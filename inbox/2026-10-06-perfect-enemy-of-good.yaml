@@ -8,6 +8,8 @@ sources:
   - {key: wp-voltaire,              title: "Voltaire (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Voltaire"}
   - {key: wp-king-lear,             title: "King Lear (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/King_Lear"}
   - {key: wp-shakespeare,           title: "William Shakespeare (Wikipedia)",          url: "https://en.wikipedia.org/wiki/William_Shakespeare"}
+  - {key: wp-aristotle,             title: "Aristotle (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Aristotle"}
+  - {key: wp-golden-mean,           title: "Golden mean (philosophy) (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Golden_mean_(philosophy)"}
   - {key: oxford-questions-encyclopedie, title: "Questions sur l'Encyclopédie (Voltaire Foundation, Oxford)", url: "https://www.voltaire.ox.ac.uk/book/questions-sur-lencyclopédie-i-viii"}
 
 people:
@@ -33,6 +35,18 @@ people:
     prominence: 5
     note: English playwright. King Lear has "striving to better, oft we mar what's well", the same idea 160 years before Voltaire.
     sources: [wp-shakespeare]
+
+  # BC years are negative: -384 = 384 BC.
+  - key: aristotle
+    name: Aristotle
+    type: Scholar
+    roles: [philosopher]
+    born: -384
+    died: -322
+    realm: Macedon
+    prominence: 5
+    note: Greek philosopher. His golden mean (virtue as the middle way between too much and too little) is the old root of "the best is the enemy of the good".
+    sources: [wp-aristotle, wp-golden-mean, wp-perfect-enemy-of-good]
 
 places:
   - key: ferney
@@ -120,12 +134,13 @@ log:
       follow_up:
         - "Montesquieu wrote 'le mieux est le mortel ennemi du bien' in his Pensées around 1726, before Voltaire. Did Voltaire get it from him?"
         - "Who was the 'sage Italien'?"
-        - "Add Aristotle (golden mean) once the site handles BC dates"
+        - "Read Aristotle on the golden mean (Nicomachean Ethics, Book II)"
         - "Shakespeare's Sonnet 103 makes the same point"
         - "Visit the Château de Voltaire at Ferney (near Geneva)"
     about:
       - {person: voltaire}
       - {person: william-shakespeare}
+      - {person: aristotle}
       - {event: questions-sur-l-encyclopedie}
       - {event: la-begueule-1772}
       - {event: king-lear-court-performance-1606}
