@@ -84,6 +84,22 @@ def test_errors_are_caught():
     assert "died (1090) before born (1100)" in text and "unknown person `nobody`" in text and "unknown place `atlantis`" in text
     assert any("no source" in w for w in plan.warnings)
 
+def test_bad_dates_are_errors_not_crashes():
+    assert intake.parse_when(-384) == (-384, None) and intake.parse_when("-384") == (-384, None)
+    assert intake.parse_when("1120-11-25") == (1120, "1120-11-25")
+    db = FakeDB(snapshot())
+    docs = [("bad.yaml", {"batch": {"title": "t"},
+             "people": [{"key": "caesar", "name": "Julius Caesar", "type": "Royalty", "born": -100, "died": "-0044-03-15"},
+                        {"key": "y0", "name": "Y", "type": "Scholar", "born": 0}],
+             "events": [{"key": "ides", "name": "Ides", "type": "Assassination", "date": "-0044-03-15"},
+                        {"key": "typo", "name": "T", "type": "Battle", "date": "1066-13-40"}],
+             "moments": [{"person": "caesar", "role": "died", "place": "jerusalem", "year": "c. 44"}]})]
+    plan = intake.plan_files(intake.World(db), docs)
+    text = " ".join(plan.errors)
+    assert "person `caesar` `died`" in text and "use the year alone (`-44`)" in text, text
+    assert "event `ides` `date`" in text and "there is no year 0" in text, text
+    assert "`1066-13-40` is not a year" in text and "`c. 44` is not a year" in text, text
+
 def test_discrepancies_are_stored_and_surfaced():
     db = FakeDB(snapshot())
     src = [{"key": "a", "title": "A"}, {"key": "b", "title": "B"}]
@@ -115,4 +131,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

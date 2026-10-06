@@ -12,6 +12,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import re
 import sys
 from dataclasses import dataclass, field
 
@@ -69,15 +70,28 @@ class RestDB:
 # --------------------------------------------------------------------------- helpers
 
 def parse_when(v):
-    """Year or full date -> (year, date or None)."""
+    """Year or full date -> (year, date or None). BC years are negative (-384 = 384 BC).
+
+    Raises ValueError with a readable message; plan_files turns it into a preview error,
+    so a bad date never reaches apply.
+    """
     if v is None:
         return None, None
     if isinstance(v, dt.date):
         return v.year, v.isoformat()
     s = str(v).strip()
-    if len(s) == 10 and s[4] == "-":
-        return int(s[:4]), s
-    return int(s), None
+    if re.fullmatch(r"-?\d+", s):
+        year = int(s)
+        if year == 0:
+            raise ValueError("there is no year 0: 1 BC is `-1`, AD 1 is `1`")
+        return year, None
+    if re.fullmatch(r"-\d+-\d+-\d+", s):
+        raise ValueError(f"`{s}`: full dates aren't supported for BC, use the year alone (`{int(s.split('-')[1]) * -1}`)")
+    try:
+        d = dt.date.fromisoformat(s)
+    except ValueError:
+        raise ValueError(f"`{s}` is not a year or a YYYY-MM-DD date") from None
+    return d.year, d.isoformat()
 
 
 def as_list(v):
@@ -177,6 +191,14 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
         if require and not srcs:
             p.warnings.append(f"{where}: no source given")
 
+    def when(item, field_name, where):
+        """parse_when for one field, recording a bad value as an error instead of crashing."""
+        try:
+            return parse_when(item.get(field_name))
+        except ValueError as e:
+            p.errors.append(f"{where} `{field_name}`: {e}")
+            return None, None
+
     for fname, d in docs:
         if not isinstance(d.get("batch"), dict) or not d["batch"].get("title"):
             p.errors.append(f"{fname}: `batch.title` is required")
@@ -208,8 +230,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             k = x.get("key")
             if not k:
                 p.errors.append(f"{fname}: a person is missing `key`"); continue
-            by, _ = parse_when(x.get("born")); dy, _ = parse_when(x.get("died"))
-            if by and dy and dy < by:
+            by, _ = when(x, "born", f"person `{k}`"); dy, _ = when(x, "died", f"person `{k}`")
+            if by is not None and dy is not None and dy < by:
                 p.errors.append(f"person `{k}`: died ({dy}) before born ({by})")
             if k in world.people:
                 p.updates["people"].append(k)
@@ -238,6 +260,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 if x.get("date") is None and x.get("year") is None:
                     p.warnings.append(f"event `{k}`: no date, so it won't appear on the timeline")
                 p.adds["events"].append(k)
+            for f in ("date", "year", "end_year"):
+                when(x, f, f"event `{k}`")
             if x.get("place"):
                 ref("place", x["place"], f"event `{k}`")
             for pe in as_list(x.get("people")):
@@ -250,6 +274,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.errors.append(f"link {x}: must start with parent, spouse, patron or teacher"); continue
             a_key, b_key, _ = LINK_KINDS[kind]
             a, b = x.get(a_key), x.get(b_key)
+            for f in ("year", "from") + (("to",) if kind in ("patron", "teacher") else ()):
+                when(x, f, f"{kind} link {a} → {b}")
             ok = ref("person", a, f"{kind} link") & ref("person", b, f"{kind} link")
             if ok:
                 (p.updates if find_rel(world, a, b, LINK_KINDS[kind][2]) else p.adds)["links"].append(f"{kind}: {a} → {b}")
@@ -258,6 +284,7 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             ok = ref("person", x.get("person"), "moment") & ref("place", x.get("place"), "moment")
             if not x.get("role"):
                 p.errors.append(f"moment {x}: needs `role`")
+            when(x, "year", f"moment {x.get('person')} {x.get('role')}")
             if ok:
                 label = f"{x.get('person')} {x.get('role')} at {x.get('place')} ({x.get('year', '?')})"
                 pe, pl = world.people.get(x["person"]), world.places.get(x["place"])
@@ -295,6 +322,7 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             if not k or not x.get("title"):
                 p.errors.append(f"{fname}: every log entry needs `key` and `title`"); continue
             (p.updates if k in world.logs else p.adds)["log"].append(k)
+            when(x, "learned_on", f"log `{k}`")
             for a in as_list(x.get("about")):
                 kind = next((kk for kk in ("person", "place", "event") if kk in a), None)
                 if kind:

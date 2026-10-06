@@ -45,7 +45,7 @@ sources:
 
 An entry whose `key` already exists is an **update**: only the fields given change.
 
-**BC dates.** Write BC years as negative numbers: `born: -384` means 384 BC. Count the same way as BC itself, so 384 BC is `-384`, not astronomers' `-383`. There is no year 0, so a lifespan crossing from BC to AD is one year shorter than plain subtraction suggests; the site corrects for this when it shows age. Full dates (`-0044-03-15`) aren't supported for BC: use the year alone. The same applies to event `year`/`end_year`, link years and moment years.
+**BC dates.** Write BC years as negative numbers: `born: -384` means 384 BC. Count the same way as BC itself, so 384 BC is `-384`, not astronomers' `-383`. There is no year 0, so a lifespan crossing from BC to AD is one year shorter than plain subtraction suggests; the site corrects for this when it shows age. Full dates (`-0044-03-15`) aren't supported for BC: use the year alone (the preview flags a BC full date, and year `0`, as errors). The same applies to event `year`/`end_year`, link years and moment years.
 
 ### `places`
 | Field | Meaning |
@@ -151,6 +151,7 @@ log:
 Before anything is applied, the preview lists every addition and update, and flags:
 - a key that doesn't exist in the database or in the file (likely a typo)
 - a new record without a source
+- a date that isn't a year or a valid `YYYY-MM-DD` (e.g. `1066-13-40`, `c. 1100`, a BC full date), in any section
 - impossible dates (died before born; a child born after a parent died, beyond a pregnancy's length)
 - a place without coordinates (it can't appear on the map)
 - a possible duplicate: a new person whose name and dates closely match someone already in the database
