@@ -66,7 +66,6 @@ people:
     note: Discovered cyanoacrylate by accident in 1942 while working on clear plastic gun sights; saw its use as an adhesive in 1951. Super glue.
     sources: [wp-harry-coover, wp-cyanoacrylate, hf-ww2-innovations]
 
-  # Wikipedia gives 1918; some sources say 1914.
   - key: richard-t-james
     name: Richard T. James
     type: Scholar
@@ -363,6 +362,44 @@ moments:
   - {person: richard-t-james, role: worked, place: cramp-shipyard, year: 1943}
   - {person: frank-whittle, role: trained, place: raf-cranwell}
 
+discrepancies:
+  - key: gloster-e28-39-speed
+    question: How fast did the Gloster E.28/39 fly, and was it faster than propeller aircraft?
+    about: [{event: gloster-e28-39-first-flight}, {person: frank-whittle}]
+    field: note
+    claims:
+      - {value: "370 mph at 25,000 ft; faster than any propeller-driven aircraft", sources: [hf-ww2-innovations]}
+      - {value: "about 350 mph maximum true speed on early test flights", sources: [wp-gloster-e28-39]}
+      - {value: "about 340 mph on the W.1 engine", sources: [wp-frank-whittle]}
+    note: The 370 mph and "fastest" claims look wrong (a Spitfire of the time was about as fast). The record says "about 350 mph".
+
+  - key: slinky-sales
+    question: How many Slinkys have been sold?
+    about: [{event: slinky-first-sold}]
+    claims:
+      - {value: "about 250 million by the end of the 20th century", sources: [hf-ww2-innovations]}
+      - {value: "about 300 million in its first 60 years (to about 2005)", sources: [wp-slinky]}
+    status: resolved
+    resolution: Not a real conflict, since they cover different periods. The record uses Wikipedia's 300 million in 60 years.
+
+  - key: coover-1942-employer
+    question: Where did Harry Coover work when he discovered cyanoacrylate in 1942?
+    about: [{person: harry-coover}, {event: cyanoacrylate-discovered}]
+    field: place
+    claims:
+      - {value: Eastman Kodak, sources: [hf-ww2-innovations, wp-harry-coover]}
+      - {value: B.F. Goodrich, sources: [wp-cyanoacrylate]}
+    note: Leaving the event without a place until a source settles it.
+
+  - key: richard-t-james-birth-year
+    question: When was Richard T. James born?
+    about: [{person: richard-t-james}]
+    field: born
+    claims:
+      - {value: 1918-03-27, sources: [wp-richard-t-james]}
+      - {value: 1914, note: "Seen in web search results; no source checked yet"}
+    note: The record uses 1918-03-27.
+
 log:
   - key: 2026-10-06-ww2-innovations
     title: 7 innovations that came out of World War II
@@ -375,11 +412,7 @@ log:
       Duct tape, radar, jet engines, super glue, electronic computers, the Slinky and mass-produced penicillin. The
       article's main point: wars don't raise the overall rate of invention. It drops when war breaks out, then surges.
     details:
-      corrections:
-        - "Gloster E.28/39: the article says 370 mph and faster than any propeller plane. Wikipedia says about 350 mph on early flights, slower than a Spitfire. Left out."
-        - "Slinky sales: the article says 250 million by 2000; Wikipedia says about 300 million in the first 60 years."
-        - "Coover in 1942: the article and his Wikipedia page say Eastman Kodak; the Cyanoacrylate page says B.F. Goodrich. Unresolved, so no place recorded."
-        - "Richard T. James born 1918 per Wikipedia; some sources say 1914."
+      discrepancies: [gloster-e28-39-speed, slinky-sales, coover-1942-employer, richard-t-james-birth-year]
       follow_up:
         - "Add the people behind the machines: Tommy Flowers (Colossus), Mauchly and Eckert (ENIAC), Randall and Boot (magnetron), Hans von Ohain (He 178), Florey and Chain (penicillin)"
         - "Add Chain Home, Britain's prewar radar network"
