@@ -151,3 +151,21 @@ links:
 moments:
   - {person: henry-i-of-england, role: died,   place: lyons-la-foret,  year: 1135}
   - {person: king-stephen,       role: buried, place: faversham-abbey, year: 1154}
+
+# Private learning log entry (illustrative: the podcast details are placeholders).
+log:
+  - key: 2026-10-05-white-ship-podcast
+    title: The White Ship disaster
+    learned_on: 2026-10-05
+    medium: podcast
+    source_title: (podcast name)
+    source_detail: (episode)
+    notes: One shipwreck caused a 19-year civil war.
+    links:
+      - {title: "White Ship (Wikipedia)", url: "https://en.wikipedia.org/wiki/White_Ship"}
+    details:
+      follow_up: ["Who survived the wreck?", "Visit Barfleur on a Normandy trip"]
+    about:
+      - {event: white-ship-1120}
+      - {person: william-adelin}
+      - {place: barfleur}

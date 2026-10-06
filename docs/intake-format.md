@@ -84,6 +84,40 @@ moments:
   - {person: henry-i-of-england, role: died, place: lyons-la-foret, year: 1135}
 ```
 
+### `log` (private)
+Where you learned it: one entry per thing you came across. Linked to every record it touched. Stored privately: the public website can't read it.
+| Field | Meaning |
+|---|---|
+| `key`, `title` | Required. Title is what caught your attention |
+| `learned_on` | Date you came across it |
+| `medium` | podcast, book, article, video, museum, site visit, conversation, … |
+| `source_title`, `source_detail` | e.g. "The Rest Is History", "Episode 412" |
+| `url` | Link to the episode, article or page |
+| `where` | Where you were, if relevant |
+| `notes` | Your own thoughts |
+| `links` | Extra links for later: list of `{title, url}` |
+| `details` | Anything else worth keeping: follow-up questions, things to visit |
+| `about` | Records it touched: `{person: …}`, `{place: …}`, `{event: …}` |
+
+```yaml
+log:
+  - key: 2026-10-05-white-ship-podcast
+    title: The White Ship disaster
+    learned_on: 2026-10-05
+    medium: podcast
+    source_title: The Rest Is History
+    source_detail: Episode on the White Ship
+    notes: One shipwreck caused a 19-year civil war.
+    links:
+      - {title: "White Ship (Wikipedia)", url: "https://en.wikipedia.org/wiki/White_Ship"}
+    details:
+      follow_up: ["Who survived the wreck?", "Visit Barfleur on a Normandy trip"]
+    about:
+      - {event: white-ship-1120}
+      - {person: william-adelin}
+      - {place: barfleur}
+```
+
 ## What the preview checks
 
 Before anything is applied, the preview lists every addition and update, and flags:
