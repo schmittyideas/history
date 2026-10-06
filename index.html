@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>History Timeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="meta"><span id="source"><i class="dot"></i>Loading…</span><span id="count"></span><span id="span"></span></div>
+    <h1>History Timeline</h1>
+  </header>
+
+  <section class="ask" aria-label="What do you want to see?">
+    <form id="ask-form" role="search">
+      <input type="search" id="q" name="q" autocomplete="off" placeholder="What do you want to see? e.g. Normandy 1050–1150 royalty" aria-label="What do you want to see?">
+      <button class="btn" type="submit">Show</button>
+      <button class="btn ghost" type="button" id="show-all">Show everything</button>
+    </form>
+    <div class="examples"><span>Try:</span>
+      <button type="button" data-q="rulers in 1066">rulers in 1066</button>
+      <button type="button" data-q="Henry I">Henry I</button>
+      <button type="button" data-q="Normandy 11th century">Normandy 11th century</button>
+      <button type="button" data-q="Italy 1700s rulers, popes and painters">Italy 1700s rulers, popes and painters</button>
+    </div>
+    <div class="chips" id="chips" aria-live="polite"></div>
+    <div class="trail" id="trail" hidden></div>
+  </section>
+
+  <div class="toolbar">
+    <div class="legend">
+      <span><i class="sw" style="background:var(--woad)"></i>Royalty</span>
+      <span><i class="sw" style="background:var(--weld)"></i>Nobility</span>
+      <span><i class="sw" style="background:var(--ochre)"></i>Other</span>
+      <span><i class="sw ring"></i>Married in</span>
+      <span><i class="sw" style="background:var(--madder)"></i>Parent to child</span>
+      <span><i class="sw dbl"></i>Marriage</span>
+      <span><i class="sw dia"></i>Took part in event</span>
+    </div>
+    <div class="controls">
+      <span class="lbl">Lanes</span>
+      <div class="seg" role="group" aria-label="Group lanes by">
+        <button type="button" id="group-family" aria-pressed="true">Family</button>
+        <button type="button" id="group-type" aria-pressed="false">Type</button>
+      </div>
+      <label class="toggle"><input type="checkbox" id="layer-spouses" checked> Spouses</label>
+      <label class="toggle"><input type="checkbox" id="layer-events" checked> Events</label>
+      <div class="zoom" role="group" aria-label="Zoom">
+        <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+        <span class="lvl" id="zoom-level">Generations</span>
+        <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="stage">
+      <div class="overview" id="overview" title="Overview: click or drag to move across the view"></div>
+      <div class="chart" id="chart" tabindex="0" aria-label="Timeline chart"></div>
+    </div>
+    <div class="side">
+      <aside class="detail" id="detail" aria-live="polite"></aside>
+      <section class="map-card" aria-label="Places map">
+        <div class="map-head">
+          <h3>Places</h3>
+          <div class="seg" role="group" aria-label="Map shows">
+            <button type="button" id="map-selected" aria-pressed="true">Selected</button>
+            <button type="button" id="map-everyone" aria-pressed="false">Everyone shown</button>
+          </div>
+        </div>
+        <div id="map"></div>
+        <ol id="stops" class="stops"></ol>
+      </section>
+    </div>
+  </div>
+
+  <p class="note">Zoom with the − and + buttons, or Ctrl/⌘ + scroll over the chart. Use the strip above the chart to jump left or right. Every name in the side panel is a link. Some dates are estimates.</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="config.js"></script>
+<script src="data/snapshot.js"></script>
+<script src="data/land.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
