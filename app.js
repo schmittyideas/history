@@ -30,6 +30,15 @@ const store = {
 };
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const fmtDate = iso => { if (!iso) return null; const [y, m, d] = iso.split("-").map(Number); return `${d} ${MONTHS[m - 1]} ${y}`; };
+// Years are whole numbers; BC is negative (-384 = 384 BC). There is no year 0, so 0 marks the BC/AD boundary.
+const fmtYear = y => y == null ? null : y < 0 ? `${-y} BC` : y === 0 ? "BC/AD" : `${y}`;
+const fmtSpan = (a, b) => a == null || b == null || b >= 0 && a >= 0 ? `${fmtYear(a) ?? "?"}–${fmtYear(b) ?? "?"}`
+  : b < 0 ? `${-a}–${-b} BC` : `${-a} BC–AD ${Math.max(1, b)}`;
+const yearsBetween = (a, b) => b - a - (a < 0 && b > 0 ? 1 : 0);
+const byYear = (a, b) => (a ?? Infinity) - (b ?? Infinity) || 0;  // unknown years last
+// Years written so parseQuery reads them back: "384 BC", "AD 14", "1066".
+const yearQuery = (y, ad = false) => y < 0 ? `${-y} BC` : ad || y < 100 ? `AD ${Math.max(1, y)}` : `${y}`;
+const rangeQuery = (a, b) => a === b ? yearQuery(a) : `${yearQuery(a)} to ${yearQuery(b, a < 0)}`;
 const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -68,10 +77,10 @@ function indexData(raw) {
   const spouseLinks = rels.filter(r => r.rel_type === "spouse");
   const parentsOf = id => parentLinks.filter(r => r.target_id === id).map(r => byId[r.source_id]).filter(Boolean);
   const childrenOf = id => parentLinks.filter(r => r.source_id === id).map(r => byId[r.target_id]).filter(Boolean)
-    .sort((a, b) => (a.birth_year ?? 0) - (b.birth_year ?? 0));
+    .sort((a, b) => byYear(a.birth_year, b.birth_year));
   const spousesOf = id => spouseLinks.filter(r => r.source_id === id || r.target_id === id)
     .map(r => ({ person: byId[r.source_id === id ? r.target_id : r.source_id], year: r.start_year }))
-    .filter(s => s.person).sort((a, b) => (a.year ?? 0) - (b.year ?? 0));
+    .filter(s => s.person).sort((a, b) => byYear(a.year, b.year));
   const marriedIn = new Set(spouseLinks.map(r => r.target_id).filter(id => parentsOf(id).length === 0));
   const marriageYear = id => { const r = spouseLinks.find(r => r.target_id === id); return r ? r.start_year : null; };
   const startOf = p => p.birth_year ?? marriageYear(p.id) ?? p.death_year;
@@ -106,17 +115,33 @@ function parseQuery(text, db) {
   const f = { raw: text, from: null, to: null, types: new Set(), regions: [], missingRegions: [], focus: null, ignored: [] };
   let t = " " + text.replace(/[’']/g, "'") + " ";
   let m;
-  if ((m = t.match(/(\d{3,4})\s*(?:-|–|—|to|until|through|and)\s*(\d{2,4})(?!\d)/i))) {
-    let a = +m[1], b = +m[2]; if (b < 100) b = Math.floor(a / 100) * 100 + b;
+  // Era markers: "384 BC", "AD 14", "4th century BC", "400–300 BC". Plain numbers are AD.
+  const ERA = String.raw`(BCE|BC|B\.C\.E\.|B\.C\.|CE|AD|C\.E\.|A\.D\.)(?!\w)`;
+  const isBC = e => !!e && /^b/i.test(e);
+  const SEP = String.raw`\s*(?:-|–|—|to|until|through|and)\s*`;
+  const sign = (n, bc) => bc ? -n : n;
+  if ((m = t.match(new RegExp(String.raw`(?:\b(AD|A\.D\.)\s*)?\b(\d{1,4})(?:\s*${ERA})?${SEP}(?:\b(AD|A\.D\.)\s*)?(\d{1,4})(?:\s*${ERA})?(?!\d)`, "i")))
+      && (m[1] || m[3] || m[4] || m[6] || (m[2].length >= 3 && m[5].length >= 2))) {
+    let a = +m[2], b = +m[5];
+    if (!m[1] && !m[3] && !m[4] && !m[6] && b < 100) b = Math.floor(a / 100) * 100 + b;   // "1066-87"
+    const aBC = isBC(m[3]) || (!m[1] && !m[3] && isBC(m[6]));                         // "400–300 BC"
+    const bBC = isBC(m[6]) || (!m[4] && !m[6] && aBC && b < a);                       // "400 BC–300"
+    a = sign(a, aBC); b = sign(b, bBC);
     f.from = Math.min(a, b); f.to = Math.max(a, b); t = t.replace(m[0], " ");
-  } else if ((m = t.match(/\b(\d{1,2})(?:st|nd|rd|th)\s*(?:century|cent\.?|c\.)/i))) {
-    const n = +m[1]; f.from = (n - 1) * 100; f.to = n * 100 - 1; t = t.replace(m[0], " ");
-  } else if ((m = t.match(/\b(\d{1,2})00s\b/i))) {
-    const n = +m[1]; f.from = n * 100; f.to = n * 100 + 99; t = t.replace(m[0], " ");
-  } else if ((m = t.match(/\b(\d{2,3})0s\b/i))) {
-    const d = +m[1]; f.from = d * 10; f.to = d * 10 + 9; t = t.replace(m[0], " ");
-  } else if ((m = t.match(/\b(around|circa|c\.|about)?\s*(\d{3,4})\b/i))) {
-    const y = +m[2];
+  } else if ((m = t.match(new RegExp(String.raw`\b(\d{1,2})(?:st|nd|rd|th)\s*(?:century|cent\.?|c\.)(?:\s*${ERA})?`, "i")))) {
+    const n = +m[1];
+    if (isBC(m[2])) { f.from = -n * 100; f.to = -(n - 1) * 100 - 1; } else { f.from = (n - 1) * 100; f.to = n * 100 - 1; }
+    t = t.replace(m[0], " ");
+  } else if ((m = t.match(new RegExp(String.raw`\b(\d{1,2})00s\b(?:\s*${ERA})?`, "i")))) {
+    const n = +m[1];
+    if (isBC(m[2])) { f.from = -(n * 100 + 99); f.to = -n * 100; } else { f.from = n * 100; f.to = n * 100 + 99; }
+    t = t.replace(m[0], " ");
+  } else if ((m = t.match(new RegExp(String.raw`\b(\d{2,3})0s\b(?:\s*${ERA})?`, "i")))) {
+    const d = +m[1];
+    if (isBC(m[2])) { f.from = -(d * 10 + 9); f.to = -d * 10; } else { f.from = d * 10; f.to = d * 10 + 9; }
+    t = t.replace(m[0], " ");
+  } else if ((m = t.match(new RegExp(String.raw`\b(around|circa|c\.|about)?\s*(?:\b(?:AD|A\.D\.)\s*(\d{1,4})\b|\b(\d{1,4})\s*${ERA}|\b(\d{3,4})\b)`, "i")))) {
+    const y = m[2] ? +m[2] : m[3] ? sign(+m[3], isBC(m[4])) : +m[5];
     if (m[1]) { f.from = y - 25; f.to = y + 25; } else { f.from = y; f.to = y; }
     t = t.replace(m[0], " ");
   }
@@ -222,8 +247,8 @@ function familyOrder(db, members, ids) {
     db.childrenOf(p.id).forEach(visit);
   };
   members.filter(p => !db.marriedIn.has(p.id) && !db.parentsOf(p.id).some(x => ids.has(x.id)))
-    .sort((a, b) => (db.startOf(a) ?? 0) - (db.startOf(b) ?? 0)).forEach(visit);
-  members.slice().sort((a, b) => (db.startOf(a) ?? 0) - (db.startOf(b) ?? 0)).forEach(p => {
+    .sort((a, b) => byYear(db.startOf(a), db.startOf(b))).forEach(visit);
+  members.slice().sort((a, b) => byYear(db.startOf(a), db.startOf(b))).forEach(p => {
     if (!seen.has(p.id)) { seen.add(p.id); order.push(p); }
   });
   return order;
@@ -238,7 +263,7 @@ function buildLanes(db, people) {
     list.forEach(p => { const k = p.type || "Other"; if (!groups.has(k)) groups.set(k, []); groups.get(k).push(p); });
     return [...groups.entries()]
       .sort((a, b) => (TYPE_ORDER.indexOf(a[0]) + 1 || 99) - (TYPE_ORDER.indexOf(b[0]) + 1 || 99))
-      .map(([k, members]) => ({ label: k, people: members.slice().sort((a, b) => (db.startOf(a) ?? 0) - (db.startOf(b) ?? 0)) }));
+      .map(([k, members]) => ({ label: k, people: members.slice().sort((a, b) => byYear(db.startOf(a), db.startOf(b))) }));
   }
   // Family lanes: connected groups through parent and spouse links.
   const parent = new Map(list.map(p => [p.id, p.id]));
@@ -255,7 +280,7 @@ function buildLanes(db, people) {
     const order = familyOrder(db, members, ids);
     return { label: `Family of ${order[0].name}`, people: order };
   });
-  if (loners.length) out.push({ label: lanes.length ? "Others in this period" : "People", people: loners.sort((a, b) => (db.startOf(a) ?? 0) - (db.startOf(b) ?? 0)) });
+  if (loners.length) out.push({ label: lanes.length ? "Others in this period" : "People", people: loners.sort((a, b) => byYear(db.startOf(a), db.startOf(b))) });
   return out;
 }
 
@@ -288,7 +313,8 @@ function run(query, { pushTrail = false, keepZoom = false } = {}) {
   S.view = computeView(S.db, S.filter);
   if (!keepZoom) {
     const ps = S.view.people;
-    const span = ps.length ? Math.max(...ps.map(p => S.db.endOf(p) ?? 0)) - Math.min(...ps.map(p => S.db.startOf(p) ?? 9999)) : 100;
+    const ends = ps.map(S.db.endOf).filter(Number.isFinite), starts = ps.map(S.db.startOf).filter(Number.isFinite);
+    const span = starts.length && ends.length ? Math.max(...ends) - Math.min(...starts) : 100;
     S.zoom = span > 700 ? 0 : span > 300 ? 1 : 2;
   }
   try { history.replaceState(null, "", query ? "?q=" + encodeURIComponent(query) : location.pathname); } catch (e) {}
@@ -309,7 +335,7 @@ function renderChips() {
   const chip = (label, value, onRemove) => h("span", { class: "chip" }, label ? `${label}: ` : "", h("b", { text: value }),
     h("button", { type: "button", "aria-label": `Remove ${value}`, title: "Remove", onclick: onRemove, text: "×" }));
   const rerun = mut => { mut(); S.view = computeView(S.db, S.filter); S.query = describe(S.filter); $("q").value = S.query; renderChips(); render(); };
-  if (f.from != null) box.append(chip("Years", f.from === f.to ? `alive in ${f.from}` : `${f.from}–${f.to}`, () => rerun(() => { f.from = f.to = null; })));
+  if (f.from != null) box.append(chip("Years", f.from === f.to ? `alive in ${fmtYear(f.from)}` : fmtSpan(f.from, f.to), () => rerun(() => { f.from = f.to = null; })));
   f.types.forEach(t => box.append(chip("Who", TYPE_LABEL[t] || t, () => rerun(() => f.types.delete(t)))));
   f.regions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.regions = f.regions.filter(x => x !== r); }))));
   f.missingRegions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.missingRegions = f.missingRegions.filter(x => x !== r); }))));
@@ -322,7 +348,7 @@ function describe(f) {
   const parts = [];
   if (f.focus != null) parts.push(S.db.byId[f.focus].name);
   parts.push(...f.regions, ...f.missingRegions);
-  if (f.from != null) parts.push(f.from === f.to ? `${f.from}` : `${f.from}-${f.to}`);
+  if (f.from != null) parts.push(rangeQuery(f.from, f.to));
   f.types.forEach(t => parts.push(TYPE_LABEL[t] || t));
   return parts.join(" ");
 }
@@ -373,7 +399,7 @@ function render() {
   const step0 = Z.px * 10 >= 24 ? 10 : Z.px * 50 >= 24 ? 50 : 100;
   const y0 = Math.floor((Math.min(...starts) - 5) / step0) * step0;
   const y1 = Math.ceil((Math.max(...ends) + 5) / step0) * step0;
-  $("span").textContent = `${y0}–${y1}`;
+  $("span").textContent = fmtSpan(y0, y1);
 
   const NAMES_H = Z.names === "full" ? 62 : Z.names === "short" ? 30 : 8;
   const LANE_H = 22, TOP = LANE_H + NAMES_H + 16;
@@ -407,7 +433,7 @@ function render() {
   for (let yr = y0; yr <= y1; yr += step0) {
     const major = yr % (step0 * 5) === 0;
     el("line", { x1: LEFT - 6, x2: W - 6, y1: y(yr), y2: y(yr), class: "grid", opacity: major ? 1 : .45 }, svg);
-    el("text", { x: LEFT - 10, y: y(yr) + 4, "text-anchor": "end", class: "yr" }, svg).textContent = yr;
+    el("text", { x: LEFT - 10, y: y(yr) + 4, "text-anchor": "end", class: "yr" }, svg).textContent = fmtYear(yr);
   }
 
   // Events lane
@@ -419,8 +445,8 @@ function render() {
       const gapNeeded = Z.names === "full" ? 30 : 16;
       const ly = Math.max(yy, lastY + gapNeeded); lastY = ly;
       el("line", { x1: LANEW - 6, x2: W - 6, y1: yy, y2: yy, class: "event-line" }, svg);
-      const g = el("g", { class: "event", tabindex: 0, role: "button", "aria-label": `${e.name}, ${e.start_year}` }, svg);
-      el("title", {}, g).textContent = `${e.name} (${e.start_date ? fmtDate(e.start_date) : e.start_year})`;
+      const g = el("g", { class: "event", tabindex: 0, role: "button", "aria-label": `${e.name}, ${fmtYear(e.start_year)}` }, svg);
+      el("title", {}, g).textContent = `${e.name} (${e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year)})`;
       if (Z.names === "none") {
         el("path", { d: `M${LANEW - 18},${yy - 5} l5,5 l-5,5 l-5,-5 Z`, fill: "var(--madder)" }, g);
         el("rect", { x: 2, y: yy - 9, width: LANEW - 6, height: 18, class: "hit" }, g);
@@ -429,7 +455,7 @@ function render() {
         const name = Z.names === "short" && e.name.length > 16 ? e.name.slice(0, 15) + "…" : e.name;
         el("text", { x: LANEW - 12, y: ly - 4, "text-anchor": "end", class: "event-label" }, g).textContent = name;
         if (Z.names === "full") el("text", { x: LANEW - 12, y: ly + 9, "text-anchor": "end", class: "event-sub" }, g).textContent =
-          (e.start_date ? fmtDate(e.start_date) : e.start_year) + (e.visitable_today ? " · ◆ visitable" : "");
+          (e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year)) + (e.visitable_today ? " · ◆ visitable" : "");
         el("rect", { x: 2, y: ly - 17, width: LANEW - 10, height: Z.names === "full" ? 30 : 18, rx: 3, class: "hit" }, g);
       }
       g.addEventListener("click", () => selectEvent(e.id));
@@ -461,7 +487,7 @@ function render() {
       const lift = Math.min(60, (x2 - x1) / 6);
       el("path", { d: `M${x1},${yy} Q${(x1 + x2) / 2},${yy - lift} ${x2},${yy}`, class: "marriage-arc" }, svg);
     }
-    if (Z.names === "full") el("text", { x: (x1 + x2) / 2, y: yy - (adjacent ? 6 : Math.min(60, (x2 - x1) / 6) / 2 + 6), "text-anchor": "middle", class: "marriage-yr" }, svg).textContent = `m. ${r.start_year}`;
+    if (Z.names === "full") el("text", { x: (x1 + x2) / 2, y: yy - (adjacent ? 6 : Math.min(60, (x2 - x1) / 6) / 2 + 6), "text-anchor": "middle", class: "marriage-yr" }, svg).textContent = `m. ${fmtYear(r.start_year)}`;
   });
 
   // People
@@ -469,13 +495,13 @@ function render() {
     const cx = xOf[p.id];
     const s = db.startOf(p), d = db.endOf(p);
     const inLaw = db.marriedIn.has(p.id);
-    const g = el("g", { class: "person", tabindex: 0, role: "button", "aria-label": `${p.name}, ${p.birth_year ?? "birth unknown"} to ${p.death_year ?? "unknown"}` }, svg);
-    el("title", {}, g).textContent = `${p.name} (${p.birth_year ?? "?"}–${p.death_year ?? "?"})`;
+    const g = el("g", { class: "person", tabindex: 0, role: "button", "aria-label": `${p.name}, ${fmtYear(p.birth_year) ?? "birth unknown"} to ${fmtYear(p.death_year) ?? "unknown"}` }, svg);
+    el("title", {}, g).textContent = `${p.name} (${fmtSpan(p.birth_year, p.death_year)})`;
     if (Z.names === "full") {
       const i = p.name.indexOf(" of ");
       const parts = i > 0 ? [p.name.slice(0, i), p.name.slice(i + 1)] : [p.name];
       parts.forEach((line, k) => el("text", { x: cx, y: TOP - 46 + k * 16 + (parts.length === 1 ? 16 : 0), "text-anchor": "middle", class: "name" }, g).textContent = line);
-      el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "dates" }, g).textContent = `${p.birth_year ?? "?"}–${p.death_year ?? "?"}`;
+      el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "dates" }, g).textContent = fmtSpan(p.birth_year, p.death_year);
     } else if (Z.names === "short") {
       const short = p.name.split(" of ")[0];
       el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "name", style: "font-size:11px" }, g).textContent = short.length > 9 ? short.slice(0, 8) + "…" : short;
@@ -612,7 +638,7 @@ function revealEvent(id) {
     c.scrollTo({ top: Math.max(0, S.layout.y(e.start_year) - 120), behavior: "smooth" });
   } else {
     const e = S.db.eventById[id];
-    run(`${e.start_year - 20}-${e.start_year + 20}`, { pushTrail: true });
+    run(rangeQuery(e.start_year - 20, e.start_year + 20), { pushTrail: true });
     selectEvent(id);
   }
 }
@@ -621,13 +647,13 @@ function select(id) {
   S.selected = { kind: "person", id };
   clearSel(); groups[id]?.classList.add("sel");
   const db = S.db, p = db.byId[id];
-  const age = Number.isFinite(p.birth_year) && Number.isFinite(p.death_year) ? p.death_year - p.birth_year : null;
+  const age = Number.isFinite(p.birth_year) && Number.isFinite(p.death_year) ? yearsBetween(p.birth_year, p.death_year) : null;
   const box = $("detail"); box.innerHTML = "";
   const rows = [
-    ["Born", p.birth_year ?? "Unknown"],
-    ["Died", p.death_year ?? "Unknown"],
+    ["Born", fmtYear(p.birth_year) ?? "Unknown"],
+    ["Died", fmtYear(p.death_year) ?? "Unknown"],
     ["Age at death", age ?? "Unknown"],
-    ["Spouses", joinNodes(db.spousesOf(id).map(s => personLink(s.person, s.year ? ` (m. ${s.year})` : "")))],
+    ["Spouses", joinNodes(db.spousesOf(id).map(s => personLink(s.person, s.year != null ? ` (m. ${fmtYear(s.year)})` : "")))],
     ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
@@ -649,8 +675,8 @@ function selectEvent(id) {
   const db = S.db, e = db.eventById[id], place = db.placeById[e.place_id];
   const box = $("detail"); box.innerHTML = "";
   const dl = h("dl");
-  [["Date", fmtDate(e.start_date) || e.start_year || "Unknown"],
-   ...(e.end_year && e.end_year !== e.start_year ? [["Ended", e.end_year]] : []),
+  [["Date", fmtDate(e.start_date) || fmtYear(e.start_year) || "Unknown"],
+   ...(e.end_year != null && e.end_year !== e.start_year ? [["Ended", fmtYear(e.end_year)]] : []),
    ["Where", place ? place.name + (place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
    ["People", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")],
    ["Visit today", e.visitable_today ? (e.visit_site || "Yes") : "No"],
@@ -688,7 +714,7 @@ function stopsForPerson(id) {
     const place = db.placeById[e.place_id];
     if (place) stops.push({ year: e.start_year, date: e.start_date, what: e.name + (role ? ` (${role})` : ""), place, rank: 2 });
   });
-  return stops.sort((a, b) => (a.year ?? 0) - (b.year ?? 0) || a.rank - b.rank || (a.date || "").localeCompare(b.date || ""));
+  return stops.sort((a, b) => byYear(a.year, b.year) || a.rank - b.rank || (a.date || "").localeCompare(b.date || ""));
 }
 function stopsForEvent(id) {
   const e = S.db.eventById[id], place = e && S.db.placeById[e.place_id];
@@ -761,7 +787,7 @@ function drawMap() {
       list.append(h("li", {},
         h("span", { class: "n", style: `background:${r.color}`, text: s.n }),
         h("div", {},
-          h("div", {}, h("span", { class: "yrs", text: (s.date ? fmtDate(s.date) : s.year ?? "") + "  " }), h("span", { class: "what", text: s.what })),
+          h("div", {}, h("span", { class: "yrs", text: (s.date ? fmtDate(s.date) : fmtYear(s.year) ?? "") + "  " }), h("span", { class: "what", text: s.what })),
           h("div", { class: "where", text: pl.name + (pl.historical_name ? ` (then ${pl.historical_name})` : "") + (pl.region ? `, ${pl.region}` : "") }),
           pl.visitable_today ? h("div", { class: "visit", text: "◆ Visit: " + (pl.visit_site || pl.name) }) : null)));
     }));
@@ -769,7 +795,7 @@ function drawMap() {
     routes.forEach(r => list.append(h("li", {},
       h("span", { class: "n", style: `background:${r.color}` }),
       h("div", {}, h("div", { class: "what" }, personLink(r.person)),
-        h("div", { class: "where", text: r.stops.map(s => `${s.place.name} ${s.year ?? ""}`.trim()).join(" → ") })))));
+        h("div", { class: "where", text: r.stops.map(s => `${s.place.name} ${fmtYear(s.year) ?? ""}`.trim()).join(" → ") })))));
   }
 }
 
