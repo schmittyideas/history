@@ -135,7 +135,7 @@ class World:
         self.event_people = db.select("event_people", "id,event_id,entity_id,role")
         self.unkeyed_people = [r for r in db.select("entities", "id,key,name,birth_year,death_year") if not r.get("key")]
         try:
-            self.discrepancies = {r["key"]: r for r in db.select("discrepancies", "id,key,question,about,field,claims,status,resolution")}
+            self.discrepancies = {r["key"]: r for r in db.select("discrepancies", "id,key,question,about,field,claims,status,note,resolution")}
         except RuntimeError:  # sql/005 not run yet
             self.discrepancies = None
 
@@ -355,6 +355,8 @@ def render(plan: Plan, files) -> str:
             for c in disc.get("claims") or []:
                 srcs = ", ".join(c.get("sources") or []) or "no source"
                 out.append(f"  - “{c.get('value')}” ({srcs})" + (f": {c['note']}" if c.get("note") else ""))
+            if disc.get("note"):
+                out.append(f"  - Note: {disc['note']}")
         out.append("")
     for s in SECTIONS:
         a, u = plan.adds[s], plan.updates[s]
@@ -466,7 +468,8 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
     for _, d in docs:
         for x in as_list(d.get("discrepancies")):
             row = {"question": x["question"], "about": as_list(x.get("about")), "field": x.get("field"),
-                   "claims": as_list(x.get("claims")), "status": x.get("status", "open"), "resolution": x.get("resolution")}
+                   "claims": as_list(x.get("claims")), "status": x.get("status", "open"), "note": x.get("note"),
+                   "resolution": x.get("resolution")}
             if x["key"] in world.discrepancies:
                 row["updated_at"] = dt.datetime.now(dt.timezone.utc).isoformat()
             upsert_keyed("discrepancies", world.discrepancies, x["key"], row)
