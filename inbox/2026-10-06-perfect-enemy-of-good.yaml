@@ -115,6 +115,18 @@ events:
 moments:
   - {person: voltaire, role: lived, place: ferney, year: 1759}
 
+discrepancies:
+  - key: voltaire-italian-proverb-work
+    question: In which work, and which year, did Voltaire first quote the Italian proverb "il meglio è l'inimico del bene"?
+    about: [{person: voltaire}, {event: questions-sur-l-encyclopedie}]
+    claims:
+      - {value: "Dictionnaire philosophique (1764), article \"Art dramatique\"", note: "Commonly cited, including in the first answer and in web search results; no source checked"}
+      - {value: "Questions sur l'Encyclopédie (1770), article \"Art dramatique\"", sources: [wp-perfect-enemy-of-good, oxford-questions-encyclopedie]}
+    note: >-
+      The record uses 1770. Likely explanation: "Art dramatique" first appeared in the Questions, and later editions
+      merged them into the Dictionnaire philosophique. That needs a source; the 1764 Dictionnaire portatif's contents
+      would settle it.
+
 log:
   - key: 2026-10-06-voltaire-better-enemy-of-good
     title: What Voltaire was quoting in "le mieux est l'ennemi du bien"
@@ -128,9 +140,7 @@ log:
     links:
       - {title: "Perfect is the enemy of good (Wikipedia)", url: "https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good"}
     details:
-      correction: >-
-        The quote was first said to be from the Dictionnaire philosophique (1764). Wikipedia puts the proverb quote
-        in Questions sur l'Encyclopédie (1770), article "Art dramatique", and La Bégueule in 1772.
+      discrepancies: [voltaire-italian-proverb-work]
       follow_up:
         - "Montesquieu wrote 'le mieux est le mortel ennemi du bien' in his Pensées around 1726, before Voltaire. Did Voltaire get it from him?"
         - "Who was the 'sage Italien'?"
