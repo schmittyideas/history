@@ -84,6 +84,31 @@ moments:
   - {person: henry-i-of-england, role: died, place: lyons-la-foret, year: 1135}
 ```
 
+### `discrepancies`
+Where sources disagree. Record both sides rather than silently picking one, so a later source can settle it.
+| Field | Meaning |
+|---|---|
+| `key`, `question` | Required. The question is what's disputed |
+| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}` |
+| `field` | Which field, if one: `born`, `died`, `date`, `place`, … |
+| `claims` | What each side says: list of `{value, sources, note}` |
+| `status` | `open` (default) or `resolved` |
+| `resolution` | What the database uses and why. Expected when resolved |
+
+```yaml
+discrepancies:
+  - key: coover-1942-employer
+    question: Where did Coover work when he found cyanoacrylate in 1942?
+    about: [{person: harry-coover}, {event: cyanoacrylate-discovered}]
+    field: place
+    claims:
+      - {value: Eastman Kodak, sources: [wp-harry-coover]}
+      - {value: B.F. Goodrich, sources: [wp-cyanoacrylate]}
+```
+The record itself holds whichever value is best supported (or leaves it out, as here). Re-send the same `key` with `status: resolved` and a `resolution` once a source settles it; add a claim if a new source takes a side.
+
+**Checked on every intake.** When a batch adds to, updates, or links to a record that has an open discrepancy, the preview lists it under "Open discrepancies on records in this batch", with each side's claim and sources. Claude also checks for them before writing an intake.
+
 ### `log` (private)
 Where you learned it: one entry per thing you came across. Linked to every record it touched. Stored privately: the public website can't read it.
 | Field | Meaning |
@@ -126,5 +151,7 @@ Before anything is applied, the preview lists every addition and update, and fla
 - impossible dates (died before born; a child born after a parent died, beyond a pregnancy's length)
 - a place without coordinates (it can't appear on the map)
 - a possible duplicate: a new person whose name and dates closely match someone already in the database
+- an open discrepancy on any record the batch touches (see `discrepancies`)
+- a section name it doesn't recognise (a typo would otherwise be silently ignored)
 
 Nothing is written until you approve.

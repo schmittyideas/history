@@ -18,7 +18,7 @@ class FakeDB:
     def __init__(self, snap):
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
-                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": []}
+                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -84,5 +84,35 @@ def test_errors_are_caught():
     assert "died (1090) before born (1100)" in text and "unknown person `nobody`" in text and "unknown place `atlantis`" in text
     assert any("no source" in w for w in plan.warnings)
 
+def test_discrepancies_are_stored_and_surfaced():
+    db = FakeDB(snapshot())
+    src = [{"key": "a", "title": "A"}, {"key": "b", "title": "B"}]
+    first = [("d.yaml", {"batch": {"title": "t"}, "sources": src, "discrepancies": [
+        {"key": "henry-birth", "question": "When was Henry I born?", "about": [{"person": "henry-i-of-england"}], "field": "born",
+         "claims": [{"value": 1068, "sources": ["a"]}, {"value": 1069, "sources": ["b"]}]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, first)
+    assert not plan.errors and plan.adds["discrepancies"] == ["henry-birth"], (plan.errors, plan.adds)
+    intake.apply_files(world, first, log=lambda m: None)
+    assert db.t["discrepancies"][0]["status"] == "open" and db.t["discrepancies"][0]["about"] == [{"person": "henry-i-of-england"}]
+    # A later batch that touches Henry I (here, via an event) is shown the open discrepancy.
+    later = [("e.yaml", {"batch": {"title": "t2"}, "sources": src, "events": [
+        {"key": "x-event", "name": "X", "type": "Battle", "year": 1100, "sources": ["a"], "people": [{"person": "henry-i-of-england"}]}]})]
+    plan2 = intake.plan_files(intake.World(db), later)
+    assert [d["key"] for _, d in plan2.open_discrepancies] == ["henry-birth"]
+    assert "When was Henry I born?" in intake.render(plan2, ["e.yaml"])
+    # Resolving it in a batch stops the flag.
+    resolved = [("r.yaml", {"batch": {"title": "t3"}, "discrepancies": [{"key": "henry-birth", "question": "When was Henry I born?",
+                "about": [{"person": "henry-i-of-england"}], "status": "resolved", "resolution": "1068: most sources"}]})]
+    w3 = intake.World(db); intake.apply_files(w3, resolved, log=lambda m: None)
+    assert not intake.plan_files(intake.World(db), later).open_discrepancies
+    # Unknown sections are an error, not silently ignored; so is using discrepancies before sql/005.
+    plan4 = intake.plan_files(intake.World(db), [("u.yaml", {"batch": {"title": "t"}, "disputes": []})])
+    assert any("unknown section `disputes`" in e for e in plan4.errors)
+    del db.t["discrepancies"]
+    db.select = (lambda orig: lambda t, *a, **k: (_ for _ in ()).throw(RuntimeError("missing")) if t == "discrepancies" else orig(t, *a, **k))(db.select)
+    plan5 = intake.plan_files(intake.World(db), first)
+    assert any("run sql/005" in e for e in plan5.errors)
+
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
