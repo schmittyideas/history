@@ -1,0 +1,39 @@
+name: Intake apply
+
+# Runs when intake files land on main (i.e. after you merge the pull request). Applies them to Supabase.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "inbox/*.yaml"
+      - "inbox/*.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: intake-apply
+  cancel-in-progress: false
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml requests
+      - name: Find intake files in this push
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if [ -z "$BEFORE" ] || [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then BEFORE="$(git rev-list --max-parents=0 HEAD)"; fi
+          git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- 'inbox/*.yaml' 'inbox/*.yml' > files.txt
+          cat files.txt
+      - name: Apply to the database
+        env:
+          SUPABASE_URL: https://alhvzdvabugmkeqmvmiz.supabase.co
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: python tools/intake.py apply $(cat files.txt)

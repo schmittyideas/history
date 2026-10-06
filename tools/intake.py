@@ -1,0 +1,445 @@
+#!/usr/bin/env python3
+"""Intake files -> History Project database.
+
+  python tools/intake.py plan  inbox/2026-10-05-white-ship.yaml [...]   # preview (Markdown), writes nothing
+  python tools/intake.py apply inbox/2026-10-05-white-ship.yaml [...]   # adds and updates; never deletes
+
+Needs SUPABASE_URL and SUPABASE_SECRET_KEY in the environment.
+See docs/intake-format.md for the file format.
+"""
+from __future__ import annotations
+
+import datetime as dt
+import json
+import os
+import sys
+from dataclasses import dataclass, field
+
+import yaml
+
+try:
+    import requests
+except ImportError:  # only needed for the real database
+    requests = None
+
+
+# --------------------------------------------------------------------------- database access
+
+class RestDB:
+    """Minimal PostgREST client (Supabase REST API)."""
+
+    def __init__(self, url: str, key: str):
+        if requests is None:
+            raise SystemExit("The 'requests' package is required: pip install requests")
+        self.base = url.rstrip("/") + "/rest/v1"
+        self.h = {"apikey": key, "Content-Type": "application/json"}
+        if not key.startswith("sb_"):
+            self.h["Authorization"] = f"Bearer {key}"
+
+    def select(self, table, columns="*", **eq):
+        params = {"select": columns, **{k: f"eq.{v}" for k, v in eq.items()}}
+        r = requests.get(f"{self.base}/{table}", headers=self.h, params=params, timeout=30)
+        self._check(r, table)
+        return r.json()
+
+    def insert(self, table, row, ignore_duplicates_on=None):
+        h = {**self.h, "Prefer": "return=representation"}
+        params = {}
+        if ignore_duplicates_on:
+            h["Prefer"] += ",resolution=ignore-duplicates"
+            params["on_conflict"] = ignore_duplicates_on
+        r = requests.post(f"{self.base}/{table}", headers=h, params=params, data=json.dumps(row, default=str), timeout=30)
+        self._check(r, table)
+        out = r.json()
+        return out[0] if out else None
+
+    def update(self, table, match: dict, changes: dict):
+        h = {**self.h, "Prefer": "return=representation"}
+        params = {k: f"eq.{v}" for k, v in match.items()}
+        r = requests.patch(f"{self.base}/{table}", headers=h, params=params, data=json.dumps(changes, default=str), timeout=30)
+        self._check(r, table)
+        return r.json()
+
+    @staticmethod
+    def _check(r, table):
+        if r.status_code >= 300:
+            raise RuntimeError(f"{table}: HTTP {r.status_code}: {r.text[:300]}")
+
+
+# --------------------------------------------------------------------------- helpers
+
+def parse_when(v):
+    """Year or full date -> (year, date or None)."""
+    if v is None:
+        return None, None
+    if isinstance(v, dt.date):
+        return v.year, v.isoformat()
+    s = str(v).strip()
+    if len(s) == 10 and s[4] == "-":
+        return int(s[:4]), s
+    return int(s), None
+
+
+def as_list(v):
+    if v is None:
+        return []
+    return v if isinstance(v, list) else [v]
+
+
+@dataclass
+class Plan:
+    adds: dict = field(default_factory=lambda: {k: [] for k in SECTIONS})
+    updates: dict = field(default_factory=lambda: {k: [] for k in SECTIONS})
+    errors: list = field(default_factory=list)
+    warnings: list = field(default_factory=list)
+
+
+SECTIONS = ["sources", "places", "people", "events", "links", "moments", "log"]
+
+PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
+                 "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
+                 "born_estimated": "birth_estimated", "died_estimated": "death_estimated"}
+PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
+                "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
+                "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note"}
+EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
+                "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note", "visitable": "visitable_today",
+                "visit_site": "visit_site"}
+LOG_FIELDS = {"title": "title", "learned_on": "learned_on", "medium": "medium", "source_title": "source_title",
+              "source_detail": "source_detail", "url": "url", "where": "where_text", "notes": "notes",
+              "links": "links", "details": "details"}
+LINK_KINDS = {  # first key = source side, second = target side, rel_type, year fields
+    "parent": ("parent", "child", "parent"),
+    "spouse": ("spouse", "to", "spouse"),
+    "patron": ("patron", "artist", "patron"),
+    "teacher": ("teacher", "student", "teacher"),
+}
+
+
+# --------------------------------------------------------------------------- loading existing data
+
+class World:
+    """What the database already holds, indexed by key."""
+
+    def __init__(self, db):
+        self.db = db
+        self.people = {r["key"]: r for r in db.select("entities", "id,key,name,birth_year,death_year") if r.get("key")}
+        self.places = {r["key"]: r for r in db.select("places", "id,key,name,lat,lng") if r.get("key")}
+        self.events = {r["key"]: r for r in db.select("events", "id,key,name") if r.get("key")}
+        self.sources = {r["key"]: r for r in db.select("sources", "id,key,title")}
+        self.logs = {r["key"]: r for r in db.select("learning_log", "id,key,title")}
+        self.rels = db.select("relationships", "id,source_id,target_id,rel_type,start_year,end_year")
+        self.moments = db.select("person_places", "id,entity_id,place_id,role,year")
+        self.event_people = db.select("event_people", "id,event_id,entity_id,role")
+        self.unkeyed_people = [r for r in db.select("entities", "id,key,name,birth_year,death_year") if not r.get("key")]
+
+
+# --------------------------------------------------------------------------- planning
+
+def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
+    p = Plan()
+    new = {"people": {}, "places": {}, "events": {}, "sources": {}}
+
+    # First pass: collect every key the files define, so references across sections and files resolve.
+    for _, d in docs:
+        for s in as_list(d.get("sources")):
+            new["sources"][s.get("key")] = s
+        for x in as_list(d.get("places")):
+            new["places"][x.get("key")] = x
+        for x in as_list(d.get("people")):
+            new["people"][x.get("key")] = x
+        for x in as_list(d.get("events")):
+            new["events"][x.get("key")] = x
+
+    def known(kind, key):
+        table = {"person": "people", "place": "places", "event": "events", "source": "sources"}[kind]
+        return key in getattr(world, table) or key in new[table]
+
+    def ref(kind, key, where):
+        if key is None:
+            p.errors.append(f"{where}: missing {kind}")
+            return False
+        if not known(kind, key):
+            p.errors.append(f"{where}: unknown {kind} `{key}` (not in the database or this file)")
+            return False
+        return True
+
+    def check_sources(item, where, require=True):
+        srcs = as_list(item.get("sources"))
+        for s in srcs:
+            ref("source", s, where)
+        if require and not srcs:
+            p.warnings.append(f"{where}: no source given")
+
+    for fname, d in docs:
+        if not isinstance(d.get("batch"), dict) or not d["batch"].get("title"):
+            p.errors.append(f"{fname}: `batch.title` is required")
+
+        for s in as_list(d.get("sources")):
+            if not s.get("key") or not s.get("title"):
+                p.errors.append(f"{fname}: every source needs `key` and `title`")
+                continue
+            (p.updates if s["key"] in world.sources else p.adds)["sources"].append(s["key"])
+
+        for x in as_list(d.get("places")):
+            k = x.get("key")
+            if not k:
+                p.errors.append(f"{fname}: a place is missing `key`"); continue
+            if k in world.places:
+                p.updates["places"].append(k)
+            else:
+                if not x.get("name"):
+                    p.errors.append(f"place `{k}`: new places need `name`")
+                p.adds["places"].append(k)
+                if x.get("lat") is None or x.get("lng") is None:
+                    p.warnings.append(f"place `{k}`: no coordinates, so it won't appear on the map")
+            check_sources(x, f"place `{k}`", require=k not in world.places)
+
+        for x in as_list(d.get("people")):
+            k = x.get("key")
+            if not k:
+                p.errors.append(f"{fname}: a person is missing `key`"); continue
+            by, _ = parse_when(x.get("born")); dy, _ = parse_when(x.get("died"))
+            if by and dy and dy < by:
+                p.errors.append(f"person `{k}`: died ({dy}) before born ({by})")
+            if k in world.people:
+                p.updates["people"].append(k)
+            else:
+                if not x.get("name") or not x.get("type"):
+                    p.errors.append(f"person `{k}`: new people need `name` and `type`")
+                p.adds["people"].append(k)
+                nm = (x.get("name") or "").lower()
+                for e in list(world.people.values()) + world.unkeyed_people:
+                    if e["name"].lower() == nm and (by is None or e.get("birth_year") is None or abs(e["birth_year"] - by) <= 5):
+                        p.warnings.append(f"person `{k}`: possible duplicate of existing “{e['name']}” ({e.get('key') or 'no key'})")
+            pr = x.get("prominence")
+            if pr is not None and pr not in (1, 2, 3, 4, 5):
+                p.errors.append(f"person `{k}`: prominence must be 1–5")
+            check_sources(x, f"person `{k}`", require=k not in world.people)
+
+        for x in as_list(d.get("events")):
+            k = x.get("key")
+            if not k:
+                p.errors.append(f"{fname}: an event is missing `key`"); continue
+            if k in world.events:
+                p.updates["events"].append(k)
+            else:
+                if not x.get("name") or not x.get("type"):
+                    p.errors.append(f"event `{k}`: new events need `name` and `type`")
+                if x.get("date") is None and x.get("year") is None:
+                    p.warnings.append(f"event `{k}`: no date, so it won't appear on the timeline")
+                p.adds["events"].append(k)
+            if x.get("place"):
+                ref("place", x["place"], f"event `{k}`")
+            for pe in as_list(x.get("people")):
+                ref("person", pe.get("person"), f"event `{k}` people")
+            check_sources(x, f"event `{k}`", require=k not in world.events)
+
+        for x in as_list(d.get("links")):
+            kind = next((kk for kk in LINK_KINDS if kk in x), None)
+            if not kind:
+                p.errors.append(f"link {x}: must start with parent, spouse, patron or teacher"); continue
+            a_key, b_key, _ = LINK_KINDS[kind]
+            a, b = x.get(a_key), x.get(b_key)
+            ok = ref("person", a, f"{kind} link") & ref("person", b, f"{kind} link")
+            if ok:
+                (p.updates if find_rel(world, a, b, LINK_KINDS[kind][2]) else p.adds)["links"].append(f"{kind}: {a} → {b}")
+
+        for x in as_list(d.get("moments")):
+            ok = ref("person", x.get("person"), "moment") & ref("place", x.get("place"), "moment")
+            if not x.get("role"):
+                p.errors.append(f"moment {x}: needs `role`")
+            if ok:
+                label = f"{x.get('person')} {x.get('role')} at {x.get('place')} ({x.get('year', '?')})"
+                pe, pl = world.people.get(x["person"]), world.places.get(x["place"])
+                exists = pe and pl and any(m["entity_id"] == pe["id"] and m["place_id"] == pl["id"] and m["role"] == x.get("role") for m in world.moments)
+                (p.updates if exists else p.adds)["moments"].append(label)
+
+        for x in as_list(d.get("log")):
+            k = x.get("key")
+            if not k or not x.get("title"):
+                p.errors.append(f"{fname}: every log entry needs `key` and `title`"); continue
+            (p.updates if k in world.logs else p.adds)["log"].append(k)
+            for a in as_list(x.get("about")):
+                kind = next((kk for kk in ("person", "place", "event") if kk in a), None)
+                if kind:
+                    ref(kind, a[kind], f"log `{k}`")
+    return p
+
+
+def find_rel(world, a_key, b_key, rel_type):
+    a, b = world.people.get(a_key), world.people.get(b_key)
+    if not a or not b:
+        return None
+    return next((r for r in world.rels if r["source_id"] == a["id"] and r["target_id"] == b["id"] and r["rel_type"] == rel_type), None)
+
+
+def render(plan: Plan, files) -> str:
+    out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
+    labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events",
+              "links": "Relationships", "moments": "Life moments", "log": "Learning log (private)"}
+    total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
+    out.append(f"**{total_add} to add, {total_upd} to update.** Nothing is deleted.")
+    out.append("")
+    if plan.errors:
+        out += ["### ❌ Must fix before applying", *[f"- {e}" for e in plan.errors], ""]
+    if plan.warnings:
+        out += ["### ⚠️ Worth a look", *[f"- {w}" for w in plan.warnings], ""]
+    for s in SECTIONS:
+        a, u = plan.adds[s], plan.updates[s]
+        if not a and not u:
+            continue
+        out.append(f"### {labels[s]}")
+        out += [f"- ➕ {x}" for x in a]
+        out += [f"- ✏️ {x} (update)" for x in u]
+        out.append("")
+    if not plan.errors:
+        out.append("✅ Ready. Merging this pull request applies it to the database.")
+    return "\n".join(out)
+
+
+# --------------------------------------------------------------------------- applying
+
+def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
+    db = world.db
+
+    def upsert_keyed(table, index, key, row):
+        row = {k: v for k, v in row.items() if v is not None}
+        if key in index:
+            if row:
+                db.update(table, {"key": key}, row)
+            log(f"updated {table} {key}")
+        else:
+            created = db.insert(table, {"key": key, **row})
+            index[key] = created
+            log(f"added {table} {key}")
+        return index[key]
+
+    def map_fields(x, mapping):
+        return {col: x[k] for k, col in mapping.items() if k in x}
+
+    def link_sources(record_type, record_key, srcs):
+        for s in as_list(srcs):
+            db.insert("source_links", {"source_id": world.sources[s]["id"], "record_type": record_type, "record_key": record_key},
+                      ignore_duplicates_on="source_id,record_type,record_key")
+
+    for _, d in docs:
+        for s in as_list(d.get("sources")):
+            upsert_keyed("sources", world.sources, s["key"], {"title": s.get("title"), "url": s.get("url"), "author": s.get("author"), "note": s.get("note")})
+    for _, d in docs:
+        for x in as_list(d.get("places")):
+            upsert_keyed("places", world.places, x["key"], map_fields(x, PLACE_FIELDS))
+    for _, d in docs:
+        for x in as_list(d.get("people")):
+            row = map_fields(x, PEOPLE_FIELDS)
+            if "born" in x:
+                row["birth_year"], row["birth_date"] = parse_when(x["born"])
+            if "died" in x:
+                row["death_year"], row["death_date"] = parse_when(x["died"])
+            upsert_keyed("entities", world.people, x["key"], row)
+    for _, d in docs:
+        for x in as_list(d.get("events")):
+            row = map_fields(x, EVENT_FIELDS)
+            if "date" in x:
+                row["start_year"], row["start_date"] = parse_when(x["date"])
+            elif "year" in x:
+                row["start_year"], _ = parse_when(x["year"])
+            if x.get("place"):
+                pl = world.places[x["place"]]
+                row["place_id"] = pl["id"]
+                if x["key"] not in world.events:
+                    row.setdefault("location", pl.get("name"))
+            if x["key"] not in world.events and "visitable_today" not in row and x.get("place"):
+                row["visitable_today"] = bool(world.db.select("places", "visitable_today", id=world.places[x["place"]]["id"])[0].get("visitable_today"))
+            ev = upsert_keyed("events", world.events, x["key"], row)
+            for pe in as_list(x.get("people")):
+                pid = world.people[pe["person"]]["id"]
+                if not any(r["event_id"] == ev["id"] and r["entity_id"] == pid for r in world.event_people):
+                    world.event_people.append(db.insert("event_people", {"event_id": ev["id"], "entity_id": pid, "role": pe.get("role")}))
+                    log(f"linked {pe['person']} to {x['key']}")
+    for _, d in docs:
+        for x in as_list(d.get("links")):
+            kind = next(kk for kk in LINK_KINDS if kk in x)
+            a_key, b_key, rel_type = LINK_KINDS[kind]
+            a, b = world.people[x[a_key]], world.people[x[b_key]]
+            years = {}
+            if kind == "spouse" and "year" in x:
+                years["start_year"] = x["year"]
+            if "from" in x:
+                years["start_year"] = x["from"]
+            if "to" in x and kind in ("patron", "teacher"):
+                years["end_year"] = x["to"]
+            existing = find_rel(world, x[a_key], x[b_key], rel_type)
+            if existing:
+                if years:
+                    db.update("relationships", {"id": existing["id"]}, years)
+            else:
+                world.rels.append(db.insert("relationships", {"source_id": a["id"], "target_id": b["id"], "rel_type": rel_type, **years}))
+                log(f"added {kind} link {x[a_key]} → {x[b_key]}")
+            link_sources("relationship", f"{kind}:{x[a_key]}>{x[b_key]}", x.get("sources"))
+    for _, d in docs:
+        for x in as_list(d.get("moments")):
+            pid, plid = world.people[x["person"]]["id"], world.places[x["place"]]["id"]
+            existing = next((m for m in world.moments if m["entity_id"] == pid and m["place_id"] == plid and m["role"] == x["role"]), None)
+            if existing:
+                if x.get("year") is not None:
+                    db.update("person_places", {"id": existing["id"]}, {"year": x["year"]})
+            else:
+                world.moments.append(db.insert("person_places", {"entity_id": pid, "place_id": plid, "role": x["role"], "year": x.get("year")}))
+                log(f"added moment {x['person']} {x['role']} at {x['place']}")
+            link_sources("moment", f"{x['person']}:{x['role']}:{x['place']}", x.get("sources"))
+    for _, d in docs:
+        for kind, sect in (("place", "places"), ("person", "people"), ("event", "events")):
+            for x in as_list(d.get(sect)):
+                link_sources(kind, x["key"], x.get("sources"))
+    for _, d in docs:
+        for x in as_list(d.get("log")):
+            row = map_fields(x, LOG_FIELDS)
+            if "learned_on" in row:
+                row["learned_on"] = parse_when(row["learned_on"])[1] or f"{row['learned_on']}-01-01"
+            entry = upsert_keyed("learning_log", world.logs, x["key"], row)
+            for a in as_list(x.get("about")):
+                kind = next((kk for kk in ("person", "place", "event") if kk in a), None)
+                if kind:
+                    db.insert("learning_log_items", {"log_id": entry["id"], "record_type": kind, "record_key": a[kind]},
+                              ignore_duplicates_on="log_id,record_type,record_key")
+
+
+# --------------------------------------------------------------------------- main
+
+def load(files):
+    docs = []
+    for f in files:
+        with open(f, encoding="utf-8") as fh:
+            d = yaml.safe_load(fh) or {}
+        if not isinstance(d, dict):
+            raise SystemExit(f"{f}: not a valid intake file")
+        docs.append((f, d))
+    return docs
+
+
+def main(argv):
+    if len(argv) < 2 or argv[0] not in ("plan", "apply"):
+        print(__doc__); return 2
+    cmd, files = argv[0], [f for f in argv[1:] if f.strip()]
+    if not files:
+        print("No intake files to process."); return 0
+    url, key = os.environ.get("SUPABASE_URL"), os.environ.get("SUPABASE_SECRET_KEY")
+    if not url or not key:
+        raise SystemExit("Set SUPABASE_URL and SUPABASE_SECRET_KEY")
+    docs = load(files)
+    world = World(RestDB(url, key))
+    plan = plan_files(world, docs)
+    if cmd == "plan":
+        print(render(plan, files))
+        return 1 if plan.errors else 0
+    if plan.errors:
+        print(render(plan, files)); print("\nNot applied: fix the errors above first.")
+        return 1
+    apply_files(world, docs)
+    print("Applied:", ", ".join(files))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main(sys.argv[1:]))

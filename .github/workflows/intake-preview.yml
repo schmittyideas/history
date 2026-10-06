@@ -1,0 +1,47 @@
+name: Intake preview
+
+# Runs when a pull request adds or changes an intake file. Posts the preview as a comment.
+on:
+  pull_request:
+    paths:
+      - "inbox/*.yaml"
+      - "inbox/*.yml"
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml requests
+      - name: Find intake files in this pull request
+        run: |
+          git diff --name-only --diff-filter=AM "origin/${{ github.base_ref }}...HEAD" -- 'inbox/*.yaml' 'inbox/*.yml' > files.txt
+          cat files.txt
+      - name: Build preview
+        id: plan
+        env:
+          SUPABASE_URL: https://alhvzdvabugmkeqmvmiz.supabase.co
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          set +e
+          python tools/intake.py plan $(cat files.txt) > preview.md 2>&1
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+          cat preview.md
+      - name: Post preview on the pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr comment "${{ github.event.pull_request.number }}" --body-file preview.md --edit-last \
+            || gh pr comment "${{ github.event.pull_request.number }}" --body-file preview.md
+      - name: Fail the check if the file has errors
+        if: steps.plan.outputs.status != '0'
+        run: exit 1
