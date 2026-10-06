@@ -1,0 +1,413 @@
+batch:
+  title: Innovations that came out of World War II
+  requested: "Add the History Facts article '7 Innovations That Came Out of World War II'"
+  date: 2026-10-06
+
+sources:
+  - {key: hf-ww2-innovations, title: "7 Innovations That Came Out of World War II (History Facts, Tony Dunnell, 14 May 2026)", url: "https://historyfacts.com/science-industry/article/7-innovations-that-came-out-of-world-war-ii/"}
+  - {key: wp-vesta-stoudt,     title: "Vesta Stoudt (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Vesta_Stoudt"}
+  - {key: wp-heinrich-hertz,   title: "Heinrich Hertz (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Heinrich_Hertz"}
+  - {key: wp-cavity-magnetron, title: "Cavity magnetron (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Cavity_magnetron"}
+  - {key: wp-frank-whittle,    title: "Frank Whittle (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Frank_Whittle"}
+  - {key: wp-heinkel-he-178,   title: "Heinkel He 178 (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Heinkel_He_178"}
+  - {key: wp-gloster-e28-39,   title: "Gloster E.28/39 (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Gloster_E.28/39"}
+  - {key: wp-harry-coover,     title: "Harry Coover (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Harry_Coover"}
+  - {key: wp-cyanoacrylate,    title: "Cyanoacrylate (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Cyanoacrylate"}
+  - {key: wp-colossus,         title: "Colossus computer (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Colossus_computer"}
+  - {key: wp-eniac,            title: "ENIAC (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/ENIAC"}
+  - {key: wp-slinky,           title: "Slinky (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Slinky"}
+  - {key: wp-betty-james,      title: "Betty James (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Betty_James"}
+  - {key: wp-richard-t-james,  title: "Richard T. James (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Richard_T._James"}
+  - {key: wp-alexander-fleming, title: "Alexander Fleming (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Alexander_Fleming"}
+  - {key: wp-penicillin,       title: "Penicillin (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Penicillin"}
+
+people:
+  - key: vesta-stoudt
+    name: Vesta Stoudt
+    type: Scholar
+    roles: [inventor]
+    born: 1891-04-13
+    died: 1966-05-09
+    realm: United States
+    prominence: 2
+    note: Ordnance-plant worker with two sons in the Navy; her idea for a waterproof cloth tape on ammunition boxes became duct tape.
+    sources: [wp-vesta-stoudt, hf-ww2-innovations]
+
+  - key: heinrich-hertz
+    name: Heinrich Hertz
+    type: Scholar
+    roles: [physicist]
+    born: 1857-02-22
+    died: 1894-01-01
+    realm: Germany
+    prominence: 4
+    note: Proved electromagnetic waves exist and showed they reflect off objects, the principle behind radar.
+    sources: [wp-heinrich-hertz, hf-ww2-innovations]
+
+  - key: frank-whittle
+    name: Frank Whittle
+    type: Scholar
+    roles: [engineer, inventor]
+    born: 1907-06-01
+    died: 1996-08-08
+    realm: United Kingdom
+    prominence: 4
+    note: RAF officer who conceived the turbojet in the late 1920s (patent 1930), was ridiculed for it, and built Britain's first jet engine.
+    sources: [wp-frank-whittle, hf-ww2-innovations]
+
+  - key: harry-coover
+    name: Harry Coover
+    type: Scholar
+    roles: [chemist, inventor]
+    born: 1917-03-06
+    died: 2011-03-26
+    realm: United States
+    prominence: 2
+    note: Discovered cyanoacrylate by accident in 1942 while working on clear plastic gun sights; saw its use as an adhesive in 1951. Super glue.
+    sources: [wp-harry-coover, wp-cyanoacrylate, hf-ww2-innovations]
+
+  # Wikipedia gives 1918; some sources say 1914.
+  - key: richard-t-james
+    name: Richard T. James
+    type: Scholar
+    roles: [engineer, inventor]
+    born: 1918-03-27
+    died: 1974-07-13
+    realm: United States
+    prominence: 2
+    note: Naval engineer who invented the Slinky in 1943. Left for Bolivia in 1960 to join Wycliffe Bible Translators and died there.
+    sources: [wp-richard-t-james, wp-slinky, hf-ww2-innovations]
+
+  - key: betty-james
+    name: Betty James
+    type: Scholar
+    roles: [entrepreneur]
+    born: 1918-02-13
+    died: 2008-11-20
+    realm: United States
+    prominence: 2
+    note: Named the Slinky (from the dictionary) and co-founded James Industries; ran it alone for nearly 40 years after Richard left in 1960.
+    sources: [wp-betty-james, hf-ww2-innovations]
+
+  - key: alexander-fleming
+    name: Alexander Fleming
+    type: Scholar
+    roles: [bacteriologist]
+    born: 1881-08-06
+    died: 1955-03-11
+    realm: United Kingdom
+    prominence: 4
+    note: Scottish bacteriologist who discovered penicillin in 1928. Buried in St Paul's Cathedral.
+    sources: [wp-alexander-fleming, wp-penicillin]
+
+places:
+  - key: green-river-ordnance-plant
+    name: Green River Ordnance Plant
+    kind: factory
+    region: Illinois
+    country: United States
+    lat: 41.75      # approximate: between Amboy and Dixon
+    lng: -89.36
+    visitable: false
+    note: Where Vesta Stoudt packed ammunition boxes.
+    sources: [wp-vesta-stoudt]
+
+  - key: university-of-birmingham
+    name: University of Birmingham
+    kind: university
+    region: West Midlands
+    country: England
+    lat: 52.4508
+    lng: -1.9305
+    visitable: true
+    visit_site: Edgbaston campus
+    sources: [wp-cavity-magnetron]
+
+  - key: rostock-marienehe
+    name: Heinkel airfield, Rostock-Marienehe
+    historical_name: Marienehe
+    kind: airfield
+    region: Mecklenburg-Vorpommern
+    country: Germany
+    lat: 54.115     # approximate
+    lng: 12.08
+    visitable: false
+    sources: [wp-heinkel-he-178]
+
+  - key: raf-cranwell
+    name: RAF Cranwell
+    kind: airfield
+    region: Lincolnshire
+    country: England
+    lat: 53.0306
+    lng: -0.4833
+    visitable: false
+    note: Whittle trained here and wrote the thesis that led to the jet engine; the E.28/39 first flew here.
+    sources: [wp-gloster-e28-39, wp-frank-whittle]
+
+  - key: bletchley-park
+    name: Bletchley Park
+    kind: estate
+    region: Buckinghamshire
+    country: England
+    lat: 51.9977
+    lng: -0.7407
+    visitable: true
+    visit_site: Bletchley Park museum; a working Colossus rebuild is at the National Museum of Computing on the same site
+    sources: [wp-colossus]
+
+  - key: moore-school-penn
+    name: Moore School of Electrical Engineering, University of Pennsylvania
+    kind: university
+    region: Pennsylvania
+    country: United States
+    lat: 39.9522
+    lng: -75.1906
+    sources: [wp-eniac]
+
+  - key: cramp-shipyard
+    name: William Cramp & Sons shipyard
+    kind: shipyard
+    region: Pennsylvania
+    country: United States
+    lat: 39.970     # approximate: Richmond, Philadelphia, on the Delaware
+    lng: -75.120
+    visitable: false
+    sources: [wp-slinky, hf-ww2-innovations]
+
+  - key: gimbels-philadelphia
+    name: Gimbels department store, Philadelphia
+    kind: shop
+    region: Pennsylvania
+    country: United States
+    lat: 39.9515    # approximate: Market Street at 8th–9th
+    lng: -75.1545
+    visitable: false
+    note: Where the Slinky was first sold. The store has since closed.
+    sources: [wp-slinky]
+
+  - key: st-marys-hospital-london
+    name: St Mary's Hospital, Paddington
+    kind: hospital
+    region: London
+    country: England
+    lat: 51.5175
+    lng: -0.1741
+    visitable: true
+    visit_site: Alexander Fleming Laboratory Museum (his restored lab)
+    sources: [wp-penicillin]
+
+events:
+  - key: hertz-radio-reflection
+    name: Hertz shows radio waves reflect
+    type: Discovery
+    year: 1886
+    end_year: 1889
+    prominence: 2
+    note: The principle that radar would use 50 years later.
+    people:
+      - {person: heinrich-hertz, role: physicist}
+    sources: [wp-heinrich-hertz, hf-ww2-innovations]
+
+  - key: whittle-engine-ground-run
+    name: First run of Whittle's jet engine
+    type: Invention
+    date: 1937-04-12
+    prominence: 2
+    note: The first practical jet engine ran on the ground; the war then brought Whittle far more funding.
+    people:
+      - {person: frank-whittle, role: inventor}
+    sources: [wp-frank-whittle, hf-ww2-innovations]
+
+  - key: heinkel-he-178-first-flight
+    name: First jet-powered flight (Heinkel He 178)
+    type: Flight
+    date: 1939-08-27
+    place: rostock-marienehe
+    prominence: 3
+    note: Flown by Erich Warsitz on Hans von Ohain's engine, five days before Germany invaded Poland. Lasted about six minutes.
+    sources: [wp-heinkel-he-178, hf-ww2-innovations]
+
+  - key: cavity-magnetron-1940
+    name: Cavity magnetron invented
+    type: Invention
+    year: 1940
+    place: university-of-birmingham
+    prominence: 3
+    note: John Randall and Harry Boot's device made radar compact and powerful, and later made microwave ovens possible.
+    sources: [wp-cavity-magnetron, hf-ww2-innovations]
+
+  - key: gloster-e28-39-first-flight
+    name: First British jet flight (Gloster E.28/39)
+    type: Flight
+    date: 1941-05-15
+    place: raf-cranwell
+    prominence: 3
+    note: Powered by Whittle's W.1 engine, flown by Gerry Sayer. It reached about 350 mph on its first flights.
+    people:
+      - {person: frank-whittle, role: engine designer}
+    sources: [wp-gloster-e28-39, wp-frank-whittle]
+
+  - key: cyanoacrylate-discovered
+    name: Cyanoacrylate discovered
+    type: Discovery
+    year: 1942
+    prominence: 1
+    note: Found while making clear plastic gun sights; set aside as too sticky to be useful.
+    people:
+      - {person: harry-coover, role: chemist}
+    sources: [wp-harry-coover, wp-cyanoacrylate, hf-ww2-innovations]
+
+  - key: duct-tape-letter
+    name: Vesta Stoudt's duct tape letter to Roosevelt
+    type: Invention
+    date: 1943-02-10
+    place: green-river-ordnance-plant
+    prominence: 2
+    note: >-
+      She proposed waterproof cloth tape after seeing paper tabs tear off ammunition boxes. The War Production Board
+      approved it on 26 March 1943 as "of exceptional merit"; Revolite (Johnson & Johnson) made it.
+    people:
+      - {person: vesta-stoudt, role: inventor}
+    sources: [wp-vesta-stoudt, hf-ww2-innovations]
+
+  - key: slinky-invented
+    name: Slinky invented
+    type: Invention
+    year: 1943
+    place: cramp-shipyard
+    prominence: 2
+    note: A spring meant to steady ship instruments fell off a shelf and "walked". Betty named it in 1944.
+    people:
+      - {person: richard-t-james, role: inventor}
+      - {person: betty-james, role: named it}
+    sources: [wp-slinky, wp-betty-james, hf-ww2-innovations]
+
+  - key: colossus-first-message
+    name: Colossus breaks its first message
+    type: Invention
+    date: 1944-02-05
+    place: bletchley-park
+    prominence: 3
+    note: >-
+      Tommy Flowers's electronic code-breaking machine, built against the Lorenz cipher. Mark 2 began work on
+      1 June 1944, just before D-Day; ten were running by VE Day.
+    sources: [wp-colossus, hf-ww2-innovations]
+
+  - key: penicillin-for-d-day
+    name: 2.3 million doses of penicillin ready for D-Day
+    type: Production
+    year: 1944
+    prominence: 2
+    note: >-
+      Mass production developed by the US and Britain together. In March 1942, treating one patient, Anne Miller,
+      had used half the US supply.
+    sources: [wp-penicillin, hf-ww2-innovations]
+
+  - key: jets-enter-combat
+    name: Jet aircraft enter combat (Me 262 and Gloster Meteor)
+    type: Military
+    year: 1944
+    prominence: 2
+    sources: [hf-ww2-innovations]
+
+  - key: slinky-first-sold
+    name: Slinky first sold at Gimbels
+    type: Product launch
+    date: 1945-11-27
+    place: gimbels-philadelphia
+    prominence: 1
+    note: 400 sold in 90 minutes at $1 each. About 300 million sold in the first 60 years.
+    people:
+      - {person: richard-t-james, role: inventor}
+      - {person: betty-james, role: co-founder}
+    sources: [wp-slinky]
+
+  - key: eniac-unveiled
+    name: ENIAC unveiled
+    type: Invention
+    date: 1946-02-15
+    place: moore-school-penn
+    prominence: 3
+    note: >-
+      First programmable, general-purpose electronic digital computer, by John Mauchly and J. Presper Eckert. Completed
+      in 1945, built for artillery firing tables; its first real program was for hydrogen bomb research.
+    sources: [wp-eniac, hf-ww2-innovations]
+
+  - key: super-glue-1951
+    name: Cyanoacrylate rediscovered as an adhesive (super glue)
+    type: Invention
+    year: 1951
+    prominence: 2
+    note: Coover's team saw that it bonded instantly without heat or pressure. Sold from 1958 as Eastman 910, later "Super Glue".
+    people:
+      - {person: harry-coover, role: inventor}
+    sources: [wp-harry-coover, hf-ww2-innovations]
+
+  - key: penicillin-discovered
+    name: Penicillin discovered
+    type: Discovery
+    date: 1928-09-03
+    place: st-marys-hospital-london
+    prominence: 4
+    note: A mould contaminating Fleming's cultures killed the bacteria around it. Florey and Chain's Oxford team purified it in 1940.
+    people:
+      - {person: alexander-fleming, role: discoverer}
+    sources: [wp-penicillin, wp-alexander-fleming]
+
+links:
+  - {spouse: richard-t-james, to: betty-james}
+
+moments:
+  - {person: vesta-stoudt, role: worked, place: green-river-ordnance-plant, year: 1943}
+  - {person: richard-t-james, role: worked, place: cramp-shipyard, year: 1943}
+  - {person: frank-whittle, role: trained, place: raf-cranwell}
+
+log:
+  - key: 2026-10-06-ww2-innovations
+    title: 7 innovations that came out of World War II
+    learned_on: 2026-10-06
+    medium: article
+    source_title: History Facts
+    source_detail: "\"7 Innovations That Came Out of World War II\" by Tony Dunnell, 14 May 2026"
+    url: https://historyfacts.com/science-industry/article/7-innovations-that-came-out-of-world-war-ii/
+    notes: >-
+      Duct tape, radar, jet engines, super glue, electronic computers, the Slinky and mass-produced penicillin. The
+      article's main point: wars don't raise the overall rate of invention. It drops when war breaks out, then surges.
+    details:
+      corrections:
+        - "Gloster E.28/39: the article says 370 mph and faster than any propeller plane. Wikipedia says about 350 mph on early flights, slower than a Spitfire. Left out."
+        - "Slinky sales: the article says 250 million by 2000; Wikipedia says about 300 million in the first 60 years."
+        - "Coover in 1942: the article and his Wikipedia page say Eastman Kodak; the Cyanoacrylate page says B.F. Goodrich. Unresolved, so no place recorded."
+        - "Richard T. James born 1918 per Wikipedia; some sources say 1914."
+      follow_up:
+        - "Add the people behind the machines: Tommy Flowers (Colossus), Mauchly and Eckert (ENIAC), Randall and Boot (magnetron), Hans von Ohain (He 178), Florey and Chain (penicillin)"
+        - "Add Chain Home, Britain's prewar radar network"
+        - "Add D-Day (6 June 1944) as an event"
+        - "Visit Bletchley Park and the National Museum of Computing"
+        - "Visit the Alexander Fleming Laboratory Museum, London"
+    about:
+      - {person: vesta-stoudt}
+      - {person: heinrich-hertz}
+      - {person: frank-whittle}
+      - {person: harry-coover}
+      - {person: richard-t-james}
+      - {person: betty-james}
+      - {person: alexander-fleming}
+      - {event: duct-tape-letter}
+      - {event: hertz-radio-reflection}
+      - {event: cavity-magnetron-1940}
+      - {event: whittle-engine-ground-run}
+      - {event: heinkel-he-178-first-flight}
+      - {event: gloster-e28-39-first-flight}
+      - {event: jets-enter-combat}
+      - {event: cyanoacrylate-discovered}
+      - {event: super-glue-1951}
+      - {event: colossus-first-message}
+      - {event: eniac-unveiled}
+      - {event: slinky-invented}
+      - {event: slinky-first-sold}
+      - {event: penicillin-discovered}
+      - {event: penicillin-for-d-day}
+      - {place: bletchley-park}
+      - {place: st-marys-hospital-london}
