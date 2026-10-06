@@ -92,6 +92,7 @@ Where sources disagree. Record both sides rather than silently picking one, so a
 | `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}` |
 | `field` | Which field, if one: `born`, `died`, `date`, `place`, … |
 | `claims` | What each side says: list of `{value, sources, note}` |
+| `note` | Context while it's open, e.g. which value the record uses for now |
 | `status` | `open` (default) or `resolved` |
 | `resolution` | What the database uses and why. Expected when resolved |
 

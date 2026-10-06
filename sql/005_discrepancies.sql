@@ -9,6 +9,7 @@ create table discrepancies (
   field text,                          -- which field, if one: born, died, date, place, ...
   claims jsonb not null default '[]',  -- [{"value": "...", "sources": ["source-key"], "note": "..."}]
   status text not null default 'open' check (status in ('open','resolved')),
+  note text,                           -- context while it's open, e.g. which value the record uses for now
   resolution text,                     -- what the database uses and why
   created_at timestamp default now(),
   updated_at timestamp default now()
