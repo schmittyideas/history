@@ -1,0 +1,149 @@
+batch:
+  title: The White Ship and the succession crisis
+  requested: "Add Henry I's children, the White Ship, and King Stephen"
+  date: 2026-10-05
+
+sources:
+  - {key: wp-white-ship,      title: "White Ship (Wikipedia)",                url: "https://en.wikipedia.org/wiki/White_Ship"}
+  - {key: wp-william-adelin,  title: "William Adelin (Wikipedia)",            url: "https://en.wikipedia.org/wiki/William_Adelin"}
+  - {key: wp-empress-matilda, title: "Empress Matilda (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Empress_Matilda"}
+  - {key: wp-king-stephen,    title: "Stephen, King of England (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Stephen,_King_of_England"}
+  - {key: wp-geoffrey,        title: "Geoffrey Plantagenet, Count of Anjou (Wikipedia)", url: "https://en.wikipedia.org/wiki/Geoffrey_Plantagenet,_Count_of_Anjou"}
+  - {key: wp-anarchy,         title: "The Anarchy (Wikipedia)",               url: "https://en.wikipedia.org/wiki/The_Anarchy"}
+  - {key: wp-henry-i,         title: "Henry I of England (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Henry_I_of_England"}
+
+people:
+  - key: william-adelin
+    name: William Adelin
+    type: Royalty
+    born: 1103
+    died: 1120-11-25
+    house: Normandy
+    realm: England
+    prominence: 3
+    note: Henry I's only legitimate son and heir; drowned when the White Ship sank.
+    sources: [wp-william-adelin, wp-white-ship]
+
+  - key: empress-matilda
+    name: Empress Matilda
+    type: Royalty
+    born: 1102
+    born_estimated: true
+    died: 1167-09-10
+    house: Normandy
+    realm: England
+    prominence: 4
+    note: Henry I's named heir after the White Ship; fought Stephen for the crown. Mother of Henry II. First married Emperor Henry V (not yet added).
+    sources: [wp-empress-matilda]
+
+  - key: geoffrey-plantagenet
+    name: Geoffrey Plantagenet
+    type: Nobility
+    born: 1113-08-24
+    died: 1151-09-07
+    house: Anjou
+    realm: Anjou
+    prominence: 3
+    note: Count of Anjou; Matilda's second husband; father of Henry II.
+    sources: [wp-geoffrey]
+
+  # Not the same person as stephen-of-blois (his father, the Count of Blois).
+  # Both are often called "Stephen of Blois", which is why records use keys.
+  - key: king-stephen
+    name: Stephen, King of England
+    type: Royalty
+    born: 1092
+    born_estimated: true
+    died: 1154-10-25
+    house: Blois
+    realm: England
+    prominence: 4
+    note: Adela's son. Seized the crown in 1135 against Matilda's claim, starting the Anarchy.
+    sources: [wp-king-stephen]
+
+  # Update to an existing record: only the fields listed change.
+  - key: henry-i-of-england
+    prominence: 5
+    sources: [wp-henry-i]
+
+places:
+  - key: barfleur
+    name: Barfleur
+    kind: harbour
+    region: Normandy
+    country: France
+    lat: 49.6714
+    lng: -1.2647
+    visitable: true
+    visit_site: Barfleur harbour (the wreck lies off the point, on the Raz de Barfleur)
+    sources: [wp-white-ship]
+
+  - key: lyons-la-foret
+    name: Lyons-la-Forêt
+    historical_name: Saint-Denis-en-Lyons
+    kind: town
+    region: Normandy
+    country: France
+    lat: 49.3986
+    lng: 1.4772
+    visitable: true
+    visit_site: Lyons-la-Forêt village and forest
+    sources: [wp-henry-i]
+
+  - key: faversham-abbey
+    name: Faversham Abbey
+    kind: abbey
+    region: Kent
+    country: England
+    lat: 51.3180
+    lng: 0.8970
+    visitable: false
+    note: Founded by Stephen; almost nothing survives above ground.
+    sources: [wp-king-stephen]
+
+events:
+  - key: white-ship-1120
+    name: Sinking of the White Ship
+    type: Shipwreck
+    date: 1120-11-25
+    place: barfleur
+    prominence: 4
+    note: Left Henry I without a legitimate son and set up the succession crisis.
+    people:
+      - {person: william-adelin, role: drowned}
+    sources: [wp-white-ship]
+
+  - key: coronation-of-stephen
+    name: Coronation of Stephen
+    type: Coronation
+    date: 1135-12-22
+    place: westminster-abbey
+    prominence: 3
+    people:
+      - {person: king-stephen, role: crowned}
+    sources: [wp-king-stephen]
+
+  - key: the-anarchy
+    name: The Anarchy
+    type: Civil war
+    year: 1135
+    end_year: 1153
+    prominence: 4
+    note: Civil war between Stephen and Matilda; ended when Stephen named Matilda's son Henry as his heir.
+    people:
+      - {person: king-stephen, role: claimant}
+      - {person: empress-matilda, role: claimant}
+    sources: [wp-anarchy]
+
+links:
+  - {parent: henry-i-of-england,  child: william-adelin}
+  - {parent: matilda-of-scotland, child: william-adelin}
+  - {parent: henry-i-of-england,  child: empress-matilda}
+  - {parent: matilda-of-scotland, child: empress-matilda}
+  - {parent: adela-of-normandy,   child: king-stephen}
+  - {parent: stephen-of-blois,    child: king-stephen}
+  - {spouse: empress-matilda, to: geoffrey-plantagenet, year: 1128}
+
+moments:
+  - {person: henry-i-of-england, role: died,   place: lyons-la-foret,  year: 1135}
+  - {person: king-stephen,       role: buried, place: faversham-abbey, year: 1154}
