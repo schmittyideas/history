@@ -477,20 +477,35 @@ function render() {
     el("text", { x: LEFT - 10, y: y(yr) + 4, "text-anchor": "end", class: "yr" }, svg).textContent = fmtYear(yr);
   }
 
-  // Events lane
+  // Events lane. Prominence is a star rating: 5 = always labelled, then 4, 3, 2, 1 while labels fit
+  // without overlapping (no rating counts as 3). An event left without room keeps its line and gets a
+  // small marker, with its name as a tooltip, and stays clickable.
   if (evShown.length) {
     if (Z.names !== "none") el("text", { x: 8, y: TOP - 10, class: "dates" }, svg).textContent = "EVENTS";
-    let lastY = -Infinity;
+    const gapNeeded = Z.names === "full" ? 30 : 16;
+    const stars = e => e.prominence ?? 3;
+    const taken = [], labelY = {};
+    const fits = ly => taken.every(t => Math.abs(t - ly) >= gapNeeded);
+    if (Z.names !== "none") evShown.slice()
+      .sort((a, b) => stars(b) - stars(a) || a.start_year - b.start_year || (a.start_date || "").localeCompare(b.start_date || ""))
+      .forEach(e => {
+        let ly = y(e.start_year);
+        if (!fits(ly)) {
+          if (stars(e) < 5) return;          // no room: marker only
+          while (!fits(ly)) ly += 2;         // a 5 always gets a label: nudge it to the next free spot
+        }
+        taken.push(ly); labelY[e.id] = ly;
+      });
     evShown.forEach(e => {
-      const yy = y(e.start_year);
-      const gapNeeded = Z.names === "full" ? 30 : 16;
-      const ly = Math.max(yy, lastY + gapNeeded); lastY = ly;
+      const yy = y(e.start_year), ly = labelY[e.id];
       el("line", { x1: LANEW - 6, x2: W - 6, y1: yy, y2: yy, class: "event-line" }, svg);
       const g = el("g", { class: "event", tabindex: 0, role: "button", "aria-label": `${e.name}, ${fmtYear(e.start_year)}` }, svg);
       el("title", {}, g).textContent = `${e.name} (${e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year)})`;
-      if (Z.names === "none") {
-        el("path", { d: `M${LANEW - 18},${yy - 5} l5,5 l-5,5 l-5,-5 Z`, fill: "var(--madder)" }, g);
-        el("rect", { x: 2, y: yy - 9, width: LANEW - 6, height: 18, class: "hit" }, g);
+      if (Z.names === "none" || ly == null) {
+        el("path", { d: `M${LANEW - 18},${yy - 5} l5,5 l-5,5 l-5,-5 Z`, fill: "var(--madder)", class: Z.names === "none" ? null : "event-mark" }, g);
+        // Beside labels, the marker's click area is just the marker so it can't cover a label.
+        if (Z.names === "none") el("rect", { x: 2, y: yy - 9, width: LANEW - 6, height: 18, class: "hit" }, g);
+        else el("rect", { x: LANEW - 28, y: yy - 9, width: 20, height: 18, class: "hit" }, g);
       } else {
         if (ly !== yy) el("path", { d: `M${LANEW - 10},${ly - 4} L${LANEW - 6},${yy}`, class: "event-line" }, svg);
         const name = Z.names === "short" && e.name.length > 16 ? e.name.slice(0, 15) + "…" : e.name;
@@ -1156,7 +1171,8 @@ function setGroup(g) {
 function wire() {
   $("ask-form").addEventListener("submit", e => { e.preventDefault(); run($("q").value.trim(), { pushTrail: true }); });
   $("show-all").addEventListener("click", () => run("", { pushTrail: true }));
-  document.querySelectorAll(".examples button").forEach(b => b.addEventListener("click", () => run(b.dataset.q, { pushTrail: true })));
+  // Only the timeline's examples carry data-q; the Year view's (data-from) are wired below.
+  document.querySelectorAll(".examples button[data-q]").forEach(b => b.addEventListener("click", () => run(b.dataset.q, { pushTrail: true })));
   $("group-family").addEventListener("click", () => setGroup("family"));
   $("group-type").addEventListener("click", () => setGroup("type"));
   $("layer-spouses").checked = S.layers.spouses;

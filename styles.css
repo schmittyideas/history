@@ -103,6 +103,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.5vw
 .yr { font-family: var(--mono); font-size: 11px; fill: var(--muted); font-variant-numeric: tabular-nums; }
 .grid { stroke: var(--rule); stroke-width: 1; }
 .event-line { stroke: var(--madder); stroke-width: 1; stroke-dasharray: 3 4; fill: none; }
+.event-mark { opacity: .75; }
 .event-label { font-family: var(--body); font-size: 12.5px; font-weight: 600; fill: var(--madder); }
 .event-sub { font-family: var(--mono); font-size: 10.5px; fill: var(--muted); }
 .role-label { font-family: var(--mono); font-size: 10.5px; fill: var(--madder); paint-order: stroke; stroke: var(--linen); stroke-width: 3px; }

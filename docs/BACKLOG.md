@@ -87,6 +87,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Event labels by prominence: 5 always, then 4 to 1 while they fit
+`type: enhancement` · `area: site` · `status: done` · `issue: #21`
+
+Events' `prominence` is a star rating (5 = always shown; kept as 5-to-1 by Ty's choice, 2026-10-07). The timeline labels 5s always, then 4, 3, 2, 1 while labels fit; no rating counts as 3. The rest get a small marker with the name on hover. Also fixed: the timeline's example-button handler was catching the Year view's examples too. Done 2026-10-07.
+Source: Ty, 2026-10-07.
+
 #### [P2] Crowns for rulers, with their title under the name
 `type: enhancement` · `area: site` · `status: done` · `issue: #19`
 
