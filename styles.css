@@ -13,6 +13,7 @@
   --ochre: #a8692a;     /* artists and others */
   --sea: #d6dcdc;
   --land: #f1efe8;
+  --gold: #b07d1a;      /* gilt thread: titles and reigns */
   --display: "IM Fell English SC", "Times New Roman", serif;
   --body: "Literata", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -21,13 +22,13 @@
   :root:not([data-theme="light"]) {
     --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
     --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-    --sea: #10151d; --land: #262d39; color-scheme: dark;
+    --sea: #10151d; --land: #262d39; --gold: #e3b84f; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
   --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-  --sea: #10151d; --land: #262d39; color-scheme: dark;
+  --sea: #10151d; --land: #262d39; --gold: #e3b84f; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -112,6 +113,14 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.5vw
 .marriage-arc { fill: none; stroke: var(--stitch); stroke-width: 1.5; stroke-dasharray: 2 3; }
 .marriage-yr { font-family: var(--mono); font-size: 10px; fill: var(--stitch); }
 .hit { fill: transparent; }
+.crown { fill: var(--gold); pointer-events: none; }
+.crown.disputed { fill-opacity: .45; }
+.reign { fill: var(--gold); pointer-events: none; }
+.reign.disputed { fill-opacity: .4; }
+.rank { font-family: var(--mono); font-size: 9px; fill: color-mix(in srgb, var(--gold) 70%, var(--ink)); letter-spacing: .02em; }
+.crown-icon { fill: var(--gold); vertical-align: -1px; flex: none; }
+li.disputed .crown-icon { fill-opacity: .45; }
+.sw.crown-sw { background: none; width: 13px; }
 .person, .event { cursor: pointer; outline: none; }
 .person:hover .bar { opacity: .75; }
 .person:focus-visible .hit, .event:focus-visible .hit { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 3; }

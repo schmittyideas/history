@@ -87,6 +87,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Crowns for rulers, with their title under the name
+`type: enhancement` · `area: site` · `status: done` · `issue: #19`
+
+Timeline: a crown above the name of anyone who held a title (in the requested years, if the request names some), their main title in small text under the dates ("King of England", so William I and William Adelin are easy to tell apart), and a gold strip beside the bar for the years each title was held. Year view and the person panel show a crown beside rulers. Done 2026-10-07.
+Source: Ty, 2026-10-07.
+
 #### [P2] The world in AD 1000: every ruler, grouped by world region
 `type: enhancement` · `area: data` · `status: done` · `issue: #17`
 

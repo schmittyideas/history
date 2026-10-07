@@ -383,6 +383,29 @@ function renderTrail() {
 /* ------------------------------------------------------------------ chart */
 
 const colorFor = t => t === "Nobility" ? "var(--weld)" : t === "Royalty" ? "var(--woad)" : "var(--ochre)";
+
+// Crowns: who held a title, and which one to name. Sovereign titles outrank dukes, counts and offices.
+const SOVEREIGN = /\b(king|queen|emperor|empress|caliph|sultan|tsar|pope|high king|grand prince|doge|khan|lady of the english)\b/i;
+// The title to show under a name: one held in the view's years if it asks for some, else the highest held in life.
+function headlineTitle(id, from, to) {
+  let ts = S.db.titlesOf(id);
+  if (from != null) ts = ts.filter(t => overlaps(t.start_year, t.end_year, from, to ?? from));
+  if (!ts.length) return null;
+  const rank = t => (SOVEREIGN.test(t.title) ? 0 : 1);
+  const best = ts.slice().sort((a, b) => rank(a) - rank(b) || byYear(b.start_year, a.start_year))[0];
+  return { title: best, more: new Set(ts.map(t => t.title)).size - 1 };
+}
+// A small crown, drawn into an SVG at (x, y) as its top-left corner.
+function crownPath(x, y, w = 12) {
+  const h = w * .75;
+  return `M${x},${y + h} L${x},${y + h * .2} L${x + w * .27},${y + h * .55} L${x + w / 2},${y} L${x + w * .73},${y + h * .55} L${x + w},${y + h * .2} L${x + w},${y + h} Z`;
+}
+// The same crown as a standalone inline icon for HTML text (Year view, side panel).
+function crownIcon(label = "Held a title") {
+  const svg = el("svg", { viewBox: "0 0 12 10", width: 13, height: 11, class: "crown-icon", role: "img", "aria-label": label });
+  el("path", { d: crownPath(0, .5, 12) }, svg);
+  return svg;
+}
 let groups = {}, eventGroups = {};
 
 function render() {
@@ -416,7 +439,10 @@ function render() {
   const y1 = Math.ceil((Math.max(...ends) + 5) / step0) * step0;
   $("span").textContent = fmtSpan(y0, y1);
 
-  const NAMES_H = Z.names === "full" ? 62 : Z.names === "short" ? 30 : 8;
+  // At full zoom a ruler's column carries a third header line: a crown and their title ("King of England").
+  // and a crown above the name.
+  const titled = Z.names !== "none" && order.some(p => db.titlesOf(p.id).length);
+  const NAMES_H = Z.names === "full" ? (titled ? 92 : 62) : Z.names === "short" ? (titled ? 44 : 30) : 8;
   const LANE_H = 22, TOP = LANE_H + NAMES_H + 16;
   const LANEW = evShown.length ? (Z.names === "none" ? 40 : Z.names === "short" ? 120 : 176) : 0;
   const LEFT = LANEW + 52, GAP = 18;
@@ -511,20 +537,49 @@ function render() {
     const s = db.startOf(p), d = db.endOf(p);
     const inLaw = db.marriedIn.has(p.id);
     const g = el("g", { class: "person", tabindex: 0, role: "button", "aria-label": `${p.name}, ${fmtYear(p.birth_year) ?? "birth unknown"} to ${fmtYear(p.death_year) ?? "unknown"}` }, svg);
-    el("title", {}, g).textContent = `${p.name} (${fmtSpan(p.birth_year, p.death_year)})`;
+    const titles = db.titlesOf(p.id);
+    el("title", {}, g).textContent = `${p.name} (${fmtSpan(p.birth_year, p.death_year)})` + titles.map(t => `\n♛ ${t.title}, ${reignSpan(t)}`).join("");
+    // A crown sits above the name of anyone who held a title (in the requested years, if the request names some).
+    const head = headlineTitle(p.id, S.filter?.from, S.filter?.to);
+    const crown = (cy, w) => el("path", { d: crownPath(cx - w / 2, cy, w), class: "crown" + (head.title.disputed ? " disputed" : "") }, g);
     if (Z.names === "full") {
+      const lift = titled ? 16 : 0;   // room for the title line
       const i = p.name.indexOf(" of ");
       const parts = i > 0 ? [p.name.slice(0, i), p.name.slice(i + 1)] : [p.name];
-      parts.forEach((line, k) => el("text", { x: cx, y: TOP - 46 + k * 16 + (parts.length === 1 ? 16 : 0), "text-anchor": "middle", class: "name" }, g).textContent = line);
-      el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "dates" }, g).textContent = fmtSpan(p.birth_year, p.death_year);
+      const firstY = TOP - 46 - lift + (parts.length === 1 ? 16 : 0);
+      parts.forEach((line, k) => el("text", { x: cx, y: firstY + k * 16, "text-anchor": "middle", class: "name" }, g).textContent = line);
+      el("text", { x: cx, y: TOP - 12 - lift, "text-anchor": "middle", class: "dates" }, g).textContent = fmtSpan(p.birth_year, p.death_year);
+      if (head) {
+        crown(firstY - 25, 15);
+        // "King of England +1" under the dates, cut to fit the column.
+        const CH = 5.5;   // width of one 9px mono character
+        const max = Math.floor((Z.col - 10) / CH);
+        // Keep the title whole if possible: the "+1" (other titles, listed in the panel) goes first.
+        let label = head.title.title + (head.more ? ` +${head.more}` : "");
+        if (label.length > max) label = head.title.title;
+        if (label.length > max) label = label.slice(0, max - 1) + "…";
+        el("text", { x: cx, y: TOP - 13, "text-anchor": "middle", class: "rank" }, g).textContent = label;
+      }
     } else if (Z.names === "short") {
       const short = p.name.split(" of ")[0];
       el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "name", style: "font-size:11px" }, g).textContent = short.length > 9 ? short.slice(0, 8) + "…" : short;
+      if (head) crown(TOP - 34, 12);
     }
     const color = colorFor(p.type);
     const top = y(s ?? y0), hgt = Math.max(2, y(d ?? s ?? y0) - top);
     if (inLaw) el("rect", { x: cx - Z.bar / 2 + .75, y: top, width: Z.bar - 1.5, height: hgt, rx: 3, fill: color, "fill-opacity": .22, stroke: color, "stroke-width": 1.5, "stroke-dasharray": p.birth_year == null ? "4 3" : null, class: "bar" }, g);
     else el("rect", { x: cx - Z.bar / 2, y: top, width: Z.bar, height: hgt, rx: 3, fill: color, class: "bar" }, g);
+    // Reigns: a gold strip beside the bar for the years each title was held.
+    // Titles held at the same time (Duke of Normandy and King of England) get side-by-side strips.
+    const tracks = [];
+    titles.forEach(t => {
+      if (t.start_year == null) return;
+      const end = t.end_year ?? d ?? t.start_year;
+      let k = tracks.findIndex(last => last < t.start_year);
+      if (k < 0) k = tracks.push(end) - 1; else tracks[k] = end;
+      const ry = y(t.start_year), rh = Math.max(2, y(end) - ry);
+      el("rect", { x: cx + Z.bar / 2 + 2 + k * 5, y: ry, width: 3, height: rh, rx: 1.5, class: "reign" + (t.disputed ? " disputed" : "") }, g);
+    });
     el("rect", { x: cx - Z.col / 2 + 3, y: LANE_H + 4, width: Z.col - 6, height: Math.max(top + hgt, TOP) - LANE_H + 4, rx: 4, class: "hit" }, g);
     g.addEventListener("click", () => select(p.id));
     g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p.id); } });
@@ -684,13 +739,13 @@ function select(id) {
     ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
-    ...(db.titlesOf(id).length ? [["Titles", joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
+    ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(), " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
       title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
       text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
     ["Obsidian note", obsidianLink(p.obsidian_link)],
   ];
   const dl = h("dl");
-  rows.forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
+  rows.forEach(([k, v]) => dl.append(h("dt", {}, k), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(
     h("div", { class: "kind", style: `color:${colorFor(p.type)}`, text: (p.type || "Person") + (db.marriedIn.has(id) ? " · married in" : "") }),
     h("h2", { text: p.name }), dl,
@@ -739,7 +794,7 @@ function selectPlace(id) {
     ["Obsidian note", obsidianLink(pl.obsidian_link)],
   ];
   const dl = h("dl");
-  rows.forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
+  rows.forEach(([k, v]) => dl.append(h("dt", {}, k), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(h("div", { class: "kind", style: "color:var(--ink)", text: cap(pl.kind) || "Place" }), h("h2", { text: pl.name }), dl,
     h("p", { class: "hint", text: "Everything that happened here is listed in date order under the map." }));
   drawMap();
@@ -1030,7 +1085,7 @@ function renderYear() {
         // "year 5 of 22": works for offices and regencies as well as reigns.
         const nth = single && t.start_year != null
           ? ` · year ${yearsBetween(t.start_year, a) + 1}` + (t.end_year != null ? ` of ${yearsBetween(t.start_year, t.end_year) + 1}` : "") : "";
-        list.append(h("li", { class: t.disputed ? "disputed" : "" }, yPerson(p),
+        list.append(h("li", { class: t.disputed ? "disputed" : "" }, crownIcon(t.disputed ? "Disputed claim" : "Held this title"), " ", yPerson(p),
           h("span", { class: "yrs", text: ` ${reignSpan(t)}${t.disputed ? " · disputed" : ""}${nth}` }),
           t.note ? h("div", { class: "tnote", text: t.note }) : null));
       });
