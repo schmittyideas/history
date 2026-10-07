@@ -38,7 +38,7 @@ sources:
 | `born`, `died` | Year, or full date `1120-11-25`. BC years are negative: `-384` = 384 BC (see below) |
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |
 | `house`, `realm` | Optional: dynasty and realm, used for lanes later |
-| `prominence` | 1–5: how important when zoomed out (5 = always shown) |
+| `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
 | `obsidian_link` | Exact Obsidian note name |
 | `note` | One-line summary |
 | `sources` | List of source keys |
