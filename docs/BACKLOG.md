@@ -27,6 +27,13 @@ Rules:
 
 ### Ready (ranked)
 
+#### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
+`type: task` · `area: site` · `status: ready` · `issue: #23`
+
+1. Breadcrumb of 5: replace the "Back to:" trail (8 steps, newest first, raw query text) with the last 5 steps, oldest to newest, in plain words (`Everything › Henry I's family › 1060 › William I's family`). The last crumb is where you are (bold, not clickable); clicking an earlier one goes back there and drops the later steps. Year view steps join it ("Who ruled in 1000"). The browser's Back button and the phone's back swipe follow the same history (pushState) instead of leaving the site.
+2. Center on a person: the card's "Show <name>'s family" button moves to the top as "Center on <name>"; double-clicking a nameplate does the same; a single click still just selects.
+Source: Ty, 2026-10-07.
+
 #### [P2] Decide: when a request names a place and a person, which wins
 `type: task` · `area: site` · `status: ready` · `issue: #11`
 
