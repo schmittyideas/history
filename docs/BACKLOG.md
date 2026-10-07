@@ -27,6 +27,12 @@ Rules:
 
 ### Ready (ranked)
 
+#### [P2] Year view: who ruled, and what happened, in a year or span
+`type: enhancement` · `area: site` · `status: in-progress` · `issue: #14`
+
+A second view beside the timeline. Type a year (1060, 384 BC) or a span (1060 to 1100, 12th century): rulers grouped by realm, each title's holders in order with a reign strip for spans, then events, births and deaths. Rulers come from a new `titles` table (`sql/007`, applied 2026-10-06) filled by a new intake `titles` section, so it grows to any country. First data: reigns for the rulers already in the database (`inbox/2026-10-06-reigns.yaml`). Closes when the pull request merges.
+Source: Ty, 2026-10-06 ("type in a year, 1060, and it tells me who is King").
+
 #### [P2] Decide: when a request names a place and a person, which wins
 `type: task` · `area: site` · `status: ready` · `issue: #11`
 
@@ -54,6 +60,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 ## Data
 
 ### Ready (ranked)
+
+#### [P2] Add every English monarch's reign from the Obsidian Royalty timeline notes
+`type: task` · `area: data` · `status: ready` · `issue: #15`
+
+The Year view shows no King of England outside the reigns entered so far (1042–1154, 1216–1272). `Personal/History/Royalty timelines` in Obsidian has a note for most English monarchs from Edward the Confessor to Elizabeth II. Intake batch: each monarch as a person plus a King/Queen of England title, dates checked against the List of English monarchs, `obsidian_link` to the reign note. France next (the Kings of the Franks / France notes are there too).
+Source: Year view, 2026-10-06.
 
 #### [P2] Add Emperor Henry V
 `type: task` · `area: data` · `status: ready` · `issue: #6`

@@ -97,6 +97,18 @@ def parse_when(v):
     return d.year, d.isoformat()
 
 
+def title_key(x):
+    """A title's key: given, or built from person, title and start year so a second reign gets its own row."""
+    if x.get("key"):
+        return x["key"]
+    slug = re.sub(r"[^a-z0-9]+", "-", str(x.get("title") or "").lower()).strip("-")
+    try:
+        year = parse_when(x.get("from"))[0]
+    except ValueError:
+        year = None
+    return f"{x.get('person')}--{slug}" + (f"--{year}" if year is not None else "")
+
+
 def as_list(v):
     if v is None:
         return []
@@ -112,7 +124,7 @@ class Plan:
     open_discrepancies: list = field(default_factory=list)   # (record label, discrepancy) for records this batch touches
 
 
-SECTIONS = ["sources", "places", "people", "events", "links", "moments", "discrepancies", "log"]
+SECTIONS = ["sources", "places", "people", "events", "links", "moments", "titles", "discrepancies", "log"]
 ABOUT_KINDS = ("person", "place", "event")
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
@@ -125,6 +137,8 @@ PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "k
 EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
                 "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note", "visitable": "visitable_today",
                 "visit_site": "visit_site"}
+TITLE_FIELDS = {"title": "title", "realm": "realm", "from_estimated": "start_estimated", "to_estimated": "end_estimated",
+                "disputed": "disputed", "note": "note", "obsidian_link": "obsidian_link"}
 LOG_FIELDS = {"title": "title", "learned_on": "learned_on", "medium": "medium", "source_title": "source_title",
               "source_detail": "source_detail", "url": "url", "where": "where_text", "notes": "notes",
               "links": "links", "details": "details"}
@@ -156,6 +170,10 @@ class World:
             self.discrepancies = {r["key"]: r for r in db.select("discrepancies", "id,key,question,about,field,claims,status,note,resolution")}
         except RuntimeError:  # sql/005 not run yet
             self.discrepancies = None
+        try:
+            self.titles = {r["key"]: r for r in db.select("titles", "id,key,entity_id,title,start_year,end_year")}
+        except RuntimeError:  # sql/007 not run yet
+            self.titles = None
 
 
 # --------------------------------------------------------------------------- planning
@@ -298,6 +316,32 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 exists = pe and pl and any(m["entity_id"] == pe["id"] and m["place_id"] == pl["id"] and m["role"] == x.get("role") for m in world.moments)
                 (p.updates if exists else p.adds)["moments"].append(label)
 
+        if d.get("titles") and world.titles is None:
+            p.errors.append(f"{fname}: the database has no titles table yet: run sql/007_titles.sql first")
+        for x in as_list(d.get("titles")):
+            k, who = title_key(x), x.get("person")
+            where = f"title `{k}`"
+            ok = ref("person", who, where)
+            if k not in (world.titles or {}) and (not x.get("title") or not x.get("realm")):
+                p.errors.append(f"{where}: new titles need `title` and `realm`")
+            fy, _ = when(x, "from", where); ty, _ = when(x, "to", where)
+            if fy is not None and ty is not None and ty < fy:
+                p.errors.append(f"{where}: ended ({ty}) before it began ({fy})")
+            if ok:  # a title held outside the holder's life is almost always a typo
+                if who in new["people"]:
+                    try:
+                        by, dy = parse_when(new["people"][who].get("born"))[0], parse_when(new["people"][who].get("died"))[0]
+                    except ValueError:
+                        by = dy = None
+                else:
+                    by, dy = world.people[who].get("birth_year"), world.people[who].get("death_year")
+                if fy is not None and by is not None and fy < by:
+                    p.warnings.append(f"{where}: starts ({fy}) before {who} was born ({by})")
+                if ty is not None and dy is not None and ty > dy:
+                    p.warnings.append(f"{where}: ends ({ty}) after {who} died ({dy})")
+            (p.updates if k in (world.titles or {}) else p.adds)["titles"].append(k)
+            check_sources(x, where, require=k not in (world.titles or {}))
+
         if d.get("discrepancies") and world.discrepancies is None:
             p.errors.append(f"{fname}: the database has no discrepancies table yet: run sql/005_discrepancies.sql first")
         for x in as_list(d.get("discrepancies")):
@@ -373,7 +417,7 @@ def find_rel(world, a_key, b_key, rel_type):
 def render(plan: Plan, files) -> str:
     out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
     labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events",
-              "links": "Relationships", "moments": "Life moments", "discrepancies": "Discrepancies (sources disagree)",
+              "links": "Relationships", "moments": "Life moments", "titles": "Titles and reigns", "discrepancies": "Discrepancies (sources disagree)",
               "log": "Learning log (private)"}
     total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
     out.append(f"**{total_add} to add, {total_upd} to update.** Nothing is deleted.")
@@ -501,6 +545,16 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
                 world.moments.append(db.insert("person_places", {"entity_id": pid, "place_id": plid, "role": x["role"], "year": x.get("year")}))
                 log(f"added moment {x['person']} {x['role']} at {x['place']}")
             link_sources("moment", f"{x['person']}:{x['role']}:{x['place']}", x.get("sources"))
+    for _, d in docs:
+        for x in as_list(d.get("titles")):
+            k = title_key(x)
+            row = {"entity_id": world.people[x["person"]]["id"], **map_fields(x, TITLE_FIELDS)}
+            if "from" in x:
+                row["start_year"], row["start_date"] = parse_when(x["from"])
+            if "to" in x:
+                row["end_year"], row["end_date"] = parse_when(x["to"])
+            upsert_keyed("titles", world.titles, k, row)
+            link_sources("title", k, x.get("sources"))
     for _, d in docs:
         for kind, sect in (("place", "places"), ("person", "people"), ("event", "events")):
             for x in as_list(d.get(sect)):
