@@ -67,6 +67,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Intake crashed on a BC full date instead of showing an error
+`type: bug` · `area: tooling` · `status: done` · `issue: —`
+
+`-0044-03-15` (and year `0`, or any malformed date) crashed `tools/intake.py`. Event, link, moment and log dates were only parsed during apply, so a bad one could stop a run after some writes. The preview now checks every date field and lists bad ones as errors (2026-10-06).
+Source: found while adding Aristotle (PR #2).
+
 #### [P3] Stop tracking the Python cache file
 `type: bug` · `area: tooling` · `status: done` · `issue: —`
 
