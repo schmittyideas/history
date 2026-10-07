@@ -34,6 +34,13 @@ Today people are matched before places, so a place whose name contains a person'
 Recommendation: match people and places in one pass, longest name first, with a place winning a tie, so the fuller name always wins. When a request names both, keep the person as the family focus but open the place's panel, since the place is what narrows the request.
 Source: Ty, 2026-10-06.
 
+#### [P2] Nearby: enter a location, see the history around it
+`type: enhancement` · `area: site` · `status: ready` · `issue: #13`
+
+Give the site a location (a town or address you type, "near me" from the browser, or a click on the map) and list the history near it: places within a chosen distance (10 / 50 / 100 km), nearest first, each with what happened there and whether you can visit. Useful for trips ("visit Barfleur on a Normandy trip").
+Approach: distance is worked out in the browser from the lat/lng places already have, so no database change. Typing a town needs a geocoder; OpenStreetMap Nominatim is free with no key (1 request a second, needs an attribution line). "Near me" uses the browser's location and nothing is stored. Places without coordinates can't show up; the intake preview already warns about those.
+Source: Ty, 2026-10-06.
+
 #### [P2] Lanes by dynasty and realm
 `type: enhancement` · `area: site` · `status: ready` · `issue: #5`
 
