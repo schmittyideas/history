@@ -1,0 +1,157 @@
+batch:
+  title: "\"The best is the enemy of the good\": Voltaire and his sources"
+  requested: "What was Voltaire referencing? (Le mieux est l'ennemi du bien)"
+  date: 2026-10-06
+
+sources:
+  - {key: wp-perfect-enemy-of-good, title: "Perfect is the enemy of good (Wikipedia)", url: "https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good"}
+  - {key: wp-voltaire,              title: "Voltaire (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Voltaire"}
+  - {key: wp-king-lear,             title: "King Lear (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/King_Lear"}
+  - {key: wp-shakespeare,           title: "William Shakespeare (Wikipedia)",          url: "https://en.wikipedia.org/wiki/William_Shakespeare"}
+  - {key: wp-aristotle,             title: "Aristotle (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Aristotle"}
+  - {key: wp-golden-mean,           title: "Golden mean (philosophy) (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Golden_mean_(philosophy)"}
+  - {key: oxford-questions-encyclopedie, title: "Questions sur l'Encyclopédie (Voltaire Foundation, Oxford)", url: "https://www.voltaire.ox.ac.uk/book/questions-sur-lencyclopédie-i-viii"}
+
+people:
+  - key: voltaire
+    name: Voltaire
+    type: Writer
+    roles: [philosopher, poet, playwright]
+    born: 1694-11-21
+    died: 1778-05-30
+    realm: France
+    prominence: 5
+    note: François-Marie Arouet. Enlightenment writer; popularised "le mieux est l'ennemi du bien".
+    sources: [wp-voltaire]
+
+  - key: william-shakespeare
+    name: William Shakespeare
+    type: Writer
+    roles: [playwright, poet]
+    born: 1564
+    born_estimated: true
+    died: 1616-04-23
+    realm: England
+    prominence: 5
+    note: English playwright. King Lear has "striving to better, oft we mar what's well", the same idea 160 years before Voltaire.
+    sources: [wp-shakespeare]
+
+  # BC years are negative: -384 = 384 BC.
+  - key: aristotle
+    name: Aristotle
+    type: Scholar
+    roles: [philosopher]
+    born: -384
+    died: -322
+    realm: Macedon
+    prominence: 5
+    note: Greek philosopher. His golden mean (virtue as the middle way between too much and too little) is the old root of "the best is the enemy of the good".
+    sources: [wp-aristotle, wp-golden-mean, wp-perfect-enemy-of-good]
+
+places:
+  - key: ferney
+    name: Château de Voltaire, Ferney-Voltaire
+    historical_name: Ferney
+    kind: house
+    region: Ain
+    country: France
+    lat: 46.2558
+    lng: 6.1083
+    visitable: true
+    visit_site: Château de Voltaire (Centre des monuments nationaux)
+    note: Voltaire's home from 1759 until 1778. He wrote both works that use the phrase here.
+    sources: [wp-voltaire]
+
+  - key: palace-of-whitehall
+    name: Palace of Whitehall
+    kind: palace
+    region: London
+    country: England
+    lat: 51.5045
+    lng: -0.1262
+    visitable: true
+    visit_site: Banqueting House, the only surviving part (Historic Royal Palaces)
+    sources: [wp-king-lear]
+
+events:
+  - key: king-lear-court-performance-1606
+    name: King Lear performed at court
+    type: Performance
+    date: 1606-12-26
+    place: palace-of-whitehall
+    prominence: 3
+    note: The earliest recorded performance, in front of James I. Albany's line "striving to better, oft we mar what's well" is in the play.
+    people:
+      - {person: william-shakespeare, role: playwright}
+    sources: [wp-king-lear, wp-perfect-enemy-of-good]
+
+  - key: questions-sur-l-encyclopedie
+    name: Questions sur l'Encyclopédie published
+    type: Publication
+    year: 1770
+    end_year: 1772
+    place: ferney
+    prominence: 2
+    note: >-
+      The article "Art dramatique" quotes the Italian proverb "il meglio è l'inimico del bene", crediting a wise Italian
+      who isn't named. It's often cited as the 1764 Dictionnaire philosophique because later editions merged the two works.
+    people:
+      - {person: voltaire, role: author}
+    sources: [wp-perfect-enemy-of-good, oxford-questions-encyclopedie]
+
+  - key: la-begueule-1772
+    name: La Bégueule published
+    type: Publication
+    year: 1772
+    place: ferney
+    prominence: 2
+    note: >-
+      A moral tale in verse that opens with "le mieux est l'ennemi du bien". It's about a fussy woman who is never
+      satisfied, keeps chasing something better, and ends up worse off.
+    people:
+      - {person: voltaire, role: author}
+    sources: [wp-perfect-enemy-of-good]
+
+moments:
+  - {person: voltaire, role: lived, place: ferney, year: 1759}
+
+discrepancies:
+  - key: voltaire-italian-proverb-work
+    question: In which work, and which year, did Voltaire first quote the Italian proverb "il meglio è l'inimico del bene"?
+    about: [{person: voltaire}, {event: questions-sur-l-encyclopedie}]
+    claims:
+      - {value: "Dictionnaire philosophique (1764), article \"Art dramatique\"", note: "Commonly cited, including in the first answer and in web search results; no source checked"}
+      - {value: "Questions sur l'Encyclopédie (1770), article \"Art dramatique\"", sources: [wp-perfect-enemy-of-good, oxford-questions-encyclopedie]}
+    note: >-
+      The record uses 1770. Likely explanation: "Art dramatique" first appeared in the Questions, and later editions
+      merged them into the Dictionnaire philosophique. That needs a source; the 1764 Dictionnaire portatif's contents
+      would settle it.
+
+log:
+  - key: 2026-10-06-voltaire-better-enemy-of-good
+    title: What Voltaire was quoting in "le mieux est l'ennemi du bien"
+    learned_on: 2026-10-06
+    medium: conversation
+    source_title: Conversation with Claude
+    notes: >-
+      Voltaire didn't invent it. He was quoting an Italian proverb from a "sage Italien" who isn't named, so the
+      original source is unknown. The idea is much older: Shakespeare's King Lear (1606) says it, and Aristotle's
+      golden mean (moderation, avoiding excess) is related.
+    links:
+      - {title: "Perfect is the enemy of good (Wikipedia)", url: "https://en.wikipedia.org/wiki/Perfect_is_the_enemy_of_good"}
+    details:
+      discrepancies: [voltaire-italian-proverb-work]
+      follow_up:
+        - "Montesquieu wrote 'le mieux est le mortel ennemi du bien' in his Pensées around 1726, before Voltaire. Did Voltaire get it from him?"
+        - "Who was the 'sage Italien'?"
+        - "Read Aristotle on the golden mean (Nicomachean Ethics, Book II)"
+        - "Shakespeare's Sonnet 103 makes the same point"
+        - "Visit the Château de Voltaire at Ferney (near Geneva)"
+    about:
+      - {person: voltaire}
+      - {person: william-shakespeare}
+      - {person: aristotle}
+      - {event: questions-sur-l-encyclopedie}
+      - {event: la-begueule-1772}
+      - {event: king-lear-court-performance-1606}
+      - {place: ferney}

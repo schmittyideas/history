@@ -35,7 +35,7 @@ sources:
 | `name` | Display name (required for new people) |
 | `type` | Main type, used for colour: Royalty, Nobility, Clergy, Artist, Writer, Composer, Scholar |
 | `roles` | Extra roles: e.g. `[patron]`, `[pope]`, `[painter, architect]` |
-| `born`, `died` | Year, or full date `1120-11-25` |
+| `born`, `died` | Year, or full date `1120-11-25`. BC years are negative: `-384` = 384 BC (see below) |
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |
 | `house`, `realm` | Optional: dynasty and realm, used for lanes later |
 | `prominence` | 1–5: how important when zoomed out (5 = always shown) |
@@ -44,6 +44,8 @@ sources:
 | `sources` | List of source keys |
 
 An entry whose `key` already exists is an **update**: only the fields given change.
+
+**BC dates.** Write BC years as negative numbers: `born: -384` means 384 BC. Count the same way as BC itself, so 384 BC is `-384`, not astronomers' `-383`. There is no year 0, so a lifespan crossing from BC to AD is one year shorter than plain subtraction suggests; the site corrects for this when it shows age. Full dates (`-0044-03-15`) aren't supported for BC: use the year alone (the preview flags a BC full date, and year `0`, as errors). The same applies to event `year`/`end_year`, link years and moment years.
 
 ### `places`
 | Field | Meaning |
@@ -84,6 +86,32 @@ moments:
   - {person: henry-i-of-england, role: died, place: lyons-la-foret, year: 1135}
 ```
 
+### `discrepancies`
+Where sources disagree. Record both sides rather than silently picking one, so a later source can settle it.
+| Field | Meaning |
+|---|---|
+| `key`, `question` | Required. The question is what's disputed |
+| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}` |
+| `field` | Which field, if one: `born`, `died`, `date`, `place`, … |
+| `claims` | What each side says: list of `{value, sources, note}` |
+| `note` | Context while it's open, e.g. which value the record uses for now |
+| `status` | `open` (default) or `resolved` |
+| `resolution` | What the database uses and why. Expected when resolved |
+
+```yaml
+discrepancies:
+  - key: coover-1942-employer
+    question: Where did Coover work when he found cyanoacrylate in 1942?
+    about: [{person: harry-coover}, {event: cyanoacrylate-discovered}]
+    field: place
+    claims:
+      - {value: Eastman Kodak, sources: [wp-harry-coover]}
+      - {value: B.F. Goodrich, sources: [wp-cyanoacrylate]}
+```
+The record itself holds whichever value is best supported (or leaves it out, as here). Re-send the same `key` with `status: resolved` and a `resolution` once a source settles it; add a claim if a new source takes a side.
+
+**Checked on every intake.** When a batch adds to, updates, or links to a record that has an open discrepancy, the preview lists it under "Open discrepancies on records in this batch", with each side's claim and sources. Claude also checks for them before writing an intake.
+
 ### `log` (private)
 Where you learned it: one entry per thing you came across. Linked to every record it touched. Stored privately: the public website can't read it.
 | Field | Meaning |
@@ -123,8 +151,11 @@ log:
 Before anything is applied, the preview lists every addition and update, and flags:
 - a key that doesn't exist in the database or in the file (likely a typo)
 - a new record without a source
+- a date that isn't a year or a valid `YYYY-MM-DD` (e.g. `1066-13-40`, `c. 1100`, a BC full date), in any section
 - impossible dates (died before born; a child born after a parent died, beyond a pregnancy's length)
 - a place without coordinates (it can't appear on the map)
 - a possible duplicate: a new person whose name and dates closely match someone already in the database
+- an open discrepancy on any record the batch touches (see `discrepancies`)
+- a section name it doesn't recognise (a typo would otherwise be silently ignored)
 
 Nothing is written until you approve.

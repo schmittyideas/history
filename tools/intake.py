@@ -12,6 +12,7 @@ from __future__ import annotations
 import datetime as dt
 import json
 import os
+import re
 import sys
 from dataclasses import dataclass, field
 
@@ -69,15 +70,28 @@ class RestDB:
 # --------------------------------------------------------------------------- helpers
 
 def parse_when(v):
-    """Year or full date -> (year, date or None)."""
+    """Year or full date -> (year, date or None). BC years are negative (-384 = 384 BC).
+
+    Raises ValueError with a readable message; plan_files turns it into a preview error,
+    so a bad date never reaches apply.
+    """
     if v is None:
         return None, None
     if isinstance(v, dt.date):
         return v.year, v.isoformat()
     s = str(v).strip()
-    if len(s) == 10 and s[4] == "-":
-        return int(s[:4]), s
-    return int(s), None
+    if re.fullmatch(r"-?\d+", s):
+        year = int(s)
+        if year == 0:
+            raise ValueError("there is no year 0: 1 BC is `-1`, AD 1 is `1`")
+        return year, None
+    if re.fullmatch(r"-\d+-\d+-\d+", s):
+        raise ValueError(f"`{s}`: full dates aren't supported for BC, use the year alone (`{int(s.split('-')[1]) * -1}`)")
+    try:
+        d = dt.date.fromisoformat(s)
+    except ValueError:
+        raise ValueError(f"`{s}` is not a year or a YYYY-MM-DD date") from None
+    return d.year, d.isoformat()
 
 
 def as_list(v):
@@ -92,9 +106,11 @@ class Plan:
     updates: dict = field(default_factory=lambda: {k: [] for k in SECTIONS})
     errors: list = field(default_factory=list)
     warnings: list = field(default_factory=list)
+    open_discrepancies: list = field(default_factory=list)   # (record label, discrepancy) for records this batch touches
 
 
-SECTIONS = ["sources", "places", "people", "events", "links", "moments", "log"]
+SECTIONS = ["sources", "places", "people", "events", "links", "moments", "discrepancies", "log"]
+ABOUT_KINDS = ("person", "place", "event")
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
@@ -132,6 +148,10 @@ class World:
         self.moments = db.select("person_places", "id,entity_id,place_id,role,year")
         self.event_people = db.select("event_people", "id,event_id,entity_id,role")
         self.unkeyed_people = [r for r in db.select("entities", "id,key,name,birth_year,death_year") if not r.get("key")]
+        try:
+            self.discrepancies = {r["key"]: r for r in db.select("discrepancies", "id,key,question,about,field,claims,status,note,resolution")}
+        except RuntimeError:  # sql/005 not run yet
+            self.discrepancies = None
 
 
 # --------------------------------------------------------------------------- planning
@@ -171,9 +191,20 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
         if require and not srcs:
             p.warnings.append(f"{where}: no source given")
 
+    def when(item, field_name, where):
+        """parse_when for one field, recording a bad value as an error instead of crashing."""
+        try:
+            return parse_when(item.get(field_name))
+        except ValueError as e:
+            p.errors.append(f"{where} `{field_name}`: {e}")
+            return None, None
+
     for fname, d in docs:
         if not isinstance(d.get("batch"), dict) or not d["batch"].get("title"):
             p.errors.append(f"{fname}: `batch.title` is required")
+        for sect in d:
+            if sect != "batch" and sect not in SECTIONS:
+                p.errors.append(f"{fname}: unknown section `{sect}` (it would be ignored)")
 
         for s in as_list(d.get("sources")):
             if not s.get("key") or not s.get("title"):
@@ -199,8 +230,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             k = x.get("key")
             if not k:
                 p.errors.append(f"{fname}: a person is missing `key`"); continue
-            by, _ = parse_when(x.get("born")); dy, _ = parse_when(x.get("died"))
-            if by and dy and dy < by:
+            by, _ = when(x, "born", f"person `{k}`"); dy, _ = when(x, "died", f"person `{k}`")
+            if by is not None and dy is not None and dy < by:
                 p.errors.append(f"person `{k}`: died ({dy}) before born ({by})")
             if k in world.people:
                 p.updates["people"].append(k)
@@ -229,6 +260,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 if x.get("date") is None and x.get("year") is None:
                     p.warnings.append(f"event `{k}`: no date, so it won't appear on the timeline")
                 p.adds["events"].append(k)
+            for f in ("date", "year", "end_year"):
+                when(x, f, f"event `{k}`")
             if x.get("place"):
                 ref("place", x["place"], f"event `{k}`")
             for pe in as_list(x.get("people")):
@@ -241,6 +274,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.errors.append(f"link {x}: must start with parent, spouse, patron or teacher"); continue
             a_key, b_key, _ = LINK_KINDS[kind]
             a, b = x.get(a_key), x.get(b_key)
+            for f in ("year", "from") + (("to",) if kind in ("patron", "teacher") else ()):
+                when(x, f, f"{kind} link {a} → {b}")
             ok = ref("person", a, f"{kind} link") & ref("person", b, f"{kind} link")
             if ok:
                 (p.updates if find_rel(world, a, b, LINK_KINDS[kind][2]) else p.adds)["links"].append(f"{kind}: {a} → {b}")
@@ -249,21 +284,75 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             ok = ref("person", x.get("person"), "moment") & ref("place", x.get("place"), "moment")
             if not x.get("role"):
                 p.errors.append(f"moment {x}: needs `role`")
+            when(x, "year", f"moment {x.get('person')} {x.get('role')}")
             if ok:
                 label = f"{x.get('person')} {x.get('role')} at {x.get('place')} ({x.get('year', '?')})"
                 pe, pl = world.people.get(x["person"]), world.places.get(x["place"])
                 exists = pe and pl and any(m["entity_id"] == pe["id"] and m["place_id"] == pl["id"] and m["role"] == x.get("role") for m in world.moments)
                 (p.updates if exists else p.adds)["moments"].append(label)
 
+        if d.get("discrepancies") and world.discrepancies is None:
+            p.errors.append(f"{fname}: the database has no discrepancies table yet: run sql/005_discrepancies.sql first")
+        for x in as_list(d.get("discrepancies")):
+            k = x.get("key")
+            if not k or not x.get("question"):
+                p.errors.append(f"{fname}: every discrepancy needs `key` and `question`"); continue
+            (p.updates if k in (world.discrepancies or {}) else p.adds)["discrepancies"].append(k)
+            if not as_list(x.get("about")):
+                p.errors.append(f"discrepancy `{k}`: needs `about` (the records it concerns)")
+            for a in as_list(x.get("about")):
+                kind = next((kk for kk in ABOUT_KINDS if kk in a), None)
+                if kind:
+                    ref(kind, a[kind], f"discrepancy `{k}`")
+                else:
+                    p.errors.append(f"discrepancy `{k}`: `about` entries look like {{person: key}}, {{place: key}} or {{event: key}}")
+            if len(as_list(x.get("claims"))) < 2:
+                p.warnings.append(f"discrepancy `{k}`: fewer than two claims")
+            for c in as_list(x.get("claims")):
+                if "value" not in c:
+                    p.errors.append(f"discrepancy `{k}`: every claim needs a `value`")
+                check_sources(c, f"discrepancy `{k}` claim “{c.get('value')}”")
+            if x.get("status", "open") not in ("open", "resolved"):
+                p.errors.append(f"discrepancy `{k}`: status must be open or resolved")
+            if x.get("status") == "resolved" and not x.get("resolution"):
+                p.warnings.append(f"discrepancy `{k}`: resolved but no `resolution` saying what was decided")
+
         for x in as_list(d.get("log")):
             k = x.get("key")
             if not k or not x.get("title"):
                 p.errors.append(f"{fname}: every log entry needs `key` and `title`"); continue
             (p.updates if k in world.logs else p.adds)["log"].append(k)
+            when(x, "learned_on", f"log `{k}`")
             for a in as_list(x.get("about")):
                 kind = next((kk for kk in ("person", "place", "event") if kk in a), None)
                 if kind:
                     ref(kind, a[kind], f"log `{k}`")
+
+    # Records already in the database that this batch changes or cites: show their open discrepancies,
+    # so a new source gets checked against what's disputed. (Discrepancies written in this batch are listed above.)
+    touched = set()
+    for _, d in docs:
+        for kind, sect, index in (("place", "places", world.places), ("person", "people", world.people), ("event", "events", world.events)):
+            touched |= {(kind, x.get("key")) for x in as_list(d.get(sect)) if x.get("key") in index}
+        for x in as_list(d.get("events")):
+            touched |= {("person", pe.get("person")) for pe in as_list(x.get("people")) if pe.get("person") in world.people}
+            if x.get("place") in world.places:
+                touched.add(("place", x["place"]))
+        for x in as_list(d.get("links")):
+            kind = next((kk for kk in LINK_KINDS if kk in x), None)
+            if kind:
+                touched |= {("person", x.get(side)) for side in LINK_KINDS[kind][:2] if x.get(side) in world.people}
+        for x in as_list(d.get("moments")):
+            touched |= {("person", x.get("person")), ("place", x.get("place"))}
+    in_batch = {x.get("key") for _, d in docs for x in as_list(d.get("discrepancies"))}
+    for disc in (world.discrepancies or {}).values():
+        if disc.get("status") != "open" or disc["key"] in in_batch:
+            continue
+        for a in disc.get("about") or []:
+            kind = next((kk for kk in ABOUT_KINDS if kk in a), None)
+            if kind and (kind, a[kind]) in touched:
+                p.open_discrepancies.append((f"{kind} `{a[kind]}`", disc))
+                break
     return p
 
 
@@ -277,7 +366,8 @@ def find_rel(world, a_key, b_key, rel_type):
 def render(plan: Plan, files) -> str:
     out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
     labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events",
-              "links": "Relationships", "moments": "Life moments", "log": "Learning log (private)"}
+              "links": "Relationships", "moments": "Life moments", "discrepancies": "Discrepancies (sources disagree)",
+              "log": "Learning log (private)"}
     total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
     out.append(f"**{total_add} to add, {total_upd} to update.** Nothing is deleted.")
     out.append("")
@@ -285,6 +375,17 @@ def render(plan: Plan, files) -> str:
         out += ["### ❌ Must fix before applying", *[f"- {e}" for e in plan.errors], ""]
     if plan.warnings:
         out += ["### ⚠️ Worth a look", *[f"- {w}" for w in plan.warnings], ""]
+    if plan.open_discrepancies:
+        out += ["### 🔎 Open discrepancies on records in this batch",
+                "Sources already disagree about these. Check the new information against them, and resolve or add a claim if it settles anything.", ""]
+        for label, disc in plan.open_discrepancies:
+            out.append(f"- {label}: **{disc['question']}** (`{disc['key']}`)")
+            for c in disc.get("claims") or []:
+                srcs = ", ".join(c.get("sources") or []) or "no source"
+                out.append(f"  - “{c.get('value')}” ({srcs})" + (f": {c['note']}" if c.get("note") else ""))
+            if disc.get("note"):
+                out.append(f"  - Note: {disc['note']}")
+        out.append("")
     for s in SECTIONS:
         a, u = plan.adds[s], plan.updates[s]
         if not a and not u:
@@ -392,6 +493,14 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
         for kind, sect in (("place", "places"), ("person", "people"), ("event", "events")):
             for x in as_list(d.get(sect)):
                 link_sources(kind, x["key"], x.get("sources"))
+    for _, d in docs:
+        for x in as_list(d.get("discrepancies")):
+            row = {"question": x["question"], "about": as_list(x.get("about")), "field": x.get("field"),
+                   "claims": as_list(x.get("claims")), "status": x.get("status", "open"), "note": x.get("note"),
+                   "resolution": x.get("resolution")}
+            if x["key"] in world.discrepancies:
+                row["updated_at"] = dt.datetime.now(dt.timezone.utc).isoformat()
+            upsert_keyed("discrepancies", world.discrepancies, x["key"], row)
     for _, d in docs:
         for x in as_list(d.get("log")):
             row = map_fields(x, LOG_FIELDS)
