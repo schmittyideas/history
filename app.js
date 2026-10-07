@@ -712,7 +712,7 @@ function selectPlace(id) {
   clearSel();
   const db = S.db, pl = db.placeById[id];
   const box = $("detail"); box.innerHTML = "";
-  const events = db.eventsAt(id).sort((a, b) => byYear(a.start_year, b.start_year));
+  const events = db.eventsAt(id).sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
   const people = [...new Map([...db.momentsAt(id).map(m => m.person), ...events.flatMap(e => db.peopleInEvent(e.id).map(x => x.person))]
     .map(p => [p.id, p])).values()].sort((a, b) => byYear(db.startOf(a), db.startOf(b)));
   const where = [pl.region, pl.modern_country].filter(Boolean).join(", ");

@@ -27,12 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P2] Places as their own view, with dates and builders
-`type: enhancement` · `area: site` · `status: in-progress` · `issue: #10`
-
-Click a place (map pin, an event's Where, a search for its name) to open its own panel: founded / ended, built by, architect, visit today, its events and people, and everything that happened there in date order under the map. Places gain founded / ended / built by / architect (`sql/006`, applied 2026-10-06). First example: Westminster Abbey (`inbox/2026-10-06-westminster-abbey.yaml`). Closes when the pull request merges.
-Source: Ty, 2026-10-06 ("build a place like Westminster Abbey").
-
 #### [P2] Decide: when a request names a place and a person, which wins
 `type: task` · `area: site` · `status: ready` · `issue: #11`
 
@@ -79,6 +73,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Places as their own view, with dates and builders
+`type: enhancement` · `area: site` · `status: done` · `issue: #10`
+
+Click a place (map pin, an event's Where, a search for its name) to open its own panel: founded / ended, built by, architect, visit today, its events and people, and everything that happened there in date order under the map. Places gain founded / ended / built by / architect (`sql/006`, applied 2026-10-06). First example: Westminster Abbey (`inbox/2026-10-06-westminster-abbey.yaml`). Merged in PR #12 and applied 2026-10-06.
+Source: Ty, 2026-10-06 ("build a place like Westminster Abbey").
 
 #### [P2] Intake crashed on a BC full date instead of showing an error
 `type: bug` · `area: tooling` · `status: done` · `issue: #8`
