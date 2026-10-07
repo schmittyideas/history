@@ -1,6 +1,6 @@
 # History Timeline backlog
 
-Last updated 2026-10-06
+Last updated 2026-10-06 · Board: [GitHub Project](https://github.com/users/schmittyideas/projects/1)
 
 One list of bugs, tasks and ideas for the site, the data and the tooling.
 
@@ -28,7 +28,7 @@ Rules:
 ### Ready (ranked)
 
 #### [P2] Lanes by dynasty and realm
-`type: enhancement` · `area: site` · `status: ready` · `issue: —`
+`type: enhancement` · `area: site` · `status: ready` · `issue: #5`
 
 People carry `house` and `realm` (added in `sql/002`), but the Lanes control only offers Family and Type. Add House and Realm options to the grouping in `app.js`. `app.js` loads `select=*`, so the fields are already in the data.
 Source: `docs/intake-format.md` ("used for lanes later").
@@ -42,13 +42,13 @@ Source: `docs/intake-format.md` ("used for lanes later").
 ### Ready (ranked)
 
 #### [P2] Add Emperor Henry V
-`type: task` · `area: data` · `status: ready` · `issue: —`
+`type: task` · `area: data` · `status: ready` · `issue: #6`
 
 Empress Matilda's first husband (married 1114). Intake: the person, a `spouse` link to `empress-matilda`, and a source.
 Source: Empress Matilda's note in `inbox/2026-10-05-white-ship.yaml` ("not yet added").
 
 #### [P3] White Ship follow-ups
-`type: task` · `area: data` · `status: ready` · `issue: —`
+`type: task` · `area: data` · `status: ready` · `issue: #7`
 
 Who survived the wreck (the butcher Berold is the usual answer). Visiting Barfleur on a Normandy trip belongs in a learning-log entry rather than here.
 Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
@@ -68,13 +68,13 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ## Done
 
 #### [P2] Intake crashed on a BC full date instead of showing an error
-`type: bug` · `area: tooling` · `status: done` · `issue: —`
+`type: bug` · `area: tooling` · `status: done` · `issue: #8`
 
 `-0044-03-15` (and year `0`, or any malformed date) crashed `tools/intake.py`. Event, link, moment and log dates were only parsed during apply, so a bad one could stop a run after some writes. The preview now checks every date field and lists bad ones as errors (2026-10-06).
 Source: found while adding Aristotle (PR #2).
 
 #### [P3] Stop tracking the Python cache file
-`type: bug` · `area: tooling` · `status: done` · `issue: —`
+`type: bug` · `area: tooling` · `status: done` · `issue: #9`
 
 `tools/__pycache__/intake.cpython-313.pyc` was committed with the intake script. Removed it and added `__pycache__/` to `.gitignore` (2026-10-06).
 Source: commit `8f56234`.
