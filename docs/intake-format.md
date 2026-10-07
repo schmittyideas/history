@@ -57,6 +57,11 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 | `lat`, `lng` | Coordinates (decimal degrees) |
 | `visitable` | `true` if you can visit it today |
 | `visit_site` | What to visit (e.g. "Battle Abbey and Battlefield (English Heritage)") |
+| `founded` | Year it was founded or built (BC negative). A full date is kept as its year |
+| `founded_estimated` | `true` when the year is approximate (shown as "c.") |
+| `ended` | Year it was destroyed or demolished. Leave out if it still stands |
+| `built_by` | Who founded or (re)built it, as plain text: "Edward the Confessor; rebuilt by Henry III from 1245". Names that match a person in the database become links on the site |
+| `architect` | Architect or master mason, as plain text |
 | `obsidian_link`, `sources` | As above |
 
 ### `events`

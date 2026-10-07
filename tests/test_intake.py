@@ -84,9 +84,28 @@ def test_errors_are_caught():
     assert "died (1090) before born (1100)" in text and "unknown person `nobody`" in text and "unknown place `atlantis`" in text
     assert any("no source" in w for w in plan.warnings)
 
+def test_place_dates_and_builders():
+    db = FakeDB(snapshot())
+    docs = [("p.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "places": [
+        {"key": "westminster-abbey", "founded": 960, "founded_estimated": True, "built_by": "Edward the Confessor", "architect": "Henry of Reyns", "sources": ["s"]},
+        {"key": "new-castle", "name": "New Castle", "founded": "1100-05-01", "ended": 1650, "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors, plan.errors
+    intake.apply_files(world, docs, log=lambda m: None)
+    pl = {r["key"]: r for r in db.t["places"]}
+    wa = pl["westminster-abbey"]
+    assert (wa["start_year"], wa["start_estimated"], wa["built_by"], wa["architect"]) == (960, True, "Edward the Confessor", "Henry of Reyns")
+    assert wa["name"] == "Westminster Abbey" and "end_year" not in wa  # an update only touches the fields given
+    assert (pl["new-castle"]["start_year"], pl["new-castle"]["end_year"]) == (1100, 1650)
+    bad = [("b.yaml", {"batch": {"title": "t"}, "places": [{"key": "x", "name": "X", "founded": 1500, "ended": 1400}, {"key": "y", "name": "Y", "founded": "c. 900"}]})]
+    text = " ".join(intake.plan_files(intake.World(db), bad).errors)
+    assert "ended (1400) before founded (1500)" in text and "place `y` `founded`: `c. 900` is not a year" in text, text
+
 def test_bad_dates_are_errors_not_crashes():
     assert intake.parse_when(-384) == (-384, None) and intake.parse_when("-384") == (-384, None)
     assert intake.parse_when("1120-11-25") == (1120, "1120-11-25")
+    assert intake.parse_when("988-05-19") == (988, "0988-05-19")  # pre-1000 full dates need no zero-padding
     db = FakeDB(snapshot())
     docs = [("bad.yaml", {"batch": {"title": "t"},
              "people": [{"key": "caesar", "name": "Julius Caesar", "type": "Royalty", "born": -100, "died": "-0044-03-15"},
@@ -131,4 +150,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

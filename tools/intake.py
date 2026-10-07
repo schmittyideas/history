@@ -88,7 +88,10 @@ def parse_when(v):
     if re.fullmatch(r"-\d+-\d+-\d+", s):
         raise ValueError(f"`{s}`: full dates aren't supported for BC, use the year alone (`{int(s.split('-')[1]) * -1}`)")
     try:
-        d = dt.date.fromisoformat(s)
+        m = re.fullmatch(r"(\d{1,4})-(\d{1,2})-(\d{1,2})", s)  # years before 1000 may have fewer digits: 988-05-19
+        if not m:
+            raise ValueError
+        d = dt.date(*map(int, m.groups()))
     except ValueError:
         raise ValueError(f"`{s}` is not a year or a YYYY-MM-DD date") from None
     return d.year, d.isoformat()
@@ -117,7 +120,8 @@ PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "hou
                  "born_estimated": "birth_estimated", "died_estimated": "death_estimated"}
 PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
                 "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
-                "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note"}
+                "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",
+                "founded_estimated": "start_estimated", "built_by": "built_by", "architect": "architect"}
 EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
                 "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note", "visitable": "visitable_today",
                 "visit_site": "visit_site"}
@@ -224,6 +228,9 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.adds["places"].append(k)
                 if x.get("lat") is None or x.get("lng") is None:
                     p.warnings.append(f"place `{k}`: no coordinates, so it won't appear on the map")
+            fy, _ = when(x, "founded", f"place `{k}`"); ey, _ = when(x, "ended", f"place `{k}`")
+            if fy is not None and ey is not None and ey < fy:
+                p.errors.append(f"place `{k}`: ended ({ey}) before founded ({fy})")
             check_sources(x, f"place `{k}`", require=k not in world.places)
 
         for x in as_list(d.get("people")):
@@ -429,7 +436,12 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
             upsert_keyed("sources", world.sources, s["key"], {"title": s.get("title"), "url": s.get("url"), "author": s.get("author"), "note": s.get("note")})
     for _, d in docs:
         for x in as_list(d.get("places")):
-            upsert_keyed("places", world.places, x["key"], map_fields(x, PLACE_FIELDS))
+            row = map_fields(x, PLACE_FIELDS)
+            if "founded" in x:  # places keep years only; a full date is reduced to its year
+                row["start_year"] = parse_when(x["founded"])[0]
+            if "ended" in x:
+                row["end_year"] = parse_when(x["ended"])[0]
+            upsert_keyed("places", world.places, x["key"], row)
     for _, d in docs:
         for x in as_list(d.get("people")):
             row = map_fields(x, PEOPLE_FIELDS)

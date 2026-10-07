@@ -1,0 +1,136 @@
+batch:
+  title: Westminster Abbey
+  requested: "Build out Westminster Abbey as a place, using the Obsidian History notes"
+  date: 2026-10-06
+
+sources:
+  - {key: wp-westminster-abbey,     title: "Westminster Abbey (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Westminster_Abbey"}
+  - {key: wp-edward-the-confessor,  title: "Edward the Confessor (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Edward_the_Confessor"}
+  - {key: wp-harold-godwinson,      title: "Harold Godwinson (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Harold_Godwinson"}
+  - {key: wp-henry-iii,             title: "Henry III of England (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Henry_III_of_England"}
+  - {key: wp-matilda-of-scotland,   title: "Matilda of Scotland (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Matilda_of_Scotland"}
+  - {key: wp-dunstan,               title: "Dunstan (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Dunstan"}
+  - {key: obsidian-king-harold-ii,  title: "King Harold II (Obsidian History note)", note: "Says Harold was the first to be crowned at Westminster Abbey"}
+
+places:
+  # Update: the abbey already exists; this adds its dates, builders and a note.
+  - key: westminster-abbey
+    founded: 959
+    founded_estimated: true
+    built_by: "Dunstan and King Edgar (monastery, c. 959); Edward the Confessor (church, c. 1042–1065); Henry III (rebuilt from 1245)"
+    architect: "Henry of Reynes (Henry III's master mason)"
+    note: Coronation church of English monarchs since 1066, and burial place of many of them.
+    sources: [wp-westminster-abbey]
+
+people:
+  - key: edward-the-confessor
+    name: Edward the Confessor
+    type: Royalty
+    born: 1003
+    born_estimated: true
+    died: 1066-01-05
+    house: Wessex
+    realm: England
+    prominence: 4
+    obsidian_link: King Edward the Confessor
+    note: King of England 1042–1066. Rebuilt Westminster Abbey; his death without an heir led to 1066.
+    sources: [wp-edward-the-confessor]
+
+  - key: henry-iii-of-england
+    name: Henry III
+    type: Royalty
+    born: 1207-10-01
+    died: 1272-11-16
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    obsidian_link: King Henry III
+    note: King of England 1216–1272. Rebuilt Westminster Abbey in the Gothic style from 1245.
+    sources: [wp-henry-iii]
+
+  - key: dunstan
+    name: Dunstan
+    type: Clergy
+    roles: [archbishop, saint]
+    born: 909
+    born_estimated: true
+    died: 988-05-19
+    realm: England
+    prominence: 2
+    obsidian_link: Dunston
+    note: Archbishop of Canterbury 959–988 and monastic reformer. With King Edgar, installed Benedictine monks at Westminster.
+    sources: [wp-dunstan, wp-westminster-abbey]
+
+events:
+  - key: westminster-benedictine-community
+    name: Benedictine monks settled at Westminster
+    type: Founding
+    year: 959
+    estimated: true
+    place: westminster-abbey
+    prominence: 2
+    note: The usual date for the abbey's origins. Dunstan and King Edgar installed the community.
+    people:
+      - {person: dunstan, role: founder}
+    sources: [wp-westminster-abbey]
+
+  - key: consecration-of-westminster-abbey-1065
+    name: Consecration of Edward the Confessor's abbey
+    type: Consecration
+    date: 1065-12-28
+    place: westminster-abbey
+    prominence: 3
+    note: Edward was too ill to attend and died eight days later.
+    people:
+      - {person: edward-the-confessor, role: founder}
+    sources: [wp-westminster-abbey, wp-edward-the-confessor]
+
+  - key: coronation-of-harold-ii
+    name: Coronation of Harold II
+    type: Coronation
+    date: 1066-01-06
+    place: westminster-abbey
+    prominence: 3
+    note: The day after Edward the Confessor died, and the day of his burial. The place is probable, not certain.
+    people:
+      - {person: harold-ii-of-england, role: crowned}
+    sources: [wp-harold-godwinson, wp-westminster-abbey]
+
+  - key: coronation-of-henry-iii-1220
+    name: Second coronation of Henry III
+    type: Coronation
+    date: 1220-05-17
+    place: westminster-abbey
+    prominence: 2
+    note: First crowned at Gloucester on 28 October 1216, in the middle of the First Barons' War.
+    people:
+      - {person: henry-iii-of-england, role: crowned}
+    sources: [wp-henry-iii]
+
+  - key: rebuilding-of-westminster-abbey
+    name: Henry III rebuilds Westminster Abbey
+    type: Construction
+    date: 1245-07-06
+    end_year: 1269
+    place: westminster-abbey
+    prominence: 3
+    note: Master mason Henry of Reynes. The new church was consecrated on 13 October 1269, when Edward the Confessor's remains were moved to the shrine behind the high altar.
+    people:
+      - {person: henry-iii-of-england, role: patron}
+    sources: [wp-westminster-abbey]
+
+moments:
+  - {person: edward-the-confessor, role: buried, place: westminster-abbey, year: 1066, sources: [wp-edward-the-confessor]}
+  - {person: matilda-of-scotland,  role: buried, place: westminster-abbey, year: 1118, sources: [wp-matilda-of-scotland]}
+  - {person: henry-iii-of-england, role: buried, place: westminster-abbey, year: 1272, sources: [wp-henry-iii]}
+
+discrepancies:
+  - key: harold-ii-coronation-place
+    question: Was Harold II crowned at Westminster Abbey, and was his the first coronation there?
+    about: [{event: coronation-of-harold-ii}, {person: harold-ii-of-england}, {place: westminster-abbey}]
+    field: place
+    claims:
+      - {value: "Westminster Abbey; the first coronation there", sources: [obsidian-king-harold-ii]}
+      - {value: "Most likely Westminster Abbey; little evidence from the time, mainly the Bayeux Tapestry", sources: [wp-harold-godwinson]}
+      - {value: "Probably Westminster, but the first documented coronation there is William I's (25 December 1066)", sources: [wp-westminster-abbey]}
+    note: The event is placed at Westminster Abbey as the most likely site. Harold may well have been the first crowned there, but William I is the first on record.
