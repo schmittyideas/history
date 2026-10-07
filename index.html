@@ -12,9 +12,33 @@
 <div class="wrap">
   <header class="top">
     <div class="meta"><span id="source"><i class="dot"></i>Loading…</span><span id="count"></span><span id="span"></span></div>
-    <h1>History Timeline</h1>
+    <div class="title-row">
+      <h1>History Timeline</h1>
+      <nav class="seg views" aria-label="View">
+        <button type="button" id="view-timeline" aria-pressed="true">Timeline</button>
+        <button type="button" id="view-year" aria-pressed="false">Year</button>
+      </nav>
+    </div>
   </header>
 
+  <section class="view year" id="year-view" aria-label="Who ruled, and what happened, in a year" hidden>
+    <form class="ask year-form" id="year-form">
+      <label class="yf"><span>Year</span><input type="search" id="year-from" autocomplete="off" placeholder="1060" aria-describedby="year-help"></label>
+      <label class="yf"><span>to</span><input type="search" id="year-to" autocomplete="off" placeholder="optional"></label>
+      <button class="btn" type="submit">Show</button>
+      <p class="hint" id="year-help">A year (1060, 384 BC), or a span: add an end year, or type "11th century".</p>
+      <div class="examples"><span>Try:</span>
+        <button type="button" data-from="1060">1060</button>
+        <button type="button" data-from="1066">1066</button>
+        <button type="button" data-from="1087" data-to="1154">1087 to 1154</button>
+        <button type="button" data-from="12th century">12th century</button>
+      </div>
+      <div class="chips" id="year-realms" aria-label="Realms shown"></div>
+    </form>
+    <div id="year-out" class="year-out" aria-live="polite"></div>
+  </section>
+
+  <div class="view" id="timeline-view">
   <section class="ask" aria-label="What do you want to see?">
     <form id="ask-form" role="search">
       <input type="search" id="q" name="q" autocomplete="off" placeholder="What do you want to see? e.g. Normandy 1050–1150 royalty" aria-label="What do you want to see?">
@@ -79,6 +103,7 @@
   </div>
 
   <p class="note">Zoom with the − and + buttons, or Ctrl/⌘ + scroll over the chart. Use the strip above the chart to jump left or right. Every name in the side panel is a link. Some dates are estimates.</p>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>

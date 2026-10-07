@@ -59,6 +59,8 @@ async function loadData() {
         })));
       const raw = Object.fromEntries(TABLES.map((t, i) => [t, rows[i]]));
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
+      // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
+      raw.titles = await fetch(`${c.supabaseUrl}/rest/v1/titles?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -69,7 +71,7 @@ async function loadData() {
 
 function indexData(raw) {
   const people = raw.entities || [], rels = raw.relationships || [], events = raw.events || [];
-  const ep = raw.event_people || [], places = raw.places || [], pp = raw.person_places || [];
+  const ep = raw.event_people || [], places = raw.places || [], pp = raw.person_places || [], titles = raw.titles || [];
   const byId = Object.fromEntries(people.map(p => [p.id, p]));
   const eventById = Object.fromEntries(events.map(e => [e.id, e]));
   const placeById = Object.fromEntries(places.map(p => [p.id, p]));
@@ -97,7 +99,7 @@ function indexData(raw) {
   const momentsAt = id => pp.filter(x => x.place_id === id).map(x => ({ person: byId[x.entity_id], role: x.role, year: x.year })).filter(x => x.person);
   return { people, rels, events, ep, places, pp, byId, eventById, placeById, parentLinks, spouseLinks,
     parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
-    eventsAt, momentsAt };
+    eventsAt, momentsAt, titles, titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)) };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -344,7 +346,8 @@ function renderChips() {
   const chip = (label, value, onRemove) => h("span", { class: "chip" }, label ? `${label}: ` : "", h("b", { text: value }),
     h("button", { type: "button", "aria-label": `Remove ${value}`, title: "Remove", onclick: onRemove, text: "×" }));
   const rerun = mut => { mut(); S.view = computeView(S.db, S.filter); S.query = describe(S.filter); $("q").value = S.query; renderChips(); render(); };
-  if (f.from != null) box.append(chip("Years", f.from === f.to ? `alive in ${fmtYear(f.from)}` : fmtSpan(f.from, f.to), () => rerun(() => { f.from = f.to = null; })));
+  if (f.from != null) box.append(chip("Years", f.from === f.to ? `alive in ${fmtYear(f.from)}` : fmtSpan(f.from, f.to), () => rerun(() => { f.from = f.to = null; })),
+    h("button", { type: "button", class: "plink", onclick: () => openYear(f.from, f.to), text: "Who ruled then?" }));
   f.types.forEach(t => box.append(chip("Who", TYPE_LABEL[t] || t, () => rerun(() => f.types.delete(t)))));
   f.regions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.regions = f.regions.filter(x => x !== r); }))));
   f.missingRegions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.missingRegions = f.missingRegions.filter(x => x !== r); }))));
@@ -678,6 +681,9 @@ function select(id) {
     ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
+    ...(db.titlesOf(id).length ? [["Titles", joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
+      title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
+      text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
     ["Obsidian note", obsidianLink(p.obsidian_link)],
   ];
   const dl = h("dl");
@@ -883,6 +889,184 @@ function setMapMode(m) {
   drawMap();
 }
 
+/* ------------------------------------------------------------------ year view */
+// Who ruled where, and what happened, in a year or a span. Rulers come from the titles table,
+// grouped by realm, so it grows to any country as titles are added.
+
+const Y = { from: null, to: null, hidden: new Set(store.get("hiddenRealms", [])) };
+const reignSpan = t => {
+  const s = (t.start_estimated ? "c. " : "") + (fmtYear(t.start_year) ?? "?");
+  if (t.end_year == null) return `from ${s}`;
+  if (t.end_year === t.start_year) return s;
+  return (t.start_estimated ? "c. " : "") + fmtSpan(t.start_year, t.end_year) + (t.end_estimated ? " (end approx.)" : "");
+};
+const overlaps = (s, e, a, b) => s != null && s <= b && (e ?? Infinity) >= a;
+
+// Links out of the Year view switch to the timeline first, then go to the record there.
+const toTimeline = fn => () => { showView("timeline"); fn(); };
+const yPerson = (p, extra = "") => h("button", { type: "button", class: "plink", title: `Show ${p.name} on the timeline`, onclick: toTimeline(() => reveal(p.id)), text: p.name + extra });
+const yEvent = e => h("button", { type: "button", class: "plink", title: `Show ${e.name} on the timeline`, onclick: toTimeline(() => revealEvent(e.id)), text: e.name });
+const yPlace = pl => h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: toTimeline(() => selectPlace(pl.id)), text: pl.name });
+
+function showView(v) {
+  $("timeline-view").hidden = v !== "timeline";
+  $("year-view").hidden = v !== "year";
+  $("view-timeline").setAttribute("aria-pressed", v === "timeline");
+  $("view-year").setAttribute("aria-pressed", v === "year");
+  S.viewMode = v;
+  if (v === "timeline") {
+    try { history.replaceState(null, "", S.query ? "?q=" + encodeURIComponent(S.query) : location.pathname); } catch (e) {}
+    renderOverview(); updateOverviewWindow();
+  } else {
+    syncYearUrl();
+    $("year-from").focus({ preventScroll: true });
+  }
+}
+
+function syncYearUrl() {
+  if (S.viewMode !== "year") return;
+  const p = new URLSearchParams({ view: "year" });
+  if (Y.from != null) p.set("y", yearQuery(Y.from));
+  if (Y.to != null && Y.to !== Y.from) p.set("to", yearQuery(Y.to, Y.from < 0));
+  try { history.replaceState(null, "", "?" + p.toString()); } catch (e) {}
+}
+
+// Opens the Year view on a year or span, from anywhere in the site.
+function openYear(from, to) {
+  Y.from = from; Y.to = to ?? from;
+  $("year-from").value = from != null ? yearQuery(from) : "";
+  $("year-to").value = Y.to !== Y.from ? yearQuery(Y.to, from < 0) : "";
+  showView("year");
+  renderYear();
+}
+
+// Reads the two boxes with the same rules as the main request box: "1060", "384 BC", "11th century", "1060 to 1100".
+function readYearForm() {
+  const a = $("year-from").value.trim(), b = $("year-to").value.trim();
+  if (!a) return { error: "Type a year, e.g. 1060." };
+  const fa = parseQuery(a, S.db);
+  if (fa.from == null) return { error: `Couldn't read "${a}" as a year. Try 1060, 384 BC or 11th century.` };
+  let from = fa.from, to = fa.to;
+  if (b) {
+    const fb = parseQuery(b, S.db);
+    if (fb.from == null) return { error: `Couldn't read "${b}" as a year.` };
+    to = fb.to;
+  }
+  return from <= to ? { from, to } : { from: to, to: from };
+}
+
+function renderYear() {
+  const db = S.db, out = $("year-out"), realmsBox = $("year-realms");
+  out.innerHTML = ""; realmsBox.innerHTML = "";
+  if (Y.error) { out.append(h("p", { class: "hint", text: Y.error })); return; }
+  if (Y.from == null) {
+    out.append(h("p", { class: "hint", text: "Type a year above to see who ruled and what happened." }));
+    return;
+  }
+  const a = Y.from, b = Y.to ?? Y.from, single = a === b;
+  const label = single ? fmtYear(a) : fmtSpan(a, b);
+  const span = single ? 1 : yearsBetween(a, b) + 1;
+
+  // Rulers, grouped by realm, then by title in the order each title first appears.
+  const inRange = db.titles.filter(t => overlaps(t.start_year, t.end_year, a, b));
+  // Realms with the most rulers in the span first (the main kingdoms), then by name.
+  const count = r => inRange.filter(t => t.realm === r).length;
+  const realms = [...new Set(inRange.map(t => t.realm))].sort((x, y) => count(y) - count(x) || x.localeCompare(y));
+  if (realms.length > 1) {
+    realmsBox.append(h("span", { class: "lbl", text: "Realms" }));
+    realms.forEach(r => {
+      const on = !Y.hidden.has(r);
+      realmsBox.append(h("button", { type: "button", class: "chip toggle-chip", "aria-pressed": on, title: on ? `Hide ${r}` : `Show ${r}`,
+        onclick: () => { on ? Y.hidden.add(r) : Y.hidden.delete(r); store.set("hiddenRealms", [...Y.hidden]); renderYear(); }, text: r }));
+    });
+  }
+
+  out.append(h("div", { class: "year-head" },
+    h("h2", { text: label }),
+    h("button", { type: "button", class: "btn ghost", onclick: toTimeline(() => run(rangeQuery(a, b), { pushTrail: true })), text: "Show these years on the timeline" })));
+
+  const rulers = h("section", { class: "year-sec" }, h("h3", { text: single ? "Who ruled" : "Who ruled, in order" }));
+  const shown = realms.filter(r => !Y.hidden.has(r));
+  if (!inRange.length) {
+    const ys = db.titles.flatMap(t => [t.start_year, t.end_year]).filter(Number.isFinite);
+    rulers.append(h("p", { class: "hint", text: db.titles.length
+      ? `No rulers recorded for ${label} yet. Titles so far cover ${fmtSpan(Math.min(...ys), Math.max(...ys))}: ${[...new Set(db.titles.map(t => t.realm))].sort().join(", ")}.`
+      : "No titles or reigns in the database yet." }));
+  } else if (!shown.length) {
+    rulers.append(h("p", { class: "hint", text: "Every realm is hidden. Turn one back on above." }));
+  }
+  const grid = h("div", { class: "realms" });
+  shown.forEach(realm => {
+    const ts = inRange.filter(t => t.realm === realm);
+    const names = [...new Set(ts.slice().sort((x, y) => byYear(x.start_year, y.start_year)).map(t => t.title))];
+    const card = h("article", { class: "realm-card" }, h("h4", { text: realm }));
+    names.forEach(name => {
+      const holders = ts.filter(t => t.title === name).sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
+      const row = h("div", { class: "title-row-y" }, h("div", { class: "tname", text: name }));
+      const list = h("ol", { class: "holders" });
+      holders.forEach(t => {
+        const p = db.byId[t.entity_id];
+        if (!p) return;
+        const nth = single && t.start_year != null ? ` · year ${yearsBetween(t.start_year, a) + 1} of reign` : "";
+        list.append(h("li", { class: t.disputed ? "disputed" : "" }, yPerson(p),
+          h("span", { class: "yrs", text: ` ${reignSpan(t)}${t.disputed ? " · disputed" : ""}${nth}` }),
+          t.note ? h("div", { class: "tnote", text: t.note }) : null));
+      });
+      row.append(list);
+      if (!single) row.append(reignStrip(holders, a, b));
+      card.append(row);
+    });
+    grid.append(card);
+  });
+  rulers.append(grid);
+  out.append(rulers);
+
+  // Events in the span, in date order.
+  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b))
+    .sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
+  const evSec = h("section", { class: "year-sec" }, h("h3", { text: `Events (${evs.length})` }));
+  if (!evs.length) evSec.append(h("p", { class: "hint", text: `No events recorded for ${label} yet.` }));
+  const evList = h("ul", { class: "ylist" });
+  evs.forEach(e => {
+    const pl = db.placeById[e.place_id], ppl = db.peopleInEvent(e.id);
+    const when = e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year) + (e.end_year != null && e.end_year !== e.start_year ? `–${fmtYear(e.end_year)}` : "");
+    evList.append(h("li", {}, h("span", { class: "yrs", text: (e.estimated ? "c. " : "") + when }), " ", yEvent(e),
+      pl ? [" · ", yPlace(pl)] : null,
+      ppl.length ? h("div", { class: "who" }, ...joinNodes(ppl.map(x => yPerson(x.person, x.role ? ` (${x.role})` : "")))) : null));
+  });
+  evSec.append(evList);
+  out.append(evSec);
+
+  // Births and deaths in the span.
+  const born = db.people.filter(p => p.birth_year != null && p.birth_year >= a && p.birth_year <= b).sort((x, y) => byYear(x.birth_year, y.birth_year));
+  const died = db.people.filter(p => p.death_year != null && p.death_year >= a && p.death_year <= b).sort((x, y) => byYear(x.death_year, y.death_year));
+  const bd = h("section", { class: "year-sec two" });
+  [["Born", born, "birth"], ["Died", died, "death"]].forEach(([title, list, k]) => {
+    const sec = h("div", {}, h("h3", { text: `${title} (${list.length})` }));
+    if (!list.length) sec.append(h("p", { class: "hint", text: "None recorded." }));
+    else sec.append(h("ul", { class: "ylist" }, ...list.map(p => h("li", {},
+      h("span", { class: "yrs", text: (p[k + "_estimated"] ? "c. " : "") + (p[k + "_date"] ? fmtDate(p[k + "_date"]) : fmtYear(p[k + "_year"])) }), " ", yPerson(p)))));
+    bd.append(sec);
+  });
+  out.append(bd);
+  if (span > 1) out.append(h("p", { class: "hint", text: `${span} years. Rulers are listed if any part of their reign falls in this span.` }));
+}
+
+// One title's holders across the span, as bars on a shared scale.
+function reignStrip(holders, a, b) {
+  const W = 600, H = 22, x = y => ((Math.max(a, Math.min(b + 1, y)) - a) / (b + 1 - a)) * W;
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, class: "strip", role: "img", "aria-label": holders.map(t => `${S.db.byId[t.entity_id]?.name} ${reignSpan(t)}`).join("; ") });
+  el("rect", { x: 0, y: 4, width: W, height: H - 8, class: "strip-bg" }, svg);
+  holders.forEach((t, i) => {
+    const p = S.db.byId[t.entity_id];
+    const x0 = x(t.start_year), x1 = x((t.end_year ?? b) + 1), w = Math.max(2, x1 - x0);
+    const r = el("rect", { x: x0, y: 4, width: w, height: H - 8, class: "strip-bar" + (i % 2 ? " alt" : "") + (t.disputed ? " disputed" : "") }, svg);
+    el("title", {}, r).textContent = `${p?.name}: ${reignSpan(t)}`;
+    if (p && w > p.name.length * 6.5 + 8) el("text", { x: x0 + 5, y: H / 2 + 4, class: "strip-label" }, svg).textContent = p.name;
+  });
+  return svg;
+}
+
 /* ------------------------------------------------------------------ wiring */
 
 function setGroup(g) {
@@ -904,6 +1088,19 @@ function wire() {
   $("layer-events").addEventListener("change", e => { S.layers.events = e.target.checked; store.set("events", S.layers.events); render(); updateOverviewWindow(); });
   $("zoom-in").addEventListener("click", () => setZoom(S.zoom + 1));
   $("zoom-out").addEventListener("click", () => setZoom(S.zoom - 1));
+  $("view-timeline").addEventListener("click", () => showView("timeline"));
+  $("view-year").addEventListener("click", () => { showView("year"); renderYear(); });
+  $("year-form").addEventListener("submit", e => {
+    e.preventDefault();
+    const r = readYearForm();
+    Y.error = r.error || null;
+    if (!r.error) { Y.from = r.from; Y.to = r.to; }
+    syncYearUrl(); renderYear();
+  });
+  document.querySelectorAll("#year-form .examples button").forEach(b => b.addEventListener("click", () => {
+    $("year-from").value = b.dataset.from; $("year-to").value = b.dataset.to || "";
+    $("year-form").requestSubmit();
+  }));
   $("map-selected").addEventListener("click", () => setMapMode("selected"));
   $("map-everyone").addEventListener("click", () => setMapMode("everyone"));
 
@@ -942,9 +1139,16 @@ async function init() {
   src.innerHTML = "";
   src.append(h("i", { class: "dot" }), source === "live" ? "Live from Supabase" : "Snapshot of 5 Oct 2026");
   if (error) src.title = `Live data unavailable: ${error}`;
-  let q = "";
-  try { q = new URLSearchParams(location.search).get("q") || ""; } catch (e) {}
-  run(q);
+  let params = new URLSearchParams();
+  try { params = new URLSearchParams(location.search); } catch (e) {}
+  // The timeline is always drawn first (while visible, so it can measure itself); ?view=year then switches over.
+  S.viewMode = "timeline";
+  run(params.get("q") || "");
+  if (params.get("view") === "year") {
+    $("year-from").value = params.get("y") || ""; $("year-to").value = params.get("to") || "";
+    showView("year");
+    if ($("year-from").value) $("year-form").requestSubmit(); else renderYear();
+  }
 }
 
 init();

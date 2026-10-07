@@ -18,7 +18,7 @@ class FakeDB:
     def __init__(self, snap):
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
-                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": []}
+                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -102,6 +102,33 @@ def test_place_dates_and_builders():
     text = " ".join(intake.plan_files(intake.World(db), bad).errors)
     assert "ended (1400) before founded (1500)" in text and "place `y` `founded`: `c. 900` is not a year" in text, text
 
+def test_titles():
+    db = FakeDB(snapshot())
+    src = [{"key": "s", "title": "S"}]
+    docs = [("t.yaml", {"batch": {"title": "t"}, "sources": src, "titles": [
+        {"person": "william-i-of-england", "title": "King of England", "realm": "England", "from": "1066-12-25", "to": "1087-09-09", "sources": ["s"]},
+        {"person": "william-i-of-england", "title": "Duke of Normandy", "realm": "Normandy", "from": 1035, "to": 1087, "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    assert plan.adds["titles"] == ["william-i-of-england--king-of-england--1066", "william-i-of-england--duke-of-normandy--1035"]
+    intake.apply_files(world, docs, log=lambda m: None)
+    t = {r["key"]: r for r in db.t["titles"]}["william-i-of-england--king-of-england--1066"]
+    assert (t["start_year"], t["start_date"], t["end_year"], t["realm"]) == (1066, "1066-12-25", 1087, "England")
+    assert any(l["record_type"] == "title" for l in db.t["source_links"])
+    # Re-sending updates rather than duplicating.
+    plan2 = intake.plan_files(intake.World(db), docs)
+    assert not plan2.adds["titles"] and len(plan2.updates["titles"]) == 2
+    bad = [("b.yaml", {"batch": {"title": "t"}, "titles": [
+        {"person": "william-i-of-england", "title": "King of England", "realm": "England", "from": 1090, "to": 1080},
+        {"person": "william-i-of-england", "title": "Count of Nowhere", "realm": "Nowhere", "from": 1000},
+        {"person": "nobody", "title": "X", "realm": "Y"},
+        {"person": "william-i-of-england", "from": 1050}]})]
+    p3 = intake.plan_files(intake.World(db), bad)
+    text = " ".join(p3.errors) + " | " + " ".join(p3.warnings)
+    assert "ended (1080) before it began (1090)" in text and "unknown person `nobody`" in text, text
+    assert "need `title` and `realm`" in text and "starts (1000) before william-i-of-england was born (1028)" in text, text
+
 def test_bad_dates_are_errors_not_crashes():
     assert intake.parse_when(-384) == (-384, None) and intake.parse_when("-384") == (-384, None)
     assert intake.parse_when("1120-11-25") == (1120, "1120-11-25")
@@ -150,4 +177,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_titles(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

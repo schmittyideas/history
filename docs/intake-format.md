@@ -91,6 +91,26 @@ moments:
   - {person: henry-i-of-england, role: died, place: lyons-la-foret, year: 1135}
 ```
 
+### `titles`
+Titles and reigns: who held what, from when to when. A title is separate from the person's life, as in the Obsidian notes (William I lived 1028–1087; he was Duke of Normandy 1035–1087 and King of England 1066–1087). The Year view reads these to show who ruled where.
+| Field | Meaning |
+|---|---|
+| `person` | Person key (required) |
+| `title` | The title as written: "King of England", "Duke of Normandy", "Pope" (required for new titles) |
+| `realm` | What it rules, used to group the Year view: "England", "Normandy", "Papal States" (required for new titles). Use the same spelling every time |
+| `from`, `to` | Start and end: year or full date (BC negative). Leave out `to` while it's still held |
+| `from_estimated`, `to_estimated` | `true` when approximate |
+| `disputed` | `true` for a contested claim (Empress Matilda, 1141) |
+| `key` | Optional. Without it the key is `person--title--start year`, so a second reign of the same title gets its own row |
+| `note`, `obsidian_link`, `sources` | As above; `obsidian_link` is the reign note, e.g. "King William I of England" |
+
+```yaml
+titles:
+  - {person: william-i-of-england, title: King of England, realm: England, from: 1066-12-25, to: 1087-09-09, obsidian_link: King William I of England}
+  - {person: william-i-of-england, title: Duke of Normandy, realm: Normandy, from: 1035, to: 1087}
+```
+The preview warns when a title starts before its holder was born or ends after they died.
+
 ### `discrepancies`
 Where sources disagree. Record both sides rather than silently picking one, so a later source can settle it.
 | Field | Meaning |

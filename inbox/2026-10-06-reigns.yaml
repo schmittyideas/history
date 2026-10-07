@@ -1,0 +1,35 @@
+batch:
+  title: Reigns of the rulers already in the database
+  requested: "Type a year and see who is King; build it as its own view"
+  date: 2026-10-06
+
+sources:
+  - {key: wp-english-monarchs,  title: "List of English monarchs (Wikipedia)", url: "https://en.wikipedia.org/wiki/List_of_English_monarchs"}
+  - {key: wp-duke-of-normandy,  title: "Duke of Normandy (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Duke_of_Normandy"}
+  - {key: wp-william-i,         title: "William the Conqueror (Wikipedia)",    url: "https://en.wikipedia.org/wiki/William_the_Conqueror"}
+  - {key: wp-stephen-of-blois,  title: "Stephen, Count of Blois (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Stephen,_Count_of_Blois"}
+
+titles:
+  # Kings of England. Dates are the reign dates in the List of English monarchs.
+  - {person: edward-the-confessor,  title: King of England, realm: England, from: 1042-06-08, to: 1066-01-05, obsidian_link: King Edward the Confessor, sources: [wp-english-monarchs]}
+  - {person: harold-ii-of-england,  title: King of England, realm: England, from: 1066-01-06, to: 1066-10-14, obsidian_link: King Harold II, sources: [wp-english-monarchs]}
+  - {person: william-i-of-england,  title: King of England, realm: England, from: 1066-12-25, to: 1087-09-09, obsidian_link: King William I of England, sources: [wp-english-monarchs]}
+  - {person: william-ii-of-england, title: King of England, realm: England, from: 1087-09-26, to: 1100-08-02, obsidian_link: King William II, sources: [wp-english-monarchs]}
+  - {person: henry-i-of-england,    title: King of England, realm: England, from: 1100-08-05, to: 1135-12-01, obsidian_link: King Henry 1 of England, sources: [wp-english-monarchs]}
+  - {person: king-stephen,          title: King of England, realm: England, from: 1135-12-22, to: 1154-10-25, obsidian_link: King Stephen,
+     note: "Held captive and displaced by Matilda for part of 1141", sources: [wp-english-monarchs]}
+  - {person: empress-matilda,       title: Lady of the English, realm: England, from: 1141-04-07, to: 1141-11-01, disputed: true,
+     note: "Never crowned; rarely listed as a monarch", sources: [wp-english-monarchs]}
+  - {person: henry-iii-of-england,  title: King of England, realm: England, from: 1216-10-28, to: 1272-11-16, obsidian_link: King Henry III, sources: [wp-english-monarchs]}
+
+  # Dukes of Normandy.
+  - {person: william-i-of-england,  title: Duke of Normandy, realm: Normandy, from: 1035, to: 1087-09-09, obsidian_link: "William I, Duke Of Normandy",
+     note: "Succeeded his father Robert I as a child", sources: [wp-william-i, wp-duke-of-normandy]}
+  - {person: robert-curthose,       title: Duke of Normandy, realm: Normandy, from: 1087-09-09, to: 1106, note: "Lost the duchy to Henry I at Tinchebray", sources: [wp-duke-of-normandy]}
+  - {person: henry-i-of-england,    title: Duke of Normandy, realm: Normandy, from: 1106, to: 1135-12-01, sources: [wp-duke-of-normandy]}
+  - {person: king-stephen,          title: Duke of Normandy, realm: Normandy, from: 1135, to: 1144, disputed: true, note: "Lost Normandy to Geoffrey during the Anarchy", sources: [wp-duke-of-normandy]}
+  - {person: geoffrey-plantagenet,  title: Duke of Normandy, realm: Normandy, from: 1144, to: 1150, note: "Handed the duchy to his son, the future Henry II", sources: [wp-duke-of-normandy]}
+
+  # Counts.
+  - {person: geoffrey-plantagenet,  title: Count of Anjou, realm: Anjou, from: 1129, to: 1151-09-07, sources: [wp-geoffrey]}
+  - {person: stephen-of-blois,      title: Count of Blois, realm: Blois, from: 1089, to: 1102, note: "Captured at the Second Battle of Ramla on crusade and executed", sources: [wp-stephen-of-blois]}
