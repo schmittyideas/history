@@ -60,7 +60,8 @@ async function loadData() {
       const raw = Object.fromEntries(TABLES.map((t, i) => [t, rows[i]]));
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
-      raw.titles = await fetch(`${c.supabaseUrl}/rest/v1/titles?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
+      const optional = t => fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
+      [raw.titles, raw.realms] = await Promise.all([optional("titles"), optional("realms")]);
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -99,7 +100,9 @@ function indexData(raw) {
   const momentsAt = id => pp.filter(x => x.place_id === id).map(x => ({ person: byId[x.entity_id], role: x.role, year: x.year })).filter(x => x.person);
   return { people, rels, events, ep, places, pp, byId, eventById, placeById, parentLinks, spouseLinks,
     parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
-    eventsAt, momentsAt, titles, titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)) };
+    eventsAt, momentsAt, titles,
+    regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
+    titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)) };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -893,7 +896,10 @@ function setMapMode(m) {
 // Who ruled where, and what happened, in a year or a span. Rulers come from the titles table,
 // grouped by realm, so it grows to any country as titles are added.
 
-const Y = { from: null, to: null, hidden: new Set(store.get("hiddenRealms", [])) };
+const Y = { from: null, to: null, hidden: new Set(store.get("hiddenRegions", [])) };
+// World regions in display order (matches sql/008). Realms not yet given a region go under Other.
+const REGIONS = ["Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
+  "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania", "Other"];
 const reignSpan = t => {
   const s = (t.start_estimated ? "c. " : "") + (fmtYear(t.start_year) ?? "?");
   if (t.end_year == null) return `from ${s}`;
@@ -972,12 +978,14 @@ function renderYear() {
   // Realms with the most rulers in the span first (the main kingdoms), then by name.
   const count = r => inRange.filter(t => t.realm === r).length;
   const realms = [...new Set(inRange.map(t => t.realm))].sort((x, y) => count(y) - count(x) || x.localeCompare(y));
-  if (realms.length > 1) {
-    realmsBox.append(h("span", { class: "lbl", text: "Realms" }));
-    realms.forEach(r => {
-      const on = !Y.hidden.has(r);
-      realmsBox.append(h("button", { type: "button", class: "chip toggle-chip", "aria-pressed": on, title: on ? `Hide ${r}` : `Show ${r}`,
-        onclick: () => { on ? Y.hidden.add(r) : Y.hidden.delete(r); store.set("hiddenRealms", [...Y.hidden]); renderYear(); }, text: r }));
+  const regionOf = r => db.regionOf[r] || "Other";
+  const regions = REGIONS.filter(g => realms.some(r => regionOf(r) === g));
+  if (regions.length > 1) {
+    realmsBox.append(h("span", { class: "lbl", text: "Regions" }));
+    regions.forEach(g => {
+      const on = !Y.hidden.has(g), n = realms.filter(r => regionOf(r) === g).length;
+      realmsBox.append(h("button", { type: "button", class: "chip toggle-chip", "aria-pressed": on, title: on ? `Hide ${g}` : `Show ${g}`,
+        onclick: () => { on ? Y.hidden.add(g) : Y.hidden.delete(g); store.set("hiddenRegions", [...Y.hidden]); renderYear(); }, text: `${g} (${n})` }));
     });
   }
 
@@ -986,16 +994,28 @@ function renderYear() {
     h("button", { type: "button", class: "btn ghost", onclick: toTimeline(() => run(rangeQuery(a, b), { pushTrail: true })), text: "Show these years on the timeline" })));
 
   const rulers = h("section", { class: "year-sec" }, h("h3", { text: single ? "Who ruled" : "Who ruled, in order" }));
-  const shown = realms.filter(r => !Y.hidden.has(r));
+  const shown = realms.filter(r => !Y.hidden.has(regionOf(r)));
   if (!inRange.length) {
     const ys = db.titles.flatMap(t => [t.start_year, t.end_year]).filter(Number.isFinite);
     rulers.append(h("p", { class: "hint", text: db.titles.length
       ? `No rulers recorded for ${label} yet. Titles so far cover ${fmtSpan(Math.min(...ys), Math.max(...ys))}: ${[...new Set(db.titles.map(t => t.realm))].sort().join(", ")}.`
       : "No titles or reigns in the database yet." }));
   } else if (!shown.length) {
-    rulers.append(h("p", { class: "hint", text: "Every realm is hidden. Turn one back on above." }));
+    rulers.append(h("p", { class: "hint", text: "Every region is hidden. Turn one back on above." }));
   }
-  const grid = h("div", { class: "realms" });
+  // With more than one region, each gets a heading and its own grid of realm cards.
+  const grids = {};
+  const gridFor = realm => {
+    const g = regionOf(realm);
+    if (!grids[g]) {
+      grids[g] = h("div", { class: "realms" });
+      if (regions.length > 1) rulers.append(h("h4", { class: "region-head", text: g }));
+      rulers.append(grids[g]);
+    }
+    return grids[g];
+  };
+  // Grouped by region, the realms in each region read best alphabetically; without regions, biggest first (as sorted above).
+  if (regions.length > 1) shown.sort((x, y) => REGIONS.indexOf(regionOf(x)) - REGIONS.indexOf(regionOf(y)) || x.localeCompare(y));
   shown.forEach(realm => {
     const ts = inRange.filter(t => t.realm === realm);
     const names = [...new Set(ts.slice().sort((x, y) => byYear(x.start_year, y.start_year)).map(t => t.title))];
@@ -1007,7 +1027,9 @@ function renderYear() {
       holders.forEach(t => {
         const p = db.byId[t.entity_id];
         if (!p) return;
-        const nth = single && t.start_year != null ? ` · year ${yearsBetween(t.start_year, a) + 1} of reign` : "";
+        // "year 5 of 22": works for offices and regencies as well as reigns.
+        const nth = single && t.start_year != null
+          ? ` · year ${yearsBetween(t.start_year, a) + 1}` + (t.end_year != null ? ` of ${yearsBetween(t.start_year, t.end_year) + 1}` : "") : "";
         list.append(h("li", { class: t.disputed ? "disputed" : "" }, yPerson(p),
           h("span", { class: "yrs", text: ` ${reignSpan(t)}${t.disputed ? " · disputed" : ""}${nth}` }),
           t.note ? h("div", { class: "tnote", text: t.note }) : null));
@@ -1016,14 +1038,14 @@ function renderYear() {
       if (!single) row.append(reignStrip(holders, a, b));
       card.append(row);
     });
-    grid.append(card);
+    gridFor(realm).append(card);
   });
-  rulers.append(grid);
   out.append(rulers);
 
   // Events in the span, in date order.
+  // Within a year, dated events first in date order, then those known only by year.
   const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b))
-    .sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
+    .sort((x, y) => byYear(x.start_year, y.start_year) || !x.start_date - !y.start_date || (x.start_date || "").localeCompare(y.start_date || ""));
   const evSec = h("section", { class: "year-sec" }, h("h3", { text: `Events (${evs.length})` }));
   if (!evs.length) evSec.append(h("p", { class: "hint", text: `No events recorded for ${label} yet.` }));
   const evList = h("ul", { class: "ylist" });

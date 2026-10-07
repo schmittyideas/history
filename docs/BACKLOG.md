@@ -55,6 +55,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### Ready (ranked)
 
+#### [P2] The world in AD 1000: every ruler, grouped by world region
+`type: enhancement` · `area: data` · `status: in-progress` · `issue: #17`
+
+Rulers of 41 realms in 1000 (54 title holders), from England to Song China, with their reigns, 11 events of the year and two discrepancies (Svolder; Stephen of Hungary's coronation). Realms get a world region (`sql/008`, applied 2026-10-07; intake `realms` section) so the Year view groups them under Western Europe, East Asia and so on, with region filters. Left out for lack of a confidently named ruler: Srivijaya, Ghana Empire, Ethiopia/Zagwe, Kara-Khanids, Toltec and Maya states. Closes when the pull request merges.
+Source: Ty, 2026-10-07 ("find all the royalty in 1000 in the world").
+
 #### [P2] Add every English monarch's reign from the Obsidian Royalty timeline notes
 `type: task` · `area: data` · `status: ready` · `issue: #15`
 
