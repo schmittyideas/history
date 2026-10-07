@@ -27,12 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P2] Year view: who ruled, and what happened, in a year or span
-`type: enhancement` · `area: site` · `status: in-progress` · `issue: #14`
-
-A second view beside the timeline. Type a year (1060, 384 BC) or a span (1060 to 1100, 12th century): rulers grouped by realm, each title's holders in order with a reign strip for spans, then events, births and deaths. Rulers come from a new `titles` table (`sql/007`, applied 2026-10-06) filled by a new intake `titles` section, so it grows to any country. First data: reigns for the rulers already in the database (`inbox/2026-10-06-reigns.yaml`). Closes when the pull request merges.
-Source: Ty, 2026-10-06 ("type in a year, 1060, and it tells me who is King").
-
 #### [P2] Decide: when a request names a place and a person, which wins
 `type: task` · `area: site` · `status: ready` · `issue: #11`
 
@@ -92,6 +86,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Year view: who ruled, and what happened, in a year or span
+`type: enhancement` · `area: site` · `status: done` · `issue: #14`
+
+A second view beside the timeline. Type a year (1060, 384 BC) or a span (1060 to 1100, 12th century): rulers grouped by realm, each title's holders in order with a reign strip for spans, then events, births and deaths. Rulers come from a new `titles` table (`sql/007`, applied 2026-10-06) filled by a new intake `titles` section, so it grows to any country. First data: reigns for the rulers already in the database (`inbox/2026-10-06-reigns.yaml`). Merged in PR #16 and applied 2026-10-07.
+Source: Ty, 2026-10-06 ("type in a year, 1060, and it tells me who is King").
 
 #### [P2] Places as their own view, with dates and builders
 `type: enhancement` · `area: site` · `status: done` · `issue: #10`
