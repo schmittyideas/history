@@ -97,16 +97,23 @@ def parse_when(v):
     return d.year, d.isoformat()
 
 
+def slug(s):
+    return re.sub(r"[^a-z0-9]+", "-", str(s or "").lower()).strip("-")
+
+
+def realm_key(x):
+    return x.get("key") or slug(x.get("name"))
+
+
 def title_key(x):
     """A title's key: given, or built from person, title and start year so a second reign gets its own row."""
     if x.get("key"):
         return x["key"]
-    slug = re.sub(r"[^a-z0-9]+", "-", str(x.get("title") or "").lower()).strip("-")
     try:
         year = parse_when(x.get("from"))[0]
     except ValueError:
         year = None
-    return f"{x.get('person')}--{slug}" + (f"--{year}" if year is not None else "")
+    return f"{x.get('person')}--{slug(x.get('title'))}" + (f"--{year}" if year is not None else "")
 
 
 def as_list(v):
@@ -124,7 +131,9 @@ class Plan:
     open_discrepancies: list = field(default_factory=list)   # (record label, discrepancy) for records this batch touches
 
 
-SECTIONS = ["sources", "places", "people", "events", "links", "moments", "titles", "discrepancies", "log"]
+SECTIONS = ["sources", "places", "realms", "people", "events", "links", "moments", "titles", "discrepancies", "log"]
+REGIONS = ("Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
+           "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania")  # matches sql/008's check
 ABOUT_KINDS = ("person", "place", "event")
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
@@ -174,6 +183,10 @@ class World:
             self.titles = {r["key"]: r for r in db.select("titles", "id,key,entity_id,title,start_year,end_year")}
         except RuntimeError:  # sql/007 not run yet
             self.titles = None
+        try:
+            self.realms = {r["key"]: r for r in db.select("realms", "id,key,name,region")}
+        except RuntimeError:  # sql/008 not run yet
+            self.realms = None
 
 
 # --------------------------------------------------------------------------- planning
@@ -316,6 +329,20 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 exists = pe and pl and any(m["entity_id"] == pe["id"] and m["place_id"] == pl["id"] and m["role"] == x.get("role") for m in world.moments)
                 (p.updates if exists else p.adds)["moments"].append(label)
 
+        if d.get("realms") and world.realms is None:
+            p.errors.append(f"{fname}: the database has no realms table yet: run sql/008_realms.sql first")
+        for x in as_list(d.get("realms")):
+            k = realm_key(x)
+            if not k:
+                p.errors.append(f"{fname}: every realm needs `name`"); continue
+            is_new = k not in (world.realms or {})
+            if is_new and (not x.get("name") or not x.get("region")):
+                p.errors.append(f"realm `{k}`: new realms need `name` and `region`")
+            if x.get("region") and x["region"] not in REGIONS:
+                p.errors.append(f"realm `{k}`: region must be one of: {', '.join(REGIONS)}")
+            (p.adds if is_new else p.updates)["realms"].append(k)
+
+        known_realms = {r["name"] for r in (world.realms or {}).values()} | {x.get("name") for _, dd in docs for x in as_list(dd.get("realms"))}
         if d.get("titles") and world.titles is None:
             p.errors.append(f"{fname}: the database has no titles table yet: run sql/007_titles.sql first")
         for x in as_list(d.get("titles")):
@@ -327,6 +354,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             fy, _ = when(x, "from", where); ty, _ = when(x, "to", where)
             if fy is not None and ty is not None and ty < fy:
                 p.errors.append(f"{where}: ended ({ty}) before it began ({fy})")
+            if x.get("realm") and world.realms is not None and x["realm"] not in known_realms:
+                p.warnings.append(f"{where}: realm “{x['realm']}” has no region yet (add it under `realms`), so the Year view files it under Other")
             if ok:  # a title held outside the holder's life is almost always a typo
                 if who in new["people"]:
                     try:
@@ -417,7 +446,7 @@ def find_rel(world, a_key, b_key, rel_type):
 def render(plan: Plan, files) -> str:
     out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
     labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events",
-              "links": "Relationships", "moments": "Life moments", "titles": "Titles and reigns", "discrepancies": "Discrepancies (sources disagree)",
+              "links": "Relationships", "moments": "Life moments", "titles": "Titles and reigns", "realms": "Realms", "discrepancies": "Discrepancies (sources disagree)",
               "log": "Learning log (private)"}
     total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
     out.append(f"**{total_add} to add, {total_upd} to update.** Nothing is deleted.")
@@ -545,6 +574,10 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
                 world.moments.append(db.insert("person_places", {"entity_id": pid, "place_id": plid, "role": x["role"], "year": x.get("year")}))
                 log(f"added moment {x['person']} {x['role']} at {x['place']}")
             link_sources("moment", f"{x['person']}:{x['role']}:{x['place']}", x.get("sources"))
+    for _, d in docs:
+        for x in as_list(d.get("realms")):
+            upsert_keyed("realms", world.realms, realm_key(x),
+                         {"name": x.get("name"), "region": x.get("region"), "modern_country": x.get("country"), "note": x.get("note")})
     for _, d in docs:
         for x in as_list(d.get("titles")):
             k = title_key(x)

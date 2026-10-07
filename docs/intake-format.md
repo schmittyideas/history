@@ -109,7 +109,22 @@ titles:
   - {person: william-i-of-england, title: King of England, realm: England, from: 1066-12-25, to: 1087-09-09, obsidian_link: King William I of England}
   - {person: william-i-of-england, title: Duke of Normandy, realm: Normandy, from: 1035, to: 1087}
 ```
-The preview warns when a title starts before its holder was born or ends after they died.
+The preview warns when a title starts before its holder was born or ends after they died, and when its realm has no region yet.
+
+### `realms`
+What titles rule, and which part of the world each is in. The Year view groups realms under these regions. Add a realm the first time a title names it.
+| Field | Meaning |
+|---|---|
+| `name` | Exactly as titles write it: "England", "Song dynasty" (required) |
+| `region` | One of: Western Europe, Northern Europe, Eastern Europe, Middle East and North Africa, Sub-Saharan Africa, Central Asia, South Asia, East Asia, Southeast Asia, Americas, Oceania (required for new realms) |
+| `country` | Where it is today: "France", "China" |
+| `key`, `note` | Optional. The key defaults to the name in lowercase with hyphens |
+
+```yaml
+realms:
+  - {name: England, region: Western Europe, country: United Kingdom}
+  - {name: Song dynasty, region: East Asia, country: China}
+```
 
 ### `discrepancies`
 Where sources disagree. Record both sides rather than silently picking one, so a later source can settle it.

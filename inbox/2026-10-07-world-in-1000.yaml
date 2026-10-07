@@ -1,0 +1,457 @@
+batch:
+  title: The world in AD 1000
+  requested: "Find all the royalty in 1000 in the world and build this out"
+  date: 2026-10-07
+
+# Every ruler below held power during 1000. Dates are from each ruler's English Wikipedia article
+# (checked 2026-10-07). Where articles disagree, the record uses the article's main date and the note
+# says what else is claimed. Realms Wikipedia names no confident ruler for in 1000 are left out:
+# Srivijaya, the Ghana Empire, Ethiopia/Zagwe, the Kara-Khanids, and the Toltec and Maya states.
+
+sources:
+  - {key: wp-aethelred-the-unready,   title: "Æthelred the Unready (Wikipedia)",          url: "https://en.wikipedia.org/wiki/%C3%86thelred_the_Unready"}
+  - {key: wp-kenneth-iii,             title: "Kenneth III of Scotland (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Kenneth_III_of_Scotland"}
+  - {key: wp-mael-sechnaill,          title: "Máel Sechnaill mac Domnaill (Wikipedia)",    url: "https://en.wikipedia.org/wiki/M%C3%A1el_Sechnaill_mac_Domnaill"}
+  - {key: wp-robert-ii-of-france,     title: "Robert II of France (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Robert_II_of_France"}
+  - {key: wp-richard-ii-of-normandy,  title: "Richard II, Duke of Normandy (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Richard_II,_Duke_of_Normandy"}
+  - {key: wp-otto-iii,                title: "Otto III, Holy Roman Emperor (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Otto_III,_Holy_Roman_Emperor"}
+  - {key: wp-sylvester-ii,            title: "Pope Sylvester II (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Pope_Sylvester_II"}
+  - {key: wp-pietro-ii-orseolo,       title: "Pietro II Orseolo (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Pietro_II_Orseolo"}
+  - {key: wp-alfonso-v-of-leon,       title: "Alfonso V of León (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Alfonso_V_of_Le%C3%B3n"}
+  - {key: wp-garcia-sanchez-ii,       title: "García Sánchez II of Pamplona (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Garc%C3%ADa_S%C3%A1nchez_II_of_Pamplona"}
+  - {key: wp-hisham-ii,               title: "Hisham II (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Hisham_II"}
+  - {key: wp-almanzor,                title: "Almanzor (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Almanzor"}
+  - {key: wp-ramon-borrell,           title: "Ramon Borrell, Count of Barcelona (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ramon_Borrell,_Count_of_Barcelona"}
+  - {key: wp-sweyn-forkbeard,         title: "Sweyn Forkbeard (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Sweyn_Forkbeard"}
+  - {key: wp-olaf-tryggvason,         title: "Olaf Tryggvason (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Olaf_Tryggvason"}
+  - {key: wp-eric-haakonsson,         title: "Eric Haakonsson (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Eric_Haakonsson"}
+  - {key: wp-sweyn-haakonsson,        title: "Sweyn Haakonsson (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Sweyn_Haakonsson"}
+  - {key: wp-norwegian-monarchs,      title: "List of Norwegian monarchs (Wikipedia)",     url: "https://en.wikipedia.org/wiki/List_of_Norwegian_monarchs"}
+  - {key: wp-olof-skotkonung,         title: "Olof Skötkonung (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Olof_Sk%C3%B6tkonung"}
+  - {key: wp-boleslaw-i,              title: "Bolesław I the Brave (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Boles%C5%82aw_I_the_Brave"}
+  - {key: wp-stephen-i-of-hungary,    title: "Stephen I of Hungary (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Stephen_I_of_Hungary"}
+  - {key: wp-boleslaus-iii,           title: "Boleslaus III, Duke of Bohemia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Boleslaus_III,_Duke_of_Bohemia"}
+  - {key: wp-vladimir-the-great,      title: "Vladimir the Great (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Vladimir_the_Great"}
+  - {key: wp-basil-ii,                title: "Basil II (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Basil_II"}
+  - {key: wp-constantine-viii,        title: "Constantine VIII (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Constantine_VIII"}
+  - {key: wp-samuel-of-bulgaria,      title: "Samuel of Bulgaria (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Samuel_of_Bulgaria"}
+  - {key: wp-svetoslav-suronja,       title: "Svetoslav Suronja (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Svetoslav_Suronja"}
+  - {key: wp-kresimir-iii,            title: "Krešimir III of Croatia (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Kre%C5%A1imir_III_of_Croatia"}
+  - {key: wp-gojslav,                 title: "Gojslav of Croatia (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Gojslav_of_Croatia"}
+  - {key: wp-bagrat-iii,              title: "Bagrat III of Georgia (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Bagrat_III_of_Georgia"}
+  - {key: wp-gurgen-of-iberia,        title: "Gurgen of Iberia (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Gurgen_of_Iberia"}
+  - {key: wp-david-iii-of-tao,        title: "David III of Tao (Wikipedia)",               url: "https://en.wikipedia.org/wiki/David_III_of_Tao"}
+  - {key: wp-gagik-i,                 title: "Gagik I of Armenia (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Gagik_I_of_Armenia"}
+  - {key: wp-al-qadir,                title: "Al-Qadir (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Al-Qadir"}
+  - {key: wp-baha-al-dawla,           title: "Baha al-Dawla (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Baha_al-Dawla"}
+  - {key: wp-al-hakim,                title: "Al-Hakim bi-Amr Allah (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Al-Hakim_bi-Amr_Allah"}
+  - {key: wp-mahmud-of-ghazni,        title: "Mahmud of Ghazni (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Mahmud_of_Ghazni"}
+  - {key: wp-badis-ibn-mansur,        title: "Badis ibn Mansur (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Badis_ibn_Mansur"}
+  - {key: wp-rajaraja-i,              title: "Rajaraja I (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Rajaraja_I"}
+  - {key: wp-satyashraya,             title: "Satyashraya (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Satyashraya"}
+  - {key: wp-mahipala,                title: "Mahipala (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Mahipala"}
+  - {key: wp-zhenzong,                title: "Emperor Zhenzong of Song (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Emperor_Zhenzong_of_Song"}
+  - {key: wp-shengzong-of-liao,       title: "Emperor Shengzong of Liao (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Emperor_Shengzong_of_Liao"}
+  - {key: wp-xiao-chuo,               title: "Xiao Chuo (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Xiao_Chuo"}
+  - {key: wp-emperor-ichijo,          title: "Emperor Ichijō (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Emperor_Ichij%C5%8D"}
+  - {key: wp-fujiwara-no-michinaga,   title: "Fujiwara no Michinaga (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Fujiwara_no_Michinaga"}
+  - {key: wp-mokjong,                 title: "Mokjong of Goryeo (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Mokjong_of_Goryeo"}
+  - {key: wp-queen-heonae,            title: "Queen Heonae (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Queen_Heonae"}
+  - {key: wp-le-hoan,                 title: "Lê Hoàn (Wikipedia)",                        url: "https://en.wikipedia.org/wiki/L%C3%AA_Ho%C3%A0n"}
+  - {key: wp-jayavarman-v,            title: "Jayavarman V (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Jayavarman_V"}
+  - {key: wp-duan-suying,             title: "Duan Suying (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Duan_Suying"}
+  - {key: wp-congress-of-gniezno,     title: "Congress of Gniezno (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Congress_of_Gniezno"}
+  - {key: wp-battle-of-svolder,       title: "Battle of Svolder (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Battle_of_Svolder"}
+  - {key: wp-christianization-of-iceland, title: "Christianization of Iceland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Christianization_of_Iceland"}
+  - {key: wp-battle-of-cervera,       title: "Battle of Cervera (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Battle_of_Cervera"}
+  - {key: wp-fujiwara-no-shoshi,      title: "Fujiwara no Shōshi (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Fujiwara_no_Sh%C5%8Dshi"}
+
+realms:
+  # Realms already in the database, now given a region.
+  - {name: England,  region: Western Europe, country: United Kingdom}
+  - {name: Normandy, region: Western Europe, country: France}
+  - {name: Anjou,    region: Western Europe, country: France}
+  - {name: Blois,    region: Western Europe, country: France}
+  # New in this batch.
+  - {name: Scotland,             region: Western Europe, country: United Kingdom, note: "The Kingdom of Alba"}
+  - {name: Ireland,              region: Western Europe, country: Ireland}
+  - {name: France,               region: Western Europe, country: France, note: "West Francia; its kings were Kings of the Franks"}
+  - {name: Holy Roman Empire,    region: Western Europe, country: Germany}
+  - {name: Papacy,               region: Western Europe, country: Italy}
+  - {name: Venice,               region: Western Europe, country: Italy}
+  - {name: León,                 region: Western Europe, country: Spain}
+  - {name: Pamplona,             region: Western Europe, country: Spain, note: "Later the Kingdom of Navarre"}
+  - {name: Barcelona,            region: Western Europe, country: Spain}
+  - {name: Caliphate of Córdoba, region: Western Europe, country: Spain}
+  - {name: Denmark,              region: Northern Europe, country: Denmark}
+  - {name: Norway,               region: Northern Europe, country: Norway}
+  - {name: Sweden,               region: Northern Europe, country: Sweden}
+  - {name: Poland,               region: Eastern Europe, country: Poland}
+  - {name: Hungary,              region: Eastern Europe, country: Hungary}
+  - {name: Bohemia,              region: Eastern Europe, country: Czech Republic}
+  - {name: "Kievan Rus'",        region: Eastern Europe, country: Ukraine}
+  - {name: Byzantine Empire,     region: Eastern Europe, country: Turkey}
+  - {name: Bulgaria,             region: Eastern Europe, country: Bulgaria, note: "The First Bulgarian Empire"}
+  - {name: Croatia,              region: Eastern Europe, country: Croatia}
+  - {name: Abkhazia,             region: Middle East and North Africa, country: Georgia, note: "Kingdom of Abkhazia, in the Caucasus"}
+  - {name: Iberia,               region: Middle East and North Africa, country: Georgia, note: "The Georgian kingdom of the Iberians, in the Caucasus"}
+  - {name: Tao,                  region: Middle East and North Africa, country: Turkey, note: "Georgian principality, in the Caucasus"}
+  - {name: Georgia,              region: Middle East and North Africa, country: Georgia, note: "United kingdom from 1008, in the Caucasus"}
+  - {name: Armenia,              region: Middle East and North Africa, country: Armenia, note: "Bagratid Kingdom of Armenia, in the Caucasus"}
+  - {name: Abbasid Caliphate,    region: Middle East and North Africa, country: Iraq}
+  - {name: Buyid Emirate,        region: Middle East and North Africa, country: Iran}
+  - {name: Fatimid Caliphate,    region: Middle East and North Africa, country: Egypt}
+  - {name: Zirid Ifriqiya,       region: Middle East and North Africa, country: Tunisia}
+  - {name: Ghaznavid Empire,     region: Central Asia, country: Afghanistan}
+  - {name: Chola Empire,         region: South Asia, country: India}
+  - {name: Western Chalukya Empire, region: South Asia, country: India}
+  - {name: Pala Empire,          region: South Asia, country: India}
+  - {name: Song dynasty,         region: East Asia, country: China}
+  - {name: Liao dynasty,         region: East Asia, country: China}
+  - {name: Dali Kingdom,         region: East Asia, country: China}
+  - {name: Japan,                region: East Asia, country: Japan}
+  - {name: Goryeo,               region: East Asia, country: South Korea}
+  - {name: Đại Cồ Việt,          region: Southeast Asia, country: Vietnam}
+  - {name: Khmer Empire,         region: Southeast Asia, country: Cambodia}
+
+people:
+  # ---- Western Europe
+  - {key: aethelred-the-unready, name: Æthelred the Unready, type: Royalty, born: 968, born_estimated: true, died: 1016-04-23, house: Wessex, realm: England, prominence: 3,
+     note: "King of the English whose long reign was dominated by Viking raids.", sources: [wp-aethelred-the-unready]}
+  - {key: kenneth-iii-of-scotland, name: Kenneth III, type: Royalty, born: 966, born_estimated: true, died: 1005-03-25, died_estimated: true, house: Alpin, realm: Scotland, prominence: 2,
+     note: "King of Alba, killed in battle by Malcolm II at Monzievaird.", sources: [wp-kenneth-iii]}
+  - {key: mael-sechnaill-mac-domnaill, name: Máel Sechnaill mac Domnaill, type: Royalty, born: 949, died: 1022-09-02, house: Clann Cholmáin, realm: Ireland, prominence: 2,
+     note: "High King of Ireland who gave way to Brian Boru in 1002 and took the title back after Brian's death.", sources: [wp-mael-sechnaill]}
+  - {key: robert-ii-of-france, name: Robert II, type: Royalty, born: 972, born_estimated: true, died: 1031-07-20, house: Capetian, realm: France, prominence: 3, obsidian_link: Robert II,
+     note: "Second Capetian king of the Franks, called Robert the Pious.", sources: [wp-robert-ii-of-france]}
+  - {key: richard-ii-of-normandy, name: Richard II of Normandy, type: Nobility, born: 980, born_estimated: true, died: 1026-08-28, house: Normandy, realm: Normandy, prominence: 2,
+     note: "Duke of Normandy called the Good; grandfather of William the Conqueror.", sources: [wp-richard-ii-of-normandy]}
+  - {key: otto-iii-holy-roman-emperor, name: Otto III, type: Royalty, born: 980, born_estimated: true, died: 1002-01-23, house: Ottonian, realm: Holy Roman Empire, prominence: 3,
+     note: "King of the Germans from the age of three and Holy Roman Emperor, who dreamed of renewing the Roman Empire.", sources: [wp-otto-iii]}
+  - {key: sylvester-ii, name: Sylvester II, type: Clergy, roles: [pope], born: 946, born_estimated: true, died: 1003-05-12, realm: Papacy, prominence: 3,
+     note: "Gerbert of Aurillac, a scholar of mathematics and astronomy and the first French pope.", sources: [wp-sylvester-ii]}
+  - {key: pietro-ii-orseolo, name: Pietro II Orseolo, type: Nobility, born: 961, died: 1009, house: Orseolo, realm: Venice, prominence: 2,
+     note: "Doge of Venice who brought the Dalmatian coast under Venetian control.", sources: [wp-pietro-ii-orseolo]}
+  - {key: alfonso-v-of-leon, name: Alfonso V of León, type: Royalty, born: 994, born_estimated: true, died: 1028-08-07, house: Astur-Leonese, realm: León, prominence: 2,
+     note: "Came to the throne as a child; killed by an arrow while besieging Viseu.", sources: [wp-alfonso-v-of-leon]}
+  - {key: garcia-sanchez-ii-of-pamplona, name: García Sánchez II, type: Royalty, born: 964, born_estimated: true, died: 1004, died_estimated: true, house: Jiménez, realm: Pamplona, prominence: 2,
+     note: "King of Pamplona and father of Sancho III the Great. Not recorded after 1000; dead by 1004.", sources: [wp-garcia-sanchez-ii]}
+  - {key: hisham-ii, name: Hisham II, type: Royalty, born: 966, died: 1013, died_estimated: true, house: Umayyad, realm: Caliphate of Córdoba, prominence: 2,
+     note: "Umayyad caliph of Córdoba who reigned in name while Almanzor held real power.", sources: [wp-hisham-ii]}
+  - {key: almanzor, name: Almanzor, type: Nobility, born: 938, born_estimated: true, died: 1002-08-08, house: Amirid, realm: Caliphate of Córdoba, prominence: 3,
+     note: "Hajib (chamberlain) and real ruler of al-Andalus, famous for his campaigns against the Christian kingdoms.", sources: [wp-almanzor]}
+  - {key: ramon-borrell-of-barcelona, name: Ramon Borrell, type: Nobility, born: 972, died: 1017, house: Barcelona, realm: Barcelona, prominence: 1,
+     note: "Count of Barcelona, Girona and Osona.", sources: [wp-ramon-borrell]}
+  # ---- Northern Europe
+  - {key: sweyn-forkbeard, name: Sweyn Forkbeard, type: Royalty, died: 1014-02-03, house: Knýtlinga, realm: Denmark, prominence: 3,
+     note: "King of Denmark who won at Svolder in 1000 and conquered England in 1013. Birth year unknown.", sources: [wp-sweyn-forkbeard]}
+  - {key: olaf-tryggvason, name: Olaf Tryggvason, type: Royalty, born: 965, born_estimated: true, died: 1000-09-09, house: Fairhair, realm: Norway, prominence: 3,
+     note: "King of Norway who pushed Christianity on Norway and Iceland; killed at the Battle of Svolder.", sources: [wp-olaf-tryggvason]}
+  - {key: eric-haakonsson, name: Eric Haakonsson, type: Nobility, born: 965, born_estimated: true, died: 1025, died_estimated: true, house: Lade jarls, realm: Norway, prominence: 2,
+     note: "Jarl of Lade who captured Olaf's Long Serpent at Svolder, then ruled Norway under Danish overlordship.", sources: [wp-eric-haakonsson]}
+  - {key: sweyn-haakonsson, name: Sweyn Haakonsson, type: Nobility, died: 1016, died_estimated: true, house: Lade jarls, realm: Norway, prominence: 1,
+     note: "Jarl of Lade who co-ruled Norway with his brother Eric after Svolder.", sources: [wp-sweyn-haakonsson]}
+  - {key: olof-skotkonung, name: Olof Skötkonung, type: Royalty, born: 980, born_estimated: true, died: 1022, died_estimated: true, house: Munsö, realm: Sweden, prominence: 2,
+     note: "First Christian King of Sweden; allied with Denmark at Svolder.", sources: [wp-olof-skotkonung]}
+  # ---- Eastern Europe
+  - {key: boleslaw-i-of-poland, name: Bolesław I the Brave, type: Royalty, born: 967, born_estimated: true, died: 1025-06-17, house: Piast, realm: Poland, prominence: 3,
+     note: "Duke of Poland who hosted Otto III at Gniezno in 1000 and became Poland's first crowned king.", sources: [wp-boleslaw-i]}
+  - {key: stephen-i-of-hungary, name: Stephen I of Hungary, type: Royalty, roles: [saint], born: 975, born_estimated: true, died: 1038-08-15, house: Árpád, realm: Hungary, prominence: 3,
+     note: "Last Grand Prince and first King of Hungary, who made it a Christian kingdom.", sources: [wp-stephen-i-of-hungary]}
+  - {key: boleslaus-iii-of-bohemia, name: Boleslaus III of Bohemia, type: Nobility, born: 965, born_estimated: true, died: 1037, house: Přemyslid, realm: Bohemia, prominence: 1,
+     note: "Unstable Duke of Bohemia, later blinded and imprisoned by Bolesław I of Poland.", sources: [wp-boleslaus-iii]}
+  - {key: vladimir-the-great, name: Vladimir the Great, type: Royalty, roles: [saint], born: 958, born_estimated: true, died: 1015-07-15, house: Rurik, realm: "Kievan Rus'", prominence: 3,
+     note: "Grand Prince of Kiev who converted Kievan Rus' to Christianity in 988.", sources: [wp-vladimir-the-great]}
+  - {key: basil-ii, name: Basil II, type: Royalty, born: 958, died: 1025-12-15, house: Macedonian, realm: Byzantine Empire, prominence: 4,
+     note: "Byzantine emperor for almost fifty years, called the Bulgar-slayer for his long war with Bulgaria.", sources: [wp-basil-ii]}
+  - {key: constantine-viii, name: Constantine VIII, type: Royalty, born: 960, died: 1028-11-11, house: Macedonian, realm: Byzantine Empire, prominence: 1,
+     note: "Basil II's younger brother: co-emperor in name for decades, then sole emperor for three years.", sources: [wp-constantine-viii]}
+  - {key: samuel-of-bulgaria, name: Samuel of Bulgaria, type: Royalty, born: 958, born_estimated: true, died: 1014-10-06, house: Cometopuli, realm: Bulgaria, prominence: 2,
+     note: "Tsar of Bulgaria and Basil II's great opponent; died soon after the disaster at Kleidion.", sources: [wp-samuel-of-bulgaria]}
+  - {key: svetoslav-suronja, name: Svetoslav Suronja, type: Royalty, died: 1000, died_estimated: true, house: Trpimirović, realm: Croatia, prominence: 1,
+     note: "King of Croatia, overthrown by his younger brothers around 1000.", sources: [wp-svetoslav-suronja]}
+  - {key: kresimir-iii-of-croatia, name: Krešimir III of Croatia, type: Royalty, died: 1030, house: Trpimirović, realm: Croatia, prominence: 1,
+     note: "Took the Croatian throne from his brother Svetoslav with Bulgarian help.", sources: [wp-kresimir-iii]}
+  - {key: gojslav-of-croatia, name: Gojslav of Croatia, type: Royalty, died: 1020, house: Trpimirović, realm: Croatia, prominence: 1,
+     note: "Co-king of Croatia with his brother Krešimir III.", sources: [wp-gojslav]}
+  # ---- Caucasus
+  - {key: bagrat-iii-of-georgia, name: Bagrat III of Georgia, type: Royalty, born: 963, born_estimated: true, died: 1014-05-07, house: Bagrationi, realm: Georgia, prominence: 2,
+     note: "King of Abkhazia who inherited Iberia and became the first king of a united Georgia in 1008.", sources: [wp-bagrat-iii]}
+  - {key: gurgen-of-iberia, name: Gurgen of Iberia, type: Royalty, died: 1008, house: Bagrationi, realm: Iberia, prominence: 1,
+     note: "Father of Bagrat III; King of Kings of the Iberians.", sources: [wp-gurgen-of-iberia]}
+  - {key: david-iii-of-tao, name: David III of Tao, type: Nobility, born: 935, born_estimated: true, died: 1000, died_estimated: true, house: Bagrationi, realm: Tao, prominence: 1,
+     note: "Georgian prince of Tao and adoptive father of Bagrat III; poisoned, after which Basil II took Tao. Died 31 March 1000, or in 1001.", sources: [wp-david-iii-of-tao]}
+  - {key: gagik-i-of-armenia, name: Gagik I of Armenia, type: Royalty, died: 1020, house: Bagratuni, realm: Armenia, prominence: 1,
+     note: "Bagratid King of Armenia at the height of its power.", sources: [wp-gagik-i]}
+  # ---- Middle East, North Africa and Central Asia
+  - {key: al-qadir, name: al-Qadir, type: Royalty, born: 947-09-28, died: 1031-11-29, house: Abbasid, realm: Abbasid Caliphate, prominence: 2,
+     note: "Abbasid caliph in Baghdad who restored the caliphate's religious authority.", sources: [wp-al-qadir]}
+  - {key: baha-al-dawla, name: Baha al-Dawla, type: Nobility, born: 971, died: 1012-12-22, house: Buyid, realm: Buyid Emirate, prominence: 1,
+     note: "Buyid amir of Iraq and the strongest Buyid ruler, controlling the caliph in Baghdad.", sources: [wp-baha-al-dawla]}
+  - {key: al-hakim-bi-amr-allah, name: al-Hakim bi-Amr Allah, type: Royalty, born: 985-08-13, died: 1021-02-13, house: Fatimid, realm: Fatimid Caliphate, prominence: 3,
+     note: "Sixth Fatimid caliph, ruling from Cairo; a central figure for the Druze. He vanished in 1021.", sources: [wp-al-hakim]}
+  - {key: badis-ibn-al-mansur, name: Badis ibn al-Mansur, type: Nobility, born: 984-08-14, died: 1016-05-10, house: Zirid, realm: Zirid Ifriqiya, prominence: 1,
+     note: "Zirid emir of Ifriqiya, ruling for the Fatimids.", sources: [wp-badis-ibn-mansur]}
+  - {key: mahmud-of-ghazni, name: Mahmud of Ghazni, type: Royalty, born: 971-10-02, died: 1030-04-30, house: Ghaznavid, realm: Ghaznavid Empire, prominence: 3,
+     note: "Sultan who built an empire from eastern Iran to the Punjab and raided deep into India.", sources: [wp-mahmud-of-ghazni]}
+  # ---- South Asia
+  - {key: rajaraja-i, name: Rajaraja I, type: Royalty, born: 947, born_estimated: true, died: 1014, died_estimated: true, house: Chola, realm: Chola Empire, prominence: 3,
+     note: "Chola emperor who built an empire over southern India and Sri Lanka, and the Brihadisvara Temple at Thanjavur.", sources: [wp-rajaraja-i]}
+  - {key: satyashraya, name: Satyashraya, type: Royalty, died: 1008, died_estimated: true, house: Western Chalukya, realm: Western Chalukya Empire, prominence: 1,
+     note: "Western Chalukya king who fought the Cholas under Rajaraja I.", sources: [wp-satyashraya]}
+  - {key: mahipala-i, name: Mahipala I, type: Royalty, died: 1026, died_estimated: true, house: Pala, realm: Pala Empire, prominence: 1,
+     note: "Pala emperor of Bengal who revived the empire. Scholars date his reign anywhere from 977 to 1043.", sources: [wp-mahipala]}
+  # ---- East and Southeast Asia
+  - {key: emperor-zhenzong-of-song, name: Emperor Zhenzong of Song, type: Royalty, born: 968-12-23, died: 1022-03-23, house: Zhao, realm: Song dynasty, prominence: 3,
+     note: "Third Northern Song emperor, who made the Chanyuan peace with the Liao in 1005.", sources: [wp-zhenzong]}
+  - {key: emperor-shengzong-of-liao, name: Emperor Shengzong of Liao, type: Royalty, born: 972-01-16, died: 1031-06-25, house: Yelü, realm: Liao dynasty, prominence: 2,
+     note: "Longest-reigning Liao emperor, who came to the throne as a child under his mother's regency.", sources: [wp-shengzong-of-liao]}
+  - {key: xiao-chuo, name: Xiao Chuo, type: Royalty, born: 953, died: 1009-12-29, house: Xiao, realm: Liao dynasty, prominence: 2,
+     note: "Empress Dowager Chengtian, who ruled the Liao as regent for her son and led its armies against the Song.", sources: [wp-xiao-chuo]}
+  - {key: emperor-ichijo, name: Emperor Ichijō, type: Royalty, born: 980-07-15, died: 1011-07-25, house: Imperial House of Japan, realm: Japan, prominence: 2,
+     note: "Emperor at the height of Fujiwara power; his empresses' courts produced Sei Shōnagon and Murasaki Shikibu.", sources: [wp-emperor-ichijo]}
+  - {key: fujiwara-no-michinaga, name: Fujiwara no Michinaga, type: Nobility, born: 966, died: 1028-01-03, house: Fujiwara, realm: Japan, prominence: 3,
+     note: "Head of the Fujiwara clan and the real power at the Heian court.", sources: [wp-fujiwara-no-michinaga]}
+  - {key: mokjong-of-goryeo, name: Mokjong of Goryeo, type: Royalty, born: 980-07-05, died: 1009-03-02, house: Wang, realm: Goryeo, prominence: 1,
+     note: "Seventh king of Goryeo, deposed by General Kang Cho and killed on the way into exile.", sources: [wp-mokjong]}
+  - {key: queen-heonae, name: Queen Heonae, type: Royalty, born: 964, died: 1029-01-20, house: Hwangbo, realm: Goryeo, prominence: 1,
+     note: "Queen Dowager Cheonchu, who ruled Goryeo as regent for her son Mokjong.", sources: [wp-queen-heonae]}
+  - {key: duan-suying, name: Duan Suying, type: Royalty, died: 1009, house: Duan, realm: Dali Kingdom, prominence: 1,
+     note: "Sixth ruler of the Dali Kingdom in Yunnan, credited with starting its imperial examinations.", sources: [wp-duan-suying]}
+  - {key: le-hoan, name: Lê Hoàn, type: Royalty, born: 941-08-10, died: 1005-03-18, house: Early Lê, realm: Đại Cồ Việt, prominence: 2,
+     note: "Founder of the Early Lê dynasty, who drove back a Song invasion in 981.", sources: [wp-le-hoan]}
+  - {key: jayavarman-v, name: Jayavarman V, type: Royalty, born: 958, born_estimated: true, died: 1001, house: Varman, realm: Khmer Empire, prominence: 1,
+     note: "Khmer king whose death was followed by a succession war.", sources: [wp-jayavarman-v]}
+
+titles:
+  # ---- Western Europe
+  - {person: aethelred-the-unready, title: King of England, realm: England, from: 978-03-18, to: 1013, note: "First reign, ended when Sweyn Forkbeard took England", sources: [wp-aethelred-the-unready]}
+  - {person: aethelred-the-unready, title: King of England, realm: England, from: 1014, to: 1016-04-23, note: "Second reign", sources: [wp-aethelred-the-unready]}
+  - {person: kenneth-iii-of-scotland, title: King of Alba, realm: Scotland, from: 997, to: 1005-03-25, to_estimated: true, sources: [wp-kenneth-iii]}
+  - {person: mael-sechnaill-mac-domnaill, title: High King of Ireland, realm: Ireland, from: 980, to: 1002, note: "First reign; the List of High Kings gives 979", sources: [wp-mael-sechnaill]}
+  - {person: mael-sechnaill-mac-domnaill, title: High King of Ireland, realm: Ireland, from: 1014, to: 1022-09-02, note: "Second reign, after Brian Boru's death", sources: [wp-mael-sechnaill]}
+  - {person: robert-ii-of-france, title: King of the Franks, realm: France, from: 996-10-24, to: 1031-07-20, obsidian_link: "Robert II, King of the Franks", note: "Crowned co-king with his father in 987", sources: [wp-robert-ii-of-france]}
+  - {person: richard-ii-of-normandy, title: Duke of Normandy, realm: Normandy, from: 996-11-20, to: 1026-08-28, sources: [wp-richard-ii-of-normandy]}
+  - {person: otto-iii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 983-12-25, to: 1002-01-23, sources: [wp-otto-iii]}
+  - {person: otto-iii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 996-05-21, to: 1002-01-23, sources: [wp-otto-iii]}
+  - {person: sylvester-ii, title: Pope, realm: Papacy, from: 999-04-02, to: 1003-05-12, sources: [wp-sylvester-ii]}
+  - {person: pietro-ii-orseolo, title: Doge of Venice, realm: Venice, from: 991, to: 1009, sources: [wp-pietro-ii-orseolo]}
+  - {person: alfonso-v-of-leon, title: King of León, realm: León, from: 999, to: 1028-08-07, note: "Under his mother's regency until 1008", sources: [wp-alfonso-v-of-leon]}
+  - {person: garcia-sanchez-ii-of-pamplona, title: King of Pamplona, realm: Pamplona, from: 994, to: 1004, to_estimated: true, note: "Not recorded after 1000; reign ended between 1000 and 1004", sources: [wp-garcia-sanchez-ii]}
+  - {person: hisham-ii, title: Caliph of Córdoba, realm: Caliphate of Córdoba, from: 976-10-16, to: 1009-02-15, note: "First reign; in name only while Almanzor ruled", sources: [wp-hisham-ii]}
+  - {person: hisham-ii, title: Caliph of Córdoba, realm: Caliphate of Córdoba, from: 1010-07-23, to: 1013-04-19, note: "Second reign", sources: [wp-hisham-ii]}
+  - {person: almanzor, title: Hajib of Córdoba, realm: Caliphate of Córdoba, from: 978, to: 1002-08-08, note: "Chamberlain and real ruler", sources: [wp-almanzor]}
+  - {person: ramon-borrell-of-barcelona, title: Count of Barcelona, realm: Barcelona, from: 992, to: 1017, sources: [wp-ramon-borrell]}
+  # ---- Northern Europe
+  - {person: sweyn-forkbeard, title: King of Denmark, realm: Denmark, from: 986, from_estimated: true, to: 1014-02-03, note: "Took the throne in 986 or 987", sources: [wp-sweyn-forkbeard]}
+  - {person: sweyn-forkbeard, title: Overlord of Norway, realm: Norway, from: 1000-09-09, to: 1014-02-03, from_estimated: true, note: "After Svolder; the List of Norwegian monarchs ends it in 1013", sources: [wp-sweyn-forkbeard, wp-norwegian-monarchs]}
+  - {person: sweyn-forkbeard, title: King of England, realm: England, from: 1013, to: 1014-02-03, sources: [wp-sweyn-forkbeard]}
+  - {person: olaf-tryggvason, title: King of Norway, realm: Norway, from: 995, to: 1000-09-09, sources: [wp-olaf-tryggvason]}
+  - {person: eric-haakonsson, title: Jarl of Lade, realm: Norway, from: 1000-09-09, from_estimated: true, to: 1012, note: "Ruled Norway with his brother Sweyn under Danish overlordship; the List of Norwegian monarchs ends it in 1015", sources: [wp-eric-haakonsson, wp-norwegian-monarchs]}
+  - {person: sweyn-haakonsson, title: Jarl of Lade, realm: Norway, from: 1000-09-09, from_estimated: true, to: 1015, to_estimated: true, note: "Co-ruler of Norway with his brother Eric", sources: [wp-sweyn-haakonsson]}
+  - {person: olof-skotkonung, title: King of Sweden, realm: Sweden, from: 995, from_estimated: true, to: 1022, to_estimated: true, sources: [wp-olof-skotkonung]}
+  # ---- Eastern Europe
+  - {person: boleslaw-i-of-poland, title: Duke of Poland, realm: Poland, from: 992-05-25, to: 1025, sources: [wp-boleslaw-i]}
+  - {person: boleslaw-i-of-poland, title: King of Poland, realm: Poland, from: 1025, to: 1025-06-17, note: "Crowned probably on 27 March 1025", sources: [wp-boleslaw-i]}
+  - {person: stephen-i-of-hungary, title: Grand Prince of the Hungarians, realm: Hungary, from: 997, to: 1000-12-25, sources: [wp-stephen-i-of-hungary]}
+  - {person: stephen-i-of-hungary, title: King of Hungary, realm: Hungary, from: 1000-12-25, to: 1038-08-15, note: "Crowned 25 December 1000 or 1 January 1001", sources: [wp-stephen-i-of-hungary]}
+  - {person: boleslaus-iii-of-bohemia, title: Duke of Bohemia, realm: Bohemia, from: 999, to: 1002, note: "Deposed in 1002; briefly restored in 1003", sources: [wp-boleslaus-iii]}
+  - {person: vladimir-the-great, title: Grand Prince of Kiev, realm: "Kievan Rus'", from: 978-06-11, to: 1015-07-15, sources: [wp-vladimir-the-great]}
+  - {person: basil-ii, title: Byzantine Emperor, realm: Byzantine Empire, from: 976-01-10, to: 1025-12-15, note: "Senior emperor; co-emperor from 963", sources: [wp-basil-ii]}
+  - {person: constantine-viii, title: Byzantine co-emperor, realm: Byzantine Empire, from: 962, to: 1025-12-15, note: "Junior to his brother Basil II", sources: [wp-constantine-viii]}
+  - {person: constantine-viii, title: Byzantine Emperor, realm: Byzantine Empire, from: 1025-12-15, to: 1028-11-11, sources: [wp-constantine-viii]}
+  - {person: samuel-of-bulgaria, title: Tsar of Bulgaria, realm: Bulgaria, from: 997, to: 1014-10-06, note: "Held real power from 977", sources: [wp-samuel-of-bulgaria]}
+  - {person: svetoslav-suronja, title: King of Croatia, realm: Croatia, from: 997, to: 1000, to_estimated: true, sources: [wp-svetoslav-suronja]}
+  - {person: kresimir-iii-of-croatia, title: King of Croatia, realm: Croatia, from: 1000, from_estimated: true, to: 1030, note: "With his brother Gojslav until about 1020", sources: [wp-kresimir-iii]}
+  - {person: gojslav-of-croatia, title: King of Croatia, realm: Croatia, from: 1000, from_estimated: true, to: 1020, note: "Co-king with Krešimir III", sources: [wp-gojslav]}
+  # ---- Caucasus
+  - {person: bagrat-iii-of-georgia, title: King of Abkhazia, realm: Abkhazia, from: 978, to: 1008, sources: [wp-bagrat-iii]}
+  - {person: bagrat-iii-of-georgia, title: King of Georgia, realm: Georgia, from: 1008, to: 1014-05-07, sources: [wp-bagrat-iii]}
+  - {person: gurgen-of-iberia, title: King of Kings of the Iberians, realm: Iberia, from: 994, to: 1008, sources: [wp-gurgen-of-iberia]}
+  - {person: david-iii-of-tao, title: Prince of Tao, realm: Tao, from: 966, to: 1000, to_estimated: true, note: "Kuropalates from 978", sources: [wp-david-iii-of-tao]}
+  - {person: gagik-i-of-armenia, title: King of Armenia, realm: Armenia, from: 989, to: 1020, note: "Some sources end the reign in 1017", sources: [wp-gagik-i]}
+  # ---- Middle East, North Africa and Central Asia
+  - {person: al-qadir, title: Abbasid Caliph, realm: Abbasid Caliphate, from: 991-11-22, to: 1031-11-29, sources: [wp-al-qadir]}
+  - {person: baha-al-dawla, title: Amir of Iraq, realm: Buyid Emirate, from: 988, to: 1012-12-22, sources: [wp-baha-al-dawla]}
+  - {person: baha-al-dawla, title: Amir of Fars and Kerman, realm: Buyid Emirate, from: 998, to: 1012-12-22, sources: [wp-baha-al-dawla]}
+  - {person: al-hakim-bi-amr-allah, title: Fatimid Caliph, realm: Fatimid Caliphate, from: 996-10-14, to: 1021-02-13, note: "Disappeared rather than recorded as dead", sources: [wp-al-hakim]}
+  - {person: badis-ibn-al-mansur, title: Zirid Emir of Ifriqiya, realm: Zirid Ifriqiya, from: 996-03-26, to: 1016-05-10, note: "The article's text gives 8 April 996 for his accession", sources: [wp-badis-ibn-mansur]}
+  - {person: mahmud-of-ghazni, title: Sultan, realm: Ghaznavid Empire, from: 998, to: 1030-04-30, note: "Took power in March 998", sources: [wp-mahmud-of-ghazni]}
+  # ---- South Asia
+  - {person: rajaraja-i, title: Chola Emperor, realm: Chola Empire, from: 985, to: 1014, from_estimated: true, to_estimated: true, sources: [wp-rajaraja-i]}
+  - {person: satyashraya, title: Western Chalukya King, realm: Western Chalukya Empire, from: 997, to: 1008, from_estimated: true, to_estimated: true, sources: [wp-satyashraya]}
+  - {person: mahipala-i, title: Pala Emperor, realm: Pala Empire, from: 978, to: 1026, from_estimated: true, to_estimated: true, note: "Scholars' ranges run from 977–1027 to 995–1043", sources: [wp-mahipala]}
+  # ---- East and Southeast Asia
+  - {person: emperor-zhenzong-of-song, title: Emperor of China, realm: Song dynasty, from: 997-05-08, to: 1022-03-23, sources: [wp-zhenzong]}
+  - {person: emperor-shengzong-of-liao, title: Emperor of the Liao, realm: Liao dynasty, from: 982-10-14, to: 1031-06-25, sources: [wp-shengzong-of-liao]}
+  - {person: xiao-chuo, title: Empress Dowager (regent), realm: Liao dynasty, from: 982-10-13, to: 1009-12-23, sources: [wp-xiao-chuo]}
+  - {person: emperor-ichijo, title: Emperor of Japan, realm: Japan, from: 986-07-31, to: 1011-07-16, note: "Abdicated", sources: [wp-emperor-ichijo]}
+  - {person: fujiwara-no-michinaga, title: Minister of the Left (Sadaijin), realm: Japan, from: 996-08-06, to: 1017-01-07, sources: [wp-fujiwara-no-michinaga]}
+  - {person: fujiwara-no-michinaga, title: Regent (Sesshō), realm: Japan, from: 1016-03-10, to: 1017-04-15, sources: [wp-fujiwara-no-michinaga]}
+  - {person: mokjong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 997, to: 1009-03-02, sources: [wp-mokjong]}
+  - {person: queen-heonae, title: Queen Dowager (regent), realm: Goryeo, from: 997, to: 1009, sources: [wp-queen-heonae]}
+  - {person: duan-suying, title: King of Dali, realm: Dali Kingdom, from: 986, to: 1009, note: "Some sources start the reign in 985", sources: [wp-duan-suying]}
+  - {person: le-hoan, title: Emperor of Đại Cồ Việt, realm: Đại Cồ Việt, from: 980, to: 1005-03-18, sources: [wp-le-hoan]}
+  - {person: jayavarman-v, title: King of the Khmer, realm: Khmer Empire, from: 968, to: 1001, sources: [wp-jayavarman-v]}
+
+places:
+  - {key: gniezno, name: Gniezno, kind: city, region: Greater Poland, country: Poland, lat: 52.535, lng: 17.583, visitable: true, visit_site: "Gniezno Cathedral", sources: [wp-congress-of-gniezno]}
+  - {key: oresund, name: Øresund, kind: strait, region: Scandinavia, country: Denmark, lat: 55.9, lng: 12.7, note: "One proposed site of the Battle of Svolder", sources: [wp-battle-of-svolder]}
+  - {key: esztergom, name: Esztergom, kind: city, region: Komárom-Esztergom, country: Hungary, lat: 47.786, lng: 18.740, visitable: true, visit_site: "Esztergom Basilica and the Castle Hill", sources: [wp-stephen-i-of-hungary]}
+  - {key: thingvellir, name: Þingvellir, kind: assembly site, region: Southwest Iceland, country: Iceland, lat: 64.256, lng: -21.130, visitable: true, visit_site: "Þingvellir National Park", sources: [wp-christianization-of-iceland]}
+  - {key: espinosa-de-cervera, name: Espinosa de Cervera, kind: village, region: Burgos, country: Spain, lat: 41.9, lng: -3.467, sources: [wp-battle-of-cervera]}
+  - {key: venice, name: Venice, kind: city, region: Veneto, country: Italy, lat: 45.437, lng: 12.335, visitable: true, visit_site: "Venice", sources: [wp-pietro-ii-orseolo]}
+  - {key: aachen-cathedral, name: Aachen Cathedral, kind: cathedral, region: North Rhine-Westphalia, country: Germany, lat: 50.7747, lng: 6.0839, visitable: true, visit_site: "Aachen Cathedral (Charlemagne's chapel)", sources: [wp-otto-iii]}
+  - {key: cairo, name: Cairo, kind: city, region: Egypt, country: Egypt, lat: 30.05, lng: 31.25, visitable: true, visit_site: "Fatimid Cairo, including the Mosque of al-Hakim", sources: [wp-al-hakim]}
+  - {key: heian-kyo, name: Kyoto, historical_name: Heian-kyō, kind: city, region: Kansai, country: Japan, lat: 35.02, lng: 135.76, visitable: true, visit_site: "Kyoto Imperial Palace", sources: [wp-fujiwara-no-shoshi]}
+  - {key: dali, name: Dali, kind: city, region: Yunnan, country: China, lat: 25.69, lng: 100.16, visitable: true, visit_site: "Dali Old Town and the Three Pagodas", sources: [wp-duan-suying]}
+
+events:
+  - key: congress-of-gniezno
+    name: Congress of Gniezno
+    type: Congress
+    date: 1000-03-11
+    place: gniezno
+    prominence: 3
+    note: Otto III visited Bolesław I, 7–15 March. Gniezno became an archbishopric, with new dioceses at Kraków, Wrocław and Kołobrzeg.
+    people:
+      - {person: boleslaw-i-of-poland, role: host}
+      - {person: otto-iii-holy-roman-emperor, role: guest}
+    sources: [wp-congress-of-gniezno]
+
+  - key: battle-of-cervera
+    name: Battle of Cervera
+    type: Battle
+    date: 1000-07-29
+    place: espinosa-de-cervera
+    prominence: 2
+    note: Córdoba defeated a Castilian and Pamplonese army; one of Almanzor's last great victories.
+    people:
+      - {person: almanzor, role: victor}
+    sources: [wp-battle-of-cervera]
+
+  - key: venetian-dalmatian-expedition-1000
+    name: Pietro II Orseolo's Dalmatian expedition
+    type: Campaign
+    date: 1000-05-09
+    place: venice
+    prominence: 2
+    note: The fleet sailed on Ascension Day; Venice took control of the Dalmatian coast, and the Doge became Duke of the Dalmatians. Remembered in the Festa della Sensa.
+    people:
+      - {person: pietro-ii-orseolo, role: commander}
+    sources: [wp-pietro-ii-orseolo]
+
+  - key: otto-iii-opens-charlemagnes-tomb
+    name: Otto III opens Charlemagne's tomb
+    type: Ceremony
+    year: 1000
+    place: aachen-cathedral
+    prominence: 2
+    note: Otto took relics from the tomb and carried them to Rome.
+    people:
+      - {person: otto-iii-holy-roman-emperor, role: opened the tomb}
+    sources: [wp-otto-iii]
+
+  - key: assassination-of-barjawan
+    name: Assassination of the regent Barjawan
+    type: Assassination
+    date: 1000-03-26
+    place: cairo
+    prominence: 1
+    note: Al-Hakim had his regent killed and took personal control of the Fatimid government.
+    people:
+      - {person: al-hakim-bi-amr-allah, role: ordered it}
+    sources: [wp-al-hakim]
+
+  - key: battle-of-svolder
+    name: Battle of Svolder
+    type: Battle
+    date: 1000-09-09
+    estimated: true
+    place: oresund
+    prominence: 3
+    note: A Danish, Swedish and Norwegian alliance destroyed Olaf Tryggvason's fleet; Olaf leapt into the sea from the Long Serpent. Date and place are both disputed.
+    people:
+      - {person: olaf-tryggvason, role: defeated and killed}
+      - {person: sweyn-forkbeard, role: allied commander}
+      - {person: olof-skotkonung, role: allied commander}
+      - {person: eric-haakonsson, role: allied commander}
+    sources: [wp-battle-of-svolder]
+
+  - key: christianisation-of-iceland
+    name: Iceland adopts Christianity at the Althing
+    type: Conversion
+    year: 1000
+    place: thingvellir
+    prominence: 2
+    note: The Althing accepted Christianity as the law of the land, after arbitration by the lawspeaker Thorgeir. Some sources say 999.
+    people:
+      - {person: olaf-tryggvason, role: pressed for it with trade bans and hostages}
+    sources: [wp-christianization-of-iceland]
+
+  - key: coronation-of-stephen-i-of-hungary
+    name: Coronation of Stephen I of Hungary
+    type: Coronation
+    date: 1000-12-25
+    place: esztergom
+    prominence: 3
+    note: Hungary's first king, crowned with a crown sent by Pope Sylvester II. The date (or 1 January 1001) and the place are both uncertain.
+    people:
+      - {person: stephen-i-of-hungary, role: crowned}
+      - {person: sylvester-ii, role: sent the crown}
+    sources: [wp-stephen-i-of-hungary]
+
+  - key: shoshi-named-empress
+    name: Fujiwara no Shōshi named empress
+    type: Court
+    year: 1000
+    place: heian-kyo
+    prominence: 1
+    note: Michinaga's daughter became chūgū while Teishi was re-titled kōgō, giving Japan two empresses at once for the first time. Murasaki Shikibu later served in Shōshi's court.
+    people:
+      - {person: fujiwara-no-michinaga, role: arranged it (her father)}
+      - {person: emperor-ichijo, role: husband}
+    sources: [wp-fujiwara-no-shoshi]
+
+  - key: chola-land-survey
+    name: Rajaraja I begins the Chola land survey
+    type: Administration
+    year: 1000
+    prominence: 1
+    note: A survey of land for taxation, and a reorganisation of the empire into valanadus.
+    people:
+      - {person: rajaraja-i, role: ordered it}
+    sources: [wp-rajaraja-i]
+
+  - key: dali-imperial-examinations
+    name: Dali Kingdom begins imperial examinations
+    type: Administration
+    year: 1000
+    estimated: true
+    place: dali
+    prominence: 1
+    people:
+      - {person: duan-suying, role: started them}
+    sources: [wp-duan-suying]
+
+discrepancies:
+  - key: battle-of-svolder-date-and-place
+    question: When and where was the Battle of Svolder fought?
+    about: [{event: battle-of-svolder}, {person: olaf-tryggvason}]
+    field: date
+    claims:
+      - {value: "9 September 1000", sources: [wp-battle-of-svolder], note: "The usual date"}
+      - {value: "9 September 999", sources: [wp-battle-of-svolder, wp-olaf-tryggvason]}
+      - {value: "In the Øresund (Adam of Bremen)", sources: [wp-battle-of-svolder]}
+      - {value: "Near an island called Svolder, possibly off Rügen (Icelandic sources)", sources: [wp-battle-of-svolder]}
+    note: The record uses 9 September 1000 and the Øresund, marked estimated.
+
+  - key: stephen-i-coronation-date
+    question: Was Stephen I of Hungary crowned on 25 December 1000 or 1 January 1001, and at Esztergom or Székesfehérvár?
+    about: [{event: coronation-of-stephen-i-of-hungary}, {person: stephen-i-of-hungary}]
+    field: date
+    claims:
+      - {value: "25 December 1000", sources: [wp-stephen-i-of-hungary]}
+      - {value: "1 January 1001", sources: [wp-stephen-i-of-hungary]}
+      - {value: "Esztergom or Székesfehérvár", sources: [wp-stephen-i-of-hungary], note: "Wikipedia leaves the place open"}
+    note: The record uses 25 December 1000 at Esztergom.

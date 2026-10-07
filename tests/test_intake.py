@@ -18,7 +18,7 @@ class FakeDB:
     def __init__(self, snap):
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
-                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": []}
+                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -110,7 +110,7 @@ def test_titles():
         {"person": "william-i-of-england", "title": "Duke of Normandy", "realm": "Normandy", "from": 1035, "to": 1087, "sources": ["s"]}]})]
     world = intake.World(db)
     plan = intake.plan_files(world, docs)
-    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    assert not plan.errors and all("no region" in w for w in plan.warnings), (plan.errors, plan.warnings)
     assert plan.adds["titles"] == ["william-i-of-england--king-of-england--1066", "william-i-of-england--duke-of-normandy--1035"]
     intake.apply_files(world, docs, log=lambda m: None)
     t = {r["key"]: r for r in db.t["titles"]}["william-i-of-england--king-of-england--1066"]
@@ -128,6 +128,25 @@ def test_titles():
     text = " ".join(p3.errors) + " | " + " ".join(p3.warnings)
     assert "ended (1080) before it began (1090)" in text and "unknown person `nobody`" in text, text
     assert "need `title` and `realm`" in text and "starts (1000) before william-i-of-england was born (1028)" in text, text
+
+def test_realms():
+    db = FakeDB(snapshot())
+    src = [{"key": "s", "title": "S"}]
+    docs = [("r.yaml", {"batch": {"title": "t"}, "sources": src,
+             "realms": [{"name": "England", "region": "Western Europe", "country": "United Kingdom"}],
+             "titles": [{"person": "william-i-of-england", "title": "King of England", "realm": "England", "from": 1066, "to": 1087, "sources": ["s"]},
+                        {"person": "william-i-of-england", "title": "Duke of Normandy", "realm": "Normandy", "from": 1035, "to": 1087, "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors, plan.errors
+    assert plan.adds["realms"] == ["england"]
+    assert [w for w in plan.warnings if "Normandy" in w and "no region" in w] and not [w for w in plan.warnings if "“England”" in w], plan.warnings
+    intake.apply_files(world, docs, log=lambda m: None)
+    r = db.t["realms"][0]
+    assert (r["key"], r["name"], r["region"], r["modern_country"]) == ("england", "England", "Western Europe", "United Kingdom")
+    bad = intake.plan_files(intake.World(db), [("b.yaml", {"batch": {"title": "t"}, "realms": [{"name": "Atlantis", "region": "Undersea"}, {"name": "Mu"}]})])
+    text = " ".join(bad.errors)
+    assert "region must be one of" in text and "new realms need `name` and `region`" in text, text
 
 def test_bad_dates_are_errors_not_crashes():
     assert intake.parse_when(-384) == (-384, None) and intake.parse_when("-384") == (-384, None)
@@ -177,4 +196,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_titles(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

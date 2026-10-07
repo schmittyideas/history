@@ -176,6 +176,7 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .year-sec h3 { font-family: var(--display); font-weight: 400; font-size: 21px; margin: 0; }
 .year-sec.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px 24px; }
 .year-sec.two > div { display: grid; gap: 8px; align-content: start; }
+.region-head { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 8px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--rule); }
 .realms { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 12px; }
 .realm-card { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--woad); border-radius: 4px; padding: 12px 14px; display: grid; gap: 12px; align-content: start; min-width: 0; }
 .realm-card h4 { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; }
