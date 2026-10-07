@@ -92,8 +92,12 @@ function indexData(raw) {
     ...eventsOf(id).map(x => placeById[x.event.place_id])
   ].filter(Boolean);
   const neighbours = id => [...parentsOf(id), ...childrenOf(id), ...spousesOf(id).map(s => s.person)];
+  // What happened at a place: events held there, and life moments (born, buried, ...) recorded there.
+  const eventsAt = id => events.filter(e => e.place_id === id);
+  const momentsAt = id => pp.filter(x => x.place_id === id).map(x => ({ person: byId[x.entity_id], role: x.role, year: x.year })).filter(x => x.person);
   return { people, rels, events, ep, places, pp, byId, eventById, placeById, parentLinks, spouseLinks,
-    parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours };
+    parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
+    eventsAt, momentsAt };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -324,6 +328,11 @@ function run(query, { pushTrail = false, keepZoom = false } = {}) {
   const chart = $("chart");
   chart.scrollLeft = 0; chart.scrollTop = 0;
   if (S.filter.focus != null && S.layout?.xOf[S.filter.focus] != null) select(S.filter.focus);
+  else if (S.filter.focus == null && S.filter.regions.length === 1) {
+    // A request naming one place ("Westminster Abbey") opens that place, not just the people tied to it.
+    const pl = S.db.places.find(p => p.name.toLowerCase() === S.filter.regions[0].toLowerCase());
+    if (pl) selectPlace(pl.id);
+  }
   updateOverviewWindow();
 }
 
@@ -536,6 +545,7 @@ function render() {
   // Keep or pick a selection
   if (S.selected?.kind === "event" && eventGroups[S.selected.id]) selectEvent(S.selected.id);
   else if (S.selected?.kind === "person" && xOf[S.selected.id] != null) select(S.selected.id);
+  else if (S.selected?.kind === "place" && placeInView(S.selected.id)) selectPlace(S.selected.id);
   else select((order.find(p => db.childrenOf(p.id).some(c => shownIds.has(c.id))) || order[0]).id);
 
   renderOverview();
@@ -616,6 +626,17 @@ function personLink(p, extra = "") {
 function eventLink(e, extra = "") {
   return h("button", { type: "button", class: "plink", title: `Show ${e.name}`, onclick: () => revealEvent(e.id), text: e.name + extra });
 }
+function placeLink(pl, extra = "") {
+  return h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: () => selectPlace(pl.id), text: pl.name + extra });
+}
+// Plain text with any database person's name turned into a link ("Edward the Confessor; Henry III from 1245").
+function linkNames(text) {
+  const names = S.db.people.map(p => p.name).filter(Boolean).sort((a, b) => b.length - a.length);
+  if (!text || !names.length) return [text];
+  const byName = Object.fromEntries(S.db.people.map(p => [p.name, p]));
+  return text.split(new RegExp(`(?<![\\w])(${names.map(esc).join("|")})(?![\\w])`)).filter(Boolean)
+    .map(part => byName[part] ? personLink(byName[part]) : part);
+}
 const joinNodes = (nodes, empty = "None recorded") => nodes.length ? nodes.flatMap((n, i) => i ? [", ", n] : [n]) : [empty];
 
 function reveal(id) {
@@ -677,13 +698,47 @@ function selectEvent(id) {
   const dl = h("dl");
   [["Date", fmtDate(e.start_date) || fmtYear(e.start_year) || "Unknown"],
    ...(e.end_year != null && e.end_year !== e.start_year ? [["Ended", fmtYear(e.end_year)]] : []),
-   ["Where", place ? place.name + (place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
+   ["Where", place ? placeLink(place, place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
    ["People", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")],
    ["Visit today", e.visitable_today ? (e.visit_site || "Yes") : "No"],
    ["Obsidian note", obsidianLink(e.obsidian_link)]]
     .forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(h("div", { class: "kind", style: "color:var(--madder)", text: e.type || "Event" }), h("h2", { text: e.name }), dl);
   drawMap();
+}
+
+function selectPlace(id) {
+  S.selected = { kind: "place", id };
+  clearSel();
+  const db = S.db, pl = db.placeById[id];
+  const box = $("detail"); box.innerHTML = "";
+  const events = db.eventsAt(id).sort((a, b) => byYear(a.start_year, b.start_year));
+  const people = [...new Map([...db.momentsAt(id).map(m => m.person), ...events.flatMap(e => db.peopleInEvent(e.id).map(x => x.person))]
+    .map(p => [p.id, p])).values()].sort((a, b) => byYear(db.startOf(a), db.startOf(b)));
+  const where = [pl.region, pl.modern_country].filter(Boolean).join(", ");
+  const rows = [
+    ["Where", where || "Unknown"],
+    ...(pl.historical_name ? [["Then called", pl.historical_name]] : []),
+    ["Founded", pl.start_year != null ? (pl.start_estimated ? "c. " : "") + fmtYear(pl.start_year) : "Unknown"],
+    ...(pl.end_year != null ? [["Ended", fmtYear(pl.end_year)]] : pl.visitable_today ? [["Ended", "Still stands"]] : []),
+    ...(pl.built_by ? [["Built by", linkNames(pl.built_by)]] : []),
+    ...(pl.architect ? [["Architect", linkNames(pl.architect)]] : []),
+    ["Visit today", pl.visitable_today ? (pl.visit_site || "Yes") : "No"],
+    ["Events here", joinNodes(events.map(e => eventLink(e, e.start_year != null ? ` (${fmtYear(e.start_year)})` : "")), "None linked")],
+    ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
+    ...(pl.note ? [["Note", pl.note]] : []),
+    ["Obsidian note", obsidianLink(pl.obsidian_link)],
+  ];
+  const dl = h("dl");
+  rows.forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
+  box.append(h("div", { class: "kind", style: "color:var(--ink)", text: cap(pl.kind) || "Place" }), h("h2", { text: pl.name }), dl,
+    h("p", { class: "hint", text: "Everything that happened here is listed in date order under the map." }));
+  drawMap();
+}
+// A place stays selected across views only while something in the view connects to it.
+function placeInView(id) {
+  const L = S.layout, db = S.db;
+  return db.eventsAt(id).some(e => eventGroups[e.id]) || db.momentsAt(id).some(m => L?.xOf[m.person.id] != null);
 }
 
 function obsidianLink(name) {
@@ -720,6 +775,17 @@ function stopsForEvent(id) {
   const e = S.db.eventById[id], place = e && S.db.placeById[e.place_id];
   return place ? [{ year: e.start_year, date: e.start_date, what: e.name, place, rank: 2 }] : [];
 }
+// One place's history: its events and the life moments recorded there, with links in place of plain text.
+function stopsForPlace(id) {
+  const db = S.db, place = db.placeById[id];
+  if (!place) return [];
+  const stops = [
+    ...db.eventsAt(id).map(e => ({ year: e.start_year, date: e.start_date, what: e.name, node: eventLink(e), place, rank: 2 })),
+    ...db.momentsAt(id).map(m => ({ year: m.year, date: null, what: `${m.person.name}: ${m.role}`,
+      node: [personLink(m.person), ` ${m.role}`], place, rank: ROLE_ORDER[m.role] ?? 5 })),
+  ];
+  return stops.sort((a, b) => byYear(a.year, b.year) || a.rank - b.rank || (a.date || "").localeCompare(b.date || ""));
+}
 
 function drawMap() {
   const host = $("map"), list = $("stops");
@@ -737,7 +803,12 @@ function drawMap() {
   } else if (S.selected?.kind === "person") {
     const p = db.byId[S.selected.id], s = stopsForPerson(p.id);
     if (s.length) routes = [{ person: p, stops: s, color: colorFor(p.type) }]; else emptyMsg = `No places recorded for ${p.name} yet.`;
-  } else emptyMsg = "Select a person or event to see their places.";
+  } else if (S.selected?.kind === "place") {
+    const pl = db.placeById[S.selected.id], s = stopsForPlace(pl.id);
+    if (pl.lat != null && pl.lng != null) routes = [{ place: pl, stops: s.length ? s : [{ year: null, what: "", place: pl }], color: "var(--ink)" }];
+    if (!s.length) emptyMsg = `Nothing linked to ${pl.name} yet.`;
+  } else emptyMsg = "Select a person, event or place to see where it happened.";
+  const placeMode = S.selected?.kind === "place" && S.mapMode !== "everyone";
 
   const pts = routes.flatMap(r => r.stops.map(s => [Number(s.place.lng), Number(s.place.lat)]));
   let lon0 = -3, lon1 = 3, lat0 = 48, lat1 = 53;
@@ -768,10 +839,15 @@ function drawMap() {
       r.stops.forEach(s => { s.n = ++n; if (!byPlace.has(s.place.id)) byPlace.set(s.place.id, []); byPlace.get(s.place.id).push(s); });
       byPlace.forEach(items => {
         const pl = items[0].place, [px, py] = proj([Number(pl.lng), Number(pl.lat)]);
-        const label = numbered ? items.map(s => s.n).join(",") : "";
+        // A place pin holds every stop there, so it shows a count instead of a list of numbers.
+        const label = !numbered ? "" : placeMode ? (items[0].what ? String(items.length) : "") : items.map(s => s.n).join(",");
         const rr = numbered ? (label.length > 1 ? 10 : 8) : 5;
-        el("circle", { cx: px, cy: py, r: rr, fill: r.color, stroke: "var(--land)", "stroke-width": 1.5 }, g);
-        if (numbered) el("text", { x: px, y: py + 3.5, "text-anchor": "middle", class: "stop-num" }, g).textContent = label;
+        const pin = el("circle", { cx: px, cy: py, r: rr, fill: r.color, stroke: "var(--land)", "stroke-width": 1.5,
+          class: "pin", tabindex: 0, role: "button", "aria-label": `Show ${pl.name}` }, g);
+        el("title", {}, pin).textContent = `Show ${pl.name}`;
+        pin.addEventListener("click", () => selectPlace(pl.id));
+        pin.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); selectPlace(pl.id); } });
+        if (numbered) el("text", { x: px, y: py + 3.5, "text-anchor": "middle", class: "stop-num", "pointer-events": "none" }, g).textContent = label;
         if (!labelled.has(pl.id)) {
           labelled.add(pl.id);
           const right = px < W - 110;
@@ -782,14 +858,15 @@ function drawMap() {
   }
   if (emptyMsg) { list.append(h("li", { style: "display:block" }, h("span", { class: "empty", text: emptyMsg }))); return; }
   if (S.mapMode !== "everyone") {
-    routes.forEach(r => r.stops.forEach(s => {
+    routes.forEach(r => r.stops.forEach((s, i) => {
       const pl = s.place;
       list.append(h("li", {},
-        h("span", { class: "n", style: `background:${r.color}`, text: s.n }),
+        h("span", { class: "n", style: `background:${r.color}`, text: placeMode ? i + 1 : s.n }),
         h("div", {},
-          h("div", {}, h("span", { class: "yrs", text: (s.date ? fmtDate(s.date) : fmtYear(s.year) ?? "") + "  " }), h("span", { class: "what", text: s.what })),
-          h("div", { class: "where", text: pl.name + (pl.historical_name ? ` (then ${pl.historical_name})` : "") + (pl.region ? `, ${pl.region}` : "") }),
-          pl.visitable_today ? h("div", { class: "visit", text: "◆ Visit: " + (pl.visit_site || pl.name) }) : null)));
+          h("div", {}, h("span", { class: "yrs", text: (s.date ? fmtDate(s.date) : fmtYear(s.year) ?? "") + "  " }), h("span", { class: "what" }, s.node ?? s.what)),
+          // In place mode every stop is the same place, already described in the panel above.
+          placeMode ? null : h("div", { class: "where" }, placeLink(pl, pl.historical_name ? ` (then ${pl.historical_name})` : ""), pl.region ? `, ${pl.region}` : ""),
+          !placeMode && pl.visitable_today ? h("div", { class: "visit", text: "◆ Visit: " + (pl.visit_site || pl.name) }) : null)));
     }));
   } else {
     routes.forEach(r => list.append(h("li", {},

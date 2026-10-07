@@ -27,6 +27,19 @@ Rules:
 
 ### Ready (ranked)
 
+#### [P2] Places as their own view, with dates and builders
+`type: enhancement` · `area: site` · `status: in-progress` · `issue: #10`
+
+Click a place (map pin, an event's Where, a search for its name) to open its own panel: founded / ended, built by, architect, visit today, its events and people, and everything that happened there in date order under the map. Places gain founded / ended / built by / architect (`sql/006`, applied 2026-10-06). First example: Westminster Abbey (`inbox/2026-10-06-westminster-abbey.yaml`). Closes when the pull request merges.
+Source: Ty, 2026-10-06 ("build a place like Westminster Abbey").
+
+#### [P2] Decide: when a request names a place and a person, which wins
+`type: task` · `area: site` · `status: ready` · `issue: #11`
+
+Today people are matched before places, so a place whose name contains a person's ("St Dunstan-in-the-West", "Henry VII Chapel") is read as that person. When both are named ("Henry III Westminster Abbey") the person takes the side panel; a place opens its own panel only when named alone.
+Recommendation: match people and places in one pass, longest name first, with a place winning a tie, so the fuller name always wins. When a request names both, keep the person as the family focus but open the place's panel, since the place is what narrows the request.
+Source: Ty, 2026-10-06.
+
 #### [P2] Lanes by dynasty and realm
 `type: enhancement` · `area: site` · `status: ready` · `issue: #5`
 
