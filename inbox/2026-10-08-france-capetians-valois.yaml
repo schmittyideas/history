@@ -1,0 +1,989 @@
+batch:
+  title: "The kings of France: Capetians and Valois, 1031-1498"
+  requested: "Henry I through Charles VIII of France: lives, reigns, consorts, coronations, battles, treaties, places"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles for the 20 kings (Henry I to Charles VIII). Nothing was fetched. Robert II (robert-ii-of-france, 996-1031) already exists and is used only as a parent link.
+# - Title wording: every king here is "King of France", realm France. The early kings (Henry I to Louis VII or so) were styled "King of the Franks" (rex Francorum); the Philip II article says Philip II was the first to style himself rex Francie, from 1190. Robert II's existing title says "King of the Franks"; it is left as it is.
+# - Three people are added who are not kings: Blanche of Castile (regent 1226-1234 and during Louis IX's crusade, so two "Regent of France" titles) and Joan of Arc (Orléans 1429). Joan's key joan-of-arc is defined here; her birth is not in the downloaded articles and is left out. Her type "Nobility" is only a colour grouping (she was not noble).
+# - Left out (no confident source in these articles, or out of scope): Navarre titles (Philip IV, Louis X, Charles IV were also kings of Navarre; no Navarre realm agreed), Dauphin and Duke titles of Philip VI / John II / Charles V, John II's Duke of Burgundy claim, the antiking/rival claims of Henry VI of England (other batch), Henry V (other batch). The Western Schism (1378), Black Death (1348), Battle of Cassel (1328), Mons-en-Pevele (1304), Nájera/Montiel and the Pragmatic Sanction of Bourges (1438) are left out of events to keep the batch to size; they are named in the notes of the reigns where they matter.
+# - Persecutions: the expulsions and measures against Jews (Philip II 1182, Philip IV 22 July 1306, Charles VI 17 Sept 1394, plus Louis IX's burning of the Talmud 1242) are in the articles. Only the 1306 expulsion is entered as an event.
+# - Days not given in the articles, so years only: the Sicilian Vespers (1282), the Anagni attack (September 1303), the Jacquerie (1358), the Treaty of Arras (1435; congress opened 5 Aug 1435), Treaty of Paris 1229 and 1259, Louis X's coronation (August 1315), Charles V's coronation (1364), Charles IV's coronation (1322), Henry V of England's death (Charles VII says July 1422, Charles VI says August 1422; not entered because Henry V is in another batch).
+# - Death places not given or not placed: Louis VI, Philip V (Longchamp, Paris), Philip VI (Coulombs Abbey, Eure-et-Loir, coordinates not certain), Charles V, Philip II (Mantes-la-Jolie), Henry I (Vitry-en-Brie), Charles VIII's burial. Birthplaces left out: Henry I (Reims), Philip I (Champagne-et-Fontaine), Philip II (Gonesse), Philip V (Lyon).
+# - Coordinates are from general knowledge (about 3 decimals), and some are approximate: Chateau de Montpensier, Barbeau Abbey, Chateau du Plessis-les-Tours, Melun castle. "visitable" flags are also general knowledge, not from the articles.
+# - Shared keys (defined here, other batches may send the same key): reims-cathedral, basilica-of-saint-denis, paris, notre-dame-de-paris, louvre-palace, savoy-palace, orleans, tunis, second-crusade-1147, albigensian-crusade-1208, seventh-crusade-1248, eighth-crusade-1270, start-of-the-hundred-years-war-1337, battle-of-the-golden-spurs-1302, prince-louis-invasion-of-england-1216, italian-war-of-1494, joan-of-arc. Only the facts the French articles give are sent.
+# - Existing events (battle-of-poitiers-1356, treaty-of-bretigny-1360, battle-of-crecy-1346, siege-of-calais-1346, battle-of-sluys-1340, battle-of-agincourt-1415, treaty-of-troyes-1420, battle-of-castillon-1453, loss-of-normandy-1204, capture-of-acre-1191, treaty-of-picquigny, great-revolt-1173) are not redefined. They appear in the "events" block with only key, people and sources, to link the French kings to them (the apply step only adds missing people).
+# - Size: 22 people, 22 titles, 31 new events plus 12 link-only updates to existing events, 27 places (about 115 rows with the updates); over the 60-80 target because all 20 kings are covered with places and events. If it must be split, cut it at Philip IV / Louis X (1314).
+# - Discrepancies recorded below: Philip I death date; Philip II birth date; John I's reign length; Charles IV birth day; Charles VI death date; Charles VIII death date. Also seen, not entered: John II's second marriage (9 or 19 Feb 1350 inside the John II article); Charles IV's third marriage (1324 or 1325 inside the Charles IV article); the day of Jacques de Molay's burning (March 1314, "disputed by scholars", no days given); the Seventh Crusade landing (4 or 5 June 1249).
+
+sources:
+  - {key: wp-henry-i-of-france,      title: "Henry I of France (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Henry_I_of_France"}
+  - {key: wp-philip-i-of-france,     title: "Philip I of France (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Philip_I_of_France"}
+  - {key: wp-louis-vi-of-france,     title: "Louis VI of France (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Louis_VI_of_France"}
+  - {key: wp-louis-vii-of-france,    title: "Louis VII of France (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Louis_VII_of_France"}
+  - {key: wp-philip-ii-of-france,    title: "Philip II of France (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Philip_II_of_France"}
+  - {key: wp-louis-viii-of-france,   title: "Louis VIII of France (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Louis_VIII_of_France"}
+  - {key: wp-louis-ix-of-france,     title: "Louis IX of France (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Louis_IX_of_France"}
+  - {key: wp-philip-iii-of-france,   title: "Philip III of France (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Philip_III_of_France"}
+  - {key: wp-philip-iv-of-france,    title: "Philip IV of France (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Philip_IV_of_France"}
+  - {key: wp-louis-x-of-france,      title: "Louis X of France (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Louis_X_of_France"}
+  - {key: wp-john-i-of-france,       title: "John I of France (Wikipedia)",       url: "https://en.wikipedia.org/wiki/John_I_of_France"}
+  - {key: wp-philip-v-of-france,     title: "Philip V of France (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Philip_V_of_France"}
+  - {key: wp-charles-iv-of-france,   title: "Charles IV of France (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Charles_IV_of_France"}
+  - {key: wp-philip-vi-of-france,    title: "Philip VI of France (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Philip_VI_of_France"}
+  - {key: wp-john-ii-of-france,      title: "John II of France (Wikipedia)",      url: "https://en.wikipedia.org/wiki/John_II_of_France"}
+  - {key: wp-charles-v-of-france,    title: "Charles V of France (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Charles_V_of_France"}
+  - {key: wp-charles-vi-of-france,   title: "Charles VI of France (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Charles_VI_of_France"}
+  - {key: wp-charles-vii-of-france,  title: "Charles VII of France (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Charles_VII_of_France"}
+  - {key: wp-louis-xi-of-france,     title: "Louis XI (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Louis_XI"}
+  - {key: wp-charles-viii-of-france, title: "Charles VIII of France (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charles_VIII_of_France"}
+
+people:
+  - key: henry-i-of-france
+    name: Henry I
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1008-05-04
+    died: 1060-08-04
+    prominence: 3
+    note: "King of the Franks 1031-1060; the royal demesne was at its smallest in his reign. Crowned in his father's lifetime in 1027; helped Duke William of Normandy at Val-es-Dunes in 1047."
+    sources: [wp-henry-i-of-france]
+  - key: philip-i-of-france
+    name: Philip I
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1052
+    born_estimated: true
+    died: 1108-07-29
+    prominence: 3
+    note: "Called the Amorous; king for nearly 48 years from age seven. Added the Vexin and Bourges to the royal demesne; excommunicated for marrying Bertrada of Montfort."
+    sources: [wp-philip-i-of-france]
+  - key: louis-vi-of-france
+    name: Louis VI
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1081-12-01
+    died: 1137-08-01
+    prominence: 3
+    note: "Called the Fat; fought the 'robber barons' of the Ile-de-France and Henry I of England over Normandy and Gisors. Married his heir to Eleanor of Aquitaine a week before he died."
+    sources: [wp-louis-vi-of-france]
+  - key: louis-vii-of-france
+    name: Louis VII
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1120
+    died: 1180-09-18
+    prominence: 4
+    note: "Led the Second Crusade; his marriage to Eleanor of Aquitaine was annulled in 1152 and she married Henry of Anjou, creating the Angevin power that dominated his reign."
+    sources: [wp-louis-vii-of-france]
+  - key: philip-ii-of-france
+    name: Philip II Augustus
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1165-08-21
+    died: 1223-07-14
+    prominence: 4
+    note: "First to style himself 'King of France' (from 1190). Took Normandy and most Angevin lands from John and won Bouvines in 1214; walled Paris and built the first Louvre."
+    sources: [wp-philip-ii-of-france]
+  - key: louis-viii-of-france
+    name: Louis VIII
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1187-09-05
+    died: 1226-11-08
+    prominence: 3
+    note: "Called the Lion. As prince proclaimed King of England in London in 1216 but never crowned; as king took Poitou and La Rochelle (1224) and led the Albigensian Crusade in 1226."
+    sources: [wp-louis-viii-of-france]
+  - key: blanche-of-castile
+    name: Blanche of Castile
+    type: Royalty
+    house: Capet
+    realm: France
+    died: 1252
+    prominence: 3
+    note: "Married Louis VIII in 1200; regent of France during Louis IX's minority and again during his crusade; ended the Albigensian Crusade in 1229. Died in November 1252 (day not in the articles)."
+    sources: [wp-louis-viii-of-france, wp-louis-ix-of-france]
+  - key: louis-ix-of-france
+    name: Louis IX (Saint Louis)
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1214-04-25
+    died: 1270-08-25
+    prominence: 5
+    note: "Saint Louis, the only French king canonised (1297). Built the Sainte-Chapelle, reformed royal justice, led the Seventh and Eighth Crusades and died at Tunis."
+    sources: [wp-louis-ix-of-france]
+  - key: philip-iii-of-france
+    name: Philip III
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1245-05-01
+    died: 1285-10-05
+    prominence: 3
+    note: "Called the Bold. Proclaimed king at Tunis in 1270; gained Toulouse in 1271; died at Perpignan after the failed Aragonese Crusade."
+    sources: [wp-philip-iii-of-france]
+  - key: philip-iv-of-france
+    name: Philip IV the Fair
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1268
+    died: 1314-11-29
+    prominence: 4
+    note: "Born between April and June 1268. Centralised royal government; clashed with Pope Boniface VIII and suppressed the Knights Templar; his three sons were the last direct Capetian kings."
+    sources: [wp-philip-iv-of-france]
+  - key: louis-x-of-france
+    name: Louis X the Quarrelsome
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1289-10-04
+    died: 1316-06-05
+    prominence: 2
+    note: "King of France from 1314 (and of Navarre as Louis I from 1305); freed serfs who could buy their liberty and readmitted the Jews; died leaving his wife pregnant."
+    sources: [wp-louis-x-of-france]
+  - key: john-i-of-france
+    name: John I the Posthumous
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1316-11-15
+    died: 1316-11-19
+    prominence: 1
+    note: "Posthumous son of Louis X; king from birth and for the few days he lived. His death ended three centuries of father-to-son succession."
+    sources: [wp-john-i-of-france]
+  - key: philip-v-of-france
+    name: Philip V the Tall
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1291
+    born_estimated: true
+    died: 1322-01-03
+    prominence: 3
+    note: "Regent for his unborn nephew, then king; set the precedent barring women from the throne (later called the Salic law). Created the Court of Accounts in 1320."
+    sources: [wp-philip-v-of-france]
+  - key: charles-iv-of-france
+    name: Charles IV the Fair
+    type: Royalty
+    house: Capet
+    realm: France
+    born: 1294
+    died: 1328-02-01
+    prominence: 2
+    note: "Last king of the direct Capetian line. Fought the War of Saint-Sardos (1324) against Edward II; died without a male heir, passing the crown to Philip of Valois."
+    sources: [wp-charles-iv-of-france]
+  - key: philip-vi-of-france
+    name: Philip VI
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1293
+    died: 1350-08-22
+    prominence: 4
+    note: "First Valois king. His succession was disputed by Edward III of England, and the Hundred Years' War began in his reign; defeated at Crecy (1346); bought the Dauphine in 1349."
+    sources: [wp-philip-vi-of-france]
+  - key: john-ii-of-france
+    name: John II the Good
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1319-04-26
+    died: 1364-04-08
+    prominence: 3
+    note: "Captured at Poitiers in 1356 and held in England; the Treaty of Bretigny set his ransom. Returned to England voluntarily in 1364 and died at the Savoy Palace."
+    sources: [wp-john-ii-of-france]
+  - key: charles-v-of-france
+    name: Charles V the Wise
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1338-01-21
+    died: 1380-09-16
+    prominence: 4
+    note: "Regent while his father was a prisoner; as king (1364-1380) reconquered most of what Bretigny gave England, with Bertrand du Guesclin. Built the Bastille, rebuilt the Louvre and Vincennes."
+    sources: [wp-charles-v-of-france]
+  - key: charles-vi-of-france
+    name: Charles VI the Mad
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1368-12-03
+    died: 1422-10-21
+    prominence: 4
+    note: "King at 11; first attack of madness in 1392. The Armagnac-Burgundian civil war and Agincourt (1415) led to the Treaty of Troyes (1420), which disinherited his son."
+    sources: [wp-charles-vi-of-france]
+  - key: charles-vii-of-france
+    name: Charles VII the Victorious
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1403-02-22
+    died: 1461-07-22
+    prominence: 4
+    note: "The 'King of Bourges' who, with Joan of Arc, was crowned at Reims in 1429 and ended the Hundred Years' War (Castillon, 1453). Built a standing army."
+    sources: [wp-charles-vii-of-france]
+  - key: joan-of-arc
+    name: Joan of Arc
+    type: Nobility
+    roles: [military leader]
+    realm: France
+    died: 1431-05-30
+    prominence: 5
+    note: "Peasant girl from Domremy who persuaded Charles VII at Chinon in February 1429 and lifted the siege of Orleans; captured at Compiegne, tried for heresy by pro-English clergy and burned. Birth date not in the downloaded articles. Type 'Nobility' is only a colour grouping."
+    sources: [wp-charles-vii-of-france]
+  - key: louis-xi-of-france
+    name: Louis XI the Prudent
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1423-07-03
+    died: 1483-08-30
+    prominence: 4
+    note: "The 'Universal Spider'. Rebelled against his father; as king broke the power of Charles the Bold of Burgundy, made the Treaty of Picquigny (1475) with Edward IV and built the royal postal roads."
+    sources: [wp-louis-xi-of-france]
+  - key: charles-viii-of-france
+    name: Charles VIII the Affable
+    type: Royalty
+    house: Valois
+    realm: France
+    born: 1470-06-30
+    died: 1498-04-07
+    prominence: 3
+    note: "King at 13; married Anne of Brittany in 1491; invaded Italy in 1494 and was crowned King of Naples in 1495 but lost it all. Last of the elder Valois line."
+    sources: [wp-charles-viii-of-france]
+
+titles:
+  # Henry I. Co-king from his coronation on 14 May 1027; sole ruler on his father's death in 1031.
+  - {person: henry-i-of-france, title: King of France, realm: France, from: 1031, to: 1060-08-04, note: "King of the Franks; crowned at Reims on 14 May 1027 in his father's lifetime", sources: [wp-henry-i-of-france]}
+  # Philip I. Crowned at Reims in 1059 aged seven; regents Baldwin V of Flanders and Anne of Kiev.
+  - {person: philip-i-of-france, title: King of France, realm: France, from: 1060-08-04, to: 1108-07-29, note: "King of the Franks; crowned at Reims in 1059; Baldwin V of Flanders and Anne of Kiev were regents", sources: [wp-philip-i-of-france, wp-henry-i-of-france]}
+  - {person: louis-vi-of-france, title: King of France, realm: France, from: 1108-07-29, to: 1137-08-01, note: "Crowned at Orleans on 3 August 1108 by the Archbishop of Sens, because his half-brother kept him from Reims", sources: [wp-louis-vi-of-france]}
+  # Louis VII. Anointed and crowned co-king by Pope Innocent II at Reims in October 1131.
+  - {person: louis-vii-of-france, title: King of France, realm: France, from: 1137-08-01, to: 1180-09-18, note: "Crowned co-ruler at Reims in October 1131", sources: [wp-louis-vii-of-france, wp-louis-vi-of-france]}
+  # Philip II. Crowned co-king at Reims on 1 November 1179, aged 14.
+  - {person: philip-ii-of-france, title: King of France, realm: France, from: 1180-09-18, to: 1223-07-14, note: "Crowned at Reims on 1 November 1179 in his father's lifetime; from 1190 the first king to style himself King of France", sources: [wp-philip-ii-of-france]}
+  - {person: louis-viii-of-france, title: King of France, realm: France, from: 1223-07-14, to: 1226-11-08, note: "Crowned at Reims on 6 August 1223", sources: [wp-louis-viii-of-france]}
+  # Louis IX. Regency of Blanche to 1234; Blanche regent again from 1248 while he was on crusade.
+  - {person: louis-ix-of-france, title: King of France, realm: France, from: 1226-11-08, to: 1270-08-25, note: "Crowned at Reims on 29 November 1226, aged 12; personal rule from 1234", sources: [wp-louis-ix-of-france, wp-louis-viii-of-france]}
+  - {person: blanche-of-castile, title: Regent of France, realm: France, from: 1226-11-08, to: 1234, note: "Ruled for her son Louis IX during his minority; historians date his personal rule from 1234", sources: [wp-louis-ix-of-france]}
+  - {person: blanche-of-castile, title: Regent of France, realm: France, from: 1248, to: 1252, note: "Headed the regency while Louis IX was on the Seventh Crusade (departure 1248); held it until her death in November 1252", sources: [wp-louis-ix-of-france]}
+  - {person: philip-iii-of-france, title: King of France, realm: France, from: 1270-08-25, to: 1285-10-05, note: "Proclaimed king at Tunis in 1270; crowned at Reims on 15 August 1271", sources: [wp-philip-iii-of-france]}
+  - {person: philip-iv-of-france, title: King of France, realm: France, from: 1285-10-05, to: 1314-11-29, note: "Crowned at Reims on 6 January 1286, aged 17; also King of Navarre (as Philip I) through his wife, 1284-1305, not entered", sources: [wp-philip-iv-of-france, wp-philip-iii-of-france]}
+  - {person: louis-x-of-france, title: King of France, realm: France, from: 1314-11-29, to: 1316-06-05, note: "Crowned at Reims in August 1315 with Clemence of Hungary", sources: [wp-louis-x-of-france, wp-philip-iv-of-france]}
+  - {person: john-i-of-france, title: King of France, realm: France, from: 1316-11-15, to: 1316-11-19, note: "Born king; lived four days (the Louis X and Philip V articles say five). Philip the Tall was regent", sources: [wp-john-i-of-france]}
+  - {person: philip-v-of-france, title: King of France, realm: France, from: 1316-11-19, to: 1322-01-03, note: "Regent from Louis X's death on 5 June 1316; crowned at Reims on 9 January 1317", sources: [wp-philip-v-of-france, wp-john-i-of-france]}
+  - {person: charles-iv-of-france, title: King of France, realm: France, from: 1322-01-03, to: 1328-02-01, note: "Crowned at Reims in 1322; last king of the direct Capetian line", sources: [wp-charles-iv-of-france, wp-philip-v-of-france]}
+  - {person: philip-vi-of-france, title: King of France, realm: France, from: 1328-04-01, to: 1350-08-22, note: "Regent from 9 February 1328; proclaimed king on 1 April after Charles IV's widow bore a daughter; crowned at Reims on 29 May 1328", sources: [wp-philip-vi-of-france]}
+  - {person: john-ii-of-france, title: King of France, realm: France, from: 1350-08-22, to: 1364-04-08, note: "Crowned at Reims on 26 September 1350; prisoner in England from Poitiers (1356) apart from 1360-1364", sources: [wp-john-ii-of-france, wp-philip-vi-of-france]}
+  - {person: charles-v-of-france, title: King of France, realm: France, from: 1364-04-08, to: 1380-09-16, note: "Crowned at Reims in 1364 (day not given). Regent for his captive father 1356-1360", sources: [wp-charles-v-of-france, wp-john-ii-of-france]}
+  - {person: charles-vi-of-france, title: King of France, realm: France, from: 1380-09-16, to: 1422-10-21, note: "Crowned at Reims on 4 November 1380, aged 11; his uncles ruled until 1388; mental illness from 1392. Henry V of England was named heir by the Treaty of Troyes (1420)", sources: [wp-charles-vi-of-france]}
+  - {person: charles-vii-of-france, title: King of France, realm: France, from: 1422, to: 1461-07-22, note: "Claimed the crown on his father's death in October 1422 (Henry VI of England was the other claimant); crowned at Reims only on 17 July 1429", sources: [wp-charles-vii-of-france]}
+  - {person: louis-xi-of-france, title: King of France, realm: France, from: 1461-07-22, to: 1483-08-30, sources: [wp-louis-xi-of-france]}
+  - {person: charles-viii-of-france, title: King of France, realm: France, from: 1483-08-30, to: 1498-04-07, note: "King at 13; his sister Anne of France and her husband Peter of Bourbon were regents until 1491", sources: [wp-charles-viii-of-france]}
+
+places:
+  # Shared keys: also sent by other batches with the same key; only the facts the French articles support are given.
+  - key: reims-cathedral
+    name: Reims Cathedral
+    kind: cathedral
+    city: Reims
+    region: Marne
+    country: France
+    lat: 49.254
+    lng: 4.034
+    visitable: true
+    note: "Where the kings of France were traditionally crowned: Henry I (1027), Philip II (1179), Louis VIII (1223), Louis IX (1226), Philip III (1271), Philip IV (1286), Philip V (1317), Philip VI (1328), John II (1350), Charles VI (1380) and Charles VII (17 July 1429)."
+    sources: [wp-henry-i-of-france, wp-philip-ii-of-france, wp-charles-vii-of-france]
+  - key: basilica-of-saint-denis
+    name: Basilica of Saint-Denis
+    kind: basilica
+    city: Saint-Denis
+    region: Seine-Saint-Denis
+    country: France
+    lat: 48.936
+    lng: 2.360
+    visitable: true
+    note: "Royal burial church just north of Paris: Henry I, Louis VI, Philip II, Louis VIII, Louis IX (bones, 1271), Philip III (bones), Philip IV, Louis X, John I, Philip V, Charles IV, Philip VI, John II, Charles V, Charles VI and Charles VII."
+    sources: [wp-louis-vi-of-france, wp-louis-ix-of-france, wp-philip-iv-of-france, wp-charles-v-of-france]
+  - key: paris
+    name: Paris
+    kind: city
+    region: Ile-de-France
+    country: France
+    lat: 48.857
+    lng: 2.352
+    visitable: true
+    note: "Capital of the Capetian and Valois kings. Birthplace of Louis VI and Louis X; Louis VII died here in 1180; Charles VII entered the city without resistance on 13 April 1436."
+    sources: [wp-louis-vi-of-france, wp-louis-x-of-france, wp-louis-vii-of-france, wp-charles-vii-of-france]
+  - key: hotel-saint-pol
+    name: Hotel Saint-Pol
+    kind: palace
+    city: Paris
+    region: Ile-de-France
+    country: France
+    lat: 48.854
+    lng: 2.364
+    note: "Royal residence in Paris. Charles VI (3 December 1368) and Charles VII (1403) were born here, and Charles VI died here on 21 October 1422; the entrances were walled up to keep him inside during his madness. In Paris."
+    sources: [wp-charles-vi-of-france, wp-charles-vii-of-france]
+  - key: sainte-chapelle
+    name: Sainte-Chapelle
+    kind: chapel
+    city: Paris
+    region: Ile-de-France
+    country: France
+    lat: 48.855
+    lng: 2.345
+    visitable: true
+    visit_site: "Sainte-Chapelle, Ile de la Cite, Paris"
+    founded: 1241
+    built_by: "Louis IX"
+    note: "Rayonnant Gothic palace chapel built to house the Crown of Thorns and a fragment of the True Cross, bought in 1239-41 for 135,000 livres. Foundation laid 1241; consecrated 26 April 1248. Inside the royal palace on the Ile de la Cite, now the Paris Hall of Justice."
+    sources: [wp-louis-ix-of-france]
+  - key: louvre-palace
+    name: Louvre Palace
+    kind: palace
+    city: Paris
+    region: Ile-de-France
+    country: France
+    lat: 48.861
+    lng: 2.338
+    visitable: true
+    visit_site: "Louvre Museum"
+    built_by: "Philip II (first Louvre, a fortress); expanded by Charles V"
+    note: "Philip II built the first Louvre as a fortress; Louis IX had Enguerrand IV of Coucy brought here in 1256; Philip IV's royal treasure moved here from the Paris Temple c. 1295; Charles V expanded it and housed his library of over 1,200 volumes there."
+    sources: [wp-philip-ii-of-france, wp-louis-ix-of-france, wp-philip-iv-of-france, wp-charles-v-of-france]
+  - key: notre-dame-de-paris
+    name: Notre-Dame de Paris
+    kind: cathedral
+    city: Paris
+    region: Ile-de-France
+    country: France
+    lat: 48.853
+    lng: 2.350
+    visitable: true
+    founded: 1163
+    note: "Construction begun in 1163; continued under Philip II and favoured by Louis VII. In March 1314 Jacques de Molay, the last Templar Grand Master, heard his sentence on a scaffold in front of the cathedral. Founded year is when construction began."
+    sources: [wp-philip-ii-of-france, wp-louis-vii-of-france, wp-philip-iv-of-france]
+  - key: poissy
+    name: Poissy
+    kind: town
+    region: Yvelines
+    country: France
+    lat: 48.929
+    lng: 2.046
+    note: "Birthplace of Louis IX (25 April 1214; baptised in the Collegiale Notre-Dame) and of Philip III (1 May 1245)."
+    sources: [wp-louis-ix-of-france, wp-philip-iii-of-france]
+  - key: bouvines-battlefield
+    name: Bouvines battlefield
+    kind: battlefield
+    region: Nord
+    country: France
+    lat: 50.584
+    lng: 3.191
+    note: "Site of Philip II's victory of 27 July 1214 on a small tributary of the Lys near the bridge at Bouvines, near Lille."
+    sources: [wp-philip-ii-of-france]
+  - key: orleans
+    name: Orleans
+    kind: city
+    region: Loiret
+    country: France
+    lat: 47.903
+    lng: 1.909
+    note: "Louis VI was crowned in the cathedral of Orleans on 3 August 1108. Besieged by the English from October 1428; Joan of Arc and the French lifted the siege on 8 May 1429."
+    sources: [wp-louis-vi-of-france, wp-charles-vii-of-france]
+  - key: melun-castle
+    name: Melun castle
+    kind: castle
+    city: Melun
+    region: Seine-et-Marne
+    country: France
+    lat: 48.541
+    lng: 2.660
+    note: "Philip I died in the castle of Melun on 29 July 1108; Louis VI held court here in March 1111. Coordinates approximate."
+    sources: [wp-philip-i-of-france, wp-louis-vi-of-france]
+  - key: saint-benoit-sur-loire-abbey
+    name: Abbey of Saint-Benoit-sur-Loire
+    kind: abbey
+    city: Saint-Benoit-sur-Loire
+    region: Loiret
+    country: France
+    lat: 47.805
+    lng: 2.310
+    note: "Philip I was buried here at his own request, not at Saint-Denis, apparently because he had not treated Saint-Denis as well as his predecessors had."
+    sources: [wp-philip-i-of-france]
+  - key: barbeau-abbey
+    name: Barbeau Abbey
+    kind: abbey
+    region: Seine-et-Marne
+    country: France
+    lat: 48.48
+    lng: 2.74
+    built_by: "Louis VII"
+    note: "Founded by Louis VII, who was buried here the day after his death on 18 September 1180. His remains were moved to Saint-Denis in 1817. Coordinates approximate (near Fontaine-le-Port)."
+    sources: [wp-louis-vii-of-france]
+  - key: saint-andre-cathedral-bordeaux
+    name: Bordeaux Cathedral (Saint-Andre)
+    kind: cathedral
+    city: Bordeaux
+    region: Gironde
+    country: France
+    lat: 44.838
+    lng: -0.574
+    visitable: true
+    note: "Where Louis VII married Eleanor of Aquitaine on 25 July 1137."
+    sources: [wp-louis-vi-of-france]
+  - key: tunis
+    name: Tunis
+    kind: city
+    country: Tunisia
+    lat: 36.806
+    lng: 10.181
+    note: "Louis IX died here on 25 August 1270 on the Eighth Crusade, in an epidemic of dysentery. The crusaders landed at Carthage on 17 July 1270. Philip III was proclaimed king here."
+    sources: [wp-louis-ix-of-france, wp-philip-iii-of-france]
+  - key: damietta
+    name: Damietta
+    kind: city
+    country: Egypt
+    lat: 31.416
+    lng: 31.814
+    note: "Port on the Nile delta taken by Louis IX on landing in Egypt on 4 or 5 June 1249; surrendered back as part of his ransom after his capture on 8 February 1250."
+    sources: [wp-louis-ix-of-france]
+  - key: girona
+    name: Girona
+    kind: city
+    region: Girona
+    country: Spain
+    lat: 41.979
+    lng: 2.821
+    note: "Besieged by Philip III's army from 26 June 1285 and taken on 7 September 1285 in the Aragonese Crusade."
+    sources: [wp-philip-iii-of-france]
+  - key: perpignan
+    name: Perpignan
+    kind: city
+    region: Pyrenees-Orientales
+    country: France
+    lat: 42.699
+    lng: 2.895
+    note: "Philip III died of dysentery here on 5 October 1285, at the end of the Aragonese Crusade."
+    sources: [wp-philip-iii-of-france]
+  - key: kortrijk-battlefield
+    name: Battlefield of the Golden Spurs (Kortrijk)
+    kind: battlefield
+    region: West Flanders
+    country: Belgium
+    lat: 50.828
+    lng: 3.265
+    historical_name: Courtrai
+    note: "Site of the French defeat by the Flemish on 11 July 1302 near Kortrijk (Courtrai)."
+    sources: [wp-philip-iv-of-france]
+  - key: fontainebleau-castle
+    name: Fontainebleau castle
+    kind: castle
+    city: Fontainebleau
+    region: Seine-et-Marne
+    country: France
+    lat: 48.402
+    lng: 2.700
+    note: "Philip IV was born in the medieval fortress of Fontainebleau in 1268 and died here on 29 November 1314. Louis IX installed Trinitarians here; Charles IV founded a library here."
+    sources: [wp-philip-iv-of-france, wp-louis-ix-of-france, wp-charles-iv-of-france]
+  - key: amboise-castle
+    name: Chateau d'Amboise
+    kind: castle
+    city: Amboise
+    region: Indre-et-Loire
+    country: France
+    lat: 47.413
+    lng: 0.985
+    visitable: true
+    note: "Charles VIII was born here in 1470 and died here in 1498 after, it is said, striking his head on a doorway lintel."
+    sources: [wp-charles-viii-of-france]
+  - key: mehun-sur-yevre
+    name: Mehun-sur-Yevre
+    kind: town
+    region: Cher
+    country: France
+    lat: 47.146
+    lng: 2.215
+    note: "Charles VII died here on 22 July 1461 after an infection of the jaw stopped him swallowing; his younger son Charles was with him."
+    sources: [wp-charles-vii-of-france]
+  - key: chateau-de-plessis-les-tours
+    name: Chateau de Plessis-les-Tours
+    kind: castle
+    city: La Riche (Tours)
+    region: Indre-et-Loire
+    country: France
+    lat: 47.392
+    lng: 0.655
+    note: "Louis XI died here on 30 August 1483. Coordinates approximate."
+    sources: [wp-louis-xi-of-france]
+  - key: notre-dame-de-clery
+    name: Basilica of Notre-Dame de Clery
+    kind: basilica
+    city: Clery-Saint-Andre
+    region: Loiret
+    country: France
+    lat: 47.819
+    lng: 1.756
+    note: "Louis XI was buried here in 1483, and his widow Charlotte of Savoy a few months later."
+    sources: [wp-louis-xi-of-france]
+  - key: bourges
+    name: Bourges
+    kind: city
+    region: Cher
+    country: France
+    lat: 47.081
+    lng: 2.398
+    note: "Birthplace of Louis XI (3 July 1423; baptised at the cathedral of Saint-Etienne). The Dauphin Charles set up his court here in 1418, giving him the name 'King of Bourges'."
+    sources: [wp-louis-xi-of-france, wp-charles-vii-of-france]
+  - key: chateau-de-montpensier
+    name: Chateau de Montpensier
+    kind: castle
+    region: Puy-de-Dome
+    country: France
+    lat: 46.04
+    lng: 3.20
+    note: "Louis VIII died of dysentery here on 8 November 1226 on his way back from the Albigensian Crusade. Auvergne; coordinates approximate."
+    sources: [wp-louis-viii-of-france]
+  - key: savoy-palace
+    name: Savoy Palace
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.510
+    lng: -0.120
+    note: "John II was held here after Poitiers, and died here in April 1364 after returning to England of his own will. In London."
+    sources: [wp-john-ii-of-france]
+
+events:
+  # ---- New events ----
+  - key: battle-of-val-es-dunes-1047
+    name: Battle of Val-es-Dunes
+    type: Battle
+    year: 1047
+    people: [{person: henry-i-of-france, role: victor}]
+    prominence: 2
+    note: "Henry I came to the aid of the young Duke William of Normandy (the future William the Conqueror) and won a decisive victory over William's rebel vassals near Caen. Only the year is given in the article."
+    sources: [wp-henry-i-of-france]
+  - key: marriage-of-louis-vii-and-eleanor-of-aquitaine-1137
+    name: Marriage of Louis VII and Eleanor of Aquitaine
+    type: Marriage
+    date: 1137-07-25
+    place: saint-andre-cathedral-bordeaux
+    people: [{person: louis-vii-of-france, role: groom}, {person: eleanor-of-aquitaine, role: bride}, {person: louis-vi-of-france, role: arranged the marriage}]
+    prominence: 4
+    note: "On 9 April 1137 the dying Duke William X named Louis VI guardian of Eleanor; Louis VI married her to his heir and died a week later. The marriage was annulled on 21 March 1152 by the Council of Beaugency (kinship); Eleanor married Henry of Anjou on 18 May 1152, giving him Aquitaine."
+    sources: [wp-louis-vi-of-france, wp-louis-vii-of-france]
+  - key: second-crusade-1147
+    name: Second Crusade
+    type: Crusade
+    year: 1147
+    end_year: 1149
+    people: [{person: louis-vii-of-france, role: leader}]
+    prominence: 4
+    note: "Louis VII set out from Saint-Denis in June 1147 with Eleanor. His army was ambushed by Turks at Mount Cadmus, he reached Antioch in March 1148, and the joint siege of Damascus with Conrad III and Baldwin III was abandoned after four days. He left Acre after Easter 1149 and reached Paris in November 1149. The costs and quarrels with Eleanor led to the annulment of their marriage."
+    sources: [wp-louis-vii-of-france]
+  - key: battle-of-bouvines-1214
+    name: Battle of Bouvines
+    type: Battle
+    date: 1214-07-27
+    place: bouvines-battlefield
+    people: [{person: philip-ii-of-france, role: victor}, {person: louis-viii-of-france, role: commanded the western front against John}]
+    prominence: 5
+    note: "Philip's army of about 7,000 beat about 9,000 under Emperor Otto IV and the Count of Flanders (who was captured); Philip was unhorsed but saved by his mail. It ended John's attempt to rebuild the Angevin Empire and left him so weakened that he had to accept Magna Carta (1215). A Sunday battle."
+    sources: [wp-philip-ii-of-france, wp-louis-viii-of-france]
+  - key: prince-louis-invasion-of-england-1216
+    name: Prince Louis's invasion of England
+    type: War
+    date: 1216-05-21
+    end_year: 1217
+    place: london
+    people: [{person: louis-viii-of-france, role: claimant to the English throne}]
+    prominence: 3
+    note: "Invited by rebel barons in the First Barons' War, the future Louis VIII landed on Thanet on 21 May 1216, was excommunicated on 29 May and was proclaimed King of England at Old St Paul's on 2 June (never crowned). John's death in October 1216 drew barons away; Louis lost at Lincoln (20 May 1217) and at sea off Sandwich (24 August 1217) and made the Treaty of Lambeth: 10,000 marks and a pledge never to attack England again."
+    sources: [wp-louis-viii-of-france]
+  - key: albigensian-crusade-1208
+    name: Albigensian Crusade
+    type: Crusade
+    year: 1208
+    end_year: 1244
+    people: [{person: louis-viii-of-france, role: crusader as prince (1219-1223) and king (1226)}, {person: blanche-of-castile, role: ended the crusade by agreement in 1229}, {person: philip-ii-of-france, role: allowed his vassals to join}]
+    prominence: 4
+    note: "Called against the Cathars of Languedoc by Pope Innocent III in 1208. Philip II gave no direct support. Louis VIII took Beziers, Carcassonne, Beaucaire and Marseille in 1226 and took Avignon on 9 September 1226 at heavy cost, then died on the way home. Blanche ended it with Raymond VII of Toulouse in 1229; the last Cathar strongholds fell in 1244."
+    sources: [wp-philip-ii-of-france, wp-louis-viii-of-france, wp-louis-ix-of-france]
+  - key: treaty-of-paris-1229
+    name: Treaty of Paris (1229)
+    type: Treaty
+    year: 1229
+    people: [{person: blanche-of-castile, role: signatory for the crown}, {person: louis-ix-of-france, role: king}]
+    prominence: 3
+    note: "Blanche of Castile, regent, ended the Albigensian Crusade by agreement with Raymond VII of Toulouse; the county of Toulouse came to the crown in 1271 on the death of Alphonse of Poitiers. Day not given in the articles."
+    sources: [wp-louis-ix-of-france, wp-louis-viii-of-france]
+  - key: treaty-of-corbeil-1258
+    name: Treaty of Corbeil (1258)
+    type: Treaty
+    date: 1258-03-11
+    people: [{person: louis-ix-of-france, role: signatory}]
+    prominence: 2
+    note: "With James I of Aragon: Louis renounced overlordship over Barcelona and Roussillon and James renounced claims to Provence, Languedoc and other southern counties (except Montpellier and Carlat). Philip III married Isabella of Aragon in 1262 under its terms."
+    sources: [wp-louis-ix-of-france, wp-philip-iii-of-france]
+  - key: treaty-of-paris-1259
+    name: Treaty of Paris (1259)
+    type: Treaty
+    year: 1259
+    people: [{person: louis-ix-of-france, role: signatory}]
+    prominence: 3
+    note: "Henry III of England renounced Normandy, Anjou, Maine, Touraine and Poitou, and was recognised as Duke of Aquitaine and Louis's vassal for Guyenne and Gascony. Day not given in the articles."
+    sources: [wp-louis-ix-of-france]
+  - key: seventh-crusade-1248
+    name: Seventh Crusade
+    type: Crusade
+    year: 1248
+    end_year: 1254
+    place: damietta
+    people: [{person: louis-ix-of-france, role: leader}, {person: blanche-of-castile, role: regent in France}]
+    prominence: 4
+    note: "Louis IX left in 1248, landed in Egypt on 4 or 5 June 1249 and took Damietta. His army was lost and he was captured at Fariskur on 8 February 1250; he was ransomed for 400,000 bezants (about 200,000 livres tournois) and the surrender of Damietta. He then spent four years fortifying Acre, Caesarea and Jaffa, left Acre on 24 April 1254 and reached France in July 1254."
+    sources: [wp-louis-ix-of-france]
+  - key: eighth-crusade-1270
+    name: Eighth Crusade
+    type: Crusade
+    date: 1270-07-17
+    place: tunis
+    people: [{person: louis-ix-of-france, role: leader (died)}, {person: philip-iii-of-france, role: proclaimed king at Tunis}]
+    prominence: 3
+    note: "Louis took the cross at Paris on 24 March 1267. The crusaders landed at Carthage on 17 July 1270 and an epidemic of dysentery followed: John Tristan died on 3 August and Louis on 25 August. Charles of Anjou negotiated a treaty with the Hafsid ruler on 5 November 1270."
+    sources: [wp-louis-ix-of-france, wp-philip-iii-of-france]
+  - key: sicilian-vespers-1282
+    name: Sicilian Vespers
+    type: Rebellion
+    year: 1282
+    people: [{person: philip-iii-of-france, role: kinsman of the deposed ruler (his uncle Charles I of Naples)}]
+    prominence: 3
+    note: "Sicily rose against Charles I of Naples, Philip III's uncle, after years of heavy taxation, massacring many Angevins and French. Peter III of Aragon was crowned king of Sicily on 4 September 1282; Pope Martin IV excommunicated him and granted Aragon to Philip's son Charles of Valois. Philip's brother Peter, Count of Perche, was killed at Reggio Calabria. The day of the rising is not given in the article."
+    sources: [wp-philip-iii-of-france]
+  - key: aragonese-crusade-1285
+    name: Aragonese Crusade
+    type: Crusade
+    year: 1285
+    place: girona
+    people: [{person: philip-iii-of-france, role: leader (died)}]
+    prominence: 3
+    note: "Urged by his wife Marie of Brabant and his uncle Charles of Naples, Philip III invaded Aragon via Roussillon. His army was before Girona by 26 June 1285 and took it on 7 September; dysentery then struck the camp and the French were defeated while withdrawing at the Col de Panissars on 1 October. Philip died at Perpignan on 5 October. One historian called it 'perhaps the most unjust, unnecessary and calamitous enterprise ever undertaken by the Capetian monarchy'; it nearly bankrupted the crown."
+    sources: [wp-philip-iii-of-france, wp-philip-iv-of-france]
+  - key: battle-of-the-golden-spurs-1302
+    name: Battle of the Golden Spurs
+    type: Battle
+    date: 1302-07-11
+    place: kortrijk-battlefield
+    people: [{person: philip-iv-of-france, role: defeated (his army)}]
+    prominence: 3
+    note: "An army of 2,500 men-at-arms and 4,000 infantry sent to put down the Flemish rising was defeated near Kortrijk, decimating a generation of French nobles. Philip avenged it at Mons-en-Pevele in 1304 and in 1305 took Lille, Douai and Bethune."
+    sources: [wp-philip-iv-of-france, wp-louis-x-of-france]
+  - key: attack-on-boniface-viii-at-anagni-1303
+    name: Attack on Pope Boniface VIII at Anagni
+    type: Political
+    year: 1303
+    people: [{person: philip-iv-of-france, role: instigator}]
+    prominence: 3
+    note: "In September 1303 Philip's agent Guillaume de Nogaret, with the Colonna family, seized Pope Boniface VIII at Anagni; he was held for several days and died soon after. The conflict led to Clement V and the Avignon papacy (1309-1376). The day is not given in the article."
+    sources: [wp-philip-iv-of-france]
+  - key: expulsion-of-the-jews-from-france-1306
+    name: Philip IV expels the Jews from France
+    type: Political
+    date: 1306-07-22
+    people: [{person: philip-iv-of-france, role: ordered the expulsion}]
+    prominence: 2
+    note: "Philip ordered the expulsion of the Jews on 22 July 1306 and confiscated their property on 23 August, taking at least 140,000 livres parisis. Louis X readmitted them under a twelve-year charter in 1315."
+    sources: [wp-philip-iv-of-france, wp-louis-x-of-france]
+  - key: suppression-of-the-knights-templar-1307
+    name: Suppression of the Knights Templar
+    type: Political
+    date: 1307-10-13
+    end_year: 1314
+    people: [{person: philip-iv-of-france, role: instigator}]
+    prominence: 4
+    note: "At daybreak on Friday 13 October 1307 hundreds of Templars in France were arrested on Philip's orders and later tortured into confessing heresy. Pope Clement V disbanded the order. In March 1314 (the day is disputed) the Grand Master Jacques de Molay and Geoffroi de Charney were burned at the stake on the Ile des Juifs after withdrawing their confessions. Clement died about a month later and Philip within eight months."
+    sources: [wp-philip-iv-of-france]
+  - key: tour-de-nesle-affair-1314
+    name: Tour de Nesle affair
+    type: Scandal
+    year: 1314
+    people: [{person: philip-iv-of-france, role: king}, {person: louis-x-of-france, role: husband of an accused wife}, {person: charles-iv-of-france, role: husband of an accused wife}, {person: philip-v-of-france, role: husband of an accused wife}]
+    prominence: 2
+    note: "Margaret of Burgundy (wife of Louis X) and Blanche of Burgundy (wife of Charles IV) were convicted of adultery and imprisoned for life (Margaret at Chateau Gaillard); their alleged lovers Philippe and Gauthier d'Aunay were tortured and executed. Joan, wife of Philip V, was cleared by 1315. Doubts about Louis X's daughter Joan's paternity fed the succession dispute of 1316."
+    sources: [wp-philip-iv-of-france, wp-louis-x-of-france, wp-philip-v-of-france]
+  - key: succession-crisis-of-1316
+    name: Succession crisis of 1316-1317
+    type: Succession
+    date: 1316-06-05
+    end_year: 1317
+    place: reims-cathedral
+    people: [{person: louis-x-of-france, role: died without a son}, {person: john-i-of-france, role: posthumous king}, {person: philip-v-of-france, role: regent then king}]
+    prominence: 4
+    note: "Louis X died on 5 June 1316 leaving a pregnant widow and a daughter, Joan. Philip the Tall was regent; the baby John I lived four days and Philip was crowned at Reims on 9 January 1317. At an assembly on 2 February he laid down that Joan, as a woman, could not inherit; this precedent was later called the Salic law."
+    sources: [wp-philip-v-of-france, wp-louis-x-of-france, wp-john-i-of-france]
+  - key: shepherds-crusade-1320
+    name: Shepherds' Crusade
+    type: Rebellion
+    year: 1320
+    people: [{person: philip-v-of-france, role: suppressed it}]
+    prominence: 2
+    note: "A popular crusade (the Pastoreaux) that began in Normandy in 1320 and attacked castles, royal officials, priests, lepers and Jews. Condemned by Pope John XXII; Philip crushed it and drove the remnants across the Pyrenees into Aragon."
+    sources: [wp-philip-v-of-france, wp-charles-iv-of-france]
+  - key: war-of-saint-sardos-1324
+    name: War of Saint-Sardos
+    type: War
+    year: 1324
+    people: [{person: charles-iv-of-france, role: victor}]
+    prominence: 2
+    note: "Began after Gascon forces destroyed a French bastide at Saint-Sardos in November 1323. Charles of Valois took almost all of Aquitaine, Charles IV declared Edward II's lands forfeit, and in the peace of 1327 Edward III kept a much-reduced Guyenne."
+    sources: [wp-charles-iv-of-france]
+  - key: start-of-the-hundred-years-war-1337
+    name: Start of the Hundred Years' War
+    type: War
+    date: 1337-05-24
+    end_year: 1453
+    people: [{person: philip-vi-of-france, role: king of France}]
+    prominence: 4
+    note: "On 24 May 1337 Philip VI declared Edward III had forfeited Aquitaine for disobedience and for sheltering Robert III of Artois, and Edward renewed his claim to the French throne. Philip had become king in 1328 over Edward, whose claim ran through his mother Isabella (barred under 'Salic law'); Edward did homage at Amiens on 6 June 1329. The war ended after Castillon in 1453."
+    sources: [wp-philip-vi-of-france, wp-charles-iv-of-france]
+  - key: jacquerie-1358
+    name: Jacquerie
+    type: Rebellion
+    year: 1358
+    people: [{person: charles-v-of-france, role: regent}]
+    prominence: 3
+    note: "A peasant revolt during Charles's regency, backed by Etienne Marcel, who was murdered by a mob on 31 July 1358; Charles recovered Paris the next month. Only the year is given in the articles."
+    sources: [wp-charles-v-of-france, wp-john-ii-of-france]
+  - key: murder-of-john-the-fearless-1419
+    name: Murder of John the Fearless at Montereau
+    type: Assassination
+    date: 1419-09-10
+    people: [{person: charles-vii-of-france, role: Dauphin at the meeting (his own involvement uncertain)}, {person: charles-vi-of-france, role: king}]
+    prominence: 3
+    note: "On the bridge at Montereau Duke John of Burgundy was killed by Tanneguy du Chastel, a follower of the Dauphin Charles. His son Philip the Good joined the English, which made the Treaty of Troyes (1420) possible."
+    sources: [wp-charles-vi-of-france, wp-charles-vii-of-france]
+  - key: siege-of-orleans-1429
+    name: Siege of Orleans (lifted 8 May 1429)
+    type: Siege
+    date: 1429-05-08
+    place: orleans
+    people: [{person: joan-of-arc, role: leader of the relief}, {person: charles-vii-of-france, role: Dauphin}]
+    prominence: 4
+    note: "Orleans had been besieged since October 1428. Joan reached Charles at Chinon on 23 February 1429 and led the relief; the English lifted the siege on 8 May and lost about half their army at Patay on 18 June."
+    sources: [wp-charles-vii-of-france, wp-charles-vi-of-france]
+  - key: coronation-of-charles-vii-1429
+    name: Coronation of Charles VII
+    type: Coronation
+    date: 1429-07-17
+    place: reims-cathedral
+    people: [{person: charles-vii-of-france, role: crowned}]
+    prominence: 4
+    note: "Crowned at Reims after the English troops nearby were dispersed and the townspeople opened their gates. His rival Henry VI of England was crowned in Paris on 26 December 1431."
+    sources: [wp-charles-vii-of-france, wp-charles-vi-of-france]
+  - key: execution-of-joan-of-arc-1431
+    name: Execution of Joan of Arc
+    type: Execution
+    date: 1431-05-30
+    people: [{person: joan-of-arc, role: executed}, {person: charles-vii-of-france, role: took no action to save her}]
+    prominence: 4
+    note: "Captured at the siege of Compiegne on 24 May 1430 by Burgundian troops under John of Luxembourg and handed to the English; tried for heresy by pro-English clergy under Pierre Cauchon and burned at the stake."
+    sources: [wp-charles-vii-of-france]
+  - key: treaty-of-arras-1435
+    name: Treaty of Arras (1435)
+    type: Treaty
+    year: 1435
+    people: [{person: charles-vii-of-france, role: signatory}]
+    prominence: 3
+    note: "A congress opened at Arras on 5 August 1435. Philip the Good of Burgundy ended his alliance with England; Charles had to apologise through a representative for the murder at Montereau and Philip kept his lands without paying homage. Charles entered Paris on 13 April 1436. Signing date not given."
+    sources: [wp-charles-vii-of-france]
+  - key: battle-of-formigny-1450
+    name: Battle of Formigny
+    type: Battle
+    date: 1450-04-15
+    people: [{person: charles-vii-of-france, role: victor}]
+    prominence: 3
+    note: "French victory that opened the way to the swift conquest of Normandy, after Charles alleged on 17 July 1449 that the English had broken the ten-year truce of Tours (1444)."
+    sources: [wp-charles-vii-of-france]
+  - key: battle-of-nancy-1477
+    name: Battle of Nancy
+    type: Battle
+    date: 1477-01-05
+    people: [{person: louis-xi-of-france, role: beneficiary}]
+    prominence: 3
+    note: "Charles the Bold of Burgundy was killed after defeats by the Swiss at Grandson (2 March 1476) and Murten (22 June 1476). The Burgundian line died out and Louis XI seized Burgundy and Picardy; the Treaty of Arras (1482) settled the inheritance."
+    sources: [wp-louis-xi-of-france]
+  - key: italian-war-of-1494
+    name: Charles VIII's invasion of Italy
+    type: War
+    year: 1494
+    end_year: 1498
+    people: [{person: charles-viii-of-france, role: invader}]
+    prominence: 4
+    note: "Charles invaded in September 1494 with 25,000 men (8,000 Swiss), reached Pavia on 21 October and Pisa on 8 November, entered Naples on 22 February 1495 and was crowned King of Naples on 20 May 1495. The League of Venice formed on 31 March 1495; it failed to stop him at Fornovo in July but all his gains were lost."
+    sources: [wp-charles-viii-of-france]
+
+  # ---- Existing events: link only (key, people, sources) ----
+  - {key: great-revolt-1173, people: [{person: louis-vii-of-france, role: backed the rebel sons}], sources: [wp-louis-vii-of-france]}
+  - {key: capture-of-acre-1191, people: [{person: philip-ii-of-france, role: crusader}], sources: [wp-philip-ii-of-france]}
+  - {key: loss-of-normandy-1204, people: [{person: philip-ii-of-france, role: conqueror}], sources: [wp-philip-ii-of-france]}
+  - {key: battle-of-sluys-1340, people: [{person: philip-vi-of-france, role: defeated (his fleet)}], sources: [wp-philip-vi-of-france]}
+  - {key: battle-of-crecy-1346, people: [{person: philip-vi-of-france, role: defeated}], sources: [wp-philip-vi-of-france]}
+  - {key: siege-of-calais-1346, people: [{person: philip-vi-of-france, role: failed to relieve it}], sources: [wp-philip-vi-of-france]}
+  - {key: battle-of-poitiers-1356, people: [{person: john-ii-of-france, role: captured}, {person: charles-v-of-france, role: commanded a battalion}], sources: [wp-john-ii-of-france, wp-charles-v-of-france]}
+  - {key: treaty-of-bretigny-1360, people: [{person: john-ii-of-france, role: released on ransom}, {person: charles-v-of-france, role: regent who concluded it}], sources: [wp-john-ii-of-france, wp-charles-v-of-france]}
+  - {key: battle-of-agincourt-1415, people: [{person: charles-vi-of-france, role: defeated (king)}], sources: [wp-charles-vi-of-france]}
+  - {key: treaty-of-troyes-1420, people: [{person: charles-vi-of-france, role: signatory}, {person: charles-vii-of-france, role: disinherited}], sources: [wp-charles-vi-of-france, wp-charles-vii-of-france]}
+  - {key: battle-of-castillon-1453, people: [{person: charles-vii-of-france, role: victor}], sources: [wp-charles-vii-of-france]}
+  - {key: treaty-of-picquigny, people: [{person: louis-xi-of-france, role: signatory}], sources: [wp-louis-xi-of-france]}
+
+moments:
+  # Born
+  - {person: louis-vi-of-france,    role: born,    place: paris,                 year: 1081}
+  - {person: louis-ix-of-france,    role: born,    place: poissy,                year: 1214}
+  - {person: philip-iii-of-france,  role: born,    place: poissy,                year: 1245}
+  - {person: philip-iv-of-france,   role: born,    place: fontainebleau-castle,  year: 1268}
+  - {person: louis-x-of-france,     role: born,    place: paris,                 year: 1289}
+  - {person: charles-v-of-france,   role: born,    place: chateau-de-vincennes,  year: 1338}
+  - {person: charles-vi-of-france,  role: born,    place: hotel-saint-pol,       year: 1368}
+  - {person: charles-vii-of-france, role: born,    place: hotel-saint-pol,       year: 1403}
+  - {person: louis-xi-of-france,    role: born,    place: bourges,               year: 1423}
+  - {person: charles-viii-of-france, role: born,   place: amboise-castle,        year: 1470}
+  # Crowned (Reims unless stated)
+  - {person: henry-i-of-france,     role: crowned, place: reims-cathedral, year: 1027}
+  - {person: philip-i-of-france,    role: crowned, place: reims-cathedral, year: 1059}
+  - {person: louis-vi-of-france,    role: crowned, place: orleans,         year: 1108}
+  - {person: louis-vii-of-france,   role: crowned, place: reims-cathedral, year: 1131}
+  - {person: philip-ii-of-france,   role: crowned, place: reims-cathedral, year: 1179}
+  - {person: louis-viii-of-france,  role: crowned, place: reims-cathedral, year: 1223}
+  - {person: louis-ix-of-france,    role: crowned, place: reims-cathedral, year: 1226}
+  - {person: philip-iii-of-france,  role: crowned, place: reims-cathedral, year: 1271}
+  - {person: philip-iv-of-france,   role: crowned, place: reims-cathedral, year: 1286}
+  - {person: louis-x-of-france,     role: crowned, place: reims-cathedral, year: 1315}
+  - {person: philip-v-of-france,    role: crowned, place: reims-cathedral, year: 1317}
+  - {person: charles-iv-of-france,  role: crowned, place: reims-cathedral, year: 1322}
+  - {person: philip-vi-of-france,   role: crowned, place: reims-cathedral, year: 1328}
+  - {person: john-ii-of-france,     role: crowned, place: reims-cathedral, year: 1350}
+  - {person: charles-v-of-france,   role: crowned, place: reims-cathedral, year: 1364}
+  - {person: charles-vi-of-france,  role: crowned, place: reims-cathedral, year: 1380}
+  - {person: charles-vii-of-france, role: crowned, place: reims-cathedral, year: 1429}
+  # Died
+  - {person: philip-i-of-france,    role: died, place: melun-castle,              year: 1108}
+  - {person: louis-vii-of-france,   role: died, place: paris,                     year: 1180}
+  - {person: louis-viii-of-france,  role: died, place: chateau-de-montpensier,    year: 1226}
+  - {person: louis-ix-of-france,    role: died, place: tunis,                     year: 1270}
+  - {person: philip-iii-of-france,  role: died, place: perpignan,                 year: 1285}
+  - {person: philip-iv-of-france,   role: died, place: fontainebleau-castle,      year: 1314}
+  - {person: louis-x-of-france,     role: died, place: chateau-de-vincennes,      year: 1316}
+  - {person: charles-iv-of-france,  role: died, place: chateau-de-vincennes,      year: 1328}
+  - {person: john-ii-of-france,     role: died, place: savoy-palace,              year: 1364}
+  - {person: charles-vi-of-france,  role: died, place: hotel-saint-pol,           year: 1422}
+  - {person: charles-vii-of-france, role: died, place: mehun-sur-yevre,           year: 1461}
+  - {person: louis-xi-of-france,    role: died, place: chateau-de-plessis-les-tours, year: 1483}
+  - {person: charles-viii-of-france, role: died, place: amboise-castle,           year: 1498}
+  # Buried
+  - {person: henry-i-of-france,     role: buried, place: basilica-of-saint-denis, year: 1060}
+  - {person: philip-i-of-france,    role: buried, place: saint-benoit-sur-loire-abbey, year: 1108}
+  - {person: louis-vi-of-france,    role: buried, place: basilica-of-saint-denis, year: 1137}
+  - {person: louis-vii-of-france,   role: buried, place: barbeau-abbey,           year: 1180}
+  - {person: philip-ii-of-france,   role: buried, place: basilica-of-saint-denis, year: 1223}
+  - {person: louis-viii-of-france,  role: buried, place: basilica-of-saint-denis, year: 1226}
+  - {person: louis-ix-of-france,    role: buried, place: basilica-of-saint-denis, year: 1271}
+  - {person: philip-iii-of-france,  role: buried, place: basilica-of-saint-denis, year: 1285}
+  - {person: philip-iv-of-france,   role: buried, place: basilica-of-saint-denis, year: 1314}
+  - {person: louis-x-of-france,     role: buried, place: basilica-of-saint-denis, year: 1316}
+  - {person: john-i-of-france,      role: buried, place: basilica-of-saint-denis, year: 1316}
+  - {person: philip-v-of-france,    role: buried, place: basilica-of-saint-denis, year: 1322}
+  - {person: charles-iv-of-france,  role: buried, place: basilica-of-saint-denis, year: 1328}
+  - {person: philip-vi-of-france,   role: buried, place: basilica-of-saint-denis, year: 1350}
+  - {person: john-ii-of-france,     role: buried, place: basilica-of-saint-denis, year: 1364}
+  - {person: charles-v-of-france,   role: buried, place: basilica-of-saint-denis, year: 1380}
+  - {person: charles-vi-of-france,  role: buried, place: basilica-of-saint-denis, year: 1422}
+  - {person: charles-vii-of-france, role: buried, place: basilica-of-saint-denis, year: 1461}
+  - {person: louis-xi-of-france,    role: buried, place: notre-dame-de-clery,     year: 1483}
+  # Built
+  - {person: louis-ix-of-france,    role: worked, place: sainte-chapelle,         year: 1241}
+
+links:
+  - {parent: robert-ii-of-france, child: henry-i-of-france}
+  - {parent: henry-i-of-france, child: philip-i-of-france}
+  - {parent: philip-i-of-france, child: louis-vi-of-france}
+  - {parent: louis-vi-of-france, child: louis-vii-of-france}
+  - {parent: louis-vii-of-france, child: philip-ii-of-france}
+  - {parent: philip-ii-of-france, child: louis-viii-of-france}
+  - {parent: louis-viii-of-france, child: louis-ix-of-france}
+  - {parent: blanche-of-castile, child: louis-ix-of-france}
+  - {parent: louis-ix-of-france, child: philip-iii-of-france}
+  - {parent: philip-iii-of-france, child: philip-iv-of-france}
+  - {parent: philip-iv-of-france, child: louis-x-of-france}
+  - {parent: philip-iv-of-france, child: philip-v-of-france}
+  - {parent: philip-iv-of-france, child: charles-iv-of-france}
+  - {parent: louis-x-of-france, child: john-i-of-france}
+  - {parent: philip-vi-of-france, child: john-ii-of-france}
+  - {parent: john-ii-of-france, child: charles-v-of-france}
+  - {parent: charles-v-of-france, child: charles-vi-of-france}
+  - {parent: charles-vi-of-france, child: charles-vii-of-france}
+  - {parent: charles-vii-of-france, child: louis-xi-of-france}
+  - {parent: louis-xi-of-france, child: charles-viii-of-france}
+  - {spouse: louis-vii-of-france, to: eleanor-of-aquitaine, year: 1137}
+  - {spouse: louis-viii-of-france, to: blanche-of-castile, year: 1200}
+
+discrepancies:
+  - key: philip-i-death-date
+    question: On what day did Philip I die in July 1108?
+    about: [{person: philip-i-of-france}]
+    field: died
+    claims:
+      - {value: "29 July 1108", sources: [wp-philip-i-of-france, wp-louis-vi-of-france]}
+      - {value: "30 July 1108", sources: [wp-henry-i-of-france]}
+    note: "The record uses 29 July, which the Philip I article gives twice and the Louis VI article confirms (Louis succeeded on 29 July)."
+  - key: philip-ii-birth-date
+    question: On what day in August 1165 was Philip II born?
+    about: [{person: philip-ii-of-france}]
+    field: born
+    claims:
+      - {value: "21 August 1165", sources: [wp-philip-ii-of-france]}
+      - {value: "22 August 1165", sources: [wp-louis-vii-of-france]}
+    note: "The record uses 21 August, from Philip II's own article (opening line and early life section)."
+  - key: john-i-reign-length
+    question: How long did John I the Posthumous live and reign?
+    about: [{person: john-i-of-france}]
+    field: died
+    claims:
+      - {value: "Born 15 November, died 19 November 1316; four days", sources: [wp-john-i-of-france, wp-philip-v-of-france]}
+      - {value: "Lived five days", sources: [wp-louis-x-of-france, wp-philip-v-of-france]}
+    note: "The record uses 15 and 19 November 1316 from the John I article. Five days counts both end days; the Philip V article says both four and five."
+  - key: charles-iv-birth-date
+    question: On what day in June 1294 was Charles IV born?
+    about: [{person: charles-iv-of-france}]
+    field: born
+    claims:
+      - {value: "18 June 1294", sources: [wp-charles-iv-of-france]}
+      - {value: "19 June 1294", sources: [wp-charles-iv-of-france]}
+    note: "The article gives '18/19 June 1294'. The record keeps the year only."
+  - key: charles-vi-death-date
+    question: On what day in October 1422 did Charles VI die?
+    about: [{person: charles-vi-of-france}]
+    field: died
+    claims:
+      - {value: "21 October 1422", sources: [wp-charles-vi-of-france]}
+      - {value: "22 October 1422", sources: [wp-charles-v-of-france]}
+    note: "The record uses 21 October, from Charles VI's own article (given twice). Charles VII's reign starts in 1422, year only."
+  - key: charles-viii-death-date
+    question: On what day in April 1498 did Charles VIII die?
+    about: [{person: charles-viii-of-france}]
+    field: died
+    claims:
+      - {value: "7 April 1498", sources: [wp-charles-viii-of-france]}
+      - {value: "8 April 1498", sources: [wp-louis-xi-of-france]}
+    note: "The record uses 7 April, from Charles VIII's own article."
