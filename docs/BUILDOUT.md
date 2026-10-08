@@ -52,6 +52,15 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - **Merging:** the apply workflow queue keeps only one waiting run, so merging a second PR while one is applying and another is waiting cancels the waiting one (its data never lands). Merge one PR at a time and wait for `Intake apply` to finish. If a run is cancelled, re-send the file in a new PR.
 - **Gaps to expect:** facts the articles do not give (a day, a place of death) are left out and noted, not guessed. Coordinates are mostly from general knowledge and approximate.
 
+## Lessons from the English artists batch (1600-1700)
+
+- **Cost:** 48 people, 68 places, 39 events and 174 moments from four Sonnet research agents (about 640k tokens in total) plus the main session. Ran on Ty's weekly allowance by his choice, outside the queue.
+- **Downloading:** one script in the scratchpad fetched each article's plain text, lead image and Commons licence (MediaWiki API, `User-Agent`, 2 second pauses, about 5 seconds per person), so it took about 5 minutes for 48. Check the redirect: "Roger Pratt" is a disambiguation page, the article is "Roger Pratt (architect)". Run it with the shell's normal foreground or `run_in_background`; a `&` inside a command was killed when the call ended.
+- **Agents:** group by kind (painters, architects, writers, composers and scholars), one YAML fragment each, and tell each which shared places the architects agent defines. Expect duplicate place keys across fragments; merge and dedupe, then trim: keep events rated 3 and up, and only places that a kept moment or event uses.
+- **Merging fragments:** YAML dates load as dates, so convert them back to `YYYY-MM-DD` strings when re-dumping. Comments are lost on re-dump; put the agents' doubts into a reviewer note at the top of the file.
+- **Images:** Wikipedia lead images are public domain for most 17th-century people; some files are local to en.wikipedia (no Commons record, so no licence): skip those. The Commons "Artist" field carries who made the image (it names the engraver of a portrait "after" a painter), so capture it as an artwork record's creator, not just the person's picture.
+- **Gaps:** the `image_credit` for the 44 existing person images is in the downloaded Commons data but was not stored (issue #62).
+
 ## How to run it
 
 - **One build-out at a time** is the simplest. If the session can start parallel cloud sessions, at most two at once, each on its own issue, own branches and own intake files (see CLAUDE.md, Running in parallel).

@@ -30,7 +30,7 @@ Read this whole file before changing anything. It is written so a session with n
 
 ## Database
 
-Supabase project `alhvzdvabugmkeqmvmiz`, schema `public`. Tables: `entities` (people), `relationships` (parent, spouse, patron, teacher), `events`, `event_people`, `places`, `person_places` (life moments), `titles` (who held what, when), `realms` (what a title rules, with a world region), `sources`, `source_links`, `discrepancies`, and the private `learning_log` / `learning_log_items` (no public read).
+Supabase project `alhvzdvabugmkeqmvmiz`, schema `public`. Tables: `entities` (people), `relationships` (parent, spouse, patron, teacher), `events`, `event_people`, `places`, `person_places` (life moments), `titles` (who held what, when), `realms` (what a title rules, with a world region), `artworks` (paintings, prints, sculptures: linked to their creator, the people shown, places, events and the artwork they copy, through `artwork_people`, `artwork_places`, `artwork_events`), `sources`, `source_links`, `discrepancies`, and the private `learning_log` / `learning_log_items` (no public read).
 
 - **Reads:** the claude.ai custom connector "Supabase History" (tools named like `mcp__…__execute_sql`, `list_tables`), if this session has it. Otherwise the REST API with the anon key from `config.js`: `curl "$URL/rest/v1/entities?select=key,name" -H "apikey: $KEY" -H "Authorization: Bearer $KEY"`.
 - **Data writes:** only through intake files and pull requests. The apply workflow holds the secret key as a GitHub secret (`SUPABASE_SECRET_KEY`). Don't write data any other way.
@@ -64,6 +64,9 @@ Commit messages: plain imperative title ("Add …", "Intake: …"), a short body
 - **Prominence** is a 1–5 star rating, **5 = most important**. On the timeline, 5-star events are always labelled; the rest get labels while there's room. Give 5 sparingly (a Hastings, a coronation that changed a country), 1 to minor events. Blank counts as 3.
 - **Events** need a clear date in the source. Leave out vague or legendary ones, or mark them `estimated` with a note.
 - **Places:** for each person, look for references to significant locations (places) and buildings that they built, or in which significant events took place, and add them with their `moments` and `events`. See `docs/BUILDOUT.md`, What to capture.
+- **Images** are links only, never copied files: `image_url`, `image_thumb`, `image_page` (the Commons page), `image_license`, and for artworks `image_credit`. Use an image only when Commons marks it public domain, CC0 or a free licence; otherwise leave the fields out and say why in a comment. Strip `?utm_...` from Wikipedia image URLs. A person's picture is best an `artworks` record linked as their `portrait`, so its maker, date and licence travel with it.
+- **Artworks:** give each a `creator` (a person) and, for a portrait, a `subject`; use `after` for a copy of another artwork. Don't invent a medium or kind the source doesn't state.
+- **Coverage:** every person added to a batch gets `coverage` (`not-read`, `partly`, `complete`) and, for `partly`, a `coverage_note` saying what was captured and what is missing. When a person becomes the focus, read their article and list of works, add the artworks, and mark them `complete`. Blank means not yet assessed.
 - Realms Wikipedia names no confident ruler for are left out, and the batch file says so in a comment.
 - Obsidian: Ty's notes are in the vault `Personal`, folder `History` (`D:\Documents\Obsidian\all vaults\Personal\History` on Ty's PC). Cloud sessions can't reach it; use Wikipedia. Set `obsidian_link` only to a note name you've seen.
 
