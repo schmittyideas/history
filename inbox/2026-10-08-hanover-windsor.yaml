@@ -1,0 +1,709 @@
+batch:
+  title: "British monarchs: Hanover, Windsor and today, 1714-present"
+  requested: "Kings and queens of Great Britain and the United Kingdom from George I to Charles III, with Prince Albert and Prince Philip"
+  date: 2026-10-08
+
+# NOTES ON WHAT WAS LEFT OUT (all because the downloaded Wikipedia text does not give the fact):
+# - There is no downloaded article for Queen Victoria herself (the file Victoria.txt is the disambiguation page).
+#   Her record is built from the Prince Albert, Edward VII, Osborne House, Kensington Palace and Balmoral articles.
+#   Her birth day (24 May), birthplace and coronation date are not in those articles, so birth is the year alone,
+#   there is no birth place, and there is no coronation event. Her coronation should be added when her article is available.
+# - Battle of Waterloo: the downloaded articles name it only as 1815, so the event carries the year alone.
+# - Coronations of George I, George III and George IV, and the place of William IV's coronation (8 September 1831), are not
+#   dated or placed in the downloaded articles, so George IV's and George I's coronations are omitted.
+# - Birthplaces left out: Elizabeth II (17 Bruton Street, Mayfair; a private house, not defined), Albert (Schloss Rosenau).
+# - Deaths with no place in the articles: George II (no place given), Edward VIII (home in Paris), Charles III (living).
+# - Death place of Edward VII: the article says he returned to Buckingham Palace on 27 April 1910 and died there that night
+#   (the place is implied, not stated outright).
+# - Dates for British events of 1727 and 1714 are Old Style, as Wikipedia gives them.
+# - Elector of Hanover is included for George I to III, because the articles say each ruled the Electorate. Hanover
+#   dukes/electors before George I are not in this batch.
+
+sources:
+  - {key: wp-george-i,          title: "George I of Great Britain (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/George_I_of_Great_Britain"}
+  - {key: wp-george-ii,         title: "George II of Great Britain (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/George_II_of_Great_Britain"}
+  - {key: wp-george-iii,        title: "George III (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/George_III"}
+  - {key: wp-george-iv,         title: "George IV (Wikipedia)",                                     url: "https://en.wikipedia.org/wiki/George_IV"}
+  - {key: wp-william-iv,        title: "William IV (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/William_IV"}
+  - {key: wp-prince-albert,     title: "Prince Albert of Saxe-Coburg and Gotha (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Prince_Albert_of_Saxe-Coburg_and_Gotha"}
+  - {key: wp-edward-vii,        title: "Edward VII (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/Edward_VII"}
+  - {key: wp-george-v,          title: "George V (Wikipedia)",                                      url: "https://en.wikipedia.org/wiki/George_V"}
+  - {key: wp-edward-viii,       title: "Edward VIII (Wikipedia)",                                   url: "https://en.wikipedia.org/wiki/Edward_VIII"}
+  - {key: wp-george-vi,         title: "George VI (Wikipedia)",                                     url: "https://en.wikipedia.org/wiki/George_VI"}
+  - {key: wp-elizabeth-ii,      title: "Elizabeth II (Wikipedia)",                                  url: "https://en.wikipedia.org/wiki/Elizabeth_II"}
+  - {key: wp-charles-iii,       title: "Charles III (Wikipedia)",                                   url: "https://en.wikipedia.org/wiki/Charles_III"}
+  - {key: wp-prince-philip,     title: "Prince Philip, Duke of Edinburgh (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Prince_Philip,_Duke_of_Edinburgh"}
+  - {key: wp-buckingham-palace, title: "Buckingham Palace (Wikipedia)",                             url: "https://en.wikipedia.org/wiki/Buckingham_Palace"}
+  - {key: wp-balmoral-castle,   title: "Balmoral Castle (Wikipedia)",                               url: "https://en.wikipedia.org/wiki/Balmoral_Castle"}
+  - {key: wp-sandringham-house, title: "Sandringham House (Wikipedia)",                             url: "https://en.wikipedia.org/wiki/Sandringham_House"}
+  - {key: wp-osborne-house,     title: "Osborne House (Wikipedia)",                                 url: "https://en.wikipedia.org/wiki/Osborne_House"}
+  - {key: wp-royal-pavilion,    title: "Royal Pavilion (Wikipedia)",                                url: "https://en.wikipedia.org/wiki/Royal_Pavilion"}
+  - {key: wp-kensington-palace, title: "Kensington Palace (Wikipedia)",                             url: "https://en.wikipedia.org/wiki/Kensington_Palace"}
+  - {key: wp-windsor-castle,    title: "Windsor Castle (Wikipedia)",                                url: "https://en.wikipedia.org/wiki/Windsor_Castle"}
+
+realms:
+  - {name: United Kingdom, region: Western Europe, country: United Kingdom, note: "The United Kingdom of Great Britain and Ireland from 1 January 1801 (Acts of Union 1800)"}
+  - {name: Hanover, region: Western Europe, country: Germany, note: "Electorate of Hanover (Brunswick-Lüneburg), raised to a kingdom in 1814; held with the British crown until 1837"}
+  - {name: British India, region: South Asia, country: India, note: "The British Raj; the British monarch was Empress or Emperor of India from 1876 to 1947/1948"}
+
+people:
+  - key: george-i-of-great-britain
+    name: George I
+    type: Royalty
+    house: Hanover
+    realm: Great Britain
+    born: 1660-05-28
+    died: 1727-06-11
+    prominence: 4
+    note: "First Hanoverian king of Great Britain, as Anne's nearest Protestant heir; also Elector of Hanover. Died on a trip to Hanover."
+    sources: [wp-george-i]
+  - key: george-ii-of-great-britain
+    name: George II
+    type: Royalty
+    house: Hanover
+    realm: Great Britain
+    born: 1683-11-09
+    died: 1760-10-25
+    prominence: 3
+    note: "Last British monarch born outside Britain and last to lead an army in battle (Dettingen). Reigned through the 1745 Jacobite rising."
+    sources: [wp-george-ii]
+  - key: george-iii
+    name: George III
+    type: Royalty
+    house: Hanover
+    realm: United Kingdom
+    born: 1738-06-04
+    died: 1820-01-29
+    prominence: 4
+    note: "Lost the American colonies; reigned through the Napoleonic Wars and the union with Ireland. Recurrent mental illness; his son was Prince Regent from 1811."
+    sources: [wp-george-iii]
+  - key: george-iv
+    name: George IV
+    type: Royalty
+    house: Hanover
+    realm: United Kingdom
+    born: 1762-08-12
+    died: 1830-06-26
+    prominence: 3
+    note: "Prince Regent from 1811, king from 1820. Patron of the Regency style; commissioned the Royal Pavilion at Brighton."
+    sources: [wp-george-iv]
+  - key: william-iv
+    name: William IV
+    type: Royalty
+    house: Hanover
+    realm: United Kingdom
+    born: 1765-08-21
+    died: 1837-06-20
+    prominence: 3
+    note: "The 'Sailor King'. Reign of the Reform Act 1832 and the abolition of slavery in the empire; last Hanoverian monarch of the United Kingdom."
+    sources: [wp-william-iv]
+  - key: victoria-of-the-united-kingdom
+    name: Victoria
+    type: Royalty
+    house: Hanover
+    realm: United Kingdom
+    born: 1819
+    died: 1901-01-22
+    prominence: 5
+    note: "Queen from 1837 and Empress of India from 1876; her reign gave its name to the Victorian era. Born 1819 (day not in the downloaded articles). Died at Osborne House."
+    sources: [wp-prince-albert, wp-edward-vii, wp-osborne-house, wp-kensington-palace]
+  - key: prince-albert-of-saxe-coburg-and-gotha
+    name: Prince Albert of Saxe-Coburg and Gotha
+    type: Royalty
+    house: Saxe-Coburg and Gotha
+    born: 1819-08-26
+    died: 1861-12-14
+    prominence: 3
+    note: "Victoria's husband from 1840 and Prince Consort from 1857; organised the Great Exhibition of 1851 and designed Osborne House."
+    sources: [wp-prince-albert]
+  - key: edward-vii
+    name: Edward VII
+    type: Royalty
+    house: Saxe-Coburg and Gotha
+    realm: United Kingdom
+    born: 1841-11-09
+    died: 1910-05-06
+    prominence: 4
+    note: "Prince of Wales for almost 60 years, then king 1901-1910; first monarch of the House of Saxe-Coburg and Gotha. Called 'Peacemaker'."
+    sources: [wp-edward-vii]
+  - key: george-v
+    name: George V
+    type: Royalty
+    house: Windsor
+    realm: United Kingdom
+    born: 1865-06-03
+    died: 1936-01-20
+    prominence: 4
+    note: "King through the First World War; renamed the royal house Windsor in 1917. Began the royal Christmas broadcast in 1932."
+    sources: [wp-george-v]
+  - key: edward-viii
+    name: Edward VIII
+    type: Royalty
+    house: Windsor
+    realm: United Kingdom
+    born: 1894-06-23
+    died: 1972-05-28
+    prominence: 4
+    note: "Reigned 326 days in 1936, then abdicated to marry Wallis Simpson; afterwards Duke of Windsor."
+    sources: [wp-edward-viii]
+  - key: george-vi
+    name: George VI
+    type: Royalty
+    house: Windsor
+    realm: United Kingdom
+    born: 1895-12-14
+    died: 1952-02-06
+    prominence: 4
+    note: "Became king on his brother's abdication; stayed in London through the Second World War. Last Emperor of India and first Head of the Commonwealth."
+    sources: [wp-george-vi]
+  - key: elizabeth-ii
+    name: Elizabeth II
+    type: Royalty
+    house: Windsor
+    realm: United Kingdom
+    born: 1926-04-21
+    died: 2022-09-08
+    prominence: 5
+    note: "Queen from 1952 to 2022, the longest-reigning British monarch (70 years 214 days). Died at Balmoral."
+    sources: [wp-elizabeth-ii]
+  - key: charles-iii
+    name: Charles III
+    type: Royalty
+    house: Windsor
+    realm: United Kingdom
+    born: 1948-11-14
+    prominence: 4
+    note: "King since 8 September 2022; at 73 the oldest person to accede to the British throne, after the longest wait as heir. Crowned 6 May 2023."
+    sources: [wp-charles-iii]
+  - key: prince-philip-duke-of-edinburgh
+    name: Prince Philip, Duke of Edinburgh
+    type: Royalty
+    house: Windsor
+    born: 1921-06-10
+    died: 2021-04-09
+    prominence: 3
+    note: "Born a prince of Greece and Denmark; husband of Elizabeth II from 1947 and the longest-serving royal consort in British history."
+    sources: [wp-prince-philip]
+
+places:
+  - key: buckingham-palace
+    name: Buckingham Palace
+    historical_name: Buckingham House
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5014
+    lng: -0.1419
+    visitable: true
+    visit_site: "Buckingham Palace State Rooms (Royal Collection Trust)"
+    founded: 1703
+    built_by: "Duke of Buckingham and Normanby (Buckingham House, 1703); bought by George III in 1761; enlarged for George IV"
+    architect: "John Nash and Edward Blore (early 19th century); Aston Webb (East Front, 1913)"
+    note: "Principal royal residence since Victoria's accession in 1837. William IV, Edward VII and Charles III were born here (William IV when it was still Buckingham House). In London."
+    sources: [wp-buckingham-palace, wp-william-iv, wp-edward-vii, wp-charles-iii]
+  - key: balmoral-castle
+    name: Balmoral Castle
+    kind: castle
+    city: Ballater
+    region: Aberdeenshire
+    country: Scotland
+    lat: 57.0396
+    lng: -3.2335
+    visitable: true
+    visit_site: "Balmoral Castle and grounds (open to visitors in season)"
+    founded: 1853
+    built_by: "Prince Albert (bought the estate in 1852) for Queen Victoria"
+    architect: "William Smith of Aberdeen, designs amended by Prince Albert"
+    note: "Highland summer residence; building began 1853 and the new castle was completed in 1856. Elizabeth II died here on 8 September 2022. Near Crathie, west of Ballater."
+    sources: [wp-balmoral-castle, wp-elizabeth-ii]
+  - key: sandringham-house
+    name: Sandringham House
+    kind: house
+    city: Sandringham
+    region: Norfolk
+    country: England
+    lat: 52.8290
+    lng: 0.5057
+    visitable: true
+    visit_site: "Sandringham House, Gardens and Grounds"
+    founded: 1771
+    built_by: "Hoste Henleys (1771 Georgian house); bought in 1862 for Albert Edward, Prince of Wales; largely rebuilt 1870-1900"
+    architect: "A. J. Humbert (rebuilding from 1870)"
+    note: "Country house of the royal family. George V and George VI both died here. In the parish of Sandringham."
+    sources: [wp-sandringham-house, wp-george-v, wp-george-vi]
+  - key: york-cottage
+    name: York Cottage
+    kind: house
+    region: Norfolk
+    country: England
+    lat: 52.832
+    lng: 0.508
+    note: "On the Sandringham Estate, the home of the Duke and Duchess of York, where George VI was born on 14 December 1895. Coordinates approximate."
+    sources: [wp-george-vi, wp-george-v]
+  - key: osborne-house
+    name: Osborne House
+    kind: house
+    city: East Cowes
+    region: Isle of Wight
+    country: England
+    lat: 50.7607
+    lng: -1.2615
+    visitable: true
+    visit_site: "Osborne (English Heritage)"
+    founded: 1845
+    built_by: "Queen Victoria and Prince Albert (bought 1845; built 1845-1851; Albert designed it); builder Thomas Cubitt"
+    architect: "Prince Albert with Thomas Cubitt"
+    note: "Victoria's seaside retreat; she died here on 22 January 1901. Edward VII gave it to the state on his coronation day. In East Cowes."
+    sources: [wp-osborne-house]
+  - key: royal-pavilion-brighton
+    name: Royal Pavilion
+    kind: palace
+    city: Brighton
+    region: East Sussex
+    country: England
+    lat: 50.8225
+    lng: -0.1372
+    visitable: true
+    visit_site: "Royal Pavilion Brighton"
+    founded: 1787
+    built_by: "George, Prince of Wales (later George IV), in three stages from 1787"
+    architect: "Henry Holland (1787); Peter Frederick Robinson (1801-02); William Porden (riding school and stables, 1803-08); John Nash (from 1815)"
+    note: "Seaside retreat in the Indo-Saracenic style; Victoria sold it to the city of Brighton in 1850. In Brighton."
+    sources: [wp-royal-pavilion, wp-george-iv]
+  - key: royal-mausoleum-frogmore
+    name: Royal Mausoleum, Frogmore
+    kind: mausoleum
+    city: Windsor
+    region: Berkshire
+    country: England
+    lat: 51.486
+    lng: -0.603
+    note: "In Windsor Home Park. Burial place of Prince Albert (moved here a year after his death; the mausoleum was incomplete until 1871) and Queen Victoria. Edward VIII is buried in the Royal Burial Ground behind it. Coordinates approximate. In Windsor."
+    sources: [wp-prince-albert, wp-windsor-castle, wp-edward-viii]
+  - key: hyde-park
+    name: Hyde Park
+    kind: park
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5073
+    lng: -0.1657
+    visitable: true
+    visit_site: "Hyde Park (The Royal Parks)"
+    note: "Site of the Great Exhibition of 1851, held in a glass building known as the Crystal Palace. In London."
+    sources: [wp-prince-albert]
+  - key: culloden-moor
+    name: Culloden Moor
+    kind: battlefield
+    city: Inverness
+    region: Highland
+    country: Scotland
+    lat: 57.4786
+    lng: -4.0733
+    visitable: true
+    visit_site: "Culloden Battlefield (National Trust for Scotland)"
+    note: "Site of the Battle of Culloden, 16 April 1746, the last pitched battle fought on British soil. Near Inverness. The downloaded George II article names the battle but not the site."
+    sources: [wp-george-ii]
+  - key: fort-belvedere
+    name: Fort Belvedere
+    kind: house
+    region: Surrey
+    country: England
+    lat: 51.405
+    lng: -0.572
+    note: "In Windsor Great Park. George V leased it to Edward in 1930; Edward VIII signed the instruments of abdication here on 10 December 1936. Coordinates approximate."
+    sources: [wp-edward-viii]
+  - key: marlborough-house
+    name: Marlborough House
+    kind: house
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5046
+    lng: -0.1355
+    note: "London residence of Edward, Prince of Wales, and Alexandra; George V was born here on 3 June 1865. In London."
+    sources: [wp-george-v, wp-edward-vii]
+  - key: norfolk-house
+    name: Norfolk House
+    kind: house
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5075
+    lng: -0.1357
+    note: "In St James's Square. George III was born here on 4 June 1738, two months premature. Coordinates approximate. In London."
+    sources: [wp-george-iii]
+  - key: hanover
+    name: Hanover
+    kind: city
+    region: Lower Saxony
+    country: Germany
+    lat: 52.3759
+    lng: 9.732
+    note: "Capital of the Electorate of Hanover; birthplace of George I and George II."
+    sources: [wp-george-i, wp-george-ii]
+  - key: berggarten-mausoleum-hanover
+    name: Berggarten mausoleum, Hanover
+    kind: mausoleum
+    city: Hanover
+    region: Lower Saxony
+    country: Germany
+    lat: 52.391
+    lng: 9.700
+    note: "The 19th-century mausoleum of King Ernest Augustus in the Berggarten, beside Herrenhausen Gardens. George I was first buried in the chapel of Leine Palace; after the palace burned out in Allied air raids his remains were moved here. Coordinates approximate. In Hanover."
+    sources: [wp-george-i]
+  - key: schloss-osnabrueck
+    name: Schloss Osnabrück
+    kind: palace
+    city: Osnabrück
+    region: Lower Saxony
+    country: Germany
+    lat: 52.2733
+    lng: 8.0459
+    founded: 1673
+    note: "Palace of the Prince-Bishop of Osnabrück, completed 1673. George I was taken to his brother Ernest Augustus's palace after his stroke and died there on 11 June 1727; the article names the palace by its owner, so the identification with Schloss Osnabrück is inferred. In Osnabrück."
+    sources: [wp-george-i]
+  - key: mon-repos-corfu
+    name: Mon Repos
+    kind: villa
+    city: Corfu
+    region: Corfu
+    country: Greece
+    lat: 39.6035
+    lng: 19.9265
+    note: "Villa on the island of Corfu where Prince Philip was born on 10 June 1921. Coordinates approximate. In Corfu."
+    sources: [wp-prince-philip]
+
+events:
+  - key: accession-of-george-i
+    name: Accession of George I
+    type: Succession
+    date: 1714-08-01
+    people: [{person: george-i-of-great-britain, role: succeeded}]
+    prominence: 4
+    note: "Anne died; her Protestant heir George, Elector of Hanover, became the first Hanoverian king. Date is Old Style."
+    sources: [wp-george-i]
+  - key: jacobite-rising-1715
+    name: The Fifteen (Jacobite rising of 1715)
+    type: Rebellion
+    year: 1715
+    people: [{person: george-i-of-great-britain, role: defended throne}]
+    prominence: 3
+    note: "Led by the Earl of Mar in Scotland to put James Francis Edward Stuart on the throne; collapsed by the end of 1715 and James fled to France in February 1716."
+    sources: [wp-george-i]
+  - key: coronation-of-george-ii
+    name: Coronation of George II
+    type: Coronation
+    date: 1727-10-11
+    place: westminster-abbey
+    people: [{person: george-ii-of-great-britain, role: crowned}]
+    prominence: 2
+    note: "Date is Old Style (22 October New Style). Handel wrote four anthems, including Zadok the Priest."
+    sources: [wp-george-ii]
+  - key: jacobite-rising-1745
+    name: Jacobite rising of 1745
+    type: Rebellion
+    year: 1745
+    end_year: 1746
+    people: [{person: george-ii-of-great-britain, role: defended throne}]
+    prominence: 4
+    note: "Charles Edward Stuart landed in Scotland in July 1745, won at Prestonpans and marched into England, then retreated; ended at Culloden."
+    sources: [wp-george-ii]
+  - key: battle-of-culloden
+    name: Battle of Culloden
+    type: Battle
+    date: 1746-04-16
+    place: culloden-moor
+    people:
+      - {person: george-ii-of-great-britain, role: victor}
+    prominence: 4
+    note: "The Duke of Cumberland routed Charles Edward Stuart's Jacobites in the last pitched battle on British soil. Date is Old Style (27 April New Style)."
+    sources: [wp-george-ii]
+  - key: american-declaration-of-independence
+    name: American Declaration of Independence
+    type: Declaration
+    year: 1776
+    people: [{person: george-iii, role: addressed by the declaration}]
+    prominence: 4
+    note: "In July 1776 the thirteen colonies declared independence, listing grievances against the king. The day is not in the downloaded article."
+    sources: [wp-george-iii]
+  - key: treaty-of-paris-1783
+    name: Treaty of Paris (American independence)
+    type: Treaty
+    year: 1783
+    people: [{person: george-iii, role: signed for Britain}]
+    prominence: 4
+    note: "Britain formally recognised the independence of the United States in treaties signed in 1782 and 1783, after Cornwallis surrendered at Yorktown in 1781."
+    sources: [wp-george-iii]
+  - key: union-of-great-britain-and-ireland-1801
+    name: United Kingdom of Great Britain and Ireland created
+    type: Union
+    date: 1801-01-01
+    people: [{person: george-iii, role: king}]
+    prominence: 4
+    note: "The Acts of Union passed by the British and Irish parliaments in 1800 took effect, creating the United Kingdom."
+    sources: [wp-george-iii]
+  - key: battle-of-waterloo
+    name: Battle of Waterloo
+    type: Battle
+    year: 1815
+    people: [{person: george-iv, role: Prince Regent}]
+    prominence: 4
+    note: "Napoleon's final defeat, in the Regency of the future George IV. The day is not in the downloaded articles."
+    sources: [wp-george-iii, wp-george-iv]
+  - key: coronation-of-william-iv
+    name: Coronation of William IV
+    type: Coronation
+    date: 1831-09-08
+    people: [{person: william-iv, role: crowned}]
+    prominence: 2
+    note: "A modest ceremony; the Privy Council budgeted under 30,000 pounds against the 240,000 pounds of 1821."
+    sources: [wp-william-iv]
+  - key: slavery-abolition-act-1833
+    name: Slavery Abolition Act
+    type: Law
+    year: 1833
+    people: [{person: william-iv, role: reigning monarch}]
+    prominence: 4
+    note: "Emancipated slaves in most of the British Empire. Passed in the same reign as the Reform Act 1832 and the Factory Act 1833."
+    sources: [wp-william-iv]
+  - key: accession-of-queen-victoria
+    name: Accession of Queen Victoria
+    type: Succession
+    date: 1837-06-20
+    place: kensington-palace
+    people: [{person: victoria-of-the-united-kingdom, role: succeeded}]
+    prominence: 4
+    note: "Woken at Kensington Palace and told her uncle William IV had died, aged 18. She moved to Buckingham Palace, which became the principal royal residence."
+    sources: [wp-prince-albert, wp-kensington-palace, wp-buckingham-palace]
+  - key: great-exhibition-1851
+    name: Great Exhibition
+    type: Exhibition
+    date: 1851-05-01
+    place: hyde-park
+    people:
+      - {person: victoria-of-the-united-kingdom, role: opened it}
+      - {person: prince-albert-of-saxe-coburg-and-gotha, role: organiser}
+    prominence: 5
+    note: "Opened by Victoria in the glass Crystal Palace; a colossal success whose surplus of 180,000 pounds bought land in South Kensington for museums and colleges."
+    sources: [wp-prince-albert]
+  - key: victoria-empress-of-india-1876
+    name: Victoria becomes Empress of India
+    type: Succession
+    year: 1876
+    people: [{person: victoria-of-the-united-kingdom, role: proclaimed Empress}]
+    prominence: 3
+    note: "Parliament gave Victoria the title Empress of India at the end of the Prince of Wales's tour of India (September 1875 to May 1876). Exact date not in the downloaded articles."
+    sources: [wp-edward-vii]
+  - key: death-of-queen-victoria
+    name: Death of Queen Victoria
+    type: Death
+    date: 1901-01-22
+    place: osborne-house
+    people:
+      - {person: victoria-of-the-united-kingdom, role: died}
+      - {person: edward-vii, role: succeeded}
+    prominence: 4
+    note: "Died aged 81 with two generations of her family present; her eldest son became Edward VII."
+    sources: [wp-osborne-house, wp-edward-vii]
+  - key: coronation-of-edward-vii
+    name: Coronation of Edward VII
+    type: Coronation
+    date: 1902-08-09
+    place: westminster-abbey
+    people: [{person: edward-vii, role: crowned}]
+    prominence: 3
+    note: "Postponed from 26 June 1902 when the king was operated on for appendicitis two days before. Crowned by Archbishop Frederick Temple."
+    sources: [wp-edward-vii]
+  - key: coronation-of-george-v
+    name: Coronation of George V
+    type: Coronation
+    date: 1911-06-22
+    place: westminster-abbey
+    people: [{person: george-v, role: crowned}]
+    prominence: 3
+    note: "Celebrated by the Festival of Empire in London."
+    sources: [wp-george-v]
+  - key: delhi-durbar-1911
+    name: Delhi Durbar of 1911
+    type: Ceremony
+    date: 1911-12-12
+    people: [{person: george-v, role: presented as Emperor of India}]
+    prominence: 3
+    note: "George V wore the new Imperial Crown of India and announced the move of the capital from Calcutta to Delhi; the only Emperor of India to attend his own durbar."
+    sources: [wp-george-v]
+  - key: britain-enters-first-world-war
+    name: Britain declares war on Germany (First World War)
+    type: War
+    date: 1914-08-04
+    people: [{person: george-v, role: held the council declaring war}]
+    prominence: 4
+    note: "George V held a council at 10:45 am to declare war."
+    sources: [wp-george-v]
+  - key: house-of-windsor-1917
+    name: Royal house renamed Windsor
+    type: Proclamation
+    date: 1917-07-17
+    people: [{person: george-v, role: proclaimed}]
+    prominence: 3
+    note: "Royal proclamation changed the name from the German-sounding Saxe-Coburg and Gotha to Windsor."
+    sources: [wp-george-v]
+  - key: abdication-of-edward-viii
+    name: Abdication of Edward VIII
+    type: Abdication
+    date: 1936-12-10
+    place: fort-belvedere
+    people:
+      - {person: edward-viii, role: abdicated}
+      - {person: george-vi, role: succeeded}
+    prominence: 5
+    note: "Edward signed the instruments of abdication on 10 December so he could marry Wallis Simpson; royal assent was given on 11 December and his brother, the Duke of York, became George VI."
+    sources: [wp-edward-viii, wp-george-vi]
+  - key: coronation-of-george-vi
+    name: Coronation of George VI
+    type: Coronation
+    date: 1937-05-12
+    place: westminster-abbey
+    people: [{person: george-vi, role: crowned}]
+    prominence: 3
+    note: "Held on the date already set for Edward VIII's coronation."
+    sources: [wp-george-vi]
+  - key: britain-enters-second-world-war
+    name: Britain declares war on Germany (Second World War)
+    type: War
+    year: 1939
+    people: [{person: george-vi, role: king at war}]
+    prominence: 4
+    note: "After the invasion of Poland in September 1939. George VI and the Queen stayed in London through the Blitz, which began on 7 September 1940."
+    sources: [wp-george-vi]
+  - key: independence-of-india-and-pakistan-1947
+    name: Independence of India and Pakistan
+    type: Independence
+    year: 1947
+    people: [{person: george-vi, role: last Emperor of India}]
+    prominence: 4
+    note: "The British Raj was dissolved in August 1947; George VI formally gave up the title Emperor of India in June 1948."
+    sources: [wp-george-vi]
+  - key: coronation-of-elizabeth-ii
+    name: Coronation of Elizabeth II
+    type: Coronation
+    date: 1953-06-02
+    place: westminster-abbey
+    people: [{person: elizabeth-ii, role: crowned}]
+    prominence: 4
+    note: "Went ahead despite Queen Mary's death on 24 March 1953; the first coronation to be televised (except the anointing and communion)."
+    sources: [wp-elizabeth-ii]
+  - key: death-of-elizabeth-ii
+    name: Death of Elizabeth II
+    type: Death
+    date: 2022-09-08
+    place: balmoral-castle
+    people:
+      - {person: elizabeth-ii, role: died}
+      - {person: charles-iii, role: succeeded}
+    prominence: 5
+    note: "Died aged 96 at 3:10 pm, the first monarch to die in Scotland since James V in 1542. State funeral at Westminster Abbey on 19 September; buried at Windsor beside Philip."
+    sources: [wp-elizabeth-ii, wp-charles-iii]
+  - key: coronation-of-charles-iii
+    name: Coronation of Charles III
+    type: Coronation
+    date: 2023-05-06
+    place: westminster-abbey
+    people: [{person: charles-iii, role: crowned}]
+    prominence: 4
+    note: "Charles and Camilla were crowned together (planned as Operation Golden Orb)."
+    sources: [wp-charles-iii]
+
+moments:
+  - {person: george-i-of-great-britain, role: born,   place: hanover, year: 1660}
+  - {person: george-i-of-great-britain, role: died,   place: schloss-osnabrueck, year: 1727}
+  - {person: george-i-of-great-britain, role: buried, place: berggarten-mausoleum-hanover, year: 1727}
+  - {person: george-ii-of-great-britain, role: born,   place: hanover, year: 1683}
+  - {person: george-ii-of-great-britain, role: buried, place: westminster-abbey, year: 1760}
+  - {person: george-iii, role: born,   place: norfolk-house, year: 1738}
+  - {person: george-iii, role: died,   place: windsor-castle, year: 1820}
+  - {person: george-iii, role: buried, place: st-georges-chapel-windsor, year: 1820}
+  - {person: george-iv, role: born,   place: st-jamess-palace, year: 1762}
+  - {person: george-iv, role: died,   place: windsor-castle, year: 1830}
+  - {person: george-iv, role: buried, place: st-georges-chapel-windsor, year: 1830}
+  - {person: william-iv, role: born,   place: buckingham-palace, year: 1765}
+  - {person: william-iv, role: died,   place: windsor-castle, year: 1837}
+  - {person: william-iv, role: buried, place: st-georges-chapel-windsor, year: 1837}
+  - {person: victoria-of-the-united-kingdom, role: died,   place: osborne-house, year: 1901}
+  - {person: victoria-of-the-united-kingdom, role: buried, place: royal-mausoleum-frogmore, year: 1901}
+  - {person: prince-albert-of-saxe-coburg-and-gotha, role: died,   place: windsor-castle, year: 1861}
+  - {person: prince-albert-of-saxe-coburg-and-gotha, role: buried, place: royal-mausoleum-frogmore, year: 1862}
+  - {person: edward-vii, role: born,   place: buckingham-palace, year: 1841}
+  - {person: edward-vii, role: died,   place: buckingham-palace, year: 1910}
+  - {person: edward-vii, role: buried, place: st-georges-chapel-windsor, year: 1910}
+  - {person: george-v, role: born,   place: marlborough-house, year: 1865}
+  - {person: george-v, role: died,   place: sandringham-house, year: 1936}
+  - {person: george-v, role: buried, place: st-georges-chapel-windsor, year: 1936}
+  - {person: edward-viii, role: buried, place: royal-mausoleum-frogmore, year: 1972}
+  - {person: george-vi, role: born,   place: york-cottage, year: 1895}
+  - {person: george-vi, role: died,   place: sandringham-house, year: 1952}
+  - {person: george-vi, role: buried, place: st-georges-chapel-windsor, year: 1952}
+  - {person: elizabeth-ii, role: died,   place: balmoral-castle, year: 2022}
+  - {person: elizabeth-ii, role: buried, place: st-georges-chapel-windsor, year: 2022}
+  - {person: charles-iii, role: born, place: buckingham-palace, year: 1948}
+  - {person: prince-philip-duke-of-edinburgh, role: born,   place: mon-repos-corfu, year: 1921}
+  - {person: prince-philip-duke-of-edinburgh, role: died,   place: windsor-castle, year: 2021}
+  - {person: prince-philip-duke-of-edinburgh, role: buried, place: st-georges-chapel-windsor, year: 2022}
+
+titles:
+  # Rulers of Hanover. George I's rule of the Electorate dates from his father's death in 1698 (he was only ratified as elector in 1708).
+  - {person: george-i-of-great-britain, title: Elector of Hanover, realm: Hanover, from: 1698-01-23, to: 1727-06-11, note: "Duke of Brunswick-Lüneburg and prince-elector; ratified as elector in 1708", sources: [wp-george-i]}
+  - {person: george-ii-of-great-britain, title: Elector of Hanover, realm: Hanover, from: 1727-06-11, to: 1760-10-25, sources: [wp-george-ii]}
+  - {person: george-iii, title: Elector of Hanover, realm: Hanover, from: 1760-10-25, to: 1814-10-12, note: "Duke and prince-elector; the Holy Roman Empire ended in 1806 and he continued as duke until the Congress of Vienna", sources: [wp-george-iii]}
+  - {person: george-iii, title: King of Hanover, realm: Hanover, from: 1814-10-12, to: 1820-01-29, sources: [wp-george-iii]}
+  - {person: george-iv, title: King of Hanover, realm: Hanover, from: 1820-01-29, to: 1830-06-26, sources: [wp-george-iv]}
+  - {person: william-iv, title: King of Hanover, realm: Hanover, from: 1830-06-26, to: 1837-06-20, note: "Under Salic law Victoria could not rule Hanover; it passed to his brother Ernest Augustus", sources: [wp-william-iv]}
+
+  # Kings and queens of Great Britain, then the United Kingdom.
+  - {person: george-i-of-great-britain, title: King of Great Britain, realm: Great Britain, from: 1714-08-01, to: 1727-06-11, note: "Dates are Old Style", sources: [wp-george-i]}
+  - {person: george-ii-of-great-britain, title: King of Great Britain, realm: Great Britain, from: 1727-06-11, to: 1760-10-25, note: "Dates are Old Style", sources: [wp-george-ii]}
+  - {person: george-iii, title: King of Great Britain, realm: Great Britain, from: 1760-10-25, to: 1800-12-31, sources: [wp-george-iii]}
+  - {person: george-iii, title: King of the United Kingdom, realm: United Kingdom, from: 1801-01-01, to: 1820-01-29, note: "King of Great Britain and Ireland from the Acts of Union 1800; son was Prince Regent from 1811", sources: [wp-george-iii]}
+  - {person: george-iv, title: King of the United Kingdom, realm: United Kingdom, from: 1820-01-29, to: 1830-06-26, note: "Prince Regent from 5 February 1811", sources: [wp-george-iv]}
+  - {person: william-iv, title: King of the United Kingdom, realm: United Kingdom, from: 1830-06-26, to: 1837-06-20, sources: [wp-william-iv]}
+  - {person: victoria-of-the-united-kingdom, title: Queen of the United Kingdom, realm: United Kingdom, from: 1837-06-20, to: 1901-01-22, sources: [wp-prince-albert, wp-edward-vii, wp-osborne-house]}
+  - {person: edward-vii, title: King of the United Kingdom, realm: United Kingdom, from: 1901-01-22, to: 1910-05-06, sources: [wp-edward-vii]}
+  - {person: george-v, title: King of the United Kingdom, realm: United Kingdom, from: 1910-05-06, to: 1936-01-20, sources: [wp-george-v]}
+  - {person: edward-viii, title: King of the United Kingdom, realm: United Kingdom, from: 1936-01-20, to: 1936-12-11, note: "Signed the instrument of abdication on 10 December; it took effect with royal assent on 11 December", sources: [wp-edward-viii]}
+  - {person: george-vi, title: King of the United Kingdom, realm: United Kingdom, from: 1936-12-11, to: 1952-02-06, sources: [wp-george-vi]}
+  - {person: elizabeth-ii, title: Queen of the United Kingdom, realm: United Kingdom, from: 1952-02-06, to: 2022-09-08, sources: [wp-elizabeth-ii]}
+  - {person: charles-iii, title: King of the United Kingdom, realm: United Kingdom, from: 2022-09-08, sources: [wp-charles-iii]}
+
+  # Empress and Emperor of India.
+  - {person: victoria-of-the-united-kingdom, title: Empress of India, realm: British India, from: 1876, to: 1901-01-22, note: "Title given by Parliament in 1876 (exact date not in the downloaded articles)", sources: [wp-edward-vii]}
+  - {person: edward-vii, title: Emperor of India, realm: British India, from: 1901-01-22, to: 1910-05-06, sources: [wp-edward-vii]}
+  - {person: george-v, title: Emperor of India, realm: British India, from: 1910-05-06, to: 1936-01-20, sources: [wp-george-v]}
+  - {person: edward-viii, title: Emperor of India, realm: British India, from: 1936-01-20, to: 1936-12-11, sources: [wp-edward-viii]}
+  - {person: george-vi, title: Emperor of India, realm: British India, from: 1936-12-11, to: 1948, note: "The Raj was dissolved in August 1947 but he formally gave up the title in June 1948; see the discrepancy", sources: [wp-george-vi]}
+
+discrepancies:
+  - key: george-ii-birth-date
+    question: On what date was George II born?
+    about: [{person: george-ii-of-great-britain}]
+    field: born
+    claims:
+      - {value: "30 October 1683 (Old Style, the form of the article lead)", sources: [wp-george-ii]}
+      - {value: "9 November 1683 (New Style, the Gregorian date used in Hanover)", sources: [wp-george-ii]}
+    note: "The article lead gives both as '30 October / 9 November 1683'. The record uses 1683-11-09, the New Style date; the two are the same day."
+  - key: george-vi-emperor-of-india-end
+    question: When did George VI stop being Emperor of India?
+    about: [{person: george-vi}]
+    field: title end
+    claims:
+      - {value: "August 1947, when the British Raj was dissolved", sources: [wp-george-vi]}
+      - {value: "June 1948, when he formally relinquished the title", sources: [wp-george-vi]}
+    note: "The record uses 1948 (the formal relinquishing) as the end year; the lead says he was emperor 'until the British Raj was dissolved in August 1947, though the title was only formally relinquished in June 1948'."
+  - key: edward-viii-abdication-date
+    question: On what date did Edward VIII abdicate?
+    about: [{event: abdication-of-edward-viii}, {person: edward-viii}]
+    field: date
+    claims:
+      - {value: "10 December 1936, the day he signed the instruments of abdication at Fort Belvedere", sources: [wp-edward-viii]}
+      - {value: "11 December 1936, when the Abdication Act received royal assent and George VI's reign began", sources: [wp-edward-viii, wp-george-vi]}
+    note: "The event uses 10 December (the signing); the title end dates use 11 December (effect of the abdication)."
