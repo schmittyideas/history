@@ -84,6 +84,18 @@ def test_errors_are_caught():
     assert "died (1090) before born (1100)" in text and "unknown person `nobody`" in text and "unknown place `atlantis`" in text
     assert any("no source" in w for w in plan.warnings)
 
+def test_person_image_fields():
+    db = FakeDB(snapshot())
+    docs = [("p.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "people": [
+        {"key": "pic-person", "name": "Pic Person", "type": "Artist", "born": 1600, "image_url": "https://x/a.jpg", "image_thumb": "https://x/t.jpg",
+         "image_page": "https://commons/File:a.jpg", "image_license": "Public domain", "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors, plan.errors
+    intake.apply_files(world, docs, log=lambda m: None)
+    r = [x for x in db.t["entities"] if x["key"] == "pic-person"][0]
+    assert (r["image_url"], r["image_thumb"], r["image_license"]) == ("https://x/a.jpg", "https://x/t.jpg", "Public domain")
+
 def test_place_dates_and_builders():
     db = FakeDB(snapshot())
     docs = [("p.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "places": [
@@ -197,4 +209,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

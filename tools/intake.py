@@ -138,7 +138,8 @@ ABOUT_KINDS = ("person", "place", "event")
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
-                 "born_estimated": "birth_estimated", "died_estimated": "death_estimated"}
+                 "born_estimated": "birth_estimated", "died_estimated": "death_estimated",
+                 "image_url": "image_url", "image_thumb": "image_thumb", "image_page": "image_page", "image_license": "image_license"}
 PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
                 "city": "city", "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
                 "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",

@@ -39,6 +39,9 @@ sources:
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |
 | `house`, `realm` | Optional: dynasty and realm, used for lanes later |
 | `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
+| `image_url`, `image_thumb` | Links to the person's picture and a ~400px thumbnail (Wikimedia Commons). Links only; nothing is copied. Use only images the Commons page marks public domain or freely licensed |
+| `image_page` | The Commons file page (author, licence, credit) |
+| `image_license` | Short licence name, e.g. "Public domain", "CC BY-SA 4.0" |
 | `obsidian_link` | Exact Obsidian note name |
 | `note` | One-line summary |
 | `sources` | List of source keys |
