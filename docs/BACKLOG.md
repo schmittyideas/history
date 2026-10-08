@@ -125,6 +125,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Add English artists, writers, architects, composers and scholars, 1600-1700
+`type: task` · `area: data` · `status: done` · `issue: #54`
+
+48 people active in England 1600-1700 (painters, architects, writers, composers, scholars) with royal patrons, teachers, buildings, works and life places, checked against their English Wikipedia articles. People now carry image links (full, thumbnail, Commons page, licence; schema 010) for later display. Done 2026-10-08. Left for later: showing the images on the site; Hawksmoor's churches and other buildings; artists without a usable free image (Webb, Pratt, Stone, Tomkins).
+Source: Ty, 2026-10-08.
+
 #### [P2] Add every English monarch's reign, with their places and events
 `type: task` · `area: data` · `status: done` · `issue: #15`
 

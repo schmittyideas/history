@@ -1,0 +1,3282 @@
+# Notes for the reviewer
+# - 48 people (12 painters/sculptors, 8 architects, 13 writers, 7 composers, 8 scholars), each from the English Wikipedia article.
+# - Images: links only (full image, 400px thumbnail, Commons page, licence) from the Wikipedia lead image; used only when Commons says
+#   public domain / CC0. Left out: John Webb, Roger Pratt (photo/engraving of a house), Nicholas Stone (licence not found), Thomas Tomkins (no image).
+#   William Talman's image is a family group portrait.
+# - Dates before 1752 are as the articles give them (Old Style); Newton's birth is Old Style, his death New Style, as the article headlines them.
+# - Coordinates of places are present-day, from general knowledge (the articles give none) and approximate.
+# - Left out (article unclear or contradictory): Blenheim completion (Vanbrugh article contradicts itself); Locke's Essay and Two Treatises
+#   (dated only "1689/90"); Chapel Royal composer post for Blow (1699 or 1700); many places of death or birth the articles do not state.
+# - Not defined for lack of room: Hawksmoor's London churches, Chatsworth, Kings Weston, Seaton Delaval.
+# - Patron links for Jones to James I/Charles I and Bacon/Hobbes are implied by posts/pensions in the articles, not stated outright.
+# - Events with prominence 2 or lower were dropped to keep the batch readable; 14 discrepancies recorded where the articles disagree.
+
+batch:
+  title: English artists, writers, architects, composers and scholars, 1600-1700
+  requested: About 50 well-documented people active in England 1600-1700, with patrons, works, buildings and image links
+  date: '2026-10-08'
+sources:
+- key: wp-inigo-jones
+  title: Inigo Jones (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Inigo_Jones
+- key: wp-christopher-wren
+  title: Christopher Wren (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christopher_Wren
+- key: wp-nicholas-hawksmoor
+  title: Nicholas Hawksmoor (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicholas_Hawksmoor
+- key: wp-john-vanbrugh
+  title: John Vanbrugh (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Vanbrugh
+- key: wp-john-webb
+  title: John Webb (architect) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Webb_(architect)
+- key: wp-hugh-may
+  title: Hugh May (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hugh_May
+- key: wp-william-talman
+  title: William Talman (architect) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Talman_(architect)
+- key: wp-roger-pratt
+  title: Roger Pratt (architect) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Roger_Pratt_(architect)
+- key: wp-anthony-van-dyck
+  title: Anthony van Dyck (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anthony_van_Dyck
+- key: wp-peter-lely
+  title: Peter Lely (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Peter_Lely
+- key: wp-godfrey-kneller
+  title: Godfrey Kneller (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Godfrey_Kneller
+- key: wp-nicholas-hilliard
+  title: Nicholas Hilliard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicholas_Hilliard
+- key: wp-isaac-oliver
+  title: Isaac Oliver (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isaac_Oliver
+- key: wp-samuel-cooper
+  title: Samuel Cooper (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Samuel_Cooper_(painter)
+- key: wp-william-dobson
+  title: William Dobson (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Dobson
+- key: wp-daniel-mytens
+  title: Daniel Mytens (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Dani%C3%ABl_Mijtens
+- key: wp-wenceslaus-hollar
+  title: Wenceslaus Hollar (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Wenceslaus_Hollar
+- key: wp-orazio-gentileschi
+  title: Orazio Gentileschi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Orazio_Gentileschi
+- key: wp-grinling-gibbons
+  title: Grinling Gibbons (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Grinling_Gibbons
+- key: wp-nicholas-stone
+  title: Nicholas Stone (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicholas_Stone
+- key: wp-john-milton
+  title: John Milton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Milton
+- key: wp-john-donne
+  title: John Donne (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Donne
+- key: wp-john-dryden
+  title: John Dryden (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Dryden
+- key: wp-aphra-behn
+  title: Aphra Behn (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Aphra_Behn
+- key: wp-ben-jonson
+  title: Ben Jonson (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ben_Jonson
+- key: wp-andrew-marvell
+  title: Andrew Marvell (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrew_Marvell
+- key: wp-george-herbert
+  title: George Herbert (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Herbert
+- key: wp-john-bunyan
+  title: John Bunyan (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Bunyan
+- key: wp-samuel-pepys
+  title: Samuel Pepys (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Samuel_Pepys
+- key: wp-john-evelyn
+  title: John Evelyn (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Evelyn
+- key: wp-william-congreve
+  title: William Congreve (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Congreve
+- key: wp-william-wycherley
+  title: William Wycherley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Wycherley
+- key: wp-margaret-cavendish
+  title: Margaret Cavendish, Duchess of Newcastle-upon-Tyne (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Margaret_Cavendish,_Duchess_of_Newcastle-upon-Tyne
+- key: wp-henry-purcell
+  title: Henry Purcell (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henry_Purcell
+- key: wp-orlando-gibbons
+  title: Orlando Gibbons (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Orlando_Gibbons
+- key: wp-william-byrd
+  title: William Byrd (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Byrd
+- key: wp-henry-lawes
+  title: Henry Lawes (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henry_Lawes
+- key: wp-john-blow
+  title: John Blow (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Blow
+- key: wp-matthew-locke
+  title: Matthew Locke (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Matthew_Locke_(composer)
+- key: wp-thomas-tomkins
+  title: Thomas Tomkins (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Tomkins
+- key: wp-isaac-newton
+  title: Isaac Newton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isaac_Newton
+- key: wp-robert-boyle
+  title: Robert Boyle (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Robert_Boyle
+- key: wp-robert-hooke
+  title: Robert Hooke (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Robert_Hooke
+- key: wp-william-harvey
+  title: William Harvey (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Harvey
+- key: wp-edmond-halley
+  title: Edmond Halley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edmond_Halley
+- key: wp-john-locke
+  title: John Locke (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Locke
+- key: wp-thomas-hobbes
+  title: Thomas Hobbes (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Hobbes
+- key: wp-francis-bacon
+  title: Francis Bacon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francis_Bacon
+- key: wp-london
+  title: London (Wikipedia)
+  url: https://en.wikipedia.org/wiki/London
+- key: wp-oxford
+  title: Oxford (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Oxford
+- key: wp-cambridge
+  title: Cambridge (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cambridge
+- key: wp-edinburgh
+  title: Edinburgh (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edinburgh
+places:
+- key: st-pauls-cathedral
+  name: St Paul's Cathedral
+  kind: cathedral
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.514
+  lng: -0.098
+  founded: 1673
+  built_by: Christopher Wren, 1673-1710 (declared complete by Parliament 1711)
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+- key: banqueting-house
+  name: Banqueting House, Whitehall
+  kind: palace
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.504
+  lng: -0.126
+  founded: 1622
+  built_by: Inigo Jones, 1619-1622
+  architect: Inigo Jones
+  visitable: true
+  sources:
+  - wp-inigo-jones
+- key: queens-house-greenwich
+  name: Queen's House, Greenwich
+  kind: palace
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.481
+  lng: -0.006
+  founded: 1616
+  built_by: Inigo Jones, begun 1616 for Anne of Denmark; resumed 1629 for Henrietta Maria; finished 1635; enlarged by John Webb 1662
+  architect: Inigo Jones
+  visitable: true
+  sources:
+  - wp-inigo-jones
+  - wp-john-webb
+- key: royal-hospital-chelsea
+  name: Royal Hospital Chelsea
+  historical_name: Chelsea Hospital
+  kind: hospital
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.487
+  lng: -0.157
+  founded: 1682
+  built_by: Christopher Wren, 1682-1692
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+- key: royal-hospital-greenwich
+  name: Greenwich Hospital (Old Royal Naval College)
+  historical_name: Greenwich Hospital
+  kind: hospital
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.483
+  lng: -0.01
+  built_by: Christopher Wren (Surveyor from 1696); Nicholas Hawksmoor and John Vanbrugh also worked on it; incorporates John Webb's King Charles Block (1664-1669)
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+  - wp-john-webb
+  - wp-john-vanbrugh
+- key: royal-observatory-greenwich
+  name: Royal Observatory, Greenwich
+  kind: observatory
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.477
+  lng: -0.001
+  founded: 1675
+  built_by: Christopher Wren, 1675-1676
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+- key: blenheim-palace
+  name: Blenheim Palace
+  kind: palace
+  city: Woodstock
+  region: Oxfordshire
+  country: England
+  lat: 51.841
+  lng: -1.361
+  founded: 1705
+  built_by: John Vanbrugh with Nicholas Hawksmoor for the Duke of Marlborough; work began 1705; completed by Hawksmoor
+  architect: John Vanbrugh
+  visitable: true
+  sources:
+  - wp-john-vanbrugh
+  - wp-nicholas-hawksmoor
+- key: castle-howard
+  name: Castle Howard
+  kind: country house
+  region: North Yorkshire
+  country: England
+  lat: 54.122
+  lng: -0.909
+  founded: 1699
+  built_by: John Vanbrugh with Nicholas Hawksmoor for Charles Howard, 3rd Earl of Carlisle; commissioned 1699, greater part completed by 1709
+  architect: John Vanbrugh
+  visitable: true
+  sources:
+  - wp-john-vanbrugh
+  - wp-nicholas-hawksmoor
+- key: sheldonian-theatre
+  name: Sheldonian Theatre
+  historical_name: New Theatre
+  kind: theatre
+  city: Oxford
+  region: Oxfordshire
+  country: England
+  lat: 51.754
+  lng: -1.255
+  founded: 1669
+  built_by: Christopher Wren, financed by Gilbert Sheldon; completed 1669
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+- key: the-monument-london
+  name: The Monument to the Great Fire of London
+  kind: monument
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.51
+  lng: -0.086
+  founded: 1671
+  built_by: Christopher Wren with Robert Hooke, 1671-1676
+  architect: Christopher Wren
+  visitable: true
+  sources:
+  - wp-christopher-wren
+- key: wilton-house
+  name: Wilton House
+  kind: country house
+  region: Wiltshire
+  country: England
+  lat: 51.079
+  lng: -1.861
+  built_by: Renovated from about 1630, worked on by Inigo Jones, then Isaac de Caus; Jones and John Webb returned in 1646 (Single and Double Cube rooms)
+  architect: Inigo Jones
+  visitable: true
+  sources:
+  - wp-inigo-jones
+  - wp-john-webb
+- key: covent-garden-piazza
+  name: Covent Garden Piazza
+  kind: square
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.512
+  lng: -0.123
+  built_by: Laid out for the Earl of Bedford; the first regularly planned square in London, with St Paul's church on its west side
+  architect: Inigo Jones
+  visitable: true
+  sources:
+  - wp-inigo-jones
+- key: st-benet-pauls-wharf
+  name: St Benet, Paul's Wharf
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.511
+  lng: -0.099
+  visitable: true
+  sources:
+  - wp-inigo-jones
+- key: st-stephen-walbrook
+  name: St Stephen Walbrook
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.513
+  lng: -0.09
+  visitable: true
+  sources:
+  - wp-john-vanbrugh
+- key: st-pauls-church-covent-garden
+  name: St Paul's Church, Covent Garden
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.512
+  lng: -0.123
+  visitable: true
+  sources:
+  - wp-peter-lely
+  - wp-grinling-gibbons
+- key: st-martin-in-the-fields
+  name: St Martin-in-the-Fields
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.509
+  lng: -0.127
+  visitable: true
+  sources:
+  - wp-nicholas-stone
+  - wp-nicholas-hilliard
+  - wp-william-dobson
+- key: st-marys-church-twickenham
+  name: St Mary's Church, Twickenham
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.447
+  lng: -0.325
+  architect: John James (rebuilding after the nave collapsed in 1713)
+  visitable: true
+  sources:
+  - wp-godfrey-kneller
+- key: st-ann-blackfriars
+  name: St Ann Blackfriars
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.512
+  lng: -0.104
+  ended: 1666
+  sources:
+  - wp-isaac-oliver
+- key: st-pancras-old-church
+  name: St Pancras Old Church
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.535
+  lng: -0.128
+  visitable: true
+  sources:
+  - wp-samuel-cooper
+- key: st-margarets-church-westminster
+  name: St Margaret's Church, Westminster
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.5
+  lng: -0.127
+  visitable: true
+  sources:
+  - wp-wenceslaus-hollar
+- key: queens-chapel-somerset-house
+  name: Queen's Chapel, Somerset House
+  kind: chapel
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.511
+  lng: -0.117
+  sources:
+  - wp-orazio-gentileschi
+- key: aldwincle
+  name: Aldwincle
+  kind: village
+  region: Northamptonshire
+  country: England
+  lat: 52.442
+  lng: -0.526
+  sources:
+  - wp-john-dryden
+- key: winestead
+  name: Winestead
+  kind: village
+  region: East Riding of Yorkshire
+  country: England
+  lat: 53.715
+  lng: -0.058
+  sources:
+  - wp-andrew-marvell
+- key: montgomery-wales
+  name: Montgomery
+  kind: town
+  region: Powys
+  country: Wales
+  lat: 52.561
+  lng: -3.147
+  sources:
+  - wp-george-herbert
+- key: bemerton
+  name: Bemerton
+  kind: village
+  city: Salisbury
+  region: Wiltshire
+  country: England
+  lat: 51.075
+  lng: -1.828
+  sources:
+  - wp-george-herbert
+- key: elstow
+  name: Elstow
+  kind: village
+  region: Bedfordshire
+  country: England
+  lat: 52.109
+  lng: -0.47
+  sources:
+  - wp-john-bunyan
+- key: bedford
+  name: Bedford
+  kind: town
+  region: Bedfordshire
+  country: England
+  lat: 52.136
+  lng: -0.467
+  sources:
+  - wp-john-bunyan
+- key: bunhill-fields
+  name: Bunhill Fields
+  kind: burial ground
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.523
+  lng: -0.088
+  visitable: true
+  sources:
+  - wp-john-bunyan
+- key: st-giles-cripplegate
+  name: St Giles-without-Cripplegate
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.52
+  lng: -0.093
+  visitable: true
+  sources:
+  - wp-john-milton
+- key: st-giles-in-the-fields
+  name: St Giles in the Fields
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.516
+  lng: -0.126
+  visitable: true
+  sources:
+  - wp-andrew-marvell
+- key: st-olave-hart-street
+  name: St Olave's, Hart Street
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.51
+  lng: -0.079
+  visitable: true
+  sources:
+  - wp-samuel-pepys
+- key: clapham
+  name: Clapham
+  kind: district
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.462
+  lng: -0.138
+  sources:
+  - wp-samuel-pepys
+- key: wotton-surrey
+  name: Wotton
+  kind: village
+  region: Surrey
+  country: England
+  lat: 51.213
+  lng: -0.388
+  sources:
+  - wp-john-evelyn
+- key: st-johns-church-wotton
+  name: St John's Church, Wotton
+  kind: church
+  region: Surrey
+  country: England
+  lat: 51.213
+  lng: -0.388
+  visitable: true
+  sources:
+  - wp-john-evelyn
+- key: sayes-court
+  name: Sayes Court
+  kind: house
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.486
+  lng: -0.027
+  built_by: Sir Richard Browne (bought by Evelyn from his father-in-law in 1653)
+  sources:
+  - wp-john-evelyn
+- key: bardsey
+  name: Bardsey
+  kind: village
+  region: West Yorkshire
+  country: England
+  lat: 53.89
+  lng: -1.468
+  sources:
+  - wp-william-congreve
+- key: theatre-royal-drury-lane
+  name: Theatre Royal
+  Drury Lane: null
+  kind: theatre
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.513
+  lng: -0.12
+  visitable: true
+  sources:
+  - wp-william-congreve
+- key: clive-shropshire
+  name: Clive
+  kind: village
+  region: Shropshire
+  country: England
+  lat: 52.791
+  lng: -2.717
+  sources:
+  - wp-william-wycherley
+- key: lincoln-cathedral
+  name: Lincoln Cathedral
+  kind: cathedral
+  region: Lincolnshire
+  country: England
+  city: Lincoln
+  lat: 53.234
+  lng: -0.536
+  visitable: true
+  sources:
+  - wp-william-byrd
+- key: stondon-massey
+  name: Stondon Massey
+  kind: village
+  region: Essex
+  country: England
+  lat: 51.691
+  lng: 0.256
+  sources:
+  - wp-william-byrd
+- key: ludlow-castle
+  name: Ludlow Castle
+  kind: castle
+  region: Shropshire
+  country: England
+  city: Ludlow
+  lat: 52.367
+  lng: -2.72
+  visitable: true
+  sources:
+  - wp-henry-lawes
+- key: dinton
+  name: Dinton
+  kind: village
+  region: Wiltshire
+  country: England
+  lat: 51.085
+  lng: -2.005
+  sources:
+  - wp-henry-lawes
+- key: collingham
+  name: Collingham
+  kind: village
+  region: Nottinghamshire
+  country: England
+  lat: 53.153
+  lng: -0.774
+  sources:
+  - wp-john-blow
+- key: exeter
+  name: Exeter
+  kind: city
+  region: Devon
+  country: England
+  lat: 50.723
+  lng: -3.527
+  sources:
+  - wp-matthew-locke
+- key: st-davids
+  name: St Davids
+  kind: city
+  region: Pembrokeshire
+  country: Wales
+  lat: 51.882
+  lng: -5.266
+  sources:
+  - wp-thomas-tomkins
+- key: st-michaels-church-martin-hussingtree
+  name: Church of St Michael and All Angels, Martin Hussingtree
+  kind: church
+  region: Worcestershire
+  country: England
+  lat: 52.238
+  lng: -2.17
+  sources:
+  - wp-thomas-tomkins
+- key: canterbury
+  name: Canterbury
+  kind: city
+  region: Kent
+  country: England
+  lat: 51.28
+  lng: 1.08
+  sources:
+  - wp-orlando-gibbons
+- key: woolsthorpe-manor
+  name: Woolsthorpe Manor
+  kind: manor house
+  region: Lincolnshire
+  country: England
+  city: Woolsthorpe-by-Colsterworth
+  lat: 52.806
+  lng: -0.62
+  visitable: true
+  sources:
+  - wp-isaac-newton
+- key: lismore-castle
+  name: Lismore Castle
+  kind: castle
+  region: County Waterford
+  country: Ireland
+  city: Lismore
+  lat: 52.14
+  lng: -7.929
+  sources:
+  - wp-robert-boyle
+- key: freshwater-isle-of-wight
+  name: Freshwater
+  kind: village
+  region: Isle of Wight
+  country: England
+  lat: 50.677
+  lng: -1.511
+  sources:
+  - wp-robert-hooke
+- key: st-helens-bishopsgate
+  name: St Helen's Church, Bishopsgate
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.514
+  lng: -0.081
+  visitable: true
+  sources:
+  - wp-robert-hooke
+- key: st-bartholomews-hospital
+  name: St Bartholomew's Hospital
+  kind: hospital
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.518
+  lng: -0.1
+  sources:
+  - wp-william-harvey
+- key: roehampton
+  name: Roehampton
+  kind: district
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.455
+  lng: -0.245
+  sources:
+  - wp-william-harvey
+- key: st-andrews-church-hempstead
+  name: St Andrew's Church, Hempstead
+  kind: church
+  region: Essex
+  country: England
+  city: Hempstead
+  lat: 52.017
+  lng: 0.381
+  visitable: true
+  sources:
+  - wp-william-harvey
+- key: st-margarets-church-lee
+  name: St Margaret's Church, Lee
+  kind: church
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.463
+  lng: 0.012
+  visitable: true
+  sources:
+  - wp-edmond-halley
+- key: wrington
+  name: Wrington
+  kind: village
+  region: Somerset
+  country: England
+  lat: 51.356
+  lng: -2.76
+  sources:
+  - wp-john-locke
+- key: oates-manor
+  name: Oates Manor
+  kind: manor house
+  region: Essex
+  country: England
+  city: High Laver
+  lat: 51.76
+  lng: 0.17
+  sources:
+  - wp-john-locke
+- key: all-saints-church-high-laver
+  name: All Saints' Church, High Laver
+  kind: church
+  region: Essex
+  country: England
+  city: High Laver
+  lat: 51.759
+  lng: 0.168
+  visitable: true
+  sources:
+  - wp-john-locke
+- key: malmesbury
+  name: Malmesbury
+  kind: town
+  region: Wiltshire
+  country: England
+  lat: 51.584
+  lng: -2.099
+  sources:
+  - wp-thomas-hobbes
+- key: hardwick-hall
+  name: Hardwick Hall
+  kind: country house
+  region: Derbyshire
+  country: England
+  lat: 53.168
+  lng: -1.309
+  visitable: true
+  sources:
+  - wp-thomas-hobbes
+- key: st-john-the-baptist-church-ault-hucknall
+  name: St John the Baptist's Church, Ault Hucknall
+  kind: church
+  region: Derbyshire
+  country: England
+  city: Ault Hucknall
+  lat: 53.172
+  lng: -1.311
+  visitable: true
+  sources:
+  - wp-thomas-hobbes
+- key: grays-inn
+  name: Gray's Inn
+  kind: inn of court
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.519
+  lng: -0.112
+  sources:
+  - wp-francis-bacon
+- key: arundel-house-highgate
+  name: Arundel House, Highgate
+  kind: house
+  region: Greater London
+  country: England
+  city: London
+  lat: 51.571
+  lng: -0.147
+  sources:
+  - wp-francis-bacon
+- key: st-michaels-church-st-albans
+  name: St Michael's Church, St Albans
+  kind: church
+  region: Hertfordshire
+  country: England
+  city: St Albans
+  lat: 51.75
+  lng: -0.356
+  visitable: true
+  sources:
+  - wp-francis-bacon
+- key: london
+  name: London
+  kind: city
+  region: Greater London
+  country: England
+  lat: 51.507
+  lng: -0.128
+  visitable: true
+  sources:
+  - wp-london
+- key: oxford
+  name: Oxford
+  kind: city
+  region: Oxfordshire
+  country: England
+  lat: 51.752
+  lng: -1.258
+  visitable: true
+  sources:
+  - wp-oxford
+- key: cambridge
+  name: Cambridge
+  kind: city
+  region: Cambridgeshire
+  country: England
+  lat: 52.205
+  lng: 0.119
+  visitable: true
+  sources:
+  - wp-cambridge
+- key: edinburgh
+  name: Edinburgh
+  kind: city
+  region: City of Edinburgh
+  country: Scotland
+  lat: 55.953
+  lng: -3.189
+  visitable: true
+  sources:
+  - wp-edinburgh
+people:
+- key: inigo-jones
+  name: Inigo Jones
+  type: Artist
+  roles:
+  - architect
+  - masque designer
+  born: '1573-07-15'
+  died: '1652-06-21'
+  prominence: 4
+  note: First significant English architect, who brought Palladian classicism to England and designed court masques.
+  sources:
+  - wp-inigo-jones
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/31/PortraitInigoJones.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/PortraitInigoJones.jpg/500px-PortraitInigoJones.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:PortraitInigoJones.jpg
+  image_license: Public domain
+- key: christopher-wren
+  name: Christopher Wren
+  type: Artist
+  roles:
+  - architect
+  - astronomer
+  - mathematician
+  born: '1632-10-20'
+  died: '1723-02-25'
+  prominence: 5
+  note: Architect of St Paul's Cathedral and many City churches after the Great Fire, and a founder of the Royal Society. Dates are Old Style (New Style 30 October 1632 and 8 March 1723).
+  sources:
+  - wp-christopher-wren
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4d/Christopher_Wren_by_Godfrey_Kneller_1711.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Christopher_Wren_by_Godfrey_Kneller_1711.jpg/500px-Christopher_Wren_by_Godfrey_Kneller_1711.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Christopher_Wren_by_Godfrey_Kneller_1711.jpg
+  image_license: Public domain
+- key: nicholas-hawksmoor
+  name: Nicholas Hawksmoor
+  type: Artist
+  roles:
+  - architect
+  born: 1661
+  born_estimated: true
+  died: '1736-03-25'
+  prominence: 4
+  note: Leading English Baroque architect, clerk to Wren and collaborator of Vanbrugh at Castle Howard and Blenheim; designed six London churches.
+  sources:
+  - wp-nicholas-hawksmoor
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Nicholas-Hawksmoor.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Nicholas-Hawksmoor.jpg/500px-Nicholas-Hawksmoor.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Nicholas-Hawksmoor.jpg
+  image_license: Public domain
+- key: john-vanbrugh
+  name: John Vanbrugh
+  type: Artist
+  roles:
+  - architect
+  - playwright
+  born: 1664
+  died: '1726-03-26'
+  prominence: 4
+  note: Restoration dramatist (The Relapse, The Provoked Wife) turned architect of Castle Howard and Blenheim Palace. Born in London; only the baptism date (24 January 1664) is given.
+  sources:
+  - wp-john-vanbrugh
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/57/John_Vanbrugh.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/John_Vanbrugh.jpg/500px-John_Vanbrugh.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Vanbrugh.jpg
+  image_license: Public domain
+- key: john-webb
+  name: John Webb
+  type: Artist
+  roles:
+  - architect
+  - scholar
+  born: 1611
+  died: '1672-10-24'
+  prominence: 2
+  note: Assistant and pupil of Inigo Jones; co-designed Wilton House and rebuilt part of Greenwich Palace for Charles II.
+  sources:
+  - wp-john-webb
+- key: hugh-may
+  name: Hugh May
+  type: Artist
+  roles:
+  - architect
+  born: 1621
+  born_estimated: true
+  died: '1684-02-21'
+  prominence: 2
+  note: Restoration architect who popularised Dutch-influenced brick houses and remodelled Windsor Castle for Charles II. Only the baptism date (2 October 1621) is given.
+  sources:
+  - wp-hugh-may
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/68/Hugh_May.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/68/Hugh_May.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hugh_May.jpg
+  image_license: Public domain
+- key: william-talman
+  name: William Talman
+  type: Artist
+  roles:
+  - architect
+  - landscape designer
+  born: 1650
+  died: '1719-11-22'
+  prominence: 2
+  note: Pupil of Wren, Comptroller of the Royal Works under William III, and architect of Chatsworth House.
+  sources:
+  - wp-william-talman
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a4/TalmanArchitectFamily.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/a/a4/TalmanArchitectFamily.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:TalmanArchitectFamily.jpg
+  image_license: Public domain
+- key: roger-pratt
+  name: Roger Pratt
+  type: Artist
+  roles:
+  - architect
+  born: 1620
+  born_estimated: true
+  died: '1684-02-20'
+  prominence: 2
+  note: Gentleman-architect (Clarendon House, Kingston Lacy) and first English architect to be knighted for his services (1668). Only the baptism date (2 November 1620) is given.
+  sources:
+  - wp-roger-pratt
+- key: anthony-van-dyck
+  name: Anthony van Dyck
+  type: Artist
+  roles:
+  - painter
+  - etcher
+  born: '1599-03-22'
+  died: '1641-12-09'
+  prominence: 4
+  note: Flemish painter who became Charles I's principal court painter in England from 1632 and shaped English portraiture for over 150 years.
+  sources:
+  - wp-anthony-van-dyck
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ee/Anthony_van_Dyck_-_Self-portrait_with_a_Sunflower.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Anthony_van_Dyck_-_Self-portrait_with_a_Sunflower.jpg/500px-Anthony_van_Dyck_-_Self-portrait_with_a_Sunflower.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anthony_van_Dyck_-_Self-portrait_with_a_Sunflower.jpg
+  image_license: Public domain
+- key: peter-lely
+  name: Peter Lely
+  type: Artist
+  roles:
+  - painter
+  born: '1618-09-14'
+  died: '1680-11-30'
+  prominence: 3
+  note: Dutch-born portrait painter who dominated the English court after the Restoration as Charles II's Principal Painter in Ordinary.
+  sources:
+  - wp-peter-lely
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bc/Peter_Lely_Selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Peter_Lely_Selfportrait.jpg/500px-Peter_Lely_Selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Peter_Lely_Selfportrait.jpg
+  image_license: Public domain
+- key: godfrey-kneller
+  name: Godfrey Kneller
+  type: Artist
+  roles:
+  - painter
+  born: '1646-08-08'
+  died: '1723-10-19'
+  prominence: 3
+  note: German-born portraitist who succeeded Lely and was the leading painter in England under several monarchs from Charles II to George I.
+  sources:
+  - wp-godfrey-kneller
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/Godfrey_Kneller_Selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Godfrey_Kneller_Selfportrait.jpg/500px-Godfrey_Kneller_Selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_Selfportrait.jpg
+  image_license: Public domain
+- key: nicholas-hilliard
+  name: Nicholas Hilliard
+  type: Artist
+  roles:
+  - miniaturist
+  - goldsmith
+  born: 1547
+  born_estimated: true
+  died: 1619
+  died_estimated: true
+  prominence: 3
+  note: Goldsmith and limner to Elizabeth I and James I, the leading English portrait miniaturist of his age (exact death date unknown; buried 7 January 1619).
+  sources:
+  - wp-nicholas-hilliard
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a8/Nicholas_Hilliard_021.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Nicholas_Hilliard_021.jpg/500px-Nicholas_Hilliard_021.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Nicholas_Hilliard_021.jpg
+  image_license: Public domain
+- key: isaac-oliver
+  name: Isaac Oliver
+  type: Artist
+  roles:
+  - miniaturist
+  born: 1565
+  born_estimated: true
+  died: 1617
+  prominence: 2
+  note: Huguenot-born portrait miniaturist, pupil of Hilliard, who painted for James I's court (buried 2 October 1617).
+  sources:
+  - wp-isaac-oliver
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/41/Isaac_Oliver_-_Young_Man_Seated_under_a_Tree_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Isaac_Oliver_-_Young_Man_Seated_under_a_Tree_-_Google_Art_Project.jpg/500px-Isaac_Oliver_-_Young_Man_Seated_under_a_Tree_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Isaac_Oliver_-_Young_Man_Seated_under_a_Tree_-_Google_Art_Project.jpg
+  image_license: Public domain
+- key: samuel-cooper
+  name: Samuel Cooper
+  type: Artist
+  roles:
+  - miniaturist
+  born: 1609
+  died: '1672-05-05'
+  prominence: 2
+  note: English portrait miniaturist, called "the most famous limner of the world for a face" in Mary Beale's diary on his death.
+  sources:
+  - wp-samuel-cooper
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/95/Samuel_Cooper_self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Samuel_Cooper_self-portrait.jpg/500px-Samuel_Cooper_self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Samuel_Cooper_self-portrait.jpg
+  image_license: Public domain
+- key: william-dobson
+  name: William Dobson
+  type: Artist
+  roles:
+  - painter
+  born: 1611
+  died: 1646
+  prominence: 2
+  note: Portrait painter praised by Aubrey as the best England had bred; painted the Royalist court at Oxford and died in debt (baptised 1611, buried 28 October 1646).
+  sources:
+  - wp-william-dobson
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7d/Portrait_of_the_artist%2C_bust_length_in_a_black_tunic_and_white_collar.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Portrait_of_the_artist%2C_bust_length_in_a_black_tunic_and_white_collar.jpg/500px-Portrait_of_the_artist%2C_bust_length_in_a_black_tunic_and_white_collar.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_the_artist,_bust_length_in_a_black_tunic_and_white_collar.jpg
+  image_license: Public domain
+- key: daniel-mytens
+  name: Daniel Mytens
+  type: Artist
+  roles:
+  - painter
+  born: 1590
+  born_estimated: true
+  died: 1647
+  died_estimated: true
+  prominence: 2
+  note: Dutch portrait painter who was the leading court portraitist in England until van Dyck arrived; died in The Hague in 1647 or 1648.
+  sources:
+  - wp-daniel-mytens
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ce/Daniel_Mytens.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/ce/Daniel_Mytens.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Daniel_Mytens.jpg
+  image_license: Public domain
+- key: wenceslaus-hollar
+  name: Wenceslaus Hollar
+  type: Artist
+  roles:
+  - engraver
+  - etcher
+  - painter
+  born: '1607-07-13'
+  died: '1677-03-25'
+  prominence: 3
+  note: Bohemian-born etcher of cityscapes and views of London, in England from 1637; died in poverty.
+  sources:
+  - wp-wenceslaus-hollar
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9a/Wenzel_Hollar_nach_Jan_Meyssens.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Wenzel_Hollar_nach_Jan_Meyssens.jpg/500px-Wenzel_Hollar_nach_Jan_Meyssens.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Wenzel_Hollar_nach_Jan_Meyssens.jpg
+  image_license: Public domain
+- key: orazio-gentileschi
+  name: Orazio Gentileschi
+  type: Artist
+  roles:
+  - painter
+  born: 1563
+  died: '1639-02-07'
+  prominence: 3
+  note: Italian Caravaggist painter, father of Artemisia, who spent his last years at the court of Charles I and died in London.
+  sources:
+  - wp-orazio-gentileschi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Lucas_Emil_Vorsterman_after_Sir_Anthony_van_Dyck%2C_Orazio_Gentileschi%2C_probably_1626-1641%2C_NGA_10780_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Lucas_Emil_Vorsterman_after_Sir_Anthony_van_Dyck%2C_Orazio_Gentileschi%2C_probably_1626-1641%2C_NGA_10780_%28cropped%29.jpg/500px-Lucas_Emil_Vorsterman_after_Sir_Anthony_van_Dyck%2C_Orazio_Gentileschi%2C_probably_1626-1641%2C_NGA_10780_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lucas_Emil_Vorsterman_after_Sir_Anthony_van_Dyck,_Orazio_Gentileschi,_probably_1626-1641,_NGA_10780_(cropped).jpg
+  image_license: CC0
+- key: grinling-gibbons
+  name: Grinling Gibbons
+  type: Artist
+  roles:
+  - sculptor
+  - wood carver
+  born: '1648-04-04'
+  died: '1721-08-03'
+  prominence: 3
+  note: Anglo-Dutch sculptor and the finest wood carver in England, King's Carver by 1680, who worked for Wren at St Paul's and for several monarchs.
+  sources:
+  - wp-grinling-gibbons
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Grinling_Gibbons_by_Sir_Godfrey_Kneller%2C_Bt.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Grinling_Gibbons_by_Sir_Godfrey_Kneller%2C_Bt.jpg/500px-Grinling_Gibbons_by_Sir_Godfrey_Kneller%2C_Bt.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Grinling_Gibbons_by_Sir_Godfrey_Kneller,_Bt.jpg
+  image_license: Public domain
+- key: nicholas-stone
+  name: Nicholas Stone
+  type: Artist
+  roles:
+  - sculptor
+  - architect
+  - master mason
+  born: 1586
+  died: '1647-08-24'
+  prominence: 3
+  note: Leading English funerary sculptor and mason-architect, master mason to James I and Charles I (the article gives his birth as 1586/87).
+  sources:
+  - wp-nicholas-stone
+- key: john-milton
+  name: John Milton
+  type: Writer
+  roles:
+  - poet
+  - polemicist
+  born: '1608-12-09'
+  died: 1674
+  prominence: 5
+  note: Poet and civil servant of the Commonwealth, author of the epic Paradise Lost (1667) and Areopagitica (1644).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/91/John-milton.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/John-milton.jpg/500px-John-milton.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John-milton.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-milton
+- key: john-donne
+  name: John Donne
+  type: Writer
+  roles:
+  - poet
+  - priest
+  born: 1572
+  born_estimated: true
+  died: '1631-03-31'
+  prominence: 4
+  note: Leading metaphysical poet, later a priest of the Church of England and Dean of St Paul's (1621-1631).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/John_Donne_by_Isaac_Oliver.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/John_Donne_by_Isaac_Oliver.jpg/500px-John_Donne_by_Isaac_Oliver.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Donne_by_Isaac_Oliver.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-donne
+- key: john-dryden
+  name: John Dryden
+  type: Writer
+  roles:
+  - poet
+  - playwright
+  - critic
+  - translator
+  born: 1631
+  died: 1700
+  prominence: 4
+  note: Dominant literary figure of Restoration England, appointed England's first Poet Laureate.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/John_Dryden_portrait_painting.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/John_Dryden_portrait_painting.jpg/500px-John_Dryden_portrait_painting.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Dryden_portrait_painting.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-dryden
+- key: aphra-behn
+  name: Aphra Behn
+  type: Writer
+  roles:
+  - playwright
+  - poet
+  - novelist
+  - spy
+  born: 1640
+  born_estimated: true
+  died: '1689-04-16'
+  prominence: 3
+  note: One of the first Englishwomen to earn a living by writing; author of The Rover and Oroonoko. Born date is her baptism (14 December 1640).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e7/Peter_Lely_-_Aphra_Behn_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Peter_Lely_-_Aphra_Behn_-_Google_Art_Project.jpg/500px-Peter_Lely_-_Aphra_Behn_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Peter_Lely_-_Aphra_Behn_-_Google_Art_Project.jpg
+  image_license: Public domain
+  sources:
+  - wp-aphra-behn
+- key: ben-jonson
+  name: Ben Jonson
+  type: Writer
+  roles:
+  - playwright
+  - poet
+  - actor
+  born: 1572
+  born_estimated: true
+  died: 1637
+  prominence: 4
+  note: Jacobean playwright and poet (Volpone, The Alchemist) and writer of court masques for James I.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/99/Ben_Jonson_by_George_Vertue_1730.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Ben_Jonson_by_George_Vertue_1730.jpg/500px-Ben_Jonson_by_George_Vertue_1730.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ben_Jonson_by_George_Vertue_1730.jpg
+  image_license: Public domain
+  sources:
+  - wp-ben-jonson
+- key: andrew-marvell
+  name: Andrew Marvell
+  type: Writer
+  roles:
+  - poet
+  - satirist
+  - politician
+  born: '1621-03-31'
+  died: 1678
+  prominence: 3
+  note: Metaphysical poet and MP for Hull, colleague of Milton in the Commonwealth's Latin secretaryship.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/Portrait_of_Marvell.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Portrait_of_Marvell.jpg/500px-Portrait_of_Marvell.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Marvell.jpg
+  image_license: Public domain
+  sources:
+  - wp-andrew-marvell
+- key: george-herbert
+  name: George Herbert
+  type: Writer
+  roles:
+  - poet
+  - priest
+  - orator
+  born: '1593-04-03'
+  died: '1633-03-01'
+  prominence: 3
+  note: Welsh-born devotional poet and Church of England priest, author of The Temple; rector of Fugglestone with Bemerton.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/80/George_Herbert.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/80/George_Herbert.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:George_Herbert.jpg
+  image_license: Public domain
+  sources:
+  - wp-george-herbert
+- key: john-bunyan
+  name: John Bunyan
+  type: Writer
+  roles:
+  - author
+  - preacher
+  born: 1628
+  died: '1688-08-31'
+  prominence: 4
+  note: Nonconformist preacher and author of The Pilgrim's Progress, written while imprisoned in Bedford. Born date unknown; baptised 30 November 1628.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/John_Bunyan_by_Thomas_Sadler_1684.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/John_Bunyan_by_Thomas_Sadler_1684.jpg/500px-John_Bunyan_by_Thomas_Sadler_1684.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Bunyan_by_Thomas_Sadler_1684.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-bunyan
+- key: samuel-pepys
+  name: Samuel Pepys
+  type: Writer
+  roles:
+  - diarist
+  - naval administrator
+  born: '1633-02-23'
+  died: '1703-05-26'
+  prominence: 4
+  note: Navy Board official, Secretary of the Admiralty and President of the Royal Society, famed for his diary of 1660-1669.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/21/Samuel_Pepys.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/21/Samuel_Pepys.jpg/500px-Samuel_Pepys.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Samuel_Pepys.jpg
+  image_license: Public domain
+  sources:
+  - wp-samuel-pepys
+- key: john-evelyn
+  name: John Evelyn
+  type: Writer
+  roles:
+  - diarist
+  - gardener
+  - courtier
+  born: '1620-10-31'
+  died: '1706-02-27'
+  prominence: 3
+  note: Diarist, gardener and founding Fellow of the Royal Society; author of Sylva (1664).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c3/JohnEvelyn1687.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/JohnEvelyn1687.jpg/500px-JohnEvelyn1687.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:JohnEvelyn1687.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-evelyn
+- key: william-congreve
+  name: William Congreve
+  type: Writer
+  roles:
+  - playwright
+  - poet
+  born: '1670-01-24'
+  died: '1729-01-19'
+  prominence: 3
+  note: Restoration playwright of The Way of the World; disciple of Dryden.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/55/William_Congreve_by_Sir_Godfrey_Kneller%2C_Bt.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/William_Congreve_by_Sir_Godfrey_Kneller%2C_Bt.jpg/500px-William_Congreve_by_Sir_Godfrey_Kneller%2C_Bt.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Congreve_by_Sir_Godfrey_Kneller,_Bt.jpg
+  image_license: Public domain
+  sources:
+  - wp-william-congreve
+- key: william-wycherley
+  name: William Wycherley
+  type: Writer
+  roles:
+  - playwright
+  born: 1641
+  died: '1716-01-01'
+  prominence: 2
+  note: Restoration dramatist, author of The Country Wife and The Plain Dealer.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/41/William_Wycherley_by_Sir_Peter_Lely.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/William_Wycherley_by_Sir_Peter_Lely.jpg/500px-William_Wycherley_by_Sir_Peter_Lely.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Wycherley_by_Sir_Peter_Lely.jpg
+  image_license: Public domain
+  sources:
+  - wp-william-wycherley
+- key: margaret-cavendish
+  name: Margaret Cavendish, Duchess of Newcastle-upon-Tyne
+  type: Writer
+  roles:
+  - poet
+  - natural philosopher
+  - playwright
+  born: 1623
+  died: '1673-12-16'
+  prominence: 3
+  note: Prolific writer and natural philosopher, author of The Blazing World; first woman to attend a Royal Society meeting.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Margaret_cavendish_from_Luminarium.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/0/0b/Margaret_cavendish_from_Luminarium.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Margaret_cavendish_from_Luminarium.jpg
+  image_license: Public domain
+  sources:
+  - wp-margaret-cavendish
+- key: henry-purcell
+  name: Henry Purcell
+  type: Composer
+  roles:
+  - composer
+  - organist
+  born: 1659
+  born_estimated: true
+  died: '1695-11-21'
+  prominence: 5
+  note: English Baroque composer and organist of Westminster Abbey and the Chapel Royal, author of the opera Dido and Aeneas.
+  sources:
+  - wp-henry-purcell
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/05/Portrait_of_Henry_Purcell_%28cropped%29.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Portrait_of_Henry_Purcell_%28cropped%29.png/500px-Portrait_of_Henry_Purcell_%28cropped%29.png
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Henry_Purcell_(cropped).png
+  image_license: Public domain
+- key: orlando-gibbons
+  name: Orlando Gibbons
+  type: Composer
+  roles:
+  - composer
+  - organist
+  born: 1583
+  born_estimated: true
+  died: '1625-06-05'
+  prominence: 3
+  note: Composer and keyboard player, organist of the Chapel Royal and of Westminster Abbey; baptised 25 December 1583.
+  sources:
+  - wp-orlando-gibbons
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/Orlando_Gibbons.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Orlando_Gibbons.jpg/500px-Orlando_Gibbons.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Orlando_Gibbons.jpg
+  image_license: Public domain
+- key: william-byrd
+  name: William Byrd
+  type: Composer
+  roles:
+  - composer
+  - organist
+  born: 1540
+  born_estimated: true
+  died: '1623-07-04'
+  prominence: 4
+  note: Renaissance composer and Gentleman of the Chapel Royal, a Catholic who wrote for both Anglican and Catholic rites.
+  sources:
+  - wp-william-byrd
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/38/William_Byrd_%281543-1623%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/William_Byrd_%281543-1623%29.jpg/500px-William_Byrd_%281543-1623%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Byrd_(1543-1623).jpg
+  image_license: Public domain
+- key: henry-lawes
+  name: Henry Lawes
+  type: Composer
+  roles:
+  - composer
+  - singer
+  born: 1596
+  born_estimated: true
+  died: '1662-10-21'
+  prominence: 2
+  note: Leading English songwriter of the mid-17th century and a musician of Charles I; baptised 5 January 1596.
+  sources:
+  - wp-henry-lawes
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/83/Henry_Lawes_-_I_rise_and_grieve._%28BL_Add_MS_53723_f._3r%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Henry_Lawes_-_I_rise_and_grieve._%28BL_Add_MS_53723_f._3r%29.jpg/500px-Henry_Lawes_-_I_rise_and_grieve._%28BL_Add_MS_53723_f._3r%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henry_Lawes_-_I_rise_and_grieve._(BL_Add_MS_53723_f._3r).jpg
+  image_license: Public domain
+- key: john-blow
+  name: John Blow
+  type: Composer
+  roles:
+  - composer
+  - organist
+  born: 1649
+  born_estimated: true
+  died: '1708-10-01'
+  prominence: 3
+  note: Baroque composer and organist of Westminster Abbey, teacher of Henry Purcell; baptised 23 February 1649.
+  sources:
+  - wp-john-blow
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bf/John_Blow.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/John_Blow.jpg/500px-John_Blow.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Blow.jpg
+  image_license: Public domain
+- key: matthew-locke
+  name: Matthew Locke
+  type: Composer
+  roles:
+  - composer
+  - music theorist
+  born: 1621
+  born_estimated: true
+  died: 1677
+  prominence: 2
+  note: Baroque composer and theorist, Composer in Ordinary to Charles II, who died in August 1677.
+  sources:
+  - wp-matthew-locke
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c3/Matthew_Locke.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Matthew_Locke.jpg/500px-Matthew_Locke.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Matthew_Locke.jpg
+  image_license: Public domain
+- key: thomas-tomkins
+  name: Thomas Tomkins
+  type: Composer
+  roles:
+  - composer
+  - organist
+  born: 1572
+  died: 1656
+  prominence: 2
+  note: Welsh-born composer, organist of Worcester Cathedral and a Gentleman of the Chapel Royal; buried 9 June 1656.
+  sources:
+  - wp-thomas-tomkins
+- key: isaac-newton
+  name: Isaac Newton
+  type: Scholar
+  roles:
+  - mathematician
+  - physicist
+  - astronomer
+  born: '1642-12-25'
+  died: '1727-03-31'
+  prominence: 5
+  note: Mathematician and physicist who wrote the Principia; dates as in the article (born Old Style, 4 January 1643 New Style; died 20 March 1727 Old Style).
+  sources:
+  - wp-isaac-newton
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg/500px-Portrait_of_Sir_Isaac_Newton%2C_1689_%28brightened%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Sir_Isaac_Newton,_1689_(brightened).jpg
+  image_license: Public domain
+- key: robert-boyle
+  name: Robert Boyle
+  type: Scholar
+  roles:
+  - chemist
+  - natural philosopher
+  born: '1627-01-25'
+  died: '1691-12-31'
+  prominence: 4
+  note: Anglo-Irish chemist and physicist, known for Boyle's law and a founder of the Royal Society.
+  sources:
+  - wp-robert-boyle
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Shannon_Portrait_of_the_Hon_Robert_Boyle.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/The_Shannon_Portrait_of_the_Hon_Robert_Boyle.jpg/500px-The_Shannon_Portrait_of_the_Hon_Robert_Boyle.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:The_Shannon_Portrait_of_the_Hon_Robert_Boyle.jpg
+  image_license: Public domain
+- key: robert-hooke
+  name: Robert Hooke
+  type: Scholar
+  roles:
+  - natural philosopher
+  - architect
+  - surveyor
+  born: '1635-07-18'
+  died: '1703-03-03'
+  prominence: 3
+  note: Polymath, first Curator of Experiments of the Royal Society, author of Micrographia and Wren's colleague in rebuilding London after the Great Fire.
+  sources:
+  - wp-robert-hooke
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cc/Portrait_of_a_Mathematician_1680c.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Portrait_of_a_Mathematician_1680c.jpg/500px-Portrait_of_a_Mathematician_1680c.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_a_Mathematician_1680c.jpg
+  image_license: Public domain
+- key: william-harvey
+  name: William Harvey
+  type: Scholar
+  roles:
+  - physician
+  - anatomist
+  born: '1578-04-01'
+  died: '1657-06-03'
+  prominence: 4
+  note: Physician who described the circulation of the blood; physician to James I and Charles I.
+  sources:
+  - wp-william-harvey
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/42/William_Harvey_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/William_Harvey_2.jpg/500px-William_Harvey_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Harvey_2.jpg
+  image_license: Public domain
+- key: edmond-halley
+  name: Edmond Halley
+  type: Scholar
+  roles:
+  - astronomer
+  - mathematician
+  born: '1656-11-08'
+  died: '1742-01-25'
+  prominence: 3
+  note: Astronomer who predicted the return of the comet named for him and funded the publication of Newton's Principia; dates New Style (born 29 October 1656 Old Style).
+  sources:
+  - wp-edmond-halley
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Edmund_Halley.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Edmund_Halley.jpg/500px-Edmund_Halley.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edmund_Halley.jpg
+  image_license: Public domain
+- key: john-locke
+  name: John Locke
+  type: Scholar
+  roles:
+  - philosopher
+  - physician
+  born: '1632-08-29'
+  died: '1704-10-28'
+  prominence: 4
+  note: Philosopher and physician, author of Two Treatises of Government and An Essay Concerning Human Understanding.
+  sources:
+  - wp-john-locke
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg/500px-Godfrey_Kneller_-_Portrait_of_John_Locke_%28Hermitage%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Godfrey_Kneller_-_Portrait_of_John_Locke_(Hermitage).jpg
+  image_license: Public domain
+- key: thomas-hobbes
+  name: Thomas Hobbes
+  type: Scholar
+  roles:
+  - philosopher
+  - political theorist
+  born: '1588-04-05'
+  died: '1679-12-04'
+  prominence: 4
+  note: Philosopher and political theorist, author of Leviathan (1651).
+  sources:
+  - wp-thomas-hobbes
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg/500px-Thomas_Hobbes_by_John_Michael_Wright_%28colour%29_%283x4_cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Thomas_Hobbes_by_John_Michael_Wright_(colour)_(3x4_cropped).jpg
+  image_license: Public domain
+- key: francis-bacon
+  name: Francis Bacon
+  type: Scholar
+  roles:
+  - philosopher
+  - statesman
+  born: '1561-01-22'
+  died: '1626-04-09'
+  prominence: 4
+  note: Philosopher and statesman, Attorney General and Lord Chancellor under James I, a founder of the scientific method.
+  sources:
+  - wp-francis-bacon
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Somer_Francis_Bacon.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Somer_Francis_Bacon.jpg/500px-Somer_Francis_Bacon.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Somer_Francis_Bacon.jpg
+  image_license: Public domain
+events:
+- key: st-pauls-cathedral-completed
+  name: St Paul's Cathedral declared complete
+  type: Building
+  year: 1711
+  place: st-pauls-cathedral
+  people:
+  - person: christopher-wren
+    role: architect
+  prominence: 5
+  note: Parliament declared Wren's cathedral complete in 1711; the lead of the article says completed 1710 (the topping out).
+  sources:
+  - wp-christopher-wren
+- key: banqueting-house-completed
+  name: Banqueting House, Whitehall completed
+  type: Building
+  year: 1622
+  place: banqueting-house
+  people:
+  - person: inigo-jones
+    role: architect
+  prominence: 4
+  note: Built 1619-1622; a Rubens ceiling was added several years later.
+  sources:
+  - wp-inigo-jones
+- key: queens-house-greenwich-completed
+  name: Queen's House, Greenwich finished
+  type: Building
+  year: 1635
+  place: queens-house-greenwich
+  people:
+  - person: inigo-jones
+    role: architect
+  prominence: 4
+  note: Begun 1616, halted when Anne died in 1619, resumed 1629; the first strictly classical building in England.
+  sources:
+  - wp-inigo-jones
+- key: sheldonian-theatre-completed
+  name: Wren's Oxford theatre completed
+  type: Building
+  year: 1669
+  place: sheldonian-theatre
+  people:
+  - person: christopher-wren
+    role: architect
+  prominence: 3
+  sources:
+  - wp-christopher-wren
+- key: monument-london-completed
+  name: The Monument to the Great Fire completed
+  type: Building
+  year: 1676
+  place: the-monument-london
+  people:
+  - person: christopher-wren
+    role: architect
+  prominence: 3
+  note: Built 1671-1676.
+  sources:
+  - wp-christopher-wren
+- key: royal-observatory-greenwich-built
+  name: Royal Observatory, Greenwich built
+  type: Building
+  year: 1676
+  place: royal-observatory-greenwich
+  people:
+  - person: christopher-wren
+    role: architect
+  prominence: 3
+  note: Built 1675-1676.
+  sources:
+  - wp-christopher-wren
+- key: royal-hospital-chelsea-completed
+  name: Royal Hospital Chelsea completed
+  type: Building
+  year: 1692
+  place: royal-hospital-chelsea
+  people:
+  - person: christopher-wren
+    role: architect
+  prominence: 3
+  note: Built 1682-1692; still serves its original function.
+  sources:
+  - wp-christopher-wren
+- key: the-relapse-1696
+  name: The Relapse first staged
+  type: Performance
+  year: 1696
+  people:
+  - person: john-vanbrugh
+    role: author
+  prominence: 3
+  note: Vanbrugh's first play, a sequel to Cibber's Love's Last Shift; a great success.
+  sources:
+  - wp-john-vanbrugh
+- key: the-provoked-wife-1697
+  name: The Provoked Wife first staged
+  type: Performance
+  year: 1697
+  people:
+  - person: john-vanbrugh
+    role: author
+  prominence: 3
+  note: Performed by the actors' cooperative with Betterton as Sir John Brute.
+  sources:
+  - wp-john-vanbrugh
+- key: clarendon-house-completed
+  name: Clarendon House, Piccadilly completed
+  type: Building
+  year: 1667
+  people:
+  - person: roger-pratt
+    role: architect
+  prominence: 3
+  note: Built 1664-1667 for the Earl of Clarendon; demolished 1683.
+  sources:
+  - wp-roger-pratt
+- key: areopagitica-published-1644
+  name: Areopagitica published
+  type: Publication
+  year: 1644
+  people:
+  - person: john-milton
+    role: author
+  prominence: 4
+  note: Milton's defence of freedom of speech and the press against pre-publication censorship.
+  sources:
+  - wp-john-milton
+- key: paradise-lost-published-1667
+  name: Paradise Lost first published
+  type: Publication
+  year: 1667
+  estimated: false
+  people:
+  - person: john-milton
+    role: author
+  prominence: 5
+  note: Milton sold the rights on 27 April 1667; the first edition appeared in August 1667.
+  sources:
+  - wp-john-milton
+- key: devotions-upon-emergent-occasions-1624
+  name: Devotions upon Emergent Occasions published
+  type: Publication
+  year: 1624
+  people:
+  - person: john-donne
+    role: author
+  prominence: 3
+  note: Includes Meditation XVII ("No man is an island").
+  sources:
+  - wp-john-donne
+- key: annus-mirabilis-published-1667
+  name: Annus Mirabilis published
+  type: Publication
+  year: 1667
+  people:
+  - person: john-dryden
+    role: author
+  prominence: 3
+  note: Poem on the Dutch naval war and the Great Fire of London; established Dryden as the leading poet of his generation.
+  sources:
+  - wp-john-dryden
+- key: absalom-and-achitophel-published-1681
+  name: Absalom and Achitophel published
+  type: Publication
+  year: 1681
+  people:
+  - person: john-dryden
+    role: author
+  prominence: 3
+  sources:
+  - wp-john-dryden
+- key: the-forced-marriage-staged-1670
+  name: The Forc'd Marriage staged (Behn's first play)
+  type: Performance
+  year: 1670
+  people:
+  - person: aphra-behn
+    role: author
+  prominence: 3
+  note: Staged by the Duke's Company in September 1670; ran six nights. Day not given, so recorded as the year.
+  sources:
+  - wp-aphra-behn
+- key: oroonoko-published-1688
+  name: Oroonoko published
+  type: Publication
+  year: 1688
+  people:
+  - person: aphra-behn
+    role: author
+  prominence: 3
+  sources:
+  - wp-aphra-behn
+- key: masque-of-blackness-1605
+  name: The Masque of Blackness
+  type: Performance
+  year: 1605
+  people:
+  - person: ben-jonson
+    role: author
+  prominence: 3
+  note: One of about two dozen masques Jonson wrote for James I or Queen Anne.
+  sources:
+  - wp-ben-jonson
+- key: the-temple-published-1633
+  name: The Temple published
+  type: Publication
+  year: 1633
+  people:
+  - person: george-herbert
+    role: author
+  prominence: 3
+  note: Herbert's English poems, published after his death with a preface by Nicholas Ferrar; eight editions by 1690.
+  sources:
+  - wp-george-herbert
+- key: pilgrims-progress-published-1678
+  name: The Pilgrim's Progress published
+  type: Publication
+  year: 1678
+  people:
+  - person: john-bunyan
+    role: author
+  prominence: 4
+  note: Completed during his second imprisonment; an immediate success.
+  sources:
+  - wp-john-bunyan
+- key: pepys-diary-begun-1660
+  name: Pepys begins his diary
+  type: Publication
+  date: '1660-01-01'
+  people:
+  - person: samuel-pepys
+    role: author
+  prominence: 3
+  note: Dated "1 January 1659/1660" in contemporary terms.
+  sources:
+  - wp-samuel-pepys
+- key: sylva-published-1664
+  name: Sylva, or A Discourse of Forest-Trees published
+  type: Publication
+  year: 1664
+  people:
+  - person: john-evelyn
+    role: author
+  prominence: 3
+  note: Evelyn's best-known book, a plea to landowners to plant trees.
+  sources:
+  - wp-john-evelyn
+- key: the-old-bachelor-1693
+  name: The Old Bachelor produced
+  type: Performance
+  year: 1693
+  place: theatre-royal-drury-lane
+  people:
+  - person: william-congreve
+    role: author
+  prominence: 3
+  note: Congreve's first play; a success.
+  sources:
+  - wp-william-congreve
+- key: love-for-love-premiere-1695
+  name: Love for Love premiered
+  type: Performance
+  date: '1695-04-30'
+  people:
+  - person: william-congreve
+    role: author
+  prominence: 3
+  note: Staged at the Lincoln's Inn Theatre.
+  sources:
+  - wp-william-congreve
+- key: the-way-of-the-world-premiere-1700
+  name: The Way of the World premiered
+  type: Performance
+  year: 1700
+  people:
+  - person: william-congreve
+    role: author
+  prominence: 3
+  note: Premiered March 1700; a failure at the time, now seen as his masterpiece.
+  sources:
+  - wp-william-congreve
+- key: the-country-wife-published-1675
+  name: The Country Wife published
+  type: Publication
+  year: 1675
+  people:
+  - person: william-wycherley
+    role: author
+  prominence: 3
+  note: Produced in 1672 or 1673 (article is unsure), published 1675.
+  sources:
+  - wp-william-wycherley
+- key: the-blazing-world-published-1666
+  name: The Blazing World published
+  type: Publication
+  year: 1666
+  people:
+  - person: margaret-cavendish
+    role: author
+  prominence: 3
+  note: One of the earliest works of science fiction.
+  sources:
+  - wp-margaret-cavendish
+- key: dido-and-aeneas-first-performance
+  name: Dido and Aeneas performed
+  type: Performance
+  year: 1689
+  people:
+  - person: henry-purcell
+    role: composer
+  prominence: 4
+  note: Purcell's chamber opera, libretto by Nahum Tate, performed in 1689 at Josias Priest's boarding school (the documented performance); the article says it may have been staged earlier.
+  sources:
+  - wp-henry-purcell
+- key: comus-first-performance-1634
+  name: Comus first performed at Ludlow Castle
+  type: Performance
+  date: '1634-09-29'
+  place: ludlow-castle
+  people:
+  - person: henry-lawes
+    role: composer
+  prominence: 3
+  note: Milton's masque with music by Henry Lawes, marking the appointment of the Earl of Bridgewater as President of the Council of Wales.
+  sources:
+  - wp-henry-lawes
+- key: royal-society-founded-1660
+  name: Royal Society founded
+  type: Foundation
+  year: 1660
+  prominence: 4
+  note: Founded in 1660 as the Royal Society for the Improvement of Natural Knowledge by Experiment; the Hooke article gives the royal charter as July 1662, the Boyle article as 1663.
+  sources:
+  - wp-robert-hooke
+  - wp-robert-boyle
+- key: principia-published-1687
+  name: Newton's Principia published
+  type: Publication
+  date: '1687-07-05'
+  people:
+  - person: isaac-newton
+    role: author
+  prominence: 5
+  note: Philosophiae Naturalis Principia Mathematica, published with encouragement and financial help from Edmond Halley.
+  sources:
+  - wp-isaac-newton
+  - wp-edmond-halley
+- key: opticks-published-1704
+  name: Newton's Opticks published
+  type: Publication
+  year: 1704
+  people:
+  - person: isaac-newton
+    role: author
+  prominence: 4
+  note: Newton's work on light and colour.
+  sources:
+  - wp-isaac-newton
+- key: micrographia-published-1665
+  name: Hooke's Micrographia published
+  type: Publication
+  year: 1665
+  people:
+  - person: robert-hooke
+    role: author
+  prominence: 4
+  note: Observations with microscopes and telescopes, in which Hooke coined the term cell.
+  sources:
+  - wp-robert-hooke
+- key: de-motu-cordis-published-1628
+  name: Harvey's De Motu Cordis published
+  type: Publication
+  year: 1628
+  people:
+  - person: william-harvey
+    role: author
+  prominence: 4
+  note: Exercitatio Anatomica de Motu Cordis et Sanguinis in Animalibus, published in Frankfurt, setting out the circulation of the blood.
+  sources:
+  - wp-william-harvey
+- key: sceptical-chymist-published-1661
+  name: Boyle's The Sceptical Chymist published
+  type: Publication
+  year: 1661
+  people:
+  - person: robert-boyle
+    role: author
+  prominence: 3
+  note: Seen as a cornerstone book of chemistry.
+  sources:
+  - wp-robert-boyle
+- key: halley-synopsis-of-comets-1705
+  name: Halley publishes Synopsis of the Astronomy of Comets
+  type: Publication
+  year: 1705
+  people:
+  - person: edmond-halley
+    role: author
+  prominence: 3
+  note: Computes the periodicity of the comet later named for Halley, whose return in 1758 he did not live to see.
+  sources:
+  - wp-edmond-halley
+- key: letter-concerning-toleration-1689
+  name: Locke's A Letter Concerning Toleration published
+  type: Publication
+  year: 1689
+  people:
+  - person: john-locke
+    role: author
+  prominence: 3
+  note: Published anonymously.
+  sources:
+  - wp-john-locke
+- key: leviathan-published-1651
+  name: Hobbes's Leviathan published
+  type: Publication
+  year: 1651
+  people:
+  - person: thomas-hobbes
+    role: author
+  prominence: 4
+  note: Published in mid-1651; sets out his social contract theory.
+  sources:
+  - wp-thomas-hobbes
+- key: instauratio-magna-1620
+  name: Bacon's Instauratio Magna (with Novum Organum) published
+  type: Publication
+  year: 1620
+  people:
+  - person: francis-bacon
+    role: author
+  prominence: 3
+  note: The Great Instauration, a multi-part work including the Novum Organum.
+  sources:
+  - wp-francis-bacon
+links:
+- patron: james-i-of-england
+  artist: inigo-jones
+  from: 1615
+- patron: charles-i-of-england
+  artist: inigo-jones
+- patron: charles-ii-of-england
+  artist: christopher-wren
+  from: 1669
+- patron: charles-ii-of-england
+  artist: john-webb
+- patron: charles-ii-of-england
+  artist: hugh-may
+  from: 1660
+- patron: william-iii-of-england
+  artist: william-talman
+  from: 1689
+  to: 1702
+- teacher: christopher-wren
+  student: nicholas-hawksmoor
+- teacher: inigo-jones
+  student: john-webb
+- teacher: christopher-wren
+  student: william-talman
+- teacher: inigo-jones
+  student: roger-pratt
+- patron: charles-i-of-england
+  artist: anthony-van-dyck
+  from: 1632
+  to: 1641
+- patron: charles-i-of-england
+  artist: peter-lely
+- patron: oliver-cromwell
+  artist: peter-lely
+- patron: charles-ii-of-england
+  artist: peter-lely
+  from: 1661
+  to: 1680
+- patron: charles-ii-of-england
+  artist: godfrey-kneller
+  from: 1680
+- patron: mary-ii-of-england
+  artist: godfrey-kneller
+  from: 1690
+  to: 1691
+- patron: william-iii-of-england
+  artist: godfrey-kneller
+- patron: james-i-of-england
+  artist: nicholas-hilliard
+- patron: james-i-of-england
+  artist: isaac-oliver
+- patron: james-i-of-england
+  artist: daniel-mytens
+- patron: charles-i-of-england
+  artist: daniel-mytens
+  from: 1625
+- patron: charles-i-of-england
+  artist: william-dobson
+  from: 1641
+  to: 1646
+- patron: charles-i-of-england
+  artist: orazio-gentileschi
+  from: 1626
+  to: 1639
+- patron: charles-ii-of-england
+  artist: grinling-gibbons
+- patron: james-ii-of-england
+  artist: grinling-gibbons
+  from: 1685
+- patron: william-iii-of-england
+  artist: grinling-gibbons
+- patron: james-i-of-england
+  artist: nicholas-stone
+  from: 1619
+- patron: charles-i-of-england
+  artist: nicholas-stone
+  from: 1626
+  to: 1647
+- teacher: nicholas-hilliard
+  student: isaac-oliver
+- teacher: peter-lely
+  student: robert-hooke
+- patron: james-i-of-england
+  artist: john-donne
+  from: 1621
+  to: 1631
+- patron: james-i-of-england
+  artist: ben-jonson
+  from: 1603
+- patron: charles-ii-of-england
+  artist: john-dryden
+  from: 1668
+- patron: charles-ii-of-england
+  artist: william-wycherley
+  from: 1675
+  to: 1679
+- patron: james-ii-of-england
+  artist: william-wycherley
+  from: 1685
+- teacher: john-dryden
+  student: william-congreve
+- patron: charles-i-of-england
+  artist: henry-lawes
+  from: 1631
+- patron: charles-ii-of-england
+  artist: henry-lawes
+- patron: charles-ii-of-england
+  artist: henry-purcell
+  from: 1682
+- patron: james-i-of-england
+  artist: orlando-gibbons
+  from: 1603
+  to: 1625
+- patron: charles-i-of-england
+  artist: orlando-gibbons
+  from: 1617
+  to: 1625
+- patron: james-ii-of-england
+  artist: john-blow
+  from: 1685
+- patron: charles-ii-of-england
+  artist: matthew-locke
+- patron: james-i-of-england
+  artist: thomas-tomkins
+  from: 1621
+- patron: charles-i-of-england
+  artist: thomas-tomkins
+  from: 1625
+- patron: james-i-of-england
+  artist: william-harvey
+  from: 1618
+- patron: charles-i-of-england
+  artist: william-harvey
+  from: 1632
+- patron: charles-ii-of-england
+  artist: edmond-halley
+  from: 1676
+  to: 1678
+- patron: james-i-of-england
+  artist: francis-bacon
+  from: 1603
+  to: 1621
+- patron: charles-ii-of-england
+  artist: thomas-hobbes
+- teacher: thomas-hobbes
+  student: charles-ii-of-england
+- teacher: john-blow
+  student: henry-purcell
+- teacher: william-byrd
+  student: thomas-tomkins
+- patron: elizabeth-i-of-england
+  artist: nicholas-hilliard
+moments:
+- person: inigo-jones
+  role: born
+  place: london
+  year: 1573
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: buried
+  place: st-benet-pauls-wharf
+  year: 1652
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: theobalds-house
+  year: 1606
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: queens-house-greenwich
+  year: 1616
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: banqueting-house
+  year: 1619
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: st-jamess-palace
+  year: 1623
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: wilton-house
+  year: 1630
+  sources:
+  - wp-inigo-jones
+- person: inigo-jones
+  role: worked
+  place: st-pauls-cathedral
+  year: 1634
+  sources:
+  - wp-inigo-jones
+- person: christopher-wren
+  role: buried
+  place: st-pauls-cathedral
+  year: 1723
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: oxford
+  year: 1653
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: cambridge
+  year: 1663
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: sheldonian-theatre
+  year: 1662
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: st-pauls-cathedral
+  year: 1666
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: the-monument-london
+  year: 1671
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: royal-observatory-greenwich
+  year: 1675
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: royal-hospital-chelsea
+  year: 1682
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: windsor-castle
+  year: 1684
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: palace-of-whitehall
+  year: 1685
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: hampton-court-palace
+  year: 1689
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: kensington-palace
+  year: 1689
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: royal-hospital-greenwich
+  year: 1696
+  sources:
+  - wp-christopher-wren
+- person: christopher-wren
+  role: worked
+  place: westminster-abbey
+  year: 1698
+  sources:
+  - wp-christopher-wren
+- person: nicholas-hawksmoor
+  role: died
+  place: london
+  year: 1736
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: st-pauls-cathedral
+  year: 1684
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: royal-hospital-chelsea
+  year: 1684
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: hampton-court-palace
+  year: 1684
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: kensington-palace
+  year: 1689
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: castle-howard
+  year: 1700
+  sources:
+  - wp-nicholas-hawksmoor
+  - wp-john-vanbrugh
+- person: nicholas-hawksmoor
+  role: worked
+  place: royal-hospital-greenwich
+  year: 1705
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: blenheim-palace
+  year: 1705
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: oxford
+  year: 1713
+  sources:
+  - wp-nicholas-hawksmoor
+- person: nicholas-hawksmoor
+  role: worked
+  place: westminster-abbey
+  year: 1723
+  sources:
+  - wp-nicholas-hawksmoor
+- person: john-vanbrugh
+  role: born
+  place: london
+  year: 1664
+  sources:
+  - wp-john-vanbrugh
+- person: john-vanbrugh
+  role: died
+  place: london
+  year: 1726
+  sources:
+  - wp-john-vanbrugh
+- person: john-vanbrugh
+  role: buried
+  place: st-stephen-walbrook
+  year: 1726
+  sources:
+  - wp-john-vanbrugh
+- person: john-vanbrugh
+  role: worked
+  place: castle-howard
+  year: 1699
+  sources:
+  - wp-john-vanbrugh
+- person: john-vanbrugh
+  role: worked
+  place: royal-hospital-greenwich
+  year: 1703
+  sources:
+  - wp-john-vanbrugh
+- person: john-vanbrugh
+  role: worked
+  place: blenheim-palace
+  year: 1705
+  sources:
+  - wp-john-vanbrugh
+- person: john-webb
+  role: born
+  place: london
+  year: 1611
+  sources:
+  - wp-john-webb
+- person: john-webb
+  role: worked
+  place: wilton-house
+  year: 1646
+  sources:
+  - wp-john-webb
+  - wp-inigo-jones
+- person: john-webb
+  role: worked
+  place: queens-house-greenwich
+  year: 1662
+  sources:
+  - wp-john-webb
+- person: john-webb
+  role: worked
+  place: greenwich-palace
+  year: 1664
+  sources:
+  - wp-john-webb
+- person: hugh-may
+  role: worked
+  place: windsor-castle
+  year: 1673
+  sources:
+  - wp-hugh-may
+- person: william-talman
+  role: worked
+  place: hampton-court-palace
+  year: 1689
+  sources:
+  - wp-william-talman
+- person: roger-pratt
+  role: worked
+  place: st-pauls-cathedral
+  year: 1663
+  sources:
+  - wp-roger-pratt
+- person: anthony-van-dyck
+  role: died
+  place: london
+  year: 1641
+- person: anthony-van-dyck
+  role: buried
+  place: st-pauls-cathedral
+  year: 1641
+- person: anthony-van-dyck
+  role: worked
+  place: london
+  year: 1632
+- person: peter-lely
+  role: died
+  place: london
+  year: 1680
+- person: peter-lely
+  role: buried
+  place: st-pauls-church-covent-garden
+  year: 1680
+- person: peter-lely
+  role: worked
+  place: covent-garden-piazza
+  year: 1651
+- person: godfrey-kneller
+  role: died
+  place: london
+  year: 1723
+- person: godfrey-kneller
+  role: buried
+  place: st-marys-church-twickenham
+- person: godfrey-kneller
+  role: worked
+  place: covent-garden-piazza
+  year: 1682
+- person: nicholas-hilliard
+  role: buried
+  place: st-martin-in-the-fields
+  year: 1619
+- person: nicholas-hilliard
+  role: worked
+  place: london
+  year: 1579
+- person: isaac-oliver
+  role: died
+  place: london
+  year: 1617
+- person: isaac-oliver
+  role: buried
+  place: st-ann-blackfriars
+  year: 1617
+- person: samuel-cooper
+  role: born
+  place: london
+  year: 1609
+- person: samuel-cooper
+  role: buried
+  place: st-pancras-old-church
+- person: william-dobson
+  role: born
+  place: london
+  year: 1611
+- person: william-dobson
+  role: buried
+  place: st-martin-in-the-fields
+  year: 1646
+- person: daniel-mytens
+  role: worked
+  place: london
+  year: 1618
+- person: wenceslaus-hollar
+  role: died
+  place: london
+  year: 1677
+- person: wenceslaus-hollar
+  role: buried
+  place: st-margarets-church-westminster
+  year: 1677
+- person: wenceslaus-hollar
+  role: worked
+  place: london
+  year: 1637
+- person: orazio-gentileschi
+  role: died
+  place: london
+  year: 1639
+- person: orazio-gentileschi
+  role: buried
+  place: queens-chapel-somerset-house
+  year: 1639
+- person: orazio-gentileschi
+  role: worked
+  place: london
+  year: 1626
+- person: grinling-gibbons
+  role: buried
+  place: st-pauls-church-covent-garden
+- person: nicholas-stone
+  role: died
+  place: london
+  year: 1647
+- person: nicholas-stone
+  role: buried
+  place: st-martin-in-the-fields
+  year: 1647
+- person: nicholas-stone
+  role: worked
+  place: windsor-castle
+  year: 1626
+- person: john-milton
+  role: born
+  place: london
+  year: 1608
+- person: john-milton
+  role: worked
+  place: cambridge
+  year: 1625
+- person: john-milton
+  role: buried
+  place: st-giles-cripplegate
+  year: 1674
+- person: john-donne
+  role: born
+  place: london
+  year: 1572
+- person: john-donne
+  role: worked
+  place: st-pauls-cathedral
+  year: 1621
+- person: john-donne
+  role: buried
+  place: st-pauls-cathedral
+  year: 1631
+- person: john-dryden
+  role: born
+  place: aldwincle
+  year: 1631
+- person: john-dryden
+  role: worked
+  place: cambridge
+  year: 1650
+- person: john-dryden
+  role: buried
+  place: westminster-abbey
+  year: 1700
+- person: aphra-behn
+  role: buried
+  place: westminster-abbey
+  year: 1689
+- person: ben-jonson
+  role: died
+  place: london
+  year: 1637
+- person: ben-jonson
+  role: buried
+  place: westminster-abbey
+  year: 1637
+- person: ben-jonson
+  role: worked
+  place: edinburgh
+  year: 1618
+- person: andrew-marvell
+  role: born
+  place: winestead
+  year: 1621
+- person: andrew-marvell
+  role: worked
+  place: cambridge
+  year: 1634
+- person: andrew-marvell
+  role: buried
+  place: st-giles-in-the-fields
+  year: 1678
+- person: george-herbert
+  role: born
+  place: montgomery-wales
+  year: 1593
+- person: george-herbert
+  role: worked
+  place: cambridge
+  year: 1609
+- person: george-herbert
+  role: worked
+  place: bemerton
+  year: 1630
+- person: john-bunyan
+  role: born
+  place: elstow
+  year: 1628
+- person: john-bunyan
+  role: worked
+  place: bedford
+  year: 1661
+- person: john-bunyan
+  role: died
+  place: london
+  year: 1688
+- person: john-bunyan
+  role: buried
+  place: bunhill-fields
+  year: 1688
+- person: samuel-pepys
+  role: born
+  place: london
+  year: 1633
+- person: samuel-pepys
+  role: worked
+  place: cambridge
+  year: 1650
+- person: samuel-pepys
+  role: worked
+  place: london
+  year: 1660
+- person: samuel-pepys
+  role: died
+  place: clapham
+  year: 1703
+- person: samuel-pepys
+  role: buried
+  place: st-olave-hart-street
+  year: 1703
+- person: john-evelyn
+  role: born
+  place: wotton-surrey
+  year: 1620
+- person: john-evelyn
+  role: worked
+  place: sayes-court
+  year: 1652
+- person: john-evelyn
+  role: died
+  place: london
+  year: 1706
+- person: john-evelyn
+  role: buried
+  place: st-johns-church-wotton
+  year: 1706
+- person: william-congreve
+  role: born
+  place: bardsey
+  year: 1670
+- person: william-congreve
+  role: died
+  place: london
+  year: 1729
+- person: william-congreve
+  role: buried
+  place: westminster-abbey
+  year: 1729
+- person: william-wycherley
+  role: born
+  place: clive-shropshire
+  year: 1641
+- person: william-wycherley
+  role: died
+  place: london
+  year: 1716
+- person: william-wycherley
+  role: buried
+  place: st-pauls-church-covent-garden
+  year: 1716
+- person: margaret-cavendish
+  role: died
+  place: london
+  year: 1673
+- person: margaret-cavendish
+  role: buried
+  place: westminster-abbey
+  year: 1674
+- person: henry-purcell
+  role: born
+  place: london
+  year: 1659
+- person: henry-purcell
+  role: worked
+  place: westminster-abbey
+  year: 1676
+- person: henry-purcell
+  role: died
+  place: london
+  year: 1695
+- person: henry-purcell
+  role: buried
+  place: westminster-abbey
+  year: 1695
+- person: orlando-gibbons
+  role: born
+  place: oxford
+  year: 1583
+- person: orlando-gibbons
+  role: worked
+  place: kings-college-chapel-cambridge
+  year: 1596
+- person: orlando-gibbons
+  role: worked
+  place: westminster-abbey
+  year: 1623
+- person: orlando-gibbons
+  role: died
+  place: canterbury
+  year: 1625
+- person: orlando-gibbons
+  role: buried
+  place: canterbury-cathedral
+  year: 1625
+- person: william-byrd
+  role: born
+  place: london
+  year: 1540
+- person: william-byrd
+  role: worked
+  place: lincoln-cathedral
+  year: 1563
+- person: william-byrd
+  role: worked
+  place: stondon-massey
+  year: 1594
+- person: william-byrd
+  role: died
+  place: stondon-massey
+  year: 1623
+- person: henry-lawes
+  role: born
+  place: dinton
+  year: 1596
+- person: henry-lawes
+  role: worked
+  place: ludlow-castle
+  year: 1634
+- person: henry-lawes
+  role: buried
+  place: westminster-abbey
+  year: 1662
+- person: john-blow
+  role: born
+  place: collingham
+  year: 1649
+- person: john-blow
+  role: worked
+  place: westminster-abbey
+  year: 1668
+- person: john-blow
+  role: worked
+  place: st-pauls-cathedral
+  year: 1687
+- person: john-blow
+  role: died
+  place: london
+  year: 1708
+- person: john-blow
+  role: buried
+  place: westminster-abbey
+  year: 1708
+- person: matthew-locke
+  role: born
+  place: exeter
+  year: 1621
+- person: thomas-tomkins
+  role: born
+  place: st-davids
+  year: 1572
+- person: thomas-tomkins
+  role: worked
+  place: worcester-cathedral
+  year: 1596
+- person: thomas-tomkins
+  role: buried
+  place: st-michaels-church-martin-hussingtree
+  year: 1656
+- person: isaac-newton
+  role: born
+  place: woolsthorpe-manor
+  year: 1642
+- person: isaac-newton
+  role: worked
+  place: cambridge
+  year: 1661
+- person: isaac-newton
+  role: worked
+  place: london
+  year: 1696
+- person: isaac-newton
+  role: died
+  place: london
+  year: 1727
+- person: isaac-newton
+  role: buried
+  place: westminster-abbey
+  year: 1727
+- person: robert-boyle
+  role: born
+  place: lismore-castle
+  year: 1627
+- person: robert-boyle
+  role: worked
+  place: oxford
+  year: 1654
+- person: robert-boyle
+  role: worked
+  place: london
+  year: 1668
+- person: robert-boyle
+  role: died
+  place: london
+  year: 1691
+- person: robert-boyle
+  role: buried
+  place: st-martin-in-the-fields
+  year: 1691
+- person: robert-hooke
+  role: born
+  place: freshwater-isle-of-wight
+  year: 1635
+- person: robert-hooke
+  role: worked
+  place: oxford
+  year: 1653
+- person: robert-hooke
+  role: worked
+  place: london
+  year: 1662
+- person: robert-hooke
+  role: died
+  place: london
+  year: 1703
+- person: robert-hooke
+  role: buried
+  place: st-helens-bishopsgate
+  year: 1703
+- person: william-harvey
+  role: worked
+  place: cambridge
+  year: 1593
+- person: william-harvey
+  role: worked
+  place: st-bartholomews-hospital
+  year: 1609
+- person: william-harvey
+  role: worked
+  place: oxford
+  year: 1642
+- person: william-harvey
+  role: died
+  place: roehampton
+  year: 1657
+- person: william-harvey
+  role: buried
+  place: st-andrews-church-hempstead
+  year: 1657
+- person: edmond-halley
+  role: born
+  place: london
+  year: 1656
+- person: edmond-halley
+  role: worked
+  place: oxford
+  year: 1673
+- person: edmond-halley
+  role: buried
+  place: st-margarets-church-lee
+  year: 1742
+- person: john-locke
+  role: born
+  place: wrington
+  year: 1632
+- person: john-locke
+  role: worked
+  place: oxford
+  year: 1652
+- person: john-locke
+  role: died
+  place: oates-manor
+  year: 1704
+- person: john-locke
+  role: buried
+  place: all-saints-church-high-laver
+  year: 1704
+- person: thomas-hobbes
+  role: born
+  place: malmesbury
+  year: 1588
+- person: thomas-hobbes
+  role: worked
+  place: oxford
+  year: 1601
+- person: thomas-hobbes
+  role: died
+  place: hardwick-hall
+  year: 1679
+- person: thomas-hobbes
+  role: buried
+  place: st-john-the-baptist-church-ault-hucknall
+  year: 1679
+- person: francis-bacon
+  role: born
+  place: london
+  year: 1561
+- person: francis-bacon
+  role: worked
+  place: cambridge
+  year: 1573
+- person: francis-bacon
+  role: worked
+  place: grays-inn
+  year: 1576
+- person: francis-bacon
+  role: died
+  place: arundel-house-highgate
+  year: 1626
+- person: francis-bacon
+  role: buried
+  place: st-michaels-church-st-albans
+  year: 1626
+discrepancies:
+- key: coleshill-house-architect
+  question: Who designed Coleshill House, Berkshire - Inigo Jones or Roger Pratt?
+  about:
+  - person: inigo-jones
+  - person: roger-pratt
+  field: attribution
+  claims:
+  - value: Inigo Jones (primarily credited with the design)
+    sources:
+    - wp-roger-pratt
+    - wp-inigo-jones
+  - value: Roger Pratt (executed the building)
+    sources:
+    - wp-roger-pratt
+  note: Record credits Jones with the design and Pratt with the execution, as the Pratt article states.
+- key: horseheath-hall-architect
+  question: Who designed Horseheath Hall, Cambridgeshire - Roger Pratt or John Webb?
+  about:
+  - person: roger-pratt
+  - person: john-webb
+  field: attribution
+  claims:
+  - value: Roger Pratt
+    sources:
+    - wp-roger-pratt
+  - value: John Webb (as attributed in Colen Campbell's Vitruvius Britannicus)
+    sources:
+    - wp-roger-pratt
+  note: The record holds Pratt, as the Pratt article lists the house among his own works.
+- key: wren-city-churches-attribution
+  question: Who had the principal creative responsibility for Wren's City of London churches?
+  about:
+  - person: christopher-wren
+  - person: nicholas-hawksmoor
+  field: attribution
+  claims:
+  - value: Christopher Wren (rebuilt 52 churches after the Great Fire)
+    sources:
+    - wp-christopher-wren
+  - value: Others in Wren's office
+    especially Nicholas Hawksmoor (now more commonly attributed): null
+    sources:
+    - wp-christopher-wren
+  note: The record credits Wren as architect of the programme; individual designs are often now attributed to his office.
+- key: john-milton-died
+  question: On what date did John Milton die?
+  about:
+  - person: john-milton
+  field: died
+  claims:
+  - value: 8 November 1674
+    sources:
+    - wp-john-milton
+    note: Given in the article's opening line
+  - value: 9 or 10 November 1674
+    sources:
+    - wp-john-milton
+    note: Given in the article's Death section
+  note: Record holds the year 1674 only.
+- key: john-donne-born
+  question: Was John Donne born in 1571 or 1572?
+  about:
+  - person: john-donne
+  field: born
+  claims:
+  - value: 1571
+    sources:
+    - wp-john-donne
+  - value: 1572
+    sources:
+    - wp-john-donne
+  note: Record uses 1572, marked estimated; the article says "1571 or 1572".
+- key: john-dryden-laureate-year
+  question: In which year was Dryden appointed Poet Laureate?
+  about:
+  - person: john-dryden
+  field: date
+  claims:
+  - value: 1668
+    sources:
+    - wp-john-dryden
+    note: Article lead
+  - value: 1667
+    sources:
+    - wp-john-dryden
+    note: Article later text
+  note: Patron link uses 1668 (lead).
+- key: aphra-behn-birthplace
+  question: Where was Aphra Behn born?
+  about:
+  - person: aphra-behn
+  field: place
+  claims:
+  - value: Sturry or Canterbury
+    Kent: null
+    sources:
+    - wp-aphra-behn
+    note: Colonel Thomas Colepeper
+  - value: Wye
+    Kent: null
+    sources:
+    - wp-aphra-behn
+    note: Anne Finch
+  - value: Harbledown
+    Kent: null
+    sources:
+    - wp-aphra-behn
+    note: Another version of her life
+  note: No born moment recorded; the article calls her early life scant and obscured.
+- key: andrew-marvell-death
+  question: When and where did Andrew Marvell die?
+  about:
+  - person: andrew-marvell
+  field: died
+  claims:
+  - value: 16 August 1678
+    sources:
+    - wp-andrew-marvell
+    note: Article opening line
+  - value: 18 August 1678 in London
+    sources:
+    - wp-andrew-marvell
+    note: Highgate plaque inscription quoted in the article
+  - value: Died suddenly at Hull while meeting his old constituents
+    sources:
+    - wp-andrew-marvell
+    note: Article text
+  note: Record holds the year 1678 only; no died moment recorded.
+- key: william-wycherley-birthplace
+  question: Where was William Wycherley born?
+  about:
+  - person: william-wycherley
+  field: place
+  claims:
+  - value: Clive Hall
+    Clive near Shrewsbury: null
+    sources:
+    - wp-william-wycherley
+  - value: Trench Farm near Wem
+    sources:
+    - wp-william-wycherley
+    note: Said by Lionel Cust
+  note: Record uses Clive.
+- key: orlando-gibbons-born-place
+  question: Was Orlando Gibbons born in Oxford or Cambridge?
+  about:
+  - person: orlando-gibbons
+  field: place
+  claims:
+  - value: Oxford
+    sources:
+    - wp-orlando-gibbons
+    note: Baptism record at St Martin's, Oxford, and parents then resident in Oxford; modern historians.
+  - value: Cambridge
+    sources:
+    - wp-orlando-gibbons
+    note: Early biographies and his Canterbury memorial; believed until the early 20th century.
+  note: The record uses Oxford (best supported).
+- key: william-byrd-born
+  question: When was William Byrd born?
+  about:
+  - person: william-byrd
+  field: born
+  claims:
+  - value: 1539 or 1540
+    sources:
+    - wp-william-byrd
+    note: A document of 2 October 1598 in his hand says he was 58 years or thereabouts.
+  - value: A later year
+    sources:
+    - wp-william-byrd
+    note: His will of November 1622 says he was in the 80th year of his age; Kerry McCarthy suggests the will was not kept up to date.
+  note: The record uses c. 1540.
+- key: john-blow-born-place
+  question: Was John Blow born in Collingham or Newark?
+  about:
+  - person: john-blow
+  field: place
+  claims:
+  - value: Collingham, Nottinghamshire
+    sources:
+    - wp-john-blow
+    note: 'Article: probably born there; Newark parish registers record his baptism.'
+  - value: Newark
+    sources:
+    - wp-john-blow
+    note: On taking his doctorate in 1677 Blow gave his birthplace as the faithful borough of Newark.
+  note: The record uses Collingham, as the article does.
+- key: dido-and-aeneas-date
+  question: When was Purcell's Dido and Aeneas first performed?
+  about:
+  - event: dido-and-aeneas-first-performance
+  field: date
+  claims:
+  - value: '1689'
+    sources:
+    - wp-henry-purcell
+    note: The documented performance, at Josias Priest's school.
+  - value: '1688'
+    sources:
+    - wp-henry-purcell
+    note: Date in the article's list of notable compositions; the article also says an earlier production is possible.
+  note: The record uses 1689 (documented).
+- key: royal-society-charter-date
+  question: When did the Royal Society receive its charter?
+  about:
+  - event: royal-society-founded-1660
+  field: date
+  claims:
+  - value: July 1662
+    sources:
+    - wp-robert-hooke
+  - value: '1663'
+    sources:
+    - wp-robert-boyle
+    note: 'Boyle article: the Invisible College became the Royal Society in 1663, with the charter naming Boyle to the council.'
+  note: The event is dated to the founding in 1660.
