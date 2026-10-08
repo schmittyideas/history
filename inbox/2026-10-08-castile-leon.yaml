@@ -1,0 +1,939 @@
+batch:
+  title: "The kings and queens of León and Castile, 1028-1504"
+  requested: "Bermudo III through Isabella I: lives, reigns, the 1072/1126/1157/1230 partitions and reunions, battles, treaties, places"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles for the 21 rulers. Nothing was fetched. Bermudo III is linked as the son of the existing alfonso-v-of-leon (a parent link only; Alfonso V is not changed).
+# - Titles: "King of León" (realm León, existing) and "King of Castile" (realm Castile, NEW in this file, Western Europe / Spain). A monarch ruling both has two rows. Women ruling in their own right are "Queen of León" / "Queen of Castile" (Urraca, Isabella I). Reunions are separate rows: Sancho II (Castile 1065-72, León 12 Jan-7 Oct 1072), Alfonso VI (León 1065-72 and again 1072-1109, Castile 1072-1109), Alfonso VII (both from 1126, to 1157), Ferdinand III (Castile 1217, León 1230).
+# - Ferdinand I: the article says he was Count of Castile 1029-1037 and NOT king of Castile, "as many later authors have it". So he has "Count of Castile" (realm Castile) for 1029-1037 and "King of León" 1037-1065. The article does not call him king of Castile, so no King of Castile row.
+# - Isabella I: the title note records that she reigned jointly with Ferdinand II of Aragon (the Catholic Monarchs) and was queen consort of Aragon from 1479. Ferdinand of Aragon is not added (Aragon is out of scope).
+# - Alfonso X: also given a disputed "King of the Germans" row (realm Holy Roman Empire, 1 April 1257 to his oral renunciation in 1275). If the Holy Roman Empire batch sends the same person/title the keys match and merge.
+# - Galicia: NOT added. Several articles give Galicia dates (Sancho II 1071-72, Alfonso VI 1071-1109, Alfonso VII from 1111, Urraca, Ferdinand III from 1231) but I did not add the realm Galicia, to stay near the row limit. Say so if you want a Galicia pass.
+# - Not in this batch (not requested), so gaps in the timeline: Ferdinand II of León (1157-1188), Henry I of Castile (1214-1217), Berengaria of Castile (briefly queen in 1217), García II of Galicia, Eleanor of England (Alfonso VIII's queen, daughter of Henry II and Eleanor of Aquitaine), Sancha of León (Ferdinand I's queen). They are mentioned in notes only.
+# - Siete Partidas: the Alfonso X article gives no date for it (it was begun in his reign and promulgated by his great-grandson), so there is no event. It is in his person note. Same for the Alfonsine tables, Cantigas de Santa Maria and the Mesta (1273, in the article; left to the note).
+# - Left out because the article gives no day or no year: Alfonso X's Jerez capture (1261, no day), Sancho IV's coronation at Toledo (1284, no day), Ferdinand IV's Treaty of Alcañices (1297, in the article as 13 September for the prelates only), Alfonso XI's self-coronation (1332; the article does not say where), Henry IV's Farce of Ávila (no year in his article; Isabella's gives June 1465 for the civil war), Alfonso VI's Uclés defeat (29 May 1108) and Alfonso VII's Almería capture (October 1147) (no place defined; left out for size).
+# - Death and birth places left out (not in the article, or the place is not defined here): Alfonso IX (death place), Ferdinand III (birth Monastery of Valparaíso, death place), Alfonso VII (death at Las Fresnedas), Alfonso VIII (birth Soria, death Gutierre-Muñoz), Urraca (death at the castle of Saldaña, birth place disputed), Ferdinand IV (birth Alcázar de San Juan), Henry II (death Santo Domingo de la Calzada), John I (death at Alcalá de Henares), Henry IV (burial at Santa María de Guadalupe; death at Madrid), Henry III (birth Burgos), Alfonso XI (burial: the article does not say where he was first buried; his remains are with Ferdinand IV, see Ferdinand IV's burial).
+# - Dates: where one article gives only a year I used the year. A few title dates are taken from the predecessor's death date in another article of this batch (cited in sources), e.g. Alfonso VIII from 31 August 1158 (death of Sancho III).
+# - Coordinates are from general knowledge (2-3 decimals); battlefield and monastery points (Tamarón, Sagrajas, Las Navas de Tolosa, Aljubarrota, Montiel, Oña, Sahagún) are approximate. The "visitable" flags are also general knowledge, not from the articles.
+# - Shared keys defined here (other batches may send the same key): toledo, seville, cordoba, granada, valladolid, leon, gibraltar, battle-of-aljubarrota-1385, battle-of-najera-1367, battle-of-montiel-1369 (the Hundred Years' War and England batches may also want these).
+# - Size: 21 people, 40 title rows, 1 realm, 26 places, 26 events (about 114 rows), over the 100 target; if it must be split, cut at Alfonso X (1252) or at John II (1406).
+# - Discrepancies recorded below: Bermudo III's accession year; Alfonso VI's birth year and death year; Alfonso IX's death day; Ferdinand III's birth year; Sancho IV's birth day; Alfonso XI's birth day and death day; Henry II's start of reign. Seen and not entered: Urraca's birthplace (León, per the lead, versus "unknown, likely Sahagún or León"); the Agnes of Aquitaine annulment (Alfonso VI article).
+
+sources:
+  - {key: wp-bermudo-iii-of-leon,            title: "Bermudo III of León (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Bermudo_III_of_Le%C3%B3n"}
+  - {key: wp-ferdinand-i-of-leon,            title: "Ferdinand I of León (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Ferdinand_I_of_Le%C3%B3n"}
+  - {key: wp-sancho-ii-of-castile,           title: "Sancho II of Castile and León (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Sancho_II_of_Castile_and_Le%C3%B3n"}
+  - {key: wp-alfonso-vi-of-leon-and-castile, title: "Alfonso VI of León and Castile (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Alfonso_VI_of_Le%C3%B3n_and_Castile"}
+  - {key: wp-urraca-of-leon-and-castile,     title: "Urraca of León and Castile (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Urraca_of_Le%C3%B3n_and_Castile"}
+  - {key: wp-alfonso-vii-of-leon-and-castile, title: "Alfonso VII of León and Castile (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Alfonso_VII_of_Le%C3%B3n_and_Castile"}
+  - {key: wp-sancho-iii-of-castile,          title: "Sancho III of Castile (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Sancho_III_of_Castile"}
+  - {key: wp-alfonso-viii-of-castile,        title: "Alfonso VIII of Castile (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Alfonso_VIII_of_Castile"}
+  - {key: wp-alfonso-ix-of-leon,             title: "Alfonso IX of León (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Alfonso_IX_of_Le%C3%B3n"}
+  - {key: wp-ferdinand-iii-of-castile,       title: "Ferdinand III of Castile (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Ferdinand_III_of_Castile"}
+  - {key: wp-alfonso-x-of-castile,           title: "Alfonso X of Castile (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Alfonso_X_of_Castile"}
+  - {key: wp-sancho-iv-of-castile,           title: "Sancho IV of Castile (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Sancho_IV_of_Castile"}
+  - {key: wp-ferdinand-iv-of-castile,        title: "Ferdinand IV of Castile (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Ferdinand_IV_of_Castile"}
+  - {key: wp-alfonso-xi-of-castile,          title: "Alfonso XI of Castile (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Alfonso_XI_of_Castile"}
+  - {key: wp-peter-of-castile,               title: "Peter of Castile (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Peter_of_Castile"}
+  - {key: wp-henry-ii-of-castile,            title: "Henry II of Castile (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Henry_II_of_Castile"}
+  - {key: wp-john-i-of-castile,              title: "John I of Castile (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/John_I_of_Castile"}
+  - {key: wp-henry-iii-of-castile,           title: "Henry III of Castile (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Henry_III_of_Castile"}
+  - {key: wp-john-ii-of-castile,             title: "John II of Castile (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/John_II_of_Castile"}
+  - {key: wp-henry-iv-of-castile,            title: "Henry IV of Castile (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Henry_IV_of_Castile"}
+  - {key: wp-isabella-i-of-castile,          title: "Isabella I of Castile (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Isabella_I_of_Castile"}
+
+realms:
+  - {name: Castile, region: Western Europe, country: Spain, note: "County, then kingdom, in the north of Iberia; united with León in 1230 under Ferdinand III"}
+
+people:
+  - key: bermudo-iii-of-leon
+    name: Bermudo III of León
+    type: Royalty
+    realm: León
+    born: 1015
+    born_estimated: true
+    died: 1037-09-04
+    prominence: 2
+    note: "Last Leonese king of the line of Peter of Cantabria; driven out by Sancho III of Pamplona in 1034 and killed at Tamarón."
+    sources: [wp-bermudo-iii-of-leon]
+  - key: ferdinand-i-of-leon
+    name: Ferdinand I the Great
+    type: Royalty
+    house: Jiménez
+    realm: León
+    born: 1015
+    born_estimated: true
+    died: 1065-12-24
+    prominence: 4
+    note: "Count of Castile from 1029 and king of León from 1037; began the Jiménez rule over western Spain and divided his realm among his sons."
+    sources: [wp-ferdinand-i-of-leon]
+  - key: sancho-ii-of-castile
+    name: Sancho II the Strong
+    type: Royalty
+    realm: Castile
+    born: 1037
+    born_estimated: true
+    died: 1072-10-07
+    prominence: 2
+    note: "King of Castile from 1065; briefly held all his father's crowns in 1072; killed during the siege of Zamora."
+    sources: [wp-sancho-ii-of-castile]
+  - key: alfonso-vi-of-leon-and-castile
+    name: Alfonso VI the Brave
+    type: Royalty
+    realm: León
+    born: 1040
+    born_estimated: true
+    died: 1109-07-01
+    prominence: 4
+    note: "King of León from 1065 and Castile from 1072; took Toledo in 1085, then lost at Sagrajas (1086) to the Almoravids."
+    sources: [wp-alfonso-vi-of-leon-and-castile]
+  - key: urraca-of-leon-and-castile
+    name: Urraca the Reckless
+    type: Royalty
+    realm: León
+    born: 1081
+    born_estimated: true
+    died: 1126-03-08
+    prominence: 3
+    note: "Queen of León and Castile from 1109; the first queen regnant in European history, called the first Western European queen to reign in her own right after the Byzantine empresses."
+    sources: [wp-urraca-of-leon-and-castile]
+  - key: alfonso-vii-of-leon-and-castile
+    name: Alfonso VII the Emperor
+    type: Royalty
+    house: Ivrea
+    realm: León
+    born: 1105-03-01
+    died: 1157-08-21
+    prominence: 3
+    note: "Son of Urraca; crowned 'Emperor of Spain' at León in 1135; split his realm between his sons Sancho (Castile) and Ferdinand (León)."
+    sources: [wp-alfonso-vii-of-leon-and-castile]
+  - key: sancho-iii-of-castile
+    name: Sancho III the Desired
+    type: Royalty
+    realm: Castile
+    born: 1134
+    born_estimated: true
+    died: 1158-08-31
+    prominence: 2
+    note: "King of Castile for one year; the Order of Calatrava began in his reign."
+    sources: [wp-sancho-iii-of-castile]
+  - key: alfonso-viii-of-castile
+    name: Alfonso VIII the Noble
+    type: Royalty
+    realm: Castile
+    born: 1155-11-11
+    died: 1214-10-05
+    prominence: 4
+    note: "Defeated at Alarcos in 1195, then led the coalition that broke the Almohads at Las Navas de Tolosa in 1212; married Eleanor, daughter of Henry II of England."
+    sources: [wp-alfonso-viii-of-castile]
+  - key: alfonso-ix-of-leon
+    name: Alfonso IX of León
+    type: Royalty
+    realm: León
+    born: 1171-08-15
+    died: 1230-09-24
+    prominence: 3
+    note: "Summoned the Cortes of León in 1188 and founded the University of Salamanca in 1218; his marriages brought papal interdicts."
+    sources: [wp-alfonso-ix-of-leon]
+  - key: ferdinand-iii-of-castile
+    name: Ferdinand III the Saint
+    type: Royalty
+    realm: Castile
+    born: 1201
+    born_estimated: true
+    died: 1252-05-30
+    prominence: 4
+    note: "King of Castile from 1217 and of León from 1230, joining them for good; took Córdoba (1236) and Seville (1248); canonized in 1671."
+    sources: [wp-ferdinand-iii-of-castile]
+  - key: alfonso-x-of-castile
+    name: Alfonso X the Wise
+    type: Royalty
+    realm: Castile
+    born: 1221-11-23
+    died: 1284-04-04
+    prominence: 4
+    note: "Patron of the Toledo scholars, the Alfonsine tables and the Siete Partidas; chosen king of Germany in 1257 but never ruled there; ended his reign in civil war with his son Sancho."
+    sources: [wp-alfonso-x-of-castile]
+  - key: sancho-iv-of-castile
+    name: Sancho IV the Brave
+    type: Royalty
+    realm: Castile
+    born: 1258-05-12
+    died: 1295-04-25
+    prominence: 2
+    note: "Took the crown from his father's grandsons in the 1282-84 civil war; faced revolts and the Marinid siege of Tarifa."
+    sources: [wp-sancho-iv-of-castile]
+  - key: ferdinand-iv-of-castile
+    name: Ferdinand IV the Summoned
+    type: Royalty
+    realm: Castile
+    born: 1285-12-06
+    died: 1312-09-07
+    prominence: 2
+    note: "Reigned under the regency of María de Molina; took Gibraltar in 1309; died mysteriously at Jaén, thirty days after the Carvajal brothers' summons."
+    sources: [wp-ferdinand-iv-of-castile]
+  - key: alfonso-xi-of-castile
+    name: Alfonso XI the Avenger
+    type: Royalty
+    realm: Castile
+    born: 1311-08-13
+    died: 1350-03-26
+    prominence: 3
+    note: "Won the Battle of Río Salado (1340) and took Algeciras (1344); died of the Black Death at the siege of Gibraltar."
+    sources: [wp-alfonso-xi-of-castile]
+  - key: peter-of-castile
+    name: Peter the Cruel
+    type: Royalty
+    house: Ivrea
+    realm: Castile
+    born: 1334-08-30
+    died: 1369-03-23
+    prominence: 4
+    note: "Last ruler of the main branch of the House of Ivrea; overthrown by his half-brother Henry in the Castilian Civil War and killed after Montiel."
+    sources: [wp-peter-of-castile]
+  - key: henry-ii-of-castile
+    name: Henry II of Trastámara
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1334-01-13
+    died: 1379-05-29
+    prominence: 3
+    note: "Illegitimate son of Alfonso XI; killed Peter at Montiel in 1369 and founded the Trastámara line."
+    sources: [wp-henry-ii-of-castile]
+  - key: john-i-of-castile
+    name: John I of Castile
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1358-08-24
+    died: 1390-10-09
+    prominence: 2
+    note: "Claimed the Portuguese crown through his wife Beatrice and lost at Aljubarrota (1385); died falling from his horse."
+    sources: [wp-john-i-of-castile]
+  - key: henry-iii-of-castile
+    name: Henry III the Suffering
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1379-10-04
+    died: 1406-12-25
+    prominence: 2
+    note: "First Prince of Asturias; married Catherine of Lancaster in 1388; sent embassies to Timur; began the colonisation of the Canary Islands."
+    sources: [wp-henry-iii-of-castile]
+  - key: john-ii-of-castile
+    name: John II of Castile
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1405-03-06
+    died: 1454-07-20
+    prominence: 2
+    note: "Reigned 48 years, much of it under his favourite Álvaro de Luna, whom he executed; father of Henry IV and Isabella I."
+    sources: [wp-john-ii-of-castile]
+  - key: henry-iv-of-castile
+    name: Henry IV the Impotent
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1425-01-05
+    died: 1474-12-11
+    prominence: 3
+    note: "Weak king whose reign ended in civil war over the succession of his daughter Joanna versus his half-sister Isabella."
+    sources: [wp-henry-iv-of-castile]
+  - key: isabella-i-of-castile
+    name: Isabella I the Catholic
+    type: Royalty
+    house: Trastámara
+    realm: Castile
+    born: 1451-04-22
+    died: 1504-11-26
+    prominence: 5
+    note: "Queen of Castile and León from 1474; with Ferdinand II of Aragon she completed the Reconquista, ordered the 1492 expulsion of the Jews and sponsored Columbus."
+    sources: [wp-isabella-i-of-castile]
+
+titles:
+  # Bermudo III.
+  - {person: bermudo-iii-of-leon, title: King of León, realm: León, from: 1028, to: 1037-09-04, note: "A child when he succeeded; driven into Galicia by Sancho III of Pamplona in 1034, returned after Sancho's death in 1035; killed at Tamarón", sources: [wp-bermudo-iii-of-leon]}
+  # Ferdinand I.
+  - {person: ferdinand-i-of-leon, title: Count of Castile, realm: Castile, from: 1029, to: 1037, note: "Named count by his father Sancho III of Pamplona; the article says he was not king of Castile, as many later authors have it", sources: [wp-ferdinand-i-of-leon]}
+  - {person: ferdinand-i-of-leon, title: King of León, realm: León, from: 1037-09-04, to: 1065-12-24, note: "Took León by right of his wife Sancha after killing Bermudo III at Tamarón; crowned and anointed 22 June 1038; held the title 'emperor' (first used in his own charter in 1056)", sources: [wp-ferdinand-i-of-leon]}
+  # Sancho II. Castile 1065-72; crowned king of León 12 January 1072 after Golpejera, killed 7 October 1072.
+  - {person: sancho-ii-of-castile, title: King of Castile, realm: Castile, from: 1065-12-24, to: 1072-10-07, note: "Received Castile under his father's will", sources: [wp-sancho-ii-of-castile, wp-ferdinand-i-of-leon]}
+  - {person: sancho-ii-of-castile, title: King of León, realm: León, from: 1072-01-12, to: 1072-10-07, note: "After defeating his brother Alfonso VI at Golpejera; held all three crowns his father had divided (Castile, León, Galicia)", sources: [wp-sancho-ii-of-castile, wp-alfonso-vi-of-leon-and-castile]}
+  # Alfonso VI. León 1065-72, in exile 1072 (Toledo), then León and Castile from 1072 to 1109.
+  - {person: alfonso-vi-of-leon-and-castile, title: King of León, realm: León, from: 1065-12-24, to: 1072-01-12, note: "Crowned at León in January 1066; defeated by Sancho II at Golpejera on 12 January 1072 and exiled to Toledo", sources: [wp-alfonso-vi-of-leon-and-castile]}
+  - {person: alfonso-vi-of-leon-and-castile, title: King of León, realm: León, from: 1072, to: 1109-07-01, note: "Regained León, and gained Castile and Galicia, after Sancho II was murdered in 1072; styled himself emperor of all Spain from 1077", sources: [wp-alfonso-vi-of-leon-and-castile, wp-sancho-ii-of-castile]}
+  - {person: alfonso-vi-of-leon-and-castile, title: King of Castile, realm: Castile, from: 1072, to: 1109-07-01, sources: [wp-alfonso-vi-of-leon-and-castile]}
+  # Urraca. The articles give 'from 1109'; the Alfonso VI article dates her father's death 1 July 1109.
+  - {person: urraca-of-leon-and-castile, title: Queen of León, realm: León, from: 1109, to: 1126-03-08, note: "Reigned in her own right; married Alfonso I of Aragon in 1109, separated by 1110 and the marriage was annulled; civil war with him for years", sources: [wp-urraca-of-leon-and-castile]}
+  - {person: urraca-of-leon-and-castile, title: Queen of Castile, realm: Castile, from: 1109, to: 1126-03-08, note: "Alfonso I of Aragon held a large part of Castile after the 1112 truce", sources: [wp-urraca-of-leon-and-castile]}
+  # Alfonso VII. Crowned in León 10 March 1126; the Peace of Támara (1127) gave him Castile.
+  - {person: alfonso-vii-of-leon-and-castile, title: King of León, realm: León, from: 1126, to: 1157-08-21, note: "Crowned at León on 10 March 1126; crowned 'Emperor of Spain' there 26 May 1135. At his death the realm split between his sons", sources: [wp-alfonso-vii-of-leon-and-castile]}
+  - {person: alfonso-vii-of-leon-and-castile, title: King of Castile, realm: Castile, from: 1126, to: 1157-08-21, note: "Recognised in Castile by Alfonso the Battler in the Peace of Támara (1127)", sources: [wp-alfonso-vii-of-leon-and-castile]}
+  # Sancho III. León went to his brother Ferdinand II (not in this batch).
+  - {person: sancho-iii-of-castile, title: King of Castile, realm: Castile, from: 1157-08-21, to: 1158-08-31, note: "King of Castile and Toledo; León went to his brother Ferdinand II", sources: [wp-sancho-iii-of-castile, wp-alfonso-vii-of-leon-and-castile]}
+  # Alfonso VIII.
+  - {person: alfonso-viii-of-castile, title: King of Castile, realm: Castile, from: 1158-08-31, to: 1214-10-05, note: "Proclaimed king at two; the Lara and Castro families and his uncle Ferdinand II of León contested the regency", sources: [wp-alfonso-viii-of-castile, wp-sancho-iii-of-castile]}
+  # Alfonso IX.
+  - {person: alfonso-ix-of-leon, title: King of León, realm: León, from: 1188, to: 1230-09-24, note: "In July 1188 recognised his cousin Alfonso VIII as overlord in return for acceptance in León", sources: [wp-alfonso-ix-of-leon, wp-alfonso-viii-of-castile]}
+  # Ferdinand III. Castile from 1217 (his mother Berengaria crowned him co-ruler), León from 1230.
+  - {person: ferdinand-iii-of-castile, title: King of Castile, realm: Castile, from: 1217, to: 1252-05-30, note: "His mother Berengaria succeeded her brother Henry I in 1217 and quickly crowned him co-ruler", sources: [wp-ferdinand-iii-of-castile]}
+  - {person: ferdinand-iii-of-castile, title: King of León, realm: León, from: 1230, to: 1252-05-30, note: "Succeeded Alfonso IX; the Treaty of Benavente (11 December 1230) paid his half-sisters; first sovereign of both kingdoms since Alfonso VII", sources: [wp-ferdinand-iii-of-castile, wp-alfonso-ix-of-leon]}
+  # Alfonso X.
+  - {person: alfonso-x-of-castile, title: King of Castile, realm: Castile, from: 1252-06-01, to: 1284-04-04, sources: [wp-alfonso-x-of-castile]}
+  - {person: alfonso-x-of-castile, title: King of León, realm: León, from: 1252-06-01, to: 1284-04-04, sources: [wp-alfonso-x-of-castile]}
+  - {person: alfonso-x-of-castile, title: King of the Germans, realm: Holy Roman Empire, from: 1257-04-01, to: 1275, disputed: true, note: "Chosen by a dissident faction of electors; his rival Richard of Cornwall was crowned at Aachen in 1257; he gave up the claim by an oral renunciation in 1275", sources: [wp-alfonso-x-of-castile]}
+  # Sancho IV.
+  - {person: sancho-iv-of-castile, title: King of Castile, realm: Castile, from: 1284, to: 1295-04-25, note: "Declared king by a coalition of nobles in 1282; took control when his father died in 1284; crowned at Toledo", sources: [wp-sancho-iv-of-castile, wp-alfonso-x-of-castile]}
+  - {person: sancho-iv-of-castile, title: King of León, realm: León, from: 1284, to: 1295-04-25, sources: [wp-sancho-iv-of-castile]}
+  # Ferdinand IV.
+  - {person: ferdinand-iv-of-castile, title: King of Castile, realm: Castile, from: 1295-04-25, to: 1312-09-07, note: "Nine years old at his accession; his mother María de Molina was regent; declared of age 6 December 1301", sources: [wp-ferdinand-iv-of-castile, wp-sancho-iv-of-castile]}
+  - {person: ferdinand-iv-of-castile, title: King of León, realm: León, from: 1295-04-25, to: 1312-09-07, sources: [wp-ferdinand-iv-of-castile, wp-sancho-iv-of-castile]}
+  # Alfonso XI.
+  - {person: alfonso-xi-of-castile, title: King of Castile, realm: Castile, from: 1312-09-07, to: 1350-03-26, note: "One year old at his accession; regencies disputed until 1313; declared of age in August 1325", sources: [wp-alfonso-xi-of-castile, wp-ferdinand-iv-of-castile]}
+  - {person: alfonso-xi-of-castile, title: King of León, realm: León, from: 1312-09-07, to: 1350-03-26, sources: [wp-alfonso-xi-of-castile, wp-ferdinand-iv-of-castile]}
+  # Peter.
+  - {person: peter-of-castile, title: King of Castile, realm: Castile, from: 1350, to: 1369-03-23, note: "Driven out by his half-brother Henry in 1366 and restored in 1367 after the Battle of Nájera", sources: [wp-peter-of-castile]}
+  - {person: peter-of-castile, title: King of León, realm: León, from: 1350, to: 1369-03-23, sources: [wp-peter-of-castile]}
+  # Henry II.
+  - {person: henry-ii-of-castile, title: King of Castile, realm: Castile, from: 1369, to: 1379-05-29, note: "Proclaimed king at Las Huelgas, Burgos, in 1366; the article dates his kingship from 1369 and Montiel (see discrepancy)", sources: [wp-henry-ii-of-castile, wp-peter-of-castile]}
+  - {person: henry-ii-of-castile, title: King of León, realm: León, from: 1369, to: 1379-05-29, sources: [wp-henry-ii-of-castile]}
+  # John I.
+  - {person: john-i-of-castile, title: King of Castile, realm: Castile, from: 1379-05-29, to: 1390-10-09, sources: [wp-john-i-of-castile, wp-henry-ii-of-castile]}
+  - {person: john-i-of-castile, title: King of León, realm: León, from: 1379-05-29, to: 1390-10-09, sources: [wp-john-i-of-castile, wp-henry-ii-of-castile]}
+  # Henry III.
+  - {person: henry-iii-of-castile, title: King of Castile, realm: Castile, from: 1390-10-09, to: 1406-12-25, note: "A minor when he succeeded; assumed power on 2 August 1393 aged 13", sources: [wp-henry-iii-of-castile, wp-john-i-of-castile]}
+  - {person: henry-iii-of-castile, title: King of León, realm: León, from: 1390-10-09, to: 1406-12-25, sources: [wp-henry-iii-of-castile, wp-john-i-of-castile]}
+  # John II.
+  - {person: john-ii-of-castile, title: King of Castile, realm: Castile, from: 1406-12-25, to: 1454-07-20, note: "Regency of his mother Catherine of Lancaster and uncle Ferdinand I of Aragon (to 1416), then Catherine alone to 1418", sources: [wp-john-ii-of-castile, wp-henry-iii-of-castile]}
+  - {person: john-ii-of-castile, title: King of León, realm: León, from: 1406-12-25, to: 1454-07-20, sources: [wp-john-ii-of-castile]}
+  # Henry IV.
+  - {person: henry-iv-of-castile, title: King of Castile, realm: Castile, from: 1454-07-21, to: 1474-12-11, note: "Proclaimed king the day after his father's death", sources: [wp-henry-iv-of-castile]}
+  - {person: henry-iv-of-castile, title: King of León, realm: León, from: 1454-07-21, to: 1474-12-11, sources: [wp-henry-iv-of-castile]}
+  # Isabella I.
+  - {person: isabella-i-of-castile, title: Queen of Castile, realm: Castile, from: 1474-12-13, to: 1504-11-26, note: "Proclaimed at Segovia two days after Henry IV's death. Reigned jointly with her husband Ferdinand II of Aragon (the Catholic Monarchs), whom she married in 1469; Queen consort of Aragon from 1479", sources: [wp-isabella-i-of-castile]}
+  - {person: isabella-i-of-castile, title: Queen of León, realm: León, from: 1474-12-13, to: 1504-11-26, sources: [wp-isabella-i-of-castile]}
+
+places:
+  - key: leon
+    name: León
+    kind: city
+    region: Castile and León
+    country: Spain
+    lat: 42.599
+    lng: -5.571
+    visitable: true
+    note: "Capital of the Leonese kingdom. Ferdinand I was crowned and anointed here on 22 June 1038, Alfonso VI in January 1066, Alfonso VII on 10 March 1126 and as Emperor of Spain in the cathedral on 26 May 1135. Defined here."
+    sources: [wp-ferdinand-i-of-leon, wp-alfonso-vi-of-leon-and-castile, wp-alfonso-vii-of-leon-and-castile]
+  - key: basilica-of-san-isidoro
+    name: Basilica of San Isidoro
+    kind: basilica
+    city: León
+    region: Castile and León
+    country: Spain
+    lat: 42.5988
+    lng: -5.5693
+    visitable: true
+    note: "Consecrated at the end of 1063, when Ferdinand I made known his will; he died before its altar on 24 December 1065. The Cortes of León met in its cloisters in 1188."
+    sources: [wp-alfonso-vi-of-leon-and-castile, wp-ferdinand-i-of-leon, wp-alfonso-ix-of-leon]
+  - key: tamaron-battlefield
+    name: Tamarón battlefield
+    kind: battlefield
+    region: Burgos
+    country: Spain
+    lat: 42.39
+    lng: -4.03
+    note: "Where Ferdinand I killed Bermudo III on 4 September 1037. Site approximate."
+    sources: [wp-ferdinand-i-of-leon, wp-bermudo-iii-of-leon]
+  - key: zamora
+    name: Zamora
+    kind: city
+    region: Zamora
+    country: Spain
+    lat: 41.503
+    lng: -5.744
+    visitable: true
+    note: "Birthplace of Sancho II and of Alfonso IX; the city of Urraca, daughter of Ferdinand I, besieged by Sancho II in 1072."
+    sources: [wp-sancho-ii-of-castile, wp-alfonso-ix-of-leon]
+  - key: toledo
+    name: Toledo
+    kind: city
+    region: Toledo
+    country: Spain
+    lat: 39.862
+    lng: -4.027
+    visitable: true
+    note: "Taken by Alfonso VI on 25 May 1085; he died here on 1 July 1109. Birthplace of Alfonso X; Sancho IV died here on 25 April 1295 and Henry III on 25 December 1406; Sancho III was buried here in 1158. Defined here."
+    sources: [wp-alfonso-vi-of-leon-and-castile, wp-alfonso-x-of-castile, wp-sancho-iv-of-castile, wp-henry-iii-of-castile]
+  - key: toledo-cathedral
+    name: Toledo Cathedral
+    kind: cathedral
+    city: Toledo
+    region: Toledo
+    country: Spain
+    lat: 39.8573
+    lng: -4.0239
+    visitable: true
+    note: "Burial place of Sancho IV and, in the Chapel of the New Monarchs, of Henry II, John I and Henry III."
+    sources: [wp-ferdinand-iv-of-castile, wp-henry-ii-of-castile, wp-john-i-of-castile, wp-henry-iii-of-castile]
+  - key: sagrajas-battlefield
+    name: Sagrajas battlefield
+    kind: battlefield
+    region: Badajoz
+    country: Spain
+    lat: 38.88
+    lng: -6.99
+    historical_name: "Battle of Sagrajas (az-Zallaqa)"
+    note: "Where the Almoravids defeated Alfonso VI on 23 October 1086, in Extremadura near Badajoz. Site approximate."
+    sources: [wp-alfonso-vi-of-leon-and-castile]
+  - key: san-benito-sahagun
+    name: Royal Monastery of San Benito, Sahagún
+    kind: monastery
+    city: Sahagún
+    region: León
+    country: Spain
+    lat: 42.371
+    lng: -5.03
+    note: "Burial place of Alfonso VI. His tomb was destroyed in the fire of 1810; his remains are now in the Benedictine nuns' monastery of Sahagún. The monastery was dissolved in 1835."
+    sources: [wp-alfonso-vi-of-leon-and-castile]
+  - key: san-salvador-de-ona
+    name: Monastery of San Salvador de Oña
+    kind: monastery
+    city: Oña
+    region: Burgos
+    country: Spain
+    lat: 42.735
+    lng: -3.415
+    note: "Burial place of Sancho II."
+    sources: [wp-sancho-ii-of-castile]
+  - key: las-navas-de-tolosa-battlefield
+    name: Las Navas de Tolosa battlefield
+    kind: battlefield
+    region: Jaén
+    country: Spain
+    lat: 38.35
+    lng: -3.55
+    note: "Near Santa Elena. Where the Christian coalition under Alfonso VIII defeated the Almohad caliph on 16 July 1212. Site approximate."
+    sources: [wp-alfonso-viii-of-castile]
+  - key: cordoba
+    name: Córdoba
+    kind: city
+    region: Córdoba
+    country: Spain
+    lat: 37.888
+    lng: -4.779
+    visitable: true
+    note: "Old Umayyad capital, taken by Ferdinand III in 1236. Defined here."
+    sources: [wp-ferdinand-iii-of-castile]
+  - key: mosque-cathedral-of-cordoba
+    name: Mosque-Cathedral of Córdoba
+    kind: mosque-cathedral
+    city: Córdoba
+    region: Córdoba
+    country: Spain
+    lat: 37.879
+    lng: -4.780
+    visitable: true
+    note: "Ferdinand IV was buried in a chapel here on 13 September 1312; in 1371 he and Alfonso XI were placed in its Royal Chapel, and in 1736 moved to the Collegiate Church of Saint Hippolytus, Córdoba."
+    sources: [wp-ferdinand-iv-of-castile]
+  - key: seville
+    name: Seville
+    kind: city
+    region: Seville
+    country: Spain
+    lat: 37.389
+    lng: -5.984
+    visitable: true
+    note: "Entered by Ferdinand III as conqueror on 22 December 1248; Alfonso X died here in 1284. Defined here."
+    sources: [wp-ferdinand-iii-of-castile, wp-alfonso-x-of-castile]
+  - key: seville-cathedral
+    name: Seville Cathedral
+    kind: cathedral
+    city: Seville
+    region: Seville
+    country: Spain
+    lat: 37.386
+    lng: -5.993
+    visitable: true
+    note: "Ferdinand III was buried here on 1 June 1252 and his body is still on view; Ferdinand IV was baptised here."
+    sources: [wp-ferdinand-iii-of-castile, wp-ferdinand-iv-of-castile]
+  - key: gibraltar
+    name: Gibraltar
+    kind: fortress city
+    country: Gibraltar
+    lat: 36.14
+    lng: -5.353
+    visitable: true
+    note: "Capitulated to Ferdinand IV's forces on 12 September 1309; Alfonso XI died of the plague during its siege in 1350. Defined here."
+    sources: [wp-ferdinand-iv-of-castile, wp-alfonso-xi-of-castile]
+  - key: montiel-castle
+    name: Montiel castle
+    kind: castle
+    city: Montiel
+    region: Ciudad Real
+    country: Spain
+    lat: 38.70
+    lng: -2.87
+    note: "Fortress of the Order of Santiago where Peter took refuge after losing to Henry on 14 March 1369; he was killed in du Guesclin's tent on the night of 23 March. Site approximate."
+    sources: [wp-peter-of-castile, wp-henry-ii-of-castile]
+  - key: najera
+    name: Nájera
+    kind: town
+    region: La Rioja
+    country: Spain
+    lat: 42.416
+    lng: -2.730
+    note: "Where Peter, backed by the Black Prince, defeated Henry on 3 April 1367; Henry was also held prisoner here in 1360."
+    sources: [wp-henry-ii-of-castile, wp-peter-of-castile]
+  - key: aljubarrota-battlefield
+    name: Aljubarrota battlefield
+    kind: battlefield
+    region: Leiria
+    country: Portugal
+    lat: 39.568
+    lng: -8.824
+    note: "Where John I of Castile was defeated by John of Aviz on 14 August 1385."
+    sources: [wp-john-i-of-castile]
+  - key: granada
+    name: Granada
+    kind: city
+    region: Granada
+    country: Spain
+    lat: 37.177
+    lng: -3.599
+    visitable: true
+    note: "Last Muslim city of Iberia; Isabella and Ferdinand entered it on 2 January 1492. Defined here."
+    sources: [wp-isabella-i-of-castile]
+  - key: capilla-real-granada
+    name: Royal Chapel of Granada
+    kind: chapel
+    city: Granada
+    region: Granada
+    country: Spain
+    lat: 37.1766
+    lng: -3.5988
+    visitable: true
+    built_by: "Charles V, Holy Roman Emperor, her grandson"
+    note: "Isabella I is entombed here with Ferdinand and their daughter Joanna; the museum next door holds her crown and sceptre."
+    sources: [wp-isabella-i-of-castile]
+  - key: medina-del-campo
+    name: Medina del Campo
+    kind: town
+    region: Valladolid
+    country: Spain
+    lat: 41.311
+    lng: -4.913
+    note: "Isabella I died at the Royal Palace here on 26 November 1504; the Granada War is dated from the monarchs' arrival here on 1 February 1482."
+    sources: [wp-isabella-i-of-castile]
+  - key: madrigal-de-las-altas-torres
+    name: Madrigal de las Altas Torres
+    kind: town
+    region: Ávila
+    country: Spain
+    lat: 41.088
+    lng: -4.998
+    note: "Birthplace of Isabella I, 22 April 1451."
+    sources: [wp-isabella-i-of-castile]
+  - key: las-huelgas-burgos
+    name: Monasterio de Santa María la Real de Las Huelgas
+    kind: abbey
+    city: Burgos
+    region: Burgos
+    country: Spain
+    lat: 42.336
+    lng: -3.719
+    visitable: true
+    note: "Peter the Cruel was born in the defensive tower here in 1334, and Henry II was proclaimed king in the abbey in 1366."
+    sources: [wp-peter-of-castile, wp-henry-ii-of-castile]
+  - key: valladolid
+    name: Valladolid
+    kind: city
+    region: Valladolid
+    country: Spain
+    lat: 41.652
+    lng: -4.724
+    visitable: true
+    note: "Birthplace of Henry IV (1425) and place of death of John II (1454); Isabella married Ferdinand of Aragon here on 19 October 1469, in the Palacio de los Vivero. Defined here."
+    sources: [wp-henry-iv-of-castile, wp-john-ii-of-castile, wp-isabella-i-of-castile]
+  - key: alcazar-of-segovia
+    name: Alcázar of Segovia
+    kind: castle
+    city: Segovia
+    region: Segovia
+    country: Spain
+    lat: 40.9546
+    lng: -4.1318
+    visitable: true
+    note: "Alfonso VIII and Eleanor were the first to make it their residence; John II built the 'New Tower' (Tower of John II); Isabella took refuge here in December 1474 and was proclaimed queen the next day."
+    sources: [wp-alfonso-viii-of-castile, wp-john-ii-of-castile, wp-isabella-i-of-castile]
+  - key: jaen
+    name: Jaén
+    kind: city
+    region: Jaén
+    country: Spain
+    lat: 37.779
+    lng: -3.785
+    visitable: true
+    note: "Ferdinand IV died here on 7 September 1312."
+    sources: [wp-ferdinand-iv-of-castile]
+
+events:
+  - key: battle-of-tamaron-1037
+    name: Battle of Tamarón
+    type: Battle
+    date: 1037-09-04
+    place: tamaron-battlefield
+    people: [{person: ferdinand-i-of-leon, role: victor}, {person: bermudo-iii-of-leon, role: killed}]
+    prominence: 3
+    note: "Fought over the lands between the Cea and the Pisuerga; Ferdinand's victory over his brother-in-law gave him León."
+    sources: [wp-ferdinand-i-of-leon, wp-bermudo-iii-of-leon]
+  - key: coronation-of-ferdinand-i-1038
+    name: Coronation of Ferdinand I as king of León
+    type: Coronation
+    date: 1038-06-22
+    place: leon
+    people: [{person: ferdinand-i-of-leon, role: crowned}]
+    prominence: 3
+    note: "Crowned and anointed king in León."
+    sources: [wp-ferdinand-i-of-leon, wp-bermudo-iii-of-leon]
+  - key: siege-of-zamora-1072
+    name: Siege of Zamora and death of Sancho II
+    type: Siege
+    year: 1072
+    place: zamora
+    people: [{person: sancho-ii-of-castile, role: killed}, {person: alfonso-vi-of-leon-and-castile, role: heir}]
+    prominence: 3
+    note: "Sancho II besieged his sister Urraca's city; the Zamoran noble Vellido Dolfos killed him (7 October 1072, per the Sancho II article). Alfonso VI, in exile, took his brother's kingdoms."
+    sources: [wp-sancho-ii-of-castile, wp-alfonso-vi-of-leon-and-castile]
+  - key: conquest-of-toledo-1085
+    name: Conquest of Toledo
+    type: Siege
+    date: 1085-05-25
+    place: toledo
+    people: [{person: alfonso-vi-of-leon-and-castile, role: conqueror}]
+    prominence: 4
+    note: "Alfonso VI took the taifa capital after besieging it; he took the title 'King of Toledo'. The conquest provoked the Almoravid invasion."
+    sources: [wp-alfonso-vi-of-leon-and-castile]
+  - key: battle-of-sagrajas-1086
+    name: Battle of Sagrajas
+    type: Battle
+    date: 1086-10-23
+    place: sagrajas-battlefield
+    people: [{person: alfonso-vi-of-leon-and-castile, role: defeated}]
+    prominence: 3
+    note: "The Almoravid army and the taifa troops beat Alfonso VI's forces; the start of three decades of Almoravid initiative."
+    sources: [wp-alfonso-vi-of-leon-and-castile]
+  - key: coronation-of-alfonso-vii-as-emperor-1135
+    name: Alfonso VII crowned Emperor of Spain
+    type: Coronation
+    date: 1135-05-26
+    place: leon
+    people: [{person: alfonso-vii-of-leon-and-castile, role: crowned}]
+    prominence: 3
+    note: "In the cathedral of León, to assert his authority over the whole peninsula and leadership of the Reconquista."
+    sources: [wp-alfonso-vii-of-leon-and-castile]
+  - key: cortes-of-leon-1188
+    name: Cortes of León
+    type: Assembly
+    year: 1188
+    place: basilica-of-san-isidoro
+    people: [{person: alfonso-ix-of-leon, role: summoned}]
+    prominence: 4
+    note: "Alfonso IX called nobles, clergy and city representatives, described as the fullest citizen representation in Western Europe at the time; held in the cloisters of San Isidoro."
+    sources: [wp-alfonso-ix-of-leon]
+  - key: battle-of-alarcos-1195
+    name: Battle of Alarcos
+    type: Battle
+    year: 1195
+    people: [{person: alfonso-viii-of-castile, role: defeated}]
+    prominence: 3
+    note: "Alfonso VIII was roundly defeated by the Almohad caliph Abu Yusuf Yaqub al-Mansur; Calatrava fell first and the frontier held near Toledo for 17 years. Day not given in the article."
+    sources: [wp-alfonso-viii-of-castile]
+  - key: battle-of-las-navas-de-tolosa-1212
+    name: Battle of Las Navas de Tolosa
+    type: Battle
+    date: 1212-07-16
+    place: las-navas-de-tolosa-battlefield
+    people: [{person: alfonso-viii-of-castile, role: victor}]
+    prominence: 5
+    note: "A crusade called through Pope Innocent III: Castilians, Aragonese and Catalans under Peter II, Navarrese under Sancho VII and Franks. The caliph Muhammad al-Nasir was routed and Almohad power broken."
+    sources: [wp-alfonso-viii-of-castile]
+  - key: founding-of-university-of-salamanca-1218
+    name: Founding of the University of Salamanca
+    type: Foundation
+    year: 1218
+    people: [{person: alfonso-ix-of-leon, role: founder}]
+    prominence: 3
+    note: "Alfonso IX founded it in 1218; Ferdinand III later strengthened it."
+    sources: [wp-alfonso-ix-of-leon, wp-ferdinand-iii-of-castile]
+  - key: union-of-leon-and-castile-1230
+    name: Treaty of Benavente and union of León and Castile
+    type: Treaty
+    date: 1230-12-11
+    people: [{person: ferdinand-iii-of-castile, role: king}, {person: alfonso-ix-of-leon, role: predecessor}]
+    prominence: 4
+    note: "After Alfonso IX's will left León to his daughters Sancha and Dulce, a treaty negotiated by their mothers gave Ferdinand III León for compensation to his half-sisters; the crowns were united for good."
+    sources: [wp-ferdinand-iii-of-castile, wp-alfonso-ix-of-leon]
+  - key: capture-of-cordoba-1236
+    name: Capture of Córdoba
+    type: Siege
+    year: 1236
+    place: cordoba
+    people: [{person: ferdinand-iii-of-castile, role: conqueror}]
+    prominence: 4
+    note: "Ferdinand arrived with a royal army to take the Medina; Pope Gregory IX hailed him 'athleta Christi'. Day not given in the article."
+    sources: [wp-ferdinand-iii-of-castile]
+  - key: capture-of-seville-1248
+    name: Capture of Seville
+    type: Siege
+    date: 1248-12-22
+    place: seville
+    people: [{person: ferdinand-iii-of-castile, role: conqueror}]
+    prominence: 4
+    note: "Ferdinand entered the greatest city of al-Andalus as conqueror; only the Emirate of Granada remained."
+    sources: [wp-ferdinand-iii-of-castile]
+  - key: election-of-alfonso-x-as-king-of-germany-1257
+    name: Alfonso X chosen king of Germany
+    type: Election
+    date: 1257-04-01
+    people: [{person: alfonso-x-of-castile, role: elected}]
+    prominence: 3
+    note: "A dissident faction of electors chose him through his Hohenstaufen descent; he never went to Germany and renounced the claim in 1275."
+    sources: [wp-alfonso-x-of-castile]
+  - key: capture-of-gibraltar-1309
+    name: Capture of Gibraltar
+    type: Siege
+    date: 1309-09-12
+    place: gibraltar
+    people: [{person: ferdinand-iv-of-castile, role: king}]
+    prominence: 3
+    note: "Taken during Ferdinand IV's campaign while he failed to take Algeciras."
+    sources: [wp-ferdinand-iv-of-castile]
+  - key: battle-of-rio-salado-1340
+    name: Battle of Río Salado
+    type: Battle
+    year: 1340
+    people: [{person: alfonso-xi-of-castile, role: victor}]
+    prominence: 4
+    note: "Alfonso XI beat the last great Marinid invasion of the peninsula. Day and place not given in the article."
+    sources: [wp-alfonso-xi-of-castile]
+  - key: battle-of-najera-1367
+    name: Battle of Nájera
+    type: Battle
+    date: 1367-04-03
+    place: najera
+    people: [{person: peter-of-castile, role: victor}, {person: henry-ii-of-castile, role: defeated}]
+    prominence: 3
+    note: "An Anglo-Gascon army under the Black Prince and John of Gaunt restored Peter; the Black Prince fell ill and the two parted over the cost."
+    sources: [wp-henry-ii-of-castile, wp-peter-of-castile]
+  - key: battle-of-montiel-1369
+    name: Battle of Montiel and death of Peter the Cruel
+    type: Battle
+    date: 1369-03-14
+    place: montiel-castle
+    people: [{person: henry-ii-of-castile, role: victor}, {person: peter-of-castile, role: defeated and killed}]
+    prominence: 4
+    note: "Henry, helped by Bertrand du Guesclin, beat Peter on 14 March; Peter was lured into du Guesclin's tent and killed by Henry on the night of 23 March 1369."
+    sources: [wp-henry-ii-of-castile, wp-peter-of-castile]
+  - key: battle-of-aljubarrota-1385
+    name: Battle of Aljubarrota
+    type: Battle
+    date: 1385-08-14
+    place: aljubarrota-battlefield
+    people: [{person: john-i-of-castile, role: defeated}]
+    prominence: 4
+    note: "John I's attempt to rule Portugal through his wife Beatrice ended; John of Aviz became uncontested king and Portugal stayed independent."
+    sources: [wp-john-i-of-castile]
+  - key: treaty-of-toros-de-guisando-1468
+    name: Treaty of Toros de Guisando
+    type: Treaty
+    date: 1468-09-19
+    people: [{person: isabella-i-of-castile, role: named heir}, {person: henry-iv-of-castile, role: king}]
+    prominence: 3
+    note: "Henry IV named Isabella heir presumptive instead of his daughter Joanna; she could not be forced to marry against her will."
+    sources: [wp-isabella-i-of-castile, wp-henry-iv-of-castile]
+  - key: marriage-of-isabella-and-ferdinand-1469
+    name: Marriage of Isabella and Ferdinand of Aragon
+    type: Marriage
+    date: 1469-10-19
+    place: valladolid
+    people: [{person: isabella-i-of-castile, role: bride}]
+    prominence: 4
+    note: "Betrothed 18 October 1469 without Henry IV's knowledge; married next day in the Palacio de los Vivero, with a papal dispensation that was in fact forged."
+    sources: [wp-isabella-i-of-castile]
+  - key: battle-of-toro-1476
+    name: Battle of Toro
+    type: Battle
+    date: 1476-03-01
+    people: [{person: isabella-i-of-castile, role: victorious claimant}]
+    prominence: 3
+    note: "Indecisive on the field, but a political victory for Isabella and Ferdinand: Joanna's party broke up and Afonso V's Portuguese army left Castile."
+    sources: [wp-isabella-i-of-castile]
+  - key: treaty-of-alcacovas-1479
+    name: Treaty of Alcáçovas
+    type: Treaty
+    date: 1479-09-04
+    people: [{person: isabella-i-of-castile, role: signatory}]
+    prominence: 3
+    note: "Portugal gave up the Castilian throne for most Atlantic territories (the Canary Islands stayed Castilian); ended the War of the Castilian Succession."
+    sources: [wp-isabella-i-of-castile]
+  - key: fall-of-granada-1492
+    name: Fall of Granada
+    type: Conquest
+    date: 1492-01-02
+    place: granada
+    people: [{person: isabella-i-of-castile, role: conqueror}]
+    prominence: 5
+    note: "Muhammad XI surrendered at the end of 1491 after a siege begun in spring 1491; the monarchs entered on 2 January 1492. The end of the Reconquista."
+    sources: [wp-isabella-i-of-castile]
+  - key: alhambra-decree-1492
+    name: Alhambra Decree
+    type: Edict
+    date: 1492-03-31
+    people: [{person: isabella-i-of-castile, role: issuer}]
+    prominence: 4
+    note: "Expelled the Jews of Spain; they had until the end of July to leave. Isabella opposed harsh measures on economic grounds but Torquemada persuaded Ferdinand."
+    sources: [wp-isabella-i-of-castile]
+  - key: columbus-first-voyage-1492
+    name: First voyage of Columbus
+    type: Exploration
+    date: 1492-08-03
+    end_year: 1492
+    people: [{person: isabella-i-of-castile, role: sponsor}]
+    prominence: 5
+    note: "Departed 3 August 1492 and reached the New World on 12 October; Isabella agreed to sponsor it three months after entering Granada."
+    sources: [wp-isabella-i-of-castile]
+
+moments:
+  - {person: bermudo-iii-of-leon, role: died, place: tamaron-battlefield, date: 1037-09-04}
+  - {person: ferdinand-i-of-leon, role: crowned, place: leon, date: 1038-06-22}
+  - {person: ferdinand-i-of-leon, role: died, place: leon, date: 1065-12-24}
+  - {person: sancho-ii-of-castile, role: born, place: zamora, year: 1037}
+  - {person: sancho-ii-of-castile, role: buried, place: san-salvador-de-ona, year: 1072}
+  - {person: alfonso-vi-of-leon-and-castile, role: crowned, place: leon, year: 1066}
+  - {person: alfonso-vi-of-leon-and-castile, role: died, place: toledo, date: 1109-07-01}
+  - {person: alfonso-vi-of-leon-and-castile, role: buried, place: san-benito-sahagun, year: 1109}
+  - {person: alfonso-vii-of-leon-and-castile, role: crowned, place: leon, date: 1126-03-10}
+  - {person: sancho-iii-of-castile, role: buried, place: toledo, year: 1158}
+  - {person: alfonso-ix-of-leon, role: born, place: zamora, date: 1171-08-15}
+  - {person: ferdinand-iii-of-castile, role: buried, place: seville-cathedral, date: 1252-06-01}
+  - {person: alfonso-x-of-castile, role: born, place: toledo, date: 1221-11-23}
+  - {person: alfonso-x-of-castile, role: died, place: seville, year: 1284}
+  - {person: sancho-iv-of-castile, role: crowned, place: toledo, year: 1284}
+  - {person: sancho-iv-of-castile, role: died, place: toledo, date: 1295-04-25}
+  - {person: sancho-iv-of-castile, role: buried, place: toledo-cathedral, year: 1295}
+  - {person: ferdinand-iv-of-castile, role: died, place: jaen, date: 1312-09-07}
+  - {person: ferdinand-iv-of-castile, role: buried, place: mosque-cathedral-of-cordoba, date: 1312-09-13}
+  - {person: alfonso-xi-of-castile, role: died, place: gibraltar, date: 1350-03-26}
+  - {person: peter-of-castile, role: born, place: las-huelgas-burgos, date: 1334-08-30}
+  - {person: peter-of-castile, role: died, place: montiel-castle, date: 1369-03-23}
+  - {person: henry-ii-of-castile, role: crowned, place: las-huelgas-burgos, year: 1366}
+  - {person: henry-ii-of-castile, role: buried, place: toledo-cathedral, year: 1379}
+  - {person: john-i-of-castile, role: buried, place: toledo-cathedral, year: 1390}
+  - {person: henry-iii-of-castile, role: died, place: toledo, date: 1406-12-25}
+  - {person: henry-iii-of-castile, role: buried, place: toledo-cathedral, year: 1406}
+  - {person: john-ii-of-castile, role: died, place: valladolid, date: 1454-07-20}
+  - {person: henry-iv-of-castile, role: born, place: valladolid, date: 1425-01-05}
+  - {person: isabella-i-of-castile, role: born, place: madrigal-de-las-altas-torres, date: 1451-04-22}
+  - {person: isabella-i-of-castile, role: died, place: medina-del-campo, date: 1504-11-26}
+  - {person: isabella-i-of-castile, role: buried, place: capilla-real-granada, year: 1504}
+
+links:
+  - {parent: alfonso-v-of-leon, child: bermudo-iii-of-leon}
+  - {parent: ferdinand-i-of-leon, child: sancho-ii-of-castile}
+  - {parent: ferdinand-i-of-leon, child: alfonso-vi-of-leon-and-castile}
+  - {parent: alfonso-vi-of-leon-and-castile, child: urraca-of-leon-and-castile}
+  - {parent: urraca-of-leon-and-castile, child: alfonso-vii-of-leon-and-castile}
+  - {parent: alfonso-vii-of-leon-and-castile, child: sancho-iii-of-castile}
+  - {parent: sancho-iii-of-castile, child: alfonso-viii-of-castile}
+  - {parent: alfonso-viii-of-castile, child: blanche-of-castile}
+  - {parent: alfonso-ix-of-leon, child: ferdinand-iii-of-castile}
+  - {parent: ferdinand-iii-of-castile, child: alfonso-x-of-castile}
+  - {parent: alfonso-x-of-castile, child: sancho-iv-of-castile}
+  - {parent: sancho-iv-of-castile, child: ferdinand-iv-of-castile}
+  - {parent: ferdinand-iv-of-castile, child: alfonso-xi-of-castile}
+  - {parent: alfonso-xi-of-castile, child: peter-of-castile}
+  - {parent: alfonso-xi-of-castile, child: henry-ii-of-castile}
+  - {parent: henry-ii-of-castile, child: john-i-of-castile}
+  - {parent: john-i-of-castile, child: henry-iii-of-castile}
+  - {parent: henry-iii-of-castile, child: john-ii-of-castile}
+  - {parent: john-ii-of-castile, child: henry-iv-of-castile}
+  - {parent: john-ii-of-castile, child: isabella-i-of-castile}
+
+discrepancies:
+  - key: bermudo-iii-accession-year
+    question: When did Bermudo III become king of León?
+    about: [{person: bermudo-iii-of-leon}]
+    field: title start
+    claims:
+      - {value: "1028 (king of León from 1028, per the article lead)", sources: [wp-bermudo-iii-of-leon]}
+      - {value: "1027 (the History section says he succeeded to the throne in 1027)", sources: [wp-bermudo-iii-of-leon]}
+    note: "The record uses 1028. Alfonso V of León is recorded as dying on 7 August 1028."
+  - key: alfonso-vi-birth-year
+    question: In what year was Alfonso VI born?
+    about: [{person: alfonso-vi-of-leon-and-castile}]
+    field: born
+    claims:
+      - {value: "c. 1040/1041 (article lead; birth order of the children)", sources: [wp-alfonso-vi-of-leon-and-castile]}
+      - {value: "Second half of 1047 or first half of 1048 (the Chronicle of Sahagún says he died at 62)", sources: [wp-alfonso-vi-of-leon-and-castile]}
+      - {value: "About 1030 (Pelagius of Oviedo says he was 79 at death), which would be before his parents' marriage", sources: [wp-alfonso-vi-of-leon-and-castile]}
+    note: "The record uses c. 1040, the lead's date."
+  - key: alfonso-vi-death-year
+    question: When did Alfonso VI die?
+    about: [{person: alfonso-vi-of-leon-and-castile}]
+    field: died
+    claims:
+      - {value: "1 July 1109, at Toledo", sources: [wp-alfonso-vi-of-leon-and-castile]}
+      - {value: "30 June or 1 July 1108 (the Urraca article's wording, which sits oddly beside its own reign start of 1109)", sources: [wp-urraca-of-leon-and-castile]}
+    note: "The record uses 1 July 1109, which the Alfonso VI article gives in its lead and its Death section; the 1108 reading looks like a slip in the Urraca article, since Sancho Alfónsez died at Uclés on 29 May 1108 'shortly before'."
+  - key: alfonso-ix-death-day
+    question: On what day did Alfonso IX die?
+    about: [{person: alfonso-ix-of-leon}]
+    field: died
+    claims:
+      - {value: "23 September 1230", sources: [wp-alfonso-ix-of-leon]}
+      - {value: "24 September 1230", sources: [wp-alfonso-ix-of-leon]}
+    note: "The article's lead says '23 or 24 September' and the Death section says 24 September; the record uses 24 September."
+  - key: ferdinand-iii-birth-year
+    question: In what year was Ferdinand III born?
+    about: [{person: ferdinand-iii-of-castile}]
+    field: born
+    claims:
+      - {value: "1199 (or even 1198)", sources: [wp-ferdinand-iii-of-castile]}
+      - {value: "Summer 1201 (more recent researchers)", sources: [wp-ferdinand-iii-of-castile]}
+    note: "The record uses 1201, marked estimated. The Alfonso IX article gives '1199/1201'."
+  - key: sancho-iv-birth-day
+    question: On what day in May 1258 was Sancho IV born?
+    about: [{person: sancho-iv-of-castile}]
+    field: born
+    claims:
+      - {value: "12 May 1258", sources: [wp-sancho-iv-of-castile]}
+      - {value: "13 May 1258", sources: [wp-alfonso-x-of-castile]}
+    note: "The record uses 12 May, from Sancho IV's own article."
+  - key: alfonso-xi-birth-day
+    question: On what day in August 1311 was Alfonso XI born?
+    about: [{person: alfonso-xi-of-castile}]
+    field: born
+    claims:
+      - {value: "11 August 1311", sources: [wp-alfonso-xi-of-castile]}
+      - {value: "13 August 1311, at Salamanca", sources: [wp-alfonso-xi-of-castile]}
+    note: "Both dates are in the same article (lead and Minority section). The record uses 13 August."
+  - key: alfonso-xi-death-day
+    question: On what day did Alfonso XI die?
+    about: [{person: alfonso-xi-of-castile}, {place: gibraltar}]
+    field: died
+    claims:
+      - {value: "The night of 25-26 March 1350", sources: [wp-alfonso-xi-of-castile]}
+      - {value: "27 March 1350, which the article calls wrong", sources: [wp-alfonso-xi-of-castile]}
+    note: "The record uses 26 March."
+  - key: henry-ii-reign-start
+    question: When did Henry II's reign as king of Castile begin?
+    about: [{person: henry-ii-of-castile}, {person: peter-of-castile}]
+    field: title start
+    claims:
+      - {value: "1366: proclaimed king in the Abbey of Las Huelgas, Burgos", sources: [wp-henry-ii-of-castile]}
+      - {value: "1368: the Cortes of Burgos recognised him as king after his return in September 1368", sources: [wp-peter-of-castile]}
+      - {value: "1369: 'became king in 1369' by defeating Peter at Montiel (14 March; Peter killed 23 March)", sources: [wp-henry-ii-of-castile]}
+    note: "The record uses 1369, the date the Henry II article gives for his becoming king. Peter's reign is recorded to 23 March 1369 and covers his 1366-67 ouster."
