@@ -53,7 +53,8 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 | `key`, `name` | Required for new places |
 | `historical_name` | What it was called then |
 | `kind` | castle, abbey, church, battlefield, city, museum, harbour, … |
-| `region`, `country` | Region and modern country |
+| `city` | The city or town it is in today ("London"); leave out when the place is itself the city |
+| `region`, `country` | County or state, and modern country, by present-day standards ("Greater London", "England") |
 | `lat`, `lng` | Coordinates (decimal degrees) |
 | `visitable` | `true` if you can visit it today |
 | `visit_site` | What to visit (e.g. "Battle Abbey and Battlefield (English Heritage)") |

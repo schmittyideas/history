@@ -140,7 +140,7 @@ PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "hou
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
                  "born_estimated": "birth_estimated", "died_estimated": "death_estimated"}
 PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
-                "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
+                "city": "city", "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
                 "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",
                 "founded_estimated": "start_estimated", "built_by": "built_by", "architect": "architect"}
 EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
