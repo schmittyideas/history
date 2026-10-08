@@ -1,0 +1,978 @@
+batch:
+  title: "The emperors and empresses of Byzantium, 1034-1453"
+  requested: "Michael IV through Constantine XI, including Zoe and Theodora Porphyrogenita and the emperors of Nicaea: lives, reigns, battles, councils, places"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles for the 31 people (nothing was fetched). Line 1-3 of every file was checked: each is the right article (no disambiguation pages). Constantine XI's file is about 90k characters, but only the first ~60k are the article; the rest is notes and references and was skipped. Facts not in the articles are left out.
+# - Romanos III Argyros (1028-1034) was NOT downloaded and is NOT entered. Zoe's marriages to him, to Michael IV and to Constantine IX are only in Zoe's record and in the Michael IV note. The existing "Byzantine co-emperor"/"Byzantine Emperor" rows of Constantine VIII end in 1028, so the timeline has a gap 1028-1034 (Romanos III).
+# - Titles: "Byzantine Emperor" (realm Byzantine Empire, existing) for every emperor, and "Byzantine Empress" for Zoe and Theodora when they ruled in their own right. Zoe's row covers only the joint reign with Theodora, 21 April to 11 June 1042; her years as Augusta beside Romanos III, Michael IV and Constantine IX are in the note, not a title row. Theodora's row runs 21 April 1042 to 31 August 1056 (the article's own reign dates; sole ruler from 11 January 1055).
+# - Nicaea: Theodore I, John III and Theodore II keep realm Byzantine Empire and title "Byzantine Emperor", with the note 'in exile at Nicaea, 1204-1261'. Michael VIII's row starts on 1 January 1259 (formally proclaimed emperor at Nymphaion) and runs to his death; before 1261 it is also Nicaea. The Latin emperors, the Empire of Trebizond, Epirus and the Bulgarian rulers are out of scope.
+# - Not entered (no article downloaded, or a title with no realm): regents Eudokia Makrembolitissa (1067-68, she also co-ruled one month with Michael VII in 1071) and Maria of Antioch (1180-82); the boy-emperor John IV Laskaris (1258-1261; the timeline has a gap 16 August 1258 to 1 January 1259 before Michael VIII, and John is named only in notes); the usurper emperors Andronikos IV, John VII, Alexios Branas, Nestor, Nicholas Kanabos, Constantine Laskaris and the like; Michael IX, John VII and other co-emperors. Co-emperor rows ('Byzantine co-emperor') for John II (1092), Alexios II (1171), Andronikos II (crowned 8 November 1272), Manuel II (25 September 1373) and Andronikos III (crowned February 1325) are NOT entered, to keep the batch to about 100 rows; their dates are in the person notes. Add them in a later batch if wanted.
+# - Start dates: where an article gives the predecessor's last day, the row starts then and the note gives the coronation (as the Scotland batch does). Exceptions: Nikephoros III starts on 7 January 1078, the date in his article's lead (Senate acclamation), even though Michael VII's row runs to 31 March 1078; the two rows overlap, which is the historical dispute (see the discrepancy). Isaac I starts 30 August 1057 (Michael VI's abdication; the army had proclaimed him on 8 June). Month-only dates (Alexios III March 1195; Alexios IV August 1203; Alexios II end September 1183; Andronikos I September 1183; Theodore I and John III 1221) are given as the year.
+# - Overlaps on purpose: John V (1341-1391) overlaps John VI (1347-1354) and the interruptions of 1376 (Andronikos IV) and 1390 (John VII) are only in the note; John VI's own proclamation at Didymoteichon in 1341 is in his note (no day in the article).
+# - Events the articles give no usable date or place for, so not entered or entered without a place: Battle of Myriokephalon (1176 is the year the Manuel I article implies; no coordinates are given and the site is disputed, so the event has no place); Levounion, Beroia, Pelagonia, Ankara, Lyon and Florence have no defined place here; the Battle of Pelekanon (10 or 15 June 1329, Andronikos III) is not entered; the Treaty of Deabolis (1108), the Battle of Civetot (October 1096), the Fourth Crusade's arrival (June 1203) and Alexios V's coup (January 1204) are only in notes.
+# - 'Theodosian Walls': that name appears in none of the articles, which say only 'walls of Constantinople', 'land walls', 'Gate of St. Romanus' and 'Kerkoporta'. The place key and name theodosian-walls are from general knowledge (as the brief asked); founded/built_by are therefore left out. The point is the St. Romanus Gate area, approximate.
+# - Coordinates are from general knowledge (2-3 decimals) and approximate for Blachernae, the walls, Nymphaion, Sosandra and the Stoudios monastery; Manzikert (Malazgirt) is the modern town, approximate. The 'visitable' flags are also general knowledge. Sosandra monastery was destroyed after the 14th-century Turkish conquest (Theodore II article), so it is not visitable.
+# - Shared keys defined here that other batches might also send: constantinople, hagia-sophia, blachernae-palace, theodosian-walls, nicaea, manzikert-battlefield, great-schism-1054, battle-of-manzikert-1071, first-crusade-at-constantinople-1096, sack-of-constantinople-1204, second-council-of-lyon-1274, council-of-florence-1439, fall-of-constantinople-1453, recapture-of-constantinople-1261. Existing keys reused (no redefinition): constantine-viii (two parent links and one discrepancy), basil-ii (not used), london.
+# - The Great Schism event has only the emperor as a person; Leo IX, Keroularios and the legates have no keys in this batch.
+# - Discrepancies recorded below: Constantine VIII's death day (11 or 12 November 1028) and the date of Zoe's marriage; the name of the 1057 battle (Hades or Petroe); Michael VII's abdication and Nikephoros III's accession in 1078; Manuel I's death day; Alexios I's death day; Isaac II's overthrow (March or April 1195); Alexios III's flight (17/18 or 18/19 July 1203); the coup of Alexios V (27, 28 or 28/29 January 1204) and the deaths of Isaac II and Alexios IV; John III's death (date and place); Michael VIII's proclamation; Constantine IX's birth; Constantine XI's accession (6 or 23 January 1449) and death (29 or 30 May 1453). Seen and not entered: Battle of Pelekanon (10 or 15 June 1329); Isaac II's birth is 'possibly September 1156'; John V's and Andronikos II's families are in the notes only; Theodore II's birth is 'November 1221/1222' (recorded as 1221, estimated); the fate and burial of Michael V are not in the article.
+# - Size: 31 people, 32 title rows, 12 places, 25 events (100 rows), 15 links, 34 moments, 14 discrepancies.
+
+sources:
+  - {key: wp-michael-iv-the-paphlagonian, title: "Michael IV the Paphlagonian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_IV_the_Paphlagonian"}
+  - {key: wp-michael-v-kalaphates,        title: "Michael V Kalaphates (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Michael_V_Kalaphates"}
+  - {key: wp-zoe-porphyrogenita,          title: "Zoe Porphyrogenita (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Zoe_Porphyrogenita"}
+  - {key: wp-constantine-ix-monomachos,   title: "Constantine IX Monomachos (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Constantine_IX_Monomachos"}
+  - {key: wp-theodora-porphyrogenita,     title: "Theodora Porphyrogenita (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Theodora_Porphyrogenita"}
+  - {key: wp-michael-vi-bringas,          title: "Michael VI Bringas (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Michael_VI_Bringas"}
+  - {key: wp-isaac-i-komnenos,            title: "Isaac I Komnenos (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Isaac_I_Komnenos"}
+  - {key: wp-constantine-x-doukas,        title: "Constantine X Doukas (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Constantine_X_Doukas"}
+  - {key: wp-romanos-iv-diogenes,         title: "Romanos IV Diogenes (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Romanos_IV_Diogenes"}
+  - {key: wp-michael-vii-doukas,          title: "Michael VII Doukas (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Michael_VII_Doukas"}
+  - {key: wp-nikephoros-iii-botaneiates,  title: "Nikephoros III Botaneiates (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Nikephoros_III_Botaneiates"}
+  - {key: wp-alexios-i-komnenos,          title: "Alexios I Komnenos (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Alexios_I_Komnenos"}
+  - {key: wp-john-ii-komnenos,            title: "John II Komnenos (Wikipedia)",            url: "https://en.wikipedia.org/wiki/John_II_Komnenos"}
+  - {key: wp-manuel-i-komnenos,           title: "Manuel I Komnenos (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Manuel_I_Komnenos"}
+  - {key: wp-alexios-ii-komnenos,         title: "Alexios II Komnenos (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Alexios_II_Komnenos"}
+  - {key: wp-andronikos-i-komnenos,       title: "Andronikos I Komnenos (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Andronikos_I_Komnenos"}
+  - {key: wp-isaac-ii-angelos,            title: "Isaac II Angelos (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Isaac_II_Angelos"}
+  - {key: wp-alexios-iii-angelos,         title: "Alexios III Angelos (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Alexios_III_Angelos"}
+  - {key: wp-alexios-iv-angelos,          title: "Alexios IV Angelos (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Alexios_IV_Angelos"}
+  - {key: wp-alexios-v-doukas,            title: "Alexios V Doukas (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Alexios_V_Doukas"}
+  - {key: wp-theodore-i-laskaris,         title: "Theodore I Laskaris (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Theodore_I_Laskaris"}
+  - {key: wp-john-iii-doukas-vatatzes,    title: "John III Doukas Vatatzes (Wikipedia)",    url: "https://en.wikipedia.org/wiki/John_III_Doukas_Vatatzes"}
+  - {key: wp-theodore-ii-laskaris,        title: "Theodore II Laskaris (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Theodore_II_Laskaris"}
+  - {key: wp-michael-viii-palaiologos,    title: "Michael VIII Palaiologos (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Michael_VIII_Palaiologos"}
+  - {key: wp-andronikos-ii-palaiologos,   title: "Andronikos II Palaiologos (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Andronikos_II_Palaiologos"}
+  - {key: wp-andronikos-iii-palaiologos,  title: "Andronikos III Palaiologos (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Andronikos_III_Palaiologos"}
+  - {key: wp-john-v-palaiologos,          title: "John V Palaiologos (Wikipedia)",          url: "https://en.wikipedia.org/wiki/John_V_Palaiologos"}
+  - {key: wp-john-vi-kantakouzenos,       title: "John VI Kantakouzenos (Wikipedia)",       url: "https://en.wikipedia.org/wiki/John_VI_Kantakouzenos"}
+  - {key: wp-manuel-ii-palaiologos,       title: "Manuel II Palaiologos (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Manuel_II_Palaiologos"}
+  - {key: wp-john-viii-palaiologos,       title: "John VIII Palaiologos (Wikipedia)",       url: "https://en.wikipedia.org/wiki/John_VIII_Palaiologos"}
+  - {key: wp-constantine-xi-palaiologos,  title: "Constantine XI Palaiologos (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Constantine_XI_Palaiologos"}
+
+people:
+  - key: michael-iv-the-paphlagonian
+    name: Michael IV the Paphlagonian
+    type: Royalty
+    realm: Byzantine Empire
+    born: 1010
+    born_estimated: true
+    died: 1041-12-10
+    prominence: 2
+    note: "Peasant-born money changer who became Zoe's lover and, on the day Romanos III was found dead in his bath (11 April 1034), her husband; crowned the next day. Epileptic and ill, he left government to his brother John the Orphanotrophos. Led the army against the Bulgarian rebels in 1041 and died a few months later as a monk."
+    sources: [wp-michael-iv-the-paphlagonian, wp-zoe-porphyrogenita]
+  - key: michael-v-kalaphates
+    name: Michael V Kalaphates
+    type: Royalty
+    realm: Byzantine Empire
+    born: 1015
+    born_estimated: true
+    prominence: 2
+    note: "Nephew of Michael IV and adopted son of Zoe; 'the Caulker'. Proclaimed 13 December 1041, banished Zoe on the night of 18-19 April 1042, and was overthrown by a popular revolt on 21 April; blinded and sent to a monastery. The article gives no death date; the birth year is only 'sometimes given'."
+    sources: [wp-michael-v-kalaphates]
+  - key: zoe-porphyrogenita
+    name: Zoe Porphyrogenita
+    type: Royalty
+    house: Macedonian
+    realm: Byzantine Empire
+    born: 978
+    born_estimated: true
+    died: 1050
+    prominence: 3
+    note: "Daughter of Constantine VIII, born into the purple. Promised to Otto III (he died before she reached Italy in 1002). Married Romanos III (10 November 1028), Michael IV (11 April 1034) and Constantine IX (11 June 1042); adopted Michael V. Joint empress with her sister Theodora from 21 April to 11 June 1042, then Augusta beside Constantine IX until her death."
+    sources: [wp-zoe-porphyrogenita, wp-michael-iv-the-paphlagonian]
+  - key: constantine-ix-monomachos
+    name: Constantine IX Monomachos
+    type: Royalty
+    realm: Byzantine Empire
+    died: 1055-01-11
+    prominence: 3
+    note: "Third husband of Zoe; emperor from 1042 to 1055. Spent the treasury, debased the gold nomisma, re-founded the University of Constantinople (1046), annexed Ani (1045) and put down the rebellion of Leo Tornikios (1047). In 1054 the papal legates' bull was laid on the altar of Hagia Sophia in his reign (the Great Schism). Born around 980 or 1000 at Antioch (see discrepancy)."
+    sources: [wp-constantine-ix-monomachos, wp-zoe-porphyrogenita]
+  - key: theodora-porphyrogenita
+    name: Theodora Porphyrogenita
+    type: Royalty
+    house: Macedonian
+    realm: Byzantine Empire
+    born: 980
+    born_estimated: true
+    died: 1056-08-31
+    prominence: 3
+    note: "Youngest daughter of Constantine VIII and last of the Macedonian dynasty. Confined in the Petrion monastery from 1031; proclaimed empress with Zoe by the crowd in 1042 and crowned 21 April. Reigned in her own right from 11 January 1055 until her death at about 76. Named no heir; her advisers chose Michael VI as she was dying."
+    sources: [wp-theodora-porphyrogenita, wp-zoe-porphyrogenita]
+  - key: michael-vi-bringas
+    name: Michael VI Bringas
+    type: Royalty
+    realm: Byzantine Empire
+    died: 1057
+    died_estimated: true
+    prominence: 1
+    note: "Elderly civil servant (Stratiotikos, 'the military one') picked by Theodora's advisers in her last hours. Lost the support of the eastern generals, was beaten at the Battle of Petroe and abdicated on 30 August 1057 in favour of Isaac I; died soon after as a monk."
+    sources: [wp-michael-vi-bringas, wp-isaac-i-komnenos]
+  - key: isaac-i-komnenos
+    name: Isaac I Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1007
+    born_estimated: true
+    died: 1060-06-01
+    prominence: 3
+    note: "General, first reigning Komnenos. Proclaimed by the army on 8 June 1057 and crowned in Hagia Sophia on 1 September. Cut pensions, took Church land and jailed Patriarch Keroularios (8 November 1058). Ill after a hunt, he named Constantine Doukas his heir on 22 November 1059 and retired to the Stoudios monastery, where he died (probably 1 June 1060)."
+    sources: [wp-isaac-i-komnenos]
+  - key: constantine-x-doukas
+    name: Constantine X Doukas
+    type: Royalty
+    house: Doukas
+    realm: Byzantine Empire
+    born: 1006
+    born_estimated: true
+    died: 1067-05-23
+    prominence: 2
+    note: "Founder of the Doukid dynasty; chosen by the ailing Isaac I and crowned 23 November 1059. Favoured the civil bureaucracy, cut army pay and disbanded the Armenian militia just as the Seljuks advanced; the Normans took Calabria and Alp Arslan took Ani in 1064."
+    sources: [wp-constantine-x-doukas]
+  - key: romanos-iv-diogenes
+    name: Romanos IV Diogenes
+    type: Royalty
+    realm: Byzantine Empire
+    born: 1030
+    born_estimated: true
+    died: 1072-08-04
+    prominence: 3
+    note: "Cappadocian general who married the dowager Eudokia Makrembolitissa and was crowned on 1 January 1068. Defeated and captured by Alp Arslan at Manzikert (26 August 1071), released on a ransom treaty, then deposed by the Doukas family. Blinded at Kotyaion on 29 June 1072 and died of his wounds on Prote."
+    sources: [wp-romanos-iv-diogenes]
+  - key: michael-vii-doukas
+    name: Michael VII Doukas
+    type: Royalty
+    house: Doukas
+    realm: Byzantine Empire
+    born: 1050
+    born_estimated: true
+    died: 1090
+    died_estimated: true
+    prominence: 2
+    note: "Parapinakes ('minus a quarter', for the devalued coinage). Eldest son of Constantine X, associated with the throne about 1060; senior emperor from about 1 October 1071 after Manzikert. Ruled through his minister Nikephoritzes; lost Bari (1071) and Anatolia. Abdicated in March 1078 to Nikephoros III and became a monk at the Stoudios monastery; later metropolitan of Ephesus."
+    sources: [wp-michael-vii-doukas, wp-romanos-iv-diogenes]
+  - key: nikephoros-iii-botaneiates
+    name: Nikephoros III Botaneiates
+    type: Royalty
+    realm: Byzantine Empire
+    born: 1002
+    died: 1081
+    prominence: 2
+    note: "Anatolian general, proclaimed emperor against Michael VII (July or October 1077) and by the Senate on 7 January 1078; entered Constantinople 3 April 1078. Faced four revolts and a Varangian plot; deposed by Alexios Komnenos on 1 April 1081 and became a monk at the Peribleptos. Married Maria of Alania, Michael VII's wife."
+    sources: [wp-nikephoros-iii-botaneiates, wp-michael-vii-doukas]
+  - key: alexios-i-komnenos
+    name: Alexios I Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1057
+    born_estimated: true
+    died: 1118-08-15
+    prominence: 4
+    note: "Took Constantinople on 1 April 1081 and ruled 37 years. Beat the Normans of Robert Guiscard and Bohemond, the Pechenegs at Levounion (29 April 1091) and, with the First Crusade, recovered western Anatolia. Founded the Komnenian restoration; his daughter Anna Komnene wrote the Alexiad. Succeeded by John II."
+    sources: [wp-alexios-i-komnenos]
+  - key: john-ii-komnenos
+    name: John II Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1087-09-13
+    died: 1143-04-08
+    prominence: 3
+    note: "'John the Good', called the greatest of the Komnenian emperors. Co-emperor from 1092, took the signet ring from the dying Alexios on 15 August 1118. Destroyed the Pechenegs at Beroia (1122), reconquered much of Anatolia and Cilicia, and built the Pantokrator monastery. Died of a poisoned-arrow wound while hunting in Cilicia."
+    sources: [wp-john-ii-komnenos, wp-alexios-i-komnenos]
+  - key: manuel-i-komnenos
+    name: Manuel I Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1118-11-28
+    died: 1180-09-24
+    prominence: 4
+    note: "Born in the purple chamber of the Great Palace; chosen by John II over his brother Isaac and acclaimed by the army in Cilicia in April 1143, crowned in Constantinople in mid-August. Pursued an ambitious western and crusader policy, took Dalmatia and Sirmium, and was defeated by Kilij Arslan II at Myriokephalon (1176). Buried at the Pantokrator beside his father. Death day: see discrepancy."
+    sources: [wp-manuel-i-komnenos, wp-john-ii-komnenos]
+  - key: alexios-ii-komnenos
+    name: Alexios II Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1169-09-14
+    died: 1183
+    prominence: 1
+    note: "Only son of Manuel I and Maria of Antioch; co-emperor from 1171, emperor at eleven. Ruled under his mother's regency, then under Andronikos I, who officially restored him on 16 May 1182, made him sign his mother's death sentence, and had him strangled in September 1183."
+    sources: [wp-alexios-ii-komnenos, wp-andronikos-i-komnenos]
+  - key: andronikos-i-komnenos
+    name: Andronikos I Komnenos
+    type: Royalty
+    house: Komnenos
+    realm: Byzantine Empire
+    born: 1118
+    born_estimated: true
+    died: 1185-09-12
+    prominence: 3
+    note: "Cousin of Manuel I, famous for his escapes and scandalous affairs. Entered Constantinople in April 1182 as protector of Alexios II, killed him in September 1183 and ruled as a feared anti-aristocratic reformer. Lynched by the mob in the Hippodrome after the Sicilian capture of Thessaloniki and the uprising of Isaac Angelos. Last Komnenian emperor."
+    sources: [wp-andronikos-i-komnenos]
+  - key: isaac-ii-angelos
+    name: Isaac II Angelos
+    type: Royalty
+    house: Angelos
+    realm: Byzantine Empire
+    born: 1156
+    born_estimated: true
+    died: 1204-01-28
+    prominence: 2
+    note: "Founder of the Angelos dynasty. Proclaimed after killing Stephen Hagiochristophorites and taking refuge in Hagia Sophia on 11 September 1185; beat the Normans at Demetritzes (7 November 1185). Lost Bulgaria to the Asen rising. Blinded and imprisoned by his brother Alexios III in 1195, restored in 1203 beside his son Alexios IV, and died after Alexios V's coup. 'Possibly born September 1156' in the article."
+    sources: [wp-isaac-ii-angelos, wp-andronikos-i-komnenos]
+  - key: alexios-iii-angelos
+    name: Alexios III Angelos
+    type: Royalty
+    house: Angelos
+    realm: Byzantine Empire
+    born: 1153
+    born_estimated: true
+    died: 1211
+    prominence: 2
+    note: "Deposed and blinded his brother Isaac II in 1195. Fled Constantinople on the night of 17-18 July 1203 as the Fourth Crusade attacked. Captured by Boniface of Montferrat, later ransomed, and captured again by his son-in-law Theodore I at the Battle of Antioch on the Meander (1211); died that year in the monastery at Nicaea."
+    sources: [wp-alexios-iii-angelos, wp-theodore-i-laskaris]
+  - key: alexios-iv-angelos
+    name: Alexios IV Angelos
+    type: Royalty
+    house: Angelos
+    realm: Byzantine Empire
+    born: 1182
+    born_estimated: true
+    died: 1204
+    prominence: 2
+    note: "Son of Isaac II. Escaped to the West in 1201 and bought the Fourth Crusade's help by promising money and church union. Made co-emperor with his father in July-August 1203, could not pay the crusaders, and was arrested by Alexios Doukas in January 1204 and strangled in February (probably 8 February)."
+    sources: [wp-alexios-iv-angelos, wp-alexios-v-doukas]
+  - key: alexios-v-doukas
+    name: Alexios V Doukas
+    type: Royalty
+    house: Doukas
+    realm: Byzantine Empire
+    died: 1204
+    prominence: 2
+    note: "Mourtzouphlos ('bushy eyebrows' or 'gloomy'). Seized the throne in a coup in late January 1204, crowned on or around 5 February, and led the defence against the crusaders. Fled on the night of 12 April 1204 when the walls fell; blinded by Alexios III, captured in November and thrown from the Column of Theodosius by the Latins (the article's lead gives December 1204 as his death). Last emperor to rule from Constantinople until 1261."
+    sources: [wp-alexios-v-doukas]
+  - key: theodore-i-laskaris
+    name: Theodore I Laskaris
+    type: Royalty
+    house: Laskaris
+    realm: Byzantine Empire
+    born: 1175
+    born_estimated: true
+    died: 1221
+    prominence: 3
+    note: "Son-in-law of Alexios III; escaped Constantinople in September 1203 and organised Greek resistance in Bithynia. Took the imperial title early in 1205 and was crowned by the patriarch at Nicaea on Easter Sunday, 6 April 1208. Killed the Seljuk sultan Kaykhusraw I in single combat (1211) and built the Empire of Nicaea, the base of the 1261 recovery. In exile at Nicaea, 1204-1261. Died November 1221."
+    sources: [wp-theodore-i-laskaris, wp-alexios-iii-angelos]
+  - key: john-iii-doukas-vatatzes
+    name: John III Doukas Vatatzes
+    type: Royalty
+    realm: Byzantine Empire
+    born: 1192
+    born_estimated: true
+    died: 1254-11-03
+    prominence: 3
+    note: "Son-in-law of Theodore I; emperor of Nicaea December 1221 to November 1254. Defeated his rivals at Poimanenon, took Thrace and Thessalonica, and allied with Frederick II. Canonised as John Vatatzes the Merciful (feast 4 November). Buried at Sosandra. In exile at Nicaea, 1204-1261. Death date and place differ between articles (see discrepancy)."
+    sources: [wp-john-iii-doukas-vatatzes, wp-theodore-ii-laskaris]
+  - key: theodore-ii-laskaris
+    name: Theodore II Laskaris
+    type: Royalty
+    house: Laskaris
+    realm: Byzantine Empire
+    born: 1221
+    born_estimated: true
+    died: 1258-08-16
+    prominence: 2
+    note: "Scholar-emperor, only child of John III. Succeeded 4 November 1254, crowned by Patriarch Arsenios at Christmas 1254. Fought Bulgaria and Epirus, distrusted the aristocrats, and died young of epilepsy or cancer at Magnesia, leaving the boy John IV to the regent George Mouzalon (murdered within ten days; Michael Palaiologos took over). In exile at Nicaea, 1204-1261. Born November 1221 or 1222."
+    sources: [wp-theodore-ii-laskaris, wp-john-iii-doukas-vatatzes]
+  - key: michael-viii-palaiologos
+    name: Michael VIII Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1224
+    died: 1282-12-11
+    prominence: 4
+    note: "Founder of the Palaiologan dynasty. Regent for John IV, proclaimed emperor on 1 January 1259 at Nymphaion, won at Pelagonia (1259), and recovered Constantinople on 25 July 1261 (entered 15 August). Blinded John IV in December 1261 and was excommunicated by Patriarch Arsenios. Accepted union with Rome at Lyon (1274); fought Charles of Anjou until the Sicilian Vespers of 1282. Denied burial in Constantinople."
+    sources: [wp-michael-viii-palaiologos, wp-theodore-ii-laskaris]
+  - key: andronikos-ii-palaiologos
+    name: Andronikos II Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1259-03-25
+    died: 1332-02-13
+    prominence: 2
+    note: "Born at Nicaea; acclaimed co-emperor after 1261, crowned 8 November 1272. Sole emperor from 11 December 1282 and repudiated his father's church union. Dismantled the fleet, lost most of Anatolia to the Turks (Bapheus 1302; Prusa fell 1326) and hired the Catalan Company. Deposed by his grandson Andronikos III in 1328; died a monk, buried at the Lips monastery."
+    sources: [wp-andronikos-ii-palaiologos, wp-michael-viii-palaiologos]
+  - key: andronikos-iii-palaiologos
+    name: Andronikos III Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1297-03-25
+    died: 1341-06-15
+    prominence: 2
+    note: "Grandson of Andronikos II; co-emperor before 1313, formally crowned co-emperor in February 1325, sole emperor from 24 May 1328 after a civil war. Recovered Chios, Lesbos, Phocaea and Thessaly and Epirus but lost Nicaea (1331) and Nicomedia (1337) to the Ottomans. Relied on John Kantakouzenos. Buried at the Hodegon monastery."
+    sources: [wp-andronikos-iii-palaiologos]
+  - key: john-v-palaiologos
+    name: John V Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1332-06-18
+    died: 1391-02-16
+    prominence: 3
+    note: "Emperor at eight; fought John VI Kantakouzenos in the civil wars of 1341-47 and 1352-54 and took full power in 1354. Converted to Catholicism in Rome (October 1369), was held for debt in Venice, and recognised Ottoman suzerainty in 1371. Deposed by his son Andronikos IV in 1376 and by his grandson John VII in 1390 (neither entered here). Ordered to raze the Golden Gate fortifications by Bayezid I."
+    sources: [wp-john-v-palaiologos, wp-manuel-ii-palaiologos]
+  - key: john-vi-kantakouzenos
+    name: John VI Kantakouzenos
+    type: Royalty
+    house: Kantakouzenos
+    realm: Byzantine Empire
+    born: 1292-05-06
+    died: 1383-06-15
+    prominence: 3
+    note: "Grand domestic under Andronikos III and regent for John V. Proclaimed emperor by his army at Didymoteichon in 1341 (no day in the article), entered Constantinople on 8 February 1347 and was crowned 21 May. Allied with the Ottomans, who got Gallipoli (1354). Deposed by John V in December 1354; became the monk Joasaph and wrote a History. Lived to 91, the longest-lived Roman emperor."
+    sources: [wp-john-vi-kantakouzenos, wp-john-v-palaiologos]
+  - key: manuel-ii-palaiologos
+    name: Manuel II Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1350-06-27
+    died: 1425-07-21
+    prominence: 3
+    note: "Co-emperor from 25 September 1373, emperor from February 1391. Held as hostage by Bayezid I, endured the blockade of 1394-1402, and toured Venice, Paris and London (1399-1403) for help; the only Byzantine emperor to visit England. Built the Hexamilion in the Morea (1415). Died a monk named Matthew; buried at the Pantokrator. Father of John VIII and Constantine XI."
+    sources: [wp-manuel-ii-palaiologos, wp-john-v-palaiologos]
+  - key: john-viii-palaiologos
+    name: John VIII Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1392-12-18
+    died: 1448-10-31
+    prominence: 3
+    note: "Had full power from 19 January 1421, sole emperor from 21 July 1425. Defended Constantinople against Murad II (1422) and travelled to Italy in 1423 and 1437-40. Consented to church union at the Council of Florence (1439), which Constantinople rejected. Childless after three marriages; died the last emperor to die naturally, buried at the Pantokrator."
+    sources: [wp-john-viii-palaiologos, wp-constantine-xi-palaiologos]
+  - key: constantine-xi-palaiologos
+    name: Constantine XI Palaiologos
+    type: Royalty
+    house: Palaiologos
+    realm: Byzantine Empire
+    born: 1404-02-08
+    died: 1453-05-29
+    prominence: 5
+    note: "Last reigning Byzantine emperor. Despot of the Morea from 1428, took Patras (1429-30) and Athens and Thebes (1444), and was regent in Constantinople twice. Proclaimed at Mystras on 6 January 1449, never crowned. Died defending Constantinople against Mehmed II; accounts of his death conflict. Became the 'Marble Emperor' of Greek legend. Dates of accession and death differ inside the article (see discrepancy)."
+    sources: [wp-constantine-xi-palaiologos, wp-manuel-ii-palaiologos]
+
+titles:
+  # Michael IV to Michael V to Zoe and Theodora
+  - {person: michael-iv-the-paphlagonian, title: Byzantine Emperor, realm: Byzantine Empire, from: 1034-04-11, to: 1041-12-10, note: "Began on the day Romanos III was found dead in his bath and Zoe married Michael; crowned by Patriarch Alexios on 12 April after a payment of 50 pounds of gold. Romanos III (1028-1034) is not entered.", sources: [wp-michael-iv-the-paphlagonian, wp-zoe-porphyrogenita]}
+  - {person: michael-v-kalaphates, title: Byzantine Emperor, realm: Byzantine Empire, from: 1041-12-13, to: 1042-04-21, note: "Proclaimed three days after Michael IV's death. Banished Zoe on the night of 18-19 April 1042; the crowd rose and he fled to the Stoudios monastery on 21 April, was arrested and blinded.", sources: [wp-michael-v-kalaphates, wp-zoe-porphyrogenita]}
+  - {person: zoe-porphyrogenita, title: Byzantine Empress, realm: Byzantine Empire, from: 1042-04-21, to: 1042-06-11, note: "Joint empress with her sister Theodora, the senior of the two, from their crowning on 21 April 1042. She married Constantine IX on 11 June 1042 and the management of the empire passed to him; she stayed Augusta and heir until her death in 1050 (the article says she 'continued to rule'). Earlier she was Augusta beside Romanos III (1028), Michael IV (1034) and Michael V (as adoptive mother).", sources: [wp-zoe-porphyrogenita, wp-theodora-porphyrogenita]}
+  - {person: constantine-ix-monomachos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1042-06-11, to: 1055-01-11, note: "Married Zoe on 11 June 1042 (Patriarch Alexios refused to officiate at a third marriage) and was crowned the next day. The article's lead gives the reign as June 1042 to January 1055.", sources: [wp-constantine-ix-monomachos, wp-zoe-porphyrogenita]}
+  - {person: theodora-porphyrogenita, title: Byzantine Empress, realm: Byzantine Empire, from: 1042-04-21, to: 1056-08-31, note: "Reigning empress from 21 April 1042 (joint with Zoe, the junior of the two) to her death; after 11 June 1042 real power went to Constantine IX, and she retired to a convent after Zoe's death in 1050. Returned to the Great Palace before Constantine IX died and was sole ruler from 11 January 1055. Coins and seals read 'Theodora, Augusta and porphyrogenita'.", sources: [wp-theodora-porphyrogenita]}
+  - {person: michael-vi-bringas, title: Byzantine Emperor, realm: Byzantine Empire, from: 1056-08-31, to: 1057-08-30, note: "Chosen by Theodora's advisers as she lay dying; crowned on 31 August 1056. Abdicated on 30 August 1057 at the urging of Patriarch Keroularios.", sources: [wp-michael-vi-bringas, wp-theodora-porphyrogenita, wp-isaac-i-komnenos]}
+  - {person: isaac-i-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1057-08-30, to: 1059-11-22, note: "Proclaimed by the eastern army at Gounaria on 8 June 1057; Michael VI abdicated on 30 August, Isaac entered the palace on 31 August and was crowned by the patriarch in Hagia Sophia on 1 September. Named Constantine Doukas his successor on 22 November 1059.", sources: [wp-isaac-i-komnenos, wp-constantine-x-doukas]}
+  - {person: constantine-x-doukas, title: Byzantine Emperor, realm: Byzantine Empire, from: 1059-11-23, to: 1067-05-23, note: "Acclaimed on 23 November 1059, the day after Isaac I's abdication. His sons Michael VII and Konstantios were junior co-emperors; after his death Eudokia Makrembolitissa ruled as regent until 1 January 1068 (not entered).", sources: [wp-constantine-x-doukas, wp-isaac-i-komnenos]}
+  - {person: romanos-iv-diogenes, title: Byzantine Emperor, realm: Byzantine Empire, from: 1068-01-01, to: 1071-10-01, to_estimated: true, note: "Married Eudokia and was crowned on 1 January 1068. Taken prisoner at Manzikert on 26 August 1071; the Doukas family declared him deposed and proclaimed Michael VII 'c. 1 October 1071'.", sources: [wp-romanos-iv-diogenes, wp-michael-vii-doukas]}
+  - {person: michael-vii-doukas, title: Byzantine Emperor, realm: Byzantine Empire, from: 1071-10-01, from_estimated: true, to: 1078-03-31, note: "Senior emperor from about 1 October 1071 (co-emperor with his father from about 1060 and beside Romanos IV from 1068). Abdicated on 31 March 1078 (the Michael VII article says 24 or 31 March) and retired to the Stoudios monastery.", sources: [wp-michael-vii-doukas, wp-nikephoros-iii-botaneiates]}
+  - {person: nikephoros-iii-botaneiates, title: Byzantine Emperor, realm: Byzantine Empire, from: 1078-01-07, to: 1081-04-01, note: "Date from the article's lead (Senate proclamation on 7 January 1078); he entered Constantinople and took the throne on 3 April 1078, after Michael VII's abdication. The rows overlap for that reason (see discrepancy). Abdicated at Alexios Komnenos's capture of the city on 1 April 1081.", sources: [wp-nikephoros-iii-botaneiates, wp-alexios-i-komnenos]}
+  - {person: alexios-i-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1081-04-01, to: 1118-08-15, note: "Entered Constantinople with his brother Isaac on 1 April 1081 and was crowned. Crowned John II co-emperor in 1092. Death day: the John II article suggests he died the night after 15 August 1118.", sources: [wp-alexios-i-komnenos, wp-nikephoros-iii-botaneiates, wp-john-ii-komnenos]}
+  - {person: john-ii-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1118-08-15, to: 1143-04-08, note: "Seized the signet ring at the Mangana monastery on 15 August 1118 and was acclaimed in the Great Palace; his mother Irene and sister Anna Komnene plotted against him. Co-emperor since 1092. Died of a poisoned-arrow wound in Cilicia.", sources: [wp-john-ii-komnenos, wp-alexios-i-komnenos]}
+  - {person: manuel-i-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1143-04-08, to: 1180-09-24, note: "Acclaimed by the army in Cilicia after John II died on 8 April 1143; entered Constantinople in mid-August and was crowned by Patriarch Michael II Kourkouas. The John II article gives Manuel's death as 21 September 1180 (see discrepancy).", sources: [wp-manuel-i-komnenos, wp-john-ii-komnenos]}
+  - {person: alexios-ii-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1180-09-24, to: 1183, note: "Co-emperor from 1171, emperor at eleven under his mother's regency. Restored to the throne by Andronikos I on 16 May 1182; strangled in September 1183 (year only: the article gives no day).", sources: [wp-alexios-ii-komnenos, wp-manuel-i-komnenos, wp-andronikos-i-komnenos]}
+  - {person: andronikos-i-komnenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1183, to: 1185-09-12, note: "Crowned co-emperor in September 1183 (year only), then had Alexios II strangled and ruled alone; made his son John co-emperor in November 1183. Lynched in the Hippodrome; the Isaac II article gives 12 September 1185 for his death, the day after Isaac was proclaimed.", sources: [wp-andronikos-i-komnenos, wp-isaac-ii-angelos]}
+  - {person: isaac-ii-angelos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1185-09-11, to: 1195, note: "Proclaimed in Hagia Sophia on 11 September 1185. Overthrown by Alexios III in 1195 (the Isaac II article says 8 or 9 April, the Alexios III article March; year only, see discrepancy), blinded and imprisoned.", sources: [wp-isaac-ii-angelos, wp-alexios-iii-angelos]}
+  - {person: alexios-iii-angelos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1195, to: 1203-07-18, note: "Acclaimed by the army in March 1195 (year only; Isaac II article: 8 or 9 April) while Isaac II was hunting in Thrace. Reigned as Alexios Komnenos. Fled on the night of 17-18 July 1203 as the Fourth Crusade attacked.", sources: [wp-alexios-iii-angelos, wp-isaac-ii-angelos]}
+  - {person: isaac-ii-angelos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1203-07-18, to: 1204-01-28, key: isaac-ii-angelos--byzantine-emperor--1203, note: "Second reign: brought out of prison after Alexios III fled and restored beside his son Alexios IV, who was the effective ruler. Imprisoned in Alexios Doukas's coup and died at about that time (the article's lead gives 28 January 1204).", sources: [wp-isaac-ii-angelos, wp-alexios-iv-angelos, wp-alexios-v-doukas]}
+  - {person: alexios-iv-angelos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1203, to: 1204-01-28, note: "Made co-emperor by the crusaders after Isaac II's release; the article gives only 'August 1203' for the start (year recorded). Arrested in Alexios Doukas's coup (27, 28 or 28/29 January 1204; see discrepancy) and strangled in February.", sources: [wp-alexios-iv-angelos, wp-alexios-v-doukas, wp-isaac-ii-angelos]}
+  - {person: alexios-v-doukas, title: Byzantine Emperor, realm: Byzantine Empire, from: 1204-01-28, to: 1204-04-12, note: "Acclaimed during the coup of late January 1204 (see discrepancy) and crowned on or around 5 February. Fled the city on the night of 12 April 1204 as the crusaders broke in. The last emperor to rule in Constantinople until 1261.", sources: [wp-alexios-v-doukas, wp-theodore-i-laskaris]}
+  - {person: theodore-i-laskaris, title: Byzantine Emperor, realm: Byzantine Empire, from: 1205, to: 1221, note: "In exile at Nicaea, 1204-1261. Assumed the imperial title early in 1205 and was crowned by Patriarch Michael Autoreianos on 6 April 1208. Died November 1221 (year only).", sources: [wp-theodore-i-laskaris]}
+  - {person: john-iii-doukas-vatatzes, title: Byzantine Emperor, realm: Byzantine Empire, from: 1221, to: 1254-11-03, note: "In exile at Nicaea, 1204-1261. Became emperor in December 1221 (year only) after a succession fight with Theodore I's brothers, settled at the Battle of Poimanenon. His death is 3 November in his own article and 4 November in Theodore II's (see discrepancy).", sources: [wp-john-iii-doukas-vatatzes, wp-theodore-ii-laskaris]}
+  - {person: theodore-ii-laskaris, title: Byzantine Emperor, realm: Byzantine Empire, from: 1254-11-04, to: 1258-08-16, note: "In exile at Nicaea, 1204-1261. Acclaimed on 4 November 1254 and crowned by Patriarch Arsenios at Christmas 1254. Died at Magnesia.", sources: [wp-theodore-ii-laskaris]}
+  - {person: michael-viii-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1259-01-01, to: 1282-12-11, note: "Formally proclaimed emperor at Nymphaion on 1 January 1259 (Nicaea until 1261; in exile at Nicaea, 1204-1261). Recovered Constantinople on 25 July 1261 and was crowned in Hagia Sophia on 15 August. The Theodore II article says he was proclaimed co-emperor 'before the end of the year' 1258 and crowned early in 1259 beside John IV.", sources: [wp-michael-viii-palaiologos, wp-theodore-ii-laskaris]}
+  - {person: andronikos-ii-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1282-12-11, to: 1328-05-24, note: "Sole emperor on Michael VIII's death (co-emperor since after 1261, crowned 8 November 1272). Forced to abdicate in the civil war with his grandson; the Andronikos III article gives 24 May 1328 as the day Andronikos III became sole emperor.", sources: [wp-andronikos-ii-palaiologos, wp-andronikos-iii-palaiologos]}
+  - {person: andronikos-iii-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1328-05-24, to: 1341-06-15, note: "Rebelled against his grandfather in 1321, crowned co-emperor in February 1325, sole emperor from 24 May 1328.", sources: [wp-andronikos-iii-palaiologos]}
+  - {person: john-v-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1341-06-15, to: 1391-02-16, note: "Emperor at eight from his father's death. Interrupted: John VI ruled as senior emperor 1347-1354, Andronikos IV usurped in 1376 and John VII in 1390 (the dates of the end of these interruptions are not in the articles).", sources: [wp-john-v-palaiologos, wp-andronikos-iii-palaiologos]}
+  - {person: john-vi-kantakouzenos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1347-02-08, to: 1354-12-10, note: "Proclaimed emperor at Didymoteichon in 1341 (no day in the article) as junior to John V; entered Constantinople on 8 February 1347 and was crowned on 21 May. Agreed to rule as senior emperor for ten years. Became a monk on 10 December 1354.", sources: [wp-john-vi-kantakouzenos, wp-john-v-palaiologos]}
+  - {person: manuel-ii-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1391-02-16, to: 1425-07-21, note: "Proclaimed emperor on 25 September 1373 as heir; succeeded when John V died in February 1391 (day from the John V article); crowned with Helena Dragas in 1392. Paralysed by a stroke on 1 October 1422 and left duties to John VIII.", sources: [wp-manuel-ii-palaiologos, wp-john-v-palaiologos]}
+  - {person: john-viii-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1425-07-21, to: 1448-10-31, note: "Sole emperor on his father's death; he had already assumed full power on 19 January 1421 and was co-emperor before 1416.", sources: [wp-john-viii-palaiologos]}
+  - {person: constantine-xi-palaiologos, title: Byzantine Emperor, realm: Byzantine Empire, from: 1449-01-06, to: 1453-05-29, note: "Proclaimed at Mystras on 6 January 1449 and never crowned in Hagia Sophia; the article's lead gives 23 January 1449 as the start (see discrepancy). Reached Constantinople on 12 March 1449. Died at the fall of the city, 29 May (or 30 May) 1453.", sources: [wp-constantine-xi-palaiologos]}
+
+places:
+  - key: constantinople
+    name: Constantinople
+    kind: city
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.009
+    lng: 28.978
+    visitable: true
+    visit_site: "Historic Areas of Istanbul: Hagia Sophia, the Hippodrome, the land walls"
+    founded: 330
+    built_by: "Constantine the Great, who founded it as the Roman Empire's new capital in 330"
+    note: "Today's Istanbul. Capital of the Byzantine Empire; held by the crusader Latin Empire 1204-1261 (57 years, per the Alexios V article), recovered by Michael VIII in 1261, and taken by Mehmed II on 29 May 1453. By 1449 only about 50,000 people lived in it (Constantine XI article)."
+    sources: [wp-constantine-xi-palaiologos, wp-alexios-v-doukas, wp-michael-viii-palaiologos]
+  - key: hagia-sophia
+    name: Hagia Sophia
+    kind: church
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.0086
+    lng: 28.9802
+    visitable: true
+    visit_site: "Hagia Sophia"
+    note: "Cathedral and coronation church of the emperors: Isaac I (1 September 1057), Michael VIII (second coronation, 15 August 1261). Refuge of Isaac II (1185), Maria Komnene and Renier (1181) and Anna Dalassene (1081); place of the legates' bull (1054), the Catholic liturgy of 12 December 1452, and the last joint service on the eve of 29 May 1453. Constantine IX paid for daily liturgy; he is depicted in a mosaic there."
+    sources: [wp-isaac-i-komnenos, wp-constantine-ix-monomachos, wp-isaac-ii-angelos, wp-constantine-xi-palaiologos, wp-theodore-ii-laskaris]
+  - key: blachernae-palace
+    name: Blachernae Palace
+    kind: palace
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.042
+    lng: 28.938
+    note: "Imperial residence close to the city walls; the Palaiologan emperors used it as their main residence instead of the old Great Palace (Constantine XI article). Isaac II and Alexios IV barricaded themselves here in January 1204; the crusaders looted it on 12 April 1204. The Council of Blachernae met in May 1157 under Manuel I. Point approximate."
+    sources: [wp-constantine-xi-palaiologos, wp-alexios-v-doukas, wp-manuel-i-komnenos]
+  - key: theodosian-walls
+    name: Walls of Constantinople (Theodosian Walls)
+    kind: fortification
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.016
+    lng: 28.924
+    visitable: true
+    visit_site: "Land walls of Istanbul"
+    note: "The land walls of Constantinople; the point is the St. Romanus Gate area, where the assault of 29 May 1453 was focused. The articles say only 'walls', 'land walls', 'Gate of St. Romanus' and 'Kerkoporta'. Breached by the crusaders near the Petria Gate on 12 April 1204 and repaired by Constantine XI in the winter of 1452-53. The name 'Theodosian' and founder are not in the articles."
+    sources: [wp-constantine-xi-palaiologos, wp-alexios-v-doukas, wp-manuel-i-komnenos]
+  - key: nicaea
+    name: Nicaea
+    kind: city
+    city: Iznik
+    region: Bursa Province
+    country: Turkey
+    lat: 40.429
+    lng: 29.721
+    visitable: true
+    visit_site: "Iznik walls and Hagia Sophia (Nicaea)"
+    note: "Capital of the Empire of Nicaea, 1205-1261: Theodore I was crowned here (1208), Theodore I and Alexios III were buried at the monastery of St. Hyakinthos, and Andronikos II was born here (1259). The First Crusade took it in 1097 and gave it back to Alexios I; the Battle of Petroe (Hades) in 1057 was fought near it. The Ottomans took it in 1331."
+    sources: [wp-theodore-i-laskaris, wp-alexios-iii-angelos, wp-andronikos-ii-palaiologos, wp-alexios-i-komnenos, wp-isaac-i-komnenos, wp-andronikos-iii-palaiologos]
+  - key: manzikert-battlefield
+    name: Manzikert
+    kind: battlefield
+    city: Malazgirt
+    region: Muş Province
+    country: Turkey
+    lat: 39.14
+    lng: 42.54
+    note: "Site of the Battle of Manzikert on 26 August 1071, between Romanos IV Diogenes and Alp Arslan. The articles do not locate it; the point is the modern town of Malazgirt, approximate."
+    sources: [wp-romanos-iv-diogenes]
+  - key: mystras
+    name: Mystras
+    kind: fortified city
+    region: Laconia
+    country: Greece
+    lat: 37.073
+    lng: 22.368
+    visitable: true
+    visit_site: "Mystras archaeological site"
+    note: "Capital of the Despotate of the Morea. Constantine XI was proclaimed emperor here on 6 January 1449, in a small civil ceremony possibly in one of the churches or the Despot's Palace. Turahan failed to take it in 1446."
+    sources: [wp-constantine-xi-palaiologos]
+  - key: pantokrator-monastery
+    name: Monastery of Christ Pantokrator
+    historical_name: "Pantokrator Monastery"
+    kind: monastery
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.019
+    lng: 28.957
+    visitable: true
+    visit_site: "Zeyrek Mosque (Monastery of Christ Pantokrator)"
+    built_by: "John II Komnenos, with his wife Irene (Piroska of Hungary)"
+    note: "Three churches and a five-ward hospital; the central church was the Komnenian funerary chapel (St. Michael). Manuel I was buried beside his father here (1180), and Manuel II (1425) and John VIII (1448) were later buried here. Andronikos I visited Manuel's tomb in 1182."
+    sources: [wp-john-ii-komnenos, wp-manuel-i-komnenos, wp-manuel-ii-palaiologos, wp-john-viii-palaiologos, wp-andronikos-i-komnenos]
+  - key: stoudios-monastery
+    name: Stoudios Monastery
+    kind: monastery
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 40.999
+    lng: 28.924
+    visitable: true
+    note: "Stoudion monastery in Constantinople. Isaac I and his brother John were raised here under Basil II's care; Michael V fled here in April 1042; Isaac I retired here in November 1059 and died here (1060); Michael VII retired here in 1078. Point approximate."
+    sources: [wp-isaac-i-komnenos, wp-michael-v-kalaphates, wp-michael-vii-doukas]
+  - key: nymphaion
+    name: Nymphaion
+    kind: palace
+    city: Kemalpasa
+    region: Izmir Province
+    country: Turkey
+    lat: 38.43
+    lng: 27.42
+    note: "Winter palace of John III Vatatzes (Theodore II article). Michael VIII was formally proclaimed emperor here on 1 January 1259, and the Treaty of Nymphaeum with Genoa (March 1261) was made here. The John III article says John III died here in 1254 (the Theodore II article says Nicaea). Point approximate."
+    sources: [wp-michael-viii-palaiologos, wp-theodore-ii-laskaris, wp-john-iii-doukas-vatatzes]
+  - key: magnesia
+    name: Magnesia
+    kind: city
+    city: Manisa
+    region: Manisa Province
+    country: Turkey
+    lat: 38.614
+    lng: 27.429
+    visitable: true
+    note: "Magnesia on the Hermos (Manisa). Theodore II kept his palace here and died here on 16 August 1258."
+    sources: [wp-theodore-ii-laskaris]
+  - key: sosandra-monastery
+    name: Sosandra Monastery
+    kind: monastery
+    region: Manisa Province
+    country: Turkey
+    lat: 38.62
+    lng: 27.42
+    visitable: false
+    built_by: "John III Doukas Vatatzes (the monastery he founded, per the article)"
+    note: "On Mount Sipylus, near Magnesia. John III (1254) and Theodore II (1258) were buried here. The grave and the monastery were destroyed after the Turkish conquest of the region in the 14th century. Point approximate."
+    sources: [wp-theodore-ii-laskaris, wp-john-iii-doukas-vatatzes]
+
+events:
+  - key: coronation-of-michael-iv-1034
+    name: Coronation of Michael IV
+    type: Coronation
+    date: 1034-04-12
+    people:
+      - {person: michael-iv-the-paphlagonian, role: crowned}
+      - {person: zoe-porphyrogenita, role: married}
+    prominence: 2
+    note: "Romanos III was found dying in his bath on 11 April 1034 (Psellus says he was held under water; Scylitzes says on Michael's orders; Matthew of Edessa says Zoe poisoned him). Zoe and Michael married that day; the next day Patriarch Alexios I crowned Michael after a payment of 50 pounds of gold. Place not named in the articles."
+    sources: [wp-michael-iv-the-paphlagonian, wp-zoe-porphyrogenita]
+  - key: uprising-and-joint-reign-of-zoe-and-theodora-1042
+    name: Uprising of 1042 and the joint reign of Zoe and Theodora
+    type: Revolt
+    date: 1042-04-21
+    place: hagia-sophia
+    people:
+      - {person: michael-v-kalaphates, role: deposed}
+      - {person: zoe-porphyrogenita, role: crowned}
+      - {person: theodora-porphyrogenita, role: crowned}
+    prominence: 4
+    note: "Michael V banished Zoe to Principus on the night of 18-19 April 1042; the mob rose on 19 April, sought out Theodora at the Petrion convent and proclaimed her empress with Zoe in Hagia Sophia. Both were crowned at dawn on 21 April and Michael fled to the Stoudios monastery, where he was arrested, blinded and made a monk. About three thousand died in the fighting by 21 April. Zoe, the senior empress, married Constantine IX on 11 June."
+    sources: [wp-michael-v-kalaphates, wp-zoe-porphyrogenita, wp-theodora-porphyrogenita]
+  - key: coronation-of-constantine-ix-1042
+    name: Coronation of Constantine IX
+    type: Coronation
+    date: 1042-06-12
+    people:
+      - {person: constantine-ix-monomachos, role: crowned}
+      - {person: zoe-porphyrogenita, role: married}
+    prominence: 3
+    note: "Zoe married Constantine Monomachos on 11 June 1042 without the participation of Patriarch Alexios, who would not officiate at a third marriage; Constantine was crowned by the patriarch the next day. Place not named in the articles."
+    sources: [wp-constantine-ix-monomachos, wp-zoe-porphyrogenita]
+  - key: great-schism-1054
+    name: The Great Schism (the legates' bull of 1054)
+    type: Schism
+    year: 1054
+    place: hagia-sophia
+    people:
+      - {person: constantine-ix-monomachos, role: emperor}
+    prominence: 4
+    note: "Papal legates of Leo IX, welcomed by Constantine IX, fell out with Patriarch Michael Keroularios; they put a bull of excommunication on the altar of Hagia Sophia and he excommunicated them, ending the hope of a papal-Byzantine alliance in southern Italy. The article gives no day. Leo IX, Keroularios and the legates have no keys in this batch."
+    sources: [wp-constantine-ix-monomachos]
+  - key: battle-of-petroe-1057
+    name: Battle of Petroe (Hades)
+    type: Battle
+    date: 1057-08-20
+    place: nicaea
+    people:
+      - {person: isaac-i-komnenos, role: victor}
+      - {person: michael-vi-bringas, role: defeated}
+      - {person: nikephoros-iii-botaneiates, role: commander}
+    prominence: 3
+    note: "Isaac Komnenos defeated the army of Michael VI near Nicaea on 20 August 1057 (date from the Michael VI and Nikephoros III articles; the Isaac I article calls it the Battle of Hades and gives no day). Kekaumenos took the loyalist camp; Botaneiates led a wing. The Nikephoros III article places it 'at Constantinople'. One of the bloodiest Byzantine civil-war battles."
+    sources: [wp-isaac-i-komnenos, wp-michael-vi-bringas, wp-nikephoros-iii-botaneiates]
+  - key: coronation-of-isaac-i-komnenos-1057
+    name: Coronation of Isaac I Komnenos
+    type: Coronation
+    date: 1057-09-01
+    place: hagia-sophia
+    people:
+      - {person: isaac-i-komnenos, role: crowned}
+      - {person: michael-vi-bringas, role: abdicated}
+    prominence: 3
+    note: "Michael VI abdicated on 30 August after a crowd in Hagia Sophia, led by Patriarch Keroularios, acclaimed Isaac; Isaac entered the palace on 31 August and was crowned by the patriarch on 1 September 1057, the first reigning Komnenos."
+    sources: [wp-isaac-i-komnenos, wp-michael-vi-bringas]
+  - key: battle-of-manzikert-1071
+    name: Battle of Manzikert
+    type: Battle
+    date: 1071-08-26
+    place: manzikert-battlefield
+    people:
+      - {person: romanos-iv-diogenes, role: captured}
+    prominence: 5
+    note: "Romanos IV's army was beaten by Alp Arslan after Andronikos Doukas, commanding the reserve, left the field with about 30,000 men. Romanos fought on, was wounded in the hand and taken prisoner; Alp Arslan released him for a treaty and a ransom (first 10,000,000, later 1,500,000 nomismata and 360,000 a year). The Doukas family deposed him in his absence. The defeat opened Anatolia to Turkish settlement."
+    sources: [wp-romanos-iv-diogenes, wp-nikephoros-iii-botaneiates]
+  - key: alexios-i-seizes-constantinople-1081
+    name: Alexios Komnenos seizes Constantinople
+    type: Coup
+    date: 1081-04-01
+    place: constantinople
+    people:
+      - {person: alexios-i-komnenos, role: victor}
+      - {person: nikephoros-iii-botaneiates, role: deposed}
+    prominence: 4
+    note: "Alexios and his brother Isaac, sent against the Normans, instead rose with the Doukas faction and Maria of Alania. They bribed the western troops, broke into the city on 1 April 1081, and Nikephoros III abdicated and became a monk at the Peribleptos. Anna Dalassene had held the Komnenos women in sanctuary at Hagia Sophia."
+    sources: [wp-alexios-i-komnenos, wp-nikephoros-iii-botaneiates]
+  - key: battle-of-levounion-1091
+    name: Battle of Levounion
+    type: Battle
+    date: 1091-04-29
+    people:
+      - {person: alexios-i-komnenos, role: victor}
+    prominence: 3
+    note: "Alexios, with about 40,000 Cuman allies, destroyed the Pechenegs in Thrace, ending their threat. No place defined here."
+    sources: [wp-alexios-i-komnenos]
+  - key: first-crusade-at-constantinople-1096
+    name: The First Crusade at Constantinople
+    type: Crusade
+    year: 1096
+    end_year: 1097
+    place: constantinople
+    people:
+      - {person: alexios-i-komnenos, role: emperor}
+    prominence: 4
+    note: "Alexios's envoys asked Urban II for mercenaries at Piacenza in 1095, and the Council of Clermont produced the First Crusade. The People's Crusade was shipped across and massacred at Civetot in October 1096; the princes (Godfrey, Bohemond, Raymond) came by turn and swore oaths of homage. Nicaea surrendered to the emperor in 1097 and John Doukas recovered Chios, Rhodes, Smyrna, Ephesus, Sardis and Philadelphia by 1099. Bohemond kept Antioch and swore vassalage at the Treaty of Deabolis (1108)."
+    sources: [wp-alexios-i-komnenos]
+  - key: battle-of-beroia-1122
+    name: Battle of Beroia
+    type: Battle
+    year: 1122
+    people:
+      - {person: john-ii-komnenos, role: victor}
+    prominence: 3
+    note: "John II surrounded the Pechenegs who had crossed the Danube, tricked them with talk of a treaty, and stormed their wagon camp with the Varangian Guard; he was wounded in the leg. It ended the Pechenegs as an independent people. The article gives no day; no place defined."
+    sources: [wp-john-ii-komnenos]
+  - key: battle-of-myriokephalon-1176
+    name: Battle of Myriokephalon
+    type: Battle
+    year: 1176
+    people:
+      - {person: manuel-i-komnenos, role: defeated}
+    prominence: 4
+    note: "Manuel's 35,000-man column, ten miles long, ignored Sultan Kilij Arslan II's peace offer, was ambushed in a pass and lost its baggage and siege train. Manuel compared it to Manzikert. He had to dismantle the forts at Sublaeum (but not Dorylaeum). The year 1176 is from the article's list of failed expeditions; the article gives no day and the site is not located, so no place."
+    sources: [wp-manuel-i-komnenos]
+  - key: massacre-of-the-latins-1182
+    name: Massacre of the Latins
+    type: Massacre
+    year: 1182
+    place: constantinople
+    people:
+      - {person: andronikos-i-komnenos, role: ruler}
+    prominence: 3
+    note: "Soon after Andronikos took Constantinople in April 1182, the mob killed or drove out most of the Latin population and burnt the Latin quarters. Andronikos made no effort to stop it. Eustathius put the dead at about 60,000, probably exaggerated; a papal delegate was beheaded. The Sicilians' sack of Thessaloniki in 1185 was seen as revenge."
+    sources: [wp-andronikos-i-komnenos]
+  - key: fall-of-andronikos-i-1185
+    name: Fall and death of Andronikos I
+    type: Coup
+    date: 1185-09-12
+    place: constantinople
+    people:
+      - {person: andronikos-i-komnenos, role: killed}
+      - {person: isaac-ii-angelos, role: proclaimed}
+    prominence: 3
+    note: "Isaac Angelos killed the arresting officer on 11 September 1185, took refuge in Hagia Sophia and was acclaimed by the crowd. Andronikos tried to flee by boat, was captured and handed to the mob, beaten for three days and hung by the feet in the Hippodrome; he died on 12 September. His co-emperor John was murdered by his own troops in Thrace."
+    sources: [wp-andronikos-i-komnenos, wp-isaac-ii-angelos]
+  - key: fourth-crusade-restores-isaac-ii-1203
+    name: The Fourth Crusade restores Isaac II and Alexios IV
+    type: Siege
+    date: 1203-07-18
+    place: constantinople
+    people:
+      - {person: alexios-iii-angelos, role: fled}
+      - {person: isaac-ii-angelos, role: restored}
+      - {person: alexios-iv-angelos, role: crowned}
+    prominence: 4
+    note: "The crusaders reached Constantinople in June 1203 (they took Pera on 6 July) with Alexios IV, who had promised 200,000 silver marks, 10,000 men and church union. After a fire and the failure of Alexios III's sally on 17 July, he fled that night; Isaac II was released and made his son co-emperor. Alexios IV raised half the money (100,000 marks) and was caught between the crusaders and the people."
+    sources: [wp-alexios-iii-angelos, wp-alexios-iv-angelos, wp-theodore-i-laskaris]
+  - key: sack-of-constantinople-1204
+    name: Sack of Constantinople by the Fourth Crusade
+    type: Siege
+    date: 1204-04-12
+    place: constantinople
+    people:
+      - {person: alexios-v-doukas, role: fled}
+    prominence: 5
+    note: "After the first assault of 9 April failed, the crusaders broke through the walls near the Petria Gate on 12 April 1204, looted Blachernae and the city, and set up the Latin Empire (Baldwin of Flanders elected in May). Alexios V fled that night; Constantine Laskaris was acclaimed in Hagia Sophia and left on 13 April. The Latin Empire held the city for 57 years."
+    sources: [wp-alexios-v-doukas, wp-theodore-i-laskaris]
+  - key: coronation-of-theodore-i-laskaris-1208
+    name: Coronation of Theodore I Laskaris at Nicaea
+    type: Coronation
+    date: 1208-04-06
+    place: nicaea
+    people:
+      - {person: theodore-i-laskaris, role: crowned}
+    prominence: 3
+    note: "A council at Nicaea in Holy Week 1208 elected Michael Autoreianos patriarch on 20 March; his first act was to crown and anoint Theodore 'emperor and autocrat of the Romans' on Easter Sunday, 6 April. The Epirote rulers questioned its legality. The year 1208 is from the article's context (Holy Week 1208)."
+    sources: [wp-theodore-i-laskaris]
+  - key: battle-of-pelagonia-1259
+    name: Battle of Pelagonia
+    type: Battle
+    year: 1259
+    people:
+      - {person: michael-viii-palaiologos, role: victor}
+    prominence: 3
+    note: "Michael VIII's forces defeated the alliance of William of Villehardouin, Prince of Achaea, and Michael II Komnenos Doukas of Epirus, ending the western threat and legitimising him before the recovery of Constantinople. Manfred of Sicily sent troops to the allies. No day or place defined here."
+    sources: [wp-michael-viii-palaiologos, wp-john-iii-doukas-vatatzes]
+  - key: recapture-of-constantinople-1261
+    name: Recapture of Constantinople
+    type: Siege
+    date: 1261-07-25
+    place: constantinople
+    people:
+      - {person: michael-viii-palaiologos, role: victor}
+    prominence: 5
+    note: "Alexios Strategopoulos took the city by a surprise attack on 25 July 1261 while most of the Latin army was away; Baldwin II fled. Michael VIII entered on 15 August and was crowned a second time in Hagia Sophia. The Treaty of Nymphaeum with Genoa (March 1261) had provided for a fleet. Population: 35,000 in 1261, 70,000 by 1282."
+    sources: [wp-michael-viii-palaiologos, wp-theodore-ii-laskaris]
+  - key: second-council-of-lyon-1274
+    name: Second Council of Lyon and the union of the churches
+    type: Council
+    year: 1274
+    people:
+      - {person: michael-viii-palaiologos, role: emperor}
+    prominence: 3
+    note: "Byzantine envoys presented Michael VIII's letter on 24 June 1274 and the act of union was read at the fourth session, for the first time in two centuries. Michael deposed Patriarch Joseph for John Bekkos to win consent. The union was rejected in Byzantium (the Arsenites, Epirus), lasted until Andronikos II repudiated it in 1282, and failed to stop Charles of Anjou. No place defined here; the article gives no day for the union act."
+    sources: [wp-michael-viii-palaiologos, wp-andronikos-ii-palaiologos]
+  - key: manuel-ii-visits-england-1400
+    name: Manuel II visits England
+    type: Embassy
+    date: 1400-12-21
+    place: london
+    people:
+      - {person: manuel-ii-palaiologos, role: visitor}
+    prominence: 3
+    note: "Manuel II left Constantinople on 10 December 1399, reached Venice in April 1400 and met Charles VI at Charenton on 3 June 1400. He was met by Henry IV at Blackheath on 21 December 1400, escorted to London, and stayed at Eltham Palace until mid-February 1401 (a joust was held for him), receiving 2,000 pounds. The only Byzantine emperor to visit England. He left France on 23 November 1402 and reached Constantinople in June 1403."
+    sources: [wp-manuel-ii-palaiologos]
+  - key: battle-of-ankara-1402
+    name: Battle of Ankara
+    type: Battle
+    year: 1402
+    people:
+      - {person: manuel-ii-palaiologos, role: beneficiary}
+    prominence: 4
+    note: "Timur crushed Sultan Bayezid I, ending the blockade of Constantinople that had run since 1394. In the Ottoman interregnum John VII regained Thessalonica and the Marmara coast by the Treaty of Gallipoli; Manuel II, in the West, returned in June 1403. No day or place given in the article."
+    sources: [wp-manuel-ii-palaiologos]
+  - key: council-of-florence-1439
+    name: Council of Florence
+    type: Council
+    year: 1439
+    people:
+      - {person: john-viii-palaiologos, role: emperor}
+    prominence: 4
+    note: "In June 1439 (month only in the Constantine XI article) the council declared the Greek and Roman churches reunited. John VIII attended with about 700 followers, Patriarch Joseph II and Plethon. The union failed in Constantinople, where John's return in February 1440 stirred resentment. No place defined here."
+    sources: [wp-john-viii-palaiologos, wp-constantine-xi-palaiologos]
+  - key: proclamation-of-constantine-xi-1449
+    name: Proclamation of Constantine XI at Mystras
+    type: Coronation
+    date: 1449-01-06
+    place: mystras
+    people:
+      - {person: constantine-xi-palaiologos, role: proclaimed}
+    prominence: 3
+    note: "In a small civil ceremony, without a crown, Constantine was proclaimed Emperor of the Romans; no coronation in Hagia Sophia ever followed because of the quarrel over the union. His mother Helena Dragas had held the regency until he arrived. Murad II accepted the succession on 6 December 1448. The lead of the article gives 23 January 1449 (see discrepancy)."
+    sources: [wp-constantine-xi-palaiologos]
+  - key: fall-of-constantinople-1453
+    name: Fall of Constantinople
+    type: Siege
+    date: 1453-05-29
+    place: constantinople
+    people:
+      - {person: constantine-xi-palaiologos, role: killed}
+    prominence: 5
+    note: "Mehmed II's army (perhaps 80,000) besieged the city from early April 1453 (bombardment from 6 April; the fleet was dragged into the Golden Horn on 23 April) against 6,000-8,500 defenders under Giustiniani. The final assault began in the early hours of 29 May; Giustiniani was mortally wounded and some Ottoman troops entered through the Kerkoporta. Constantine died in the fighting; the accounts of his death conflict. The end of the Roman Empire in the East."
+    sources: [wp-constantine-xi-palaiologos]
+
+links:
+  - {parent: constantine-viii, child: zoe-porphyrogenita}
+  - {parent: constantine-viii, child: theodora-porphyrogenita}
+  - {spouse: zoe-porphyrogenita, to: michael-iv-the-paphlagonian, year: 1034}
+  - {spouse: zoe-porphyrogenita, to: constantine-ix-monomachos, year: 1042}
+  - {parent: constantine-x-doukas, child: michael-vii-doukas}
+  - {parent: alexios-i-komnenos, child: john-ii-komnenos}
+  - {parent: john-ii-komnenos, child: manuel-i-komnenos}
+  - {parent: manuel-i-komnenos, child: alexios-ii-komnenos}
+  - {parent: isaac-ii-angelos, child: alexios-iv-angelos}
+  - {parent: john-iii-doukas-vatatzes, child: theodore-ii-laskaris}
+  - {parent: michael-viii-palaiologos, child: andronikos-ii-palaiologos}
+  - {parent: andronikos-iii-palaiologos, child: john-v-palaiologos}
+  - {parent: john-v-palaiologos, child: manuel-ii-palaiologos}
+  - {parent: manuel-ii-palaiologos, child: john-viii-palaiologos}
+  - {parent: manuel-ii-palaiologos, child: constantine-xi-palaiologos}
+
+moments:
+  # Born
+  - {person: manuel-i-komnenos,        role: born, place: constantinople, year: 1118, sources: [wp-manuel-i-komnenos]}
+  - {person: alexios-ii-komnenos,      role: born, place: constantinople, year: 1169, sources: [wp-alexios-ii-komnenos]}
+  - {person: andronikos-iii-palaiologos, role: born, place: constantinople, year: 1297, sources: [wp-andronikos-iii-palaiologos]}
+  - {person: john-vi-kantakouzenos,    role: born, place: constantinople, year: 1292, sources: [wp-john-vi-kantakouzenos]}
+  - {person: andronikos-ii-palaiologos, role: born, place: nicaea, year: 1259, sources: [wp-andronikos-ii-palaiologos]}
+  - {person: theodore-ii-laskaris,     role: born, place: nicaea, sources: [wp-theodore-ii-laskaris]}
+  # Crowned or proclaimed
+  - {person: zoe-porphyrogenita,       role: proclaimed, place: hagia-sophia, year: 1042, sources: [wp-theodora-porphyrogenita, wp-zoe-porphyrogenita]}
+  - {person: theodora-porphyrogenita,  role: proclaimed, place: hagia-sophia, year: 1042, sources: [wp-theodora-porphyrogenita, wp-zoe-porphyrogenita]}
+  - {person: isaac-i-komnenos,         role: crowned, place: hagia-sophia, year: 1057, sources: [wp-isaac-i-komnenos]}
+  - {person: isaac-ii-angelos,         role: proclaimed, place: hagia-sophia, year: 1185, sources: [wp-isaac-ii-angelos, wp-andronikos-i-komnenos]}
+  - {person: theodore-i-laskaris,      role: crowned, place: nicaea, year: 1208, sources: [wp-theodore-i-laskaris]}
+  - {person: michael-viii-palaiologos, role: proclaimed, place: nymphaion, year: 1259, sources: [wp-michael-viii-palaiologos]}
+  - {person: michael-viii-palaiologos, role: crowned, place: hagia-sophia, year: 1261, sources: [wp-michael-viii-palaiologos, wp-theodore-ii-laskaris]}
+  - {person: constantine-xi-palaiologos, role: proclaimed, place: mystras, year: 1449, sources: [wp-constantine-xi-palaiologos]}
+  # Died
+  - {person: isaac-i-komnenos,         role: died, place: stoudios-monastery, year: 1060, sources: [wp-isaac-i-komnenos]}
+  - {person: andronikos-i-komnenos,    role: died, place: constantinople, year: 1185, sources: [wp-andronikos-i-komnenos]}
+  - {person: alexios-iii-angelos,      role: died, place: nicaea, year: 1211, sources: [wp-alexios-iii-angelos]}
+  - {person: alexios-v-doukas,         role: died, place: constantinople, year: 1204, sources: [wp-alexios-v-doukas]}
+  - {person: john-iii-doukas-vatatzes, role: died, place: nymphaion, year: 1254, sources: [wp-john-iii-doukas-vatatzes]}
+  - {person: theodore-ii-laskaris,     role: died, place: magnesia, year: 1258, sources: [wp-theodore-ii-laskaris]}
+  - {person: andronikos-ii-palaiologos, role: died, place: constantinople, year: 1332, sources: [wp-andronikos-ii-palaiologos]}
+  - {person: andronikos-iii-palaiologos, role: died, place: constantinople, year: 1341, sources: [wp-andronikos-iii-palaiologos]}
+  - {person: john-viii-palaiologos,    role: died, place: constantinople, year: 1448, sources: [wp-john-viii-palaiologos]}
+  - {person: constantine-xi-palaiologos, role: died, place: constantinople, year: 1453, sources: [wp-constantine-xi-palaiologos]}
+  # Buried
+  - {person: zoe-porphyrogenita,       role: buried, place: constantinople, year: 1050, sources: [wp-zoe-porphyrogenita]}
+  - {person: manuel-i-komnenos,        role: buried, place: pantokrator-monastery, year: 1180, sources: [wp-manuel-i-komnenos]}
+  - {person: manuel-ii-palaiologos,    role: buried, place: pantokrator-monastery, year: 1425, sources: [wp-manuel-ii-palaiologos]}
+  - {person: john-viii-palaiologos,    role: buried, place: pantokrator-monastery, year: 1448, sources: [wp-john-viii-palaiologos]}
+  - {person: theodore-i-laskaris,      role: buried, place: nicaea, year: 1221, sources: [wp-theodore-i-laskaris]}
+  - {person: alexios-iii-angelos,      role: buried, place: nicaea, year: 1211, sources: [wp-theodore-i-laskaris]}
+  - {person: john-iii-doukas-vatatzes, role: buried, place: sosandra-monastery, year: 1254, sources: [wp-john-iii-doukas-vatatzes]}
+  - {person: theodore-ii-laskaris,     role: buried, place: sosandra-monastery, year: 1258, sources: [wp-theodore-ii-laskaris]}
+  # Lived
+  - {person: isaac-i-komnenos,         role: lived, place: stoudios-monastery, year: 1059, sources: [wp-isaac-i-komnenos]}
+  - {person: michael-vii-doukas,       role: lived, place: stoudios-monastery, year: 1078, sources: [wp-michael-vii-doukas]}
+
+discrepancies:
+  - key: constantine-viii-death-day-1028
+    question: On what day did Constantine VIII die in November 1028, and when did Zoe marry Romanos III?
+    about: [{person: constantine-viii}, {person: zoe-porphyrogenita}, {person: theodora-porphyrogenita}]
+    field: died
+    claims:
+      - {value: "Reign as sole emperor 15 December 1025 to 11 November 1028; Zoe and Romanos married on 10 November in the palace chapel and 'the next day Constantine died'", sources: [wp-zoe-porphyrogenita]}
+      - {value: "Sole emperor until 12 November 1028; Zoe 'married Romanos three days before her father died'", sources: [wp-theodora-porphyrogenita]}
+    note: "Constantine VIII is an existing record; this entry is only added as a discrepancy. The batch's rows do not use his death day."
+  - key: battle-of-petroe-or-hades-1057
+    question: What was the 1057 battle between Isaac Komnenos and Michael VI called, where and when?
+    about: [{event: battle-of-petroe-1057}]
+    field: date
+    claims:
+      - {value: "Battle of Hades, near Nicaea (no day)", sources: [wp-isaac-i-komnenos]}
+      - {value: "Battle of Petroe, 20 August 1057, near Nicaea", sources: [wp-michael-vi-bringas]}
+      - {value: "Battle of Petroe, 20 August 1057, 'at Constantinople'", sources: [wp-nikephoros-iii-botaneiates]}
+    note: "The record uses Petroe, 20 August 1057, at Nicaea (two articles agree on date and the Michael VI and Isaac I articles on place)."
+  - key: michael-vii-abdication-and-nikephoros-iii-accession-1078
+    question: When did Michael VII leave the throne and when did Nikephoros III become emperor in 1078?
+    about: [{person: michael-vii-doukas}, {person: nikephoros-iii-botaneiates}]
+    field: date
+    claims:
+      - {value: "Michael VII resigned on 24 or 31 March 1078 and went to the Stoudios monastery", sources: [wp-michael-vii-doukas]}
+      - {value: "Michael VII abdicated on 31 March; Nikephoros entered Constantinople on 3 April 1078; the Senate proclaimed him emperor on 7 January 1078 (the lead: reign from 7 January 1078); he declared himself on 2 July/October 1077", sources: [wp-nikephoros-iii-botaneiates]}
+    note: "Michael VII's row ends 31 March 1078 and Nikephoros III's row starts on 7 January 1078 (the article's lead), so they overlap by three months."
+  - key: manuel-i-death-day-1180
+    question: On what day did Manuel I Komnenos die in September 1180?
+    about: [{person: manuel-i-komnenos}]
+    field: died
+    claims:
+      - {value: "24 September 1180", sources: [wp-manuel-i-komnenos, wp-andronikos-i-komnenos]}
+      - {value: "21 September 1180", sources: [wp-john-ii-komnenos]}
+    note: "The record uses 24 September 1180 (two articles, one of them the Manuel I article)."
+  - key: alexios-i-death-day-1118
+    question: On which day did Alexios I die in August 1118?
+    about: [{person: alexios-i-komnenos}, {person: john-ii-komnenos}]
+    field: died
+    claims:
+      - {value: "15 August 1118", sources: [wp-alexios-i-komnenos]}
+      - {value: "Alexios lay dying in the Mangana monastery on 15 August when John took the ring, and 'died the night following' John's move", sources: [wp-john-ii-komnenos]}
+    note: "The record uses 15 August 1118 (the Alexios I article); John II's row starts the same day."
+  - key: isaac-ii-overthrow-1195
+    question: When was Isaac II overthrown by Alexios III in 1195?
+    about: [{person: isaac-ii-angelos}, {person: alexios-iii-angelos}]
+    field: date
+    claims:
+      - {value: "March 1195, while Isaac was hunting in Thrace", sources: [wp-alexios-iii-angelos]}
+      - {value: "8 (or 9) April 1195", sources: [wp-isaac-ii-angelos]}
+    note: "Both title rows use the year 1195."
+  - key: alexios-iii-flight-date-1203
+    question: On which night did Alexios III flee Constantinople, and when was Isaac II freed?
+    about: [{person: alexios-iii-angelos}, {event: fourth-crusade-restores-isaac-ii-1203}]
+    field: date
+    claims:
+      - {value: "Fled on the night of 17-18 July 1203 after his sally failed on 17 July", sources: [wp-alexios-iii-angelos, wp-theodore-i-laskaris]}
+      - {value: "The crusaders assaulted on 18 July, Alexios III fled at once, and the citizens freed Isaac II 'the next morning'", sources: [wp-alexios-iv-angelos]}
+    note: "The record uses 18 July 1203 for both Alexios III's last day and Isaac II's restoration."
+  - key: coup-of-alexios-v-january-1204
+    question: On what night was the coup of Alexios Doukas Mourtzouphlos, and when did Isaac II and Alexios IV die?
+    about: [{person: alexios-v-doukas}, {person: alexios-iv-angelos}, {person: isaac-ii-angelos}]
+    field: date
+    claims:
+      - {value: "Alexios IV and Isaac II imprisoned on the night of 27 January 1204; Alexios IV strangled 'probably on 8 February'", sources: [wp-alexios-iv-angelos]}
+      - {value: "Acclaimed 'as early as' 27 January; arrest 'on the night of 28-29 January'; crowned on or around 5 February; Alexios IV 'probably killed' about 8 February", sources: [wp-alexios-v-doukas]}
+      - {value: "Army proclaimed Alexios V on 28 January 1204; Isaac II had 'already died'", sources: [wp-theodore-i-laskaris]}
+      - {value: "Isaac II died 28 January 1204", sources: [wp-isaac-ii-angelos]}
+    note: "The records use 28 January 1204 for the end of Isaac II's and Alexios IV's rows and the start of Alexios V's; year-only death for Alexios IV."
+  - key: john-iii-vatatzes-death-1254
+    question: On what day and in which place did John III Vatatzes die?
+    about: [{person: john-iii-doukas-vatatzes}, {person: theodore-ii-laskaris}]
+    field: died
+    claims:
+      - {value: "3 November 1254, at Nymphaion; buried in Sosandra monastery in the region of Magnesia", sources: [wp-john-iii-doukas-vatatzes]}
+      - {value: "4 November 1254, at Nicaea; buried in Sosandra monastery on Mount Sipylus; Theodore II succeeded him that day", sources: [wp-theodore-ii-laskaris]}
+    note: "John III's row ends 3 November (his own article); Theodore II's starts 4 November; the moment places the death at Nymphaion. The feast of John Vatatzes is kept on 4 November."
+  - key: michael-viii-proclamation-1259
+    question: When and how was Michael VIII proclaimed emperor?
+    about: [{person: michael-viii-palaiologos}]
+    field: date
+    claims:
+      - {value: "Formally proclaimed emperor, most likely without John IV, at Nymphaion on 1 January 1259", sources: [wp-michael-viii-palaiologos]}
+      - {value: "Proclaimed co-emperor 'before the end of the year' 1258, and crowned with John IV early in 1259", sources: [wp-theodore-ii-laskaris]}
+    note: "The record uses 1 January 1259 (the Michael VIII article)."
+  - key: constantine-ix-birth
+    question: When was Constantine IX Monomachos born?
+    about: [{person: constantine-ix-monomachos}]
+    field: born
+    claims:
+      - {value: "About 980", sources: [wp-constantine-ix-monomachos]}
+      - {value: "About 1000, at Antioch", sources: [wp-constantine-ix-monomachos]}
+    note: "No birth date is recorded."
+  - key: constantine-xi-accession-1449
+    question: On what day did Constantine XI become emperor?
+    about: [{person: constantine-xi-palaiologos}, {event: proclamation-of-constantine-xi-1449}]
+    field: date
+    claims:
+      - {value: "Proclaimed emperor at Mystras on 6 January 1449", sources: [wp-constantine-xi-palaiologos]}
+      - {value: "'Reigning emperor from 23 January 1449' (the lead's first sentence)", sources: [wp-constantine-xi-palaiologos]}
+    note: "The record uses 6 January 1449 (the lead's own second paragraph and the article body). Both claims are from the same article."
+  - key: constantine-xi-death-day-1453
+    question: On which day did Constantine XI die?
+    about: [{person: constantine-xi-palaiologos}, {event: fall-of-constantinople-1453}]
+    field: died
+    claims:
+      - {value: "Died in battle on 29 May 1453, the day Constantinople fell (the first paragraph and the Death section)", sources: [wp-constantine-xi-palaiologos]}
+      - {value: "'Died in battle on the following day' (30 May)", sources: [wp-constantine-xi-palaiologos]}
+      - {value: "Accounts of the manner conflict: killed fighting at the St. Romanus Gate; asked his officers to kill him; hanged himself; fled and was decapitated by marines (Tursun Beg, Ibn Kemal). Three accounts say he escaped", sources: [wp-constantine-xi-palaiologos]}
+    note: "The record uses 29 May 1453. Both dates are in the same article; the lead's first sentence and the Death section give 29 May."
+  - key: pelekanon-june-1329
+    question: On which day was the Battle of Pelekanon fought?
+    about: [{person: andronikos-iii-palaiologos}]
+    field: date
+    claims:
+      - {value: "10 June 1329", sources: [wp-andronikos-iii-palaiologos], note: "Orhan beat Andronikos III's relief of Nicaea; the article gives this date or the 15th"}
+      - {value: "15 June 1329", sources: [wp-andronikos-iii-palaiologos], note: "The other date the same article gives"}
+    note: "No event is entered for it; seen and recorded here only."
