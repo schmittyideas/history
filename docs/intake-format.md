@@ -41,6 +41,8 @@ sources:
 | `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
 | `image_url`, `image_thumb` | Links to the person's picture and a ~400px thumbnail (Wikimedia Commons). Links only; nothing is copied. Use only images the Commons page marks public domain or freely licensed |
 | `image_page` | The Commons file page (author, licence, credit) |
+| `coverage` | How far this person's record has been built out: `not-read` (named, article not read), `partly` (read; only what the batch needed was captured), `complete` (article and list of works worked through). Left out = not yet assessed |
+| `coverage_note` | For `partly`: what was captured and what is missing ("dates, patrons and a few dated works; portfolio not built out") |
 | `portrait` | Key of an `artworks` entry that shows this person, so the picture's maker, date and licence travel with it |
 | `image_license` | Short licence name, e.g. "Public domain", "CC BY-SA 4.0" |
 | `obsidian_link` | Exact Obsidian note name |

@@ -134,12 +134,14 @@ class Plan:
 SECTIONS = ["sources", "places", "realms", "people", "events", "artworks", "links", "moments", "titles", "discrepancies", "log"]
 REGIONS = ("Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
            "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania")  # matches sql/008's check
+COVERAGE = ("not-read", "partly", "complete")
 ABOUT_KINDS = ("person", "place", "event", "artwork")
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
                  "born_estimated": "birth_estimated", "died_estimated": "death_estimated",
-                 "image_url": "image_url", "image_thumb": "image_thumb", "image_page": "image_page", "image_license": "image_license"}
+                 "image_url": "image_url", "image_thumb": "image_thumb", "image_page": "image_page", "image_license": "image_license",
+                 "coverage": "coverage", "coverage_note": "coverage_note"}
 PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
                 "city": "city", "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
                 "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",
@@ -300,6 +302,10 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.errors.append(f"person `{k}`: prominence must be 1–5")
             if x.get("portrait"):
                 ref("artwork", x["portrait"], f"person `{k}` portrait")
+            if x.get("coverage") is not None and x["coverage"] not in COVERAGE:
+                p.errors.append(f"person `{k}`: coverage must be one of {', '.join(COVERAGE)}")
+            elif x.get("coverage") == "partly" and not x.get("coverage_note"):
+                p.warnings.append(f"person `{k}`: coverage `partly` without a `coverage_note` saying what was captured and what is missing")
             check_sources(x, f"person `{k}`", require=k not in world.people)
 
         for x in as_list(d.get("events")):
