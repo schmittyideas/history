@@ -1,0 +1,922 @@
+batch:
+  title: "The Papacy, part 2: the popes from Innocent III to Alexander VI, 1198-1503"
+  requested: "Reigns, lives, deaths and key events of the 34 popes from Innocent III (1198) to Alexander VI (1503): the height of papal power, the Hohenstaufen wars, the Avignon papacy, the Western Schism, the councils and the Renaissance popes"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Facts come only from the 34 downloaded pope articles (Pope_Innocent_III ... Pope_Alexander_VI) plus Avignon_Papacy, Western_Schism and Council_of_Constance. Investiture_Controversy.txt was read but covers 1050-1122 and adds nothing for this range. The Supabase database was not queried, so the "look for them first" check was not done: the keys here are the plain regnal names (innocent-iii ... alexander-vi) and should be previewed for duplicates.
+# - Apply AFTER the first Papacy batch (inbox/2026-10-08-popes-1012-1198.yaml) and the HRE, France, Byzantium, Plantagenets and Castile-Leon batches. Keys referenced, NOT redefined: places rome, st-peters-basilica-rome, lateran-palace-rome, anagni, viterbo, arezzo, pisa, florence, venice, konstanz, constantinople (all from those batches); people frederick-ii-holy-roman-emperor, philip-iv-of-france, louis-iv-holy-roman-emperor (HRE and France batches); events sack-of-constantinople-1204, recapture-of-constantinople-1261, council-of-florence-1439, fall-of-constantinople-1453 (Byzantium); albigensian-crusade-1208, aragonese-crusade-1285, attack-on-boniface-viii-at-anagni-1303 (France); sixth-crusade-1228, council-of-lyon-1245, council-of-constance-1414, imperial-coronation-of-frederick-iii-1452 (HRE); second-council-of-lyon-1274 (Byzantium); treaty-of-bretigny-1360 (existing); magna-carta-1215 (existing). Those event entries below are stubs (key, a few added fields, people, sources): the people lists add the popes. A stub adds a place or a day only where the pope article gives one: council-of-lyon-1245 and second-council-of-lyon-1274 get place lyon; council-of-florence-1439 gets place florence; the Anagni attack gets place anagni and the day 7 September 1303 (the France batch gave the year only).
+# - Defined here and possibly sent by other batches: places avignon, lyon, naples, perugia, orvieto; events fourth-crusade-1202, western-schism-1378, move-of-the-papacy-to-avignon-1309, council-of-vienne-1311, council-of-pisa-1409, council-of-basel-1431, unam-sanctam-1302. viterbo is used by moments but its note (from batch 1) is not extended here.
+# - Antipopes are out of scope and not entered: Clement VII (Robert of Geneva, 1378-94, elected at Fondi 20 September 1378), Benedict XIII (Pedro de Luna, 1394-1423), Clement VIII (1423-29), Benedict XIV (two claimants), the Pisan Alexander V (1409-10) and John XXIII (Baldassare Cossa, 1410-15), Felix V (Amadeus VIII of Savoy, elected at Basel 5 November 1439, resigned 7 April 1449) and Nicholas V (Pietro Rainalducci, set up by Louis IV in May 1328, submitted 1330). A later batch should key them with the suffix, for example `clement-vii-antipope`, `nicholas-v-antipope`, `alexander-v-antipope`, `john-xxiii-antipope`, so they do not clash with the lawful popes here. Alexander VI took his number (and not "V") because of confusion over Alexander V; the Alexander VI article says so.
+# - Popes of the period who were not requested and have no downloaded article, so they are NOT entered and the gaps between pontificates are real: Celestine IV (elected 25 October 1241, fifteen days), Innocent V (elected 21 January 1276, died 22 June 1276), Adrian V (elected 11 July 1276, died 18 August 1276), John XXI (elected 8 September 1276, died 20 May 1277) and Honorius IV (died 3 April 1287), all named in the articles; and Pius III (1503), named in the Pius II and Alexander VI articles. Do not fill them from here.
+# - Pontificate dates use each article's lead where it gives a date. Where the lead gives the election and the body a later coronation (Clement V 1305, Urban V 1362, Innocent VI 1352, Gregory XI 1370, Eugene IV 1431, Nicholas IV 1288) the lead's date is used and the other is in the note. Where only a month is known the year alone is used (Clement V: elected June 1305, crowned 14 November 1305).
+# - `disputed` is NOT used. The four Roman-line popes of the Western Schism (Urban VI, Boniface IX, Innocent VII, Gregory XII) were contested by the Avignon and Pisan claimants, who are not entered here, so flagging only the Roman line would mislead; each title note records the contest. This matches the first Papacy batch, which used no `disputed` flag.
+# - Elected popes who left office without dying: Celestine V resigned 13 December 1294 (title row ends there, died 19 May 1296 in the castle of Fumone) and Gregory XII resigned 4 July 1415 through proxies at Constance (title row ends there, died 18 October 1417). Both are given the dates the articles give, and a note.
+# - Left out because the article gives no date or no firm fact: the year of the Sistine Chapel (the Sixtus IV article says only that he sponsored its construction, so `founded` is left blank; the Sistine place has `built_by` only); the year of Nicholas V's Vatican wing and Innocent VIII's Belvedere; the Treaty of Tordesillas as an event (the articles say only that Inter caetera of 4 May 1493 became its basis, and the Nicholas V article gives 1494 in passing); the Battle of Benevento and Tagliacozzo (Clement IV article, no dates); the Battle of Varna (Eugene IV article, no date); the Battle of Belgrade 22 July 1456 and the noon-bell order of 29 June 1456 (Callixtus III; in his note only); the Pazzi conspiracy 1478 and the Spanish Inquisition bull of 1 November 1478 (Sixtus IV; in his note only); Dum Diversas 18 June 1452 and Romanus Pontifex 8 January 1455 (Nicholas V; in his note only); the Hussite crusade bull of 1 March 1420 (Martin V; note only); the canonisation of Thomas Aquinas, 18 July 1323 (John XXII; note only); Cola di Rienzo (Clement VI); Savonarola's execution 23 May 1498 (Alexander VI); Palazzo Venezia (Paul II) and the Santa Maria Maggiore palace of Nicholas IV, left unplaced. Birth places not defined here (Gavignano, Genoa, Troyes, Piacenza, Villandraut and others) are left out rather than adding a place for one line. Burials in places not defined (Clement V at Uzeste, Clement VI at La Chaise-Dieu, Urban V at Saint-Victor in Marseille, Innocent VI at Villeneuve-lès-Avignon, Pius II and others in later tombs) are in the notes only.
+# - Family ties between popes (Gregory IX a cousin of Innocent III, Alexander IV a nephew of Gregory IX, Eugene IV a nephew of Gregory XII, Paul II a nephew of Eugene IV, Callixtus III the uncle of Alexander VI, Clement VI the uncle of Gregory XI) are in the notes. The `links` section has no uncle or cousin relation, so there is none.
+# - Discrepancies found and recorded below: Avignon/Carpentras for the 1309 move, 1294/1295 for Boniface VIII's election, the death dates of Martin IV (22/28 March) and Boniface VIII (11/12 October), the year of Gregory X's election (1271/1270, an error in the Martin IV article), Innocent IV's return to Rome (1250/1253), Alexander IV's and Innocent VI's birth, the end of Gregory XII's pontificate (1415/1409) and Benedict XII's start (30 December 1334/8 January 1335). Smaller points sit in the notes: Gregory XI born c. 1329 (lead) or 1330 (Early life); Celestine V born 1209/1210 or 1215 (the record uses 1209 as c.); the age at Gregory XI's death; Gregory XII's later honours (Frascati in one passage, Porto and Santa Rufina in another and in the Constance article); the Avignon stay is "nearly 70", "68" and "67" years in different passages.
+# - Doubts: Innocent III's birth year is 1160 or 1161 (the record uses 1160, estimated); Gregory IX's lies anywhere in 1145-1170 (1145, estimated); Alexander IV's pontificate start 12 December 1254 is the day after the vote began (election at Naples), consistent in two articles; Nicholas IV was elected 15 February 1288 but agreed on 22 February, which the lead gives as the start. The Gregory XI article dates the peace of Tivoli to July 1378, the Urban VI article to 28 July 1378. No Obsidian links are set.
+
+sources:
+  - {key: wp-innocent-iii,   title: "Pope Innocent III (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Innocent_III"}
+  - {key: wp-honorius-iii,   title: "Pope Honorius III (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Honorius_III"}
+  - {key: wp-gregory-ix,     title: "Pope Gregory IX (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Gregory_IX"}
+  - {key: wp-innocent-iv,    title: "Pope Innocent IV (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Innocent_IV"}
+  - {key: wp-alexander-iv,   title: "Pope Alexander IV (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Alexander_IV"}
+  - {key: wp-urban-iv,       title: "Pope Urban IV (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Urban_IV"}
+  - {key: wp-clement-iv,     title: "Pope Clement IV (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Clement_IV"}
+  - {key: wp-gregory-x,      title: "Pope Gregory X (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Gregory_X"}
+  - {key: wp-nicholas-iii,   title: "Pope Nicholas III (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Nicholas_III"}
+  - {key: wp-martin-iv,      title: "Pope Martin IV (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Martin_IV"}
+  - {key: wp-nicholas-iv,    title: "Pope Nicholas IV (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Nicholas_IV"}
+  - {key: wp-celestine-v,    title: "Pope Celestine V (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Celestine_V"}
+  - {key: wp-boniface-viii,  title: "Pope Boniface VIII (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Pope_Boniface_VIII"}
+  - {key: wp-benedict-xi,    title: "Pope Benedict XI (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Benedict_XI"}
+  - {key: wp-clement-v,      title: "Pope Clement V (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Clement_V"}
+  - {key: wp-john-xxii,      title: "Pope John XXII (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_John_XXII"}
+  - {key: wp-benedict-xii,   title: "Pope Benedict XII (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Benedict_XII"}
+  - {key: wp-clement-vi,     title: "Pope Clement VI (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Clement_VI"}
+  - {key: wp-innocent-vi,    title: "Pope Innocent VI (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Innocent_VI"}
+  - {key: wp-urban-v,        title: "Pope Urban V (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Pope_Urban_V"}
+  - {key: wp-gregory-xi,     title: "Pope Gregory XI (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Gregory_XI"}
+  - {key: wp-urban-vi,       title: "Pope Urban VI (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Urban_VI"}
+  - {key: wp-boniface-ix,    title: "Pope Boniface IX (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Boniface_IX"}
+  - {key: wp-innocent-vii,   title: "Pope Innocent VII (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Innocent_VII"}
+  - {key: wp-gregory-xii,    title: "Pope Gregory XII (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Gregory_XII"}
+  - {key: wp-martin-v,       title: "Pope Martin V (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Martin_V"}
+  - {key: wp-eugene-iv,      title: "Pope Eugene IV (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Eugene_IV"}
+  - {key: wp-nicholas-v,     title: "Pope Nicholas V (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Nicholas_V"}
+  - {key: wp-callixtus-iii,  title: "Pope Callixtus III (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Pope_Callixtus_III"}
+  - {key: wp-pius-ii,        title: "Pope Pius II (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Pope_Pius_II"}
+  - {key: wp-paul-ii,        title: "Pope Paul II (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Pope_Paul_II"}
+  - {key: wp-sixtus-iv,      title: "Pope Sixtus IV (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Sixtus_IV"}
+  - {key: wp-innocent-viii,  title: "Pope Innocent VIII (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Pope_Innocent_VIII"}
+  - {key: wp-alexander-vi,   title: "Pope Alexander VI (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Alexander_VI"}
+  - {key: wp-avignon-papacy, title: "Avignon Papacy (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Avignon_Papacy"}
+  - {key: wp-western-schism, title: "Western Schism (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Western_Schism"}
+  - {key: wp-council-of-constance, title: "Council of Constance (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Constance"}
+
+people:
+  - key: innocent-iii
+    name: Innocent III
+    type: Clergy
+    roles: [pope]
+    house: Conti di Segni
+    realm: Papacy
+    born: 1160
+    born_estimated: true
+    died: 1216-07-16
+    prominence: 5
+    note: "Lotario de' Conti, born at Gavignano near Anagni (1160 or 1161) and elected at 37 on the day Celestine III died. The most powerful man in Europe of his time: guardian of the young Frederick II, arbiter of the German throne (backed Otto IV, then Frederick, decided at Bouvines 1214), forced John of England to accept Stephen Langton, launched the Fourth Crusade (which he forbade to attack Constantinople), the Albigensian Crusade (1208) and the Livonian Crusade, approved Francis of Assisi (1209-10) and held the Fourth Lateran Council (1215). Died suddenly at Perugia and buried in its cathedral; moved to the Lateran in December 1891."
+    sources: [wp-innocent-iii]
+  - key: honorius-iii
+    name: Honorius III
+    type: Clergy
+    roles: [pope]
+    house: Savelli
+    realm: Papacy
+    born: 1150
+    born_estimated: true
+    died: 1227-03-18
+    prominence: 3
+    note: "Cencio Savelli, a Roman, chamberlain and tutor of the young Frederick II (from 1197). Chosen by compromise two days after Innocent III died; consecrated at Perugia 24 July 1216, crowned in Rome 31 August 1216. Pushed the Fifth Crusade (failed with the loss of Damietta, 8 September 1221), brought about Frederick's marriage to Isabella II of Jerusalem and approved the Dominicans (1216), Franciscans (1223) and Carmelites (1226). Died in Rome without seeing the crusade sail."
+    sources: [wp-honorius-iii]
+  - key: gregory-ix
+    name: Gregory IX
+    type: Clergy
+    roles: [pope]
+    house: Conti di Segni
+    realm: Papacy
+    born: 1145
+    born_estimated: true
+    died: 1241-08-22
+    prominence: 4
+    note: "Ugolino dei Conti, born at Anagni (the article puts his birth anywhere between c. 1145 and 1170; he was said to be in his nineties at death), cousin of Innocent III. Dean of the cardinals and protector of the Franciscans. Began by suspending Frederick II for delaying the crusade, excommunicated him, fought the War of the Keys (1228-1230), excommunicated him again in 1239. Issued the Decretales (1234), set up the Papal Inquisition (1233) and canonised Francis, Dominic and Anthony of Padua. Died 22 August 1241 before the council he summoned could meet."
+    sources: [wp-gregory-ix]
+  - key: innocent-iv
+    name: Innocent IV
+    type: Clergy
+    roles: [pope]
+    house: Fieschi
+    realm: Papacy
+    born: 1195
+    born_estimated: true
+    died: 1254-12-07
+    prominence: 4
+    note: "Sinibaldo Fieschi of Genoa, a leading canonist. Elected 25 June 1243 after a year and a half of deadlock. Fled Rome on 7 June 1244 in disguise, reached Lyon on 29 November 1244 and held the First Council of Lyon (1245), which deposed Frederick II. Back in Italy from 1251 (Perugia 1251-53, Rome from October 1253). Issued Ad extirpanda (15 May 1252), invested Edmund Crouchback with Sicily (14 May 1254) and died at Naples on 7 December 1254 after the papal army was beaten by Manfred at Foggia."
+    sources: [wp-innocent-iv]
+  - key: alexander-iv
+    name: Alexander IV
+    type: Clergy
+    roles: [pope]
+    house: Conti di Segni
+    realm: Papacy
+    born: 1185
+    born_estimated: true
+    died: 1261-05-25
+    prominence: 2
+    note: "Rinaldo di Jenne, nephew of Gregory IX. Elected at Naples on 12 December 1254. Canonised Clare of Assisi (26 September 1255), confirmed Innocent IV's grant of Sicily to Edmund of England and absolved Henry III from the Provisions of Oxford (12 April 1261). Driven from Rome by the Ghibellines to Viterbo, where he died and was buried in the cathedral (the tomb was destroyed in 16th-century renovations). Born c. 1185 or 1199 (see discrepancy)."
+    sources: [wp-alexander-iv]
+  - key: urban-iv
+    name: Urban IV
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1195
+    born_estimated: true
+    died: 1264-10-02
+    prominence: 2
+    note: "Jacques Pantaleon, a cobbler's son from Troyes, Latin Patriarch of Jerusalem and not a cardinal when the eight cardinals chose him on 29 August 1261; crowned at Santa Maria a Gradi on 4 September. Failed to stir a crusade to restore the Latin Empire after 1261, instituted Corpus Christi (bull Transiturus, 11 August 1264, texts by Thomas Aquinas) and backed Charles of Anjou against Manfred for the throne of Sicily. Died at Perugia."
+    sources: [wp-urban-iv]
+  - key: clement-iv
+    name: Clement IV
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1190
+    born_estimated: true
+    died: 1268-11-29
+    prominence: 3
+    note: "Gui Foucois (born c. 23 November 1190 at Saint-Gilles-du-Gard), a lawyer and secretary to Louis IX, married with two daughters before taking orders; Bishop of Le Puy, Archbishop of Narbonne, then Urban IV's first cardinal. Elected at a four-month conclave at Perugia, he entered Italy in disguise, allied with Charles of Anjou, who defeated Manfred at Benevento (1266) and Conradin at Tagliacozzo. Patron of Thomas Aquinas and Roger Bacon (the Opus Majus). Lived at Viterbo; died there and was buried at Santa Maria in Gradi (moved 1885 to San Francesco alla Rocca). The see was then empty for nearly three years."
+    sources: [wp-clement-iv]
+  - key: gregory-x
+    name: Gregory X
+    type: Clergy
+    roles: [pope]
+    house: Visconti
+    realm: Papacy
+    born: 1210
+    born_estimated: true
+    died: 1276-01-10
+    prominence: 4
+    note: "Teobaldo Visconti of Piacenza, archdeacon of Liege, chosen by a compromise committee of six cardinals on 1 September 1271 after the longest papal election ever (1268-71) while he was on crusade at Acre with Prince Edward. Arrived at Viterbo in early 1272, ordained priest 19 March and crowned at St Peter's on 27 March 1272. Held the Second Council of Lyon (1274) and issued Ubi periculum, the conclave rules (ratified 16 July 1274). Condemned the blood libel in Vineam Sorec (Orvieto, 7 October 1272). Died at Arezzo on the way back from Lyon and was buried in its cathedral. Beatified 1713."
+    sources: [wp-gregory-x]
+  - key: nicholas-iii
+    name: Nicholas III
+    type: Clergy
+    roles: [pope]
+    house: Orsini
+    realm: Papacy
+    born: 1225
+    born_estimated: true
+    died: 1280-08-22
+    prominence: 3
+    note: "Giovanni Gaetano Orsini, a Roman cardinal since 1244 and first Grand Inquisitor; not a priest until he was elected on 25 November 1277 after a six-month vacancy (ordained 18 December, crowned 26 December). Broke Charles of Anjou's hold on Rome (Charles gave up the Senate in 1278), concluded the concordat with Rudolf of Habsburg (May 1278), issued Fundamenta militantis (July 1278) and Exiit qui seminat (14 August 1279) on Franciscan poverty. Repaired the Lateran and the Vatican. Notorious for nepotism (Dante puts him in Hell). Died of apoplexy at Soriano nel Cimino and was buried in the Vatican basilica."
+    sources: [wp-nicholas-iii, wp-martin-iv]
+  - key: martin-iv
+    name: Martin IV
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1210
+    born_estimated: true
+    died: 1285-03-28
+    prominence: 2
+    note: "Simon de Brion, chancellor of France under Louis IX and cardinal from 1261. Elected on 22 February 1281 at Viterbo after a riot and the kidnapping of two Orsini cardinals; crowned at Orvieto on 23 March 1281 because Rome refused him, and never visited Rome. Wholly dependent on Charles of Anjou: excommunicated Michael VIII (10 April 1281), ending the union of Lyon, and excommunicated Peter III of Aragon and declared a crusade after the Sicilian Vespers. Left Orvieto 26 June 1284 for Perugia, where he died (death date: see discrepancy) and was buried in the cathedral."
+    sources: [wp-martin-iv]
+  - key: nicholas-iv
+    name: Nicholas IV
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1227-09-30
+    died: 1292-04-04
+    prominence: 3
+    note: "Girolamo Masci of Lisciano near Ascoli Piceno, the first Franciscan pope, minister general of his order after Bonaventure. Elected unanimously on 15 February 1288 by the seven surviving cardinals and agreed on 22 February after a week's refusal. Crowned Charles II king of Sicily (May 1289), gave the cardinals half the Church's income (18 July 1289), met Rabban Bar Sauma (1288) and sent John of Monte Corvino to China after Acre fell in 1291. Died in Rome in the palace he had built beside Santa Maria Maggiore, where he is buried."
+    sources: [wp-nicholas-iv]
+  - key: celestine-v
+    name: Celestine V
+    type: Clergy
+    roles: [pope, saint]
+    realm: Papacy
+    born: 1209
+    born_estimated: true
+    died: 1296-05-19
+    prominence: 3
+    note: "Pietro Angelerio (born 1209/1210 or 1215, probably at Sant'Angelo Limosano in Molise), the hermit Peter of Morrone and founder of the Celestines. Elected on 5 July 1294 after a two-year deadlock, the last papal election without a conclave; crowned 29 August at Santa Maria di Collemaggio in L'Aquila. Held his court at Naples under Charles II, found himself unfit, issued a decree on the right to resign and abdicated on 13 December 1294. Boniface VIII imprisoned him in the castle of Fumone, where he died after ten months. Canonised 5 May 1313."
+    sources: [wp-celestine-v, wp-boniface-viii]
+  - key: boniface-viii
+    name: Boniface VIII
+    type: Clergy
+    roles: [pope]
+    house: Caetani
+    realm: Papacy
+    born: 1230
+    born_estimated: true
+    died: 1303-10-11
+    prominence: 5
+    note: "Benedetto Caetani, born at Anagni, a canon lawyer and cardinal from 1281. Elected at Naples on Christmas Eve 1294 after Celestine V abdicated; crowned in Rome on 23 January 1295. Made the strongest claims to temporal power of any pope: Clericis laicos (1296), the first Jubilee (1300), Ausculta Fili (1301) and Unam sanctam (18 November 1302) against Philip IV. Destroyed the Colonna stronghold of Palestrina (1298), published the Liber Sextus (1298) and founded the Sapienza university (1303). Seized at Anagni on 7 September 1303 by Nogaret and Sciarra Colonna, freed after three days, and died in Rome a month later. Buried in St Peter's (death day: see discrepancy)."
+    sources: [wp-boniface-viii]
+  - key: benedict-xi
+    name: Benedict XI
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1240
+    died: 1304-07-07
+    prominence: 2
+    note: "Niccolo Boccasini of Treviso, a Dominican, master of the order from 1296 and cardinal from 1298. One of two cardinals who stayed with Boniface VIII at Anagni. Chosen on one ballot at the Lateran after Boniface; absolved Philip IV of France, excommunicated Nogaret and the Anagni plotters (7 June 1304) and made a truce between France and England. Died suddenly at Perugia after eight months, with suspicion of poison that the article says has no direct evidence. Beatified 1736."
+    sources: [wp-benedict-xi]
+  - key: clement-v
+    name: Clement V
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1314-04-20
+    prominence: 4
+    note: "Bertrand de Got, a Gascon born at Villandraut (year not given), Archbishop of Bordeaux and a friend of Philip IV. Elected at Perugia in June 1305 as a compromise although he was neither Italian nor a cardinal, and crowned at Lyon on 14 November 1305. Withdrew Unam sanctam in effect, agreed to the arrest of the Templars (13 October 1307), called the Council of Vienne (1311) and suppressed the Templars (Vox in excelso, 1312). Moved the curia to Avignon on 9 March 1309, starting the Avignon papacy. Died 20 April 1314 and was buried at Uzeste near his birthplace. Birth year not given."
+    sources: [wp-clement-v, wp-avignon-papacy]
+  - key: john-xxii
+    name: John XXII
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1244
+    died: 1334-12-04
+    prominence: 3
+    note: "Jacques Duese, a lawyer, Bishop of Avignon and cardinal. Chosen on 7 August 1316 at Lyon after a two-year vacancy; made Avignon his seat. Centralised church finance, fought Louis IV of Bavaria (excommunicated 23 March 1324; Louis took Rome in 1328 and set up an antipope), condemned the doctrine of Christ's absolute poverty (1323), canonised Thomas Aquinas (18 July 1323) and provoked a quarrel over the beatific vision, which he retracted the day before he died. Died at Avignon and was buried in the cathedral of Notre-Dame-des-Doms."
+    sources: [wp-john-xxii]
+  - key: benedict-xii
+    name: Benedict XII
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1285
+    born_estimated: true
+    died: 1342-04-25
+    prominence: 3
+    note: "Jacques Fournier of Saverdun, a Cistercian, bishop of Pamiers and inquisitor of the Cathars of Montaillou (the Fournier Register), cardinal from 1327. Elected on 30 December 1334 as a dare after the conclave could not agree. Reformed the orders, opposed nepotism, settled the beatific vision question with Benedictus Deus (1336) and began the Palais des Papes in 1335 after giving up plans to move to Bologna or Rome. Failed to make peace with Louis IV. Died at Avignon on 25 April 1342 and was buried in Notre-Dame-des-Doms."
+    sources: [wp-benedict-xii, wp-clement-vi]
+  - key: clement-vi
+    name: Clement VI
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1291
+    died: 1352-12-06
+    prominence: 4
+    note: "Pierre Roger of Maumont, a Benedictine, Sorbonne doctor, Archbishop of Rouen and adviser to Philip VI. Elected 7 May 1342, crowned 19 May. Made Avignon a princely court, enlarged the Palais des Papes, bought Avignon from Queen Joan I of Naples in 1348 for 80,000 crowns, and reduced the Jubilee interval to 50 years (Unigenitus, 1343). Pope during the Black Death, stayed in Avignon, absolved the dying and defended the Jews against the massacres. Excommunicated Louis IV (13 April 1346) and had Charles IV elected. Died at Avignon; buried at La Chaise-Dieu. Uncle of Gregory XI."
+    sources: [wp-clement-vi, wp-avignon-papacy]
+  - key: innocent-vi
+    name: Innocent VI
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1282
+    born_estimated: true
+    died: 1362-09-12
+    prominence: 2
+    note: "Etienne Aubert of Les Monts near Limoges, a civil lawyer, Bishop of Noyon and of Clermont and cardinal from 1342. Chosen 18 December 1352, crowned 30 December. Cut the court's spending after Clement VI, sent Cardinal Albornoz to restore order in Italy, allowed Charles IV to be crowned in Rome in 1355 (on condition he left the same day) and was largely responsible for the Treaty of Bretigny (1360). Declined John V Palaiologos's offer to unite the churches. Died 12 September 1362 (place not stated); his tomb is in the Chartreuse du Val de Benediction at Villeneuve-les-Avignon. Birth year: see discrepancy."
+    sources: [wp-innocent-vi]
+  - key: urban-v
+    name: Urban V
+    type: Clergy
+    roles: [pope]
+    house: Grimoard
+    realm: Papacy
+    born: 1310
+    died: 1370-12-19
+    prominence: 3
+    note: "Guillaume de Grimoard, born at the castle of Grizac near Mende, a Benedictine and canon lawyer, abbot of Saint-Victor in Marseille and papal envoy in Italy. Elected 28 September 1362 while not a bishop, kept secret until he reached Avignon, consecrated and crowned 6 November. Reformed the church, founded colleges and universities (Krakow, Pavia), tried a crusade with Peter of Cyprus (1363). Went to Rome on 16 October 1367, the first pope there in sixty years, and left again on 5 September 1370 for Avignon despite Bridget of Sweden's warning; died there 19 December 1370. Buried at Saint-Victor, Marseille. Beatified 1870."
+    sources: [wp-urban-v]
+  - key: gregory-xi
+    name: Gregory XI
+    type: Clergy
+    roles: [pope]
+    house: Roger de Beaufort
+    realm: Papacy
+    born: 1329
+    born_estimated: true
+    died: 1378-03-27
+    prominence: 3
+    note: "Pierre Roger de Beaufort, nephew of Clement VI, a cardinal at eighteen and a canonist. Elected unanimously on 30 December 1370, ordained 4 January and crowned 5 January 1371 at Notre-Dame-des-Doms in Avignon. Fought the War of the Eight Saints against Florence (1375-1378) and, urged by Catherine of Siena, left Avignon on 13 September 1376 and entered Rome on 17 January 1377: the seventh and last Avignon pope and the last French pope. Died at Rome on 27 March 1378; the Western Schism followed within months. Born c. 1329 (lead) or around 1330 (Early life)."
+    sources: [wp-gregory-xi, wp-avignon-papacy]
+  - key: urban-vi
+    name: Urban VI
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1318
+    born_estimated: true
+    died: 1389-10-15
+    prominence: 3
+    note: "Bartolomeo Prignano of Itri, Archbishop of Bari, not a cardinal, chosen unanimously on 8 April 1378 under pressure from a Roman mob demanding a Roman pope. His harsh reforms turned the cardinals against him; thirteen of them declared the election void and elected Clement VII at Fondi on 20 September 1378, starting the Western Schism (Clement VII is an antipope and not entered). Quarrelled with Joan I of Naples and her successor Charles III, was besieged at Nocera, had cardinals tortured and killed, and died after falling from his mule at Narni."
+    sources: [wp-urban-vi, wp-western-schism]
+  - key: boniface-ix
+    name: Boniface IX
+    type: Clergy
+    roles: [pope]
+    house: Tomacelli
+    realm: Papacy
+    born: 1350
+    born_estimated: true
+    died: 1404-10-01
+    prominence: 2
+    note: "Pietro Tomacelli of Naples, elected by the fourteen cardinals of the Roman line. Recognised by Germany, England, Hungary, Poland and most of Italy; mutually excommunicated Clement VII. Had Ladislaus crowned at Gaeta (29 May 1390), ended the Roman commune's independence and rebuilt the Papal States. Refused to resign despite the pleas of Richard II, the Diet of Frankfurt and Wenceslaus. Held the Jubilees of 1390 and 1400; his sale of benefices and annates were widely hated. Died after a brief illness."
+    sources: [wp-boniface-ix, wp-western-schism]
+  - key: innocent-vii
+    name: Innocent VII
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1339
+    died: 1406-11-06
+    prominence: 2
+    note: "Cosimo de' Migliorati of Sulmona, a canonist, Archbishop of Ravenna and cardinal from 1389. Chosen unanimously by nine cardinals on 17 October 1404 after they swore to resign if need be. Put down a Ghibelline rising with the help of Ladislaus of Naples, fled to Viterbo in August 1405 after his nephew Ludovico murdered eleven Roman partisans, and did little to end the Schism. Died in Rome."
+    sources: [wp-innocent-vii]
+  - key: gregory-xii
+    name: Gregory XII
+    type: Clergy
+    roles: [pope]
+    house: Corraro
+    realm: Papacy
+    born: 1327
+    born_estimated: true
+    died: 1417-10-18
+    prominence: 3
+    note: "Angelo Corraro (Correr), a Venetian, Latin Patriarch of Constantinople and cardinal from 1405; about 80 when chosen at Rome on 30 November 1406 on the pledge to resign if Benedict XIII did. The meeting at Savona never happened. Created four Corraro nephews cardinals (among them the future Eugene IV); his cardinals left him and called the Council of Pisa, which deposed him on 5 June 1409. Resigned through his proxies Carlo Malatesta and Giovanni Dominici at Constance on 4 July 1415, the last pope to resign until 2013. Died at Recanati. Modern lists give his reign as 1406-1415 (see discrepancy)."
+    sources: [wp-gregory-xii, wp-western-schism, wp-council-of-constance]
+  - key: martin-v
+    name: Martin V
+    type: Clergy
+    roles: [pope]
+    house: Colonna
+    realm: Papacy
+    born: 1369
+    died: 1431-02-20
+    prominence: 4
+    note: "Oddone Colonna of Genazzano (born between 26 January and 20 February 1369), a cardinal since 1405 who had served the Pisan popes. Elected by 23 cardinals and 30 delegates of the Council of Constance on 11 November 1417, ordained 13 November and consecrated 14 November: the election that ended the Western Schism. Reached Rome in September 1420 after more than two years in Italy, rebuilt the city and helped begin the Roman Renaissance; waged crusades against the Hussites (1420) and the Turks, won the war against Braccio da Montone (1424) and founded the University of Louvain (9 December 1425). Died of a stroke at Rome and was buried in the Lateran."
+    sources: [wp-martin-v, wp-council-of-constance]
+  - key: eugene-iv
+    name: Eugene IV
+    type: Clergy
+    roles: [pope]
+    house: Condulmer
+    realm: Papacy
+    born: 1383
+    died: 1447-02-23
+    prominence: 3
+    note: "Gabriele Condulmer, a Venetian, nephew of Gregory XII who made him a cardinal in 1408. Elected unanimously on 3 March 1431 and crowned 11 March on the steps of St Peter's. His reign was dominated by the Council of Basel (1431-1439), which he tried to dissolve, then accepted, then opposed with a rival council at Ferrara (1438) and Florence (1439), where he proclaimed union with the Orthodox on 6 July 1439. Basel deposed him and chose the antipope Felix V (not entered). Driven from Rome by a Colonna revolt on 4 June 1434, he returned only on 28 September 1443. Died in Rome and was buried at St Peter's."
+    sources: [wp-eugene-iv]
+  - key: nicholas-v
+    name: Nicholas V
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1397-11-15
+    died: 1455-03-24
+    prominence: 4
+    note: "Tommaso Parentucelli of Sarzana, a humanist, Bishop of Bologna and cardinal from 1446. Elected 6 March 1447. Won the submission of the antipope Felix V (7 April 1449), made the Concordat of Vienna (17 February 1448), held the Jubilee of 1450 and crowned Frederick III in March 1452, the last imperial coronation in Rome. Founded the Vatican Library, rebuilt Rome and made the Vatican the papal residence in place of the Lateran. The fall of Constantinople (1453) darkened his last years. In Dum Diversas (18 June 1452) and Romanus Pontifex (8 January 1455) he authorised Portugal to conquer and enslave non-Christians."
+    sources: [wp-nicholas-v]
+  - key: callixtus-iii
+    name: Callixtus III
+    type: Clergy
+    roles: [pope]
+    house: Borgia
+    realm: Papacy
+    born: 1378-12-31
+    died: 1458-08-06
+    prominence: 3
+    note: "Alonso de Borja (Alfonso de Borgia), born at La Torreta in the Kingdom of Valencia, a law professor at Lleida and diplomat of Alfonso V of Aragon; cardinal from 1444. Elected as a compromise on 8 April 1455, crowned 20 April. Devoted to a crusade after the fall of Constantinople; ordered the noon bells (29 June 1456) while Hunyadi relieved Belgrade (22 July 1456), and ordered the retrial that cleared Joan of Arc. Raised two nephews to cardinal, one of them Rodrigo Borgia, later Alexander VI. Died 6 August 1458."
+    sources: [wp-callixtus-iii]
+  - key: pius-ii
+    name: Pius II
+    type: Clergy
+    roles: [pope]
+    house: Piccolomini
+    realm: Papacy
+    born: 1405-10-18
+    died: 1464-08-14
+    prominence: 3
+    note: "Enea Silvio Piccolomini, born at Corsignano (now Pienza), a humanist, poet laureate and secretary to the Council of Basel and to Frederick III before he turned to the papal side, took orders in 1446 and became a cardinal in 1456. Elected 19 August 1458, crowned 3 September. Called the Congress of Mantua (1459) and a crusade against the Turks; rebuilt Pienza as a model town. Retracted his conciliar writings in 'reject Aeneas, accept Pius' (1463). Died at Ancona on 14 August 1464 as the crusade fleet arrived."
+    sources: [wp-pius-ii]
+  - key: paul-ii
+    name: Paul II
+    type: Clergy
+    roles: [pope]
+    house: Barbo
+    realm: Papacy
+    born: 1417-02-23
+    died: 1471-07-26
+    prominence: 2
+    note: "Pietro Barbo, a Venetian, nephew of Eugene IV; a cardinal from 1440. Elected on the first ballot on 30 August 1464 by fourteen of nineteen cardinals, then set aside the conclave's pledges. Built the Palazzo San Marco (now Palazzo Venezia) and lived in it, amassing a collection of art; arrested the humanist Platina and the Roman Academy (1468); excommunicated and deposed George of Podebrady of Bohemia (December 1466); approved printing in the Papal States (Subiaco 1464, Rome 1467). Died suddenly of a heart attack."
+    sources: [wp-paul-ii]
+  - key: sixtus-iv
+    name: Sixtus IV
+    type: Clergy
+    roles: [pope]
+    house: della Rovere
+    realm: Papacy
+    born: 1414-07-21
+    died: 1484-08-12
+    prominence: 4
+    note: "Francesco della Rovere, born at Celle Ligure, a Franciscan theologian and minister general of his order from 1464, cardinal from 1467. Elected on Paul II's death. Sponsored the Sistine Chapel, the Vatican Library and the Ponte Sisto; infamous for nepotism (six of his 34 cardinals were relatives, including the future Julius II) and for his part in the Pazzi conspiracy against the Medici (1478). Approved the Spanish Inquisition (bull of 1 November 1478), put Venice under interdict (1483), annulled the decrees of Constance (1478) and confirmed Portugal's African rights (Aeterni regis, 21 June 1481). Died 12 August 1484."
+    sources: [wp-sixtus-iv]
+  - key: innocent-viii
+    name: Innocent VIII
+    type: Clergy
+    roles: [pope]
+    house: Cybo
+    realm: Papacy
+    born: 1432
+    died: 1492-07-25
+    prominence: 2
+    note: "Giovanni Battista Cybo of Genoa, cardinal from 1473, elected on 29 August 1484 after Giuliano della Rovere and Rodrigo Borgia bargained for votes. Backed the Neapolitan barons' revolt, excommunicated Ferdinand I (1489) and invited Charles VIII to take Naples. Held Prince Cem in Rome from March 1489 for the Sultan's payments. Issued Summis desiderantes affectibus on witchcraft (5 December 1484) and the crusade bull against the Waldensians (1487). Built the Belvedere in the Vatican. Fathered at least seven children before taking orders. Died July 1492."
+    sources: [wp-innocent-viii]
+  - key: alexander-vi
+    name: Alexander VI
+    type: Clergy
+    roles: [pope]
+    house: Borgia
+    realm: Papacy
+    born: 1431
+    born_estimated: true
+    died: 1503-08-18
+    prominence: 4
+    note: "Roderic de Borja (Rodrigo Borgia), born at Xativa near Valencia, nephew of Callixtus III, cardinal from 1456 and vice-chancellor for 35 years. Elected on 11 August 1492 over Ascanio Sforza and Giuliano della Rovere. His bull Inter caetera (4 May 1493) divided the New World between Spain and Portugal and underlay the Treaty of Tordesillas. Lived through the French invasion of Charles VIII (December 1494), made his son Cesare a cardinal and later duke of Valentinois, and took Romagna with French help; opened the Holy Door for the Jubilee of 1500; decorated the Borgia Apartments with Pinturicchio. Died in Rome on 18 August 1503."
+    sources: [wp-alexander-vi]
+
+titles:
+  - {person: innocent-iii, title: Pope, realm: Papacy, from: 1198-01-08, to: 1216-07-16, note: "Elected in the Septizodium after two ballots on the day Celestine III died", sources: [wp-innocent-iii]}
+  - {person: honorius-iii, title: Pope, realm: Papacy, from: 1216-07-18, to: 1227-03-18, note: "Chosen by compromise of two cardinals two days after Innocent III's death; consecrated at Perugia 24 July, crowned at Rome 31 August 1216", sources: [wp-honorius-iii]}
+  - {person: gregory-ix, title: Pope, realm: Papacy, from: 1227-03-19, to: 1241-08-22, note: "Took office the day after Honorius III died, at the monastery of St Gregory ad Septem Solia", sources: [wp-gregory-ix]}
+  - {person: innocent-iv, title: Pope, realm: Papacy, from: 1243-06-25, to: 1254-12-07, note: "Elected unanimously after the vacancy that followed Gregory IX's death (Celestine IV reigned fifteen days in 1241, not entered); in exile at Lyon from 29 November 1244, back in Rome October 1253", sources: [wp-innocent-iv]}
+  - {person: alexander-iv, title: Pope, realm: Papacy, from: 1254-12-12, to: 1261-05-25, note: "Elected at Naples; crowned there 20 December 1254. Spent much of his reign at Anagni and Viterbo", sources: [wp-alexander-iv, wp-nicholas-iii]}
+  - {person: urban-iv, title: Pope, realm: Papacy, from: 1261-08-29, to: 1264-10-02, note: "Chosen by eight cardinals after a three-month vacancy though not a cardinal; crowned 4 September 1261", sources: [wp-urban-iv]}
+  - {person: clement-iv, title: Pope, realm: Papacy, from: 1265-02-05, to: 1268-11-29, note: "Elected at Perugia in a conclave of four months; resident at Viterbo", sources: [wp-clement-iv]}
+  - {person: gregory-x, title: Pope, realm: Papacy, from: 1271-09-01, to: 1276-01-10, note: "Elected 1 September 1271 after a vacancy of two years and nine months; accepted at Viterbo in early 1272 (still at Acre when elected), ordained 19 March, crowned 27 March 1272", sources: [wp-gregory-x, wp-nicholas-iii]}
+  - {person: nicholas-iii, title: Pope, realm: Papacy, from: 1277-11-25, to: 1280-08-22, note: "Elected on the feast of St Catherine after a conclave of five and a half months; ordained 18 December, consecrated 19 December, crowned 26 December 1277", sources: [wp-nicholas-iii, wp-martin-iv]}
+  - {person: martin-iv, title: Pope, realm: Papacy, from: 1281-02-22, to: 1285-03-28, note: "Elected unanimously at Viterbo; crowned at Orvieto 23 March 1281; the lead gives the end as 22 March, the body as 28 March: see discrepancy", sources: [wp-martin-iv]}
+  - {person: nicholas-iv, title: Pope, realm: Papacy, from: 1288-02-22, to: 1292-04-04, note: "Elected unanimously 15 February 1288 by seven cardinals after a long vacancy (Honorius IV d. 3 April 1287, not entered); accepted 22 February", sources: [wp-nicholas-iv]}
+  - {person: celestine-v, title: Pope, realm: Papacy, from: 1294-07-05, to: 1294-12-13, note: "Elected 5 July 1294 at Perugia after the vacancy that followed Nicholas IV's death; abdicated 13 December 1294 at Naples. Resigned and then imprisoned by Boniface VIII", sources: [wp-celestine-v, wp-boniface-viii]}
+  - {person: boniface-viii, title: Pope, realm: Papacy, from: 1294-12-24, to: 1303-10-11, note: "Elected at Castel Nuovo in Naples 24 December 1294 after Celestine V abdicated; consecrated and crowned in Rome 23 January 1295 (two articles say Christmas Eve 1295: see discrepancy)", sources: [wp-boniface-viii, wp-celestine-v]}
+  - {person: benedict-xi, title: Pope, realm: Papacy, from: 1303-10-22, to: 1304-07-07, note: "Elected on one ballot in a one-day conclave at the Lateran", sources: [wp-benedict-xi]}
+  - {person: clement-v, title: Pope, realm: Papacy, from: 1305, to: 1314-04-20, note: "Elected in June 1305 (no day given) at Perugia, crowned 14 November 1305 at Lyon. Moved the curia to Avignon on 9 March 1309", sources: [wp-clement-v, wp-avignon-papacy]}
+  - {person: john-xxii, title: Pope, realm: Papacy, from: 1316-08-07, to: 1334-12-04, note: "Elected by a conclave of 23 cardinals locked in at Lyon, which followed a two-year vacancy; crowned at Lyon, then resided at Avignon", sources: [wp-john-xxii]}
+  - {person: benedict-xii, title: Pope, realm: Papacy, from: 1334-12-30, to: 1342-04-25, note: "The lead gives 30 December 1334; the body says the conclave opened 13 December 1334 and he took the name as pope on 8 January 1335: see discrepancy", sources: [wp-benedict-xii]}
+  - {person: clement-vi, title: Pope, realm: Papacy, from: 1342-05-07, to: 1352-12-06, note: "Elected on the second day of a conclave of 18 cardinals; crowned Pentecost Sunday, 19 May 1342", sources: [wp-clement-vi]}
+  - {person: innocent-vi, title: Pope, realm: Papacy, from: 1352-12-18, to: 1362-09-12, note: "Lead gives 18 December 1352, with coronation on 30 December", sources: [wp-innocent-vi]}
+  - {person: urban-v, title: Pope, realm: Papacy, from: 1362-09-28, to: 1370-12-19, note: "Elected 28 September 1362 in the Apostolic Palace in Avignon while away in Italy; result kept secret; he accepted at the end of October, was consecrated and crowned 6 November. In Rome 16 October 1367 to 5 September 1370", sources: [wp-urban-v]}
+  - {person: gregory-xi, title: Pope, realm: Papacy, from: 1370-12-30, to: 1378-03-27, note: "Elected unanimously 30 December 1370; ordained 4 January and crowned 5 January 1371 at Avignon. Returned to Rome 17 January 1377", sources: [wp-gregory-xi]}
+  - {person: urban-vi, title: Pope, realm: Papacy, from: 1378-04-08, to: 1389-10-15, note: "Roman line in the Western Schism; the cardinals who withdrew said the election had been forced by the mob. Opposed by the Avignon claimant Clement VII (not entered)", sources: [wp-urban-vi, wp-western-schism]}
+  - {person: boniface-ix, title: Pope, realm: Papacy, from: 1389-11-02, to: 1404-10-01, note: "Roman line in the Western Schism; elected by fourteen cardinals; opposed by Clement VII and then Benedict XIII (not entered)", sources: [wp-boniface-ix, wp-western-schism]}
+  - {person: innocent-vii, title: Pope, realm: Papacy, from: 1404-10-17, to: 1406-11-06, note: "Roman line in the Western Schism; elected unanimously by nine cardinals; opposed by Benedict XIII (not entered)", sources: [wp-innocent-vii, wp-western-schism]}
+  - {person: gregory-xii, title: Pope, realm: Papacy, from: 1406-11-30, to: 1415-07-04, note: "Roman line in the Western Schism. The Council of Pisa deposed him on 5 June 1409 and chose Alexander V; the Annuario Pontificio listed him as pope only to 1409 until 1946. He resigned through proxies at Constance on 4 July 1415", sources: [wp-gregory-xii, wp-western-schism]}
+  - {person: martin-v, title: Pope, realm: Papacy, from: 1417-11-11, to: 1431-02-20, note: "Elected at the Council of Constance by 23 cardinals and 30 delegates; the see had been vacant two years", sources: [wp-martin-v, wp-gregory-xii]}
+  - {person: eugene-iv, title: Pope, realm: Papacy, from: 1431-03-11, to: 1447-02-23, note: "Lead gives 11 March 1431 (coronation); elected unanimously 3 March. Council of Basel deposed him in 1439 and chose the antipope Felix V (not entered)", sources: [wp-eugene-iv]}
+  - {person: nicholas-v, title: Pope, realm: Papacy, from: 1447-03-06, to: 1455-03-24, note: "Elected in the conclave of 4-6 March 1447", sources: [wp-nicholas-v, wp-pius-ii]}
+  - {person: callixtus-iii, title: Pope, realm: Papacy, from: 1455-04-08, to: 1458-08-06, note: "Elected as a compromise candidate; crowned 20 April 1455", sources: [wp-callixtus-iii]}
+  - {person: pius-ii, title: Pope, realm: Papacy, from: 1458-08-19, to: 1464-08-14, note: "Elected on the second ballot (9 votes), then 12 at the accessio; crowned 3 September 1458 on the steps of St Peter's", sources: [wp-pius-ii]}
+  - {person: paul-ii, title: Pope, realm: Papacy, from: 1464-08-30, to: 1471-07-26, note: "Elected in the first ballot by accessus (14 of 19 votes)", sources: [wp-paul-ii]}
+  - {person: sixtus-iv, title: Pope, realm: Papacy, from: 1471-08-09, to: 1484-08-12, note: "Elected on the unexpected death of Paul II", sources: [wp-sixtus-iv]}
+  - {person: innocent-viii, title: Pope, realm: Papacy, from: 1484-08-29, to: 1492-07-25, note: "Elected after the cardinals della Rovere and Borgia had bargained for votes", sources: [wp-innocent-viii]}
+  - {person: alexander-vi, title: Pope, realm: Papacy, from: 1492-08-11, to: 1503-08-18, note: "Elected on 11 August 1492 after Ascanio Sforza switched to him", sources: [wp-alexander-vi]}
+
+places:
+  - key: avignon
+    name: Avignon
+    kind: city
+    region: Vaucluse
+    country: France
+    lat: 43.949
+    lng: 4.806
+    visitable: true
+    note: "Seat of seven popes from Clement V's move on 9 March 1309 to Gregory XI's departure on 13 September 1376, and of the Avignon antipopes after 1378. Clement VI bought the city from Queen Joan I of Naples in 1348 for 80,000 crowns; Avignon and the Comtat Venaissin stayed papal until 1791. Louis VIII took the city in 1226, in the Albigensian Crusade. Defined here."
+    sources: [wp-clement-v, wp-clement-vi, wp-avignon-papacy, wp-honorius-iii]
+  - key: palais-des-papes
+    name: Palais des Papes
+    historical_name: Papal Palace of Avignon
+    kind: palace
+    city: Avignon
+    region: Vaucluse
+    country: France
+    lat: 43.951
+    lng: 4.807
+    visitable: true
+    visit_site: "Palais des Papes"
+    founded: 1335
+    built_by: "Benedict XII (begun 1335); completed and greatly extended by Clement VI"
+    note: "Benedict XII ordered the palace in 1335 after giving up plans to move to Bologna; it was finished under Clement VI, who added the Garde-Robe tower, the Audience, the new papal chapel and grand staircase, the Tour de la Gache, a chapel of St Peter and two entrance fronts, and had Matteo Giovanetti paint the chapels. The conclave of 1362 met in the Apostolic Palace at Avignon. Defined here."
+    sources: [wp-benedict-xii, wp-clement-vi, wp-urban-v]
+  - key: lyon
+    name: Lyon
+    historical_name: Lyons
+    kind: city
+    region: Rhone
+    country: France
+    lat: 45.764
+    lng: 4.836
+    visitable: true
+    note: "Refuge of Innocent IV from 29 November 1244, site of the First Council of Lyon (1245); Gregory X arrived there in mid-November 1273 for the Second Council of Lyon (opened 1 May 1274); Clement V was crowned here on 14 November 1305 before Philip IV; the conclave of August 1316 that chose John XXII met here. Defined here."
+    sources: [wp-innocent-iv, wp-gregory-x, wp-clement-v, wp-john-xxii]
+  - key: naples
+    name: Naples
+    kind: city
+    region: Campania
+    country: Italy
+    lat: 40.852
+    lng: 14.268
+    visitable: true
+    note: "Innocent IV died here on 7 December 1254 and Alexander IV was elected here five days later. Celestine V held his court here under Charles II and abdicated on 13 December 1294 at the Castel Nuovo, where the conclave that chose Boniface VIII met. Urban VI was held here in 1383-84 and besieged at Nocera. Boniface IX was born here. Defined here."
+    sources: [wp-innocent-iv, wp-alexander-iv, wp-celestine-v, wp-boniface-viii, wp-urban-vi, wp-boniface-ix]
+  - key: perugia
+    name: Perugia
+    kind: city
+    region: Umbria
+    country: Italy
+    lat: 43.110
+    lng: 12.389
+    visitable: true
+    note: "Honorius III was consecrated here on 24 July 1216. Innocent III died here on 16 July 1216 and was buried in the cathedral (moved to the Lateran in 1891). Innocent IV's court stayed 1251-53 and he issued Ad extirpanda here (15 May 1252); Urban IV, Martin IV (buried in San Lorenzo) and Benedict XI died here; the conclaves of 1265, 1292-94 and 1304-05 met here. Defined here."
+    sources: [wp-innocent-iii, wp-honorius-iii, wp-innocent-iv, wp-urban-iv, wp-martin-iv, wp-benedict-xi, wp-clement-iv, wp-celestine-v, wp-clement-v]
+  - key: orvieto
+    name: Orvieto
+    kind: city
+    region: Umbria
+    country: Italy
+    lat: 42.718
+    lng: 12.111
+    visitable: true
+    note: "Gregory X issued Vineam Sorec here on 7 October 1272 and left for Lyon on 5 June 1273. Martin IV was crowned here on 23 March 1281 and left on 26 June 1284 because of the Guelph-Ghibelline strife. John XXII introduced the Corpus Christi procession here in 1316 (the miracle of Bolsena). Defined here."
+    sources: [wp-gregory-x, wp-martin-iv, wp-john-xxii]
+  - key: apostolic-palace
+    name: Apostolic Palace (Vatican Palace)
+    kind: palace
+    city: Vatican City
+    region: Vatican City
+    country: Vatican City
+    lat: 41.904
+    lng: 12.455
+    visitable: true
+    visit_site: "Vatican Museums"
+    built_by: "Nicholas V (new wing and private chapel); Innocent VIII (the Belvedere); decorated for Alexander VI (Borgia Apartments, by Pinturicchio)"
+    note: "Nicholas III repaired it with the Lateran; Nicholas V made the Vatican the official papal residence in place of the Lateran Palace and added a wing; Innocent VIII had the Belvedere built above it; Alexander VI had a suite (the Borgia Apartments) painted, which Julius II refused to live in. The Western Schism article says Gregory XI died in the Apostolic Palace on 27 March 1378. No building year is given in the articles, so `founded` is left blank. Defined here."
+    sources: [wp-nicholas-iii, wp-nicholas-v, wp-innocent-viii, wp-alexander-vi, wp-western-schism]
+  - key: sistine-chapel
+    name: Sistine Chapel
+    kind: chapel
+    city: Vatican City
+    region: Vatican City
+    country: Vatican City
+    lat: 41.903
+    lng: 12.454
+    visitable: true
+    visit_site: "Vatican Museums"
+    built_by: "Sixtus IV (sponsored its construction)"
+    note: "The Sixtus IV article says only that he sponsored the chapel; it gives no year, so `founded` is left blank. Defined here."
+    sources: [wp-sixtus-iv]
+  - key: pienza
+    name: Pienza
+    historical_name: Corsignano
+    kind: town
+    region: Tuscany
+    country: Italy
+    lat: 43.077
+    lng: 11.678
+    visitable: true
+    built_by: "Pius II (refurbished his native Corsignano and renamed it after himself)"
+    note: "Birthplace of Aeneas Silvius Piccolomini (Pius II). As pope he refurbished it and renamed it Pienza; a cathedral and palaces were built in the best style of the day and survive, in what the article calls perhaps the first city-planning exercise in modern Europe. No year is given. Defined here."
+    sources: [wp-pius-ii]
+  - key: santa-maria-di-collemaggio
+    name: Santa Maria di Collemaggio
+    kind: basilica
+    city: L'Aquila
+    region: Abruzzo
+    country: Italy
+    lat: 42.342
+    lng: 13.410
+    visitable: true
+    note: "Celestine V was crowned here on 29 August 1294 and granted a plenary indulgence for pilgrims through its holy door (still celebrated as the Perdonanza Celestiniana on 28-29 August). His body was moved here from Ferentino; it survived the 2009 earthquake, when Benedict XVI left his pallium on the casket. Defined here."
+    sources: [wp-celestine-v]
+  - key: castle-of-fumone
+    name: Castle of Fumone
+    kind: castle
+    city: Fumone
+    region: Lazio
+    country: Italy
+    lat: 41.683
+    lng: 13.325
+    visitable: true
+    note: "Boniface VIII imprisoned Celestine V here, near Ferentino, with two monks of his order; he died here on 19 May 1296 after ten months. Defined here."
+    sources: [wp-celestine-v, wp-boniface-viii]
+
+events:
+  - key: fourth-crusade-1202
+    name: Fourth Crusade
+    type: Crusade
+    year: 1202
+    end_year: 1204
+    people:
+      - {person: innocent-iii, role: decreed it (Post miserabile, 1198); forbade the attack on Christians; excommunicated the crusaders}
+    prominence: 4
+    note: "Defined here. Innocent aimed it at Egypt and raised a clerical tax of a fortieth, the first direct papal tax. The French crusaders could not pay the Venetians 85,000 marks and were diverted in 1202 to Zadar and then, at the exiled Alexios's request, to Constantinople, against the pope's orders; he excommunicated those who attacked Christian cities but accepted the result as God's will. The Latin Empire lasted about sixty years. The sack itself is sack-of-constantinople-1204 (Byzantine batch)."
+    sources: [wp-innocent-iii]
+  - key: sack-of-constantinople-1204
+    people: [{person: innocent-iii, role: pope who forbade the attack and excommunicated the crusaders}]
+    sources: [wp-innocent-iii]
+  - key: albigensian-crusade-1208
+    people:
+      - {person: innocent-iii, role: pope who called it after the murder of the legate Peter of Castelnau}
+      - {person: honorius-iii, role: confirmed Simon de Montfort in Raymond VI's lands and drew in the French crown}
+    sources: [wp-innocent-iii, wp-honorius-iii]
+  - key: fourth-lateran-council-1215
+    name: Fourth Lateran Council
+    type: Council
+    date: 1215-11-15
+    place: lateran-palace-rome
+    people: [{person: innocent-iii, role: convened it}]
+    prominence: 4
+    note: "Called the most important council of the Middle Ages: seventy reform decrees on schools, clerical conduct, annual confession, the Eucharist and the election of bishops; canon 18 banned the clerical part in trial by ordeal; canons 68-69 required Jews and Muslims to wear distinctive dress and barred Jews from public office. It endorsed the Fifth Crusade for 1217."
+    sources: [wp-innocent-iii, wp-honorius-iii]
+  - key: magna-carta-1215
+    people: [{person: innocent-iii, role: declared it annulled at King John's request}]
+    sources: [wp-innocent-iii]
+  - key: sixth-crusade-1228
+    people: [{person: gregory-ix, role: suspended and excommunicated Frederick II for delaying; fought the War of the Keys}]
+    sources: [wp-gregory-ix]
+  - key: excommunication-of-frederick-ii-1239
+    name: Gregory IX excommunicates Frederick II again
+    type: Excommunication
+    year: 1239
+    people:
+      - {person: gregory-ix, role: excommunicated and denounced him as a heretic}
+      - {person: frederick-ii-holy-roman-emperor, role: excommunicated}
+    prominence: 3
+    note: "After Frederick defeated the Lombard League in 1239 and threatened to surround the Papal States, Gregory excommunicated him afresh, called him a heretic and summoned a council at Rome, which Frederick tried to stop by seizing the prelates' ships. The first suspension and excommunication came when Gregory took office in 1227 (see sixth-crusade-1228). At Regensburg in 1241 Archbishop Eberhard of Salzburg called Gregory the Antichrist. The struggle ended with Gregory's death; the article gives no day for the excommunication."
+    sources: [wp-gregory-ix]
+  - key: council-of-lyon-1245
+    place: lyon
+    people: [{person: innocent-iv, role: convened it and deposed Frederick II}]
+    sources: [wp-innocent-iv]
+  - key: second-council-of-lyon-1274
+    place: lyon
+    people: [{person: gregory-x, role: convened it}]
+    sources: [wp-gregory-x]
+  - key: recapture-of-constantinople-1261
+    people: [{person: urban-iv, role: failed to raise a crusade to restore the Latin Empire}]
+    sources: [wp-urban-iv]
+  - key: aragonese-crusade-1285
+    people: [{person: martin-iv, role: excommunicated Peter III and declared the crusade}]
+    sources: [wp-martin-iv]
+  - key: resignation-of-celestine-v-1294
+    name: Celestine V abdicates
+    type: Abdication
+    date: 1294-12-13
+    place: naples
+    people:
+      - {person: celestine-v, role: resigned}
+      - {person: boniface-viii, role: consulted on the right to resign; elected his successor}
+    prominence: 3
+    note: "After five months and eight days Celestine, out of touch with the curia and under Charles II's control at Naples, issued a decree declaring the right to resign and used it. The article lists earlier resignations (Pontian 235, John XVIII 1009, Benedict IX 1045, Gregory VI 1046) and the next, Gregory XII in 1415. The conclave met on 23 December and chose Boniface VIII on 24 December. The Colonna later said Boniface's election was illegal."
+    sources: [wp-celestine-v, wp-boniface-viii]
+  - key: jubilee-1300
+    name: First Jubilee
+    type: Jubilee
+    year: 1300
+    place: rome
+    people: [{person: boniface-viii, role: proclaimed it}]
+    prominence: 3
+    note: "The first Roman Jubilee; Villani counted some 200,000 pilgrims. Clement VI cut the interval to 50 years in 1343 (Unigenitus), Urban VI called one for 1390, and Alexander VI began the Holy Door rite on Christmas Eve 1499 for the Jubilee of 1500."
+    sources: [wp-boniface-viii, wp-clement-vi, wp-alexander-vi]
+  - key: unam-sanctam-1302
+    name: Unam sanctam
+    type: Papal bull
+    date: 1302-11-18
+    people:
+      - {person: boniface-viii, role: issued it}
+      - {person: philip-iv-of-france, role: its target}
+    prominence: 4
+    note: "Defined here. Issued after the Roman council of October 1302 which forty-five French prelates attended against Philip's ban. The bull declared 'absolutely necessary for salvation that every human creature be subject to the Roman pontiff' and that both spiritual and temporal power were the pope's. It followed Ausculta Fili (December 1301, burned at Paris on 10 February 1302), Philip's first Estates-General (April 1302) and Clericis laicos (February 1296). Clement V essentially withdrew it in 1306."
+    sources: [wp-boniface-viii, wp-clement-v, wp-avignon-papacy]
+  - key: attack-on-boniface-viii-at-anagni-1303
+    date: 1303-09-07
+    place: anagni
+    people:
+      - {person: boniface-viii, role: seized and held three days}
+      - {person: benedict-xi, role: defended him (as Cardinal Boccasini)}
+    sources: [wp-boniface-viii, wp-benedict-xi]
+  - key: move-of-the-papacy-to-avignon-1309
+    name: The papacy moves to Avignon
+    type: Papal act
+    date: 1309-03-09
+    place: avignon
+    people: [{person: clement-v, role: moved the curia there}]
+    prominence: 5
+    note: "Defined here. After wandering Provence and Gascony, Clement V settled the curia at the Dominican priory in Avignon, in the territory ruled by Charles II of Anjou, a papal vassal, next to the Comtat Venaissin. Justified by Rome's feuds (the Colonna and Orsini) and a fire at the Lateran; begins the Avignon papacy of seven popes, called by Petrarch the 'Babylonian captivity' (1309-1376/77). The Clement V article adds that the move was 'actually to Carpentras': see discrepancy."
+    sources: [wp-clement-v, wp-avignon-papacy]
+  - key: council-of-vienne-1311
+    name: Council of Vienne and the suppression of the Templars
+    type: Council
+    date: 1311-10-16
+    end_year: 1312
+    people:
+      - {person: clement-v, role: convened it and suppressed the Templars}
+      - {person: philip-iv-of-france, role: pressed for the suppression}
+    prominence: 4
+    note: "Defined here. Opened 16 October 1311 with over 300 bishops. The Templars had been arrested in France on 13 October 1307; the council refused to convict them of heresy but Clement abolished the order by the bull Vox in excelso, signed 2 May 1312 with Philip present. A crusade was proclaimed on 4 April 1312. Philip's demand for a posthumous trial of Boniface VIII was dropped here. The place (Vienne) is not defined."
+    sources: [wp-clement-v, wp-boniface-viii, wp-avignon-papacy]
+  - key: excommunication-of-louis-iv-1324
+    name: John XXII excommunicates Louis IV
+    type: Excommunication
+    date: 1324-03-23
+    people:
+      - {person: john-xxii, role: excommunicated and then deposed him}
+      - {person: louis-iv-holy-roman-emperor, role: excommunicated}
+    prominence: 3
+    note: "Louis, crowned king of the Germans in 1314 against Frederick of Austria, sent troops to Milan in early 1323. John excommunicated him on 23 March 1324 and deposed him on 11 July. Louis called the Ghibellines to Trent, backed the Spiritual Franciscans and was crowned in Rome on 17 January 1328 by Sciarra Colonna, setting up an antipope (Nicholas V, not entered). The Estates at Rhens declared the papal decrees illegal on 16 July 1338 under Benedict XII."
+    sources: [wp-john-xxii, wp-benedict-xii]
+  - key: treaty-of-bretigny-1360
+    people: [{person: innocent-vi, role: largely brought it about}]
+    sources: [wp-innocent-vi]
+  - key: return-of-the-papacy-to-rome-1377
+    name: Gregory XI returns the papacy to Rome
+    type: Papal act
+    date: 1377-01-17
+    place: rome
+    people: [{person: gregory-xi, role: returned the curia to Rome}]
+    prominence: 4
+    note: "Defined here. Gregory left Avignon on 13 September 1376 against the French king and most cardinals, urged by Catherine of Siena; he sailed from Marseille on 2 October, reached Corneto on 6 December, Ostia on 14 January 1377, sailed up the Tiber to San Paolo and entered Rome on 17 January 1377. It ended nearly seventy years in Avignon (68 or 67 in other passages). He planned to go back after Easter 1378 but died on 27 March."
+    sources: [wp-gregory-xi, wp-avignon-papacy, wp-western-schism]
+  - key: western-schism-1378
+    name: The Western Schism
+    type: Schism
+    date: 1378-09-20
+    end_year: 1417
+    people:
+      - {person: urban-vi, role: Roman pope whose election was disputed}
+      - {person: boniface-ix, role: Roman line}
+      - {person: innocent-vii, role: Roman line}
+      - {person: gregory-xii, role: Roman line; resigned 1415}
+      - {person: martin-v, role: elected 11 November 1417 to end it}
+    prominence: 5
+    note: "Defined here. Thirteen French cardinals, calling Urban VI's election of 8 April 1378 void because of mob pressure, elected Clement VII at Fondi on 20 September 1378; he went to Avignon. France, Castile, Aragon, Navarre, Scotland and others followed Avignon; England, Germany, Hungary, Poland and most of Italy followed Rome. The Council of Pisa (1409) added a third line (Alexander V, John XXIII); Constance (1414-18) ended it by the resignation of Gregory XII, the removal of John XXIII, the excommunication of Benedict XIII (27 July 1417) and the election of Martin V on 11 November 1417. The antipopes are not entered."
+    sources: [wp-western-schism, wp-urban-vi, wp-avignon-papacy, wp-council-of-constance]
+  - key: council-of-pisa-1409
+    name: Council of Pisa
+    type: Council
+    date: 1409-06-05
+    place: pisa
+    people: [{person: gregory-xii, role: deposed by it, as was Benedict XIII}]
+    prominence: 3
+    note: "Defined here. Called by cardinals who had left both Gregory XII (at Lucca, 1408) and Benedict XIII; neither pope attended. At its fifteenth session, 5 June 1409, it declared both schismatical and heretical and elected Alexander V (reigned from 26 June 1409), creating a third claimant. The Church later classed the Pisan popes as antipopes."
+    sources: [wp-gregory-xii, wp-western-schism, wp-council-of-constance]
+  - key: council-of-constance-1414
+    people:
+      - {person: gregory-xii, role: resigned through his proxies on 4 July 1415}
+      - {person: martin-v, role: elected pope there on 11 November 1417}
+    sources: [wp-council-of-constance, wp-gregory-xii, wp-martin-v]
+  - key: council-of-basel-1431
+    name: Council of Basel
+    type: Council
+    year: 1431
+    end_year: 1439
+    people: [{person: eugene-iv, role: pope who tried to dissolve it, then opposed it}]
+    prominence: 3
+    note: "Defined here. Opened 23 July 1431 by the legate Cesarini; Eugene IV's dissolution bull of 18 December 1431 was defied, and he recognised it on 1 August 1433 (amended 15 December 1433). The conflict resumed; Eugene opened a rival council at Ferrara on 8 January 1438; Basel suspended him on 24 January 1438, deposed him on 25 June 1439 and elected the antipope Felix V on 5 November 1439 (not entered). Charles VII's Pragmatic Sanction of Bourges (7 July 1438) took its decrees into France. Felix V resigned on 7 April 1449."
+    sources: [wp-eugene-iv, wp-nicholas-v]
+  - key: council-of-florence-1439
+    place: florence
+    people: [{person: eugene-iv, role: moved the council from Ferrara; proclaimed the union (Laetentur caeli, 6 July 1439)}]
+    sources: [wp-eugene-iv]
+  - key: imperial-coronation-of-frederick-iii-1452
+    people: [{person: nicholas-v, role: crowned him in St Peter's (the last imperial coronation in Rome)}]
+    sources: [wp-nicholas-v]
+  - key: fall-of-constantinople-1453
+    people: [{person: nicholas-v, role: sent ten papal ships with Genoese, Venetian and Neapolitan ships, too late}]
+    sources: [wp-nicholas-v, wp-callixtus-iii]
+  - key: inter-caetera-1493
+    name: Inter caetera
+    type: Papal bull
+    date: 1493-05-04
+    people: [{person: alexander-vi, role: issued it}]
+    prominence: 4
+    note: "Defined here. After Columbus's voyage, Spain asked the pope to confirm title to the new lands; Alexander divided the title between Spain and Portugal along a demarcation line, which became the basis of the Treaty of Tordesillas (the Nicholas V article dates the treaty 1494; it is not entered here). Eximiae devotionis (3 May 1493) and Dudum siquidem (23 September 1493) gave Spain rights like those Nicholas V had given Portugal. Historians disagree on whether they licensed enslavement."
+    sources: [wp-alexander-vi, wp-nicholas-v]
+
+moments:
+  - {person: innocent-iii,   role: died,    place: perugia, year: 1216}
+  - {person: innocent-iii,   role: buried,  place: perugia, year: 1216}
+  - {person: honorius-iii,   role: died,    place: rome, year: 1227}
+  - {person: gregory-ix,     role: born,    place: anagni}
+  - {person: innocent-iv,    role: died,    place: naples, year: 1254}
+  - {person: alexander-iv,   role: died,    place: viterbo, year: 1261}
+  - {person: alexander-iv,   role: buried,  place: viterbo, year: 1261}
+  - {person: urban-iv,       role: died,    place: perugia, year: 1264}
+  - {person: clement-iv,     role: died,    place: viterbo, year: 1268}
+  - {person: clement-iv,     role: buried,  place: viterbo, year: 1268}
+  - {person: gregory-x,      role: died,    place: arezzo, year: 1276}
+  - {person: gregory-x,      role: buried,  place: arezzo, year: 1276}
+  - {person: nicholas-iii,   role: born,    place: rome}
+  - {person: nicholas-iii,   role: buried,  place: st-peters-basilica-rome, year: 1280}
+  - {person: martin-iv,      role: crowned, place: orvieto, year: 1281}
+  - {person: martin-iv,      role: died,    place: perugia, year: 1285}
+  - {person: martin-iv,      role: buried,  place: perugia, year: 1285}
+  - {person: nicholas-iv,    role: died,    place: rome, year: 1292}
+  - {person: celestine-v,    role: crowned, place: santa-maria-di-collemaggio, year: 1294}
+  - {person: celestine-v,    role: died,    place: castle-of-fumone, year: 1296}
+  - {person: boniface-viii,  role: born,    place: anagni}
+  - {person: boniface-viii,  role: crowned, place: st-peters-basilica-rome, year: 1295}
+  - {person: boniface-viii,  role: died,    place: rome, year: 1303}
+  - {person: boniface-viii,  role: buried,  place: st-peters-basilica-rome, year: 1303}
+  - {person: benedict-xi,    role: died,    place: perugia, year: 1304}
+  - {person: clement-v,      role: crowned, place: lyon, year: 1305}
+  - {person: john-xxii,      role: died,    place: avignon, year: 1334}
+  - {person: benedict-xii,   role: died,    place: avignon, year: 1342}
+  - {person: clement-vi,     role: died,    place: avignon, year: 1352}
+  - {person: urban-v,        role: died,    place: avignon, year: 1370}
+  - {person: gregory-xi,     role: crowned, place: avignon, year: 1371}
+  - {person: boniface-ix,    role: born,    place: naples}
+  - {person: innocent-vii,   role: died,    place: rome, year: 1406}
+  - {person: gregory-xii,    role: born,    place: venice}
+  - {person: martin-v,       role: died,    place: rome, year: 1431}
+  - {person: martin-v,       role: buried,  place: lateran-palace-rome, year: 1431}
+  - {person: eugene-iv,      role: born,    place: venice}
+  - {person: eugene-iv,      role: crowned, place: st-peters-basilica-rome, year: 1431}
+  - {person: eugene-iv,      role: died,    place: rome, year: 1447}
+  - {person: eugene-iv,      role: buried,  place: st-peters-basilica-rome, year: 1447}
+  - {person: pius-ii,        role: born,    place: pienza, year: 1405}
+  - {person: pius-ii,        role: crowned, place: st-peters-basilica-rome, year: 1458}
+  - {person: paul-ii,        role: born,    place: venice, year: 1417}
+
+discrepancies:
+  - key: move-to-avignon-1309-site
+    question: Where did Clement V settle the curia in 1309?
+    about: [{event: move-of-the-papacy-to-avignon-1309}, {person: clement-v}]
+    field: place
+    claims:
+      - {value: "Avignon: 'On 9 March 1309 ... Clement settled the curia at the Dominican priory in Avignon'", sources: [wp-clement-v, wp-avignon-papacy]}
+      - {value: "Carpentras: the Clement V article's next sentence says 'This move, actually to Carpentras, the capital of the territory'", sources: [wp-clement-v]}
+      - {value: "Priory of Grauselle near Malaucene, where he signed a mandate on 18 October 1309", sources: [wp-boniface-viii]}
+    note: "The record uses Avignon and 9 March 1309, which the Avignon Papacy article also gives for the move of the court."
+  - key: boniface-viii-election-year
+    question: In which year was Boniface VIII elected?
+    about: [{person: boniface-viii}]
+    field: title start
+    claims:
+      - {value: "24 December 1294 (Celestine V abdicated 13 December 1294; conclave opened 23 December)", sources: [wp-boniface-viii, wp-celestine-v]}
+      - {value: "24 December 1295 ('Christmas Eve, 1295' / 'elected Pope Boniface VIII on 24 December 1295')", sources: [wp-benedict-xi, wp-martin-iv]}
+    note: "The record uses 24 December 1294, which fits Celestine V's abdication and Boniface's own article; 1295 looks like a slip for his coronation year (23 January 1295)."
+  - key: martin-iv-death-date
+    question: On what day did Martin IV die?
+    about: [{person: martin-iv}]
+    field: died
+    claims:
+      - {value: "28 March 1285 (the lead's dates line and the Death section: Easter Wednesday, after Mass on Easter Sunday 25 March)", sources: [wp-martin-iv]}
+      - {value: "22 March 1285 (the lead's sentence 'until his death on 22 March 1285')", sources: [wp-martin-iv]}
+    note: "The record uses 28 March, the detailed account."
+  - key: boniface-viii-death-date
+    question: On what day did Boniface VIII die?
+    about: [{person: boniface-viii}]
+    field: died
+    claims:
+      - {value: "11 October 1303 (lead and the Burial passage: 'died of a violent fever on 11 October')", sources: [wp-boniface-viii]}
+      - {value: "12 October 1303 (Giovanni Villani's chronicle, quoted)", sources: [wp-boniface-viii]}
+    note: "The record uses 11 October."
+  - key: gregory-x-election-year
+    question: In which year was Gregory X elected?
+    about: [{person: gregory-x}]
+    field: title start
+    claims:
+      - {value: "1 September 1271", sources: [wp-gregory-x, wp-nicholas-iii]}
+      - {value: "1 September 1270 (the Martin IV article, which also dates his arrival in Italy to 1 January 1271 and entry into Rome to 13 March)", sources: [wp-martin-iv]}
+    note: "The record uses 1271. The Martin IV article gives both 1270 and 1271 and looks a year out in these passages; Gregory X's own article has the arrival at Brindisi on 1 January 1272."
+  - key: innocent-iv-return-to-rome
+    question: When did Innocent IV return to Italy and Rome after the Council of Lyon?
+    about: [{person: innocent-iv}]
+    field: date
+    claims:
+      - {value: "1250, after the death of Frederick II (the lead)", sources: [wp-innocent-iv]}
+      - {value: "Left Lyon 19 April 1251; Genoa 18 May; Milan 1 July; Perugia 5 November 1251; Rome first week of October 1253 (body)", sources: [wp-innocent-iv]}
+    note: "No return event is entered; the body's dates are in the note. Frederick II died in December 1250."
+  - key: alexander-iv-birth
+    question: In which year was Alexander IV born?
+    about: [{person: alexander-iv}]
+    field: born
+    claims:
+      - {value: "c. 1185", sources: [wp-alexander-iv]}
+      - {value: "1199", sources: [wp-alexander-iv]}
+    note: "The lead gives 'c. 1185 or 1199'; the record uses 1185, estimated. He was made cardinal in 1227, which suits the earlier date better."
+  - key: innocent-vi-birth
+    question: In which year was Innocent VI born?
+    about: [{person: innocent-vi}]
+    field: born
+    claims:
+      - {value: "1282 (lead)", sources: [wp-innocent-vi]}
+      - {value: "'during the late 1280s' (Early life)", sources: [wp-innocent-vi]}
+    note: "The record uses 1282, estimated."
+  - key: gregory-xii-pontificate-end
+    question: When did Gregory XII's pontificate end?
+    about: [{person: gregory-xii}]
+    field: title end
+    claims:
+      - {value: "4 July 1415, his resignation at Constance (modern Annuario Pontificio, which since the mid-20th century extends his reign to 1415)", sources: [wp-gregory-xii, wp-western-schism, wp-council-of-constance]}
+      - {value: "1409, when the Council of Pisa deposed him; the Annuario listed his reign as 1406-1409 until 1946, followed by Alexander V and John XXIII as popes", sources: [wp-gregory-xii, wp-western-schism]}
+    note: "The record uses 4 July 1415 and marks the title disputed. Alexander V and John XXIII (Pisa) are treated as antipopes and not entered."
+  - key: benedict-xii-start-date
+    question: On what day did Benedict XII's pontificate begin?
+    about: [{person: benedict-xii}]
+    field: title start
+    claims:
+      - {value: "30 December 1334 (lead; the conclave opened 13 December 1334)", sources: [wp-benedict-xii]}
+      - {value: "8 January 1335 ('took the name of Benedict XII as the pope on 8 January 1335', Election section)", sources: [wp-benedict-xii]}
+    note: "The record uses 30 December 1334 from the lead; 8 January 1335 is probably the coronation."
