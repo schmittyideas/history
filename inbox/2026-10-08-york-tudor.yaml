@@ -1,0 +1,320 @@
+# English monarchs: York and Tudor, 1461-1603.
+# VERIFIED against the downloaded English Wikipedia articles (scratchpad/wp/). Every date, place and
+# role below comes from those articles. Exceptions, stated honestly:
+#  - Coordinates are from general knowledge (the articles give none) and are approximate to ~3 decimals.
+#  - NOT DOWNLOADED, so left out or sourced from other articles: Elizabeth I (rate-limited error file),
+#    Spanish Armada, English Reformation, Battle of Towton/Barnet/Tewkesbury/Bosworth/Stoke Field, Hampton Court,
+#    Richmond Palace, Nonsuch Palace, Elizabeth of York, Mary Queen of Scots. Elizabeth I's facts come from
+#    the Anne Boleyn, Mary I, James VI and I and Philip II articles; the battle dates from Edward IV,
+#    Henry VII and Richard III; the Armada from Philip II. Elizabeth I's place of death, the Armada's
+#    detail, and the Nonsuch/Richmond founding facts are therefore left out.
+#  - Left out: Irish titles (Lord/King of Ireland) to keep one title per realm; Henry VI's 1470-71 reign
+#    (another agent); any founding dates or builders for Tudor palaces (no downloaded article gives them).
+#    Existing shared places (tower-of-london, windsor etc.) are referenced by key, not re-sent.
+batch:
+  title: "English monarchs: York and Tudor, 1461-1603"
+  requested: "Edward IV to Elizabeth I: reigns, Wars of the Roses battles, Reformation, Armada, Tudor places"
+  date: 2026-10-08
+
+sources:
+  - {key: wp-edward-iv-of-england, title: "Edward IV of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_IV_of_England"}
+  - {key: wp-edward-v-of-england, title: "Edward V of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_V_of_England"}
+  - {key: wp-battle-of-bosworth-field, title: "Battle of Bosworth Field (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field"}
+  - {key: wp-richard-iii-of-england, title: "Richard III of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_III_of_England"}
+  - {key: wp-henry-vii-of-england, title: "Henry VII of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_VII_of_England"}
+  - {key: wp-henry-viii, title: "Henry VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_VIII"}
+  - {key: wp-edward-vi, title: "Edward VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_VI"}
+  - {key: wp-lady-jane-grey, title: "Lady Jane Grey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lady_Jane_Grey"}
+  - {key: wp-mary-i-of-england, title: "Mary I of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_I_of_England"}
+  - {key: wp-catherine-of-aragon, title: "Catherine of Aragon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_of_Aragon"}
+  - {key: wp-anne-boleyn, title: "Anne Boleyn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Boleyn"}
+  - {key: wp-jane-seymour, title: "Jane Seymour (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jane_Seymour"}
+  - {key: wp-philip-ii-of-spain, title: "Philip II of Spain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philip_II_of_Spain"}
+  - {key: wp-james-vi-and-i, title: "James VI and I (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_VI_and_I"}
+
+people:
+  - {key: edward-iv-of-england, name: Edward IV, type: Royalty, house: York, realm: England, born: 1442-04-28, died: 1483-04-09, prominence: 4,
+     note: "First Yorkist king. Won the throne at Towton (1461), lost it to Warwick and Henry VI in 1470, regained it at Barnet and Tewkesbury (1471).", sources: [wp-edward-iv-of-england]}
+  - {key: edward-v-of-england, name: Edward V, type: Royalty, house: York, realm: England, born: 1470-11-02, died: 1483, died_estimated: true, prominence: 3,
+     note: "Reigned 9 April to 25 June 1483, never crowned. One of the Princes in the Tower; he disappeared in 1483 (died 'presumably July 1483').", sources: [wp-edward-v-of-england]}
+  - {key: richard-iii-of-england, name: Richard III, type: Royalty, house: York, realm: England, born: 1452-10-02, died: 1485-08-22, prominence: 4,
+     note: "Last Plantagenet king and last English king to die in battle (Bosworth). His remains were found in Leicester in 2012 and reburied in the cathedral in 2015.", sources: [wp-richard-iii-of-england]}
+  - {key: henry-vii-of-england, name: Henry VII, type: Royalty, house: Tudor, realm: England, born: 1457-01-28, died: 1509-04-21, prominence: 4,
+     note: "First Tudor king; won the crown at Bosworth, married Elizabeth of York and ended the Wars of the Roses at Stoke Field (1487).", sources: [wp-henry-vii-of-england]}
+  - {key: henry-viii-of-england, name: Henry VIII, type: Royalty, house: Tudor, realm: England, born: 1491-06-28, died: 1547-01-28, prominence: 5,
+     note: "Six wives; broke with Rome, became Supreme Head of the Church of England and dissolved the monasteries.", sources: [wp-henry-viii]}
+  - {key: edward-vi-of-england, name: Edward VI, type: Royalty, house: Tudor, realm: England, born: 1537-10-12, died: 1553-07-06, prominence: 3,
+     note: "Crowned aged nine; the first Protestant-raised English monarch. Ruled through regency councils under Somerset and Northumberland.", sources: [wp-edward-vi]}
+  - {key: lady-jane-grey, name: Lady Jane Grey, type: Royalty, realm: England, born: 1537, born_estimated: true, died: 1554-02-12, prominence: 3,
+     note: "The 'Nine Days Queen', proclaimed 10 July 1553 and deposed 19 July; beheaded in the Tower. Birth year uncertain (1536 or 1537).", sources: [wp-lady-jane-grey]}
+  - {key: mary-i-of-england, name: Mary I, type: Royalty, house: Tudor, realm: England, born: 1516-02-18, died: 1558-11-17, prominence: 4,
+     note: "First undisputed queen regnant of England. Restored Catholicism; more than 280 Protestants were burned. Lost Calais in 1558.", sources: [wp-mary-i-of-england]}
+  - {key: elizabeth-i-of-england, name: Elizabeth I, type: Royalty, house: Tudor, realm: England, born: 1533-09-07, died: 1603-03-24, prominence: 5,
+     note: "Daughter of Henry VIII and Anne Boleyn. Succeeded Mary I in 1558, restored Protestantism in 1559, and survived the Spanish Armada of 1588. Died childless; James VI of Scotland succeeded her.", sources: [wp-anne-boleyn, wp-mary-i-of-england, wp-james-vi-and-i, wp-philip-ii-of-spain]}
+  - {key: catherine-of-aragon, name: Catherine of Aragon, type: Royalty, realm: England, born: 1485-12-16, died: 1536-01-07, prominence: 3,
+     note: "Henry VIII's first wife (married 11 June 1509, annulled 23 May 1533). Regent in 1513 when the English beat the Scots at Flodden. Mother of Mary I.", sources: [wp-catherine-of-aragon]}
+  - {key: anne-boleyn, name: Anne Boleyn, type: Royalty, realm: England, born: 1501, born_estimated: true, died: 1536-05-19, prominence: 4,
+     note: "Henry VIII's second wife and Queen 1533-1536; mother of Elizabeth I. Beheaded for treason. Birth year is c. 1501 or c. 1507.", sources: [wp-anne-boleyn]}
+  - {key: jane-seymour, name: Jane Seymour, type: Royalty, realm: England, born: 1508, born_estimated: true, died: 1537-10-24, prominence: 2,
+     note: "Henry VIII's third wife (Queen from 30 May 1536); mother of Edward VI; died twelve days after his birth. Birth year uncertain.", sources: [wp-jane-seymour]}
+  - {key: philip-ii-of-spain, name: Philip II of Spain, type: Royalty, house: Habsburg, realm: Spain, born: 1527-05-21, died: 1598-09-13, prominence: 4,
+     note: "King of Spain from 1556. Held the title King of England jure uxoris (by right of his wife) through his marriage to Mary I, 1554-1558. Sent the Spanish Armada against Elizabeth I in 1588.", sources: [wp-philip-ii-of-spain]}
+
+places:
+  # Coordinates are approximate (the articles give none). Each place is located by today's county and country.
+  - {key: towton-battlefield, name: Towton Battlefield, kind: battlefield, region: North Yorkshire, country: England, lat: 53.855, lng: -1.264,
+     note: "Site of the Battle of Towton (29 March 1461), near the village of Towton. Coordinates approximate.", sources: [wp-edward-iv-of-england]}
+  - {key: barnet-battlefield, name: Barnet Battlefield, kind: battlefield, region: Greater London, country: England, lat: 51.663, lng: -0.206,
+     note: "Site of the Battle of Barnet (14 April 1471), in Barnet, north London. Coordinates approximate.", sources: [wp-edward-iv-of-england]}
+  - {key: tewkesbury-battlefield, name: Tewkesbury Battlefield, kind: battlefield, region: Gloucestershire, country: England, lat: 51.981, lng: -2.159,
+     note: "Site of the Battle of Tewkesbury (4 May 1471), near the town of Tewkesbury. Coordinates approximate.", sources: [wp-edward-iv-of-england]}
+  - {key: rouen, name: Rouen, kind: city, region: Normandy, country: France, lat: 49.443, lng: 1.099,
+     note: "Edward IV was born here in 1442, while his father governed English France.", sources: [wp-edward-iv-of-england]}
+  - key: bosworth-field
+    name: Bosworth Field
+    kind: battlefield
+    region: Leicestershire
+    country: England
+    city: Market Bosworth
+    lat: 52.578
+    lng: -1.434
+    visitable: true
+    visit_site: Bosworth Battlefield Heritage Centre and Country Park
+    note: "Exact site disputed. The Heritage Centre (1974) stands near Ambion Hill; 2003-2009 surveys point to a spot about 2 miles south-west, at 52.578 N, 1.434 W, which these coordinates use. Near Market Bosworth."
+    sources: [wp-battle-of-bosworth-field]
+  - {key: pembroke-castle, name: Pembroke Castle, kind: castle, city: Pembroke, region: Pembrokeshire, country: Wales, lat: 51.672, lng: -4.915,
+     note: "Birthplace of Henry VII (28 January 1457). In Pembroke.", sources: [wp-henry-vii-of-england]}
+  - {key: greyfriars-leicester, name: Greyfriars, Leicester, historical_name: Grey Friars Priory and Church, kind: church, city: Leicester, region: Leicestershire, country: England, lat: 52.634, lng: -1.136,
+     visitable: true, visit_site: "King Richard III Visitor Centre",
+     note: "Richard III was buried in the choir of Greyfriars Church after Bosworth. The site was lost, then excavated in 2012. In Leicester; the church is gone. Coordinates approximate.", sources: [wp-richard-iii-of-england]}
+  - {key: leicester-cathedral, name: Leicester Cathedral, kind: cathedral, city: Leicester, region: Leicestershire, country: England, lat: 52.636, lng: -1.133,
+     visitable: true, visit_site: "Leicester Cathedral (tomb of Richard III)",
+     note: "Richard III was reburied here on 26 March 2015. In Leicester.", sources: [wp-richard-iii-of-england]}
+  - {key: richmond-palace, name: Richmond Palace, kind: palace, city: London, region: Greater London, country: England, lat: 51.461, lng: -0.306,
+     note: "Henry VII died here on 21 April 1509. In Richmond, south-west London (historically Surrey). Founding facts not recorded in the downloaded articles.", sources: [wp-henry-vii-of-england]}
+  - {key: st-peter-ad-vincula, name: Chapel of St Peter ad Vincula, kind: church, city: London, region: Greater London, country: England, lat: 51.508, lng: -0.076,
+     note: "Chapel inside the Tower of London. Anne Boleyn was buried here in 1536; Lady Jane Grey and Guildford Dudley most likely too (not certain).", sources: [wp-anne-boleyn, wp-lady-jane-grey]}
+  - {key: kimbolton-castle, name: Kimbolton Castle, kind: castle, city: Kimbolton, region: Cambridgeshire, country: England, lat: 52.298, lng: -0.395,
+     note: "Catherine of Aragon spent her last months here and died on 7 January 1536. In Kimbolton.", sources: [wp-catherine-of-aragon]}
+  - {key: peterborough-cathedral, name: Peterborough Cathedral, kind: cathedral, city: Peterborough, region: Cambridgeshire, country: England, lat: 52.573, lng: -0.244,
+     visitable: true, visit_site: "Peterborough Cathedral (tomb of Catherine of Aragon)",
+     note: "Catherine of Aragon was buried here in 1536, with the ceremony due a Dowager Princess of Wales. In Peterborough.", sources: [wp-catherine-of-aragon]}
+  - {key: dunstable-priory, name: Dunstable Priory, kind: priory, city: Dunstable, region: Bedfordshire, country: England, lat: 51.884, lng: -0.521,
+     note: "Where Archbishop Cranmer's special court declared Henry VIII's marriage to Catherine of Aragon void on 23 May 1533. In Dunstable.", sources: [wp-henry-viii]}
+  - {key: framlingham-castle, name: Framlingham Castle, kind: castle, city: Framlingham, region: Suffolk, country: England, lat: 52.223, lng: 1.346,
+     note: "Mary assembled her supporters here by 12 July 1553, the base from which she overthrew Lady Jane Grey. In Framlingham.", sources: [wp-mary-i-of-england]}
+  - {key: gravelines, name: Gravelines, kind: city, region: Hauts-de-France, country: France, lat: 50.987, lng: 2.128,
+     note: "Port town off which the Battle of Gravelines was fought against the Spanish Armada in 1588.", sources: [wp-philip-ii-of-spain]}
+
+events:
+  # Wars of the Roses
+  - {key: battle-of-towton, name: Battle of Towton, type: Battle, date: 1461-03-29, place: towton-battlefield,
+     people: [{person: edward-iv-of-england, role: victor}], prominence: 4,
+     note: "Fought in a snowstorm; the bloodiest battle ever fought on English soil (estimates of the dead run from 9,000 to 20,000). A decisive Yorkist victory.", sources: [wp-edward-iv-of-england]}
+  - {key: coronation-of-edward-iv, name: Coronation of Edward IV, type: Coronation, date: 1461-06-28,
+     people: [{person: edward-iv-of-england, role: crowned}], prominence: 3,
+     note: "Edward was hastily appointed king in London in March 1461 and crowned on 28 June.", sources: [wp-edward-iv-of-england]}
+  - {key: battle-of-barnet, name: Battle of Barnet, type: Battle, date: 1471-04-14, place: barnet-battlefield,
+     people: [{person: edward-iv-of-england, role: victor}], prominence: 3,
+     note: "Warwick the Kingmaker was killed.", sources: [wp-edward-iv-of-england]}
+  - {key: battle-of-tewkesbury, name: Battle of Tewkesbury, type: Battle, date: 1471-05-04, place: tewkesbury-battlefield,
+     people: [{person: edward-iv-of-england, role: victor}], prominence: 3,
+     note: "The Lancastrian army was destroyed and Edward of Westminster, Henry VI's only son and heir, died on the field.", sources: [wp-edward-iv-of-england]}
+  - {key: treaty-of-picquigny, name: Treaty of Picquigny, type: Treaty, year: 1475,
+     people: [{person: edward-iv-of-england, role: signatory}], prominence: 3,
+     note: "Edward invaded France in 1475 and was bought off by Louis XI; the treaty formally ended the Hundred Years' War.", sources: [wp-edward-iv-of-england]}
+  - {key: princes-in-the-tower, name: Disappearance of the Princes in the Tower, type: Disappearance, year: 1483, estimated: true, place: tower-of-london,
+     people: [{person: edward-v-of-england, role: disappeared}, {person: richard-iii-of-england, role: suspected}], prominence: 4,
+     note: "Edward V and his brother Richard of Shrewsbury were seen less and less in the Tower and vanished from view in late summer or autumn 1483. Their fate is unknown; most accept they were murdered, usually blamed on Richard III.", sources: [wp-edward-v-of-england, wp-richard-iii-of-england]}
+  - {key: coronation-of-richard-iii, name: Coronation of Richard III, type: Coronation, date: 1483-07-06,
+     people: [{person: richard-iii-of-england, role: crowned}], prominence: 3,
+     note: "An assembly had proclaimed him king on 25 June, after declaring Edward IV's marriage invalid and his children illegitimate.", sources: [wp-richard-iii-of-england]}
+  - {key: buckinghams-rebellion, name: Buckingham's rebellion, type: Rebellion, year: 1483,
+     people: [{person: richard-iii-of-england, role: defeated rebels}], prominence: 2,
+     note: "October 1483 revolt led by Richard's former ally the Duke of Buckingham; it failed.", sources: [wp-richard-iii-of-england]}
+  - {key: battle-of-bosworth-field, name: Battle of Bosworth Field, type: Battle, date: 1485-08-22, place: bosworth-field,
+     people: [{person: henry-vii-of-england, role: victor}, {person: richard-iii-of-england, role: died}], prominence: 5,
+     note: "Richard III was killed, the last English king to die in battle. Henry Tudor took the crown, effectively ending the Wars of the Roses.", sources: [wp-henry-vii-of-england, wp-richard-iii-of-england]}
+  - {key: coronation-of-henry-vii, name: Coronation of Henry VII, type: Coronation, date: 1485-10-30, place: westminster-abbey,
+     people: [{person: henry-vii-of-england, role: crowned}], prominence: 3, sources: [wp-henry-vii-of-england]}
+  - {key: marriage-of-henry-vii-and-elizabeth-of-york, name: Marriage of Henry VII and Elizabeth of York, type: Marriage, year: 1486, place: westminster-abbey,
+     people: [{person: henry-vii-of-england, role: groom}], prominence: 3,
+     note: "Joined the Lancastrian and Yorkist claims. Henry was 29, she was 20.", sources: [wp-henry-vii-of-england]}
+  - {key: battle-of-stoke-field, name: Battle of Stoke Field, type: Battle, year: 1487,
+     people: [{person: henry-vii-of-england, role: victor}], prominence: 2,
+     note: "Defeated the Yorkist rebellion backing the pretender Lambert Simnel; the Earl of Lincoln was killed. Called the end of the Wars of the Roses (1455-1487).", sources: [wp-henry-vii-of-england]}
+
+  # Henry VIII and the Reformation
+  - {key: coronation-of-henry-viii, name: Coronation of Henry VIII and Catherine of Aragon, type: Coronation, date: 1509-06-24, place: westminster-abbey,
+     people: [{person: henry-viii-of-england, role: crowned}, {person: catherine-of-aragon, role: crowned}], prominence: 4, sources: [wp-henry-viii]}
+  - {key: field-of-the-cloth-of-gold, name: Field of the Cloth of Gold, type: Summit, date: 1520-06-07,
+     people: [{person: henry-viii-of-england, role: host}], prominence: 3,
+     note: "Fortnight of lavish entertainment near Calais at which Henry met Francis I of France.", sources: [wp-henry-viii]}
+  - {key: annulment-of-henry-viii-and-catherine, name: Annulment of Henry VIII's marriage to Catherine of Aragon, type: Annulment, date: 1533-05-23, place: dunstable-priory,
+     people: [{person: henry-viii-of-england, role: petitioner}, {person: catherine-of-aragon, role: annulled}], prominence: 4,
+     note: "Archbishop Cranmer's special court declared the marriage void. The pope refused to agree and excommunicated Henry.", sources: [wp-henry-viii, wp-catherine-of-aragon]}
+  - {key: coronation-of-anne-boleyn, name: Coronation of Anne Boleyn, type: Coronation, date: 1533-06-01, place: westminster-abbey,
+     people: [{person: anne-boleyn, role: crowned}, {person: henry-viii-of-england, role: husband}], prominence: 3,
+     note: "The last queen consort of England to be crowned separately from her husband.", sources: [wp-anne-boleyn]}
+  - {key: act-of-supremacy-1534, name: Act of Supremacy, type: Law, year: 1534,
+     people: [{person: henry-viii-of-england, role: Supreme Head}], prominence: 4,
+     note: "Declared the king 'the only Supreme Head on Earth of the Church of England'; the Treasons Act 1534 made denying it high treason.", sources: [wp-henry-viii]}
+  - {key: english-reformation, name: English Reformation, type: Reformation, year: 1534, end_year: 1559,
+     people: [{person: henry-viii-of-england, role: initiator}, {person: edward-vi-of-england, role: furthered}, {person: mary-i-of-england, role: reversed}, {person: elizabeth-i-of-england, role: restored}], prominence: 5,
+     note: "Henry broke with Rome (Act of Supremacy 1534). Protestantism was established under Edward VI, reversed under Mary I, and restored by Elizabeth in 1559. Span begins at the Act of Supremacy, though Wikipedia dates Henry's appeal for an annulment to 1527.", sources: [wp-henry-viii, wp-edward-vi, wp-mary-i-of-england]}
+  - {key: execution-of-anne-boleyn, name: Execution of Anne Boleyn, type: Execution, date: 1536-05-19, place: tower-of-london,
+     people: [{person: anne-boleyn, role: executed}, {person: henry-viii-of-england, role: ordered}], prominence: 4,
+     note: "Beheaded on Tower Green at 8 am after a trial for treasonable adultery, incest and conspiracy, charges most historians dispute.", sources: [wp-anne-boleyn, wp-henry-viii]}
+  - {key: dissolution-of-the-monasteries, name: Dissolution of the monasteries, type: Reformation, year: 1536, end_year: 1540,
+     people: [{person: henry-viii-of-england, role: ordered}], prominence: 4,
+     note: "Began with religious houses worth less than 200 pounds vested in the Crown in January 1536; about 800 houses were dissolved. End date disputed within Wikipedia (1540 or 1542).", sources: [wp-henry-viii]}
+  - {key: pilgrimage-of-grace, name: Pilgrimage of Grace, type: Rebellion, year: 1536, end_year: 1537,
+     people: [{person: henry-viii-of-england, role: suppressed}], prominence: 3,
+     note: "Large uprising in northern England led by Robert Aske against Henry's religious reforms; about 200 rebels were executed.", sources: [wp-henry-viii]}
+
+  # Edward VI, Jane, Mary
+  - {key: coronation-of-edward-vi, name: Coronation of Edward VI, type: Coronation, date: 1547-02-20, place: westminster-abbey,
+     people: [{person: edward-vi-of-england, role: crowned}], prominence: 3,
+     note: "Crowned aged nine in a shortened ceremony; Cranmer called him a second Josiah.", sources: [wp-edward-vi]}
+  - {key: book-of-common-prayer-1549, name: First Book of Common Prayer and Act of Uniformity, type: Law, year: 1549,
+     people: [{person: edward-vi-of-england, role: king}], prominence: 3,
+     note: "Cranmer's English liturgy was made compulsory. A revised, more Protestant prayer book followed in 1552 under a second Act of Uniformity.", sources: [wp-edward-vi]}
+  - {key: prayer-book-rebellion, name: Prayer Book Rebellion, type: Rebellion, year: 1549,
+     people: [{person: edward-vi-of-england, role: suppressed}], prominence: 2,
+     note: "Revolt in Devon and Cornwall in which over 5,500 people died.", sources: [wp-edward-vi]}
+  - {key: devise-for-the-succession, name: Edward VI's Devise for the Succession, type: Succession, year: 1553,
+     people: [{person: edward-vi-of-england, role: author}, {person: lady-jane-grey, role: named heir}], prominence: 3,
+     note: "The dying king named Lady Jane Grey his heir, excluding his half-sisters Mary and Elizabeth.", sources: [wp-edward-vi, wp-lady-jane-grey]}
+  - {key: proclamation-of-lady-jane-grey, name: Proclamation of Lady Jane Grey as queen, type: Proclamation, date: 1553-07-10, place: tower-of-london,
+     people: [{person: lady-jane-grey, role: proclaimed}], prominence: 3,
+     note: "Proclaimed in London; she awaited her coronation in the Tower.", sources: [wp-lady-jane-grey]}
+  - {key: mary-i-proclaimed-queen, name: Mary I proclaimed queen, type: Accession, date: 1553-07-19, place: framlingham-castle,
+     people: [{person: mary-i-of-england, role: victor}, {person: lady-jane-grey, role: deposed}], prominence: 4,
+     note: "Mary raised a force at Framlingham by 12 July; the Privy Council changed sides and proclaimed her on 19 July, deposing Jane. She rode into London on 3 August.", sources: [wp-mary-i-of-england, wp-lady-jane-grey]}
+  - {key: execution-of-lady-jane-grey, name: Execution of Lady Jane Grey, type: Execution, date: 1554-02-12, place: tower-of-london,
+     people: [{person: lady-jane-grey, role: executed}], prominence: 3,
+     note: "Beheaded with her husband Guildford Dudley after Wyatt's rebellion made her a danger to Mary.", sources: [wp-lady-jane-grey]}
+  - {key: wyatts-rebellion, name: Wyatt's rebellion, type: Rebellion, year: 1554,
+     people: [{person: mary-i-of-england, role: defeated rebels}], prominence: 2,
+     note: "Revolt from Kent against Mary's marriage to Philip of Spain; Wyatt's army surrendered within sight of the Tower.", sources: [wp-mary-i-of-england]}
+  - {key: marriage-of-mary-i-and-philip, name: Marriage of Mary I and Philip of Spain, type: Marriage, date: 1554-07-25, place: winchester-cathedral,
+     people: [{person: mary-i-of-england, role: bride}, {person: philip-ii-of-spain, role: groom}], prominence: 4,
+     note: "Two days after they first met. Philip became King of England jure uxoris; the couple had no children.", sources: [wp-mary-i-of-england, wp-philip-ii-of-spain]}
+  - {key: marian-persecutions, name: Marian persecutions, type: Persecution, year: 1555, end_year: 1558,
+     people: [{person: mary-i-of-england, role: ordered}], prominence: 3,
+     note: "The first burnings were in February 1555; more than 280 people were burned for heresy, including Cranmer, Ridley and Latimer.", sources: [wp-mary-i-of-england]}
+  - {key: loss-of-calais, name: Loss of Calais, type: Siege, year: 1558,
+     people: [{person: mary-i-of-england, role: lost}], prominence: 3,
+     note: "French forces took Calais in January 1558, England's last possession on the continent.", sources: [wp-mary-i-of-england]}
+
+  # Elizabeth
+  - {key: elizabethan-religious-settlement, name: Elizabethan Religious Settlement, type: Reformation, year: 1559,
+     people: [{person: elizabeth-i-of-england, role: restored}], prominence: 4,
+     note: "Elizabeth restored the Protestant reforms of Edward VI's reign in 1559.", sources: [wp-edward-vi]}
+  - {key: spanish-armada, name: Spanish Armada, type: Naval campaign, year: 1588, place: gravelines,
+     people: [{person: elizabeth-i-of-england, role: defender}, {person: philip-ii-of-spain, role: aggressor}], prominence: 5,
+     note: "Philip II sent the fleet to cross the Channel with the Army of Flanders and overthrow Elizabeth. The English navy denied it a link-up at Gravelines and storms wrecked much of the fleet on its return. Over 7,000 English sailors died of disease.", sources: [wp-philip-ii-of-spain]}
+
+titles:
+  - {person: edward-iv-of-england, title: King of England, realm: England, from: 1461-03-04, to: 1470-10-03, sources: [wp-edward-iv-of-england]}
+  - {person: edward-iv-of-england, title: King of England, realm: England, from: 1471-04-11, to: 1483-04-09, note: "Second reign, after Barnet and Tewkesbury", sources: [wp-edward-iv-of-england]}
+  - {person: edward-v-of-england, title: King of England, realm: England, from: 1483-04-09, to: 1483-06-25, note: "Never crowned", sources: [wp-edward-v-of-england]}
+  - {person: richard-iii-of-england, title: King of England, realm: England, from: 1483-06-26, to: 1485-08-22, sources: [wp-richard-iii-of-england]}
+  - {person: henry-vii-of-england, title: King of England, realm: England, from: 1485-08-22, to: 1509-04-21, sources: [wp-henry-vii-of-england]}
+  - {person: henry-viii-of-england, title: King of England, realm: England, from: 1509-04-22, to: 1547-01-28, sources: [wp-henry-viii]}
+  - {person: edward-vi-of-england, title: King of England, realm: England, from: 1547-01-28, to: 1553-07-06, sources: [wp-edward-vi]}
+  - {person: lady-jane-grey, title: Queen of England, realm: England, from: 1553-07-10, to: 1553-07-19, disputed: true, note: "Proclaimed under Edward VI's Devise; deposed by the Privy Council. Wikipedia's article on Mary I excludes her reign from the line of undisputed monarchs.", sources: [wp-lady-jane-grey, wp-mary-i-of-england]}
+  - {person: mary-i-of-england, title: Queen of England, realm: England, from: 1553, to: 1558-11-17, note: "Wikipedia gives the start only as July 1553 (Jane was deposed on 19 July)", sources: [wp-mary-i-of-england]}
+  - {person: philip-ii-of-spain, title: King of England, realm: England, from: 1554-07-25, to: 1558-11-17, note: "Jure uxoris, by his marriage to Mary I under the Act for the Marriage of Queen Mary to Philip of Spain; he shared the title for as long as the marriage lasted and lost it at her death", sources: [wp-philip-ii-of-spain, wp-mary-i-of-england]}
+  - {person: elizabeth-i-of-england, title: Queen of England, realm: England, from: 1558-11-17, to: 1603-03-24, note: "Start is the day Mary I died and Elizabeth succeeded her (Mary I article)", sources: [wp-mary-i-of-england, wp-james-vi-and-i]}
+
+moments:
+  - {person: edward-iv-of-england, role: born, place: rouen, year: 1442, sources: [wp-edward-iv-of-england]}
+  - {person: edward-iv-of-england, role: buried, place: st-georges-chapel-windsor, year: 1483, sources: [wp-edward-iv-of-england]}
+  - {person: edward-v-of-england, role: born, place: westminster-abbey, year: 1470, sources: [wp-edward-v-of-england]}
+  - {person: edward-v-of-england, role: lived, place: tower-of-london, year: 1483, sources: [wp-edward-v-of-england]}
+  - {person: richard-iii-of-england, role: born, place: fotheringhay-castle, year: 1452, sources: [wp-richard-iii-of-england]}
+  - {person: richard-iii-of-england, role: died, place: bosworth-field, year: 1485, sources: [wp-richard-iii-of-england]}
+  - {person: richard-iii-of-england, role: buried, place: greyfriars-leicester, year: 1485, sources: [wp-richard-iii-of-england]}
+  - {person: richard-iii-of-england, role: buried, place: leicester-cathedral, year: 2015, sources: [wp-richard-iii-of-england]}
+  - {person: henry-vii-of-england, role: born, place: pembroke-castle, year: 1457, sources: [wp-henry-vii-of-england]}
+  - {person: henry-vii-of-england, role: died, place: richmond-palace, year: 1509, sources: [wp-henry-vii-of-england]}
+  - {person: henry-vii-of-england, role: buried, place: westminster-abbey, year: 1509, sources: [wp-henry-vii-of-england]}
+  - {person: henry-viii-of-england, role: born, place: greenwich-palace, year: 1491, sources: [wp-henry-viii]}
+  - {person: henry-viii-of-england, role: died, place: palace-of-whitehall, year: 1547, sources: [wp-henry-viii]}
+  - {person: henry-viii-of-england, role: buried, place: st-georges-chapel-windsor, year: 1547, sources: [wp-henry-viii]}
+  - {person: edward-vi-of-england, role: born, place: hampton-court-palace, year: 1537, sources: [wp-edward-vi]}
+  - {person: edward-vi-of-england, role: died, place: greenwich-palace, year: 1553, sources: [wp-edward-vi]}
+  - {person: edward-vi-of-england, role: buried, place: westminster-abbey, year: 1553, sources: [wp-edward-vi]}
+  - {person: lady-jane-grey, role: died, place: tower-of-london, year: 1554, sources: [wp-lady-jane-grey]}
+  - {person: lady-jane-grey, role: buried, place: st-peter-ad-vincula, year: 1554, sources: [wp-lady-jane-grey]}
+  - {person: mary-i-of-england, role: born, place: greenwich-palace, year: 1516, sources: [wp-mary-i-of-england]}
+  - {person: mary-i-of-england, role: died, place: st-jamess-palace, year: 1558, sources: [wp-mary-i-of-england]}
+  - {person: mary-i-of-england, role: buried, place: westminster-abbey, year: 1558, sources: [wp-mary-i-of-england]}
+  - {person: elizabeth-i-of-england, role: born, place: greenwich-palace, year: 1533, sources: [wp-anne-boleyn]}
+  - {person: elizabeth-i-of-england, role: buried, place: westminster-abbey, year: 1603, sources: [wp-mary-i-of-england, wp-edward-v-of-england]}
+  - {person: catherine-of-aragon, role: died, place: kimbolton-castle, year: 1536, sources: [wp-catherine-of-aragon]}
+  - {person: catherine-of-aragon, role: buried, place: peterborough-cathedral, year: 1536, sources: [wp-catherine-of-aragon]}
+  - {person: anne-boleyn, role: died, place: tower-of-london, year: 1536, sources: [wp-anne-boleyn]}
+  - {person: anne-boleyn, role: buried, place: st-peter-ad-vincula, year: 1536, sources: [wp-anne-boleyn]}
+  - {person: jane-seymour, role: died, place: hampton-court-palace, year: 1537, sources: [wp-jane-seymour]}
+  - {person: jane-seymour, role: buried, place: st-georges-chapel-windsor, year: 1537, sources: [wp-jane-seymour]}
+
+discrepancies:
+  - key: princes-in-the-tower-fate
+    question: What happened to Edward V and his brother Richard of Shrewsbury after they disappeared in 1483?
+    about: [{person: edward-v-of-england}, {event: princes-in-the-tower}]
+    field: died
+    claims:
+      - {value: "Murdered on the orders of their uncle Richard III (the most widely accepted theory; Thomas More says smothered with pillows)", sources: [wp-edward-v-of-england, wp-richard-iii-of-england]}
+      - {value: "Fate unknown, with other suspects proposed, including Buckingham and Henry VII; no conclusive evidence", sources: [wp-edward-v-of-england, wp-richard-iii-of-england]}
+    note: "The record gives Edward V's death as 1483 (estimated). Bones found in 1674 and placed in Westminster Abbey have never been proven to be the princes."
+  - key: anne-boleyn-birth-year
+    question: When was Anne Boleyn born?
+    about: [{person: anne-boleyn}]
+    field: born
+    claims:
+      - {value: "c. 1501 (Eric Ives)", sources: [wp-anne-boleyn]}
+      - {value: "c. 1507 (Retha Warnicke; supported by William Camden)", sources: [wp-anne-boleyn]}
+    note: "The record uses c. 1501 (estimated) for now."
+  - key: jane-seymour-birth-year
+    question: When was Jane Seymour born?
+    about: [{person: jane-seymour}]
+    field: born
+    claims:
+      - {value: "c. 1508 (accounts range from 1504 to 1509)", sources: [wp-jane-seymour]}
+      - {value: "c. 1512-1513 (Elizabeth Norton)", sources: [wp-jane-seymour]}
+    note: "The record uses c. 1508 (estimated) for now."
+  - key: lady-jane-grey-birth
+    question: When and where was Lady Jane Grey born?
+    about: [{person: lady-jane-grey}]
+    field: born
+    claims:
+      - {value: "October 1537 at Bradgate House, Leicestershire (the traditional view)", sources: [wp-lady-jane-grey]}
+      - {value: "Earlier: possibly in London, before May 1537 or between May 1536 and February 1537 (more recent research; fits her being in her 17th year at her execution)", sources: [wp-lady-jane-grey]}
+    note: "The record uses 1537 (estimated) and gives no birthplace."
+  - key: lady-jane-grey-reign-length
+    question: How long did Lady Jane Grey reign?
+    about: [{person: lady-jane-grey}]
+    field: date
+    claims:
+      - {value: "Nine days, 10 to 19 July 1553 (proclamation to deposition)", sources: [wp-lady-jane-grey]}
+      - {value: "About 13 days if dated from Edward VI's death on 6 July 1553", sources: [wp-lady-jane-grey]}
+    note: "The title record uses 10-19 July 1553."
+  - key: dissolution-of-the-monasteries-end
+    question: When did the dissolution of the English monasteries end?
+    about: [{event: dissolution-of-the-monasteries}]
+    field: date
+    claims:
+      - {value: "January 1540: no religious houses remained, about 800 dissolved", sources: [wp-henry-viii]}
+      - {value: "1542: England's remaining monasteries were all dissolved", sources: [wp-henry-viii]}
+    note: "Two passages of the same article differ. The event record ends at 1540."
+  - key: richard-iii-burial-fate
+    question: Was Richard III's body thrown into the River Soar?
+    about: [{person: richard-iii-of-england}]
+    field: place
+    status: resolved
+    claims:
+      - {value: "Thrown into the River Soar at the Dissolution (long-standing tradition, now called discredited)", sources: [wp-richard-iii-of-england]}
+      - {value: "Buried in the choir of Greyfriars Church, Leicester; the skeleton was found there in 2012 and identified in 2013", sources: [wp-richard-iii-of-england]}
+    resolution: "The 2012 excavation found him at Greyfriars; the record gives burial at Greyfriars (1485) and reburial in Leicester Cathedral (2015)."
