@@ -68,10 +68,34 @@ Source: `docs/intake-format.md` ("used for lanes later").
 A realm can carry emblems with the years they were really in use (banner, arms or colour: the Abbasid black banner, the Fatimid white, England's three lions from 1198), with the picture's source and licence (Wikimedia Commons). Where one was in use in the year shown, it replaces the plain map flag and appears on the realm card; otherwise the plain flag stays. Cards can also show a small grey "today: France" flag from the realm's modern country, labelled as today's. Needs an emblems table (realm, picture, from, to, source), an intake section and a first batch.
 Source: Ty, 2026-10-07 (option 3 of the flags discussion).
 
+#### [P2] Build-out: Europe's big thrones, 1000–1500
+`type: task` · `area: data` · `status: ready` · `issue: #31`
+
+France, the Holy Roman Empire, the Papacy, Castile and León, Scotland and Byzantium: rulers with reigns, realms, key coronations, discrepancies. Queue item 2 in `docs/BUILDOUT.md`.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+
+#### [P2] Build-out: Indian rulers, 1000–1600
+`type: task` · `area: data` · `status: ready` · `issue: #32`
+
+Cholas, Western Chalukyas and Hoysalas, Palas and Senas, the Delhi Sultanate, Vijayanagara, the Bahmanis, Rajput kingdoms, the Mughals to Akbar; Tarain, Panipat, Talikota. Queue item 3 (Ty: India before East Asia).
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+
+#### [P2] Build-out: East Asian dynasties, 1000–1600
+`type: task` · `area: data` · `status: ready` · `issue: #33`
+
+Song, Liao, Jin, Yuan, Ming; Japan's emperors, shoguns and Hōjō regents; Goryeo and Joseon; Đại Việt. Queue item 4.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+
+#### [P2] Build-out: the world, century by century (1100–1500) with maps
+`type: task` · `area: data` · `status: ready` · `issue: #34`
+
+The world-in-1000 build repeated for 1100–1500, plus border snapshots in `data/maps/`. Queue item 5.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+
 #### [P2] Add every English monarch's reign from the Obsidian Royalty timeline notes
 `type: task` · `area: data` · `status: ready` · `issue: #15`
 
-The Year view shows no King of England outside the reigns entered so far (1042–1154, 1216–1272). `Personal/History/Royalty timelines` in Obsidian has a note for most English monarchs from Edward the Confessor to Elizabeth II. Intake batch: each monarch as a person plus a King/Queen of England title, dates checked against the List of English monarchs, `obsidian_link` to the reign note. France next (the Kings of the Franks / France notes are there too).
+The Year view shows no King of England outside the reigns entered so far (1042–1154, 1216–1272). `Personal/History/Royalty timelines` in Obsidian has a note for most English monarchs from Edward the Confessor to Elizabeth II. Intake batch: each monarch as a person plus a King/Queen of England title, dates checked against the List of English monarchs, `obsidian_link` to the reign note. France next (the Kings of the Franks / France notes are there too). Queue item 1 in `docs/BUILDOUT.md`; run it first to measure cost.
 Source: Year view, 2026-10-06.
 
 #### [P2] Add Emperor Henry V

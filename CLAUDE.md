@@ -88,6 +88,10 @@ Commit messages: plain imperative title ("Add …", "Intake: …"), a short body
 - `docs/BACKLOG.md` and `data/maps/index.json` are shared. Change them in small, separate commits, and rebase right before pushing.
 - Merges apply one at a time (the apply workflow queues). If an apply fails, fix forward with a new PR; never revert data by hand.
 
+## Current plan: the build-out
+
+As of October 2026 there's a large build-out queue, run on Ty's cloud session credits: English monarchs, Europe's big thrones, Indian rulers, East Asian dynasties, then the world century by century. **Read `docs/BUILDOUT.md` before starting any of it.** Its hard rule: stop before the cloud credits run out, so the work never eats Ty's weekly plan allowance, which he needs for other work.
+
 ## Unattended runs (Ty asleep or away)
 
 Work through the task you were given without stopping to ask. Quality beats quantity:
