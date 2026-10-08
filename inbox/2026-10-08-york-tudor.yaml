@@ -19,6 +19,12 @@ batch:
 sources:
   - {key: wp-edward-iv-of-england, title: "Edward IV of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_IV_of_England"}
   - {key: wp-edward-v-of-england, title: "Edward V of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_V_of_England"}
+  - {key: wp-greenwich-palace, title: "Palace of Placentia / Greenwich Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greenwich_Palace"}
+  - {key: wp-fotheringhay-castle, title: "Fotheringhay Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fotheringhay_Castle"}
+  - {key: wp-winchester-cathedral, title: "Winchester Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Winchester_Cathedral"}
+  - {key: wp-hampton-court-palace, title: "Hampton Court Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hampton_Court_Palace"}
+  - {key: wp-elizabeth-i, title: "Elizabeth I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_I"}
+  - {key: wp-spanish-armada, title: "Spanish Armada (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spanish_Armada"}
   - {key: wp-battle-of-bosworth-field, title: "Battle of Bosworth Field (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field"}
   - {key: wp-richard-iii-of-england, title: "Richard III of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_III_of_England"}
   - {key: wp-henry-vii-of-england, title: "Henry VII of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_VII_of_England"}
@@ -82,6 +88,63 @@ places:
     visit_site: Bosworth Battlefield Heritage Centre and Country Park
     note: "Exact site disputed. The Heritage Centre (1974) stands near Ambion Hill; 2003-2009 surveys point to a spot about 2 miles south-west, at 52.578 N, 1.434 W, which these coordinates use. Near Market Bosworth."
     sources: [wp-battle-of-bosworth-field]
+  - key: greenwich-palace
+    name: Greenwich Palace
+    historical_name: Bella Court; Palace of Placentia
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.4833
+    lng: -0.0089
+    founded: 1443
+    ended: 1660
+    built_by: "Humphrey, Duke of Gloucester (1443); rebuilt by Henry VII (1498-1504)"
+    architect: "Robert Vertue (master mason, Henry VII's rebuilding)"
+    note: "Royal residence at Greenwich, on the south bank of the Thames. The old main palace was demolished by Charles II in 1660; the site is now the Old Royal Naval College. Coordinates are the site of the Old Royal Naval College (approximate). The friary church beside it was used for royal baptisms and marriages, including Henry VIII's marriage to Catherine of Aragon."
+    sources: [wp-greenwich-palace]
+  - key: fotheringhay-castle
+    name: Fotheringhay Castle
+    kind: castle
+    city: Fotheringhay
+    region: Northamptonshire
+    country: England
+    lat: 52.526
+    lng: -0.441
+    founded: 1100
+    founded_estimated: true
+    ended: 1630
+    built_by: "Simon de Senlis, Earl of Northampton"
+    visitable: true
+    note: "Motte-and-bailey castle in the village of Fotheringhay, about 6 km north of Oundle. Richard III was born here in 1452; Mary, Queen of Scots was tried and executed here in 1587. Dismantled in the 1630s (the end year is approximate); only earthworks remain, a Scheduled Monument open to the public. Coordinates approximate."
+    sources: [wp-fotheringhay-castle]
+  - key: winchester-cathedral
+    name: Winchester Cathedral
+    kind: cathedral
+    city: Winchester
+    region: Hampshire
+    country: England
+    lat: 51.0607
+    lng: -1.3133
+    founded: 1079
+    built_by: "Bishop Walkelin (present cathedral begun 1079; building continued to 1532)"
+    visitable: true
+    note: "The present cathedral was built 1079-1532 and is among the longest medieval cathedrals in the world. It replaced the Old Minster, founded c. 648 by Cenwalh of Wessex. Mary I married Philip of Spain here on 25 July 1554. Coordinates approximate."
+    sources: [wp-winchester-cathedral]
+  - key: hampton-court-palace
+    name: Hampton Court Palace
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.4037
+    lng: -0.3377
+    founded: 1514
+    built_by: "Cardinal Thomas Wolsey (from 1514); given to Henry VIII in 1529 and enlarged by him; partly rebuilt by William III from the early 1690s"
+    visitable: true
+    visit_site: Hampton Court Palace (Historic Royal Palaces)
+    note: "In the London Borough of Richmond upon Thames. George II was the last monarch to reside here. Coordinates approximate."
+    sources: [wp-hampton-court-palace]
   - {key: pembroke-castle, name: Pembroke Castle, kind: castle, city: Pembroke, region: Pembrokeshire, country: Wales, lat: 51.672, lng: -4.915,
      note: "Birthplace of Henry VII (28 January 1457). In Pembroke.", sources: [wp-henry-vii-of-england]}
   - {key: greyfriars-leicester, name: Greyfriars, Leicester, historical_name: Grey Friars Priory and Church, kind: church, city: Leicester, region: Leicestershire, country: England, lat: 52.634, lng: -1.136,
@@ -211,9 +274,12 @@ events:
   - {key: elizabethan-religious-settlement, name: Elizabethan Religious Settlement, type: Reformation, year: 1559,
      people: [{person: elizabeth-i-of-england, role: restored}], prominence: 4,
      note: "Elizabeth restored the Protestant reforms of Edward VI's reign in 1559.", sources: [wp-edward-vi]}
+  - {key: coronation-of-elizabeth-i, name: Coronation of Elizabeth I, type: Coronation, date: 1559-01-15, place: westminster-abbey,
+     people: [{person: elizabeth-i-of-england, role: crowned}], prominence: 3,
+     note: "Date chosen by her astrologer John Dee. Crowned and anointed by Owen Oglethorpe, the Catholic bishop of Carlisle.", sources: [wp-elizabeth-i]}
   - {key: spanish-armada, name: Spanish Armada, type: Naval campaign, year: 1588, place: gravelines,
      people: [{person: elizabeth-i-of-england, role: defender}, {person: philip-ii-of-spain, role: aggressor}], prominence: 5,
-     note: "Philip II sent the fleet to cross the Channel with the Army of Flanders and overthrow Elizabeth. The English navy denied it a link-up at Gravelines and storms wrecked much of the fleet on its return. Over 7,000 English sailors died of disease.", sources: [wp-philip-ii-of-spain]}
+     note: "Philip II sent the fleet to cross the Channel with the Army of Flanders and overthrow Elizabeth. The English navy denied it a link-up at Gravelines and storms wrecked much of the fleet on its return. Over 7,000 English sailors died of disease.", sources: [wp-philip-ii-of-spain, wp-spanish-armada]}
 
 titles:
   - {person: edward-iv-of-england, title: King of England, realm: England, from: 1461-03-04, to: 1470-10-03, sources: [wp-edward-iv-of-england]}
@@ -251,8 +317,9 @@ moments:
   - {person: mary-i-of-england, role: born, place: greenwich-palace, year: 1516, sources: [wp-mary-i-of-england]}
   - {person: mary-i-of-england, role: died, place: st-jamess-palace, year: 1558, sources: [wp-mary-i-of-england]}
   - {person: mary-i-of-england, role: buried, place: westminster-abbey, year: 1558, sources: [wp-mary-i-of-england]}
-  - {person: elizabeth-i-of-england, role: born, place: greenwich-palace, year: 1533, sources: [wp-anne-boleyn]}
-  - {person: elizabeth-i-of-england, role: buried, place: westminster-abbey, year: 1603, sources: [wp-mary-i-of-england, wp-edward-v-of-england]}
+  - {person: elizabeth-i-of-england, role: born, place: greenwich-palace, year: 1533, sources: [wp-elizabeth-i]}
+  - {person: elizabeth-i-of-england, role: died, place: richmond-palace, year: 1603, sources: [wp-elizabeth-i]}
+  - {person: elizabeth-i-of-england, role: buried, place: westminster-abbey, year: 1603, sources: [wp-elizabeth-i]}
   - {person: catherine-of-aragon, role: died, place: kimbolton-castle, year: 1536, sources: [wp-catherine-of-aragon]}
   - {person: catherine-of-aragon, role: buried, place: peterborough-cathedral, year: 1536, sources: [wp-catherine-of-aragon]}
   - {person: anne-boleyn, role: died, place: tower-of-london, year: 1536, sources: [wp-anne-boleyn]}
