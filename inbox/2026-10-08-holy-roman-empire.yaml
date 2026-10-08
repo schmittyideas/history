@@ -1,0 +1,752 @@
+batch:
+  title: "The kings of the Germans and Holy Roman emperors, 1002-1519"
+  requested: "Henry II through Maximilian I: lives, reigns, coronations, key events and places"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles for 23 rulers (Henry II to Maximilian I). Nothing was fetched. Otto III (otto-iii-holy-roman-emperor) already exists and is not touched.
+# - Adolf of Nassau: the first download was a disambiguation page; the real article ("Adolf, King of the Romans", revision 1369845799) was fetched afterwards and his record, election (5 May 1292), coronation (24 June 1292) and death (2 July 1298) come from it.
+# - Title wording: every ruler has "King of the Germans" (realm Holy Roman Empire), whatever the article calls it (King of Germany, King of the Romans, Rex Romanorum). Crowned emperors also get "Holy Roman Emperor". Conrad III, Rudolf I, Adolf, Albert I, Wenceslaus IV, Rupert and Albert II were never crowned emperor and have only the first title. Maximilian I took the title "Elected Roman Emperor" at Trento in 1508 with Pope Julius II's assent and was never crowned by a pope; his emperor title runs from 1508.
+# - Start-of-reign convention: the date of the election, or of the first coronation where there was no election (Henry II). For rulers who were crowned co-king in their father's lifetime (Henry III 1028, Henry IV 1054, Henry V 1099, Henry VI 1169) the title starts at the father's death, and the co-kingship is in the title note, so the lanes do not overlap. Henry II, Conrad II, Frederick I and Maximilian (from 1486, jointly with his father) follow the dates given in their titles.
+# - Overlaps by design (not marked disputed, because each ruler was accepted as king by most of the empire at some point): Philip of Swabia and Otto IV (double election of 1198, to Philip's murder in 1208), Louis IV and Charles IV (1346-1347), Wenceslaus IV and Rupert (Wenceslaus never recognised his deposition of 20 August 1400), Sigismund and Jobst of Moravia (1410-1411).
+# - Antikings are out of scope and not entered: Rudolf of Rheinfelden, Hermann of Salm, Conrad III's years as antiking of Lothair III (1127-1135, in his title note only), Frederick the Fair (Louis IV's co-king 1325-1330, in the Louis note), Günther von Schwarzburg, Jobst of Moravia, Henry Raspe, William of Holland. The Great Interregnum (1250-1273) has no ruler in this batch.
+# - Titles left out for size (all other realms need their own agreed wording): King of Italy (Henry II 1004, Conrad II 1026, Frederick I 1155, Henry VII 1311, Louis IV 1327, Charles IV 1355, Sigismund 1431), King of Burgundy (Conrad II 1033, Frederick I 1178, Charles IV 1365), King of Sicily (Henry VI, crowned 25 December 1194; Frederick II, crowned 17 May 1198), King of Jerusalem (Frederick II 1229), King of Hungary (Sigismund from 31 March 1387; Albert II, crowned 1 January 1438), King of Bohemia (Charles IV, crowned 2 September 1347; Wenceslaus IV from 1378; Sigismund from 1419), all dukedoms. The realms Hungary and Bohemia exist, so these can be added in the Bohemia / Hungary batches. Sicily and Jerusalem would need new realms.
+# - Consorts and children are mostly left out to keep the batch to size. Only parent-child links among the rulers are entered, plus Henry V's marriage to Empress Matilda (existing key empress-matilda, married at Mainz on 7 January 1114).
+# - Dates not given as a day in the articles, so year only: Henry III's co-coronation at Aachen (Easter 1028), Louis IV's imperial coronation (January 1328), Hus's execution (July 1415), the Golden Bull (1356), the Habsburg investiture with Austria (December 1282), Frederick II's coronation at Aachen (mid-July 1215), the Council of Lyon (1245), Frederick I's birth (mid-December 1122), Henry VI's birth (November 1165 / autumn 1165), Philip of Swabia's birth (February/March 1177), Albert I's birth (July 1255).
+# - Places not entered because the article gives no clear founding fact or place: Henry II's birthplace; Conrad III's, Lothair's (Unterlüß is given for Lothair but not entered), Rupert's death castle (Landskrone near Oppenheim) and burial church (Church of the Holy Spirit, Heidelberg); Louis IV's burial (Frauenkirche, Munich); Henry VII's tomb (Pisa Cathedral); Frederick III's tomb (St Stephen's, Vienna); Maximilian's burial (Wiener Neustadt castle chapel); Sigismund's burial (Nagyvárad / Oradea); Albert II's burial (Székesfehérvár); Henry VI's and Frederick II's tombs (Palermo Cathedral). These are named in the notes of the persons.
+# - Discrepancies recorded below: Henry III birth year; Henry V birth year; Conrad III birth year; Lothair III death day; Otto IV reign end; Sigismund birthplace; Henry VII birth year. Also seen, not entered because they touch no record field: Henry II's Italian coronation (14 May 1004 in the text, 15 May in the lead); his canonisation (1146 in the lead, July 1147 in the Veneration section); Frederick I's coronation as King of Italy (Pavia 24 April or Monza 15 April 1155); Rudolph III of Burgundy's death (6 September 1032 or 2 February 1032, Conrad II article).
+# - Shared keys defined here (other batches may send the same key): rome, st-peters-basilica-rome, speyer-cathedral, worms, konstanz, palermo, third-crusade-1189. Existing keys referenced and not redefined: aachen-cathedral, jerusalem, venice, empress-matilda, otto-iii-holy-roman-emperor (not used), richard-i-handed-to-the-emperor-1193, battle-of-crecy-1346. France-batch keys referenced and not redefined: second-crusade-1147, battle-of-bouvines-1214, italian-war-of-1494. They appear in the "events" block with only key, people and sources.
+# - Coordinates are from general knowledge (about 3 decimals); "visitable" flags are general knowledge, not from the articles. The Saleph/Göksu river and Habsburg Castle (Habichtsburg) coordinates are approximate.
+# - Size: 24 people, 40 titles, 20 new events plus 5 link-only updates to existing events, 11 places, 24 moments (16 Aachen crownings, 8 burials), 11 links, 7 discrepancies (about 142 rows with the updates). Over the 100-row target because every ruler has two titles and a coronation moment. If it must be cut, drop the 16 Aachen moments first (the title notes already hold the crowning dates), then the 11 links.
+# - Doubts: Frederick II's King of the Germans start (elected in absentia at Nuremberg in September 1211, crowned at Mainz 9 December 1212, crowned again at Aachen in mid-July 1215 after Bouvines; the record uses the Mainz coronation); Otto IV's end (see discrepancy); Sigismund's start (first election 20 September 1410 contested by Jobst, second 21 July 1411; the record uses 1411); Conrad II's and Henry III's dates are election/accession dates, the coronation days are in the notes.
+
+sources:
+  - {key: wp-henry-ii-holy-roman-emperor,            title: "Henry II, Holy Roman Emperor (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Henry_II%2C_Holy_Roman_Emperor"}
+  - {key: wp-conrad-ii-holy-roman-emperor,           title: "Conrad II, Holy Roman Emperor (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Conrad_II%2C_Holy_Roman_Emperor"}
+  - {key: wp-henry-iii-holy-roman-emperor,           title: "Henry III, Holy Roman Emperor (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Henry_III%2C_Holy_Roman_Emperor"}
+  - {key: wp-henry-iv-holy-roman-emperor,            title: "Henry IV, Holy Roman Emperor (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Henry_IV%2C_Holy_Roman_Emperor"}
+  - {key: wp-henry-v-holy-roman-emperor,             title: "Henry V, Holy Roman Emperor (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Henry_V%2C_Holy_Roman_Emperor"}
+  - {key: wp-lothair-iii-holy-roman-emperor,         title: "Lothair III, Holy Roman Emperor (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Lothair_III%2C_Holy_Roman_Emperor"}
+  - {key: wp-conrad-iii-of-germany,                  title: "Conrad III of Germany (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Conrad_III_of_Germany"}
+  - {key: wp-frederick-i-barbarossa-holy-roman-emperor, title: "Frederick Barbarossa (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Frederick_Barbarossa"}
+  - {key: wp-henry-vi-holy-roman-emperor,            title: "Henry VI, Holy Roman Emperor (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Henry_VI%2C_Holy_Roman_Emperor"}
+  - {key: wp-philip-of-swabia,                       title: "Philip of Swabia (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Philip_of_Swabia"}
+  - {key: wp-otto-iv-holy-roman-emperor,             title: "Otto IV, Holy Roman Emperor (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Otto_IV%2C_Holy_Roman_Emperor"}
+  - {key: wp-frederick-ii-holy-roman-emperor,        title: "Frederick II, Holy Roman Emperor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frederick_II%2C_Holy_Roman_Emperor"}
+  - {key: wp-rudolf-i-of-germany,                    title: "Rudolf I of Germany (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Rudolf_I_of_Germany"}
+  - {key: wp-adolf-of-nassau,                        title: "Adolf, King of the Romans (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adolf%2C_King_of_the_Romans"}
+  - {key: wp-albert-i-of-germany,                    title: "Albert I of Germany (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Albert_I_of_Germany"}
+  - {key: wp-henry-vii-holy-roman-emperor,           title: "Henry VII, Holy Roman Emperor (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Henry_VII%2C_Holy_Roman_Emperor"}
+  - {key: wp-louis-iv-holy-roman-emperor,            title: "Louis IV, Holy Roman Emperor (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Louis_IV%2C_Holy_Roman_Emperor"}
+  - {key: wp-charles-iv-holy-roman-emperor,          title: "Charles IV, Holy Roman Emperor (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Charles_IV%2C_Holy_Roman_Emperor"}
+  - {key: wp-wenceslaus-iv-of-bohemia,               title: "Wenceslaus IV of Bohemia (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Wenceslaus_IV_of_Bohemia"}
+  - {key: wp-rupert-of-germany,                      title: "Rupert, King of the Romans (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Rupert%2C_King_of_the_Romans"}
+  - {key: wp-sigismund-holy-roman-emperor,           title: "Sigismund, Holy Roman Emperor (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Sigismund%2C_Holy_Roman_Emperor"}
+  - {key: wp-albert-ii-of-germany,                   title: "Albert II of Germany (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Albert_II_of_Germany"}
+  - {key: wp-frederick-iii-holy-roman-emperor,       title: "Frederick III, Holy Roman Emperor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frederick_III%2C_Holy_Roman_Emperor"}
+  - {key: wp-maximilian-i-holy-roman-emperor,        title: "Maximilian I, Holy Roman Emperor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Maximilian_I%2C_Holy_Roman_Emperor"}
+
+people:
+  - key: henry-ii-holy-roman-emperor
+    name: Henry II (Holy Roman Emperor)
+    type: Royalty
+    house: Ottonian
+    realm: Holy Roman Empire
+    born: 0973-05-06
+    died: 1024-07-13
+    prominence: 3
+    note: "Last Ottonian emperor and later a saint; King from 1002, emperor from 1014. Fought three wars with Bolesław I of Poland (peace of Bautzen 1018) and founded the Diocese of Bamberg in 1007. Died childless at Göttingen."
+    sources: [wp-henry-ii-holy-roman-emperor]
+  - key: conrad-ii-holy-roman-emperor
+    name: Conrad II (Holy Roman Emperor)
+    type: Royalty
+    house: Salian
+    realm: Holy Roman Empire
+    born: 990
+    born_estimated: true
+    died: 1039-06-04
+    prominence: 3
+    note: "First Salian emperor. Joined Burgundy to the empire in 1033-1034, began Speyer Cathedral in 1030 and died at Utrecht."
+    sources: [wp-conrad-ii-holy-roman-emperor]
+  - key: henry-iii-holy-roman-emperor
+    name: Henry III (Holy Roman Emperor)
+    type: Royalty
+    house: Salian
+    realm: Holy Roman Empire
+    born: 1016-10-28
+    died: 1056-10-05
+    prominence: 3
+    note: "Crowned emperor on Christmas Day 1046 after deposing three rival popes at Sutri; appointed four German popes. Died aged 39 at the Bodfeld hunting lodge; heart at Goslar, body at Speyer."
+    sources: [wp-henry-iii-holy-roman-emperor]
+  - key: henry-iv-holy-roman-emperor
+    name: Henry IV (Holy Roman Emperor)
+    type: Royalty
+    house: Salian
+    realm: Holy Roman Empire
+    born: 1050-11-11
+    died: 1106-08-07
+    prominence: 4
+    note: "Central figure of the Investiture Controversy: excommunicated by Gregory VII in 1076, absolved at Canossa in 1077, crowned emperor in 1084. Forced to abdicate by his son Henry V on 31 December 1105; died at Liège and was buried at Speyer in 1111."
+    sources: [wp-henry-iv-holy-roman-emperor]
+  - key: henry-v-holy-roman-emperor
+    name: Henry V (Holy Roman Emperor)
+    type: Royalty
+    house: Salian
+    realm: Holy Roman Empire
+    born: 1086
+    born_estimated: true
+    died: 1125-05-23
+    prominence: 3
+    note: "Last Salian. Rebelled against his father in 1104, imprisoned Pope Paschal II to force his imperial coronation in 1111 and ended the Investiture Controversy with the Concordat of Worms in 1122. Married Matilda of England in 1114; died childless at Utrecht."
+    sources: [wp-henry-v-holy-roman-emperor]
+  - key: lothair-iii-holy-roman-emperor
+    name: Lothair III (Holy Roman Emperor)
+    type: Royalty
+    house: Supplinburg
+    realm: Holy Roman Empire
+    born: 1075
+    born_estimated: true
+    died: 1137-12-03
+    prominence: 2
+    note: "Duke of Saxony from 1106; elected king in 1125, crowned emperor at the Lateran in 1133. Spent his reign fighting the Hohenstaufen and died returning from a campaign against Roger II of Sicily; buried at Königslutter."
+    sources: [wp-lothair-iii-holy-roman-emperor]
+  - key: conrad-iii-of-germany
+    name: Conrad III of Germany
+    type: Royalty
+    house: Hohenstaufen
+    realm: Holy Roman Empire
+    born: 1093
+    born_estimated: true
+    died: 1152-02-15
+    prominence: 3
+    note: "First Hohenstaufen king (1138-1152), earlier antiking to Lothair III (1127-1135). His quarrel with Henry the Proud began the Guelph-Ghibelline wars. Led the German army on the failed Second Crusade; never crowned emperor. Named his nephew Frederick Barbarossa as successor."
+    sources: [wp-conrad-iii-of-germany, wp-lothair-iii-holy-roman-emperor]
+  - key: frederick-i-barbarossa-holy-roman-emperor
+    name: Frederick I Barbarossa
+    type: Royalty
+    house: Hohenstaufen
+    realm: Holy Roman Empire
+    born: 1122
+    died: 1190-06-10
+    prominence: 5
+    note: "Hohenstaufen emperor (1155-1190). Six Italian campaigns; beaten by the Lombard League at Legnano in 1176; broke Henry the Lion in 1180-1181. Took the cross for the Third Crusade and drowned in the Saleph River in Cilicia. Born in mid-December 1122, birthplace uncertain (Hagenau likely)."
+    sources: [wp-frederick-i-barbarossa-holy-roman-emperor]
+  - key: henry-vi-holy-roman-emperor
+    name: Henry VI (Holy Roman Emperor)
+    type: Royalty
+    house: Hohenstaufen
+    realm: Holy Roman Empire
+    born: 1165
+    died: 1197-09-28
+    prominence: 3
+    note: "Son of Barbarossa; emperor 1191-1197. Held Richard I to ransom in 1193-1194, conquered Sicily in 1194 and tried to make the empire hereditary. Born at Nijmegen in autumn 1165; died of malaria at Messina and was buried at Palermo."
+    sources: [wp-henry-vi-holy-roman-emperor]
+  - key: philip-of-swabia
+    name: Philip of Swabia
+    type: Royalty
+    house: Hohenstaufen
+    realm: Holy Roman Empire
+    born: 1177
+    died: 1208-06-21
+    prominence: 2
+    note: "Youngest son of Barbarossa; elected king in March 1198 against the Welf Otto of Brunswick, starting the German throne dispute. Murdered at Bamberg by Otto VIII of Wittelsbach; never crowned emperor."
+    sources: [wp-philip-of-swabia]
+  - key: otto-iv-holy-roman-emperor
+    name: Otto IV (Holy Roman Emperor)
+    type: Royalty
+    house: Welf
+    realm: Holy Roman Empire
+    born: 1175
+    died: 1218-05-19
+    prominence: 2
+    note: "Only Welf king of Germany; raised in England, nephew of Richard I. Elected 1198, sole king after 1208, crowned emperor in 1209, excommunicated 1210 and beaten at Bouvines in 1214 on England's side."
+    sources: [wp-otto-iv-holy-roman-emperor]
+  - key: frederick-ii-holy-roman-emperor
+    name: Frederick II (Holy Roman Emperor)
+    type: Royalty
+    house: Hohenstaufen
+    realm: Holy Roman Empire
+    born: 1194-12-26
+    died: 1250-12-13
+    prominence: 5
+    note: "Stupor mundi. Born at Jesi, King of Sicily from 1198, King of Germany from 1212, emperor from 1220. Recovered Jerusalem by treaty in 1229, issued the Constitutions of Melfi in 1231 and was excommunicated and declared deposed by Innocent IV in 1245. Died at Castel Fiorentino and was buried at Palermo."
+    sources: [wp-frederick-ii-holy-roman-emperor]
+  - key: rudolf-i-of-germany
+    name: Rudolf I of Germany
+    type: Royalty
+    house: Habsburg
+    realm: Holy Roman Empire
+    born: 1218-05-01
+    died: 1291-07-15
+    prominence: 3
+    note: "Rudolf of Habsburg, first Habsburg king (1273-1291), ending the Great Interregnum. Beat Ottokar II at the Marchfeld in 1278 and gave Austria and Styria to his sons in 1282. Never crowned emperor; buried at Speyer."
+    sources: [wp-rudolf-i-of-germany]
+  - key: adolf-of-nassau
+    name: Adolf of Nassau
+    type: Royalty
+    house: Nassau
+    realm: Holy Roman Empire
+    born: 1255
+    born_estimated: true
+    died: 1298-07-02
+    prominence: 2
+    note: "Count of Nassau, elected king of the Germans in 1292 after Rudolf I's death; deposed by the electors in 1298 and killed at Göllheim fighting Albert of Habsburg. Never crowned emperor."
+    sources: [wp-adolf-of-nassau, wp-albert-i-of-germany, wp-rudolf-i-of-germany]
+  - key: albert-i-of-germany
+    name: Albert I of Germany
+    type: Royalty
+    house: Habsburg
+    realm: Holy Roman Empire
+    born: 1255
+    died: 1308-05-01
+    prominence: 2
+    note: "Albert of Habsburg, Duke of Austria and Styria from 1282; king 1298-1308 after Adolf fell at Göllheim. Never crowned emperor. Murdered at Windisch on the Reuss by his nephew John the Parricide."
+    sources: [wp-albert-i-of-germany]
+  - key: henry-vii-holy-roman-emperor
+    name: Henry VII (Holy Roman Emperor)
+    type: Royalty
+    house: Luxembourg
+    realm: Holy Roman Empire
+    born: 1275
+    born_estimated: true
+    died: 1313-08-24
+    prominence: 3
+    note: "First Luxembourg emperor; Count of Luxembourg elected king in 1308. Crowned emperor at the Lateran on 29 June 1312, the first since Frederick II (1250). Besieged Florence in 1312 and died of malaria at Buonconvento; tomb at Pisa."
+    sources: [wp-henry-vii-holy-roman-emperor]
+  - key: louis-iv-holy-roman-emperor
+    name: Louis IV (Holy Roman Emperor)
+    type: Royalty
+    house: Wittelsbach
+    realm: Holy Roman Empire
+    born: 1282-04-01
+    died: 1347-10-11
+    prominence: 3
+    note: "Louis the Bavarian, born at Munich. Won the throne against Frederick the Fair at Mühldorf in 1322, was excommunicated by John XXII, crowned emperor at Rome in 1328 and declared the pope deposed. Died of a stroke on a bear hunt; buried in the Frauenkirche, Munich."
+    sources: [wp-louis-iv-holy-roman-emperor]
+  - key: charles-iv-holy-roman-emperor
+    name: Charles IV (Holy Roman Emperor)
+    type: Royalty
+    house: Luxembourg
+    realm: Holy Roman Empire
+    born: 1316-05-14
+    died: 1378-11-29
+    prominence: 4
+    note: "Born at Prague as Wenceslaus. King of Bohemia from 1346, king of the Romans from 1346, emperor from 1355. Issued the Golden Bull of 1356, founded Charles University in 1348 and made Prague a capital. Escaped from Crécy, where his father John of Bohemia died."
+    sources: [wp-charles-iv-holy-roman-emperor]
+  - key: wenceslaus-iv-of-bohemia
+    name: Wenceslaus IV of Bohemia
+    type: Royalty
+    house: Luxembourg
+    realm: Holy Roman Empire
+    born: 1361-02-26
+    died: 1419-08-16
+    prominence: 2
+    note: "Born at Nuremberg, son of Charles IV. King of Bohemia 1378-1419, king of the Romans 1376-1400. Deposed by four electors on 20 August 1400 and never crowned emperor; his reign ended with the Hussite crisis."
+    sources: [wp-wenceslaus-iv-of-bohemia]
+  - key: rupert-of-germany
+    name: Rupert of Germany
+    type: Royalty
+    house: Wittelsbach
+    realm: Holy Roman Empire
+    born: 1352-05-05
+    died: 1410-05-18
+    prominence: 2
+    note: "Rupert III, Elector Palatine, born at Amberg. Elected king after Wenceslaus's deposition in 1400, crowned at Cologne in 1401; failed in Italy at Brescia. Never crowned emperor."
+    sources: [wp-rupert-of-germany, wp-wenceslaus-iv-of-bohemia]
+  - key: sigismund-holy-roman-emperor
+    name: Sigismund (Holy Roman Emperor)
+    type: Royalty
+    house: Luxembourg
+    realm: Holy Roman Empire
+    born: 1368-02-15
+    died: 1437-12-09
+    prominence: 4
+    note: "Son of Charles IV; King of Hungary from 1387, king of the Romans from 1410/1411, King of Bohemia from 1419, emperor from 1433. Beaten at Nicopolis in 1396; drove the Council of Constance (1414-1418), which ended the Western Schism. Died at Znojmo, buried at Nagyvárad."
+    sources: [wp-sigismund-holy-roman-emperor]
+  - key: albert-ii-of-germany
+    name: Albert II of Germany
+    type: Royalty
+    house: Habsburg
+    realm: Holy Roman Empire
+    born: 1397-08-10
+    died: 1439-10-27
+    prominence: 2
+    note: "Born at Vienna; Albert V of Austria, son-in-law and heir of Sigismund. King of Hungary (crowned 1 January 1438) and king of the Romans from 17 March 1438; never crowned emperor. Died at Neszmély fighting the Turks and was buried at Székesfehérvár."
+    sources: [wp-albert-ii-of-germany]
+  - key: frederick-iii-holy-roman-emperor
+    name: Frederick III (Holy Roman Emperor)
+    type: Royalty
+    house: Habsburg
+    realm: Holy Roman Empire
+    born: 1415-09-21
+    died: 1493-08-19
+    prominence: 3
+    note: "First Habsburg emperor, born at Innsbruck; his 41-year reign as emperor (1452-1493) is the longest in the empire's history. Last emperor crowned in Rome (1452). Lost Vienna to Matthias Corvinus but won the Burgundian inheritance for his son Maximilian. Died at Linz, buried in St Stephen's Cathedral, Vienna."
+    sources: [wp-frederick-iii-holy-roman-emperor]
+  - key: maximilian-i-holy-roman-emperor
+    name: Maximilian I (Holy Roman Emperor)
+    type: Royalty
+    house: Habsburg
+    realm: Holy Roman Empire
+    born: 1459-03-22
+    died: 1519-01-12
+    prominence: 4
+    note: "The last knight. Born at Wiener Neustadt; married Mary of Burgundy in 1477, king of the Romans from 1486, Elected Roman Emperor in 1508 (never crowned by a pope). Reformed the empire at the Diet of Worms in 1495 and fought the Italian Wars; his grandson Charles V succeeded him. Died at Wels."
+    sources: [wp-maximilian-i-holy-roman-emperor]
+
+titles:
+  # ---- Ottonian and Salian ----
+  - {person: henry-ii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1002-07-09, to: 1024-07-13, note: "Anointed and crowned at Mainz by Archbishop Willigis on 9 July 1002, without the nobles' election and not at Aachen; King of Italy at Pavia in May 1004", sources: [wp-henry-ii-holy-roman-emperor]}
+  - {person: henry-ii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1014-02-14, to: 1024-07-13, note: "Crowned by Benedict VIII in St Peter's Basilica after restoring him to Rome", sources: [wp-henry-ii-holy-roman-emperor]}
+  - {person: conrad-ii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1024-09-04, to: 1039-06-04, note: "Elected at Kamba on 4 September 1024; crowned at Mainz Cathedral on 8 September by Archbishop Aribo; crowned King of Italy at Milan in March 1026; crowned King of Burgundy at Payerne on 2 February 1033", sources: [wp-conrad-ii-holy-roman-emperor]}
+  - {person: conrad-ii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1027-03-26, to: 1039-06-04, note: "Crowned with Gisela by John XIX in Old St Peter's Basilica, Rome", sources: [wp-conrad-ii-holy-roman-emperor]}
+  - {person: henry-iii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1039-06-04, to: 1056-10-05, note: "Crowned co-king at Aachen at Easter 1028 by Archbishop Pilgrim of Cologne, in his father's lifetime", sources: [wp-henry-iii-holy-roman-emperor, wp-conrad-ii-holy-roman-emperor]}
+  - {person: henry-iii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1046-12-25, to: 1056-10-05, note: "Crowned with Agnes of Poitou by Clement II five days after the Synod of Sutri (20 December 1046)", sources: [wp-henry-iii-holy-roman-emperor]}
+  - {person: henry-iv-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1056-10-05, to: 1105-12-31, note: "Crowned co-king at Aachen on 17 July 1054; sole ruler from his father's death under the regency of Agnes; forced to abdicate at Ingelheim on 31 December 1105", sources: [wp-henry-iv-holy-roman-emperor]}
+  - {person: henry-iv-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1084-04-01, to: 1105-12-31, note: "Crowned in St Peter's Basilica by Antipope Clement III; excommunicated by Gregory VII in 1076 and 1080", sources: [wp-henry-iv-holy-roman-emperor]}
+  - {person: henry-v-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1105-12-31, to: 1125-05-23, note: "Crowned co-king at Aachen on 6 January 1099; ruled alone after his father's abdication, and was anointed and crowned again on 5 or 6 January 1106", sources: [wp-henry-v-holy-roman-emperor]}
+  - {person: henry-v-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1111-04-13, to: 1125-05-23, note: "Crowned by Paschal II at Rome after imprisoning him; the Concordat of Worms followed in 1122", sources: [wp-henry-v-holy-roman-emperor]}
+  # ---- Supplinburg and Hohenstaufen ----
+  - {person: lothair-iii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1125-08-24, to: 1137-12-03, note: "Elected at Mainz on 24 August 1125 against Frederick II of Swabia; Innocent II crowned him King of the Romans again at Liège on 29 March 1131", sources: [wp-lothair-iii-holy-roman-emperor]}
+  - {person: lothair-iii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1133-06-04, to: 1137-12-03, note: "Crowned in the Lateran Basilica because the antipope Anacletus II held St Peter's", sources: [wp-lothair-iii-holy-roman-emperor]}
+  - {person: conrad-iii-of-germany, title: King of the Germans, realm: Holy Roman Empire, from: 1138-03-07, to: 1152-02-15, note: "Styled King of the Romans, never crowned emperor. Elected at Koblenz on 7 March 1138 and crowned at Aachen on 13 March. Earlier antiking against Lothair III (elected at Nuremberg in December 1127, gave up the title in 1135)", sources: [wp-conrad-iii-of-germany]}
+  - {person: frederick-i-barbarossa-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1152-03-04, to: 1190-06-10, note: "Elected at Frankfurt on 4 March 1152 and crowned at Aachen on 9 March; crowned King of Burgundy at Arles on 30 June 1178", sources: [wp-frederick-i-barbarossa-holy-roman-emperor]}
+  - {person: frederick-i-barbarossa-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1155-06-18, to: 1190-06-10, note: "Crowned by Adrian IV in St Peter's Basilica; the word sacrum (holy) first appears with his empire in 1157", sources: [wp-frederick-i-barbarossa-holy-roman-emperor]}
+  - {person: henry-vi-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1190-06-10, to: 1197-09-28, note: "Elected King of the Romans at Bamberg at Pentecost 1169, aged four, and crowned at Aachen on 15 August 1169; sole ruler from his father's death on crusade", sources: [wp-henry-vi-holy-roman-emperor]}
+  - {person: henry-vi-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1191-04-15, to: 1197-09-28, note: "Crowned with Constance by Celestine III in Rome on Easter Monday", sources: [wp-henry-vi-holy-roman-emperor]}
+  - {person: philip-of-swabia, title: King of the Germans, realm: Holy Roman Empire, from: 1198-03-08, to: 1208-06-21, note: "Elected at Mühlhausen on 8 March 1198, crowned at Mainz on 8 September 1198 and again at Aachen on 6 January 1205; rival to Otto IV; murdered at Bamberg", sources: [wp-philip-of-swabia]}
+  - {person: otto-iv-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1198-06-09, to: 1215, note: "Elected at Cologne on 9 June 1198 and crowned at Aachen by Archbishop Adolf on 12 July 1198; sole king after Philip's murder (accepted by all electors at Frankfurt on 11 November 1208); deposed in 1215 after Bouvines", sources: [wp-otto-iv-holy-roman-emperor, wp-philip-of-swabia, wp-frederick-ii-holy-roman-emperor]}
+  - {person: otto-iv-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1209-10-04, to: 1215, note: "Crowned by Innocent III in St Peter's Basilica; excommunicated 18 November 1210. The article's lead says he was emperor until his death in 1218, the text says he was deposed in 1215 (see discrepancy otto-iv-reign-end)", sources: [wp-otto-iv-holy-roman-emperor]}
+  - {person: frederick-ii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1212-12-09, to: 1250-12-13, note: "Elected in absentia at Nuremberg in 1211, crowned at Mainz on 9 December 1212 and again at Aachen in mid-July 1215; his son Henry (VII) and then Conrad IV were kings in Germany while he stayed in Italy", sources: [wp-frederick-ii-holy-roman-emperor]}
+  - {person: frederick-ii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1220-11-20, to: 1250-12-13, note: "Crowned in Rome; excommunicated 29 September 1227 and again; declared deposed by Innocent IV in 1245, which no monarch accepted", sources: [wp-frederick-ii-holy-roman-emperor]}
+  # ---- Habsburg, Nassau, Luxembourg, Wittelsbach ----
+  - {person: rudolf-i-of-germany, title: King of the Germans, realm: Holy Roman Empire, from: 1273-10-01, to: 1291-07-15, note: "Elected at Frankfurt on 1 October 1273 and crowned at Aachen on 24 October by Archbishop Engelbert II of Cologne; Gregory X acknowledged him on 20 September 1274. The planned imperial coronation of 2 February 1276 never happened", sources: [wp-rudolf-i-of-germany]}
+  - {person: adolf-of-nassau, title: King of the Germans, realm: Holy Roman Empire, from: 1292-05-05, to: 1298-07-02, note: "Elected at Frankfurt 5 May 1292, crowned at Aachen 24 June 1292; deposed by the prince-electors in 1298 and killed at Göllheim", sources: [wp-adolf-of-nassau]}
+  - {person: albert-i-of-germany, title: King of the Germans, realm: Holy Roman Empire, from: 1298-07-27, to: 1308-05-01, note: "Elected at Frankfurt on 27 July 1298 and crowned at Aachen Cathedral on 24 August; Boniface VIII recognised him in 1303; murdered 1 May 1308", sources: [wp-albert-i-of-germany]}
+  - {person: henry-vii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1308-11-27, to: 1313-08-24, note: "Elected at Frankfurt with six votes on 27 November 1308 and crowned at Aachen on 6 January 1309; crowned King of Italy at Milan on 6 January 1311", sources: [wp-henry-vii-holy-roman-emperor]}
+  - {person: henry-vii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1312-06-29, to: 1313-08-24, note: "Crowned at the Lateran by three cardinals, not the pope; the first emperor since Frederick II", sources: [wp-henry-vii-holy-roman-emperor]}
+  - {person: louis-iv-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1314-10-20, to: 1347-10-11, note: "Elected at Frankfurt on 20 October 1314, the day after a rival election of Frederick the Fair; both were crowned on 25 November (Louis at Aachen). Frederick was captured at Mühldorf in 1322 and was co-king with Louis for a time after 1325; Charles IV was rival king from 1346", sources: [wp-louis-iv-holy-roman-emperor]}
+  - {person: louis-iv-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1328, to: 1347-10-11, note: "Crowned at Rome in January 1328 by Sciarra Colonna, not by the pope; declared John XXII deposed on 18 April 1328", sources: [wp-louis-iv-holy-roman-emperor]}
+  - {person: charles-iv-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1346-07-11, to: 1378-11-29, note: "Elected at Rhens on 11 July 1346 against Louis IV and crowned at Bonn on 26 November 1346; re-elected at Frankfurt on 17 June 1349 and crowned again at Aachen on 25 July 1349, after Louis's death; also King of Bohemia from 1346", sources: [wp-charles-iv-holy-roman-emperor]}
+  - {person: charles-iv-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1355-04-05, to: 1378-11-29, note: "Crowned at Rome by a cardinal, after the Lombard crown at Milan on 6 January 1355; crowned King of Burgundy at Arles on 4 June 1365", sources: [wp-charles-iv-holy-roman-emperor]}
+  - {person: wenceslaus-iv-of-bohemia, title: King of the Germans, realm: Holy Roman Empire, from: 1376-06-10, to: 1400-08-20, note: "Elected on 10 June 1376 and crowned at Aachen on 6 July; declared deposed at Lahneck by four electors on 20 August 1400; he never recognised the deposition and gave up the German crown only in 1411", sources: [wp-wenceslaus-iv-of-bohemia]}
+  - {person: rupert-of-germany, title: King of the Germans, realm: Holy Roman Empire, from: 1400-08-21, to: 1410-05-18, note: "Elected at Rhens by four electors the day after Wenceslaus's deposition; Aachen refused him entry, so he was crowned at Cologne on 6 January 1401; Boniface IX acknowledged him on 1 October 1403", sources: [wp-rupert-of-germany, wp-wenceslaus-iv-of-bohemia]}
+  - {person: sigismund-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1411-07-21, to: 1437-12-09, note: "First elected on 20 September 1410 by three electors against Jobst of Moravia, who was elected on 1 October; elected again on 21 July 1411 after Jobst's death; crowned at Aachen on 8 November 1414. Also King of Hungary from 1387 and King of Bohemia from 1419 (not entered here)", sources: [wp-sigismund-holy-roman-emperor]}
+  - {person: sigismund-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1433-05-31, to: 1437-12-09, note: "Crowned in Rome after the Iron Crown at Milan on 25 November 1431", sources: [wp-sigismund-holy-roman-emperor]}
+  - {person: albert-ii-of-germany, title: King of the Germans, realm: Holy Roman Empire, from: 1438-03-17, to: 1439-10-27, note: "Elected at Frankfurt on 17 March 1438 while fighting in Bohemia; King of Hungary since 1 January 1438; never crowned emperor", sources: [wp-albert-ii-of-germany]}
+  - {person: frederick-iii-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1440-02-02, to: 1493-08-19, note: "Elected unanimously at Frankfurt on 2 February 1440 (as Frederick IV); ruled jointly with his son Maximilian from 1486", sources: [wp-frederick-iii-holy-roman-emperor]}
+  - {person: frederick-iii-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1452-03-19, to: 1493-08-19, note: "Crowned by Nicholas V in Rome with Eleanor of Portugal; the last emperor crowned in Rome", sources: [wp-frederick-iii-holy-roman-emperor]}
+  - {person: maximilian-i-holy-roman-emperor, title: King of the Germans, realm: Holy Roman Empire, from: 1486-02-16, to: 1519-01-12, note: "Elected at Frankfurt on 16 February 1486 and crowned at Aachen on 9 April; ruled jointly with his father Frederick III until 1493", sources: [wp-maximilian-i-holy-roman-emperor, wp-frederick-iii-holy-roman-emperor]}
+  - {person: maximilian-i-holy-roman-emperor, title: Holy Roman Emperor, realm: Holy Roman Empire, from: 1508, to: 1519-01-12, note: "Proclaimed himself Elected Roman Emperor at Trento in 1508 with the assent of Pope Julius II; never crowned by a pope because the Venetians blocked the road to Rome", sources: [wp-maximilian-i-holy-roman-emperor]}
+
+places:
+  - key: rome
+    name: Rome
+    kind: city
+    region: Lazio
+    country: Italy
+    lat: 41.903
+    lng: 12.496
+    visitable: true
+    note: "Defined here; other batches may send the same key. Where the emperors were crowned by the pope: Henry II (1014), Conrad II (1027), Henry III (1046), Henry IV (1084, by an antipope), Henry V (1111), Lothair III (1133, at the Lateran), Frederick I (1155), Henry VI (1191), Otto IV (1209), Frederick II (1220), Henry VII (1312, at the Lateran), Louis IV (1328), Charles IV (1355), Sigismund (1433) and Frederick III (1452)."
+    sources: [wp-henry-v-holy-roman-emperor, wp-frederick-iii-holy-roman-emperor, wp-lothair-iii-holy-roman-emperor]
+  - key: st-peters-basilica-rome
+    name: St Peter's Basilica
+    kind: basilica
+    city: Vatican City
+    region: Vatican City
+    country: Vatican City
+    lat: 41.902
+    lng: 12.454
+    visitable: true
+    note: "Defined here; other batches may send the same key. The articles place these imperial coronations in St Peter's (the old basilica until the 16th century): Henry II (1014), Conrad II (1027), Henry IV (1084, by an antipope), Frederick I (1155), Otto IV (1209), Louis IV (1328) and Frederick III (1452)."
+    sources: [wp-henry-ii-holy-roman-emperor, wp-frederick-i-barbarossa-holy-roman-emperor, wp-frederick-iii-holy-roman-emperor]
+  - key: speyer-cathedral
+    name: Speyer Cathedral
+    kind: cathedral
+    city: Speyer
+    region: Rhineland-Palatinate
+    country: Germany
+    lat: 49.317
+    lng: 8.442
+    visitable: true
+    founded: 1030
+    built_by: "Conrad II (begun 1030); extended under Henry III"
+    note: "Defined here; other batches may send the same key. Burial church of the Salian emperors and of Rudolf I and Philip of Swabia. Conrad II began it to mark his election."
+    sources: [wp-conrad-ii-holy-roman-emperor, wp-henry-iii-holy-roman-emperor, wp-henry-iv-holy-roman-emperor, wp-rudolf-i-of-germany, wp-philip-of-swabia]
+  - key: bamberg-cathedral
+    name: Bamberg Cathedral
+    kind: cathedral
+    city: Bamberg
+    region: Bavaria
+    country: Germany
+    lat: 49.891
+    lng: 10.882
+    visitable: true
+    note: "Burial place of Henry II, who founded the Diocese of Bamberg in 1007 and gave his wife Cunigunde the Bamberg estates. Philip of Swabia was first buried here after his murder in 1208."
+    sources: [wp-henry-ii-holy-roman-emperor, wp-philip-of-swabia]
+  - key: koenigslutter-imperial-cathedral
+    name: Königslutter Imperial Cathedral
+    historical_name: Collegiate Church of Saints Peter and Paul
+    kind: cathedral
+    city: Königslutter
+    region: Lower Saxony
+    country: Germany
+    lat: 52.251
+    lng: 10.811
+    visitable: true
+    founded: 1135
+    built_by: "Lothair III (laid the cornerstone in 1135)"
+    note: "Lothair III chose it as his burial site; his bones were brought here after his death at Breitenwang in December 1137."
+    sources: [wp-lothair-iii-holy-roman-emperor]
+  - key: canossa-castle
+    name: Canossa Castle
+    kind: castle
+    region: Emilia-Romagna
+    country: Italy
+    lat: 44.574
+    lng: 10.445
+    visitable: true
+    note: "Castle of Matilda of Tuscany. Gregory VII took refuge here in January 1077; Henry IV stood barefoot in sackcloth before it for three days and was absolved."
+    sources: [wp-henry-iv-holy-roman-emperor]
+  - key: worms
+    name: Worms
+    kind: city
+    region: Rhineland-Palatinate
+    country: Germany
+    lat: 49.632
+    lng: 8.364
+    visitable: true
+    note: "Defined here; other batches may send the same key. Site of the Concordat of Worms (1122) and the Diet of Worms of 1495. Henry IV was girded with a sword here on 29 March 1065 (his coming of age); Henry V had the Heinricianum and Calixtinum exchanged here."
+    sources: [wp-henry-v-holy-roman-emperor, wp-maximilian-i-holy-roman-emperor]
+  - key: konstanz
+    name: Konstanz
+    kind: city
+    region: Baden-Wurttemberg
+    country: Germany
+    lat: 47.660
+    lng: 9.175
+    visitable: true
+    note: "Defined here; other batches may send the same key. Seat of the Council of Constance (1414-1418) and where Jan Hus was burned in July 1415."
+    sources: [wp-sigismund-holy-roman-emperor, wp-wenceslaus-iv-of-bohemia]
+  - key: palermo
+    name: Palermo
+    kind: city
+    region: Sicily
+    country: Italy
+    lat: 38.116
+    lng: 13.361
+    visitable: true
+    note: "Defined here; other batches may send the same key. Capital of the Kingdom of Sicily: Henry VI was crowned king here on 25 December 1194, and Frederick II was crowned here in 1198 and held his court. Henry VI (reburied 1198) and Frederick II lie in Palermo Cathedral."
+    sources: [wp-henry-vi-holy-roman-emperor, wp-frederick-ii-holy-roman-emperor]
+  - key: habsburg-castle
+    name: Habsburg Castle
+    historical_name: Habichtsburg
+    kind: castle
+    city: Habsburg
+    region: Aargau
+    country: Switzerland
+    lat: 47.469
+    lng: 8.187
+    visitable: true
+    founded: 1020
+    founded_estimated: true
+    built_by: "Probably Guntram the Rich"
+    note: "Ancestral seat that gave the Habsburgs their name. Rudolf I inherited the estates around it in 1239/1240 and became the first Habsburg king in 1273."
+    sources: [wp-rudolf-i-of-germany]
+  - key: karlstejn-castle
+    name: Karlstejn Castle
+    kind: castle
+    city: Karlstejn
+    region: Central Bohemian Region
+    country: Czech Republic
+    lat: 49.939
+    lng: 14.188
+    visitable: true
+    founded: 1348
+    built_by: "Charles IV (built 1348-1355)"
+    note: "Built to keep the imperial regalia, especially the Imperial Crown of the Holy Roman Empire. The Hussites besieged it in 1422."
+    sources: [wp-charles-iv-holy-roman-emperor, wp-sigismund-holy-roman-emperor]
+
+events:
+  # ---- New events ----
+  - key: walk-to-canossa-1077
+    name: Walk to Canossa
+    type: Penance
+    date: 1077-01-25
+    place: canossa-castle
+    people: [{person: henry-iv-holy-roman-emperor, role: penitent}]
+    prominence: 5
+    note: "Excommunicated by Gregory VII in 1076 and threatened with deposition, Henry crossed the Alps in the winter of 1076-77 and reached Canossa on 25 January 1077. He stood barefoot in sackcloth for three days until Matilda of Tuscany, his mother-in-law Adelaide and Hugh of Cluny persuaded the pope to absolve him. The date given is his arrival; the day of absolution is not stated. German nobles elected Rudolf of Rheinfelden antiking at Forchheim on 14 March 1077."
+    sources: [wp-henry-iv-holy-roman-emperor]
+  - key: imperial-coronation-of-henry-v-1111
+    name: Henry V imprisons Paschal II and is crowned emperor
+    type: Coronation
+    date: 1111-04-13
+    place: rome
+    people: [{person: henry-v-holy-roman-emperor, role: crowned}]
+    prominence: 3
+    note: "Henry and Paschal II agreed the Concordat of Sutri on 9 February 1111, but protests broke out and the coronation planned for 12 February was cancelled. Henry seized and imprisoned the pope; by the Treaty of Ponte Mammolo on 12 April Paschal granted the right to invest with ring and staff and absolved Henry IV, and on 13 April he completed the coronation. Henry was excommunicated at a Burgundian synod in September 1112."
+    sources: [wp-henry-v-holy-roman-emperor]
+  - key: concordat-of-worms-1122
+    name: Concordat of Worms
+    type: Treaty
+    date: 1122-09-23
+    place: worms
+    people: [{person: henry-v-holy-roman-emperor, role: signatory}]
+    prominence: 5
+    note: "Ended the Investiture Controversy. Henry V gave up investing bishops with ring and staff and restored church property; Pope Callixtus II (represented by Cardinal Lambert of Ostia) allowed the emperor to be present at the election and to grant the regalia with the sceptre. Spiritual and temporal powers of bishops were separated. Princes negotiated the clauses after the Würzburg assembly of 29 September 1121."
+    sources: [wp-henry-v-holy-roman-emperor, wp-henry-iv-holy-roman-emperor]
+  - key: imperial-coronation-of-frederick-barbarossa-1155
+    name: Frederick Barbarossa crowned emperor
+    type: Coronation
+    date: 1155-06-18
+    place: st-peters-basilica-rome
+    people: [{person: frederick-i-barbarossa-holy-roman-emperor, role: crowned}]
+    prominence: 3
+    note: "Crowned by Adrian IV after the stirrup-holding dispute at the royal tent. The Romans rioted and Frederick spent the day putting down the revolt, killing over 1,000. The Roman commune's leader Arnold of Brescia had been captured and hanged shortly before."
+    sources: [wp-frederick-i-barbarossa-holy-roman-emperor]
+  - key: battle-of-legnano-1176
+    name: Battle of Legnano
+    type: Battle
+    date: 1176-05-29
+    people: [{person: frederick-i-barbarossa-holy-roman-emperor, role: defeated}]
+    prominence: 4
+    note: "The Lombard League beat Barbarossa near Milan; he was wounded and for some time believed dead. The turning point of his claim to rule Italy, followed by the Peace of Anagni in 1176."
+    sources: [wp-frederick-i-barbarossa-holy-roman-emperor]
+  - key: peace-of-venice-1177
+    name: Peace of Venice
+    type: Treaty
+    year: 1177
+    place: venice
+    people: [{person: frederick-i-barbarossa-holy-roman-emperor, role: signatory}]
+    prominence: 3
+    note: "Frederick and Alexander III were formally reconciled and Frederick humbled himself before the pope; a truce with the Lombard cities took effect in August 1178. A permanent peace came with the Peace of Constance in 1183."
+    sources: [wp-frederick-i-barbarossa-holy-roman-emperor]
+  - key: third-crusade-1189
+    name: Third Crusade
+    type: Crusade
+    year: 1189
+    people: [{person: frederick-i-barbarossa-holy-roman-emperor, role: leader of the German army}]
+    prominence: 4
+    note: "Defined here; other batches may send the same key. Barbarossa took the cross at the Diet of Mainz on 27 March 1188 and set out from Hagenau on 15 April 1189 with an army the modern estimate puts at 12,000-15,000 men. He beat the Turks at Philomelium and Iconium, then drowned in the Saleph River on 10 June 1190; several thousand Germans turned back and only about 5,000 reached Acre. Dates of the whole crusade (to 1192) belong to the other batches."
+    sources: [wp-frederick-i-barbarossa-holy-roman-emperor]
+  - key: henry-vi-crowned-king-of-sicily-1194
+    name: Henry VI crowned King of Sicily
+    type: Coronation
+    date: 1194-12-25
+    place: palermo
+    people: [{person: henry-vi-holy-roman-emperor, role: crowned}]
+    prominence: 3
+    note: "Paid for by Richard I's ransom, Henry entered Palermo on 20 November 1194 and was crowned on Christmas Day. The next day his son Frederick II was born at Jesi. Henry had failed at the siege of Naples in 1191 and died in 1197 before uniting Sicily and the empire."
+    sources: [wp-henry-vi-holy-roman-emperor]
+  - key: german-throne-dispute-1198
+    name: "German throne dispute: Philip of Swabia and Otto IV"
+    type: Election
+    year: 1198
+    end_year: 1208
+    people: [{person: philip-of-swabia, role: elected king}, {person: otto-iv-holy-roman-emperor, role: elected rival king}]
+    prominence: 3
+    note: "After Henry VI's death two kings were elected: Philip at Mühlhausen on 8 March 1198 and Otto at Cologne on 9 June 1198 (crowned at Aachen 12 July). Philip won ground until he was murdered at Bamberg on 21 June 1208; Otto was then accepted by all the electors at Frankfurt on 11 November 1208."
+    sources: [wp-philip-of-swabia, wp-otto-iv-holy-roman-emperor]
+  - key: sixth-crusade-1228
+    name: Sixth Crusade (Frederick II)
+    type: Crusade
+    year: 1228
+    end_year: 1229
+    place: jerusalem
+    people: [{person: frederick-ii-holy-roman-emperor, role: leader}]
+    prominence: 4
+    note: "Frederick sailed from Brindisi in June 1228 although excommunicated (first on 29 September 1227, again in 1228). By negotiation with Sultan al-Kamil he agreed on 18 February 1229 (Treaty of Jaffa) to a 10-year return of Jerusalem, Nazareth and Bethlehem, and crowned himself King of Jerusalem on 18 March 1229. The pope lifted the excommunication in 1230 (Treaty of San Germano, July 1230)."
+    sources: [wp-frederick-ii-holy-roman-emperor]
+  - key: council-of-lyon-1245
+    name: First Council of Lyon and deposition of Frederick II
+    type: Council
+    year: 1245
+    people: [{person: frederick-ii-holy-roman-emperor, role: declared deposed}]
+    prominence: 4
+    note: "Innocent IV declared Frederick deposed as emperor and called him a heretic; no European monarch accepted it. Frederick had been excommunicated by Gregory IX in 1239 and remained at war with the papacy until his death in 1250."
+    sources: [wp-frederick-ii-holy-roman-emperor]
+  - key: battle-of-the-marchfeld-1278
+    name: Battle on the Marchfeld
+    type: Battle
+    date: 1278-08-26
+    people: [{person: rudolf-i-of-germany, role: victor}]
+    prominence: 4
+    note: "Rudolf I, allied with Ladislaus IV of Hungary, defeated Ottokar II of Bohemia, who was killed. This secured the Habsburgs' hold on Austria, Styria and Carinthia."
+    sources: [wp-rudolf-i-of-germany, wp-albert-i-of-germany]
+  - key: habsburg-investiture-austria-styria-1282
+    name: Habsburgs invested with Austria and Styria
+    type: Investiture
+    year: 1282
+    people: [{person: rudolf-i-of-germany, role: granted}, {person: albert-i-of-germany, role: invested duke}]
+    prominence: 4
+    note: "At the Hoftag at Augsburg in December 1282 Rudolf invested his sons Albert and Rudolf II with the duchies of Austria and Styria, founding the House of Habsburg's power. Only the month is given, so year only."
+    sources: [wp-rudolf-i-of-germany, wp-albert-i-of-germany]
+  - key: battle-of-muhldorf-1322
+    name: Battle of Mühldorf
+    type: Battle
+    date: 1322-09-28
+    people: [{person: louis-iv-holy-roman-emperor, role: victor}]
+    prominence: 3
+    note: "Louis the Bavarian decisively beat Frederick the Fair of Habsburg at Ampfing Heath and captured him and 1,300 nobles. Frederick renounced the crown at the Peace of Trausnitz in 1325."
+    sources: [wp-louis-iv-holy-roman-emperor]
+  - key: golden-bull-1356
+    name: Golden Bull of 1356
+    type: Law
+    year: 1356
+    people: [{person: charles-iv-holy-roman-emperor, role: issued}]
+    prominence: 5
+    note: "Charles IV's imperial law regulating the election of the king and so the succession to the imperial title, which held for the next four centuries. The day is not given in the article."
+    sources: [wp-charles-iv-holy-roman-emperor]
+  - key: council-of-constance-1414
+    name: Council of Constance
+    type: Council
+    year: 1414
+    end_year: 1418
+    place: konstanz
+    people: [{person: sigismund-holy-roman-emperor, role: convener}]
+    prominence: 5
+    note: "Called by Sigismund to settle the Western Schism; in 1417 it deposed all three rival popes and elected a new one. It also condemned Jan Hus, burned in July 1415, which led to the Hussite Wars."
+    sources: [wp-sigismund-holy-roman-emperor, wp-wenceslaus-iv-of-bohemia]
+  - key: execution-of-jan-hus-1415
+    name: Execution of Jan Hus
+    type: Execution
+    year: 1415
+    place: konstanz
+    people: [{person: sigismund-holy-roman-emperor, role: had given Hus a safe conduct}]
+    prominence: 4
+    note: "The Czech reformer Jan Hus was burned for heresy in July 1415 by an ad hoc Church court at the Council of Constance, in Sigismund's absence; Sigismund had given him a safe conduct and protested his imprisonment, and his role is controversial. Wenceslaus IV had protected Hus in Bohemia."
+    sources: [wp-sigismund-holy-roman-emperor, wp-wenceslaus-iv-of-bohemia]
+  - key: imperial-coronation-of-frederick-iii-1452
+    name: Frederick III crowned emperor
+    type: Coronation
+    date: 1452-03-19
+    place: st-peters-basilica-rome
+    people: [{person: frederick-iii-holy-roman-emperor, role: crowned}]
+    prominence: 3
+    note: "The last coronation of an emperor in Rome. He was crowned King of Italy on 16 March (with the German crown) and married Eleanor of Portugal by the pope the same day; on 19 March they were anointed in St Peter's and he was crowned by Nicholas V."
+    sources: [wp-frederick-iii-holy-roman-emperor]
+  - key: marriage-of-maximilian-and-mary-of-burgundy-1477
+    name: Marriage of Maximilian and Mary of Burgundy
+    type: Marriage
+    date: 1477-08-19
+    people: [{person: maximilian-i-holy-roman-emperor, role: groom}, {person: frederick-iii-holy-roman-emperor, role: arranged the match}]
+    prominence: 4
+    note: "At Ghent. After her father Charles the Bold died at Nancy on 5 January 1477 and Louis XI seized the Duchy of Burgundy, Mary of Burgundy married Maximilian to secure her lands. She died in a riding accident on 27 March 1482. The Burgundian inheritance began the Habsburg rise: 'Let others wage war, but you, happy Austria, marry.'"
+    sources: [wp-maximilian-i-holy-roman-emperor, wp-frederick-iii-holy-roman-emperor]
+  - key: diet-of-worms-1495
+    name: Diet of Worms (1495)
+    type: Diet
+    year: 1495
+    place: worms
+    people: [{person: maximilian-i-holy-roman-emperor, role: presided}]
+    prominence: 4
+    note: "The imperial reform: the Reichskammergericht (supreme court), the Gemeine Pfennig tax and the Eternal Public Peace abolishing private war; Roman law was made binding in the courts. Berthold of Henneberg led the princes' proposals."
+    sources: [wp-maximilian-i-holy-roman-emperor]
+
+  # ---- Existing / France-batch events: link only (key, people, sources) ----
+  - {key: second-crusade-1147, people: [{person: conrad-iii-of-germany, role: leader of the German army}, {person: frederick-i-barbarossa-holy-roman-emperor, role: young crusader}], sources: [wp-conrad-iii-of-germany, wp-frederick-i-barbarossa-holy-roman-emperor]}
+  - {key: richard-i-handed-to-the-emperor-1193, people: [{person: henry-vi-holy-roman-emperor, role: captor}], sources: [wp-henry-vi-holy-roman-emperor]}
+  - {key: battle-of-bouvines-1214, people: [{person: otto-iv-holy-roman-emperor, role: defeated}, {person: frederick-ii-holy-roman-emperor, role: gained the throne}], sources: [wp-otto-iv-holy-roman-emperor, wp-frederick-ii-holy-roman-emperor]}
+  - {key: battle-of-crecy-1346, people: [{person: charles-iv-holy-roman-emperor, role: fought for France and escaped wounded}], sources: [wp-charles-iv-holy-roman-emperor]}
+  - {key: italian-war-of-1494, people: [{person: maximilian-i-holy-roman-emperor, role: joined the Holy League against France}], sources: [wp-maximilian-i-holy-roman-emperor]}
+
+moments:
+  # Crowned at Aachen (year only; days are in the title notes)
+  - {person: henry-iii-holy-roman-emperor,          role: crowned, place: aachen-cathedral, year: 1028}
+  - {person: henry-iv-holy-roman-emperor,           role: crowned, place: aachen-cathedral, year: 1054}
+  - {person: conrad-iii-of-germany,                 role: crowned, place: aachen-cathedral, year: 1138}
+  - {person: frederick-i-barbarossa-holy-roman-emperor, role: crowned, place: aachen-cathedral, year: 1152}
+  - {person: henry-vi-holy-roman-emperor,           role: crowned, place: aachen-cathedral, year: 1169}
+  - {person: otto-iv-holy-roman-emperor,            role: crowned, place: aachen-cathedral, year: 1198}
+  - {person: philip-of-swabia,                      role: crowned, place: aachen-cathedral, year: 1205}
+  - {person: frederick-ii-holy-roman-emperor,       role: crowned, place: aachen-cathedral, year: 1215}
+  - {person: rudolf-i-of-germany,                   role: crowned, place: aachen-cathedral, year: 1273}
+  - {person: albert-i-of-germany,                   role: crowned, place: aachen-cathedral, year: 1298}
+  - {person: henry-vii-holy-roman-emperor,          role: crowned, place: aachen-cathedral, year: 1309}
+  - {person: louis-iv-holy-roman-emperor,           role: crowned, place: aachen-cathedral, year: 1314}
+  - {person: charles-iv-holy-roman-emperor,         role: crowned, place: aachen-cathedral, year: 1349}
+  - {person: wenceslaus-iv-of-bohemia,              role: crowned, place: aachen-cathedral, year: 1376}
+  - {person: sigismund-holy-roman-emperor,          role: crowned, place: aachen-cathedral, year: 1414}
+  - {person: maximilian-i-holy-roman-emperor,       role: crowned, place: aachen-cathedral, year: 1486}
+  # Buried
+  - {person: henry-ii-holy-roman-emperor,           role: buried, place: bamberg-cathedral, year: 1024}
+  - {person: conrad-ii-holy-roman-emperor,          role: buried, place: speyer-cathedral, year: 1039}
+  - {person: henry-iii-holy-roman-emperor,          role: buried, place: speyer-cathedral, year: 1056}
+  - {person: henry-iv-holy-roman-emperor,           role: buried, place: speyer-cathedral, year: 1111}
+  - {person: henry-v-holy-roman-emperor,            role: buried, place: speyer-cathedral, year: 1125}
+  - {person: lothair-iii-holy-roman-emperor,        role: buried, place: koenigslutter-imperial-cathedral, year: 1137}
+  - {person: philip-of-swabia,                      role: buried, place: speyer-cathedral, year: 1213}
+  - {person: rudolf-i-of-germany,                   role: buried, place: speyer-cathedral, year: 1291}
+
+links:
+  - {parent: conrad-ii-holy-roman-emperor, child: henry-iii-holy-roman-emperor}
+  - {parent: henry-iii-holy-roman-emperor, child: henry-iv-holy-roman-emperor}
+  - {parent: henry-iv-holy-roman-emperor, child: henry-v-holy-roman-emperor}
+  - {spouse: henry-v-holy-roman-emperor, to: empress-matilda, year: 1114}
+  - {parent: frederick-i-barbarossa-holy-roman-emperor, child: henry-vi-holy-roman-emperor}
+  - {parent: frederick-i-barbarossa-holy-roman-emperor, child: philip-of-swabia}
+  - {parent: henry-vi-holy-roman-emperor, child: frederick-ii-holy-roman-emperor}
+  - {parent: rudolf-i-of-germany, child: albert-i-of-germany}
+  - {parent: charles-iv-holy-roman-emperor, child: wenceslaus-iv-of-bohemia}
+  - {parent: charles-iv-holy-roman-emperor, child: sigismund-holy-roman-emperor}
+  - {parent: frederick-iii-holy-roman-emperor, child: maximilian-i-holy-roman-emperor}
+
+discrepancies:
+  - key: henry-iii-birth-year
+    question: In which year was Henry III born?
+    about: [{person: henry-iii-holy-roman-emperor}]
+    field: born
+    claims:
+      - {value: "28 October 1016", sources: [wp-henry-iii-holy-roman-emperor]}
+      - {value: "28 October 1017", sources: [wp-conrad-ii-holy-roman-emperor]}
+    note: "The Henry III article opens with 1016 but also says 'or 1017'; the Conrad II article says he was born in 1017, during Conrad's exile. The record uses 1016, from his own article's lead."
+  - key: henry-v-birth-year
+    question: In which year was Henry V born?
+    about: [{person: henry-v-holy-roman-emperor}]
+    field: born
+    claims:
+      - {value: "11 August 1081", sources: [wp-henry-v-holy-roman-emperor]}
+      - {value: "11 August 1086", sources: [wp-henry-v-holy-roman-emperor, wp-henry-iv-holy-roman-emperor]}
+    note: "The Henry V article says 'probably 11 August 1081 or 1086'; the Henry IV article gives 1086. Only his accolade at Easter 1101 is certain. The record uses 1086, marked estimated."
+  - key: conrad-iii-birth-year
+    question: In which year was Conrad III born?
+    about: [{person: conrad-iii-of-germany}]
+    field: born
+    claims:
+      - {value: "1093", sources: [wp-conrad-iii-of-germany]}
+      - {value: "1094", sources: [wp-conrad-iii-of-germany]}
+    note: "The article gives '1093 or 1094'. The record uses 1093, marked estimated."
+  - key: lothair-iii-death-date
+    question: On what day did Lothair III die?
+    about: [{person: lothair-iii-holy-roman-emperor}]
+    field: died
+    claims:
+      - {value: "3 December 1137", sources: [wp-lothair-iii-holy-roman-emperor]}
+      - {value: "4 December 1137", sources: [wp-lothair-iii-holy-roman-emperor]}
+    note: "The lead says 4 December; the Death section says 3 December at Breitenwang. The record uses 3 December, from the detailed section."
+  - key: otto-iv-reign-end
+    question: When did Otto IV cease to be emperor?
+    about: [{person: otto-iv-holy-roman-emperor}]
+    field: reign end
+    claims:
+      - {value: "Deposed in 1215, after Bouvines", sources: [wp-otto-iv-holy-roman-emperor, wp-frederick-ii-holy-roman-emperor]}
+      - {value: "Emperor until his death on 19 May 1218", sources: [wp-otto-iv-holy-roman-emperor]}
+    note: "The Otto IV lead says emperor 1209 until his death in 1218; the text says he was deposed in 1215 and withdrew to Brunswick. Frederick II's article says Frederick took Aachen and Cologne by 1215. Both titles end in 1215 in the records."
+  - key: sigismund-birthplace
+    question: Where was Sigismund born?
+    about: [{person: sigismund-holy-roman-emperor}]
+    field: place
+    claims:
+      - {value: "Nuremberg", sources: [wp-sigismund-holy-roman-emperor]}
+      - {value: "Prague", sources: [wp-sigismund-holy-roman-emperor]}
+    note: "The article says 'Born in Nuremberg or Prague'. No birth moment is entered."
+  - key: henry-vii-birth-year
+    question: In which year was Henry VII born?
+    about: [{person: henry-vii-holy-roman-emperor}]
+    field: born
+    claims:
+      - {value: "1275", sources: [wp-henry-vii-holy-roman-emperor]}
+      - {value: "1278 or 1279", sources: [wp-henry-vii-holy-roman-emperor]}
+    note: "The article says 'probably between 1275 or 1278/79', born at Valenciennes. The record uses 1275, marked estimated."
