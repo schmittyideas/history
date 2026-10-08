@@ -87,7 +87,7 @@ def test_errors_are_caught():
 def test_place_dates_and_builders():
     db = FakeDB(snapshot())
     docs = [("p.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "places": [
-        {"key": "westminster-abbey", "founded": 960, "founded_estimated": True, "built_by": "Edward the Confessor", "architect": "Henry of Reyns", "sources": ["s"]},
+        {"key": "westminster-abbey", "founded": 960, "founded_estimated": True, "built_by": "Edward the Confessor", "architect": "Henry of Reyns", "city": "London", "sources": ["s"]},
         {"key": "new-castle", "name": "New Castle", "founded": "1100-05-01", "ended": 1650, "sources": ["s"]}]})]
     world = intake.World(db)
     plan = intake.plan_files(world, docs)
@@ -96,6 +96,7 @@ def test_place_dates_and_builders():
     pl = {r["key"]: r for r in db.t["places"]}
     wa = pl["westminster-abbey"]
     assert (wa["start_year"], wa["start_estimated"], wa["built_by"], wa["architect"]) == (960, True, "Edward the Confessor", "Henry of Reyns")
+    assert wa["city"] == "London"
     assert wa["name"] == "Westminster Abbey" and "end_year" not in wa  # an update only touches the fields given
     assert (pl["new-castle"]["start_year"], pl["new-castle"]["end_year"]) == (1100, 1650)
     bad = [("b.yaml", {"batch": {"title": "t"}, "places": [{"key": "x", "name": "X", "founded": 1500, "ended": 1400}, {"key": "y", "name": "Y", "founded": "c. 900"}]})]
