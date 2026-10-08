@@ -63,6 +63,7 @@ Commit messages: plain imperative title ("Add …", "Intake: …"), a short body
 - **Types:** `Royalty` for monarchs and their consorts, `Nobility` for dukes, counts, jarls, doges, emirs under a caliph and regents who weren't royal, `Clergy` for popes and bishops (with `roles: [pope]`).
 - **Prominence** is a 1–5 star rating, **5 = most important**. On the timeline, 5-star events are always labelled; the rest get labels while there's room. Give 5 sparingly (a Hastings, a coronation that changed a country), 1 to minor events. Blank counts as 3.
 - **Events** need a clear date in the source. Leave out vague or legendary ones, or mark them `estimated` with a note.
+- **Places:** for each person, look for references to significant locations (places) and buildings that they built, or in which significant events took place, and add them with their `moments` and `events`. See `docs/BUILDOUT.md`, What to capture.
 - Realms Wikipedia names no confident ruler for are left out, and the batch file says so in a comment.
 - Obsidian: Ty's notes are in the vault `Personal`, folder `History` (`D:\Documents\Obsidian\all vaults\Personal\History` on Ty's PC). Cloud sessions can't reach it; use Wikipedia. Set `obsidian_link` only to a note name you've seen.
 

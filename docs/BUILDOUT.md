@@ -17,11 +17,21 @@ Do them in this order. Each is a GitHub issue on Project 1. Within each, go in o
 
 | # | Build-out | Issue | Rough size | Notes |
 |---|---|---|---|---|
-| 1 | **English monarchs, 1066 to today** | #15 | ~40 people, ~0.4M tokens | Every King and Queen of England, then Great Britain and the United Kingdom, with reigns (`realm: England` until 1707, then `Great Britain`, then `United Kingdom` from 1801; add the realms), consorts where notable, coronations. Edward the Confessor to Henry III and Stephen are already in: reuse their keys. Ty's Obsidian has a "Royalty timelines" note for most of them; cloud sessions can't read it, so use Wikipedia (List of English monarchs, List of British monarchs, each article). Run this first to measure cost (see Calibrate). |
+| 1 | **English monarchs, 1066 to today** | #15 | ~40 people, ~0.4M tokens | Every King and Queen of England, then Great Britain and the United Kingdom, with reigns (`realm: England` until 1707, then `Great Britain`, then `United Kingdom` from 1801; add the realms), consorts where notable, coronations, plus their places and events (see What to capture). Edward the Confessor to Henry III and Stephen are already in: reuse their keys. Ty's Obsidian has a "Royalty timelines" note for most of them; cloud sessions can't read it, so use Wikipedia (List of English monarchs, List of British monarchs, each article). Run this first to measure cost (see Calibrate). |
 | 2 | **Europe's big thrones, 1000–1500** | #31 | ~200 people, ~2M | France, the Holy Roman Empire, the Papacy (~90 popes: do it last, possibly in its own batches), Castile and León, Scotland, Byzantium. Many 1000-era holders are already in from the world-in-1000 batch: reuse their keys. |
 | 3 | **Indian rulers, 1000–1600** | #32 | ~100 people, ~1M | Ty asked for India before East Asia. Cholas, Western Chalukyas and Hoysalas, Palas and Senas, the Delhi Sultanate (all dynasties), Vijayanagara, the Bahmanis, Rajput kingdoms (Chauhans, Mewar), the Mughals to Akbar. Key battles: Tarain 1191, Panipat 1526, Talikota 1565. Region: South Asia. |
 | 4 | **East Asian dynasties, 1000–1600** | #33 | ~150 people, ~1.5M | Song, Liao, Jin, Yuan, Ming; Japan's emperors plus the Kamakura and Ashikaga shoguns and the Hōjō regents; Goryeo and Joseon; Đại Việt. Region: East Asia, Southeast Asia for Vietnam. |
 | 5 | **The world, century by century (1100–1500), with maps** | #34 | ~200 people, ~2M | Repeat the world-in-1000 build for 1100, 1200, 1300, 1400 and 1500, reusing everyone the earlier build-outs added. Add the border snapshots to `data/maps/` (see CLAUDE.md, Maps) with `index.json` names and capital `points`. This is the only item with a site-side change; keep it to the data files and `index.json`. |
+
+## What to capture for each ruler
+
+Added by Ty on 2026-10-08. For every ruler, not just the reign:
+
+- **The person and their title:** life dates, reign, notable consorts, coronation (as an event).
+- **Places:** look for references to significant locations (places) and buildings that they built, or in which significant events took place. Add each as a `places` record with its `kind` (castle, abbey, cathedral, palace, battlefield, city, …), coordinates, `founded` / `ended`, `built_by` and `visitable`. Include where they were born, crowned, died and buried, as `moments` linked to those places.
+- **Events:** the significant events of their life and reign (battles, treaties, rebellions, coronations), each with a place where the source gives one, the people involved, and a prominence rating.
+
+The same rules apply as everywhere else: cite a source for every new place and event, check each fact against the article, and leave out anything that can't be confirmed. Only keep places and events that matter to the ruler's story, not every place the article mentions. The extra work makes each ruler more expensive (estimated 30–50% more tokens), so measure it in the first build-out (see Calibrate).
 
 Ty said "do it all". The whole queue is roughly 700 people and ~7M tokens (likely $10–25 at API rates, but anywhere from $5 to $50), so it only all fits if the credit is large enough. If it isn't, stop where the credit cap says and leave the rest Ready on the board.
 
