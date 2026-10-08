@@ -68,6 +68,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 For every place that past events happened at, record where it is today by present-day standards: city, county or region, and country, plus current latitude and longitude. Example: the Tower of London becomes London, Greater London, England, with today's coordinates. Today a place has `region`, `modern_country`, `lat` and `lng` but no city field. Proposed: add a `city` column (a small schema change, applied before the intake), make `region` the county or state, and back-fill the existing places. Teach `tools/intake.py`, its tests and `docs/intake-format.md` the new field, and show the full location in the place panel.
 Source: Ty, 2026-10-08.
 
+#### [P2] English artists, writers, composers and scholars, 1600–1700
+`type: task` · `area: data` · `status: ready` · `issue: #52`
+
+About 40 to 60 well-documented people active in England 1600–1700; only Shakespeare is in so far. Painters (van Dyck, Lely, Kneller), architects (Inigo Jones, Wren, Hawksmoor), writers (Milton, Donne, Dryden, Behn), composers (Purcell), scholars (Newton, Boyle). Each with a patron link where the article says so, the places and buildings they made or worked in (county, country, coordinates, city, built_by, architect), life moments and dated events. Reuse existing place keys. One batch of about 60 records, about $5–8. Follow the lessons in `docs/BUILDOUT.md`.
+Source: Ty, 2026-10-08.
+
 #### [P3] Period emblems for realms, with today's flag as context
 `type: enhancement` · `area: data` · `status: ready` · `issue: #27`
 
