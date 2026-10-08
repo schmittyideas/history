@@ -61,7 +61,7 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
-      [raw.titles, raw.realms] = await Promise.all([optional("titles"), optional("realms")]);
+      [raw.titles, raw.realms, raw.sources, raw.source_links] = await Promise.all([optional("titles"), optional("realms"), optional("sources"), optional("source_links")]);
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -102,7 +102,12 @@ function indexData(raw) {
     parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
     eventsAt, momentsAt, titles,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
-    titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)) };
+    titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
+    // Where a record's facts come from (usually its Wikipedia article): record type + key -> sources.
+    sourcesFor: (type, key) => {
+      const byId = Object.fromEntries((raw.sources || []).map(s => [s.id, s]));
+      return (raw.source_links || []).filter(l => l.record_type === type && l.record_key === key).map(l => byId[l.source_id]).filter(Boolean);
+    } };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -759,6 +764,7 @@ function select(id) {
     ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(), " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
       title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
       text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
+    ["Sources", sourceLinks(db.sourcesFor("person", p.key))],
     ["Obsidian note", obsidianLink(p.obsidian_link)],
   ];
   const dl = h("dl");
@@ -782,6 +788,7 @@ function selectEvent(id) {
    ["Where", place ? placeLink(place, place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
    ["People", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")],
    ["Visit today", e.visitable_today ? (e.visit_site || "Yes") : "No"],
+   ["Sources", sourceLinks(db.sourcesFor("event", e.key))],
    ["Obsidian note", obsidianLink(e.obsidian_link)]]
     .forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(h("div", { class: "kind", style: "color:var(--madder)", text: e.type || "Event" }), h("h2", { text: e.name }), dl);
@@ -808,6 +815,7 @@ function selectPlace(id) {
     ["Events here", joinNodes(events.map(e => eventLink(e, e.start_year != null ? ` (${fmtYear(e.start_year)})` : "")), "None linked")],
     ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
     ...(pl.note ? [["Note", pl.note]] : []),
+    ["Sources", sourceLinks(db.sourcesFor("place", pl.key))],
     ["Obsidian note", obsidianLink(pl.obsidian_link)],
   ];
   const dl = h("dl");
@@ -820,6 +828,17 @@ function selectPlace(id) {
 function placeInView(id) {
   const L = S.layout, db = S.db;
   return db.eventsAt(id).some(e => eventGroups[e.id]) || db.momentsAt(id).some(m => L?.xOf[m.person.id] != null);
+}
+
+// Source links open in a new tab: "Wikipedia: Matilda of Flanders", or the source's title when it isn't Wikipedia.
+// A source without a URL (an Obsidian note, a conversation) is listed as plain text.
+function sourceLinks(sources) {
+  if (!sources.length) return ["None recorded"];
+  return joinNodes(sources.map(s => {
+    const wiki = /wikipedia\.org/.test(s.url || "");
+    const label = wiki ? "Wikipedia: " + s.title.replace(/\s*\(Wikipedia\)\s*$/, "") : s.title;
+    return s.url ? h("a", { class: "ext", href: s.url, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
+  }));
 }
 
 function obsidianLink(name) {
