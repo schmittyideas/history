@@ -25,6 +25,7 @@ sources:
   - {key: wp-george-iii,        title: "George III (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/George_III"}
   - {key: wp-george-iv,         title: "George IV (Wikipedia)",                                     url: "https://en.wikipedia.org/wiki/George_IV"}
   - {key: wp-william-iv,        title: "William IV (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/William_IV"}
+  - {key: wp-queen-victoria,     title: "Queen Victoria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Queen_Victoria"}
   - {key: wp-prince-albert,     title: "Prince Albert of Saxe-Coburg and Gotha (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Prince_Albert_of_Saxe-Coburg_and_Gotha"}
   - {key: wp-edward-vii,        title: "Edward VII (Wikipedia)",                                    url: "https://en.wikipedia.org/wiki/Edward_VII"}
   - {key: wp-george-v,          title: "George V (Wikipedia)",                                      url: "https://en.wikipedia.org/wiki/George_V"}
@@ -102,11 +103,11 @@ people:
     type: Royalty
     house: Hanover
     realm: United Kingdom
-    born: 1819
+    born: 1819-05-24
     died: 1901-01-22
     prominence: 5
-    note: "Queen from 1837 and Empress of India from 1876; her reign gave its name to the Victorian era. Born 1819 (day not in the downloaded articles). Died at Osborne House."
-    sources: [wp-prince-albert, wp-edward-vii, wp-osborne-house, wp-kensington-palace]
+    note: "Queen from 1837 and Empress of India from 1876; her reign gave its name to the Victorian era. Born at Kensington Palace; died at Osborne House."
+    sources: [wp-queen-victoria, wp-prince-albert, wp-edward-vii, wp-osborne-house, wp-kensington-palace]
   - key: prince-albert-of-saxe-coburg-and-gotha
     name: Prince Albert of Saxe-Coburg and Gotha
     type: Royalty
@@ -235,6 +236,7 @@ places:
   - key: york-cottage
     name: York Cottage
     kind: house
+    city: Sandringham
     region: Norfolk
     country: England
     lat: 52.832
@@ -468,6 +470,15 @@ events:
     prominence: 4
     note: "Emancipated slaves in most of the British Empire. Passed in the same reign as the Reform Act 1832 and the Factory Act 1833."
     sources: [wp-william-iv]
+  - key: coronation-of-queen-victoria
+    name: Coronation of Queen Victoria
+    type: Coronation
+    date: 1838-06-28
+    place: westminster-abbey
+    prominence: 3
+    note: "Over 400,000 visitors came to London for the celebrations."
+    people: [{person: victoria-of-the-united-kingdom, role: crowned}]
+    sources: [wp-queen-victoria]
   - key: accession-of-queen-victoria
     name: Accession of Queen Victoria
     type: Succession
@@ -630,8 +641,9 @@ moments:
   - {person: william-iv, role: born,   place: buckingham-palace, year: 1765}
   - {person: william-iv, role: died,   place: windsor-castle, year: 1837}
   - {person: william-iv, role: buried, place: st-georges-chapel-windsor, year: 1837}
-  - {person: victoria-of-the-united-kingdom, role: died,   place: osborne-house, year: 1901}
-  - {person: victoria-of-the-united-kingdom, role: buried, place: royal-mausoleum-frogmore, year: 1901}
+  - {person: victoria-of-the-united-kingdom, role: born,   place: kensington-palace, year: 1819, sources: [wp-queen-victoria]}
+  - {person: victoria-of-the-united-kingdom, role: died,   place: osborne-house, year: 1901, sources: [wp-queen-victoria]}
+  - {person: victoria-of-the-united-kingdom, role: buried, place: royal-mausoleum-frogmore, year: 1901, sources: [wp-queen-victoria]}
   - {person: prince-albert-of-saxe-coburg-and-gotha, role: died,   place: windsor-castle, year: 1861}
   - {person: prince-albert-of-saxe-coburg-and-gotha, role: buried, place: royal-mausoleum-frogmore, year: 1862}
   - {person: edward-vii, role: born,   place: buckingham-palace, year: 1841}
