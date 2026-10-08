@@ -386,12 +386,14 @@ const colorFor = t => t === "Nobility" ? "var(--weld)" : t === "Royalty" ? "var(
 
 // Crowns: who held a title, and which one to name. Sovereign titles outrank dukes, counts and offices.
 const SOVEREIGN = /\b(king|queen|emperor|empress|caliph|sultan|tsar|pope|high king|grand prince|doge|khan|lady of the english)\b/i;
+// 0 = sovereign, 1 = co-ruler of one (Byzantine co-emperor, co-king), 2 = everything else (dukes, regents, offices).
+const titleRank = t => /\bco-/i.test(t) ? 1 : SOVEREIGN.test(t) ? 0 : 2;
 // The title to show under a name: one held in the view's years if it asks for some, else the highest held in life.
 function headlineTitle(id, from, to) {
   let ts = S.db.titlesOf(id);
   if (from != null) ts = ts.filter(t => overlaps(t.start_year, t.end_year, from, to ?? from));
   if (!ts.length) return null;
-  const rank = t => (SOVEREIGN.test(t.title) ? 0 : 1);
+  const rank = t => titleRank(t.title);
   const best = ts.slice().sort((a, b) => rank(a) - rank(b) || byYear(b.start_year, a.start_year))[0];
   return { title: best, more: new Set(ts.map(t => t.title)).size - 1 };
 }
@@ -1194,7 +1196,11 @@ function yearMap(a, b, realmsInView) {
 
     const head = h("div", { class: "map-head" }, h("h3", { text: "Borders" }));
     const seg = h("div", { class: "seg", role: "group", "aria-label": "Snapshot year" });
-    if (choices.length > 1) head.append(seg);
+    // Map labels: a plain flag with the ruler's name (default), or the realm's name alone.
+    const modeSeg = h("div", { class: "seg", role: "group", "aria-label": "Map labels" });
+    const tools = h("div", { class: "map-tools" }, modeSeg);
+    if (choices.length > 1) tools.prepend(seg);
+    head.append(tools);
     const box = h("div", { class: "histmap-box" });
     const credit = h("p", { class: "hint map-credit" });
     sec.append(head, box, credit);
@@ -1203,6 +1209,12 @@ function yearMap(a, b, realmsInView) {
       seg.innerHTML = "";
       choices.forEach(y => seg.append(h("button", { type: "button", "aria-pressed": y === Y.mapYear, text: fmtYear(y),
         onclick: () => { Y.mapYear = y; draw(); } })));
+      const mode = store.get("mapLabels", "rulers");
+      modeSeg.innerHTML = "";
+      [["rulers", "Rulers"], ["realms", "Realms"]].forEach(([m, label]) => modeSeg.append(h("button", { type: "button", "aria-pressed": m === mode, text: label,
+        onclick: () => { store.set("mapLabels", m); draw(); } })));
+      // Whose name goes on a realm's flag: the year shown on the map if it falls in the span, else the span's start.
+      const at = Y.mapYear >= a && Y.mapYear <= b ? Y.mapYear : a;
       const geo = await mapGeo(idx.years[Y.mapYear]);
       box.innerHTML = "";
       const W = 960, H = 500;
@@ -1224,28 +1236,52 @@ function yearMap(a, b, realmsInView) {
           p.addEventListener("click", go);
           p.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
           const name = realms.length === 1 ? realms[0] : pr.NAME, area = path.area(f);
-          if (!labelFor[name] || labelFor[name].area < area) labelFor[name] = { name, area, xy: path.centroid(f) };
+          if (!labelFor[name] || labelFor[name].area < area) labelFor[name] = { name, realms, area, xy: path.centroid(f) };
           const [[x0, y0], [x1, y1]] = path.bounds(f);
           bx0 = Math.min(bx0, x0); by0 = Math.min(by0, y0); bx1 = Math.max(bx1, x1); by1 = Math.max(by1, y1);
         }
       });
+      // The ruler a realm's flag names: a sovereign (king, caliph, emperor) over dukes, regents and officials,
+      // an undisputed holder over a disputed one; "+1" when others also held titles there then.
+      const rulerFor = realms => {
+        const ts = S.db.titles.filter(t => realms.includes(t.realm) && overlaps(t.start_year, t.end_year, at, at) && S.db.byId[t.entity_id]);
+        if (!ts.length) return null;
+        const best = ts.slice().sort((x, y) => titleRank(x.title) - titleRank(y.title)
+          || x.disputed - y.disputed || byYear(x.start_year, y.start_year))[0];
+        return { t: best, more: new Set(ts.map(t => t.entity_id)).size - 1 };
+      };
       const lg = el("g", { class: "hm-labels" }, g);
       const labels = Object.values(labelFor).sort((p, q) => q.area - p.area).map(l => {
-        const t = el("text", { x: l.xy[0], y: l.xy[1] + 4, "text-anchor": "middle" }, lg);
-        t.textContent = l.name;
-        return { ...l, t };
+        // Drawn at screen size around (0, 0); placeLabels moves and scales the group.
+        const lab = el("g", {}, lg);
+        const ruler = mode === "rulers" ? rulerFor(l.realms) : null;
+        if (ruler) {
+          const who = S.db.byId[ruler.t.entity_id].name + (ruler.more ? ` +${ruler.more}` : "");
+          l.w = 12 + Math.max(who.length * 6.4, l.name.length * 5.2);
+          const x0 = -l.w / 2;
+          el("line", { x1: x0 + 1, y1: -9, x2: x0 + 1, y2: 6, class: "flag-pole" }, lab);
+          el("path", { d: `M${x0 + 1},-9 h8 l-2,3 l2,3 h-8 Z`, class: "flag" + (ruler.t.disputed ? " disputed" : "") }, lab);
+          el("text", { x: x0 + 12, y: -1, class: "hm-ruler" }, lab).textContent = who;
+          el("text", { x: x0 + 12, y: 10, class: "hm-realm" }, lab).textContent = l.name;
+          l.h0 = 11; l.h1 = 13;
+          el("title", {}, lab).textContent = `${l.name}: ${S.db.byId[ruler.t.entity_id].name}, ${ruler.t.title} (${reignSpan(ruler.t)})`;
+        } else {
+          el("text", { x: 0, y: 4, "text-anchor": "middle", class: "hm-ruler plain" }, lab).textContent = l.name;
+          l.w = l.name.length * 6.2 + 6; l.h0 = 8; l.h1 = 8;
+        }
+        return { ...l, lab };
       });
       // Labels keep their on-screen size at any zoom; one that would overlap a bigger realm's label is hidden
       // until zooming in makes room.
       const placeLabels = tr => {
-        // r converts screen pixels to map units, so labels stay 11px on a phone as on a desktop.
+        // r converts screen pixels to map units, so labels stay the same size on a phone as on a desktop.
         const r = W / (svg.getBoundingClientRect().width || W), kept = [];
         labels.forEach(l => {
-          l.t.setAttribute("font-size", 11 * r / tr.k);
-          const [sx, sy] = tr.apply(l.xy), w = (l.name.length * 6.2 + 6) * r, hh = 8 * r;
-          const box = [sx - w / 2, sy - hh, sx + w / 2, sy + hh];
+          l.lab.setAttribute("transform", `translate(${l.xy[0]},${l.xy[1]}) scale(${r / tr.k})`);
+          const [sx, sy] = tr.apply(l.xy), w = l.w * r;
+          const box = [sx - w / 2, sy - l.h0 * r, sx + w / 2, sy + l.h1 * r];
           const ok = l.area * tr.k * tr.k > 60 && !kept.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]);
-          l.t.style.display = ok ? "" : "none";
+          l.lab.style.display = ok ? "" : "none";
           if (ok) kept.push(box);
         });
       };

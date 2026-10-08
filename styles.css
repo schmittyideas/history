@@ -194,7 +194,16 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .hm-land { fill: var(--land); stroke: var(--rule); stroke-width: .6; vector-effect: non-scaling-stroke; }
 .hm-land.ruled { fill: color-mix(in srgb, var(--woad) 38%, var(--land)); stroke: var(--woad); cursor: pointer; outline: none; }
 .hm-land.ruled:hover, .hm-land.ruled:focus-visible { fill: color-mix(in srgb, var(--woad) 60%, var(--land)); }
-.hm-labels text { font-family: var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--land); stroke-width: 2.5px; stroke-linejoin: round; pointer-events: none; vector-effect: non-scaling-stroke; }
+.hm-labels { pointer-events: none; }
+.hm-labels text { font-family: var(--body); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; }
+.hm-ruler { font-size: 11px; font-weight: 600; fill: var(--ink); }
+.hm-ruler.plain { font-weight: 400; }
+.hm-realm { font-size: 9px; fill: var(--muted); }
+/* A plain flag, black on the light theme and white on the dark: it marks a ruler, not any realm's real banner. */
+.flag { fill: var(--ink); stroke: var(--land); stroke-width: .8px; paint-order: stroke; }
+.flag.disputed { fill: var(--land); stroke: var(--ink); stroke-width: 1.2px; }
+.flag-pole { stroke: var(--ink); stroke-width: 1.4px; stroke-linecap: round; }
+.map-tools { display: flex; gap: 8px; flex-wrap: wrap; }
 .map-credit { font-size: 12px; }
 .realm-card.flash { animation: card-flash 1.4s ease-out; }
 @keyframes card-flash { 0% { box-shadow: 0 0 0 3px var(--woad); } 100% { box-shadow: 0 0 0 3px transparent; } }
