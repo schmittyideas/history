@@ -86,11 +86,11 @@ Source: Ty, 2026-10-08.
 A realm can carry emblems with the years they were really in use (banner, arms or colour: the Abbasid black banner, the Fatimid white, England's three lions from 1198), with the picture's source and licence (Wikimedia Commons). Where one was in use in the year shown, it replaces the plain map flag and appears on the realm card; otherwise the plain flag stays. Cards can also show a small grey "today: France" flag from the realm's modern country, labelled as today's. Needs an emblems table (realm, picture, from, to, source), an intake section and a first batch.
 Source: Ty, 2026-10-07 (option 3 of the flags discussion).
 
-#### [P2] Build-out: Europe's big thrones, 1000–1500
-`type: task` · `area: data` · `status: ready` · `issue: #31`
+#### [P3] Fill the gaps left in the Europe's big thrones batches
+`type: task` · `area: data` · `status: ready` · `issue: #72`
 
-France, the Holy Roman Empire, the Papacy, Castile and León, Scotland and Byzantium: rulers with reigns, realms, key coronations, discrepancies. Queue item 2 in `docs/BUILDOUT.md`.
-Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+Rulers and popes left out of item 2 because they were not in the list or had no downloaded article: Romanos III Argyros, John IV Laskaris, Lulach, Ferdinand II of León, Henry I of Castile, Berengaria, the popes of 1003-1032 and a few others, antipopes, HRE antikings, Aragon and Navarre. Full list in the issue.
+Source: Ty, 2026-10-08 (item 2 session).
 
 #### [P2] Build-out: Indian rulers, 1000–1600
 `type: task` · `area: data` · `status: ready` · `issue: #32`
@@ -136,6 +136,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Build-out: Europe's big thrones, 1000–1500
+`type: task` · `area: data` · `status: done` · `issue: #31`
+
+182 rulers with 221 title rows, their places, events, life moments and 66 discrepancies, checked against their English Wikipedia articles: France (22, PR #57), the Holy Roman Empire (24, #58), Castile and León (21, #59), Scotland and William Wallace (24, #60), Byzantium (31, #66) and the Papacy (60 popes, 1012 to 1503, #68 and #70). Everyone is marked `coverage: partly` (#71). The wiki downloader `tools/wiki.py` (#56) now waits out Wikipedia's rate limit. Done 2026-10-08. Left for later: see the gaps item above. Batches ran 160-200 preview rows, over the 60-80 guide, because every ruler has places and events.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
 #### [P3] Coverage status on people
 `type: enhancement` · `area: data` · `status: done` · `issue: #64`

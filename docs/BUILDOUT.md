@@ -44,6 +44,20 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - Cost: **about $9** ($248 to $239, read by Ty) for about 64 new people plus their places, events, reigns and discrepancies, in 4 batches and a city back-fill. That is about **$0.14 per person**, all in, roughly five times the original reigns-only estimate, because places and events are now captured too, and because of the setup problems below.
 - Budget after item 1: about $165 of the 70% cap remains. The rest of the queue (~650 people) should cost roughly $90–130 at this rate. Re-check the rate after item 2.
 
+## Calibration: item 2 (Europe's big thrones), 2026-10-08
+
+- Added **182 people** (France 22, Holy Roman Empire 24, Castile and León 21, Scotland 24, Byzantium 31, Papacy 60), 221 title rows and 66 discrepancies, in 7 data PRs (#57, #58, #59, #60, #66, #68, #70) plus a coverage backfill (#71). The 6 realms took one agent each (Papacy two).
+- Tokens: the 7 research agents used **about 2.45M** (measured). The main session's share is not measured; roughly 0.4-0.5M. So about **2.9M tokens, or about 16,000 per person** (item 1 was nearer 10,000), because every ruler also has places, moments and events. Credit used: not readable from here; Ty to read the billing page.
+- Batches ran 160-200 preview rows (the guide says 60-80). They were still clean, so one PR per realm was kept; splitting would have made the second half depend on places from the first.
+- Pace: about 1 article per 15-60 seconds is what Wikipedia allowed; downloads, not research, set the pace.
+
+## Lessons from item 2
+
+- **`tools/wiki.py`** (PR #56) replaces the shell loop for downloads: serial, a proper User-Agent, waits for `Retry-After`, records the revision ID. Run it detached (`setsid nohup ... &`): a background job started the plain way died when the tool shell restarted. Quote or avoid titles with brackets in shell lists; use a file of titles with `xargs -a`.
+- Check each downloaded file's first lines: some titles land on a disambiguation page (Adolf of Nassau).
+- Agents write the file; the main session runs the preview, fixes warnings (a discrepancy needs two claims), decides judgement calls (here, `disputed` was dropped from the Western Schism popes because the rival line was not entered) and merges one PR at a time, waiting for `Intake apply` each time.
+- New rule mid-run: `coverage` on every person. Backfill with a small update-only intake rather than reopening merged files.
+
 ## Lessons from item 1
 
 - **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.
