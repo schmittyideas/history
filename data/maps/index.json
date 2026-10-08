@@ -7,38 +7,162 @@
     "1100": "world_1100.geojson"
   },
   "realms": {
-    "England": ["England"],
-    "Scotland": ["Scotland"],
-    "France": ["Kingdom of France"],
-    "Holy Roman Empire": ["Holy Roman Empire"],
-    "Papacy": ["Papal States"],
-    "Venice": ["Venice"],
-    "León": ["León"],
-    "Pamplona": ["Navarre"],
-    "Caliphate of Córdoba": ["Caliphate of Córdoba"],
-    "Denmark": ["Denmark-Norway", "Denmark"],
-    "Norway": ["Denmark-Norway", "Norway"],
-    "Sweden": ["Sweden"],
-    "Poland": ["Poland"],
-    "Hungary": ["Magyars", "Hungary"],
-    "Kievan Rus'": ["Kyivan Rus", "Kievan Rus"],
-    "Byzantine Empire": ["Byzantine Empire"],
-    "Croatia": ["Croatia"],
-    "Georgia": ["Kingdom of Georgia"],
-    "Abkhazia": ["Kingdom of Georgia"],
-    "Armenia": ["Armenia"],
-    "Buyid Emirate": ["Buyid Emirate", "Buwayhid Emirates"],
-    "Fatimid Caliphate": ["Fatimid Caliphate"],
-    "Ghaznavid Empire": ["Ghaznavid Emirate"],
-    "Chola Empire": ["Chola Empire", "Cholas"],
-    "Western Chalukya Empire": ["Chalukya Empire", "Western Chalukyas"],
-    "Pala Empire": ["Palas"],
-    "Song dynasty": ["Song Empire"],
-    "Liao dynasty": ["Liao"],
-    "Dali Kingdom": ["Nan Chao"],
-    "Japan": ["Imperial Japan (Fujiwara)"],
-    "Goryeo": ["Korea"],
-    "Đại Cồ Việt": ["Annam", "Đại Việt"],
-    "Khmer Empire": ["Khmer Empire"]
+    "England": [
+      "England"
+    ],
+    "Scotland": [
+      "Scotland"
+    ],
+    "France": [
+      "Kingdom of France"
+    ],
+    "Holy Roman Empire": [
+      "Holy Roman Empire"
+    ],
+    "Papacy": [
+      "Papal States"
+    ],
+    "Venice": [
+      "Venice"
+    ],
+    "León": [
+      "León"
+    ],
+    "Pamplona": [
+      "Navarre"
+    ],
+    "Caliphate of Córdoba": [
+      "Caliphate of Córdoba"
+    ],
+    "Denmark": [
+      "Denmark-Norway",
+      "Denmark"
+    ],
+    "Norway": [
+      "Denmark-Norway",
+      "Norway"
+    ],
+    "Sweden": [
+      "Sweden"
+    ],
+    "Poland": [
+      "Poland"
+    ],
+    "Hungary": [
+      "Magyars",
+      "Hungary"
+    ],
+    "Kievan Rus'": [
+      "Kyivan Rus",
+      "Kievan Rus"
+    ],
+    "Byzantine Empire": [
+      "Byzantine Empire"
+    ],
+    "Croatia": [
+      "Croatia"
+    ],
+    "Georgia": [
+      "Kingdom of Georgia"
+    ],
+    "Abkhazia": [
+      "Kingdom of Georgia"
+    ],
+    "Armenia": [
+      "Armenia"
+    ],
+    "Buyid Emirate": [
+      "Buyid Emirate",
+      "Buwayhid Emirates"
+    ],
+    "Fatimid Caliphate": [
+      "Fatimid Caliphate"
+    ],
+    "Ghaznavid Empire": [
+      "Ghaznavid Emirate"
+    ],
+    "Chola Empire": [
+      "Chola Empire",
+      "Cholas"
+    ],
+    "Western Chalukya Empire": [
+      "Chalukya Empire",
+      "Western Chalukyas"
+    ],
+    "Pala Empire": [
+      "Palas"
+    ],
+    "Song dynasty": [
+      "Song Empire"
+    ],
+    "Liao dynasty": [
+      "Liao"
+    ],
+    "Dali Kingdom": [
+      "Nan Chao"
+    ],
+    "Japan": [
+      "Imperial Japan (Fujiwara)"
+    ],
+    "Goryeo": [
+      "Korea"
+    ],
+    "Đại Cồ Việt": [
+      "Annam",
+      "Đại Việt"
+    ],
+    "Khmer Empire": [
+      "Khmer Empire"
+    ]
+  },
+  "points": {
+    "Barcelona": [
+      2.173,
+      41.385
+    ],
+    "Normandy": [
+      1.099,
+      49.443
+    ],
+    "Anjou": [
+      -0.554,
+      47.473
+    ],
+    "Blois": [
+      1.331,
+      47.586
+    ],
+    "Papacy": [
+      12.454,
+      41.902
+    ],
+    "Ireland": [
+      -6.611,
+      53.58
+    ],
+    "Bohemia": [
+      14.421,
+      50.088
+    ],
+    "Bulgaria": [
+      20.802,
+      41.117
+    ],
+    "Iberia": [
+      44.209,
+      41.967
+    ],
+    "Tao": [
+      41.993,
+      40.541
+    ],
+    "Abbasid Caliphate": [
+      44.366,
+      33.315
+    ],
+    "Zirid Ifriqiya": [
+      10.096,
+      35.678
+    ]
   }
 }

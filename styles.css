@@ -187,7 +187,14 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .year-sec.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px 24px; }
 .year-sec.two > div { display: grid; gap: 8px; align-content: start; }
 .map-sec .map-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
-.histmap-box { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--sea); touch-action: pan-y; }
+.histmap-box { position: relative; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--sea); touch-action: pan-y; }
+.map-zoom { position: absolute; top: 8px; right: 8px; display: grid; border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--panel); }
+.map-zoom button { border: 0; background: transparent; width: 32px; height: 30px; font-size: 17px; line-height: 1; cursor: pointer; color: var(--ink); }
+.map-zoom button + button { border-top: 1px solid var(--rule); }
+.map-zoom button:hover { background: var(--lane); }
+.map-zoom button:focus-visible { outline: 2px solid var(--woad); outline-offset: -2px; }
+.hm-pin { fill: var(--woad); stroke: var(--land); stroke-width: 1.5px; vector-effect: non-scaling-stroke; cursor: pointer; outline: none; }
+.hm-pin:hover, .hm-pin:focus-visible { fill: var(--ink); }
 .histmap { display: block; width: 100%; height: auto; cursor: grab; }
 .histmap:active { cursor: grabbing; }
 .hm-sea { fill: var(--sea); }
