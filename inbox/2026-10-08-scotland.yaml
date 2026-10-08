@@ -1,0 +1,1040 @@
+batch:
+  title: "The kings and queens of Scotland, 1005-1513, and William Wallace"
+  requested: "Malcolm II through James IV, plus Margaret Maid of Norway, John Balliol, Robert the Bruce and William Wallace: lives, reigns, battles, treaties, places"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles for the 24 people. Nothing was fetched. Every file was checked: line 1 of each is the right article (no disambiguation pages). James IV's article is titled "James IV" (not "James IV of Scotland"), and John Balliol's and William the Lion's likewise have no "of Scotland".
+# - Lulach (king Sept 1057 to 23 April 1058, Macbeth's stepson, crowned at Scone) has no downloaded article, so he is NOT entered. Malcolm III's title therefore starts in 1058 and Macbeth's ends on 15 August 1057, leaving a gap that is Lulach's reign.
+# - Interregnums (1290-92, 1296-1306) are gaps; no title is invented. Margaret has a "Queen of Scotland" row 19 March 1286 to 1290 and the note says she was never inaugurated (see "Margaret" below).
+# - Titles: "King of Scotland" (realm Scotland, existing) for every king, with a note where the article says "King of Alba" or "King of Scots" (the articles use Alba up to Alexander III, Scots from Balliol on). Kenneth III's existing "King of Alba" row is untouched; his reign ends 1005.
+# - Start dates: where an article gives both the death of the predecessor and the inauguration, the title starts at the predecessor's death (as the Stuarts batch does) and the note gives the inauguration. Exceptions: Duncan I starts on his acclamation, 30 November 1034, because Malcolm II's death date (25 November) and his acclamation differ. Duncan II and Donald III have year-only starts for 1094 because the articles give no day.
+# - David I's title starts on 23 April 1124, the death date of Alexander I taken from Alexander I's own article; David I's article gives only "1124" and says he was crowned at Scone in April or May. David's earlier title Prince of the Cumbrians (1113-1124) is left out: no realm of that name is entered.
+# - Left out (no article or a title with no realm): Lulach; Saint Margaret (Malcolm III's queen) and Edgar Ætheling; Ingibiorg; Earl Henry (David I's son, father of Malcolm IV and William the Lion); the rival Edward Balliol (crowned by the English 24 September 1332, in David II's article); Guardians of Scotland other than Wallace (Bruce and Comyn 1298, the six guardians 1286, Moray and Murray); Andrew Moray; the Lords of the Isles; Mary of Guelders, Margaret of Denmark and Margaret Tudor. Consort links are therefore not entered, only parent-to-child links between kings.
+# - Wallace: the article gives no start date for his Guardianship beyond "after" Stirling Bridge (11 September 1297) and says he resigned by September 1298 (after Falkirk, July 1298). The title therefore runs 1297 to 1298 (years only), with Andrew Moray as joint Guardian until his death in late 1297. The Bruce article says Bruce and Comyn followed him as joint Guardians; those titles are not entered here.
+# - Existing events reused (people only, no other fields): battle-of-bannockburn-1314 (adds Robert the Bruce as victor) and battle-of-falkirk-1298 (adds Wallace as defeated). Existing places reused: edinburgh, edinburgh-castle, london, tower-of-london, dunbar (for the 1296 battle; the existing record is the 1650 site), chateau-gaillard (David II lived there in exile). Because the intake only adds event_people rows for an existing event, I send just key + people + sources for those two; if the preview objects to a nameless event entry, drop those two blocks and add the moments instead.
+# - Not entered because the article gives no date or place, or the date is month-only: Carham (probably 1018, no day); Dunsinane (1054, no day or defined place); Largs place; Methven (June 1306); Loudoun Hill (1307); Neville's Cross place; Dupplin Moor and Halidon Hill (only in the David II article, not requested); the Treaty of Berwick (3 October 1357) and Treaty of Birgham (18 July 1290); Murdoch Stewart's execution (24/25 May 1425, Stirling Castle); James IV's marriage (8 August 1503, Holyrood Abbey), which is in the note on the Perpetual Peace instead. The Treaty of Edinburgh-Northampton is month-only (May 1328), so it is dated by year. The Battle of Dunbar 1296 is dated by year (the articles give only the 27 April fall of the castle).
+# - Declaration of Arbroath: the Bruce article dates it 1320 (no day) and does not name the place. The place arbroath-abbey is taken from the William the Lion article ("Arbroath Abbey, the site of the later Declaration of Arbroath"). Prominence 5, as instructed. Stirling Bridge (11 September 1297) is 5; Bannockburn is the existing event.
+# - Births and deaths whose place is not in the article, or whose place is not defined here, are left out: Malcolm III's birth, Alexander II's birth (Haddington), Alexander III's birth (Roxburgh, not the castle), Malcolm IV's death (Jedburgh), Alexander I's death (the court at Stirling), Robert III's death (Rothesay Castle), Margaret's death (Orkney), Balliol's death (Hélicourt, Picardy: no reliable coordinates in hand). Robert the Bruce's birthplace is disputed and not entered (see discrepancy).
+# - Reburials: Malcolm III's moment is the 1250 reburial beside Margaret at Dunfermline Abbey (the article's year); his first burial at Tynemouth Priory is in the discrepancy. Robert I's heart (Melrose Abbey, buried after 1330) and viscera (St Serf's chapel, Dumbarton) are in the person note; the moment 'heart buried' at Melrose has no year because the article gives none for the burial itself.
+# - James IV: body held unburied at Sheen Priory, Surrey; the article's long account (excommunication, lost body) is in the note only.
+# - Dates: where an article gives a month but no day, I used the year (and the note says so). All English-style calendar differences are irrelevant here (no entry is after 1752).
+# - Coordinates are from general knowledge (2-3 decimals); battlefield and monastery points (Lumphanan, Stirling Bridge, the Standard, Flodden, Cardross) are approximate. The "visitable" flags are also general knowledge, not from the articles. The exact site of Cardross manor and of the 1297 bridge is not given in the articles.
+# - Shared keys defined here that other batches might also send: scone, dunfermline-abbey, iona, stirling-castle, holyrood-abbey, holyrood-palace, carlisle-castle, roxburgh-castle, perth, kelso-abbey, flodden-battlefield, battle-of-flodden-1513. If the Tudors/England batch also defines flodden or carlisle, keep one.
+# - Size: 24 people, 25 title rows, 24 places, 27 new events plus 2 people-only references to existing events (about 100 rows), 14 links, 47 moments, 12 discrepancies.
+# - Discrepancies recorded below: Duncan I's death day; Macbeth's place of death; Malcolm III's death place and burial; Donald III's fate; Duncan II's killer and burial; Edgar's death; the death/accession date at the Alexander II to Alexander III handover; Margaret's death day; Robert the Bruce's birthplace; Robert II's coronation day; James II's coronation day; James III's birth. Seen and not entered: Earl Henry's death (12 June 1152 in the Malcolm IV article, 12 July 1152 in the David I article; he is not in this batch); Donald III's birth (c. 1032 in the lead, about 1033 in the text; the record uses c. 1032).
+
+sources:
+  - {key: wp-malcolm-ii-of-scotland,    title: "Malcolm II of Scotland (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Malcolm_II_of_Scotland"}
+  - {key: wp-duncan-i-of-scotland,      title: "Duncan I of Scotland (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Duncan_I_of_Scotland"}
+  - {key: wp-macbeth-of-scotland,       title: "Macbeth, King of Scotland (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Macbeth%2C_King_of_Scotland"}
+  - {key: wp-malcolm-iii-of-scotland,   title: "Malcolm III of Scotland (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Malcolm_III_of_Scotland"}
+  - {key: wp-donald-iii-of-scotland,    title: "Donald III of Scotland (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Donald_III_of_Scotland"}
+  - {key: wp-duncan-ii-of-scotland,     title: "Duncan II of Scotland (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Duncan_II_of_Scotland"}
+  - {key: wp-edgar-of-scotland,         title: "Edgar, King of Scotland (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Edgar%2C_King_of_Scotland"}
+  - {key: wp-alexander-i-of-scotland,   title: "Alexander I of Scotland (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Alexander_I_of_Scotland"}
+  - {key: wp-david-i-of-scotland,       title: "David I of Scotland (Wikipedia)",        url: "https://en.wikipedia.org/wiki/David_I_of_Scotland"}
+  - {key: wp-malcolm-iv-of-scotland,    title: "Malcolm IV of Scotland (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Malcolm_IV_of_Scotland"}
+  - {key: wp-william-i-of-scotland,     title: "William the Lion (Wikipedia)",           url: "https://en.wikipedia.org/wiki/William_the_Lion"}
+  - {key: wp-alexander-ii-of-scotland,  title: "Alexander II of Scotland (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Alexander_II_of_Scotland"}
+  - {key: wp-alexander-iii-of-scotland, title: "Alexander III of Scotland (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Alexander_III_of_Scotland"}
+  - {key: wp-margaret-maid-of-norway,   title: "Margaret, Maid of Norway (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Margaret%2C_Maid_of_Norway"}
+  - {key: wp-john-balliol,              title: "John Balliol (Wikipedia)",               url: "https://en.wikipedia.org/wiki/John_Balliol"}
+  - {key: wp-robert-i-of-scotland,      title: "Robert the Bruce (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Robert_the_Bruce"}
+  - {key: wp-david-ii-of-scotland,      title: "David II of Scotland (Wikipedia)",       url: "https://en.wikipedia.org/wiki/David_II_of_Scotland"}
+  - {key: wp-robert-ii-of-scotland,     title: "Robert II of Scotland (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Robert_II_of_Scotland"}
+  - {key: wp-robert-iii-of-scotland,    title: "Robert III of Scotland (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Robert_III_of_Scotland"}
+  - {key: wp-james-i-of-scotland,       title: "James I of Scotland (Wikipedia)",        url: "https://en.wikipedia.org/wiki/James_I_of_Scotland"}
+  - {key: wp-james-ii-of-scotland,      title: "James II of Scotland (Wikipedia)",       url: "https://en.wikipedia.org/wiki/James_II_of_Scotland"}
+  - {key: wp-james-iii-of-scotland,     title: "James III of Scotland (Wikipedia)",      url: "https://en.wikipedia.org/wiki/James_III_of_Scotland"}
+  - {key: wp-james-iv-of-scotland,      title: "James IV (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/James_IV"}
+  - {key: wp-william-wallace,           title: "William Wallace (Wikipedia)",            url: "https://en.wikipedia.org/wiki/William_Wallace"}
+
+people:
+  - key: malcolm-ii-of-scotland
+    name: Malcolm II
+    type: Royalty
+    realm: Scotland
+    born: 958
+    born_estimated: true
+    died: 1034-11-25
+    prominence: 3
+    note: "King of Alba 1005-1034, one of the longest-reigning early Scottish kings. Took the throne by killing Kenneth III at Monzievaird; married his daughters into rival dynasties, so that his grandson Duncan I succeeded him."
+    sources: [wp-malcolm-ii-of-scotland]
+  - key: duncan-i-of-scotland
+    name: Duncan I
+    type: Royalty
+    house: Dunkeld
+    realm: Scotland
+    born: 1001
+    born_estimated: true
+    died: 1040-08-14
+    prominence: 3
+    note: "Grandson of Malcolm II; a young man, not the old king of Shakespeare's Macbeth. Killed in battle against Macbeth in Moray in 1040 after a failed siege of Durham in 1039."
+    sources: [wp-duncan-i-of-scotland]
+  - key: macbeth-of-scotland
+    name: Macbeth
+    type: Royalty
+    realm: Scotland
+    died: 1057-08-15
+    prominence: 4
+    note: "Macbethad mac Findláech, Mormaer of Moray from 1032 and king 1040-1057; a peaceful 17-year reign, a pilgrimage to Rome in 1050. Killed by the future Malcolm III at Lumphanan and buried on Iona. Shakespeare's play is not historically accurate."
+    sources: [wp-macbeth-of-scotland]
+  - key: malcolm-iii-of-scotland
+    name: Malcolm III
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    died: 1093-11-13
+    prominence: 4
+    note: "Malcolm Canmore, king 1058-1093. Overthrew Macbeth's line, married the English princess Margaret (later Saint Margaret), submitted to William the Conqueror at Abernethy in 1072, and was killed near Alnwick in 1093. Ancestor of the kings to 1290."
+    sources: [wp-malcolm-iii-of-scotland]
+  - key: donald-iii-of-scotland
+    name: Donald III
+    type: Royalty
+    realm: Scotland
+    born: 1032
+    born_estimated: true
+    died: 1099
+    prominence: 2
+    note: "Domnall Bán, Malcolm III's brother. Seized the throne after Malcolm's death in 1093, was displaced by Duncan II in 1094, regained it, and was overthrown in 1097. Said to have been blinded and imprisoned; died in 1099."
+    sources: [wp-donald-iii-of-scotland]
+  - key: duncan-ii-of-scotland
+    name: Duncan II
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1060
+    born_estimated: true
+    died: 1094-11-12
+    prominence: 2
+    note: "Malcolm III's eldest son, raised as a hostage at William the Conqueror's court. Won the crown in 1094 with Norman help, was crowned at Scone, and was killed after reigning under seven months."
+    sources: [wp-duncan-ii-of-scotland]
+  - key: edgar-of-scotland
+    name: Edgar
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1074
+    born_estimated: true
+    died: 1107-01-08
+    prominence: 2
+    note: "Nicknamed Probus, 'the Valiant'. Won the throne in 1097 with the backing of William II and Edgar Ætheling; ruled quietly until 1107. Unmarried and childless."
+    sources: [wp-edgar-of-scotland]
+  - key: alexander-i-of-scotland
+    name: Alexander I
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1078
+    born_estimated: true
+    died: 1124-04-23
+    prominence: 2
+    note: "Called The Fierce. King 1107-1124; married Sybilla, an illegitimate daughter of Henry I of England. Pious patron of church reform: founded an Augustinian priory at Scone, planned Inchcolm, and built the two western towers of Dunfermline Abbey."
+    sources: [wp-alexander-i-of-scotland]
+  - key: david-i-of-scotland
+    name: David I
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1084
+    born_estimated: true
+    died: 1153-05-24
+    prominence: 4
+    note: "Youngest son of Malcolm III; Prince of the Cumbrians 1113-1124 and king 1124-1153. Normanised the realm in the 'Davidian Revolution': burghs, monasteries, feudal lordships and the first Scottish silver coinage. Supported Empress Matilda against Stephen; defeated at the Battle of the Standard (1138). Venerated as a saint (feast day 24 May)."
+    sources: [wp-david-i-of-scotland]
+  - key: malcolm-iv-of-scotland
+    name: Malcolm IV
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1141
+    died: 1165-12-09
+    prominence: 2
+    note: "Called Malcolm the Maiden. Grandson of David I, inaugurated at Scone aged 12; knighted in 1159 at Toulouse; put down rebellions in Moray and Galloway; died unmarried at 24. Born between 23 April and 24 May 1141."
+    sources: [wp-malcolm-iv-of-scotland]
+  - key: william-i-of-scotland
+    name: William the Lion
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1142
+    born_estimated: true
+    died: 1214-12-04
+    prominence: 3
+    note: "King for 49 years, the longest reign before 1603. Captured at Alnwick in 1174 and forced to accept Henry II as overlord until Richard I ended the treaty in 1189. Traditionally founded Arbroath Abbey, where he is buried. 'The Lion' comes from his red-lion banner."
+    sources: [wp-william-i-of-scotland, wp-alexander-ii-of-scotland]
+  - key: alexander-ii-of-scotland
+    name: Alexander II
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1198-08-24
+    died: 1249-07-08
+    prominence: 3
+    note: "Succeeded at 16. Supported the barons against King John (1215-1217), ended the MacWilliam rebellions, concluded the Treaty of York with Henry III (1237) and died on Kerrera in 1249 on a campaign against Norse rule in the Hebrides."
+    sources: [wp-alexander-ii-of-scotland]
+  - key: alexander-iii-of-scotland
+    name: Alexander III
+    type: Royalty
+    house: Canmore
+    realm: Scotland
+    born: 1241-09-04
+    died: 1286-03-19
+    prominence: 4
+    note: "King from the age of seven. After the Battle of Largs (1263) won the Isle of Man and the Western Isles by the Treaty of Perth (1266). Killed in a fall from his horse near Kinghorn; his death led to the succession crisis and the Wars of Independence."
+    sources: [wp-alexander-iii-of-scotland]
+  - key: margaret-maid-of-norway
+    name: Margaret, Maid of Norway
+    type: Royalty
+    realm: Scotland
+    born: 1283
+    died: 1290
+    prominence: 3
+    note: "Daughter of Eric II of Norway and Margaret of Scotland; born in Tønsberg in March or April 1283. Heir of Alexander III and 'queen-designate' from 1286, but never inaugurated, so historians debate whether she was a monarch. Died in Orkney on 26-29 September 1290 on the way to Scotland, which started the Great Cause."
+    sources: [wp-margaret-maid-of-norway]
+  - key: john-balliol
+    name: John Balliol
+    type: Royalty
+    house: Balliol
+    realm: Scotland
+    born: 1249
+    born_estimated: true
+    died: 1314
+    prominence: 3
+    note: "Toom Tabard, 'empty coat'. Chosen king in the Great Cause by Edward I, who treated Scotland as a vassal. Made the Auld Alliance with France (1295), was defeated at Dunbar and abdicated in 1296; held in the Tower of London, then retired to Picardy, where he died in late 1314."
+    sources: [wp-john-balliol]
+  - key: robert-i-of-scotland
+    name: Robert the Bruce
+    type: Royalty
+    house: Bruce
+    realm: Scotland
+    born: 1274-07-11
+    died: 1329-06-07
+    prominence: 5
+    note: "Robert I, king 1306-1329. Killed John Comyn, was inaugurated at Scone, survived defeat at Methven, and won Bannockburn (1314). The Declaration of Arbroath (1320) and the Treaty of Edinburgh-Northampton (1328) secured recognition of an independent Scotland. Buried at Dunfermline Abbey; his heart at Melrose Abbey and his viscera at St Serf's chapel, Dumbarton."
+    sources: [wp-robert-i-of-scotland]
+  - key: david-ii-of-scotland
+    name: David II
+    type: Royalty
+    house: Bruce
+    realm: Scotland
+    born: 1324-03-05
+    died: 1371-02-22
+    prominence: 3
+    note: "Son of Robert the Bruce, king at five. First Scottish king to be anointed. Exiled to France 1334-1341, captured at Neville's Cross in 1346 and held in England for 11 years; ransomed by the Treaty of Berwick (1357). Last of the House of Bruce; died childless."
+    sources: [wp-david-ii-of-scotland]
+  - key: robert-ii-of-scotland
+    name: Robert II
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1316-03-02
+    died: 1390-04-19
+    prominence: 3
+    note: "Robert Stewart, grandson of Robert the Bruce through Marjorie; first Stuart king, from 1371 at 55. Delegated power to his sons, lost control in the 1384 coup, and died at Dundonald Castle; buried at Scone."
+    sources: [wp-robert-ii-of-scotland]
+  - key: robert-iii-of-scotland
+    name: Robert III
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1337
+    born_estimated: true
+    died: 1406-04-04
+    prominence: 2
+    note: "Born John Stewart; took the name Robert in 1390. Crippled by a horse-kick, he ruled in name only under his brother Albany; his heir David, Duke of Rothesay, died in custody in 1402. Died at Rothesay Castle after his son James was captured by the English; buried at Paisley Abbey."
+    sources: [wp-robert-iii-of-scotland]
+  - key: james-i-of-scotland
+    name: James I
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1394
+    died: 1437-02-21
+    prominence: 3
+    note: "Captured by English pirates at 11 (22 March 1406) and held 18 years; crowned at Scone on 21 May 1424. Broke the Albany Stewarts, built Linlithgow Palace, wrote the poem The Kingis Quair. Assassinated at Perth in 1437. Born in late July 1394."
+    sources: [wp-james-i-of-scotland]
+  - key: james-ii-of-scotland
+    name: James II
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1430-10-16
+    died: 1460-08-03
+    prominence: 3
+    note: "Born with a large red birthmark on his face (the Auchinleck chronicle's 'fyre mark in his face'). King at six; murdered the 8th Earl of Douglas at Stirling in 1452 and destroyed the Douglases by 1455. Killed by an exploding bombard at the siege of Roxburgh."
+    sources: [wp-james-ii-of-scotland]
+  - key: james-iii-of-scotland
+    name: James III
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1452
+    born_estimated: true
+    died: 1488-06-11
+    prominence: 3
+    note: "King at eight; acquired Orkney and Shetland through his marriage to Margaret of Denmark. Unpopular and ineffective: lost Berwick in 1482, was briefly imprisoned, and was killed at the Battle of Sauchieburn with his own heir the figurehead of the rebels. Birth date and place are disputed."
+    sources: [wp-james-iii-of-scotland]
+  - key: james-iv-of-scotland
+    name: James IV
+    type: Royalty
+    house: Stuart
+    realm: Scotland
+    born: 1473-03-17
+    died: 1513-09-09
+    prominence: 4
+    note: "Renaissance king: built the Scottish navy, founded the first printing press, commissioned the Palace of Holyroodhouse. The Treaty of Perpetual Peace (1502) and marriage to Margaret Tudor (1503) led to the Union of the Crowns of 1603. Killed at Flodden in 1513, the last British monarch to die in battle."
+    sources: [wp-james-iv-of-scotland]
+  - key: william-wallace
+    name: William Wallace
+    type: Nobility
+    roles: [soldier]
+    realm: Scotland
+    born: 1270
+    born_estimated: true
+    died: 1305-08-23
+    prominence: 5
+    note: "Scottish knight who with Andrew Moray beat the English at Stirling Bridge (11 September 1297) and was Guardian of Scotland until his defeat at Falkirk (July 1298). Betrayed and captured at Robroyston on 5 August 1305; tried at Westminster Hall and hanged, drawn and quartered at Smithfield."
+    sources: [wp-william-wallace]
+
+titles:
+  # Malcolm II. Kenneth III (existing, King of Alba) was killed by him in 1005.
+  - {person: malcolm-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1005, to: 1034-11-25, note: "Article: King of Alba (Scotland); the Irish annals call him ard ri Alban. Took the throne by killing Kenneth III at Monzievaird in 1005. Died at Glamis (king-lists)", sources: [wp-malcolm-ii-of-scotland]}
+  - {person: duncan-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1034-11-30, to: 1040-08-14, note: "Article: king of Scotland (Alba). Acclaimed 30 November 1034 (the Macbeth article), five days after Malcolm II's death; killed at Bothnagowan, probably 14 August 1040", sources: [wp-duncan-i-of-scotland, wp-macbeth-of-scotland]}
+  - {person: macbeth-of-scotland, title: King of Scotland, realm: Scotland, from: 1040-08-14, to: 1057-08-15, note: "Article: King of Scotland, 'the Kingdom of Alba'. Became king on Duncan I's death; died at Lumphanan. His stepson Lulach reigned September 1057 to April 1058 (not entered)", sources: [wp-macbeth-of-scotland]}
+  - {person: malcolm-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1058, to: 1093-11-13, note: "Article: King of Alba (Scotland). Killed Lulach 23 April 1058; perhaps inaugurated 25 April 1058, which only Fordun reports", sources: [wp-malcolm-iii-of-scotland]}
+  - {person: donald-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1093, to: 1094, key: donald-iii-of-scotland--king-of-scotland--1093, note: "Article: King of Alba 1093-1094 and 1094-1097. First reign: seized the throne after Malcolm III and Queen Margaret died; displaced in May 1094 by Duncan II", sources: [wp-donald-iii-of-scotland]}
+  - {person: donald-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1094-11-12, to: 1097, key: donald-iii-of-scotland--king-of-scotland--1094, note: "Second reign: regained the throne when Duncan II was killed on 12 November 1094; defeated in 1097 by Edgar with English backing", sources: [wp-donald-iii-of-scotland, wp-duncan-ii-of-scotland, wp-edgar-of-scotland]}
+  - {person: duncan-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1094, to: 1094-11-12, note: "Article: King of Alba. Invaded in May-June 1094 with William II's help and was crowned at Scone; killed 12 November 1094 after under seven months. The article gives no day for his start", sources: [wp-duncan-ii-of-scotland, wp-donald-iii-of-scotland]}
+  - {person: edgar-of-scotland, title: King of Scotland, realm: Scotland, from: 1097, to: 1107-01-08, note: "Article: King of the Kingdom of Scotland. Claimed the crown in early 1095 but held only Lothian until Donald III was defeated in 1097", sources: [wp-edgar-of-scotland]}
+  - {person: alexander-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1107-01-08, to: 1124-04-23, note: "Article: King of Alba (Scotland). Started on Edgar's death, 8 January 1107", sources: [wp-alexander-i-of-scotland, wp-edgar-of-scotland]}
+  - {person: david-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1124-04-23, to: 1153-05-24, note: "Start taken from Alexander I's death on 23 April 1124; the David I article gives only 1124 and says he was crowned at Scone in April or May. The Annals of Tigernach call him 'king of Scotland and England'", sources: [wp-david-i-of-scotland, wp-alexander-i-of-scotland]}
+  - {person: malcolm-iv-of-scotland, title: King of Scotland, realm: Scotland, from: 1153-05-24, to: 1165-12-09, note: "Inaugurated at Scone on 27 May 1153, aged 12, before David I was buried", sources: [wp-malcolm-iv-of-scotland]}
+  - {person: william-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1165-12-09, to: 1214-12-04, note: "Article: King of Alba. Inaugurated 24 December 1165. Held in England after his capture in 1174; the Treaty of Falaise made Scotland subject to Henry II until 5 December 1189", sources: [wp-william-i-of-scotland]}
+  - {person: alexander-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1214-12-04, to: 1249-07-08, note: "Went to Scone the day after his father's death to be inaugurated, aged 16. Died on Kerrera on 8 July 1249", sources: [wp-alexander-ii-of-scotland]}
+  - {person: alexander-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1249-07-08, to: 1286-03-19, note: "Article: King of Alba from 6 July 1249 (the record uses 8 July; see discrepancy). Inaugurated at Scone on 13 July 1249, aged seven", sources: [wp-alexander-iii-of-scotland, wp-alexander-ii-of-scotland]}
+  - {person: margaret-maid-of-norway, title: Queen of Scotland, realm: Scotland, from: 1286-03-19, to: 1290, note: "Never inaugurated; historians disagree on whether she was queen (Duncan: 'never queen of Scots'; Reid: 'her reign never started'). Reference books date her reign from Alexander III's death, 19 March 1286; the Scots usually called her 'lady'. Died in Orkney 26-29 September 1290. Interregnum follows to 1292", sources: [wp-margaret-maid-of-norway]}
+  - {person: john-balliol, title: King of Scotland, realm: Scotland, from: 1292-11-30, to: 1296-07-10, note: "Article: King of Scots. Awarded the crown by Edward I's court at Berwick on 17 November 1292, inaugurated at Scone on St Andrew's Day. Abdicated at Stracathro; interregnum to 1306", sources: [wp-john-balliol]}
+  - {person: robert-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1306-03-25, to: 1329-06-07, note: "Article: King of Scots. Inaugurated at Scone on Palm Sunday, 25 March 1306, and crowned a second time the next day by Isabella MacDuff", sources: [wp-robert-i-of-scotland]}
+  - {person: david-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1329-06-07, to: 1371-02-22, note: "Crowned and anointed at Scone Abbey on 24 November 1331. Edward Balliol, crowned by the English on 24 September 1332, was a rival (not entered). In France 1334-1341; captive in England 1346-1357", sources: [wp-david-ii-of-scotland]}
+  - {person: robert-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1371-02-22, to: 1390-04-19, note: "Article: King of Scots. Coronation delayed by an armed protest of the Earl of Douglas; held 26 March 1371 (27 March in the Robert III article)", sources: [wp-robert-ii-of-scotland, wp-robert-iii-of-scotland]}
+  - {person: robert-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1390-04-19, to: 1406-04-04, note: "Article: King of Scots. Born John Stewart; changed his regnal name in May 1390. His brother Albany or his son Rothesay held the lieutenancy for most of the reign", sources: [wp-robert-iii-of-scotland]}
+  - {person: james-i-of-scotland, title: King of Scotland, realm: Scotland, from: 1406-04-04, to: 1437-02-21, note: "Article: King of Scots. Uncrowned and a captive in England until April 1424; crowned at Scone on 21 May 1424. Assassinated at Perth on the night of 20/21 February 1437", sources: [wp-james-i-of-scotland]}
+  - {person: james-ii-of-scotland, title: King of Scotland, realm: Scotland, from: 1437-02-21, to: 1460-08-03, note: "Article: King of Scots. Crowned at Holyrood Abbey in March 1437; personal rule from 1449", sources: [wp-james-ii-of-scotland]}
+  - {person: james-iii-of-scotland, title: King of Scotland, realm: Scotland, from: 1460-08-03, to: 1488-06-11, note: "Article: King of Scots. Crowned at Kelso Abbey on 10 August 1460 (two days after Roxburgh fell); personal rule from 1469", sources: [wp-james-iii-of-scotland, wp-james-ii-of-scotland]}
+  - {person: james-iv-of-scotland, title: King of Scotland, realm: Scotland, from: 1488-06-11, to: 1513-09-09, note: "Article: King of Scotland. Crowned at Scone Abbey on 24 June 1488, aged 15. Granted the title 'Protector and Defender of the Christian Faith' by Julius II in 1507", sources: [wp-james-iv-of-scotland]}
+  - {person: william-wallace, title: Guardian of Scotland, realm: Scotland, from: 1297, to: 1298, note: "Joint Guardian with Andrew Moray after Stirling Bridge (11 September 1297), then alone after Moray died of wounds in late 1297; resigned by September 1298 after Falkirk, in favour of Bruce and John Comyn. Acted in the name of King John Balliol. Years only: the article gives no start day", sources: [wp-william-wallace]}
+
+places:
+  - key: scone
+    name: Scone
+    kind: abbey
+    city: Perth
+    region: Perth and Kinross
+    country: Scotland
+    lat: 56.418
+    lng: -3.414
+    visitable: true
+    visit_site: "Scone Palace"
+    note: "The traditional place where Scottish kings were inaugurated; used for Duncan II (1094), David I (1124), Malcolm IV (1153), Alexander II (1214), Alexander III (1249), Balliol (1292), Bruce (1306), David II (1331) and James I and IV. Alexander I founded an Augustinian priory here (traditionally 1114-15); Robert II was buried here. The Bruce article calls Scone Abbey his main residence until 1327."
+    sources: [wp-alexander-i-of-scotland, wp-robert-i-of-scotland, wp-david-ii-of-scotland, wp-robert-ii-of-scotland]
+  - key: dunfermline-abbey
+    name: Dunfermline Abbey
+    kind: abbey
+    city: Dunfermline
+    region: Fife
+    country: Scotland
+    lat: 56.0696
+    lng: -3.4628
+    visitable: true
+    visit_site: "Dunfermline Abbey and Palace (Historic Environment Scotland)"
+    built_by: "Queen Margaret's foundation; the two western towers built by Alexander I"
+    note: "Royal burial place from the reign of Malcolm III: Malcolm III and Margaret (reinterred 1250), Edgar, Alexander I's wife Sybilla, David I, Alexander III and his children, and Robert the Bruce are buried here. David II and James I were born here. Defined here as the Abbey; the existing dunfermline-palace is the separate palace."
+    sources: [wp-edgar-of-scotland, wp-alexander-i-of-scotland, wp-malcolm-iii-of-scotland, wp-robert-i-of-scotland, wp-david-i-of-scotland]
+  - key: iona
+    name: Iona
+    kind: abbey
+    region: Argyll and Bute
+    country: Scotland
+    lat: 56.331
+    lng: -6.391
+    visitable: true
+    visit_site: "Iona Abbey (Historic Environment Scotland)"
+    note: "The traditional resting place of Scottish kings. Macbeth was buried here; Duncan I and Donald III are said to have been moved here, and Malcolm III and Duncan II are sometimes said to lie here."
+    sources: [wp-macbeth-of-scotland, wp-duncan-i-of-scotland, wp-donald-iii-of-scotland]
+  - key: glamis-castle
+    name: Glamis Castle
+    kind: castle
+    region: Angus
+    country: Scotland
+    lat: 56.6206
+    lng: -3.0055
+    visitable: true
+    visit_site: "Glamis Castle"
+    note: "The king-lists say Malcolm II died at Glamis Castle, 25 November 1034. The present building is later than the 11th century."
+    sources: [wp-malcolm-ii-of-scotland]
+  - key: lumphanan
+    name: Lumphanan
+    kind: battlefield
+    region: Aberdeenshire
+    country: Scotland
+    lat: 57.134
+    lng: -2.476
+    note: "Where Macbeth made his last stand in 1057 against the future Malcolm III. Approximate."
+    sources: [wp-macbeth-of-scotland, wp-malcolm-iii-of-scotland]
+  - key: carlisle-castle
+    name: Carlisle Castle
+    kind: castle
+    city: Carlisle
+    region: Cumbria
+    country: England
+    lat: 54.895
+    lng: -2.938
+    visitable: true
+    visit_site: "Carlisle Castle (English Heritage)"
+    founded: 1093
+    built_by: "William II (William Rufus), from 1093"
+    note: "David I's favoured residence in his later years (he rebuilt the fortress during the Anarchy); he died here on 24 May 1153."
+    sources: [wp-duncan-ii-of-scotland, wp-david-i-of-scotland]
+  - key: cowdon-moor
+    name: Cowdon Moor
+    historical_name: "Battle of the Standard"
+    kind: battlefield
+    region: North Yorkshire
+    country: England
+    lat: 54.365
+    lng: -1.44
+    note: "Near Northallerton; the Scots under David I lost the Battle of the Standard here on 22 August 1138. Approximate."
+    sources: [wp-david-i-of-scotland]
+  - key: arbroath-abbey
+    name: Arbroath Abbey
+    kind: abbey
+    city: Arbroath
+    region: Angus
+    country: Scotland
+    lat: 56.5589
+    lng: -2.5836
+    visitable: true
+    visit_site: "Arbroath Abbey (Historic Environment Scotland)"
+    built_by: "William the Lion (traditionally credited)"
+    note: "William the Lion was buried before the high altar on 10 December 1214. The site of the Declaration of Arbroath (1320), according to the William the Lion article."
+    sources: [wp-william-i-of-scotland, wp-alexander-ii-of-scotland]
+  - key: melrose-abbey
+    name: Melrose Abbey
+    kind: abbey
+    city: Melrose
+    region: Scottish Borders
+    country: Scotland
+    lat: 55.599
+    lng: -2.719
+    visitable: true
+    visit_site: "Melrose Abbey (Historic Environment Scotland)"
+    note: "Alexander II was buried here in 1249. The heart of Robert the Bruce was returned here after Sir James Douglas's death at Teba in 1330 and reburied in 1998."
+    sources: [wp-alexander-ii-of-scotland, wp-robert-i-of-scotland]
+  - key: kerrera
+    name: Kerrera
+    kind: island
+    region: Argyll and Bute
+    country: Scotland
+    lat: 56.39
+    lng: -5.54
+    note: "Alexander II died here on 8 July 1249 at about three in the afternoon while his fleet gathered to move against Ewan of Argyll and the Norwegian Hebrides."
+    sources: [wp-alexander-ii-of-scotland]
+  - key: kinghorn
+    name: Kinghorn
+    kind: town
+    region: Fife
+    country: Scotland
+    lat: 56.07
+    lng: -3.174
+    visitable: true
+    note: "Alexander III was found dead with a broken neck on the shore near here on 19 March 1286. A monument was erected at the approximate site in 1886."
+    sources: [wp-alexander-iii-of-scotland]
+  - key: stirling-castle
+    name: Stirling Castle
+    kind: castle
+    city: Stirling
+    region: Stirling
+    country: Scotland
+    lat: 56.1238
+    lng: -3.9475
+    visitable: true
+    visit_site: "Stirling Castle (Historic Environment Scotland)"
+    note: "James II stabbed the Earl of Douglas to death here in 1452 (James III article); James IV was born here in 1473 and built the great hall and a new royal lodging."
+    sources: [wp-james-iii-of-scotland, wp-james-iv-of-scotland]
+  - key: stirling-bridge
+    name: Stirling Bridge
+    kind: battlefield
+    city: Stirling
+    region: Stirling
+    country: Scotland
+    lat: 56.124
+    lng: -3.933
+    note: "Site of the Battle of Stirling Bridge, 11 September 1297. The bridge of 1297 was wooden and its exact position is approximate here; the Wallace Monument (1869) stands close to the site."
+    sources: [wp-william-wallace]
+  - key: roxburgh-castle
+    name: Roxburgh Castle
+    kind: castle
+    region: Scottish Borders
+    country: Scotland
+    lat: 55.594
+    lng: -2.456
+    note: "English-held for much of the late Middle Ages. James I failed to take it in 1436; James II died during the siege in 1460, and it fell to the Scots on 8 August 1460. Now ruins."
+    sources: [wp-james-i-of-scotland, wp-james-ii-of-scotland]
+  - key: holyrood-abbey
+    name: Holyrood Abbey
+    kind: abbey
+    city: Edinburgh
+    region: City of Edinburgh
+    country: Scotland
+    lat: 55.9521
+    lng: -3.1713
+    visitable: true
+    visit_site: "Holyrood Abbey ruins (Historic Environment Scotland)"
+    note: "Burial place of David II (1371) and James II (1460); James II was crowned and married here (1449). James III married here in 1469 and James IV married Margaret Tudor here on 8 August 1503."
+    sources: [wp-david-ii-of-scotland, wp-james-ii-of-scotland, wp-james-iii-of-scotland, wp-james-iv-of-scotland]
+  - key: holyrood-palace
+    name: Palace of Holyroodhouse
+    historical_name: "Holyrood Palace"
+    kind: palace
+    city: Edinburgh
+    region: City of Edinburgh
+    country: Scotland
+    lat: 55.9525
+    lng: -3.172
+    visitable: true
+    visit_site: "Palace of Holyroodhouse (Royal Collection Trust)"
+    founded: 1501
+    built_by: "James IV (built 1501-1505)"
+    note: "The James II article says he was born at 'Holyrood Palace' in 1430, before James IV's building; it presumably refers to an earlier royal lodging by the abbey. James IV's heir James was born here in February 1507."
+    sources: [wp-james-iv-of-scotland, wp-james-ii-of-scotland]
+  - key: linlithgow-palace
+    name: Linlithgow Palace
+    kind: palace
+    city: Linlithgow
+    region: West Lothian
+    country: Scotland
+    lat: 55.977
+    lng: -3.6
+    visitable: true
+    visit_site: "Linlithgow Palace (Historic Environment Scotland)"
+    built_by: "James I (rebuilding after a fire of 1425, continued until 1437); further work by James IV"
+    note: "James I diverted ransom money to the building, an estimated tenth of royal income. Henry VI and Margaret of Anjou were lodged here in 1461 (James III article)."
+    sources: [wp-james-i-of-scotland, wp-james-iii-of-scotland, wp-james-iv-of-scotland]
+  - key: cardross-manor
+    name: Cardross manor
+    kind: manor
+    region: Argyll and Bute
+    country: Scotland
+    lat: 55.966
+    lng: -4.656
+    note: "Robert the Bruce's favoured residence in his last years (lands acquired 1325, habitable 1327). He died here on 7 June 1329. The exact site is not given in the article; the point is Cardross village, near Dumbarton."
+    sources: [wp-robert-i-of-scotland]
+  - key: cambuskenneth-abbey
+    name: Cambuskenneth Abbey
+    kind: abbey
+    city: Stirling
+    region: Stirling
+    country: Scotland
+    lat: 56.117
+    lng: -3.915
+    visitable: true
+    visit_site: "Cambuskenneth Abbey ruins (Historic Environment Scotland)"
+    note: "James III and his queen were buried before the high altar; Robert the Bruce's funeral procession stopped here in 1329 on the way to Dunfermline."
+    sources: [wp-james-iii-of-scotland, wp-robert-i-of-scotland]
+  - key: kelso-abbey
+    name: Kelso Abbey
+    kind: abbey
+    city: Kelso
+    region: Scottish Borders
+    country: Scotland
+    lat: 55.5997
+    lng: -2.4337
+    visitable: true
+    visit_site: "Kelso Abbey (Historic Environment Scotland)"
+    note: "James III was crowned here on 10 August 1460, because the king could not travel to Scone."
+    sources: [wp-james-ii-of-scotland, wp-james-iii-of-scotland]
+  - key: perth
+    name: Perth
+    kind: city
+    region: Perth and Kinross
+    country: Scotland
+    lat: 56.395
+    lng: -3.431
+    note: "James I was assassinated here at the Blackfriars monastery on the night of 20/21 February 1437. Robert Bruce took the town in January 1312."
+    sources: [wp-james-i-of-scotland]
+  - key: dundonald-castle
+    name: Dundonald Castle
+    kind: castle
+    region: South Ayrshire
+    country: Scotland
+    lat: 55.569
+    lng: -4.614
+    visitable: true
+    note: "Robert II died here on 19 April 1390; Robert III stayed here in 1405."
+    sources: [wp-robert-ii-of-scotland, wp-robert-iii-of-scotland]
+  - key: paisley-abbey
+    name: Paisley Abbey
+    kind: abbey
+    city: Paisley
+    region: Renfrewshire
+    country: Scotland
+    lat: 55.8446
+    lng: -4.4239
+    visitable: true
+    built_by: "The Stewarts (a Stewart foundation)"
+    note: "Robert III was buried here in 1406."
+    sources: [wp-robert-iii-of-scotland, wp-james-i-of-scotland]
+  - key: flodden-battlefield
+    name: Flodden battlefield
+    kind: battlefield
+    region: Northumberland
+    country: England
+    lat: 55.625
+    lng: -2.136
+    visitable: true
+    note: "Branxton Hill, Northumberland: James IV and many of his nobles were killed here on 9 September 1513. Approximate."
+    sources: [wp-james-iv-of-scotland]
+
+events:
+  - key: battle-of-monzievaird-1005
+    name: Battle of Monzievaird
+    type: Battle
+    year: 1005
+    people:
+      - {person: malcolm-ii-of-scotland, role: victor}
+      - {person: kenneth-iii-of-scotland, role: killed}
+    prominence: 2
+    note: "Malcolm II killed Kenneth III in battle at Monzievaird in Strathearn in 1005 and took the throne. No coordinates or day in the article."
+    sources: [wp-malcolm-ii-of-scotland]
+  - key: battle-of-bothnagowan-1040
+    name: Battle of Bothnagowan
+    type: Battle
+    date: 1040-08-14
+    people:
+      - {person: duncan-i-of-scotland, role: killed}
+      - {person: macbeth-of-scotland, role: victor}
+    prominence: 3
+    note: "Duncan I led an army into Moray, apparently on a punitive expedition, and was killed by Macbeth's men at Bothnagowan, now Pitgaveny near Elgin, probably on 14 August 1040. He is thought to have been buried at Elgin and later moved to Iona. No place defined for Pitgaveny."
+    sources: [wp-duncan-i-of-scotland, wp-macbeth-of-scotland]
+  - key: battle-of-lumphanan-1057
+    name: Battle of Lumphanan
+    type: Battle
+    date: 1057-08-15
+    place: lumphanan
+    people:
+      - {person: macbeth-of-scotland, role: killed}
+      - {person: malcolm-iii-of-scotland, role: victor}
+    prominence: 3
+    note: "Macbeth retreated over the Cairnamounth Pass and was defeated and mortally wounded by the future Malcolm III on the north side of the Mounth. The Prophecy of Berchan has him dying at Scone days later."
+    sources: [wp-macbeth-of-scotland, wp-malcolm-iii-of-scotland]
+  - key: battle-of-alnwick-1093
+    name: Battle of Alnwick
+    type: Battle
+    date: 1093-11-13
+    people:
+      - {person: malcolm-iii-of-scotland, role: killed}
+    prominence: 3
+    note: "On the march home from ravaging Northumbria, Malcolm III and his son Edward were attacked by Robert de Mowbray's forces; Malcolm was killed by Morel of Bamburgh (Arkil Morel in the Duncan II article). Contemporary sources place it at Alnmouth (Inber Alda); later accounts say Alnwick. Queen Margaret died days later."
+    sources: [wp-malcolm-iii-of-scotland, wp-duncan-ii-of-scotland]
+  - key: battle-of-the-standard-1138
+    name: Battle of the Standard
+    type: Battle
+    date: 1138-08-22
+    place: cowdon-moor
+    people:
+      - {person: david-i-of-scotland, role: defeated}
+    prominence: 3
+    note: "David I's army, said to be 26,000 strong, was defeated at Cowdon Moor near Northallerton by an English army led by William, Earl of Aumale. Not decisive: David kept most of his army and his hold on Cumberland and much of Northumberland. A settlement followed in 1139."
+    sources: [wp-david-i-of-scotland]
+  - key: battle-of-alnwick-1174
+    name: Battle of Alnwick (1174)
+    type: Battle
+    year: 1174
+    people:
+      - {person: william-i-of-scotland, role: captured}
+    prominence: 3
+    note: "During the Great Revolt (see great-revolt-1173) William the Lion was surprised in his camp with 60 men against 400 English, charged recklessly, was unhorsed and captured by troops led by Ranulf de Glanvill. The article gives no day. He was held at Newcastle, Northampton, Caen and Falaise."
+    sources: [wp-william-i-of-scotland]
+  - key: treaty-of-falaise-1175
+    name: Treaty of Falaise and William's fealty at York
+    type: Treaty
+    date: 1175-08-10
+    people:
+      - {person: william-i-of-scotland, role: signatory}
+    prominence: 3
+    note: "As ransom William the Lion acknowledged Henry II as feudal superior, agreed to pay for the English occupation (40,000 Scottish marks) and subjected the Scottish church to the English. The article gives no year for the signing at Falaise; he swore fealty to Henry at York Castle on 10 August 1175, which dates this record. Defined here from the William the Lion article only."
+    sources: [wp-william-i-of-scotland]
+  - key: end-of-treaty-of-falaise-1189
+    name: Richard I ends the Treaty of Falaise
+    type: Treaty
+    date: 1189-12-05
+    people:
+      - {person: william-i-of-scotland, role: signatory}
+    prominence: 2
+    note: "Richard the Lionheart, needing money for the Third Crusade, cancelled the treaty for 10,000 silver marks."
+    sources: [wp-william-i-of-scotland]
+  - key: battle-of-largs-1263
+    name: Battle of Largs
+    type: Battle
+    date: 1263-10-02
+    people:
+      - {person: alexander-iii-of-scotland, role: commander}
+    prominence: 3
+    note: "Indecisive, but King Haakon IV of Norway, whose fleet was damaged by storms, withdrew and died in Orkney on 15 December 1263. No place defined."
+    sources: [wp-alexander-iii-of-scotland]
+  - key: treaty-of-perth-1266
+    name: Treaty of Perth
+    type: Treaty
+    year: 1266
+    people:
+      - {person: alexander-iii-of-scotland, role: signatory}
+    prominence: 3
+    note: "Magnus the Lawmender of Norway ceded the Isle of Man and the Western Isles to Scotland in return for payments. Norway kept Orkney and Shetland until 1469."
+    sources: [wp-alexander-iii-of-scotland]
+  - key: death-of-alexander-iii-1286
+    name: Death of Alexander III
+    type: Death
+    date: 1286-03-19
+    place: kinghorn
+    people:
+      - {person: alexander-iii-of-scotland, role: died}
+    prominence: 4
+    note: "Alexander III rode through the dark and storm from Edinburgh Castle to visit his new queen, Yolande, at Kinghorn, became separated from his party and was found dead with a broken neck. His death began the succession crisis."
+    sources: [wp-alexander-iii-of-scotland]
+  - key: inauguration-of-john-balliol-1292
+    name: Inauguration of John Balliol
+    type: Coronation
+    date: 1292-11-30
+    place: scone
+    people:
+      - {person: john-balliol, role: crowned}
+    prominence: 3
+    note: "The Great Cause, judged by Edward I's court at Berwick Castle, chose Balliol on 17 November 1292; he was inaugurated at Scone on St Andrew's Day. Thirteen men had claimed the crown after the Maid of Norway's death."
+    sources: [wp-john-balliol]
+  - key: auld-alliance-1295
+    name: Auld Alliance treaty
+    type: Treaty
+    date: 1295-10-23
+    people:
+      - {person: john-balliol, role: signatory}
+    prominence: 3
+    note: "Treaty of mutual assistance with Philip IV of France, later called the Auld Alliance; Balliol's son Edward was betrothed to Philip's niece Joan of Valois. It led Edward I to invade in 1296."
+    sources: [wp-john-balliol]
+  - key: battle-of-dunbar-1296
+    name: Battle of Dunbar (1296)
+    type: Battle
+    year: 1296
+    place: dunbar
+    people:
+      - {person: john-balliol, role: defeated}
+    prominence: 3
+    note: "The Scots were defeated and the English took Dunbar Castle on 27 April 1296. Balliol abdicated at Stracathro near Montrose on 10 July 1296, when the arms of Scotland were torn from his surcoat. The articles give no day for the battle itself. The existing place dunbar is the Dunbar of the 1650 battle."
+    sources: [wp-john-balliol, wp-william-wallace]
+  - key: battle-of-stirling-bridge-1297
+    name: Battle of Stirling Bridge
+    type: Battle
+    date: 1297-09-11
+    place: stirling-bridge
+    people:
+      - {person: william-wallace, role: victor}
+    prominence: 5
+    note: "Wallace and Andrew Moray routed the army of the 6th Earl of Surrey as it crossed the narrow bridge; Hugh de Cressingham was killed. The Scots then became Guardians of Scotland in King John Balliol's name."
+    sources: [wp-william-wallace]
+  - key: battle-of-falkirk-1298
+    people:
+      - {person: william-wallace, role: defeated}
+    sources: [wp-william-wallace]
+  - key: execution-of-william-wallace-1305
+    name: Execution of William Wallace
+    type: Execution
+    date: 1305-08-23
+    place: london
+    people:
+      - {person: william-wallace, role: executed}
+    prominence: 4
+    note: "Betrayed by John de Menteith and captured at Robroyston on 5 August 1305; tried for treason in Westminster Hall, taken to the Tower, dragged to Smithfield and hanged, drawn and quartered. His head was placed on London Bridge."
+    sources: [wp-william-wallace]
+  - key: inauguration-of-robert-the-bruce-1306
+    name: Inauguration of Robert the Bruce
+    type: Coronation
+    date: 1306-03-25
+    place: scone
+    people:
+      - {person: robert-i-of-scotland, role: crowned}
+    prominence: 4
+    note: "Six weeks after killing John Comyn at Dumfries (10 February 1306) Bruce was inaugurated by Bishop William de Lamberton on Palm Sunday; crowned again the next day by Isabella MacDuff. Edward I's forces beat him at Methven in June 1306."
+    sources: [wp-robert-i-of-scotland]
+  - key: battle-of-bannockburn-1314
+    people:
+      - {person: robert-i-of-scotland, role: victor}
+    sources: [wp-robert-i-of-scotland]
+  - key: declaration-of-arbroath-1320
+    name: Declaration of Arbroath
+    type: Declaration
+    year: 1320
+    place: arbroath-abbey
+    people:
+      - {person: robert-i-of-scotland, role: asserted}
+    prominence: 5
+    note: "The Scottish nobility's letter to Pope John XXII declared Robert the rightful king and asserted Scotland's status as an independent kingdom. The Bruce article gives only the year; the place (Arbroath Abbey) is from the William the Lion article. The Pope recognised Robert as king in 1324."
+    sources: [wp-robert-i-of-scotland, wp-william-i-of-scotland]
+  - key: treaty-of-edinburgh-northampton-1328
+    name: Treaty of Edinburgh-Northampton
+    type: Treaty
+    year: 1328
+    people:
+      - {person: robert-i-of-scotland, role: signatory}
+    prominence: 4
+    note: "In May 1328 Edward III renounced all claims to sovereignty over Scotland and recognised Bruce as king. The treaty also provided for David II's marriage to Joan, which took place at Berwick Castle on 17 July 1328. Dated by year because only the month is given for the treaty itself."
+    sources: [wp-robert-i-of-scotland, wp-david-ii-of-scotland]
+  - key: battle-of-nevilles-cross-1346
+    name: Battle of Neville's Cross
+    type: Battle
+    date: 1346-10-17
+    people:
+      - {person: david-ii-of-scotland, role: captured}
+    prominence: 3
+    note: "David II invaded England to relieve the French after Crecy, was defeated, took two arrow wounds to the face and was captured by Sir John de Coupland. He was held for 11 years. No place defined."
+    sources: [wp-david-ii-of-scotland, wp-robert-ii-of-scotland]
+  - key: assassination-of-james-i-1437
+    name: Assassination of James I
+    type: Assassination
+    date: 1437-02-21
+    place: perth
+    people:
+      - {person: james-i-of-scotland, role: killed}
+    prominence: 4
+    note: "Murdered at the Blackfriars monastery on the night of 20/21 February 1437 by about thirty conspirators led by Sir Robert Graham and the Chambers brothers, in a failed coup by his uncle Walter Stewart, Earl of Atholl. Queen Joan, though wounded, escaped. Atholl was beheaded on 26 March."
+    sources: [wp-james-i-of-scotland, wp-james-ii-of-scotland]
+  - key: black-dinner-1440
+    name: The Black Dinner
+    type: Execution
+    date: 1440-11-24
+    place: edinburgh-castle
+    prominence: 2
+    note: "William Crichton invited the young 6th Earl of Douglas to Edinburgh Castle, where he and his brother David were seized and beheaded."
+    sources: [wp-james-ii-of-scotland]
+  - key: murder-of-earl-of-douglas-1452
+    name: Murder of the Earl of Douglas
+    type: Murder
+    date: 1452-02-22
+    place: stirling-castle
+    people:
+      - {person: james-ii-of-scotland, role: killer}
+    prominence: 3
+    note: "After dinner James II stabbed William, 8th Earl of Douglas, twice when he refused to dissolve his alliance with the earls of Ross and Crawford; the king's attendants finished the murder. The Douglases then fought the king until Arkinholm (1 May 1455)."
+    sources: [wp-james-ii-of-scotland, wp-james-iii-of-scotland]
+  - key: siege-of-roxburgh-1460
+    name: Siege of Roxburgh and death of James II
+    type: Siege
+    year: 1460
+    place: roxburgh-castle
+    people:
+      - {person: james-ii-of-scotland, role: died}
+      - {person: james-iii-of-scotland, role: succeeded}
+    prominence: 3
+    note: "James II began besieging the English-held castle in late July 1460 and was killed on 3 August when a bombard exploded. The castle fell on 8 August and James III was crowned at Kelso Abbey on 10 August."
+    sources: [wp-james-ii-of-scotland, wp-james-iii-of-scotland]
+  - key: battle-of-sauchieburn-1488
+    name: Battle of Sauchieburn
+    type: Battle
+    date: 1488-06-11
+    people:
+      - {person: james-iii-of-scotland, role: killed}
+      - {person: james-iv-of-scotland, role: rebel figurehead}
+    prominence: 3
+    note: "The royal army was defeated by rebels south of Stirling, with the king's fifteen-year-old heir (the future James IV) as their figurehead. James III was killed, how is unclear. James IV wore an iron belt in penance for the rest of his life."
+    sources: [wp-james-iii-of-scotland, wp-james-iv-of-scotland]
+  - key: treaty-of-perpetual-peace-1502
+    name: Treaty of Perpetual Peace
+    type: Treaty
+    date: 1502-01-24
+    people:
+      - {person: james-iv-of-scotland, role: signatory}
+    prominence: 4
+    note: "Commissioners at Richmond Palace agreed the marriage of James IV to Margaret Tudor and the first peace treaty between Scotland and England since 1328; James confirmed it at Glasgow Cathedral on 10 December 1502. The wedding was celebrated at Holyrood Abbey on 8 August 1503. It led to the Union of the Crowns in 1603."
+    sources: [wp-james-iv-of-scotland]
+  - key: battle-of-flodden-1513
+    name: Battle of Flodden
+    type: Battle
+    date: 1513-09-09
+    place: flodden-battlefield
+    people:
+      - {person: james-iv-of-scotland, role: killed}
+    prominence: 4
+    note: "James IV chose the Auld Alliance and invaded England with about 34,000 men; at Branxton Hill the Scots were beaten by the Earl of Surrey's army, and the king, many nobles and a large part of the political community died. One of Scotland's worst military defeats. James V, aged one, was crowned three weeks later."
+    sources: [wp-james-iv-of-scotland]
+
+links:
+  - {parent: duncan-i-of-scotland, child: malcolm-iii-of-scotland}
+  - {parent: duncan-i-of-scotland, child: donald-iii-of-scotland}
+  - {parent: malcolm-iii-of-scotland, child: duncan-ii-of-scotland}
+  - {parent: malcolm-iii-of-scotland, child: edgar-of-scotland}
+  - {parent: malcolm-iii-of-scotland, child: alexander-i-of-scotland}
+  - {parent: malcolm-iii-of-scotland, child: david-i-of-scotland}
+  - {parent: william-i-of-scotland, child: alexander-ii-of-scotland}
+  - {parent: alexander-ii-of-scotland, child: alexander-iii-of-scotland}
+  - {parent: robert-i-of-scotland, child: david-ii-of-scotland}
+  - {parent: robert-ii-of-scotland, child: robert-iii-of-scotland}
+  - {parent: robert-iii-of-scotland, child: james-i-of-scotland}
+  - {parent: james-i-of-scotland, child: james-ii-of-scotland}
+  - {parent: james-ii-of-scotland, child: james-iii-of-scotland}
+  - {parent: james-iii-of-scotland, child: james-iv-of-scotland}
+
+moments:
+  # Born
+  - {person: david-ii-of-scotland,   role: born, place: dunfermline-abbey, year: 1324, sources: [wp-david-ii-of-scotland]}
+  - {person: james-i-of-scotland,    role: born, place: dunfermline-abbey, year: 1394, sources: [wp-james-i-of-scotland]}
+  - {person: james-ii-of-scotland,   role: born, place: holyrood-palace,   year: 1430, sources: [wp-james-ii-of-scotland]}
+  - {person: james-iv-of-scotland,   role: born, place: stirling-castle,   year: 1473, sources: [wp-james-iv-of-scotland]}
+  # Crowned
+  - {person: duncan-ii-of-scotland,   role: crowned, place: scone,        year: 1094, sources: [wp-duncan-ii-of-scotland]}
+  - {person: david-i-of-scotland,     role: crowned, place: scone,        year: 1124, sources: [wp-david-i-of-scotland]}
+  - {person: malcolm-iv-of-scotland,  role: crowned, place: scone,        year: 1153, sources: [wp-malcolm-iv-of-scotland]}
+  - {person: alexander-ii-of-scotland, role: crowned, place: scone,       year: 1214, sources: [wp-alexander-ii-of-scotland]}
+  - {person: alexander-iii-of-scotland, role: crowned, place: scone,      year: 1249, sources: [wp-alexander-iii-of-scotland]}
+  - {person: david-ii-of-scotland,    role: crowned, place: scone,        year: 1331, sources: [wp-david-ii-of-scotland]}
+  - {person: robert-ii-of-scotland,   role: crowned, place: scone,        year: 1371, sources: [wp-robert-ii-of-scotland]}
+  - {person: james-i-of-scotland,     role: crowned, place: scone,        year: 1424, sources: [wp-james-i-of-scotland]}
+  - {person: james-ii-of-scotland,    role: crowned, place: holyrood-abbey, year: 1437, sources: [wp-james-ii-of-scotland]}
+  - {person: james-iii-of-scotland,   role: crowned, place: kelso-abbey,  year: 1460, sources: [wp-james-iii-of-scotland, wp-james-ii-of-scotland]}
+  - {person: james-iv-of-scotland,    role: crowned, place: scone,        year: 1488, sources: [wp-james-iv-of-scotland]}
+  # Died
+  - {person: malcolm-ii-of-scotland,  role: died, place: glamis-castle,   year: 1034, sources: [wp-malcolm-ii-of-scotland]}
+  - {person: macbeth-of-scotland,     role: died, place: lumphanan,       year: 1057, sources: [wp-macbeth-of-scotland]}
+  - {person: edgar-of-scotland,       role: died, place: edinburgh,       year: 1107, sources: [wp-edgar-of-scotland]}
+  - {person: david-i-of-scotland,     role: died, place: carlisle-castle, year: 1153, sources: [wp-david-i-of-scotland]}
+  - {person: alexander-ii-of-scotland, role: died, place: kerrera,        year: 1249, sources: [wp-alexander-ii-of-scotland]}
+  - {person: alexander-iii-of-scotland, role: died, place: kinghorn,      year: 1286, sources: [wp-alexander-iii-of-scotland]}
+  - {person: robert-i-of-scotland,    role: died, place: cardross-manor,  year: 1329, sources: [wp-robert-i-of-scotland]}
+  - {person: david-ii-of-scotland,    role: died, place: edinburgh-castle, year: 1371, sources: [wp-david-ii-of-scotland]}
+  - {person: robert-ii-of-scotland,   role: died, place: dundonald-castle, year: 1390, sources: [wp-robert-ii-of-scotland]}
+  - {person: james-i-of-scotland,     role: died, place: perth,           year: 1437, sources: [wp-james-i-of-scotland]}
+  - {person: james-ii-of-scotland,    role: died, place: roxburgh-castle, year: 1460, sources: [wp-james-ii-of-scotland]}
+  - {person: james-iv-of-scotland,    role: died, place: flodden-battlefield, year: 1513, sources: [wp-james-iv-of-scotland]}
+  - {person: william-wallace,         role: died, place: london,          year: 1305, sources: [wp-william-wallace]}
+  # Buried
+  - {person: macbeth-of-scotland,     role: buried, place: iona,             year: 1057, sources: [wp-macbeth-of-scotland]}
+  - {person: donald-iii-of-scotland,  role: buried, place: iona,             sources: [wp-donald-iii-of-scotland]}
+  - {person: malcolm-iii-of-scotland, role: buried, place: dunfermline-abbey, year: 1250, sources: [wp-malcolm-iii-of-scotland]}
+  - {person: edgar-of-scotland,       role: buried, place: dunfermline-abbey, year: 1107, sources: [wp-edgar-of-scotland]}
+  - {person: david-i-of-scotland,     role: buried, place: dunfermline-abbey, year: 1153, sources: [wp-david-i-of-scotland]}
+  - {person: william-i-of-scotland,   role: buried, place: arbroath-abbey,   year: 1214, sources: [wp-alexander-ii-of-scotland]}
+  - {person: alexander-ii-of-scotland, role: buried, place: melrose-abbey,   year: 1249, sources: [wp-alexander-ii-of-scotland]}
+  - {person: alexander-iii-of-scotland, role: buried, place: dunfermline-abbey, year: 1286, sources: [wp-alexander-iii-of-scotland]}
+  - {person: robert-i-of-scotland,    role: buried, place: dunfermline-abbey, year: 1329, sources: [wp-robert-i-of-scotland]}
+  - {person: robert-i-of-scotland,    role: heart buried, place: melrose-abbey, sources: [wp-robert-i-of-scotland]}
+  - {person: david-ii-of-scotland,    role: buried, place: holyrood-abbey,   year: 1371, sources: [wp-david-ii-of-scotland]}
+  - {person: robert-ii-of-scotland,   role: buried, place: scone,            year: 1390, sources: [wp-robert-ii-of-scotland]}
+  - {person: robert-iii-of-scotland,  role: buried, place: paisley-abbey,    year: 1406, sources: [wp-robert-iii-of-scotland]}
+  - {person: james-ii-of-scotland,    role: buried, place: holyrood-abbey,   year: 1460, sources: [wp-james-ii-of-scotland]}
+  - {person: james-iii-of-scotland,   role: buried, place: cambuskenneth-abbey, year: 1488, sources: [wp-james-iii-of-scotland]}
+  # Lived, imprisoned
+  - {person: john-balliol,            role: imprisoned, place: tower-of-london, year: 1296, sources: [wp-john-balliol]}
+  - {person: david-ii-of-scotland,    role: lived,      place: chateau-gaillard, year: 1334, sources: [wp-david-ii-of-scotland]}
+  - {person: david-ii-of-scotland,    role: imprisoned, place: tower-of-london, year: 1347, sources: [wp-david-ii-of-scotland]}
+  - {person: james-i-of-scotland,     role: imprisoned, place: tower-of-london, year: 1413, sources: [wp-james-i-of-scotland]}
+
+discrepancies:
+  - key: duncan-i-death-day
+    question: On what day was Duncan I killed at Bothnagowan in 1040?
+    about: [{person: duncan-i-of-scotland}, {event: battle-of-bothnagowan-1040}]
+    field: died
+    claims:
+      - {value: "14 August 1040 ('probably')", sources: [wp-duncan-i-of-scotland, wp-macbeth-of-scotland]}
+      - {value: "15 August 1040", sources: [wp-malcolm-iii-of-scotland]}
+    note: "The record uses 14 August 1040."
+  - key: macbeth-place-of-death
+    question: Where did Macbeth die in 1057?
+    about: [{person: macbeth-of-scotland}, {event: battle-of-lumphanan-1057}]
+    field: place
+    claims:
+      - {value: "Mortally wounded or killed in the battle of Lumphanan", sources: [wp-macbeth-of-scotland, wp-malcolm-iii-of-scotland]}
+      - {value: "Wounded at Lumphanan and died at Scone some days later (Prophecy of Berchan)", sources: [wp-macbeth-of-scotland]}
+    note: "The record uses Lumphanan. William of Malmesbury's claim that Siward killed Macbeth in 1054 is contradicted by Macbeth outliving Siward (Malcolm III article)."
+  - key: malcolm-iii-death-place-and-burial
+    question: Where was Malcolm III killed and where was he first buried?
+    about: [{person: malcolm-iii-of-scotland}, {event: battle-of-alnwick-1093}]
+    field: place
+    claims:
+      - {value: "Killed at Inber Alda (Alnmouth) on 13 November 1093; buried at Tynemouth Priory, later moved to Dunfermline Abbey 'or possibly Iona'", sources: [wp-malcolm-iii-of-scotland]}
+      - {value: "Killed near Alnwick (the later tradition); Duncan II's article names the killer Arkil Morel, steward of Bamburgh, where Malcolm III's article says Morel of Bamburgh, steward of Robert de Mowbray", sources: [wp-duncan-ii-of-scotland, wp-malcolm-iii-of-scotland]}
+    note: "No place is attached to the event. The moment records the Dunfermline reburial of 1250 (beside Margaret after her canonisation)."
+  - key: donald-iii-fate
+    question: What happened to Donald III after 1097?
+    about: [{person: donald-iii-of-scotland}]
+    field: died
+    claims:
+      - {value: "Blinded and imprisoned for life by Edgar, at Rescobie near Forfar; died there in 1099 (Fordun and the king-lists)", sources: [wp-donald-iii-of-scotland]}
+      - {value: "Expelled (Anglo-Saxon Chronicle); blinded by his brother (Annals of Tigernach); 'slain by the craftiness of David and the strength of William' (William of Malmesbury)", sources: [wp-donald-iii-of-scotland]}
+      - {value: "Alexander I slew Donald III after Donald killed Edgar (Orderic Vitalis)", sources: [wp-edgar-of-scotland]}
+    note: "The record uses 1099 for his death. Burial: Dunfermline Abbey or Dunkeld Cathedral first, then agreed to be moved to Iona."
+  - key: duncan-ii-killer-and-burial
+    question: Who killed Duncan II on 12 November 1094, and where was he buried?
+    about: [{person: duncan-ii-of-scotland}]
+    field: died
+    claims:
+      - {value: "Killed by Máel Petair, Mormaer of Mearns (13th-century note; Fordun says at Monthechin), at Donald III's instigation", sources: [wp-duncan-ii-of-scotland, wp-donald-iii-of-scotland, wp-edgar-of-scotland]}
+      - {value: "Killed by Donald III (Annals of Inisfallen) or treacherously by 'his brothers Domnall and Edmond' (Annals of Ulster, probably meaning his uncle Donald III and half-brother Edmund)", sources: [wp-duncan-ii-of-scotland]}
+      - {value: "Buried at Dunfermline Abbey, or on Iona", sources: [wp-duncan-ii-of-scotland]}
+    note: "The date, 12 November 1094, is agreed by both articles. No burial moment is entered."
+  - key: edgar-death
+    question: Did Edgar die peacefully in Edinburgh in 1107, or was he killed by Donald III?
+    about: [{person: edgar-of-scotland}]
+    field: died
+    claims:
+      - {value: "Died at Edinburgh on 8 January 1107, buried at Dunfermline Abbey", sources: [wp-edgar-of-scotland]}
+      - {value: "Murdered by his uncle Donald III, who was then killed by Alexander I (Orderic Vitalis)", sources: [wp-edgar-of-scotland]}
+    note: "The record uses 8 January 1107. The Edgar article quotes Benjamin Hudson calling Orderic's account 'completely false', probably a confusion with Duncan II's murder."
+  - key: alexander-ii-death-date
+    question: On what day did Alexander II die, and so when did Alexander III become king?
+    about: [{person: alexander-ii-of-scotland}, {person: alexander-iii-of-scotland}]
+    field: died
+    claims:
+      - {value: "Alexander II died on 8 July 1249 at about three in the afternoon on Kerrera", sources: [wp-alexander-ii-of-scotland]}
+      - {value: "Alexander II died on 6 July 1249, when Alexander III became king; inaugurated at Scone on 13 July 1249", sources: [wp-alexander-iii-of-scotland]}
+    note: "The record uses 8 July 1249 for Alexander II's death and the start of Alexander III's reign."
+  - key: margaret-maid-of-norway-death-day
+    question: On what day did Margaret, Maid of Norway die in Orkney?
+    about: [{person: margaret-maid-of-norway}]
+    field: died
+    claims:
+      - {value: "Between 26 and 29 September 1290", sources: [wp-margaret-maid-of-norway]}
+      - {value: "'Late September 1290'", sources: [wp-william-wallace]}
+    note: "Year only is recorded."
+  - key: robert-bruce-birthplace
+    question: Where was Robert the Bruce born on 11 July 1274?
+    about: [{person: robert-i-of-scotland}]
+    field: place
+    claims:
+      - {value: "Most likely Turnberry Castle, Ayrshire, head of his mother's earldom of Carrick", sources: [wp-robert-i-of-scotland]}
+      - {value: "Perhaps Lochmaben, Dumfriesshire", sources: [wp-robert-i-of-scotland]}
+      - {value: "Perhaps Writtle, Essex", sources: [wp-robert-i-of-scotland]}
+    note: "No birth moment is entered."
+  - key: robert-ii-coronation-day
+    question: On what date was Robert II crowned at Scone in 1371?
+    about: [{person: robert-ii-of-scotland}]
+    field: crowned
+    claims:
+      - {value: "26 March 1371 (delayed by William, Earl of Douglas's armed protest)", sources: [wp-robert-ii-of-scotland]}
+      - {value: "27 March 1371", sources: [wp-robert-iii-of-scotland]}
+    note: "The moment records the year only."
+  - key: james-ii-coronation-day
+    question: On what date was James II crowned at Holyrood Abbey in 1437?
+    about: [{person: james-ii-of-scotland}]
+    field: crowned
+    claims:
+      - {value: "26 March 1437, by Michael Ochiltree, Bishop of Dunblane", sources: [wp-james-ii-of-scotland]}
+      - {value: "25 March 1437: the Earl of Atholl was beheaded on 26 March, 'the day after the coronation of the young James II'", sources: [wp-james-i-of-scotland]}
+    note: "The moment records the year only."
+  - key: james-iii-birth
+    question: When and where was James III born?
+    about: [{person: james-iii-of-scotland}]
+    field: born
+    claims:
+      - {value: "Late May 1452 at St Andrews (argued by Norman Macdougall)", sources: [wp-james-iii-of-scotland]}
+      - {value: "10 or 20 July 1451, at Stirling Castle", sources: [wp-james-iii-of-scotland]}
+      - {value: "May 1452 (James II's article)", sources: [wp-james-ii-of-scotland]}
+    note: "The record uses 1452 (estimated) and enters no birth place."
