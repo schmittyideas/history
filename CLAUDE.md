@@ -71,6 +71,7 @@ Commit messages: plain imperative title ("Add …", "Intake: …"), a short body
 - Colours come from the tokens at the top of `styles.css` (Bayeux Tapestry wools: woad, madder, weld, stitch, ochre, gold), redefined for dark mode. Never hard-code a colour.
 - Views: Timeline (lanes of lives, events lane, side panel with a places map) and Year (rulers by realm and world region, a border map, events, births and deaths). Links go both ways between them.
 - Crowns mark people who held a title; the gold strip beside a lifespan bar marks the years held.
+- Person, event and place panels show a **Sources** row linking each cited source ("Wikipedia: …", new tab). So a record without a source shows "None recorded": always cite one.
 - Keep it working at 375px wide and in both themes. Check that it does.
 
 ## Maps (GPL-3.0)

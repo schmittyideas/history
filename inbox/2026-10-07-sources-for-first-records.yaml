@@ -1,0 +1,54 @@
+batch:
+  title: Sources for the first records
+  requested: "Are we capturing the Wikipedia page? We should link to that"
+  date: 2026-10-07
+
+# The site's first records (October 5) went in before sources existed. This batch adds a source to each:
+# its English Wikipedia article (checked to exist on 2026-10-07). Updates only: no other fields change.
+
+sources:
+  - {key: wp-matilda-of-flanders,   title: "Matilda of Flanders (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Matilda_of_Flanders"}
+  - {key: wp-robert-curthose,       title: "Robert Curthose (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Robert_Curthose"}
+  - {key: wp-william-ii-of-england, title: "William II of England (Wikipedia)",   url: "https://en.wikipedia.org/wiki/William_II_of_England"}
+  - {key: wp-adela-of-normandy,     title: "Adela of Normandy (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Adela_of_Normandy"}
+  - {key: wp-adeliza-of-louvain,    title: "Adeliza of Louvain (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Adeliza_of_Louvain"}
+  - {key: wp-sybilla-of-conversano, title: "Sybilla of Conversano (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Sybilla_of_Conversano"}
+  - {key: wp-battle-of-hastings,    title: "Battle of Hastings (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Battle_of_Hastings"}
+  - {key: wp-falaise-castle,        title: "Falaise Castle (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Falaise_Castle"}
+  - {key: wp-battle-abbey,          title: "Battle Abbey (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Battle_Abbey"}
+  - {key: wp-abbaye-aux-hommes,     title: "Abbey of Saint-Étienne, Caen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abbey_of_Saint-%C3%89tienne,_Caen"}
+  - {key: wp-abbaye-aux-dames,      title: "Abbaye aux Dames (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Abbaye_aux_Dames"}
+  - {key: wp-reading-abbey,         title: "Reading Abbey (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Reading_Abbey"}
+  - {key: wp-waltham-abbey,         title: "Waltham Abbey (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Waltham_Abbey"}
+  - {key: wp-bayeux-tapestry-museum, title: "Bayeux Tapestry Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bayeux_Tapestry_Museum"}
+  - {key: wp-conversano,            title: "Conversano (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Conversano"}
+  - {key: wp-jerusalem,             title: "Jerusalem (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Jerusalem"}
+
+people:
+  - {key: harold-ii-of-england,  sources: [wp-harold-godwinson]}
+  - {key: william-i-of-england,  sources: [wp-william-i]}
+  - {key: matilda-of-flanders,   sources: [wp-matilda-of-flanders]}
+  - {key: stephen-of-blois,      sources: [wp-stephen-of-blois]}
+  - {key: robert-curthose,       sources: [wp-robert-curthose]}
+  - {key: william-ii-of-england, sources: [wp-william-ii-of-england]}
+  - {key: adela-of-normandy,     sources: [wp-adela-of-normandy]}
+  - {key: matilda-of-scotland,   sources: [wp-matilda-of-scotland]}
+  - {key: adeliza-of-louvain,    sources: [wp-adeliza-of-louvain]}
+  - {key: sybilla-of-conversano, sources: [wp-sybilla-of-conversano]}
+
+events:
+  - {key: battle-of-hastings,      sources: [wp-battle-of-hastings]}
+  - {key: coronation-of-william-i, sources: [wp-william-i, wp-westminster-abbey]}
+
+places:
+  - {key: falaise-castle,         sources: [wp-falaise-castle]}
+  - {key: battle-abbey,           sources: [wp-battle-abbey]}
+  - {key: abbaye-aux-hommes,      sources: [wp-abbaye-aux-hommes]}
+  - {key: abbaye-aux-dames,       sources: [wp-abbaye-aux-dames]}
+  - {key: reading-abbey,          sources: [wp-reading-abbey]}
+  - {key: waltham-abbey,          sources: [wp-waltham-abbey]}
+  - {key: musee-de-la-tapisserie, sources: [wp-bayeux-tapestry-museum]}
+  - {key: conversano,             sources: [wp-conversano]}
+  - {key: jerusalem,              sources: [wp-jerusalem]}
+  # No English article of its own: William the Conqueror died at the priory of Saint-Gervais.
+  - {key: saint-gervais-rouen,    sources: [wp-william-i]}
