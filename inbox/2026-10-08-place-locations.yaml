@@ -1,0 +1,29 @@
+batch:
+  title: Where the existing places are today (city, county, country)
+  requested: "Identify the current location for any past event: city, county and country by today's standards"
+  date: 2026-10-08
+
+# Back-fills the new `city` field on places that were added before it existed, and puts London's two
+# places under the county name used elsewhere ("Greater London"). Only the fields given change.
+# Places that are themselves a city or town (Rouen, Venice, Cairo, Nottingham, Worcester and so on) get
+# no city, as the intake format says. Places whose nearest town is not clear-cut (most battlefields)
+# are left for a later pass rather than guessed.
+places:
+  - {key: aachen-cathedral,         city: Aachen}
+  - {key: abbaye-aux-dames,         city: Caen}
+  - {key: abbaye-aux-hommes,        city: Caen}
+  - {key: agincourt-battlefield,    city: Azincourt}
+  - {key: bannockburn-battlefield,  city: Stirling}
+  - {key: barnet-battlefield,       city: London}
+  - {key: battle-abbey,             city: Battle}
+  - {key: ferney,                   city: Ferney-Voltaire}
+  - {key: crecy-battlefield,        city: Crécy-en-Ponthieu}
+  - {key: falaise-castle,           city: Falaise}
+  - {key: faversham-abbey,          city: Faversham}
+  - {key: musee-de-la-tapisserie,   city: Bayeux}
+  - {key: palace-of-whitehall,      city: London, region: Greater London}
+  - {key: reading-abbey,            city: Reading}
+  - {key: saint-gervais-rouen,      city: Rouen}
+  - {key: tewkesbury-battlefield,   city: Tewkesbury}
+  - {key: theobalds-house,          city: Cheshunt}
+  - {key: westminster-abbey,        city: London, region: Greater London}
