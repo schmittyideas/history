@@ -41,6 +41,7 @@ sources:
 | `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
 | `image_url`, `image_thumb` | Links to the person's picture and a ~400px thumbnail (Wikimedia Commons). Links only; nothing is copied. Use only images the Commons page marks public domain or freely licensed |
 | `image_page` | The Commons file page (author, licence, credit) |
+| `portrait` | Key of an `artworks` entry that shows this person, so the picture's maker, date and licence travel with it |
 | `image_license` | Short licence name, e.g. "Public domain", "CC BY-SA 4.0" |
 | `obsidian_link` | Exact Obsidian note name |
 | `note` | One-line summary |
@@ -77,6 +78,36 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 | `place` | Place key |
 | `people` | List of `{person: key, role: …}` (victor, defeated, crowned, died, …) |
 | `prominence`, `obsidian_link`, `note`, `sources` | As above |
+
+### `artworks`
+Paintings, prints, miniatures, sculptures and other works as records of their own. An artwork links to who made it, who it shows, where it was made or hangs, which event it depicts, and which artwork it copies, so each can be found from any of them. Links only for images; nothing is copied.
+| Field | Meaning |
+|---|---|
+| `key`, `name` | Required for new artworks ("portrait-of-inigo-jones-after-van-dyck") |
+| `kind`, `medium` | painting, print, miniature, sculpture, drawing, …; "oil on canvas". Leave out what the source does not say |
+| `made`, `made_end` | Year (or span) it was made; years only (BC negative). `estimated: true` for "c." |
+| `after` | Key of the artwork this one copies or is based on (an engraving after a painting) |
+| `collection` | Where it is now ("Chatsworth House") |
+| `image_url`, `image_thumb`, `image_page`, `image_license`, `image_credit` | Links to the picture and a thumbnail; the Commons (or museum) page where author and licence can be checked; short licence name; credit line as the source gives it |
+| `people` | List of `{person: key, role: …}`. Roles: `creator`, `subject` (portrayed), `patron` (commissioned it), `after` (the artist of the original it copies), `engraver`, `owner` |
+| `places` | List of `{place: key, role: …}`. Roles: `made`, `depicts`, `held`, `made-for`, `displayed` |
+| `events` | List of `{event: key, role: …}`. Roles: `depicts`, `commemorates`, `made-during` |
+| `prominence`, `obsidian_link`, `note`, `sources` | As above |
+
+```yaml
+artworks:
+  - key: portrait-of-inigo-jones-after-van-dyck
+    name: Portrait of Inigo Jones
+    made: 1757
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/31/PortraitInigoJones.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:PortraitInigoJones.jpg
+    image_license: Public domain
+    people:
+      - {person: william-hogarth, role: creator}
+      - {person: inigo-jones, role: subject}
+    sources: [commons-portrait-inigo-jones]
+```
+The preview warns about a new artwork with no `creator` (and no `after`), and about an image without a licence and page. Discrepancies can be about an artwork: `{artwork: key}` (attribution disputes are common).
 
 ### `links`
 Relationships between people. One line each:
@@ -135,7 +166,7 @@ Where sources disagree. Record both sides rather than silently picking one, so a
 | Field | Meaning |
 |---|---|
 | `key`, `question` | Required. The question is what's disputed |
-| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}` |
+| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}`, `{artwork: …}` |
 | `field` | Which field, if one: `born`, `died`, `date`, `place`, … |
 | `claims` | What each side says: list of `{value, sources, note}` |
 | `note` | Context while it's open, e.g. which value the record uses for now |

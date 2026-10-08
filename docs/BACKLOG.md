@@ -27,6 +27,12 @@ Rules:
 
 ### Ready (ranked)
 
+#### [P2] Show artworks and portraits on the site
+`type: enhancement` · `area: site` · `status: ready` · `issue: #62`
+
+Show a person's portrait (thumbnail, credit line, link to its Commons page) and an Artworks row on person, place and event panels, linking maker, sitter, place and event. Then backfill artworks for the 44 existing person images from their Commons credits (the credits are in the Wikipedia image data; only the link and licence were stored so far). Needs the artworks table (sql/011).
+Source: Ty, 2026-10-08.
+
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
 
@@ -130,6 +136,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Artworks as records: maker, sitter, place, event, copies
+`type: enhancement` · `area: data` · `status: done` · `issue: #61`
+
+New `artworks` table (sql/011) with links to its creator, the people it shows, places, events and the artwork it copies (`after`), image links with licence and credit, and a person's `portrait`. The intake format, tool and tests know it. First record: Hogarth's portrait of Inigo Jones after Van Dyck. Done 2026-10-08.
+Source: Ty, 2026-10-08.
 
 #### [P2] Add English artists, writers, architects, composers and scholars, 1600-1700
 `type: task` · `area: data` · `status: done` · `issue: #54`

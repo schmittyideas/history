@@ -1,0 +1,46 @@
+batch:
+  title: The first artwork record, a portrait of Inigo Jones
+  requested: "Show how artworks link to their maker, their sitter and the original they copy (Hogarth's print after Van Dyck)"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Everything about the artwork comes from its Wikimedia Commons file page (date "from 1757 until 1758", credit "After Anthony van Dyck / William Hogarth", public domain).
+#   Commons does not say the medium (print or engraving), so `kind` and `medium` are left out. The original Van Dyck painting is not recorded here (no article date or owner found yet).
+# - William Hogarth is added only as the maker; his own works and links are left for a later batch. Facts from his English Wikipedia article.
+
+sources:
+  - {key: wp-william-hogarth, title: "William Hogarth (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Hogarth"}
+  - {key: commons-portrait-inigo-jones, title: "File:PortraitInigoJones.jpg (Wikimedia Commons)", url: "https://commons.wikimedia.org/wiki/File:PortraitInigoJones.jpg"}
+
+people:
+  - key: william-hogarth
+    name: William Hogarth
+    type: Artist
+    roles: [painter, engraver, satirist]
+    born: 1697-11-10
+    died: 1764-10-26
+    prominence: 4
+    note: "English painter, engraver and satirist, known for A Harlot's Progress, A Rake's Progress and Marriage A-la-Mode."
+    sources: [wp-william-hogarth]
+  - key: inigo-jones
+    portrait: portrait-of-inigo-jones-after-van-dyck
+
+artworks:
+  - key: portrait-of-inigo-jones-after-van-dyck
+    name: Portrait of Inigo Jones
+    made: 1757
+    made_end: 1758
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/31/PortraitInigoJones.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/PortraitInigoJones.jpg/500px-PortraitInigoJones.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:PortraitInigoJones.jpg
+    image_license: Public domain
+    image_credit: "After Anthony van Dyck / William Hogarth (Wikimedia Commons)"
+    people:
+      - {person: william-hogarth, role: creator}
+      - {person: anthony-van-dyck, role: after}
+      - {person: inigo-jones, role: subject}
+    note: "Hogarth's portrait of Inigo Jones, made after a portrait by Van Dyck; the dates 1757-1758 are Commons'."
+    sources: [commons-portrait-inigo-jones]
+
+moments:
+  - {person: william-hogarth, role: born, place: london, year: 1697, sources: [wp-william-hogarth]}

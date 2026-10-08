@@ -18,7 +18,8 @@ class FakeDB:
     def __init__(self, snap):
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
-                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": []}
+                  "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": [],
+                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -95,6 +96,42 @@ def test_person_image_fields():
     intake.apply_files(world, docs, log=lambda m: None)
     r = [x for x in db.t["entities"] if x["key"] == "pic-person"][0]
     assert (r["image_url"], r["image_thumb"], r["image_license"]) == ("https://x/a.jpg", "https://x/t.jpg", "Public domain")
+
+def test_artworks():
+    db = FakeDB(snapshot())
+    docs = [("a.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+        "people": [{"key": "painter", "name": "Painter", "type": "Artist", "born": 1599, "portrait": "engraving", "sources": ["s"]},
+                   {"key": "engraver", "name": "Engraver", "type": "Artist", "born": 1697, "sources": ["s"]},
+                   {"key": "sitter", "name": "Sitter", "type": "Artist", "born": 1573, "sources": ["s"]}],
+        "artworks": [
+            {"key": "painting", "name": "Portrait of Sitter", "kind": "painting", "medium": "oil on canvas", "made": 1632,
+             "collection": "Somewhere", "people": [{"person": "painter", "role": "creator"}, {"person": "sitter", "role": "subject"}],
+             "places": [{"place": "westminster-abbey", "role": "held"}], "events": [{"event": "battle-of-hastings", "role": "depicts"}],
+             "sources": ["s"]},
+            {"key": "engraving", "name": "Portrait of Sitter (engraving)", "kind": "engraving", "made": 1743, "after": "painting",
+             "image_url": "https://x/a.jpg", "image_page": "https://commons/File:a.jpg", "image_license": "Public domain",
+             "people": [{"person": "engraver", "role": "creator"}, {"person": "sitter", "role": "subject"}], "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    assert plan.adds["artworks"] == ["painting", "engraving"]
+    intake.apply_files(world, docs, log=lambda m: None)
+    art = {r["key"]: r for r in db.t["artworks"]}
+    assert art["painting"]["start_year"] == 1632 and art["painting"]["medium"] == "oil on canvas"
+    assert art["engraving"]["derived_from_id"] == art["painting"]["id"] and art["engraving"]["image_license"] == "Public domain"
+    ent = {r["key"]: r for r in db.t["entities"]}
+    assert ent["painter"]["portrait_artwork_id"] == art["engraving"]["id"]
+    assert sorted(r["role"] for r in db.t["artwork_people"] if r["artwork_id"] == art["painting"]["id"]) == ["creator", "subject"]
+    assert len(db.t["artwork_places"]) == 1 and len(db.t["artwork_events"]) == 1
+    assert any(l["record_type"] == "artwork" and l["record_key"] == "painting" for l in db.t["source_links"])
+    n = len(db.t["artwork_people"]); intake.apply_files(intake.World(db), docs, log=lambda m: None)   # re-sending adds no duplicates
+    assert len(db.t["artwork_people"]) == n and len(db.t["artworks"]) == 2
+    bad = [("b.yaml", {"batch": {"title": "t"}, "artworks": [
+        {"key": "x", "name": "X", "after": "nope", "people": [{"person": "ghost", "role": "creator"}], "sources": ["s"]},
+        {"key": "y", "name": "Y", "made": 1700, "made_end": 1690, "people": [{"person": "ghost"}]}]})]
+    errs = intake.plan_files(intake.World(FakeDB(snapshot())), bad).errors
+    assert any("unknown artwork `nope`" in e for e in errs) and any("unknown person `ghost`" in e for e in errs)
+    assert any("made_end" in e for e in errs) and any("needs a `role`" in e for e in errs)
 
 def test_place_dates_and_builders():
     db = FakeDB(snapshot())
@@ -209,4 +246,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_artworks(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
