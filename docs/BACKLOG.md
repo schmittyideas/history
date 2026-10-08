@@ -98,11 +98,6 @@ Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 The world-in-1000 build repeated for 1100–1500, plus border snapshots in `data/maps/`. Queue item 5.
 Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
-#### [P2] Add every English monarch's reign from the Obsidian Royalty timeline notes
-`type: task` · `area: data` · `status: ready` · `issue: #15`
-
-The Year view shows no King of England outside the reigns entered so far (1042–1154, 1216–1272). `Personal/History/Royalty timelines` in Obsidian has a note for most English monarchs from Edward the Confessor to Elizabeth II. Intake batch: each monarch as a person plus a King/Queen of England title, dates checked against the List of English monarchs, `obsidian_link` to the reign note. France next (the Kings of the Franks / France notes are there too). Queue item 1 in `docs/BUILDOUT.md`; run it first to measure cost.
-Source: Year view, 2026-10-06.
 
 #### [P2] Add Emperor Henry V
 `type: task` · `area: data` · `status: ready` · `issue: #6`
@@ -129,6 +124,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Add every English monarch's reign, with their places and events
+`type: task` · `area: data` · `status: done` · `issue: #15`
+
+Every King and Queen of England, Great Britain and the United Kingdom from Edward the Confessor to Charles III now has a reign, with places (county, country, city, coordinates) and events, checked against their English Wikipedia articles. Done 2026-10-08 in PRs #42 (Stuarts), #43 (Plantagenets and Lancaster), #44 (York and Tudor), #45 (Hanover to today), #46/#48 (Mary II) and #47 (city back-fill). Left for later: Mary II's place of death, some battlefield cities, Elizabeth II's birthplace, coronation dates the articles do not give, and a verification pass on approximate coordinates.
+Source: Year view, 2026-10-06; widened by Ty on 2026-10-08 to include places, buildings and events.
 
 #### [P2] Map flags: a plain flag with each realm's ruler
 `type: enhancement` · `area: site` · `status: done` · `issue: #26`
