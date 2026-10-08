@@ -1,0 +1,624 @@
+batch:
+  title: "English and British monarchs: the Stuarts, 1603-1714"
+  requested: "Reigns, lives and key events of James I, Charles I, Cromwell, Charles II, James II, William III, Mary II and Anne"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - All dates before 1752 are as the Wikipedia articles give them (English Old Style calendar), e.g. the Boyne is 1 July 1690 O.S.
+# - Mary II: the article Mary_II_of_England was NOT downloaded (rate-limited). Her facts come only from the William III, James II and Anne articles. Her birthplace and place/date of burial are left out.
+# - William III's Dutch offices (Prince of Orange, Stadtholder) are left out: no Dutch realms are in this batch. His Irish crown is left out too (no Ireland title wording agreed).
+# - Charles II's coronation (April 1661), the Battle of Blenheim and the Banqueting House are left out: no clear date or founding fact in the downloaded articles.
+# - Anne's place of death is not stated in the downloaded article, so there is no "died" moment for her.
+# - The Great Fire, the Boyne, and other battlefield coordinates are present-day site coordinates to about 2 decimals, set from general knowledge of the locations.
+
+sources:
+  - {key: wp-james-vi-and-i,   title: "James VI and I (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/James_VI_and_I"}
+  - {key: wp-charles-i,        title: "Charles I of England (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Charles_I_of_England"}
+  - {key: wp-oliver-cromwell,  title: "Oliver Cromwell (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Oliver_Cromwell"}
+  - {key: wp-charles-ii,       title: "Charles II of England (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Charles_II_of_England"}
+  - {key: wp-james-ii,         title: "James II of England (Wikipedia)",            url: "https://en.wikipedia.org/wiki/James_II_of_England"}
+  - {key: wp-william-iii,      title: "William III of England (Wikipedia)",         url: "https://en.wikipedia.org/wiki/William_III_of_England"}
+  - {key: wp-anne,             title: "Anne, Queen of Great Britain (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Anne,_Queen_of_Great_Britain"}
+  - {key: wp-acts-of-union-1707, title: "Acts of Union 1707 (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Acts_of_Union_1707"}
+
+realms:
+  - {name: Commonwealth of England, region: Western Europe, country: United Kingdom, note: "The republic of 1649-1660; Cromwell was Lord Protector 1653-1658"}
+  - {name: Great Britain, region: Western Europe, country: United Kingdom, note: "England and Scotland united by the Acts of Union, 1 May 1707"}
+
+people:
+  - key: james-i-of-england
+    name: James VI and I
+    type: Royalty
+    house: Stuart
+    realm: England
+    born: 1566-06-19
+    died: 1625-03-27
+    prominence: 4
+    note: "King of Scotland as James VI from 1567 and of England and Ireland as James I from 1603; first Stuart king of England."
+    sources: [wp-james-vi-and-i]
+  - key: charles-i-of-england
+    name: Charles I
+    type: Royalty
+    house: Stuart
+    realm: England
+    born: 1600-11-19
+    died: 1649-01-30
+    prominence: 5
+    note: "Lost the English Civil War and was beheaded at Whitehall; the only English king executed."
+    sources: [wp-charles-i]
+  - key: oliver-cromwell
+    name: Oliver Cromwell
+    type: Nobility
+    roles: [soldier, statesman]
+    realm: Commonwealth of England
+    born: 1599-04-25
+    died: 1658-09-03
+    prominence: 5
+    note: "Parliamentarian commander who backed the execution of Charles I; Lord Protector from December 1653 until his death."
+    sources: [wp-oliver-cromwell]
+  - key: charles-ii-of-england
+    name: Charles II
+    type: Royalty
+    house: Stuart
+    realm: England
+    born: 1630-05-29
+    died: 1685-02-06
+    prominence: 4
+    note: "Restored to the throne in 1660 after nine years in exile; the 'Merry Monarch' of the Restoration."
+    sources: [wp-charles-ii]
+  - key: james-ii-of-england
+    name: James II and VII
+    type: Royalty
+    house: Stuart
+    realm: England
+    born: 1633-10-14
+    died: 1701-09-16
+    prominence: 3
+    note: "Last Catholic king of England; deposed in the Glorious Revolution of 1688 and died in exile at Saint-Germain-en-Laye."
+    sources: [wp-james-ii]
+  - key: william-iii-of-england
+    name: William III and II
+    type: Royalty
+    house: Orange
+    realm: England
+    born: 1650-11-04
+    died: 1702-03-08
+    prominence: 4
+    note: "Prince of Orange who invaded England in 1688; ruled jointly with Mary II to 1694, then alone."
+    sources: [wp-william-iii]
+  - key: mary-ii-of-england
+    name: Mary II
+    type: Royalty
+    house: Stuart
+    realm: England
+    born: 1662-04-30
+    died: 1694-12-28
+    prominence: 3
+    note: "Elder Protestant daughter of James II; joint sovereign with her husband William III from 1689; died of smallpox."
+    sources: [wp-james-ii, wp-william-iii]
+  - key: anne-of-great-britain
+    name: Anne
+    type: Royalty
+    house: Stuart
+    realm: Great Britain
+    born: 1665-02-06
+    died: 1714-08-01
+    prominence: 4
+    note: "Last Stuart monarch; Queen of England from 1702 and of Great Britain from the 1707 union."
+    sources: [wp-anne]
+
+titles:
+  # James I. England reign from 24 March 1603 (Elizabeth I's death); Scottish reign from his mother's abdication.
+  - {person: james-i-of-england, title: King of England, realm: England, from: 1603-03-24, to: 1625-03-27, sources: [wp-james-vi-and-i]}
+  - {person: james-i-of-england, title: King of Scotland, realm: Scotland, from: 1567-07-24, to: 1625-03-27, note: "As James VI; crowned 29 July 1567 aged 13 months", sources: [wp-james-vi-and-i]}
+  # Charles I.
+  - {person: charles-i-of-england, title: King of England, realm: England, from: 1625-03-27, to: 1649-01-30, sources: [wp-charles-i]}
+  - {person: charles-i-of-england, title: King of Scotland, realm: Scotland, from: 1625-03-27, to: 1649-01-30, sources: [wp-charles-i]}
+  # Cromwell. Sworn in 16 December 1653.
+  - {person: oliver-cromwell, title: Lord Protector, realm: Commonwealth of England, from: 1653-12-16, to: 1658-09-03, note: "Ruled England, Scotland and Ireland under the Instrument of Government; offered the crown in 1657 and declined", sources: [wp-oliver-cromwell]}
+  # Charles II. Scots proclaimed him 5 Feb 1649; English reign taken from the 1660 Restoration (see discrepancy).
+  - {person: charles-ii-of-england, title: King of Scotland, realm: Scotland, from: 1649-02-05, to: 1651, note: "Crowned at Scone 1 January 1651; defeated at Worcester 3 September 1651", sources: [wp-charles-ii]}
+  - {person: charles-ii-of-england, title: King of England, realm: England, from: 1660-05-29, to: 1685-02-06, note: "Restored 1660. Royalists dated his reign from his father's death in 1649", sources: [wp-charles-ii]}
+  # James II.
+  - {person: james-ii-of-england, title: King of England, realm: England, from: 1685-02-06, to: 1688-12-11, note: "Tried to flee on 11 December 1688; left for France on 23 December; throne declared vacant February 1689", sources: [wp-james-ii]}
+  - {person: james-ii-of-england, title: King of Scotland, realm: Scotland, from: 1685-02-06, to: 1689-04-11, note: "As James VII; Scottish Estates declared the throne forfeited on 11 April 1689", sources: [wp-james-ii]}
+  # William and Mary: joint monarchs; William alone after Mary's death.
+  - {person: william-iii-of-england, title: King of England, realm: England, from: 1689-02-13, to: 1702-03-08, note: "Joint monarch with Mary II to 1694", sources: [wp-william-iii]}
+  - {person: william-iii-of-england, title: King of Scotland, realm: Scotland, from: 1689-04-11, to: 1702-03-08, sources: [wp-william-iii, wp-james-ii]}
+  - {person: mary-ii-of-england, title: Queen of England, realm: England, from: 1689-02-13, to: 1694-12-28, note: "Joint sovereign with William; he held the sole exercise of regal power", sources: [wp-william-iii]}
+  - {person: mary-ii-of-england, title: Queen of Scotland, realm: Scotland, from: 1689-04-11, to: 1694-12-28, sources: [wp-william-iii, wp-james-ii]}
+  # Anne. England to the union, Great Britain from 1 May 1707.
+  - {person: anne-of-great-britain, title: Queen of England, realm: England, from: 1702-03-08, to: 1707-04-30, sources: [wp-anne]}
+  - {person: anne-of-great-britain, title: Queen of Scotland, realm: Scotland, from: 1702-03-08, to: 1707-04-30, sources: [wp-anne]}
+  - {person: anne-of-great-britain, title: Queen of Great Britain, realm: Great Britain, from: 1707-05-01, to: 1714-08-01, sources: [wp-anne, wp-acts-of-union-1707]}
+
+places:
+  - key: edinburgh-castle
+    name: Edinburgh Castle
+    kind: castle
+    city: Edinburgh
+    region: City of Edinburgh
+    country: Scotland
+    lat: 55.9486
+    lng: -3.1999
+    visitable: true
+    visit_site: "Edinburgh Castle (Historic Environment Scotland)"
+    note: "Birthplace of James VI and I, 19 June 1566. In Edinburgh."
+    sources: [wp-james-vi-and-i]
+  - key: dunfermline-palace
+    name: Dunfermline Palace
+    kind: palace
+    city: Dunfermline
+    region: Fife
+    country: Scotland
+    lat: 56.070
+    lng: -3.462
+    note: "Birthplace of Charles I, 19 November 1600. In Dunfermline."
+    sources: [wp-charles-i]
+  - key: st-jamess-palace
+    name: St James's Palace
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5039
+    lng: -0.1371
+    visitable: false
+    note: "Birthplace of Charles II (1630), James II (1633) and Anne (1665); Charles I was held here before his execution. In London."
+    sources: [wp-charles-ii, wp-james-ii, wp-anne, wp-charles-i]
+  - key: theobalds-house
+    name: Theobalds House
+    kind: palace
+    region: Hertfordshire
+    country: England
+    lat: 51.713
+    lng: -0.044
+    note: "Where James VI and I died on 27 March 1625. Site at Theobalds Park near Cheshunt."
+    sources: [wp-james-vi-and-i]
+  - key: huntingdon
+    name: Huntingdon
+    kind: town
+    region: Cambridgeshire
+    country: England
+    lat: 52.330
+    lng: -0.183
+    note: "Birthplace of Oliver Cromwell (Cromwell House, on the site of Huntingdon Priory). Today the Cromwell Museum is here."
+    sources: [wp-oliver-cromwell]
+  - key: nottingham
+    name: Nottingham
+    kind: city
+    region: Nottinghamshire
+    country: England
+    lat: 52.955
+    lng: -1.158
+    note: "Charles I raised the royal standard here on 22 August 1642."
+    sources: [wp-charles-i]
+  - key: edgehill-battlefield
+    name: Edgehill battlefield
+    kind: battlefield
+    region: Warwickshire
+    country: England
+    lat: 52.12
+    lng: -1.48
+    note: "Site of the first major battle of the English Civil War, 23 October 1642."
+    sources: [wp-charles-i]
+  - key: marston-moor-battlefield
+    name: Marston Moor battlefield
+    kind: battlefield
+    region: North Yorkshire
+    country: England
+    lat: 53.97
+    lng: -1.17
+    note: "Site of the Royalist defeat of July 1644, helped by Cromwell's cavalry. Near York."
+    sources: [wp-charles-i, wp-oliver-cromwell]
+  - key: naseby-battlefield
+    name: Naseby battlefield
+    kind: battlefield
+    region: Northamptonshire
+    country: England
+    lat: 52.40
+    lng: -0.99
+    note: "Site of the 14 June 1645 defeat of Charles I by the New Model Army."
+    sources: [wp-charles-i, wp-oliver-cromwell]
+  - key: drogheda
+    name: Drogheda
+    kind: town
+    region: County Louth
+    country: Ireland
+    lat: 53.718
+    lng: -6.356
+    note: "Stormed by Cromwell's army in September 1649; nearly 3,500 people were killed."
+    sources: [wp-oliver-cromwell]
+  - key: dunbar
+    name: Dunbar
+    kind: town
+    region: East Lothian
+    country: Scotland
+    lat: 56.004
+    lng: -2.518
+    note: "Cromwell defeated the Scottish army near here on 3 September 1650."
+    sources: [wp-oliver-cromwell]
+  - key: worcester
+    name: Worcester
+    kind: city
+    region: Worcestershire
+    country: England
+    lat: 52.192
+    lng: -2.220
+    note: "Cromwell destroyed the last major Royalist army here on 3 September 1651."
+    sources: [wp-oliver-cromwell, wp-charles-ii]
+  - key: pudding-lane
+    name: Pudding Lane
+    kind: street
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5087
+    lng: -0.0863
+    note: "Where the Great Fire of London began on 2 September 1666. In the City of London."
+    sources: [wp-charles-ii]
+  - key: tyburn
+    name: Tyburn
+    kind: execution site
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.513
+    lng: -0.159
+    note: "Cromwell's exhumed body was hanged in chains here on 30 January 1661. Near Marble Arch, London."
+    sources: [wp-oliver-cromwell]
+  - key: sidney-sussex-college-cambridge
+    name: Sidney Sussex College, Cambridge
+    kind: college
+    city: Cambridge
+    region: Cambridgeshire
+    country: England
+    lat: 52.2051
+    lng: 0.1213
+    note: "Cromwell's head was buried beneath the floor of the antechapel in 1960. In Cambridge."
+    sources: [wp-oliver-cromwell]
+  - key: sedgemoor-battlefield
+    name: Sedgemoor battlefield
+    kind: battlefield
+    region: Somerset
+    country: England
+    lat: 51.08
+    lng: -2.93
+    note: "Site of the 1685 defeat of Monmouth's rebels. Near Westonzoyland."
+    sources: [wp-james-ii, wp-charles-ii]
+  - key: brixham
+    name: Brixham
+    kind: harbour
+    region: Devon
+    country: England
+    lat: 50.395
+    lng: -3.514
+    note: "William of Orange landed here on 5 November 1688."
+    sources: [wp-william-iii, wp-james-ii]
+  - key: boyne-battlefield
+    name: Boyne battlefield
+    kind: battlefield
+    region: County Meath
+    country: Ireland
+    lat: 53.72
+    lng: -6.42
+    historical_name: "Battle of the Boyne"
+    note: "Where William III defeated James II on 1 July 1690 (O.S.). On the River Boyne near Drogheda."
+    sources: [wp-william-iii, wp-james-ii]
+  - key: chateau-de-saint-germain-en-laye
+    name: Château de Saint-Germain-en-Laye
+    kind: palace
+    city: Saint-Germain-en-Laye
+    region: Yvelines
+    country: France
+    lat: 48.8979
+    lng: 2.0944
+    note: "Louis XIV gave this royal château to the exiled James II, who died here on 16 September 1701. In Saint-Germain-en-Laye."
+    sources: [wp-james-ii]
+  # Shared keys (also sent by other batches with the same key; only the facts the downloaded articles support are given).
+  - key: kensington-palace
+    name: Kensington Palace
+    kind: palace
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5058
+    lng: -0.1877
+    visitable: true
+    visit_site: "Kensington Palace (Historic Royal Palaces)"
+    note: "William III died here on 8 March 1702. In London."
+    sources: [wp-william-iii]
+  - key: st-georges-chapel-windsor
+    name: St George's Chapel, Windsor
+    kind: chapel
+    city: Windsor
+    region: Berkshire
+    country: England
+    lat: 51.4839
+    lng: -0.6044
+    visitable: true
+    visit_site: "St George's Chapel, Windsor Castle"
+    note: "Charles I was buried here in private on 9 February 1649, beside Henry VIII and Jane Seymour. In Windsor."
+    sources: [wp-charles-i]
+
+events:
+  - key: union-of-the-crowns-1603
+    name: Union of the Crowns
+    type: Succession
+    date: 1603-03-24
+    people: [{person: james-i-of-england, role: succeeded}]
+    prominence: 4
+    note: "James VI of Scotland became James I of England on Elizabeth I's death; the two kingdoms kept separate parliaments until 1707."
+    sources: [wp-james-vi-and-i]
+  - key: coronation-of-james-i
+    name: Coronation of James I
+    type: Coronation
+    date: 1603-07-25
+    place: westminster-abbey
+    people: [{person: james-i-of-england, role: crowned}]
+    prominence: 3
+    note: "Festivities were restricted by an outbreak of plague."
+    sources: [wp-james-vi-and-i]
+  - key: gunpowder-plot
+    name: Gunpowder Plot
+    type: Conspiracy
+    date: 1605-11-05
+    people: [{person: james-i-of-england, role: target}]
+    prominence: 4
+    note: "Guy Fawkes was found guarding 36 barrels of gunpowder in the cellars of Parliament on the night of 4-5 November, the eve of the state opening."
+    sources: [wp-james-vi-and-i]
+  - key: charles-i-raises-the-royal-standard-1642
+    name: Charles I raises the royal standard
+    type: War
+    date: 1642-08-22
+    place: nottingham
+    people: [{person: charles-i-of-england, role: king}]
+    prominence: 3
+    note: "The start of the English Civil War in the field."
+    sources: [wp-charles-i]
+  - key: battle-of-edgehill
+    name: Battle of Edgehill
+    type: Battle
+    date: 1642-10-23
+    place: edgehill-battlefield
+    people: [{person: charles-i-of-england, role: commander}]
+    prominence: 3
+    note: "The first major battle of the Civil War; it ended inconclusively as daylight faded."
+    sources: [wp-charles-i]
+  - key: battle-of-marston-moor
+    name: Battle of Marston Moor
+    type: Battle
+    year: 1644
+    place: marston-moor-battlefield
+    people: [{person: oliver-cromwell, role: victor}, {person: charles-i-of-england, role: defeated}]
+    prominence: 3
+    note: "July 1644 (the day is not given in the downloaded articles). Cromwell's cavalry was a major factor in the Parliamentarian victory."
+    sources: [wp-oliver-cromwell, wp-charles-i]
+  - key: battle-of-naseby
+    name: Battle of Naseby
+    type: Battle
+    date: 1645-06-14
+    place: naseby-battlefield
+    people: [{person: oliver-cromwell, role: victor}, {person: charles-i-of-england, role: defeated}]
+    prominence: 4
+    note: "The New Model Army smashed the King's main army; the military balance tipped decisively to Parliament."
+    sources: [wp-charles-i, wp-oliver-cromwell]
+  - key: execution-of-charles-i
+    name: Execution of Charles I
+    type: Execution
+    date: 1649-01-30
+    place: palace-of-whitehall
+    people: [{person: charles-i-of-england, role: executed}, {person: oliver-cromwell, role: signatory}]
+    prominence: 5
+    note: "Beheaded on a scaffold outside the Banqueting House at about 2 pm; the monarchy was abolished and the Commonwealth declared."
+    sources: [wp-charles-i, wp-oliver-cromwell]
+  - key: siege-of-drogheda
+    name: Siege of Drogheda
+    type: Siege
+    year: 1649
+    place: drogheda
+    people: [{person: oliver-cromwell, role: commander}]
+    prominence: 3
+    note: "September 1649. After the town fell, Cromwell's troops killed nearly 3,500 people, including civilians, prisoners and priests."
+    sources: [wp-oliver-cromwell]
+  - key: battle-of-dunbar-1650
+    name: Battle of Dunbar
+    type: Battle
+    date: 1650-09-03
+    place: dunbar
+    people: [{person: oliver-cromwell, role: victor}]
+    prominence: 3
+    note: "Cromwell smashed the main Scottish army, killing about 4,000 and taking 10,000 prisoner, then took Edinburgh."
+    sources: [wp-oliver-cromwell, wp-charles-ii]
+  - key: battle-of-worcester
+    name: Battle of Worcester
+    type: Battle
+    date: 1651-09-03
+    place: worcester
+    people: [{person: oliver-cromwell, role: victor}, {person: charles-ii-of-england, role: defeated}]
+    prominence: 4
+    note: "The last major battle of the Civil Wars; Charles II escaped and spent nine years in exile."
+    sources: [wp-oliver-cromwell, wp-charles-ii]
+  - key: cromwell-made-lord-protector
+    name: Cromwell sworn in as Lord Protector
+    type: Political
+    date: 1653-12-16
+    people: [{person: oliver-cromwell, role: protector}]
+    prominence: 4
+    note: "Under the Instrument of Government; he wore plain black, not regalia."
+    sources: [wp-oliver-cromwell]
+  - key: restoration-of-charles-ii
+    name: Restoration of the monarchy
+    type: Restoration
+    date: 1660-05-29
+    people: [{person: charles-ii-of-england, role: restored}]
+    prominence: 4
+    note: "Charles II reached London on his 30th birthday after landing at Dover on 25 May."
+    sources: [wp-charles-ii]
+  - key: posthumous-execution-of-cromwell
+    name: Posthumous execution of Cromwell
+    type: Execution
+    date: 1661-01-30
+    place: tyburn
+    people: [{person: oliver-cromwell, role: exhumed}]
+    prominence: 2
+    note: "Exhumed from Westminster Abbey on the 12th anniversary of Charles I's execution, hanged in chains, and his head displayed at Westminster Hall."
+    sources: [wp-oliver-cromwell]
+  - key: great-fire-of-london
+    name: Great Fire of London
+    type: Disaster
+    date: 1666-09-02
+    place: pudding-lane
+    people: [{person: charles-ii-of-england, role: directed firefighting}, {person: james-ii-of-england, role: directed firefighting}]
+    prominence: 4
+    note: "Destroyed about 13,200 houses and 87 churches, including St Paul's Cathedral. Date is the day it began."
+    sources: [wp-charles-ii, wp-james-ii]
+  - key: treaty-of-dover-1670
+    name: Secret Treaty of Dover
+    type: Treaty
+    year: 1670
+    people: [{person: charles-ii-of-england, role: signatory}]
+    prominence: 2
+    note: "Alliance with Louis XIV against the Dutch; Charles secretly promised to announce a conversion to Catholicism. Day not given in the downloaded article."
+    sources: [wp-charles-ii]
+  - key: battle-of-sedgemoor
+    name: Battle of Sedgemoor
+    type: Battle
+    date: 1685-07-06
+    place: sedgemoor-battlefield
+    people: [{person: james-ii-of-england, role: victor}]
+    prominence: 3
+    note: "Monmouth's rebels were routed; he was captured and executed at the Tower of London on 15 July. The Bloody Assizes followed."
+    sources: [wp-james-ii, wp-charles-ii]
+  - key: acquittal-of-the-seven-bishops
+    name: Acquittal of the Seven Bishops
+    type: Trial
+    date: 1688-06-30
+    people: [{person: james-ii-of-england, role: prosecutor}]
+    prominence: 3
+    note: "Seen as an assault on the Church of England; the same day seven nobles invited William of Orange to England."
+    sources: [wp-james-ii, wp-william-iii]
+  - key: glorious-revolution
+    name: Glorious Revolution
+    type: Revolution
+    date: 1688-11-05
+    end_year: 1689
+    place: brixham
+    people: [{person: william-iii-of-england, role: invader}, {person: james-ii-of-england, role: deposed}, {person: mary-ii-of-england, role: joint sovereign}]
+    prominence: 5
+    note: "William landed at Brixham on 5 November 1688; James's army deserted and he went into exile on 23 December. Parliament offered the crown to William and Mary."
+    sources: [wp-william-iii, wp-james-ii]
+  - key: declaration-of-right-1689
+    name: Declaration of Right
+    type: Law
+    date: 1689-02-13
+    people: [{person: william-iii-of-england, role: accepted}, {person: mary-ii-of-england, role: accepted}]
+    prominence: 3
+    note: "Parliament declared James II had abdicated and the throne was vacant; the basis of the Bill of Rights 1689. See discrepancy on the date."
+    sources: [wp-william-iii, wp-james-ii]
+  - key: coronation-of-william-and-mary
+    name: Coronation of William III and Mary II
+    type: Coronation
+    date: 1689-04-11
+    place: westminster-abbey
+    people: [{person: william-iii-of-england, role: crowned}, {person: mary-ii-of-england, role: crowned}]
+    prominence: 3
+    note: "Crowned by Henry Compton, Bishop of London, because Archbishop Sancroft refused to recognise James's removal."
+    sources: [wp-william-iii]
+  - key: battle-of-the-boyne
+    name: Battle of the Boyne
+    type: Battle
+    date: 1690-07-01
+    place: boyne-battlefield
+    people: [{person: william-iii-of-england, role: victor}, {person: james-ii-of-england, role: defeated}]
+    prominence: 4
+    note: "1 July 1690 Old Style. James fled to France via Kinsale and never returned."
+    sources: [wp-william-iii, wp-james-ii]
+  - key: act-of-settlement-1701
+    name: Act of Settlement
+    type: Law
+    year: 1701
+    people: [{person: anne-of-great-britain, role: heir}]
+    prominence: 3
+    note: "Passed after the Duke of Gloucester's death in 1700; the crown would go to Sophia of Hanover and her Protestant heirs, excluding over 50 Catholics."
+    sources: [wp-anne]
+  - key: coronation-of-anne
+    name: Coronation of Anne
+    type: Coronation
+    date: 1702-04-23
+    place: westminster-abbey
+    people: [{person: anne-of-great-britain, role: crowned}]
+    prominence: 3
+    note: "St George's Day; Anne, lame with gout, was carried to the Abbey in an open sedan chair."
+    sources: [wp-anne]
+  - key: acts-of-union-1707
+    name: Acts of Union 1707
+    type: Treaty
+    date: 1707-05-01
+    people: [{person: anne-of-great-britain, role: sovereign}]
+    prominence: 4
+    note: "England and Scotland became one kingdom, Great Britain, with one parliament at Westminster. Scotland ratified on 16 January and England on 6 March 1707."
+    sources: [wp-acts-of-union-1707, wp-anne]
+
+moments:
+  - {person: james-i-of-england,    role: born,   place: edinburgh-castle, year: 1566}
+  - {person: james-i-of-england,    role: died,   place: theobalds-house, year: 1625}
+  - {person: james-i-of-england,    role: buried, place: westminster-abbey, year: 1625}
+  - {person: charles-i-of-england,  role: born,   place: dunfermline-palace, year: 1600}
+  - {person: charles-i-of-england,  role: died,   place: palace-of-whitehall, year: 1649}
+  - {person: charles-i-of-england,  role: buried, place: st-georges-chapel-windsor, year: 1649}
+  - {person: oliver-cromwell,       role: born,   place: huntingdon, year: 1599}
+  - {person: oliver-cromwell,       role: died,   place: palace-of-whitehall, year: 1658}
+  - {person: oliver-cromwell,       role: buried, place: westminster-abbey, year: 1658}
+  - {person: charles-ii-of-england, role: born,   place: st-jamess-palace, year: 1630}
+  - {person: charles-ii-of-england, role: died,   place: palace-of-whitehall, year: 1685}
+  - {person: charles-ii-of-england, role: buried, place: westminster-abbey, year: 1685}
+  - {person: james-ii-of-england,   role: born,   place: st-jamess-palace, year: 1633}
+  - {person: james-ii-of-england,   role: died,   place: chateau-de-saint-germain-en-laye, year: 1701}
+  - {person: william-iii-of-england, role: died,  place: kensington-palace, year: 1702}
+  - {person: william-iii-of-england, role: buried, place: westminster-abbey, year: 1702}
+  - {person: anne-of-great-britain, role: born,   place: st-jamess-palace, year: 1665}
+  - {person: anne-of-great-britain, role: buried, place: westminster-abbey, year: 1714}
+
+links:
+  - {parent: james-i-of-england, child: charles-i-of-england}
+  - {parent: charles-i-of-england, child: charles-ii-of-england}
+  - {parent: charles-i-of-england, child: james-ii-of-england}
+  - {parent: james-ii-of-england, child: mary-ii-of-england}
+  - {parent: james-ii-of-england, child: anne-of-great-britain}
+  - {spouse: william-iii-of-england, to: mary-ii-of-england, year: 1677}
+
+discrepancies:
+  - key: charles-ii-english-reign-start
+    question: When did Charles II's reign as King of England begin?
+    about: [{person: charles-ii-of-england}]
+    field: title start
+    claims:
+      - {value: "1660-05-29, the Restoration (the article lead says King of England 'from the 1660 Restoration')", sources: [wp-charles-ii]}
+      - {value: "30 January 1649, his father's death; the Scottish Parliament proclaimed him king on 5 February 1649", sources: [wp-charles-ii]}
+    note: "The record uses 29 May 1660 for England and 5 February 1649 for Scotland."
+  - key: declaration-of-right-date
+    question: On what date did Parliament issue the Declaration of Right?
+    about: [{event: declaration-of-right-1689}]
+    field: date
+    claims:
+      - {value: "13 February 1689", sources: [wp-william-iii]}
+      - {value: "12 February 1689", sources: [wp-james-ii]}
+    note: "The record uses 13 February, which the William III article gives twice (the Declaration and the start of his kingship)."
+  - key: james-ii-reign-end
+    question: When did James II's reign end?
+    about: [{person: james-ii-of-england}]
+    field: title end
+    claims:
+      - {value: "11 December 1688, when he first tried to flee and threw the Great Seal in the Thames", sources: [wp-james-ii]}
+      - {value: "23 December 1688, when William let him escape to France", sources: [wp-james-ii]}
+      - {value: "13 February 1689, when Parliament declared the throne vacant", sources: [wp-william-iii]}
+    note: "The record uses 11 December 1688 for England. Mary and William's reign is dated from 13 February 1689."
+  - key: cromwell-remains
+    question: Is the body hanged at Tyburn, and the head later buried at Cambridge, really Cromwell's?
+    about: [{person: oliver-cromwell}, {place: tyburn}]
+    field: burial
+    claims:
+      - {value: "Body exhumed from Westminster Abbey in 1661, hanged at Tyburn and thrown into a pit; head buried at Sidney Sussex College in 1960", sources: [wp-oliver-cromwell]}
+      - {value: "Doubts that these were his remains, because the body was assumed to have been reburied in several places between September 1658 and January 1661", sources: [wp-oliver-cromwell]}
+    note: "The record keeps the standard account (buried at Westminster Abbey 1658)."
