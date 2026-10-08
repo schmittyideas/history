@@ -62,6 +62,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### Ready (ranked)
 
+#### [P3] Period emblems for realms, with today's flag as context
+`type: enhancement` · `area: data` · `status: ready` · `issue: #27`
+
+A realm can carry emblems with the years they were really in use (banner, arms or colour: the Abbasid black banner, the Fatimid white, England's three lions from 1198), with the picture's source and licence (Wikimedia Commons). Where one was in use in the year shown, it replaces the plain map flag and appears on the realm card; otherwise the plain flag stays. Cards can also show a small grey "today: France" flag from the realm's modern country, labelled as today's. Needs an emblems table (realm, picture, from, to, source), an intake section and a first batch.
+Source: Ty, 2026-10-07 (option 3 of the flags discussion).
+
 #### [P2] Add every English monarch's reign from the Obsidian Royalty timeline notes
 `type: task` · `area: data` · `status: ready` · `issue: #15`
 
@@ -93,6 +99,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Map flags: a plain flag with each realm's ruler
+`type: enhancement` · `area: site` · `status: done` · `issue: #26`
+
+On the Year view's border map, each shaded realm gets a plain flag (black on light, white on dark; hollow for a disputed claim) with the ruler's name and the realm's name under it. The sovereign is named over co-rulers, dukes, regents and officials, with +N for others holding titles there then. A Rulers / Realms switch brings back plain realm names. Deliberately not a real banner (Ty: historically accurate). Done 2026-10-07.
+Source: Ty, 2026-10-07.
 
 #### [P2] Historical border maps in the Year view (trial: 1000 and 1100)
 `type: enhancement` · `area: site` · `status: done` · `issue: #24`
