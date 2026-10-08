@@ -1,0 +1,839 @@
+batch:
+  title: "The Papacy, part 1: the popes from Benedict VIII to Celestine III, 1012-1198"
+  requested: "Reigns, lives, deaths and key events of the 26 popes from Benedict VIII (1012) to Celestine III (1198): the Tusculan popes, the Sutri reform, the Great Schism, the Investiture Controversy, the First Crusade and the struggle with Barbarossa"
+  date: 2026-10-08
+
+# Notes for the reviewer
+# - Facts come only from the 26 downloaded Wikipedia articles (Pope_Benedict_VIII ... Pope_Celestine_III). Investiture_Controversy.txt is NOT in the download folder, so no event is taken from it; the Investiture events here (Gregory VII's excommunication of Henry IV, Canossa, Henry V and Paschal II, Worms) come from the pope articles.
+# - Antipopes are out of scope and not entered: Sylvester III, Benedict X, Honorius II (Cadalus), Clement III (Guibert of Ravenna), Gregory VIII (Maurice Bourdin), Anacletus II, Victor IV, Paschal III, Callixtus III, Innocent III (1179), and the "Gregory VI" of 1012 named in the Benedict VIII article. They appear in notes only. Because these share regnal names, a later batch that enters an antipope should use a key such as `clement-iii-antipope`. The keys here (clement-iii, gregory-viii, celestine-ii, honorius-ii...) are the lawful popes.
+# - Honorius II's article calls the rival of December 1124 (Theobald Boccapecci) "Celestine II". He is not the Celestine II of this batch (Guido di Castello, 1143-44).
+# - Popes of the period who were not requested and have no downloaded article, so they are NOT entered and the gaps between pontificates are real in the data: the popes between Sylvester II (d. 1003) and Benedict VIII (1012), and John XIX (Benedict VIII's brother, 1024-1032, named in the Benedict VIII and IX articles), Damasus II (1048, named in the Benedict IX and Leo IX articles), Lucius II (1144-1145; killed in an attack on the Capitol, per the Eugene III article), and Anastasius IV (1153-1154, named in the Adrian IV article). Do not fill them from here.
+# - Pontificate dates use each article's lead. Where the lead gives the election date and the body a different consecration date, the election date is used (Gregory VII 22 April 1073, consecrated 29 June; Paschal II 13 August 1099, consecrated 19 August; Victor III elected 24 May 1086, consecrated 21 March 1087; Stephen IX elected 2 August 1057, lead gives 3 August, the day of his coronation). Where only a month is given the year alone is used and the month is in the note (Benedict IX's three pontificates, Lucius III 1181).
+# - Benedict IX is three title rows (1032-1044, 1045, 1047-1048). The rows are keyed by person--title--start year and are separate on purpose. The 1045 row overlaps Gregory VI's start (1 May 1045): the article says Benedict resigned in May 1045.
+# - `disputed: true` is not used. Innocent II (against Anacletus II, 1130-1138) and Alexander III (against Victor IV and his successors, 1159-1177) are the lawful popes in the articles; the contests are recorded as the events schism-of-1130 and schism-of-1159. Honorius II's election in December 1124 was also contested briefly; he resigned and was re-elected unanimously, consecrated 21 December 1124.
+# - Left out because the articles give no date: the Dictatus Papae (the Gregory VII article only lists "Dictatus papae (1075-87)" under See also, with no content), the Synod of Worms of 24 January 1076 as a separate event (in the excommunication note), Treaty of Melfi 1059, Treaty of Mignano (25 July 1139), Council of Troyes 1129, Clement III's treaty with the Romans (31 May 1188), the canonisation of Thomas Becket (1173), Third Lateran details beyond the two-thirds rule. Also left out: births with no article place, burial places not stated (Urban II, Innocent II's tomb site, Nicholas II, Clement III, Celestine III, Benedict VIII, Leo IX, Eugene III's exact church), and Gregory VI's death place (the article says only "probably at Cologne").
+# - Shared keys defined here (other batches may send the same key): great-schism-1054 (Byzantine batch defines it with place hagia-sophia; this one omits the place so the other value stands), council-of-clermont-1095. Referenced and not redefined: rome, st-peters-basilica-rome, bamberg-cathedral, canossa-castle, worms, venice, walk-to-canossa-1077, imperial-coronation-of-henry-v-1111, concordat-of-worms-1122, imperial-coronation-of-frederick-barbarossa-1155, peace-of-venice-1177, second-crusade-1147, third-crusade-1189, and the people henry-iii-holy-roman-emperor, henry-iv-holy-roman-emperor, henry-v-holy-roman-emperor, frederick-i-barbarossa-holy-roman-emperor (HRE batch), henry-ii-of-england (Plantagenets batch), william-i-of-england (already in the database). This batch must be applied after the HRE, France and Plantagenets batches.
+# - Cluny Abbey, Monte Cassino and the Lateran are given only the roles the articles state. Coordinates are from general knowledge to 2-3 decimals.
+# - Doubts: Alexander II is "born in Milan" in the lead but the body gives Cesano Boscone near Corsico, 7 km from Milan; the lead is used for the note. Born-date ranges (Nicholas II c.990/995, Alexander II 1010/1015, Paschal II 1050x1055, Gelasius II 1060/1064, Alexander III 1100/1105, Gregory VIII 1100/1105) use the first year with `born_estimated: true`; Lucius III's article says 1100 "perhaps 1097".
+
+sources:
+  - {key: wp-benedict-viii,   title: "Pope Benedict VIII (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Benedict_VIII"}
+  - {key: wp-benedict-ix,     title: "Pope Benedict IX (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Benedict_IX"}
+  - {key: wp-gregory-vi,      title: "Pope Gregory VI (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Gregory_VI"}
+  - {key: wp-clement-ii,      title: "Pope Clement II (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Clement_II"}
+  - {key: wp-leo-ix,          title: "Pope Leo IX (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Pope_Leo_IX"}
+  - {key: wp-victor-ii,       title: "Pope Victor II (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Victor_II"}
+  - {key: wp-stephen-ix,      title: "Pope Stephen IX (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Stephen_IX"}
+  - {key: wp-nicholas-ii,     title: "Pope Nicholas II (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Nicholas_II"}
+  - {key: wp-alexander-ii,    title: "Pope Alexander II (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Alexander_II"}
+  - {key: wp-gregory-vii,     title: "Pope Gregory VII (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Gregory_VII"}
+  - {key: wp-victor-iii,      title: "Pope Victor III (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Victor_III"}
+  - {key: wp-urban-ii,        title: "Pope Urban II (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Pope_Urban_II"}
+  - {key: wp-paschal-ii,      title: "Pope Paschal II (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Paschal_II"}
+  - {key: wp-gelasius-ii,     title: "Pope Gelasius II (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Gelasius_II"}
+  - {key: wp-callixtus-ii,    title: "Pope Callixtus II (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Callixtus_II"}
+  - {key: wp-honorius-ii,     title: "Pope Honorius II (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Honorius_II"}
+  - {key: wp-innocent-ii,     title: "Pope Innocent II (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Innocent_II"}
+  - {key: wp-celestine-ii,    title: "Pope Celestine II (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Celestine_II"}
+  - {key: wp-eugene-iii,      title: "Pope Eugene III (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Eugene_III"}
+  - {key: wp-adrian-iv,       title: "Pope Adrian IV (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Adrian_IV"}
+  - {key: wp-alexander-iii,   title: "Pope Alexander III (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Alexander_III"}
+  - {key: wp-lucius-iii,      title: "Pope Lucius III (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Pope_Lucius_III"}
+  - {key: wp-urban-iii,       title: "Pope Urban III (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Pope_Urban_III"}
+  - {key: wp-gregory-viii,    title: "Pope Gregory VIII (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Pope_Gregory_VIII"}
+  - {key: wp-clement-iii,     title: "Pope Clement III (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Pope_Clement_III"}
+  - {key: wp-celestine-iii,   title: "Pope Celestine III (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Pope_Celestine_III"}
+
+people:
+  - key: benedict-viii
+    name: Benedict VIII
+    type: Clergy
+    roles: [pope]
+    house: Tusculum
+    realm: Papacy
+    born: 980
+    born_estimated: true
+    died: 1024-04-09
+    prominence: 3
+    note: "Theophylact of Tusculum. Strong in Rome and abroad; crowned Henry II emperor on 14 February 1014, held the synod of Pavia in 1022 against simony and backed the Cluny reform. Succeeded by his brother John XIX."
+    sources: [wp-benedict-viii]
+  - key: benedict-ix
+    name: Benedict IX
+    type: Clergy
+    roles: [pope]
+    house: Tusculum
+    realm: Papacy
+    born: 1012
+    born_estimated: true
+    died: 1056
+    died_estimated: true
+    prominence: 3
+    note: "Theophylact of Tusculum, born in Rome, nephew of Benedict VIII and John XIX. The only man to be pope three times (1032-44, 1045, 1047-48) and the only one accused of selling the papacy, to his godfather Gregory VI. Excommunicated in 1049; buried at the Abbey of Grottaferrata c. 1056, said to have been penitent."
+    sources: [wp-benedict-ix]
+  - key: gregory-vi
+    name: Gregory VI
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1048
+    prominence: 3
+    note: "John Gratian, born in Rome; archpriest of St John by the Latin Gate and Benedict IX's godfather, who paid Benedict to resign. Resigned at the Synod of Sutri on 20 December 1046 because the deal was simoniacal; taken to Germany and died in 1048, probably at Cologne, with his chaplain Hildebrand. Birth year not given."
+    sources: [wp-gregory-vi]
+  - key: clement-ii
+    name: Clement II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1047-10-09
+    prominence: 3
+    note: "Suidger of Morsleben-Horneburg, born at Hornburg; bishop of Bamberg from 1040 and the first German reform pope. Crowned Henry III and Agnes emperor and empress on 25 December 1046. Died near Pesaro and was buried in Bamberg Cathedral, the only papal tomb north of the Alps; a mid-20th-century examination found lead poisoning. Birth year not given."
+    sources: [wp-clement-ii]
+  - key: leo-ix
+    name: Leo IX
+    type: Clergy
+    roles: [pope, saint]
+    realm: Papacy
+    born: 1002-06-21
+    died: 1054-04-19
+    prominence: 4
+    note: "Bruno of Egisheim-Dagsburg, bishop of Toul from 1027 and a cousin of Conrad II. Reforming pope who toured Italy, Germany and France; beaten by the Normans at Civitate in 1053 and held at Benevento until March 1054; his legates' quarrel with the patriarch of Constantinople in 1054 is counted as the Great Schism. Feast day 19 April."
+    sources: [wp-leo-ix]
+  - key: victor-ii
+    name: Victor II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1018
+    born_estimated: true
+    died: 1057-07-28
+    prominence: 2
+    note: "Gebhard of Dollnstein-Hirschberg, bishop of Eichstatt and kinsman of Henry III; birthplace unknown. Guardian of the child Henry IV after Henry III died on 5 October 1056. Died at Arezzo; his body, bound for Eichstatt, was taken by citizens of Ravenna and buried in Santa Maria Rotonda."
+    sources: [wp-victor-ii]
+  - key: stephen-ix
+    name: Stephen IX
+    type: Clergy
+    roles: [pope]
+    house: Ardennes-Verdun
+    realm: Papacy
+    born: 1020
+    born_estimated: true
+    died: 1058-03-29
+    prominence: 2
+    note: "Frederick of Lorraine, brother of Godfrey the Bearded; Leo IX's chancellor, one of the three legates to Constantinople in 1054, and abbot of Monte Cassino, which he kept as pope. Chosen on 2 August 1057 and crowned the next day. Died at Florence with Abbot Hugh of Cluny at his bedside, apparently poisoned by the Romans; buried in Santa Reparata. The most recent pope to take the name Stephen."
+    sources: [wp-stephen-ix]
+  - key: nicholas-ii
+    name: Nicholas II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 990
+    born_estimated: true
+    died: 1061-07-27
+    prominence: 3
+    note: "Gerard of Burgundy, born at Chevron in Savoy; bishop of Florence from 1045. Elected against the antipope Benedict X and re-elected at Siena in December 1058; the Lateran synod of 1059 gave the choice of pope to the cardinal bishops. Born c. 990/995."
+    sources: [wp-nicholas-ii]
+  - key: alexander-ii
+    name: Alexander II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1010
+    born_estimated: true
+    died: 1073-04-21
+    prominence: 3
+    note: "Anselm of Baggio, born near Milan (born c. 1010/1015) and a founder of the Pataria reform movement; bishop of Lucca from 1056 or 1057. The first pope elected by the cardinals alone (1 October 1061). Blessed William of Normandy's invasion of England in 1066, called the Crusade of Barbastro, and began the rupture with Henry IV over Milan. Died at the Lateran Palace and was buried in the Lateran Basilica."
+    sources: [wp-alexander-ii]
+  - key: gregory-vii
+    name: Gregory VII
+    type: Clergy
+    roles: [pope, saint]
+    realm: Papacy
+    born: 1015
+    born_estimated: true
+    died: 1085-05-25
+    prominence: 5
+    note: "Hildebrand of Sovana, a blacksmith's son who served Gregory VI, Leo IX and later popes. Elected by acclamation on 22 April 1073. Forbade lay investiture, excommunicated Henry IV in 1076 and again in 1080, and absolved him at Canossa in 1077. Driven from Rome by Henry and the Normans' excesses, he died in exile at Salerno ('I have loved justice and hated iniquity; therefore, I die in exile'). Canonised 24 May 1728."
+    sources: [wp-gregory-vii]
+  - key: victor-iii
+    name: Victor III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1026
+    born_estimated: true
+    died: 1087-09-16
+    prominence: 2
+    note: "Dauferio Epifani Del Zotto, as Desiderius the great abbot of Monte Cassino, who rebuilt its basilica (consecrated 1 October 1071). Reluctant pope: elected 24 May 1086, driven from Rome, consecrated 21 March 1087, and back at Monte Cassino by the summer. Died there and was buried in the chapter-house. Beatified in 1887."
+    sources: [wp-victor-iii]
+  - key: urban-ii
+    name: Urban II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1035
+    born_estimated: true
+    died: 1099-07-29
+    prominence: 5
+    note: "Odo of Châtillon-sur-Marne, prior of Cluny and cardinal bishop of Ostia, elected at Terracina in March 1088. Convened the Council of Clermont and launched the First Crusade with his speech of 27 November 1095; died fourteen days after the fall of Jerusalem, before the news arrived. Set up the Roman Curia. Beatified 1881. Place of death and burial not given."
+    sources: [wp-urban-ii]
+  - key: paschal-ii
+    name: Paschal II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1050
+    born_estimated: true
+    died: 1118-01-21
+    prominence: 3
+    note: "Raniero of Bleda near Forlì, a monk of Cluny; born between 1050 and 1055. Preached the crusade of 1101. Imprisoned for 61 days by Henry V in 1111 and forced to grant investiture; the Lateran council of 1112 voided the concession. Approved the Hospitallers on 15 February 1113. Died in Rome within days of returning in January 1118."
+    sources: [wp-paschal-ii]
+  - key: gelasius-ii
+    name: Gelasius II
+    type: Clergy
+    roles: [pope]
+    house: Caetani
+    realm: Papacy
+    born: 1060
+    born_estimated: true
+    died: 1119-01-29
+    prominence: 2
+    note: "Giovanni Caetani, born at Gaeta (c. 1060/1064), monk of Monte Cassino and papal chancellor 1089-1118. Seized by the Frangipani, driven out by Henry V in March 1118, exiled to Gaeta and France, and died at Cluny Abbey while planning a council on investiture."
+    sources: [wp-gelasius-ii]
+  - key: callixtus-ii
+    name: Callixtus II
+    type: Clergy
+    roles: [pope]
+    house: Burgundy
+    realm: Papacy
+    born: 1065
+    born_estimated: true
+    died: 1124-12-13
+    prominence: 3
+    note: "Guy of Burgundy, born at Besançon, son of Count William I of Burgundy; archbishop of Vienne from 1088. Elected at Cluny on 2 February 1119 and crowned at Vienne on 9 February. Settled the Investiture Controversy by the Concordat of Worms (1122), issued Sicut Judaeis in 1120 and convened the First Lateran Council in 1123."
+    sources: [wp-callixtus-ii]
+  - key: honorius-ii
+    name: Honorius II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1060-02-09
+    died: 1130-02-13
+    prominence: 3
+    note: "Lamberto Scannabecchi of Fiagnano near Imola, cardinal bishop of Ostia from 1117 and the papal negotiator of the Concordat of Worms. Elected amid violence in December 1124 and re-elected after resigning. First pope to confirm the election of the German king (Lothair, 1125); approved the Templars (1128). Died at the San Gregorio Magno monastery on the Caelian; reburied in the Lateran next to Callixtus II."
+    sources: [wp-honorius-ii]
+  - key: innocent-ii
+    name: Innocent II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1143-09-24
+    prominence: 3
+    note: "Gregorio Papareschi of Rome, a former Cluniac monk and cardinal from 1116. Elected on 14 February 1130 against Anacletus II; exiled in France and Pisa until Anacletus died in 1138. Crowned Lothair III emperor at the Lateran in 1133, held the Second Lateran Council in 1139 and was captured by Roger III of Apulia that July. Birth year not given."
+    sources: [wp-innocent-ii]
+  - key: celestine-ii
+    name: Celestine II
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1144-03-08
+    prominence: 1
+    note: "Guido di Castello, a pupil of Abelard, born at Città di Castello or Macerata. Pope for five months and thirteen days; lifted the interdict on France by recognising Pierre de la Châtre at Bourges and refused to ratify the Treaty of Mignano. Died at the monastery of Saint Sebastian on the Palatine; buried in the Lateran. Birth year not given."
+    sources: [wp-celestine-ii]
+  - key: eugene-iii
+    name: Eugene III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1080
+    born_estimated: true
+    died: 1153-07-08
+    prominence: 3
+    note: "Bernardo da Pisa, the first Cistercian pope, a pupil of Bernard of Clairvaux and abbot of Tre Fontane. Elected on 15 February 1145; proclaimed the Second Crusade after the fall of Edessa. Spent most of his reign outside Rome because of the Commune and Arnold of Brescia; later agreed to annul Louis VII's marriage to Eleanor. Died at Tivoli, buried in the Vatican; beatified 1872."
+    sources: [wp-eugene-iii]
+  - key: adrian-iv
+    name: Adrian IV
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1100
+    born_estimated: true
+    died: 1159-09-01
+    prominence: 4
+    note: "Nicholas Breakspear, the only English pope, born in Hertfordshire (probably near St Albans). Abbot of Saint-Ruf, cardinal bishop of Albano and legate to Scandinavia (1152-54). Elected 4 December 1154; crowned Barbarossa in 1155, made the Treaty of Benevento with William I of Sicily in 1156 and supposedly issued Laudabiliter. Died of quinsy at Anagni and was buried in St Peter's on 4 September 1159."
+    sources: [wp-adrian-iv]
+  - key: alexander-iii
+    name: Alexander III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1100
+    born_estimated: true
+    died: 1181-08-30
+    prominence: 5
+    note: "Roland of Siena, chancellor from 1153 and leader of the cardinals opposed to Barbarossa. Elected on 7 September 1159 against the imperial antipope Victor IV and lived mostly outside Rome until Barbarossa's defeat at Legnano (1176) and the Peace of Venice (1177). Held the Third Lateran Council (1179); canonised Thomas Becket and Edward the Confessor. Died at Civita Castellana after the longest papacy since Adrian I. Born c. 1100/1105."
+    sources: [wp-alexander-iii]
+  - key: lucius-iii
+    name: Lucius III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1100
+    born_estimated: true
+    died: 1185-11-25
+    prominence: 2
+    note: "Ubaldo Allucingoli of Lucca (born c. 1100, perhaps 1097), cardinal from 1138 and negotiator of the Peace of Venice. Elected at Velletri in September 1181; lived in Rome only from November 1181 to March 1182, then in exile at Velletri, Anagni and Verona. Issued Ad abolendam (1184) against heresy; quarrelled with Frederick I over the Matildine lands. Died at Verona."
+    sources: [wp-lucius-iii]
+  - key: urban-iii
+    name: Urban III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    died: 1187-10-20
+    prominence: 2
+    note: "Uberto Crivelli, born at Cuggiono; archbishop of Milan, which he kept as pope. Elected on 25 November 1185, the day Lucius III died. His relatives had been mutilated at the sack of Milan in 1162, and he refused to crown Henry (VI). Driven from Verona, he died at Ferrara and was buried there; chroniclers say the news of Hattin killed him. Birth year not given."
+    sources: [wp-urban-iii]
+  - key: gregory-viii
+    name: Gregory VIII
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1105
+    born_estimated: true
+    died: 1187-12-17
+    prominence: 2
+    note: "Alberto di Morra, born at Benevento (c. 1100/1105); a Premonstratensian canon and papal chancellor from 1178, conciliatory towards Barbarossa. Elected on 21 October 1187, consecrated 25 October, and issued Audita tremendi calling the Third Crusade after Hattin. Died of fever at Pisa after 57 days and was buried in the cathedral; tomb destroyed in the fire of 1600."
+    sources: [wp-gregory-viii]
+  - key: clement-iii
+    name: Clement III
+    type: Clergy
+    roles: [pope]
+    realm: Papacy
+    born: 1130
+    died: 1191-03-20
+    prominence: 2
+    note: "Paolo Scolari, born in the Pigna district of Rome. Elected on 19 December 1187; ended the half-century conflict with the Roman commune (treaty of 31 May 1188) and so brought the papacy back to Rome, made peace with Barbarossa in April 1189, and angered Henry VI by granting Sicily to Tancred. The death date differs inside the article (see discrepancy)."
+    sources: [wp-clement-iii]
+  - key: celestine-iii
+    name: Celestine III
+    type: Clergy
+    roles: [pope]
+    house: Orsini
+    realm: Papacy
+    born: 1105
+    born_estimated: true
+    died: 1198-01-08
+    prominence: 3
+    note: "Giacinto Bobone of the Orsini, born in Rome; cardinal deacon from 1144 and legate to Spain twice. Elected at about 85 on 29 or 30 March 1191, ordained priest 13 April and crowned Henry VI a day or two later. Recognised Tancred as king of Sicily (1192), excommunicated Alfonso IX of León over his marriage to Theresa of Portugal and later his alliance with the Almohads. Died 8 January 1198."
+    sources: [wp-celestine-iii]
+
+titles:
+  - {person: benedict-viii, title: Pope, realm: Papacy, from: 1012-05-18, to: 1024-04-09, note: "Driven out of Rome by an antipope (named Gregory VI in the article) and restored by Henry II", sources: [wp-benedict-viii]}
+  - {person: benedict-ix, title: Pope, realm: Papacy, from: 1032, to: 1044, note: "First pontificate, October 1032 to September 1044 (no day given). Briefly forced out in 1036; driven out in 1044 and Sylvester III elected", sources: [wp-benedict-ix]}
+  - {person: benedict-ix, title: Pope, realm: Papacy, from: 1045, to: 1045, note: "Second pontificate: his forces returned in April 1045 and he resigned in May 1045, selling the office to his godfather Gregory VI", sources: [wp-benedict-ix]}
+  - {person: benedict-ix, title: Pope, realm: Papacy, from: 1047, to: 1048, note: "Third pontificate: seized the Lateran Palace in November 1047 after Clement II's death and was driven out by German troops in July 1048; Damasus II was then elected. He had been declared deposed at Sutri in December 1046 and never accepted it", sources: [wp-benedict-ix]}
+  - {person: gregory-vi, title: Pope, realm: Papacy, from: 1045-05-01, to: 1046-12-20, note: "Resigned at the Synod of Sutri", sources: [wp-gregory-vi]}
+  - {person: clement-ii, title: Pope, realm: Papacy, from: 1046-12-25, to: 1047-10-09, note: "Kept the bishopric of Bamberg while pope", sources: [wp-clement-ii]}
+  - {person: leo-ix, title: Pope, realm: Papacy, from: 1049-02-12, to: 1054-04-19, note: "Chosen at Worms in December 1048 and received in Rome in February 1049 after a free election", sources: [wp-leo-ix]}
+  - {person: victor-ii, title: Pope, realm: Papacy, from: 1055-04-13, to: 1057-07-28, note: "Nominated by Henry III at Mainz; also Imperial Vicar for Italy and dux et marchio", sources: [wp-victor-ii]}
+  - {person: stephen-ix, title: Pope, realm: Papacy, from: 1057-08-03, to: 1058-03-29, note: "Chosen on 2 August 1057 and crowned on 3 August", sources: [wp-stephen-ix]}
+  - {person: nicholas-ii, title: Pope, realm: Papacy, from: 1059-01-24, to: 1061-07-27, note: "Elected by Hildebrand's party in 1058 against Benedict X, re-elected at Siena in December 1058; Benedict X surrendered in 1059", sources: [wp-nicholas-ii]}
+  - {person: alexander-ii, title: Pope, realm: Papacy, from: 1061-10-01, to: 1073-04-21, note: "Elected by the cardinal bishops alone; crowned at San Pietro in Vincoli because St Peter's was closed to him. The German court's rival Cadalus (Honorius II) was deposed at Mantua on 31 May-1 June 1064", sources: [wp-alexander-ii]}
+  - {person: gregory-vii, title: Pope, realm: Papacy, from: 1073-04-22, to: 1085-05-25, note: "Acclaimed at the funeral of Alexander II and elected at San Pietro in Vincoli; ordained priest 22 May and consecrated bishop on 29 June 1073", sources: [wp-gregory-vii]}
+  - {person: victor-iii, title: Pope, realm: Papacy, from: 1086-05-24, to: 1087-09-16, note: "Elected 24 May 1086 but would not accept; consecrated and enthroned 21 March 1087; spent little time in Rome", sources: [wp-victor-iii]}
+  - {person: urban-ii, title: Pope, realm: Papacy, from: 1088-03-12, to: 1099-07-29, note: "Elected at Terracina in March 1088; Clement III (Guibert) held Rome until 1097", sources: [wp-urban-ii]}
+  - {person: paschal-ii, title: Pope, realm: Papacy, from: 1099-08-13, to: 1118-01-21, note: "Consecrated 19 August 1099", sources: [wp-paschal-ii]}
+  - {person: gelasius-ii, title: Pope, realm: Papacy, from: 1118-01-24, to: 1119-01-29, note: "Elected unanimously; ordained priest 9 March 1118 and consecrated bishop the next day at Gaeta. Henry V set up Maurice Bourdin as antipope. Death date 28 or 29 January: see discrepancy", sources: [wp-gelasius-ii]}
+  - {person: callixtus-ii, title: Pope, realm: Papacy, from: 1119-02-02, to: 1124-12-13, note: "Elected at Cluny on 2 February 1119 by nine cardinals; crowned at Vienne on 9 February", sources: [wp-callixtus-ii]}
+  - {person: honorius-ii, title: Pope, realm: Papacy, from: 1124-12-21, to: 1130-02-13, note: "On 16 December 1124 the cardinals unanimously chose Theobald (called Celestine II in the article), but an armed Frangipani party burst in, wounded him and acclaimed Lamberto; Honorius resigned, was re-elected unanimously and was consecrated 21 December 1124", sources: [wp-honorius-ii]}
+  - {person: innocent-ii, title: Pope, realm: Papacy, from: 1130-02-14, to: 1143-09-24, note: "Elected by six cardinals on 13 February 1130 and consecrated the next day; the other cardinals chose Anacletus II, who held Rome until his death on 25 January 1138", sources: [wp-innocent-ii]}
+  - {person: celestine-ii, title: Pope, realm: Papacy, from: 1143-09-26, to: 1144-03-08, note: "The article's lead says 26 September 1143, the body 25 September: see discrepancy. Elected in the first undisturbed papal election in Rome for eighty-two years", sources: [wp-celestine-ii]}
+  - {person: eugene-iii, title: Pope, realm: Papacy, from: 1145-02-15, to: 1153-07-08, note: "Elected the day Lucius II died (Lucius II is not entered); consecrated at Farfa Abbey; spent most of his reign outside Rome", sources: [wp-eugene-iii]}
+  - {person: adrian-iv, title: Pope, realm: Papacy, from: 1154-12-04, to: 1159-09-01, note: "Elected 4 December 1154, enthroned the next day and crowned in St Peter's the day after; the article says he probably was not crowned in the Lateran ceremony until Easter 1155", sources: [wp-adrian-iv]}
+  - {person: alexander-iii, title: Pope, realm: Papacy, from: 1159-09-07, to: 1181-08-30, note: "Contested by the imperial antipopes Victor IV, Paschal III and Callixtus III until the Peace of Venice (1177). Out of Rome 1162 to 23 November 1165 and again from 1167; returned 12 March 1178; forced to leave again after the Third Lateran Council and never re-entered", sources: [wp-alexander-iii]}
+  - {person: lucius-iii, title: Pope, realm: Papacy, from: 1181, to: 1185-11-25, note: "Elected at Velletri in September 1181 (no day given)", sources: [wp-lucius-iii]}
+  - {person: urban-iii, title: Pope, realm: Papacy, from: 1185-11-25, to: 1187-10-20, note: "Elected the same day Lucius III died, probably in haste for fear of imperial interference", sources: [wp-urban-iii]}
+  - {person: gregory-viii, title: Pope, realm: Papacy, from: 1187-10-21, to: 1187-12-17, note: "Elected the day after Urban III died; consecrated 25 October; pope for 57 days", sources: [wp-gregory-viii]}
+  - {person: clement-iii, title: Pope, realm: Papacy, from: 1187-12-19, to: 1191-03-20, note: "Elected two days after Gregory VIII died, when the cardinals' first choice, Theobald of Ostia, refused. End date: see discrepancy", sources: [wp-clement-iii]}
+  - {person: celestine-iii, title: Pope, realm: Papacy, from: 1191-03-30, to: 1198-01-08, note: "The lead says 30 March or 10 April 1191, the body 29/30 March: see discrepancy. Elected unanimously aged about 85; ordained priest 13 April 1191", sources: [wp-celestine-iii]}
+
+places:
+  - key: lateran-palace-rome
+    name: Lateran Palace and Basilica of St John Lateran
+    kind: palace
+    city: Rome
+    region: Lazio
+    country: Italy
+    lat: 41.886
+    lng: 12.506
+    visitable: true
+    visit_site: "Archbasilica of St John Lateran"
+    note: "Seat of the popes and of the Lateran councils of 1059, 1063, 1112, 1123, 1139 and 1179. Alexander II died at the palace and was buried in the basilica; Celestine II and Callixtus II are placed in its south transept (Honorius II was reburied beside Callixtus there). Benedict IX seized the palace in November 1047; Lothair III was crowned emperor in the basilica on 4 June 1133. Defined here."
+    sources: [wp-alexander-ii, wp-honorius-ii, wp-celestine-ii, wp-nicholas-ii, wp-innocent-ii]
+  - key: cluny-abbey
+    name: Cluny Abbey
+    kind: abbey
+    city: Cluny
+    region: Saône-et-Loire
+    country: France
+    lat: 46.435
+    lng: 4.659
+    visitable: true
+    note: "Centre of the Cluniac reform. Benedict VIII befriended its abbot Odilo; Hildebrand spent about a year at Cluny before returning to Rome with Leo IX in 1049; Urban II had been its prior and Paschal II a monk there. Gelasius II died here on 29 January 1119 and Callixtus II was elected here on 2 February. Honorius II deposed its abbot Pons of Melgueil in 1126. Defined here."
+    sources: [wp-gelasius-ii, wp-callixtus-ii, wp-urban-ii, wp-paschal-ii, wp-honorius-ii, wp-benedict-viii]
+  - key: clermont-ferrand
+    name: Clermont-Ferrand
+    historical_name: Clermont
+    kind: city
+    region: Puy-de-Dôme
+    country: France
+    lat: 45.777
+    lng: 3.087
+    visitable: true
+    note: "Site of the Council of Clermont in November 1095; sessions were held in the cathedral or the suburban church of Notre-Dame-du-Port, and Urban II's speech was made in the open air. Defined here."
+    sources: [wp-urban-ii]
+  - key: salerno
+    name: Salerno
+    kind: city
+    region: Campania
+    country: Italy
+    lat: 40.682
+    lng: 14.768
+    visitable: true
+    note: "Gregory VII withdrew to the castle of Salerno by the sea and died there on 25 May 1085; the epitaph on his sarcophagus in the cathedral reads 'I have loved justice and hated iniquity; therefore, I die in exile'. Urban II is venerated as a saint in the cathedral's transept mosaic. Defined here."
+    sources: [wp-gregory-vii, wp-urban-ii]
+  - key: monte-cassino
+    name: Monte Cassino Abbey
+    kind: abbey
+    city: Cassino
+    region: Lazio
+    country: Italy
+    lat: 41.490
+    lng: 13.814
+    visitable: true
+    note: "Mother house of the Benedictines. Stephen IX and Victor III (as Desiderius) were its abbots; Alexander II consecrated its new basilica on 1 October 1071 for Desiderius. Victor III died here on 16 September 1087 and was buried in the chapter-house; his tomb was moved in 1515, 1887 and back in 1963. The abbey was destroyed by US bombing in February 1944. Defined here."
+    sources: [wp-victor-iii, wp-stephen-ix, wp-alexander-ii]
+  - key: anagni
+    name: Anagni
+    kind: city
+    region: Lazio
+    country: Italy
+    lat: 41.744
+    lng: 13.154
+    visitable: true
+    note: "Adrian IV retired here for security against the emperor and died on 1 September 1159. Alexander III excommunicated Victor IV and Frederick I from Anagni on 24 March 1160; Lucius III spent part of his exile here. Defined here."
+    sources: [wp-adrian-iv, wp-alexander-iii, wp-lucius-iii]
+  - key: benevento
+    name: Benevento
+    kind: city
+    region: Campania
+    country: Italy
+    lat: 41.130
+    lng: 14.782
+    visitable: true
+    note: "Papal enclave in the south. Leo IX was held here in honourable captivity from June 1053 to March 1054 after Civitate; Adrian IV made peace with William I of Sicily here in June 1156 and issued the St Albans privilege Incomprehensibilis on 5 February 1156; Gregory VIII was born here. Defined here."
+    sources: [wp-leo-ix, wp-adrian-iv, wp-gregory-viii]
+  - key: sutri
+    name: Sutri
+    kind: town
+    region: Lazio
+    country: Italy
+    lat: 42.243
+    lng: 12.216
+    visitable: true
+    note: "Site of the Synod of Sutri (20 December 1046), where Henry III had three rival popes dealt with; of a synod of Nicholas II in 1058-59 that deposed Benedict X; and of Adrian IV's meeting with Barbarossa in June 1155. Defined here."
+    sources: [wp-gregory-vi, wp-nicholas-ii, wp-adrian-iv]
+  - key: florence
+    name: Florence
+    kind: city
+    region: Tuscany
+    country: Italy
+    lat: 43.771
+    lng: 11.254
+    visitable: true
+    note: "Victor II held a council here in June 1055; Nicholas II was bishop of Florence from 1045; Stephen IX died here on 29 March 1058. Defined here."
+    sources: [wp-victor-ii, wp-stephen-ix, wp-nicholas-ii]
+  - key: santa-reparata-florence
+    name: Santa Reparata, Florence
+    kind: church
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.773
+    lng: 11.256
+    ended: 1357
+    note: "Burial church of Stephen IX. Demolished in 1357 to make way for the new cathedral, Santa Maria del Fiore; his incorrupt body was found next to the altar of S. Zenobio and its present whereabouts are unknown. Defined here."
+    sources: [wp-stephen-ix]
+  - key: arezzo
+    name: Arezzo
+    kind: city
+    region: Tuscany
+    country: Italy
+    lat: 43.463
+    lng: 11.880
+    visitable: true
+    note: "Victor II held a synod at the palace of S. Donato near Arezzo in 1057 and died here on 28 July 1057. Defined here."
+    sources: [wp-victor-ii]
+  - key: santa-maria-rotonda-ravenna
+    name: Santa Maria Rotonda, Ravenna
+    kind: church
+    city: Ravenna
+    region: Emilia-Romagna
+    country: Italy
+    lat: 44.421
+    lng: 12.201
+    visitable: true
+    note: "Burial place of Victor II (his body was seized by citizens of Ravenna on its way to Eichstatt) and, the article adds, of Theodoric the Great. Defined here."
+    sources: [wp-victor-ii]
+  - key: pisa
+    name: Pisa
+    kind: city
+    region: Tuscany
+    country: Italy
+    lat: 43.723
+    lng: 10.397
+    visitable: true
+    note: "Innocent II took refuge here and held the council of Pisa in May 1135; Eugene III was born nearby. Gregory VIII died here on 17 December 1187 and was buried in the Duomo; the tomb was destroyed in the 1600 fire. Defined here."
+    sources: [wp-gregory-viii, wp-innocent-ii, wp-eugene-iii]
+  - key: verona
+    name: Verona
+    kind: city
+    region: Veneto
+    country: Italy
+    lat: 45.438
+    lng: 10.992
+    visitable: true
+    note: "Lucius III met Frederick I here in October 1184, held a synod in November 1184 against the Cathars and others, and died here on 25 November 1185. Urban III lived here until the Veronese protested against his excommunicating Frederick. Defined here."
+    sources: [wp-lucius-iii, wp-urban-iii]
+  - key: ferrara
+    name: Ferrara
+    kind: city
+    region: Emilia-Romagna
+    country: Italy
+    lat: 44.838
+    lng: 11.620
+    visitable: true
+    note: "Urban III withdrew here from Verona, died on 20 October 1187 and was buried here. Defined here."
+    sources: [wp-urban-iii]
+  - key: tivoli
+    name: Tivoli
+    kind: town
+    region: Lazio
+    country: Italy
+    lat: 41.963
+    lng: 12.797
+    visitable: true
+    note: "Eugene III sought Tivoli's help against Rome and died here on 8 July 1153. Innocent II's quarrel with Tivoli roused the Roman factions against him. Defined here."
+    sources: [wp-eugene-iii, wp-innocent-ii]
+  - key: civita-castellana
+    name: Civita Castellana
+    kind: town
+    region: Lazio
+    country: Italy
+    lat: 42.294
+    lng: 12.412
+    visitable: true
+    note: "Alexander III died here on 30 August 1181. Henry IV fled towards it after Robert Guiscard relieved Rome in 1084. Defined here."
+    sources: [wp-alexander-iii, wp-gregory-vii]
+  - key: siena
+    name: Siena
+    kind: city
+    region: Tuscany
+    country: Italy
+    lat: 43.318
+    lng: 11.331
+    visitable: true
+    note: "Birthplace of Alexander III; where the cardinals re-elected Gerard of Burgundy as Nicholas II in December 1058; Eugene III stayed here during his exile. Defined here."
+    sources: [wp-alexander-iii, wp-nicholas-ii, wp-eugene-iii]
+  - key: viterbo
+    name: Viterbo
+    kind: city
+    region: Lazio
+    country: Italy
+    lat: 42.417
+    lng: 12.108
+    visitable: true
+    note: "Refuge of Eugene III from 1146 and again from June 1148, and of Adrian IV in 'virtual exile' after Barbarossa left Rome in 1155. Defined here."
+    sources: [wp-eugene-iii, wp-adrian-iv]
+
+events:
+  - key: synod-of-sutri-1046
+    name: Synod of Sutri
+    type: Council
+    date: 1046-12-20
+    place: sutri
+    people:
+      - {person: gregory-vi, role: resigned}
+      - {person: benedict-ix, role: declared deposed}
+      - {person: clement-ii, role: elected pope afterwards}
+      - {person: henry-iii-holy-roman-emperor, role: summoned it}
+    prominence: 4
+    note: "Henry III came to Italy at the request of clergy and laity to end the rule of three rival popes. Gregory VI admitted paying Benedict IX and was told it was simony, so he resigned; Sylvester III and Benedict IX (who did not attend) were declared deposed and Sylvester was condemned to confinement in a monastery. Henry then had the bishop of Bamberg elected as Clement II."
+    sources: [wp-gregory-vi, wp-benedict-ix, wp-clement-ii]
+  - key: great-schism-1054
+    name: The Great Schism (the legates' bull of 1054)
+    type: Schism
+    year: 1054
+    people:
+      - {person: leo-ix, role: pope who sent the legates}
+      - {person: stephen-ix, role: legate (as Frederick of Lorraine)}
+    prominence: 4
+    note: "Defined here and in the Byzantine batch with the same key; the place (Hagia Sophia) is left to that batch. Leo IX answered Patriarch Michael Cerularius's attack on Latin practice with a letter and a legation under Cardinal Humbert. Leo died on 19 April 1054 during the talks; on 16 July 1054 Humbert placed a bull of excommunication on the high altar of Hagia Sophia, the patriarch excommunicated him in return, and the break is popularly dated from this. The article calls Humbert's act legally invalid because the pope was dead. Cerularius is not entered as a person."
+    sources: [wp-leo-ix, wp-stephen-ix]
+  - key: battle-of-civitate-1053
+    name: Battle of Civitate
+    type: Battle
+    date: 1053-06-15
+    people: [{person: leo-ix, role: defeated and captured}]
+    prominence: 3
+    note: "Leo IX led an army of Italians and Swabian mercenaries against the Normans of southern Italy; it was totally defeated. The Normans then did homage, but he was held at Benevento until he acknowledged their conquests in Calabria and Apulia, and left on 12 March 1054. The Stephen IX article dates the battle 18 June 1053 (see discrepancy). The place Civitate is not defined here."
+    sources: [wp-leo-ix, wp-stephen-ix]
+  - key: lateran-synod-of-1059
+    name: Lateran Synod of 1059 (the papal election decree)
+    type: Council
+    year: 1059
+    place: lateran-palace-rome
+    people: [{person: nicholas-ii, role: presided}]
+    prominence: 4
+    note: "At Easter 1059 Nicholas II brought 113 bishops to the Lateran. The synod laid down that future popes be chosen by the cardinal bishops, with the other cardinals, clergy, nobility and laity approving or rejecting; the bull In nomine Domini embodied it, and Alexander II was the first pope elected under it. Archbishop Wido of Milan attended unwillingly after Milan was subordinated to Rome. The article gives Easter, April 1059, not a day."
+    sources: [wp-nicholas-ii, wp-alexander-ii]
+  - key: papal-blessing-of-william-invasion-1066
+    name: Alexander II blesses William's invasion of England
+    type: Papal act
+    year: 1066
+    people:
+      - {person: alexander-ii, role: gave his blessing}
+      - {person: william-i-of-england, role: received the papal banner}
+    prominence: 3
+    note: "William's embassy asked for the pope's blessing; Alexander gave it with a papal ring and a banner and an edict to the English clergy to submit. The article says these favours helped the English church to submit after Hastings, and that legates presided at William's coronation at Winchester at Eastertide 1070."
+    sources: [wp-alexander-ii]
+  - key: excommunication-of-henry-iv-1076
+    name: Gregory VII excommunicates Henry IV
+    type: Excommunication
+    date: 1076-02-22
+    place: lateran-palace-rome
+    people:
+      - {person: gregory-vii, role: excommunicated and deposed the king}
+      - {person: henry-iv-holy-roman-emperor, role: excommunicated}
+    prominence: 4
+    note: "Answer to the Synod of Worms (24 January 1076), where Henry and the German bishops declared Gregory deposed; the Lombard bishops at Piacenza followed. In the Lateran Basilica synod Gregory excommunicated Henry, stripped him of the kingdom and released his subjects from their oaths. He did it again on 7 March 1080 after Rudolf's victory at Flarchheim; Henry's council at Brixen (25 June 1080) deposed Gregory and chose Guibert of Ravenna."
+    sources: [wp-gregory-vii]
+  - key: walk-to-canossa-1077
+    people: [{person: gregory-vii, role: pope who absolved him}]
+    sources: [wp-gregory-vii]
+  - key: council-of-clermont-1095
+    name: Council of Clermont and the call to the First Crusade
+    type: Council
+    date: 1095-11-27
+    place: clermont-ferrand
+    people: [{person: urban-ii, role: preached the crusade}]
+    prominence: 5
+    note: "Defined here. At Piacenza in March 1095 Urban received envoys of Alexios I asking for help against the Turks. The date is that of Urban's open-air speech at the end of the council; no exact text survives and the five versions differ. He promised remission of sins to those who took part and the crowd cried 'It is the will of God' (this slogan is disputed). The First Crusade (1096-1099) took Jerusalem; Urban died fourteen days later without hearing it."
+    sources: [wp-urban-ii]
+  - key: imperial-coronation-of-henry-v-1111
+    people: [{person: paschal-ii, role: pope imprisoned for 61 days, then crowned him}]
+    sources: [wp-paschal-ii]
+  - key: concordat-of-worms-1122
+    people:
+      - {person: callixtus-ii, role: pope who confirmed the settlement}
+      - {person: honorius-ii, role: legate as Cardinal Lamberto of Ostia}
+      - {person: innocent-ii, role: papal envoy to Worms}
+    sources: [wp-callixtus-ii, wp-honorius-ii, wp-innocent-ii]
+  - key: first-lateran-council-1123
+    name: First Lateran Council
+    type: Council
+    date: 1123-03-18
+    place: lateran-palace-rome
+    people: [{person: callixtus-ii, role: convened it}]
+    prominence: 3
+    note: "Called to confirm the Concordat of Worms. Decrees against simony and clerical concubinage, against violators of the Truce of God, church-robbers and forgers; it renewed indulgences for crusaders."
+    sources: [wp-callixtus-ii]
+  - key: schism-of-1130
+    name: Schism of Innocent II and Anacletus II
+    type: Schism
+    year: 1130
+    end_year: 1138
+    people: [{person: innocent-ii, role: pope who prevailed}]
+    prominence: 3
+    note: "On Honorius II's death (13 February 1130) a commission of six cardinals elected Innocent II; the rest chose Anacletus II, whose Roman family held the city. Innocent fled to France (Bernard of Clairvaux won him recognition), was acknowledged at Würzburg in October 1130 and crowned Lothair III at the Lateran on 4 June 1133. The council of Pisa (May 1135) excommunicated Anacletus, who died on 25 January 1138."
+    sources: [wp-innocent-ii, wp-honorius-ii]
+  - key: second-lateran-council-1139
+    name: Second Lateran Council
+    type: Council
+    year: 1139
+    place: lateran-palace-rome
+    people: [{person: innocent-ii, role: convened it}]
+    prominence: 3
+    note: "April 1139 (no day). Excommunicated Roger II of Sicily; canon 29 banned crossbows, slings and bows against Christians. On 22 July Roger's son Roger III ambushed the pope at Galluccio and Innocent recognised Roger's kingship by the Treaty of Mignano on 25 July 1139."
+    sources: [wp-innocent-ii]
+  - key: second-crusade-1147
+    people: [{person: eugene-iii, role: proclaimed it}]
+    sources: [wp-eugene-iii]
+  - key: imperial-coronation-of-frederick-barbarossa-1155
+    people: [{person: adrian-iv, role: crowned him}]
+    sources: [wp-adrian-iv]
+  - key: treaty-of-benevento-1156
+    name: Treaty of Benevento
+    type: Treaty
+    year: 1156
+    place: benevento
+    people: [{person: adrian-iv, role: made peace with the Norman king}]
+    prominence: 3
+    note: "June 1156 (no day given). William I of Sicily destroyed the Byzantine and rebel armies at Brindisi; Adrian, who had allied with Manuel I and the southern barons, had to invest William with the lands he claimed. William did homage and agreed to pay an annual tribute; the king gained legatine powers over his church. Barbarossa saw it as breaking the Treaty of Constance."
+    sources: [wp-adrian-iv]
+  - key: laudabiliter-1155
+    name: Laudabiliter (papal grant of Ireland)
+    type: Papal bull
+    year: 1155
+    people:
+      - {person: adrian-iv, role: reputed author}
+      - {person: henry-ii-of-england, role: recipient}
+    prominence: 2
+    note: "Adrian is supposed to have granted Ireland to Henry II. The article does not agree with itself on the year (see discrepancy), and scholars are uncertain whether the bull ever existed. Henry did not invade for another 14 years (the article's lead)."
+    sources: [wp-adrian-iv]
+  - key: alexander-iii-excommunicates-frederick-1160
+    name: Alexander III excommunicates Victor IV and Frederick I
+    type: Excommunication
+    date: 1160-03-24
+    place: anagni
+    people:
+      - {person: alexander-iii, role: pope}
+      - {person: frederick-i-barbarossa-holy-roman-emperor, role: excommunicated}
+    prominence: 3
+    note: "Frederick summoned both claimants to a council at Pavia (5-11 February 1160); Alexander refused, saying a pope can only be judged by God. The council recognised Victor IV, who excommunicated Alexander on 13 February; Alexander replied from Anagni on 24 March when he heard."
+    sources: [wp-alexander-iii]
+  - key: schism-of-1159
+    name: Schism of Alexander III and the imperial antipopes
+    type: Schism
+    year: 1159
+    end_year: 1177
+    people:
+      - {person: alexander-iii, role: pope who prevailed}
+      - {person: frederick-i-barbarossa-holy-roman-emperor, role: backer of the antipopes}
+    prominence: 3
+    note: "Alexander was elected on 7 September 1159; a minority chose Victor IV. Victor and his successors Paschal III and Callixtus III (not entered) had imperial backing. Alexander was out of Rome 1162-23 November 1165 and from 1167, and was recognised by France, England and Hungary. Barbarossa's defeat at Legnano (1176) and the Peace of Venice (1177) ended it; Alexander returned on 12 March 1178."
+    sources: [wp-alexander-iii]
+  - key: peace-of-venice-1177
+    people:
+      - {person: alexander-iii, role: recognised by Barbarossa as pope}
+      - {person: lucius-iii, role: negotiator (as Cardinal Allucingoli)}
+    sources: [wp-alexander-iii, wp-lucius-iii]
+  - key: third-lateran-council-1179
+    name: Third Lateran Council
+    type: Council
+    year: 1179
+    place: lateran-palace-rome
+    people: [{person: alexander-iii, role: convened it}]
+    prominence: 4
+    note: "March 1179 (no day given). Eleventh ecumenical council of the Catholic Church. It ruled that no one can be elected pope without two-thirds of the cardinals' votes. Soon afterwards the Roman Republic forced Alexander out of the city."
+    sources: [wp-alexander-iii]
+  - key: third-crusade-1189
+    people:
+      - {person: gregory-viii, role: called it by the bull Audita tremendi (1187)}
+      - {person: clement-iii, role: sent Josias of Tyre to the kings of England and France}
+    sources: [wp-gregory-viii, wp-clement-iii]
+
+moments:
+  - {person: clement-ii,    role: buried, place: bamberg-cathedral, year: 1047}
+  - {person: leo-ix,        role: died,   place: rome, year: 1054}
+  - {person: victor-ii,     role: died,   place: arezzo, year: 1057}
+  - {person: victor-ii,     role: buried, place: santa-maria-rotonda-ravenna, year: 1057}
+  - {person: stephen-ix,    role: died,   place: florence, year: 1058}
+  - {person: stephen-ix,    role: buried, place: santa-reparata-florence, year: 1058}
+  - {person: nicholas-ii,   role: worked, place: florence, year: 1045}
+  - {person: alexander-ii,  role: died,   place: lateran-palace-rome, year: 1073}
+  - {person: alexander-ii,  role: buried, place: lateran-palace-rome, year: 1073}
+  - {person: gregory-vii,   role: died,   place: salerno, year: 1085}
+  - {person: gregory-vii,   role: buried, place: salerno, year: 1085}
+  - {person: victor-iii,    role: died,   place: monte-cassino, year: 1087}
+  - {person: victor-iii,    role: buried, place: monte-cassino, year: 1087}
+  - {person: urban-ii,      role: worked, place: cluny-abbey}
+  - {person: paschal-ii,    role: worked, place: cluny-abbey}
+  - {person: paschal-ii,    role: died,   place: rome, year: 1118}
+  - {person: gelasius-ii,   role: died,   place: cluny-abbey, year: 1119}
+  - {person: callixtus-ii,  role: buried, place: lateran-palace-rome, year: 1124}
+  - {person: honorius-ii,   role: buried, place: lateran-palace-rome, year: 1130}
+  - {person: celestine-ii,  role: buried, place: lateran-palace-rome, year: 1144}
+  - {person: eugene-iii,    role: lived,  place: viterbo, year: 1148}
+  - {person: eugene-iii,    role: died,   place: tivoli, year: 1153}
+  - {person: adrian-iv,     role: lived,  place: viterbo, year: 1155}
+  - {person: adrian-iv,     role: died,   place: anagni, year: 1159}
+  - {person: adrian-iv,     role: buried, place: st-peters-basilica-rome, year: 1159}
+  - {person: alexander-iii, role: born,   place: siena}
+  - {person: alexander-iii, role: died,   place: civita-castellana, year: 1181}
+  - {person: lucius-iii,    role: died,   place: verona, year: 1185}
+  - {person: urban-iii,     role: died,   place: ferrara, year: 1187}
+  - {person: urban-iii,     role: buried, place: ferrara, year: 1187}
+  - {person: gregory-viii,  role: born,   place: benevento}
+  - {person: gregory-viii,  role: died,   place: pisa, year: 1187}
+  - {person: gregory-viii,  role: buried, place: pisa, year: 1187}
+
+links:
+  - {teacher: gregory-vi, student: gregory-vii}
+
+discrepancies:
+  - key: benedict-ix-third-pontificate-end
+    question: When did Benedict IX's third pontificate end?
+    about: [{person: benedict-ix}]
+    field: title end
+    claims:
+      - {value: "July 1048 (the lead's '1047-1048'; the third-pontificate section says German troops drove him away in July 1048)", sources: [wp-benedict-ix]}
+      - {value: "'remaining on the throne until July 1046', in the first sentence of the third-pontificate section, which sits before the Council of Sutri in December 1046 and so looks like a slip for 1048", sources: [wp-benedict-ix]}
+    note: "The record uses 1047-1048."
+  - key: battle-of-civitate-date
+    question: On what day was the Battle of Civitate fought?
+    about: [{event: battle-of-civitate-1053}]
+    field: date
+    claims:
+      - {value: "15 June 1053", sources: [wp-leo-ix]}
+      - {value: "18 June 1053", sources: [wp-stephen-ix]}
+    note: "The record uses 15 June, from the Leo IX article, whose subject was the commander."
+  - key: gelasius-ii-death-date
+    question: On what day did Gelasius II die at Cluny?
+    about: [{person: gelasius-ii}]
+    field: died
+    claims:
+      - {value: "29 January 1119", sources: [wp-gelasius-ii, wp-callixtus-ii]}
+      - {value: "28 January 1119", sources: [wp-honorius-ii]}
+    note: "The record uses 29 January (two articles, including his own)."
+  - key: concordat-of-worms-year-honorius-article
+    question: In what year was the Concordat of Worms (the Pactum Calixtinum) concluded?
+    about: [{event: concordat-of-worms-1122}]
+    field: date
+    claims:
+      - {value: "23 September 1122", sources: [wp-callixtus-ii]}
+      - {value: "23 September 1123", sources: [wp-honorius-ii]}
+    note: "The Honorius II article also puts the concordat in 1122 elsewhere in the same sentence, so 1123 looks like a slip. The record (event concordat-of-worms-1122, from the HRE batch) uses 23 September 1122."
+  - key: celestine-ii-election-date
+    question: On what day was Celestine II elected?
+    about: [{person: celestine-ii}]
+    field: title start
+    claims:
+      - {value: "26 September 1143 (lead)", sources: [wp-celestine-ii]}
+      - {value: "25 September 1143, 'two days after the death of Innocent II' (Innocent died 24 September)", sources: [wp-celestine-ii]}
+    note: "The record uses 26 September from the lead, which fits two days after the 24 September death."
+  - key: clement-iii-celestine-iii-dates
+    question: When did Clement III die and Celestine III become pope in 1191?
+    about: [{person: clement-iii}, {person: celestine-iii}]
+    field: died
+    claims:
+      - {value: "Clement III died 20 March 1191 (lead); Celestine elected 29 or 30 March", sources: [wp-clement-iii, wp-celestine-iii]}
+      - {value: "Clement III died 10 April 1191 (Death section), with Celestine elected 'the day of Clement's death'; Celestine's lead says 30 March or 10 April", sources: [wp-clement-iii, wp-celestine-iii]}
+      - {value: "Clement III died 'in the latter part of March 1191' (Actions section)", sources: [wp-clement-iii]}
+    note: "The record uses 20 March 1191 for Clement's death and 30 March for Celestine's start, since the leads and the March reading agree. Celestine III was ordained priest on 13 April 1191 either way."
+  - key: laudabiliter-year
+    question: In which year did Adrian IV supposedly grant Ireland to Henry II (Laudabiliter), and did the bull exist?
+    about: [{event: laudabiliter-1155}, {person: adrian-iv}]
+    field: date
+    claims:
+      - {value: "1155 (Laudabiliter section)", sources: [wp-adrian-iv]}
+      - {value: "1158 (the lead: 'in 1158 Adrian is supposed to have granted Henry the papal bull')", sources: [wp-adrian-iv]}
+      - {value: "Scholars are uncertain whether the bull ever existed; Duggan found no reliable evidence of its content", sources: [wp-adrian-iv]}
+    note: "The record uses 1155, from the full section; the event is marked 'reputed'."
+  - key: barbarossa-1155-coronation-place
+    question: Where was Frederick Barbarossa crowned emperor on 18 June 1155?
+    about: [{event: imperial-coronation-of-frederick-barbarossa-1155}]
+    field: place
+    claims:
+      - {value: "In Rome at St Peter's (Barbarossa's own 1189 letter: 'in the city of Rome ... from the altar of St Peter'); the HRE batch records St Peter's Basilica", sources: [wp-adrian-iv]}
+      - {value: "'He was eventually crowned in Nepi on 18 June' (Imperial coronation, 1155 section); the same section says the coronation was held in secret on a Saturday because of fear of Roman hostility", sources: [wp-adrian-iv]}
+    note: "The record leaves the HRE batch's place (St Peter's) and adds the Nepi reading as an open question. The article gives no day apart from 18 June."
