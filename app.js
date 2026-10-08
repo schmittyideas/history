@@ -1065,6 +1065,7 @@ function renderYear() {
 
   const rulers = h("section", { class: "year-sec" }, h("h3", { text: single ? "Who ruled" : "Who ruled, in order" }));
   const shown = realms.filter(r => !Y.hidden.has(regionOf(r)));
+  out.append(yearMap(a, b, shown));
   if (!inRange.length) {
     const ys = db.titles.flatMap(t => [t.start_year, t.end_year]).filter(Number.isFinite);
     rulers.append(h("p", { class: "hint", text: db.titles.length
@@ -1089,7 +1090,7 @@ function renderYear() {
   shown.forEach(realm => {
     const ts = inRange.filter(t => t.realm === realm);
     const names = [...new Set(ts.slice().sort((x, y) => byYear(x.start_year, y.start_year)).map(t => t.title))];
-    const card = h("article", { class: "realm-card" }, h("h4", { text: realm }));
+    const card = h("article", { class: "realm-card", "data-realm": realm }, h("h4", { text: realm }));
     names.forEach(name => {
       const holders = ts.filter(t => t.title === name).sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
       const row = h("div", { class: "title-row-y" }, h("div", { class: "tname", text: name }));
@@ -1143,6 +1144,132 @@ function renderYear() {
   out.append(bd);
   if (span > 1) out.append(h("p", { class: "hint", text: `${span} years. Rulers are listed if any part of their reign falls in this span.` }));
 }
+
+/* ------------------------------------------------------------------ year view: border map */
+// World borders for snapshot years, from historical-basemaps (GPL-3.0, kept in data/maps/ with its licence).
+// The map uses the latest snapshot at or before the year asked for (up to 99 years back); a span that
+// crosses later snapshots gets a switch between them. Realms with a ruler in the span are shaded and
+// clickable; data/maps/index.json says which map names belong to which realm.
+
+const MAPS = { index: null, geo: {} };
+const mapIndex = () => MAPS.index ??= fetch("data/maps/index.json").then(r => r.ok ? r.json() : null).catch(() => null);
+const mapGeo = file => MAPS.geo[file] ??= fetch("data/maps/" + file).then(r => r.json()).then(rewind);
+
+// d3 reads a polygon ring's direction to tell inside from outside; rings drawn the other way would
+// cover the whole globe, so any polygon claiming more than half the sphere gets its rings reversed.
+function rewind(geo) {
+  geo.features.forEach(f => {
+    const g = f.geometry; if (!g) return;
+    const polys = g.type === "Polygon" ? [g.coordinates] : g.type === "MultiPolygon" ? g.coordinates : [];
+    polys.forEach(rings => {
+      if (d3.geoArea({ type: "Polygon", coordinates: rings }) > 2 * Math.PI) rings.forEach(r => r.reverse());
+    });
+  });
+  return geo;
+}
+
+function jumpToRealm(realm) {
+  const card = document.querySelector(`.realm-card[data-realm="${CSS.escape(realm)}"]`);
+  if (!card) return;
+  card.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center" });
+  card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
+}
+
+function yearMap(a, b, realmsInView) {
+  const sec = h("section", { class: "year-sec map-sec", hidden: "" });
+  (async () => {
+    const idx = await mapIndex();
+    if (!idx || !window.d3) return;
+    const years = Object.keys(idx.years).map(Number).sort((x, y) => x - y);
+    const start = years.filter(y => y <= a && a - y < 100).pop();
+    const choices = years.filter(y => y === start || (y > a && y <= b && start != null) || (start == null && y >= a && y <= b));
+    if (!choices.length) return;
+    if (!choices.includes(Y.mapYear)) Y.mapYear = choices[0];
+    sec.hidden = false;
+
+    const realmsOf = {};   // map name -> realms in view it belongs to
+    Object.entries(idx.realms).forEach(([realm, names]) => {
+      if (realmsInView.includes(realm)) names.forEach(n => (realmsOf[n] ||= []).push(realm));
+    });
+
+    const head = h("div", { class: "map-head" }, h("h3", { text: "Borders" }));
+    const seg = h("div", { class: "seg", role: "group", "aria-label": "Snapshot year" });
+    if (choices.length > 1) head.append(seg);
+    const box = h("div", { class: "histmap-box" });
+    const credit = h("p", { class: "hint map-credit" });
+    sec.append(head, box, credit);
+
+    const draw = async () => {
+      seg.innerHTML = "";
+      choices.forEach(y => seg.append(h("button", { type: "button", "aria-pressed": y === Y.mapYear, text: fmtYear(y),
+        onclick: () => { Y.mapYear = y; draw(); } })));
+      const geo = await mapGeo(idx.years[Y.mapYear]);
+      box.innerHTML = "";
+      const W = 960, H = 500;
+      const proj = d3.geoNaturalEarth1().fitExtent([[6, 6], [W - 6, H - 6]], { type: "Sphere" });
+      const path = d3.geoPath(proj);
+      const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, class: "histmap", role: "img", "aria-label": `World borders around ${fmtYear(Y.mapYear)}` }, box);
+      const g = el("g", {}, svg);
+      el("path", { d: path({ type: "Sphere" }), class: "hm-sea" }, g);
+      const labelFor = {};   // one label per realm, on its largest piece; our realm name where it's one realm
+      let bx0 = Infinity, by0 = Infinity, bx1 = -Infinity, by1 = -Infinity;
+      geo.features.forEach(f => {
+        const pr = f.properties || {};
+        const realms = realmsOf[pr.NAME] || realmsOf[pr.SUBJECTO] || null;
+        const p = el("path", { d: path(f), class: "hm-land" + (realms ? " ruled" : "") }, g);
+        el("title", {}, p).textContent = (pr.NAME || "Unnamed") + (realms ? `: ${realms.join(", ")}. Click for its rulers.` : "");
+        if (realms) {
+          p.setAttribute("tabindex", 0); p.setAttribute("role", "button");
+          const go = () => jumpToRealm(realms[0]);
+          p.addEventListener("click", go);
+          p.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+          const name = realms.length === 1 ? realms[0] : pr.NAME, area = path.area(f);
+          if (!labelFor[name] || labelFor[name].area < area) labelFor[name] = { name, area, xy: path.centroid(f) };
+          const [[x0, y0], [x1, y1]] = path.bounds(f);
+          bx0 = Math.min(bx0, x0); by0 = Math.min(by0, y0); bx1 = Math.max(bx1, x1); by1 = Math.max(by1, y1);
+        }
+      });
+      const lg = el("g", { class: "hm-labels" }, g);
+      const labels = Object.values(labelFor).sort((p, q) => q.area - p.area).map(l => {
+        const t = el("text", { x: l.xy[0], y: l.xy[1] + 4, "text-anchor": "middle" }, lg);
+        t.textContent = l.name;
+        return { ...l, t };
+      });
+      // Labels keep their on-screen size at any zoom; one that would overlap a bigger realm's label is hidden
+      // until zooming in makes room.
+      const placeLabels = tr => {
+        // r converts screen pixels to map units, so labels stay 11px on a phone as on a desktop.
+        const r = W / (svg.getBoundingClientRect().width || W), kept = [];
+        labels.forEach(l => {
+          l.t.setAttribute("font-size", 11 * r / tr.k);
+          const [sx, sy] = tr.apply(l.xy), w = (l.name.length * 6.2 + 6) * r, hh = 8 * r;
+          const box = [sx - w / 2, sy - hh, sx + w / 2, sy + hh];
+          const ok = l.area * tr.k * tr.k > 60 && !kept.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]);
+          l.t.style.display = ok ? "" : "none";
+          if (ok) kept.push(box);
+        });
+      };
+      // Pinch or Ctrl/⌘ + scroll to zoom, drag to pan.
+      const zoom = d3.zoom().scaleExtent([1, 12]).translateExtent([[0, 0], [W, H]])
+        .filter(e => e.type === "wheel" ? (e.ctrlKey || e.metaKey) : !e.button)
+        .on("zoom", e => { g.setAttribute("transform", e.transform); placeLabels(e.transform); });
+      const sel = d3.select(svg).call(zoom);
+      // Open fitted to the shaded realms (the whole world if none).
+      if (bx1 > bx0) {
+        const k = Math.max(1, Math.min(4, .92 / Math.max((bx1 - bx0) / W, (by1 - by0) / H)));
+        sel.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(k).translate(-(bx0 + bx1) / 2, -(by0 + by1) / 2));
+      } else placeLabels(d3.zoomIdentity);
+      credit.innerHTML = "";
+      credit.append(`Borders around ${fmtYear(Y.mapYear)}, approximate. Shaded: realms with a ruler in ${single(a, b)}. Ctrl/⌘ + scroll or pinch to zoom. Map data: `,
+        h("a", { class: "ext", href: idx.source, text: "historical-basemaps" }), " by André Ourednik, ",
+        h("a", { class: "ext", href: "data/maps/LICENSE", text: "GPL-3.0" }), " (",
+        h("a", { class: "ext", href: "https://github.com/schmittyideas/history/tree/main/data/maps", text: "our copy of the files" }), ").");
+    };
+    draw();
+  })();
+  return sec;
+}
+const single = (a, b) => a === b ? fmtYear(a) : fmtSpan(a, b);
 
 // One title's holders across the span, as bars on a shared scale.
 function reignStrip(holders, a, b) {

@@ -186,6 +186,18 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .year-sec h3 { font-family: var(--display); font-weight: 400; font-size: 21px; margin: 0; }
 .year-sec.two { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px 24px; }
 .year-sec.two > div { display: grid; gap: 8px; align-content: start; }
+.map-sec .map-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.histmap-box { border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; background: var(--sea); touch-action: pan-y; }
+.histmap { display: block; width: 100%; height: auto; cursor: grab; }
+.histmap:active { cursor: grabbing; }
+.hm-sea { fill: var(--sea); }
+.hm-land { fill: var(--land); stroke: var(--rule); stroke-width: .6; vector-effect: non-scaling-stroke; }
+.hm-land.ruled { fill: color-mix(in srgb, var(--woad) 38%, var(--land)); stroke: var(--woad); cursor: pointer; outline: none; }
+.hm-land.ruled:hover, .hm-land.ruled:focus-visible { fill: color-mix(in srgb, var(--woad) 60%, var(--land)); }
+.hm-labels text { font-family: var(--body); fill: var(--ink); paint-order: stroke; stroke: var(--land); stroke-width: 2.5px; stroke-linejoin: round; pointer-events: none; vector-effect: non-scaling-stroke; }
+.map-credit { font-size: 12px; }
+.realm-card.flash { animation: card-flash 1.4s ease-out; }
+@keyframes card-flash { 0% { box-shadow: 0 0 0 3px var(--woad); } 100% { box-shadow: 0 0 0 3px transparent; } }
 .region-head { font-family: var(--mono); font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); margin: 8px 0 0; padding-bottom: 4px; border-bottom: 1px solid var(--rule); }
 .realms { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 12px; }
 .realm-card { background: var(--panel); border: 1px solid var(--rule); border-top: 3px solid var(--woad); border-radius: 4px; padding: 12px 14px; display: grid; gap: 12px; align-content: start; min-width: 0; }

@@ -94,6 +94,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Historical border maps in the Year view (trial: 1000 and 1100)
+`type: enhancement` · `area: site` · `status: done` · `issue: #24`
+
+Two snapshots from historical-basemaps (GPL-3.0, Ty's choice to use GPL data and link to it), kept in `data/maps/` with the licence, a credit README and the realm-to-map name list (`index.json`). The Year view draws the nearest earlier snapshot (up to 99 years back), fitted to the realms with a ruler in the span; those are shaded, labelled and clickable. Spans crossing snapshots get a switch. Next if it works out: more snapshot years, and the name list moving into the `realms` table. Done 2026-10-07.
+Source: Ty, 2026-10-07 ("let's try with 1000 to 1100").
+
 #### [P2] Event labels by prominence: 5 always, then 4 to 1 while they fit
 `type: enhancement` · `area: site` · `status: done` · `issue: #21`
 
