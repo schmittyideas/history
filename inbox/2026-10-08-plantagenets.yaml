@@ -1,0 +1,1111 @@
+batch:
+  title: "English monarchs: Plantagenets and Lancaster, 1154-1471"
+  requested: "English monarchs build-out: Henry II to Henry VI, with Eleanor of Aquitaine and Magna Carta"
+  date: 2026-10-08
+
+# Built only from the downloaded English Wikipedia articles. Left out because no downloaded article
+# gives a clear fact: Henry II's and Henry IV's birthplace moments (no place record), Edward III's burial,
+# Richard I's capture date by Leopold, the date of John's coronation, the Battle of Bouvines date,
+# Henry VI as claimant "King of France" (a claim, not a ruling title), Henry IV/V as Duke of Aquitaine
+# (no dates in the articles), and Edward I's other castles (Conwy, Harlech, Beaumaris: named, not sent).
+# Henry III is already in the database (henry-iii-of-england); his reign title is not repeated.
+
+sources:
+  - {key: wp-henry-ii,            title: "Henry II of England (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Henry_II_of_England"}
+  - {key: wp-eleanor-of-aquitaine, title: "Eleanor of Aquitaine (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Eleanor_of_Aquitaine"}
+  - {key: wp-richard-i,           title: "Richard I of England (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Richard_I_of_England"}
+  - {key: wp-john-of-england,     title: "John, King of England (Wikipedia)",  url: "https://en.wikipedia.org/wiki/John,_King_of_England"}
+  - {key: wp-magna-carta,         title: "Magna Carta (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Magna_Carta"}
+  - {key: wp-edward-i,            title: "Edward I of England (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Edward_I_of_England"}
+  - {key: wp-edward-ii,           title: "Edward II of England (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Edward_II_of_England"}
+  - {key: wp-edward-iii,          title: "Edward III of England (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Edward_III_of_England"}
+  - {key: wp-richard-ii,          title: "Richard II of England (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Richard_II_of_England"}
+  - {key: wp-henry-iv,            title: "Henry IV of England (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Henry_IV_of_England"}
+  - {key: wp-henry-v,             title: "Henry V of England (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Henry_V_of_England"}
+  - {key: wp-henry-vi,            title: "Henry VI of England (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Henry_VI_of_England"}
+
+realms:
+  - {name: Aquitaine, region: Western Europe, country: France}
+
+people:
+  - key: henry-ii-of-england
+    name: Henry II
+    type: Royalty
+    born: 1133-03-05
+    died: 1189-07-06
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    note: King of England 1154-1189 and ruler of the Angevin Empire. His quarrel with Thomas Becket ended in Becket's murder in 1170; his legal reforms underlie English common law.
+    sources: [wp-henry-ii]
+
+  - key: eleanor-of-aquitaine
+    name: Eleanor of Aquitaine
+    type: Royalty
+    born: 1124
+    born_estimated: true
+    died: 1204
+    house: Poitiers
+    realm: Aquitaine
+    prominence: 4
+    note: Duchess of Aquitaine from 1137, Queen of France 1137-1152 and Queen of England 1154-1189. Mother of Richard I and John; held by Henry II after the 1173 revolt and freed in 1189.
+    sources: [wp-eleanor-of-aquitaine]
+
+  - key: richard-i-of-england
+    name: Richard I
+    type: Royalty
+    born: 1157-09-08
+    died: 1199-04-06
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    note: Richard the Lionheart, King of England 1189-1199. Led the Third Crusade, was held for ransom in Germany 1193-1194, and died of a crossbow wound at Châlus.
+    sources: [wp-richard-i]
+
+  - key: john-of-england
+    name: John
+    type: Royalty
+    born: 1166
+    born_estimated: true
+    died: 1216-10-19
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    note: King of England 1199-1216. Lost Normandy in 1204 and was forced to seal Magna Carta in 1215. Born around Christmas 1166 or 1167; died in the night of 18/19 October 1216.
+    sources: [wp-john-of-england]
+
+  - key: edward-i-of-england
+    name: Edward I
+    type: Royalty
+    born: 1239
+    died: 1307-07-07
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    note: Longshanks, King of England 1272-1307. Conquered Wales and built its great castles, reformed the law, and began the wars with Scotland. Born on the night of 17-18 June 1239.
+    sources: [wp-edward-i]
+
+  - key: edward-ii-of-england
+    name: Edward II
+    type: Royalty
+    born: 1284-04-25
+    died: 1327-09-21
+    house: Plantagenet
+    realm: England
+    prominence: 3
+    note: King of England 1307-1327. Lost at Bannockburn (1314), was deposed by his wife Isabella and Roger Mortimer, and died at Berkeley Castle in 1327.
+    sources: [wp-edward-ii]
+
+  - key: edward-iii-of-england
+    name: Edward III
+    type: Royalty
+    born: 1312-11-13
+    died: 1377-06-21
+    house: Plantagenet
+    realm: England
+    prominence: 4
+    note: King of England 1327-1377. Claimed the French throne, began the Hundred Years' War, won at Crécy and Poitiers, founded the Order of the Garter, and reigned through the Black Death.
+    sources: [wp-edward-iii]
+
+  - key: edward-the-black-prince
+    name: Edward the Black Prince
+    type: Royalty
+    born: 1330
+    died: 1376-06-08
+    house: Plantagenet
+    realm: England
+    prominence: 3
+    note: Eldest son and heir of Edward III. Won the Battle of Poitiers in 1356 and captured the French king; died a year before his father, so his son Richard II became king.
+    sources: [wp-edward-iii, wp-richard-ii]
+
+  - key: richard-ii-of-england
+    name: Richard II
+    type: Royalty
+    born: 1367-01-06
+    died: 1400-02-14
+    died_estimated: true
+    house: Plantagenet
+    realm: England
+    prominence: 3
+    note: King of England 1377-1399 from the age of ten. Faced the Peasants' Revolt in 1381, was deposed by Henry Bolingbroke in 1399 and died in Pontefract Castle around 14 February 1400 (the date and manner are questioned).
+    sources: [wp-richard-ii]
+
+  - key: henry-iv-of-england
+    name: Henry IV
+    type: Royalty
+    born: 1367
+    born_estimated: true
+    died: 1413-03-20
+    house: Lancaster
+    realm: England
+    prominence: 3
+    note: Henry Bolingbroke, first Lancastrian King of England 1399-1413. Took the throne from Richard II and spent his reign putting down rebellions.
+    sources: [wp-henry-iv]
+
+  - key: henry-v-of-england
+    name: Henry V
+    type: Royalty
+    born: 1386-09-16
+    died: 1422-08-31
+    house: Lancaster
+    realm: England
+    prominence: 4
+    note: King of England 1413-1422. Won at Agincourt (1415), conquered Normandy, and was named heir and regent of France by the Treaty of Troyes (1420).
+    sources: [wp-henry-v]
+
+  - key: henry-vi-of-england
+    name: Henry VI
+    type: Royalty
+    born: 1421-12-06
+    died: 1471-05-21
+    house: Lancaster
+    realm: England
+    prominence: 3
+    note: King of England 1422-1461 and 1470-1471, king from the age of nine months, later crowned King of France in Paris. Lost France, suffered mental collapse in 1453, and was deposed in the Wars of the Roses. Founded Eton and King's College, Cambridge.
+    sources: [wp-henry-vi]
+
+  - key: thomas-becket
+    name: Thomas Becket
+    type: Clergy
+    roles: [archbishop, saint]
+    died: 1170-12-29
+    realm: England
+    prominence: 3
+    note: Henry II's chancellor, made Archbishop of Canterbury in 1162. Quarrelled with the king over the Church's rights and was killed in Canterbury by four knights on 29 December 1170. Birth date not in the downloaded articles.
+    sources: [wp-henry-ii]
+
+places:
+  - key: canterbury-cathedral
+    name: Canterbury Cathedral
+    kind: cathedral
+    city: Canterbury
+    region: Kent
+    country: England
+    lat: 51.280
+    lng: 1.083
+    visitable: true
+    visit_site: Canterbury Cathedral
+    note: In Canterbury. Scene of Thomas Becket's murder in 1170 and burial place of Henry IV, who chose it over Westminster Abbey.
+    sources: [wp-henry-ii, wp-henry-iv]
+
+  - key: runnymede
+    name: Runnymede
+    kind: meadow
+    region: Surrey
+    country: England
+    lat: 51.444
+    lng: -0.564
+    visitable: true
+    visit_site: Runnymede (National Trust)
+    note: Water-meadow on the south bank of the Thames near Egham, between Windsor Castle and Staines. Where King John met the rebel barons in June 1215 and Magna Carta was agreed.
+    sources: [wp-magna-carta, wp-john-of-england]
+
+  - key: windsor-castle
+    name: Windsor Castle
+    kind: castle
+    city: Windsor
+    region: Berkshire
+    country: England
+    lat: 51.484
+    lng: -0.604
+    visitable: true
+    visit_site: Windsor Castle (Royal Collection Trust)
+    note: In Windsor. Birthplace of Edward III (1312) and Henry VI (1421).
+    sources: [wp-edward-iii, wp-henry-vi]
+
+  - key: st-georges-chapel-windsor
+    name: St George's Chapel, Windsor
+    kind: chapel
+    city: Windsor
+    region: Berkshire
+    country: England
+    lat: 51.484
+    lng: -0.607
+    visitable: true
+    visit_site: St George's Chapel, Windsor Castle
+    note: Inside Windsor Castle. Richard III moved Henry VI's body here from Chertsey Abbey in 1484.
+    sources: [wp-henry-vi]
+
+  - key: tower-of-london
+    name: Tower of London
+    kind: castle
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.508
+    lng: -0.076
+    visitable: true
+    visit_site: Tower of London (Historic Royal Palaces)
+    note: In London. Henry VI was imprisoned here from 1465 and again in 1471, and died here in 1471; Richard II withdrew here during the Peasants' Revolt in 1381.
+    sources: [wp-henry-vi, wp-richard-ii]
+
+  - key: gloucester-cathedral
+    name: Gloucester Cathedral
+    historical_name: Gloucester Abbey
+    kind: cathedral
+    city: Gloucester
+    region: Gloucestershire
+    country: England
+    lat: 51.867
+    lng: -2.246
+    visitable: true
+    visit_site: Gloucester Cathedral
+    note: In Gloucester. Edward II was buried by the high altar in December 1327; his tomb became a pilgrimage site.
+    sources: [wp-edward-ii]
+
+  - key: berkeley-castle
+    name: Berkeley Castle
+    kind: castle
+    city: Berkeley
+    region: Gloucestershire
+    country: England
+    lat: 51.687
+    lng: -2.459
+    visitable: true
+    visit_site: Berkeley Castle
+    note: At Berkeley. Edward II was held here from about April 1327 and died here in the night of 21 September 1327.
+    sources: [wp-edward-ii]
+
+  - key: pontefract-castle
+    name: Pontefract Castle
+    kind: castle
+    city: Pontefract
+    region: West Yorkshire
+    country: England
+    lat: 53.693
+    lng: -1.309
+    visitable: true
+    visit_site: Pontefract Castle (ruins)
+    note: In Pontefract. Richard II is thought to have starved to death here around 14 February 1400.
+    sources: [wp-richard-ii]
+
+  - key: fontevraud-abbey
+    name: Fontevraud Abbey
+    kind: abbey
+    city: Fontevraud-l'Abbaye
+    region: Maine-et-Loire
+    country: France
+    lat: 47.181
+    lng: 0.051
+    visitable: true
+    visit_site: Royal Abbey of Fontevraud
+    note: Burial place of Henry II, Richard I and Eleanor of Aquitaine. Henry had wished to lie at Grandmont but the summer heat made the journey impractical.
+    sources: [wp-henry-ii, wp-richard-i, wp-eleanor-of-aquitaine]
+
+  - key: chinon-castle
+    name: Chinon Castle
+    kind: castle
+    city: Chinon
+    region: Indre-et-Loire
+    country: France
+    lat: 47.167
+    lng: 0.236
+    visitable: true
+    visit_site: Forteresse royale de Chinon
+    note: In Chinon (then in Anjou). Henry II retreated here after defeat by Philip II and Richard, and died here on 6 July 1189.
+    sources: [wp-henry-ii]
+
+  - key: chateau-gaillard
+    name: Château Gaillard
+    historical_name: Castle at Andeli
+    kind: castle
+    city: Les Andelys
+    region: Eure
+    country: France
+    lat: 49.242
+    lng: 1.406
+    visitable: true
+    visit_site: Château Gaillard (ruins)
+    founded: 1196
+    built_by: Richard I (1196-1198)
+    note: Above the Seine at Les Andelys, Normandy. Built to defend Normandy and as a base to retake the Vexin. The source names no master mason and suggests Richard himself may have been its overall designer. Besieged by Philip II in 1203.
+    sources: [wp-richard-i, wp-john-of-england]
+
+  - key: chalus-chabrol-castle
+    name: Château de Châlus-Chabrol
+    kind: castle
+    city: Châlus
+    region: Haute-Vienne
+    country: France
+    lat: 45.65
+    lng: 0.98
+    note: Near Châlus, in Limousin. Richard I was hit by a crossbow bolt while besieging it on 26 March 1199 and died of the wound on 6 April.
+    sources: [wp-richard-i]
+
+  - key: caernarfon-castle
+    name: Caernarfon Castle
+    kind: castle
+    city: Caernarfon
+    region: Gwynedd
+    country: Wales
+    lat: 53.139
+    lng: -4.277
+    visitable: true
+    visit_site: Caernarfon Castle (Cadw)
+    built_by: Edward I
+    architect: James of Saint George (master of Edward I's Welsh castle-building)
+    note: In Caernarfon. Part of Edward I's castle programme after the conquest of Gwynedd (with Conwy, Harlech and Beaumaris). Edward II was born here on 25 April 1284.
+    sources: [wp-edward-i, wp-edward-ii]
+
+  - key: burgh-by-sands
+    name: Burgh by Sands
+    kind: village
+    region: Cumbria
+    country: England
+    lat: 54.92
+    lng: -3.04
+    note: Just south of the Scottish border. Edward I camped here on 6 July 1307 and died in the morning of 7 July on his way to fight Robert the Bruce.
+    sources: [wp-edward-i]
+
+  - key: bannockburn-battlefield
+    name: Bannockburn
+    kind: battlefield
+    region: Stirling
+    country: Scotland
+    lat: 56.096
+    lng: -3.927
+    visitable: true
+    visit_site: Bannockburn (National Trust for Scotland)
+    note: Near Stirling. Robert the Bruce's spearmen defeated Edward II's army here on 23-24 June 1314.
+    sources: [wp-edward-ii]
+
+  - key: crecy-battlefield
+    name: Crécy
+    kind: battlefield
+    region: Somme
+    country: France
+    lat: 50.254
+    lng: 1.883
+    note: Near Crécy-en-Ponthieu, north of the Somme. Edward III's army defeated a far larger French army on 26 August 1346.
+    sources: [wp-edward-iii]
+
+  - key: agincourt-battlefield
+    name: Agincourt
+    kind: battlefield
+    region: Pas-de-Calais
+    country: France
+    lat: 50.46
+    lng: 2.14
+    note: Near present-day Azincourt. Henry V's outnumbered army defeated the French here on 25 October 1415.
+    sources: [wp-henry-v]
+
+  - key: monmouth-castle
+    name: Monmouth Castle
+    kind: castle
+    city: Monmouth
+    region: Monmouthshire
+    country: Wales
+    lat: 51.812
+    lng: -2.714
+    note: In Monmouth. Henry V was born in the tower above its gatehouse on 16 September 1386.
+    sources: [wp-henry-v]
+
+  - key: newark-castle
+    name: Newark Castle
+    kind: castle
+    city: Newark-on-Trent
+    region: Nottinghamshire
+    country: England
+    lat: 53.077
+    lng: -0.813
+    visitable: true
+    visit_site: Newark Castle (ruins)
+    note: In Newark-on-Trent. King John fell too ill to travel on and died here in the night of 18/19 October 1216.
+    sources: [wp-john-of-england]
+
+  - key: worcester-cathedral
+    name: Worcester Cathedral
+    kind: cathedral
+    city: Worcester
+    region: Worcestershire
+    country: England
+    lat: 52.190
+    lng: -2.221
+    visitable: true
+    visit_site: Worcester Cathedral
+    note: In Worcester. King John was buried before the altar of St Wulfstan; a sarcophagus with an effigy was made for him in 1232.
+    sources: [wp-john-of-england]
+
+  - key: kenilworth-castle
+    name: Kenilworth Castle
+    kind: castle
+    city: Kenilworth
+    region: Warwickshire
+    country: England
+    lat: 52.348
+    lng: -1.583
+    visitable: true
+    visit_site: Kenilworth Castle (English Heritage)
+    note: In Kenilworth. Where a delegation told Edward II in January 1327 that he must resign for his son's sake.
+    sources: [wp-edward-ii]
+
+  - key: nottingham-castle
+    name: Nottingham Castle
+    kind: castle
+    city: Nottingham
+    region: Nottinghamshire
+    country: England
+    lat: 52.948
+    lng: -1.154
+    visitable: true
+    visit_site: Nottingham Castle
+    note: In Nottingham. Edward III took Roger Mortimer by surprise and captured him here on 19 October 1330.
+    sources: [wp-edward-iii]
+
+  - key: westminster-hall
+    name: Westminster Hall
+    kind: hall
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.4999
+    lng: -0.1250
+    visitable: true
+    visit_site: Westminster Hall (Houses of Parliament)
+    built_by: "Rebuilding begun by Henry III in 1245; extensively rebuilt under Richard II"
+    architect: "Hugh Herland (royal carpenter; hammer-beam roof)"
+    note: In Westminster, London. Richard II's deposition was read here on 30 September 1399.
+    sources: [wp-richard-ii]
+
+  - key: chateau-de-vincennes
+    name: Château de Vincennes
+    kind: castle
+    city: Vincennes
+    region: Val-de-Marne
+    country: France
+    lat: 48.843
+    lng: 2.436
+    visitable: true
+    visit_site: Château de Vincennes
+    note: East of Paris. Henry V was brought here ill and died on 31 August 1422.
+    sources: [wp-henry-v]
+
+  - key: kings-college-chapel-cambridge
+    name: King's College Chapel, Cambridge
+    kind: chapel
+    city: Cambridge
+    region: Cambridgeshire
+    country: England
+    lat: 52.204
+    lng: 0.116
+    visitable: true
+    visit_site: King's College Chapel
+    built_by: Henry VI (with King's College, Cambridge)
+    note: In Cambridge. A late Gothic (Perpendicular) chapel from Henry VI's college foundation.
+    sources: [wp-henry-vi]
+
+  - key: eton-college
+    name: Eton College
+    kind: school
+    city: Eton
+    region: Berkshire
+    country: England
+    lat: 51.499
+    lng: -0.610
+    visitable: true
+    visit_site: Eton College
+    built_by: Henry VI
+    note: In Eton, by Windsor. Founded by Henry VI, who also began its chapel.
+    sources: [wp-henry-vi]
+
+events:
+  # Henry II
+  - key: marriage-of-henry-and-eleanor-1152
+    name: Marriage of Henry of Normandy and Eleanor of Aquitaine
+    type: Marriage
+    date: 1152-05-18
+    prominence: 3
+    note: Eight weeks after her annulment from Louis VII, in a private ceremony at Poitiers Cathedral. It gave Henry control of Aquitaine and set up the Angevin Empire.
+    people:
+      - {person: henry-ii-of-england, role: groom}
+      - {person: eleanor-of-aquitaine, role: bride}
+    sources: [wp-eleanor-of-aquitaine, wp-henry-ii]
+
+  - key: coronation-of-henry-ii-1154
+    name: Coronation of Henry II and Eleanor
+    type: Coronation
+    date: 1154-12-19
+    place: westminster-abbey
+    prominence: 3
+    note: Henry wore one of the imperial crowns his mother brought back from Germany.
+    people:
+      - {person: henry-ii-of-england, role: crowned}
+      - {person: eleanor-of-aquitaine, role: crowned}
+    sources: [wp-henry-ii]
+
+  - key: murder-of-thomas-becket
+    name: Murder of Thomas Becket
+    type: Murder
+    date: 1170-12-29
+    place: canterbury-cathedral
+    prominence: 4
+    note: Four knights hacked the archbishop to death in front of an altar after his long quarrel with Henry II over the Church. Henry later did penance and Becket became a martyr and saint.
+    people:
+      - {person: thomas-becket, role: killed}
+      - {person: henry-ii-of-england, role: king}
+    sources: [wp-henry-ii]
+
+  - key: great-revolt-1173
+    name: The Great Revolt against Henry II
+    type: Rebellion
+    year: 1173
+    end_year: 1174
+    prominence: 3
+    note: Henry's eldest sons, joined by Eleanor, rebelled with French, Scottish and Flemish backing. Eleanor was seized on the road to Chartres and confined for the rest of Henry's life; the revolt ended with the Treaty of Montlouis (30 September 1174).
+    people:
+      - {person: henry-ii-of-england, role: king}
+      - {person: eleanor-of-aquitaine, role: rebel}
+    sources: [wp-henry-ii, wp-eleanor-of-aquitaine]
+
+  # Richard I
+  - key: coronation-of-richard-i-1189
+    name: Coronation of Richard I
+    type: Coronation
+    date: 1189-09-03
+    place: westminster-abbey
+    prominence: 3
+    note: Anti-Jewish violence broke out around the ceremony; Richard had the worst offenders executed.
+    people:
+      - {person: richard-i-of-england, role: crowned}
+    sources: [wp-richard-i]
+
+  - key: capture-of-acre-1191
+    name: Capture of Acre (Third Crusade)
+    type: Siege
+    year: 1191
+    prominence: 3
+    note: Richard landed at Acre on 8 June 1191 and helped take the city. He did not reach Jerusalem.
+    people:
+      - {person: richard-i-of-england, role: crusader}
+    sources: [wp-richard-i]
+
+  - key: richard-i-saladin-settlement-1192
+    name: Settlement between Richard I and Saladin
+    type: Treaty
+    date: 1192-09-02
+    prominence: 3
+    note: Ended the Third Crusade without the recapture of Jerusalem. Richard then had to return home because Philip II and his brother John were plotting against him.
+    people:
+      - {person: richard-i-of-england, role: signatory}
+    sources: [wp-richard-i]
+
+  - key: richard-i-handed-to-the-emperor-1193
+    name: Richard I handed to the Holy Roman Emperor
+    type: Captivity
+    date: 1193-03-28
+    prominence: 3
+    note: Held by Leopold of Austria at Dürnstein, then brought to Speyer and given to Emperor Henry VI, who imprisoned him at Trifels Castle and demanded a ransom of 150,000 marks.
+    people:
+      - {person: richard-i-of-england, role: captive}
+    sources: [wp-richard-i]
+
+  - key: building-of-chateau-gaillard
+    name: Building of Château Gaillard
+    type: Construction
+    year: 1196
+    end_year: 1198
+    place: chateau-gaillard
+    prominence: 2
+    note: Built in about two years at a cost of £15,000 to £20,000, against the terms of the Treaty of Louviers.
+    people:
+      - {person: richard-i-of-england, role: builder}
+    sources: [wp-richard-i]
+
+  - key: death-of-richard-i-1199
+    name: Death of Richard I at Châlus
+    type: Death
+    date: 1199-04-06
+    place: chalus-chabrol-castle
+    prominence: 3
+    note: Shot with a crossbow bolt on 26 March 1199 while besieging the castle; the wound turned gangrenous. His heart was buried at Rouen, his entrails at Châlus and the rest of his body at Fontevraud.
+    people:
+      - {person: richard-i-of-england, role: died}
+    sources: [wp-richard-i]
+
+  # John
+  - key: loss-of-normandy-1204
+    name: Loss of Normandy
+    type: Conquest
+    year: 1204
+    prominence: 4
+    note: Philip II of France took Normandy and most of John's other French lands, ending the Angevin Empire in northern France.
+    people:
+      - {person: john-of-england, role: defeated}
+    sources: [wp-john-of-england]
+
+  - key: magna-carta-1215
+    name: Magna Carta
+    type: Charter
+    date: 1215-06-15
+    place: runnymede
+    prominence: 5
+    note: King John sealed the charter of rights drawn up with Stephen Langton to make peace with the rebel barons; it limited royal power and set up a council of 25 barons. Pope Innocent III annulled it and the First Barons' War followed. Reissued in 1216, 1217, 1225 and 1297.
+    people:
+      - {person: john-of-england, role: sealed}
+    sources: [wp-magna-carta, wp-john-of-england]
+
+  # Edward I
+  - key: coronation-of-edward-i-1274
+    name: Coronation of Edward I
+    type: Coronation
+    date: 1274-08-19
+    place: westminster-abbey
+    prominence: 3
+    note: Edward was away on crusade when his father died and was proclaimed king in 1272. After the ceremony he took off the crown and vowed not to wear it again until he had recovered the crown lands.
+    people:
+      - {person: edward-i-of-england, role: crowned}
+    sources: [wp-edward-i]
+
+  - key: death-of-llywelyn-ap-gruffudd-1282
+    name: Death of Llywelyn ap Gruffudd at Orewin Bridge
+    type: Battle
+    date: 1282-12-11
+    prominence: 3
+    note: The Welsh prince was lured into a trap and killed, which led to Edward's conquest of Gwynedd. The Statute of Rhuddlan (1284) then brought Wales under English administration.
+    people:
+      - {person: edward-i-of-england, role: victor}
+    sources: [wp-edward-i]
+
+  - key: edict-of-expulsion-1290
+    name: Edict of Expulsion of the Jews from England
+    type: Edict
+    year: 1290
+    prominence: 3
+    note: Edward I formally expelled all Jews from England; many were dispossessed or died in storms crossing the Channel.
+    people:
+      - {person: edward-i-of-england, role: issued}
+    sources: [wp-edward-i]
+
+  - key: battle-of-falkirk-1298
+    name: Battle of Falkirk
+    type: Battle
+    date: 1298-07-22
+    prominence: 3
+    note: Edward I defeated William Wallace's forces, the only major battle he fought after Evesham in 1265.
+    people:
+      - {person: edward-i-of-england, role: victor}
+    sources: [wp-edward-i]
+
+  # Edward II
+  - key: coronation-of-edward-ii-1308
+    name: Coronation of Edward II
+    type: Coronation
+    date: 1308-02-25
+    place: westminster-abbey
+    prominence: 2
+    note: Edward swore to uphold "the rightful laws and customs which the community of the realm shall have chosen", a promise later argued over.
+    people:
+      - {person: edward-ii-of-england, role: crowned}
+    sources: [wp-edward-ii]
+
+  - key: execution-of-piers-gaveston-1312
+    name: Execution of Piers Gaveston
+    type: Execution
+    date: 1312-06-19
+    prominence: 2
+    note: Edward II's favourite was seized by the Earl of Warwick, tried by the baronial faction under the Earl of Lancaster and beheaded on Blacklow Hill.
+    people:
+      - {person: edward-ii-of-england, role: king}
+    sources: [wp-edward-ii]
+
+  - key: battle-of-bannockburn-1314
+    name: Battle of Bannockburn
+    type: Battle
+    date: 1314-06-24
+    place: bannockburn-battlefield
+    prominence: 4
+    note: Robert the Bruce's spearmen crushed Edward II's cavalry-led army; fighting began on 23 June and the main battle was on 24 June. Stirling Castle soon fell.
+    people:
+      - {person: edward-ii-of-england, role: defeated}
+    sources: [wp-edward-ii]
+
+  - key: deposition-of-edward-ii-1327
+    name: Deposition of Edward II
+    type: Deposition
+    date: 1327-01-21
+    place: kenilworth-castle
+    prominence: 4
+    note: On 20 January a delegation told Edward at Kenilworth he must resign in favour of his son; on 21 January Sir William Trussell withdrew the kingdom's homage. Isabella and Roger Mortimer then ruled in the name of Edward III.
+    people:
+      - {person: edward-ii-of-england, role: deposed}
+      - {person: edward-iii-of-england, role: successor}
+    sources: [wp-edward-ii]
+
+  - key: death-of-edward-ii-1327
+    name: Death of Edward II at Berkeley Castle
+    type: Death
+    date: 1327-09-21
+    place: berkeley-castle
+    prominence: 3
+    note: Most historians accept that he died there on this date and was probably murdered on the new regime's orders, though this cannot be proved.
+    people:
+      - {person: edward-ii-of-england, role: died}
+    sources: [wp-edward-ii]
+
+  # Edward III
+  - key: coronation-of-edward-iii-1327
+    name: Coronation of Edward III
+    type: Coronation
+    date: 1327-02-01
+    place: westminster-abbey
+    prominence: 2
+    note: Crowned at fourteen after his father's deposition.
+    people:
+      - {person: edward-iii-of-england, role: crowned}
+    sources: [wp-edward-ii, wp-edward-iii]
+
+  - key: edward-iii-overthrows-mortimer-1330
+    name: Edward III seizes power from Roger Mortimer
+    type: Coup
+    date: 1330-10-19
+    place: nottingham-castle
+    prominence: 3
+    note: At seventeen Edward took Mortimer by surprise at Nottingham Castle; Mortimer was executed and Edward began his personal rule.
+    people:
+      - {person: edward-iii-of-england, role: victor}
+    sources: [wp-edward-iii]
+
+  - key: battle-of-sluys-1340
+    name: Battle of Sluys
+    type: Battle
+    date: 1340-06-24
+    prominence: 3
+    note: English naval victory that destroyed a larger French fleet and secured the Channel.
+    people:
+      - {person: edward-iii-of-england, role: victor}
+    sources: [wp-edward-iii]
+
+  - key: battle-of-crecy-1346
+    name: Battle of Crécy
+    type: Battle
+    date: 1346-08-26
+    place: crecy-battlefield
+    prominence: 4
+    note: Edward III's army defeated a much larger army led by Philip VI of France.
+    people:
+      - {person: edward-iii-of-england, role: victor}
+    sources: [wp-edward-iii]
+
+  - key: siege-of-calais-1346
+    name: Siege of Calais
+    type: Siege
+    date: 1346-09-04
+    end_year: 1347
+    prominence: 3
+    note: The greatest English venture of the Hundred Years' War, with an army of 32,000. The town surrendered on 3 August 1347.
+    people:
+      - {person: edward-iii-of-england, role: besieger}
+    sources: [wp-edward-iii]
+
+  - key: black-death-in-england-1348
+    name: Black Death reaches England
+    type: Epidemic
+    year: 1348
+    prominence: 4
+    note: Struck England with full force and killed a third or more of the population; the labour shortage led to the Statute of Labourers (1351).
+    people:
+      - {person: edward-iii-of-england, role: king}
+    sources: [wp-edward-iii]
+
+  - key: founding-of-the-order-of-the-garter
+    name: Founding of the Order of the Garter
+    type: Founding
+    year: 1348
+    estimated: true
+    prominence: 2
+    note: Edward III founded the order probably in 1348, after giving up his Round Table project. The motto is honi soit qui mal y pense.
+    people:
+      - {person: edward-iii-of-england, role: founder}
+    sources: [wp-edward-iii]
+
+  - key: battle-of-poitiers-1356
+    name: Battle of Poitiers
+    type: Battle
+    year: 1356
+    prominence: 4
+    note: The Black Prince's greatly outnumbered army routed the French and captured King John II and his youngest son.
+    people:
+      - {person: edward-the-black-prince, role: victor}
+      - {person: edward-iii-of-england, role: king}
+    sources: [wp-edward-iii]
+
+  - key: treaty-of-bretigny-1360
+    name: Treaty of Brétigny
+    type: Treaty
+    year: 1360
+    prominence: 3
+    note: Edward III renounced his claim to the French throne in return for his French possessions in full sovereignty.
+    people:
+      - {person: edward-iii-of-england, role: signatory}
+    sources: [wp-edward-iii]
+
+  # Richard II
+  - key: coronation-of-richard-ii-1377
+    name: Coronation of Richard II
+    type: Coronation
+    date: 1377-07-16
+    place: westminster-abbey
+    prominence: 2
+    people:
+      - {person: richard-ii-of-england, role: crowned}
+    sources: [wp-richard-ii]
+
+  - key: peasants-revolt-1381
+    name: Peasants' Revolt
+    type: Rebellion
+    year: 1381
+    place: tower-of-london
+    prominence: 4
+    note: Sparked by the poll tax. The fourteen-year-old king met the rebels at Mile End on 14 June and at Smithfield on 15 June, where Wat Tyler was killed. The last rebels were beaten at Billericay on 28 June.
+    people:
+      - {person: richard-ii-of-england, role: king}
+    sources: [wp-richard-ii]
+
+  - key: deposition-of-richard-ii-1399
+    name: Deposition of Richard II
+    type: Deposition
+    date: 1399-09-30
+    place: westminster-hall
+    prominence: 4
+    note: Richard's abdication was read to lords and commons on 30 September; he was formally deposed on 1 October. Henry Bolingbroke became king.
+    people:
+      - {person: richard-ii-of-england, role: deposed}
+      - {person: henry-iv-of-england, role: successor}
+    sources: [wp-richard-ii]
+
+  # Henry IV
+  - key: coronation-of-henry-iv-1399
+    name: Coronation of Henry IV
+    type: Coronation
+    date: 1399-10-13
+    place: westminster-abbey
+    prominence: 3
+    note: Possibly the first coronation address in English since the Conquest, and the first king anointed with the Virgin Mary's oil.
+    people:
+      - {person: henry-iv-of-england, role: crowned}
+    sources: [wp-henry-iv, wp-richard-ii]
+
+  - key: battle-of-shrewsbury-1403
+    name: Battle of Shrewsbury
+    type: Battle
+    year: 1403
+    prominence: 3
+    note: Royalist victory over the Percy rebellion; Henry "Hotspur" Percy was killed and the future Henry V was wounded in the face by an arrow.
+    people:
+      - {person: henry-iv-of-england, role: victor}
+      - {person: henry-v-of-england, role: wounded}
+    sources: [wp-henry-iv, wp-henry-v]
+
+  # Henry V
+  - key: coronation-of-henry-v-1413
+    name: Coronation of Henry V
+    type: Coronation
+    date: 1413-04-09
+    place: westminster-abbey
+    prominence: 2
+    people:
+      - {person: henry-v-of-england, role: crowned}
+    sources: [wp-henry-v]
+
+  - key: battle-of-agincourt-1415
+    name: Battle of Agincourt
+    type: Battle
+    date: 1415-10-25
+    place: agincourt-battlefield
+    prominence: 4
+    note: Henry V's exhausted and outnumbered army, with archers on the flanks and French men-at-arms bogged in mud, won a decisive victory after capturing Harfleur on 22 September.
+    people:
+      - {person: henry-v-of-england, role: victor}
+    sources: [wp-henry-v]
+
+  - key: treaty-of-troyes-1420
+    name: Treaty of Troyes
+    type: Treaty
+    date: 1420-05-21
+    prominence: 4
+    note: Recognised Henry V as heir and regent of France and gave him Catherine of Valois in marriage (wedding 2 June 1420). Never accepted south of the Loire.
+    people:
+      - {person: henry-v-of-england, role: signatory}
+    sources: [wp-henry-v]
+
+  # Henry VI
+  - key: coronation-of-henry-vi-1429
+    name: Coronation of Henry VI
+    type: Coronation
+    date: 1429-11-06
+    place: westminster-abbey
+    prominence: 2
+    people:
+      - {person: henry-vi-of-england, role: crowned}
+    sources: [wp-henry-vi]
+
+  - key: coronation-of-henry-vi-as-king-of-france-1431
+    name: Henry VI crowned King of France
+    type: Coronation
+    date: 1431-12-16
+    prominence: 3
+    note: At Notre-Dame de Paris. He is the only English king crowned in both England and France.
+    people:
+      - {person: henry-vi-of-england, role: crowned}
+    sources: [wp-henry-vi]
+
+  - key: battle-of-castillon-1453
+    name: Battle of Castillon
+    type: Battle
+    year: 1453
+    prominence: 4
+    note: The decisive defeat that ended English authority in France (August 1453). Henry VI suffered a mental breakdown soon afterwards.
+    people:
+      - {person: henry-vi-of-england, role: defeated}
+    sources: [wp-henry-vi]
+
+  - key: battle-of-northampton-1460
+    name: Battle of Northampton
+    type: Battle
+    date: 1460-07-10
+    prominence: 2
+    note: Yorkist victory in which Henry VI was captured.
+    people:
+      - {person: henry-vi-of-england, role: captured}
+    sources: [wp-henry-vi]
+
+  - key: readeption-of-henry-vi-1470
+    name: Readeption of Henry VI
+    type: Restoration
+    date: 1470-10-03
+    prominence: 3
+    note: The Earl of Warwick drove Edward IV into exile and restored Henry, but ruled in his name. It lasted less than six months and ended at Barnet and Tewkesbury in 1471.
+    people:
+      - {person: henry-vi-of-england, role: restored}
+    sources: [wp-henry-vi]
+
+titles:
+  - {person: henry-ii-of-england,  title: King of England, realm: England, from: 1154-10-25, to: 1189-07-06, sources: [wp-henry-ii]}
+  - {person: henry-ii-of-england,  title: Duke of Normandy, realm: Normandy, from: 1150, to: 1189-07-06, note: "Made duke by his father in 1150", sources: [wp-henry-ii]}
+  - {person: eleanor-of-aquitaine, title: Duchess of Aquitaine, realm: Aquitaine, from: 1137, to: 1204, note: "Ruled jointly with her husbands and with her sons Richard I and John", sources: [wp-eleanor-of-aquitaine]}
+  - {person: richard-i-of-england, title: King of England, realm: England, from: 1189-07-06, to: 1199-04-06, sources: [wp-richard-i]}
+  - {person: richard-i-of-england, title: Duke of Normandy, realm: Normandy, from: 1189-07-20, to: 1199-04-06, note: "Formally invested 20 July 1189", sources: [wp-richard-i]}
+  - {person: richard-i-of-england, title: Duke of Aquitaine, realm: Aquitaine, from: 1172, to: 1199-04-06, note: "Formally recognised in June 1172 at Poitiers; the Henry II article dates his recognition to 1179", sources: [wp-richard-i, wp-henry-ii]}
+  - {person: john-of-england,      title: King of England, realm: England, from: 1199-04-06, to: 1216-10-19, sources: [wp-john-of-england]}
+  - {person: john-of-england,      title: Duke of Normandy, realm: Normandy, from: 1199, to: 1204, note: "Lost the duchy to Philip II of France", sources: [wp-john-of-england]}
+  - {person: john-of-england,      title: Lord of Ireland, realm: Ireland, from: 1177, to: 1216-10-19, note: "Appointed by Henry II in 1177 and held throughout his reign", sources: [wp-john-of-england]}
+  - {person: edward-i-of-england,  title: King of England, realm: England, from: 1272-11-16, to: 1307-07-07, note: "Proclaimed king on his father's death while abroad; crowned in 1274", sources: [wp-edward-i]}
+  - {person: edward-i-of-england,  title: Duke of Aquitaine, realm: Aquitaine, from: 1254, to: 1306, note: "Ruled Gascony as a vassal of the French king", sources: [wp-edward-i]}
+  - {person: edward-ii-of-england, title: King of England, realm: England, from: 1307-07-07, to: 1327-01-21, note: "Proclaimed king 20 July 1307; his reign was ended on 21 January 1327", sources: [wp-edward-ii]}
+  - {person: edward-iii-of-england, title: King of England, realm: England, from: 1327-01-21, to: 1377-06-21, sources: [wp-edward-iii, wp-edward-ii]}
+  - {person: richard-ii-of-england, title: King of England, realm: England, from: 1377-06-21, to: 1399-09-30, sources: [wp-richard-ii]}
+  - {person: henry-iv-of-england,  title: King of England, realm: England, from: 1399-09-30, to: 1413-03-20, sources: [wp-henry-iv]}
+  - {person: henry-v-of-england,   title: King of England, realm: England, from: 1413-03-20, to: 1422-08-31, sources: [wp-henry-v]}
+  - {person: henry-vi-of-england,  title: King of England, realm: England, from: 1422-09-01, to: 1461-03-04, note: "First reign; deposed by Edward IV", sources: [wp-henry-vi]}
+  - {person: henry-vi-of-england,  title: King of England, realm: England, from: 1470-10-03, to: 1471-04-11, note: "Restored by the Earl of Warwick; second reign", sources: [wp-henry-vi]}
+
+moments:
+  - {person: henry-ii-of-england,  role: died,   place: chinon-castle, year: 1189}
+  - {person: henry-ii-of-england,  role: buried, place: fontevraud-abbey, year: 1189}
+  - {person: eleanor-of-aquitaine, role: died,   place: fontevraud-abbey, year: 1204}
+  - {person: eleanor-of-aquitaine, role: buried, place: fontevraud-abbey, year: 1204}
+  - {person: richard-i-of-england, role: died,   place: chalus-chabrol-castle, year: 1199}
+  - {person: richard-i-of-england, role: buried, place: fontevraud-abbey, year: 1199}
+  - {person: john-of-england,      role: died,   place: newark-castle, year: 1216}
+  - {person: john-of-england,      role: buried, place: worcester-cathedral, year: 1216}
+  - {person: edward-i-of-england,  role: died,   place: burgh-by-sands, year: 1307}
+  - {person: edward-i-of-england,  role: buried, place: westminster-abbey, year: 1307}
+  - {person: edward-ii-of-england, role: born,   place: caernarfon-castle, year: 1284}
+  - {person: edward-ii-of-england, role: died,   place: berkeley-castle, year: 1327}
+  - {person: edward-ii-of-england, role: buried, place: gloucester-cathedral, year: 1327}
+  - {person: edward-iii-of-england, role: born,  place: windsor-castle, year: 1312}
+  - {person: richard-ii-of-england, role: died,  place: pontefract-castle, year: 1400}
+  - {person: richard-ii-of-england, role: buried, place: westminster-abbey, year: 1413}
+  - {person: henry-iv-of-england,  role: died,   place: westminster-abbey, year: 1413}
+  - {person: henry-iv-of-england,  role: buried, place: canterbury-cathedral, year: 1413}
+  - {person: henry-v-of-england,   role: born,   place: monmouth-castle, year: 1386}
+  - {person: henry-v-of-england,   role: died,   place: chateau-de-vincennes, year: 1422}
+  - {person: henry-v-of-england,   role: buried, place: westminster-abbey, year: 1422}
+  - {person: henry-vi-of-england,  role: born,   place: windsor-castle, year: 1421}
+  - {person: henry-vi-of-england,  role: died,   place: tower-of-london, year: 1471}
+  - {person: henry-vi-of-england,  role: buried, place: st-georges-chapel-windsor, year: 1484}
+  - {person: thomas-becket,        role: died,   place: canterbury-cathedral, year: 1170}
+
+discrepancies:
+  - key: magna-carta-sealing-date
+    question: On what date was Magna Carta sealed at Runnymede?
+    about: [{event: magna-carta-1215}]
+    field: date
+    claims:
+      - {value: "15 June 1215", sources: [wp-magna-carta, wp-john-of-england], note: "Lead of the Magna Carta article and the John article: sealed or met on 15 June"}
+      - {value: "10 June 1215 (meeting began); text agreed 15 June; oaths renewed 19 June", sources: [wp-magna-carta], note: "The body of the Magna Carta article says John met the rebels on 10 June"}
+    note: The record uses 15 June, the date usually given for the sealing.
+
+  - key: eleanor-of-aquitaine-death-date
+    question: Did Eleanor of Aquitaine die on 31 March or 1 April 1204?
+    about: [{person: eleanor-of-aquitaine}]
+    field: died
+    claims:
+      - {value: "1 April 1204", sources: [wp-eleanor-of-aquitaine], note: "Lead of the article"}
+      - {value: "31 March 1204", sources: [wp-eleanor-of-aquitaine], note: "Body: died on either 31 March or 1 April"}
+    note: The record holds the year only.
+
+  - key: eleanor-of-aquitaine-birth-year
+    question: Was Eleanor of Aquitaine born in 1122 or 1124?
+    about: [{person: eleanor-of-aquitaine}]
+    field: born
+    claims:
+      - {value: "1124", sources: [wp-eleanor-of-aquitaine], note: "Now generally accepted; a late 13th-century genealogy gives her age as 13 at her father's death in spring 1137"}
+      - {value: "1122", sources: [wp-eleanor-of-aquitaine], note: "Once the accepted date"}
+    note: The record uses c. 1124.
+
+  - key: john-birth-year
+    question: Was John born in 1166 or 1167?
+    about: [{person: john-of-england}]
+    field: born
+    claims:
+      - {value: "Christmastide 1166", sources: [wp-john-of-england]}
+      - {value: "Christmastide 1167", sources: [wp-john-of-england], note: "The article gives 1166/7 and says the date is debated"}
+    note: The record uses c. 1166.
+
+  - key: edward-i-birth-date
+    question: Was Edward I born on 17 or 18 June 1239?
+    about: [{person: edward-i-of-england}]
+    field: born
+    claims:
+      - {value: "17 June 1239", sources: [wp-edward-i]}
+      - {value: "18 June 1239", sources: [wp-edward-i], note: "He was born in the night of 17-18 June"}
+    note: The record holds the year only.
+
+  - key: richard-i-aquitaine-recognition
+    question: When was Richard recognised as Duke of Aquitaine?
+    about: [{person: richard-i-of-england}]
+    field: date
+    claims:
+      - {value: "June 1172, at Poitiers", sources: [wp-richard-i]}
+      - {value: "1179", sources: [wp-henry-ii], note: "Henry II article: Richard recognised as duke in 1179 after the revolt"}
+    note: The title row starts in 1172.
+
+  - key: death-of-edward-ii
+    question: Did Edward II die at Berkeley Castle on 21 September 1327?
+    about: [{person: edward-ii-of-england}, {event: death-of-edward-ii-1327}]
+    field: died
+    claims:
+      - {value: "Died at Berkeley Castle in the night of 21 September 1327, probably murdered", sources: [wp-edward-ii], note: "View of most historians; the only evidence is a letter later disputed by Thomas de Berkeley in 1330"}
+      - {value: "Escaped and died much later", sources: [wp-edward-ii], note: "A minority view, based on the Fieschi Letter"}
+    note: The record uses 21 September 1327.
+
+  - key: richard-ii-deposition-date
+    question: Was Richard II deposed on 30 September or 1 October 1399?
+    about: [{event: deposition-of-richard-ii-1399}]
+    field: date
+    claims:
+      - {value: "30 September 1399", sources: [wp-richard-ii, wp-henry-iv], note: "Abdication read in Westminster Hall; Henry IV's reign is dated from this day"}
+      - {value: "1 October 1399", sources: [wp-richard-ii], note: "Formal deposition by the thirty-three articles"}
+    note: The record uses 30 September, matching the start of Henry IV's reign.
+
+  - key: henry-vi-death
+    question: Where and how did Henry VI die in 1471?
+    about: [{person: henry-vi-of-england}]
+    field: place
+    claims:
+      - {value: "Died of melancholia", sources: [wp-henry-vi], note: "Historie of the arrivall of Edward IV (pro-Edward chronicle)"}
+      - {value: "Murdered on Edward IV's order", sources: [wp-henry-vi], note: "Widely suspected"}
+      - {value: "Killed by Richard, Duke of Gloucester", sources: [wp-henry-vi], note: "Thomas More's History of Richard III"}
+      - {value: "Died in the Wakefield Tower", sources: [wp-henry-vi], note: "Tradition only, unsupported by evidence; the actual place of death is unknown"}
+    note: The record places his death in the Tower of London (where he was imprisoned) on 21 May 1471, the date in the official records.
