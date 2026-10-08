@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P3] Coverage status on people
+`type: enhancement` · `area: data` · `status: done` · `issue: #64`
+
+People carry `coverage` (not-read, partly, complete) and a `coverage_note` saying what was captured, so artists who need a portfolio pass can be found with a query. Backfilled as partly for the 48 English artists and Hogarth. Done 2026-10-08. When an artist becomes the focus, read their article and list of works, add the artworks, and mark them complete.
+Source: Ty, 2026-10-08.
+
 #### [P2] Artworks as records: maker, sitter, place, event, copies
 `type: enhancement` · `area: data` · `status: done` · `issue: #61`
 

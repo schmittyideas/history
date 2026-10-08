@@ -133,6 +133,20 @@ def test_artworks():
     assert any("unknown artwork `nope`" in e for e in errs) and any("unknown person `ghost`" in e for e in errs)
     assert any("made_end" in e for e in errs) and any("needs a `role`" in e for e in errs)
 
+def test_person_coverage():
+    db = FakeDB(snapshot())
+    docs = [("c.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "people": [
+        {"key": "c1", "name": "C1", "type": "Artist", "coverage": "partly", "coverage_note": "dates only", "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    intake.apply_files(world, docs, log=lambda m: None)
+    r = [x for x in db.t["entities"] if x["key"] == "c1"][0]
+    assert (r["coverage"], r["coverage_note"]) == ("partly", "dates only")
+    bad = [("d.yaml", {"batch": {"title": "t"}, "people": [{"key": "c1", "coverage": "done"}, {"key": "c1", "coverage": "partly"}]})]
+    plan = intake.plan_files(intake.World(db), bad)
+    assert any("coverage must be one of" in e for e in plan.errors) and any("without a `coverage_note`" in w for w in plan.warnings)
+
 def test_place_dates_and_builders():
     db = FakeDB(snapshot())
     docs = [("p.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "places": [
@@ -246,4 +260,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_artworks(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
