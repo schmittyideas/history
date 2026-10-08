@@ -1250,15 +1250,32 @@ function yearMap(a, b, realmsInView) {
           || x.disputed - y.disputed || byYear(x.start_year, y.start_year))[0];
         return { t: best, more: new Set(ts.map(t => t.entity_id)).size - 1 };
       };
+      // Realms the map draws inside a bigger territory (Barcelona inside France, Bohemia inside the Empire)
+      // get a pin at their capital instead, from index.json's points.
+      const withShape = new Set(Object.values(labelFor).flatMap(l => l.realms));
+      const pg = el("g", { class: "hm-points" }, g);
+      const pins = [];
+      Object.entries(idx.points || {}).forEach(([realm, lnglat]) => {
+        if (!realmsInView.includes(realm) || withShape.has(realm)) return;
+        const xy = proj(lnglat);
+        // Area 300 ranks a pin's label with a mid-sized realm's (Croatia, León) when labels compete for room.
+        labelFor["pin:" + realm] = { name: realm, realms: [realm], area: 300, xy, point: true };
+        const c = el("circle", { cx: xy[0], cy: xy[1], class: "hm-pin", tabindex: 0, role: "button", "aria-label": `${realm}: show its rulers` }, pg);
+        el("title", {}, c).textContent = `${realm}. Click for its rulers.`;
+        c.addEventListener("click", () => jumpToRealm(realm));
+        c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jumpToRealm(realm); } });
+        pins.push(c);
+        bx0 = Math.min(bx0, xy[0]); by0 = Math.min(by0, xy[1]); bx1 = Math.max(bx1, xy[0]); by1 = Math.max(by1, xy[1]);
+      });
       const lg = el("g", { class: "hm-labels" }, g);
       const labels = Object.values(labelFor).sort((p, q) => q.area - p.area).map(l => {
-        // Drawn at screen size around (0, 0); placeLabels moves and scales the group.
+        // Drawn at screen size around (0, 0); placeLabels moves and scales the group. A pin's label sits to its right.
         const lab = el("g", {}, lg);
         const ruler = mode === "rulers" ? rulerFor(l.realms) : null;
         if (ruler) {
           const who = S.db.byId[ruler.t.entity_id].name + (ruler.more ? ` +${ruler.more}` : "");
           l.w = 12 + Math.max(who.length * 6.4, l.name.length * 5.2);
-          const x0 = -l.w / 2;
+          const x0 = l.point ? 7 : -l.w / 2;
           el("line", { x1: x0 + 1, y1: -9, x2: x0 + 1, y2: 6, class: "flag-pole" }, lab);
           el("path", { d: `M${x0 + 1},-9 h8 l-2,3 l2,3 h-8 Z`, class: "flag" + (ruler.t.disputed ? " disputed" : "") }, lab);
           el("text", { x: x0 + 12, y: -1, class: "hm-ruler" }, lab).textContent = who;
@@ -1266,7 +1283,7 @@ function yearMap(a, b, realmsInView) {
           l.h0 = 11; l.h1 = 13;
           el("title", {}, lab).textContent = `${l.name}: ${S.db.byId[ruler.t.entity_id].name}, ${ruler.t.title} (${reignSpan(ruler.t)})`;
         } else {
-          el("text", { x: 0, y: 4, "text-anchor": "middle", class: "hm-ruler plain" }, lab).textContent = l.name;
+          el("text", { x: l.point ? 7 : 0, y: 4, "text-anchor": l.point ? "start" : "middle", class: "hm-ruler plain" }, lab).textContent = l.name;
           l.w = l.name.length * 6.2 + 6; l.h0 = 8; l.h1 = 8;
         }
         return { ...l, lab };
@@ -1276,11 +1293,12 @@ function yearMap(a, b, realmsInView) {
       const placeLabels = tr => {
         // r converts screen pixels to map units, so labels stay the same size on a phone as on a desktop.
         const r = W / (svg.getBoundingClientRect().width || W), kept = [];
+        pins.forEach(c => c.setAttribute("r", 4 * r / tr.k));
         labels.forEach(l => {
           l.lab.setAttribute("transform", `translate(${l.xy[0]},${l.xy[1]}) scale(${r / tr.k})`);
           const [sx, sy] = tr.apply(l.xy), w = l.w * r;
-          const box = [sx - w / 2, sy - l.h0 * r, sx + w / 2, sy + l.h1 * r];
-          const ok = l.area * tr.k * tr.k > 60 && !kept.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]);
+          const box = l.point ? [sx, sy - l.h0 * r, sx + (w + 7 * r), sy + l.h1 * r] : [sx - w / 2, sy - l.h0 * r, sx + w / 2, sy + l.h1 * r];
+          const ok = (l.point || l.area * tr.k * tr.k > 60) && !kept.some(o => box[0] < o[2] && box[2] > o[0] && box[1] < o[3] && box[3] > o[1]);
           l.lab.style.display = ok ? "" : "none";
           if (ok) kept.push(box);
         });
@@ -1290,13 +1308,21 @@ function yearMap(a, b, realmsInView) {
         .filter(e => e.type === "wheel" ? (e.ctrlKey || e.metaKey) : !e.button)
         .on("zoom", e => { g.setAttribute("transform", e.transform); placeLabels(e.transform); });
       const sel = d3.select(svg).call(zoom);
-      // Open fitted to the shaded realms (the whole world if none).
+      // Open fitted to the shaded realms and pins (the whole world if none).
+      let home = d3.zoomIdentity;
       if (bx1 > bx0) {
         const k = Math.max(1, Math.min(4, .92 / Math.max((bx1 - bx0) / W, (by1 - by0) / H)));
-        sel.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(k).translate(-(bx0 + bx1) / 2, -(by0 + by1) / 2));
-      } else placeLabels(d3.zoomIdentity);
+        home = d3.zoomIdentity.translate(W / 2, H / 2).scale(k).translate(-(bx0 + bx1) / 2, -(by0 + by1) / 2);
+      }
+      sel.call(zoom.transform, home);
+      // Zoom buttons for those who don't know the Ctrl/⌘ + scroll or pinch gestures.
+      const ease = matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 250;
+      box.append(h("div", { class: "map-zoom" },
+        h("button", { type: "button", "aria-label": "Zoom in", title: "Zoom in", text: "+", onclick: () => sel.transition().duration(ease).call(zoom.scaleBy, 1.8) }),
+        h("button", { type: "button", "aria-label": "Zoom out", title: "Zoom out", text: "−", onclick: () => sel.transition().duration(ease).call(zoom.scaleBy, 1 / 1.8) }),
+        h("button", { type: "button", "aria-label": "Reset the map", title: "Back to the starting view", text: "⟲", onclick: () => sel.transition().duration(ease).call(zoom.transform, home) })));
       credit.innerHTML = "";
-      credit.append(`Borders around ${fmtYear(Y.mapYear)}, approximate. Shaded: realms with a ruler in ${single(a, b)}. Ctrl/⌘ + scroll or pinch to zoom. Map data: `,
+      credit.append(`Borders around ${fmtYear(Y.mapYear)}, approximate. Shaded: realms with a ruler in ${single(a, b)}; dots: realms the map draws inside a larger one, at their capital. Zoom with + and −, Ctrl/⌘ + scroll or a pinch; drag to move. Map data: `,
         h("a", { class: "ext", href: idx.source, text: "historical-basemaps" }), " by André Ourednik, ",
         h("a", { class: "ext", href: "data/maps/LICENSE", text: "GPL-3.0" }), " (",
         h("a", { class: "ext", href: "https://github.com/schmittyideas/history/tree/main/data/maps", text: "our copy of the files" }), ").");
