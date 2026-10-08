@@ -1,0 +1,12 @@
+batch:
+  title: Mary II, birthplace and burial
+  requested: "Fill the gaps in the Stuarts batch, whose download of Mary II's article was rate-limited"
+  date: 2026-10-08
+
+sources:
+  - {key: wp-mary-ii-of-england, title: "Mary II of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_II_of_England"}
+
+moments:
+  - {person: mary-ii-of-england, role: born,   place: st-jamess-palace,   year: 1662, sources: [wp-mary-ii-of-england]}
+  # Died December 1694; the article names no place of death, so none is recorded.
+  - {person: mary-ii-of-england, role: buried, place: westminster-abbey, year: 1695, sources: [wp-mary-ii-of-england]}
