@@ -6,7 +6,7 @@ Decided with Ty on 2026-10-07. A large, verified expansion of the database, run 
 
 Ty has more important work that needs his weekly Claude usage. The cloud credits are spent first; **once they run out, cloud sessions start drawing on Ty's weekly plan, and that must not happen.**
 
-- **Credit balance:** not yet known. Ty saw the expiry but not the amount; ask him for it at the start of the session if it's still unknown. Size the work to about **70% of the credit**, leaving room in case cloud credit isn't charged exactly at API rates.
+- **Credit balance:** $248 at the start of the 2026-10-08 session (Ty reads it from his billing page; Claude cannot see it). Size the work to about 70% of it. Size the work to about **70% of the credit**, leaving room in case cloud credit isn't charged exactly at API rates.
 - **Cost guide** (API rates, Claude Opus 5.5): about $1.50–3.50 per million tokens for this kind of work, most of it re-read context at the cached rate. A verified ruler costs about 8,000–10,000 tokens all in (research, checking, intake, preview, PR). So 100 rulers ≈ 1M tokens ≈ $2–4.
 - **Stop rule:** if you can read plan usage (a usage tool showing weekly %), note the weekly figure before starting. If it rises by more than 2 points, the credit has run out: finish or close any open PR cleanly, write the summary, and stop all work. If you can't read usage at all, stay within the work caps below and stop when they're done.
 - No extra usage: it's off on Ty's account, and it stays off.
@@ -38,6 +38,19 @@ Ty said "do it all". The whole queue is roughly 700 people and ~7M tokens (likel
 ## Calibrate after the first build-out
 
 When #15 is merged: note the tokens used and, if readable, how much the weekly % or credit moved. Work out the cost per person, then check that the next item fits the remaining budget before starting it. Record the figures in the summary.
+
+## Calibration: item 1 (English monarchs), 2026-10-08
+
+- Cost: **about $9** ($248 to $239, read by Ty) for about 64 new people plus their places, events, reigns and discrepancies, in 4 batches and a city back-fill. That is about **$0.14 per person**, all in, roughly five times the original reigns-only estimate, because places and events are now captured too, and because of the setup problems below.
+- Budget after item 1: about $165 of the 70% cap remains. The rest of the queue (~650 people) should cost roughly $90–130 at this rate. Re-check the rate after item 2.
+
+## Lessons from item 1
+
+- **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.
+- **Network access:** the environment must be set to Full (or allow `en.wikipedia.org`) before the session starts, or it needs a new session.
+- **Agents:** each agent reads the brief and its local articles, writes one YAML file, and does not touch the repo. The main session then runs `tools/intake.py plan`, fixes unknown place keys, adds cities, and opens the PR. Define every shared place in exactly one batch and reference it by key elsewhere.
+- **Merging:** the apply workflow queue keeps only one waiting run, so merging a second PR while one is applying and another is waiting cancels the waiting one (its data never lands). Merge one PR at a time and wait for `Intake apply` to finish. If a run is cancelled, re-send the file in a new PR.
+- **Gaps to expect:** facts the articles do not give (a day, a place of death) are left out and noted, not guessed. Coordinates are mostly from general knowledge and approximate.
 
 ## How to run it
 
