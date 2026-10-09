@@ -92,11 +92,11 @@ Source: Ty, 2026-10-07 (option 3 of the flags discussion).
 Rulers and popes left out of item 2 because they were not in the list or had no downloaded article: Romanos III Argyros, John IV Laskaris, Lulach, Ferdinand II of León, Henry I of Castile, Berengaria, the popes of 1003-1032 and a few others, antipopes, HRE antikings, Aragon and Navarre. Full list in the issue.
 Source: Ty, 2026-10-08 (item 2 session).
 
-#### [P2] Build-out: Indian rulers, 1000–1600
-`type: task` · `area: data` · `status: ready` · `issue: #32`
+#### [P3] Fill the gaps left in the Indian rulers batches
+`type: task` · `area: data` · `status: ready` · `issue: #80`
 
-Cholas, Western Chalukyas and Hoysalas, Palas and Senas, the Delhi Sultanate, Vijayanagara, the Bahmanis, Rajput kingdoms, the Mughals to Akbar; Tarain, Panipat, Talikota. Queue item 3 (Ty: India before East Asia).
-Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+Rulers and dates left out of item 3: Sadasiva Raya, the Deccan sultans of Talikota, Vijaya Sena's reign, several placeholder title starts, the Pandyas, Yadavas, Kashmir, the Ahoms, the Malwa, Jaunpur and Bengal sultanates, and the later Mughals. Full list in the issue.
+Source: Ty, 2026-10-09 (item 3 session).
 
 #### [P2] Build-out: East Asian dynasties, 1000–1600
 `type: task` · `area: data` · `status: ready` · `issue: #33`
@@ -136,6 +136,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Build-out: Indian rulers, 1000–1600
+`type: task` · `area: data` · `status: done` · `issue: #32`
+
+68 rulers with 68 title rows, 32 places, 52 events and 44 discrepancies, checked against their English Wikipedia articles, in two batches: South India (36, PR #78: Cholas, Western Chalukyas, Hoysalas, Kakatiyas, Eastern Gangas, Gajapatis, Vijayanagara, Bahmanis, Talikota) and North India (32, PR #79: Palas and Senas, Ghurids, the Chauhans, thirteen sultans of Delhi, Rajput kingdoms, Gujarat, Timur, the Mughals to Akbar, Tarain, Panipat, Khanwa, Haldighati). 17 new realms in South Asia and neighbouring regions; everyone is marked `coverage: partly`. Done 2026-10-09. Left for later: the gaps item above.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
 #### [P2] Timeline: event lines stripe the whole chart
 `type: bug` · `area: site` · `status: done` · `issue: #76`

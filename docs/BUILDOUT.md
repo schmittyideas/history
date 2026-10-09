@@ -58,6 +58,18 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - Agents write the file; the main session runs the preview, fixes warnings (a discrepancy needs two claims), decides judgement calls (here, `disputed` was dropped from the Western Schism popes because the rival line was not entered) and merges one PR at a time, waiting for `Intake apply` each time.
 - New rule mid-run: `coverage` on every person. Backfill with a small update-only intake rather than reopening merged files.
 
+## Calibration: item 3 (Indian rulers), 2026-10-09
+
+- Added **68 people** (South 36, North 32), 68 title rows, 32 places, 52 events, 44 discrepancies and 17 realms, in 2 data PRs (#78, #79), one agent each.
+- Tokens: the two research agents used **about 0.85M** (measured, plus a short resumed run). The main session's share is not measured; roughly 0.2-0.3M. So about **1.1M tokens, or about 16,000 per person**, the same as item 2. Credit used: not readable from here.
+- Batches ran 180-230 preview rows. Still clean.
+
+## Lessons from item 3
+
+- Wikipedia titles for Indian rulers are irregular (Kulothunga_Chola_II, Vishnuvardhana, Vijaya_Sena, Jayasimha_Siddharaja, "Kumarapala_(Chaulukya_dynasty)"). `tools/wiki.py` reports a missing page as FAILED; check the log for failures and wrong articles (a satrap, a disambiguation page) before launching agents, and tell the agent which files to skip.
+- When two batches run in parallel, split places by region in the brief and check for overlapping keys before the previews (there were none).
+- Dates the article does not give (a reign length only) are not turned into years: the person is kept, the title row is left out.
+
 ## Lessons from item 1
 
 - **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.
