@@ -245,3 +245,8 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .event .event-line.reach { display: none; }
 .event:hover .event-line.reach, .event:focus-visible .event-line.reach, .event.sel .event-line.reach { display: inline; }
 .event.sel .event-line { stroke-width: 2; stroke-dasharray: none; }
+
+/* Group buttons under the title: who shows in the timeline and the Year view */
+.cats { margin-top: 4px; }
+.cats .toggle-chip { font-size: 13px; }
+.cats .plink { font-size: 13px; margin-left: 4px; }
