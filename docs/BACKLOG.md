@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Year view: artists, writers and thinkers, with what they did that year
+`type: enhancement` · `area: site` · `status: done` · `issue: #`
+
+A section under Who ruled: everyone of type Artist, Writer, Composer or Scholar alive in the year or span, grouped by type, with their age (single year) or life span and roles, and under each their events, life moments (with place) and artworks in the span. Done 2026-10-09.
+Source: Ty, 2026-10-09 ("add artists and their events to the year").
+
 #### [P2] Build-out: Europe's big thrones, 1000–1500
 `type: task` · `area: data` · `status: done` · `issue: #31`
 
