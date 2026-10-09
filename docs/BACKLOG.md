@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Timeline: event lines stripe the whole chart
+`type: bug` · `area: site` · `status: done` · `issue: #76`
+
+Every event drew a dashed line across the full chart width, labelled or not (82 in 1550 to 1750). Now unlabelled events are markers only, a labelled event draws a short tick to the year rail, and its line out to the people involved appears on hover or selection. Done 2026-10-09.
+Source: Ty, 2026-10-09.
+
 #### [P2] Year view: artists, writers and thinkers, with what they did that year
 `type: enhancement` · `area: site` · `status: done` · `issue: #74`
 

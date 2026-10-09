@@ -491,8 +491,10 @@ function render() {
   }
 
   // Events lane. Prominence is a star rating: 5 = always labelled, then 4, 3, 2, 1 while labels fit
-  // without overlapping (no rating counts as 3). An event left without room keeps its line and gets a
-  // small marker, with its name as a tooltip, and stays clickable.
+  // without overlapping (no rating counts as 3). An event left without room gets only a small marker,
+  // with its name as a tooltip, and stays clickable. A labelled event draws only a short tick to the year
+  // rail (the people in it carry a diamond on their bars); its line out to the rightmost person in view who
+  // took part appears on hover or when selected, so the chart isn't striped by events.
   if (evShown.length) {
     if (Z.names !== "none") el("text", { x: 8, y: TOP - 10, class: "dates" }, svg).textContent = "EVENTS";
     const gapNeeded = Z.names === "full" ? 30 : 16;
@@ -511,8 +513,13 @@ function render() {
       });
     evShown.forEach(e => {
       const yy = y(e.start_year), ly = labelY[e.id];
-      el("line", { x1: LANEW - 6, x2: W - 6, y1: yy, y2: yy, class: "event-line" }, svg);
       const g = el("g", { class: "event", tabindex: 0, role: "button", "aria-label": `${e.name}, ${fmtYear(e.start_year)}` }, svg);
+      if (Z.names !== "none" && ly != null) {
+        // A short tick to the year rail; the line out to the people involved shows on hover or selection.
+        el("line", { x1: LANEW - 6, x2: LEFT - 6, y1: yy, y2: yy, class: "event-line" }, g);
+        const xs = db.peopleInEvent(e.id).map(x => xOf[x.person.id]).filter(v => v != null);
+        if (xs.length) el("line", { x1: LEFT - 6, x2: Math.max(...xs) + Z.bar / 2, y1: yy, y2: yy, class: "event-line reach" }, g);
+      }
       el("title", {}, g).textContent = `${e.name} (${e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year)})`;
       if (Z.names === "none" || ly == null) {
         el("path", { d: `M${LANEW - 18},${yy - 5} l5,5 l-5,5 l-5,-5 Z`, fill: "var(--madder)", class: Z.names === "none" ? null : "event-mark" }, g);
