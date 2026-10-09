@@ -1,0 +1,1302 @@
+batch:
+  title: "North India and the Delhi Sultanate to the Mughals, c.1000-1600"
+  requested: "Rulers of North India (Palas, Senas, Ghurids, Chahamanas, Delhi Sultanate in five dynasties, Timur's sack, Paramaras, Chaulukyas, Mewar, Gujarat Sultanate, Mughals, Sur Empire) with their main battles, places and disagreements between sources"
+  date: 2026-10-09
+
+# Notes for the reviewer (NORTH batch of the India build-out; the SOUTH batch is written separately)
+# - Source: local copies of English Wikipedia articles (scratchpad wp3/). Nothing was fetched. Every article was read in full except Akbar (read lines 1-135 plus the death and consort passages: campaigns, capitals and death only) and Timur (read the lead, the Delhi campaign, the title section and the death; the rest is Middle East and Central Asia).
+# - Vijaya Sena and Kumarapala (Chaulukya) were added from the corrected articles. Vijaya Sena's article gives no reign dates (only 'about 62 years' and 'immediately after the demise of Ramapala'), so he has NO title row; he is a person with a parent link to Ballala Sena. Kumarapala (Chaulukya King, 1143-1172, end of reign estimated) has a title; the article's Vikrama-to-CE conversions are inconsistent (see kumarapala-accession). The Pala king Kumarapala is not entered.
+# - Left out: Aram Shah, Ruknuddin Firuz, Muizuddin Bahram, Qaiqabad, Kayumars, Qutb ud-Din Mubarak Shah, Khusrau Khan, Mubarak Shah and Alam Shah (Sayyids), Islam Shah and Adil Shah Suri, Malik Kafur, Ghiyath al-Din of Ghor, Taj al-Din Yildiz, Qabacha, Bairam Khan, Man Singh I, Udai Singh II, the rulers of Malwa and the Chandelas: no article was supplied. Their names appear only in notes.
+# - Places not in the NORTH list and not defined: Dhar (Bhoja's capital), Champaner and Ahmedabad (Begada), Kalanaur (Akbar's enthronement), Kabul and Samarkand (Babur's and Timur's burials), Kalinjar (Sher Shah's death), Sasaram, Ranthambore, Gwalior, Kalpi, Kumbhalgarh, Gogunda and Chavand (Mewar), Dhamiak, Amarkot, Kara-Manikpur and Thatta. Events and moments that need them carry no place. Two places outside the list ARE defined because the brief names the events: qutb-minar (Aibak's tower, and the burial place of Iltutmish and Alauddin) and daulatabad (Muhammad bin Tughluq's capital move of 1327). If the SOUTH batch also sends daulatabad, keep one; the keys are the same.
+# - Left out as minor or undated: Ramapala's Varendra campaign and the move to Ramavati (no dates); Bakhtiyar Khalji's capture of Nadia (the Lakshmana Sena article gives no year); Rana Kumbha's battles (Sarangpur, Nagore, Mandalgarh: no dates in the article); Bayana (Feb 1527), Chanderi (1528) and Ghaghra (1529); Akbar's Gujarat, Bengal and Deccan campaigns; Bhoja's wars (only c. dates, none dated to a year); Mahmud Begada's Junagadh, Dwarka and Kutch campaigns. Only the Pavagadh/Champaner conquest (21 Nov 1484) is entered for Begada.
+# - Titles: one wording per realm as the brief fixes it. Notes say where the articles use another form (Khalji sultans, Mewar's 'Maharana'). Timur's 'Amir' is from the article's Legitimization section (he used Amir, not Khan); his start is 'around 1370' so from_estimated. Hemu's 'Hindu Emperor' title row follows the brief; the Hemu and Akbar articles say he 'claimed royal status' as Vikramaditya, and historians disagree whether it was an independent kingship (Satish Chandra doubts it), so it is marked disputed: true and given the realm 'Delhi Sultanate' as instructed. Khizr Khan took no royal title (he used Rayat-i-Ala) but the article calls him sultan of Delhi 1414-1421, so he has the common title with a note.
+# - Prominence 5: Second Tarain, the founding of the Delhi Sultanate, First Panipat, and the persons Alauddin Khalji, Babur and Akbar (as the brief says). Khanwa, Second Panipat and Haldighati are 4.
+# - Dates: where an article gives only a month the year is used and the note says so (Chausa June 1539, Jalal-ud-din's accession June 1290, Razia's accession November 1236, Ranthambore July 1301, Mongol siege August 1303). Dates are as the articles print them (Julian before 1582, so Babur's death is 26 December 1530 in the lead; see the discrepancy).
+# - Coordinates are from general knowledge (2-3 decimals); the Khanwa and Haldighati battlefield points and Tarain are approximate. 'visitable' and 'visit_site' are general knowledge, not from the articles.
+# - Iltutmish: the lead gives 1192 as his birth year, but the text says he was a boy sold as a slave and bought by Aibak after 1197. These cannot both hold, so no birth year is entered (see iltutmish-birth). Likewise Ghiyath al-Din Tughluq, Bahlul Lodi, Ballala Sena, Lakshmana Sena, Vijaya Sena and Kumarapala have no birth year in their articles; Mahmud Begada has only an age at accession (about 13-14) so none is entered; Timur is '1320s' (see timur-dates), so none is entered.
+# - Prithviraj Chauhan is entered as prithviraj-iii-chauhan, Ghiyath al-Din Balban as ghiyas-ud-din-balban (article title 'Balban'), Razia as razia-sultana (article title 'Razia Sultan'), Bhoja as bhoja-of-malwa (the Paramara king, r. c. 1010-1055).
+# - Existing records are not touched. mahmud-of-ghazni, mahipala-i, rajaraja-i and satyashraya are not referenced: none of these articles gives a new fact about them that is dated. Mahmud's sack of Somnath is a Ghaznavid record and is not entered; Alauddin's 1299 raid on Gujarat (which also hit Somnath) is a separate event here.
+# - Doubts: (1) the Delhi Sultanate title for Aibak starts on 25 June 1206 in Lahore (informal accession; formal recognition 1208-09 by Ghiyas al-Din Mahmud); (2) Jalal-ud-din's start is year only; (3) Ibrahim Lodi's start is 'late 1517' so year only; (4) Hemu's Delhi occupation is dated 7 Oct 1556 (the Hemu and Second Panipat articles agree) but the coronation is 6 Oct in Second Panipat; (5) Muhammad of Ghor has one title row from 1173, though 1173-1203 was a dyarchy with his brother Ghiyath al-Din (who is not entered); (6) Ramapala and the Senas have reigns only: the articles give no birth or death dates (Ramapala's death is dated only by the end of his reign).
+# - Discrepancies recorded below: Prithviraj's death; capture of Delhi (1192 or 1193); when the Delhi Sultanate began; Muhammad of Ghor's killers; Iltutmish's birth; Razia's death; Balban's accession; Jalal-ud-din's death day; Alauddin's early raids (Bhilsa, Devagiri); Ghiyath Tughluq's death; Muhammad bin Tughluq's place of death; start of the Sayyid dynasty; Ibrahim Lodi's death day; Timur's dates; Sanga's death; Babur's death; Humayun's death; Hemu's coronation day; Akbar's death; Sher Shah's birth; Bhoja's reign start; Jayasimha's birth and coronation; Haldighati's result.
+# - Size: 32 people, 33 title rows, 16 places, 35 events (116 records), 8 links, 29 moments, 11 new realms, 24 discrepancies, 39 sources.
+
+sources:
+  - {key: wp-ramapala,                   title: "Ramapala (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Ramapala"}
+  - {key: wp-vijaya-sena,                title: "Vijaya Sena (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Vijaya_Sena"}
+  - {key: wp-ballala-sena,               title: "Ballala Sena (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Ball%C4%81la_Sena"}
+  - {key: wp-lakshmana-sena,             title: "Lakshmana Sena (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Lakshmana_Sena"}
+  - {key: wp-muhammad-of-ghor,           title: "Muhammad of Ghor (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Muhammad_of_Ghor"}
+  - {key: wp-prithviraj-iii-chauhan,     title: "Prithviraj Chauhan (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Prithviraj_Chauhan"}
+  - {key: wp-qutb-ud-din-aibak,          title: "Qutb ud-Din Aibak (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Qutb_ud-Din_Aibak"}
+  - {key: wp-iltutmish,                  title: "Iltutmish (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Iltutmish"}
+  - {key: wp-razia-sultana,              title: "Razia Sultan (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Razia_Sultan"}
+  - {key: wp-ghiyas-ud-din-balban,       title: "Balban (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Balban"}
+  - {key: wp-jalal-ud-din-khalji,        title: "Jalal-ud-Din Khalji (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Jalal-ud-Din_Khalji"}
+  - {key: wp-alauddin-khalji,            title: "Alauddin Khalji (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Alauddin_Khalji"}
+  - {key: wp-ghiyath-al-din-tughluq,     title: "Ghiyath al-Din Tughluq (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Ghiyath_al-Din_Tughluq"}
+  - {key: wp-muhammad-bin-tughluq,       title: "Muhammad bin Tughluq (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Muhammad_bin_Tughluq"}
+  - {key: wp-firuz-shah-tughlaq,         title: "Firuz Shah Tughlaq (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Firuz_Shah_Tughlaq"}
+  - {key: wp-khizr-khan,                 title: "Khizr Khan (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Khizr_Khan"}
+  - {key: wp-bahlul-lodi,                title: "Bahlul Khan Lodi (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Bahlul_Khan_Lodi"}
+  - {key: wp-sikandar-lodi,              title: "Sikandar Khan Lodi (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Sikandar_Khan_Lodi"}
+  - {key: wp-ibrahim-lodi,               title: "Ibrahim Khan Lodi (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Ibrahim_Khan_Lodi"}
+  - {key: wp-timur,                      title: "Timur (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Timur"}
+  - {key: wp-bhoja-of-malwa,             title: "Bhoja (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Bhoja"}
+  - {key: wp-jayasimha-siddharaja,       title: "Jayasimha Siddharaja (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Jayasimha_Siddharaja"}
+  - {key: wp-kumarapala,                 title: "Kumarapala (Chaulukya dynasty) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kumarapala_%28Chaulukya_dynasty%29"}
+  - {key: wp-rana-kumbha,                title: "Rana Kumbha (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Rana_Kumbha"}
+  - {key: wp-rana-sanga,                 title: "Rana Sanga (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Rana_Sanga"}
+  - {key: wp-maharana-pratap,            title: "Maharana Pratap (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Maharana_Pratap"}
+  - {key: wp-mahmud-begada,              title: "Mahmud Begada (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Mahmud_Begada"}
+  - {key: wp-babur,                      title: "Babur (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Babur"}
+  - {key: wp-humayun,                    title: "Humayun (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Humayun"}
+  - {key: wp-sher-shah-suri,             title: "Sher Shah Suri (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Sher_Shah_Suri"}
+  - {key: wp-akbar,                      title: "Akbar (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Akbar"}
+  - {key: wp-hemu,                       title: "Hemu (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Hemu"}
+  - {key: wp-delhi-sultanate,            title: "Delhi Sultanate (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Delhi_Sultanate"}
+  - {key: wp-first-battle-of-tarain,     title: "First Battle of Tarain (Wikipedia)",    url: "https://en.wikipedia.org/wiki/First_Battle_of_Tarain"}
+  - {key: wp-second-battle-of-tarain,    title: "Second Battle of Tarain (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Second_Battle_of_Tarain"}
+  - {key: wp-first-battle-of-panipat,    title: "First Battle of Panipat (Wikipedia)",   url: "https://en.wikipedia.org/wiki/First_Battle_of_Panipat"}
+  - {key: wp-second-battle-of-panipat,   title: "Second Battle of Panipat (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Second_Battle_of_Panipat"}
+  - {key: wp-battle-of-khanwa,           title: "Battle of Khanwa (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Battle_of_Khanwa"}
+  - {key: wp-battle-of-haldighati,       title: "Battle of Haldighati (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Battle_of_Haldighati"}
+
+realms:
+  - {name: Sena dynasty,        region: South Asia,  country: India,       note: "Bengal; the Sena kings held West Bengal, Bangladesh and parts of Bihar (Mithila). Country given as India for the capital Lakhnauti region."}
+  - {name: Ghurid Sultanate,    region: Central Asia, country: Afghanistan}
+  - {name: Chahamana dynasty,   region: South Asia,  country: India,       note: "Chauhans of Ajmer (Sapadalaksha)."}
+  - {name: Delhi Sultanate,     region: South Asia,  country: India}
+  - {name: Timurid Empire,      region: Central Asia, country: Uzbekistan}
+  - {name: Paramara dynasty,    region: South Asia,  country: India,       note: "Malwa, capital Dhara (modern Dhar)."}
+  - {name: Chaulukya dynasty,   region: South Asia,  country: India,       note: "Solankis of Gujarat, capital Anahilapataka (Patan)."}
+  - {name: Mewar,               region: South Asia,  country: India,       note: "Sisodia kingdom in Rajasthan, capital Chittorgarh."}
+  - {name: Gujarat Sultanate,   region: South Asia,  country: India}
+  - {name: Mughal Empire,       region: South Asia,  country: India}
+  - {name: Sur Empire,          region: South Asia,  country: India}
+
+people:
+  # Pala and Sena (Bengal)
+  - key: ramapala
+    name: Ramapala
+    type: Royalty
+    house: Pala
+    realm: Pala Empire
+    died: 1130
+    died_estimated: true
+    prominence: 3
+    note: "Pala king of Bengal, r. 1077-1130, the 15th of the line and 'last great ruler' of the dynasty. Youngest son of Vigrahapala III; recovered Varendra from the Kaivarta rebel Bhima (executed), made Ramavati his capital, brought Kamarupa and Rarh under his control, but lost Mithila to Nanyadeva. According to Bengali legend he ended his life by walking into the Ganges near Mungyr after hearing of his uncle Mahana's death. Sandhyakar Nandi's Ramacharitam was written at his court. Succeeded by his son Kumarapala (the Pala king, not entered). The death year is the end of the reign; the article gives no death date."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ramapala]
+  - key: vijaya-sena
+    name: Vijaya Sena
+    type: Royalty
+    house: Sena
+    realm: Sena dynasty
+    prominence: 3
+    note: "Son of Hemanta Sena and second ruler of the Sena dynasty, with capitals at Vijayapuri and Bikrampur. Began as a Pala subordinate in Rarh (possibly the Vijayraj of Nidravali who helped Ramapala), became independent in Rarh and took Bengal after Ramapala's death, ousting the last Pala, Madanapala, after 1152-53 and the Varmans of south-eastern Bengal. The Deopara Prashasti records his victories over Nanya, Vir, Raghav and Vardhan and the temple of Pradyumneshvar. Queen Vilasdevi of the Sur family. Reign 'about 62 years'; the article gives no dates. Father of Ballala Sena."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-vijaya-sena]
+  - key: ballala-sena
+    name: Ballala Sena
+    type: Royalty
+    house: Sena
+    realm: Sena dynasty
+    prominence: 2
+    note: "Second ruler of the Sena dynasty of Bengal, r. 1160-1178, son and successor of Vijaya Sena. Ended the Pala Empire by defeating Govinda Pala; married the Western Chalukya princess Ramadevi; wrote Danasagara (1168) and began Adbhutasagara (1169). Credited with the Kulin system of Bengali Brahmins and Kayasthas (the article says it has no historical authenticity). Claims that he proclaimed himself emperor at Delhi are exaggerated. No birth or death dates in the article."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ballala-sena]
+  - key: lakshmana-sena
+    name: Lakshmana Sena
+    type: Royalty
+    house: Sena
+    realm: Sena dynasty
+    prominence: 2
+    note: "Sena king of Bengal, r. 1178-1206, whose empire at its height held Gauda, Kamrupa, Kalinga, Magadha and Kashi. A Vaishnava and patron of poets (Jayadeva, Dhoyin, Sharan); completed his father's Adbhuta Sagara, founded the Lakshmana Era and the city of Lakhnauti. Bakhtiyar Khalji took Nadia and then Lakhnauti when Lakshmana Sena was an octogenarian (the article gives no year); he withdrew to south-eastern Bengal, where his sons continued Sena rule."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-lakshmana-sena]
+
+  # Ghurids and Chahamanas
+  - key: kumarapala
+    name: Kumarapala
+    type: Royalty
+    house: Chaulukya
+    realm: Chaulukya dynasty
+    died: 1172
+    died_estimated: true
+    prominence: 3
+    note: "Chaulukya (Solanki) king of Gujarat, r. 1143-1172, ruling from Anahilapataka (Patan); a descendant of Bhima I and the successor of his relative Jayasimha Siddharaja, who in the Jain texts persecuted him. Defeated the Chahamana king Arnoraja, the Abu Paramara Vikramasimha and the Shilahara Mallikarjuna, and annexed Malwa by defeating the usurper Ballala. His empire ran from Chittor and Jaisalmer to the Tapti; he rebuilt the Somnath temple site. Jain texts make him a disciple of Hemachandra, his inscriptions invoke only Shiva. Cremated, ashes immersed at Prayag. The death year is the end of the reign."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-kumarapala]
+  - key: muhammad-of-ghor
+    name: Muhammad of Ghor
+    type: Royalty
+    house: Ghurid
+    realm: Ghurid Sultanate
+    born: 1144
+    born_estimated: true
+    died: 1206-03-15
+    prominence: 4
+    note: "Mu'izz al-Din Muhammad ibn Sam, Ghurid ruler 1173-1206. Ruled with his elder brother Ghiyath al-Din Muhammad until 1203, taking Ghazni in 1169 and Multan (1175) and ending the Ghaznavids at Lahore (1186). Routed near Mount Abu (1178), beaten by Prithviraj at the First Battle of Tarain (1191) but won the Second Battle (1192), after which his slave-generals, above all Aibak, took North India. Defeated by the Khwarazmians and Qara Khitai at Andkhud (1204). Assassinated at Dhamiak on the Indus on 15 March 1206; buried at Ghazni. His only child, a daughter, died before him."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-muhammad-of-ghor]
+  - key: prithviraj-iii-chauhan
+    name: Prithviraj III Chauhan
+    type: Royalty
+    house: Chahamana
+    realm: Chahamana dynasty
+    born: 1166
+    born_estimated: true
+    died: 1192
+    prominence: 4
+    note: "Prithviraja III, 'Rai Pithora', Chahamana king of Sapadalaksha with his capital at Ajmer; came to the throne at about 11 in 1177 under his mother's regency. Beat Muhammad of Ghor at the First Battle of Tarain (1191) but was defeated, captured and put to death after the Second (1192). Remembered in the Prithviraj Raso; the article calls the label 'last Hindu emperor' inaccurate. His son Govindaraja IV was set up as a Ghurid vassal."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-prithviraj-iii-chauhan]
+
+  # Delhi Sultanate: Mamluk
+  - key: qutb-ud-din-aibak
+    name: Qutb ud-Din Aibak
+    type: Royalty
+    house: Mamluk
+    realm: Delhi Sultanate
+    born: 1150
+    born_estimated: true
+    died: 1210-11-04
+    prominence: 4
+    note: "Turkic slave-general of Muhammad of Ghor, put in charge of the Ghurid conquests in India after Tarain (1192). Took Delhi (1192-93), Kannauj (1198-99) and sacked Anhilwara (1197). After Muhammad's assassination in 1206 he ruled from Lahore, the first Sultan of Delhi; died after a fall while playing chaugan (polo) at Lahore. Began the Qutb Minar and the Quwwat-ul-Islam mosque in Delhi and the Adhai Din Ka Jhonpra in Ajmer. Called Lakh-bakhsh, 'giver of lakhs'. Father-in-law of Iltutmish."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-qutb-ud-din-aibak, wp-delhi-sultanate]
+  - key: iltutmish
+    name: Iltutmish
+    type: Royalty
+    house: Mamluk
+    realm: Delhi Sultanate
+    died: 1236-04-30
+    prominence: 4
+    note: "Shams ud-Din Iltutmish, a slave bought by Aibak about 1197, third Sultan of Delhi (1211-1236) and the first to rule from Delhi. Beat Yildiz at Tarain (1216), took Lahore, Ranthambore (1226), Gwalior (1232) and Qabacha's Uch (1228), and was recognised by the Abbasid Caliph in 1229. Introduced the silver tanka and copper jital and the iqta system; completed the Qutb Minar and built the Hauz-i-Shamsi. Buried in the Qutb complex, Mehrauli. His birth year is not entered (see iltutmish-birth)."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-iltutmish, wp-delhi-sultanate]
+  - key: razia-sultana
+    name: Razia Sultana
+    type: Royalty
+    house: Mamluk
+    realm: Delhi Sultanate
+    born: 1205
+    born_estimated: true
+    died: 1240-10-15
+    prominence: 4
+    note: "Raziyyat-ud-Dunya wa-ud-Din, daughter of Iltutmish, the first and only woman to rule Delhi. Seized the throne in 1236 with the support of the people of Delhi after her half-brother Ruknuddin Firuz was overthrown; resisted rebel governors; appointed non-Turkic officers (among them the Abyssinian Yaqut), which turned the Turkic nobles against her. Deposed at Tabarhinda in April 1240, married Altunia, and was killed in October 1240 after defeat by Muizuddin Bahram. The word 'Sultana' used by some writers is a misnomer; her coins call her Sultan."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-razia-sultana, wp-iltutmish]
+  - key: ghiyas-ud-din-balban
+    name: Ghiyas ud-Din Balban
+    type: Royalty
+    house: Mamluk
+    realm: Delhi Sultanate
+    born: 1216
+    died: 1287-01-13
+    prominence: 3
+    note: "Ilbari Turk, one of Iltutmish's 'forty' slaves; vizier and regent of Nasiruddin Mahmud (1246-1266), then Sultan. Broke the power of the forty nobles, set up a spy network, held off the Mongols, cleared Mewat, retook Bengal from Tughril in 1275-76 and introduced Persian court ceremony and Nowruz. His heir Muhammad Khan fell fighting the Mongols on 9 March 1285; his grandson Qaiqabad succeeded him."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ghiyas-ud-din-balban, wp-delhi-sultanate]
+
+  # Delhi Sultanate: Khalji
+  - key: jalal-ud-din-khalji
+    name: Jalal-ud-Din Khalji
+    type: Royalty
+    house: Khalji
+    realm: Delhi Sultanate
+    born: 1220
+    born_estimated: true
+    died: 1296-07-19
+    prominence: 3
+    note: "Malik Firuz, around 70 when he became Sultan in June 1290, founder of the Khalji dynasty (1290-1320). Governor of Samana under Balban, he overthrew the Mamluk faction and ruled at first from Kilokhri. Mild by temperament: pardoned rebels (Malik Chajju), let Mongol converts settle in India, took Mandawar and Jhain (1291-92) but gave up the siege of Ranthambore. Murdered at Kara by his nephew and son-in-law Ali Gurshasp, who became Alauddin Khalji."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-jalal-ud-din-khalji, wp-delhi-sultanate]
+  - key: alauddin-khalji
+    name: Alauddin Khalji
+    type: Royalty
+    house: Khalji
+    realm: Delhi Sultanate
+    born: 1266
+    born_estimated: true
+    died: 1316-01-04
+    prominence: 5
+    note: "Born Ali Gurshasp, nephew and son-in-law of Jalal-ud-din, Sultan 1296-1316. Raided Devagiri and killed Jalal-ud-din to take the throne, then beat off the Mongols (Kili 1299, Delhi 1303, Amroha 1305, Ravi 1306), took Gujarat, Ranthambore (1301), Chittor (1303), Malwa (1305), Siwana (1308) and Jalore (1311), and sent Malik Kafur south to Devagiri, Warangal, Dwarasamudra and Madurai. Fifty per cent land tax, price controls and a large standing army. Built Siri Fort, the Alai Darwaza (1311) and Hauz-i-Alai. Died of illness; buried at the Qutb complex, Mehrauli."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-alauddin-khalji, wp-delhi-sultanate]
+
+  # Delhi Sultanate: Tughluq
+  - key: ghiyath-al-din-tughluq
+    name: Ghiyath al-Din Tughluq
+    type: Royalty
+    house: Tughluq
+    realm: Delhi Sultanate
+    died: 1325-02-01
+    prominence: 3
+    note: "Ghazi Malik, a Khalji border governor (Multan, Dipalpur) who beat the Mongols many times. Defeated the usurper Khusrau Khan (battles of Saraswati and Lahrawat) and was proclaimed Sultan on 6 September 1320, founding the Tughluq dynasty. His son Fakhruddin Jauna (Muhammad bin Tughluq) took Warangal in 1323, ending the Kakatiyas. Began Tughluqabad. Died when a wooden reception pavilion collapsed at Kara-Manikpur in February 1325."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ghiyath-al-din-tughluq, wp-delhi-sultanate]
+  - key: muhammad-bin-tughluq
+    name: Muhammad bin Tughluq
+    type: Royalty
+    house: Tughluq
+    realm: Delhi Sultanate
+    born: 1290
+    died: 1351-03-20
+    prominence: 4
+    note: "Fakhr-ud-Din Muhammad Shah (Jauna Khan), Sultan 1325-1351, the sultanate's greatest extent. Scholar of several languages, but known for failed experiments: a second capital at Daulatabad (1327-1335) and token copper currency (1329-1333). Revolts from 1327; Madurai, the Bahmani Sultanate, Vijayanagara and Bengal broke away. Died in March 1351 on campaign in Sindh against the Taghi (the Delhi Sultanate article says Gujarat; see discrepancy)."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-muhammad-bin-tughluq, wp-delhi-sultanate]
+  - key: firuz-shah-tughlaq
+    name: Firuz Shah Tughlaq
+    type: Royalty
+    house: Tughluq
+    realm: Delhi Sultanate
+    born: 1309
+    died: 1388-09-20
+    prominence: 3
+    note: "Nasir al-Din Firuz Shah, cousin and successor of Muhammad bin Tughluq (23 March 1351, on the Indus). Invaded Bengal (1353, 1358), Odisha (1360), Kangra and Thatta (1362-63); recognised the Deccan's independence. Builder of cities and canals: Hisar, Firozpur, Fatehabad, Jaunpur and Firozabad; repaired the Qutb Minar after lightning struck it in 1368. Abdicated for a time in 1387 and died at 78 or 79."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-firuz-shah-tughlaq, wp-delhi-sultanate]
+
+  # Delhi Sultanate: Sayyid and Lodi
+  - key: khizr-khan
+    name: Khizr Khan
+    type: Royalty
+    house: Sayyid
+    realm: Delhi Sultanate
+    born: 1361
+    born_estimated: true
+    died: 1421-05-20
+    prominence: 2
+    note: "Governor of Multan under Firuz Shah, took Delhi on 28 May 1414 and founded the Sayyid dynasty, the fourth of the Delhi Sultanate. Took no royal title, ruling as Rayat-i-Ala in the name of the Timurids (coins kept the Tughluq names; in 1417 he had his name added after Shah Rukh's). His Sayyid descent is doubted. Succeeded by his son Mubarak Khan."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-khizr-khan, wp-delhi-sultanate]
+  - key: bahlul-lodi
+    name: Bahlul Lodi
+    type: Royalty
+    house: Lodi
+    realm: Delhi Sultanate
+    died: 1489-07-12
+    prominence: 3
+    note: "Bahlul Khan Lodi, chief of the Afghan Lodi tribe and governor of Sirhind and Lahore. Failed to take Delhi in 1443 and 1447, then became Sultan on 19 April 1451 when the last Sayyid, Alam Shah, abdicated. Annexed the Jaunpur Sultanate in 1479. Founder of the Lodi dynasty. The site of his grave is disputed."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-bahlul-lodi, wp-delhi-sultanate]
+  - key: sikandar-lodi
+    name: Sikandar Lodi
+    type: Royalty
+    house: Lodi
+    realm: Delhi Sultanate
+    born: 1458-07-17
+    died: 1517-11-21
+    prominence: 3
+    note: "Born Nizam Khan, Sultan 1489-1517, the Lodis' most successful ruler. Extended his rule to Bihar, fought the Tomars of Gwalior (1500-1508) and in 1503 had the present city of Agra built, then moved his base there. A Persian poet (pen name Gul Rukhi); strict Sunni who destroyed temples. His mother was Hindu."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-sikandar-lodi, wp-delhi-sultanate]
+  - key: ibrahim-lodi
+    name: Ibrahim Lodi
+    type: Royalty
+    house: Lodi
+    realm: Delhi Sultanate
+    born: 1480
+    died: 1526-04-21
+    prominence: 3
+    note: "Ibrahim Khan Lodi, last Sultan of Delhi (1517-1526). Killed his brother Jalal Khan, took Gwalior (1518) but lost to Rana Sanga; his harshness drove Daulat Khan Lodi and his uncle Alam Khan to invite Babur. Killed at the First Battle of Panipat; his tomb at Panipat was moved by the British in 1866."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ibrahim-lodi, wp-first-battle-of-panipat]
+
+  # Timurid
+  - key: timur
+    name: Timur
+    type: Royalty
+    house: Timurid
+    realm: Timurid Empire
+    died: 1405-02-17
+    prominence: 4
+    note: "Tamerlane, Turco-Mongol conqueror, born in the 1320s near Kesh (Shahrisabz) in Transoxiana; first ruler of the Timurid dynasty. Gained control of the western Chagatai Khanate by about 1370, ruling as Amir in the name of puppet khans. Defeated the Golden Horde, the Mamluks and the Ottomans (Ankara, 20 July 1402). In 1398 he invaded India and sacked Delhi. Died at Farab in February 1405 on the way to invade Ming China; buried at Samarkand. Ancestor of Babur. Listed here only for the Delhi sack; not a Sultan of Delhi."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-timur]
+
+  # Paramara and Chaulukya
+  - key: bhoja-of-malwa
+    name: Bhoja
+    type: Royalty
+    house: Paramara
+    realm: Paramara dynasty
+    died: 1055
+    died_estimated: true
+    prominence: 3
+    note: "Paramara king of Malwa, r. c. 1010-1055, ruling from Dhara (Dhar). Fought most of his neighbours (Lata, the Konkan, the Chalukyas of Kalyani, Chandelas, Chahamanas), and at his peak held from Chittor to the upper Konkan. Famous as a scholar-king and patron: the Bhoj Shala at Dhar, the Bhojeshwar Temple at Bhojpur, and many books attributed to him. Medieval Muslim chroniclers' 'Param Dev' is identified with him; the claim that he fought Mahmud of Ghazni lacks clear evidence. Death year is the end of his reign; the article gives no death date."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-bhoja-of-malwa]
+  - key: jayasimha-siddharaja
+    name: Jayasimha Siddharaja
+    type: Royalty
+    house: Chaulukya
+    realm: Chaulukya dynasty
+    died: 1142
+    died_estimated: true
+    prominence: 3
+    note: "Chaulukya (Solanki) king of Gujarat, r. c. 1092-1142, called Siddharaja, with his capital at Anahilapataka (Patan). Son of Karna; defeated Khangara of Saurashtra, subdued the Shakambhari Chahamana Arnoraja (whose son Someshvara was Prithviraj's father), and conquered the Paramara capital Dhara about 1135-36, taking the title Avantinatha. Patron of the Jain scholar Hemachandra; renovated the Sahastralinga lake at Patan and the Rudra Mahalaya at Siddhpur. Succeeded by his relative Kumarapala. No children."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-jayasimha-siddharaja]
+
+  # Mewar
+  - key: rana-kumbha
+    name: Rana Kumbha
+    type: Royalty
+    house: Sisodia
+    realm: Mewar
+    born: 1417
+    died: 1468
+    prominence: 3
+    note: "Kumbhakaran Singh, Maharana of Mewar 1433-1468, the 48th Rana, who defeated the Sultans of Malwa, Gujarat and Nagore in battles and is said to have lost none of 56. Built Kumbhalgarh and 31 other forts of Mewar's 84, and the Vijay Stambha at Chittor (c. 1458-1468, some sources 1448). A musician and author of treatises on music. Killed by his son Udai Singh (Udaysimha 'Hatyara') at Kumbhalgarh."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-rana-kumbha]
+  - key: rana-sanga
+    name: Rana Sanga
+    type: Royalty
+    house: Sisodia
+    realm: Mewar
+    born: 1482-04-12
+    died: 1528-01-30
+    prominence: 4
+    note: "Sangram Singh I, Maharana of Mewar from 24 May 1509, ruling from Chittorgarh. Won about eighteen battles against the Sultans of Delhi, Malwa and Gujarat (Khatoli 1517, Dholpur 1518-19, Gagron 1519), at his height holding Rajputana, eastern Malwa and parts of Haryana and Uttar Pradesh; the article calls him the last independent Hindu king of northern India with extensive territory. Led the Rajput-Afghan coalition against Babur, won at Bayana (February 1527), and was beaten at Khanwa on 16 March 1527. Lost an eye and an arm and was lame; died in January 1528, reportedly poisoned by his own nobles."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-rana-sanga, wp-battle-of-khanwa]
+  - key: maharana-pratap
+    name: Maharana Pratap
+    type: Royalty
+    house: Sisodia
+    realm: Mewar
+    born: 1540-05-18
+    died: 1597-01-19
+    prominence: 4
+    note: "Pratap Singh I, Maharana of Mewar 1572-1597 (the 54th Rana), crowned at Gogunda. Refused to submit to Akbar's envoys (Jalal Khan, Man Singh, Bhagwant Das, Todar Mal), lost at Haldighati on 18 June 1576 but escaped, and kept up guerrilla warfare in the Aravallis, recovering most of Mewar except Chittor and Mandalgarh after 1585. Financed in part by his minister Bhamashah. Died at Chavand after a hunting accident; succeeded by his son Amar Singh I."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-maharana-pratap, wp-battle-of-haldighati]
+
+  # Gujarat Sultanate
+  - key: mahmud-begada
+    name: Mahmud Begada
+    type: Royalty
+    realm: Gujarat Sultanate
+    died: 1511-11-23
+    prominence: 3
+    note: "Abu'l Fath Nasir-ud-Din Mahmud Shah I, born Fateh Khan, the greatest Sultan of Gujarat (1459-1511); raised to the throne at about 13 or 14. Won Junagadh (1472-73), Dwarka (1473) and Pavagadh/Champaner (1484), making Champaner his capital as Muhammadabad. His fleet and the Mamluks beat the Portuguese at Chaul (1508) but lost at Diu (1509). Died at Ahmedabad and buried at Sarkhej; succeeded by his son Khalil Khan (Muzaffar Shah II). Called Begada ('two forts'; or from his moustache). Birth date not given in the article."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-mahmud-begada]
+
+  # Mughals and Sur
+  - key: babur
+    name: Babur
+    type: Royalty
+    house: Timurid
+    realm: Mughal Empire
+    born: 1483-02-14
+    died: 1530-12-26
+    prominence: 5
+    note: "Zahir ud-Din Muhammad, founder of the Mughal Empire; descended from Timur and Genghis Khan; born at Andijan in Fergana. Lost Samarkand repeatedly, took Kabul in 1504, then turned to India. Beat Ibrahim Lodi at First Panipat (21 April 1526) with guns and field tactics, Rana Sanga at Khanwa (16 March 1527), the Afghans and Bengal at Ghaghra (1529). Author of the Baburnama and a garden builder. Died at Agra; first buried at Agra, later moved to Kabul (between 1539 and 1544). Succeeded by Humayun."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-babur, wp-first-battle-of-panipat, wp-battle-of-khanwa]
+  - key: humayun
+    name: Humayun
+    type: Royalty
+    house: Timurid
+    realm: Mughal Empire
+    born: 1508-03-06
+    died: 1556-01-27
+    prominence: 4
+    note: "Nasir al-Din Muhammad, second Mughal emperor, 1530-1540 and 1555-1556. Divided Babur's lands with his brothers, took Gujarat briefly (1535), lost to Sher Shah Suri at Chausa (1539) and Kannauj (17 May 1540), and spent fifteen years in exile in Sindh, Kabul and Safavid Persia (Tahmasp I). Retook Delhi on 23 July 1555 after Bairam Khan's victory at Sirhind (22 June 1555). Fell down the stairs of the Sher Mandal library in the Purana Qila and died three days later; his tomb in Delhi is the first great Mughal garden tomb. Father of Akbar."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-humayun]
+  - key: sher-shah-suri
+    name: Sher Shah Suri
+    type: Royalty
+    house: Sur
+    realm: Sur Empire
+    born: 1472
+    born_estimated: true
+    died: 1545-05-22
+    prominence: 4
+    note: "Farid Khan, Pashtun of the Sur clan, born at Sasaram in Bihar; regent of Bihar (1530-1540), then crowned Sultan of Hindustan, first Sur Emperor (1540-1545), after beating Humayun at Chausa (1539) and Kannauj (17 May 1540). Took Malwa (1542), Raisen (1543) and Marwar (1543-44). Built the Grand Trunk Road, the postal system, the first Rupiya and Rohtas Fort. Died on 22 May 1545 in a powder explosion at the siege of Kalinjar; buried in a tomb at Sasaram. Birth year disputed (1472 or 1486)."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-sher-shah-suri]
+  - key: akbar
+    name: Akbar
+    type: Royalty
+    house: Timurid
+    realm: Mughal Empire
+    born: 1542-10-15
+    died: 1605-10-27
+    prominence: 5
+    note: "Jalal-ud-Din Muhammad Akbar, third Mughal emperor (1556-1605), born at Amarkot in Sindh while Humayun was in exile. Enthroned at Kalanaur on 14 February 1556 at about 13, under the regent Bairam Khan (dismissed 1560). Beat Hemu at Second Panipat (5 November 1556), took Chittor (1568), Gujarat (1572-73), Bengal (1575-76), Kabul, Kashmir, Sindh and Kandahar, and began on the Deccan. Introduced the mansabdari ranks, a revenue system based on Todar Mal's dahsala, and Rajput marriage alliances; founded Fatehpur Sikri (1569). Capitals: Fatehpur Sikri, Lahore (1585), Agra (1599). Buried at Sikandra, Agra."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-akbar, wp-second-battle-of-panipat, wp-battle-of-haldighati]
+  - key: hemu
+    name: Hemu
+    type: Nobility
+    roles: [soldier, minister]
+    realm: Sur Empire
+    born: 1501
+    born_estimated: true
+    died: 1556-11-05
+    prominence: 3
+    note: "Hemchandra Vikramaditya, a Hindu of Rewari who rose from trader to Chief Minister (Wazir) and general of Adil Shah Suri, said to have won 22 battles. Took Agra and defeated the Mughals at Tughlaqabad, entering Delhi on 7 October 1556 and taking the title Vikramaditya; whether this made him an independent king is debated. Wounded by an arrow in the eye at Second Panipat on 5 November 1556 and beheaded (by Akbar, according to Qandhari). Birth place and year are uncertain."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-hemu, wp-second-battle-of-panipat]
+
+titles:
+  # Pala and Sena
+  - {person: ramapala, title: Pala Emperor, realm: Pala Empire, from: 1077, to: 1130, note: "Article: Pala king, 15th ruler of the Pala line, succeeded his brother Shurapala II. Ruled from the new capital Ramavati; the article calls the length of rule 'at least 53 years'. Succeeded by his son Kumarapala (the Pala king, not entered)", sources: [wp-ramapala]}
+  # Vijaya Sena: no title row. His article gives no reign dates, only "about 62 years", so any years would be derived from a neighbour; left out.
+  - {person: ballala-sena, title: Sena King, realm: Sena dynasty, from: 1160, to: 1178, note: "Article: second ruler of the Sena dynasty. Ended the Pala Empire by defeating Govinda Pala", sources: [wp-ballala-sena]}
+  - {person: lakshmana-sena, title: Sena King, realm: Sena dynasty, from: 1178, to: 1206, note: "Article: ruled 28 years; the Tabaqat-i-Nasiri account of Bakhtiyar's raid puts the loss of Nadia and Lakhnauti late in his reign. His sons continued Sena rule in south-eastern Bengal", sources: [wp-lakshmana-sena]}
+  # Ghurids and Chahamanas
+  - {person: muhammad-of-ghor, title: Ghurid Sultan, realm: Ghurid Sultanate, from: 1173, to: 1206-03-15, note: "Article: ruled from 1173 (coronation at Ghazni) to 1206. Dyarchy with his elder brother Ghiyath al-Din Muhammad (at Firuzkuh) until the brother's death on 13 March 1203; then 'Al-Sultan Al-Azam'. Assassinated at Dhamiak", sources: [wp-muhammad-of-ghor]}
+  - {person: prithviraj-iii-chauhan, title: Chahamana King, realm: Chahamana dynasty, from: 1177, to: 1192, note: "Article: came to the throne as a minor in 1177 with his mother as regent; took control of the administration about 1180. Captured and executed in 1192 after the Second Battle of Tarain; capital Ajmer", sources: [wp-prithviraj-iii-chauhan]}
+  # Delhi Sultanate
+  - {person: qutb-ud-din-aibak, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1206-06-25, to: 1210-11-04, note: "Informally ascended at Lahore on 25 June 1206; formally recognised by Ghiyas al-Din Mahmud (chatr and deed of investiture) in 1208-09. Ruled mostly from Lahore. The Delhi Sultanate article calls him the first Sultan of Delhi, 1206-1210; no coins naming him Sultan have been found. Mamluk dynasty", sources: [wp-qutb-ud-din-aibak, wp-delhi-sultanate]}
+  - {person: iltutmish, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1211, to: 1236-04-30, note: "Took the throne from Aram Shah in 1211 (Aibak died in 1210; Aram Shah ruled about eight months) and set up his capital at Delhi. Recognised by the Abbasid Caliph on 18 February 1229. Mamluk dynasty", sources: [wp-iltutmish, wp-qutb-ud-din-aibak, wp-delhi-sultanate]}
+  - {person: razia-sultana, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1236, to: 1240, note: "Article: Sultan (the word 'Sultana' is a misnomer). Placed on the throne in November 1236 by the people and nobles of Delhi after Ruknuddin Firuz was overthrown (probably executed 19 November 1236); deposed by Turkic nobles in April 1240 (ruled 3 years 6 months 6 days according to Minhaj). Mamluk dynasty. Years only: the end is April 1240", sources: [wp-razia-sultana, wp-iltutmish]}
+  - {person: ghiyas-ud-din-balban, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1266, to: 1287-01-13, note: "Became Sultan in 1266 on Nasiruddin Mahmud's death (the same article also says he ruled 'from 1265'; see discrepancy). Regent and vizier of Nasiruddin from 1246. Mamluk dynasty", sources: [wp-ghiyas-ud-din-balban, wp-delhi-sultanate]}
+  - {person: jalal-ud-din-khalji, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1290, to: 1296-07-19, note: "Ascended in June 1290 at the unfinished Kilokhri palace after deposing the infant Kayumars; founder of the Khalji dynasty. Murdered at Kara by Alauddin on 19 July 1296 (Amir Khusrau) or 20 July (Barani)", sources: [wp-jalal-ud-din-khalji]}
+  - {person: alauddin-khalji, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1296-07-19, to: 1316-01-04, note: "Proclaimed Sultan at Kara after killing Jalal-ud-din (19 or 20 July 1296); formally proclaimed in Delhi on 21 October 1296. Khalji dynasty. Died on the night of 4 January 1316; Malik Kafur then made his young son Shihabuddin a puppet", sources: [wp-alauddin-khalji, wp-jalal-ud-din-khalji]}
+  - {person: ghiyath-al-din-tughluq, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1320-09-06, to: 1325-02-01, note: "Proclaimed on 6 September 1320 after defeating Khusrau Khan; founder of the Tughluq dynasty. Died when a pavilion collapsed at Kara-Manikpur", sources: [wp-ghiyath-al-din-tughluq]}
+  - {person: muhammad-bin-tughluq, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1325-02-04, to: 1351-03-20, note: "Ascended three days after his father's death (4 February 1325). Moved the capital to Daulatabad in 1327 and back to Delhi in 1335. Tughluq dynasty", sources: [wp-muhammad-bin-tughluq, wp-ghiyath-al-din-tughluq]}
+  - {person: firuz-shah-tughlaq, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1351-03-23, to: 1388-09-20, note: "Succeeded his cousin on 23 March 1351 on the banks of the Indus. Abdicated to his son Muhammad Shah III in 1387, but nobles rose against Muhammad and Firuz named his great-grandson Tughluq Khan; Firuz died in 1388. Tughluq dynasty", sources: [wp-firuz-shah-tughlaq]}
+  - {person: khizr-khan, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1414-05-28, to: 1421-05-20, note: "Took Delhi on 28 May 1414. Took no royal title (Rayat-i-Ala, 'Sublime Banners'), but the article calls him sultan of Delhi 1414-1421. Founder of the Sayyid dynasty (see discrepancy on its start year)", sources: [wp-khizr-khan, wp-delhi-sultanate]}
+  - {person: bahlul-lodi, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1451-04-19, to: 1489-07-12, note: "Ascended on 19 April 1451 (855 AH) as Bahlul Shah Ghazi after Alam Shah abdicated; founder of the Lodi dynasty. Died July 1489", sources: [wp-bahlul-lodi]}
+  - {person: sikandar-lodi, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1489, to: 1517-11-21, note: "Succeeded Bahlul in July 1489; the article gives no day. Lodi dynasty. Moved his base to Agra", sources: [wp-sikandar-lodi, wp-bahlul-lodi]}
+  - {person: ibrahim-lodi, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1517, to: 1526-04-21, note: "Ascended after Sikandar's death in late 1517 (year only). Last Sultan of Delhi; killed at Panipat (20 or 21 April 1526, see discrepancy). Lodi dynasty", sources: [wp-ibrahim-lodi, wp-sikandar-lodi]}
+  # Timur
+  - {person: timur, title: Amir of the Timurid Empire, realm: Timurid Empire, from: 1370, from_estimated: true, to: 1405-02-17, note: "Article: gained control of the western Chagatai Khanate by about 1370 and was formally proclaimed sovereign at Balkh; used the title Amir (general) rather than Khan, ruling in the name of a puppet Chagatai khan. Died at Farab on 17 or 18 February 1405", sources: [wp-timur]}
+  # Paramara, Chaulukya
+  - {person: bhoja-of-malwa, title: Paramara King, realm: Paramara dynasty, from: 1010, from_estimated: true, to: 1055, to_estimated: true, note: "Article: r. c. 1010-1055 (Modasa copper plates 1010-11 are the earliest record; his successor's inscription is dated 1055). Some scholars put the start at 1000 on Merutunga's '55 years'; see discrepancy. Ruled from Dhara (Dhar)", sources: [wp-bhoja-of-malwa]}
+  - {person: jayasimha-siddharaja, title: Chaulukya King, realm: Chaulukya dynasty, from: 1092, from_estimated: true, to: 1142, to_estimated: true, note: "Article: r. c. 1092 - c. 1142, capital Anahilapataka (Patan). Merutunga dates his coronation as a child to 7 January 1094 but the article doubts it", sources: [wp-jayasimha-siddharaja]}
+  - {person: kumarapala, title: Chaulukya King, realm: Chaulukya dynasty, from: 1143, to: 1172, note: "Article: r. 1143-1172, capital Anahilapataka (Patan). Seized the throne after Jayasimha's sudden death; inscriptions of 1145 (Mangrol) and 1169 (Veraval) date from his reign", sources: [wp-kumarapala, wp-jayasimha-siddharaja]}
+  # Mewar
+  - {person: rana-kumbha, title: Rana of Mewar, realm: Mewar, from: 1433, to: 1468, note: "Article: Maharana of Mewar, succeeded Rana Mokal Singh in 1433 under his grandmother Hansa's and great-uncle Ridmal's regency. Killed by his son Udaysimha", sources: [wp-rana-kumbha]}
+  - {person: rana-sanga, title: Rana of Mewar, realm: Mewar, from: 1509-05-24, to: 1528-01-30, note: "Article: Maharana of Mewar from 24 May 1509 until his death in 1528 (30 January in the lead; see discrepancy)", sources: [wp-rana-sanga]}
+  - {person: maharana-pratap, title: Rana of Mewar, realm: Mewar, from: 1572, to: 1597-01-19, note: "Article: crowned at Gogunda in 1572 on Holi after Udai Singh II's death (no day in the article). Ruled until his death at Chavand", sources: [wp-maharana-pratap]}
+  # Gujarat Sultanate
+  - {person: mahmud-begada, title: Sultan of Gujarat, realm: Gujarat Sultanate, from: 1459-06-18, to: 1511-11-23, note: "Ascended on Sunday 18 June 1459 as Mahmud Shah I (after the short reign of Daud Khan); died on 2 Ramzan 917 AH (23 November 1511). Reign of 54 years and one month. Called himself 'Sultan of the Land, Sultan of the Sea'", sources: [wp-mahmud-begada]}
+  # Mughals
+  - {person: babur, title: Mughal Emperor, realm: Mughal Empire, from: 1526-04-21, to: 1530-12-26, note: "Founder of the Mughal Empire at Panipat; took Delhi and Agra afterwards. Earlier ruler of Fergana and Kabul (1504-1526, not entered). 26 December 1530 is the old-style date (5 January 1531 new style)", sources: [wp-babur, wp-first-battle-of-panipat]}
+  - {person: humayun, title: Mughal Emperor, realm: Mughal Empire, from: 1530-12-26, to: 1540-05-17, key: humayun--mughal-emperor--1530, note: "First reign: succeeded his father on 26 December 1530 at 22. Lost the empire to Sher Shah at Kannauj on 17 May 1540 (and earlier at Chausa, 1539)", sources: [wp-humayun]}
+  - {person: humayun, title: Mughal Emperor, realm: Mughal Empire, from: 1555-07-23, to: 1556-01-27, key: humayun--mughal-emperor--1555, note: "Second reign: on 23 July 1555 he again sat on Babur's throne in Delhi after the Battle of Sirhind (22 June). Died three days after a fall on 24 January 1556", sources: [wp-humayun, wp-second-battle-of-panipat]}
+  - {person: sher-shah-suri, title: Sur Emperor, realm: Sur Empire, from: 1540-05-17, to: 1545-05-22, note: "Article: Sultan of Hindustan, Sultan Adil, first Sur Emperor. Crowned a second time on 17 May 1540 after Kannauj (the first coronation followed the fall of Gauda in April 1538). Died during the siege of Kalinjar", sources: [wp-sher-shah-suri]}
+  - {person: akbar, title: Mughal Emperor, realm: Mughal Empire, from: 1556-02-14, to: 1605-10-27, note: "Article: succeeded Humayun on 14 February 1556 at Kalanaur, enthroned by Bairam Khan and proclaimed Shahanshah. Humayun died on 27 January 1556; the gap is the concealment of his death. Died 27 October 1605 (lead) or 26 October (death section)", sources: [wp-akbar]}
+  - {person: hemu, title: Hindu Emperor, realm: Delhi Sultanate, from: 1556-10-07, to: 1556-11-05, disputed: true, note: "Took the title Vikramaditya (Hemu Vikramaditya) after occupying Delhi on 7 October 1556 (coronation at Purana Qila 6 October in the Second Panipat article). Akbar article: 'proclaimed himself Hindu emperor'. Historians such as Satish Chandra doubt that he declared himself an independent king; hence disputed. Ended with his defeat and death at Second Panipat", sources: [wp-hemu, wp-second-battle-of-panipat, wp-akbar]}
+
+places:
+  - key: delhi
+    name: Delhi
+    kind: city
+    region: Delhi
+    country: India
+    lat: 28.614
+    lng: 77.209
+    visitable: true
+    note: "Capital of the Delhi Sultanate from Iltutmish (1211) to the Lodis (Sikandar moved to Agra), with the second capital at Daulatabad in 1327-1335. Prithviraj is credited with the Qila Rai Pithora; Aibak and Muhammad of Ghor took it in 1192-93; Alauddin sheltered at Siri during the Mongol siege of 1303; Ghiyath Tughluq began Tughluqabad; Firuz built Firozabad; Timur sacked it on 17 December 1398; Hemu crowned himself at the Purana Qila in October 1556. Burial place of Razia (Bulbuli Khana), Firuz (Hauz Khas) and Humayun (Humayun's Tomb)."
+    sources: [wp-delhi-sultanate, wp-qutb-ud-din-aibak, wp-alauddin-khalji, wp-timur, wp-humayun, wp-hemu, wp-razia-sultana, wp-firuz-shah-tughlaq]
+  - key: qutb-minar
+    name: Qutb Minar complex
+    kind: monument
+    city: Delhi
+    region: Delhi
+    country: India
+    lat: 28.525
+    lng: 77.186
+    visitable: true
+    visit_site: "Qutb Minar and its monuments, Mehrauli (UNESCO World Heritage Site)"
+    built_by: "Begun by Qutb ud-Din Aibak; completed by Iltutmish; the Alai Darwaza (1311) added by Alauddin Khalji; Firuz Shah Tughlaq replaced the top storeys after lightning struck in 1368"
+    note: "Aibak also built the Quwwat-ul-Islam mosque here, and the article says the complex was expanded by Iltutmish and Alauddin. Iltutmish was buried in the Qutb complex in 1236; Alauddin's tomb and madrasa lie at the back of it. The article gives no year for the start of the tower."
+    sources: [wp-qutb-ud-din-aibak, wp-iltutmish, wp-alauddin-khalji, wp-firuz-shah-tughlaq, wp-delhi-sultanate]
+  - key: tarain
+    name: Tarain
+    historical_name: "Taraori"
+    kind: battlefield
+    region: Haryana
+    country: India
+    lat: 29.788
+    lng: 76.916
+    note: "Near Taraori in Haryana, 24 km from Thanesar and about 110 km north of Delhi. Site of three battles: Prithviraj beat Muhammad of Ghor (14 January 1191), Muhammad beat Prithviraj (1192), and Iltutmish beat Yildiz (25 January 1216). Approximate point."
+    sources: [wp-first-battle-of-tarain, wp-second-battle-of-tarain, wp-iltutmish]
+  - key: panipat
+    name: Panipat
+    kind: battlefield
+    region: Haryana
+    country: India
+    lat: 29.391
+    lng: 76.970
+    visitable: true
+    note: "Site of the First Battle of Panipat (21 April 1526: Babur beat Ibrahim Lodi, who is buried here) and the Second (5 November 1556: Akbar's army beat Hemu, who was beheaded here; Hemu's Samadhi Sthal marks the spot). Babur's Kabuli Bagh Mosque (1528-29) is here. Approximate point."
+    sources: [wp-first-battle-of-panipat, wp-second-battle-of-panipat, wp-ibrahim-lodi, wp-hemu, wp-babur]
+  - key: ajmer
+    name: Ajmer
+    kind: city
+    region: Rajasthan
+    country: India
+    lat: 26.449
+    lng: 74.639
+    visitable: true
+    note: "Capital of the Chahamanas under Prithviraj III. Muhammad of Ghor sacked it after Second Tarain (1192); Hariraja briefly retook it and Aibak placed a Muslim governor there. Aibak commissioned the Adhai Din Ka Jhonpra (mosque) here. Akbar took Ajmer in 1558 and Rana Kumbha's Mewar had held it earlier."
+    sources: [wp-prithviraj-iii-chauhan, wp-muhammad-of-ghor, wp-qutb-ud-din-aibak, wp-akbar]
+  - key: chittor
+    name: Chittorgarh
+    historical_name: "Chittor"
+    kind: fort
+    city: Chittorgarh
+    region: Rajasthan
+    country: India
+    lat: 24.887
+    lng: 74.645
+    visitable: true
+    visit_site: "Chittorgarh Fort"
+    note: "Capital of Mewar (Rana Kumbha, Rana Sanga). Alauddin took it in 1303 after an eight-month siege; Akbar took it in February 1568 after four months. Rana Kumbha built the Vijay Stambha (Tower of Victory) here, completed probably between 1458 and 1468 (some sources 1448). The Iltutmish article says Jaitra Singh moved Mewar's capital to Chittor after the Battle of Bhutala and that Iltutmish failed to take the fort."
+    built_by: "Vijay Stambha: Rana Kumbha"
+    sources: [wp-rana-kumbha, wp-alauddin-khalji, wp-akbar, wp-iltutmish, wp-rana-sanga]
+  - key: agra
+    name: Agra
+    kind: city
+    region: Uttar Pradesh
+    country: India
+    lat: 27.177
+    lng: 78.008
+    visitable: true
+    visit_site: "Agra Fort and Sikandra (Akbar's tomb)"
+    founded: 1503
+    built_by: "Sikandar Lodi (commissioned the present-day city in 1503)"
+    note: "Sikandar Lodi had the present-day city built in 1503 and moved his base here to be nearer Gwalior. Babur kept Agra as capital and died here (first buried at Chauburji, later moved to Kabul). Akbar's capital again from 1599; he is buried at Sikandra, Agra."
+    sources: [wp-sikandar-lodi, wp-babur, wp-akbar]
+  - key: lahore
+    name: Lahore
+    kind: city
+    region: Punjab
+    country: Pakistan
+    lat: 31.558
+    lng: 74.351
+    visitable: true
+    note: "Taken by Muhammad of Ghor in 1186 (second siege), ending the Ghaznavids. Aibak's capital after 1206; he died here in 1210 playing chaugan and is buried in Anarkali Bazaar (the present tomb dates from the 1970s). Akbar's capital from 1585 to 1599."
+    sources: [wp-muhammad-of-ghor, wp-qutb-ud-din-aibak, wp-akbar]
+  - key: ghazni
+    name: Ghazni
+    kind: city
+    region: Ghazni Province
+    country: Afghanistan
+    lat: 33.554
+    lng: 68.421
+    visitable: true
+    note: "Taken by the Ghurids from the Oghuz Turks in 1169; Muhammad of Ghor was crowned here in 1173 and based his Indian campaigns here, storing the treasure of the Gangetic raids. After his assassination his body was placed in the mausoleum of his daughter at Ghazni."
+    sources: [wp-muhammad-of-ghor]
+  - key: fatehpur-sikri
+    name: Fatehpur Sikri
+    kind: city
+    region: Uttar Pradesh
+    country: India
+    lat: 27.094
+    lng: 77.661
+    visitable: true
+    visit_site: "Fatehpur Sikri (UNESCO World Heritage Site)"
+    founded: 1569
+    built_by: "Akbar"
+    note: "Akbar laid the foundations of a walled capital here in 1569, 23 miles west of Agra, near the holy man Salim Chishti; named Fatehpur ('town of victory') after the conquest of Gujarat in 1573. He built the Buland Darwaza to commemorate his victories. The capital moved to Lahore in 1585 and the city was abandoned."
+    sources: [wp-akbar]
+  - key: khanwa
+    name: Khanwa
+    kind: battlefield
+    region: Rajasthan
+    country: India
+    lat: 27.04
+    lng: 77.09
+    note: "Where Babur beat Rana Sanga on 16 March 1527, about 60 km (37 miles) west of Agra. Approximate point."
+    sources: [wp-battle-of-khanwa, wp-rana-sanga, wp-babur]
+  - key: haldighati
+    name: Haldighati
+    kind: battlefield
+    region: Rajasthan
+    country: India
+    lat: 24.892
+    lng: 73.692
+    note: "A narrow mountain pass near Gogunda in the Aravallis (Rajsamand district), named for its yellow rock like turmeric (haldi). Where Man Singh I's Mughal army beat Maharana Pratap on 18 June 1576. The final fighting was at Rati-Talai near Khamnor (Abul Fazl) or Gogunda (Badayuni). Approximate point."
+    sources: [wp-battle-of-haldighati, wp-maharana-pratap]
+  - key: gaur
+    name: Gaur
+    historical_name: "Gauda"
+    kind: city
+    region: West Bengal
+    country: India
+    lat: 24.873
+    lng: 88.134
+    note: "Capital of the Bengal Sultanate. Sher Shah besieged it in 1537-38 and took it in April 1538; Humayun entered the abandoned city on 8 September 1538 and was trapped there by the rains until he left for Chausa. The Lakshmana Sena article lists Gauda among the territories of the Sena empire."
+    sources: [wp-sher-shah-suri, wp-humayun, wp-lakshmana-sena]
+  - key: kannauj
+    name: Kannauj
+    historical_name: "Kanauj"
+    kind: city
+    region: Uttar Pradesh
+    country: India
+    lat: 27.054
+    lng: 79.918
+    visitable: true
+    note: "Capital of the Gahadavalas, annexed by Muhammad of Ghor in 1198 (Aibak took it 1198-99). Jalal-ud-din held an army inspection here in 1290. On the Ganges near here Sher Shah beat Humayun on 17 May 1540, 200 km east of Agra."
+    sources: [wp-muhammad-of-ghor, wp-qutb-ud-din-aibak, wp-humayun, wp-sher-shah-suri, wp-jalal-ud-din-khalji]
+  - key: anhilwara-patan
+    name: Patan (Anhilwara)
+    historical_name: "Anahilapataka, Anhilwara"
+    kind: city
+    region: Gujarat
+    country: India
+    lat: 23.85
+    lng: 72.126
+    visitable: true
+    note: "Capital of the Chaulukya kings of Gujarat (Jayasimha Siddharaja). Muhammad of Ghor aimed at it in 1178 and was routed near Mount Abu; Aibak plundered it in 1197 and king Bhima II fled. Jayasimha renovated the Sahastralinga lake here and built the Rayavihara Jain temple (consecrated 1127). Kumarapala (r. 1143-1172) also ruled from here."
+    sources: [wp-jayasimha-siddharaja, wp-kumarapala, wp-muhammad-of-ghor, wp-qutb-ud-din-aibak]
+  - key: daulatabad
+    name: Daulatabad
+    historical_name: "Devagiri, Deogiri"
+    kind: fort
+    region: Maharashtra
+    country: India
+    lat: 19.943
+    lng: 75.213
+    visitable: true
+    note: "Muhammad bin Tughluq made Devagiri his second capital in 1327, renamed it Daulatabad and moved Delhi's elite there; he moved the capital back to Delhi in 1335. The Hindu Yadava capital Alauddin's forces had raided in 1296. Defined here because the brief names the event; the SOUTH batch may also send this key."
+    sources: [wp-muhammad-bin-tughluq, wp-delhi-sultanate]
+
+events:
+  - key: battle-of-kasahrada-1178
+    name: Battle of Kasahrada (Mount Abu)
+    type: Battle
+    year: 1178
+    people:
+      - {person: muhammad-of-ghor, role: defeated}
+    prominence: 2
+    note: "Marching through the Thar Desert towards Anhilwara, the Ghurid army was exhausted and routed in the mountain pass near Mount Abu by the Chaulukya king Mularaja II and other Rajput chiefs. Muhammad was wounded. The defeat made him change his route into northern India. Aibak avenged it in 1197. No place defined (Mount Abu not in the batch)."
+    sources: [wp-muhammad-of-ghor, wp-first-battle-of-tarain, wp-qutb-ud-din-aibak]
+  - key: first-battle-of-tarain-1191
+    name: First Battle of Tarain
+    type: Battle
+    date: 1191-01-14
+    place: tarain
+    people:
+      - {person: prithviraj-iii-chauhan, role: victor}
+      - {person: muhammad-of-ghor, role: defeated}
+      - {person: qutb-ud-din-aibak, role: defeated}
+    prominence: 3
+    note: "Muhammad's army, which had taken Tabarhinda (Bathinda), met Prithviraj's Rajput confederacy (led in the field by Govind Rai of Delhi). The Rajputs counter-attacked on three sides; Muhammad was wounded in a duel with Govind Rai and carried off, and his men fled to Ghazni. The Ghurid garrison at Tabarhinda held out thirteen months."
+    sources: [wp-first-battle-of-tarain, wp-muhammad-of-ghor, wp-prithviraj-iii-chauhan, wp-qutb-ud-din-aibak]
+  - key: second-battle-of-tarain-1192
+    name: Second Battle of Tarain
+    type: Battle
+    year: 1192
+    place: tarain
+    people:
+      - {person: muhammad-of-ghor, role: victor}
+      - {person: qutb-ud-din-aibak, role: commander}
+      - {person: prithviraj-iii-chauhan, role: defeated}
+    prominence: 5
+    note: "Muhammad returned with about 120,000 men (Minhaj), feigned truce talks, and attacked the Chahamana camp before sunrise with four divisions of mounted archers who feigned retreat, then a fresh reserve. Prithviraj fled but was caught near Sursuti (Sirsa) and killed. Muhammad sacked Ajmer and set Govindaraja IV up as a vassal; his general Aibak took over the conquests, and the Delhi Sultanate grew out of this victory."
+    sources: [wp-second-battle-of-tarain, wp-muhammad-of-ghor, wp-prithviraj-iii-chauhan, wp-delhi-sultanate]
+  - key: ghurid-capture-of-delhi-1192
+    name: Ghurid capture of Delhi
+    type: Conquest
+    year: 1192
+    place: delhi
+    people:
+      - {person: qutb-ud-din-aibak, role: conqueror}
+      - {person: muhammad-of-ghor, role: conqueror}
+    prominence: 3
+    note: "Aibak took control of Delhi in 1192, first keeping the local Tomara ruler as a vassal, and deposed him for treason in 1193 (Aibak article). The Muhammad of Ghor article dates the capture to 1193 (see discrepancy)."
+    sources: [wp-qutb-ud-din-aibak, wp-muhammad-of-ghor]
+  - key: battle-of-chandawar-1194
+    name: Battle of Chandawar
+    type: Battle
+    year: 1194
+    people:
+      - {person: muhammad-of-ghor, role: victor}
+      - {person: qutb-ud-din-aibak, role: commander}
+    prominence: 3
+    note: "Muhammad crossed the Jamuna with 50,000 horse and killed the Gahadavala king Jayachandra. The Ghurids took the fort at Asni and then Varanasi (Sarnath was also sacked); Kannauj was annexed in 1198. Aibak led the vanguard."
+    sources: [wp-muhammad-of-ghor, wp-qutb-ud-din-aibak]
+  - key: assassination-of-muhammad-of-ghor-1206
+    name: Assassination of Muhammad of Ghor
+    type: Assassination
+    date: 1206-03-15
+    people:
+      - {person: muhammad-of-ghor, role: killed}
+    prominence: 3
+    note: "Killed at evening prayer in his camp at Dhamiak on the bank of the Indus, on the way back from crushing the Khokhar revolt; chronicles blame the Khokhars, Isma'ili emissaries, or both (see discrepancy). His empire fell apart; his slaves Aibak, Yildiz and Qabacha shared the east."
+    sources: [wp-muhammad-of-ghor]
+  - key: founding-of-delhi-sultanate-1206
+    name: Founding of the Delhi Sultanate
+    type: Founding
+    date: 1206-06-25
+    place: lahore
+    people:
+      - {person: qutb-ud-din-aibak, role: founder}
+      - {person: muhammad-of-ghor, role: predecessor}
+    prominence: 5
+    note: "After Muhammad of Ghor's assassination the people of Lahore asked Aibak to take sovereign power; he moved his government to Lahore and informally ascended on 25 June 1206. The Delhi Sultanate article says the sultanate 'was established in 1206' from the former Ghurid lands in India; formal investiture came in 1208-09, and Iltutmish is called its effective founder. Five dynasties follow: Mamluk (1206-1290), Khalji (1290-1320), Tughlaq (1320-1414), Sayyid (1414-1451), Lodi (1451-1526)."
+    sources: [wp-delhi-sultanate, wp-qutb-ud-din-aibak, wp-iltutmish]
+  - key: battle-of-tarain-1216
+    name: Battle of Tarain (Iltutmish and Yildiz)
+    type: Battle
+    date: 1216-01-25
+    place: tarain
+    people:
+      - {person: iltutmish, role: victor}
+    prominence: 2
+    note: "Taj al-Din Yildiz, who had been driven from Ghazni and claimed the Ghurid lands in India, refused Iltutmish's offer of a parley and lost this battle; Yildiz was taken to Badaun and killed. It confirmed the independence of Delhi from Ghazni."
+    sources: [wp-iltutmish]
+  - key: caliphal-recognition-of-iltutmish-1229
+    name: Abbasid Caliph recognises Iltutmish
+    type: Recognition
+    date: 1229-02-18
+    place: delhi
+    people:
+      - {person: iltutmish, role: recognised}
+    prominence: 3
+    note: "The embassy of Caliph al-Mustansir arrived in Delhi with a deed of investiture, robes and the titles Yamin Khalifat Allah and Nasir Amir al-Mu'minin. The article calls Iltutmish the only ruler of India with the Caliph's recognition; he put the Caliph's name on his new silver tanka."
+    sources: [wp-iltutmish]
+  - key: accession-of-razia-1236
+    name: Accession of Razia Sultan
+    type: Coronation
+    year: 1236
+    place: delhi
+    people:
+      - {person: razia-sultana, role: crowned}
+    prominence: 4
+    note: "In November 1236 a crowd in Delhi, roused by Razia at Friday prayers, seized the palace from the queen mother Shah Turkan; the army and nobles then swore allegiance to her. The only woman to sit on Delhi's throne."
+    sources: [wp-razia-sultana, wp-iltutmish]
+  - key: battle-of-kili-1299
+    name: Battle of Kili
+    type: Battle
+    year: 1299
+    people:
+      - {person: alauddin-khalji, role: commander}
+    prominence: 3
+    note: "A Chagatai Mongol army under Qutlugh Khwaja, sent by Duwa, marched on Delhi. Alauddin led the Delhi forces; Zafar Khan attacked without orders and was killed with his unit, but the Mongols lost heavily and retreated, Qutlugh Khwaja dying of wounds."
+    sources: [wp-alauddin-khalji]
+  - key: khalji-raid-on-gujarat-1299
+    name: Khalji raid on Gujarat and Somnath
+    type: Invasion
+    year: 1299
+    people:
+      - {person: alauddin-khalji, role: ordered}
+    prominence: 3
+    note: "Alauddin sent Ulugh Khan and Nusrat Khan to Gujarat, where the Vaghela king Karna offered weak resistance. The army plundered several towns including Somnath, whose temple it desecrated, captured queen Kamala Devi and the slave Malik Kafur. Gujarat was annexed in a second invasion in 1304. A different event from Mahmud of Ghazni's sack of Somnath."
+    sources: [wp-alauddin-khalji]
+  - key: fall-of-ranthambore-1301
+    name: Fall of Ranthambore
+    type: Siege
+    year: 1301
+    people:
+      - {person: alauddin-khalji, role: conqueror}
+    prominence: 3
+    note: "Ulugh Khan and Nusrat Khan besieged the Chahamana king Hammiradeva (who had sheltered the Jalore mutiny leaders). Nusrat Khan was killed; Alauddin took command and took the fort in July 1301 (year used). Earlier Jalal-ud-din (1291) and Iltutmish (1226) had also attempted or taken it."
+    sources: [wp-alauddin-khalji]
+  - key: siege-of-chittor-1303
+    name: Alauddin's conquest of Chittor
+    type: Siege
+    year: 1303
+    place: chittor
+    people:
+      - {person: alauddin-khalji, role: conqueror}
+    prominence: 4
+    note: "After an eight-month siege Alauddin took Chittor, the capital of the Guhila king Ratnasimha; Amir Khusrau says he ordered 30,000 Hindus killed. The legend that he came for queen Padmini is rejected by most modern historians."
+    sources: [wp-alauddin-khalji, wp-iltutmish]
+  - key: mongol-siege-of-delhi-1303
+    name: Mongol siege of Delhi
+    type: Siege
+    year: 1303
+    place: delhi
+    people:
+      - {person: alauddin-khalji, role: defender}
+    prominence: 4
+    note: "While Alauddin's armies were at Chittor and Warangal, Mongols invaded around August 1303 (year used). He reached Delhi first but could not prepare a defence and sheltered in a camp at the under-construction Siri Fort. The Mongols ransacked Delhi's surroundings but could not breach Siri and withdrew. One of the most serious Mongol invasions of India; it led to stronger forts and his economic reforms."
+    sources: [wp-alauddin-khalji, wp-delhi-sultanate]
+  - key: founding-of-tughluq-dynasty-1320
+    name: Founding of the Tughluq dynasty
+    type: Founding
+    date: 1320-09-06
+    people:
+      - {person: ghiyath-al-din-tughluq, role: founder}
+    prominence: 3
+    note: "In July 1320 Khusrau Khan murdered Qutb ud-Din Mubarak Shah; Ghazi Malik beat him in the battles of Saraswati and Lahrawat and was proclaimed ruler on 6 September 1320, ending the Khalji dynasty."
+    sources: [wp-ghiyath-al-din-tughluq, wp-delhi-sultanate]
+  - key: capital-moved-to-daulatabad-1327
+    name: Capital moved from Delhi to Daulatabad
+    type: Relocation
+    year: 1327
+    end_year: 1335
+    place: daulatabad
+    people:
+      - {person: muhammad-bin-tughluq, role: ordered}
+    prominence: 4
+    note: "Muhammad bin Tughluq ordered the court and Delhi's Muslim elite to Daulatabad (Devagiri), a central point for ruling north and south; many died on the road. After revolts (1334 plague at Bidar, Madurai, Bengal) he moved the capital back in 1335. The migrants included Hasan Gangu, later founder of the Bahmani Sultanate."
+    sources: [wp-muhammad-bin-tughluq, wp-delhi-sultanate]
+  - key: timur-sack-of-delhi-1398
+    name: Timur's sack of Delhi
+    type: Sack
+    date: 1398-12-17
+    place: delhi
+    people:
+      - {person: timur, role: conqueror}
+    prominence: 4
+    note: "Timur crossed the Indus on 30 September 1398 with 90,000 men and defeated the army of Sultan Nasir-ud-Din Mahmud Shah Tughluq and Mallu Iqbal on 17 December, panicking their elephants with burning camels. Delhi was plundered and, after a rising, massacred for about fifteen days (estimates 100,000-200,000 dead); skilled artisans were taken to Samarkand. Mahmud fled to Gujarat. The city did not recover for almost a century."
+    sources: [wp-timur, wp-delhi-sultanate]
+  - key: khizr-khan-takes-delhi-1414
+    name: Khizr Khan takes Delhi
+    type: Conquest
+    date: 1414-05-28
+    place: delhi
+    people:
+      - {person: khizr-khan, role: conqueror}
+    prominence: 3
+    note: "Khizr Khan captured Delhi and imprisoned Daulat Khan Lodi, founding the Sayyid dynasty. The Delhi Sultanate article gives 1414-1450 in its heading and 1415-1451 in its text."
+    sources: [wp-khizr-khan, wp-delhi-sultanate]
+  - key: accession-of-bahlul-lodi-1451
+    name: Bahlul Lodi becomes Sultan
+    type: Coronation
+    date: 1451-04-19
+    place: delhi
+    people:
+      - {person: bahlul-lodi, role: crowned}
+    prominence: 3
+    note: "After Alam Shah's voluntary abdication Bahlul ascended the throne of Delhi as Bahlul Shah Ghazi, beginning the Lodi dynasty. Alam Shah lived on at Badaun until July 1478."
+    sources: [wp-bahlul-lodi, wp-delhi-sultanate]
+  - key: founding-of-agra-1503
+    name: Sikandar Lodi builds Agra
+    type: Founding
+    year: 1503
+    place: agra
+    people:
+      - {person: sikandar-lodi, role: founder}
+    prominence: 2
+    note: "Sikandar commissioned the present-day city of Agra in 1503 and moved his base there to be closer to Gwalior, which he failed to take (1505-1506). The Delhi Sultanate article says he moved his capital and court from Delhi to Agra."
+    sources: [wp-sikandar-lodi, wp-delhi-sultanate]
+  - key: battle-of-khatoli-1517
+    name: Battle of Khatoli
+    type: Battle
+    year: 1517
+    people:
+      - {person: rana-sanga, role: victor}
+      - {person: ibrahim-lodi, role: defeated}
+    prominence: 3
+    note: "Ibrahim Lodi marched against Mewar in 1517 after Sanga encroached on his lands; the Lodi army fled at Khatoli on the border of Hadoti and a prince was captured. Sanga lost an arm and was lamed by an arrow. Ibrahim was beaten again at Dholpur in 1518-19."
+    sources: [wp-rana-sanga, wp-ibrahim-lodi]
+  - key: first-battle-of-panipat-1526
+    name: First Battle of Panipat
+    type: Battle
+    date: 1526-04-21
+    place: panipat
+    people:
+      - {person: babur, role: victor}
+      - {person: ibrahim-lodi, role: killed}
+    prominence: 5
+    note: "Babur reached Panipat on 20 April 1526 and fought on the 21st. His 12,000 men, with 15-20 cannon and matchlocks behind about 700 wagons chained with rawhide, beat a much larger Lodi army (50,000-70,000 and 1,000 elephants in the Panipat article; about 100,000 in the Babur article) that had no guns. Ibrahim and about 20,000 men died. One of the first battles in India fought with gunpowder; it began Mughal rule."
+    sources: [wp-first-battle-of-panipat, wp-babur, wp-ibrahim-lodi]
+  - key: battle-of-khanwa-1527
+    name: Battle of Khanwa
+    type: Battle
+    date: 1527-03-16
+    place: khanwa
+    people:
+      - {person: babur, role: victor}
+      - {person: rana-sanga, role: defeated}
+    prominence: 4
+    note: "Sanga's coalition of over 120 Rajput chiefs, Mahmud Lodi's Afghans and Hasan Khan Mewati met Babur in a fortified camp of linked carts at Khanwa. Cannon and matchlocks broke the Rajput charges; Sanga was shot and carried off unconscious, and Silhadi of Raisen is said to have gone over to Babur. Babur built a tower of enemy skulls and took the title ghazi. Babur renounced wine before the battle."
+    sources: [wp-battle-of-khanwa, wp-rana-sanga, wp-babur]
+  - key: battle-of-chausa-1539
+    name: Battle of Chausa
+    type: Battle
+    year: 1539
+    people:
+      - {person: sher-shah-suri, role: victor}
+      - {person: humayun, role: defeated}
+    prominence: 3
+    note: "In June 1539 (year used) on the Ganges near Buxar. Sher Shah broke an agreed truce and attacked the sleeping Mughal camp at night; Humayun escaped by swimming the Ganges on a water skin. No place defined (Buxar not in the batch)."
+    sources: [wp-humayun, wp-sher-shah-suri]
+  - key: battle-of-kannauj-1540
+    name: Battle of Kannauj
+    type: Battle
+    date: 1540-05-17
+    place: kannauj
+    people:
+      - {person: sher-shah-suri, role: victor}
+      - {person: humayun, role: defeated}
+    prominence: 4
+    note: "Humayun, with his brothers Askari and Hindal, was soundly defeated 200 km east of Agra and fled through Agra, Delhi and Lahore. Sher Shah was crowned a second time that day and founded the short-lived Sur Empire with its capital at Delhi."
+    sources: [wp-humayun, wp-sher-shah-suri]
+  - key: humayun-exile-1540
+    name: Humayun's exile
+    type: Exile
+    year: 1540
+    end_year: 1555
+    people:
+      - {person: humayun, role: exile}
+    prominence: 3
+    note: "After Kannauj Humayun fled via Lahore through the Thar Desert to Sindh, where his son Akbar was born at Amarkot (15 October 1542), then to Kandahar and Kabul and into Safavid Persia, where Shah Tahmasp I gave him 12,000 cavalry. He retook Kandahar (1545) and Kabul (18 November 1545), blinded his brother Kamran in 1553, and started for India in 1554."
+    sources: [wp-humayun]
+  - key: humayun-regains-delhi-1555
+    name: Humayun regains Delhi
+    type: Restoration
+    date: 1555-07-23
+    place: delhi
+    people:
+      - {person: humayun, role: restored}
+    prominence: 4
+    note: "Bairam Khan led Humayun's army through the Punjab and beat Sikandar Shah Suri at Sirhind on 22 June 1555 by a feigned retreat. Towns welcomed the army and on 23 July 1555 Humayun again sat on Babur's throne in Delhi."
+    sources: [wp-humayun, wp-second-battle-of-panipat]
+  - key: accession-of-akbar-1556
+    name: Enthronement of Akbar
+    type: Coronation
+    date: 1556-02-14
+    people:
+      - {person: akbar, role: crowned}
+    prominence: 4
+    note: "Bairam Khan concealed Humayun's death and enthroned the 13-year-old Akbar on a newly built platform at Kalanaur in Punjab, proclaiming him Shahanshah, during the war against Sikandar Shah Suri. No place defined (Kalanaur not in the batch). Humayun's body was moved to Kalanaur after Hemu took Purana Qila."
+    sources: [wp-akbar, wp-humayun]
+  - key: hemu-takes-delhi-1556
+    name: Hemu defeats the Mughals at Tughlaqabad and takes Delhi
+    type: Battle
+    date: 1556-10-07
+    place: delhi
+    people:
+      - {person: hemu, role: victor}
+    prominence: 3
+    note: "After Humayun's death Hemu marched from Bengal, took Agra, and beat the Mughal governor Tardi Beg Khan at Tughlaqabad just outside Delhi, entering Delhi on 7 October 1556 and assuming the title Vikramaditya. The Second Panipat article dates his coronation at Purana Qila to 6 October."
+    sources: [wp-hemu, wp-second-battle-of-panipat]
+  - key: second-battle-of-panipat-1556
+    name: Second Battle of Panipat
+    type: Battle
+    date: 1556-11-05
+    place: panipat
+    people:
+      - {person: akbar, role: victor}
+      - {person: hemu, role: defeated}
+    prominence: 4
+    note: "The Mughal army under Ali Quli Khan Shaibani (Akbar and Bairam Khan stayed eight miles back) had captured Hemu's artillery train beforehand. Hemu's elephants and cavalry nearly won, but he was struck in the eye by a chance arrow and collapsed; his army fled with about 5,000 dead. Hemu was beheaded, by Akbar according to Qandhari (Abu'l-Fazl says Akbar refused), and Akbar took the title ghazi. 120 elephants were captured."
+    sources: [wp-second-battle-of-panipat, wp-hemu, wp-akbar]
+  - key: siege-of-chittorgarh-1568
+    name: Akbar's siege of Chittorgarh
+    type: Siege
+    year: 1567
+    end_year: 1568
+    place: chittor
+    people:
+      - {person: akbar, role: victor}
+    prominence: 3
+    note: "Akbar attacked Chittor in 1567 because it lay on the shortest route from Agra to Gujarat. Udai Singh II withdrew to the hills leaving Jaimal and Patta to hold it; the fort fell in February 1568 after a four-month siege. Akbar had the surviving defenders and 30,000 non-combatants killed and proclaimed the victory of Islam. It cost Mewar its fertile eastern belt."
+    sources: [wp-akbar, wp-battle-of-haldighati, wp-maharana-pratap]
+  - key: battle-of-haldighati-1576
+    name: Battle of Haldighati
+    type: Battle
+    date: 1576-06-18
+    place: haldighati
+    people:
+      - {person: maharana-pratap, role: defeated}
+      - {person: akbar, role: victor}
+    prominence: 4
+    note: "Man Singh I of Amber with about 10,000 Mughals and Rajputs met Pratap's roughly 3,000 horse and 400 Bhil archers; Mughal musketry broke the Mewar elephant charge. Pratap, wounded, was persuaded to leave and a Jhala chief took his place. The Mughals won but did not capture him; Man Singh was briefly banned from court. Akbar was not present. Pratap kept fighting by guerrilla war."
+    sources: [wp-battle-of-haldighati, wp-maharana-pratap, wp-akbar]
+  - key: conquest-of-pavagadh-1484
+    name: Mahmud Begada conquers Pavagadh and Champaner
+    type: Siege
+    date: 1484-11-21
+    people:
+      - {person: mahmud-begada, role: conqueror}
+    prominence: 3
+    note: "After a siege of more than twenty months (April 1483 to December 1484) the hill fort of Pavagadh fell to a morning assault; the Raval Jayasingh of the Khichi Chauhans and his minister were put to death for refusing Islam. Begada walled Champaner and made it his capital as Muhammadabad. Humayun took it in 1535. No place defined."
+    sources: [wp-mahmud-begada]
+  - key: chaulukya-conquest-of-dhara-1135
+    name: Jayasimha Siddharaja conquers Dhara
+    type: Conquest
+    year: 1135
+    people:
+      - {person: jayasimha-siddharaja, role: conqueror}
+    prominence: 3
+    note: "Jayasimha defeated the Paramara king of Malwa and took the capital Dhara, about 1135-36 by A. K. Majumdar's reckoning, with help from the Chahamanas Arnoraja and Asharaja. Chroniclers name the Paramara king as Naravarman or Yashovarman; he took the title Avantinatha (first attested 1137). Date is estimated."
+    estimated: true
+    sources: [wp-jayasimha-siddharaja]
+
+links:
+  - {parent: vijaya-sena, child: ballala-sena}
+  - {parent: ballala-sena, child: lakshmana-sena}
+  - {parent: ghiyath-al-din-tughluq, child: muhammad-bin-tughluq}
+  - {parent: iltutmish, child: razia-sultana}
+  - {parent: bahlul-lodi, child: sikandar-lodi}
+  - {parent: sikandar-lodi, child: ibrahim-lodi}
+  - {parent: babur, child: humayun}
+  - {parent: humayun, child: akbar}
+
+moments:
+  # Born, crowned
+  - {person: muhammad-of-ghor,        role: crowned, place: ghazni,       year: 1173, sources: [wp-muhammad-of-ghor]}
+  - {person: prithviraj-iii-chauhan,  role: lived,   place: ajmer,        year: 1177, sources: [wp-prithviraj-iii-chauhan]}
+  - {person: rana-kumbha,             role: lived,   place: chittor,      year: 1433, sources: [wp-rana-kumbha]}
+  - {person: rana-sanga,              role: lived,   place: chittor,      year: 1509, sources: [wp-rana-sanga]}
+  - {person: jayasimha-siddharaja,    role: lived,   place: anhilwara-patan, year: 1092, sources: [wp-jayasimha-siddharaja]}
+  - {person: kumarapala,              role: lived,   place: anhilwara-patan, year: 1143, sources: [wp-kumarapala]}
+  - {person: muhammad-bin-tughluq,    role: lived,   place: daulatabad,   year: 1327, sources: [wp-muhammad-bin-tughluq]}
+  - {person: sikandar-lodi,           role: lived,   place: agra,         sources: [wp-sikandar-lodi]}
+  - {person: babur,                   role: lived,   place: agra,         year: 1526, sources: [wp-babur]}
+  - {person: akbar,                   role: lived,   place: fatehpur-sikri, year: 1569, sources: [wp-akbar]}
+  - {person: akbar,                   role: lived,   place: lahore,       year: 1585, sources: [wp-akbar]}
+  - {person: akbar,                   role: lived,   place: agra,         year: 1599, sources: [wp-akbar]}
+  # Died
+  - {person: qutb-ud-din-aibak,       role: died,    place: lahore,       year: 1210, sources: [wp-qutb-ud-din-aibak]}
+  - {person: iltutmish,               role: died,    place: delhi,        year: 1236, sources: [wp-iltutmish]}
+  - {person: alauddin-khalji,         role: died,    place: delhi,        year: 1316, sources: [wp-alauddin-khalji]}
+  - {person: ibrahim-lodi,            role: died,    place: panipat,      year: 1526, sources: [wp-ibrahim-lodi]}
+  - {person: babur,                   role: died,    place: agra,         year: 1530, sources: [wp-babur]}
+  - {person: humayun,                 role: died,    place: delhi,        year: 1556, sources: [wp-humayun]}
+  - {person: hemu,                    role: died,    place: panipat,      year: 1556, sources: [wp-hemu, wp-second-battle-of-panipat]}
+  # Buried
+  - {person: muhammad-of-ghor,        role: buried,  place: ghazni,       year: 1206, sources: [wp-muhammad-of-ghor]}
+  - {person: qutb-ud-din-aibak,       role: buried,  place: lahore,       year: 1210, sources: [wp-qutb-ud-din-aibak]}
+  - {person: iltutmish,               role: buried,  place: qutb-minar,   year: 1236, sources: [wp-iltutmish]}
+  - {person: razia-sultana,           role: buried,  place: delhi,        year: 1240, sources: [wp-razia-sultana]}
+  - {person: alauddin-khalji,         role: buried,  place: qutb-minar,   year: 1316, sources: [wp-alauddin-khalji]}
+  - {person: firuz-shah-tughlaq,      role: buried,  place: delhi,        year: 1388, sources: [wp-firuz-shah-tughlaq]}
+  - {person: ibrahim-lodi,            role: buried,  place: panipat,      year: 1526, sources: [wp-ibrahim-lodi]}
+  - {person: babur,                   role: buried,  place: agra,         year: 1530, sources: [wp-babur]}
+  - {person: humayun,                 role: buried,  place: delhi,        sources: [wp-humayun]}
+  - {person: akbar,                   role: buried,  place: agra,         year: 1605, sources: [wp-akbar]}
+
+discrepancies:
+  - key: prithviraj-death
+    question: How and where did Prithviraj III die in 1192?
+    about: [{person: prithviraj-iii-chauhan}, {event: second-battle-of-tarain-1192}]
+    field: died
+    claims:
+      - {value: "Captured near Sursuti/Sirsa after the battle and summarily executed (Minhaj, Firishta; the Muhammad article says on the bank of the Saraswati, present-day Sirsa)", sources: [wp-prithviraj-iii-chauhan, wp-second-battle-of-tarain, wp-muhammad-of-ghor]}
+      - {value: "Taken to Ajmer, intended to rule as a vassal, then rebelled and was beheaded for treason (Hasan Nizami; Prabandha-Chintamani; coins with both names issued from Delhi)", sources: [wp-prithviraj-iii-chauhan, wp-second-battle-of-tarain]}
+      - {value: "Killed on the battlefield (Lakshmidhara); or died in captivity (Hammira Mahakavya); or blinded at Ghazna and killed Muhammad (Prithviraj Raso, called fictional)", sources: [wp-prithviraj-iii-chauhan]}
+    note: "The record uses 1192 only. No death place is entered."
+  - key: ghurid-capture-of-delhi-year
+    question: In which year did the Ghurids take Delhi?
+    about: [{event: ghurid-capture-of-delhi-1192}]
+    field: date
+    claims:
+      - {value: "1192; Aibak deposed the Tomara vassal in 1193", sources: [wp-qutb-ud-din-aibak]}
+      - {value: "1193, by Muhammad and Aibak, with a puppet Rajput installed and soon deposed", sources: [wp-muhammad-of-ghor]}
+    note: "The record uses 1192."
+  - key: delhi-sultanate-start
+    question: When did the Delhi Sultanate begin?
+    about: [{event: founding-of-delhi-sultanate-1206}, {person: qutb-ud-din-aibak}, {person: iltutmish}]
+    field: date
+    claims:
+      - {value: "1206: Aibak, after Muhammad's assassination, informally ascended 25 June 1206 as first Sultan of Delhi", sources: [wp-delhi-sultanate, wp-qutb-ud-din-aibak]}
+      - {value: "Formal recognition 1208-09 (chatr and deed of investiture from Ghiyas al-Din Mahmud)", sources: [wp-qutb-ud-din-aibak]}
+      - {value: "1192, from the presence and claims of Muhammad of Ghor after Tarain (some historians)", sources: [wp-delhi-sultanate]}
+      - {value: "Iltutmish (1211) as the effective founder and first to rule from Delhi", sources: [wp-iltutmish]}
+    note: "The record uses 25 June 1206."
+  - key: muhammad-of-ghor-killers
+    question: Who killed Muhammad of Ghor at Dhamiak on 15 March 1206?
+    about: [{person: muhammad-of-ghor}, {event: assassination-of-muhammad-of-ghor-1206}]
+    field: died
+    claims:
+      - {value: "Khokhars who had lost relatives in his suppression of their revolt (Tarikh-i Alfi, Firishta)", sources: [wp-muhammad-of-ghor]}
+      - {value: "Khokhars with two Muslim men, a joint Khokhar-Isma'ili attack (Ibn al-Athir)", sources: [wp-muhammad-of-ghor]}
+      - {value: "Isma'ili emissaries (lead of the article; Aibak's article says 'Khokhars or Ismailis')", sources: [wp-muhammad-of-ghor, wp-qutb-ud-din-aibak]}
+    note: "The date, 15 March 1206, and the place Dhamiak are agreed."
+  - key: iltutmish-birth
+    question: When was Iltutmish born?
+    about: [{person: iltutmish}]
+    field: born
+    claims:
+      - {value: "1192 (the Iltutmish article lead)", sources: [wp-iltutmish]}
+      - {value: "He was sold as a young boy and bought by Aibak after the Gujarat campaign of c. 1197, and was already an officer by 1200 (the same article's text)", sources: [wp-iltutmish]}
+    note: "These cannot both be right, so no birth year is entered."
+  - key: razia-death
+    question: When and where did Razia Sultan die in October 1240?
+    about: [{person: razia-sultana}]
+    field: died
+    claims:
+      - {value: "15 October 1240 (lead)", sources: [wp-razia-sultana, wp-iltutmish]}
+      - {value: "13 October 1240, 'more likely' murdered by captors at Kaithal after defeat on 14 October", sources: [wp-razia-sultana]}
+      - {value: "A later source has her and Altunia murdered by bandits while asleep under a tree outside Kaithal; her grave is at Mohalla Bulbuli Khana near Turkman Gate, Delhi, though a ruined building in Kaithal is said to be her original grave", sources: [wp-razia-sultana]}
+    note: "The record uses the lead date, 15 October 1240, and Delhi for the burial moment. The same article also says defeat on 14 October, which would be one day after a 13 October death, so the sequence is not consistent."
+  - key: balban-accession-year
+    question: When did Balban become Sultan?
+    about: [{person: ghiyas-ud-din-balban}]
+    field: date
+    claims:
+      - {value: "1266, on Nasiruddin Mahmud's death at age fifty", sources: [wp-ghiyas-ud-din-balban, wp-delhi-sultanate]}
+      - {value: "Ruled as Sultan from 1265 until 1287 (Death section of the same article)", sources: [wp-ghiyas-ud-din-balban]}
+    note: "The record uses 1266."
+  - key: jalal-ud-din-death-day
+    question: On what day was Jalal-ud-din Khalji killed and Alauddin proclaimed?
+    about: [{person: jalal-ud-din-khalji}, {person: alauddin-khalji}]
+    field: died
+    claims:
+      - {value: "19 July 1296 (16 Ramazan 695), Amir Khusrau, the more reliable", sources: [wp-jalal-ud-din-khalji]}
+      - {value: "20 July 1296 (Ziauddin Barani; also the Alauddin article)", sources: [wp-jalal-ud-din-khalji, wp-alauddin-khalji]}
+    note: "The record uses 19 July for the end of Jalal-ud-din's title and the start of Alauddin's."
+  - key: alauddin-early-raids-dates
+    question: In what years did Alauddin raid Bhilsa and Devagiri?
+    about: [{person: alauddin-khalji}, {person: jalal-ud-din-khalji}]
+    field: date
+    claims:
+      - {value: "Bhilsa 1293, Devagiri 1296", sources: [wp-jalal-ud-din-khalji, wp-alauddin-khalji]}
+      - {value: "Malwa/Bhilsa 1292, Devagiri 1294", sources: [wp-delhi-sultanate]}
+    note: "Neither raid is entered as an event; the person note uses 'Devagiri' with no year."
+  - key: ghiyath-tughluq-death
+    question: How did Ghiyath al-Din Tughluq die in 1325?
+    about: [{person: ghiyath-al-din-tughluq}]
+    field: died
+    claims:
+      - {value: "A wooden pavilion collapsed at Kara-Manikpur in February 1325 (also killing his second son Mahmud Khan)", sources: [wp-ghiyath-al-din-tughluq]}
+      - {value: "Conspiracy by his vizier Jauna Khan, i.e. the future Muhammad bin Tughluq (Ibn Battuta)", sources: [wp-ghiyath-al-din-tughluq]}
+      - {value: "Killed by his son Juna Khan, who then assumed power (Vincent Smith and some historians)", sources: [wp-delhi-sultanate]}
+    note: "The record uses 1 February 1325 and the accident."
+  - key: muhammad-bin-tughluq-death-place
+    question: Where did Muhammad bin Tughluq die in March 1351?
+    about: [{person: muhammad-bin-tughluq}]
+    field: place
+    claims:
+      - {value: "On the way to Thatta in Sindh, campaigning against the Taghi", sources: [wp-muhammad-bin-tughluq, wp-firuz-shah-tughlaq]}
+      - {value: "Trying to chase and punish rebels in Gujarat", sources: [wp-delhi-sultanate]}
+    note: "No death place is entered; the date is 20 March 1351 (Firuz succeeded on 23 March on the banks of the Indus)."
+  - key: sayyid-dynasty-start
+    question: When did the Sayyid dynasty begin?
+    about: [{person: khizr-khan}, {event: khizr-khan-takes-delhi-1414}]
+    field: date
+    claims:
+      - {value: "1414: Khizr Khan, sultan 1414-1421, captured Delhi on 28 May 1414", sources: [wp-khizr-khan]}
+      - {value: "1414-1450 in the Delhi Sultanate heading; but 'ruled the Delhi Sultanate from 1415 to 1451' in its text, and the Lodis followed in 1451", sources: [wp-delhi-sultanate]}
+    note: "The record uses 28 May 1414."
+  - key: ibrahim-lodi-death-day
+    question: On what day did Ibrahim Lodi die at Panipat?
+    about: [{person: ibrahim-lodi}, {event: first-battle-of-panipat-1526}]
+    field: died
+    claims:
+      - {value: "21 April 1526", sources: [wp-ibrahim-lodi, wp-first-battle-of-panipat, wp-babur]}
+      - {value: "20 April 1526 (the Ibrahim Lodi article's 'Death' paragraph; the same article's lead and the next sentence say 21 April; the Babur article says Babur reached Panipat on 20 April and the battle began the next day)", sources: [wp-ibrahim-lodi, wp-babur]}
+    note: "The record uses 21 April 1526."
+  - key: timur-dates
+    question: When was Timur born and on what day did he die?
+    about: [{person: timur}]
+    field: died
+    claims:
+      - {value: "Born in the late 1320s (most sources of his lifetime); died 17 or 18 February 1405 at Farab", sources: [wp-timur]}
+      - {value: "Born 8 April 1336 (later Timurid dynastic histories, said to link him to the Ilkhan Abu Sa'id, who died that year)", sources: [wp-timur, wp-babur]}
+    note: "No birth year is entered. The record uses 17 February 1405 and the title start about 1370."
+  - key: rana-sanga-death
+    question: When and where did Rana Sanga die?
+    about: [{person: rana-sanga}]
+    field: died
+    claims:
+      - {value: "30 January 1528 (lead)", sources: [wp-rana-sanga]}
+      - {value: "At Kalpi in January 1528 or on 20 May 1528, poisoned by nobles who did not want another war with Babur", sources: [wp-rana-sanga, wp-battle-of-khanwa]}
+    note: "The record uses 30 January 1528; Kalpi is not defined so no place is entered."
+  - key: babur-death-date
+    question: On what date did Babur die?
+    about: [{person: babur}]
+    field: died
+    claims:
+      - {value: "26 December 1530 (lead); Humayun's article says he succeeded on 26 December 1530", sources: [wp-babur, wp-humayun]}
+      - {value: "5 January 1531 (new style) = 26 December 1530 (old style), at Agra (Death and legacy section)", sources: [wp-babur]}
+    note: "The same day in two calendars. The record uses 26 December 1530 as in the lead."
+  - key: humayun-death-date
+    question: On what day did Humayun die?
+    about: [{person: humayun}]
+    field: died
+    claims:
+      - {value: "27 January 1556 (lead; fall on 24 January, died 'three days later')", sources: [wp-humayun, wp-second-battle-of-panipat]}
+      - {value: "26 January 1556", sources: [wp-hemu]}
+      - {value: "24 January 1556 (Lane-Poole's quotation of the date of the fall)", sources: [wp-humayun]}
+    note: "The record uses 27 January 1556."
+  - key: hemu-coronation-day
+    question: On what day did Hemu take Delhi and assume the title Vikramaditya?
+    about: [{person: hemu}, {event: hemu-takes-delhi-1556}]
+    field: date
+    claims:
+      - {value: "7 October 1556: took possession of Delhi after a day's battle and claimed royal status", sources: [wp-hemu, wp-second-battle-of-panipat]}
+      - {value: "Coronation at Purana Qila on 6 October 1556", sources: [wp-second-battle-of-panipat]}
+    note: "The record uses 7 October 1556. Whether he declared himself an independent king is a separate dispute among historians (title marked disputed)."
+  - key: akbar-death-date
+    question: On what day did Akbar die?
+    about: [{person: akbar}]
+    field: died
+    claims:
+      - {value: "27 October 1605 (lead)", sources: [wp-akbar]}
+      - {value: "'Believed to have died on 26 October 1605' after falling ill on 3 October with dysentery", sources: [wp-akbar]}
+    note: "The record uses 27 October 1605."
+  - key: sher-shah-birth
+    question: When was Sher Shah Suri born?
+    about: [{person: sher-shah-suri}]
+    field: born
+    claims:
+      - {value: "1472", sources: [wp-sher-shah-suri]}
+      - {value: "1486", sources: [wp-sher-shah-suri]}
+    note: "The article gives both (death at the age of '73 or 59'). The record uses 1472 marked estimated, as the first-listed."
+  - key: bhoja-reign-start
+    question: When did Bhoja's reign begin, and whom did he succeed?
+    about: [{person: bhoja-of-malwa}]
+    field: date
+    claims:
+      - {value: "c. 1010 (Modasa copper plates of 1010-11 are the earliest record)", sources: [wp-bhoja-of-malwa]}
+      - {value: "1000-1055 (Merutunga's 55 years 7 months 3 days; D. C. Ganguly, K. C. Jain)", sources: [wp-bhoja-of-malwa]}
+      - {value: "Succeeded his uncle Munja (Tilaka-Manjari, Prabandha-Chintamani) rather than his father Sindhuraja (inscriptions, Padmagupta)", sources: [wp-bhoja-of-malwa]}
+    note: "The record uses c. 1010 and his father Sindhuraja as predecessor (no link entered)."
+  - key: jayasimha-birth-and-coronation
+    question: When was Jayasimha Siddharaja born and crowned?
+    about: [{person: jayasimha-siddharaja}]
+    field: born
+    claims:
+      - {value: "Born 1091, crowned at three on 7 January 1094 (Merutunga's legend)", sources: [wp-jayasimha-siddharaja]}
+      - {value: "Reigned c. 1092 - c. 1142 (the article's lead); Merutunga's story is not in Hemachandra, so 'does not seem to be accurate'", sources: [wp-jayasimha-siddharaja]}
+    note: "The record uses c. 1092 for the start and c. 1142 for the end and enters no birth year."
+  - key: kumarapala-accession
+    question: When did Kumarapala become king?
+    about: [{person: kumarapala}, {person: jayasimha-siddharaja}]
+    field: date
+    claims:
+      - {value: "1143 (the article's reign, r. 1143-1172)", sources: [wp-kumarapala]}
+      - {value: "1199 VS, given by later Jain chroniclers and converted in the article to '1042 CE'; known to be inaccurate because a 1200 VS inscription of Jayasimha exists at Bali", sources: [wp-kumarapala]}
+      - {value: "Jayasimha's reign ends c. 1142", sources: [wp-jayasimha-siddharaja]}
+    note: "The record uses 1143. The article's CE conversions of the Vikrama years (1199 VS = 1042 CE, 1200 VS = 1043 CE) do not fit its own reign dates, so only the reign dates are used."
+  - key: haldighati-result
+    question: Who won the Battle of Haldighati?
+    about: [{event: battle-of-haldighati-1576}, {person: maharana-pratap}]
+    field: date
+    claims:
+      - {value: "The Mughals won after heavy losses to Mewar but failed to capture Pratap; a 'futile victory' (Mainstream; Abu'l-Fazl; Badayuni)", sources: [wp-battle-of-haldighati, wp-maharana-pratap]}
+      - {value: "Pratap won or the battle was a victory (a reading ascribed to Hindu nationalist retellings; rejected by most mainstream historians such as D. N. Jha, Tanuja Kothiyal and Rima Hooja)", sources: [wp-battle-of-haldighati]}
+    note: "The record follows the mainstream: Pratap defeated. The date, 18 June 1576, is agreed."
