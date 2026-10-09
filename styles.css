@@ -241,3 +241,7 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .makers { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 14px; }
 .makers .yrs { font-family: var(--mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .doings { margin: 4px 0 0; padding: 0 0 0 12px; list-style: none; display: grid; gap: 2px; font-size: 13px; border-left: 2px solid var(--lane); }
+.event .event-line { pointer-events: none; }
+.event .event-line.reach { display: none; }
+.event:hover .event-line.reach, .event:focus-visible .event-line.reach, .event.sel .event-line.reach { display: inline; }
+.event.sel .event-line { stroke-width: 2; stroke-dasharray: none; }
