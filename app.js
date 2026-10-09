@@ -128,6 +128,25 @@ const TYPE_WORDS = [
   [/\b(inventors?|scientists?|philosophers?)\b/gi, "Scholar"],
 ];
 const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors" };
+// Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
+// Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
+const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
+const ARCHITECT = /architect/i, BUILDER_ONLY = /^(architect|landscape designer|master mason|surveyor)$/i;
+const CATS = [
+  { key: "royalty", label: "Royalty", test: p => p.type === "Royalty" },
+  { key: "nobility", label: "Nobility", test: p => p.type === "Nobility" },
+  { key: "clergy", label: "Clergy", test: p => p.type === "Clergy" },
+  { key: "artists", label: "Artists", test: p => p.type === "Artist" && (!(p.roles || []).length || (p.roles || []).some(r => !BUILDER_ONLY.test(r))) },
+  { key: "architects", label: "Architects", test: p => hasRole(p, ARCHITECT) },
+  { key: "writers", label: "Writers", test: p => p.type === "Writer" },
+  { key: "composers", label: "Composers", test: p => p.type === "Composer" },
+  { key: "scholars", label: "Scholars", test: p => p.type === "Scholar" },
+];
+const catsOf = p => { const ks = CATS.filter(c => c.test(p)).map(c => c.key); return ks.length ? ks : ["other"]; };
+const catsFiltering = () => S.catsOff.size > 0;
+const catOn = p => !!p && catsOf(p).some(k => !S.catsOff.has(k));
+// An event stays if it has nobody attached, or anyone in it is shown.
+const eventCatOn = (db, e) => { const ppl = db.peopleInEvent(e.id); return !ppl.length || ppl.some(x => catOn(x.person)); };
 const COMMON_REGIONS = ["italy","france","england","spain","germany","scotland","wales","ireland","normandy","flanders","rome","venice","florence","milan","naples","sicily","papal states","portugal","netherlands","austria","burgundy","aquitaine","brittany","london","paris","jerusalem","byzantium","constantinople","holy roman empire"];
 const STOP = new Set("a an and or the of in on at to for from with who were was is are during time times all show me see view overlap overlapping between era period age around circa c about people persons".split(" "));
 
@@ -244,8 +263,10 @@ function computeView(db, f) {
     [...hit].forEach(id => db.neighbours(id).forEach(n => { if (pool.has(n.id)) hit.add(n.id); }));
     people = people.filter(p => hit.has(p.id));
   }
+  if (catsFiltering()) people = people.filter(catOn);
   const shown = new Set(people.map(p => p.id));
   let events = db.events.filter(e => Number.isFinite(e.start_year));
+  if (catsFiltering()) events = events.filter(e => { const ppl = db.peopleInEvent(e.id); return !ppl.length || ppl.some(x => shown.has(x.person.id)); });
   if (f.from != null) events = events.filter(e => e.start_year <= f.to && (e.end_year ?? e.start_year) >= f.from);
   if (f.regions.length || f.missingRegions.length) events = events.filter(e => placeMatches(db.placeById[e.place_id], f.regions) || db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
   if (f.focus != null || f.types.size) events = events.filter(e => db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
@@ -319,7 +340,7 @@ const S = {
   group: store.get("group", "family"),
   layers: { spouses: store.get("spouses", true), events: store.get("events", true) },
   zoom: 2, zoomAuto: true,
-  selected: null, mapMode: "selected",
+  selected: null, mapMode: "selected", catsOff: new Set(store.get("catsOff", [])),
   trail: [], layout: null,
 };
 
@@ -1078,7 +1099,7 @@ function renderYear() {
   const span = single ? 1 : yearsBetween(a, b) + 1;
 
   // Rulers, grouped by realm, then by title in the order each title first appears.
-  const inRange = db.titles.filter(t => overlaps(t.start_year, t.end_year, a, b));
+  const inRange = db.titles.filter(t => overlaps(t.start_year, t.end_year, a, b) && catOn(db.byId[t.entity_id]));
   // Realms with the most rulers in the span first (the main kingdoms), then by name.
   const count = r => inRange.filter(t => t.realm === r).length;
   const realms = [...new Set(inRange.map(t => t.realm))].sort((x, y) => count(y) - count(x) || x.localeCompare(y));
@@ -1100,7 +1121,10 @@ function renderYear() {
   const rulers = h("section", { class: "year-sec" }, h("h3", { text: single ? "Who ruled" : "Who ruled, in order" }));
   const shown = realms.filter(r => !Y.hidden.has(regionOf(r)));
   out.append(yearMap(a, b, shown));
-  if (!inRange.length) {
+  const hiddenRulers = !inRange.length && db.titles.some(t => overlaps(t.start_year, t.end_year, a, b));
+  if (hiddenRulers) {
+    rulers.append(h("p", { class: "hint", text: "Rulers are hidden by the Show buttons above (Royalty, Nobility, Clergy)." }));
+  } else if (!inRange.length) {
     const ys = db.titles.flatMap(t => [t.start_year, t.end_year]).filter(Number.isFinite);
     rulers.append(h("p", { class: "hint", text: db.titles.length
       ? `No rulers recorded for ${label} yet. Titles so far cover ${fmtSpan(Math.min(...ys), Math.max(...ys))}: ${[...new Set(db.titles.map(t => t.realm))].sort().join(", ")}.`
@@ -1150,7 +1174,7 @@ function renderYear() {
 
   // Events in the span, in date order.
   // Within a year, dated events first in date order, then those known only by year.
-  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b))
+  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b) && eventCatOn(db, e))
     .sort((x, y) => byYear(x.start_year, y.start_year) || !x.start_date - !y.start_date || (x.start_date || "").localeCompare(y.start_date || ""));
   const evSec = h("section", { class: "year-sec" }, h("h3", { text: `Events (${evs.length})` }));
   if (!evs.length) evSec.append(h("p", { class: "hint", text: `No events recorded for ${label} yet.` }));
@@ -1166,8 +1190,8 @@ function renderYear() {
   out.append(evSec);
 
   // Births and deaths in the span.
-  const born = db.people.filter(p => p.birth_year != null && p.birth_year >= a && p.birth_year <= b).sort((x, y) => byYear(x.birth_year, y.birth_year));
-  const died = db.people.filter(p => p.death_year != null && p.death_year >= a && p.death_year <= b).sort((x, y) => byYear(x.death_year, y.death_year));
+  const born = db.people.filter(p => catOn(p) && p.birth_year != null && p.birth_year >= a && p.birth_year <= b).sort((x, y) => byYear(x.birth_year, y.birth_year));
+  const died = db.people.filter(p => catOn(p) && p.death_year != null && p.death_year >= a && p.death_year <= b).sort((x, y) => byYear(x.death_year, y.death_year));
   const bd = h("section", { class: "year-sec two" });
   [["Born", born, "birth"], ["Died", died, "death"]].forEach(([title, list, k]) => {
     const sec = h("div", {}, h("h3", { text: `${title} (${list.length})` }));
@@ -1186,7 +1210,7 @@ const MAKER_TYPES = ["Artist", "Writer", "Composer", "Scholar"];
 function makersSection(a, b, single, label) {
   const db = S.db, inSpan = (s, e) => overlaps(s, e ?? s, a, b);
   const alive = p => (p.birth_year != null || p.death_year != null) && inSpan(p.birth_year ?? p.death_year, p.death_year ?? p.birth_year);
-  const makers = db.people.filter(p => MAKER_TYPES.includes(p.type) && alive(p));
+  const makers = db.people.filter(p => MAKER_TYPES.includes(p.type) && alive(p) && catOn(p));
   const sec = h("section", { class: "year-sec" }, h("h3", { text: `Artists, writers and thinkers (${makers.length})` }));
   if (!makers.length) { sec.append(h("p", { class: "hint", text: `None recorded for ${label} yet.` })); return sec; }
   const grid = h("div", { class: "realms" });
@@ -1430,6 +1454,28 @@ function setGroup(g) {
   render(); updateOverviewWindow();
 }
 
+// The group buttons under the title. Counts are people in the database; the choice is remembered per browser.
+function renderCats() {
+  const box = $("cats"), db = S.db; box.innerHTML = "";
+  box.append(h("span", { class: "lbl", text: "Show" }));
+  const groups = [...CATS, { key: "other", label: "Other" }];
+  groups.forEach(c => {
+    const n = db.people.filter(p => catsOf(p).includes(c.key)).length;
+    if (!n) return;
+    const on = !S.catsOff.has(c.key);
+    box.append(h("button", { type: "button", class: "chip toggle-chip", "aria-pressed": on, title: on ? `Hide ${c.label.toLowerCase()}` : `Show ${c.label.toLowerCase()}`,
+      onclick: () => { on ? S.catsOff.add(c.key) : S.catsOff.delete(c.key); applyCats(); }, text: `${c.label} ${n}` }));
+  });
+  if (S.catsOff.size) box.append(h("button", { type: "button", class: "plink", onclick: () => { S.catsOff.clear(); applyCats(); }, text: "Show everyone" }));
+}
+function applyCats() {
+  store.set("catsOff", [...S.catsOff]);
+  renderCats();
+  S.view = computeView(S.db, S.filter);
+  render(); updateOverviewWindow();
+  if (S.viewMode === "year") renderYear();
+}
+
 function wire() {
   $("ask-form").addEventListener("submit", e => { e.preventDefault(); run($("q").value.trim(), { pushTrail: true }); });
   $("show-all").addEventListener("click", () => run("", { pushTrail: true }));
@@ -1498,6 +1544,7 @@ async function init() {
   try { params = new URLSearchParams(location.search); } catch (e) {}
   // The timeline is always drawn first (while visible, so it can measure itself); ?view=year then switches over.
   S.viewMode = "timeline";
+  renderCats();
   run(params.get("q") || "");
   if (params.get("view") === "year") {
     $("year-from").value = params.get("y") || ""; $("year-to").value = params.get("to") || "";

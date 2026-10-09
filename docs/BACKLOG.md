@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Show buttons: choose which groups appear in the timeline and Year view
+`type: enhancement` · `area: site` · `status: done` · `issue: #82`
+
+Buttons under the title (Royalty, Nobility, Clergy, Artists, Architects, Writers, Composers, Scholars, with counts) filter the timeline's lanes and events and the Year view's rulers, artists, events, births and deaths. Architects match the architect role. Remembered per browser; Show everyone resets. Done 2026-10-09.
+Source: Ty, 2026-10-09.
+
 #### [P2] Build-out: Indian rulers, 1000–1600
 `type: task` · `area: data` · `status: done` · `issue: #32`
 
