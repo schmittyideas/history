@@ -61,7 +61,8 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
-      [raw.titles, raw.realms, raw.sources, raw.source_links] = await Promise.all([optional("titles"), optional("realms"), optional("sources"), optional("source_links")]);
+      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people] = await Promise.all(
+        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people"].map(optional));
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -103,6 +104,11 @@ function indexData(raw) {
     eventsAt, momentsAt, titles,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
     titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
+    // Artworks a person made (artwork_people role "creator").
+    worksBy: id => {
+      const byId = Object.fromEntries((raw.artworks || []).map(w => [w.id, w]));
+      return (raw.artwork_people || []).filter(x => x.entity_id === id && x.role === "creator").map(x => byId[x.artwork_id]).filter(Boolean);
+    },
     // Where a record's facts come from (usually its Wikipedia article): record type + key -> sources.
     sourcesFor: (type, key) => {
       const byId = Object.fromEntries((raw.sources || []).map(s => [s.id, s]));
@@ -1133,6 +1139,7 @@ function renderYear() {
     gridFor(realm).append(card);
   });
   out.append(rulers);
+  out.append(makersSection(a, b, single, label));
 
   // Events in the span, in date order.
   // Within a year, dated events first in date order, then those known only by year.
@@ -1164,6 +1171,46 @@ function renderYear() {
   });
   out.append(bd);
   if (span > 1) out.append(h("p", { class: "hint", text: `${span} years. Rulers are listed if any part of their reign falls in this span.` }));
+}
+
+// Artists, writers, composers and scholars alive in the span, grouped by type, each with what they did in it:
+// their events, life moments (with the place) and the artworks they made.
+const MAKER_TYPES = ["Artist", "Writer", "Composer", "Scholar"];
+function makersSection(a, b, single, label) {
+  const db = S.db, inSpan = (s, e) => overlaps(s, e ?? s, a, b);
+  const alive = p => (p.birth_year != null || p.death_year != null) && inSpan(p.birth_year ?? p.death_year, p.death_year ?? p.birth_year);
+  const makers = db.people.filter(p => MAKER_TYPES.includes(p.type) && alive(p));
+  const sec = h("section", { class: "year-sec" }, h("h3", { text: `Artists, writers and thinkers (${makers.length})` }));
+  if (!makers.length) { sec.append(h("p", { class: "hint", text: `None recorded for ${label} yet.` })); return sec; }
+  const grid = h("div", { class: "realms" });
+  MAKER_TYPES.forEach(type => {
+    const ps = makers.filter(p => p.type === type).sort((x, y) => byYear(x.birth_year, y.birth_year));
+    if (!ps.length) return;
+    const list = h("ul", { class: "makers" });
+    ps.forEach(p => {
+      const doings = [
+        ...db.eventsOf(p.id).filter(x => inSpan(x.event.start_year, x.event.end_year))
+          .map(x => ({ y: x.event.start_year, d: x.event.start_date, node: [yEvent(x.event), x.role ? ` (${x.role})` : ""] })),
+        ...db.pp.filter(m => m.entity_id === p.id && m.year != null && inSpan(m.year)).map(m => {
+          const pl = db.placeById[m.place_id];
+          return { y: m.year, d: null, node: [cap(m.role), pl ? [" at ", yPlace(pl)] : ""] };
+        }),
+        ...db.worksBy(p.id).filter(w => inSpan(w.start_year, w.end_year)).map(w => ({ y: w.start_year, d: null,
+          node: [w.image_page ? h("a", { class: "ext", href: w.image_page, target: "_blank", rel: "noopener", text: w.name + " ↗" }) : h("i", { text: w.name }),
+            w.kind ? ` (${w.kind})` : ""] })),
+      ].sort((x, y) => byYear(x.y, y.y) || (x.d || "").localeCompare(y.d || ""));
+      // "aged 34" for a single year they were alive in; otherwise their life span.
+      const when = single && p.birth_year != null && a >= p.birth_year ? `aged ${yearsBetween(p.birth_year, a)}` : fmtSpan(p.birth_year, p.death_year);
+      const roles = (p.roles || []).slice(0, 3).join(", ");
+      const shown = doings.slice(0, 8);
+      list.append(h("li", {}, yPerson(p), h("span", { class: "yrs", text: ` ${when}${roles ? " · " + roles : ""}` }),
+        shown.length ? h("ul", { class: "doings" }, ...shown.map(x => h("li", {}, h("span", { class: "yrs", text: `${x.d ? fmtDate(x.d) : fmtYear(x.y)} ` }), ...x.node))) : null,
+        doings.length > shown.length ? h("div", { class: "tnote", text: `+${doings.length - shown.length} more` }) : null));
+    });
+    grid.append(h("article", { class: "realm-card maker-card" }, h("h4", { text: cap(TYPE_LABEL[type]) }), list));
+  });
+  sec.append(grid);
+  return sec;
 }
 
 /* ------------------------------------------------------------------ year view: border map */
