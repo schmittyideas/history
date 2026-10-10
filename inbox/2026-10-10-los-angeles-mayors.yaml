@@ -1,0 +1,455 @@
+# Los Angeles: mayors and civic landmarks, 1900 to today.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the
+# research notes): the "List of mayors of Los Angeles" table (wikitext, rev 1376836168) for every term date, and
+# each mayor's own article for life dates and what happened in office. Notes:
+#  - New convention (Ty): mayors are type Government, title "Mayor of Los Angeles", realm "Los Angeles".
+#  - Every mayor in office from 1900 on is here, from Frederick Eaton (in office until 12 Dec 1900) to Karen Bass.
+#    Meredith Snyder's first term (1896-1898) is included so his three terms are complete. The two acting mayors
+#    who filled a vacancy (Niles Pease, 1909; Martin Betkouski, 1916) are included as the list gives them.
+#  - Current mayor: Karen Bass, in office since 12 December 2022. 2026 election: Bass came first in the June 2026
+#    primary (34.27%) and faces Nithya Raman in the general election on 3 November 2026, which has not happened yet.
+#    The "2026 Los Angeles mayoral election" article says both "June 2" and "June 8" for the primary; Bass's article
+#    says June 2. No primary event is recorded.
+#  - Full dates only where the article gives the day. Union Station's opening (May 1939) and Dodger Stadium's
+#    opening (1962) are years only: neither article gives the day.
+#  - Coordinates are approximate (from general knowledge, except the Northridge epicentre, which the article gives).
+#  - Images left out: the Commons licences were not checked in this batch.
+#  - Left out: other offices (Stephens as Governor of California, Garcetti as Ambassador to India) to avoid new realms;
+#    Mulholland's burial at Forest Lawn, Glendale and Cryer's at Forest Lawn (no Forest Lawn place yet; a parallel
+#    Hollywood batch may add it); the 1959 Chavez Ravine evictions (no clear date in the sources); the Owens Valley
+#    dynamiting of 1924 (outside the city). Hollywood, film and tourist-attraction content is in a separate batch.
+batch:
+  title: "Los Angeles mayors and civic landmarks, 1900 to today"
+  requested: "Every Mayor of Los Angeles from 1900 to today, key civic events a visitor would care about, and the civic landmarks tied to them"
+  date: 2026-10-10
+
+sources:
+  - {key: wp-list-of-mayors-of-los-angeles, title: "List of mayors of Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/List_of_mayors_of_Los_Angeles"}
+  - {key: wp-mayor-of-los-angeles, title: "Mayor of Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mayor_of_Los_Angeles"}
+  - {key: wp-frederick-eaton, title: "Frederick Eaton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frederick_Eaton"}
+  - {key: wp-meredith-p-snyder, title: "Meredith P. Snyder (Wikipedia)", url: "https://en.wikipedia.org/wiki/Meredith_P._Snyder"}
+  - {key: wp-owen-mcaleer, title: "Owen McAleer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Owen_McAleer"}
+  - {key: wp-arthur-c-harper, title: "Arthur Cyprian Harper (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arthur_Cyprian_Harper"}
+  - {key: wp-niles-pease, title: "Niles Pease (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niles_Pease"}
+  - {key: wp-william-d-stephens, title: "William Stephens (American politician) (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Stephens_(American_politician)"}
+  - {key: wp-george-alexander-mayor, title: "George Alexander (American politician) (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_Alexander_(American_politician)"}
+  - {key: wp-henry-h-rose, title: "Henry H. Rose (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_H._Rose"}
+  - {key: wp-charles-e-sebastian, title: "Charles E. Sebastian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charles_E._Sebastian"}
+  - {key: wp-martin-f-betkouski, title: "Martin F. Betkouski (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martin_F._Betkouski"}
+  - {key: wp-frederic-t-woodman, title: "Frederic T. Woodman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frederic_T._Woodman"}
+  - {key: wp-george-e-cryer, title: "George E. Cryer (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_E._Cryer"}
+  - {key: wp-john-c-porter, title: "John Clinton Porter (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Clinton_Porter"}
+  - {key: wp-frank-l-shaw, title: "Frank L. Shaw (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frank_L._Shaw"}
+  - {key: wp-fletcher-bowron, title: "Fletcher Bowron (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fletcher_Bowron"}
+  - {key: wp-norris-poulson, title: "Norris Poulson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Norris_Poulson"}
+  - {key: wp-sam-yorty, title: "Sam Yorty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sam_Yorty"}
+  - {key: wp-tom-bradley, title: "Tom Bradley (mayor) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tom_Bradley_(mayor)"}
+  - {key: wp-richard-riordan, title: "Richard Riordan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_Riordan"}
+  - {key: wp-james-hahn, title: "James Hahn (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Hahn"}
+  - {key: wp-antonio-villaraigosa, title: "Antonio Villaraigosa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antonio_Villaraigosa"}
+  - {key: wp-eric-garcetti, title: "Eric Garcetti (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eric_Garcetti"}
+  - {key: wp-karen-bass, title: "Karen Bass (Wikipedia)", url: "https://en.wikipedia.org/wiki/Karen_Bass"}
+  - {key: wp-2026-los-angeles-mayoral-election, title: "2026 Los Angeles mayoral election (Wikipedia)", url: "https://en.wikipedia.org/wiki/2026_Los_Angeles_mayoral_election"}
+  - {key: wp-william-mulholland, title: "William Mulholland (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Mulholland"}
+  - {key: wp-john-and-donald-parkinson, title: "John and Donald Parkinson (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_and_Donald_Parkinson"}
+  - {key: wp-los-angeles, title: "Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles"}
+  - {key: wp-el-pueblo-de-los-angeles, title: "El Pueblo de Los Ángeles Historical Monument (Wikipedia)", url: "https://en.wikipedia.org/wiki/El_Pueblo_de_Los_%C3%81ngeles_Historical_Monument"}
+  - {key: wp-los-angeles-city-hall, title: "Los Angeles City Hall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_City_Hall"}
+  - {key: wp-los-angeles-union-station, title: "Los Angeles Union Station (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Union_Station"}
+  - {key: wp-los-angeles-memorial-coliseum, title: "Los Angeles Memorial Coliseum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Memorial_Coliseum"}
+  - {key: wp-dodger-stadium, title: "Dodger Stadium (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dodger_Stadium"}
+  - {key: wp-chavez-ravine, title: "Chavez Ravine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chavez_Ravine"}
+  - {key: wp-los-angeles-aqueduct, title: "Los Angeles Aqueduct (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Aqueduct"}
+  - {key: wp-st-francis-dam, title: "St. Francis Dam (Wikipedia)", url: "https://en.wikipedia.org/wiki/St._Francis_Dam"}
+  - {key: wp-1932-summer-olympics, title: "1932 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/1932_Summer_Olympics"}
+  - {key: wp-1984-summer-olympics, title: "1984 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/1984_Summer_Olympics"}
+  - {key: wp-zoot-suit-riots, title: "Zoot Suit Riots (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zoot_Suit_Riots"}
+  - {key: wp-watts-riots, title: "Watts riots (Wikipedia)", url: "https://en.wikipedia.org/wiki/Watts_riots"}
+  - {key: wp-1992-los-angeles-riots, title: "1992 Los Angeles riots (Wikipedia)", url: "https://en.wikipedia.org/wiki/1992_Los_Angeles_riots"}
+  - {key: wp-1994-northridge-earthquake, title: "1994 Northridge earthquake (Wikipedia)", url: "https://en.wikipedia.org/wiki/1994_Northridge_earthquake"}
+  - {key: wp-january-2025-southern-california-wildfires, title: "January 2025 Southern California wildfires (Wikipedia)", url: "https://en.wikipedia.org/wiki/January_2025_Southern_California_wildfires"}
+  - {key: wp-los-angeles-times-bombing, title: "Los Angeles Times bombing (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Times_bombing"}
+
+realms:
+  - {name: Los Angeles, region: Americas, country: United States,
+     note: "The City of Los Angeles, California. Its mayors are listed from 1850, when the city was incorporated after California came under United States rule; before that the office was the Spanish and Mexican alcalde."}
+
+places:
+  - key: los-angeles
+    name: Los Angeles
+    historical_name: El Pueblo de Nuestra Señora la Reina de los Ángeles
+    kind: city
+    region: California
+    country: United States
+    lat: 34.0522
+    lng: -118.2437
+    founded: 1781
+    visitable: true
+    note: "Founded on 4 September 1781 by 44 settlers (Los Pobladores) under Spanish governor Felipe de Neve, near the Tongva village of Yaanga. The second most populous city in the United States. Coordinates are downtown (approximate)."
+    sources: [wp-los-angeles]
+  - key: el-pueblo-de-los-angeles
+    name: El Pueblo de Los Ángeles (Los Angeles Plaza)
+    historical_name: Los Angeles Plaza
+    kind: historic district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0572
+    lng: -118.2378
+    founded: 1781
+    visitable: true
+    visit_site: "El Pueblo de Los Ángeles Historical Monument: the old plaza, Olvera Street and La Placita Church (1822)"
+    note: "The oldest part of the city and its centre under Spanish, Mexican and early American rule; a plaque on the plaza marks the founding of 4 September 1781. State historic monument from 1953; on the National Register of Historic Places since 1972. Union Station was built across the street, on the site of the original Chinatown. Coordinates approximate."
+    sources: [wp-el-pueblo-de-los-angeles, wp-los-angeles-union-station]
+  - key: los-angeles-city-hall
+    name: Los Angeles City Hall
+    kind: city hall
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0536
+    lng: -118.2428
+    founded: 1928
+    built_by: "City of Los Angeles, under Mayor George E. Cryer"
+    architect: "John Parkinson, John C. Austin and Albert C. Martin Sr."
+    visitable: true
+    visit_site: "Free observation deck on the 27th floor, open Monday to Friday during business hours"
+    note: "Dedicated 26 April 1928. The tallest building in Los Angeles until 1966 (a height limit exempted only public buildings); its tower is modelled on the Mausoleum at Halicarnassus, and its concrete was made with sand from every California county and water from the 21 missions. Base-isolated in a 1998-2001 seismic retrofit. Houses the mayor's office and the City Council. Coordinates approximate."
+    sources: [wp-los-angeles-city-hall, wp-george-e-cryer]
+  - key: los-angeles-union-station
+    name: Los Angeles Union Station
+    historical_name: Los Angeles Union Passenger Terminal
+    kind: railway station
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0560
+    lng: -118.2366
+    founded: 1939
+    built_by: "City of Los Angeles with the Santa Fe, Southern Pacific and Union Pacific railroads (approved by voters in 1926)"
+    architect: "John and Donald Parkinson, with Jan van der Linden and other supporting architects"
+    visitable: true
+    note: "Opened in May 1939; called the 'Last of the Great Railway Stations' in the United States, mixing Art Deco, Mission Revival and Streamline Moderne. Built on the site of the original Chinatown, which was demolished for it. Still the busiest railway station in the western United States. Coordinates approximate."
+    sources: [wp-los-angeles-union-station]
+  - key: los-angeles-memorial-coliseum
+    name: Los Angeles Memorial Coliseum
+    kind: stadium
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0141
+    lng: -118.2879
+    founded: 1923
+    built_by: "Commissioned in 1921 as a memorial to Los Angeles veterans of the First World War"
+    architect: "John and Donald Parkinson"
+    visitable: true
+    note: "Ground broken 21 December 1921, completed 1 May 1923. Main stadium of the 1932 and 1984 Summer Olympics and due to host athletics in 2028, the first stadium to host three Games. National Historic Landmark since 27 July 1984. Home of USC Trojans football. Coordinates approximate."
+    sources: [wp-los-angeles-memorial-coliseum]
+  - key: dodger-stadium
+    name: Dodger Stadium
+    kind: stadium
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0739
+    lng: -118.2400
+    founded: 1962
+    built_by: "Walter O'Malley's Los Angeles Dodgers, privately financed, on land in Chavez Ravine traded by the city"
+    visitable: true
+    note: "Ground broken 17 September 1959; opened 1962. Built in Chavez Ravine after the city, under Mayor Norris Poulson, dropped a planned public-housing project there and traded the land to the Dodgers (approved by referendum on 3 June 1958); the Mexican-American residents were removed. The oldest major-league ballpark west of the Mississippi and the largest baseball stadium in the world by seats. Coordinates approximate."
+    sources: [wp-dodger-stadium, wp-chavez-ravine, wp-norris-poulson]
+  - key: los-angeles-aqueduct-cascades
+    name: Los Angeles Aqueduct Cascades
+    kind: aqueduct
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.3110
+    lng: -118.4930
+    founded: 1913
+    built_by: "City of Los Angeles; chief engineer William Mulholland"
+    visitable: true
+    visit_site: "The Cascades, seen from Foothill Boulevard near Balboa Boulevard, Sylmar (California Historical Landmark)"
+    note: "The terminal of the 233-mile Los Angeles Aqueduct from the Owens Valley, where the water tumbles down a stepped channel into the San Fernando Valley. Completed 5 November 1913; California Historical Landmark since 28 July 1958. About four miles north-west of San Fernando. Coordinates approximate."
+    sources: [wp-los-angeles-aqueduct]
+  - key: st-francis-dam
+    name: St. Francis Dam
+    historical_name: San Francisquito Dam
+    kind: dam
+    region: California
+    country: United States
+    lat: 34.5470
+    lng: -118.5120
+    founded: 1924
+    ended: 1928
+    built_by: "Los Angeles Bureau of Water Works and Supply, under William Mulholland"
+    visitable: true
+    visit_site: "Ruins visible from San Francisquito Canyon Road; Saint Francis Dam Disaster National Monument (2019)"
+    note: "A concrete gravity-arch dam in San Francisquito Canyon, about 40 miles north-west of downtown Los Angeles, built 1924-1926 as a storage reservoir for the aqueduct. It failed on 12 March 1928. Only broken chunks of concrete remain. Coordinates approximate."
+    sources: [wp-st-francis-dam]
+  - key: watts
+    name: Watts
+    kind: neighbourhood
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.9416
+    lng: -118.2417
+    note: "Neighbourhood of South Los Angeles where the 1965 riots began. Coordinates approximate."
+    sources: [wp-watts-riots]
+  - key: northridge
+    name: Northridge
+    kind: neighbourhood
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.213
+    lng: -118.537
+    note: "San Fernando Valley neighbourhood that gave its name to the 1994 earthquake. Coordinates are the USGS epicentre given in the article."
+    sources: [wp-1994-northridge-earthquake]
+  - key: pacific-palisades
+    name: Pacific Palisades
+    kind: neighbourhood
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0480
+    lng: -118.5260
+    note: "Coastal neighbourhood largely destroyed by the Palisades Fire of January 2025. Coordinates approximate."
+    sources: [wp-january-2025-southern-california-wildfires]
+  - key: angelus-rosedale-cemetery
+    name: Angelus-Rosedale Cemetery
+    kind: cemetery
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0395
+    lng: -118.2985
+    visitable: true
+    note: "Cemetery in Central Los Angeles; burial place of mayors Arthur Harper, George Alexander and William Stephens. Coordinates approximate."
+    sources: [wp-arthur-c-harper, wp-george-alexander-mayor, wp-william-d-stephens]
+  - key: inglewood-park-cemetery
+    name: Inglewood Park Cemetery
+    kind: cemetery
+    city: Inglewood
+    region: California
+    country: United States
+    lat: 33.9660
+    lng: -118.3420
+    visitable: true
+    note: "Burial place of mayors Frank Shaw, Fletcher Bowron and Tom Bradley. Coordinates approximate."
+    sources: [wp-frank-l-shaw, wp-fletcher-bowron, wp-tom-bradley]
+
+people:
+  # Mayors, in order of first term.
+  - {key: frederick-eaton, name: Frederick Eaton, type: Government, realm: Los Angeles, born: 1856, died: 1934-03-11, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty, aqueduct and St. Francis Dam story; Pershing Square redesign and early railway work not captured",
+     note: "Mayor 1898-1900. Self-taught engineer who hired Mulholland in 1878; the political mastermind of the Los Angeles Aqueduct, who quietly bought Owens Valley land and water rights. His demand for a million dollars for his Round Valley land pushed Mulholland to build the St. Francis Dam instead.", sources: [wp-frederick-eaton]}
+  - {key: meredith-p-snyder, name: Meredith P. Snyder, type: Government, realm: Los Angeles, born: 1859-10-22, died: 1937-04-07, prominence: 2,
+     coverage: partly, coverage_note: "Life dates and three terms; business career and the 1907 police charge not captured",
+     note: "'Pinky' Snyder, mayor three times (1896-98, 1900-04, 1919-21). Made the water system municipal and appointed the first Water Commission, which planned to bring water from the Owens Valley.", sources: [wp-meredith-p-snyder]}
+  - {key: owen-mcaleer, name: Owen McAleer, type: Government, realm: Los Angeles, born: 1858-02-03, died: 1944-03-07, prominence: 1,
+     coverage: complete,
+     note: "Mayor 1904-1906. Iron-works man who built the first steam boiler in Los Angeles; on the committee that took the first land options in the Owens Valley. Opened the city's first municipal playground.", sources: [wp-owen-mcaleer]}
+  - {key: arthur-c-harper, name: Arthur C. Harper, type: Government, realm: Los Angeles, born: 1866, died: 1948-12-25, prominence: 2,
+     coverage: complete,
+     note: "Mayor 1906-1909. His corrupt administration provoked what the article calls the first recall movement in American history; he resigned on 11 March 1909 before the vote. Began work on the Civic Center.", sources: [wp-arthur-c-harper, wp-list-of-mayors-of-los-angeles]}
+  - {key: niles-pease, name: Niles Pease, type: Government, realm: Los Angeles, born: 1838, died: 1921-09-21, prominence: 1,
+     coverage: complete,
+     note: "Furniture businessman and City Council president who was acting mayor for four days after Harper resigned (11-15 March 1909).", sources: [wp-niles-pease, wp-list-of-mayors-of-los-angeles]}
+  - {key: william-d-stephens, name: William D. Stephens, type: Government, realm: Los Angeles, born: 1859-12-26, died: 1944-04-25, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty and life dates; his terms in Congress and as Governor of California (1917-1923) are only in the note",
+     note: "Appointed mayor for eleven days in March 1909 after Harper resigned. Later a Progressive congressman and the 24th Governor of California (1917-1923). Had worked with Mulholland on the aqueduct's advisory committee.", sources: [wp-william-d-stephens]}
+  - {key: george-alexander-mayor, name: George Alexander, type: Government, realm: Los Angeles, born: 1839-09-21, died: 1923-08-02, prominence: 2,
+     coverage: complete,
+     note: "Glasgow-born grain merchant and county supervisor; mayor 1909-1913, the first under the 1909 charter that made the office nonpartisan.", sources: [wp-george-alexander-mayor, wp-mayor-of-los-angeles]}
+  - {key: henry-h-rose, name: Henry H. Rose, type: Government, realm: Los Angeles, born: 1856-11-27, died: 1923-07-21, prominence: 2,
+     coverage: complete,
+     note: "Mayor 1913-1915; presided over the opening of the Owens Valley aqueduct. A crack pistol shot.", sources: [wp-henry-h-rose]}
+  - {key: charles-e-sebastian, name: Charles E. Sebastian, type: Government, realm: Los Angeles, born: 1873-03-30, died: 1929-04-17, prominence: 1,
+     coverage: complete,
+     note: "Police chief (1911-1915), then mayor 1915-1916, when most of the San Fernando Valley and the West Side were annexed. Resigned in scandal on 2 September 1916.", sources: [wp-charles-e-sebastian, wp-list-of-mayors-of-los-angeles]}
+  - {key: martin-f-betkouski, name: Martin F. Betkouski, type: Government, realm: Los Angeles, born: 1860, died: 1942, prominence: 1,
+     coverage: complete,
+     note: "City Council member 1909-1917 who was acting mayor for three days after Sebastian resigned (2-5 September 1916). A 1917 grand jury accused him of profiting from land deals on the future Union Station site; the charge was dropped. Died shortly before 8 May 1942.", sources: [wp-martin-f-betkouski, wp-list-of-mayors-of-los-angeles]}
+  - {key: frederic-t-woodman, name: Frederic T. Woodman, type: Government, realm: Los Angeles, born: 1872-06-28, died: 1949-03-25, prominence: 1,
+     coverage: complete,
+     note: "Harbor commissioner appointed mayor after Sebastian resigned (1916-1919); indicted for bribery in 1919, acquitted, but lost the election to Snyder.", sources: [wp-frederic-t-woodman]}
+  - {key: george-e-cryer, name: George E. Cryer, type: Government, realm: Los Angeles, born: 1875-05-13, died: 1961-05-24, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty, public works and the St. Francis Dam response; the corruption allegations and Shuler libel case not captured",
+     note: "Mayor 1921-1929, when the city passed a million people. City Hall, the Central Library and the Coliseum were built; he accepted the city's responsibility for the St. Francis Dam disaster and helped win the 1932 Olympics.", sources: [wp-george-e-cryer]}
+  - {key: john-c-porter, name: John C. Porter, type: Government, realm: Los Angeles, born: 1871-04-04, died: 1959-05-27, prominence: 1,
+     coverage: complete,
+     note: "Mayor 1929-1933, a former Ku Klux Klan member; survived a recall election in 1932, the Olympic year.", sources: [wp-john-c-porter]}
+  - {key: frank-l-shaw, name: Frank L. Shaw, type: Government, realm: Los Angeles, born: 1877-02-01, died: 1958-01-24, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty and recall; the citizenship and estate lawsuits not captured",
+     note: "Mayor 1933-1938; Union Station was built in his term. His administration was among the most corrupt in the city's history, and in 1938 he became the first mayor of a major American city to be recalled.", sources: [wp-frank-l-shaw]}
+  - {key: fletcher-bowron, name: Fletcher Bowron, type: Government, realm: Los Angeles, born: 1887-08-13, died: 1968-09-11, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty, wartime role and death; judicial career only in outline",
+     note: "Reform judge elected in the 1938 recall; mayor until 1953. Cleaned up the police, began LAX and the first freeways, and pressed for the removal and internment of Japanese Americans in 1942. Lost to Poulson over public housing.", sources: [wp-fletcher-bowron]}
+  - {key: norris-poulson, name: Norris Poulson, type: Government, realm: Los Angeles, born: 1895-07-23, died: 1982-09-25, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty and the Dodgers; Assembly and congressional career only in outline",
+     note: "Mayor 1953-1961. Killed the Chavez Ravine public-housing plan and led the drive that brought the Brooklyn Dodgers to Los Angeles. Told Khrushchev in 1959, 'You shall not bury us'.", sources: [wp-norris-poulson]}
+  - {key: sam-yorty, name: Sam Yorty, type: Government, realm: Los Angeles, born: 1909-10-01, died: 1998-06-05, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty and the Watts riots; Assembly, Congress and Senate races only in outline",
+     note: "Populist mayor 1961-1973; criticised over the Watts riots of 1965. A Democrat for almost all his career, he became a Republican in 1973.", sources: [wp-sam-yorty]}
+  - {key: tom-bradley, name: Tom Bradley, type: Government, realm: Los Angeles, born: 1917-12-29, died: 1998-09-29, prominence: 4,
+     coverage: partly, coverage_note: "Mayoralty, 1984 Olympics and 1992 riots; governor races and policing battles only in outline",
+     note: "Son of Texas sharecroppers, LAPD officer, then mayor 1973-1993: the city's first black mayor and its longest-serving. Ran the first profitable Summer Olympics (1984) and started Metro Rail (1990); declared a state of emergency in the 1992 riots.", sources: [wp-tom-bradley]}
+  - {key: richard-riordan, name: Richard Riordan, type: Government, realm: Los Angeles, born: 1930-05-01, died: 2023-04-19, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty and life dates; business career only in outline",
+     note: "Businessman and the most recent Republican mayor (1993-2001), term-limited by the initiative he championed. Mayor during the Northridge earthquake (1994).", sources: [wp-richard-riordan, wp-list-of-mayors-of-los-angeles]}
+  - {key: james-hahn, name: James Hahn, type: Government, realm: Los Angeles, born: 1950-07-03, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty; later judicial career only in outline",
+     note: "Mayor 2001-2005, the only person elected to all three citywide offices. Defeated the San Fernando Valley and Hollywood secession votes and appointed police chief Bill Bratton.", sources: [wp-james-hahn]}
+  - {key: antonio-villaraigosa, name: Antonio Villaraigosa, type: Government, realm: Los Angeles, born: 1953-01-23, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty; Assembly speakership and governor races only in outline",
+     note: "Former Speaker of the California State Assembly; mayor 2005-2013, the city's first Latino mayor since the 19th century. Expanded the LAPD to its largest size.", sources: [wp-antonio-villaraigosa, wp-list-of-mayors-of-los-angeles]}
+  - {key: eric-garcetti, name: Eric Garcetti, type: Government, realm: Los Angeles, born: 1971-02-04, prominence: 2,
+     coverage: partly, coverage_note: "Mayoralty and Olympic bid; ambassadorship (India, 2023-2025) only in the note",
+     note: "Mayor 2013-2022, the city's first elected Jewish mayor; led the bid that brought Los Angeles the 2028 Summer Olympics. United States Ambassador to India 2023-2025.", sources: [wp-eric-garcetti]}
+  - {key: karen-bass, name: Karen Bass, type: Government, realm: Los Angeles, born: 1953-10-03, prominence: 3,
+     coverage: partly, coverage_note: "Mayoralty, January 2025 fires and 2026 election status; Assembly and Congress careers only in outline",
+     note: "Mayor since 12 December 2022, the first woman to hold the office. Earlier Speaker of the California State Assembly (the first African-American woman to lead a US state legislative chamber) and a congresswoman. Faced criticism over the January 2025 fires. In the June 2026 primary she came first (34.27%); she faces Nithya Raman on 3 November 2026.", sources: [wp-karen-bass, wp-2026-los-angeles-mayoral-election]}
+  # Others central to the story
+  - {key: william-mulholland, name: William Mulholland, type: Government, roles: [engineer], born: 1855-09-11, died: 1935-07-22, prominence: 4,
+     coverage: partly, coverage_note: "Aqueduct and St. Francis Dam; early life and later consulting work only in outline",
+     note: "Belfast-born, self-taught engineer who rose from ditch-tender to chief of the city's water bureau and built the 233-mile Los Angeles Aqueduct (1907-1913). His career ended when his St. Francis Dam failed in 1928; he took full responsibility. Mulholland Drive is named after him.", sources: [wp-william-mulholland]}
+  - {key: john-parkinson-architect, name: John Parkinson, type: Artist, roles: [architect], born: 1861-12-12, died: 1935-12-09, prominence: 3,
+     coverage: partly, coverage_note: "The Los Angeles civic buildings; Seattle and commercial works not built out",
+     note: "Lancashire-born architect who settled in Los Angeles in 1894; with his son Donald (from 1920) designed City Hall, the Memorial Coliseum and Union Station. Designed the city's first skyscraper, the Braly Block (1904).", sources: [wp-john-and-donald-parkinson]}
+
+titles:
+  - {person: frederick-eaton, title: Mayor of Los Angeles, realm: Los Angeles, from: 1898-12-15, to: 1900-12-12, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: meredith-p-snyder, title: Mayor of Los Angeles, realm: Los Angeles, from: 1896-12-16, to: 1898-12-15, note: "First term", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: meredith-p-snyder, title: Mayor of Los Angeles, realm: Los Angeles, from: 1900-12-12, to: 1904-12-08, note: "Second time (elected 1900 and 1902)", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: owen-mcaleer, title: Mayor of Los Angeles, realm: Los Angeles, from: 1904-12-08, to: 1906-12-13, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: arthur-c-harper, title: Mayor of Los Angeles, realm: Los Angeles, from: 1906-12-13, to: 1909-03-11, note: "Resigned ahead of a recall election", sources: [wp-list-of-mayors-of-los-angeles, wp-arthur-c-harper]}
+  - {person: niles-pease, title: Mayor of Los Angeles, realm: Los Angeles, from: 1909-03-11, to: 1909-03-15, note: "Acting mayor, as City Council president", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: william-d-stephens, title: Mayor of Los Angeles, realm: Los Angeles, from: 1909-03-15, to: 1909-03-26, note: "Appointed after Harper resigned", sources: [wp-list-of-mayors-of-los-angeles, wp-william-d-stephens]}
+  - {person: george-alexander-mayor, title: Mayor of Los Angeles, realm: Los Angeles, from: 1909-03-26, to: 1913-07-01, sources: [wp-list-of-mayors-of-los-angeles, wp-george-alexander-mayor]}
+  - {person: henry-h-rose, title: Mayor of Los Angeles, realm: Los Angeles, from: 1913-07-01, to: 1915-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: charles-e-sebastian, title: Mayor of Los Angeles, realm: Los Angeles, from: 1915-07-01, to: 1916-09-02, note: "Resigned", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: martin-f-betkouski, title: Mayor of Los Angeles, realm: Los Angeles, from: 1916-09-02, to: 1916-09-05, note: "Acting mayor, as City Council president", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: frederic-t-woodman, title: Mayor of Los Angeles, realm: Los Angeles, from: 1916-09-05, to: 1919-07-01, note: "Appointed after Sebastian resigned; elected 1917", sources: [wp-list-of-mayors-of-los-angeles, wp-frederic-t-woodman]}
+  - {person: meredith-p-snyder, title: Mayor of Los Angeles, realm: Los Angeles, from: 1919-07-01, to: 1921-07-01, note: "Third time. His article says he served until June 1921 (see discrepancy)", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: george-e-cryer, title: Mayor of Los Angeles, realm: Los Angeles, from: 1921-07-01, to: 1929-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: john-c-porter, title: Mayor of Los Angeles, realm: Los Angeles, from: 1929-07-01, to: 1933-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: frank-l-shaw, title: Mayor of Los Angeles, realm: Los Angeles, from: 1933-07-01, to: 1938-09-26, note: "Recalled", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: fletcher-bowron, title: Mayor of Los Angeles, realm: Los Angeles, from: 1938-09-26, to: 1953-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: norris-poulson, title: Mayor of Los Angeles, realm: Los Angeles, from: 1953-07-01, to: 1961-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: sam-yorty, title: Mayor of Los Angeles, realm: Los Angeles, from: 1961-07-01, to: 1973-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: tom-bradley, title: Mayor of Los Angeles, realm: Los Angeles, from: 1973-07-01, to: 1993-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: richard-riordan, title: Mayor of Los Angeles, realm: Los Angeles, from: 1993-07-01, to: 2001-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: james-hahn, title: Mayor of Los Angeles, realm: Los Angeles, from: 2001-07-01, to: 2005-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: antonio-villaraigosa, title: Mayor of Los Angeles, realm: Los Angeles, from: 2005-07-01, to: 2013-07-01, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: eric-garcetti, title: Mayor of Los Angeles, realm: Los Angeles, from: 2013-07-01, to: 2022-12-12, note: "Second term ran longer than four years when city elections moved to even years", sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: karen-bass, title: Mayor of Los Angeles, realm: Los Angeles, from: 2022-12-12, note: "Incumbent; elected 17 November 2022", sources: [wp-list-of-mayors-of-los-angeles, wp-mayor-of-los-angeles]}
+
+events:
+  - {key: harper-resignation-1909, name: Mayor Harper resigns ahead of a recall vote, type: Resignation, date: 1909-03-11, place: los-angeles,
+     people: [{person: arthur-c-harper, role: resigned}, {person: william-d-stephens, role: appointed successor}], prominence: 2,
+     note: "The Los Angeles Herald exposed protection money from brothels and saloons; 25,000 signatures forced a recall, and Harper resigned instead.", sources: [wp-arthur-c-harper, wp-list-of-mayors-of-los-angeles]}
+  - {key: los-angeles-times-bombing, name: Los Angeles Times bombing, type: Bombing, date: 1910-10-01, place: los-angeles, prominence: 3,
+     note: "Iron-workers' union members dynamited the Los Angeles Times Building, starting a fire that killed 21 people. J.B. McNamara admitted it. Still the deadliest crime to go to trial in California.", sources: [wp-los-angeles-times-bombing]}
+  - {key: los-angeles-aqueduct-opening, name: Opening of the Los Angeles Aqueduct, type: Opening, date: 1913-11-05, place: los-angeles-aqueduct-cascades,
+     people: [{person: william-mulholland, role: chief engineer}, {person: henry-h-rose, role: presided as mayor}, {person: frederick-eaton, role: conceived it}], prominence: 5,
+     note: "Owens Valley water first poured down the Cascades into the San Fernando Valley. The 233-mile aqueduct, built 1908-1913 by up to 3,900 workers and 164 tunnels, let Los Angeles grow into California's largest city, at the cost of the Owens Valley's farms.", sources: [wp-los-angeles-aqueduct, wp-william-mulholland, wp-henry-h-rose]}
+  - {key: st-francis-dam-failure, name: St. Francis Dam disaster, type: Disaster, date: 1928-03-12, place: st-francis-dam,
+     people: [{person: william-mulholland, role: chief engineer}, {person: george-e-cryer, role: accepted the city's responsibility}], prominence: 4,
+     note: "The dam collapsed just before midnight, about 12 hours after Mulholland had inspected it, and the flood ran down the Santa Clara River to the sea. At least 431 people died (see discrepancy on the toll), one of the worst American civil-engineering disasters of the 20th century.", sources: [wp-st-francis-dam, wp-william-mulholland, wp-george-e-cryer]}
+  - {key: los-angeles-city-hall-dedication, name: Dedication of Los Angeles City Hall, type: Dedication, date: 1928-04-26, place: los-angeles-city-hall,
+     people: [{person: george-e-cryer, role: mayor}, {person: john-parkinson-architect, role: architect}], prominence: 3,
+     note: "Mayor Cryer led a parade of floats from the countries of the world. The tower was the city's tallest building until 1966.", sources: [wp-los-angeles-city-hall, wp-george-e-cryer]}
+  - {key: 1932-summer-olympics, name: 1932 Summer Olympics, type: Olympic Games, date: 1932-07-30, end_year: 1932, place: los-angeles-memorial-coliseum, prominence: 4,
+     note: "30 July to 14 August 1932, held in the Depression with 37 nations. The Coliseum was the Olympic Stadium, and the Baldwin Hills village was the first modern Olympic Village. Mayor Cryer had helped win the bid.", sources: [wp-1932-summer-olympics, wp-george-e-cryer]}
+  - {key: recall-of-frank-shaw, name: Recall of Mayor Frank Shaw, type: Recall, year: 1938, place: los-angeles-city-hall,
+     people: [{person: frank-l-shaw, role: recalled}, {person: fletcher-bowron, role: elected}], prominence: 2,
+     note: "Police misconduct and misuse of public funds led to Shaw's recall, the first of a big-city mayor in the United States; Bowron took office on 26 September 1938.", sources: [wp-frank-l-shaw, wp-list-of-mayors-of-los-angeles]}
+  - {key: union-station-opening, name: Union Station opens, type: Opening, year: 1939, place: los-angeles-union-station,
+     people: [{person: john-parkinson-architect, role: architect}], prominence: 3,
+     note: "Opened in May 1939 (the article gives no day), uniting the Santa Fe, Southern Pacific and Union Pacific terminals. Designed by John and Donald Parkinson; John had died in 1935.", sources: [wp-los-angeles-union-station, wp-john-and-donald-parkinson]}
+  - {key: zoot-suit-riots, name: Zoot Suit Riots, type: Riot, date: 1943-06-03, end_year: 1943, place: los-angeles, prominence: 3,
+     note: "3-8 June 1943: servicemen and white Angelenos attacked and stripped young Mexican Americans (and Black and Filipino Americans) in zoot suits, starting on Main Street downtown and spreading to East Los Angeles.", sources: [wp-zoot-suit-riots]}
+  - {key: dodger-stadium-opening, name: Dodger Stadium opens, type: Opening, year: 1962, place: dodger-stadium,
+     people: [{person: norris-poulson, role: brought the Dodgers to Los Angeles}], prominence: 3,
+     note: "The Dodgers, who moved from Brooklyn in 1958 and played at the Coliseum until 1961, opened their privately financed stadium in Chavez Ravine in 1962 (the article gives no day). Ground had been broken on 17 September 1959.", sources: [wp-dodger-stadium, wp-chavez-ravine, wp-norris-poulson]}
+  - {key: watts-riots, name: Watts riots, type: Riot, date: 1965-08-11, end_year: 1965, place: watts,
+     people: [{person: sam-yorty, role: mayor}], prominence: 4,
+     note: "Began with the arrest of Marquette Frye on 11 August; six days of rioting against police abuse and discrimination left 34 dead and over $40 million of damage. Nearly 14,000 National Guard troops were sent in. End date disputed (see discrepancy).", sources: [wp-watts-riots, wp-sam-yorty]}
+  - {key: 1984-summer-olympics, name: 1984 Summer Olympics, type: Olympic Games, date: 1984-07-28, end_year: 1984, place: los-angeles-memorial-coliseum,
+     people: [{person: tom-bradley, role: mayor}], prominence: 4,
+     note: "28 July to 12 August 1984, opened by President Reagan and boycotted by 14 Eastern Bloc countries. Privately funded, it made a profit of $232.5 million, the most financially successful modern Games.", sources: [wp-1984-summer-olympics, wp-tom-bradley]}
+  - {key: 1992-los-angeles-riots, name: 1992 Los Angeles riots, type: Riot, date: 1992-04-29, end_year: 1992, place: los-angeles,
+     people: [{person: tom-bradley, role: declared a state of emergency}], prominence: 5,
+     note: "29 April to 3 May 1992, after a jury acquitted four LAPD officers of beating Rodney King. 55 people died, more than 12,000 were arrested and damage passed $1 billion, the most destructive local unrest in US history; Koreatown was disproportionately damaged.", sources: [wp-1992-los-angeles-riots]}
+  - {key: 1994-northridge-earthquake, name: Northridge earthquake, type: Earthquake, date: 1994-01-17, place: northridge, prominence: 4,
+     note: "Magnitude 6.7, at 4:30 a.m. beneath the San Fernando Valley. Sixty people died and freeways collapsed; damage was $13-50 billion, among the costliest US natural disasters.", sources: [wp-1994-northridge-earthquake]}
+  - {key: january-2025-los-angeles-wildfires, name: January 2025 Los Angeles wildfires, type: Wildfire, date: 2025-01-07, end_year: 2025, place: pacific-palisades,
+     people: [{person: karen-bass, role: mayor}], prominence: 4,
+     note: "7-31 January 2025: fourteen wildfires driven by Santa Ana winds, chiefly the Palisades Fire and the Eaton Fire in Altadena, killed at least 31 people and destroyed more than 18,000 homes and buildings. Mayor Bass was in Ghana when they began.", sources: [wp-january-2025-southern-california-wildfires, wp-karen-bass]}
+
+moments:
+  - {person: frederick-eaton, role: born, place: los-angeles, year: 1856, sources: [wp-frederick-eaton]}
+  - {person: frederick-eaton, role: died, place: los-angeles, year: 1934, sources: [wp-frederick-eaton]}
+  - {person: meredith-p-snyder, role: died, place: los-angeles, year: 1937, sources: [wp-meredith-p-snyder]}
+  - {person: meredith-p-snyder, role: lay in state, place: los-angeles-city-hall, year: 1937, sources: [wp-meredith-p-snyder]}
+  - {person: arthur-c-harper, role: buried, place: angelus-rosedale-cemetery, year: 1948, sources: [wp-arthur-c-harper]}
+  - {person: william-d-stephens, role: died, place: los-angeles, year: 1944, sources: [wp-william-d-stephens]}
+  - {person: william-d-stephens, role: buried, place: angelus-rosedale-cemetery, year: 1944, sources: [wp-william-d-stephens]}
+  - {person: george-alexander-mayor, role: died, place: los-angeles, year: 1923, sources: [wp-george-alexander-mayor]}
+  - {person: george-alexander-mayor, role: buried, place: angelus-rosedale-cemetery, year: 1923, sources: [wp-george-alexander-mayor]}
+  - {person: frederic-t-woodman, role: died, place: los-angeles, year: 1949, sources: [wp-frederic-t-woodman]}
+  - {person: george-e-cryer, role: worked, place: los-angeles-city-hall, year: 1928, sources: [wp-george-e-cryer]}
+  - {person: george-e-cryer, role: lay in state, place: los-angeles-city-hall, year: 1961, sources: [wp-george-e-cryer]}
+  - {person: john-c-porter, role: worked, place: los-angeles-city-hall, year: 1929, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: john-c-porter, role: died, place: los-angeles, year: 1959, sources: [wp-john-c-porter]}
+  - {person: frank-l-shaw, role: worked, place: los-angeles-city-hall, year: 1933, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: frank-l-shaw, role: buried, place: inglewood-park-cemetery, year: 1958, sources: [wp-frank-l-shaw]}
+  - {person: fletcher-bowron, role: worked, place: los-angeles-city-hall, year: 1938, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: fletcher-bowron, role: lay in state, place: los-angeles-city-hall, year: 1968, sources: [wp-fletcher-bowron]}
+  - {person: fletcher-bowron, role: buried, place: inglewood-park-cemetery, year: 1968, sources: [wp-fletcher-bowron]}
+  - {person: norris-poulson, role: worked, place: los-angeles-city-hall, year: 1953, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: sam-yorty, role: worked, place: los-angeles-city-hall, year: 1961, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: sam-yorty, role: died, place: los-angeles, year: 1998, sources: [wp-sam-yorty]}
+  - {person: tom-bradley, role: worked, place: los-angeles-city-hall, year: 1973, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: tom-bradley, role: died, place: los-angeles, year: 1998, sources: [wp-tom-bradley]}
+  - {person: tom-bradley, role: buried, place: inglewood-park-cemetery, year: 1998, sources: [wp-tom-bradley]}
+  - {person: richard-riordan, role: worked, place: los-angeles-city-hall, year: 1993, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: richard-riordan, role: died, place: los-angeles, year: 2023, sources: [wp-richard-riordan]}
+  - {person: james-hahn, role: born, place: los-angeles, year: 1950, sources: [wp-james-hahn]}
+  - {person: james-hahn, role: worked, place: los-angeles-city-hall, year: 2001, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: antonio-villaraigosa, role: worked, place: los-angeles-city-hall, year: 2005, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: eric-garcetti, role: born, place: los-angeles, year: 1971, sources: [wp-eric-garcetti]}
+  - {person: eric-garcetti, role: worked, place: los-angeles-city-hall, year: 2013, sources: [wp-list-of-mayors-of-los-angeles]}
+  - {person: karen-bass, role: born, place: los-angeles, year: 1953, sources: [wp-karen-bass]}
+  - {person: karen-bass, role: worked, place: los-angeles-city-hall, year: 2022, sources: [wp-list-of-mayors-of-los-angeles, wp-los-angeles-city-hall]}
+  - {person: william-mulholland, role: worked, place: los-angeles-aqueduct-cascades, year: 1913, sources: [wp-william-mulholland]}
+  - {person: john-parkinson-architect, role: worked, place: los-angeles, year: 1894, sources: [wp-john-and-donald-parkinson]}
+
+discrepancies:
+  - key: watts-riots-end-date
+    question: On what day did the Watts riots of 1965 end?
+    about: [{event: watts-riots}]
+    field: end_year
+    claims:
+      - {value: "16 August 1965 (11-16 August)", sources: [wp-watts-riots]}
+      - {value: "17 August 1965 (11-17 August)", sources: [wp-sam-yorty]}
+    note: "The record stores only the end year (1965), which both agree on. Both say six days."
+  - key: snyder-third-term-end
+    question: When did Meredith Snyder's third term as mayor end?
+    about: [{person: meredith-p-snyder}]
+    field: title end
+    claims:
+      - {value: "1 July 1921", sources: [wp-list-of-mayors-of-los-angeles]}
+      - {value: "June 1921", sources: [wp-meredith-p-snyder]}
+    note: "The title row uses 1 July 1921, the list's date, which matches Cryer taking office the same day."
+  - key: st-francis-dam-death-toll
+    question: How many people died in the St. Francis Dam disaster?
+    about: [{event: st-francis-dam-failure}, {place: st-francis-dam}]
+    field: note
+    claims:
+      - {value: "At least 431", sources: [wp-st-francis-dam, wp-los-angeles-aqueduct], note: "The article's current figure; remains were still being found until the mid-1950s"}
+      - {value: "385", sources: [wp-st-francis-dam], note: "The official toll in August 1928, as the article reports"}
+      - {value: "Over 450", sources: [wp-st-francis-dam], note: "The California Historical Landmark No. 919 plaque, quoted in the article"}
+    note: "The event note uses 'at least 431'. Many victims were swept out to sea and never found, so the true number is unknown."
