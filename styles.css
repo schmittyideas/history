@@ -262,6 +262,12 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .cat-chip[aria-pressed="false"] { background: transparent; color: var(--muted); text-decoration: line-through; }
 .cat-chip[aria-pressed="false"] .dot { background: transparent; }
 .cat-chip:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+.fame { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; flex-basis: 100%; margin-top: 6px; }
+.fame .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.fame .chip { cursor: pointer; padding: 3px 10px; gap: 6px; font-size: 13px; color: var(--ink); }
+.fame .chip b { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); }
+.fame .chip[aria-pressed="true"] { background: color-mix(in srgb, var(--ochre) 16%, var(--panel)); border-color: var(--ochre); }
+.fame .chip:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
 
 /* Name cards sit beside the lines now, so give them a halo where a marriage or descent line passes behind */
 .person .name, .person .dates, .person .rank { paint-order: stroke; stroke: var(--lane); stroke-width: 3px; stroke-linejoin: round; }

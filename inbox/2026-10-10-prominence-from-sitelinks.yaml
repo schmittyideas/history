@@ -1,0 +1,1275 @@
+# Notes for the reviewer
+# - Prominence for artists, writers, composers and scholars is now derived from Wikipedia sitelinks (language editions): 150+ = 5, 100-149 = 4, 60-99 = 3, 40-59 = 2, under 40 = 1. It replaces the research agents' rough guesses. Rulers, clergy and officials keep their hand-set prominence.
+
+batch:
+  title: Prominence of cultural figures from Wikipedia sitelinks
+  requested: "Tiers: show well-known artists first"
+  date: 2026-10-10
+
+people:
+  - key: voltaire
+    prominence: 5
+  - key: william-shakespeare
+    prominence: 5
+  - key: aristotle
+    prominence: 5
+  - key: inigo-jones
+    prominence: 2
+  - key: christopher-wren
+    prominence: 3
+  - key: nicholas-hawksmoor
+    prominence: 1
+  - key: john-vanbrugh
+    prominence: 2
+  - key: john-webb
+    prominence: 1
+  - key: hugh-may
+    prominence: 1
+  - key: william-talman
+    prominence: 1
+  - key: roger-pratt
+    prominence: 1
+  - key: anthony-van-dyck
+    prominence: 3
+  - key: peter-lely
+    prominence: 1
+  - key: godfrey-kneller
+    prominence: 2
+  - key: nicholas-hilliard
+    prominence: 1
+  - key: isaac-oliver
+    prominence: 1
+  - key: samuel-cooper
+    prominence: 1
+  - key: william-dobson
+    prominence: 1
+  - key: daniel-mytens
+    prominence: 1
+  - key: wenceslaus-hollar
+    prominence: 1
+  - key: orazio-gentileschi
+    prominence: 1
+  - key: grinling-gibbons
+    prominence: 1
+  - key: nicholas-stone
+    prominence: 1
+  - key: john-milton
+    prominence: 5
+  - key: john-donne
+    prominence: 4
+  - key: john-dryden
+    prominence: 3
+  - key: aphra-behn
+    prominence: 3
+  - key: ben-jonson
+    prominence: 3
+  - key: andrew-marvell
+    prominence: 2
+  - key: george-herbert
+    prominence: 3
+  - key: john-bunyan
+    prominence: 3
+  - key: samuel-pepys
+    prominence: 2
+  - key: john-evelyn
+    prominence: 1
+  - key: william-congreve
+    prominence: 2
+  - key: william-wycherley
+    prominence: 1
+  - key: margaret-cavendish
+    prominence: 2
+  - key: henry-purcell
+    prominence: 3
+  - key: orlando-gibbons
+    prominence: 1
+  - key: william-byrd
+    prominence: 2
+  - key: henry-lawes
+    prominence: 1
+  - key: john-blow
+    prominence: 1
+  - key: matthew-locke
+    prominence: 1
+  - key: thomas-tomkins
+    prominence: 1
+  - key: isaac-newton
+    prominence: 5
+  - key: robert-boyle
+    prominence: 4
+  - key: robert-hooke
+    prominence: 4
+  - key: william-harvey
+    prominence: 3
+  - key: edmond-halley
+    prominence: 3
+  - key: john-locke
+    prominence: 5
+  - key: thomas-hobbes
+    prominence: 5
+  - key: francis-bacon
+    prominence: 5
+  - key: william-hogarth
+    prominence: 3
+  - key: vesta-stoudt
+    prominence: 1
+  - key: heinrich-hertz
+    prominence: 4
+  - key: frank-whittle
+    prominence: 2
+  - key: harry-coover
+    prominence: 1
+  - key: richard-t-james
+    prominence: 1
+  - key: betty-james
+    prominence: 1
+  - key: alexander-fleming
+    prominence: 4
+  - key: john-parkinson-architect
+    prominence: 1
+  - key: d-w-griffith
+    prominence: 3
+  - key: cecil-b-demille
+    prominence: 3
+  - key: jesse-l-lasky
+    prominence: 1
+  - key: carl-laemmle
+    prominence: 1
+  - key: mary-pickford
+    prominence: 4
+  - key: douglas-fairbanks
+    prominence: 3
+  - key: charlie-chaplin
+    prominence: 5
+  - key: walt-disney
+    prominence: 5
+  - key: sid-grauman
+    prominence: 1
+  - key: simon-rodia
+    prominence: 1
+  - key: frank-lloyd-wright
+    prominence: 5
+  - key: frank-gehry
+    prominence: 3
+  - key: richard-meier
+    prominence: 2
+  - key: james-parrott
+    prominence: 1
+  - key: william-a-wellman
+    prominence: 1
+  - key: george-sidney
+    prominence: 1
+  - key: billy-wilder
+    prominence: 3
+  - key: rudolph-mate
+    prominence: 1
+  - key: nicholas-ray
+    prominence: 2
+  - key: orson-welles
+    prominence: 4
+  - key: george-roy-hill
+    prominence: 2
+  - key: roman-polanski
+    prominence: 4
+  - key: michael-ritchie
+    prominence: 1
+  - key: ridley-scott
+    prominence: 3
+  - key: ivan-reitman
+    prominence: 2
+  - key: robert-zemeckis
+    prominence: 3
+  - key: john-mctiernan
+    prominence: 1
+  - key: jon-favreau
+    prominence: 3
+  - key: joe-wright
+    prominence: 1
+  - key: marc-webb
+    prominence: 1
+  - key: michel-hazanavicius
+    prominence: 3
+  - key: damien-chazelle
+    prominence: 2
+  - key: leonardo-da-vinci
+    prominence: 5
+  - key: michelangelo
+    prominence: 5
+  - key: raphael
+    prominence: 5
+  - key: titian
+    prominence: 4
+  - key: sandro-botticelli
+    prominence: 4
+  - key: giorgione
+    prominence: 3
+  - key: domenico-ghirlandaio
+    prominence: 3
+  - key: andrea-del-sarto
+    prominence: 3
+  - key: giorgio-vasari
+    prominence: 3
+  - key: sofonisba-anguissola
+    prominence: 3
+  - key: tintoretto
+    prominence: 3
+  - key: paolo-veronese
+    prominence: 3
+  - key: caravaggio
+    prominence: 4
+  - key: artemisia-gentileschi
+    prominence: 3
+  - key: guido-reni
+    prominence: 2
+  - key: canaletto
+    prominence: 3
+  - key: giovanni-battista-tiepolo
+    prominence: 3
+  - key: el-greco
+    prominence: 4
+  - key: bartolome-esteban-murillo
+    prominence: 3
+  - key: francisco-de-zurbaran
+    prominence: 3
+  - key: albrecht-durer
+    prominence: 5
+  - key: hans-holbein-the-younger
+    prominence: 3
+  - key: hieronymus-bosch
+    prominence: 3
+  - key: pieter-bruegel-the-elder
+    prominence: 3
+  - key: lucas-cranach-the-elder
+    prominence: 3
+  - key: rembrandt
+    prominence: 5
+  - key: johannes-vermeer
+    prominence: 4
+  - key: frans-hals
+    prominence: 3
+  - key: peter-paul-rubens
+    prominence: 5
+  - key: jan-steen
+    prominence: 2
+  - key: diego-velazquez
+    prominence: 5
+  - key: francisco-goya
+    prominence: 5
+  - key: nicolas-poussin
+    prominence: 3
+  - key: jacques-louis-david
+    prominence: 3
+  - key: jean-auguste-dominique-ingres
+    prominence: 4
+  - key: eugene-delacroix
+    prominence: 4
+  - key: antoine-watteau
+    prominence: 3
+  - key: j-m-w-turner
+    prominence: 3
+  - key: john-constable
+    prominence: 3
+  - key: thomas-gainsborough
+    prominence: 3
+  - key: joshua-reynolds
+    prominence: 3
+  - key: vincent-van-gogh
+    prominence: 5
+  - key: claude-monet
+    prominence: 5
+  - key: paul-cezanne
+    prominence: 4
+  - key: paul-gauguin
+    prominence: 4
+  - key: edouard-manet
+    prominence: 4
+  - key: edgar-degas
+    prominence: 4
+  - key: pierre-auguste-renoir
+    prominence: 4
+  - key: camille-pissarro
+    prominence: 3
+  - key: georges-seurat
+    prominence: 3
+  - key: berthe-morisot
+    prominence: 3
+  - key: alfred-sisley
+    prominence: 3
+  - key: mary-cassatt
+    prominence: 3
+  - key: henri-de-toulouse-lautrec
+    prominence: 3
+  - key: gustave-caillebotte
+    prominence: 2
+  - key: frederic-bazille
+    prominence: 2
+  - key: paul-signac
+    prominence: 3
+  - key: odilon-redon
+    prominence: 3
+  - key: henri-rousseau
+    prominence: 3
+  - key: gustave-courbet
+    prominence: 3
+  - key: jean-baptiste-camille-corot
+    prominence: 3
+  - key: jean-francois-millet
+    prominence: 3
+  - key: honore-daumier
+    prominence: 3
+  - key: eugene-boudin
+    prominence: 2
+  - key: theodore-rousseau
+    prominence: 2
+  - key: charles-francois-daubigny
+    prominence: 2
+  - key: james-mcneill-whistler
+    prominence: 3
+  - key: john-singer-sargent
+    prominence: 3
+  - key: winslow-homer
+    prominence: 2
+  - key: thomas-eakins
+    prominence: 2
+  - key: edouard-vuillard
+    prominence: 2
+  - key: pierre-bonnard
+    prominence: 2
+  - key: maurice-denis
+    prominence: 2
+  - key: emile-bernard
+    prominence: 2
+  - key: suzanne-valadon
+    prominence: 2
+  - key: maurice-utrillo
+    prominence: 2
+  - key: gustave-moreau
+    prominence: 2
+  - key: pierre-puvis-de-chavannes
+    prominence: 2
+  - key: rosa-bonheur
+    prominence: 2
+  - key: william-adolphe-bouguereau
+    prominence: 3
+  - key: jean-leon-gerome
+    prominence: 2
+  - key: alexandre-cabanel
+    prominence: 2
+  - key: henri-fantin-latour
+    prominence: 2
+  - key: pablo-picasso
+    prominence: 5
+  - key: henri-matisse
+    prominence: 5
+  - key: georges-braque
+    prominence: 3
+  - key: juan-gris
+    prominence: 3
+  - key: fernand-leger
+    prominence: 2
+  - key: joan-miro
+    prominence: 4
+  - key: salvador-dali
+    prominence: 5
+  - key: rene-magritte
+    prominence: 3
+  - key: max-ernst
+    prominence: 3
+  - key: yves-tanguy
+    prominence: 2
+  - key: giorgio-de-chirico
+    prominence: 3
+  - key: giorgio-morandi
+    prominence: 2
+  - key: umberto-boccioni
+    prominence: 2
+  - key: giacomo-balla
+    prominence: 2
+  - key: amedeo-modigliani
+    prominence: 3
+  - key: wassily-kandinsky
+    prominence: 4
+  - key: paul-klee
+    prominence: 3
+  - key: piet-mondrian
+    prominence: 3
+  - key: kazimir-malevich
+    prominence: 3
+  - key: el-lissitzky
+    prominence: 2
+  - key: marc-chagall
+    prominence: 4
+  - key: egon-schiele
+    prominence: 3
+  - key: gustav-klimt
+    prominence: 4
+  - key: edvard-munch
+    prominence: 4
+  - key: franz-marc
+    prominence: 3
+  - key: august-macke
+    prominence: 3
+  - key: ernst-ludwig-kirchner
+    prominence: 3
+  - key: emil-nolde
+    prominence: 2
+  - key: otto-dix
+    prominence: 3
+  - key: max-beckmann
+    prominence: 3
+  - key: george-grosz
+    prominence: 3
+  - key: alexej-von-jawlensky
+    prominence: 2
+  - key: andre-derain
+    prominence: 2
+  - key: maurice-de-vlaminck
+    prominence: 2
+  - key: kees-van-dongen
+    prominence: 2
+  - key: raoul-dufy
+    prominence: 2
+  - key: francis-picabia
+    prominence: 2
+  - key: tamara-de-lempicka
+    prominence: 2
+  - key: paula-modersohn-becker
+    prominence: 2
+  - key: joaquin-sorolla
+    prominence: 2
+  - key: chaim-soutine
+    prominence: 2
+  - key: theo-van-doesburg
+    prominence: 3
+  - key: jackson-pollock
+    prominence: 4
+  - key: mark-rothko
+    prominence: 3
+  - key: willem-de-kooning
+    prominence: 2
+  - key: edward-hopper
+    prominence: 3
+  - key: georgia-o-keeffe
+    prominence: 3
+  - key: andy-warhol
+    prominence: 5
+  - key: roy-lichtenstein
+    prominence: 2
+  - key: jasper-johns
+    prominence: 2
+  - key: robert-rauschenberg
+    prominence: 2
+  - key: arshile-gorky
+    prominence: 2
+  - key: franz-kline
+    prominence: 1
+  - key: barnett-newman
+    prominence: 1
+  - key: cy-twombly
+    prominence: 1
+  - key: frank-stella
+    prominence: 1
+  - key: ellsworth-kelly
+    prominence: 1
+  - key: helen-frankenthaler
+    prominence: 1
+  - key: norman-rockwell
+    prominence: 2
+  - key: grant-wood
+    prominence: 2
+  - key: jean-michel-basquiat
+    prominence: 2
+  - key: keith-haring
+    prominence: 2
+  - key: thomas-cole
+    prominence: 2
+  - key: frederic-edwin-church
+    prominence: 2
+  - key: albert-bierstadt
+    prominence: 2
+  - key: gilbert-stuart
+    prominence: 1
+  - key: john-singleton-copley
+    prominence: 1
+  - key: benjamin-west
+    prominence: 1
+  - key: francis-bacon-artist
+    prominence: 3
+  - key: lucian-freud
+    prominence: 2
+  - key: david-hockney
+    prominence: 3
+  - key: jean-dubuffet
+    prominence: 3
+  - key: alberto-giacometti
+    prominence: 3
+  - key: anselm-kiefer
+    prominence: 2
+  - key: gerhard-richter
+    prominence: 2
+  - key: georg-baselitz
+    prominence: 2
+  - key: sigmar-polke
+    prominence: 2
+  - key: antoni-tapies
+    prominence: 2
+  - key: louise-bourgeois
+    prominence: 3
+  - key: jean-arp
+    prominence: 3
+  - key: karel-appel
+    prominence: 2
+  - key: leonora-carrington
+    prominence: 2
+  - key: niki-de-saint-phalle
+    prominence: 2
+  - key: carl-larsson
+    prominence: 2
+  - key: pietro-perugino
+    prominence: 3
+  - key: albrecht-altdorfer
+    prominence: 2
+  - key: matthias-grunewald
+    prominence: 2
+  - key: antonio-da-correggio
+    prominence: 2
+  - key: bronzino
+    prominence: 3
+  - key: giuseppe-arcimboldo
+    prominence: 3
+  - key: jusepe-de-ribera
+    prominence: 3
+  - key: georges-de-la-tour
+    prominence: 2
+  - key: claude-lorrain
+    prominence: 2
+  - key: charles-le-brun
+    prominence: 2
+  - key: francois-boucher
+    prominence: 3
+  - key: jean-honore-fragonard
+    prominence: 2
+  - key: angelica-kauffman
+    prominence: 2
+  - key: elisabeth-vigee-le-brun
+    prominence: 3
+  - key: william-blake
+    prominence: 5
+  - key: caspar-david-friedrich
+    prominence: 3
+  - key: theodore-gericault
+    prominence: 3
+  - key: francesco-hayez
+    prominence: 2
+  - key: karl-bryullov
+    prominence: 2
+  - key: ivan-aivazovsky
+    prominence: 3
+  - key: arnold-bocklin
+    prominence: 2
+  - key: william-holman-hunt
+    prominence: 2
+  - key: dante-gabriel-rossetti
+    prominence: 3
+  - key: john-everett-millais
+    prominence: 2
+  - key: ivan-shishkin
+    prominence: 3
+  - key: vasily-perov
+    prominence: 2
+  - key: ivan-kramskoi
+    prominence: 2
+  - key: jan-matejko
+    prominence: 3
+  - key: vasily-vereshchagin
+    prominence: 2
+  - key: ilya-repin
+    prominence: 3
+  - key: max-liebermann
+    prominence: 2
+  - key: viktor-vasnetsov
+    prominence: 3
+  - key: vasily-surikov
+    prominence: 2
+  - key: alphonse-mucha
+    prominence: 3
+  - key: isaac-levitan
+    prominence: 2
+  - key: anders-zorn
+    prominence: 2
+  - key: valentin-serov
+    prominence: 2
+  - key: akseli-gallen-kallela
+    prominence: 2
+  - key: nicholas-roerich
+    prominence: 3
+  - key: constantin-brancusi
+    prominence: 3
+  - key: luca-signorelli
+    prominence: 2
+  - key: pinturicchio
+    prominence: 2
+  - key: filippino-lippi
+    prominence: 2
+  - key: piero-di-cosimo
+    prominence: 2
+  - key: vittore-carpaccio
+    prominence: 2
+  - key: lorenzo-lotto
+    prominence: 2
+  - key: pontormo
+    prominence: 2
+  - key: giulio-romano
+    prominence: 2
+  - key: parmigianino
+    prominence: 2
+  - key: annibale-carracci
+    prominence: 2
+  - key: pieter-brueghel-the-younger
+    prominence: 2
+  - key: jan-brueghel-the-elder
+    prominence: 2
+  - key: guercino
+    prominence: 2
+  - key: pietro-da-cortona
+    prominence: 2
+  - key: salvator-rosa
+    prominence: 2
+  - key: jacob-van-ruisdael
+    prominence: 2
+  - key: jean-simeon-chardin
+    prominence: 2
+  - key: bernardo-bellotto
+    prominence: 2
+  - key: anton-raphael-mengs
+    prominence: 2
+  - key: joseph-wright-of-derby
+    prominence: 2
+  - key: henry-fuseli
+    prominence: 2
+  - key: alexander-andreyevich-ivanov
+    prominence: 2
+  - key: carl-spitzweg
+    prominence: 2
+  - key: frederic-leighton
+    prominence: 2
+  - key: edward-burne-jones
+    prominence: 2
+  - key: lawrence-alma-tadema
+    prominence: 2
+  - key: james-tissot
+    prominence: 2
+  - key: john-william-waterhouse
+    prominence: 2
+  - key: ferdinand-hodler
+    prominence: 2
+  - key: mikhail-vrubel
+    prominence: 2
+  - key: lovis-corinth
+    prominence: 2
+  - key: james-ensor
+    prominence: 2
+  - key: niko-pirosmani
+    prominence: 2
+  - key: mikhail-nesterov
+    prominence: 2
+  - key: felix-vallotton
+    prominence: 2
+  - key: leon-bakst
+    prominence: 2
+  - key: boris-kustodiev
+    prominence: 2
+  - key: natalia-goncharova
+    prominence: 2
+  - key: john-bauer
+    prominence: 2
+  - key: laszlo-moholy-nagy
+    prominence: 2
+  - key: maria-prymachenko
+    prominence: 2
+  - key: istvan-sandorfi
+    prominence: 2
+  - key: hugo-van-der-goes
+    prominence: 2
+  - key: quentin-matsys
+    prominence: 2
+  - key: il-sodoma
+    prominence: 2
+  - key: hans-baldung
+    prominence: 2
+  - key: pieter-aertsen
+    prominence: 2
+  - key: lucas-cranach-the-younger
+    prominence: 2
+  - key: lavinia-fontana
+    prominence: 2
+  - key: ludovico-carracci
+    prominence: 2
+  - key: domenichino
+    prominence: 2
+  - key: hendrick-avercamp
+    prominence: 2
+  - key: simon-vouet
+    prominence: 2
+  - key: gerard-van-honthorst
+    prominence: 2
+  - key: jacob-jordaens
+    prominence: 2
+  - key: jan-van-goyen
+    prominence: 2
+  - key: philippe-de-champaigne
+    prominence: 2
+  - key: anna-maria-van-schurman
+    prominence: 2
+  - key: judith-leyster
+    prominence: 2
+  - key: aelbert-cuyp
+    prominence: 2
+  - key: pieter-de-hooch
+    prominence: 2
+  - key: hyacinthe-rigaud
+    prominence: 2
+  - key: francesco-guardi
+    prominence: 2
+  - key: nicolai-abildgaard
+    prominence: 2
+  - key: philipp-otto-runge
+    prominence: 2
+  - key: paul-delaroche
+    prominence: 2
+  - key: franz-xaver-winterhalter
+    prominence: 2
+  - key: adolph-menzel
+    prominence: 2
+  - key: thomas-couture
+    prominence: 2
+  - key: ford-madox-brown
+    prominence: 2
+  - key: alexei-savrasov
+    prominence: 2
+  - key: albert-edelfelt
+    prominence: 2
+  - key: helene-schjerfbeck
+    prominence: 2
+  - key: olga-boznanska
+    prominence: 2
+  - key: lyonel-feininger
+    prominence: 2
+  - key: nadezda-petrovic
+    prominence: 2
+  - key: gabriele-munter
+    prominence: 2
+  - key: martiros-saryan
+    prominence: 2
+  - key: aleksandra-ekster
+    prominence: 2
+  - key: marie-laurencin
+    prominence: 2
+  - key: karl-schmidt-rottluff
+    prominence: 2
+  - key: kateryna-bilokur
+    prominence: 2
+  - key: carlo-levi
+    prominence: 2
+  - key: zurab-tsereteli
+    prominence: 2
+  - key: lorenzo-di-credi
+    prominence: 1
+  - key: sebastiano-del-piombo
+    prominence: 1
+  - key: jacopo-bassano
+    prominence: 2
+  - key: federico-barocci
+    prominence: 2
+  - key: alessandro-allori
+    prominence: 1
+  - key: hans-von-aachen
+    prominence: 2
+  - key: agostino-carracci
+    prominence: 2
+  - key: cristofano-allori
+    prominence: 1
+  - key: adriaen-brouwer
+    prominence: 2
+  - key: gerard-ter-borch
+    prominence: 1
+  - key: paulus-potter
+    prominence: 2
+  - key: luca-giordano
+    prominence: 1
+  - key: rosalba-carriera
+    prominence: 1
+  - key: maurice-quentin-de-la-tour
+    prominence: 2
+  - key: adelaide-labille-guiard
+    prominence: 1
+  - key: thomas-lawrence
+    prominence: 2
+  - key: antoine-jean-gros
+    prominence: 2
+  - key: william-etty
+    prominence: 1
+  - key: horace-vernet
+    prominence: 2
+  - key: nikolai-ge
+    prominence: 2
+  - key: armand-guillaumin
+    prominence: 1
+  - key: giovanni-boldini
+    prominence: 1
+  - key: vasily-polenov
+    prominence: 2
+  - key: peder-severin-kryer
+    prominence: 2
+  - key: anna-ancher
+    prominence: 1
+  - key: konstantin-korovin
+    prominence: 2
+  - key: santiago-rusinol
+    prominence: 1
+  - key: franz-von-stuck
+    prominence: 1
+  - key: paul-serusier
+    prominence: 1
+  - key: enrique-simonet
+    prominence: 1
+  - key: georges-rouault
+    prominence: 1
+  - key: frantisek-kupka
+    prominence: 1
+  - key: erich-heckel
+    prominence: 2
+  - key: zinaida-serebriakova
+    prominence: 2
+  - key: oskar-schlemmer
+    prominence: 1
+  - key: paul-delvaux
+    prominence: 2
+  - key: maria-helena-vieira-da-silva
+    prominence: 2
+  - key: francoise-gilot
+    prominence: 1
+  - key: zdzisaw-beksinski
+    prominence: 1
+  - key: frank-auerbach
+    prominence: 1
+  - key: julian-schnabel
+    prominence: 1
+  - key: ludmilla-radchenko
+    prominence: 1
+  - key: gerard-david
+    prominence: 1
+  - key: hans-holbein-the-elder
+    prominence: 1
+  - key: dosso-dossi
+    prominence: 1
+  - key: rosso-fiorentino
+    prominence: 1
+  - key: francesco-primaticcio
+    prominence: 1
+  - key: francois-clouet
+    prominence: 1
+  - key: karel-van-mander
+    prominence: 1
+  - key: pierre-mignard
+    prominence: 1
+  - key: gerrit-dou
+    prominence: 1
+  - key: carel-fabritius
+    prominence: 1
+  - key: gabriel-metsu
+    prominence: 1
+  - key: josefa-de-obidos
+    prominence: 1
+  - key: meindert-hobbema
+    prominence: 1
+  - key: andrea-pozzo
+    prominence: 1
+  - key: rachel-ruysch
+    prominence: 1
+  - key: giovanni-paolo-panini
+    prominence: 1
+  - key: claude-joseph-vernet
+    prominence: 1
+  - key: george-stubbs
+    prominence: 1
+  - key: jean-baptiste-greuze
+    prominence: 1
+  - key: francois-gerard
+    prominence: 1
+  - key: christoffer-wilhelm-eckersberg
+    prominence: 1
+  - key: johan-christian-dahl
+    prominence: 1
+  - key: george-catlin
+    prominence: 1
+  - key: rodolphe-topffer
+    prominence: 1
+  - key: ernest-meissonier
+    prominence: 1
+  - key: jules-breton
+    prominence: 1
+  - key: anselm-feuerbach
+    prominence: 1
+  - key: leon-bonnat
+    prominence: 1
+  - key: anton-mauve
+    prominence: 1
+  - key: christian-krohg
+    prominence: 1
+  - key: francesco-filippini
+    prominence: 1
+  - key: louise-abbema
+    prominence: 1
+  - key: marianne-von-werefkin
+    prominence: 1
+  - key: kuzma-petrov-vodkin
+    prominence: 1
+  - key: carlo-carra
+    prominence: 1
+  - key: max-pechstein
+    prominence: 1
+  - key: george-bellows
+    prominence: 1
+  - key: luigi-russolo
+    prominence: 1
+  - key: thomas-hart-benton
+    prominence: 1
+  - key: remedios-varo
+    prominence: 1
+  - key: pierre-soulages
+    prominence: 1
+  - key: jorg-immendorff
+    prominence: 1
+  - key: martin-schongauer
+    prominence: 1
+  - key: lorenzo-costa
+    prominence: 1
+  - key: jan-gossaert
+    prominence: 1
+  - key: palma-vecchio
+    prominence: 1
+  - key: bernardino-luini
+    prominence: 1
+  - key: lucas-van-leyden
+    prominence: 1
+  - key: niccolo-dell-abbate
+    prominence: 1
+  - key: giovanni-battista-moroni
+    prominence: 1
+  - key: federico-zuccari
+    prominence: 1
+  - key: francesco-albani
+    prominence: 1
+  - key: pieter-claesz
+    prominence: 1
+  - key: alonso-cano
+    prominence: 1
+  - key: jan-brueghel-the-younger
+    prominence: 1
+  - key: ferdinand-bol
+    prominence: 1
+  - key: elisabetta-sirani
+    prominence: 1
+  - key: jean-marc-nattier
+    prominence: 1
+  - key: pompeo-batoni
+    prominence: 1
+  - key: salomon-gessner
+    prominence: 1
+  - key: anne-louis-girodet-de-roussy-trioson
+    prominence: 1
+  - key: edwin-landseer
+    prominence: 1
+  - key: hermann-goldschmidt
+    prominence: 1
+  - key: richard-parkes-bonington
+    prominence: 1
+  - key: andreas-achenbach
+    prominence: 1
+  - key: eugene-fromentin
+    prominence: 1
+  - key: jean-baptiste-carpeaux
+    prominence: 1
+  - key: felicien-rops
+    prominence: 1
+  - key: anton-von-werner
+    prominence: 1
+  - key: henryk-siemiradzki
+    prominence: 1
+  - key: leonid-pasternak
+    prominence: 1
+  - key: hugo-simberg
+    prominence: 1
+  - key: albert-marquet
+    prominence: 1
+  - key: gino-severini
+    prominence: 1
+  - key: charles-demuth
+    prominence: 1
+  - key: han-van-meegeren
+    prominence: 1
+  - key: lyubov-popova
+    prominence: 1
+  - key: sophie-taeuber-arp
+    prominence: 1
+  - key: ben-nicholson
+    prominence: 1
+  - key: dorothea-tanning
+    prominence: 1
+  - key: bernard-buffet
+    prominence: 1
+  - key: wolf-vostell
+    prominence: 1
+  - key: martin-kippenberger
+    prominence: 1
+  - key: alfred-freddy-krupa
+    prominence: 1
+  - key: mariotto-albertinelli
+    prominence: 1
+  - key: joachim-patinir
+    prominence: 1
+  - key: domenico-beccafumi
+    prominence: 1
+  - key: baccio-bandinelli
+    prominence: 1
+  - key: fede-galizia
+    prominence: 1
+  - key: willem-claesz-heda
+    prominence: 1
+  - key: adriaen-van-ostade
+    prominence: 1
+  - key: philips-wouwerman
+    prominence: 1
+  - key: pierre-puget
+    prominence: 1
+  - key: jacopo-amigoni
+    prominence: 1
+  - key: jean-etienne-liotard
+    prominence: 1
+  - key: marcello-bacciarelli
+    prominence: 1
+  - key: washington-allston
+    prominence: 1
+  - key: johann-friedrich-overbeck
+    prominence: 1
+  - key: jozef-israels
+    prominence: 1
+  - key: oswald-achenbach
+    prominence: 1
+  - key: jules-joseph-lefebvre
+    prominence: 1
+  - key: konstantin-makovsky
+    prominence: 1
+  - key: julius-von-payer
+    prominence: 1
+  - key: osman-hamdi-bey
+    prominence: 1
+  - key: nikolaos-gyzis
+    prominence: 1
+  - key: anna-boch
+    prominence: 1
+  - key: john-collier
+    prominence: 1
+  - key: edmund-blair-leighton
+    prominence: 1
+  - key: jacek-malczewski
+    prominence: 1
+  - key: evelyn-de-morgan
+    prominence: 1
+  - key: henri-edmond-cross
+    prominence: 1
+  - key: giovanni-segantini
+    prominence: 1
+  - key: vilhelm-hammershoi
+    prominence: 1
+  - key: roger-fry
+    prominence: 1
+  - key: hugo-alfven
+    prominence: 1
+  - key: otto-mueller
+    prominence: 1
+  - key: jean-metzinger
+    prominence: 1
+  - key: isaak-brodsky
+    prominence: 1
+  - key: andre-lhote
+    prominence: 1
+  - key: josef-lada
+    prominence: 1
+  - key: amadeo-de-souza-cardoso
+    prominence: 1
+  - key: robert-indiana
+    prominence: 1
+  - key: bridget-riley
+    prominence: 1
+  - key: bettina-heinen-ayech
+    prominence: 1
+  - key: chuck-close
+    prominence: 1
+  - key: gottfried-helnwein
+    prominence: 1
+  - key: hendrick-goltzius
+    prominence: 1
+  - key: abraham-bloemaert
+    prominence: 1
+  - key: adam-elsheimer
+    prominence: 1
+  - key: frans-snyders
+    prominence: 1
+  - key: pieter-lastman
+    prominence: 1
+  - key: dirck-van-baburen
+    prominence: 1
+  - key: david-teniers-the-younger
+    prominence: 1
+  - key: giuseppe-crespi
+    prominence: 1
+  - key: adrien-manglard
+    prominence: 1
+  - key: pietro-longhi
+    prominence: 1
+  - key: alexander-roslin
+    prominence: 1
+  - key: george-romney
+    prominence: 1
+  - key: pierre-narcisse-guerin
+    prominence: 1
+  - key: vasily-tropinin
+    prominence: 1
+  - key: joseph-karl-stieler
+    prominence: 1
+  - key: george-frederic-watts
+    prominence: 1
+  - key: sophie-gengembre-anderson
+    prominence: 1
+  - key: julie-wilhelmine-hagen-schwarz
+    prominence: 1
+  - key: hans-gude
+    prominence: 1
+  - key: albert-anker
+    prominence: 1
+  - key: peter-nicolai-arbo
+    prominence: 1
+  - key: pavel-chistyakov
+    prominence: 1
+  - key: carl-bloch
+    prominence: 1
+  - key: franz-von-lenbach
+    prominence: 1
+  - key: fernand-cormon
+    prominence: 1
+  - key: nikolai-yaroshenko
+    prominence: 1
+  - key: eva-gonzales
+    prominence: 1
+  - key: jules-bastien-lepage
+    prominence: 1
+  - key: tivadar-csontvary-kosztka
+    prominence: 1
+  - key: ivana-kobilca
+    prominence: 1
+  - key: frederic-remington
+    prominence: 1
+  - key: theo-van-rysselberghe
+    prominence: 1
+  - key: konstantin-somov
+    prominence: 1
+  - key: johannes-itten
+    prominence: 1
+  - key: alice-prin
+    prominence: 1
+  - key: victor-brauner
+    prominence: 1
+  - key: milena-pavlovic-barili
+    prominence: 1
+  - key: richard-hamilton
+    prominence: 1
+  - key: a-r-penck
+    prominence: 1
+  - key: jan-theuninck
+    prominence: 1
+  - key: peter-doig
+    prominence: 1
+  - key: catharina-van-hemessen
+    prominence: 1
+  - key: cornelis-van-haarlem
+    prominence: 1
+  - key: bartholomeus-van-der-helst
+    prominence: 1
+  - key: willem-van-de-velde-the-younger
+    prominence: 1
+  - key: mary-beale
+    prominence: 1
+  - key: nicolaes-maes
+    prominence: 1
+  - key: francesco-solimena
+    prominence: 1
+  - key: giambattista-pittoni
+    prominence: 1
+  - key: georg-wenzeslaus-von-knobelsdorff
+    prominence: 1
+  - key: hubert-robert
+    prominence: 1
+  - key: johan-zoffany
+    prominence: 1
+  - key: charles-willson-peale
+    prominence: 1
+  - key: jens-juel
+    prominence: 1
+  - key: john-trumbull
+    prominence: 1
+  - key: pierre-joseph-redoute
+    prominence: 1
+  - key: carl-gustav-carus
+    prominence: 1
+  - key: john-martin
+    prominence: 1
+  - key: ferdinand-georg-waldmuller
+    prominence: 1
+  - key: leon-cogniet
+    prominence: 1
+  - key: ary-scheffer
+    prominence: 1
+  - key: narcisse-virgilio-diaz
+    prominence: 1
+  - key: rudolf-von-alt
+    prominence: 1
+  - key: emanuel-leutze
+    prominence: 1
+  - key: arthur-hughes
+    prominence: 1
+  - key: jules-cheret
+    prominence: 1
+  - key: carolus-duran
+    prominence: 1
+  - key: jean-paul-laurens
+    prominence: 1
+  - key: mihaly-munkacsy
+    prominence: 1
+  - key: harriet-backer
+    prominence: 1
+  - key: jean-beraud
+    prominence: 1
+  - key: anna-bilinska
+    prominence: 1
+  - key: vlaho-bukovac
+    prominence: 1
+  - key: fernand-khnopff
+    prominence: 1
+  - key: anton-azbe
+    prominence: 1
+  - key: igor-grabar
+    prominence: 1
+  - key: mikhail-larionov
+    prominence: 1
+  - key: frans-masereel
+    prominence: 1
+  - key: jeanne-hebuterne
+    prominence: 1
+  - key: kara-walker
+    prominence: 1
+  - key: josef-capek
+    prominence: 2
+  - key: amrita-sher-gil
+    prominence: 3
