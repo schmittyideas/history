@@ -1,0 +1,3750 @@
+# Notes for the reviewer
+# - 42 modern painters (Cubism to the Russian avant-garde), ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 3: modern masters (42 painters)'
+  requested: 'Western painters from 1500, batch 3: Cubism, Fauvism, Expressionism, Surrealism, abstraction and the Russian avant-garde, with teachers, places and key works'
+  date: '2026-10-10'
+sources:
+- key: wp-pablo-picasso
+  title: Pablo Picasso (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pablo_Picasso
+- key: wp-henri-matisse
+  title: Henri Matisse (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henri_Matisse
+- key: wp-georges-braque
+  title: Georges Braque (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georges_Braque
+- key: wp-juan-gris
+  title: Juan Gris (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Juan_Gris
+- key: wp-fernand-leger
+  title: Fernand Léger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fernand_L%C3%A9ger
+- key: wp-joan-miro
+  title: Joan Miró (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joan_Mir%C3%B3
+- key: wp-salvador-dali
+  title: Salvador Dalí (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD
+- key: wp-rene-magritte
+  title: René Magritte (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ren%C3%A9_Magritte
+- key: wp-max-ernst
+  title: Max Ernst (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Max_Ernst
+- key: wp-yves-tanguy
+  title: Yves Tanguy (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Yves_Tanguy
+- key: wp-giorgio-de-chirico
+  title: Giorgio de Chirico (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giorgio_de_Chirico
+- key: wp-giorgio-morandi
+  title: Giorgio Morandi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giorgio_Morandi
+- key: wp-umberto-boccioni
+  title: Umberto Boccioni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Umberto_Boccioni
+- key: wp-giacomo-balla
+  title: Giacomo Balla (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giacomo_Balla
+- key: wp-amedeo-modigliani
+  title: Amedeo Modigliani (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Amedeo_Modigliani
+- key: wp-wassily-kandinsky
+  title: Wassily Kandinsky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Wassily_Kandinsky
+- key: wp-paul-klee
+  title: Paul Klee (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paul_Klee
+- key: wp-piet-mondrian
+  title: Piet Mondrian (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Piet_Mondrian
+- key: wp-kazimir-malevich
+  title: Kazimir Malevich (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kazimir_Malevich
+- key: wp-el-lissitzky
+  title: El Lissitzky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/El_Lissitzky
+- key: wp-marc-chagall
+  title: Marc Chagall (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marc_Chagall
+- key: wp-egon-schiele
+  title: Egon Schiele (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Egon_Schiele
+- key: wp-gustav-klimt
+  title: Gustav Klimt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustav_Klimt
+- key: wp-edvard-munch
+  title: Edvard Munch (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edvard_Munch
+- key: wp-franz-marc
+  title: Franz Marc (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Franz_Marc
+- key: wp-august-macke
+  title: August Macke (Wikipedia)
+  url: https://en.wikipedia.org/wiki/August_Macke
+- key: wp-ernst-ludwig-kirchner
+  title: Ernst Ludwig Kirchner (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ernst_Ludwig_Kirchner
+- key: wp-emil-nolde
+  title: Emil Nolde (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Emil_Nolde
+- key: wp-otto-dix
+  title: Otto Dix (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Otto_Dix
+- key: wp-max-beckmann
+  title: Max Beckmann (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Max_Beckmann
+- key: wp-george-grosz
+  title: George Grosz (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Grosz
+- key: wp-alexej-von-jawlensky
+  title: Alexej von Jawlensky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexej_von_Jawlensky
+- key: wp-andre-derain
+  title: Andre Derain (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andr%C3%A9_Derain
+- key: wp-maurice-de-vlaminck
+  title: Maurice de Vlaminck (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maurice_de_Vlaminck
+- key: wp-kees-van-dongen
+  title: Kees van Dongen (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kees_van_Dongen
+- key: wp-raoul-dufy
+  title: Raoul Dufy (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Raoul_Dufy
+- key: wp-francis-picabia
+  title: Francis Picabia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francis_Picabia
+- key: wp-tamara-de-lempicka
+  title: Tamara de Lempicka (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Tamara_de_Lempicka
+- key: wp-paula-modersohn-becker
+  title: Paula Modersohn-Becker (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paula_Modersohn-Becker
+- key: wp-joaquin-sorolla
+  title: Joaquin Sorolla (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Sorolla
+- key: wp-chaim-soutine
+  title: Chaim Soutine (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cha%C3%AFm_Soutine
+- key: wp-theo-van-doesburg
+  title: Theo van Doesburg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Theo_van_Doesburg
+places:
+- key: malaga
+  name: Málaga
+  kind: city
+  region: Andalusia
+  country: Spain
+  lat: 36.721
+  lng: -4.421
+  sources:
+  - wp-pablo-picasso
+- key: barcelona
+  name: Barcelona
+  kind: city
+  region: Catalonia
+  country: Spain
+  lat: 41.385
+  lng: 2.173
+  sources:
+  - wp-pablo-picasso
+  - wp-joan-miro
+- key: mougins
+  name: Mougins
+  kind: town
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.6
+  lng: 7.005
+  sources:
+  - wp-pablo-picasso
+- key: chateau-de-vauvenargues
+  name: Château of Vauvenargues
+  kind: castle
+  city: Vauvenargues
+  region: Bouches-du-Rhône
+  country: France
+  lat: 43.562
+  lng: 5.6
+  visitable: false
+  sources:
+  - wp-pablo-picasso
+- key: le-cateau-cambresis
+  name: Le Cateau-Cambrésis
+  kind: town
+  region: Nord
+  country: France
+  lat: 50.1
+  lng: 3.543
+  sources:
+  - wp-henri-matisse
+- key: nice
+  name: Nice
+  kind: city
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.71
+  lng: 7.262
+  sources:
+  - wp-henri-matisse
+- key: vence
+  name: Vence
+  kind: town
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.723
+  lng: 7.112
+  sources:
+  - wp-henri-matisse
+- key: chapelle-du-rosaire-vence
+  name: Chapelle du Rosaire de Vence
+  kind: chapel
+  city: Vence
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.717
+  lng: 7.107
+  visitable: true
+  sources:
+  - wp-henri-matisse
+- key: ceret
+  name: Céret
+  kind: town
+  region: Pyrénées-Orientales
+  country: France
+  lat: 42.487
+  lng: 2.748
+  sources:
+  - wp-georges-braque
+- key: l-estaque
+  name: L'Estaque
+  kind: district
+  city: Marseille
+  region: Bouches-du-Rhône
+  country: France
+  lat: 43.362
+  lng: 5.318
+  sources:
+  - wp-georges-braque
+- key: varengeville-sur-mer
+  name: Varengeville-sur-Mer
+  kind: village
+  region: Seine-Maritime
+  country: France
+  lat: 49.912
+  lng: 0.999
+  sources:
+  - wp-georges-braque
+  - wp-joan-miro
+- key: bateau-lavoir
+  name: Bateau-Lavoir
+  kind: studio building
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.886
+  lng: 2.338
+  visitable: false
+  sources:
+  - wp-juan-gris
+- key: boulogne-billancourt
+  name: Boulogne-Billancourt
+  historical_name: Boulogne-sur-Seine
+  kind: town
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.835
+  lng: 2.24
+  sources:
+  - wp-juan-gris
+- key: argentan
+  name: Argentan
+  kind: town
+  region: Orne
+  country: France
+  lat: 48.745
+  lng: -0.02
+  sources:
+  - wp-fernand-leger
+- key: gif-sur-yvette
+  name: Gif-sur-Yvette
+  kind: town
+  region: Essonne
+  country: France
+  lat: 48.7
+  lng: 2.133
+  sources:
+  - wp-fernand-leger
+- key: palma
+  name: Palma
+  kind: city
+  region: Balearic Islands
+  country: Spain
+  lat: 39.57
+  lng: 2.65
+  sources:
+  - wp-joan-miro
+- key: figueres
+  name: Figueres
+  kind: town
+  region: Catalonia
+  country: Spain
+  lat: 42.267
+  lng: 2.961
+  sources:
+  - wp-salvador-dali
+- key: port-lligat
+  name: Port Lligat
+  kind: village
+  city: Cadaqués
+  region: Catalonia
+  country: Spain
+  lat: 42.289
+  lng: 3.289
+  sources:
+  - wp-salvador-dali
+- key: dali-theatre-museum
+  name: Dalí Theatre-Museum
+  kind: museum
+  city: Figueres
+  region: Catalonia
+  country: Spain
+  lat: 42.268
+  lng: 2.96
+  visitable: true
+  built_by: Salvador Dalí (work begun 1960, opened 1974)
+  sources:
+  - wp-salvador-dali
+- key: castle-of-pubol
+  name: Castle of Púbol
+  kind: castle
+  city: Púbol
+  region: Catalonia
+  country: Spain
+  lat: 42.034
+  lng: 2.994
+  sources:
+  - wp-salvador-dali
+- key: lessines
+  name: Lessines
+  kind: town
+  region: Hainaut
+  country: Belgium
+  lat: 50.712
+  lng: 3.834
+  sources:
+  - wp-rene-magritte
+- key: schaerbeek-cemetery
+  name: Schaerbeek Cemetery
+  kind: cemetery
+  city: Evere
+  region: Brussels-Capital Region
+  country: Belgium
+  lat: 50.878
+  lng: 4.41
+  sources:
+  - wp-rene-magritte
+- key: bruhl
+  name: Brühl
+  kind: town
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.828
+  lng: 6.903
+  sources:
+  - wp-max-ernst
+- key: cologne
+  name: Cologne
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.938
+  lng: 6.96
+  sources:
+  - wp-max-ernst
+- key: sedona
+  name: Sedona
+  kind: town
+  region: Arizona
+  country: United States
+  lat: 34.87
+  lng: -111.761
+  sources:
+  - wp-max-ernst
+- key: woodbury-connecticut
+  name: Woodbury
+  kind: town
+  region: Connecticut
+  country: United States
+  lat: 41.544
+  lng: -73.208
+  sources:
+  - wp-yves-tanguy
+- key: volos
+  name: Volos
+  kind: city
+  region: Thessaly
+  country: Greece
+  lat: 39.361
+  lng: 22.942
+  sources:
+  - wp-giorgio-de-chirico
+- key: casa-morandi-bologna
+  name: Casa Morandi, Via Fondazza
+  kind: house museum
+  city: Bologna
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.488
+  lng: 11.353
+  visitable: true
+  sources:
+  - wp-giorgio-morandi
+- key: casa-museo-morandi-grizzana
+  name: Casa Museo Morandi, Grizzana
+  kind: house museum
+  city: Grizzana Morandi
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.217
+  lng: 11.03
+  visitable: true
+  built_by: The Morandi family (summer house built at the end of the 1950s)
+  sources:
+  - wp-giorgio-morandi
+- key: certosa-di-bologna
+  name: Certosa di Bologna
+  kind: cemetery
+  city: Bologna
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.504
+  lng: 11.322
+  visitable: true
+  sources:
+  - wp-giorgio-morandi
+- key: reggio-calabria
+  name: Reggio Calabria
+  kind: city
+  region: Calabria
+  country: Italy
+  lat: 38.111
+  lng: 15.661
+  sources:
+  - wp-umberto-boccioni
+- key: turin
+  name: Turin
+  kind: city
+  region: Piedmont
+  country: Italy
+  lat: 45.07
+  lng: 7.687
+  sources:
+  - wp-giacomo-balla
+- key: livorno
+  name: Livorno
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.548
+  lng: 10.311
+  sources:
+  - wp-amedeo-modigliani
+- key: bateau-lavoir-paris
+  name: Bateau-Lavoir
+  kind: artists' commune
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.885
+  lng: 2.338
+  sources:
+  - wp-amedeo-modigliani
+- key: moscow
+  name: Moscow
+  kind: city
+  region: Moscow
+  country: Russia
+  lat: 55.756
+  lng: 37.617
+  sources:
+  - wp-wassily-kandinsky
+- key: munich
+  name: Munich
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 48.137
+  lng: 11.575
+  sources:
+  - wp-wassily-kandinsky
+- key: murnau
+  name: Murnau
+  kind: town
+  region: Bavaria
+  country: Germany
+  lat: 47.68
+  lng: 11.2
+  sources:
+  - wp-wassily-kandinsky
+- key: neuilly-sur-seine
+  name: Neuilly-sur-Seine
+  kind: city
+  region: Ile-de-France
+  country: France
+  lat: 48.885
+  lng: 2.268
+  sources:
+  - wp-wassily-kandinsky
+- key: muenchenbuchsee
+  name: Muenchenbuchsee
+  kind: town
+  region: Bern
+  country: Switzerland
+  lat: 47.022
+  lng: 7.449
+  sources:
+  - wp-paul-klee
+- key: muralto
+  name: Muralto
+  kind: town
+  city: Locarno
+  region: Ticino
+  country: Switzerland
+  lat: 46.173
+  lng: 8.805
+  sources:
+  - wp-paul-klee
+- key: bern
+  name: Bern
+  kind: city
+  region: Bern
+  country: Switzerland
+  lat: 46.948
+  lng: 7.447
+  sources:
+  - wp-paul-klee
+- key: duesseldorf
+  name: Duesseldorf
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.228
+  lng: 6.774
+  sources:
+  - wp-paul-klee
+- key: amersfoort
+  name: Amersfoort
+  kind: city
+  region: Utrecht
+  country: Netherlands
+  lat: 52.156
+  lng: 5.387
+  sources:
+  - wp-piet-mondrian
+- key: kyiv
+  name: Kyiv
+  kind: city
+  region: Kyiv
+  country: Ukraine
+  lat: 50.45
+  lng: 30.523
+  sources:
+  - wp-kazimir-malevich
+- key: saint-petersburg
+  name: Saint Petersburg
+  historical_name: Leningrad
+  kind: city
+  region: Saint Petersburg
+  country: Russia
+  lat: 59.934
+  lng: 30.336
+  sources:
+  - wp-kazimir-malevich
+- key: vitebsk
+  name: Vitebsk
+  kind: city
+  region: Vitebsk Region
+  country: Belarus
+  lat: 55.185
+  lng: 30.202
+  sources:
+  - wp-kazimir-malevich
+- key: nemchinovka
+  name: Nemchinovka
+  kind: town
+  region: Moscow Oblast
+  country: Russia
+  lat: 55.7
+  lng: 37.38
+  sources:
+  - wp-kazimir-malevich
+- key: pochinok
+  name: Pochinok
+  kind: town
+  region: Smolensk Oblast
+  country: Russia
+  lat: 54.4
+  lng: 32.44
+  sources:
+  - wp-el-lissitzky
+- key: darmstadt
+  name: Darmstadt
+  kind: city
+  region: Hesse
+  country: Germany
+  lat: 49.872
+  lng: 8.651
+  sources:
+  - wp-el-lissitzky
+- key: berlin
+  name: Berlin
+  kind: city
+  region: Berlin
+  country: Germany
+  lat: 52.52
+  lng: 13.405
+  sources:
+  - wp-el-lissitzky
+- key: vienna
+  name: Vienna
+  kind: city
+  country: Austria
+  lat: 48.208
+  lng: 16.373
+  visitable: true
+  sources:
+  - wp-egon-schiele
+  - wp-gustav-klimt
+- key: tulln
+  name: Tulln an der Donau
+  kind: town
+  region: Lower Austria
+  country: Austria
+  lat: 48.331
+  lng: 16.057
+  visitable: true
+  sources:
+  - wp-egon-schiele
+- key: cesky-krumlov
+  name: Cesky Krumlov (Krumau)
+  kind: town
+  region: South Bohemian Region
+  country: Czechia
+  lat: 48.811
+  lng: 14.315
+  visitable: true
+  sources:
+  - wp-egon-schiele
+- key: neulengbach
+  name: Neulengbach
+  kind: town
+  region: Lower Austria
+  country: Austria
+  lat: 48.2
+  lng: 15.92
+  visitable: true
+  sources:
+  - wp-egon-schiele
+- key: hietzing-cemetery
+  name: Hietzing Cemetery
+  kind: cemetery
+  city: Vienna
+  region: Vienna
+  country: Austria
+  lat: 48.185
+  lng: 16.298
+  visitable: true
+  sources:
+  - wp-gustav-klimt
+- key: burgtheater-vienna
+  name: Burgtheater
+  kind: theatre
+  city: Vienna
+  region: Vienna
+  country: Austria
+  lat: 48.211
+  lng: 16.361
+  visitable: true
+  sources:
+  - wp-gustav-klimt
+- key: stoclet-palace
+  name: Stoclet Palace
+  kind: palace
+  city: Brussels
+  region: Brussels-Capital Region
+  country: Belgium
+  lat: 50.834
+  lng: 4.419
+  visitable: false
+  sources:
+  - wp-gustav-klimt
+- key: adalsbruk
+  name: Adalsbruk, Loten
+  kind: village
+  region: Innlandet
+  country: Norway
+  lat: 60.79
+  lng: 11.43
+  sources:
+  - wp-edvard-munch
+- key: oslo
+  name: Oslo
+  historical_name: Christiania (Kristiania from 1877)
+  kind: city
+  country: Norway
+  lat: 59.914
+  lng: 10.752
+  visitable: true
+  sources:
+  - wp-edvard-munch
+- key: asgaardstrand
+  name: Asgardstrand
+  kind: town
+  region: Vestfold
+  country: Norway
+  lat: 59.354
+  lng: 10.466
+  visitable: true
+  sources:
+  - wp-edvard-munch
+- key: verdun
+  name: Verdun
+  kind: city
+  region: Meuse
+  country: France
+  lat: 49.16
+  lng: 5.384
+  visitable: true
+  sources:
+  - wp-franz-marc
+- key: meschede
+  name: Meschede
+  kind: town
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.35
+  lng: 8.283
+  visitable: true
+  sources:
+  - wp-august-macke
+- key: bonn
+  name: Bonn
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.737
+  lng: 7.098
+  visitable: true
+  sources:
+  - wp-august-macke
+- key: souain-perthes-les-hurlus
+  name: Souain-Perthes-les-Hurlus
+  kind: commune
+  region: Marne
+  country: France
+  lat: 49.103
+  lng: 4.451
+  sources:
+  - wp-august-macke
+- key: aschaffenburg
+  name: Aschaffenburg
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 49.976
+  lng: 9.149
+  visitable: true
+  sources:
+  - wp-ernst-ludwig-kirchner
+- key: dresden
+  name: Dresden
+  kind: city
+  region: Saxony
+  country: Germany
+  lat: 51.051
+  lng: 13.738
+  visitable: true
+  sources:
+  - wp-ernst-ludwig-kirchner
+  - wp-otto-dix
+  - wp-george-grosz
+- key: davos
+  name: Davos
+  kind: town
+  region: Graubunden
+  country: Switzerland
+  lat: 46.8
+  lng: 9.836
+  visitable: true
+  sources:
+  - wp-ernst-ludwig-kirchner
+- key: frauenkirch
+  name: Frauenkirch
+  kind: village
+  city: Davos
+  region: Graubunden
+  country: Switzerland
+  lat: 46.765
+  lng: 9.8
+  visitable: true
+  sources:
+  - wp-ernst-ludwig-kirchner
+- key: nolde-village
+  name: Nolde (Burkal)
+  kind: village
+  region: Southern Jutland
+  country: Denmark
+  lat: 54.93
+  lng: 8.83
+  sources:
+  - wp-emil-nolde
+- key: flensburg
+  name: Flensburg
+  kind: city
+  region: Schleswig-Holstein
+  country: Germany
+  lat: 54.783
+  lng: 9.437
+  visitable: true
+  sources:
+  - wp-emil-nolde
+- key: st-gallen
+  name: St. Gallen
+  kind: city
+  country: Switzerland
+  lat: 47.424
+  lng: 9.377
+  visitable: true
+  sources:
+  - wp-emil-nolde
+- key: seebuell
+  name: Seebull
+  kind: village
+  city: Neukirchen
+  region: Schleswig-Holstein
+  country: Germany
+  lat: 54.8
+  lng: 8.92
+  visitable: true
+  visit_site: Nolde Museum Seebull
+  sources:
+  - wp-emil-nolde
+- key: gera
+  name: Gera
+  kind: city
+  region: Thuringia
+  country: Germany
+  lat: 50.88
+  lng: 12.08
+  visitable: true
+  sources:
+  - wp-otto-dix
+- key: hemmenhofen
+  name: Hemmenhofen
+  kind: village
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 47.696
+  lng: 8.985
+  visitable: true
+  sources:
+  - wp-otto-dix
+- key: singen
+  name: Singen (Hohentwiel)
+  kind: town
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 47.76
+  lng: 8.84
+  visitable: true
+  sources:
+  - wp-otto-dix
+- key: leipzig
+  name: Leipzig
+  kind: city
+  region: Saxony
+  country: Germany
+  lat: 51.34
+  lng: 12.375
+  visitable: true
+  sources:
+  - wp-max-beckmann
+- key: frankfurt
+  name: Frankfurt am Main
+  kind: city
+  region: Hesse
+  country: Germany
+  lat: 50.11
+  lng: 8.682
+  visitable: true
+  sources:
+  - wp-max-beckmann
+- key: st-louis
+  name: St. Louis
+  kind: city
+  region: Missouri
+  country: United States
+  lat: 38.627
+  lng: -90.199
+  visitable: true
+  sources:
+  - wp-max-beckmann
+- key: huntington-new-york
+  name: Huntington, New York
+  kind: town
+  region: New York
+  country: United States
+  lat: 40.868
+  lng: -73.425
+  visitable: true
+  sources:
+  - wp-george-grosz
+- key: torzhok
+  name: Torzhok
+  kind: town
+  region: Tver Oblast
+  country: Russia
+  lat: 57.04
+  lng: 34.96
+  visitable: true
+  sources:
+  - wp-alexej-von-jawlensky
+- key: wiesbaden
+  name: Wiesbaden
+  kind: city
+  region: Hesse
+  country: Germany
+  lat: 50.083
+  lng: 8.24
+  visitable: true
+  sources:
+  - wp-alexej-von-jawlensky
+- key: chatou
+  name: Chatou
+  kind: town
+  region: Yvelines
+  country: France
+  lat: 48.89
+  lng: 2.158
+  sources:
+  - wp-andre-derain
+- key: collioure
+  name: Collioure
+  kind: village
+  region: Pyrenees-Orientales
+  country: France
+  lat: 42.526
+  lng: 3.083
+  sources:
+  - wp-andre-derain
+- key: garches
+  name: Garches
+  kind: town
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.843
+  lng: 2.186
+  sources:
+  - wp-andre-derain
+- key: rueil-la-gadeliere
+  name: Rueil-la-Gadeliere
+  kind: village
+  region: Eure-et-Loir
+  country: France
+  lat: 48.696
+  lng: 1.001
+  sources:
+  - wp-maurice-de-vlaminck
+- key: rotterdam
+  name: Rotterdam
+  kind: city
+  region: South Holland
+  country: Netherlands
+  lat: 51.922
+  lng: 4.479
+  sources:
+  - wp-kees-van-dongen
+- key: monte-carlo
+  name: Monte Carlo
+  kind: city quarter
+  region: Monaco
+  country: Monaco
+  lat: 43.74
+  lng: 7.427
+  sources:
+  - wp-kees-van-dongen
+- key: forcalquier
+  name: Forcalquier
+  kind: town
+  region: Alpes-de-Haute-Provence
+  country: France
+  lat: 43.96
+  lng: 5.783
+  sources:
+  - wp-raoul-dufy
+- key: cimiez-monastery-cemetery
+  name: Cimiez Monastery Cemetery
+  kind: cemetery
+  city: Nice
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.719
+  lng: 7.277
+  sources:
+  - wp-raoul-dufy
+- key: new-york
+  name: New York City
+  kind: city
+  region: New York
+  country: United States
+  lat: 40.713
+  lng: -74.006
+  sources:
+  - wp-francis-picabia
+- key: warsaw
+  name: Warsaw
+  kind: city
+  region: Masovia
+  country: Poland
+  lat: 52.23
+  lng: 21.012
+  sources:
+  - wp-tamara-de-lempicka
+- key: cuernavaca
+  name: Cuernavaca
+  kind: city
+  region: Morelos
+  country: Mexico
+  lat: 18.919
+  lng: -99.234
+  sources:
+  - wp-tamara-de-lempicka
+- key: houston
+  name: Houston
+  kind: city
+  region: Texas
+  country: United States
+  lat: 29.76
+  lng: -95.37
+  sources:
+  - wp-tamara-de-lempicka
+- key: bremen
+  name: Bremen
+  kind: city
+  region: Bremen
+  country: Germany
+  lat: 53.079
+  lng: 8.802
+  sources:
+  - wp-paula-modersohn-becker
+- key: worpswede
+  name: Worpswede
+  kind: artists' colony
+  region: Lower Saxony
+  country: Germany
+  lat: 53.223
+  lng: 8.992
+  sources:
+  - wp-paula-modersohn-becker
+- key: paula-modersohn-becker-museum
+  name: Paula Modersohn-Becker Museum
+  kind: museum
+  city: Bremen
+  region: Bremen
+  country: Germany
+  lat: 53.075
+  lng: 8.808
+  founded: 1927
+  built_by: Ludwig Roselius (opened the museum)
+  architect: Bernhard Hoetger
+  visitable: true
+  sources:
+  - wp-paula-modersohn-becker
+- key: valencia
+  name: Valencia
+  kind: city
+  region: Valencian Community
+  country: Spain
+  lat: 39.47
+  lng: -0.376
+  sources:
+  - wp-joaquin-sorolla
+- key: museo-sorolla
+  name: Museo Sorolla
+  kind: museum
+  city: Madrid
+  region: Community of Madrid
+  country: Spain
+  lat: 40.44
+  lng: -3.693
+  founded: 1932
+  visitable: true
+  sources:
+  - wp-joaquin-sorolla
+- key: hispanic-society-of-america
+  name: Hispanic Society of America
+  kind: museum
+  city: New York City
+  region: New York
+  country: United States
+  lat: 40.834
+  lng: -73.947
+  visitable: true
+  sources:
+  - wp-joaquin-sorolla
+- key: smilavichy
+  name: Smilavichy
+  kind: town
+  region: Minsk Region
+  country: Belarus
+  lat: 53.92
+  lng: 28.06
+  sources:
+  - wp-chaim-soutine
+- key: la-ruche
+  name: La Ruche
+  kind: artists' residence
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.838
+  lng: 2.298
+  sources:
+  - wp-chaim-soutine
+- key: champigny-sur-veude
+  name: Champigny-sur-Veude
+  kind: village
+  region: Indre-et-Loire
+  country: France
+  lat: 47.062
+  lng: 0.35
+  sources:
+  - wp-chaim-soutine
+- key: utrecht
+  name: Utrecht
+  kind: city
+  region: Utrecht
+  country: Netherlands
+  lat: 52.091
+  lng: 5.122
+  sources:
+  - wp-theo-van-doesburg
+- key: aubette-strasbourg
+  name: Aubette
+  kind: entertainment complex
+  city: Strasbourg
+  region: Grand Est
+  country: France
+  lat: 48.584
+  lng: 7.749
+  visitable: true
+  sources:
+  - wp-theo-van-doesburg
+people:
+- key: pablo-picasso
+  name: Pablo Picasso
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1881-10-25'
+  died: '1973-04-08'
+  prominence: 5
+  note: Spanish painter and sculptor who spent most of his adult life in France; co-founded Cubism and made Guernica.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Pablo_picasso_1.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Pablo_picasso_1.jpg/500px-Pablo_picasso_1.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pablo_picasso_1.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of birth, work and burial, and two key works captured; the article was cut at 32,000 characters (the list of works and legacy are missing), full portfolio not built out.
+  sources:
+  - wp-pablo-picasso
+- key: henri-matisse
+  name: Henri Matisse
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - printmaker
+  - sculptor
+  born: '1869-12-31'
+  died: '1954-11-03'
+  prominence: 4
+  note: French painter, draughtsman and sculptor, leader of the Fauves, known for colour and, in his last years, paper cut-outs.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/76/Henri_Matisse%2C_1913%2C_photograph_by_Alvin_Langdon_Coburn.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Henri_Matisse%2C_1913%2C_photograph_by_Alvin_Langdon_Coburn.jpg/500px-Henri_Matisse%2C_1913%2C_photograph_by_Alvin_Langdon_Coburn.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henri_Matisse,_1913,_photograph_by_Alvin_Langdon_Coburn.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, main places and two early works captured; the 'Selected works' and 'Paintings' lists are empty in the source text, so most works, the cut-outs and the Vence chapel designs
+    are not built out.
+  sources:
+  - wp-henri-matisse
+- key: georges-braque
+  name: Georges Braque
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - printmaker
+  - sculptor
+  born: '1882-05-13'
+  died: '1963-08-31'
+  prominence: 4
+  note: French painter, collagist and printmaker who developed Cubism with Picasso and invented the papier colle technique.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/e/e1/Georges_Braque%2C_1908%2C_photograph_published_in_Gelett_Burgess%2C_The_Wild_Men_of_Paris%2C_Architectural_Record%2C_May_1910.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Georges_Braque,_1908,_photograph_published_in_Gelett_Burgess,_The_Wild_Men_of_Paris,_Architectural_Record,_May_1910.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Cubist collaboration with Picasso and two dated works captured; no full list of works in the article, stained glass and prints not built out.
+  sources:
+  - wp-georges-braque
+- key: juan-gris
+  name: Juan Gris
+  type: Artist
+  roles:
+  - painter
+  born: '1887-03-23'
+  died: '1927-05-11'
+  prominence: 3
+  note: Spanish painter born in Madrid who worked in France, one of the most distinctive Cubists.
+  coverage: partly
+  coverage_note: Dates, places, teacher link and two dated works captured; most works and the Ballets Russes designs not built out.
+  sources:
+  - wp-juan-gris
+- key: fernand-leger
+  name: Fernand Léger
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - film director
+  born: '1881-02-04'
+  died: '1955-08-17'
+  prominence: 4
+  note: French painter, sculptor and filmmaker, creator of "tubism" and a forerunner of pop art.
+  coverage: partly
+  coverage_note: Dates, teacher, places and two dated works (one a film) captured; his many pupils, murals and mosaics not built out.
+  sources:
+  - wp-fernand-leger
+- key: joan-miro
+  name: Joan Miró
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - ceramicist
+  born: '1893-04-20'
+  died: '1983-12-25'
+  prominence: 4
+  note: Catalan painter, sculptor and ceramicist, a Surrealist with a personal style of pictorial signs.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg/500px-Portrait_of_Joan_Miro%2C_Barcelona_1935_June_13.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Joan_Miro,_Barcelona_1935_June_13.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; the 'Constellations', ceramics, tapestries and public sculptures not built out.
+  sources:
+  - wp-joan-miro
+- key: salvador-dali
+  name: Salvador Dalí
+  type: Artist
+  roles:
+  - painter
+  born: '1904-05-11'
+  died: '1989-01-23'
+  prominence: 4
+  note: Spanish Surrealist artist from Figueres, famous for The Persistence of Memory and his flamboyant public persona.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/Salvador_Dal%C3%AD_1939.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Salvador_Dal%C3%AD_1939.jpg/500px-Salvador_Dal%C3%AD_1939.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Salvador_Dal%C3%AD_1939.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, main places and two dated works captured; article cut at 32,000 characters so death place, burial, later works and legacy are missing; film, sculpture and design work not built out.
+  sources:
+  - wp-salvador-dali
+- key: rene-magritte
+  name: René Magritte
+  type: Artist
+  roles:
+  - painter
+  born: '1898-11-21'
+  died: '1967-08-15'
+  prominence: 4
+  note: Belgian Surrealist painter known for ordinary objects in unexpected contexts, such as The Treachery of Images.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f4/Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg/500px-Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_%281898-1967%29_le_18_octobre_1961_devant_une_de_ses_toiles%2C_PH19994.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_en_buste_du_peintre_surr%C3%A9aliste_Ren%C3%A9_Magritte_(1898-1967)_le_18_octobre_1961_devant_une_de_ses_toiles,_PH19994.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, places, burial and two dated works captured; the selected list of works and his film posters not built out.
+  sources:
+  - wp-rene-magritte
+- key: max-ernst
+  name: Max Ernst
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1891-04-02'
+  died: '1976-04-01'
+  prominence: 4
+  note: German-born painter, sculptor and poet, a pioneer of Dada and Surrealism who invented frottage and grattage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/87/Max_Ernst_1968.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Max_Ernst_1968.jpg/500px-Max_Ernst_1968.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Max_Ernst_1968.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, main places and two dated works captured; sculptures, collage novels and the Menil holdings not built out.
+  sources:
+  - wp-max-ernst
+- key: yves-tanguy
+  name: Yves Tanguy
+  type: Artist
+  roles:
+  - painter
+  born: '1900-01-05'
+  died: '1955-01-15'
+  prominence: 3
+  note: French-born Surrealist painter, later an American citizen, known for abstract dreamlike landscapes.
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; the long 'Partial list of paintings' (1924-1954, with collections) not built out.
+  sources:
+  - wp-yves-tanguy
+- key: giorgio-de-chirico
+  name: Giorgio de Chirico
+  type: Artist
+  roles:
+  - painter
+  born: '1888-07-10'
+  died: '1978-11-20'
+  prominence: 4
+  note: Greek-born Italian painter and writer who founded the metaphysical art movement that shaped the Surrealists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/Giorgio_de_Chirico_%28portrait%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/e/e4/Giorgio_de_Chirico_%28portrait%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giorgio_de_Chirico_(portrait).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, main places and two dated works captured; the article has no list of works, later neo-Baroque work and his writings not built out.
+  sources:
+  - wp-giorgio-de-chirico
+- key: giorgio-morandi
+  name: Giorgio Morandi
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1890-07-20'
+  died: '1964-06-18'
+  prominence: 3
+  note: Italian painter and printmaker of Bologna, known for subtly muted still lifes of bottles and vessels, and for etchings.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/61/Giorgio_Morandi%2C_cropped.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Giorgio_Morandi%2C_cropped.jpg/500px-Giorgio_Morandi%2C_cropped.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giorgio_Morandi,_cropped.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of life and burial, and one dated work captured; landscapes, etchings and full portfolio not built out.
+  sources:
+  - wp-giorgio-morandi
+- key: umberto-boccioni
+  name: Umberto Boccioni
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1882-10-19'
+  died: '1916-08-17'
+  prominence: 3
+  note: Italian Futurist painter and sculptor, the movement's main theorist, who died young after a fall from his horse in army training.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/ba/Umberto_Boccioni%2C_portrait_photograph.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/b/ba/Umberto_Boccioni%2C_portrait_photograph.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Umberto_Boccioni,_portrait_photograph.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places and two key works captured; the dynamist series, portraits and destroyed sculptures not built out.
+  sources:
+  - wp-umberto-boccioni
+- key: giacomo-balla
+  name: Giacomo Balla
+  type: Artist
+  roles:
+  - painter
+  born: '1871-07-18'
+  died: '1958-03-01'
+  prominence: 3
+  note: Italian Futurist painter and art teacher, known for depicting light, movement and speed, and teacher of Boccioni and Severini.
+  coverage: partly
+  coverage_note: Dates, pupils, places and two key works captured; furniture, clothing and later naturalistic work not built out.
+  sources:
+  - wp-giacomo-balla
+- key: amedeo-modigliani
+  name: Amedeo Modigliani
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1884-07-12'
+  died: '1920-01-24'
+  prominence: 4
+  note: Italian painter and sculptor of the Ecole de Paris, known for portraits and nudes with elongated faces and necks.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Amedeo_Modigliani_in_his_studio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Amedeo_Modigliani_in_his_studio.jpg/500px-Amedeo_Modigliani_in_his_studio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Amedeo_Modigliani_in_his_studio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training and places captured; the local article text ends in his early Paris years, so named works with years are not captured.
+  sources:
+  - wp-amedeo-modigliani
+- key: wassily-kandinsky
+  name: Wassily Kandinsky
+  type: Artist
+  roles:
+  - painter
+  born: '1866-12-16'
+  died: '1944-12-13'
+  prominence: 4
+  note: Russian painter and art theorist, generally credited as one of the pioneers of abstraction, who taught at the Bauhaus.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/af/Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg/500px-Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kandinsky_-_Vassily_Kandinsky_by_Adolf_Elnain_Photo_credits_-_Georges_Meguerditchian.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Bauhaus years and two dated works captured; the Compositions, Improvisations and writings not built out.
+  sources:
+  - wp-wassily-kandinsky
+- key: paul-klee
+  name: Paul Klee
+  type: Artist
+  roles:
+  - painter
+  born: '1879-12-18'
+  died: '1940-06-29'
+  prominence: 4
+  note: Swiss-born German artist of highly individual style, a colour theorist who taught at the Bauhaus.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg/500px-Paul_Klee_by_Hugo_Erfurth%2C_1922.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Paul_Klee_by_Hugo_Erfurth,_1922.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Bauhaus years and one key work captured; the many other dated works and his writings not built out.
+  sources:
+  - wp-paul-klee
+- key: piet-mondrian
+  name: Piet Mondrian
+  type: Artist
+  roles:
+  - painter
+  born: '1872-03-07'
+  died: '1944-02-01'
+  prominence: 4
+  note: Dutch painter and art theoretician, a pioneer of abstraction, co-founder of De Stijl and creator of Neoplasticism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/83/Piet_Mondriaan.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Piet_Mondriaan.jpg/500px-Piet_Mondriaan.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Piet_Mondriaan.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of life and one key work captured; the lozenge and transatlantic works, flower paintings and writings not built out.
+  sources:
+  - wp-piet-mondrian
+- key: kazimir-malevich
+  name: Kazimir Malevich
+  type: Artist
+  roles:
+  - painter
+  born: '1879-02-23'
+  died: '1935-05-15'
+  prominence: 4
+  note: Russian avant-garde artist and art theorist, born in Kyiv, founder of Suprematism and painter of the Black Square.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/63/Casimir_Malevich_photo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/Casimir_Malevich_photo.jpg/500px-Casimir_Malevich_photo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Casimir_Malevich_photo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Suprematism and two dated works captured; the local article text is cut before the end of the art market section, and his many other works are not built out.
+  sources:
+  - wp-kazimir-malevich
+- key: el-lissitzky
+  name: El Lissitzky
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - photographer
+  - architect
+  born: '1890-11-23'
+  died: '1941-12-30'
+  prominence: 3
+  note: Russian and Soviet avant-garde artist, designer and architect, a Suprematist who created the Proun series and pioneered exhibition design and typography.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/El_lissitzky_self_portrait_1924.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/El_lissitzky_self_portrait_1924.jpg/500px-El_lissitzky_self_portrait_1924.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:El_lissitzky_self_portrait_1924.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, Vitebsk and Berlin years and one dated poster captured; the local article text is cut at the Prouns, so later years, place of death and exhibition design are missing.
+  sources:
+  - wp-el-lissitzky
+- key: marc-chagall
+  name: Marc Chagall
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1887-07-06'
+  died: '1985-03-28'
+  prominence: 4
+  note: Russian and French artist of Jewish ancestry of the Ecole de Paris, known for paintings, book illustrations, stained glass and stage sets drawing on Vitebsk folklore.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Shagal_Choumoff.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Shagal_Choumoff.jpg/500px-Shagal_Choumoff.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Shagal_Choumoff.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of work, training and two dated works captured; the local article text is cut in 1940-41, so the New York years, stained glass and place of death are missing.
+  sources:
+  - wp-marc-chagall
+- key: egon-schiele
+  name: Egon Schiele
+  type: Artist
+  roles:
+  - painter
+  born: '1890-06-12'
+  died: '1918-10-31'
+  prominence: 4
+  note: Austrian Expressionist painter, protege of Gustav Klimt, known for intense, raw figure studies and many self-portraits.
+  sources:
+  - wp-egon-schiele
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b8/Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg/500px-Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Egon_Schiele_-_Self-Portrait_with_Physalis_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, mentor Klimt, places worked and one key work captured; full portfolio not built out. Place of death is not named in the article.
+- key: gustav-klimt
+  name: Gustav Klimt
+  type: Artist
+  roles:
+  - painter
+  born: '1862-07-14'
+  died: '1918-02-06'
+  prominence: 4
+  note: Austrian symbolist painter, founder and first president of the Vienna Secession, best known for The Kiss and his gold-leaf "golden phase".
+  sources:
+  - wp-gustav-klimt
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d8/Klimt.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Klimt.jpg/500px-Klimt.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Klimt.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, death and burial, key decorative commissions and The Kiss captured; full portfolio (Beethoven Frieze, Stoclet Frieze, portraits, landscapes) not built out.
+- key: edvard-munch
+  name: Edvard Munch
+  type: Artist
+  roles:
+  - painter
+  born: '1863-12-12'
+  died: '1944-01-23'
+  prominence: 4
+  note: Norwegian painter and printmaker whose 1893 The Scream is one of the most recognised images in Western art.
+  sources:
+  - wp-edvard-munch
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Portrait_of_Edvard_Munch_%28cropped%29.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Portrait_of_Edvard_Munch_%28cropped%29.png/500px-Portrait_of_Edvard_Munch_%28cropped%29.png
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Edvard_Munch_(cropped).png
+  image_license: CC BY 2.0
+  coverage: partly
+  coverage_note: Dates, birthplace, main places worked and The Scream captured; Frieze of Life and prints not built out. The article text was cut at 32,000 characters, so the place of death and the end
+    of the later years section are missing.
+- key: franz-marc
+  name: Franz Marc
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1880-02-08'
+  died: '1916-03-04'
+  prominence: 3
+  note: German Expressionist painter and printmaker, co-founder of Der Blaue Reiter, known for brightly coloured animal paintings; killed at Verdun.
+  sources:
+  - wp-franz-marc
+  coverage: partly
+  coverage_note: Dates, birth and death places, one key work captured; Blaue Reiter exhibitions and full portfolio not built out.
+- key: august-macke
+  name: August Macke
+  type: Artist
+  roles:
+  - painter
+  born: '1887-01-03'
+  died: '1914-09-26'
+  prominence: 3
+  note: German Expressionist painter of Der Blaue Reiter, friend of Franz Marc, killed in the first weeks of the First World War.
+  sources:
+  - wp-august-macke
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/August_Macke_042.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/August_Macke_042.jpg/500px-August_Macke_042.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:August_Macke_042.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, Bonn years, burial and one 1914 work captured; Selected paintings list (empty in the article text) and Tunisia works not built out.
+- key: ernst-ludwig-kirchner
+  name: Ernst Ludwig Kirchner
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1880-05-06'
+  died: '1938-06-15'
+  prominence: 3
+  note: German Expressionist painter and printmaker, founder of the group Die Brucke, later living in Davos; his work was branded degenerate by the Nazis.
+  sources:
+  - wp-ernst-ludwig-kirchner
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg/500px-Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_%281913-15%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ernst_Ludwig_Kirchner_-_Selbstportr%C3%A4t_in_der_Atelierwohnung_in_Berlin-Friedenau_(1913-15).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Dresden, Berlin and Davos periods and the Berlin Street Scene captured; other works and Brucke members not built out.
+- key: emil-nolde
+  name: Emil Nolde
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1867-08-07'
+  died: '1956-04-13'
+  prominence: 3
+  note: German-Danish Expressionist painter and printmaker, known for colour, flowers and storm watercolours; a Nazi Party supporter whose work the Nazis nonetheless condemned.
+  sources:
+  - wp-emil-nolde
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/61/WP_Emil_Nolde.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/WP_Emil_Nolde.jpg/500px-WP_Emil_Nolde.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:WP_Emil_Nolde.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, places worked and one dated work captured; religious series, South Seas expedition works and Unpainted Pictures not built out.
+- key: otto-dix
+  name: Otto Dix
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1891-12-02'
+  died: '1969-07-25'
+  prominence: 4
+  note: German painter and printmaker of the Neue Sachlichkeit, known for harshly realistic pictures of war and Weimar society.
+  sources:
+  - wp-otto-dix
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/90/Otto_Dix%2C_May_1955%2C_by_Hans-Joachim_Koch_%282%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Otto_Dix%2C_May_1955%2C_by_Hans-Joachim_Koch_%282%29.jpg/500px-Otto_Dix%2C_May_1955%2C_by_Hans-Joachim_Koch_%282%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Otto_Dix,_May_1955,_by_Hans-Joachim_Koch_(2).jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places of birth, work, death and burial and two dated works captured; Der Krieg etchings and portrait commissions not built out.
+- key: max-beckmann
+  name: Max Beckmann
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - printmaker
+  - sculptor
+  born: '1884-02-12'
+  died: '1950-12-27'
+  prominence: 4
+  note: German painter, associated with Expressionism and the New Objectivity, known for self-portraits and triptychs; lived in exile in Amsterdam and later taught in the United States.
+  sources:
+  - wp-max-beckmann
+  coverage: partly
+  coverage_note: Dates, places of birth, teaching, exile and death and one dated work captured; triptychs, prints and the Hell series not built out.
+- key: george-grosz
+  name: George Grosz
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1893-07-26'
+  died: '1959-07-06'
+  prominence: 3
+  note: German-American artist known for caricatural drawings and paintings of 1920s Berlin, a leading figure of Berlin Dada and the New Objectivity; emigrated to the United States in 1933.
+  sources:
+  - wp-george-grosz
+  coverage: partly
+  coverage_note: Dates, places of birth, work, emigration and death and one dated work captured; Eclipse of the Sun (no year in article) and portfolios not built out.
+- key: alexej-von-jawlensky
+  name: Alexej von Jawlensky
+  type: Artist
+  roles:
+  - painter
+  born: '1864-03-13'
+  died: '1941-03-15'
+  prominence: 3
+  note: Russian Expressionist painter active in Germany and Switzerland, member of Der Blaue Reiter and founder of the Blue Four, known for his Mystical Heads.
+  sources:
+  - wp-alexej-von-jawlensky
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f3/Alexej_von_Jawlensky_Selbstbildnis_1905.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Alexej_von_Jawlensky_Selbstbildnis_1905.jpg/500px-Alexej_von_Jawlensky_Selbstbildnis_1905.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alexej_von_Jawlensky_Selbstbildnis_1905.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of birth, work and death and the Mystical Heads series captured; Saviour's Faces and the Representative works list (empty in the article text) not built out.
+- key: andre-derain
+  name: Andre Derain
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1880-06-17'
+  died: '1954-09-08'
+  prominence: 4
+  note: French painter and sculptor, co-founder with Matisse of Fauvism; known for his 1905-1906 colourist work and his London paintings.
+  sources:
+  - wp-andre-derain
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Andr%C3%A9_Derain%2C_circa_1903.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/81/Andr%C3%A9_Derain%2C_circa_1903.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Andr%C3%A9_Derain,_circa_1903.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Fauvism and London paintings and one key work captured; full portfolio, ballet designs and illustrations not built out.
+- key: maurice-de-vlaminck
+  name: Maurice de Vlaminck
+  type: Artist
+  roles:
+  - painter
+  born: '1876-04-04'
+  died: '1958-10-11'
+  prominence: 3
+  note: French painter, one of the principal Fauves with Derain and Matisse; known for violent colour and Seine and Chatou landscapes.
+  sources:
+  - wp-maurice-de-vlaminck
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Derain_et_Vlaminck_en_1942.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/3/3a/Derain_et_Vlaminck_en_1942.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Derain_et_Vlaminck_en_1942.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Fauve context and one key work captured; later works and writings not built out.
+- key: kees-van-dongen
+  name: Kees van Dongen
+  type: Artist
+  roles:
+  - painter
+  born: '1877-01-26'
+  died: '1968-05-28'
+  prominence: 3
+  note: Dutch-French painter, one of the leading Fauves, known for sensuous portraits of women and nightlife scenes.
+  sources:
+  - wp-kees-van-dongen
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Kees_van_Dongen_in_his_studio_circa_1910.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/54/Kees_van_Dongen_in_his_studio_circa_1910.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kees_van_Dongen_in_his_studio_circa_1910.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and sitters' names noted; only one dated work captured; portfolio and sitters not built out.
+- key: raoul-dufy
+  name: Raoul Dufy
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1877-06-03'
+  died: '1953-03-23'
+  prominence: 3
+  note: French painter associated with Fauvism, known for a vibrant decorative style, textile designs and La Fee Electricite.
+  sources:
+  - wp-raoul-dufy
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/Raoul_Dufy%2C_portrait_photograph.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Raoul_Dufy%2C_portrait_photograph.jpg/500px-Raoul_Dufy%2C_portrait_photograph.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Raoul_Dufy,_portrait_photograph.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; textile, tapestry and book-illustration work not built out.
+- key: francis-picabia
+  name: Francis Picabia
+  type: Artist
+  roles:
+  - painter
+  - writer
+  - poet
+  - filmmaker
+  born: '1879-01-22'
+  died: '1953-11-30'
+  prominence: 4
+  note: French avant-garde painter, writer and publisher associated with Cubism, Dada and later Surrealism, known for constantly changing styles.
+  sources:
+  - wp-francis-picabia
+  coverage: partly
+  coverage_note: Dates, places, periods and travels captured; no single artwork with a clearly stated year built out; portfolio not built out.
+- key: tamara-de-lempicka
+  name: Tamara de Lempicka
+  type: Artist
+  roles:
+  - painter
+  born: '1894-06-16'
+  died: '1980-03-18'
+  prominence: 4
+  note: Polish painter who worked in France and the United States, best known for polished Art Deco portraits and stylized nudes.
+  sources:
+  - wp-tamara-de-lempicka
+  coverage: partly
+  coverage_note: Dates, places, teachers and one key work captured; sitters, patrons and the rest of the portfolio not built out.
+- key: paula-modersohn-becker
+  name: Paula Modersohn-Becker
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1876-02-08'
+  died: '1907-11-20'
+  prominence: 4
+  note: German painter and draftswoman, a key figure of early Expressionism, noted for her self-portraits including nudes.
+  sources:
+  - wp-paula-modersohn-becker
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/Modersohn-Becker_01.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/e/e4/Modersohn-Becker_01.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Modersohn-Becker_01.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Worpswede and Paris periods, museum and one key work captured; full list of works not built out.
+- key: joaquin-sorolla
+  name: Joaquin Sorolla
+  type: Artist
+  roles:
+  - painter
+  born: '1863-02-27'
+  died: '1923-08-10'
+  prominence: 4
+  note: Spanish painter of portraits, landscapes and monumental social and historical works, known for his sunlit scenes of Spain.
+  sources:
+  - wp-joaquin-sorolla
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e8/Joaquin_Sorolla_by_Gertrude_K%C3%A4sebier%2C_1908.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Joaquin_Sorolla_by_Gertrude_K%C3%A4sebier%2C_1908.jpg/500px-Joaquin_Sorolla_by_Gertrude_K%C3%A4sebier%2C_1908.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Joaquin_Sorolla_by_Gertrude_K%C3%A4sebier,_1908.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; his many dated portraits (Alfonso XIII, Taft, Tiffany) and teachers not built out.
+- key: chaim-soutine
+  name: Chaim Soutine
+  type: Artist
+  roles:
+  - painter
+  born: '1893-01-13'
+  died: '1943-08-09'
+  prominence: 4
+  note: French painter of Belarusian-Jewish origin of the School of Paris, a major Expressionist known for his carcass paintings.
+  sources:
+  - wp-chaim-soutine
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; patrons, dealers and the rest of the portfolio not built out.
+- key: theo-van-doesburg
+  name: Theo van Doesburg
+  type: Artist
+  roles:
+  - painter
+  - architect
+  - writer
+  - poet
+  born: '1883-08-30'
+  died: '1931-03-07'
+  prominence: 4
+  note: Dutch painter, writer, poet and architect, founder and leader of the De Stijl movement.
+  sources:
+  - wp-theo-van-doesburg
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/73/Theo_van_Doesburg_in_military_service.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Theo_van_Doesburg_in_military_service.JPG/500px-Theo_van_Doesburg_in_military_service.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Theo_van_Doesburg_in_military_service.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, De Stijl role and one key work captured; the list of works (the article's Works section is empty in the text) not built out.
+artworks:
+- key: guernica
+  name: Guernica
+  kind: painting
+  made: 1937
+  collection: Museo Reina Sofía
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 5
+  note: Picasso's anti-war painting of the bombing of Guernica in the Spanish Civil War; shown at the Spanish Pavilion in Paris in July 1937 and at MoMA until 1981.
+  sources:
+  - wp-pablo-picasso
+- key: les-demoiselles-d-avignon
+  name: Les Demoiselles d'Avignon
+  kind: painting
+  made: 1907
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 4
+  note: Proto-Cubist painting that begins Picasso's African-influenced period; not shown publicly until 1916.
+  sources:
+  - wp-pablo-picasso
+- key: luxe-calme-et-volupte
+  name: Luxe, Calme et Volupté
+  kind: painting
+  made: 1904
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+  note: Matisse's most important work in the neo-Impressionist style, painted after the summer of 1904 at St Tropez with Signac and Cross.
+  sources:
+  - wp-henri-matisse
+- key: woman-with-a-hat-matisse
+  name: Woman with a Hat
+  kind: painting
+  made: 1905
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 4
+  note: Shown at the 1905 Salon d'Automne and condemned by critics; bought by Gertrude and Leo Stein.
+  sources:
+  - wp-henri-matisse
+- key: blue-guitar-braque
+  name: Blue Guitar
+  kind: painting
+  made: 1943
+  collection: Allen Memorial Art Museum
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+  note: A 1943 still life by Braque.
+  sources:
+  - wp-georges-braque
+- key: the-birds-braque-louvre-ceiling
+  name: The Birds
+  kind: painting
+  made: 1952
+  made_end: 1953
+  people:
+  - person: georges-braque
+    role: creator
+  places:
+  - place: louvre-palace
+    role: made-for
+  prominence: 2
+  note: Ceiling painting for a room in the Louvre.
+  sources:
+  - wp-georges-braque
+- key: still-life-before-an-open-window-place-ravignan
+  name: Still Life before an Open Window, Place Ravignan
+  made: 1915
+  collection: Philadelphia Museum of Art
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+  note: Dated June 1915; already shows the geometric structure of Gris's Crystal period.
+  sources:
+  - wp-juan-gris
+- key: portrait-of-josette-gris
+  name: Portrait of Josette Gris
+  made: 1916
+  collection: Museo Reina Sofía
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 2
+  note: Dated October 1916, the epilogue to Woman with Mandolin, after Corot.
+  sources:
+  - wp-juan-gris
+- key: the-card-players-leger
+  name: The Card Players
+  kind: painting
+  made: 1917
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+  note: Painted while convalescing at Villepinte after a gas attack at Verdun; its robot-like figures reflect his war experience.
+  sources:
+  - wp-fernand-leger
+- key: ballet-mecanique
+  name: Ballet Mécanique
+  kind: film
+  made: 1924
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 4
+  note: Neither abstract nor narrative film co-produced and co-directed by Léger and Dudley Murphy, in collaboration with George Antheil and Man Ray.
+  sources:
+  - wp-fernand-leger
+- key: the-farm-miro
+  name: The Farm
+  kind: painting
+  made: 1921
+  made_end: 1922
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 4
+  note: The culmination of Miró's detailed early style; later bought by Ernest Hemingway.
+  sources:
+  - wp-joan-miro
+- key: harlequins-carnival
+  name: Harlequin's Carnival
+  kind: painting
+  made: 1924
+  made_end: 1925
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 4
+  note: One of Miró's most famous works, from his Surrealist pictorial-language period.
+  sources:
+  - wp-joan-miro
+- key: persistence-of-memory
+  name: The Persistence of Memory
+  kind: painting
+  made: 1931
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 5
+  note: Dalí's best-known work, completed in August 1931, with soft melting pocket watches.
+  sources:
+  - wp-salvador-dali
+- key: metamorphosis-of-narcissus
+  name: The Metamorphosis of Narcissus
+  kind: painting
+  made: 1937
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 4
+  note: Painted during Edward James's patronage; Freud wrote of it after meeting Dalí in 1938.
+  sources:
+  - wp-salvador-dali
+- key: the-lost-jockey
+  name: The Lost Jockey
+  kind: painting
+  made: 1926
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+  note: Magritte's first surreal painting (Le jockey perdu).
+  sources:
+  - wp-rene-magritte
+- key: golconda-magritte
+  name: Golconda
+  kind: painting
+  medium: oil
+  made: 1953
+  collection: Menil Collection
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 4
+  note: Major oil painting by Magritte in the Menil Collection, Houston.
+  sources:
+  - wp-rene-magritte
+- key: the-virgin-chastises-the-infant-jesus
+  name: 'The Virgin Chastises the Infant Jesus before Three Witnesses: André Breton, Paul Éluard, and the Painter'
+  kind: painting
+  made: 1926
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+  note: Ernst's 1926 painting that drew a great deal of controversy.
+  sources:
+  - wp-max-ernst
+- key: celebes-ernst
+  name: Celebes
+  kind: painting
+  made: 1921
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+  note: One of two Ernst paintings bought by Paul Éluard in 1921 (the other was Oedipus Rex).
+  sources:
+  - wp-max-ernst
+- key: mama-papa-is-wounded
+  name: Mama, Papa is Wounded!
+  kind: painting
+  made: 1927
+  collection: Museum of Modern Art, New York
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+  note: One of Tanguy's most impressive paintings; shows his debt to de Chirico.
+  sources:
+  - wp-yves-tanguy
+- key: the-invisibles-tanguy
+  name: The Invisibles (The Transparent Ones)
+  made: 1951
+  collection: Tate Modern
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+  note: Late Tanguy abstract landscape, listed as 1951 in the article.
+  sources:
+  - wp-yves-tanguy
+- key: enigma-of-an-autumn-afternoon
+  name: The Enigma of an Autumn Afternoon
+  kind: painting
+  made: 1910
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  places:
+  - place: florence
+    role: made
+  prominence: 4
+  note: First of de Chirico's Metaphysical Town Square series, painted in Florence after a revelation in Piazza Santa Croce.
+  sources:
+  - wp-giorgio-de-chirico
+- key: the-song-of-love
+  name: The Song of Love
+  kind: painting
+  made: 1914
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 4
+  note: Painted in 1914; Magritte said seeing a reproduction in 1922 was one of the most moving moments of his life.
+  sources:
+  - wp-giorgio-de-chirico
+  - wp-rene-magritte
+- key: still-life-1920-morandi
+  name: Still Life (1920)
+  kind: painting
+  made: 1920
+  people:
+  - person: giorgio-morandi
+    role: creator
+  prominence: 2
+  note: Still life discussed by the Guggenheim Museum Bilbao in the Wikipedia article; the article does not say which museum holds it.
+  sources:
+  - wp-giorgio-morandi
+- key: the-city-rises
+  name: The City Rises (La citta sale)
+  kind: painting
+  made: 1910
+  collection: Museum of Modern Art, New York
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 4
+  note: Huge painting (2m by 3m) worked on for nearly a year, considered Boccioni's turning point into Futurism; first shown in Milan in May 1911.
+  sources:
+  - wp-umberto-boccioni
+- key: unique-forms-of-continuity-in-space
+  name: Unique Forms of Continuity in Space
+  kind: sculpture
+  made: 1913
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 4
+  note: Considered his masterpiece; completed in wax by the end of 1913, existed only as a plaster cast in his lifetime and was first cast in bronze in 1931; engraved on the Italian 20-cent euro coin.
+  sources:
+  - wp-umberto-boccioni
+- key: dynamism-of-a-dog-on-a-leash
+  name: Dynamism of a Dog on a Leash
+  kind: painting
+  made: 1912
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 3
+  note: One of Balla's most famous works, expressing movement by showing numerous legs, tails and leashes at once.
+  sources:
+  - wp-giacomo-balla
+- key: abstract-speed-sound
+  name: Abstract Speed + Sound
+  made: 1913
+  made_end: 1914
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 2
+  note: Study of speed symbolised by the automobile; the article dates it 1913-14 in one place and 1914 in another, and says it may originally have been part of a triptych.
+  sources:
+  - wp-giacomo-balla
+- key: yellow-red-blue-kandinsky
+  name: Yellow-Red-Blue
+  kind: painting
+  made: 1925
+  people:
+  - person: wassily-kandinsky
+    role: creator
+  prominence: 3
+  note: Two-metre-wide work of the Bauhaus years with a vertical yellow rectangle, an inclined red cross and a large dark blue circle.
+  sources:
+  - wp-wassily-kandinsky
+- key: the-blue-rider-kandinsky
+  name: The Blue Rider
+  kind: painting
+  made: 1903
+  people:
+  - person: wassily-kandinsky
+    role: creator
+  prominence: 3
+  note: Described as perhaps the most important of his paintings of the 1900s; a small cloaked figure on a speeding horse. Shares a name with the Blue Rider group he later formed.
+  sources:
+  - wp-wassily-kandinsky
+- key: ad-parnassum
+  name: Ad Parnassum
+  kind: painting
+  made: 1932
+  people:
+  - person: paul-klee
+    role: creator
+  places:
+  - place: duesseldorf
+    role: made
+  prominence: 3
+  note: Considered his masterpiece and the best example of his pointillist style; one of his largest paintings, 100 x 126 cm.
+  sources:
+  - wp-paul-klee
+- key: broadway-boogie-woogie
+  name: Broadway Boogie-Woogie
+  kind: painting
+  made: 1942
+  made_end: 1943
+  collection: Museum of Modern Art, New York
+  people:
+  - person: piet-mondrian
+    role: creator
+  places:
+  - place: new-york-city
+    role: made
+  prominence: 4
+  note: Highly influential in abstract geometric painting; solid lines replaced by lines of small adjoining coloured rectangles.
+  sources:
+  - wp-piet-mondrian
+- key: black-square-malevich
+  name: Black Square
+  kind: painting
+  made: 1915
+  collection: State Tretyakov Gallery, Moscow
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 5
+  note: First shown at the Last Futurist Exhibition 0,10 in Petrograd in December 1915; a decisive break with representational painting. Malevich later painted further versions (c. 1923, 1929 and others).
+  sources:
+  - wp-kazimir-malevich
+- key: white-on-white-malevich
+  name: White on White
+  kind: painting
+  made: 1918
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 3
+  note: Named in the article as a famous example of his Suprematist works.
+  sources:
+  - wp-kazimir-malevich
+- key: beat-the-whites-with-the-red-wedge
+  name: Beat the Whites with the Red Wedge
+  kind: poster
+  made: 1919
+  people:
+  - person: el-lissitzky
+    role: creator
+  prominence: 4
+  note: Propaganda poster of the Russian Civil War, perhaps his most famous work of the period.
+  sources:
+  - wp-el-lissitzky
+- key: la-fenetre-sur-l-ile-de-brehat
+  name: La fenetre sur l'Ile-de-Brehat
+  kind: painting
+  made: 1924
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 2
+  note: Painted on a trip to Brittany in 1924. The article text is cut before his later famous works (stained glass, Paris Opera ceiling), so this is the only single painting with a clear year in the available
+    text.
+  sources:
+  - wp-marc-chagall
+- key: chagall-bible-illustrations
+  name: The Bible illustrations (105 plates)
+  made: 1931
+  made_end: 1956
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+  note: Etchings commissioned by Ambroise Vollard; worked on from 1931, 66 plates done by 1939, series completed in 1956 and published by Edition Teriade.
+  sources:
+  - wp-marc-chagall
+- key: portrait-of-wally-schiele
+  name: Portrait of Wally
+  kind: painting
+  made: 1912
+  collection: Leopold Museum, Vienna
+  people:
+  - person: egon-schiele
+    role: creator
+  places:
+  - place: vienna
+    role: held
+  prominence: 3
+  note: Its Nazi-era provenance was the subject of a long restitution case, settled in 2010 when the Leopold Museum bought it.
+  sources:
+  - wp-egon-schiele
+- key: the-kiss-klimt
+  name: The Kiss
+  kind: painting
+  made: 1907
+  made_end: 1908
+  people:
+  - person: gustav-klimt
+    role: creator
+  prominence: 4
+  note: Klimt's best-known work, from his golden phase; many scholars consider it an image of him and Emilie Floge as lovers.
+  sources:
+  - wp-gustav-klimt
+- key: the-scream-1893
+  name: The Scream
+  made: 1893
+  people:
+  - person: edvard-munch
+    role: creator
+  prominence: 5
+  note: Exists in four versions between 1893 and 1910 (paintings of 1893 and 1910, pastels of 1893 and 1895) plus prints; conceived in Kristiania. Dated here to the first version.
+  sources:
+  - wp-edvard-munch
+- key: fate-of-the-animals-marc
+  name: Fate of the Animals (Tierschicksale)
+  kind: painting
+  made: 1913
+  collection: Kunstmuseum Basel
+  people:
+  - person: franz-marc
+    role: creator
+  places:
+  - place: basel
+    role: held
+  prominence: 3
+  note: One of Marc's best-known paintings; he wrote that it was like a premonition of the war.
+  sources:
+  - wp-franz-marc
+- key: market-in-tunis-macke
+  name: Market in Tunis
+  made: 1914
+  people:
+  - person: august-macke
+    role: creator
+  prominence: 2
+  note: Painted in his Tunisian period of 1914, made on the trip with Paul Klee and Louis Moilliet.
+  sources:
+  - wp-august-macke
+- key: street-scene-berlin-1913-kirchner
+  name: Street Scene, Berlin
+  kind: painting
+  made: 1913
+  people:
+  - person: ernst-ludwig-kirchner
+    role: creator
+  places:
+  - place: berlin
+    role: depicts
+  prominence: 3
+  note: One of his Berlin street scenes; sold in 2006 for $38 million, a record for the artist, and later partly acquired by the Neue Galerie, New York.
+  sources:
+  - wp-ernst-ludwig-kirchner
+- key: man-woman-and-cat-nolde
+  name: Man, Woman and Cat
+  made: 1912
+  people:
+  - person: emil-nolde
+    role: creator
+  prominence: 2
+  note: Based on drawings made at the Berlin Volkerkundemuseum of King Njoya's throne from Cameroon.
+  sources:
+  - wp-emil-nolde
+- key: the-trench-dix
+  name: The Trench
+  kind: painting
+  made: 1923
+  people:
+  - person: otto-dix
+    role: creator
+  prominence: 3
+  note: Showed the dismembered bodies of soldiers; caused a furor, was shown in the 1937 degenerate art exhibition and its later whereabouts are unknown.
+  sources:
+  - wp-otto-dix
+- key: self-portrait-with-horn-beckmann
+  name: Self-Portrait with Horn
+  kind: painting
+  made: 1938
+  people:
+  - person: max-beckmann
+    role: creator
+  - person: max-beckmann
+    role: subject
+  places:
+  - place: amsterdam
+    role: made
+  prominence: 3
+  note: Painted during his exile in Amsterdam; sold for $22.5 million in 2001.
+  sources:
+  - wp-max-beckmann
+- key: dangerous-street-grosz
+  name: Dangerous Street (Gefahrliche Strasse)
+  kind: painting
+  made: 1918
+  people:
+  - person: george-grosz
+    role: creator
+  prominence: 2
+  note: His highest-selling painting at auction (2020).
+  sources:
+  - wp-george-grosz
+- key: mystical-heads-jawlensky
+  name: Mystical Heads
+  made: 1917
+  made_end: 1919
+  people:
+  - person: alexej-von-jawlensky
+    role: creator
+  prominence: 3
+  note: Perhaps his best-known series, painted in Switzerland; related to his Saviour's Faces (1918-1920) and reminiscent of Russian Orthodox icons.
+  sources:
+  - wp-alexej-von-jawlensky
+- key: mountains-at-collioure
+  name: Mountains at Collioure
+  kind: painting
+  made: 1905
+  people:
+  - person: andre-derain
+    role: creator
+  places:
+  - place: collioure
+    role: made
+  prominence: 3
+  note: Painted in the summer of 1905 when Derain worked with Matisse at Collioure, shortly before the Fauves showed at the Salon d'Automne.
+  sources:
+  - wp-andre-derain
+- key: sur-le-zinc
+  name: Sur le zinc (At the Bar)
+  kind: painting
+  made: 1900
+  people:
+  - person: maurice-de-vlaminck
+    role: creator
+  prominence: 3
+  note: One of two groundbreaking paintings of 1900 (with L'homme a la pipe) that the article names for Vlaminck.
+  sources:
+  - wp-maurice-de-vlaminck
+- key: portrait-of-brigitte-bardot-van-dongen
+  name: Portrait of Brigitte Bardot
+  kind: portrait
+  made: 1959
+  people:
+  - person: kees-van-dongen
+    role: creator
+  prominence: 2
+  note: A 1959 portrait of Brigitte Bardot in a little black dress, cited by the article as a late work. Sitter is not in the database.
+  sources:
+  - wp-kees-van-dongen
+- key: la-fee-electricite
+  name: La Fee Electricite
+  kind: painting
+  medium: oil on plywood
+  made: 1937
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+  note: Produced for the 1937 Exposition Internationale in Paris, one of the largest paintings of its time, celebrating electricity.
+  sources:
+  - wp-raoul-dufy
+- key: autoportrait-tamara-in-a-green-bugatti
+  name: Autoportrait (Tamara in a Green Bugatti)
+  kind: painting
+  made: 1929
+  people:
+  - person: tamara-de-lempicka
+    role: creator
+  - person: tamara-de-lempicka
+    role: subject
+  prominence: 4
+  note: Painted for the cover of the German fashion magazine Die Dame; she repainted it twice between 1974 and 1979.
+  sources:
+  - wp-tamara-de-lempicka
+- key: self-portrait-on-6th-wedding-anniversary
+  name: Self-Portrait on 6th Wedding Anniversary
+  kind: painting
+  made: 1906
+  collection: Museen Boettcherstrasse, Paula Modersohn-Becker Museum, Bremen
+  people:
+  - person: paula-modersohn-becker
+    role: creator
+  - person: paula-modersohn-becker
+    role: subject
+  places:
+  - place: paula-modersohn-becker-museum
+    role: held
+  prominence: 3
+  note: One of her first nude self-portraits, works unprecedented for female artists.
+  sources:
+  - wp-paula-modersohn-becker
+- key: sad-inheritance
+  name: Sad Inheritance!
+  kind: painting
+  made: 1899
+  people:
+  - person: joaquin-sorolla
+    role: creator
+  places:
+  - place: valencia
+    role: depicts
+  prominence: 3
+  note: Very large canvas of crippled children bathing in the sea at Valencia; won the Grand Prix at the 1900 Paris Universal Exhibition.
+  sources:
+  - wp-joaquin-sorolla
+- key: provinces-of-spain
+  name: The Provinces of Spain (Vision of Spain)
+  kind: mural
+  made: 1911
+  made_end: 1919
+  collection: Hispanic Society of America, New York
+  people:
+  - person: joaquin-sorolla
+    role: creator
+  places:
+  - place: hispanic-society-of-america
+    role: held
+  prominence: 4
+  note: Fourteen large oil murals of Spain's regions, the major commission of his career; the final panel was completed by July 1919.
+  sources:
+  - wp-joaquin-sorolla
+- key: le-boeuf-ecorche
+  name: Le Boeuf Ecorche (The Flayed Ox)
+  kind: painting
+  made: 1924
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 4
+  note: From his carcass series of about ten works, inspired by Rembrandt's Slaughtered Ox; the 1924 date is the one given for the version sold in 2006.
+  sources:
+  - wp-chaim-soutine
+- key: space-time-construction-3
+  name: Space-time construction
+  made: 1923
+  collection: National Gallery of Australia, Canberra
+  people:
+  - person: theo-van-doesburg
+    role: creator
+  prominence: 3
+  note: A key work in the 1947-52 touring exhibition Painting toward architecture; later influential on the architect Harry Seidler.
+  sources:
+  - wp-theo-van-doesburg
+links:
+- teacher: william-adolphe-bouguereau
+  student: henri-matisse
+  sources:
+  - wp-henri-matisse
+- teacher: gustave-moreau
+  student: henri-matisse
+  sources:
+  - wp-henri-matisse
+- teacher: jean-leon-gerome
+  student: fernand-leger
+  sources:
+  - wp-fernand-leger
+- teacher: pablo-picasso
+  student: juan-gris
+  sources:
+  - wp-juan-gris
+- teacher: giacomo-balla
+  student: umberto-boccioni
+  sources:
+  - wp-umberto-boccioni
+  - wp-giacomo-balla
+- teacher: kazimir-malevich
+  student: el-lissitzky
+  sources:
+  - wp-el-lissitzky
+- teacher: gustav-klimt
+  student: egon-schiele
+  sources:
+  - wp-egon-schiele
+- teacher: maurice-denis
+  student: tamara-de-lempicka
+  sources:
+  - wp-tamara-de-lempicka
+moments:
+- person: pablo-picasso
+  role: born
+  place: malaga
+  year: 1881
+  sources:
+  - wp-pablo-picasso
+- person: pablo-picasso
+  role: worked
+  place: barcelona
+  year: 1895
+  sources:
+  - wp-pablo-picasso
+- person: pablo-picasso
+  role: worked
+  place: paris
+  year: 1900
+  sources:
+  - wp-pablo-picasso
+- person: pablo-picasso
+  role: died
+  place: mougins
+  year: 1973
+  sources:
+  - wp-pablo-picasso
+- person: pablo-picasso
+  role: buried
+  place: chateau-de-vauvenargues
+  year: 1973
+  sources:
+  - wp-pablo-picasso
+- person: henri-matisse
+  role: born
+  place: le-cateau-cambresis
+  year: 1869
+  sources:
+  - wp-henri-matisse
+- person: henri-matisse
+  role: worked
+  place: nice
+  year: 1917
+  sources:
+  - wp-henri-matisse
+- person: henri-matisse
+  role: worked
+  place: vence
+  year: 1943
+  sources:
+  - wp-henri-matisse
+- person: henri-matisse
+  role: worked
+  place: chapelle-du-rosaire-vence
+  year: 1948
+  sources:
+  - wp-henri-matisse
+- person: henri-matisse
+  role: buried
+  place: nice
+  year: 1954
+  sources:
+  - wp-henri-matisse
+- person: georges-braque
+  role: born
+  place: argenteuil
+  year: 1882
+  sources:
+  - wp-georges-braque
+- person: georges-braque
+  role: worked
+  place: l-estaque
+  year: 1906
+  sources:
+  - wp-georges-braque
+- person: georges-braque
+  role: worked
+  place: ceret
+  year: 1911
+  sources:
+  - wp-georges-braque
+- person: georges-braque
+  role: died
+  place: paris
+  year: 1963
+  sources:
+  - wp-georges-braque
+- person: georges-braque
+  role: buried
+  place: varengeville-sur-mer
+  year: 1963
+  sources:
+  - wp-georges-braque
+- person: juan-gris
+  role: born
+  place: madrid
+  year: 1887
+  sources:
+  - wp-juan-gris
+- person: juan-gris
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-juan-gris
+- person: juan-gris
+  role: worked
+  place: bateau-lavoir
+  year: 1909
+  sources:
+  - wp-juan-gris
+- person: juan-gris
+  role: died
+  place: boulogne-billancourt
+  year: 1927
+  sources:
+  - wp-juan-gris
+- person: fernand-leger
+  role: born
+  place: argentan
+  year: 1881
+  sources:
+  - wp-fernand-leger
+- person: fernand-leger
+  role: worked
+  place: paris
+  year: 1900
+  sources:
+  - wp-fernand-leger
+- person: fernand-leger
+  role: buried
+  place: gif-sur-yvette
+  year: 1955
+  sources:
+  - wp-fernand-leger
+- person: joan-miro
+  role: born
+  place: barcelona
+  year: 1893
+  sources:
+  - wp-joan-miro
+- person: joan-miro
+  role: worked
+  place: paris
+  year: 1920
+  sources:
+  - wp-joan-miro
+- person: joan-miro
+  role: worked
+  place: varengeville-sur-mer
+  year: 1939
+  sources:
+  - wp-joan-miro
+- person: joan-miro
+  role: died
+  place: palma
+  year: 1983
+  sources:
+  - wp-joan-miro
+- person: joan-miro
+  role: buried
+  place: barcelona
+  year: 1983
+  sources:
+  - wp-joan-miro
+- person: salvador-dali
+  role: born
+  place: figueres
+  year: 1904
+  sources:
+  - wp-salvador-dali
+- person: salvador-dali
+  role: worked
+  place: madrid
+  year: 1922
+  sources:
+  - wp-salvador-dali
+- person: salvador-dali
+  role: worked
+  place: port-lligat
+  year: 1930
+  sources:
+  - wp-salvador-dali
+- person: salvador-dali
+  role: worked
+  place: dali-theatre-museum
+  year: 1960
+  sources:
+  - wp-salvador-dali
+- person: salvador-dali
+  role: worked
+  place: castle-of-pubol
+  year: 1982
+  sources:
+  - wp-salvador-dali
+- person: rene-magritte
+  role: born
+  place: lessines
+  year: 1898
+  sources:
+  - wp-rene-magritte
+- person: rene-magritte
+  role: worked
+  place: brussels
+  year: 1926
+  sources:
+  - wp-rene-magritte
+- person: rene-magritte
+  role: worked
+  place: paris
+  year: 1927
+  sources:
+  - wp-rene-magritte
+- person: rene-magritte
+  role: buried
+  place: schaerbeek-cemetery
+  year: 1967
+  sources:
+  - wp-rene-magritte
+- person: max-ernst
+  role: born
+  place: bruhl
+  year: 1891
+  sources:
+  - wp-max-ernst
+- person: max-ernst
+  role: worked
+  place: cologne
+  year: 1919
+  sources:
+  - wp-max-ernst
+- person: max-ernst
+  role: worked
+  place: sedona
+  year: 1946
+  sources:
+  - wp-max-ernst
+- person: max-ernst
+  role: died
+  place: paris
+  year: 1976
+  sources:
+  - wp-max-ernst
+- person: max-ernst
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1976
+  sources:
+  - wp-max-ernst
+- person: yves-tanguy
+  role: born
+  place: paris
+  year: 1900
+  sources:
+  - wp-yves-tanguy
+- person: yves-tanguy
+  role: died
+  place: woodbury-connecticut
+  year: 1955
+  sources:
+  - wp-yves-tanguy
+- person: giorgio-de-chirico
+  role: born
+  place: volos
+  year: 1888
+  sources:
+  - wp-giorgio-de-chirico
+- person: giorgio-de-chirico
+  role: worked
+  place: florence
+  year: 1910
+  sources:
+  - wp-giorgio-de-chirico
+- person: giorgio-de-chirico
+  role: worked
+  place: paris
+  year: 1911
+  sources:
+  - wp-giorgio-de-chirico
+- person: giorgio-de-chirico
+  role: worked
+  place: ferrara
+  year: 1915
+  sources:
+  - wp-giorgio-de-chirico
+- person: giorgio-de-chirico
+  role: died
+  place: rome
+  year: 1978
+  sources:
+  - wp-giorgio-de-chirico
+- person: giorgio-morandi
+  role: born
+  place: bologna
+  year: 1890
+  sources:
+  - wp-giorgio-morandi
+- person: giorgio-morandi
+  role: worked
+  place: casa-morandi-bologna
+  year: 1909
+  sources:
+  - wp-giorgio-morandi
+- person: giorgio-morandi
+  role: worked
+  place: casa-museo-morandi-grizzana
+  year: 1913
+  sources:
+  - wp-giorgio-morandi
+- person: giorgio-morandi
+  role: buried
+  place: certosa-di-bologna
+  year: 1964
+  sources:
+  - wp-giorgio-morandi
+- person: umberto-boccioni
+  role: born
+  place: reggio-calabria
+  year: 1882
+  sources:
+  - wp-umberto-boccioni
+- person: umberto-boccioni
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-umberto-boccioni
+- person: umberto-boccioni
+  role: worked
+  place: milan
+  year: 1907
+  sources:
+  - wp-umberto-boccioni
+- person: umberto-boccioni
+  role: died
+  place: verona
+  year: 1916
+  sources:
+  - wp-umberto-boccioni
+- person: umberto-boccioni
+  role: buried
+  place: verona
+  year: 1916
+  sources:
+  - wp-umberto-boccioni
+- person: giacomo-balla
+  role: born
+  place: turin
+  year: 1871
+  sources:
+  - wp-giacomo-balla
+- person: giacomo-balla
+  role: worked
+  place: rome
+  year: 1895
+  sources:
+  - wp-giacomo-balla
+- person: giacomo-balla
+  role: died
+  place: rome
+  year: 1958
+  sources:
+  - wp-giacomo-balla
+- person: amedeo-modigliani
+  role: born
+  place: livorno
+  year: 1884
+  sources:
+  - wp-amedeo-modigliani
+- person: amedeo-modigliani
+  role: worked
+  place: venice
+  year: 1903
+  sources:
+  - wp-amedeo-modigliani
+- person: amedeo-modigliani
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-amedeo-modigliani
+- person: amedeo-modigliani
+  role: worked
+  place: bateau-lavoir-paris
+  year: 1906
+  sources:
+  - wp-amedeo-modigliani
+- person: amedeo-modigliani
+  role: died
+  place: paris
+  year: 1920
+  sources:
+  - wp-amedeo-modigliani
+- person: wassily-kandinsky
+  role: born
+  place: moscow
+  year: 1866
+  sources:
+  - wp-wassily-kandinsky
+- person: wassily-kandinsky
+  role: worked
+  place: munich
+  year: 1896
+  sources:
+  - wp-wassily-kandinsky
+- person: wassily-kandinsky
+  role: worked
+  place: murnau
+  year: 1908
+  sources:
+  - wp-wassily-kandinsky
+- person: wassily-kandinsky
+  role: worked
+  place: weimar
+  year: 1922
+  sources:
+  - wp-wassily-kandinsky
+- person: wassily-kandinsky
+  role: died
+  place: neuilly-sur-seine
+  year: 1944
+  sources:
+  - wp-wassily-kandinsky
+- person: paul-klee
+  role: born
+  place: muenchenbuchsee
+  year: 1879
+  sources:
+  - wp-paul-klee
+- person: paul-klee
+  role: worked
+  place: munich
+  year: 1898
+  sources:
+  - wp-paul-klee
+- person: paul-klee
+  role: worked
+  place: duesseldorf
+  year: 1931
+  sources:
+  - wp-paul-klee
+- person: paul-klee
+  role: died
+  place: muralto
+  year: 1940
+  sources:
+  - wp-paul-klee
+- person: paul-klee
+  role: buried
+  place: bern
+  year: 1940
+  sources:
+  - wp-paul-klee
+- person: piet-mondrian
+  role: born
+  place: amersfoort
+  year: 1872
+  sources:
+  - wp-piet-mondrian
+- person: piet-mondrian
+  role: worked
+  place: amsterdam
+  year: 1892
+  sources:
+  - wp-piet-mondrian
+- person: piet-mondrian
+  role: worked
+  place: paris
+  year: 1912
+  sources:
+  - wp-piet-mondrian
+- person: piet-mondrian
+  role: worked
+  place: london
+  year: 1938
+  sources:
+  - wp-piet-mondrian
+- person: piet-mondrian
+  role: died
+  place: new-york-city
+  year: 1944
+  sources:
+  - wp-piet-mondrian
+- person: kazimir-malevich
+  role: born
+  place: kyiv
+  year: 1879
+  sources:
+  - wp-kazimir-malevich
+- person: kazimir-malevich
+  role: worked
+  place: moscow
+  year: 1906
+  sources:
+  - wp-kazimir-malevich
+- person: kazimir-malevich
+  role: worked
+  place: vitebsk
+  year: 1919
+  sources:
+  - wp-kazimir-malevich
+- person: kazimir-malevich
+  role: died
+  place: saint-petersburg
+  year: 1935
+  sources:
+  - wp-kazimir-malevich
+- person: kazimir-malevich
+  role: buried
+  place: nemchinovka
+  year: 1935
+  sources:
+  - wp-kazimir-malevich
+- person: el-lissitzky
+  role: born
+  place: pochinok
+  year: 1890
+  sources:
+  - wp-el-lissitzky
+- person: el-lissitzky
+  role: worked
+  place: darmstadt
+  year: 1909
+  sources:
+  - wp-el-lissitzky
+- person: el-lissitzky
+  role: worked
+  place: vitebsk
+  year: 1919
+  sources:
+  - wp-el-lissitzky
+- person: el-lissitzky
+  role: worked
+  place: berlin
+  year: 1921
+  sources:
+  - wp-el-lissitzky
+- person: marc-chagall
+  role: worked
+  place: saint-petersburg
+  year: 1906
+  sources:
+  - wp-marc-chagall
+- person: marc-chagall
+  role: worked
+  place: paris
+  year: 1910
+  sources:
+  - wp-marc-chagall
+- person: marc-chagall
+  role: worked
+  place: vitebsk
+  year: 1918
+  sources:
+  - wp-marc-chagall
+- person: marc-chagall
+  role: worked
+  place: moscow
+  year: 1920
+  sources:
+  - wp-marc-chagall
+- person: marc-chagall
+  role: worked
+  place: paris
+  year: 1923
+  sources:
+  - wp-marc-chagall
+- person: egon-schiele
+  role: born
+  place: tulln
+  year: 1890
+  sources:
+  - wp-egon-schiele
+- person: egon-schiele
+  role: worked
+  place: vienna
+  year: 1906
+  sources:
+  - wp-egon-schiele
+- person: egon-schiele
+  role: worked
+  place: cesky-krumlov
+  year: 1911
+  sources:
+  - wp-egon-schiele
+- person: egon-schiele
+  role: worked
+  place: neulengbach
+  year: 1912
+  sources:
+  - wp-egon-schiele
+- person: gustav-klimt
+  role: died
+  place: vienna
+  year: 1918
+  sources:
+  - wp-gustav-klimt
+- person: gustav-klimt
+  role: buried
+  place: hietzing-cemetery
+  year: 1918
+  sources:
+  - wp-gustav-klimt
+- person: gustav-klimt
+  role: worked
+  place: burgtheater-vienna
+  year: 1886
+  sources:
+  - wp-gustav-klimt
+- person: gustav-klimt
+  role: worked
+  place: stoclet-palace
+  year: 1904
+  sources:
+  - wp-gustav-klimt
+- person: edvard-munch
+  role: born
+  place: adalsbruk
+  year: 1863
+  sources:
+  - wp-edvard-munch
+- person: edvard-munch
+  role: worked
+  place: oslo
+  year: 1864
+  sources:
+  - wp-edvard-munch
+- person: edvard-munch
+  role: worked
+  place: paris
+  year: 1889
+  sources:
+  - wp-edvard-munch
+- person: edvard-munch
+  role: worked
+  place: berlin
+  year: 1892
+  sources:
+  - wp-edvard-munch
+- person: edvard-munch
+  role: worked
+  place: asgaardstrand
+  year: 1897
+  sources:
+  - wp-edvard-munch
+- person: franz-marc
+  role: born
+  place: munich
+  year: 1880
+  sources:
+  - wp-franz-marc
+- person: franz-marc
+  role: worked
+  place: paris
+  year: 1903
+  sources:
+  - wp-franz-marc
+- person: franz-marc
+  role: died
+  place: verdun
+  year: 1916
+  sources:
+  - wp-franz-marc
+- person: august-macke
+  role: born
+  place: meschede
+  year: 1887
+  sources:
+  - wp-august-macke
+- person: august-macke
+  role: worked
+  place: bonn
+  year: 1911
+  sources:
+  - wp-august-macke
+- person: august-macke
+  role: buried
+  place: souain-perthes-les-hurlus
+  year: 1914
+  sources:
+  - wp-august-macke
+- person: ernst-ludwig-kirchner
+  role: born
+  place: aschaffenburg
+  year: 1880
+  sources:
+  - wp-ernst-ludwig-kirchner
+- person: ernst-ludwig-kirchner
+  role: worked
+  place: dresden
+  year: 1905
+  sources:
+  - wp-ernst-ludwig-kirchner
+- person: ernst-ludwig-kirchner
+  role: worked
+  place: berlin
+  year: 1911
+  sources:
+  - wp-ernst-ludwig-kirchner
+- person: ernst-ludwig-kirchner
+  role: worked
+  place: davos
+  year: 1917
+  sources:
+  - wp-ernst-ludwig-kirchner
+- person: ernst-ludwig-kirchner
+  role: died
+  place: frauenkirch
+  year: 1938
+  sources:
+  - wp-ernst-ludwig-kirchner
+- person: emil-nolde
+  role: born
+  place: nolde-village
+  year: 1867
+  sources:
+  - wp-emil-nolde
+- person: emil-nolde
+  role: worked
+  place: flensburg
+  year: 1884
+  sources:
+  - wp-emil-nolde
+- person: emil-nolde
+  role: worked
+  place: st-gallen
+  year: 1892
+  sources:
+  - wp-emil-nolde
+- person: emil-nolde
+  role: worked
+  place: berlin
+  year: 1902
+  sources:
+  - wp-emil-nolde
+- person: emil-nolde
+  role: died
+  place: seebuell
+  year: 1956
+  sources:
+  - wp-emil-nolde
+- person: otto-dix
+  role: born
+  place: gera
+  year: 1891
+  sources:
+  - wp-otto-dix
+- person: otto-dix
+  role: worked
+  place: dresden
+  year: 1910
+  sources:
+  - wp-otto-dix
+- person: otto-dix
+  role: worked
+  place: hemmenhofen
+  year: 1936
+  sources:
+  - wp-otto-dix
+- person: otto-dix
+  role: died
+  place: singen
+  year: 1969
+  sources:
+  - wp-otto-dix
+- person: otto-dix
+  role: buried
+  place: hemmenhofen
+  year: 1969
+  sources:
+  - wp-otto-dix
+- person: max-beckmann
+  role: born
+  place: leipzig
+  year: 1884
+  sources:
+  - wp-max-beckmann
+- person: max-beckmann
+  role: worked
+  place: frankfurt
+  year: 1925
+  sources:
+  - wp-max-beckmann
+- person: max-beckmann
+  role: worked
+  place: amsterdam
+  year: 1937
+  sources:
+  - wp-max-beckmann
+- person: max-beckmann
+  role: worked
+  place: st-louis
+  year: 1947
+  sources:
+  - wp-max-beckmann
+- person: max-beckmann
+  role: died
+  place: new-york-city
+  year: 1950
+  sources:
+  - wp-max-beckmann
+- person: george-grosz
+  role: born
+  place: berlin
+  year: 1893
+  sources:
+  - wp-george-grosz
+- person: george-grosz
+  role: worked
+  place: dresden
+  year: 1909
+  sources:
+  - wp-george-grosz
+- person: george-grosz
+  role: worked
+  place: new-york-city
+  year: 1933
+  sources:
+  - wp-george-grosz
+- person: george-grosz
+  role: worked
+  place: huntington-new-york
+  year: 1947
+  sources:
+  - wp-george-grosz
+- person: george-grosz
+  role: died
+  place: berlin
+  year: 1959
+  sources:
+  - wp-george-grosz
+- person: alexej-von-jawlensky
+  role: born
+  place: torzhok
+  year: 1864
+  sources:
+  - wp-alexej-von-jawlensky
+- person: alexej-von-jawlensky
+  role: worked
+  place: saint-petersburg
+  year: 1889
+  sources:
+  - wp-alexej-von-jawlensky
+- person: alexej-von-jawlensky
+  role: worked
+  place: munich
+  year: 1894
+  sources:
+  - wp-alexej-von-jawlensky
+- person: alexej-von-jawlensky
+  role: worked
+  place: wiesbaden
+  year: 1921
+  sources:
+  - wp-alexej-von-jawlensky
+- person: alexej-von-jawlensky
+  role: died
+  place: wiesbaden
+  year: 1941
+  sources:
+  - wp-alexej-von-jawlensky
+- person: andre-derain
+  role: born
+  place: chatou
+  year: 1880
+  sources:
+  - wp-andre-derain
+- person: andre-derain
+  role: worked
+  place: collioure
+  year: 1905
+  sources:
+  - wp-andre-derain
+- person: andre-derain
+  role: worked
+  place: london
+  year: 1906
+  sources:
+  - wp-andre-derain
+- person: andre-derain
+  role: died
+  place: garches
+  year: 1954
+  sources:
+  - wp-andre-derain
+- person: maurice-de-vlaminck
+  role: born
+  place: paris
+  year: 1876
+  sources:
+  - wp-maurice-de-vlaminck
+- person: maurice-de-vlaminck
+  role: worked
+  place: london
+  year: 1911
+  sources:
+  - wp-maurice-de-vlaminck
+- person: maurice-de-vlaminck
+  role: died
+  place: rueil-la-gadeliere
+  year: 1958
+  sources:
+  - wp-maurice-de-vlaminck
+- person: kees-van-dongen
+  role: born
+  place: rotterdam
+  year: 1877
+  sources:
+  - wp-kees-van-dongen
+- person: kees-van-dongen
+  role: worked
+  place: paris
+  year: 1899
+  sources:
+  - wp-kees-van-dongen
+- person: kees-van-dongen
+  role: worked
+  place: bateau-lavoir
+  year: 1906
+  sources:
+  - wp-kees-van-dongen
+- person: kees-van-dongen
+  role: died
+  place: monte-carlo
+  year: 1968
+  sources:
+  - wp-kees-van-dongen
+- person: raoul-dufy
+  role: born
+  place: le-havre
+  year: 1877
+  sources:
+  - wp-raoul-dufy
+- person: raoul-dufy
+  role: worked
+  place: paris
+  year: 1900
+  sources:
+  - wp-raoul-dufy
+- person: raoul-dufy
+  role: died
+  place: forcalquier
+  year: 1953
+  sources:
+  - wp-raoul-dufy
+- person: raoul-dufy
+  role: buried
+  place: cimiez-monastery-cemetery
+  year: 1953
+  sources:
+  - wp-raoul-dufy
+- person: francis-picabia
+  role: born
+  place: paris
+  year: 1879
+  sources:
+  - wp-francis-picabia
+- person: francis-picabia
+  role: worked
+  place: new-york
+  year: 1915
+  sources:
+  - wp-francis-picabia
+- person: francis-picabia
+  role: worked
+  place: barcelona
+  year: 1916
+  sources:
+  - wp-francis-picabia
+- person: francis-picabia
+  role: died
+  place: paris
+  year: 1953
+  sources:
+  - wp-francis-picabia
+- person: francis-picabia
+  role: buried
+  place: cimetiere-de-montmartre
+  year: 1953
+  sources:
+  - wp-francis-picabia
+- person: tamara-de-lempicka
+  role: born
+  place: warsaw
+  year: 1894
+  sources:
+  - wp-tamara-de-lempicka
+- person: tamara-de-lempicka
+  role: worked
+  place: paris
+  year: 1918
+  sources:
+  - wp-tamara-de-lempicka
+- person: tamara-de-lempicka
+  role: worked
+  place: los-angeles
+  year: 1939
+  sources:
+  - wp-tamara-de-lempicka
+- person: tamara-de-lempicka
+  role: worked
+  place: houston
+  year: 1963
+  sources:
+  - wp-tamara-de-lempicka
+- person: tamara-de-lempicka
+  role: died
+  place: cuernavaca
+  year: 1980
+  sources:
+  - wp-tamara-de-lempicka
+- person: paula-modersohn-becker
+  role: born
+  place: dresden
+  year: 1876
+  sources:
+  - wp-paula-modersohn-becker
+- person: paula-modersohn-becker
+  role: worked
+  place: bremen
+  year: 1888
+  sources:
+  - wp-paula-modersohn-becker
+- person: paula-modersohn-becker
+  role: worked
+  place: worpswede
+  year: 1898
+  sources:
+  - wp-paula-modersohn-becker
+- person: paula-modersohn-becker
+  role: worked
+  place: paris
+  year: 1900
+  sources:
+  - wp-paula-modersohn-becker
+- person: paula-modersohn-becker
+  role: buried
+  place: worpswede
+  year: 1907
+  sources:
+  - wp-paula-modersohn-becker
+- person: joaquin-sorolla
+  role: born
+  place: valencia
+  year: 1863
+  sources:
+  - wp-joaquin-sorolla
+- person: joaquin-sorolla
+  role: worked
+  place: madrid
+  year: 1890
+  sources:
+  - wp-joaquin-sorolla
+- person: joaquin-sorolla
+  role: buried
+  place: valencia
+  year: 1923
+  sources:
+  - wp-joaquin-sorolla
+- person: chaim-soutine
+  role: born
+  place: smilavichy
+  year: 1893
+  sources:
+  - wp-chaim-soutine
+- person: chaim-soutine
+  role: worked
+  place: la-ruche
+  year: 1913
+  sources:
+  - wp-chaim-soutine
+- person: chaim-soutine
+  role: worked
+  place: ceret
+  year: 1919
+  sources:
+  - wp-chaim-soutine
+- person: chaim-soutine
+  role: worked
+  place: champigny-sur-veude
+  year: 1941
+  sources:
+  - wp-chaim-soutine
+- person: chaim-soutine
+  role: died
+  place: paris
+  year: 1943
+  sources:
+  - wp-chaim-soutine
+- person: chaim-soutine
+  role: buried
+  place: cimetiere-du-montparnasse
+  year: 1943
+  sources:
+  - wp-chaim-soutine
+- person: theo-van-doesburg
+  role: born
+  place: utrecht
+  year: 1883
+  sources:
+  - wp-theo-van-doesburg
+- person: theo-van-doesburg
+  role: worked
+  place: weimar
+  year: 1922
+  sources:
+  - wp-theo-van-doesburg
+- person: theo-van-doesburg
+  role: worked
+  place: paris
+  year: 1923
+  sources:
+  - wp-theo-van-doesburg
+- person: theo-van-doesburg
+  role: died
+  place: davos
+  year: 1931
+  sources:
+  - wp-theo-van-doesburg
+discrepancies:
+- key: malevich-born
+  question: When was Kazimir Malevich born?
+  about:
+  - person: kazimir-malevich
+  field: born
+  claims:
+  - value: 23 February 1879 (O.S. 11 February)
+    sources:
+    - wp-kazimir-malevich
+    note: Given in the article lead; the record uses this
+  - value: 26 February 1879 (O.S. 14 February)
+    sources:
+    - wp-kazimir-malevich
+    note: The article says he was born on either date
+  - value: '1878'
+    sources:
+    - wp-kazimir-malevich
+    note: Andrei Nakov re-established the birth year as 1879 rather than 1878
+  note: The record holds 1879-02-23, as in the article lead.
+- key: chagall-birthplace
+  question: Was Marc Chagall born in Lyozna or in Vitebsk?
+  about:
+  - person: marc-chagall
+  field: place
+  claims:
+  - value: Lyozna, near Vitebsk
+    sources:
+    - wp-marc-chagall
+  - value: Vitebsk
+    sources:
+    - wp-marc-chagall
+  note: The article says "in Lyozna, near the city of Vitebsk, Belarus ... or in Vitebsk"; no born moment is recorded.
+- key: tamara-de-lempicka-born-place
+  question: Where was Tamara de Lempicka born?
+  about:
+  - person: tamara-de-lempicka
+  field: place
+  claims:
+  - value: Warsaw
+    sources:
+    - wp-tamara-de-lempicka
+    note: The widely accepted place of birth, per the article.
+  - value: Saint Petersburg
+    sources:
+    - wp-tamara-de-lempicka
+    note: The article says she was born in either Warsaw or St. Petersburg.
+  note: The record uses Warsaw, the place the article calls widely accepted.
