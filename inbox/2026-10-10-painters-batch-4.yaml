@@ -1,0 +1,3304 @@
+# Notes for the reviewer
+# - 42 American and postwar painters (Abstract Expressionism to the Hudson River School), ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 4: American and postwar masters (42 painters)'
+  requested: 'Western painters from 1500, batch 4: Abstract Expressionism, Pop, American landscape and portraiture, postwar European painters'
+  date: '2026-10-10'
+sources:
+- key: wp-jackson-pollock
+  title: Jackson Pollock (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jackson_Pollock
+- key: wp-mark-rothko
+  title: Mark Rothko (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mark_Rothko
+- key: wp-willem-de-kooning
+  title: Willem de Kooning (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Willem_de_Kooning
+- key: wp-edward-hopper
+  title: Edward Hopper (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edward_Hopper
+- key: wp-georgia-o-keeffe
+  title: Georgia O'Keeffe (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georgia_O%27Keeffe
+- key: wp-andy-warhol
+  title: Andy Warhol (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andy_Warhol
+- key: wp-roy-lichtenstein
+  title: Roy Lichtenstein (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Roy_Lichtenstein
+- key: wp-jasper-johns
+  title: Jasper Johns (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jasper_Johns
+- key: wp-robert-rauschenberg
+  title: Robert Rauschenberg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Robert_Rauschenberg
+- key: wp-arshile-gorky
+  title: Arshile Gorky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Arshile_Gorky
+- key: wp-franz-kline
+  title: Franz Kline (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Franz_Kline
+- key: wp-barnett-newman
+  title: Barnett Newman (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Barnett_Newman
+- key: wp-cy-twombly
+  title: Cy Twombly (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cy_Twombly
+- key: wp-frank-stella
+  title: Frank Stella (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frank_Stella
+- key: wp-ellsworth-kelly
+  title: Ellsworth Kelly (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ellsworth_Kelly
+- key: wp-helen-frankenthaler
+  title: Helen Frankenthaler (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Helen_Frankenthaler
+- key: wp-norman-rockwell
+  title: Norman Rockwell (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Norman_Rockwell
+- key: wp-grant-wood
+  title: Grant Wood (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Grant_Wood
+- key: wp-jean-michel-basquiat
+  title: Jean-Michel Basquiat (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Michel_Basquiat
+- key: wp-keith-haring
+  title: Keith Haring (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Keith_Haring
+- key: wp-thomas-cole
+  title: Thomas Cole (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Cole
+- key: wp-frederic-edwin-church
+  title: Frederic Edwin Church (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frederic_Edwin_Church
+- key: wp-albert-bierstadt
+  title: Albert Bierstadt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albert_Bierstadt
+- key: wp-gilbert-stuart
+  title: Gilbert Stuart (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gilbert_Stuart
+- key: wp-john-singleton-copley
+  title: John Singleton Copley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Singleton_Copley
+- key: wp-benjamin-west
+  title: Benjamin West (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Benjamin_West
+- key: wp-francis-bacon-artist
+  title: Francis Bacon (artist) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francis_Bacon_(artist)
+- key: wp-lucian-freud
+  title: Lucian Freud (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lucian_Freud
+- key: wp-david-hockney
+  title: David Hockney (Wikipedia)
+  url: https://en.wikipedia.org/wiki/David_Hockney
+- key: wp-jean-dubuffet
+  title: Jean Dubuffet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean_Dubuffet
+- key: wp-alberto-giacometti
+  title: Alberto Giacometti (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alberto_Giacometti
+- key: wp-anselm-kiefer
+  title: Anselm Kiefer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anselm_Kiefer
+- key: wp-gerhard-richter
+  title: Gerhard Richter (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gerhard_Richter
+- key: wp-georg-baselitz
+  title: Georg Baselitz (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georg_Baselitz
+- key: wp-sigmar-polke
+  title: Sigmar Polke (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Sigmar_Polke
+- key: wp-antoni-tapies
+  title: Antoni Tàpies (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antoni_T%C3%A0pies
+- key: wp-louise-bourgeois
+  title: Louise Bourgeois (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louise_Bourgeois
+- key: wp-jean-arp
+  title: Jean Arp (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean_Arp
+- key: wp-karel-appel
+  title: Karel Appel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Karel_Appel
+- key: wp-leonora-carrington
+  title: Leonora Carrington (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Leonora_Carrington
+- key: wp-niki-de-saint-phalle
+  title: Niki de Saint Phalle (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Niki_de_Saint_Phalle
+- key: wp-carl-larsson
+  title: Carl Larsson (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carl_Larsson
+places:
+- key: cody-wyoming
+  name: Cody
+  kind: town
+  region: Wyoming
+  country: United States
+  lat: 44.526
+  lng: -109.057
+  sources:
+  - wp-jackson-pollock
+- key: springs-new-york
+  name: Springs
+  kind: hamlet
+  city: East Hampton
+  region: New York
+  country: United States
+  lat: 41.02
+  lng: -72.15
+  sources:
+  - wp-jackson-pollock
+- key: daugavpils
+  name: Daugavpils
+  historical_name: Dvinsk
+  kind: city
+  region: Latgale
+  country: Latvia
+  lat: 55.875
+  lng: 26.536
+  sources:
+  - wp-mark-rothko
+- key: east-hampton-new-york
+  name: East Hampton
+  kind: town
+  region: New York
+  country: United States
+  lat: 40.963
+  lng: -72.185
+  sources:
+  - wp-willem-de-kooning
+- key: nyack
+  name: Nyack
+  kind: village
+  region: New York
+  country: United States
+  lat: 41.091
+  lng: -73.918
+  sources:
+  - wp-edward-hopper
+- key: south-truro
+  name: South Truro
+  kind: village
+  city: Truro
+  region: Massachusetts
+  country: United States
+  lat: 41.985
+  lng: -70.062
+  sources:
+  - wp-edward-hopper
+- key: sun-prairie
+  name: Sun Prairie
+  kind: city
+  region: Wisconsin
+  country: United States
+  lat: 43.184
+  lng: -89.213
+  sources:
+  - wp-georgia-o-keeffe
+- key: abiquiu
+  name: Abiquiu
+  kind: village
+  region: New Mexico
+  country: United States
+  lat: 36.208
+  lng: -106.319
+  sources:
+  - wp-georgia-o-keeffe
+- key: santa-fe
+  name: Santa Fe
+  kind: city
+  region: New Mexico
+  country: United States
+  lat: 35.687
+  lng: -105.938
+  sources:
+  - wp-georgia-o-keeffe
+- key: pittsburgh
+  name: Pittsburgh
+  kind: city
+  region: Pennsylvania
+  country: United States
+  lat: 40.441
+  lng: -79.996
+  sources:
+  - wp-andy-warhol
+- key: southampton-new-york
+  name: Southampton
+  kind: town
+  region: New York
+  country: United States
+  lat: 40.884
+  lng: -72.39
+  sources:
+  - wp-roy-lichtenstein
+- key: augusta-georgia
+  name: Augusta
+  kind: city
+  region: Georgia
+  country: United States
+  lat: 33.474
+  lng: -81.975
+  sources:
+  - wp-jasper-johns
+- key: port-arthur-texas
+  name: Port Arthur
+  kind: city
+  region: Texas
+  country: United States
+  lat: 29.885
+  lng: -93.94
+  sources:
+  - wp-robert-rauschenberg
+- key: captiva-island
+  name: Captiva Island
+  kind: island
+  region: Florida
+  country: United States
+  lat: 26.527
+  lng: -82.19
+  sources:
+  - wp-robert-rauschenberg
+- key: khorgom
+  name: Khorgom
+  kind: village
+  region: Van Province
+  country: Turkey
+  lat: 38.4
+  lng: 43.3
+  sources:
+  - wp-arshile-gorky
+- key: sherman-connecticut
+  name: Sherman
+  kind: town
+  region: Connecticut
+  country: United States
+  lat: 41.581
+  lng: -73.499
+  sources:
+  - wp-arshile-gorky
+- key: wilkes-barre
+  name: Wilkes-Barre
+  kind: city
+  region: Pennsylvania
+  country: United States
+  lat: 41.246
+  lng: -75.881
+  sources:
+  - wp-franz-kline
+- key: the-bronx
+  name: The Bronx
+  kind: borough
+  city: New York City
+  region: New York
+  country: United States
+  lat: 40.837
+  lng: -73.865
+  visitable: true
+  sources:
+  - wp-barnett-newman
+- key: brooklyn
+  name: Brooklyn
+  kind: borough
+  city: New York City
+  region: New York
+  country: United States
+  lat: 40.65
+  lng: -73.95
+  visitable: true
+  sources:
+  - wp-jean-michel-basquiat
+- key: green-wood-cemetery
+  name: Green-Wood Cemetery
+  kind: cemetery
+  city: New York City
+  region: New York
+  country: United States
+  lat: 40.652
+  lng: -73.994
+  visitable: true
+  sources:
+  - wp-jean-michel-basquiat
+- key: lexington-virginia
+  name: Lexington
+  kind: city
+  region: Virginia
+  country: United States
+  lat: 37.784
+  lng: -79.443
+  visitable: true
+  sources:
+  - wp-cy-twombly
+- key: malden-massachusetts
+  name: Malden
+  kind: city
+  region: Massachusetts
+  country: United States
+  lat: 42.425
+  lng: -71.066
+  visitable: true
+  sources:
+  - wp-frank-stella
+- key: newburgh-new-york
+  name: Newburgh
+  kind: city
+  region: New York
+  country: United States
+  lat: 41.503
+  lng: -74.01
+  visitable: true
+  sources:
+  - wp-ellsworth-kelly
+- key: spencertown-new-york
+  name: Spencertown
+  kind: hamlet
+  region: New York
+  country: United States
+  lat: 42.384
+  lng: -73.551
+  visitable: true
+  sources:
+  - wp-ellsworth-kelly
+- key: darien-connecticut
+  name: Darien
+  kind: town
+  region: Connecticut
+  country: United States
+  lat: 41.077
+  lng: -73.469
+  visitable: true
+  sources:
+  - wp-helen-frankenthaler
+- key: stockbridge-massachusetts
+  name: Stockbridge
+  kind: town
+  region: Massachusetts
+  country: United States
+  lat: 42.285
+  lng: -73.32
+  visitable: true
+  sources:
+  - wp-norman-rockwell
+- key: arlington-vermont
+  name: Arlington
+  kind: town
+  region: Vermont
+  country: United States
+  lat: 43.078
+  lng: -73.157
+  visitable: true
+  sources:
+  - wp-norman-rockwell
+- key: anamosa-iowa
+  name: Anamosa
+  kind: city
+  region: Iowa
+  country: United States
+  lat: 42.108
+  lng: -91.286
+  visitable: true
+  sources:
+  - wp-grant-wood
+- key: cedar-rapids
+  name: Cedar Rapids
+  kind: city
+  region: Iowa
+  country: United States
+  lat: 41.977
+  lng: -91.666
+  visitable: true
+  sources:
+  - wp-grant-wood
+- key: iowa-city
+  name: Iowa City
+  kind: city
+  region: Iowa
+  country: United States
+  lat: 41.661
+  lng: -91.53
+  visitable: true
+  sources:
+  - wp-grant-wood
+- key: reading-pennsylvania
+  name: Reading
+  kind: city
+  region: Pennsylvania
+  country: United States
+  lat: 40.336
+  lng: -75.927
+  visitable: true
+  sources:
+  - wp-keith-haring
+- key: sant-antonio-abate-pisa
+  name: Sant'Antonio Abate church, Pisa
+  kind: church
+  city: Pisa
+  region: Tuscany
+  country: Italy
+  lat: 43.709
+  lng: 10.399
+  visitable: true
+  sources:
+  - wp-keith-haring
+- key: bolton-lancashire
+  name: Bolton
+  historical_name: Bolton le Moors
+  kind: town
+  region: Greater Manchester
+  country: England
+  lat: 53.578
+  lng: -2.429
+  visitable: true
+  sources:
+  - wp-thomas-cole
+- key: steubenville-ohio
+  name: Steubenville
+  kind: city
+  region: Ohio
+  country: United States
+  lat: 40.37
+  lng: -80.634
+  visitable: true
+  sources:
+  - wp-thomas-cole
+- key: catskill-new-york
+  name: Catskill
+  kind: town
+  region: New York
+  country: United States
+  lat: 42.218
+  lng: -73.865
+  visitable: true
+  sources:
+  - wp-thomas-cole
+- key: cedar-grove-catskill
+  name: Cedar Grove (Thomas Cole House)
+  kind: house
+  city: Catskill
+  region: New York
+  country: United States
+  lat: 42.222
+  lng: -73.866
+  visitable: true
+  visit_site: Thomas Cole National Historic Site
+  sources:
+  - wp-thomas-cole
+- key: hartford
+  name: Hartford
+  kind: city
+  region: Connecticut
+  country: United States
+  lat: 41.764
+  lng: -72.685
+  visitable: true
+  sources:
+  - wp-frederic-edwin-church
+- key: catskill
+  name: Catskill
+  kind: town
+  region: New York
+  country: United States
+  lat: 42.217
+  lng: -73.865
+  visitable: true
+  sources:
+  - wp-frederic-edwin-church
+- key: olana
+  name: Olana
+  kind: house
+  city: Hudson
+  region: New York
+  country: United States
+  lat: 42.218
+  lng: -73.811
+  founded: 1872
+  built_by: Frederic Edwin Church
+  architect: Calvert Vaux
+  visitable: true
+  visit_site: Olana State Historic Site
+  sources:
+  - wp-frederic-edwin-church
+- key: spring-grove-cemetery-hartford
+  name: Spring Grove Cemetery
+  kind: cemetery
+  city: Hartford
+  region: Connecticut
+  country: United States
+  lat: 41.745
+  lng: -72.7
+  visitable: true
+  sources:
+  - wp-frederic-edwin-church
+- key: solingen
+  name: Solingen
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.171
+  lng: 7.083
+  visitable: true
+  sources:
+  - wp-albert-bierstadt
+- key: dusseldorf
+  name: Dusseldorf
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.228
+  lng: 6.774
+  visitable: true
+  sources:
+  - wp-albert-bierstadt
+- key: rural-cemetery-new-bedford
+  name: Rural Cemetery
+  New Bedford: null
+  kind: cemetery
+  city: New Bedford
+  region: Massachusetts
+  country: United States
+  lat: 41.64
+  lng: -70.94
+  visitable: true
+  sources:
+  - wp-albert-bierstadt
+- key: metropolitan-museum-of-art
+  name: Metropolitan Museum of Art
+  kind: museum
+  city: New York
+  region: New York
+  country: United States
+  lat: 40.779
+  lng: -73.963
+  visitable: true
+  sources:
+  - wp-albert-bierstadt
+- key: saunderstown
+  name: Saunderstown
+  kind: village
+  region: Rhode Island
+  country: United States
+  lat: 41.52
+  lng: -71.43
+  visitable: true
+  visit_site: Gilbert Stuart Birthplace and Museum
+  sources:
+  - wp-gilbert-stuart
+- key: central-burial-ground-boston
+  name: Central Burial Ground, Boston Common
+  kind: cemetery
+  city: Boston
+  region: Massachusetts
+  country: United States
+  lat: 42.351
+  lng: -71.066
+  visitable: true
+  sources:
+  - wp-gilbert-stuart
+- key: croydon-minster
+  name: Croydon Minster
+  kind: church
+  city: Croydon
+  region: Greater London
+  country: United Kingdom
+  lat: 51.372
+  lng: -0.098
+  visitable: true
+  sources:
+  - wp-john-singleton-copley
+- key: springfield-pennsylvania
+  name: Springfield
+  Pennsylvania: null
+  kind: township
+  region: Pennsylvania
+  country: United States
+  lat: 39.926
+  lng: -75.32
+  visitable: true
+  sources:
+  - wp-benjamin-west
+- key: dublin
+  name: Dublin
+  kind: city
+  region: County Dublin
+  country: Ireland
+  lat: 53.35
+  lng: -6.26
+  visitable: true
+  sources:
+  - wp-francis-bacon-artist
+- key: highgate-cemetery
+  name: Highgate Cemetery
+  kind: cemetery
+  city: London
+  region: Greater London
+  country: United Kingdom
+  lat: 51.567
+  lng: -0.147
+  visitable: true
+  sources:
+  - wp-lucian-freud
+- key: bradford
+  name: Bradford
+  kind: city
+  region: West Yorkshire
+  country: United Kingdom
+  lat: 53.795
+  lng: -1.759
+  visitable: true
+  sources:
+  - wp-david-hockney
+- key: kroller-muller-museum
+  name: Kroller-Muller Museum
+  kind: museum
+  city: Otterlo
+  region: Gelderland
+  country: Netherlands
+  lat: 52.095
+  lng: 5.818
+  visitable: true
+  sources:
+  - wp-jean-dubuffet
+- key: borgonovo
+  name: Borgonovo
+  kind: village
+  region: Graubunden
+  country: Switzerland
+  lat: 46.344
+  lng: 9.583
+  visitable: true
+  sources:
+  - wp-alberto-giacometti
+- key: chur
+  name: Chur
+  kind: city
+  region: Graubunden
+  country: Switzerland
+  lat: 46.85
+  lng: 9.532
+  visitable: true
+  sources:
+  - wp-alberto-giacometti
+- key: donaueschingen
+  name: Donaueschingen
+  kind: town
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 47.954
+  lng: 8.5
+  visitable: true
+  sources:
+  - wp-anselm-kiefer
+- key: hornbach-walldurn
+  name: Hornbach (Walldurn)
+  kind: village
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 49.59
+  lng: 9.39
+  visitable: true
+  sources:
+  - wp-anselm-kiefer
+- key: barjac
+  name: Barjac
+  kind: village
+  region: Gard
+  country: France
+  lat: 44.121
+  lng: 4.37
+  visitable: false
+  sources:
+  - wp-anselm-kiefer
+- key: cologne-cathedral
+  name: Cologne Cathedral
+  kind: cathedral
+  city: Cologne
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.941
+  lng: 6.958
+  visitable: true
+  sources:
+  - wp-gerhard-richter
+- key: deutschbaselitz
+  name: Deutschbaselitz
+  kind: village
+  city: Kamenz
+  region: Saxony
+  country: Germany
+  lat: 51.27
+  lng: 14.04
+  sources:
+  - wp-georg-baselitz
+- key: oels
+  name: Oels (Oleśnica)
+  historical_name: Oels
+  kind: town
+  region: Lower Silesian Voivodeship
+  country: Poland
+  lat: 51.209
+  lng: 17.382
+  sources:
+  - wp-sigmar-polke
+- key: zurich
+  name: Zürich
+  kind: city
+  region: Canton of Zürich
+  country: Switzerland
+  lat: 47.377
+  lng: 8.541
+  sources:
+  - wp-sigmar-polke
+  - wp-jean-arp
+  - wp-karel-appel
+- key: grossmuenster-zurich
+  name: Grossmünster
+  kind: church
+  city: Zürich
+  region: Canton of Zürich
+  country: Switzerland
+  lat: 47.37
+  lng: 8.544
+  visitable: true
+  sources:
+  - wp-sigmar-polke
+- key: fundacio-antoni-tapies
+  name: Fundació Antoni Tàpies
+  kind: museum
+  city: Barcelona
+  region: Catalonia
+  country: Spain
+  lat: 41.391
+  lng: 2.163
+  founded: 1984
+  visitable: true
+  sources:
+  - wp-antoni-tapies
+- key: strasbourg
+  name: Strasbourg
+  kind: city
+  region: Grand Est
+  country: France
+  lat: 48.573
+  lng: 7.752
+  sources:
+  - wp-jean-arp
+- key: meudon
+  name: Meudon
+  kind: town
+  region: Île-de-France
+  country: France
+  lat: 48.813
+  lng: 2.236
+  sources:
+  - wp-jean-arp
+- key: arp-house-clamart
+  name: Arp house and studio
+  Clamart: null
+  kind: house
+  city: Clamart
+  region: Île-de-France
+  country: France
+  lat: 48.8
+  lng: 2.263
+  built_by: Jean Arp and Sophie Taeuber-Arp
+  architect: Sophie Taeuber-Arp
+  visitable: true
+  visit_site: Fondation Arp
+  sources:
+  - wp-jean-arp
+- key: mexico-city
+  name: Mexico City
+  kind: city
+  region: Mexico City
+  country: Mexico
+  lat: 19.433
+  lng: -99.133
+  sources:
+  - wp-leonora-carrington
+- key: saint-martin-dardeche
+  name: Saint-Martin-d'Ardèche
+  kind: village
+  region: Ardèche
+  country: France
+  lat: 44.31
+  lng: 4.57
+  sources:
+  - wp-leonora-carrington
+- key: stockholm
+  name: Stockholm
+  kind: city
+  region: Stockholm County
+  country: Sweden
+  lat: 59.329
+  lng: 18.069
+  sources:
+  - wp-niki-de-saint-phalle
+  - wp-carl-larsson
+- key: nationalmuseum-stockholm
+  name: Nationalmuseum
+  kind: museum
+  city: Stockholm
+  region: Stockholm County
+  country: Sweden
+  lat: 59.329
+  lng: 18.079
+  visitable: true
+  sources:
+  - wp-carl-larsson
+- key: sundborn-lilla-hyttnas
+  name: Lilla Hyttnäs (Carl Larsson-gården)
+  kind: house
+  city: Sundborn
+  region: Dalarna County
+  country: Sweden
+  lat: 60.67
+  lng: 15.77
+  visitable: true
+  visit_site: Carl Larsson-gården (open to visitors May to October)
+  sources:
+  - wp-carl-larsson
+- key: sundborn-church
+  name: Sundborn Church
+  kind: church
+  city: Sundborn
+  region: Dalarna County
+  country: Sweden
+  lat: 60.668
+  lng: 15.77
+  sources:
+  - wp-carl-larsson
+- key: falun
+  name: Falun
+  kind: city
+  region: Dalarna County
+  country: Sweden
+  lat: 60.607
+  lng: 15.626
+  sources:
+  - wp-carl-larsson
+people:
+- key: jackson-pollock
+  name: Jackson Pollock
+  type: Artist
+  roles:
+  - painter
+  born: '1912-01-28'
+  died: '1956-08-11'
+  prominence: 4
+  note: American abstract expressionist painter, famous for his drip technique of pouring paint onto canvases laid on the floor.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1e/Jackson_Pollock_by_Hans_Namuth_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Jackson_Pollock_by_Hans_Namuth_%28cropped%29.jpg/500px-Jackson_Pollock_by_Hans_Namuth_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jackson_Pollock_by_Hans_Namuth_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher (Benton) and two key works captured; the article was cut at 32,000 characters (archives and later sections missing), full portfolio not built out.
+  sources:
+  - wp-jackson-pollock
+- key: mark-rothko
+  name: Mark Rothko
+  type: Artist
+  roles:
+  - painter
+  born: '1903-09-25'
+  died: '1970-02-25'
+  prominence: 4
+  note: Latvian-born American abstract painter, best known for color field paintings of rectangular regions of color.
+  coverage: partly
+  coverage_note: Dates, birth place, teacher link (Gorky) and one key work captured; the article was cut at 32,000 characters (the Seagram, Harvard and Rothko Chapel sections are missing), full portfolio
+    not built out.
+  sources:
+  - wp-mark-rothko
+- key: willem-de-kooning
+  name: Willem de Kooning
+  type: Artist
+  roles:
+  - painter
+  born: '1904-04-24'
+  died: '1997-03-19'
+  prominence: 4
+  note: Dutch-born American abstract expressionist, known for his action painting and the Woman series.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Willem_de_Kooning_in_his_studio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Willem_de_Kooning_in_his_studio.jpg/500px-Willem_de_Kooning_in_his_studio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Willem_de_Kooning_in_his_studio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, main homes and one key work captured; death place not stated in the article, no formal teacher named, sculptures not built out.
+  sources:
+  - wp-willem-de-kooning
+- key: edward-hopper
+  name: Edward Hopper
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1882-07-22'
+  died: '1967-05-15'
+  prominence: 4
+  note: American realist painter and printmaker, known for quiet scenes of solitude in American cities and New England, such as Nighthawks.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b7/Edward_Hopper%2C_New_York_artist_LCCN2016871478_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Edward_Hopper%2C_New_York_artist_LCCN2016871478_%28cropped%29.jpg/500px-Edward_Hopper%2C_New_York_artist_LCCN2016871478_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edward_Hopper,_New_York_artist_LCCN2016871478_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; teachers (Chase, Henri) not in the database so not linked; the article was cut at 32,000 characters, full portfolio not built out.
+  sources:
+  - wp-edward-hopper
+- key: georgia-o-keeffe
+  name: Georgia O'Keeffe
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1887-11-15'
+  died: '1986-03-06'
+  prominence: 4
+  note: American modernist painter, "Mother of American modernism", known for flowers, desert landscapes and animal skulls.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a2/Georgia_O%27Keeffe_MET_DP230868.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Georgia_O%27Keeffe_MET_DP230868.jpg/500px-Georgia_O%27Keeffe_MET_DP230868.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Georgia_O%27Keeffe_MET_DP230868.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; teachers (Vanderpoel, Chase, Cox, Mora, Dow) not in the database so not linked; the article was cut at 32,000 characters, full portfolio not built
+    out.
+  sources:
+  - wp-georgia-o-keeffe
+- key: andy-warhol
+  name: Andy Warhol
+  type: Artist
+  roles:
+  - painter
+  - film director
+  born: '1928-08-06'
+  died: '1987-02-22'
+  prominence: 5
+  note: American pop artist and filmmaker from Pittsburgh, known for silkscreen paintings such as Campbell's Soup Cans and Marilyn Diptych, and for the Factory.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6c/Andy_Warhol_by_Bernard_Gotfryd_1980.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Andy_Warhol_by_Bernard_Gotfryd_1980.png/500px-Andy_Warhol_by_Bernard_Gotfryd_1980.png
+  image_page: https://commons.wikimedia.org/wiki/File:Andy_Warhol_by_Bernard_Gotfryd_1980.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, New York career and one key work captured; the article was cut at 32,000 characters (death place and later career missing), films and other series not built out.
+  sources:
+  - wp-andy-warhol
+- key: roy-lichtenstein
+  name: Roy Lichtenstein
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1923-10-27'
+  died: '1997-09-29'
+  prominence: 4
+  note: American pop artist, known for large comic-book-style paintings with Ben-Day dots such as Whaam!.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg/500px-Roy_Lichtenstein%2C_painter_1969_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Roy_Lichtenstein,_painter_1969_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; teachers (Marsh, Sherman) not in the database so not linked; the article was cut at 32,000 characters, full portfolio not built out.
+  sources:
+  - wp-roy-lichtenstein
+- key: jasper-johns
+  name: Jasper Johns
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - draughtsman
+  - printmaker
+  born: '1930-05-15'
+  prominence: 4
+  note: American painter, sculptor and printmaker, associated with neo-Dada and pop art, known for paintings of flags, targets and numbers.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f4/Jasper_Johns%2C_Medal_of_Freedom%2C_2011.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/f/f4/Jasper_Johns%2C_Medal_of_Freedom%2C_2011.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jasper_Johns,_Medal_of_Freedom,_2011.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Birth date and place, early training and one key work captured (still living per the article); prints and later series not built out.
+  sources:
+  - wp-jasper-johns
+- key: robert-rauschenberg
+  name: Robert Rauschenberg
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1925-10-22'
+  died: '2008-05-12'
+  prominence: 4
+  note: American painter and multi-media artist, known for his Combines, associated with neo-Dada, pop art and the New York School.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/Robert_Rauschenberg_1999.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/2/20/Robert_Rauschenberg_1999.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Robert_Rauschenberg_1999.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; teachers (Albers, Vytlacil, Kantor) not in the database so not linked; Combines, dance and technology work not built out.
+  sources:
+  - wp-robert-rauschenberg
+- key: arshile-gorky
+  name: Arshile Gorky
+  type: Artist
+  roles:
+  - painter
+  born: 1904
+  born_estimated: true
+  died: '1948-07-21'
+  prominence: 3
+  note: Armenian-American painter, survivor of the Armenian genocide, whose lyrical abstraction influenced abstract expressionism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/aa/Archives_of_American_Art_-_Arshile_Gorky_-_3044.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Archives_of_American_Art_-_Arshile_Gorky_-_3044.jpg/500px-Archives_of_American_Art_-_Arshile_Gorky_-_3044.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Archives_of_American_Art_-_Arshile_Gorky_-_3044.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates (birth year uncertain), places, students and one key work captured; other works from the 1940s not built out.
+  sources:
+  - wp-arshile-gorky
+- key: franz-kline
+  name: Franz Kline
+  type: Artist
+  roles:
+  - painter
+  born: '1910-05-23'
+  died: '1962-05-13'
+  prominence: 3
+  note: American abstract expressionist painter of the New York School, known for large black-and-white gestural works.
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; the 1950s black-and-white paintings (Nijinsky, Requiem, Crow Dancer) not built out.
+  sources:
+  - wp-franz-kline
+- key: barnett-newman
+  name: Barnett Newman
+  type: Artist
+  roles:
+  - painter
+  born: '1905-01-29'
+  died: '1970-07-04'
+  prominence: 4
+  note: American painter, a major figure of abstract expressionism and color field painting, known for flat fields of colour divided by thin vertical "zips".
+  sources:
+  - wp-barnett-newman
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Newman_Barnett.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Newman_Barnett.jpg/500px-Newman_Barnett.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Newman_Barnett.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, two key works captured; full portfolio, exhibitions and sculptures not built out.
+- key: cy-twombly
+  name: Cy Twombly
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - photographer
+  born: '1928-04-25'
+  died: '2011-07-05'
+  prominence: 4
+  note: American painter, sculptor and photographer who settled in Rome, known for large calligraphic, graffiti-like works and cycles drawn from myth and poetry.
+  sources:
+  - wp-cy-twombly
+  coverage: partly
+  coverage_note: Dates, teacher link, places and two key works captured; later series, prints and photographs not built out.
+- key: frank-stella
+  name: Frank Stella
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1936-05-12'
+  died: '2024-05-04'
+  prominence: 4
+  note: American painter, sculptor and printmaker, a catalyst of minimalism and post-painterly abstraction, known for his Black Paintings and shaped canvases.
+  sources:
+  - wp-frank-stella
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/76/Frank_Stella%2C_Baltimore_Sun_1976.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Frank_Stella%2C_Baltimore_Sun_1976.jpg/500px-Frank_Stella%2C_Baltimore_Sun_1976.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Frank_Stella,_Baltimore_Sun_1976.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places and two key works captured; later series, sculptures and commissions not built out.
+- key: ellsworth-kelly
+  name: Ellsworth Kelly
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1923-05-31'
+  died: '2015-12-27'
+  prominence: 4
+  note: American painter, sculptor and printmaker associated with hard-edge painting, color field painting and minimalism, known for bright shaped monochrome canvases.
+  sources:
+  - wp-ellsworth-kelly
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/db/Ellsworth_Kelly_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/Ellsworth_Kelly_%28cropped%29.jpg/500px-Ellsworth_Kelly_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ellsworth_Kelly_(cropped).jpg
+  image_license: CC BY 2.0
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; the long list of public commissions, prints and sculptures not built out.
+- key: helen-frankenthaler
+  name: Helen Frankenthaler
+  type: Artist
+  roles:
+  - painter
+  born: '1928-12-12'
+  died: '2011-12-27'
+  prominence: 4
+  note: American abstract expressionist painter who invented the "soak stain" technique and helped launch color field painting.
+  sources:
+  - wp-helen-frankenthaler
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg/500px-%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%C2%A9lynngilbert_Helen_Frankenthaler_1978.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; works on paper, other prints and exhibitions not built out.
+- key: norman-rockwell
+  name: Norman Rockwell
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1894-02-03'
+  died: '1978-11-08'
+  prominence: 4
+  note: American painter and illustrator, best known for 322 Saturday Evening Post covers of everyday American life and the Four Freedoms series.
+  sources:
+  - wp-norman-rockwell
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/37/Rockwell-Norman-LOC.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/37/Rockwell-Norman-LOC.jpg/500px-Rockwell-Norman-LOC.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rockwell-Norman-LOC.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; Post covers, Boy Scouts work, book illustrations and portraits not built out.
+- key: grant-wood
+  name: Grant Wood
+  type: Artist
+  roles:
+  - painter
+  born: '1891-02-13'
+  died: '1942-02-12'
+  prominence: 4
+  note: American Regionalist painter of the rural Midwest, best known for American Gothic (1930).
+  sources:
+  - wp-grant-wood
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/02/Grant_Wood.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Grant_Wood.jpg/500px-Grant_Wood.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Grant_Wood.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and American Gothic captured; other works, murals and stained glass not built out.
+- key: jean-michel-basquiat
+  name: Jean-Michel Basquiat
+  type: Artist
+  roles:
+  - painter
+  born: '1960-12-22'
+  died: '1988-08-12'
+  prominence: 4
+  note: American Neo-expressionist artist who began as the graffiti artist SAMO and became a leading painter of the 1980s.
+  sources:
+  - wp-jean-michel-basquiat
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/a/aa/Jean-Michel_Basquiat_passport_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Michel_Basquiat_passport_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; later sections of the article (cut at 32,000 characters) and the wider portfolio not built out.
+- key: keith-haring
+  name: Keith Haring
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1958-05-04'
+  died: '1990-02-16'
+  prominence: 4
+  note: American artist and activist whose bold graphic imagery, from subway chalk drawings to public murals, bridged street art and Pop art.
+  sources:
+  - wp-keith-haring
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/04/Haringpalladium_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/04/Haringpalladium_%28cropped%29.jpg/500px-Haringpalladium_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Haringpalladium_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key murals captured; the 50-plus other murals, Pop Shop and later sections (article cut at 32,000 characters) not built out.
+- key: thomas-cole
+  name: Thomas Cole
+  type: Artist
+  roles:
+  - painter
+  born: '1801-02-01'
+  died: '1848-02-11'
+  prominence: 4
+  note: Anglo-American painter who founded the Hudson River School, known for romantic landscapes and allegorical series.
+  sources:
+  - wp-thomas-cole
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/af/Thomas_Cole_1845_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Thomas_Cole_1845_%28cropped%29.jpg/500px-Thomas_Cole_1845_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Thomas_Cole_1845_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, student link and two key works captured; The Course of Empire (no year in the article), patrons and other works not built out.
+- key: frederic-edwin-church
+  name: Frederic Edwin Church
+  type: Artist
+  roles:
+  - painter
+  born: '1826-05-04'
+  died: '1900-04-07'
+  prominence: 4
+  note: American landscape painter of the Hudson River School, best known for The Heart of the Andes and his Olana estate.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Photograph_of_Frederic_Edwin_Church_by_Napoleon_Sarony.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Photograph_of_Frederic_Edwin_Church_by_Napoleon_Sarony.jpg/500px-Photograph_of_Frederic_Edwin_Church_by_Napoleon_Sarony.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Photograph_of_Frederic_Edwin_Church_by_Napoleon_Sarony.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places and one key work captured; full portfolio, students and travels not built out.
+  sources:
+  - wp-frederic-edwin-church
+- key: albert-bierstadt
+  name: Albert Bierstadt
+  type: Artist
+  roles:
+  - painter
+  born: '1830-01-07'
+  died: '1902-02-18'
+  prominence: 4
+  note: German-American painter of the Hudson River School, known for monumental landscapes of the American West.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5e/Original_Colour_Photo_of_Albert_Bierstadt%2C_c._1895.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Original_Colour_Photo_of_Albert_Bierstadt%2C_c._1895.png/500px-Original_Colour_Photo_of_Albert_Bierstadt%2C_c._1895.png
+  image_page: https://commons.wikimedia.org/wiki/File:Original_Colour_Photo_of_Albert_Bierstadt,_c._1895.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; the long list of existing works not built out.
+  sources:
+  - wp-albert-bierstadt
+- key: gilbert-stuart
+  name: Gilbert Stuart
+  type: Artist
+  roles:
+  - painter
+  born: '1755-12-03'
+  died: '1828-07-09'
+  prominence: 4
+  note: American portrait painter, best known for his unfinished Athenaeum portrait of George Washington, used on the one-dollar bill.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Gilbert_Stuart_Selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Gilbert_Stuart_Selfportrait.jpg/500px-Gilbert_Stuart_Selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Selfportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places and the Athenaeum portrait captured; his other portraits and sitters not built out.
+  sources:
+  - wp-gilbert-stuart
+- key: john-singleton-copley
+  name: John Singleton Copley
+  type: Artist
+  roles:
+  - painter
+  born: '1738-07-03'
+  died: '1815-09-09'
+  prominence: 4
+  note: American-born British painter, portraitist of colonial New England and later history painter in London.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7b/Self-Portrait_1769_John_Singleton_Copley.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Self-Portrait_1769_John_Singleton_Copley.jpg/500px-Self-Portrait_1769_John_Singleton_Copley.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-Portrait_1769_John_Singleton_Copley.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one early work captured; his history paintings and sitters not built out.
+  sources:
+  - wp-john-singleton-copley
+- key: benjamin-west
+  name: Benjamin West
+  type: Artist
+  roles:
+  - painter
+  born: '1738-10-10'
+  died: '1820-03-11'
+  prominence: 4
+  note: American-born British history painter, second president of the Royal Academy and historical painter to George III.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ae/After_Benjamin_West%2C_Benjamin_West%2C_c._1776%2C_NGA_1133.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/After_Benjamin_West%2C_Benjamin_West%2C_c._1776%2C_NGA_1133.jpg/500px-After_Benjamin_West%2C_Benjamin_West%2C_c._1776%2C_NGA_1133.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:After_Benjamin_West,_Benjamin_West,_c._1776,_NGA_1133.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, royal patron, pupil, places and one key work captured; other works and the rest of his pupils not built out.
+  sources:
+  - wp-benjamin-west
+- key: francis-bacon-artist
+  name: Francis Bacon (artist)
+  type: Artist
+  roles:
+  - painter
+  born: '1909-10-28'
+  died: '1992-04-28'
+  prominence: 4
+  note: Irish-born British figurative painter known for raw, unsettling imagery such as crucifixions and screaming popes.
+  coverage: partly
+  coverage_note: Dates, places and the 1944 triptych captured; the popes, portraits and later series not built out.
+  sources:
+  - wp-francis-bacon-artist
+- key: lucian-freud
+  name: Lucian Freud
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1922-12-08'
+  died: '2011-07-20'
+  prominence: 4
+  note: Berlin-born British painter and draughtsman, one of the foremost 20th-century English portraitists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/LucienFreud.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/c4/LucienFreud.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:LucienFreud.jpg
+  image_license: CC BY 2.0
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; other portraits, etchings and sitters not built out.
+  sources:
+  - wp-lucian-freud
+- key: david-hockney
+  name: David Hockney
+  type: Artist
+  roles:
+  - painter
+  - photographer
+  born: '1937-07-09'
+  died: '2026-06-11'
+  prominence: 4
+  note: British painter, stage designer and photographer, a leading figure of 1960s pop art known for his California swimming pools and Yorkshire landscapes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:David_Hockney_in_Washington_Square_Park_(1977).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; printmaking, photocollages, stage designs and exhibitions not built out.
+  sources:
+  - wp-david-hockney
+- key: jean-dubuffet
+  name: Jean Dubuffet
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1901-07-31'
+  died: '1985-05-12'
+  prominence: 3
+  note: French painter and sculptor of the Ecole de Paris, founder of the art brut movement.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/Paolo_Monti_-_Servizio_fotografico_%28Italia%2C_1960%29_-_BEIC_6341424.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Paolo_Monti_-_Servizio_fotografico_%28Italia%2C_1960%29_-_BEIC_6341424.jpg/500px-Paolo_Monti_-_Servizio_fotografico_%28Italia%2C_1960%29_-_BEIC_6341424.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Paolo_Monti_-_Servizio_fotografico_(Italia,_1960)_-_BEIC_6341424.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; art brut collection, series and exhibitions not built out.
+  sources:
+  - wp-jean-dubuffet
+- key: alberto-giacometti
+  name: Alberto Giacometti
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - draughtsman
+  - printmaker
+  born: '1901-10-10'
+  died: '1966-01-11'
+  prominence: 4
+  note: Swiss sculptor, painter and printmaker, famous for his tall, slender figures made after the Second World War.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Emmy_Andriesse_-_Alberto_Giacometti_%28Ende_1940er_PK-F-A.06801%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Emmy_Andriesse_-_Alberto_Giacometti_%28Ende_1940er_PK-F-A.06801%29.jpg/500px-Emmy_Andriesse_-_Alberto_Giacometti_%28Ende_1940er_PK-F-A.06801%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Emmy_Andriesse_-_Alberto_Giacometti_(Ende_1940er_PK-F-A.06801).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; teacher Bourdelle and the Surrealist circle not linked; other works not built out.
+  sources:
+  - wp-alberto-giacometti
+- key: anselm-kiefer
+  name: Anselm Kiefer
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1945-03-08'
+  prominence: 4
+  note: German painter and sculptor whose large works with straw, ash and lead confront German history and the Holocaust.
+  coverage: partly
+  coverage_note: Birth, studios and one dated work captured; teachers (Dreher, Antes, Beuys) not in the database; series and exhibitions not built out.
+  sources:
+  - wp-anselm-kiefer
+- key: gerhard-richter
+  name: Gerhard Richter
+  type: Artist
+  roles:
+  - painter
+  born: '1932-02-09'
+  prominence: 4
+  note: German painter of photo-based and abstract works, co-founder of Capitalist Realism, and designer of the Cologne Cathedral window.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Gerhard_Richter%2C_Prague_%282017%29.jpg/500px-Gerhard_Richter%2C_Prague_%282017%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gerhard_Richter,_Prague_(2017).jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places, two key works captured from the first 32,000 characters of the article; full portfolio and later sections not built out.
+  sources:
+  - wp-gerhard-richter
+- key: georg-baselitz
+  name: Georg Baselitz
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - graphic artist
+  born: '1938-01-23'
+  died: '2026-04-30'
+  prominence: 3
+  note: German-Austrian painter, born Hans-Georg Kern, known for figurative expressive works and for painting his subjects upside down from 1969.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/65/Georg_Baselitz_by_Erling_Mandelmann.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/65/Georg_Baselitz_by_Erling_Mandelmann.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Georg_Baselitz_by_Erling_Mandelmann.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, studies, studios and the first inverted painting captured; later series and sculpture not built out.
+  sources:
+  - wp-georg-baselitz
+- key: sigmar-polke
+  name: Sigmar Polke
+  type: Artist
+  roles:
+  - painter
+  - photographer
+  born: '1941-02-13'
+  died: '2010-06-10'
+  prominence: 3
+  note: German painter and photographer, co-founder of Capitalist Realism, who experimented with chemicals and unusual materials.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/Sigmar_Polke.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Sigmar_Polke.jpg/500px-Sigmar_Polke.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sigmar_Polke.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, commissions and two works captured; photography, films and exhibitions not built out.
+  sources:
+  - wp-sigmar-polke
+- key: antoni-tapies
+  name: Antoni Tàpies
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1923-12-13'
+  died: '2012-02-06'
+  prominence: 3
+  note: Catalan painter and sculptor of matter painting and Art Informel, a founder of Dau al Set, who set up the Fundació Antoni Tàpies in Barcelona.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Antoni_T%C3%A0pies_%281%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Antoni_T%C3%A0pies_%281%29.jpg/500px-Antoni_T%C3%A0pies_%281%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antoni_T%C3%A0pies_(1).jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, birthplace, foundation and two works captured; graphic work, essays and exhibitions not built out.
+  sources:
+  - wp-antoni-tapies
+- key: louise-bourgeois
+  name: Louise Bourgeois
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - printmaker
+  born: '1911-12-25'
+  died: '2010-05-31'
+  prominence: 4
+  note: French-American artist best known for large-scale sculpture and installation, including the spider Maman.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Oliver_Mark_-_Louise_Bourgeois%2C_New_York_1996.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Oliver_Mark_-_Louise_Bourgeois%2C_New_York_1996.jpg/500px-Oliver_Mark_-_Louise_Bourgeois%2C_New_York_1996.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Oliver_Mark_-_Louise_Bourgeois,_New_York_1996.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, teachers, places and two works captured; Cells, prints and later installations not built out.
+  sources:
+  - wp-louise-bourgeois
+- key: jean-arp
+  name: Jean Arp
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - poet
+  born: '1886-09-16'
+  died: '1966-06-07'
+  prominence: 3
+  note: German-French sculptor, painter and poet (Hans Arp), a Dadaist and abstract artist.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/14/Hans_Arp.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Hans_Arp.JPG/500px-Hans_Arp.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_Arp.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Dada and Surrealist links and one dated work captured; sculptures and exhibitions not built out.
+  sources:
+  - wp-jean-arp
+- key: karel-appel
+  name: Karel Appel
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - poet
+  born: '1921-04-25'
+  died: '2006-05-03'
+  prominence: 3
+  note: Dutch painter, sculptor and poet, a founder of the CoBrA movement in 1948.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e7/Karel_Appel_%281982%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Karel_Appel_%281982%29.jpg/500px-Karel_Appel_%281982%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Karel_Appel_(1982).jpg
+  image_license: CC BY-SA 3.0 nl
+  coverage: partly
+  coverage_note: Dates, places, CoBrA and the Amsterdam City Hall fresco captured; later murals and exhibitions not built out.
+  sources:
+  - wp-karel-appel
+- key: leonora-carrington
+  name: Leonora Carrington
+  type: Artist
+  roles:
+  - painter
+  - novelist
+  born: '1917-04-06'
+  died: '2011-05-25'
+  prominence: 3
+  note: British-born Mexican Surrealist painter and novelist who lived most of her adult life in Mexico City.
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; writings, later paintings and exhibitions not built out.
+  sources:
+  - wp-leonora-carrington
+- key: niki-de-saint-phalle
+  name: Niki de Saint Phalle
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - filmmaker
+  born: '1930-10-29'
+  died: '2002-05-21'
+  prominence: 3
+  note: French-American sculptor and painter known for her Nanas, shooting paintings (Tirs) and the Tarot Garden.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/dc/Niki_de_Saint_Phalle_by_Lothar_Wolleh.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Niki_de_Saint_Phalle_by_Lothar_Wolleh.jpg/500px-Niki_de_Saint_Phalle_by_Lothar_Wolleh.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Niki_de_Saint_Phalle_by_Lothar_Wolleh.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, early life, Tirs and Nanas and Hon captured from the first 32,000 characters; Tarot Garden, later works and death place not captured (article cut).
+  sources:
+  - wp-niki-de-saint-phalle
+- key: carl-larsson
+  name: Carl Larsson
+  type: Artist
+  roles:
+  - painter
+  born: '1853-05-28'
+  died: '1919-01-22'
+  prominence: 3
+  note: Swedish Arts and Crafts painter best known for watercolours of idyllic family life and the large painting Midvinterblot.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/Larsson_-_Self_Portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Larsson_-_Self_Portrait.jpg/500px-Larsson_-_Self_Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Larsson_-_Self_Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, family home and Midvinterblot captured; frescoes, books and the full watercolour series not built out.
+  sources:
+  - wp-carl-larsson
+artworks:
+- key: mural-pollock-1943
+  name: Mural
+  medium: oil on canvas
+  made: 1943
+  collection: University of Iowa
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 4
+  note: 8-by-20-foot work for the entry of Peggy Guggenheim's townhouse, painted on canvas rather than the wall at Marcel Duchamp's suggestion; held by the University of Iowa.
+  sources:
+  - wp-jackson-pollock
+- key: number-11-1952-blue-poles
+  name: Number 11, 1952 (Blue Poles)
+  made: 1952
+  collection: National Gallery of Australia
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+  note: Bought in 1973 by the Australian government for the National Gallery of Australia.
+  sources:
+  - wp-jackson-pollock
+- key: slow-swirl-at-the-edge-of-the-sea
+  name: Slow Swirl at the Edge of the Sea
+  made: 1945
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+  note: Called Rothko's masterpiece of his turn towards abstraction; completed in the year the Second World War ended.
+  sources:
+  - wp-mark-rothko
+- key: woman-iii
+  name: Woman III
+  kind: painting
+  medium: oil
+  made: 1953
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 4
+  note: From the Woman series begun in 1950; sold by David Geffen to Steven A. Cohen in 2006 for $137.5 million.
+  sources:
+  - wp-willem-de-kooning
+- key: nighthawks
+  name: Nighthawks
+  made: 1942
+  people:
+  - person: edward-hopper
+    role: creator
+  prominence: 5
+  note: Hopper's best-known painting, customers at an all-night diner counter; Josephine Hopper named it.
+  sources:
+  - wp-edward-hopper
+- key: jimson-weed-white-flower-no-1
+  name: Jimson Weed/White Flower No. 1
+  made: 1932
+  people:
+  - person: georgia-o-keeffe
+    role: creator
+  prominence: 3
+  note: Sold in 2014 for $44,405,000, then by far the highest price paid for a painting by a female artist.
+  sources:
+  - wp-georgia-o-keeffe
+- key: marilyn-diptych
+  name: Marilyn Diptych
+  made: 1962
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 4
+  note: One of Warhol's best-known early silkscreen paintings, with Campbell's Soup Can and Coca-Cola (3), all 1962.
+  sources:
+  - wp-andy-warhol
+- key: whaam
+  name: Whaam!
+  kind: painting
+  made: 1963
+  collection: Tate
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 4
+  note: Diptych of a fighter aircraft firing a rocket at an enemy plane, from his war-themed work; bought by the Tate Gallery in 1966.
+  sources:
+  - wp-roy-lichtenstein
+- key: flag-johns-1954
+  name: Flag
+  medium: encaustic
+  made: 1954
+  made_end: 1955
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 4
+  note: Painted after a dream, it began his flag, target and number paintings. The article also dates a "1958 Flag" sold in 2010 for a reported $110 million; the artwork dated 1954-55 here is the early
+    one.
+  sources:
+  - wp-jasper-johns
+- key: erased-de-kooning-drawing
+  name: Erased de Kooning Drawing
+  made: 1953
+  people:
+  - person: robert-rauschenberg
+    role: creator
+  prominence: 4
+  note: Conceptual work made by erasing a drawing that Willem de Kooning gave him, with the elder artist's consent.
+  sources:
+  - wp-robert-rauschenberg
+- key: the-liver-is-the-cocks-comb
+  name: The Liver Is the Cock's Comb
+  made: 1944
+  people:
+  - person: arshile-gorky
+    role: creator
+  prominence: 3
+  note: Andre Breton called it one of the most important paintings made in America; shown at the Surrealists' final show at the Galerie Maeght in Paris in 1947.
+  sources:
+  - wp-arshile-gorky
+- key: lehighton-mural
+  name: Lehighton
+  made: 1946
+  collection: Allentown Art Museum
+  people:
+  - person: franz-kline
+    role: creator
+  prominence: 2
+  note: Large canvas of the town where he attended high school, commissioned by the Lehighton American Legion post; acquired by the Allentown Art Museum in 2016.
+  sources:
+  - wp-franz-kline
+- key: broken-obelisk
+  name: Broken Obelisk
+  kind: sculpture
+  made: 1963
+  note: Newman's most monumental and best-known sculpture, an inverted obelisk balanced on the apex of a pyramid.
+  people:
+  - person: barnett-newman
+    role: creator
+  prominence: 3
+  sources:
+  - wp-barnett-newman
+- key: stations-of-the-cross-newman
+  name: 'Stations of the Cross: Lema Sabachthani'
+  kind: painting
+  made: 1958
+  made_end: 1966
+  note: Series of black and white paintings, usually regarded as the peak of Newman's achievement; begun shortly after his heart attack.
+  people:
+  - person: barnett-newman
+    role: creator
+  prominence: 4
+  sources:
+  - wp-barnett-newman
+- key: fifty-days-at-iliam
+  name: Fifty Days at Iliam
+  kind: painting
+  made: 1978
+  collection: Philadelphia Museum of Art
+  note: Ten-part cycle inspired by Homer's Iliad in Alexander Pope's translation; the museum opened permanent rooms for it in 1989.
+  people:
+  - person: cy-twombly
+    role: creator
+  prominence: 4
+  sources:
+  - wp-cy-twombly
+- key: twombly-ceiling-louvre
+  name: Ceiling (Salle des Bronzes, Louvre)
+  kind: painting
+  made: 2010
+  collection: Musee du Louvre
+  note: Permanent site-specific ceiling painting in the Louvre's Salle des Bronzes, unveiled in 2010.
+  people:
+  - person: cy-twombly
+    role: creator
+  prominence: 3
+  sources:
+  - wp-cy-twombly
+- key: die-fahne-hoch
+  name: Die Fahne Hoch!
+  kind: painting
+  made: 1959
+  note: One of Stella's Black Paintings; the title is the first line of the Horst-Wessel-Lied.
+  people:
+  - person: frank-stella
+    role: creator
+  prominence: 3
+  sources:
+  - wp-frank-stella
+- key: protractor-variation-i
+  name: Protractor Variation I
+  kind: painting
+  made: 1969
+  collection: Perez Art Museum Miami
+  note: Shaped-canvas work from the Protractor Series, marking Stella's move to vibrant colour and formal complexity.
+  people:
+  - person: frank-stella
+    role: creator
+  prominence: 3
+  sources:
+  - wp-frank-stella
+- key: spectrum-viii
+  name: Spectrum VIII
+  kind: painting
+  medium: acrylic on canvas, 12 joined panels
+  made: 2014
+  collection: Fondation Louis Vuitton, Paris
+  note: Large multi-panel painting commissioned in 2013 as the curtain for the Frank Gehry auditorium of the Louis Vuitton Foundation.
+  people:
+  - person: ellsworth-kelly
+    role: creator
+  prominence: 3
+  sources:
+  - wp-ellsworth-kelly
+- key: houston-triptych
+  name: Houston Triptych
+  kind: sculpture
+  medium: bronze
+  made: 1986
+  collection: Museum of Fine Arts, Houston
+  note: Vertical bronze planes mounted on a tall concrete base, a public commission.
+  people:
+  - person: ellsworth-kelly
+    role: creator
+  prominence: 3
+  sources:
+  - wp-ellsworth-kelly
+- key: mountains-and-sea
+  name: Mountains and Sea
+  kind: painting
+  made: 1952
+  note: The exhibition of this painting in 1952 launched Frankenthaler's career; Morris Louis called it a bridge between Pollock and what was possible. The article gives 1952 as the year of the exhibition,
+    not explicitly of its making.
+  people:
+  - person: helen-frankenthaler
+    role: creator
+  prominence: 4
+  sources:
+  - wp-helen-frankenthaler
+- key: essence-mulberry
+  name: Essence Mulberry
+  kind: woodcut
+  made: 1977
+  note: Eight-colour woodcut, her first collaboration with Kenneth E. Tyler.
+  people:
+  - person: helen-frankenthaler
+    role: creator
+  prominence: 2
+  sources:
+  - wp-helen-frankenthaler
+- key: four-freedoms
+  name: Four Freedoms
+  kind: painting
+  made: 1943
+  note: Series of four paintings (Freedom of Speech, Freedom of Worship, Freedom from Want, Freedom from Fear) inspired by a speech of Franklin D. Roosevelt; published by The Saturday Evening Post in 1943.
+  people:
+  - person: norman-rockwell
+    role: creator
+  prominence: 4
+  sources:
+  - wp-norman-rockwell
+- key: the-problem-we-all-live-with
+  name: The Problem We All Live With
+  kind: painting
+  made: 1964
+  note: Depicts Ruby Bridges walking to school flanked by federal marshals; dealt with school racial integration and was displayed in the White House in 2011.
+  people:
+  - person: norman-rockwell
+    role: creator
+  prominence: 4
+  sources:
+  - wp-norman-rockwell
+- key: american-gothic
+  name: American Gothic
+  kind: painting
+  made: 1930
+  collection: Art Institute of Chicago
+  note: First exhibited in 1930 at the Art Institute of Chicago, which awarded it a $300 prize; modelled by the artist's sister Nan Wood Graham and his dentist Dr. Byron McKeeby.
+  people:
+  - person: grant-wood
+    role: creator
+  prominence: 5
+  sources:
+  - wp-grant-wood
+- key: dos-cabezas
+  name: Dos Cabezas
+  kind: painting
+  made: 1982
+  note: Painted within two hours after Basquiat met Warhol for lunch on 4 October 1982; it began their friendship.
+  people:
+  - person: jean-michel-basquiat
+    role: creator
+  - person: jean-michel-basquiat
+    role: subject
+  - person: andy-warhol
+    role: subject
+  prominence: 3
+  sources:
+  - wp-jean-michel-basquiat
+- key: untitled-1982-skull-basquiat
+  name: Untitled (1982, black skull with red and yellow rivulets)
+  kind: painting
+  made: 1982
+  note: Sold in 2017 for a record $110.5 million, one of the most expensive paintings ever purchased.
+  people:
+  - person: jean-michel-basquiat
+    role: creator
+  prominence: 4
+  sources:
+  - wp-jean-michel-basquiat
+- key: tuttomondo
+  name: Tuttomondo
+  kind: mural
+  made: 1989
+  note: Mural painted in June 1989 on the rear wall of the convent of the Sant'Antonio Abate church in Pisa.
+  people:
+  - person: keith-haring
+    role: creator
+  places:
+  - place: sant-antonio-abate-pisa
+    role: made
+  prominence: 4
+  sources:
+  - wp-keith-haring
+- key: crack-is-wack
+  name: Crack Is Wack
+  kind: mural
+  made: 1986
+  note: Mural in East Harlem visible from the FDR Drive; Haring was arrested for it, then painted an updated version on the same wall in October 1986.
+  people:
+  - person: keith-haring
+    role: creator
+  prominence: 3
+  sources:
+  - wp-keith-haring
+- key: the-oxbow
+  name: The Oxbow
+  kind: painting
+  made: 1836
+  note: One of Cole's other famous works named in the article.
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 4
+  sources:
+  - wp-thomas-cole
+- key: the-voyage-of-life
+  name: The Voyage of Life
+  kind: painting
+  made: 1840
+  collection: Munson-Williams-Proctor Arts Institute, Utica, New York
+  note: Four-part allegorical series; the 1840 original is at Utica, with 1842 replicas with minor alterations at the National Gallery of Art in Washington, D.C.
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 4
+  sources:
+  - wp-thomas-cole
+- key: the-heart-of-the-andes
+  name: The Heart of the Andes
+  kind: painting
+  made: 1859
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 4
+  note: Church's most famous painting; first shown in a single-painting exhibition in New York in 1859 and later sold for $10,000, then the highest price paid for a work by a living American artist.
+  sources:
+  - wp-frederic-edwin-church
+- key: the-rocky-mountains-landers-peak
+  name: The Rocky Mountains, Lander's Peak
+  kind: painting
+  medium: oil on canvas
+  made: 1863
+  collection: Metropolitan Museum of Art, New York City
+  people:
+  - person: albert-bierstadt
+    role: creator
+  places:
+  - place: metropolitan-museum-of-art
+    role: held
+  prominence: 3
+  note: Painted after his 1859 westward trip with surveyor Frederick W. Lander; bought for $25,000 in 1865.
+  sources:
+  - wp-albert-bierstadt
+- key: athenaeum-portrait-of-george-washington
+  name: Athenaeum Portrait of George Washington
+  kind: painting
+  made: 1796
+  collection: National Portrait Gallery, Washington, D.C. (jointly bought with the Museum of Fine Arts, Boston, 1980)
+  people:
+  - person: gilbert-stuart
+    role: creator
+  prominence: 4
+  note: Unfinished portrait begun in 1796; Stuart kept it to paint about 50 copies, and its image appears on the US one-dollar bill. George Washington is not yet in the database, so no subject link.
+  sources:
+  - wp-gilbert-stuart
+- key: a-boy-with-a-flying-squirrel
+  name: A Boy with a Flying Squirrel
+  kind: painting
+  made: 1765
+  people:
+  - person: john-singleton-copley
+    role: creator
+  prominence: 3
+  note: Portrait of his half-brother Henry Pelham, sent to London and exhibited in 1766, which established Copley's fame in England. The article gives no year for Watson and the Shark, so it is left out.
+  sources:
+  - wp-john-singleton-copley
+- key: the-death-of-general-wolfe
+  name: The Death of General Wolfe
+  kind: painting
+  made: 1770
+  people:
+  - person: benjamin-west
+    role: creator
+  prominence: 4
+  note: West's most famous and possibly most influential painting; exhibited at the Royal Academy in 1771 and one of the most reproduced images of its period.
+  sources:
+  - wp-benjamin-west
+- key: three-studies-for-figures-at-the-base-of-a-crucifixion
+  name: Three Studies for Figures at the Base of a Crucifixion
+  kind: painting
+  made: 1944
+  people:
+  - person: francis-bacon-artist
+    role: creator
+  prominence: 4
+  note: Triptych regarded as his first mature piece; it caused a sensation when exhibited in 1945.
+  sources:
+  - wp-francis-bacon-artist
+- key: benefits-supervisor-sleeping
+  name: Benefits Supervisor Sleeping
+  kind: painting
+  made: 1995
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+  note: Nude portrait of Sue Tilley; sold at Christie's in 2008 for $33.6 million, then a record for a living artist.
+  sources:
+  - wp-lucian-freud
+- key: portrait-of-queen-elizabeth-ii-by-lucian-freud
+  name: Portrait of Queen Elizabeth II
+  kind: painting
+  made: 2001
+  people:
+  - person: lucian-freud
+    role: creator
+  - person: elizabeth-ii
+    role: subject
+  prominence: 2
+  note: Completed in 2001; its portrayal of the Queen drew criticism in the British media.
+  sources:
+  - wp-lucian-freud
+- key: mr-and-mrs-clark-and-percy
+  name: Mr. and Mrs. Clark and Percy
+  kind: painting
+  made: 1970
+  made_end: 1971
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 4
+  note: Double portrait of fashion designers Ossie Clark and Celia Birtwell, among Hockney's portraits of friends from 1968 on.
+  sources:
+  - wp-david-hockney
+- key: bigger-trees-near-warter
+  name: Bigger Trees Near Warter
+  kind: painting
+  made: 2007
+  collection: Tate, London
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 3
+  note: Hockney's largest painting (15 by 40 feet), painted on 50 canvases in East Yorkshire and shown at the Royal Academy in 2007; he donated it to Tate in 2008.
+  sources:
+  - wp-david-hockney
+- key: jardin-d-email
+  name: Jardin d'email
+  kind: sculpture
+  made: 1974
+  people:
+  - person: jean-dubuffet
+    role: creator
+  places:
+  - place: kroller-muller-museum
+    role: made-for
+  prominence: 2
+  note: A very large outdoor painted sculpture designed for the Kroller-Muller Museum.
+  sources:
+  - wp-jean-dubuffet
+- key: grande-femme-debout
+  name: Grande femme debout I-IV
+  kind: sculpture
+  made: 1960
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+  note: Four figures of standing women, his largest sculptures, made for a commission for the Chase Manhattan Bank building in New York that he abandoned.
+  sources:
+  - wp-alberto-giacometti
+- key: to-the-unknown-painter
+  name: To the Unknown Painter
+  kind: painting
+  made: 1983
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+  note: Part of a 1980-83 series of looming stone edifices; its plaza refers to the courtyard of Hitler's Chancellery in Berlin.
+  sources:
+  - wp-anselm-kiefer
+- key: richter-18-october-1977
+  name: 18 October 1977
+  kind: painting
+  made: 1988
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 4
+  note: Cycle of 15 photo paintings of Red Army Faction members, first exhibited in Krefeld in 1989.
+  sources:
+  - wp-gerhard-richter
+- key: cologne-cathedral-window-richter
+  name: Cologne Cathedral south transept window
+  kind: stained glass window
+  made: 2007
+  people:
+  - person: gerhard-richter
+    role: creator
+  places:
+  - place: cologne-cathedral
+    role: made-for
+  prominence: 4
+  note: Abstract collage of 11,500 pixel-like squares in 72 colours, unveiled August 2007; the artist waived his fee.
+  sources:
+  - wp-gerhard-richter
+- key: the-wood-on-its-head
+  name: The Wood on Its Head (Der Wald auf dem Kopf)
+  kind: painting
+  made: 1969
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 4
+  note: Baselitz's first painting with an inverted motif, based on Rayski's Wermsdorf Woods.
+  sources:
+  - wp-georg-baselitz
+- key: polke-grossmuenster-windows
+  name: Stained-glass windows of the Grossmünster
+  kind: stained glass window
+  made: 2006
+  made_end: 2009
+  people:
+  - person: sigmar-polke
+    role: creator
+  places:
+  - place: grossmuenster-zurich
+    role: made-for
+  prominence: 3
+  note: Series of windows made between 2006 and 2009, drawing on Polke's early glass-painting training.
+  sources:
+  - wp-sigmar-polke
+- key: the-three-lies-of-painting
+  name: The Three Lies of Painting
+  kind: painting
+  made: 1994
+  people:
+  - person: sigmar-polke
+    role: creator
+  prominence: 3
+  sources:
+  - wp-sigmar-polke
+- key: grey-and-green-painting
+  name: Grey and Green Painting
+  kind: painting
+  made: 1957
+  collection: Tate Gallery, London
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+  note: Mixed-media work with clay and marble dust added to the paint, and waste paper, string and rags.
+  sources:
+  - wp-antoni-tapies
+- key: canvas-burned-to-matter
+  name: Canvas Burned to Matter
+  made: 1960
+  estimated: true
+  collection: Honolulu Museum of Art
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+  note: Mixed-media assemblage combining the principles of Dada and Surrealism.
+  sources:
+  - wp-antoni-tapies
+- key: femme-maison
+  name: Femme Maison
+  kind: painting
+  made: 1946
+  made_end: 1947
+  people:
+  - person: louise-bourgeois
+    role: creator
+  prominence: 3
+  note: Series of paintings with women's heads replaced by houses; became an icon of the feminist art movement.
+  sources:
+  - wp-louise-bourgeois
+- key: maman-bourgeois
+  name: Maman
+  kind: sculpture
+  medium: steel and marble
+  made: 2000
+  people:
+  - person: louise-bourgeois
+    role: creator
+  prominence: 4
+  note: Spider sculpture over nine metres high; first shown in 2000 as the Unilever Series commission for Tate Modern's Turbine Hall; an edition of six bronzes was cast later.
+  sources:
+  - wp-louise-bourgeois
+- key: trousse-d-un-da
+  name: Trousse d'un Da
+  made: 1921
+  people:
+  - person: jean-arp
+    role: creator
+  prominence: 3
+  note: Cited in the article as an example of Arp's collage and assemblage work.
+  sources:
+  - wp-jean-arp
+- key: questioning-children
+  name: Questioning Children
+  kind: fresco
+  made: 1949
+  people:
+  - person: karel-appel
+    role: creator
+  places:
+  - place: amsterdam
+    role: made
+  prominence: 3
+  note: Fresco in Amsterdam City Hall that caused controversy and was covered up for ten years.
+  sources:
+  - wp-karel-appel
+- key: self-portrait-inn-of-the-dawn-horse
+  name: Self-Portrait (The Inn of the Dawn Horse)
+  kind: painting
+  made: 1937
+  made_end: 1938
+  collection: Metropolitan Museum of Art
+  people:
+  - person: leonora-carrington
+    role: creator
+  prominence: 4
+  sources:
+  - wp-leonora-carrington
+- key: el-mundo-magico-de-los-mayas
+  name: El Mundo Magico de los Mayas
+  kind: mural
+  made: 1963
+  collection: Museo Nacional de Antropología, Mexico City
+  people:
+  - person: leonora-carrington
+    role: creator
+  places:
+  - place: mexico-city
+    role: held
+  prominence: 3
+  note: Mural influenced by folk stories of the region.
+  sources:
+  - wp-leonora-carrington
+- key: hon-en-katedral
+  name: Hon - en katedral (She - a Cathedral)
+  kind: sculpture
+  made: 1966
+  people:
+  - person: niki-de-saint-phalle
+    role: creator
+  places:
+  - place: stockholm
+    role: made
+  prominence: 4
+  note: Temporary walk-in sculpture of a reclining pregnant woman, made with Jean Tinguely and Per Olof Ultvedt at the Moderna Museet.
+  sources:
+  - wp-niki-de-saint-phalle
+- key: midvinterblot
+  name: Midvinterblot (Midwinter Sacrifice)
+  kind: painting
+  medium: oil
+  made: 1915
+  collection: Nationalmuseum, Stockholm
+  people:
+  - person: carl-larsson
+    role: creator
+  places:
+  - place: nationalmuseum-stockholm
+    role: held
+  prominence: 4
+  note: Larsson's last monumental work, rejected by the museum board on completion and bought and displayed there in 1997.
+  sources:
+  - wp-carl-larsson
+links:
+- teacher: thomas-hart-benton
+  student: jackson-pollock
+  sources:
+  - wp-jackson-pollock
+- teacher: arshile-gorky
+  student: mark-rothko
+  sources:
+  - wp-mark-rothko
+- teacher: franz-kline
+  student: cy-twombly
+  sources:
+  - wp-cy-twombly
+- teacher: thomas-cole
+  student: frederic-edwin-church
+  from: 1844
+  to: 1846
+  sources:
+  - wp-thomas-cole
+- teacher: thomas-cole
+  student: frederic-edwin-church
+  sources:
+  - wp-frederic-edwin-church
+- teacher: benjamin-west
+  student: gilbert-stuart
+  sources:
+  - wp-gilbert-stuart
+- patron: george-iii
+  artist: benjamin-west
+  from: 1772
+  sources:
+  - wp-benjamin-west
+- teacher: fernand-leger
+  student: louise-bourgeois
+  sources:
+  - wp-louise-bourgeois
+moments:
+- person: jackson-pollock
+  role: born
+  place: cody-wyoming
+  year: 1912
+  sources:
+  - wp-jackson-pollock
+- person: jackson-pollock
+  role: worked
+  place: new-york-city
+  year: 1930
+  sources:
+  - wp-jackson-pollock
+- person: jackson-pollock
+  role: worked
+  place: springs-new-york
+  year: 1945
+  sources:
+  - wp-jackson-pollock
+- person: jackson-pollock
+  role: died
+  place: springs-new-york
+  year: 1956
+  sources:
+  - wp-jackson-pollock
+- person: jackson-pollock
+  role: buried
+  place: springs-new-york
+  year: 1956
+  sources:
+  - wp-jackson-pollock
+- person: mark-rothko
+  role: born
+  place: daugavpils
+  year: 1903
+  sources:
+  - wp-mark-rothko
+- person: mark-rothko
+  role: worked
+  place: new-york-city
+  year: 1923
+  sources:
+  - wp-mark-rothko
+- person: willem-de-kooning
+  role: born
+  place: rotterdam
+  year: 1904
+  sources:
+  - wp-willem-de-kooning
+- person: willem-de-kooning
+  role: worked
+  place: new-york-city
+  year: 1927
+  sources:
+  - wp-willem-de-kooning
+- person: willem-de-kooning
+  role: worked
+  place: east-hampton-new-york
+  year: 1963
+  sources:
+  - wp-willem-de-kooning
+- person: edward-hopper
+  role: born
+  place: nyack
+  year: 1882
+  sources:
+  - wp-edward-hopper
+- person: edward-hopper
+  role: worked
+  place: south-truro
+  year: 1930
+  sources:
+  - wp-edward-hopper
+- person: edward-hopper
+  role: died
+  place: new-york-city
+  year: 1967
+  sources:
+  - wp-edward-hopper
+- person: edward-hopper
+  role: buried
+  place: nyack
+  year: 1967
+  sources:
+  - wp-edward-hopper
+- person: georgia-o-keeffe
+  role: born
+  place: sun-prairie
+  year: 1887
+  sources:
+  - wp-georgia-o-keeffe
+- person: georgia-o-keeffe
+  role: worked
+  place: new-york-city
+  year: 1918
+  sources:
+  - wp-georgia-o-keeffe
+- person: georgia-o-keeffe
+  role: worked
+  place: abiquiu
+  year: 1949
+  sources:
+  - wp-georgia-o-keeffe
+- person: georgia-o-keeffe
+  role: died
+  place: santa-fe
+  year: 1986
+  sources:
+  - wp-georgia-o-keeffe
+- person: andy-warhol
+  role: born
+  place: pittsburgh
+  year: 1928
+  sources:
+  - wp-andy-warhol
+- person: andy-warhol
+  role: worked
+  place: new-york-city
+  year: 1949
+  sources:
+  - wp-andy-warhol
+- person: roy-lichtenstein
+  role: born
+  place: new-york-city
+  year: 1923
+  sources:
+  - wp-roy-lichtenstein
+- person: roy-lichtenstein
+  role: worked
+  place: southampton-new-york
+  year: 1970
+  sources:
+  - wp-roy-lichtenstein
+- person: roy-lichtenstein
+  role: died
+  place: new-york-city
+  year: 1997
+  sources:
+  - wp-roy-lichtenstein
+- person: jasper-johns
+  role: born
+  place: augusta-georgia
+  year: 1930
+  sources:
+  - wp-jasper-johns
+- person: jasper-johns
+  role: worked
+  place: new-york-city
+  year: 1949
+  sources:
+  - wp-jasper-johns
+- person: robert-rauschenberg
+  role: born
+  place: port-arthur-texas
+  year: 1925
+  sources:
+  - wp-robert-rauschenberg
+- person: robert-rauschenberg
+  role: worked
+  place: captiva-island
+  year: 1970
+  sources:
+  - wp-robert-rauschenberg
+- person: robert-rauschenberg
+  role: died
+  place: captiva-island
+  year: 2008
+  sources:
+  - wp-robert-rauschenberg
+- person: arshile-gorky
+  role: born
+  place: khorgom
+  year: 1904
+  sources:
+  - wp-arshile-gorky
+- person: arshile-gorky
+  role: buried
+  place: sherman-connecticut
+  year: 1948
+  sources:
+  - wp-arshile-gorky
+- person: franz-kline
+  role: born
+  place: wilkes-barre
+  year: 1910
+  sources:
+  - wp-franz-kline
+- person: franz-kline
+  role: worked
+  place: new-york-city
+  year: 1939
+  sources:
+  - wp-franz-kline
+- person: franz-kline
+  role: died
+  place: new-york-city
+  year: 1962
+  sources:
+  - wp-franz-kline
+- person: barnett-newman
+  role: born
+  place: the-bronx
+  year: 1905
+  sources:
+  - wp-barnett-newman
+- person: barnett-newman
+  role: died
+  place: new-york-city
+  year: 1970
+  sources:
+  - wp-barnett-newman
+- person: cy-twombly
+  role: born
+  place: lexington-virginia
+  year: 1928
+  sources:
+  - wp-cy-twombly
+- person: cy-twombly
+  role: worked
+  place: new-york-city
+  year: 1955
+  sources:
+  - wp-cy-twombly
+- person: cy-twombly
+  role: worked
+  place: rome
+  year: 1957
+  sources:
+  - wp-cy-twombly
+- person: cy-twombly
+  role: died
+  place: rome
+  year: 2011
+  sources:
+  - wp-cy-twombly
+- person: frank-stella
+  role: born
+  place: malden-massachusetts
+  year: 1936
+  sources:
+  - wp-frank-stella
+- person: frank-stella
+  role: died
+  place: new-york-city
+  year: 2024
+  sources:
+  - wp-frank-stella
+- person: ellsworth-kelly
+  role: born
+  place: newburgh-new-york
+  year: 1923
+  sources:
+  - wp-ellsworth-kelly
+- person: ellsworth-kelly
+  role: worked
+  place: paris
+  year: 1948
+  sources:
+  - wp-ellsworth-kelly
+- person: ellsworth-kelly
+  role: worked
+  place: spencertown-new-york
+  year: 1970
+  sources:
+  - wp-ellsworth-kelly
+- person: ellsworth-kelly
+  role: died
+  place: spencertown-new-york
+  year: 2015
+  sources:
+  - wp-ellsworth-kelly
+- person: helen-frankenthaler
+  role: born
+  place: new-york-city
+  year: 1928
+  sources:
+  - wp-helen-frankenthaler
+- person: helen-frankenthaler
+  role: died
+  place: darien-connecticut
+  year: 2011
+  sources:
+  - wp-helen-frankenthaler
+- person: norman-rockwell
+  role: born
+  place: new-york-city
+  year: 1894
+  sources:
+  - wp-norman-rockwell
+- person: norman-rockwell
+  role: worked
+  place: arlington-vermont
+  year: 1939
+  sources:
+  - wp-norman-rockwell
+- person: norman-rockwell
+  role: worked
+  place: stockbridge-massachusetts
+  year: 1953
+  sources:
+  - wp-norman-rockwell
+- person: norman-rockwell
+  role: died
+  place: stockbridge-massachusetts
+  year: 1978
+  sources:
+  - wp-norman-rockwell
+- person: grant-wood
+  role: born
+  place: anamosa-iowa
+  year: 1891
+  sources:
+  - wp-grant-wood
+- person: grant-wood
+  role: worked
+  place: cedar-rapids
+  year: 1919
+  sources:
+  - wp-grant-wood
+- person: grant-wood
+  role: worked
+  place: iowa-city
+  year: 1934
+  sources:
+  - wp-grant-wood
+- person: grant-wood
+  role: died
+  place: iowa-city
+  year: 1942
+  sources:
+  - wp-grant-wood
+- person: grant-wood
+  role: buried
+  place: anamosa-iowa
+  year: 1942
+  sources:
+  - wp-grant-wood
+- person: jean-michel-basquiat
+  role: born
+  place: brooklyn
+  year: 1960
+  sources:
+  - wp-jean-michel-basquiat
+- person: jean-michel-basquiat
+  role: worked
+  place: los-angeles
+  year: 1982
+  sources:
+  - wp-jean-michel-basquiat
+- person: jean-michel-basquiat
+  role: died
+  place: new-york-city
+  year: 1988
+  sources:
+  - wp-jean-michel-basquiat
+- person: jean-michel-basquiat
+  role: buried
+  place: green-wood-cemetery
+  year: 1988
+  sources:
+  - wp-jean-michel-basquiat
+- person: keith-haring
+  role: born
+  place: reading-pennsylvania
+  year: 1958
+  sources:
+  - wp-keith-haring
+- person: keith-haring
+  role: worked
+  place: new-york-city
+  year: 1978
+  sources:
+  - wp-keith-haring
+- person: keith-haring
+  role: worked
+  place: pisa
+  year: 1989
+  sources:
+  - wp-keith-haring
+- person: keith-haring
+  role: died
+  place: new-york-city
+  year: 1990
+  sources:
+  - wp-keith-haring
+- person: thomas-cole
+  role: born
+  place: bolton-lancashire
+  year: 1801
+  sources:
+  - wp-thomas-cole
+- person: thomas-cole
+  role: worked
+  place: steubenville-ohio
+  year: 1818
+  sources:
+  - wp-thomas-cole
+- person: thomas-cole
+  role: worked
+  place: philadelphia
+  year: 1823
+  sources:
+  - wp-thomas-cole
+- person: thomas-cole
+  role: worked
+  place: catskill-new-york
+  year: 1825
+  sources:
+  - wp-thomas-cole
+- person: thomas-cole
+  role: worked
+  place: cedar-grove-catskill
+  year: 1827
+  sources:
+  - wp-thomas-cole
+- person: thomas-cole
+  role: died
+  place: catskill-new-york
+  year: 1848
+  sources:
+  - wp-thomas-cole
+- person: frederic-edwin-church
+  role: born
+  place: hartford
+  year: 1826
+  sources:
+  - wp-frederic-edwin-church
+- person: frederic-edwin-church
+  role: worked
+  place: catskill
+  year: 1844
+  sources:
+  - wp-frederic-edwin-church
+- person: frederic-edwin-church
+  role: worked
+  place: olana
+  year: 1872
+  sources:
+  - wp-frederic-edwin-church
+- person: frederic-edwin-church
+  role: died
+  place: new-york
+  year: 1900
+  sources:
+  - wp-frederic-edwin-church
+- person: frederic-edwin-church
+  role: buried
+  place: spring-grove-cemetery-hartford
+  year: 1900
+  sources:
+  - wp-frederic-edwin-church
+- person: albert-bierstadt
+  role: born
+  place: solingen
+  year: 1830
+  sources:
+  - wp-albert-bierstadt
+- person: albert-bierstadt
+  role: worked
+  place: dusseldorf
+  year: 1853
+  sources:
+  - wp-albert-bierstadt
+- person: albert-bierstadt
+  role: worked
+  place: new-york
+  year: 1859
+  sources:
+  - wp-albert-bierstadt
+- person: albert-bierstadt
+  role: buried
+  place: rural-cemetery-new-bedford
+  year: 1902
+  sources:
+  - wp-albert-bierstadt
+- person: gilbert-stuart
+  role: born
+  place: saunderstown
+  year: 1755
+  sources:
+  - wp-gilbert-stuart
+- person: gilbert-stuart
+  role: worked
+  place: philadelphia
+  year: 1795
+  sources:
+  - wp-gilbert-stuart
+- person: gilbert-stuart
+  role: worked
+  place: boston
+  year: 1805
+  sources:
+  - wp-gilbert-stuart
+- person: gilbert-stuart
+  role: died
+  place: boston
+  year: 1828
+  sources:
+  - wp-gilbert-stuart
+- person: gilbert-stuart
+  role: buried
+  place: central-burial-ground-boston
+  year: 1828
+  sources:
+  - wp-gilbert-stuart
+- person: john-singleton-copley
+  role: born
+  place: boston
+  year: 1738
+  sources:
+  - wp-john-singleton-copley
+- person: john-singleton-copley
+  role: worked
+  place: new-york
+  year: 1771
+  sources:
+  - wp-john-singleton-copley
+- person: john-singleton-copley
+  role: worked
+  place: london
+  year: 1775
+  sources:
+  - wp-john-singleton-copley
+- person: john-singleton-copley
+  role: died
+  place: london
+  year: 1815
+  sources:
+  - wp-john-singleton-copley
+- person: john-singleton-copley
+  role: buried
+  place: croydon-minster
+  year: 1815
+  sources:
+  - wp-john-singleton-copley
+- person: benjamin-west
+  role: born
+  place: springfield-pennsylvania
+  year: 1738
+  sources:
+  - wp-benjamin-west
+- person: benjamin-west
+  role: worked
+  place: rome
+  year: 1760
+  sources:
+  - wp-benjamin-west
+- person: benjamin-west
+  role: worked
+  place: london
+  year: 1763
+  sources:
+  - wp-benjamin-west
+- person: benjamin-west
+  role: died
+  place: london
+  year: 1820
+  sources:
+  - wp-benjamin-west
+- person: benjamin-west
+  role: buried
+  place: st-pauls-cathedral
+  year: 1820
+  sources:
+  - wp-benjamin-west
+- person: francis-bacon-artist
+  role: born
+  place: dublin
+  year: 1909
+  sources:
+  - wp-francis-bacon-artist
+- person: francis-bacon-artist
+  role: worked
+  place: paris
+  year: 1927
+  sources:
+  - wp-francis-bacon-artist
+- person: francis-bacon-artist
+  role: worked
+  place: london
+  year: 1929
+  sources:
+  - wp-francis-bacon-artist
+- person: francis-bacon-artist
+  role: worked
+  place: monte-carlo
+  year: 1946
+  sources:
+  - wp-francis-bacon-artist
+- person: francis-bacon-artist
+  role: died
+  place: madrid
+  year: 1992
+  sources:
+  - wp-francis-bacon-artist
+- person: lucian-freud
+  role: born
+  place: berlin
+  year: 1922
+  sources:
+  - wp-lucian-freud
+- person: lucian-freud
+  role: worked
+  place: london
+  year: 1933
+  sources:
+  - wp-lucian-freud
+- person: lucian-freud
+  role: died
+  place: london
+  year: 2011
+  sources:
+  - wp-lucian-freud
+- person: lucian-freud
+  role: buried
+  place: highgate-cemetery
+  year: 2011
+  sources:
+  - wp-lucian-freud
+- person: david-hockney
+  role: born
+  place: bradford
+  year: 1937
+  sources:
+  - wp-david-hockney
+- person: david-hockney
+  role: worked
+  place: los-angeles
+  year: 1964
+  sources:
+  - wp-david-hockney
+- person: david-hockney
+  role: died
+  place: london
+  year: 2026
+  sources:
+  - wp-david-hockney
+- person: jean-dubuffet
+  role: born
+  place: le-havre
+  year: 1901
+  sources:
+  - wp-jean-dubuffet
+- person: jean-dubuffet
+  role: worked
+  place: paris
+  year: 1918
+  sources:
+  - wp-jean-dubuffet
+- person: jean-dubuffet
+  role: died
+  place: paris
+  year: 1985
+  sources:
+  - wp-jean-dubuffet
+- person: alberto-giacometti
+  role: born
+  place: borgonovo
+  year: 1901
+  sources:
+  - wp-alberto-giacometti
+- person: alberto-giacometti
+  role: worked
+  place: paris
+  year: 1922
+  sources:
+  - wp-alberto-giacometti
+- person: alberto-giacometti
+  role: died
+  place: chur
+  year: 1966
+  sources:
+  - wp-alberto-giacometti
+- person: alberto-giacometti
+  role: buried
+  place: borgonovo
+  year: 1966
+  sources:
+  - wp-alberto-giacometti
+- person: anselm-kiefer
+  role: born
+  place: donaueschingen
+  year: 1945
+  sources:
+  - wp-anselm-kiefer
+- person: anselm-kiefer
+  role: worked
+  place: hornbach-walldurn
+  year: 1971
+  sources:
+  - wp-anselm-kiefer
+- person: anselm-kiefer
+  role: worked
+  place: barjac
+  year: 1992
+  sources:
+  - wp-anselm-kiefer
+- person: anselm-kiefer
+  role: worked
+  place: paris
+  year: 2008
+  sources:
+  - wp-anselm-kiefer
+- person: gerhard-richter
+  role: born
+  place: dresden
+  year: 1932
+  sources:
+  - wp-gerhard-richter
+- person: gerhard-richter
+  role: worked
+  place: duesseldorf
+  year: 1961
+  sources:
+  - wp-gerhard-richter
+- person: gerhard-richter
+  role: worked
+  place: cologne
+  year: 1983
+  sources:
+  - wp-gerhard-richter
+- person: georg-baselitz
+  role: born
+  place: deutschbaselitz
+  year: 1938
+  sources:
+  - wp-georg-baselitz
+- person: georg-baselitz
+  role: worked
+  place: berlin
+  year: 1957
+  sources:
+  - wp-georg-baselitz
+- person: georg-baselitz
+  role: worked
+  place: florence
+  year: 1976
+  sources:
+  - wp-georg-baselitz
+- person: sigmar-polke
+  role: born
+  place: oels
+  year: 1941
+  sources:
+  - wp-sigmar-polke
+- person: sigmar-polke
+  role: worked
+  place: duesseldorf
+  year: 1961
+  sources:
+  - wp-sigmar-polke
+- person: sigmar-polke
+  role: worked
+  place: cologne
+  year: 1978
+  sources:
+  - wp-sigmar-polke
+- person: antoni-tapies
+  role: born
+  place: barcelona
+  year: 1923
+  sources:
+  - wp-antoni-tapies
+- person: antoni-tapies
+  role: worked
+  place: fundacio-antoni-tapies
+  year: 1984
+  sources:
+  - wp-antoni-tapies
+- person: louise-bourgeois
+  role: born
+  place: paris
+  year: 1911
+  sources:
+  - wp-louise-bourgeois
+- person: louise-bourgeois
+  role: worked
+  place: new-york-city
+  year: 1938
+  sources:
+  - wp-louise-bourgeois
+- person: louise-bourgeois
+  role: died
+  place: new-york-city
+  year: 2010
+  sources:
+  - wp-louise-bourgeois
+- person: jean-arp
+  role: born
+  place: strasbourg
+  year: 1886
+  sources:
+  - wp-jean-arp
+- person: jean-arp
+  role: worked
+  place: zurich
+  year: 1915
+  sources:
+  - wp-jean-arp
+- person: jean-arp
+  role: worked
+  place: meudon
+  year: 1926
+  sources:
+  - wp-jean-arp
+- person: jean-arp
+  role: worked
+  place: zurich
+  year: 1942
+  sources:
+  - wp-jean-arp
+- person: jean-arp
+  role: died
+  place: basel
+  year: 1966
+  sources:
+  - wp-jean-arp
+- person: karel-appel
+  role: born
+  place: amsterdam
+  year: 1921
+  sources:
+  - wp-karel-appel
+- person: karel-appel
+  role: worked
+  place: paris
+  year: 1950
+  sources:
+  - wp-karel-appel
+- person: karel-appel
+  role: died
+  place: zurich
+  year: 2006
+  sources:
+  - wp-karel-appel
+- person: karel-appel
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 2006
+  sources:
+  - wp-karel-appel
+- person: leonora-carrington
+  role: worked
+  place: saint-martin-dardeche
+  year: 1938
+  sources:
+  - wp-leonora-carrington
+- person: leonora-carrington
+  role: worked
+  place: mexico-city
+  year: 1942
+  sources:
+  - wp-leonora-carrington
+- person: leonora-carrington
+  role: died
+  place: mexico-city
+  year: 2011
+  sources:
+  - wp-leonora-carrington
+- person: niki-de-saint-phalle
+  role: born
+  place: neuilly-sur-seine
+  year: 1930
+  sources:
+  - wp-niki-de-saint-phalle
+- person: niki-de-saint-phalle
+  role: worked
+  place: paris
+  year: 1952
+  sources:
+  - wp-niki-de-saint-phalle
+- person: niki-de-saint-phalle
+  role: worked
+  place: stockholm
+  year: 1966
+  sources:
+  - wp-niki-de-saint-phalle
+- person: carl-larsson
+  role: born
+  place: stockholm
+  year: 1853
+  sources:
+  - wp-carl-larsson
+- person: carl-larsson
+  role: worked
+  place: paris
+  year: 1877
+  sources:
+  - wp-carl-larsson
+- person: carl-larsson
+  role: worked
+  place: sundborn-lilla-hyttnas
+  year: 1888
+  sources:
+  - wp-carl-larsson
+- person: carl-larsson
+  role: died
+  place: falun
+  year: 1919
+  sources:
+  - wp-carl-larsson
+- person: carl-larsson
+  role: buried
+  place: sundborn-church
+  year: 1919
+  sources:
+  - wp-carl-larsson
+discrepancies:
+- key: arshile-gorky-born
+  question: When was Arshile Gorky born?
+  about:
+  - person: arshile-gorky
+  field: born
+  claims:
+  - value: 1904 (April 15, 1904, the often-cited date)
+    sources:
+    - wp-arshile-gorky
+  - value: 1902 or 1903
+    sources:
+    - wp-arshile-gorky
+    note: The article says the year might have been 1902 or 1903; Gorky was vague about it and changed it year to year.
+  note: The record uses 1904, marked estimated, year only.
+- key: basquiat-first-painting-sold
+  question: Which painting did Basquiat sell to Debbie Harry as his first sale?
+  about:
+  - person: jean-michel-basquiat
+  field: date
+  claims:
+  - value: Cadillac Moon (1981), sold for $200
+    sources:
+    - wp-jean-michel-basquiat
+  - value: Self-Portrait with Suzanne, per Debbie Harry's autobiography
+    sources:
+    - wp-jean-michel-basquiat
+    note: The article says she states this on page 174 of her autobiography.
+  note: No artwork record created for either painting.
+- key: sigmar-polke-reichstag-lightboxes-authorship
+  question: Who is the author of the five lenticular lightboxes made for the Reichstag in 1999?
+  about:
+  - person: sigmar-polke
+  field: attribution
+  claims:
+  - value: Sigmar Polke
+    sources:
+    - wp-sigmar-polke
+    note: Credited as sole artist
+  - value: Polke with Philippe David Eisfeld as co-author
+    sources:
+    - wp-sigmar-polke
+    note: Eisfeld, who did the technical 3D lenticular work, later claimed co-authorship
+  note: The record credits Polke as the article does; authorship and licensing remain unresolved.
