@@ -1,0 +1,692 @@
+# Los Angeles films, 2000 to today: famous films released since 2000 that were shot at places in Los Angeles a visitor can find.
+# Follows inbox/2026-10-10-los-angeles-film-locations.yaml: each film is an artwork (kind: film) linked to its director
+# (creator) and to the places it was shot (role: filmed). No cast, plot or posters: this is the locale database.
+# Part of a "top 100 Los Angeles film locations" set; parallel batches cover before 1970 and 1970-1999.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the session
+# scratchpad); list sections the plain-text extract drops (Union Station, Griffith Observatory, Sixth Street Viaduct,
+# Los Angeles River) were read from the raw wikitext. Every film-place claim below is stated in the film's article, the
+# place's article, or both (the cited sources say which). Candidates came from Wikidata "filming location" (P915), which
+# for most post-2000 films only says "Los Angeles", and from the landmarks' own film lists.
+# Stated honestly:
+#  - The Los Angeles River reuses the place (and source) added by the before-1970 batch.
+#  - Coordinates of new places are from general knowledge (the articles give none), approximate to ~3 decimals.
+#  - Directors are added with life dates and one line only (coverage: not-read, "added as director of ...").
+#  - Already in the database, so not repeated: Iron Man, The Soloist, (500) Days of Summer, The Artist, La La Land.
+#  - Left out because the place is outside Los Angeles city: Somewhere (2010; the Chateau Marmont is in West Hollywood),
+#    Lords of Dogtown (set in Venice/Santa Monica but shot in Imperial Beach), A Star Is Born's Chateau Marmont scenes.
+#  - Left out because the place is gone: the old Sixth Street Viaduct (demolished 2016; Gone in 60 Seconds, Drive,
+#    Furious 7 and others), the Ambassador Hotel (Catch Me If You Can, S.W.A.T.), the Spruce Goose hangar (Avatar).
+#  - Left out because Wikipedia doesn't confirm a specific LA place being filmed: Drive and Gone in 60 Seconds (2000)
+#    (the Los Angeles River's list says only "filmed or set" and the films' articles name no river scene), Creed III
+#    (Dodger Stadium is only the story's setting), Furious 7 (Walt Disney Concert Hall "featured"), Training Day,
+#    Crash, Nightcrawler, Mulholland Drive, Inception, The Social Network, Mank (filmed "in Los Angeles" only),
+#    Pearl Harbor and Yes Man (named only in bare lists), Pay It Forward (studio work in LA only).
+#  - Under the Silver Lake: the Hollywood Forever Cemetery is only where the story's secret concert takes place, so the
+#    cemetery is not linked; the film's own list of locations is.
+#  - Robert Luketic's birth date: Wikipedia 14 August 1971, Wikidata 1 November 1973. Recorded as a discrepancy.
+batch:
+  title: "Los Angeles films, 2000-2023"
+  requested: "About 25 more famous films released 2000-today shot at specific Los Angeles places, as artworks (kind: film) linked to their directors and to the places they were filmed"
+  date: 2026-10-10
+
+sources:
+  # Films
+  - {key: wp-what-women-want-2000, title: "What Women Want (Wikipedia)", url: "https://en.wikipedia.org/wiki/What_Women_Want"}
+  - {key: wp-charlies-angels-2000, title: "Charlie's Angels (2000 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlie%27s_Angels_(2000_film)"}
+  - {key: wp-the-fast-and-the-furious-2001, title: "The Fast and the Furious (2001 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Fast_and_the_Furious_(2001_film)"}
+  - {key: wp-legally-blonde-2001, title: "Legally Blonde (Wikipedia)", url: "https://en.wikipedia.org/wiki/Legally_Blonde"}
+  - {key: wp-the-italian-job-2003, title: "The Italian Job (2003 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Italian_Job_(2003_film)"}
+  - {key: wp-charlies-angels-full-throttle-2003, title: "Charlie's Angels: Full Throttle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlie%27s_Angels:_Full_Throttle"}
+  - {key: wp-collateral-2004, title: "Collateral (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Collateral_(film)"}
+  - {key: wp-superman-returns-2006, title: "Superman Returns (Wikipedia)", url: "https://en.wikipedia.org/wiki/Superman_Returns"}
+  - {key: wp-transformers-2007, title: "Transformers (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Transformers_(film)"}
+  - {key: wp-get-smart-2008, title: "Get Smart (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Get_Smart_(film)"}
+  - {key: wp-hancock-2008, title: "Hancock (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hancock_(film)"}
+  - {key: wp-get-him-to-the-greek-2010, title: "Get Him to the Greek (Wikipedia)", url: "https://en.wikipedia.org/wiki/Get_Him_to_the_Greek"}
+  - {key: wp-the-muppets-2011, title: "The Muppets (2011 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Muppets_(2011_film)"}
+  - {key: wp-the-dark-knight-rises-2012, title: "The Dark Knight Rises (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Dark_Knight_Rises"}
+  - {key: wp-argo-2012, title: "Argo (2012 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Argo_(2012_film)"}
+  - {key: wp-gangster-squad-2013, title: "Gangster Squad (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gangster_Squad_(film)"}
+  - {key: wp-her-2013, title: "Her (2013 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Her_(2013_film)"}
+  - {key: wp-a-star-is-born-2018, title: "A Star Is Born (2018 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/A_Star_Is_Born_(2018_film)"}
+  - {key: wp-under-the-silver-lake-2018, title: "Under the Silver Lake (Wikipedia)", url: "https://en.wikipedia.org/wiki/Under_the_Silver_Lake"}
+  - {key: wp-once-upon-a-time-in-hollywood-2019, title: "Once Upon a Time in Hollywood (Wikipedia)", url: "https://en.wikipedia.org/wiki/Once_Upon_a_Time_in_Hollywood"}
+  - {key: wp-licorice-pizza-2021, title: "Licorice Pizza (Wikipedia)", url: "https://en.wikipedia.org/wiki/Licorice_Pizza"}
+  - {key: wp-ambulance-2022, title: "Ambulance (2022 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ambulance_(2022_film)"}
+  - {key: wp-babylon-2022, title: "Babylon (2022 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Babylon_(2022_film)"}
+  - {key: wp-barbie-2023, title: "Barbie (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Barbie_(film)"}
+  - {key: wp-fast-x-2023, title: "Fast X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fast_X"}
+  # New places
+  - {key: wp-greek-theatre-los-angeles, title: "Greek Theatre (Los Angeles) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greek_Theatre_(Los_Angeles)"}
+  - {key: wp-shrine-auditorium-and-expo-hall, title: "Shrine Auditorium and Expo Hall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Shrine_Auditorium_and_Expo_Hall"}
+  - {key: wp-musso-frank-grill, title: "Musso & Frank Grill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Musso_%26_Frank_Grill"}
+  - {key: wp-bruin-theater, title: "Bruin Theater (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bruin_Theater"}
+  - {key: wp-los-angeles-times-building, title: "Los Angeles Times Building (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Times_Building"}
+  - {key: wp-united-artists-theatre-los-angeles, title: "United Artists Theatre (Los Angeles) (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_Artists_Theatre_(Los_Angeles)"}
+  - {key: wp-angelino-heights-los-angeles, title: "Angelino Heights, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Angelino_Heights,_Los_Angeles"}
+  - {key: wp-university-of-california-los-angeles, title: "University of California, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/University_of_California,_Los_Angeles"}
+  - {key: wp-hollywood-boulevard, title: "Hollywood Boulevard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Boulevard"}
+  - {key: wp-silver-lake-reservoir, title: "Silver Lake Reservoir (Wikipedia)", url: "https://en.wikipedia.org/wiki/Silver_Lake_Reservoir"}
+  - {key: wp-koreatown-los-angeles, title: "Koreatown, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Koreatown,_Los_Angeles"}
+  - {key: wp-los-angeles-international-airport, title: "Los Angeles International Airport (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_International_Airport"}
+  - {key: wp-crossroads-of-the-world, title: "Crossroads of the World (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crossroads_of_the_World"}
+  - {key: wp-encino-los-angeles, title: "Encino, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Encino,_Los_Angeles"}
+  - {key: wp-los-angeles-theatre, title: "Los Angeles Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Theatre"}
+  - {key: wp-the-last-bookstore, title: "The Last Bookstore (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Last_Bookstore"}
+  # Directors
+  - {key: wp-nancy-meyers, title: "Nancy Meyers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nancy_Meyers"}
+  - {key: wp-mcg, title: "McG (Wikipedia)", url: "https://en.wikipedia.org/wiki/McG"}
+  - {key: wp-rob-cohen, title: "Rob Cohen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rob_Cohen"}
+  - {key: wp-robert-luketic, title: "Robert Luketic (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Luketic"}
+  - {key: wd-robert-luketic, title: "Robert Luketic (Wikidata Q721107)", url: "https://www.wikidata.org/wiki/Q721107"}
+  - {key: wp-f-gary-gray, title: "F. Gary Gray (Wikipedia)", url: "https://en.wikipedia.org/wiki/F._Gary_Gray"}
+  - {key: wp-michael-mann, title: "Michael Mann (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_Mann"}
+  - {key: wp-bryan-singer, title: "Bryan Singer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bryan_Singer"}
+  - {key: wp-michael-bay, title: "Michael Bay (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_Bay"}
+  - {key: wp-peter-segal, title: "Peter Segal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peter_Segal"}
+  - {key: wp-peter-berg, title: "Peter Berg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peter_Berg"}
+  - {key: wp-nicholas-stoller, title: "Nicholas Stoller (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nicholas_Stoller"}
+  - {key: wp-james-bobin, title: "James Bobin (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Bobin"}
+  - {key: wp-christopher-nolan, title: "Christopher Nolan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Christopher_Nolan"}
+  - {key: wp-ben-affleck, title: "Ben Affleck (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ben_Affleck"}
+  - {key: wp-ruben-fleischer, title: "Ruben Fleischer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ruben_Fleischer"}
+  - {key: wp-spike-jonze, title: "Spike Jonze (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spike_Jonze"}
+  - {key: wp-bradley-cooper, title: "Bradley Cooper (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bradley_Cooper"}
+  - {key: wp-david-robert-mitchell, title: "David Robert Mitchell (Wikipedia)", url: "https://en.wikipedia.org/wiki/David_Robert_Mitchell"}
+  - {key: wp-quentin-tarantino, title: "Quentin Tarantino (Wikipedia)", url: "https://en.wikipedia.org/wiki/Quentin_Tarantino"}
+  - {key: wp-paul-thomas-anderson, title: "Paul Thomas Anderson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paul_Thomas_Anderson"}
+  - {key: wp-greta-gerwig, title: "Greta Gerwig (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greta_Gerwig"}
+  - {key: wp-louis-leterrier, title: "Louis Leterrier (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louis_Leterrier"}
+
+people:
+  # Directors (Damien Chazelle already exists). All type Artist, role film director; not built out.
+  - {key: nancy-meyers, name: Nancy Meyers, type: Artist, roles: [film director], born: 1949-12-08, prominence: 2,
+     note: "American writer-director of romantic comedies: Private Benjamin (writer), What Women Want (2000), Something's Gotta Give, The Holiday.",
+     coverage: not-read, coverage_note: "Added as director of What Women Want.", sources: [wp-nancy-meyers]}
+  - {key: mcg, name: McG, type: Artist, roles: [film director], born: 1968-08-09, prominence: 2,
+     note: "Joseph McGinty Nichol, American music-video director whose feature debut was Charlie's Angels (2000); later Terminator Salvation.",
+     coverage: not-read, coverage_note: "Added as director of Charlie's Angels and Full Throttle.", sources: [wp-mcg]}
+  - {key: rob-cohen, name: Rob Cohen, type: Artist, roles: [film director], born: 1949-03-12, prominence: 2,
+     note: "American director and producer; directed The Fast and the Furious (2001), the first of the franchise, and xXx.",
+     coverage: not-read, coverage_note: "Added as director of The Fast and the Furious.", sources: [wp-rob-cohen]}
+  - {key: robert-luketic, name: Robert Luketic, type: Artist, roles: [film director], born: 1971-08-14, prominence: 2,
+     note: "Australian director of Legally Blonde (2001), Monster-in-Law and 21.",
+     coverage: not-read, coverage_note: "Added as director of Legally Blonde.", sources: [wp-robert-luketic]}
+  - {key: f-gary-gray, name: F. Gary Gray, type: Artist, roles: [film director], born: 1969-07-17, prominence: 2,
+     note: "American music-video and film director: Friday, The Italian Job (2003), Straight Outta Compton, The Fate of the Furious.",
+     coverage: not-read, coverage_note: "Added as director of The Italian Job.", sources: [wp-f-gary-gray]}
+  - {key: michael-mann, name: Michael Mann, type: Artist, roles: [film director], born: 1943-02-05, prominence: 3,
+     note: "American director of stylised crime dramas: Thief, Manhunter, Heat, The Insider, Collateral (2004).",
+     coverage: not-read, coverage_note: "Added as director of Collateral.", sources: [wp-michael-mann]}
+  - {key: bryan-singer, name: Bryan Singer, type: Artist, roles: [film director], born: 1965-09-17, prominence: 2,
+     note: "American director of The Usual Suspects, the first X-Men films and Superman Returns (2006). Faced sexual-assault lawsuits and allegations from 1997 onward, which he has denied.",
+     coverage: not-read, coverage_note: "Added as director of Superman Returns.", sources: [wp-bryan-singer]}
+  - {key: michael-bay, name: Michael Bay, type: Artist, roles: [film director], born: 1965-02-17, prominence: 3,
+     note: "Los Angeles-born director of big-budget action films: Bad Boys, The Rock, Armageddon, the Transformers series (from 2007), Ambulance (2022).",
+     coverage: not-read, coverage_note: "Added as director of Transformers and Ambulance.", sources: [wp-michael-bay]}
+  - {key: peter-segal, name: Peter Segal, type: Artist, roles: [film director], born: 1962, prominence: 1,
+     note: "American comedy director: Tommy Boy, 50 First Dates, Get Smart (2008).",
+     coverage: not-read, coverage_note: "Added as director of Get Smart.", sources: [wp-peter-segal]}
+  - {key: peter-berg, name: Peter Berg, type: Artist, roles: [film director, actor], born: 1964-03-11, prominence: 2,
+     note: "American actor and director: Friday Night Lights, Hancock (2008), Lone Survivor, Deepwater Horizon.",
+     coverage: not-read, coverage_note: "Added as director of Hancock.", sources: [wp-peter-berg]}
+  - {key: nicholas-stoller, name: Nicholas Stoller, type: Artist, roles: [film director], born: 1976-03-19, prominence: 1,
+     note: "American comedy writer-director: Forgetting Sarah Marshall, Get Him to the Greek (2010), Neighbors; co-wrote The Muppets (2011).",
+     coverage: not-read, coverage_note: "Added as director of Get Him to the Greek.", sources: [wp-nicholas-stoller]}
+  - {key: james-bobin, name: James Bobin, type: Artist, roles: [film director], born: 1972-01-01, prominence: 1,
+     note: "British director and writer; co-created Flight of the Conchords and directed The Muppets (2011) and Muppets Most Wanted.",
+     coverage: not-read, coverage_note: "Added as director of The Muppets.", sources: [wp-james-bobin]}
+  - {key: christopher-nolan, name: Christopher Nolan, type: Artist, roles: [film director], born: 1970-07-30, prominence: 4,
+     note: "British-American director of Memento, The Dark Knight trilogy (to 2012), Inception, Interstellar and Oppenheimer.",
+     coverage: not-read, coverage_note: "Added as director of The Dark Knight Rises.", sources: [wp-christopher-nolan]}
+  - {key: ben-affleck, name: Ben Affleck, type: Artist, roles: [film director, actor], born: 1972-08-15, prominence: 3,
+     note: "American actor and filmmaker; Oscars for the screenplay of Good Will Hunting and as producer of Argo (2012), which he directed.",
+     coverage: not-read, coverage_note: "Added as director of Argo.", sources: [wp-ben-affleck]}
+  - {key: ruben-fleischer, name: Ruben Fleischer, type: Artist, roles: [film director], born: 1974-10-31, prominence: 1,
+     note: "American director of Zombieland, Gangster Squad (2013) and Venom.",
+     coverage: not-read, coverage_note: "Added as director of Gangster Squad.", sources: [wp-ruben-fleischer]}
+  - {key: spike-jonze, name: Spike Jonze, type: Artist, roles: [film director], born: 1969-10-22, prominence: 3,
+     note: "Adam Spiegel, American filmmaker from skateboard videos and music videos: Being John Malkovich, Adaptation, Her (2013).",
+     coverage: not-read, coverage_note: "Added as director of Her.", sources: [wp-spike-jonze]}
+  - {key: bradley-cooper, name: Bradley Cooper, type: Artist, roles: [film director, actor], born: 1975-01-05, prominence: 3,
+     note: "American actor and filmmaker; directed A Star Is Born (2018), his debut, and Maestro.",
+     coverage: not-read, coverage_note: "Added as director of A Star Is Born (2018).", sources: [wp-bradley-cooper]}
+  - {key: david-robert-mitchell, name: David Robert Mitchell, type: Artist, roles: [film director], born: 1974-10-19, prominence: 1,
+     note: "American writer-director of It Follows and Under the Silver Lake (2018).",
+     coverage: not-read, coverage_note: "Added as director of Under the Silver Lake.", sources: [wp-david-robert-mitchell]}
+  - {key: quentin-tarantino, name: Quentin Tarantino, type: Artist, roles: [film director], born: 1963-03-27, prominence: 4,
+     note: "American filmmaker: Reservoir Dogs, Pulp Fiction (Palme d'Or), Kill Bill, Django Unchained, Once Upon a Time in Hollywood (2019).",
+     coverage: not-read, coverage_note: "Added as director of Once Upon a Time in Hollywood.", sources: [wp-quentin-tarantino]}
+  - {key: paul-thomas-anderson, name: Paul Thomas Anderson, type: Artist, roles: [film director], born: 1970-06-26, prominence: 3,
+     note: "American filmmaker born in Studio City, Los Angeles: Boogie Nights, There Will Be Blood, Licorice Pizza (2021), One Battle After Another.",
+     coverage: not-read, coverage_note: "Added as director of Licorice Pizza.", sources: [wp-paul-thomas-anderson]}
+  - {key: greta-gerwig, name: Greta Gerwig, type: Artist, roles: [film director, actor], born: 1983-08-04, prominence: 3,
+     note: "American actress and filmmaker: Lady Bird, Little Women, Barbie (2023).",
+     coverage: not-read, coverage_note: "Added as director of Barbie.", sources: [wp-greta-gerwig]}
+  - {key: louis-leterrier, name: Louis Leterrier, type: Artist, roles: [film director], born: 1973-06-17, prominence: 1,
+     note: "French action director: The Transporter films, The Incredible Hulk, Now You See Me, Fast X (2023).",
+     coverage: not-read, coverage_note: "Added as director of Fast X.", sources: [wp-louis-leterrier]}
+
+places:
+  - key: greek-theatre-los-angeles
+    name: Greek Theatre
+    kind: amphitheatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1197
+    lng: -118.2966
+    founded: 1930
+    built_by: "City of Los Angeles, with money left by Griffith J. Griffith"
+    architect: "Samuel Tilden Norton and Frederick Hastings Wallis"
+    visitable: true
+    visit_site: "Concerts in summer; 2700 North Vermont Avenue, Griffith Park"
+    note: "Open-air amphitheatre in a canyon of Griffith Park, dedicated in 1930, first performance 1931; owned by the city. Films shot here include Bye Bye Birdie, Get Him to the Greek and A Star Is Born (2018)."
+    sources: [wp-greek-theatre-los-angeles]
+  - key: shrine-auditorium-and-expo-hall
+    name: Shrine Auditorium and Expo Hall
+    kind: auditorium
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0230
+    lng: -118.2817
+    founded: 1926
+    built_by: "Al Malaikah Temple (Shriners)"
+    visitable: true
+    visit_site: "Event venue at 665 West Jefferson Boulevard, University Park, beside USC"
+    note: "Large-event venue opened 23 January 1926, headquarters of the Al Malaikah Shriners; a Los Angeles Historic-Cultural Monument (1975) on the National Register (1987)."
+    sources: [wp-shrine-auditorium-and-expo-hall]
+  - key: musso-frank-grill
+    name: Musso & Frank Grill
+    kind: restaurant
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1017
+    lng: -118.3354
+    founded: 1919
+    built_by: "Frank Toulet and Joseph Musso"
+    visitable: true
+    visit_site: "Still a restaurant, 6667 Hollywood Boulevard"
+    note: "Hollywood's oldest restaurant, opened 1919, called \"the genesis of Hollywood\"; the first restaurant with a star on the Walk of Fame (2019). Seen in Ed Wood, Ocean's Eleven and Once Upon a Time in Hollywood."
+    sources: [wp-musso-frank-grill]
+  - key: bruin-theater
+    name: Bruin Theater
+    kind: cinema
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0628
+    lng: -118.4475
+    founded: 1937
+    architect: "S. Charles Lee"
+    visitable: true
+    visit_site: "Exterior and Streamline Moderne marquee in Westwood Village, opposite the Fox Village Theater; closed since July 2024"
+    note: "Movie palace in Westwood near UCLA, opened by Fox West Coast Theaters on 31 December 1937 and named after the UCLA mascot; long used for premieres."
+    sources: [wp-bruin-theater]
+  - key: los-angeles-times-building
+    name: Los Angeles Times Building (Times Mirror Square)
+    kind: office building
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0532
+    lng: -118.2437
+    founded: 1935
+    architect: "Gordon Kaufmann"
+    visitable: true
+    visit_site: "Exterior, 202 West First Street at Spring Street, Civic Center"
+    note: "The Los Angeles Times's home from 1935 to 2018, later expanded to fill the block as Times Mirror Square; the paper moved to El Segundo in 2018."
+    sources: [wp-los-angeles-times-building]
+  - key: united-artists-theatre-los-angeles
+    name: United Artists Theatre
+    kind: theatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0418
+    lng: -118.2580
+    founded: 1927
+    built_by: "United Artists (Griffith, Chaplin, Fairbanks and Pickford)"
+    architect: "C. Howard Crane, with Walker & Eisen"
+    visitable: true
+    visit_site: "Theatre and hotel at 929-937 South Broadway, Downtown (Theatre at Ace Hotel 2014-2024)"
+    note: "Spanish Gothic movie palace and office tower modelled on Segovia Cathedral; briefly the city's tallest building after 1927. The offices became the Ace Hotel in 2014."
+    sources: [wp-united-artists-theatre-los-angeles]
+  - key: angelino-heights-los-angeles
+    name: Angelino Heights
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0700
+    lng: -118.2530
+    founded: 1886
+    visitable: true
+    visit_site: "Victorian houses of Carroll Avenue (on the National Register), between Echo Park and Chinatown"
+    note: "One of the oldest neighbourhoods of Los Angeles, founded 1886, known for Eastlake and Queen Anne houses; the city's first historic district (1981)."
+    sources: [wp-angelino-heights-los-angeles]
+  - key: university-of-california-los-angeles
+    name: University of California, Los Angeles (UCLA)
+    kind: university
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0689
+    lng: -118.4452
+    founded: 1919
+    visitable: true
+    visit_site: "Westwood campus"
+    note: "Public research university in Westwood; roots in the 1881 southern branch of the State Normal School, made the University of California's southern branch in 1919."
+    sources: [wp-university-of-california-los-angeles]
+  - key: hollywood-boulevard
+    name: Hollywood Boulevard
+    kind: street
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1016
+    lng: -118.3387
+    visitable: true
+    visit_site: "The Walk of Fame stretch between La Brea Avenue and Gower Street"
+    note: "East-west street through Hollywood, home of the Walk of Fame, the Chinese and Egyptian theatres and the Dolby Theatre; its commercial core is on the National Register as a historic district."
+    sources: [wp-hollywood-boulevard]
+  - key: silver-lake-reservoir
+    name: Silver Lake Reservoir
+    kind: reservoir
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0951
+    lng: -118.2617
+    visitable: true
+    visit_site: "Walking path around the reservoir and the Silver Lake Meadow (opened 2011)"
+    note: "Two concrete-lined basins, Ivanhoe Reservoir and Silver Lake, named in 1906 for Water Board commissioner Herman Silver; the Silver Lake neighbourhood is named after it."
+    sources: [wp-silver-lake-reservoir]
+  - key: koreatown-los-angeles
+    name: Koreatown
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0618
+    lng: -118.3004
+    visitable: true
+    visit_site: "Around Wilshire Boulevard and Sixth Street near Western Avenue"
+    note: "Central Los Angeles neighbourhood around Sixth and Alexandria streets, settled by Korean immigrants from the 1960s; many Art Deco buildings survive."
+    sources: [wp-koreatown-los-angeles]
+  - key: los-angeles-international-airport
+    name: Los Angeles International Airport (LAX)
+    kind: airport
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.9416
+    lng: -118.4085
+    founded: 1928
+    visitable: true
+    visit_site: "Terminals and the 1961 Googie-style Theme Building, Westchester"
+    note: "The city's main airport, opened 1 October 1928 in Westchester; the U-shaped terminal layout dates from 1958-1961."
+    sources: [wp-los-angeles-international-airport]
+  - key: crossroads-of-the-world
+    name: Crossroads of the World
+    kind: shopping centre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0979
+    lng: -118.3369
+    founded: 1936
+    architect: "Robert V. Derrah"
+    visitable: true
+    visit_site: "Exterior from Sunset Boulevard at Las Palmas Avenue, Hollywood; now private offices"
+    note: "Open-air mall of 1936 with a central building shaped like an ocean liner among cottage bungalows, called America's first outdoor shopping mall."
+    sources: [wp-crossroads-of-the-world]
+  - key: encino-los-angeles
+    name: Encino
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1592
+    lng: -118.5012
+    visitable: true
+    visit_site: "Ventura Boulevard and Los Encinos State Historic Park"
+    note: "San Fernando Valley neighbourhood that grew from Rancho Los Encinos, granted in 1845; Bedford Falls for It's a Wonderful Life was built here in 1946."
+    sources: [wp-encino-los-angeles]
+  - key: los-angeles-theatre
+    name: Los Angeles Theatre
+    kind: cinema
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0451
+    lng: -118.2531
+    founded: 1931
+    built_by: "H. L. Gumbiner"
+    architect: "S. Charles Lee and Samuel Tilden Norton"
+    visitable: true
+    visit_site: "615 South Broadway, Broadway Theater District; open for tours and events"
+    note: "French Baroque movie palace of 1931 with an interior modelled on Versailles's Hall of Mirrors; now used mostly as a filming location."
+    sources: [wp-los-angeles-theatre]
+  - key: the-last-bookstore
+    name: The Last Bookstore
+    kind: bookshop
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0476
+    lng: -118.2496
+    founded: 2005
+    built_by: "Josh Spencer"
+    visitable: true
+    visit_site: "453 South Spring Street, Downtown"
+    note: "Independent new-and-used bookshop founded by Josh Spencer in 2005, called California's largest; seen in Gone Girl and Under the Silver Lake."
+    sources: [wp-the-last-bookstore]
+
+artworks:
+  # 2000-2004
+  - key: what-women-want-2000
+    name: What Women Want
+    kind: film
+    made: 2000
+    prominence: 2
+    note: "Romantic comedy; the Bradbury Building lists it among the films shot there."
+    people:
+      - {person: nancy-meyers, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-what-women-want-2000, wp-bradbury-building]
+  - key: charlies-angels-2000
+    name: Charlie's Angels
+    kind: film
+    made: 2000
+    prominence: 2
+    note: "Spy comedy based on the TV series; the Los Angeles Theatre on Broadway names it among the films shot there."
+    people:
+      - {person: mcg, role: creator}
+    places:
+      - {place: los-angeles-theatre, role: filmed}
+    sources: [wp-charlies-angels-2000, wp-los-angeles-theatre]
+  - key: the-fast-and-the-furious-2001
+    name: The Fast and the Furious
+    kind: film
+    made: 2001
+    prominence: 3
+    note: "First film of the franchise, set in Los Angeles: Brian tests his car in the Dodger Stadium parking lot in the opening, and the Toretto house is in Angelino Heights."
+    people:
+      - {person: rob-cohen, role: creator}
+    places:
+      - {place: dodger-stadium, role: filmed}
+      - {place: angelino-heights-los-angeles, role: filmed}
+    sources: [wp-the-fast-and-the-furious-2001, wp-dodger-stadium]
+  - key: legally-blonde-2001
+    name: Legally Blonde
+    kind: film
+    made: 2001
+    prominence: 3
+    note: "Set mainly at Harvard, but the campus scenes were filmed at USC and UCLA (and in Pasadena)."
+    people:
+      - {person: robert-luketic, role: creator}
+    places:
+      - {place: university-of-southern-california, role: filmed}
+      - {place: university-of-california-los-angeles, role: filmed}
+    sources: [wp-legally-blonde-2001]
+  - key: the-italian-job-2003
+    name: The Italian Job
+    kind: film
+    made: 2003
+    prominence: 3
+    note: "Heist remake shot largely in Los Angeles: the Mini Cooper chase runs through the Los Angeles River channel, and the getaway ends at Union Station."
+    people:
+      - {person: f-gary-gray, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+      - {place: los-angeles-river, role: filmed}
+    sources: [wp-the-italian-job-2003, wp-los-angeles-union-station, wp-los-angeles-river]
+  - key: charlies-angels-full-throttle-2003
+    name: "Charlie's Angels: Full Throttle"
+    kind: film
+    made: 2003
+    prominence: 1
+    note: "Sequel to Charlie's Angels; the Los Angeles Theatre and Griffith Observatory both list it among the films shot there."
+    people:
+      - {person: mcg, role: creator}
+    places:
+      - {place: los-angeles-theatre, role: filmed}
+      - {place: griffith-observatory, role: filmed}
+    sources: [wp-charlies-angels-full-throttle-2003, wp-los-angeles-theatre, wp-griffith-observatory]
+  - key: collateral-2004
+    name: Collateral
+    kind: film
+    made: 2004
+    prominence: 3
+    note: "A night in a Los Angeles cab, shot on location across the city: set pieces at LAX and in Koreatown, and Walt Disney Concert Hall briefly in the opening."
+    people:
+      - {person: michael-mann, role: creator}
+    places:
+      - {place: los-angeles-international-airport, role: filmed}
+      - {place: koreatown-los-angeles, role: filmed}
+      - {place: walt-disney-concert-hall, role: filmed}
+    sources: [wp-collateral-2004, wp-walt-disney-concert-hall]
+  # 2005-2012
+  - key: superman-returns-2006
+    name: Superman Returns
+    kind: film
+    made: 2006
+    prominence: 2
+    note: "Mostly shot in Australia; a second unit filmed Dodger Stadium, Metropolis's ballpark, for the end of the airplane rescue."
+    people:
+      - {person: bryan-singer, role: creator}
+    places:
+      - {place: dodger-stadium, role: filmed}
+    sources: [wp-superman-returns-2006, wp-dodger-stadium]
+  - key: transformers-2007
+    name: Transformers
+    kind: film
+    made: 2007
+    prominence: 3
+    note: "The crew was let in to shoot at Griffith Observatory while it was still closed for renovation (it reopened in November 2006)."
+    people:
+      - {person: michael-bay, role: creator}
+    places:
+      - {place: griffith-observatory, role: filmed}
+    sources: [wp-transformers-2007, wp-griffith-observatory]
+  - key: get-smart-2008
+    name: Get Smart
+    kind: film
+    made: 2008
+    prominence: 2
+    note: "Spy comedy based on the TV series; its finale, a bomb plot at a concert for the President, was filmed at Walt Disney Concert Hall."
+    people:
+      - {person: peter-segal, role: creator}
+    places:
+      - {place: walt-disney-concert-hall, role: filmed}
+    sources: [wp-get-smart-2008, wp-walt-disney-concert-hall]
+  - key: hancock-2008
+    name: Hancock
+    kind: film
+    made: 2008
+    prominence: 2
+    note: "Superhero film shot in Los Angeles in mid-2007; Hollywood Boulevard was dressed with rubble, overturned cars and fires, and the Santa Monica Pier lists it among its films."
+    people:
+      - {person: peter-berg, role: creator}
+    places:
+      - {place: hollywood-boulevard, role: filmed}
+      - {place: santa-monica-pier, role: filmed}
+    sources: [wp-hancock-2008, wp-santa-monica-pier]
+  - key: get-him-to-the-greek-2010
+    name: Get Him to the Greek
+    kind: film
+    made: 2010
+    prominence: 2
+    note: "Comedy whose story ends at a rock star's comeback show at the Greek Theatre in Griffith Park, where it was filmed."
+    people:
+      - {person: nicholas-stoller, role: creator}
+    places:
+      - {place: greek-theatre-los-angeles, role: filmed}
+    sources: [wp-get-him-to-the-greek-2010, wp-greek-theatre-los-angeles]
+  - key: the-muppets-2011
+    name: The Muppets
+    kind: film
+    made: 2011
+    prominence: 2
+    note: "Kermit's office was filmed at Crossroads of the World and other scenes at Grauman's Chinese Theatre; Angels Flight appears too, before it closed again in 2013."
+    people:
+      - {person: james-bobin, role: creator}
+    places:
+      - {place: crossroads-of-the-world, role: filmed}
+      - {place: grauman-s-chinese-theatre, role: filmed}
+      - {place: angels-flight, role: filmed}
+    sources: [wp-the-muppets-2011, wp-angels-flight]
+  - key: the-dark-knight-rises-2012
+    name: The Dark Knight Rises
+    kind: film
+    made: 2012
+    prominence: 4
+    note: "Last film of Nolan's Batman trilogy; Union Station's grand hall plays Gotham City's kangaroo court."
+    people:
+      - {person: christopher-nolan, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+    sources: [wp-the-dark-knight-rises-2012, wp-los-angeles-union-station]
+  - key: argo-2012
+    name: Argo
+    kind: film
+    made: 2012
+    prominence: 4
+    note: "Best Picture winner about the 1980 rescue from Tehran; every CIA scene except the walk into the Virginia lobby was filmed in the basement of the Los Angeles Times Building."
+    people:
+      - {person: ben-affleck, role: creator}
+    places:
+      - {place: los-angeles-times-building, role: filmed}
+    sources: [wp-argo-2012]
+  # 2013-2023
+  - key: gangster-squad-2013
+    name: Gangster Squad
+    kind: film
+    made: 2013
+    prominence: 2
+    note: "Crime film set in 1949 Los Angeles: the squad poses in front of City Hall, and Mayor Villaraigosa's conference room served as Police Chief Parker's office."
+    people:
+      - {person: ruben-fleischer, role: creator}
+    places:
+      - {place: los-angeles-city-hall, role: filmed}
+    sources: [wp-gangster-squad-2013, wp-los-angeles-city-hall]
+  - key: her-2013
+    name: Her
+    kind: film
+    made: 2013
+    prominence: 3
+    note: "Near-future romance shot mainly in Los Angeles (skyline shots in Shanghai); the Bradbury Building is Theodore's apartment building, and the Santa Monica Pier appears prominently."
+    people:
+      - {person: spike-jonze, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+      - {place: santa-monica-pier, role: filmed}
+    sources: [wp-her-2013, wp-santa-monica-pier]
+  - key: a-star-is-born-2018
+    name: A Star Is Born
+    kind: film
+    made: 2018
+    prominence: 4
+    note: "Fourth version of the story. The first stage performance of \"Shallow\" was filmed at the Greek Theatre (standing in for a Northern California venue); the Grammys and the final \"I'll Never Love Again\" at the Shrine Auditorium, where Judy Garland filmed \"The Man That Got Away\" for the 1954 version."
+    people:
+      - {person: bradley-cooper, role: creator}
+    places:
+      - {place: greek-theatre-los-angeles, role: filmed}
+      - {place: shrine-auditorium-and-expo-hall, role: filmed}
+    sources: [wp-a-star-is-born-2018, wp-greek-theatre-los-angeles]
+  - key: under-the-silver-lake-2018
+    name: Under the Silver Lake
+    kind: film
+    made: 2018
+    prominence: 2
+    note: "Neo-noir set in 2011 Los Angeles, filmed around Silver Lake and its reservoir, at Griffith Observatory and in The Last Bookstore."
+    people:
+      - {person: david-robert-mitchell, role: creator}
+    places:
+      - {place: silver-lake-reservoir, role: filmed}
+      - {place: griffith-observatory, role: filmed}
+      - {place: the-last-bookstore, role: filmed}
+    sources: [wp-under-the-silver-lake-2018, wp-silver-lake-reservoir]
+  - key: once-upon-a-time-in-hollywood-2019
+    name: Once Upon a Time in Hollywood
+    kind: film
+    made: 2019
+    prominence: 4
+    note: "Tarantino's 1969 Hollywood, made by turning 2018 Los Angeles back without CGI: several key scenes at Musso & Frank Grill, and Westwood's Bruin and Fox Village theatres restored with period marquees."
+    people:
+      - {person: quentin-tarantino, role: creator}
+    places:
+      - {place: musso-frank-grill, role: filmed}
+      - {place: bruin-theater, role: filmed}
+    sources: [wp-once-upon-a-time-in-hollywood-2019, wp-musso-frank-grill]
+  - key: licorice-pizza-2021
+    name: Licorice Pizza
+    kind: film
+    made: 2021
+    prominence: 3
+    note: "Coming-of-age story set in the 1973 San Fernando Valley; principal photography began in Encino in August 2020."
+    people:
+      - {person: paul-thomas-anderson, role: creator}
+    places:
+      - {place: encino-los-angeles, role: filmed}
+    sources: [wp-licorice-pizza-2021]
+  - key: ambulance-2022
+    name: Ambulance
+    kind: film
+    made: 2022
+    prominence: 2
+    note: "Heist chase shot in Los Angeles: helicopters chase the ambulance down the Los Angeles River channel, and one scene had 19 minutes of light at City Hall, the Times Mirror Square building and LAPD headquarters."
+    people:
+      - {person: michael-bay, role: creator}
+    places:
+      - {place: los-angeles-river, role: filmed}
+      - {place: los-angeles-city-hall, role: filmed}
+      - {place: los-angeles-times-building, role: filmed}
+    sources: [wp-ambulance-2022]
+  - key: babylon-2022
+    name: Babylon
+    kind: film
+    made: 2022
+    prominence: 2
+    note: "Epic of Hollywood's move from silent to sound films, shot in Los Angeles in 2021; the interiors of the opening party mansion were filmed in the Ace Hotel (United Artists Theatre building)."
+    people:
+      - {person: damien-chazelle, role: creator}
+    places:
+      - {place: united-artists-theatre-los-angeles, role: filmed}
+    sources: [wp-babylon-2022]
+  - key: barbie-2023
+    name: Barbie
+    kind: film
+    made: 2023
+    prominence: 4
+    note: "Shot mostly at Warner Bros. Studios Leavesden in England; Barbie's arrival in the real world was filmed at Venice Beach and its skatepark."
+    people:
+      - {person: greta-gerwig, role: creator}
+    places:
+      - {place: venice-los-angeles, role: filmed}
+    sources: [wp-barbie-2023]
+  - key: fast-x-2023
+    name: Fast X
+    kind: film
+    made: 2023
+    prominence: 2
+    note: "Tenth film of the franchise; returns to the Dodger Stadium parking lot of the first film, where Dom teaches his son to drift."
+    people:
+      - {person: louis-leterrier, role: creator}
+    places:
+      - {place: dodger-stadium, role: filmed}
+    sources: [wp-fast-x-2023, wp-dodger-stadium]
+
+discrepancies:
+  - key: robert-luketic-birth-date
+    question: Was Robert Luketic born on 14 August 1971 or 1 November 1973?
+    about: [{person: robert-luketic}]
+    field: born
+    claims:
+      - {value: "1971-08-14", sources: [wp-robert-luketic], note: "Early life: born in Sydney on August 14, 1971"}
+      - {value: "1973-11-01", sources: [wd-robert-luketic], note: "Wikidata date of birth"}
+    note: "The record uses Wikipedia's 1971-08-14, the only date the article gives."
