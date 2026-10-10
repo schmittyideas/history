@@ -1,0 +1,2392 @@
+# Notes for the reviewer
+# - 42 painters: Baroque, Rococo, Symbolists, Scandinavians and modern figures, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: Painters, batch 11
+  requested: Western painters from 1500, batch 11
+  date: '2026-10-10'
+sources:
+- key: wp-mariotto-albertinelli
+  title: Mariotto Albertinelli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mariotto_Albertinelli
+- key: wp-joachim-patinir
+  title: Joachim Patinir (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joachim_Patinir
+- key: wp-domenico-beccafumi
+  title: Domenico Beccafumi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Domenico_Beccafumi
+- key: wp-baccio-bandinelli
+  title: Baccio Bandinelli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Baccio_Bandinelli
+- key: wp-fede-galizia
+  title: Fede Galizia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fede_Galizia
+- key: wp-willem-claesz-heda
+  title: Willem Claesz. Heda (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Willem_Claesz._Heda
+- key: wp-adriaen-van-ostade
+  title: Adriaen van Ostade (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Adriaen_van_Ostade
+- key: wp-philips-wouwerman
+  title: Philips Wouwerman (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Philips_Wouwerman
+- key: wp-pierre-puget
+  title: Pierre Puget (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre_Puget
+- key: wp-jacopo-amigoni
+  title: Jacopo Amigoni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jacopo_Amigoni
+- key: wp-jean-etienne-liotard
+  title: Jean-Etienne Liotard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-%C3%89tienne_Liotard
+- key: wp-marcello-bacciarelli
+  title: Marcello Bacciarelli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marcello_Bacciarelli
+- key: wp-washington-allston
+  title: Washington Allston (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Washington_Allston
+- key: wp-johann-friedrich-overbeck
+  title: Johann Friedrich Overbeck (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Johann_Friedrich_Overbeck
+- key: wp-jozef-israels
+  title: Jozef Israëls (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jozef_Isra%C3%ABls
+- key: wp-oswald-achenbach
+  title: Oswald Achenbach (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Oswald_Achenbach
+- key: wp-jules-joseph-lefebvre
+  title: Jules Joseph Lefebvre (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jules_Joseph_Lefebvre
+- key: wp-konstantin-makovsky
+  title: Konstantin Makovsky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Konstantin_Makovsky
+- key: wp-julius-von-payer
+  title: Julius von Payer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Julius_von_Payer
+- key: wp-osman-hamdi-bey
+  title: Osman Hamdi Bey (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Osman_Hamdi_Bey
+- key: wp-nikolaos-gyzis
+  title: Nikolaos Gyzis (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nikolaos_Gyzis
+- key: wp-anna-boch
+  title: Anna Boch (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anna_Boch
+- key: wp-john-collier
+  title: John Collier (painter) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Collier_(painter)
+- key: wp-edmund-blair-leighton
+  title: Edmund Blair Leighton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edmund_Blair_Leighton
+- key: wp-jacek-malczewski
+  title: Jacek Malczewski (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jacek_Malczewski
+- key: wp-evelyn-de-morgan
+  title: Evelyn De Morgan (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Evelyn_De_Morgan
+- key: wp-henri-edmond-cross
+  title: Henri-Edmond Cross (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henri-Edmond_Cross
+- key: wp-giovanni-segantini
+  title: Giovanni Segantini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giovanni_Segantini
+- key: wp-vilhelm-hammershoi
+  title: Vilhelm Hammershøi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vilhelm_Hammersh%C3%B8i
+- key: wp-roger-fry
+  title: Roger Fry (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Roger_Fry
+- key: wp-hugo-alfven
+  title: Hugo Alfvén (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hugo_Alfv%C3%A9n
+- key: wp-otto-mueller
+  title: Otto Mueller (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Otto_Mueller
+- key: wp-jean-metzinger
+  title: Jean Metzinger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean_Metzinger
+- key: wp-isaak-brodsky
+  title: Isaak Brodsky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isaak_Brodsky
+- key: wp-andre-lhote
+  title: Andre Lhote (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andr%C3%A9_Lhote
+- key: wp-josef-lada
+  title: Josef Lada (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Josef_Lada
+- key: wp-amadeo-de-souza-cardoso
+  title: Amadeo de Souza-Cardoso (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Amadeo_de_Souza-Cardoso
+- key: wp-robert-indiana
+  title: Robert Indiana (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Robert_Indiana
+- key: wp-bridget-riley
+  title: Bridget Riley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bridget_Riley
+- key: wp-bettina-heinen-ayech
+  title: Bettina Heinen-Ayech (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bettina_Heinen-Ayech
+- key: wp-chuck-close
+  title: Chuck Close (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Chuck_Close
+- key: wp-gottfried-helnwein
+  title: Gottfried Helnwein (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gottfried_Helnwein
+places:
+- key: montaperti
+  name: Montaperti
+  kind: village
+  region: Tuscany
+  country: Italy
+  city: Siena
+  lat: 43.332
+  lng: 11.404
+  visitable: true
+  sources:
+  - wp-domenico-beccafumi
+- key: siena-cathedral
+  name: Siena Cathedral
+  kind: cathedral
+  region: Tuscany
+  country: Italy
+  city: Siena
+  lat: 43.318
+  lng: 11.329
+  visitable: true
+  sources:
+  - wp-domenico-beccafumi
+- key: piazza-della-signoria
+  name: Piazza della Signoria
+  kind: square
+  region: Tuscany
+  country: Italy
+  city: Florence
+  lat: 43.769
+  lng: 11.256
+  visitable: true
+  sources:
+  - wp-baccio-bandinelli
+- key: toulon
+  name: Toulon
+  kind: city
+  region: Provence-Alpes-Cote d'Azur
+  country: France
+  lat: 43.124
+  lng: 5.928
+  visitable: true
+  sources:
+  - wp-pierre-puget
+- key: la-vieille-charite
+  name: La Vieille Charite
+  kind: hospice
+  region: Provence-Alpes-Cote d'Azur
+  country: France
+  city: Marseille
+  lat: 43.301
+  lng: 5.368
+  founded: 1679
+  architect: Pierre Puget
+  visitable: true
+  sources:
+  - wp-pierre-puget
+- key: nymphenburg-palace
+  name: Nymphenburg Palace
+  kind: palace
+  region: Bavaria
+  country: Germany
+  city: Munich
+  lat: 48.158
+  lng: 11.503
+  visitable: true
+  sources:
+  - wp-jacopo-amigoni
+- key: groningen
+  name: Groningen
+  kind: city
+  region: Groningen
+  country: Netherlands
+  lat: 53.219
+  lng: 6.566
+  sources:
+  - wp-jozef-israels
+- key: scheveningen
+  name: Scheveningen
+  kind: town
+  region: South Holland
+  country: Netherlands
+  city: The Hague
+  lat: 52.108
+  lng: 4.273
+  sources:
+  - wp-jozef-israels
+- key: lubeck
+  name: Lubeck
+  kind: city
+  region: Schleswig-Holstein
+  country: Germany
+  lat: 53.866
+  lng: 10.687
+  sources:
+  - wp-johann-friedrich-overbeck
+- key: san-bernardo-alle-terme
+  name: San Bernardo alle Terme
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.903
+  lng: 12.493
+  visitable: true
+  sources:
+  - wp-johann-friedrich-overbeck
+- key: tournan-en-brie
+  name: Tournan-en-Brie
+  kind: town
+  region: Seine-et-Marne
+  country: France
+  lat: 48.738
+  lng: 2.775
+  sources:
+  - wp-jules-joseph-lefebvre
+- key: montmartre-cemetery
+  name: Montmartre Cemetery
+  kind: cemetery
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.887
+  lng: 2.331
+  visitable: true
+  sources:
+  - wp-jules-joseph-lefebvre
+- key: bled
+  name: Bled
+  historical_name: Veldes
+  kind: town
+  region: Upper Carniola
+  country: Slovenia
+  lat: 46.368
+  lng: 14.114
+  sources:
+  - wp-julius-von-payer
+- key: waccamaw-parish
+  name: Waccamaw Parish
+  kind: parish
+  city: Georgetown
+  region: South Carolina
+  country: United States
+  lat: 33.376
+  lng: -79.294
+  sources:
+  - wp-washington-allston
+- key: cambridge-massachusetts
+  name: Cambridge, Massachusetts
+  kind: city
+  region: Massachusetts
+  country: United States
+  lat: 42.373
+  lng: -71.11
+  sources:
+  - wp-washington-allston
+- key: old-burying-ground-cambridge
+  name: Old Burying Ground (Cambridge
+  Massachusetts): null
+  kind: cemetery
+  city: Cambridge
+  region: Massachusetts
+  country: United States
+  lat: 42.373
+  lng: -71.119
+  visitable: true
+  sources:
+  - wp-washington-allston
+- key: sklavochori-tinos
+  name: Sklavochori
+  kind: village
+  city: Tinos
+  region: South Aegean
+  country: Greece
+  lat: 37.6
+  lng: 25.2
+  sources:
+  - wp-nikolaos-gyzis
+- key: pera-museum
+  name: Pera Museum
+  kind: museum
+  city: Istanbul
+  region: Istanbul
+  country: Turkey
+  lat: 41.031
+  lng: 28.974
+  visitable: true
+  sources:
+  - wp-osman-hamdi-bey
+- key: radom
+  name: Radom
+  kind: city
+  region: Masovian Voivodeship
+  country: Poland
+  lat: 51.403
+  lng: 21.147
+  sources:
+  - wp-jacek-malczewski
+- key: skalka-krakow
+  name: Skalka (Church on the Rock)
+  kind: church
+  city: Krakow
+  region: Lesser Poland Voivodeship
+  country: Poland
+  lat: 50.052
+  lng: 19.938
+  visitable: true
+  sources:
+  - wp-jacek-malczewski
+- key: brookwood-cemetery
+  name: Brookwood Cemetery
+  kind: cemetery
+  city: Woking
+  region: Surrey
+  country: England
+  lat: 51.307
+  lng: -0.628
+  visitable: true
+  sources:
+  - wp-evelyn-de-morgan
+- key: douai
+  name: Douai
+  kind: city
+  region: Nord
+  country: France
+  lat: 50.371
+  lng: 3.08
+  sources:
+  - wp-henri-edmond-cross
+- key: saint-clair-le-lavandou
+  name: Saint-Clair
+  kind: hamlet
+  city: Le Lavandou
+  region: Var
+  country: France
+  lat: 43.165
+  lng: 6.4
+  sources:
+  - wp-henri-edmond-cross
+- key: le-lavandou
+  name: Le Lavandou
+  kind: town
+  region: Var
+  country: France
+  lat: 43.138
+  lng: 6.368
+  sources:
+  - wp-henri-edmond-cross
+- key: arco-trentino
+  name: Arco
+  kind: town
+  region: Trentino
+  country: Italy
+  lat: 45.918
+  lng: 10.887
+  sources:
+  - wp-giovanni-segantini
+- key: savognin
+  name: Savognin
+  kind: village
+  region: Graubunden
+  country: Switzerland
+  lat: 46.597
+  lng: 9.598
+  sources:
+  - wp-giovanni-segantini
+- key: strandgade-30-copenhagen
+  name: Strandgade 30
+  Copenhagen: null
+  kind: house
+  city: Copenhagen
+  country: Denmark
+  lat: 55.674
+  lng: 12.595
+  sources:
+  - wp-vilhelm-hammershoi
+- key: strandgade-25-copenhagen
+  name: Strandgade 25
+  Copenhagen: null
+  kind: house
+  city: Copenhagen
+  country: Denmark
+  lat: 55.673
+  lng: 12.594
+  sources:
+  - wp-vilhelm-hammershoi
+- key: guildford
+  name: Guildford
+  kind: town
+  region: Surrey
+  country: England
+  lat: 51.236
+  lng: -0.57
+  sources:
+  - wp-roger-fry
+- key: durbins-guildford
+  name: Durbins
+  kind: house
+  city: Guildford
+  region: Surrey
+  country: England
+  lat: 51.231
+  lng: -0.58
+  architect: Roger Fry (his own design)
+  built_by: Roger Fry
+  sources:
+  - wp-roger-fry
+- key: uppsala
+  name: Uppsala
+  kind: city
+  country: Sweden
+  lat: 59.858
+  lng: 17.639
+  sources:
+  - wp-hugo-alfven
+- key: lubawka
+  name: Lubawka (Liebau)
+  kind: town
+  region: Lower Silesian Voivodeship
+  country: Poland
+  lat: 50.703
+  lng: 16.002
+  sources:
+  - wp-otto-mueller
+- key: hrusice
+  name: Hrusice
+  kind: village
+  region: Central Bohemia
+  country: Czech Republic
+  lat: 49.934
+  lng: 14.77
+  sources:
+  - wp-josef-lada
+- key: manhufe
+  name: Manhufe
+  kind: village
+  city: Amarante
+  region: Porto District
+  country: Portugal
+  lat: 41.263
+  lng: -8.083
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- key: espinho
+  name: Espinho
+  kind: city
+  region: Aveiro District
+  country: Portugal
+  lat: 41.007
+  lng: -8.641
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- key: new-castle-indiana
+  name: New Castle, Indiana
+  kind: city
+  region: Indiana
+  country: United States
+  lat: 39.929
+  lng: -85.371
+  sources:
+  - wp-robert-indiana
+- key: vinalhaven
+  name: Vinalhaven
+  kind: island town
+  region: Maine
+  country: United States
+  lat: 44.048
+  lng: -68.834
+  sources:
+  - wp-robert-indiana
+- key: monroe-washington
+  name: Monroe, Washington
+  kind: city
+  region: Washington
+  country: United States
+  lat: 47.855
+  lng: -121.972
+  sources:
+  - wp-chuck-close
+- key: guelma
+  name: Guelma
+  kind: city
+  region: Guelma Province
+  country: Algeria
+  lat: 36.462
+  lng: 7.426
+  sources:
+  - wp-bettina-heinen-ayech
+people:
+- key: mariotto-albertinelli
+  name: Mariotto Albertinelli
+  type: Artist
+  roles:
+  - painter
+  born: '1474-10-13'
+  died: '1515-11-05'
+  prominence: 2
+  note: Florentine High Renaissance painter, partner of Fra Bartolomeo, best known for the 1503 Visitation altarpiece now in the Uffizi.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c3/Portret_van_Mariotto_Albertinelli%2C_RP-P-2016-686.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Portret_van_Mariotto_Albertinelli%2C_RP-P-2016-686.jpg/500px-Portret_van_Mariotto_Albertinelli%2C_RP-P-2016-686.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portret_van_Mariotto_Albertinelli,_RP-P-2016-686.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, training, partnerships, students and the Visitation captured; full portfolio not built out. Place of death not in the article.
+  sources:
+  - wp-mariotto-albertinelli
+- key: joachim-patinir
+  name: Joachim Patinir
+  type: Artist
+  roles:
+  - painter
+  born: 1480
+  born_estimated: true
+  died: '1524-10-05'
+  prominence: 4
+  note: Flemish Renaissance painter who worked in Antwerp and pioneered the world landscape as an independent genre.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7a/Aegidius_Sadeler_%28after_Durer%29_-_Portrait_of_Joachim_Patinir.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Aegidius_Sadeler_%28after_Durer%29_-_Portrait_of_Joachim_Patinir.jpg/500px-Aegidius_Sadeler_%28after_Durer%29_-_Portrait_of_Joachim_Patinir.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Aegidius_Sadeler_(after_Durer)_-_Portrait_of_Joachim_Patinir.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Antwerp career, marriages and style captured; individual paintings not built out (article gives no dated works).
+  sources:
+  - wp-joachim-patinir
+- key: domenico-beccafumi
+  name: Domenico Beccafumi
+  type: Artist
+  roles:
+  - painter
+  born: 1486
+  died: '1551-05-18'
+  prominence: 3
+  note: Sienese Renaissance-Mannerist painter who also directed the pavement of Siena Cathedral.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d2/Domenico_Beccafumi_064.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Domenico_Beccafumi_064.jpg/500px-Domenico_Beccafumi_064.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Domenico_Beccafumi_064.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Rome visit, cathedral pavement and one key work captured; the long list of works not built out.
+  sources:
+  - wp-domenico-beccafumi
+- key: baccio-bandinelli
+  name: Baccio Bandinelli
+  type: Artist
+  roles:
+  - sculptor
+  - draughtsman
+  - painter
+  born: '1493-11-12'
+  died: 1560
+  prominence: 3
+  note: Florentine Mannerist sculptor and draughtsman, known for the colossal Hercules and Cacus in the Piazza della Signoria.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/02/Baccio_Bandinelli_self-portrait%2C_Vasari_Corridor_2016-05-06.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Baccio_Bandinelli_self-portrait%2C_Vasari_Corridor_2016-05-06.jpg/500px-Baccio_Bandinelli_self-portrait%2C_Vasari_Corridor_2016-05-06.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Baccio_Bandinelli_self-portrait,_Vasari_Corridor_2016-05-06.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, pupils and Hercules and Cacus captured; patron links (Clement VII, Charles V, Cosimo I) not linked as they are not in the database; other works not built out.
+  sources:
+  - wp-baccio-bandinelli
+- key: fede-galizia
+  name: Fede Galizia
+  type: Artist
+  roles:
+  - painter
+  born: 1578
+  born_estimated: true
+  died: 1630
+  died_estimated: true
+  prominence: 3
+  note: Milanese painter of still lifes, portraits and religious pictures, one of the earliest European still-life painters.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/58/Judith_with_the_head_of_Holofernes.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Judith_with_the_head_of_Holofernes.jpg/500px-Judith_with_the_head_of_Holofernes.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Judith_with_the_head_of_Holofernes.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Milan, training under her father, and two works captured; still lifes not built out.
+  sources:
+  - wp-fede-galizia
+- key: willem-claesz-heda
+  name: Willem Claesz. Heda
+  type: Artist
+  roles:
+  - painter
+  born: 1593
+  born_estimated: true
+  died: 1680
+  died_estimated: true
+  prominence: 3
+  note: Dutch Golden Age still-life painter of Haarlem, known for his monochrome breakfast pieces.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Willem_Claesz._Heda_005.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Willem_Claesz._Heda_005.jpg/500px-Willem_Claesz._Heda_005.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Willem_Claesz._Heda_005.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Haarlem career, guild membership and one dated work captured; full portfolio not built out. Pupils named in the article are not in the database.
+  sources:
+  - wp-willem-claesz-heda
+- key: adriaen-van-ostade
+  name: Adriaen van Ostade
+  type: Artist
+  roles:
+  - painter
+  born: 1610
+  died: 1685
+  prominence: 3
+  note: Dutch Golden Age genre painter of Haarlem, known for tavern scenes and village life.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/08/Frans_Hals%2C_Adriaen_van_Ostade%2C_c._1645_alt._1648.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Frans_Hals%2C_Adriaen_van_Ostade%2C_c._1645_alt._1648.jpg/500px-Frans_Hals%2C_Adriaen_van_Ostade%2C_c._1645_alt._1648.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Frans_Hals,_Adriaen_van_Ostade,_c._1645_alt._1648.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates (baptism 1610-12-10, burial 1685-05-02), teacher, pupils, Haarlem and Utrecht, and one dated work captured; other works not built out.
+  sources:
+  - wp-adriaen-van-ostade
+- key: philips-wouwerman
+  name: Philips Wouwerman
+  type: Artist
+  roles:
+  - painter
+  born: 1619
+  died: '1668-05-19'
+  prominence: 3
+  note: Dutch Golden Age painter of Haarlem, noted for hunting, landscape and battle scenes with horses.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/ff/Philips_wouwerman_zelfportret-red-chalk.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Philips_wouwerman_zelfportret-red-chalk.jpg/500px-Philips_wouwerman_zelfportret-red-chalk.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Philips_wouwerman_zelfportret-red-chalk.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Haarlem career and guild membership captured; no individual dated work named in the article.
+  sources:
+  - wp-philips-wouwerman
+- key: pierre-puget
+  name: Pierre Puget
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - architect
+  - engineer
+  born: 1620
+  born_estimated: true
+  died: '1694-12-02'
+  prominence: 4
+  note: French Baroque sculptor, painter, architect and engineer from Marseille, known for the Milon of Croton and the Toulon atlantes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0a/Pierre-Puget-Francois_Puget.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Pierre-Puget-Francois_Puget.jpg/500px-Pierre-Puget-Francois_Puget.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pierre-Puget-Francois_Puget.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, Italy, Toulon, Marseille and Versailles career, and two works captured; sculpture and painting lists (empty in the article text) not built out. Patrons Fouquet and Colbert
+    are not in the database so not linked.
+  sources:
+  - wp-pierre-puget
+- key: jacopo-amigoni
+  name: Jacopo Amigoni
+  type: Artist
+  roles:
+  - painter
+  born: 1682
+  died: 1752
+  prominence: 3
+  note: Italian late-Baroque or Rococo painter from Naples who worked in Venice, Bavaria, London and Madrid, and was court painter to Ferdinand VI of Spain.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Self_portrait_by_Jacopo_Amigoni%2C_probably_London%2C_1730-1735%2C_oil_on_canvas_-_Hessisches_Landesmuseum_Darmstadt_-_Darmstadt%2C_Germany_-_DSC01160.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Self_portrait_by_Jacopo_Amigoni%2C_probably_London%2C_1730-1735%2C_oil_on_canvas_-_Hessisches_Landesmuseum_Darmstadt_-_Darmstadt%2C_Germany_-_DSC01160.jpg/500px-Self_portrait_by_Jacopo_Amigoni%2C_probably_London%2C_1730-1735%2C_oil_on_canvas_-_Hessisches_Landesmuseum_Darmstadt_-_Darmstadt%2C_Germany_-_DSC01160.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self_portrait_by_Jacopo_Amigoni,_probably_London,_1730-1735,_oil_on_canvas_-_Hessisches_Landesmuseum_Darmstadt_-_Darmstadt,_Germany_-_DSC01160.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, career route, Farinelli portrait and pupils captured; other commissions (Moor Park, Wolterton Hall, Ottobeuren) not built out; pupils are not in the database.
+  sources:
+  - wp-jacopo-amigoni
+- key: jean-etienne-liotard
+  name: Jean-Etienne Liotard
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1702-12-22'
+  died: '1789-06-12'
+  prominence: 4
+  note: Genevan pastellist and painter known for naturalistic pastel portraits and Turkish scenes, nicknamed the Turkish painter.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/52/Jean-Etienne_Liotard_-_Selbstbildnis_in_t%C3%BCrkischer_Tracht_%28ca._1746%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Jean-Etienne_Liotard_-_Selbstbildnis_in_t%C3%BCrkischer_Tracht_%28ca._1746%29.jpg/500px-Jean-Etienne_Liotard_-_Selbstbildnis_in_t%C3%BCrkischer_Tracht_%28ca._1746%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Etienne_Liotard_-_Selbstbildnis_in_t%C3%BCrkischer_Tracht_%28ca._1746%29.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels, teachers and sitters named in the text captured; no artwork added because the article gives no year of making (The Chocolate Girl is only said to be acquired in 1745). Sitters
+    (Pope Clement XII, Marie Antoinette) not in the database.
+  sources:
+  - wp-jean-etienne-liotard
+- key: marcello-bacciarelli
+  name: Marcello Bacciarelli
+  type: Artist
+  roles:
+  - painter
+  born: '1731-02-16'
+  died: '1818-01-05'
+  prominence: 3
+  note: Italian-born late-baroque and Neoclassical painter who worked in Dresden, Vienna and Warsaw, court painter to Stanislaw II Augustus.
+  sources:
+  - wp-marcello-bacciarelli
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d2/Bacciarelli_Self-portrait_in_brown_frock_coat.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Bacciarelli_Self-portrait_in_brown_frock_coat.jpg/500px-Bacciarelli_Self-portrait_in_brown_frock_coat.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bacciarelli_Self-portrait_in_brown_frock_coat.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, moves between Dresden, Vienna and Warsaw and pupils captured; no dated work (article gives no years for works); patron Stanislaw II Augustus not in the database so not
+    linked.
+- key: washington-allston
+  name: Washington Allston
+  type: Artist
+  roles:
+  - painter
+  - poet
+  born: '1779-11-05'
+  died: '1843-07-09'
+  prominence: 3
+  note: American painter and poet who pioneered Romantic landscape painting in the United States.
+  sources:
+  - wp-washington-allston
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/84/Washington_Allston.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Washington_Allston.jpeg/500px-Washington_Allston.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Washington_Allston.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, study at the Royal Academy Schools and unfinished Belshazzar's Feast captured; no dated work; pupils (Morse, Flagg nephews) not in the database.
+- key: johann-friedrich-overbeck
+  name: Johann Friedrich Overbeck
+  type: Artist
+  roles:
+  - painter
+  born: '1789-07-03'
+  died: '1869-11-12'
+  prominence: 4
+  note: German painter and a founder of the Nazarene movement, who worked in Rome for 59 years.
+  sources:
+  - wp-johann-friedrich-overbeck
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a7/Friedrich_Overbeck_011.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Friedrich_Overbeck_011.jpg/500px-Friedrich_Overbeck_011.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Friedrich_Overbeck_011.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Nazarene circle and two dated works captured; the long list of works and fresco commissions (Casa Bartholdy, Casino Massimo) not built out; Nazarene associates not in the
+    database.
+- key: jozef-israels
+  name: Jozef Israëls
+  type: Artist
+  roles:
+  - painter
+  born: '1824-01-27'
+  died: '1911-08-12'
+  prominence: 4
+  note: Dutch painter, a leading member of the Hague School, known for realist scenes of the lives of the poor and of fishermen.
+  sources:
+  - wp-jozef-israels
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a7/JozefIsraels.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/a/a7/JozefIsraels.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:JozefIsraels.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the Hague School context captured; works named only with exhibition years, so no artwork record; teachers (Kruseman, Picot) not in the database.
+- key: oswald-achenbach
+  name: Oswald Achenbach
+  type: Artist
+  roles:
+  - painter
+  born: '1827-02-02'
+  died: '1905-02-01'
+  prominence: 3
+  note: German landscape painter of the Dusseldorf school, professor at the Kunstakademie Dusseldorf and brother of Andreas Achenbach.
+  sources:
+  - wp-oswald-achenbach
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c7/Oswald_Achenbach%2C_von_Ludwig_des_Coudres_001.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Oswald_Achenbach%2C_von_Ludwig_des_Coudres_001.jpg/500px-Oswald_Achenbach%2C_von_Ludwig_des_Coudres_001.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Oswald_Achenbach,_von_Ludwig_des_Coudres_001.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Dusseldorf career, professorship 1863-1872 and Italian trips captured; no dated individual work in the text read; students not in the database; article text cut off near the end.
+- key: jules-joseph-lefebvre
+  name: Jules Joseph Lefebvre
+  type: Artist
+  roles:
+  - painter
+  born: '1836-03-14'
+  died: '1911-02-24'
+  prominence: 3
+  note: French academic painter and teacher at the Academie Julian, who won the Prix de Rome in 1861.
+  sources:
+  - wp-jules-joseph-lefebvre
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Picture_of_Jules_Joseph_Lefebvre.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Picture_of_Jules_Joseph_Lefebvre.jpg/500px-Picture_of_Jules_Joseph_Lefebvre.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Picture_of_Jules_Joseph_Lefebvre.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher, one prize-winning work and students captured; portraits and nudes not built out; most named students not in the database.
+- key: konstantin-makovsky
+  name: Konstantin Makovsky
+  type: Artist
+  roles:
+  - painter
+  born: '1839-07-02'
+  died: '1915-09-30'
+  prominence: 3
+  note: Russian painter of the Peredvizhniki and Belle Epoque academic art, known for idealised scenes of old Russian life.
+  sources:
+  - wp-konstantin-makovsky
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/f/f7/%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%D0%9A%D0%BE%D0%BD%D1%81%D1%82%D0%B0%D0%BD%D1%82%D0%B8%D0%BD_%D0%9C%D0%B0%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B9.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates (new-style calendar), training, Revolt of the Fourteen and a few dated works captured; the Artworks section of the article text was empty; teacher Tropinin not in the database.
+- key: julius-von-payer
+  name: Julius von Payer
+  type: Artist
+  roles:
+  - painter
+  - explorer
+  - cartographer
+  born: '1841-09-02'
+  died: '1915-08-29'
+  prominence: 2
+  note: Austro-Hungarian army officer, mountaineer and Arctic explorer who discovered Franz Josef Land, and later a painter.
+  sources:
+  - wp-julius-von-payer
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8a/Luckhardt_-_Julius_von_Payer_%28%C3%96NB_8080757%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/8a/Luckhardt_-_Julius_von_Payer_%28%C3%96NB_8080757%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Luckhardt_-_Julius_von_Payer_(%C3%96NB_8080757).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, painting studies and later life captured; exploration career summarised only; no dated painting named in the article.
+- key: osman-hamdi-bey
+  name: Osman Hamdi Bey
+  type: Artist
+  roles:
+  - painter
+  - archaeologist
+  born: '1842-12-30'
+  died: '1910-02-24'
+  prominence: 3
+  note: Ottoman painter, administrator and the empire's first archaeologist and museologist, founder of the Istanbul Archaeology Museums and the Academy of Fine Arts.
+  sources:
+  - wp-osman-hamdi-bey
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c2/Osman_Hamdi_Bey.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/c2/Osman_Hamdi_Bey.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Osman_Hamdi_Bey.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Paris training under Gerome, museum and academy roles and The Tortoise Trainer captured; digs and other paintings not built out; birth and death places not named in the article.
+- key: nikolaos-gyzis
+  name: Nikolaos Gyzis
+  type: Artist
+  roles:
+  - painter
+  born: '1842-03-01'
+  died: '1901-01-04'
+  prominence: 3
+  note: Greek painter of the Munich School, professor at the Munich Academy of Fine Arts.
+  sources:
+  - wp-nikolaos-gyzis
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/75/Nikolaos_Gyzis_%281842%E2%80%931901%29.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Nikolaos_Gyzis_%281842%E2%80%931901%29.png/500px-Nikolaos_Gyzis_%281842%E2%80%931901%29.png
+  image_page: https://commons.wikimedia.org/wiki/File:Nikolaos_Gyzis_(1842%E2%80%931901).png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Munich career and one dated work captured; Eros and the Painter and later religious works have no year in the article; students not in the database.
+- key: anna-boch
+  name: Anna Boch
+  type: Artist
+  roles:
+  - painter
+  born: '1848-02-10'
+  died: '1936-02-25'
+  prominence: 3
+  note: Belgian Impressionist and Neo-Impressionist painter, the only female member of Les XX, and a collector of Post-Impressionist art.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Anna_Boch_010.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anna_Boch_010.JPG/500px-Anna_Boch_010.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Anna_Boch_010.JPG
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, style, training, collecting and legacy captured; no birthplace, places or dated works in the article; portfolio not built out.
+  sources:
+  - wp-anna-boch
+- key: john-collier
+  name: John Collier
+  type: Artist
+  roles:
+  - painter
+  born: '1850-01-27'
+  died: '1934-04-11'
+  prominence: 3
+  note: English portrait and history painter (and writer), whose sitters included Darwin, Huxley and Kipling.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/80/Collier%2C_Marian_-_Portrait_of_John_Collier_-_circa_1882-1883.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Collier%2C_Marian_-_Portrait_of_John_Collier_-_circa_1882-1883.jpg/500px-Collier%2C_Marian_-_Portrait_of_John_Collier_-_circa_1882-1883.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Collier,_Marian_-_Portrait_of_John_Collier_-_circa_1882-1883.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, royal portrait commissions and two dated works captured; many sitters and collections in the article not built out.
+  sources:
+  - wp-john-collier
+- key: edmund-blair-leighton
+  name: Edmund Blair Leighton
+  type: Artist
+  roles:
+  - painter
+  born: '1852-09-21'
+  died: '1922-09-01'
+  prominence: 3
+  note: English painter of historical genre scenes, specialising in Regency and medieval subjects, associated with the Pre-Raphaelite movement.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Edmund_Blair_Leighton%2C_1900.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Edmund_Blair_Leighton%2C_1900.jpg/500px-Edmund_Blair_Leighton%2C_1900.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edmund_Blair_Leighton,_1900.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and biography captured; the Works list in the article text is empty, so no dated works; portfolio not built out.
+  sources:
+  - wp-edmund-blair-leighton
+- key: jacek-malczewski
+  name: Jacek Malczewski
+  type: Artist
+  roles:
+  - painter
+  born: '1854-07-15'
+  died: '1929-10-08'
+  prominence: 4
+  note: Polish Symbolist painter and a central figure of the Young Poland movement, known for self-portraits in costume and themes of Polish martyrdom.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/58/Jacek_Malczewski_-_Self-portrait_with_palette_-_MP_764_-_National_Museum_in_Warsaw.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Jacek_Malczewski_-_Self-portrait_with_palette_-_MP_764_-_National_Museum_in_Warsaw.jpg/500px-Jacek_Malczewski_-_Self-portrait_with_palette_-_MP_764_-_National_Museum_in_Warsaw.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jacek_Malczewski_-_Self-portrait_with_palette_-_MP_764_-_National_Museum_in_Warsaw.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, training under Matejko and two key works captured; other teachers and the Thanatos and Fables series not built out.
+  sources:
+  - wp-jacek-malczewski
+- key: evelyn-de-morgan
+  name: Evelyn De Morgan
+  type: Artist
+  roles:
+  - painter
+  born: '1855-08-30'
+  died: '1919-05-02'
+  prominence: 3
+  note: English painter of the late Pre-Raphaelite, Aesthetic and Symbolist movements, known for spiritualist, feminist and pacifist allegories.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Evelyndemorgan.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Evelyndemorgan.jpg/500px-Evelyndemorgan.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Evelyndemorgan.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; the Works list in the article text is empty; husband and teacher (not in the database) not linked.
+  sources:
+  - wp-evelyn-de-morgan
+- key: henri-edmond-cross
+  name: Henri-Edmond Cross
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1856-05-20'
+  died: '1910-05-16'
+  prominence: 3
+  note: French Neo-Impressionist painter and printmaker, born Henri-Edmond-Joseph Delacroix, an influence on Matisse and the development of Fauvism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5f/Henri-Edmond-Cross-Self-portrait.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/5f/Henri-Edmond-Cross-Self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henri-Edmond-Cross-Self-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and training captured; no named work with a clear year captured; portfolio not built out.
+  sources:
+  - wp-henri-edmond-cross
+- key: giovanni-segantini
+  name: Giovanni Segantini
+  type: Artist
+  roles:
+  - painter
+  born: '1858-01-15'
+  died: '1899-09-28'
+  prominence: 4
+  note: Austrian-born, stateless painter of large Alpine pastoral landscapes, combining Divisionism with Symbolism; active in Italy, then Switzerland.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7b/Segantini_Selbstportrait1893.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Segantini_Selbstportrait1893.jpg/500px-Segantini_Selbstportrait1893.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Segantini_Selbstportrait1893.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the Life, Nature and Death triptych captured; other works, dealers (Grubicy) and friends not in the database not linked.
+  sources:
+  - wp-giovanni-segantini
+- key: vilhelm-hammershoi
+  name: Vilhelm Hammershøi
+  type: Artist
+  roles:
+  - painter
+  born: '1864-05-15'
+  died: '1916-02-13'
+  prominence: 4
+  note: Danish painter of poetic, subdued portraits and interiors, mostly painted in Copenhagen.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/55/Vilhelm_Hammersh%C3%B8i%2C_by_Vilhelm_Hammersh%C3%B8i.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Vilhelm_Hammersh%C3%B8i%2C_by_Vilhelm_Hammersh%C3%B8i.jpg/500px-Vilhelm_Hammersh%C3%B8i%2C_by_Vilhelm_Hammersh%C3%B8i.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vilhelm_Hammersh%C3%B8i,_by_Vilhelm_Hammersh%C3%B8i.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, homes and two dated works captured; teachers (not in the database) not linked; death place not stated.
+  sources:
+  - wp-vilhelm-hammershoi
+- key: roger-fry
+  name: Roger Fry
+  type: Artist
+  roles:
+  - painter
+  - art critic
+  born: '1866-12-14'
+  died: '1934-09-09'
+  prominence: 3
+  note: English painter and critic of the Bloomsbury Group who named and championed Post-Impressionism in Britain.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9d/Roger_Fry_c._1900.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/Roger_Fry_c._1900.jpg/500px-Roger_Fry_c._1900.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Roger_Fry_c._1900.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Durbins house and career (Burlington Magazine, Slade) captured; no dated painting captured; later critical writings not built out.
+  sources:
+  - wp-roger-fry
+- key: hugo-alfven
+  name: Hugo Alfvén
+  type: Composer
+  roles:
+  - composer
+  - conductor
+  - violinist
+  - painter
+  born: '1872-05-01'
+  died: '1960-05-08'
+  prominence: 3
+  note: Swedish composer, conductor and violinist (also a watercolourist), best known for the Swedish Rhapsody No. 1, Midsommarvaka.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c6/Hugo_Alfv%C3%A9n_ca_1906.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Hugo_Alfv%C3%A9n_ca_1906.png/500px-Hugo_Alfv%C3%A9n_ca_1906.png
+  image_page: https://commons.wikimedia.org/wiki/File:Hugo_Alfv%C3%A9n_ca_1906.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and career captured; the full list of musical works and his paintings not built out.
+  sources:
+  - wp-hugo-alfven
+- key: otto-mueller
+  name: Otto Mueller
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1874-10-16'
+  died: '1930-09-24'
+  prominence: 3
+  note: German Expressionist painter and printmaker of Die Brucke, known for nudes and Romani women painted in distemper.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/65/Otto_Mueller_-_Self-Portrait.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/65/Otto_Mueller_-_Self-Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Otto_Mueller_-_Self-Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, training and teaching captured; the Works list in the article text is empty, so no dated works; death place not stated.
+  sources:
+  - wp-otto-mueller
+- key: jean-metzinger
+  name: Jean Metzinger
+  type: Artist
+  roles:
+  - painter
+  born: '1883-06-24'
+  died: '1956-11-03'
+  prominence: 4
+  note: French painter, theorist and poet who, with Albert Gleizes, wrote the first major treatise on Cubism, Du "Cubisme" (1912).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/08/Jean_Metzinger%2C_photo_published_in_1913.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Jean_Metzinger%2C_photo_published_in_1913.jpg/500px-Jean_Metzinger%2C_photo_published_in_1913.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean_Metzinger,_photo_published_in_1913.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Paris move, Cubist role and one key work captured; birthplace and death place not in the article text read (cut at 32,000 characters); full portfolio not built out.
+  sources:
+  - wp-jean-metzinger
+- key: isaak-brodsky
+  name: Isaak Brodsky
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1884-01-06'
+  died: '1939-08-14'
+  prominence: 3
+  note: Russian-Soviet painter, pupil of Ilya Repin, best known for his portraits of Lenin and other Soviet leaders in the Socialist realist style.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Isaak_Brodsky.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Isaak_Brodsky.jpg/500px-Isaak_Brodsky.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Isaak_Brodsky.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, teacher, death place and career roles captured; no dated work named in the article, so no artwork; full portfolio not built out.
+  sources:
+  - wp-isaak-brodsky
+- key: andre-lhote
+  name: Andre Lhote
+  type: Artist
+  roles:
+  - painter
+  born: '1885-07-05'
+  died: '1962-01-24'
+  prominence: 3
+  note: French Cubist painter, writer and influential teacher who founded his own academy in Montparnasse in 1922.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/36/Edmond_Boissonnet%2C_photograph_of_Andr%C3%A9_Lhote_0023.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/3/36/Edmond_Boissonnet%2C_photograph_of_Andr%C3%A9_Lhote_0023.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edmond_Boissonnet,_photograph_of_Andr%C3%A9_Lhote_0023.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, birth and death places, teaching career and one known student in the database captured; no dated work named in the article, so no artwork; most students not in the database.
+  sources:
+  - wp-andre-lhote
+- key: josef-lada
+  name: Josef Lada
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  - cartoonist
+  - writer
+  born: '1887-12-17'
+  died: '1957-12-14'
+  prominence: 3
+  note: Czech self-taught painter, illustrator and writer, best known for his children's books and his illustrations for The Good Soldier Svejk.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0f/Josef_Lada_1940.png
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/0/0f/Josef_Lada_1940.png
+  image_page: https://commons.wikimedia.org/wiki/File:Josef_Lada_1940.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, self-taught status and career themes captured; no dated work named, so no artwork; death place not given in the article.
+  sources:
+  - wp-josef-lada
+- key: amadeo-de-souza-cardoso
+  name: Amadeo de Souza-Cardoso
+  type: Artist
+  roles:
+  - painter
+  born: '1887-11-14'
+  died: '1918-10-25'
+  prominence: 3
+  note: Portuguese modernist painter who worked between Paris and Manhufe, engaging with Cubism, Futurism and Expressionism; died of the Spanish flu aged 30.
+  coverage: partly
+  coverage_note: Dates, birth and death places, Paris years, teacher Anglada Camarasa (not in database) and one listed work captured; full portfolio not built out.
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- key: robert-indiana
+  name: Robert Indiana
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1928-09-13'
+  died: '2018-05-19'
+  prominence: 4
+  note: American pop artist (born Robert Clark) best known for his LOVE image, first made in 1964, and its sculptures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Robert_Indiana.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Robert_Indiana.jpg/500px-Robert_Indiana.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Robert_Indiana.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, birth and death places, New York and Vinalhaven years and the LOVE image captured; other series (EAT, numbers, Peace Paintings) not built out.
+  sources:
+  - wp-robert-indiana
+- key: bridget-riley
+  name: Bridget Riley
+  type: Artist
+  roles:
+  - painter
+  born: '1931-04-24'
+  prominence: 4
+  note: English painter known for her op art paintings; first woman and first British contemporary painter to win the International Prize for painting at the Venice Biennale (1968).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Bridget-Riley.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Bridget-Riley.jpg/500px-Bridget-Riley.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bridget-Riley.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Birth date and place, op art phase, Venice Biennale prize, one key work and St Mary's Hospital mural captured; later colour series not built out.
+  sources:
+  - wp-bridget-riley
+- key: bettina-heinen-ayech
+  name: Bettina Heinen-Ayech
+  type: Artist
+  roles:
+  - painter
+  born: '1937-09-03'
+  died: '2020-06-07'
+  prominence: 2
+  note: German painter known for her colourful watercolour landscapes of Algeria, where she lived from the 1960s.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Bettina_Heinen_1989.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Bettina_Heinen_1989.jpg/500px-Bettina_Heinen_1989.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bettina_Heinen_1989.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, death place, move to Guelma, Algeria, and honours captured; no individual dated work named, so no artwork; teachers (Bowien, Kaspar) not in database.
+  sources:
+  - wp-bettina-heinen-ayech
+- key: chuck-close
+  name: Chuck Close
+  type: Artist
+  roles:
+  - painter
+  - photographer
+  born: '1940-07-05'
+  died: '2021-08-19'
+  prominence: 4
+  note: American painter and photographer known for massive-scale photorealist and grid-based portraits; continued working after paralysis in 1988.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5a/Chuck_Close.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/5a/Chuck_Close.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Chuck_Close.jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, birthplace, education, move to New York and Big Self-Portrait captured; prints, tapestries and commissions not built out; death place not given in the article.
+  sources:
+  - wp-chuck-close
+- key: gottfried-helnwein
+  name: Gottfried Helnwein
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - photographer
+  - sculptor
+  born: '1948-10-08'
+  prominence: 3
+  note: Austrian-Irish visual artist whose work centres on the image of the wounded child and on the legacy of the Nazi era.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/Save_The_World_Awards_2009_show04_-_Gottfried_Helnwein.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Save_The_World_Awards_2009_show04_-_Gottfried_Helnwein.jpg/500px-Save_The_World_Awards_2009_show04_-_Gottfried_Helnwein.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Save_The_World_Awards_2009_show04_-_Gottfried_Helnwein.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Birth date and place, studies, moves (Germany, New York, Ireland, Los Angeles) and one dated painting captured; music collaborations and later series not built out.
+  sources:
+  - wp-gottfried-helnwein
+artworks:
+- key: visitation-albertinelli
+  name: Visitation (altarpiece for Sant'Elisabetta, San Michele alle Trombe)
+  kind: altarpiece
+  made: 1503
+  collection: Uffizi
+  people:
+  - person: mariotto-albertinelli
+    role: creator
+  prominence: 3
+  note: Signed and dated 1503; central panel the Visitation, predella of the Annunciation, Nativity and Circumcision. Albertinelli's best-known work.
+  sources:
+  - wp-mariotto-albertinelli
+- key: christ-in-limbo-beccafumi
+  name: Christ in Limbo
+  kind: painting
+  made: 1535
+  collection: Pinacoteca Nazionale, Siena
+  people:
+  - person: domenico-beccafumi
+    role: creator
+  prominence: 3
+  note: Cited in the article as an example of Beccafumi's irrational, hallucinatory Sienese style.
+  sources:
+  - wp-domenico-beccafumi
+- key: hercules-and-cacus-bandinelli
+  name: Hercules and Cacus
+  kind: sculpture
+  medium: marble
+  made: 1534
+  collection: Piazza della Signoria, Florence
+  people:
+  - person: baccio-bandinelli
+    role: creator
+  places:
+  - place: piazza-della-signoria
+    role: displayed
+  prominence: 4
+  note: Colossal (5.05 m) marble group, commissioned by Pope Clement VII, completed 1534.
+  sources:
+  - wp-baccio-bandinelli
+- key: judith-with-the-head-of-holofernes-galizia
+  name: Judith with the Head of Holofernes
+  kind: painting
+  made: 1596
+  collection: Ringling Museum of Art, Sarasota
+  people:
+  - person: fede-galizia
+    role: creator
+  prominence: 3
+  note: Perhaps her earliest Judith picture, painted in 1596 according to the article.
+  sources:
+  - wp-fede-galizia
+- key: portrait-of-paolo-morigia-galizia
+  name: Portrait of Paolo Morigia
+  kind: painting
+  made: 1596
+  collection: Pinacoteca Ambrosiana, Milan
+  people:
+  - person: fede-galizia
+    role: creator
+  prominence: 3
+  note: Painted when Galizia was eighteen; the article's collections list gives 1592-1595 (see discrepancy). Morigia is not in the database.
+  sources:
+  - wp-fede-galizia
+- key: breakfast-table-with-blackberry-pie-heda
+  name: Breakfast table with blackberry pie
+  kind: painting
+  made: 1631
+  people:
+  - person: willem-claesz-heda
+    role: creator
+  prominence: 3
+  note: Still life of 1631, an example of Heda's mature style.
+  sources:
+  - wp-willem-claesz-heda
+- key: village-school-ostade
+  name: The Village School
+  kind: painting
+  made: 1662
+  collection: Louvre
+  people:
+  - person: adriaen-van-ostade
+    role: creator
+  prominence: 3
+  note: Named in the article among his worthy dated works of 1662.
+  sources:
+  - wp-adriaen-van-ostade
+- key: milon-of-croton-puget
+  name: Milon of Croton
+  kind: sculpture
+  made: 1672
+  made_end: 1682
+  collection: Louvre
+  people:
+  - person: pierre-puget
+    role: creator
+  prominence: 4
+  note: Commissioned by Colbert in 1672 for the gardens of Versailles, finished August 1682; now in the Louvre.
+  sources:
+  - wp-pierre-puget
+- key: portrait-of-farinelli-amigoni
+  name: Portrait of Farinelli
+  kind: portrait
+  made: 1735
+  people:
+  - person: jacopo-amigoni
+    role: creator
+  prominence: 3
+  note: Amigoni painted the castrato Farinelli twice in 1735 and again in 1752 (article); this entry stands for the 1735 portraits. Farinelli is not in the database.
+  sources:
+  - wp-jacopo-amigoni
+- key: italy-and-germany-overbeck
+  name: Italy and Germany
+  kind: painting
+  made: 1828
+  prominence: 3
+  people:
+  - person: johann-friedrich-overbeck
+    role: creator
+  sources:
+  - wp-johann-friedrich-overbeck
+- key: vision-of-st-francis-overbeck
+  name: Vision of St Francis
+  kind: wall painting
+  made: 1830
+  collection: Porziuncola, Basilica of Santa Maria degli Angeli, near Assisi
+  prominence: 3
+  people:
+  - person: johann-friedrich-overbeck
+    role: creator
+  note: Wall painting 6.5 metres long, finished in 1830.
+  sources:
+  - wp-johann-friedrich-overbeck
+- key: the-death-of-priam-lefebvre
+  name: The Death of Priam
+  kind: painting
+  made: 1861
+  prominence: 2
+  people:
+  - person: jules-joseph-lefebvre
+    role: creator
+  note: Won the Prix de Rome in 1861.
+  sources:
+  - wp-jules-joseph-lefebvre
+- key: beneath-the-crown
+  name: Beneath the Crown (The Russian Bride's Attire)
+  kind: painting
+  made: 1889
+  prominence: 3
+  people:
+  - person: konstantin-makovsky
+    role: creator
+  sources:
+  - wp-konstantin-makovsky
+- key: the-tortoise-trainer
+  name: The Tortoise Trainer
+  kind: painting
+  made: 1906
+  collection: Pera Museum, Istanbul
+  prominence: 4
+  people:
+  - person: osman-hamdi-bey
+    role: creator
+  places:
+  - place: pera-museum
+    role: held
+  note: Shows the painter in antiquated clothing training tortoises in a mosque; sold in 2004 for a record price for a Turkish painting.
+  sources:
+  - wp-osman-hamdi-bey
+- key: news-of-victory-gyzis
+  name: News of Victory
+  kind: painting
+  made: 1871
+  prominence: 2
+  people:
+  - person: nikolaos-gyzis
+    role: creator
+  note: Deals with the Franco-Prussian War.
+  sources:
+  - wp-nikolaos-gyzis
+- key: a-glass-of-wine-with-caesar-borgia
+  name: A Glass of Wine with Caesar Borgia
+  made: 1893
+  people:
+  - person: john-collier
+    role: creator
+  prominence: 3
+  note: Hangs in the atrium of Ipswich Town Hall.
+  sources:
+  - wp-john-collier
+- key: portrait-of-the-duke-of-york-collier
+  name: Portrait of the Duke of York as Master of Trinity House
+  kind: portrait
+  made: 1901
+  people:
+  - person: john-collier
+    role: creator
+  - person: george-v
+    role: subject
+  - person: george-v
+    role: patron
+  prominence: 2
+  note: Commissioned portrait of the Duke of York, later George V, as Master of Trinity House.
+  sources:
+  - wp-john-collier
+- key: vicious-circle-malczewski
+  name: Vicious Circle (Blędne kolo)
+  made: 1895
+  made_end: 1897
+  people:
+  - person: jacek-malczewski
+    role: creator
+  prominence: 4
+  note: Named among his most famous canvases.
+  sources:
+  - wp-jacek-malczewski
+- key: melancholia-malczewski
+  name: Melancholia
+  made: 1890
+  made_end: 1894
+  people:
+  - person: jacek-malczewski
+    role: creator
+  prominence: 3
+  note: Named among his most famous canvases.
+  sources:
+  - wp-jacek-malczewski
+- key: daughters-of-the-mist-de-morgan
+  name: Daughters of the Mist
+  made: 1905
+  made_end: 1910
+  estimated: true
+  people:
+  - person: evelyn-de-morgan
+    role: creator
+  prominence: 3
+  note: Symbolist allegory, cited in the article as a peak of her spiritualist themes.
+  sources:
+  - wp-evelyn-de-morgan
+- key: life-nature-death-segantini
+  name: Life, Nature and Death
+  kind: triptych
+  made: 1897
+  made_end: 1899
+  estimated: true
+  collection: Segantini Museum, St. Moritz
+  people:
+  - person: giovanni-segantini
+    role: creator
+  prominence: 4
+  note: Redesigned from a commissioned 1897 panorama of the Engadin for the 1900 Paris Exposition; worked on until his death in 1899; his most famous work. The dates are the span from commission to death,
+    not stated as the dates of making.
+  sources:
+  - wp-giovanni-segantini
+- key: interior-with-an-easel-hammershoi
+  name: Interior with an Easel, Bredgade 25
+  made: 1912
+  collection: J. Paul Getty Museum
+  people:
+  - person: vilhelm-hammershoi
+    role: creator
+  prominence: 3
+  note: Acquired by the Getty in December 2018.
+  sources:
+  - wp-vilhelm-hammershoi
+- key: portrait-of-a-young-girl-hammershoi
+  name: Portrait of a Young Girl
+  made: 1885
+  people:
+  - person: vilhelm-hammershoi
+    role: creator
+  prominence: 2
+  note: His debut at the Charlottenborg Spring Exhibition, showing his sister Anna; reportedly admired by Renoir.
+  sources:
+  - wp-vilhelm-hammershoi
+- key: portrait-de-guillaume-apollinaire-metzinger
+  name: Portrait de Guillaume Apollinaire
+  made: 1909
+  made_end: 1910
+  people:
+  - person: jean-metzinger
+    role: creator
+  prominence: 3
+  note: Described as the first Cubist portrait and the first great public portrait of the poet; exhibited at the Salon des Independants in 1910. Apollinaire is not yet in the database, so no subject link.
+  sources:
+  - wp-jean-metzinger
+- key: o-castelo-souza-cardoso
+  name: O castelo (Castle)
+  made: 1912
+  people:
+  - person: amadeo-de-souza-cardoso
+    role: creator
+  prominence: 2
+  note: Listed among his selected artworks.
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- key: love-robert-indiana
+  name: LOVE
+  made: 1964
+  people:
+  - person: robert-indiana
+    role: creator
+  prominence: 4
+  note: First created in 1964 as a card; a red, blue and green version became the Museum of Modern Art Christmas card in 1965; first sculpture 1966. The article also says he created it in 1978, which looks
+    like an error.
+  sources:
+  - wp-robert-indiana
+- key: current-bridget-riley
+  name: Current
+  kind: painting
+  made: 1964
+  people:
+  - person: bridget-riley
+    role: creator
+  prominence: 3
+  note: Reproduced on the cover of the catalogue of the 1965 Museum of Modern Art show The Responsive Eye.
+  sources:
+  - wp-bridget-riley
+- key: big-self-portrait-chuck-close
+  name: Big Self-Portrait
+  kind: painting
+  made: 1967
+  made_end: 1968
+  collection: Walker Art Center
+  people:
+  - person: chuck-close
+    role: creator
+  - person: chuck-close
+    role: subject
+  prominence: 3
+  note: Black and white enlargement of his face on a 107.5 by 83.5 inch canvas, made over four months in 1968; the first painting he sold, bought by the Walker Art Center in 1969.
+  sources:
+  - wp-chuck-close
+- key: mouse-i-helnwein
+  name: Mouse I
+  kind: painting
+  medium: oil and acrylic on canvas
+  made: 1995
+  people:
+  - person: gottfried-helnwein
+    role: creator
+  prominence: 2
+  note: Shown in 2000 at the San Francisco Museum of Modern Art exhibition The Darker Side of Playland.
+  sources:
+  - wp-gottfried-helnwein
+links:
+- teacher: mariotto-albertinelli
+  student: pontormo
+  sources:
+  - wp-mariotto-albertinelli
+- teacher: baccio-bandinelli
+  student: giorgio-vasari
+  sources:
+  - wp-baccio-bandinelli
+- teacher: frans-hals
+  student: adriaen-van-ostade
+  sources:
+  - wp-adriaen-van-ostade
+- teacher: adriaen-van-ostade
+  student: jan-steen
+  sources:
+  - wp-adriaen-van-ostade
+- teacher: jean-leon-gerome
+  student: osman-hamdi-bey
+  sources:
+  - wp-osman-hamdi-bey
+- teacher: jules-joseph-lefebvre
+  student: felix-vallotton
+  sources:
+  - wp-jules-joseph-lefebvre
+- patron: george-v
+  artist: john-collier
+  from: 1901
+  to: 1901
+  sources:
+  - wp-john-collier
+- patron: edward-viii
+  artist: john-collier
+  sources:
+  - wp-john-collier
+- teacher: jan-matejko
+  student: jacek-malczewski
+  sources:
+  - wp-jacek-malczewski
+- teacher: ilya-repin
+  student: isaak-brodsky
+  sources:
+  - wp-isaak-brodsky
+- teacher: andre-lhote
+  student: tamara-de-lempicka
+  sources:
+  - wp-andre-lhote
+moments:
+- person: mariotto-albertinelli
+  role: born
+  place: florence
+  year: 1474
+  sources:
+  - wp-mariotto-albertinelli
+- person: joachim-patinir
+  role: worked
+  place: antwerp
+  year: 1515
+  sources:
+  - wp-joachim-patinir
+- person: joachim-patinir
+  role: died
+  place: antwerp
+  year: 1524
+  sources:
+  - wp-joachim-patinir
+- person: domenico-beccafumi
+  role: born
+  place: montaperti
+  year: 1486
+  sources:
+  - wp-domenico-beccafumi
+- person: domenico-beccafumi
+  role: worked
+  place: rome
+  year: 1509
+  sources:
+  - wp-domenico-beccafumi
+- person: domenico-beccafumi
+  role: worked
+  place: siena-cathedral
+  year: 1517
+  sources:
+  - wp-domenico-beccafumi
+- person: fede-galizia
+  role: born
+  place: milan
+  year: 1578
+  sources:
+  - wp-fede-galizia
+- person: fede-galizia
+  role: died
+  place: milan
+  year: 1630
+  sources:
+  - wp-fede-galizia
+- person: willem-claesz-heda
+  role: born
+  place: haarlem
+  year: 1593
+  sources:
+  - wp-willem-claesz-heda
+- person: willem-claesz-heda
+  role: died
+  place: haarlem
+  year: 1680
+  sources:
+  - wp-willem-claesz-heda
+- person: adriaen-van-ostade
+  role: born
+  place: haarlem
+  year: 1610
+  sources:
+  - wp-adriaen-van-ostade
+- person: adriaen-van-ostade
+  role: worked
+  place: utrecht
+  year: 1632
+  sources:
+  - wp-adriaen-van-ostade
+- person: adriaen-van-ostade
+  role: worked
+  place: haarlem
+  year: 1634
+  sources:
+  - wp-adriaen-van-ostade
+- person: adriaen-van-ostade
+  role: died
+  place: haarlem
+  year: 1685
+  sources:
+  - wp-adriaen-van-ostade
+- person: philips-wouwerman
+  role: born
+  place: haarlem
+  year: 1619
+  sources:
+  - wp-philips-wouwerman
+- person: philips-wouwerman
+  role: died
+  place: haarlem
+  year: 1668
+  sources:
+  - wp-philips-wouwerman
+- person: pierre-puget
+  role: born
+  place: marseille
+  year: 1620
+  sources:
+  - wp-pierre-puget
+- person: pierre-puget
+  role: worked
+  place: toulon
+  year: 1655
+  sources:
+  - wp-pierre-puget
+- person: pierre-puget
+  role: worked
+  place: genoa
+  year: 1663
+  sources:
+  - wp-pierre-puget
+- person: pierre-puget
+  role: died
+  place: marseille
+  year: 1694
+  sources:
+  - wp-pierre-puget
+- person: jacopo-amigoni
+  role: born
+  place: naples
+  year: 1682
+  sources:
+  - wp-jacopo-amigoni
+- person: jacopo-amigoni
+  role: worked
+  place: nymphenburg-palace
+  year: 1719
+  sources:
+  - wp-jacopo-amigoni
+- person: jacopo-amigoni
+  role: worked
+  place: london
+  year: 1730
+  sources:
+  - wp-jacopo-amigoni
+- person: jacopo-amigoni
+  role: died
+  place: madrid
+  year: 1752
+  sources:
+  - wp-jacopo-amigoni
+- person: jean-etienne-liotard
+  role: born
+  place: geneva
+  year: 1702
+  sources:
+  - wp-jean-etienne-liotard
+- person: jean-etienne-liotard
+  role: worked
+  place: paris
+  year: 1725
+  sources:
+  - wp-jean-etienne-liotard
+- person: jean-etienne-liotard
+  role: worked
+  place: constantinople
+  year: 1738
+  sources:
+  - wp-jean-etienne-liotard
+- person: jean-etienne-liotard
+  role: worked
+  place: vienna
+  year: 1742
+  sources:
+  - wp-jean-etienne-liotard
+- person: jean-etienne-liotard
+  role: died
+  place: geneva
+  year: 1789
+  sources:
+  - wp-jean-etienne-liotard
+- person: marcello-bacciarelli
+  role: born
+  place: rome
+  year: 1731
+  sources:
+  - wp-marcello-bacciarelli
+- person: marcello-bacciarelli
+  role: worked
+  place: dresden
+  year: 1750
+  sources:
+  - wp-marcello-bacciarelli
+- person: marcello-bacciarelli
+  role: worked
+  place: warsaw
+  year: 1766
+  sources:
+  - wp-marcello-bacciarelli
+- person: washington-allston
+  role: born
+  place: waccamaw-parish
+  year: 1779
+  sources:
+  - wp-washington-allston
+- person: washington-allston
+  role: worked
+  place: london
+  year: 1801
+  sources:
+  - wp-washington-allston
+- person: washington-allston
+  role: worked
+  place: cambridge-massachusetts
+  year: 1818
+  sources:
+  - wp-washington-allston
+- person: washington-allston
+  role: buried
+  place: old-burying-ground-cambridge
+  year: 1843
+  sources:
+  - wp-washington-allston
+- person: johann-friedrich-overbeck
+  role: born
+  place: lubeck
+  year: 1789
+  sources:
+  - wp-johann-friedrich-overbeck
+- person: johann-friedrich-overbeck
+  role: worked
+  place: vienna
+  year: 1806
+  sources:
+  - wp-johann-friedrich-overbeck
+- person: johann-friedrich-overbeck
+  role: worked
+  place: rome
+  year: 1810
+  sources:
+  - wp-johann-friedrich-overbeck
+- person: johann-friedrich-overbeck
+  role: died
+  place: rome
+  year: 1869
+  sources:
+  - wp-johann-friedrich-overbeck
+- person: johann-friedrich-overbeck
+  role: buried
+  place: san-bernardo-alle-terme
+  year: 1869
+  sources:
+  - wp-johann-friedrich-overbeck
+- person: jozef-israels
+  role: born
+  place: groningen
+  year: 1824
+  sources:
+  - wp-jozef-israels
+- person: jozef-israels
+  role: worked
+  place: the-hague
+  year: 1870
+  sources:
+  - wp-jozef-israels
+- person: jozef-israels
+  role: died
+  place: scheveningen
+  year: 1911
+  sources:
+  - wp-jozef-israels
+- person: oswald-achenbach
+  role: worked
+  place: dusseldorf
+  year: 1835
+  sources:
+  - wp-oswald-achenbach
+- person: oswald-achenbach
+  role: died
+  place: dusseldorf
+  year: 1905
+  sources:
+  - wp-oswald-achenbach
+- person: jules-joseph-lefebvre
+  role: born
+  place: tournan-en-brie
+  year: 1836
+  sources:
+  - wp-jules-joseph-lefebvre
+- person: jules-joseph-lefebvre
+  role: died
+  place: paris
+  year: 1911
+  sources:
+  - wp-jules-joseph-lefebvre
+- person: jules-joseph-lefebvre
+  role: buried
+  place: montmartre-cemetery
+  year: 1911
+  sources:
+  - wp-jules-joseph-lefebvre
+- person: konstantin-makovsky
+  role: worked
+  place: saint-petersburg
+  year: 1858
+  sources:
+  - wp-konstantin-makovsky
+- person: konstantin-makovsky
+  role: died
+  place: saint-petersburg
+  year: 1915
+  sources:
+  - wp-konstantin-makovsky
+- person: julius-von-payer
+  role: worked
+  place: paris
+  year: 1884
+  sources:
+  - wp-julius-von-payer
+- person: julius-von-payer
+  role: died
+  place: bled
+  year: 1915
+  sources:
+  - wp-julius-von-payer
+- person: osman-hamdi-bey
+  role: worked
+  place: paris
+  year: 1860
+  sources:
+  - wp-osman-hamdi-bey
+- person: osman-hamdi-bey
+  role: worked
+  place: constantinople
+  year: 1869
+  sources:
+  - wp-osman-hamdi-bey
+- person: nikolaos-gyzis
+  role: born
+  place: sklavochori-tinos
+  year: 1842
+  sources:
+  - wp-nikolaos-gyzis
+- person: nikolaos-gyzis
+  role: worked
+  place: munich
+  year: 1865
+  sources:
+  - wp-nikolaos-gyzis
+- person: nikolaos-gyzis
+  role: died
+  place: munich
+  year: 1901
+  sources:
+  - wp-nikolaos-gyzis
+- person: jacek-malczewski
+  role: born
+  place: radom
+  year: 1854
+  sources:
+  - wp-jacek-malczewski
+- person: jacek-malczewski
+  role: worked
+  place: krakow
+  year: 1872
+  sources:
+  - wp-jacek-malczewski
+- person: jacek-malczewski
+  role: died
+  place: krakow
+  year: 1929
+  sources:
+  - wp-jacek-malczewski
+- person: jacek-malczewski
+  role: buried
+  place: skalka-krakow
+  year: 1929
+  sources:
+  - wp-jacek-malczewski
+- person: evelyn-de-morgan
+  role: born
+  place: london
+  year: 1855
+  sources:
+  - wp-evelyn-de-morgan
+- person: evelyn-de-morgan
+  role: worked
+  place: florence
+  year: 1895
+  sources:
+  - wp-evelyn-de-morgan
+- person: evelyn-de-morgan
+  role: died
+  place: london
+  year: 1919
+  sources:
+  - wp-evelyn-de-morgan
+- person: evelyn-de-morgan
+  role: buried
+  place: brookwood-cemetery
+  year: 1919
+  sources:
+  - wp-evelyn-de-morgan
+- person: henri-edmond-cross
+  role: born
+  place: douai
+  year: 1856
+  sources:
+  - wp-henri-edmond-cross
+- person: henri-edmond-cross
+  role: worked
+  place: saint-clair-le-lavandou
+  year: 1891
+  sources:
+  - wp-henri-edmond-cross
+- person: henri-edmond-cross
+  role: died
+  place: saint-clair-le-lavandou
+  year: 1910
+  sources:
+  - wp-henri-edmond-cross
+- person: henri-edmond-cross
+  role: buried
+  place: le-lavandou
+  year: 1910
+  sources:
+  - wp-henri-edmond-cross
+- person: giovanni-segantini
+  role: born
+  place: arco-trentino
+  year: 1858
+  sources:
+  - wp-giovanni-segantini
+- person: giovanni-segantini
+  role: worked
+  place: milan
+  year: 1874
+  sources:
+  - wp-giovanni-segantini
+- person: giovanni-segantini
+  role: worked
+  place: savognin
+  year: 1886
+  sources:
+  - wp-giovanni-segantini
+- person: vilhelm-hammershoi
+  role: born
+  place: copenhagen
+  year: 1864
+  sources:
+  - wp-vilhelm-hammershoi
+- person: vilhelm-hammershoi
+  role: worked
+  place: strandgade-30-copenhagen
+  year: 1898
+  sources:
+  - wp-vilhelm-hammershoi
+- person: vilhelm-hammershoi
+  role: worked
+  place: strandgade-25-copenhagen
+  year: 1913
+  sources:
+  - wp-vilhelm-hammershoi
+- person: roger-fry
+  role: born
+  place: london
+  year: 1866
+  sources:
+  - wp-roger-fry
+- person: roger-fry
+  role: worked
+  place: durbins-guildford
+  year: 1910
+  sources:
+  - wp-roger-fry
+- person: roger-fry
+  role: died
+  place: london
+  year: 1934
+  sources:
+  - wp-roger-fry
+- person: hugo-alfven
+  role: born
+  place: stockholm
+  year: 1872
+  sources:
+  - wp-hugo-alfven
+- person: hugo-alfven
+  role: worked
+  place: uppsala
+  year: 1910
+  sources:
+  - wp-hugo-alfven
+- person: hugo-alfven
+  role: died
+  place: falun
+  year: 1960
+  sources:
+  - wp-hugo-alfven
+- person: otto-mueller
+  role: born
+  place: lubawka
+  year: 1874
+  sources:
+  - wp-otto-mueller
+- person: otto-mueller
+  role: worked
+  place: dresden
+  year: 1894
+  sources:
+  - wp-otto-mueller
+- person: otto-mueller
+  role: worked
+  place: berlin
+  year: 1908
+  sources:
+  - wp-otto-mueller
+- person: jean-metzinger
+  role: worked
+  place: paris
+  year: 1903
+  sources:
+  - wp-jean-metzinger
+- person: isaak-brodsky
+  role: died
+  place: saint-petersburg
+  year: 1939
+  sources:
+  - wp-isaak-brodsky
+- person: andre-lhote
+  role: born
+  place: bordeaux
+  year: 1885
+  sources:
+  - wp-andre-lhote
+- person: andre-lhote
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-andre-lhote
+- person: andre-lhote
+  role: died
+  place: paris
+  year: 1962
+  sources:
+  - wp-andre-lhote
+- person: josef-lada
+  role: born
+  place: hrusice
+  year: 1887
+  sources:
+  - wp-josef-lada
+- person: amadeo-de-souza-cardoso
+  role: born
+  place: manhufe
+  year: 1887
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- person: amadeo-de-souza-cardoso
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- person: amadeo-de-souza-cardoso
+  role: died
+  place: espinho
+  year: 1918
+  sources:
+  - wp-amadeo-de-souza-cardoso
+- person: robert-indiana
+  role: born
+  place: new-castle-indiana
+  year: 1928
+  sources:
+  - wp-robert-indiana
+- person: robert-indiana
+  role: worked
+  place: new-york-city
+  year: 1954
+  sources:
+  - wp-robert-indiana
+- person: robert-indiana
+  role: worked
+  place: vinalhaven
+  year: 1969
+  sources:
+  - wp-robert-indiana
+- person: robert-indiana
+  role: died
+  place: vinalhaven
+  year: 2018
+  sources:
+  - wp-robert-indiana
+- person: bridget-riley
+  role: born
+  place: london
+  year: 1931
+  sources:
+  - wp-bridget-riley
+- person: bridget-riley
+  role: worked
+  place: st-marys-hospital-london
+  year: 2014
+  sources:
+  - wp-bridget-riley
+- person: bettina-heinen-ayech
+  role: worked
+  place: guelma
+  year: 1963
+  sources:
+  - wp-bettina-heinen-ayech
+- person: bettina-heinen-ayech
+  role: died
+  place: munich
+  year: 2020
+  sources:
+  - wp-bettina-heinen-ayech
+- person: chuck-close
+  role: born
+  place: monroe-washington
+  year: 1940
+  sources:
+  - wp-chuck-close
+- person: chuck-close
+  role: worked
+  place: new-york-city
+  year: 1967
+  sources:
+  - wp-chuck-close
+- person: gottfried-helnwein
+  role: born
+  place: vienna
+  year: 1948
+  sources:
+  - wp-gottfried-helnwein
+- person: gottfried-helnwein
+  role: worked
+  place: new-york-city
+  year: 1989
+  sources:
+  - wp-gottfried-helnwein
+- person: gottfried-helnwein
+  role: worked
+  place: dublin
+  year: 1997
+  sources:
+  - wp-gottfried-helnwein
+- person: gottfried-helnwein
+  role: worked
+  place: los-angeles
+  year: 2002
+  sources:
+  - wp-gottfried-helnwein
+discrepancies:
+- key: pierre-puget-born
+  question: When was Pierre Puget born?
+  about:
+  - person: pierre-puget
+  field: born
+  claims:
+  - value: 16 October 1620
+    sources:
+    - wp-pierre-puget
+  - value: 31 October 1622
+    sources:
+    - wp-pierre-puget
+  note: The record uses 1620 (the article's first date), marked estimated.
+- key: willem-claesz-heda-born
+  question: Was Willem Claesz. Heda born in 1593 or 1594?
+  about:
+  - person: willem-claesz-heda
+  field: born
+  claims:
+  - value: 14 December 1593
+    sources:
+    - wp-willem-claesz-heda
+  - value: 14 December 1594
+    sources:
+    - wp-willem-claesz-heda
+  note: The record uses 1593, marked estimated.
+- key: willem-claesz-heda-died
+  question: Did Heda die in 1680 or 1682?
+  about:
+  - person: willem-claesz-heda
+  field: died
+  claims:
+  - value: c. 1680
+    sources:
+    - wp-willem-claesz-heda
+  - value: c. 1682
+    sources:
+    - wp-willem-claesz-heda
+  note: The record uses 1680, marked estimated.
+- key: joachim-patinir-born
+  question: Was Patinir born in Dinant or Bouvignes?
+  about:
+  - person: joachim-patinir
+  field: place
+  claims:
+  - value: Dinant
+    sources:
+    - wp-joachim-patinir
+  - value: Bouvignes
+    sources:
+    - wp-joachim-patinir
+  note: No birth moment recorded for him.
+- key: portrait-of-paolo-morigia-date
+  question: When was Galizia's Portrait of Paolo Morigia painted?
+  about:
+  - artwork: portrait-of-paolo-morigia-galizia
+  field: date
+  claims:
+  - value: 1596 (when Galizia was eighteen)
+    sources:
+    - wp-fede-galizia
+  - value: 1592-1595 (collections list)
+    sources:
+    - wp-fede-galizia
+  note: The record uses 1596, the date given in the article's body text.
+- key: jacopo-amigoni-born
+  question: Was Amigoni born in Naples in 1682 or Venice in 1675?
+  about:
+  - person: jacopo-amigoni
+  field: born
+  claims:
+  - value: Naples, 1682
+    sources:
+    - wp-jacopo-amigoni
+  - value: Venice, 1675 (superseded claim)
+    sources:
+    - wp-jacopo-amigoni
+  status: resolved
+  resolution: The article calls the Venice 1675 claim superseded; the record uses Naples, 1682.
