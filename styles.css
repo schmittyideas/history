@@ -18,6 +18,7 @@
   --lichen: #3e7563;    /* lichen dye: writers */
   --rose: #a34d6d;      /* rose madder: composers */
   --slate: #4f6479;     /* slate grey-blue: scholars */
+  --verdigris: #1d7a8a; /* verdigris: government */
   --display: "IM Fell English SC", "Times New Roman", serif;
   --body: "Literata", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -26,13 +27,13 @@
   :root:not([data-theme="light"]) {
     --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
     --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-    --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; color-scheme: dark;
+    --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; --verdigris: #6cc4d2; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
   --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-  --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; color-scheme: dark;
+  --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; --verdigris: #6cc4d2; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
