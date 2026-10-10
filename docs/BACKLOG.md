@@ -131,6 +131,18 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ### Ready (ranked)
 
+#### [P3] Painters: finish the list (batch 13, missed painters, two missing articles)
+`type: task` · `area: data` · `status: ready` · `issue: #113`
+
+About 40 more candidates from the Wikidata ranking (batch 13, articles already downloaded), Josef Capek and Amrita Sher-Gil (articles missing in batch 5), and famous painters whose Wikipedia lead says "artist" not "painter" (Matisse and Dali were added by hand; others may be missing). Use the pipeline in docs/BUILDOUT.md.
+Source: Ty, 2026-10-10.
+
+#### [P3] Painters: add patron links once the patrons are in the database
+`type: task` · `area: data` · `status: blocked` · `issue: #114`
+
+Most painters have no patron links because the patrons (popes, Philip IV, Charles V, Napoleon and Napoleon III, Louis XIV, the Medici, Este dukes) are not people in the database yet. Blocked on the ruler build-outs. Afterwards re-read each painter's article and add the patron links.
+Source: Ty, 2026-10-10.
+
 ### Icebox
 
 ---
