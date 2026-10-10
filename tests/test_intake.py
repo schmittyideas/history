@@ -212,6 +212,28 @@ def test_realms():
     text = " ".join(bad.errors)
     assert "region must be one of" in text and "new realms need `name` and `region`" in text, text
 
+def test_restdb_reads_every_page():
+    # Supabase caps a request at 1,000 rows; select must keep reading until a page comes back short.
+    rows = [{"id": i} for i in range(1, 2501)]
+    calls = []
+    class Resp:
+        def __init__(self, data): self.status_code, self._data, self.text = 200, data, ""
+        def json(self): return self._data
+    class FakeRequests:
+        @staticmethod
+        def get(url, headers=None, params=None, timeout=None):
+            calls.append(params)
+            o, n = params["offset"], params["limit"]
+            return Resp(rows[o:o + n])
+    real = intake.requests
+    intake.requests = FakeRequests
+    try:
+        got = intake.RestDB("https://example.supabase.co", "sb_test").select("source_links", "id")
+    finally:
+        intake.requests = real
+    assert len(got) == 2500 and got[-1]["id"] == 2500, len(got)
+    assert [c["offset"] for c in calls] == [0, 1000, 2000] and all(c["order"] == "id" for c in calls), calls
+
 def test_bad_dates_are_errors_not_crashes():
     assert intake.parse_when(-384) == (-384, None) and intake.parse_when("-384") == (-384, None)
     assert intake.parse_when("1120-11-25") == (1120, "1120-11-25")
@@ -260,4 +282,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")

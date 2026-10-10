@@ -37,11 +37,21 @@ class RestDB:
         if not key.startswith("sb_"):
             self.h["Authorization"] = f"Bearer {key}"
 
+    PAGE = 1000  # Supabase returns at most this many rows per request
+
     def select(self, table, columns="*", **eq):
-        params = {"select": columns, **{k: f"eq.{v}" for k, v in eq.items()}}
-        r = requests.get(f"{self.base}/{table}", headers=self.h, params=params, timeout=30)
-        self._check(r, table)
-        return r.json()
+        """Every matching row, read in pages: a single request stops at 1,000 rows, and a table read short
+        would make apply think existing moments and links are missing, and add them again."""
+        out = []
+        while True:
+            params = {"select": columns, "order": "id", "limit": self.PAGE, "offset": len(out),
+                      **{k: f"eq.{v}" for k, v in eq.items()}}
+            r = requests.get(f"{self.base}/{table}", headers=self.h, params=params, timeout=30)
+            self._check(r, table)
+            rows = r.json()
+            out += rows
+            if len(rows) < self.PAGE:
+                return out
 
     def insert(self, table, row, ignore_duplicates_on=None):
         h = {**self.h, "Prefer": "return=representation"}
