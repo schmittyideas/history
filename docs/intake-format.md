@@ -41,6 +41,7 @@ sources:
 | `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
 | `image_url`, `image_thumb` | Links to the person's picture and a ~400px thumbnail (Wikimedia Commons). Links only; nothing is copied. Use only images the Commons page marks public domain or freely licensed |
 | `image_page` | The Commons file page (author, licence, credit) |
+| `sitelinks`, `sitelinks_on` | Popularity signal: the number of Wikipedia language editions that have an article on the person (from Wikidata), and the date it was read (`2026-10-10`). Used to rank people and derive display tiers |
 | `coverage` | How far this person's record has been built out: `not-read` (named, article not read), `partly` (read; only what the batch needed was captured), `complete` (article and list of works worked through). Left out = not yet assessed |
 | `coverage_note` | For `partly`: what was captured and what is missing ("dates, patrons and a few dated works; portfolio not built out") |
 | `portrait` | Key of an `artworks` entry that shows this person, so the picture's maker, date and licence travel with it |
