@@ -1,0 +1,20 @@
+batch:
+  title: Own Wikipedia articles for five people
+  requested: "Can we add the Wikipedia links for royalty?"
+  date: 2026-10-09
+
+# These five cited only someone else's article (Elizabeth I cited Anne Boleyn's, Mary II James II's), so the
+# site's Wikipedia link for them went to the wrong page. Each now cites their own article (checked to exist on
+# 2026-10-09). Updates only: no other fields change.
+
+sources:
+  - {key: wp-thomas-becket,      title: "Thomas Becket (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Thomas_Becket"}
+  - {key: wp-joan-of-arc,        title: "Joan of Arc (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Joan_of_Arc"}
+  - {key: wp-blanche-of-castile, title: "Blanche of Castile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blanche_of_Castile"}
+
+people:
+  - {key: elizabeth-i-of-england, sources: [wp-elizabeth-i]}
+  - {key: mary-ii-of-england,     sources: [wp-mary-ii-of-england]}
+  - {key: blanche-of-castile,     sources: [wp-blanche-of-castile]}
+  - {key: thomas-becket,          sources: [wp-thomas-becket]}
+  - {key: joan-of-arc,            sources: [wp-joan-of-arc]}

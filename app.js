@@ -51,16 +51,25 @@ async function loadData() {
   if (c.supabaseUrl && c.publishableKey) {
     const headers = { apikey: c.publishableKey };
     if (!c.publishableKey.startsWith("sb_")) headers.Authorization = `Bearer ${c.publishableKey}`;
+    // Supabase returns at most 1,000 rows per request, so read each table in pages, in id order, until a page
+    // comes back short. (Reading only the first page once hid most sources: source_links had 2,490 rows.)
+    const PAGE = 1000;
+    const getAll = async t => {
+      const out = [];
+      for (let offset = 0; ; offset += PAGE) {
+        const r = await fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*&order=id&limit=${PAGE}&offset=${offset}`, { headers });
+        if (!r.ok) throw new Error(`${t}: HTTP ${r.status}`);
+        const rows = await r.json();
+        out.push(...rows);
+        if (rows.length < PAGE) return out;
+      }
+    };
     try {
-      const rows = await Promise.all(TABLES.map(t =>
-        fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*`, { headers }).then(r => {
-          if (!r.ok) throw new Error(`${t}: HTTP ${r.status}`);
-          return r.json();
-        })));
+      const rows = await Promise.all(TABLES.map(getAll));
       const raw = Object.fromEntries(TABLES.map((t, i) => [t, rows[i]]));
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
-      const optional = t => fetch(`${c.supabaseUrl}/rest/v1/${t}?select=*`, { headers }).then(r => r.ok ? r.json() : []).catch(() => []);
+      const optional = t => getAll(t).catch(() => []);
       [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people] = await Promise.all(
         ["titles", "realms", "sources", "source_links", "artworks", "artwork_people"].map(optional));
       return { source: "live", raw };
@@ -893,6 +902,22 @@ function placeInView(id) {
 
 // Source links open in a new tab: "Wikipedia: Matilda of Flanders", or the source's title when it isn't Wikipedia.
 // A source without a URL (an Obsidian note, a conversation) is listed as plain text.
+// A person's own Wikipedia article: of the Wikipedia sources they cite, the one whose title shares the most
+// words with their name (so William Adelin links to "William Adelin", not to "White Ship").
+function wikiFor(p) {
+  const words = s => new Set(s.toLowerCase().replace(/\(wikipedia\)/, "").split(/[^\p{L}\p{N}]+/u).filter(w => w.length > 1));
+  const name = words(p.name);
+  const wps = S.db.sourcesFor("person", p.key).filter(s => /wikipedia\.org\/wiki\//.test(s.url || ""));
+  let best = null, score = -1;
+  wps.forEach(s => { const n = [...words(s.title)].filter(w => name.has(w)).length; if (n > score) { best = s; score = n; } });
+  return best;
+}
+// A small "Wikipedia ↗" link after a name, opening the person's article in a new tab (nothing if none is cited).
+function wikiLink(p) {
+  const s = wikiFor(p);
+  return s ? h("a", { class: "wiki", href: s.url, target: "_blank", rel: "noopener", title: s.title, "aria-label": `${p.name} on Wikipedia`, text: "Wikipedia ↗" }) : null;
+}
+
 function sourceLinks(sources) {
   if (!sources.length) return ["None recorded"];
   return joinNodes(sources.map(s => {
@@ -1218,6 +1243,7 @@ function renderYear() {
           ? ` · year ${yearsBetween(t.start_year, a) + 1}` + (t.end_year != null ? ` of ${yearsBetween(t.start_year, t.end_year) + 1}` : "") : "";
         list.append(h("li", { class: t.disputed ? "disputed" : "" }, crownIcon(t.disputed ? "Disputed claim" : "Held this title"), " ", yPerson(p),
           h("span", { class: "yrs", text: ` ${reignSpan(t)}${t.disputed ? " · disputed" : ""}${nth}` }),
+          wikiLink(p),
           t.note ? h("div", { class: "tnote", text: t.note }) : null));
       });
       row.append(list);

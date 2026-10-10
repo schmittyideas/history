@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P1] Only the first 1,000 rows of each table loaded; Wikipedia links for rulers
+`type: bug` · `area: site` · `status: done` · `issue: #88`
+
+The site and `tools/intake.py` read each table in one request, which Supabase caps at 1,000 rows, so `source_links` (2,490) was cut short. Both now read in pages. The Year view adds a Wikipedia link after each ruler (all 435 have one); five people who cited only someone else's article now cite their own. Done 2026-10-09.
+Source: Ty, 2026-10-09 ("add the Wikipedia links for royalty").
+
 #### [P2] Pick a country: realms in the timeline search and a realm focus in the Year view
 `type: enhancement` · `area: site` · `status: done` · `issue: #86`
 
