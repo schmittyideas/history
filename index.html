@@ -19,7 +19,6 @@
         <button type="button" id="view-year" aria-pressed="false">Year</button>
       </nav>
     </div>
-    <div class="chips cats" id="cats" role="group" aria-label="Who to show"></div>
   </header>
 
   <section class="view year" id="year-view" aria-label="Who ruled, and what happened, in a year" hidden>
@@ -36,6 +35,7 @@
       </div>
       <div class="chips" id="year-realms" aria-label="Realms shown"></div>
     </form>
+    <div class="chips cats" role="group" aria-label="Who to show"></div>
     <div id="year-out" class="year-out" aria-live="polite"></div>
   </section>
 
@@ -56,11 +56,9 @@
     <div class="trail" id="trail" hidden></div>
   </section>
 
+  <div class="chips cats" role="group" aria-label="Who to show (also the colour key)"></div>
   <div class="toolbar">
     <div class="legend">
-      <span><i class="sw" style="background:var(--woad)"></i>Royalty</span>
-      <span><i class="sw" style="background:var(--weld)"></i>Nobility</span>
-      <span><i class="sw" style="background:var(--ochre)"></i>Other</span>
       <span><i class="sw ring"></i>Married in</span>
       <span><i class="sw" style="background:var(--madder)"></i>Parent to child</span>
       <span><i class="sw dbl"></i>Marriage</span>
