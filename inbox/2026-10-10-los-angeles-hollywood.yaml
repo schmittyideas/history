@@ -1,0 +1,987 @@
+# Los Angeles for a visitor: Hollywood, film and the landmarks, from about 1900 to today.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the
+# session scratchpad). Every date, builder and role below comes from those articles. Stated honestly:
+#  - Coordinates are from general knowledge (the articles give none) and are approximate to ~3 decimals.
+#  - Leaves out mayors, City Hall, Union Station, the Coliseum, Dodger Stadium, the aqueduct and civic disasters:
+#    a parallel batch covers those (PR #91, the mayors batch). The city place `los-angeles` comes from that batch,
+#    so this file must be applied after it.
+#  - TYPE QUESTION FOR TY: Griffith J. Griffith (industrialist), Abbot Kinney (developer), J. Paul Getty (oil, art
+#    collector) and Eli Broad (businessman, art collector) fit none of the existing types (Royalty, Nobility, Clergy,
+#    Artist, Writer, Composer, Scholar). They are typed `Patron` for now, which the site shows outside the Show
+#    groups (always visible, sorted last). Change the type if you'd rather fold them into an existing group.
+#  - Film people are `type: Artist` with film roles (film director, actor, film producer, animator); Sid Grauman
+#    is an Artist with roles showman and film exhibitor. Architects are Artist with `architect`.
+#  - Left out: Harvey Henderson Wilcox, who named Hollywood in 1887 (a landowner, same type question; he is named
+#    in the Hollywood place note instead); Aline Barnsdall (Hollyhock House's client, named in built_by);
+#    Louis B. Mayer and the Academy's founding (the Academy's article gives the Jan 1927 banquet, not a founding
+#    day); Lloyd Wright's Bowl shells; Lillian Disney's gift; artworks (the free images are modern photos by
+#    Commons users, not people in the database). Person pictures are linked directly, every one checked on
+#    Commons as public domain or a free licence.
+#  - Disneyland is in Anaheim (Orange County), not Los Angeles, but it is kept: Walt Disney built it and it is
+#    on every visitor's list.
+batch:
+  title: "Los Angeles: Hollywood and the visitor's landmarks, 1900-today"
+  requested: "Los Angeles from a tourist's perspective, working back from today to about 1900: the places a visitor goes, the people behind them, and the events that made them"
+  date: 2026-10-10
+
+sources:
+  - {key: wp-hollywood-los-angeles, title: "Hollywood, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood,_Los_Angeles"}
+  - {key: wp-santa-monica-california, title: "Santa Monica, California (Wikipedia)", url: "https://en.wikipedia.org/wiki/Santa_Monica,_California"}
+  - {key: wp-venice-los-angeles, title: "Venice, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Venice,_Los_Angeles"}
+  - {key: wp-griffith-j-griffith, title: "Griffith J. Griffith (Wikipedia)", url: "https://en.wikipedia.org/wiki/Griffith_J._Griffith"}
+  - {key: wp-sid-grauman, title: "Sid Grauman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sid_Grauman"}
+  - {key: wp-cecil-b-demille, title: "Cecil B. DeMille (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cecil_B._DeMille"}
+  - {key: wp-d-w-griffith, title: "D. W. Griffith (Wikipedia)", url: "https://en.wikipedia.org/wiki/D._W._Griffith"}
+  - {key: wp-mary-pickford, title: "Mary Pickford (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Pickford"}
+  - {key: wp-charlie-chaplin, title: "Charlie Chaplin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlie_Chaplin"}
+  - {key: wp-douglas-fairbanks, title: "Douglas Fairbanks (Wikipedia)", url: "https://en.wikipedia.org/wiki/Douglas_Fairbanks"}
+  - {key: wp-jesse-l-lasky, title: "Jesse L. Lasky (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jesse_L._Lasky"}
+  - {key: wp-carl-laemmle, title: "Carl Laemmle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carl_Laemmle"}
+  - {key: wp-walt-disney, title: "Walt Disney (Wikipedia)", url: "https://en.wikipedia.org/wiki/Walt_Disney"}
+  - {key: wp-abbot-kinney, title: "Abbot Kinney (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abbot_Kinney"}
+  - {key: wp-j-paul-getty, title: "J. Paul Getty (Wikipedia)", url: "https://en.wikipedia.org/wiki/J._Paul_Getty"}
+  - {key: wp-eli-broad, title: "Eli Broad (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eli_Broad"}
+  - {key: wp-frank-gehry, title: "Frank Gehry (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frank_Gehry"}
+  - {key: wp-richard-meier, title: "Richard Meier (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_Meier"}
+  - {key: wp-frank-lloyd-wright, title: "Frank Lloyd Wright (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frank_Lloyd_Wright"}
+  - {key: wp-hollywood-sign, title: "Hollywood Sign (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Sign"}
+  - {key: wp-grauman-s-chinese-theatre, title: "Grauman's Chinese Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grauman%27s_Chinese_Theatre"}
+  - {key: wp-grauman-s-egyptian-theatre, title: "Grauman's Egyptian Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grauman%27s_Egyptian_Theatre"}
+  - {key: wp-hollywood-walk-of-fame, title: "Hollywood Walk of Fame (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Walk_of_Fame"}
+  - {key: wp-hollywood-bowl, title: "Hollywood Bowl (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Bowl"}
+  - {key: wp-griffith-park, title: "Griffith Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Griffith_Park"}
+  - {key: wp-griffith-observatory, title: "Griffith Observatory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Griffith_Observatory"}
+  - {key: wp-capitol-records-building, title: "Capitol Records Building (Wikipedia)", url: "https://en.wikipedia.org/wiki/Capitol_Records_Building"}
+  - {key: wp-getty-center, title: "Getty Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Getty_Center"}
+  - {key: wp-getty-villa, title: "Getty Villa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Getty_Villa"}
+  - {key: wp-walt-disney-concert-hall, title: "Walt Disney Concert Hall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Walt_Disney_Concert_Hall"}
+  - {key: wp-the-broad, title: "The Broad (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Broad"}
+  - {key: wp-lacma, title: "Los Angeles County Museum of Art (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_County_Museum_of_Art"}
+  - {key: wp-watts-towers, title: "Watts Towers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Watts_Towers"}
+  - {key: wp-santa-monica-pier, title: "Santa Monica Pier (Wikipedia)", url: "https://en.wikipedia.org/wiki/Santa_Monica_Pier"}
+  - {key: wp-venice-canal-historic-district, title: "Venice Canal Historic District (Wikipedia)", url: "https://en.wikipedia.org/wiki/Venice_Canal_Historic_District"}
+  - {key: wp-bradbury-building, title: "Bradbury Building (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bradbury_Building"}
+  - {key: wp-hollyhock-house, title: "Hollyhock House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollyhock_House"}
+  - {key: wp-paramount-pictures, title: "Paramount Pictures (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paramount_Pictures"}
+  - {key: wp-hollywood-heritage-museum, title: "Hollywood Heritage Museum (Lasky-DeMille Barn) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Heritage_Museum"}
+  - {key: wp-hollywood-roosevelt-hotel, title: "Hollywood Roosevelt Hotel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Roosevelt_Hotel"}
+  - {key: wp-disneyland, title: "Disneyland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Disneyland"}
+  - {key: wp-universal-studios-hollywood, title: "Universal Studios Hollywood (Wikipedia)", url: "https://en.wikipedia.org/wiki/Universal_Studios_Hollywood"}
+  - {key: wp-dolby-theatre, title: "Dolby Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dolby_Theatre"}
+  - {key: wp-in-old-california-1910, title: "In Old California (1910 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/In_Old_California_(1910_film)"}
+  - {key: wp-the-squaw-man-1914, title: "The Squaw Man (1914 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Squaw_Man_(1914_film)"}
+  - {key: wp-nestor-film-company, title: "Nestor Film Company (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nestor_Film_Company"}
+  - {key: wp-united-artists, title: "United Artists (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_Artists"}
+  - {key: wp-1st-academy-awards, title: "1st Academy Awards (Wikipedia)", url: "https://en.wikipedia.org/wiki/1st_Academy_Awards"}
+
+people:
+  # Film
+  - key: d-w-griffith
+    name: D. W. Griffith
+    type: Artist
+    roles: [film director]
+    born: 1875-01-22
+    died: 1948-07-23
+    prominence: 4
+    note: "Pioneer of film editing and narrative film; his short In Old California (1910) was the first film shot in Hollywood. Directed The Birth of a Nation (1915), a landmark denounced for glorifying the Ku Klux Klan. Co-founded United Artists (1919). Died in Los Angeles, found unconscious at the Knickerbocker Hotel."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/93/David_Wark_Griffith_portrait.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/David_Wark_Griffith_portrait.jpg/500px-David_Wark_Griffith_portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:David_Wark_Griffith_portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, In Old California and United Artists; filmography (about 520 films) not built out."
+    sources: [wp-d-w-griffith, wp-in-old-california-1910]
+  - key: cecil-b-demille
+    name: Cecil B. DeMille
+    type: Artist
+    roles: [film director, film producer]
+    born: 1881-08-12
+    died: 1959-01-21
+    prominence: 4
+    note: "Founding father of American cinema: his first film, The Squaw Man (1914), was the first feature-length film shot in Hollywood, made in a rented barn at Selma and Vine. Co-founded what became Paramount. His The King of Kings opened Grauman's Chinese Theatre (1927). Entombed at Hollywood Forever."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c9/Demille_-_c1920_%283x4_cropped%29.JPG
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Demille_-_c1920_%283x4_cropped%29.JPG/500px-Demille_-_c1920_%283x4_cropped%29.JPG
+    image_page: https://commons.wikimedia.org/wiki/File:Demille_-_c1920_(3x4_cropped).JPG
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, The Squaw Man, the barn, Paramount and the Chinese Theatre premiere; his 70 features not built out."
+    sources: [wp-cecil-b-demille, wp-the-squaw-man-1914]
+  - key: jesse-l-lasky
+    name: Jesse L. Lasky
+    type: Artist
+    roles: [film producer]
+    born: 1880-09-13
+    died: 1958-01-13
+    prominence: 3
+    note: "Vaudeville promoter turned producer; with Samuel Goldfish (Goldwyn) and DeMille he formed the Jesse L. Lasky Feature Play Company in 1913, a key founder of what became Paramount Pictures. Moved Paramount's studio to Marathon Street in 1926."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d3/Jesse-lasky-1915.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/d/d3/Jesse-lasky-1915.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Jesse-lasky-1915.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, the Lasky company, The Squaw Man and Paramount's move; later career not built out."
+    sources: [wp-jesse-l-lasky, wp-paramount-pictures]
+  - key: carl-laemmle
+    name: Carl Laemmle
+    type: Artist
+    roles: [film producer]
+    born: 1867-01-17
+    died: 1939-09-24
+    prominence: 3
+    note: "German-born co-founder and, until 1934, owner of Universal Pictures. Opened Universal City in the San Fernando Valley in March 1915, the world's largest film production facility, with public tours. Died in Beverly Hills."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Carl_Laemmle_holding_an_Oscar_trophy%2C_1930_Retouched.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Carl_Laemmle_holding_an_Oscar_trophy%2C_1930_Retouched.jpg/500px-Carl_Laemmle_holding_an_Oscar_trophy%2C_1930_Retouched.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Carl_Laemmle_holding_an_Oscar_trophy,_1930_Retouched.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates and Universal City; his 400 films and the Universal mergers not built out."
+    sources: [wp-carl-laemmle]
+  - key: mary-pickford
+    name: Mary Pickford
+    type: Artist
+    roles: [actor, film producer]
+    born: 1892-04-08
+    died: 1979-05-29
+    prominence: 4
+    note: "'America's Sweetheart', Hollywood's first millionaire (by 1916). Co-founded United Artists (1919) and the Academy (1927); co-owned Grauman's Chinese Theatre and left the first prints in its forecourt with Fairbanks. Born in Toronto; died in a Santa Monica hospital. Birth year disputed (see discrepancy)."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/88/Mary_Pickford_cph.3c17995u.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Mary_Pickford_cph.3c17995u.jpg/500px-Mary_Pickford_cph.3c17995u.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Mary_Pickford_cph.3c17995u.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, United Artists, the Chinese Theatre and marriage to Fairbanks; films and Pickfair not built out."
+    sources: [wp-mary-pickford]
+  - key: douglas-fairbanks
+    name: Douglas Fairbanks
+    type: Artist
+    roles: [actor, film producer]
+    born: 1883-05-23
+    died: 1939-12-12
+    prominence: 3
+    note: "'The King of Hollywood', the first screen Zorro. Co-founded United Artists (1919) and the Academy, and hosted the 1st Academy Awards (1929) as its president. His Robin Hood was the first premiere at the Egyptian Theatre (1922). Married Mary Pickford in 1920."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6e/Douglas_Fairbanks_cropped.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Douglas_Fairbanks_cropped.jpg/500px-Douglas_Fairbanks_cropped.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Douglas_Fairbanks_cropped.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, United Artists, the Academy, the Hollywood theatres; films not built out."
+    sources: [wp-douglas-fairbanks]
+  - key: charlie-chaplin
+    name: Charlie Chaplin
+    type: Artist
+    roles: [actor, film director]
+    born: 1889-04-16
+    died: 1977-12-25
+    prominence: 5
+    note: "English comic actor and filmmaker, creator of the Tramp. Built his own studio off Sunset Boulevard (completed January 1918) and co-founded United Artists (1919). His Walk of Fame star was withheld in 1960 under pressure from local businesses."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/82/Charlie_Chaplin_portrait_Getty_1739411952.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Charlie_Chaplin_portrait_Getty_1739411952.jpg/500px-Charlie_Chaplin_portrait_Getty_1739411952.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Charlie_Chaplin_portrait_Getty_1739411952.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, his studio and United Artists; films, exile and later life not built out."
+    sources: [wp-charlie-chaplin, wp-hollywood-walk-of-fame]
+  - key: walt-disney
+    name: Walt Disney
+    type: Artist
+    roles: [animator, film producer]
+    born: 1901-12-05
+    died: 1966-12-15
+    prominence: 5
+    note: "Animation pioneer; moved to Hollywood in July 1923 and founded the Disney Brothers Studio with his brother Roy; created Mickey Mouse with Ub Iwerks (1928). Holds the record for Academy Awards won by an individual (22). Opened Disneyland in 1955. The concert hall downtown is named for him (his widow Lillian's gift)."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Walt_Disney_1946_%28cropped2%29.JPG
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/50/Walt_Disney_1946_%28cropped2%29.JPG
+    image_page: https://commons.wikimedia.org/wiki/File:Walt_Disney_1946_(cropped2).JPG
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, the studio's founding and Disneyland; films and studios not built out."
+    sources: [wp-walt-disney]
+  - key: sid-grauman
+    name: Sid Grauman
+    type: Artist
+    roles: [showman, film exhibitor]
+    born: 1879-03-17
+    died: 1950-03-05
+    prominence: 3
+    note: "Showman who built Hollywood's two great movie palaces, the Egyptian (1922) and the Chinese (1927), and began the forecourt handprints. Died at Cedars-Sinai in Los Angeles."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/27/Sid_Grauman.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Sid_Grauman.jpg/500px-Sid_Grauman.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Sid_Grauman.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates and the two Hollywood theatres; the downtown theatres (Million Dollar, Rialto, Metropolitan) not added."
+    sources: [wp-sid-grauman]
+  # Builders and benefactors
+  - key: griffith-j-griffith
+    name: Griffith J. Griffith
+    type: Patron
+    roles: [industrialist, philanthropist]
+    born: 1850-01-04
+    died: 1919-07-06
+    prominence: 3
+    note: "Welsh-born mining magnate who gave Los Angeles 3,015 acres for Griffith Park (1896) and left the money for the Greek Theatre and Griffith Observatory. Shot his wife in 1903 and served almost two years in prison."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/44/Griffith_Jenkins_Griffith.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Griffith_Jenkins_Griffith.jpg/500px-Griffith_Jenkins_Griffith.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Griffith_Jenkins_Griffith.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, the park gift and the observatory bequest."
+    sources: [wp-griffith-j-griffith]
+  - key: abbot-kinney
+    name: Abbot Kinney
+    type: Patron
+    roles: [developer, conservationist]
+    born: 1850-11-16
+    died: 1920-11-04
+    prominence: 2
+    note: "Tobacco fortune heir and developer who built 'Venice of America' (opened 4 July 1905), with canals dug to drain the marshes, on land south of Santa Monica."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Abbot_Kinney_portrait_circa_1900.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Abbot_Kinney_portrait_circa_1900.jpg/500px-Abbot_Kinney_portrait_circa_1900.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Abbot_Kinney_portrait_circa_1900.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates and Venice; Kinneloa, forestry and water work not built out."
+    sources: [wp-abbot-kinney, wp-venice-los-angeles]
+  - key: simon-rodia
+    name: Simon Rodia
+    type: Artist
+    roles: [sculptor, tile mason]
+    born: 1878
+    born_estimated: true
+    died: 1965-07-17
+    prominence: 3
+    note: "Sabato 'Simon' Rodia, an Italian immigrant construction worker from Serino, built the Watts Towers by himself from 1921 to 1954, then gave the property to a neighbour (1955) and moved to Martinez. Birth year disputed (see discrepancy)."
+    coverage: partly
+    coverage_note: "From the Watts Towers article (his name redirects there); no separate article."
+    sources: [wp-watts-towers]
+  - key: j-paul-getty
+    name: J. Paul Getty
+    type: Patron
+    roles: [industrialist, art collector]
+    born: 1892-12-15
+    died: 1976-06-06
+    prominence: 3
+    note: "Oil industrialist (Getty Oil, 1942), once the world's wealthiest private citizen. His collection founded the J. Paul Getty Museum; he set up the Getty Trust in 1953 and built the Getty Villa (1974), which he never visited. The museum inherited over $661 million and built the Getty Center."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/JP_Getty_1944_%28cropped%29_%282%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/JP_Getty_1944_%28cropped%29_%282%29.jpg/500px-JP_Getty_1944_%28cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:JP_Getty_1944_(cropped)_(2).jpg
+    image_license: CC BY 4.0
+    coverage: partly
+    coverage_note: "Life dates and the Getty museums; business career and family not built out."
+    sources: [wp-j-paul-getty, wp-getty-villa]
+  - key: eli-broad
+    name: Eli Broad
+    type: Patron
+    roles: [businessman, art collector, philanthropist]
+    born: 1933-06-06
+    died: 2021-04-30
+    prominence: 2
+    note: "Businessman and philanthropist; with his wife Edythe he paid for The Broad, the free contemporary art museum on Grand Avenue (2015). Died at Cedars-Sinai, Los Angeles."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8a/Eli_Broad_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Eli_Broad_%28cropped%29.jpg/500px-Eli_Broad_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Eli_Broad_(cropped).jpg
+    image_license: CC BY 2.0
+    coverage: partly
+    coverage_note: "Life dates and The Broad; his companies and education philanthropy not built out."
+    sources: [wp-eli-broad, wp-the-broad]
+  # Architects
+  - key: frank-lloyd-wright
+    name: Frank Lloyd Wright
+    type: Artist
+    roles: [architect]
+    born: 1867-06-08
+    died: 1959-04-09
+    prominence: 4
+    note: "American architect of organic architecture and the Prairie School; over 1,000 structures in 70 years, among them Fallingwater (1935). In Los Angeles he designed Hollyhock House (1919-1921) for Aline Barnsdall."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/30/Frank_Lloyd_Wright_portrait.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Frank_Lloyd_Wright_portrait.jpg/500px-Frank_Lloyd_Wright_portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Frank_Lloyd_Wright_portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates and Hollyhock House only; his other works not built out."
+    sources: [wp-frank-lloyd-wright, wp-hollyhock-house]
+  - key: frank-gehry
+    name: Frank Gehry
+    type: Artist
+    roles: [architect]
+    born: 1929-02-28
+    died: 2025-12-05
+    prominence: 4
+    note: "Canadian-American architect of sculptural, undulating buildings: the Guggenheim Bilbao, the Walt Disney Concert Hall (2003) and his own house in Santa Monica, where he died."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/75/Frank_Gehry%2C_Viljo_Revell_Centenary_reception%2C_2010_%28S2311_fl2969_it0089%29_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/7/75/Frank_Gehry%2C_Viljo_Revell_Centenary_reception%2C_2010_%28S2311_fl2969_it0089%29_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Frank_Gehry,_Viljo_Revell_Centenary_reception,_2010_(S2311_fl2969_it0089)_(cropped).jpg
+    image_license: Attribution (City of Toronto)
+    coverage: partly
+    coverage_note: "Life dates and the Disney Concert Hall; other works not built out."
+    sources: [wp-frank-gehry, wp-walt-disney-concert-hall]
+  - key: richard-meier
+    name: Richard Meier
+    type: Artist
+    roles: [architect]
+    born: 1934-10-12
+    prominence: 3
+    note: "American architect of white geometric buildings; Pritzker Prize 1984; chosen in 1984 to design the Getty Center. Resigned from his firm in 2021 after sexual assault accusations."
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/23/Richard_Meier_at_the_2009_Tribeca_Film_Festival.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Richard_Meier_at_the_2009_Tribeca_Film_Festival.jpg/500px-Richard_Meier_at_the_2009_Tribeca_Film_Festival.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Richard_Meier_at_the_2009_Tribeca_Film_Festival.jpg
+    image_license: CC BY 3.0
+    coverage: partly
+    coverage_note: "Life dates and the Getty Center; other works not built out."
+    sources: [wp-richard-meier, wp-getty-center]
+
+places:
+  # Districts and cities (the city of Los Angeles itself, `los-angeles`, comes from the mayors batch). Coordinates approximate.
+  - {key: hollywood, name: Hollywood, kind: district, city: Los Angeles, region: California, country: United States, lat: 34.098, lng: -118.327, founded: 1887, visitable: true,
+     built_by: "Harvey Henderson Wilcox, who filed the name for his estate in 1887 (his wife Daeida chose it)",
+     note: "Named by the Wilcoxes in 1887; an independent city from 9 November 1903, it merged with Los Angeles on 7 February 1910 for water and sewers, and the film industry moved in soon after.", sources: [wp-hollywood-los-angeles]}
+  - {key: santa-monica, name: Santa Monica, kind: city, region: California, country: United States, lat: 34.019, lng: -118.491, founded: 1875, visitable: true,
+     note: "Beach city on the Pacific west of Los Angeles; founded in 1875 by John P. Jones and Robert and Arcadia Baker, incorporated in 1886.", sources: [wp-santa-monica-california]}
+  # Hollywood
+  - key: hollywood-sign
+    name: Hollywood Sign
+    historical_name: Hollywoodland Sign
+    kind: landmark
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.134
+    lng: -118.322
+    founded: 1923
+    built_by: "Real estate developers Woodruff and Shoults, to advertise their Hollywoodland development; replaced in steel in 1978"
+    visitable: true
+    visit_site: "Seen from Griffith Observatory, the Hollywood Bowl and Hollywood Boulevard; the letters themselves are fenced off"
+    note: "On Mount Lee in the Santa Monica Mountains. Erected in 1923 reading HOLLYWOODLAND in 50-foot letters, meant to last a year and a half; 'LAND' removed in 1949; rebuilt in 1978 with 45-foot steel letters. Owned by the City of Los Angeles."
+    sources: [wp-hollywood-sign]
+  - key: grauman-s-chinese-theatre
+    name: Grauman's Chinese Theatre
+    historical_name: Mann's Chinese Theatre (1973-2001); TCL Chinese Theatre (sponsor's name since 2013)
+    kind: theatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.102
+    lng: -118.341
+    founded: 1927
+    built_by: "Sid Grauman, with co-owners Mary Pickford, Douglas Fairbanks, Howard Schenck and West Coast Theatres"
+    architect: "Raymond M. Kennedy of Meyer & Holler"
+    visitable: true
+    visit_site: "TCL Chinese Theatre, 6925 Hollywood Boulevard: the forecourt of handprints and footprints is free"
+    note: "Exotic Revival movie palace on Hollywood Boulevard, built from January 1926 and opened 18 May 1927. Nearly 200 stars' prints are in the forecourt concrete. Hosted three Academy Awards ceremonies and the 1977 premiere of Star Wars."
+    sources: [wp-grauman-s-chinese-theatre, wp-sid-grauman]
+  - key: grauman-s-egyptian-theatre
+    name: Grauman's Egyptian Theatre
+    kind: theatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.101
+    lng: -118.336
+    founded: 1922
+    built_by: "Sid Grauman and Charles E. Toberman"
+    architect: "Meyer & Holler"
+    visitable: true
+    visit_site: "The Egyptian, Hollywood Boulevard (Netflix and the American Cinematheque)"
+    note: "Early lavish movie palace with an Egyptian theme; site of the world's first film premiere, Douglas Fairbanks in Robin Hood (1922). Restored by the American Cinematheque (reopened 1998) and again by Netflix (reopened 2023)."
+    sources: [wp-grauman-s-egyptian-theatre]
+  - key: hollywood-walk-of-fame
+    name: Hollywood Walk of Fame
+    kind: landmark
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1016
+    lng: -118.3267
+    founded: 1960
+    built_by: "Hollywood Chamber of Commerce (idea credited to Harry Sugarman or E. M. Stuart; see discrepancy)"
+    visitable: true
+    visit_site: "Hollywood Boulevard from Gower Street to La Brea Avenue, and Vine Street from Yucca Street to Sunset"
+    note: "More than 2,800 terrazzo-and-brass stars along fifteen blocks of Hollywood Boulevard and three of Vine Street. Conceived in 1953; eight prototype stars in 1958; built from 1960; about ten million visitors a year (2010)."
+    sources: [wp-hollywood-walk-of-fame]
+  - key: hollywood-roosevelt-hotel
+    name: Hollywood Roosevelt Hotel
+    kind: hotel
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1016
+    lng: -118.3415
+    founded: 1927
+    built_by: "Financed by a group including Louis B. Mayer, Mary Pickford, Douglas Fairbanks and Sid Grauman"
+    visitable: true
+    note: "Spanish Colonial hotel at 7000 Hollywood Boulevard, built in 1926 and opened 15 May 1927; named for Theodore Roosevelt. The 1st Academy Awards were held here in 1929. David Hockney painted the pool mural in 1987."
+    sources: [wp-hollywood-roosevelt-hotel]
+  - key: dolby-theatre
+    name: Dolby Theatre
+    historical_name: Kodak Theatre
+    kind: theatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1027
+    lng: -118.3404
+    founded: 2001
+    architect: "David Rockwell (Rockwell Group)"
+    visitable: true
+    visit_site: "Ovation Hollywood, Hollywood Boulevard and Highland Avenue (guided tours)"
+    note: "Home of the Academy Awards since it opened on 9 November 2001, next to the Chinese Theatre; seats 3,332."
+    sources: [wp-dolby-theatre]
+  - key: capitol-records-building
+    name: Capitol Records Building
+    kind: office building
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.1032
+    lng: -118.3262
+    founded: 1956
+    built_by: "Capitol Records, after EMI bought it in 1955"
+    architect: "Louis Naidorf of Welton Becket and Associates"
+    visitable: true
+    visit_site: "Seen from Vine Street, just north of Hollywood and Vine (the studios are not open to the public)"
+    note: "13-storey round tower completed in April 1956, called the world's first circular office building; its look of a stack of records was a coincidence. Home of Capitol Studios; 'The House That Nat Built' (Nat King Cole)."
+    sources: [wp-capitol-records-building]
+  - key: lasky-demille-barn
+    name: Lasky-DeMille Barn (Hollywood Heritage Museum)
+    kind: museum
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.109
+    lng: -118.338
+    founded: 1901
+    built_by: "Col. Robert Northam, as a stable (1901); moved to the Paramount lot in 1926 and to Highland Avenue after 1983"
+    visitable: true
+    visit_site: "Hollywood Heritage Museum, Highland Avenue, opposite the Hollywood Bowl"
+    note: "The barn DeMille rented in December 1913 at Selma and Vine to make The Squaw Man, 'Hollywood's First Major Film Company Studio' (California Historical Landmark 554, 1956). A museum since 13 December 1985."
+    sources: [wp-hollywood-heritage-museum, wp-cecil-b-demille]
+  - key: paramount-studios
+    name: Paramount Pictures studio lot
+    kind: film studio
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0837
+    lng: -118.3214
+    founded: 1926
+    built_by: "Jesse L. Lasky bought the Robert Brunton Studios (5451 Marathon Street) in January 1926 and moved Paramount there on 8 May 1926"
+    visitable: true
+    visit_site: "Paramount Pictures Studio Tour, Melrose Avenue"
+    note: "Paramount is the last major studio still headquartered in Hollywood."
+    sources: [wp-paramount-pictures]
+  - key: hollywood-bowl
+    name: Hollywood Bowl
+    kind: amphitheatre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.112
+    lng: -118.339
+    founded: 1922
+    built_by: "Community Park and Art Association (F. W. Blanchard), for the Theatre Arts Alliance of Christine Wetherill Stevenson; owned by Los Angeles County"
+    visitable: true
+    note: "Amphitheatre in Daisy Dell, a natural bowl in the Hollywood Hills chosen in 1919. Opened 11 July 1922; summer home of the Los Angeles Philharmonic. Its concentric-arch shell stood 1929-2003 and was replaced for 2004."
+    sources: [wp-hollywood-bowl]
+  - key: hollyhock-house
+    name: Hollyhock House
+    kind: house
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.100
+    lng: -118.294
+    founded: 1921
+    built_by: "Aline Barnsdall, oil heiress, who bought Olive Hill in 1919"
+    architect: "Frank Lloyd Wright, with Rudolph Schindler, Richard Neutra and Lloyd Wright"
+    visitable: true
+    visit_site: "Hollyhock House, Barnsdall Art Park, 4800 Hollywood Boulevard (house museum)"
+    note: "Named for its hollyhock motifs; completed in 1921 as the only built part of a planned theatre complex. The city took it over in 1927."
+    sources: [wp-hollyhock-house]
+  # Griffith Park
+  - key: griffith-park
+    name: Griffith Park
+    kind: park
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.136
+    lng: -118.294
+    founded: 1896
+    built_by: "Griffith J. and Christina Griffith, who gave 3,015 acres to the city on 16 December 1896"
+    visitable: true
+    note: "One of the largest municipal parks in the United States (4,310 acres), at the eastern end of the Santa Monica Mountains; holds the Los Angeles Zoo, the Autry Museum, Griffith Observatory and the Hollywood Sign."
+    sources: [wp-griffith-park]
+  - key: griffith-observatory
+    name: Griffith Observatory
+    kind: observatory
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.118
+    lng: -118.300
+    founded: 1935
+    built_by: "Paid for by the bequest of Griffith J. Griffith; built from 20 June 1933"
+    architect: "John C. Austin and Frederic M. Ashley, from sketches by Russell W. Porter"
+    visitable: true
+    visit_site: "Griffith Observatory, free admission under Griffith's will"
+    note: "On the south slope of Mount Hollywood, with views of the basin and the Hollywood Sign. Opened 14 May 1935 as the country's third planetarium; its 12-inch Zeiss refractor is said to be the most viewed telescope in the world."
+    sources: [wp-griffith-observatory]
+  # Film studios and parks beyond Hollywood
+  - key: universal-studios-hollywood
+    name: Universal Studios Hollywood
+    historical_name: Universal City
+    kind: film studio
+    city: Universal City
+    region: California
+    country: United States
+    lat: 34.138
+    lng: -118.353
+    founded: 1915
+    built_by: "Carl Laemmle, who bought the Taylor Ranch in 1914"
+    visitable: true
+    visit_site: "Universal Studios Hollywood: studio tour and theme park"
+    note: "Working studio and theme park over the Cahuenga Pass from Hollywood. Laemmle's first public tours ended about 1930; the modern tour began 15 July 1964 and grew into the theme park."
+    sources: [wp-universal-studios-hollywood, wp-carl-laemmle]
+  - key: disneyland
+    name: Disneyland
+    kind: theme park
+    city: Anaheim
+    region: California
+    country: United States
+    lat: 33.812
+    lng: -117.919
+    founded: 1955
+    built_by: "Walt Disney, with WED Enterprises (the Imagineers)"
+    visitable: true
+    note: "The first Disney theme park, the only one built under Walt Disney's own supervision, on 160 acres of orange groves in Anaheim (Orange County). Built from 16 July 1954; 757 million visits by 2021."
+    sources: [wp-disneyland]
+  # Downtown
+  - key: bradbury-building
+    name: Bradbury Building
+    kind: office building
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0505
+    lng: -118.2479
+    founded: 1893
+    built_by: "Lewis L. Bradbury, mining millionaire (died 1892, before it was built)"
+    architect: "George Wyman, from an original design by Sumner Hunt"
+    visitable: true
+    visit_site: "Bradbury Building, Broadway and Third Street (the lobby)"
+    note: "Five-storey office building famous for its skylit atrium and ornate ironwork; the city's oldest landmarked building and a National Historic Landmark (1977). Often filmed."
+    sources: [wp-bradbury-building]
+  - key: walt-disney-concert-hall
+    name: Walt Disney Concert Hall
+    kind: concert hall
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0553
+    lng: -118.2498
+    founded: 2003
+    built_by: "Lillian Disney's $50 million gift (1987), in tribute to Walt Disney"
+    architect: "Frank Gehry; acoustics by Minoru Nagata and Yasuhisa Toyota"
+    visitable: true
+    note: "Home of the Los Angeles Philharmonic and the Master Chorale, part of the Music Center on Grand Avenue; opened 23 October 2003; seats 2,265."
+    sources: [wp-walt-disney-concert-hall]
+  - key: the-broad
+    name: The Broad
+    kind: museum
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0544
+    lng: -118.2505
+    founded: 2015
+    built_by: "Eli and Edythe Broad, who paid for the $140 million building"
+    visitable: true
+    visit_site: "The Broad, Grand Avenue: free general admission"
+    note: "Contemporary art museum for the Broad collections, opened 20 September 2015 beside the Disney Concert Hall."
+    sources: [wp-the-broad]
+  # West side and the coast
+  - key: lacma
+    name: Los Angeles County Museum of Art (LACMA)
+    kind: museum
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0639
+    lng: -118.3592
+    founded: 1965
+    built_by: "Los Angeles County; lead gift from Howard F. Ahmanson"
+    architect: "William Pereira (1965 buildings, demolished 2020); Peter Zumthor (David Geffen Galleries, 2026)"
+    visitable: true
+    visit_site: "LACMA, Wilshire Boulevard on Museum Row, next to the La Brea Tar Pits"
+    note: "Founded in 1961 out of the Los Angeles Museum of History, Science and Art; moved into its Wilshire Boulevard complex in 1965. The largest art museum in the western United States, with over 150,000 works. The Geffen Galleries opened in May 2026."
+    sources: [wp-lacma]
+  - key: getty-center
+    name: Getty Center
+    kind: museum
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.078
+    lng: -118.474
+    founded: 1997
+    built_by: "J. Paul Getty Trust; construction from August 1989"
+    architect: "Richard Meier (chosen 1984); Central Garden by Robert Irwin"
+    visitable: true
+    visit_site: "Getty Center, Brentwood: reached by a cable-pulled tram from the car park"
+    note: "Hilltop campus of the Getty Museum and the Getty Trust's institutes, opened 16 December 1997; known for its architecture, gardens and views. Holds Van Gogh's Irises. About 1.8 million visitors a year."
+    sources: [wp-getty-center]
+  - key: getty-villa
+    name: Getty Villa
+    kind: museum
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0456
+    lng: -118.5646
+    founded: 1974
+    built_by: "J. Paul Getty, on his Pacific Palisades property"
+    architect: "Robert E. Langdon Jr. and Ernest C. Wilson Jr., with archaeologist Norman Neuerburg"
+    visitable: true
+    note: "Getty's museum of Greek, Roman and Etruscan antiquities, modelled on the Villa of the Papyri at Herculaneum; opened 1974 and never visited by Getty, who died in 1976."
+    sources: [wp-getty-villa]
+  - key: santa-monica-pier
+    name: Santa Monica Pier
+    kind: pier
+    city: Santa Monica
+    region: California
+    country: United States
+    lat: 34.0086
+    lng: -118.4987
+    founded: 1909
+    built_by: "City of Santa Monica (Municipal Pier, 1909); the adjoining Pleasure Pier built by Charles I. D. Looff in 1916"
+    visitable: true
+    note: "Two joined piers at the foot of Colorado Avenue: the Municipal Pier opened 9 September 1909 to carry sewer pipes; the Pleasure Pier brought the amusements. Pacific Park's Ferris wheel and the 1920s Looff Hippodrome carousel."
+    sources: [wp-santa-monica-pier]
+  - key: venice-canals
+    name: Venice Canals
+    kind: canal
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.985
+    lng: -118.4695
+    founded: 1905
+    built_by: "Abbot Kinney, for his Venice of America"
+    visitable: true
+    visit_site: "Venice Canal Historic District, walkable from Venice Beach"
+    note: "Canals dug in 1905 to drain the marshes and copy the look of Venice, Italy; Venice was its own city until Los Angeles annexed it in 1926. Many canals were filled in for roads in the 1920s."
+    sources: [wp-venice-canal-historic-district, wp-venice-los-angeles]
+  - key: watts-towers
+    name: Watts Towers
+    historical_name: Nuestro Pueblo
+    kind: sculpture
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.9388
+    lng: -118.2412
+    founded: 1921
+    built_by: "Simon Rodia, alone, 1921-1954"
+    visitable: true
+    visit_site: "Watts Towers of Simon Rodia State Historic Park"
+    note: "Seventeen interconnected sculptural towers of steel, mortar and mosaic, the tallest 99.5 feet, built on Rodia's own lot in Watts; outsider art. National Historic Landmark (1990)."
+    sources: [wp-watts-towers]
+
+events:
+  - key: griffith-park-donated
+    name: Griffith Park given to Los Angeles
+    type: Founding
+    date: 1896-12-16
+    place: griffith-park
+    prominence: 3
+    people:
+      - {person: griffith-j-griffith, role: donor}
+    note: "Griffith and his wife Christina gave 3,015 acres of the Rancho Los Feliz to the city, asking that no one be excluded by race, creed or colour."
+    sources: [wp-griffith-park, wp-griffith-j-griffith]
+  - key: venice-of-america-opens
+    name: Venice of America opens
+    type: Founding
+    date: 1905-07-04
+    place: venice-canals
+    prominence: 2
+    people:
+      - {person: abbot-kinney, role: founder}
+    note: "Kinney's seaside resort opened with canals, a 1,200-foot pier, a salt-water plunge and an arcaded Venetian business street."
+    sources: [wp-venice-los-angeles]
+  - key: hollywood-merges-with-los-angeles
+    name: Hollywood merges with Los Angeles
+    type: Political
+    date: 1910-02-07
+    place: hollywood
+    prominence: 3
+    note: "Incorporated as a city on 9 November 1903, Hollywood voted to consolidate with Los Angeles for water and sewers; Prospect Avenue became Hollywood Boulevard. The film industry moved in soon after."
+    sources: [wp-hollywood-los-angeles]
+  - key: in-old-california-filmed
+    name: In Old California, the first film shot in Hollywood
+    type: Film
+    year: 1910
+    place: hollywood
+    prominence: 4
+    people:
+      - {person: d-w-griffith, role: director}
+    note: "A 17-minute Biograph melodrama of Mexican-era California. Long thought lost; a monument at 1713 Vine Street was set up in 2004. See discrepancy on the first Hollywood film."
+    sources: [wp-in-old-california-1910, wp-hollywood-los-angeles]
+  - key: nestor-studio-opens
+    name: Nestor opens the first film studio in Hollywood
+    type: Founding
+    date: 1911-10-27
+    place: hollywood
+    prominence: 2
+    note: "The Nestor Film Company opened a studio in the Blondeau Tavern at Sunset Boulevard and Gower Street, with the first film stage in Hollywood behind it. Merged into Universal in 1912. See discrepancy on the first studio."
+    sources: [wp-nestor-film-company]
+  - key: the-squaw-man-filmed
+    name: The Squaw Man filmed in Hollywood
+    type: Film
+    date: 1913-12-29
+    end_year: 1914
+    place: lasky-demille-barn
+    prominence: 4
+    people:
+      - {person: cecil-b-demille, role: director}
+      - {person: jesse-l-lasky, role: producer}
+    note: "DeMille's first film, co-directed with Oscar Apfel, shot from 29 December 1913 to 20 January 1914 in a barn at Selma and Vine; the first feature-length film made in Hollywood. Its success made Hollywood the new home of the U.S. film industry."
+    sources: [wp-the-squaw-man-1914, wp-cecil-b-demille]
+  - key: universal-city-opens
+    name: Universal City opens
+    type: Founding
+    date: 1915-03-14
+    place: universal-studios-hollywood
+    prominence: 3
+    people:
+      - {person: carl-laemmle, role: founder}
+    note: "A two-day grand opening with 10,000 people for the world's largest film production facility; visitors could watch filming for five cents. Date disputed by a day (see discrepancy)."
+    sources: [wp-universal-studios-hollywood, wp-carl-laemmle]
+  - key: united-artists-founded
+    name: United Artists founded
+    type: Founding
+    date: 1919-02-05
+    prominence: 4
+    people:
+      - {person: charlie-chaplin, role: founder}
+      - {person: mary-pickford, role: founder}
+      - {person: douglas-fairbanks, role: founder}
+      - {person: d-w-griffith, role: founder}
+    note: "Four stars set up their own distribution company so actors and directors could make films on their own terms."
+    sources: [wp-united-artists, wp-d-w-griffith]
+  - key: hollywood-bowl-opens
+    name: Hollywood Bowl opens
+    type: Founding
+    date: 1922-07-11
+    place: hollywood-bowl
+    prominence: 3
+    note: "The first season opened with Alfred Hertz conducting the Los Angeles Philharmonic, on a stage of little more than wooden platforms and canvas."
+    sources: [wp-hollywood-bowl]
+  - key: egyptian-theatre-robin-hood-premiere
+    name: Robin Hood opens the Egyptian Theatre, the first film premiere
+    type: Premiere
+    year: 1922
+    place: grauman-s-egyptian-theatre
+    prominence: 3
+    people:
+      - {person: sid-grauman, role: builder}
+      - {person: douglas-fairbanks, role: star}
+    note: "Grauman's Egyptian Theatre opened with Douglas Fairbanks in Robin Hood, called the world's first film premiere. The article gives the year only."
+    sources: [wp-grauman-s-egyptian-theatre]
+  - key: hollywoodland-sign-dedicated
+    name: Hollywoodland sign dedicated
+    type: Building
+    date: 1923-07-13
+    place: hollywood-sign
+    prominence: 4
+    note: "A temporary advertisement for the Hollywoodland housing development, meant to last a year and a half; it stayed, lost 'LAND' in 1949 and was rebuilt in steel in 1978."
+    sources: [wp-hollywood-sign]
+  - key: paramount-moves-to-marathon-street
+    name: Paramount moves to its Marathon Street lot
+    type: Founding
+    date: 1926-05-08
+    place: paramount-studios
+    prominence: 2
+    people:
+      - {person: jesse-l-lasky, role: buyer}
+    note: "Outgrowing the Sunset and Vine lot, Lasky bought the 26-acre Robert Brunton Studios for $1 million; Paramount took the barn with it."
+    sources: [wp-paramount-pictures, wp-hollywood-heritage-museum]
+  - key: chinese-theatre-first-handprints
+    name: First handprints at the Chinese Theatre
+    type: Ceremony
+    date: 1927-04-30
+    place: grauman-s-chinese-theatre
+    prominence: 2
+    people:
+      - {person: mary-pickford, role: imprinted}
+      - {person: douglas-fairbanks, role: imprinted}
+      - {person: sid-grauman, role: host}
+    note: "Pickford and Fairbanks were the first stars to leave prints in the forecourt; the story of how the tradition began varies (see discrepancy)."
+    sources: [wp-grauman-s-chinese-theatre]
+  - key: chinese-theatre-opens
+    name: Grauman's Chinese Theatre opens
+    type: Premiere
+    date: 1927-05-18
+    place: grauman-s-chinese-theatre
+    prominence: 4
+    people:
+      - {person: sid-grauman, role: builder}
+      - {person: cecil-b-demille, role: director of the opening film}
+    note: "Opened with the premiere of DeMille's The King of Kings, after 18 months' building at a cost of $2.1 million."
+    sources: [wp-grauman-s-chinese-theatre, wp-sid-grauman]
+  - key: first-academy-awards
+    name: First Academy Awards
+    type: Ceremony
+    date: 1929-05-16
+    place: hollywood-roosevelt-hotel
+    prominence: 4
+    people:
+      - {person: douglas-fairbanks, role: host}
+    note: "A 15-minute private dinner for 270 people ($5 a ticket) honouring films of 1927-28 in 12 categories; the winners were announced three months before. The only ceremony not broadcast."
+    sources: [wp-1st-academy-awards]
+  - key: griffith-observatory-opens
+    name: Griffith Observatory opens
+    type: Founding
+    date: 1935-05-14
+    place: griffith-observatory
+    prominence: 3
+    people:
+      - {person: griffith-j-griffith, role: benefactor}
+    note: "Built from Griffith's bequest to make astronomy free to the public; 13,000 visitors in its first five days. Used to train pilots in celestial navigation in the Second World War."
+    sources: [wp-griffith-observatory]
+  - key: disneyland-opens
+    name: Disneyland opens
+    type: Founding
+    date: 1955-07-17
+    place: disneyland
+    prominence: 4
+    people:
+      - {person: walt-disney, role: founder}
+    note: "Dedicated in a live ABC broadcast the day before its public opening; it set the pattern for theme parks."
+    sources: [wp-disneyland, wp-walt-disney]
+  - key: capitol-records-building-completed
+    name: Capitol Records Building completed
+    type: Building
+    year: 1956
+    place: capitol-records-building
+    prominence: 2
+    note: "Completed in April 1956 (the article gives no day)."
+    sources: [wp-capitol-records-building]
+  - key: walk-of-fame-first-star
+    name: First permanent star on the Hollywood Walk of Fame
+    type: Building
+    date: 1960-03-28
+    place: hollywood-walk-of-fame
+    prominence: 3
+    people:
+      - {person: charlie-chaplin, role: excluded}
+    note: "Stanley Kramer's star was the first set, near Hollywood and Gower, after groundbreaking on 8 February 1960; eight prototype stars had been shown in September 1958 (Joanne Woodward is often called the first). The Walk was dedicated on 23 November 1960. Chaplin's star was withheld; his son's lawsuit was dismissed in 1960."
+    sources: [wp-hollywood-walk-of-fame]
+  - key: lacma-opens-on-wilshire
+    name: LACMA opens on Wilshire Boulevard
+    type: Founding
+    year: 1965
+    place: lacma
+    prominence: 2
+    note: "The county art museum, founded in 1961, moved into William Pereira's three-building complex, then the largest new U.S. museum since the National Gallery of Art."
+    sources: [wp-lacma]
+  - key: getty-center-opens
+    name: Getty Center opens
+    type: Founding
+    date: 1997-12-16
+    place: getty-center
+    prominence: 3
+    people:
+      - {person: richard-meier, role: architect}
+    note: "Meier's hilltop campus for the Getty Museum and Trust opened after construction from 1989."
+    sources: [wp-getty-center]
+  - key: walt-disney-concert-hall-opens
+    name: Walt Disney Concert Hall opens
+    type: Founding
+    date: 2003-10-23
+    place: walt-disney-concert-hall
+    prominence: 3
+    people:
+      - {person: frank-gehry, role: architect}
+    note: "New home of the Los Angeles Philharmonic, sixteen years after Lillian Disney's gift."
+    sources: [wp-walt-disney-concert-hall]
+  - key: the-broad-opens
+    name: The Broad opens
+    type: Founding
+    date: 2015-09-20
+    place: the-broad
+    prominence: 2
+    people:
+      - {person: eli-broad, role: founder}
+    sources: [wp-the-broad]
+
+links:
+  - {spouse: mary-pickford, to: douglas-fairbanks, year: 1920}
+
+moments:
+  - {person: cecil-b-demille, role: worked, place: lasky-demille-barn, year: 1913}
+  - {person: jesse-l-lasky, role: worked, place: lasky-demille-barn, year: 1913}
+  - {person: simon-rodia, role: worked, place: watts-towers, year: 1921}
+  - {person: walt-disney, role: lived, place: hollywood, year: 1923}
+  - {person: d-w-griffith, role: died, place: los-angeles, year: 1948}
+  - {person: sid-grauman, role: died, place: los-angeles, year: 1950}
+  - {person: mary-pickford, role: died, place: santa-monica, year: 1979}
+  - {person: eli-broad, role: died, place: los-angeles, year: 2021}
+  - {person: frank-gehry, role: died, place: santa-monica, year: 2025}
+
+discrepancies:
+  - key: first-film-shot-in-hollywood
+    question: Which was the first film shot in Hollywood?
+    about: [{event: in-old-california-filmed}, {event: the-squaw-man-filmed}]
+    claims:
+      - {value: "In Old California (D. W. Griffith, 1910)", sources: [wp-in-old-california-1910, wp-hollywood-los-angeles], note: "The first film of any length shot in Hollywood."}
+      - {value: "The Squaw Man (DeMille, 1914)", sources: [wp-in-old-california-1910, wp-cecil-b-demille], note: "Long thought the first; it is the first feature-length film shot there."}
+    status: resolved
+    resolution: "Both hold: In Old California (1910) was the first film shot in Hollywood, The Squaw Man (1913-14) the first feature. The records say so."
+  - key: first-studio-in-hollywood
+    question: When and where did the first film studio in Hollywood open?
+    about: [{event: nestor-studio-opens}]
+    field: date
+    claims:
+      - {value: "27 October 1911, Nestor Film Company, Blondeau Tavern at Sunset and Gower", sources: [wp-nestor-film-company, wp-hollywood-los-angeles]}
+      - {value: "Early 1913, on Formosa Avenue", sources: [wp-hollywood-los-angeles]}
+    note: "The Hollywood article gives both, in consecutive sentences. The event uses Nestor, 1911, which the Nestor article details."
+  - key: universal-city-opening-date
+    question: On what day did Universal City open in 1915?
+    about: [{event: universal-city-opens}]
+    field: date
+    claims:
+      - {value: 1915-03-14, sources: [wp-universal-studios-hollywood], note: "Start of a two-day grand opening."}
+      - {value: 1915-03-15, sources: [wp-carl-laemmle]}
+    note: "Both may be right if the 15th was the second day. The event uses 14 March, the start."
+  - key: mary-pickford-birth-year
+    question: Was Mary Pickford born in 1892 or 1893?
+    about: [{person: mary-pickford}]
+    field: born
+    claims:
+      - {value: 1892-04-08, sources: [wp-mary-pickford]}
+      - {value: 1893-04-08, sources: [wp-mary-pickford], note: "The date on the plaque at her Toronto birthplace (1973); she let people think she was a year younger."}
+    note: "The record uses 1892, the article's date; her birth was never registered."
+  - key: simon-rodia-birth-year
+    question: When was Simon Rodia born?
+    about: [{person: simon-rodia}, {place: watts-towers}]
+    field: born
+    claims:
+      - {value: 1878-02-12, sources: [wp-watts-towers], note: "The article's biography section."}
+      - {value: "1879 or 1886", sources: [wp-watts-towers], note: "The article's opening paragraph."}
+    note: "The record uses 1878, marked approximate, until a better source settles it."
+  - key: chinese-theatre-handprints-origin
+    question: How did the Chinese Theatre's handprint tradition begin?
+    about: [{place: grauman-s-chinese-theatre}, {event: chinese-theatre-first-handprints}]
+    claims:
+      - {value: "Norma Talmadge stepped in the wet concrete by accident", sources: [wp-grauman-s-chinese-theatre, wp-sid-grauman], note: "The theatre's official account."}
+      - {value: "Sid Grauman stepped in it himself, then asked Mary Pickford to add her foot", sources: [wp-grauman-s-chinese-theatre, wp-sid-grauman], note: "Grauman on Lux Radio Theatre, 1937."}
+      - {value: "Mason Jean Klossner and Grauman thought of it together", sources: [wp-grauman-s-chinese-theatre], note: "Klossner's account, which he later changed."}
+    note: "Pickford and Fairbanks were the first to be imprinted (30 April 1927) in every telling."
+  - key: walk-of-fame-originator
+    question: Who came up with the Hollywood Walk of Fame?
+    about: [{place: hollywood-walk-of-fame}]
+    field: built_by
+    claims:
+      - {value: "Harry Sugarman, Hollywood Improvement Association", sources: [wp-hollywood-walk-of-fame], note: "Some sources."}
+      - {value: "E. M. Stuart, 1953 volunteer president of the Hollywood Chamber of Commerce", sources: [wp-hollywood-walk-of-fame], note: "The Chamber's own account."}
+    note: "The place record names the Chamber and both men."
