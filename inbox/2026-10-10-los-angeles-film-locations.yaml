@@ -1,0 +1,495 @@
+# Los Angeles film locations: famous films shot at places in and around Los Angeles that a visitor can find today.
+# Each film is an artwork (kind: film) linked to its director (creator) and to the places it was shot (role: filmed,
+# new: "scenes were shot here"). No poster images: posters are not freely licensed.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the session
+# scratchpad). Candidates came from Wikidata "filming location" (P915) and the landmarks' own popular-culture lists; every
+# film-place claim below is stated in the film's article, the place's article, or both (the cited sources say which).
+# Stated honestly:
+#  - Coordinates of new places are from general knowledge (the articles give none), approximate to ~3 decimals.
+#  - Directors are added with life dates and one line only (coverage: not-read, "added as director of ...").
+#  - Left out because Wikipedia doesn't confirm the LA location: The Terminator at Griffith Observatory, Safety Last!'s
+#    downtown buildings, Blade Runner at Union Station, L.A. Confidential at City Hall (only the plot is set there).
+#  - Left out because the place is gone or not visitable: the Ambassador Hotel (demolished; The Graduate, Pretty Woman,
+#    Catch Me If You Can), the Spruce Goose hangar sound stages (Titanic), the Heim Bridge (Inception).
+#  - The War of the Worlds (1953) is left out: its City Hall is a miniature, and its Pacific Tech is the Paramount lot only
+#    as a stand-in, not a scene a visitor can recognise.
+#  - A Star Is Born (1937): the Hollywood Bowl's list of films names "A Star Is Born" without a year (there are several
+#    versions), so only the Chinese Theatre, which names the 1937 film, is linked.
+#  - Chinatown (1974): the only LA location Wikipedia names is the Bradbury Building, in the building's list of films;
+#    the film's own article gives no locations. Kept, at prominence 3.
+#  - Zemeckis's birth year: Wikipedia 1951, Wikidata 1952; Ritchie's birth day: Wikipedia 28 November, Wikidata both
+#    18 and 28 November. Both recorded as discrepancies.
+batch:
+  title: "Los Angeles film locations, 1921-2016"
+  requested: "About 20-25 famous films shot at specific, visitable Los Angeles places, as artworks (kind: film) linked to their directors and to the places they were filmed"
+  date: 2026-10-10
+
+sources:
+  # Films
+  - {key: wp-the-kid-1921, title: "The Kid (1921 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Kid_(1921_film)"}
+  - {key: wp-the-music-box-1932, title: "The Music Box (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Music_Box"}
+  - {key: wp-a-star-is-born-1937, title: "A Star Is Born (1937 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/A_Star_Is_Born_(1937_film)"}
+  - {key: wp-anchors-aweigh-1945, title: "Anchors Aweigh (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anchors_Aweigh_(film)"}
+  - {key: wp-sunset-boulevard-1950, title: "Sunset Boulevard (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sunset_Boulevard_(film)"}
+  - {key: wp-union-station-1950, title: "Union Station (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Union_Station_(film)"}
+  - {key: wp-rebel-without-a-cause-1955, title: "Rebel Without a Cause (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rebel_Without_a_Cause"}
+  - {key: wp-touch-of-evil-1958, title: "Touch of Evil (Wikipedia)", url: "https://en.wikipedia.org/wiki/Touch_of_Evil"}
+  - {key: wp-the-sting-1973, title: "The Sting (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Sting"}
+  - {key: wp-chinatown-1974, title: "Chinatown (1974 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chinatown_(1974_film)"}
+  - {key: wp-the-bad-news-bears-1976, title: "The Bad News Bears (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Bad_News_Bears"}
+  - {key: wp-blade-runner-1982, title: "Blade Runner (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blade_Runner"}
+  - {key: wp-ghostbusters-1984, title: "Ghostbusters (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ghostbusters"}
+  - {key: wp-back-to-the-future-1985, title: "Back to the Future (Wikipedia)", url: "https://en.wikipedia.org/wiki/Back_to_the_Future"}
+  - {key: wp-die-hard-1988, title: "Die Hard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Die_Hard"}
+  - {key: wp-forrest-gump-1994, title: "Forrest Gump (Wikipedia)", url: "https://en.wikipedia.org/wiki/Forrest_Gump"}
+  - {key: wp-iron-man-2008, title: "Iron Man (2008 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Iron_Man_(2008_film)"}
+  - {key: wp-the-soloist-2009, title: "The Soloist (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Soloist"}
+  - {key: wp-500-days-of-summer-2009, title: "(500) Days of Summer (Wikipedia)", url: "https://en.wikipedia.org/wiki/(500)_Days_of_Summer"}
+  - {key: wp-the-artist-2011, title: "The Artist (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Artist_(film)"}
+  - {key: wp-la-la-land-2016, title: "La La Land (Wikipedia)", url: "https://en.wikipedia.org/wiki/La_La_Land"}
+  # New places
+  - {key: wp-chaplin-studios, title: "Chaplin Studios (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlie_Chaplin_Studios"}
+  - {key: wp-los-angeles-central-library, title: "Los Angeles Central Library (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Central_Library"}
+  - {key: wp-angels-flight, title: "Angels Flight (Wikipedia)", url: "https://en.wikipedia.org/wiki/Angels_Flight"}
+  - {key: wp-fox-plaza-los-angeles, title: "2121 Avenue of the Stars (Fox Plaza) (Wikipedia)", url: "https://en.wikipedia.org/wiki/2121_Avenue_of_the_Stars"}
+  - {key: wp-university-of-southern-california, title: "University of Southern California (Wikipedia)", url: "https://en.wikipedia.org/wiki/University_of_Southern_California"}
+  # Directors
+  - {key: wp-james-parrott, title: "James Parrott (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Parrott"}
+  - {key: wp-william-a-wellman, title: "William A. Wellman (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_A._Wellman"}
+  - {key: wp-george-sidney, title: "George Sidney (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_Sidney"}
+  - {key: wp-billy-wilder, title: "Billy Wilder (Wikipedia)", url: "https://en.wikipedia.org/wiki/Billy_Wilder"}
+  - {key: wp-rudolph-mate, title: "Rudolph Maté (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rudolph_Mat%C3%A9"}
+  - {key: wp-nicholas-ray, title: "Nicholas Ray (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nicholas_Ray"}
+  - {key: wp-orson-welles, title: "Orson Welles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Orson_Welles"}
+  - {key: wp-george-roy-hill, title: "George Roy Hill (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_Roy_Hill"}
+  - {key: wp-roman-polanski, title: "Roman Polanski (Wikipedia)", url: "https://en.wikipedia.org/wiki/Roman_Polanski"}
+  - {key: wp-michael-ritchie, title: "Michael Ritchie (filmmaker) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_Ritchie_(filmmaker)"}
+  - {key: wd-michael-ritchie, title: "Michael Ritchie (Wikidata Q1561788)", url: "https://www.wikidata.org/wiki/Q1561788"}
+  - {key: wp-ridley-scott, title: "Ridley Scott (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ridley_Scott"}
+  - {key: wp-ivan-reitman, title: "Ivan Reitman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ivan_Reitman"}
+  - {key: wp-robert-zemeckis, title: "Robert Zemeckis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Zemeckis"}
+  - {key: wd-robert-zemeckis, title: "Robert Zemeckis (Wikidata Q187364)", url: "https://www.wikidata.org/wiki/Q187364"}
+  - {key: wp-john-mctiernan, title: "John McTiernan (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_McTiernan"}
+  - {key: wp-jon-favreau, title: "Jon Favreau (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jon_Favreau"}
+  - {key: wp-joe-wright, title: "Joe Wright (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joe_Wright"}
+  - {key: wp-marc-webb, title: "Marc Webb (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marc_Webb"}
+  - {key: wp-michel-hazanavicius, title: "Michel Hazanavicius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michel_Hazanavicius"}
+  - {key: wp-damien-chazelle, title: "Damien Chazelle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Damien_Chazelle"}
+
+people:
+  # Directors (Charlie Chaplin already exists). All type Artist, role film director; not built out.
+  - {key: james-parrott, name: James Parrott, type: Artist, roles: [film director, actor], born: 1897-08-02, died: 1939-05-10, prominence: 2,
+     note: "American actor and director, younger brother of Charley Chase; directed Laurel and Hardy's The Music Box (1932).",
+     coverage: not-read, coverage_note: "Added as director of The Music Box.", sources: [wp-james-parrott]}
+  - {key: william-a-wellman, name: William A. Wellman, type: Artist, roles: [film director], born: 1896-02-29, died: 1975-12-09, prominence: 3,
+     note: "American director of over 80 films; his Wings (1927) won the first Best Picture. Won the Oscar for the story of A Star Is Born (1937).",
+     coverage: not-read, coverage_note: "Added as director of A Star Is Born (1937).", sources: [wp-william-a-wellman]}
+  - {key: george-sidney, name: George Sidney, type: Artist, roles: [film director], born: 1916-10-04, died: 2002-05-05, prominence: 2,
+     note: "MGM director of big post-war musicals; Gene Kelly dances with Jerry Mouse in his Anchors Aweigh (1945).",
+     coverage: not-read, coverage_note: "Added as director of Anchors Aweigh.", sources: [wp-george-sidney]}
+  - {key: billy-wilder, name: Billy Wilder, type: Artist, roles: [film director], born: 1906-06-22, died: 2002-03-27, prominence: 4,
+     note: "Austrian-born director and screenwriter in Hollywood from 1934; Double Indemnity, The Lost Weekend, Sunset Boulevard. Seven Academy Awards.",
+     coverage: not-read, coverage_note: "Added as director of Sunset Boulevard.", sources: [wp-billy-wilder]}
+  - {key: rudolph-mate, name: Rudolph Maté, type: Artist, roles: [film director], born: 1898-01-21, died: 1964-10-27, prominence: 2,
+     note: "Cinematographer (The Passion of Joan of Arc, Gilda) turned director; directed Union Station (1950).",
+     coverage: not-read, coverage_note: "Added as director of Union Station.", sources: [wp-rudolph-mate]}
+  - {key: nicholas-ray, name: Nicholas Ray, type: Artist, roles: [film director], born: 1911-08-07, died: 1979-06-16, prominence: 3,
+     note: "American director; best known for Rebel Without a Cause (1955), with James Dean.",
+     coverage: not-read, coverage_note: "Added as director of Rebel Without a Cause.", sources: [wp-nicholas-ray]}
+  - {key: orson-welles, name: Orson Welles, type: Artist, roles: [film director, actor], born: 1915-05-06, died: 1985-10-10, prominence: 4,
+     note: "American actor and filmmaker, counted among the most influential of all time; The War of the Worlds broadcast (1938), Citizen Kane, Touch of Evil.",
+     coverage: not-read, coverage_note: "Added as director of Touch of Evil.", sources: [wp-orson-welles]}
+  - {key: george-roy-hill, name: George Roy Hill, type: Artist, roles: [film director], born: 1921-12-20, died: 2002-12-27, prominence: 3,
+     note: "American director of Butch Cassidy and the Sundance Kid (1969) and The Sting (1973), which won him the Oscar for Best Director.",
+     coverage: not-read, coverage_note: "Added as director of The Sting.", sources: [wp-george-roy-hill]}
+  - {key: roman-polanski, name: Roman Polanski, type: Artist, roles: [film director], born: 1933-08-18, prominence: 3,
+     note: "Polish-French director of Chinatown (1974). Pleaded guilty in 1977 to unlawful sex with a 13-year-old and fled the US in 1978; still a fugitive from US justice.",
+     coverage: not-read, coverage_note: "Added as director of Chinatown.", sources: [wp-roman-polanski]}
+  - {key: michael-ritchie, name: Michael Ritchie, type: Artist, roles: [film director], born: 1938-11-28, died: 2001-04-16, prominence: 2,
+     note: "American director of satirical comedies and sports films: The Candidate, The Bad News Bears (1976), Fletch.",
+     coverage: not-read, coverage_note: "Added as director of The Bad News Bears.", sources: [wp-michael-ritchie]}
+  - {key: ridley-scott, name: Ridley Scott, type: Artist, roles: [film director], born: 1937-11-30, prominence: 4,
+     note: "English director of Alien, Blade Runner (1982), Thelma & Louise and Gladiator.",
+     coverage: not-read, coverage_note: "Added as director of Blade Runner.", sources: [wp-ridley-scott]}
+  - {key: ivan-reitman, name: Ivan Reitman, type: Artist, roles: [film director], born: 1946-10-27, died: 2022-02-12, prominence: 3,
+     note: "Canadian director and producer of comedies: Stripes, Ghostbusters (1984), Twins, Dave.",
+     coverage: not-read, coverage_note: "Added as director of Ghostbusters.", sources: [wp-ivan-reitman]}
+  - {key: robert-zemeckis, name: Robert Zemeckis, type: Artist, roles: [film director], born: 1951-05-14, prominence: 4,
+     note: "American director of the Back to the Future trilogy, Who Framed Roger Rabbit and Forrest Gump (Oscar for Best Director). Studied at USC.",
+     coverage: not-read, coverage_note: "Added as director of Back to the Future and Forrest Gump.", sources: [wp-robert-zemeckis]}
+  - {key: john-mctiernan, name: John McTiernan, type: Artist, roles: [film director], born: 1951-01-08, prominence: 3,
+     note: "American action director: Predator, Die Hard (1988), The Hunt for Red October.",
+     coverage: not-read, coverage_note: "Added as director of Die Hard.", sources: [wp-john-mctiernan]}
+  - {key: jon-favreau, name: Jon Favreau, type: Artist, roles: [film director, actor], born: 1966-10-19, prominence: 3,
+     note: "American actor and filmmaker; directed Iron Man (2008), the first film of the Marvel Cinematic Universe.",
+     coverage: not-read, coverage_note: "Added as director of Iron Man.", sources: [wp-jon-favreau]}
+  - {key: joe-wright, name: Joe Wright, type: Artist, roles: [film director], born: 1972-08-25, prominence: 2,
+     note: "English director of Pride & Prejudice, Atonement, The Soloist (2009) and Darkest Hour.",
+     coverage: not-read, coverage_note: "Added as director of The Soloist.", sources: [wp-joe-wright]}
+  - {key: marc-webb, name: Marc Webb, type: Artist, roles: [film director], born: 1974-08-31, prominence: 2,
+     note: "American music-video and film director; feature debut (500) Days of Summer (2009), then The Amazing Spider-Man.",
+     coverage: not-read, coverage_note: "Added as director of (500) Days of Summer.", sources: [wp-marc-webb]}
+  - {key: michel-hazanavicius, name: Michel Hazanavicius, type: Artist, roles: [film director], born: 1967-03-29, prominence: 3,
+     note: "French director of The Artist (2011), which won Best Picture and Best Director.",
+     coverage: not-read, coverage_note: "Added as director of The Artist.", sources: [wp-michel-hazanavicius]}
+  - {key: damien-chazelle, name: Damien Chazelle, type: Artist, roles: [film director], born: 1985-01-19, prominence: 3,
+     note: "French-American director of Whiplash, La La Land (2016; youngest Best Director winner, at 32) and Babylon.",
+     coverage: not-read, coverage_note: "Added as director of La La Land.", sources: [wp-damien-chazelle]}
+
+places:
+  - key: chaplin-studios
+    name: Chaplin Studios (Charlie Chaplin Studios)
+    kind: film studio
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.096
+    lng: -118.344
+    founded: 1917
+    built_by: "Charlie Chaplin; later A&M Records (1966-1999) and the Jim Henson Company (2000-2024)"
+    visitable: false
+    visit_site: "A working studio; seen from La Brea Avenue, just south of Sunset Boulevard"
+    note: "Chaplin's own studio from 1917 to 1953, where he made The Kid, The Gold Rush, City Lights, Modern Times and The Great Dictator. A Los Angeles Historic-Cultural Monument; the name Chaplin Studios was restored in 2026."
+    sources: [wp-chaplin-studios]
+  - key: music-box-steps
+    name: Music Box Steps
+    kind: staircase
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.087
+    lng: -118.275
+    visitable: true
+    visit_site: "Public stairway at 923-925 North Vendome Street, Silver Lake; a plaque on a lower step"
+    note: "133 public steps from Vendome Street up to Descanso Drive, where Laurel and Hardy hauled a piano in The Music Box (1932); a popular tourist attraction near Laurel and Hardy Park."
+    sources: [wp-the-music-box-1932]
+  - key: venice-los-angeles
+    name: Venice
+    historical_name: Venice of America
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.985
+    lng: -118.469
+    founded: 1905
+    built_by: "Abbot Kinney"
+    visitable: true
+    visit_site: "Venice Beach boardwalk, the canals and Abbot Kinney Boulevard"
+    note: "Beach district founded by Abbot Kinney as the resort town Venice of America, opened 4 July 1905; part of Los Angeles since 1926. A common filming location: piers, skate park, canals and boardwalk."
+    sources: [wp-venice-los-angeles]
+  - key: los-angeles-central-library
+    name: Los Angeles Central Library
+    kind: library
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0505
+    lng: -118.2551
+    founded: 1926
+    architect: "Bertram Goodhue (Goodhue Building); Tom Bradley wing added 1993"
+    visitable: true
+    visit_site: "Richard J. Riordan Central Library, 630 West 5th Street, Downtown"
+    note: "Main branch of the Los Angeles Public Library, opened July 1926; the Goodhue Building is a downtown landmark on the National Register of Historic Places (1970)."
+    sources: [wp-los-angeles-central-library]
+  - key: angels-flight
+    name: Angels Flight
+    kind: funicular
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0514
+    lng: -118.2500
+    founded: 1901
+    visitable: true
+    visit_site: "Between Hill Street and California Plaza, Bunker Hill, opposite Grand Central Market"
+    note: "Narrow-gauge funicular with two cars, Olivet and Sinai. Ran on Third Street from 1901 to 1969, reopened half a block south in 1996; closed after accidents and back in service since 31 August 2017."
+    sources: [wp-angels-flight]
+  - key: fox-plaza
+    name: Fox Plaza (2121 Avenue of the Stars)
+    kind: office tower
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0555
+    lng: -118.4130
+    founded: 1987
+    built_by: "Marvin Davis, on land kept back from his sale of 20th Century Fox"
+    architect: "Scott Johnson (Johnson Fain)"
+    visitable: true
+    visit_site: "Exterior only, on Avenue of the Stars in Century City; the building cannot be toured"
+    note: "34-storey Century City tower completed in 1987, now called 2121 Avenue of the Stars. Ronald Reagan kept his offices on the 34th floor after leaving office. Nakatomi Plaza in Die Hard."
+    sources: [wp-fox-plaza-los-angeles, wp-die-hard-1988]
+  - key: university-of-southern-california
+    name: University of Southern California
+    kind: university
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.0224
+    lng: -118.2851
+    founded: 1880
+    built_by: "Robert M. Widney, with land given by Ozro Childs, John G. Downey and Isaias W. Hellman"
+    visitable: true
+    visit_site: "University Park campus, south of Downtown"
+    note: "California's oldest private research university, founded 1880. Its campus is a frequent filming location (Forrest Gump, Ghostbusters, The Graduate, The Social Network)."
+    sources: [wp-university-of-southern-california]
+
+artworks:
+  # 1920s-1940s
+  - key: the-kid-1921
+    name: The Kid
+    kind: film
+    made: 1921
+    prominence: 4
+    note: "Chaplin's first feature as director, with Jackie Coogan; silent comedy-drama, shot at his own studio on La Brea."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: chaplin-studios, role: filmed}
+    sources: [wp-the-kid-1921, wp-chaplin-studios]
+  - key: the-music-box-1932
+    name: The Music Box
+    kind: film
+    made: 1932
+    prominence: 3
+    note: "Laurel and Hardy short: the pair try to move a piano up the 133 Vendome Street steps in Silver Lake. Won the first Oscar for Best Live Action Short (Comedy)."
+    people:
+      - {person: james-parrott, role: creator}
+    places:
+      - {place: music-box-steps, role: filmed}
+    sources: [wp-the-music-box-1932]
+  - key: a-star-is-born-1937
+    name: A Star Is Born
+    kind: film
+    made: 1937
+    prominence: 3
+    note: "Technicolor drama with Janet Gaynor and Fredric March; Esther's premiere is at the Chinese Theatre, whose forecourt signatures and footprints are seen in the film; it also premiered there."
+    people:
+      - {person: william-a-wellman, role: creator}
+    places:
+      - {place: grauman-s-chinese-theatre, role: filmed}
+    sources: [wp-a-star-is-born-1937, wp-grauman-s-chinese-theatre]
+  - key: anchors-aweigh-1945
+    name: Anchors Aweigh
+    kind: film
+    made: 1945
+    prominence: 2
+    note: "MGM musical with Frank Sinatra and Gene Kelly; an exterior scene at the Hollywood Bowl, where Sinatra sings \"I Fall in Love Too Easily\"."
+    people:
+      - {person: george-sidney, role: creator}
+    places:
+      - {place: hollywood-bowl, role: filmed}
+    sources: [wp-anchors-aweigh-1945, wp-hollywood-bowl]
+  # 1950s
+  - key: sunset-boulevard-1950
+    name: Sunset Boulevard
+    kind: film
+    made: 1950
+    prominence: 4
+    note: "Film noir with Gloria Swanson and William Holden; DeMille's scenes were shot on his Samson and Delilah set at Paramount, and Gillis and Betty walk the real Paramount back lot."
+    people:
+      - {person: billy-wilder, role: creator}
+    places:
+      - {place: paramount-studios, role: filmed}
+    sources: [wp-sunset-boulevard-1950]
+  - key: union-station-1950
+    name: Union Station
+    kind: film
+    made: 1950
+    prominence: 2
+    note: "Kidnap noir with William Holden; set in Chicago's Union Station but shot in Los Angeles Union Station."
+    people:
+      - {person: rudolph-mate, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+    sources: [wp-union-station-1950, wp-los-angeles-union-station]
+  - key: rebel-without-a-cause-1955
+    name: Rebel Without a Cause
+    kind: film
+    made: 1955
+    prominence: 5
+    note: "James Dean's teen drama: the planetarium field trip, the knife fight and the final standoff are set at Griffith Observatory, where the fight was filmed."
+    people:
+      - {person: nicholas-ray, role: creator}
+    places:
+      - {place: griffith-observatory, role: filmed}
+    sources: [wp-rebel-without-a-cause-1955]
+  - key: touch-of-evil-1958
+    name: Touch of Evil
+    kind: film
+    made: 1958
+    prominence: 3
+    note: "Welles's border-town noir with Charlton Heston and Janet Leigh, shot in Venice from 18 February to 2 April 1957, standing in for a Mexican border town."
+    people:
+      - {person: orson-welles, role: creator}
+    places:
+      - {place: venice-los-angeles, role: filmed}
+    sources: [wp-touch-of-evil-1958]
+  # 1970s
+  - key: the-sting-1973
+    name: The Sting
+    kind: film
+    made: 1973
+    prominence: 4
+    note: "Caper film with Paul Newman and Robert Redford, made mostly on the Universal backlot; Gondorff's carousel scenes were shot at the Santa Monica Pier's Carousel and Hippodrome."
+    people:
+      - {person: george-roy-hill, role: creator}
+    places:
+      - {place: santa-monica-pier, role: filmed}
+      - {place: universal-studios-hollywood, role: filmed}
+    sources: [wp-the-sting-1973, wp-santa-monica-pier]
+  - key: chinatown-1974
+    name: Chinatown
+    kind: film
+    made: 1974
+    prominence: 3
+    note: "Neo-noir with Jack Nicholson and Faye Dunaway, inspired by Los Angeles's water wars. The Bradbury Building lists it among the films shot there; the film's own article names no locations."
+    people:
+      - {person: roman-polanski, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-chinatown-1974, wp-bradbury-building]
+  - key: the-bad-news-bears-1976
+    name: The Bad News Bears
+    kind: film
+    made: 1976
+    prominence: 2
+    note: "Little League comedy with Walter Matthau, filmed mainly in the San Fernando Valley; one scene was shot in the council chamber of City Hall."
+    people:
+      - {person: michael-ritchie, role: creator}
+    places:
+      - {place: los-angeles-city-hall, role: filmed}
+    sources: [wp-the-bad-news-bears-1976, wp-los-angeles-city-hall]
+  # 1980s
+  - key: blade-runner-1982
+    name: Blade Runner
+    kind: film
+    made: 1982
+    prominence: 4
+    note: "Science fiction set in a 2019 Los Angeles; the Bradbury Building is the setting for J. F. Sebastian's apartment and the climactic rooftop scene."
+    people:
+      - {person: ridley-scott, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-blade-runner-1982, wp-bradbury-building]
+  - key: ghostbusters-1984
+    name: Ghostbusters
+    kind: film
+    made: 1984
+    prominence: 3
+    note: "Set in New York but largely shot in Los Angeles: the New York Public Library's basement stacks, where the first ghost appears, are the Los Angeles Central Library."
+    people:
+      - {person: ivan-reitman, role: creator}
+    places:
+      - {place: los-angeles-central-library, role: filmed}
+    sources: [wp-ghostbusters-1984]
+  - key: back-to-the-future-1985
+    name: Back to the Future
+    kind: film
+    made: 1985
+    prominence: 4
+    note: "Hill Valley's clock tower and town square are sets on the Universal Studios lot in Universal City, where most of the film was shot."
+    people:
+      - {person: robert-zemeckis, role: creator}
+    places:
+      - {place: universal-studios-hollywood, role: filmed}
+    sources: [wp-back-to-the-future-1985]
+  - key: die-hard-1988
+    name: Die Hard
+    kind: film
+    made: 1988
+    prominence: 5
+    note: "Shot almost entirely in and around the still unfinished Fox Plaza in Century City, which plays Nakatomi Plaza; now a tourist sight, though it can't be toured."
+    people:
+      - {person: john-mctiernan, role: creator}
+    places:
+      - {place: fox-plaza, role: filmed}
+    sources: [wp-die-hard-1988, wp-fox-plaza-los-angeles]
+  # 1990s-2010s
+  - key: forrest-gump-1994
+    name: Forrest Gump
+    kind: film
+    made: 1994
+    prominence: 3
+    note: "Most of the college campus scenes (the University of Alabama in the story) were filmed at the University of Southern California."
+    people:
+      - {person: robert-zemeckis, role: creator}
+    places:
+      - {place: university-of-southern-california, role: filmed}
+    sources: [wp-forrest-gump-1994, wp-university-of-southern-california]
+  - key: iron-man-2008
+    name: Iron Man
+    kind: film
+    made: 2008
+    prominence: 2
+    note: "First Marvel Cinematic Universe film; Walt Disney Concert Hall is briefly used for a Stark Industries party."
+    people:
+      - {person: jon-favreau, role: creator}
+    places:
+      - {place: walt-disney-concert-hall, role: filmed}
+    sources: [wp-iron-man-2008, wp-walt-disney-concert-hall]
+  - key: the-soloist-2009
+    name: The Soloist
+    kind: film
+    made: 2009
+    prominence: 2
+    note: "Drama about the homeless cellist Nathaniel Ayers, with Jamie Foxx and Robert Downey Jr.; Walt Disney Concert Hall was filmed extensively, inside and out."
+    people:
+      - {person: joe-wright, role: creator}
+    places:
+      - {place: walt-disney-concert-hall, role: filmed}
+    sources: [wp-the-soloist-2009, wp-walt-disney-concert-hall]
+  - key: 500-days-of-summer-2009
+    name: (500) Days of Summer
+    kind: film
+    made: 2009
+    prominence: 3
+    note: "Romantic comedy set in downtown Los Angeles; Tom's job interview is at the Bradbury Building."
+    people:
+      - {person: marc-webb, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-500-days-of-summer-2009, wp-bradbury-building]
+  - key: the-artist-2011
+    name: The Artist
+    kind: film
+    made: 2011
+    prominence: 3
+    note: "Black-and-white silent-style film about Hollywood from 1927 to 1932, Best Picture winner; the staircase sequence was shot in the Bradbury Building."
+    people:
+      - {person: michel-hazanavicius, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-the-artist-2011, wp-bradbury-building]
+  - key: la-la-land-2016
+    name: La La Land
+    kind: film
+    made: 2016
+    prominence: 4
+    note: "Musical with Ryan Gosling and Emma Stone, shot at over 60 Los Angeles locations: among them Griffith Observatory, where Mia and Seb share a kiss, Angels Flight (reopened for a single day of filming) and the Watts Towers."
+    people:
+      - {person: damien-chazelle, role: creator}
+    places:
+      - {place: griffith-observatory, role: filmed}
+      - {place: angels-flight, role: filmed}
+      - {place: watts-towers, role: filmed}
+    sources: [wp-la-la-land-2016, wp-angels-flight]
+
+discrepancies:
+  - key: robert-zemeckis-birth-year
+    question: Was Robert Zemeckis born in 1951 or 1952?
+    about: [{person: robert-zemeckis}]
+    field: born
+    claims:
+      - {value: "1951-05-14", sources: [wp-robert-zemeckis], note: "Lead and Early life: born in Chicago on May 14, 1951"}
+      - {value: "1952-05-14", sources: [wd-robert-zemeckis], note: "Wikidata date of birth"}
+    note: "The record uses Wikipedia's 1951-05-14, which the article states twice."
+  - key: michael-ritchie-birth-date
+    question: Was Michael Ritchie born on 18 or 28 November 1938?
+    about: [{person: michael-ritchie}]
+    field: born
+    claims:
+      - {value: "1938-11-28", sources: [wp-michael-ritchie], note: "Wikipedia lead; Wikidata also lists this date"}
+      - {value: "1938-11-18", sources: [wd-michael-ritchie], note: "Second Wikidata date of birth"}
+    note: "The record uses 1938-11-28, given by Wikipedia and one of Wikidata's two values."
