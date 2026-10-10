@@ -66,6 +66,15 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ## Data
 
+### In progress
+
+#### [P2] Western painters from 1500 (target 500), in gated batches
+`type: task` · `area: data` · `status: in progress` · `issue: #98`
+
+Painters of Europe and the US from 1500 to today, about 40 per batch, ranked by Wikipedia sitelinks (Wikidata), one batch merged at a time with a stop for Ty's go after each. Batch 1 (41 Renaissance to Romanticism masters) done 2026-10-10. Each person is marked `coverage: partly`; portfolios, artwork images and the missing patrons (popes, Philip IV, Napoleon, Medici) come later.
+Source: Ty, 2026-10-10.
+
+
 ### Ready (ranked)
 
 #### [P1] Places: today's location (city, county, country) and current coordinates
