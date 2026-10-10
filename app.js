@@ -601,13 +601,17 @@ function render() {
     // A crown sits above the name of anyone who held a title (in the requested years, if the request names some).
     const head = headlineTitle(p.id, S.filter?.from, S.filter?.to);
     const crown = (cy, w) => el("path", { d: crownPath(cx - w / 2, cy, w), class: "crown" + (head.title.disputed ? " disputed" : "") }, g);
+    // The name card (crown, name, dates, title) sits just above the top of this person's own bar, not in a
+    // header row: in a long span, someone born late would otherwise have their name far above their line.
+    // dy is how far their bar starts below the chart's top; people born at the start keep the header spot.
+    const top = y(s ?? y0), dy = Math.max(0, top - TOP);
     if (Z.names === "full") {
       const lift = titled ? 16 : 0;   // room for the title line
       const i = p.name.indexOf(" of ");
       const parts = i > 0 ? [p.name.slice(0, i), p.name.slice(i + 1)] : [p.name];
-      const firstY = TOP - 46 - lift + (parts.length === 1 ? 16 : 0);
+      const firstY = TOP - 46 - lift + (parts.length === 1 ? 16 : 0) + dy;
       parts.forEach((line, k) => el("text", { x: cx, y: firstY + k * 16, "text-anchor": "middle", class: "name" }, g).textContent = line);
-      el("text", { x: cx, y: TOP - 12 - lift, "text-anchor": "middle", class: "dates" }, g).textContent = fmtSpan(p.birth_year, p.death_year);
+      el("text", { x: cx, y: TOP - 12 - lift + dy, "text-anchor": "middle", class: "dates" }, g).textContent = fmtSpan(p.birth_year, p.death_year);
       if (head) {
         crown(firstY - 25, 15);
         // "King of England +1" under the dates, cut to fit the column.
@@ -617,15 +621,15 @@ function render() {
         let label = head.title.title + (head.more ? ` +${head.more}` : "");
         if (label.length > max) label = head.title.title;
         if (label.length > max) label = label.slice(0, max - 1) + "…";
-        el("text", { x: cx, y: TOP - 13, "text-anchor": "middle", class: "rank" }, g).textContent = label;
+        el("text", { x: cx, y: TOP - 13 + dy, "text-anchor": "middle", class: "rank" }, g).textContent = label;
       }
     } else if (Z.names === "short") {
       const short = p.name.split(" of ")[0];
-      el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "name", style: "font-size:11px" }, g).textContent = short.length > 9 ? short.slice(0, 8) + "…" : short;
-      if (head) crown(TOP - 34, 12);
+      el("text", { x: cx, y: TOP - 12 + dy, "text-anchor": "middle", class: "name", style: "font-size:11px" }, g).textContent = short.length > 9 ? short.slice(0, 8) + "…" : short;
+      if (head) crown(TOP - 34 + dy, 12);
     }
     const color = colorFor(p);
-    const top = y(s ?? y0), hgt = Math.max(2, y(d ?? s ?? y0) - top);
+    const hgt = Math.max(2, y(d ?? s ?? y0) - top);
     if (inLaw) el("rect", { x: cx - Z.bar / 2 + .75, y: top, width: Z.bar - 1.5, height: hgt, rx: 3, fill: color, "fill-opacity": .22, stroke: color, "stroke-width": 1.5, "stroke-dasharray": p.birth_year == null ? "4 3" : null, class: "bar" }, g);
     else el("rect", { x: cx - Z.bar / 2, y: top, width: Z.bar, height: hgt, rx: 3, fill: color, class: "bar" }, g);
     // Reigns: a gold strip beside the bar for the years each title was held.
@@ -639,7 +643,9 @@ function render() {
       const ry = y(t.start_year), rh = Math.max(2, y(end) - ry);
       el("rect", { x: cx + Z.bar / 2 + 2 + k * 5, y: ry, width: 3, height: rh, rx: 1.5, class: "reign" + (t.disputed ? " disputed" : "") }, g);
     });
-    el("rect", { x: cx - Z.col / 2 + 3, y: LANE_H + 4, width: Z.col - 6, height: Math.max(top + hgt, TOP) - LANE_H + 4, rx: 4, class: "hit" }, g);
+    // Click area: from the name card down to the end of the bar.
+    const hy = LANE_H + 4 + dy;
+    el("rect", { x: cx - Z.col / 2 + 3, y: hy, width: Z.col - 6, height: Math.max(top + hgt, TOP + dy) - hy + 8, rx: 4, class: "hit" }, g);
     g.addEventListener("click", () => select(p.id));
     g.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(p.id); } });
     groups[p.id] = g;
