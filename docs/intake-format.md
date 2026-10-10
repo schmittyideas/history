@@ -33,7 +33,7 @@ sources:
 |---|---|
 | `key` | Unique key (required) |
 | `name` | Display name (required for new people) |
-| `type` | Main type, used for colour: Royalty, Nobility, Clergy, Government (mayors, governors, presidents: elected or appointed offices), Artist, Writer, Composer, Scholar. Film people are Artists with a film role (`film director`, `actor`, `animator`) |
+| `type` | Main type, used for colour: Royalty, Nobility, Clergy, Government (mayors, governors, presidents: elected or appointed offices), Artist, Writer, Composer, Scholar, Patron (benefactors and founders who gave a city a park, museum or district). Film people are Artists with a film role (`film director`, `actor`, `animator`) |
 | `roles` | Extra roles: e.g. `[patron]`, `[pope]`, `[painter, architect]` |
 | `born`, `died` | Year, or full date `1120-11-25`. BC years are negative: `-384` = 384 BC (see below) |
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |

@@ -139,8 +139,9 @@ const TYPE_WORDS = [
   [/\b(composers?|musicians?)\b/gi, "Composer"],
   [/\b(inventors?|scientists?|philosophers?)\b/gi, "Scholar"],
   [/\b(mayors?|governors?|presidents?|politicians?|government)\b/gi, "Government"],
+  [/\b(patrons?|benefactors?|philanthropists?)\b/gi, "Patron"],
 ];
-const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials" };
+const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials", Patron: "patrons and benefactors" };
 // Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
 // Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
 const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
@@ -157,6 +158,7 @@ const CATS = [
   { key: "writers", label: "Writers", color: "var(--lichen)", test: p => p.type === "Writer" },
   { key: "composers", label: "Composers", color: "var(--rose)", test: p => p.type === "Composer" },
   { key: "scholars", label: "Scholars", color: "var(--slate)", test: p => p.type === "Scholar" },
+  { key: "patrons", label: "Patrons", color: "var(--indigo)", test: p => p.type === "Patron" },
 ];
 const catsOf = p => { const ks = CATS.filter(c => c.test(p)).map(c => c.key); return ks.length ? ks : ["other"]; };
 const catsFiltering = () => S.catsOff.size > 0;
@@ -303,7 +305,7 @@ function computeView(db, f) {
 
 /* ------------------------------------------------------------------ lanes */
 
-const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar"];
+const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar", "Patron"];
 
 function familyOrder(db, members, ids) {
   const order = [], seen = new Set();
