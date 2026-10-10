@@ -1,0 +1,602 @@
+# Los Angeles films before 1970: more famous films, silent era to the 1960s, shot at places in the city of Los Angeles.
+# Part of a "top 100 Los Angeles film locations" set (parallel batches cover 1970-1999 and 2000 onwards). Follows the
+# conventions of inbox/2026-10-10-los-angeles-film-locations.yaml: each film is an artwork (kind: film) linked to its
+# director (creator) and to the places it was shot (role: filmed). No cast, plot or posters: this is a locale database.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the session
+# scratchpad). Candidates came from Wikidata "filming location" (P915) inside Los Angeles and the landmarks' own film
+# lists; every film-place claim below is stated in the film's article, the place's article, or both (the cited sources
+# say which).
+# Stated honestly:
+#  - Coordinates of new places are from general knowledge (the articles give none), approximate to ~3 decimals.
+#  - Directors are added with life dates and one line only (coverage: not-read, "added as director of ...").
+#  - Chaplin-Keaton-Lloyd Alley has no Wikipedia article of its own; its key is its name, and its only source is the
+#    article on Cops (1922).
+#  - Bunker Hill's Victorian streets, where Criss Cross, M, Cry Danger, Kiss Me Deadly and The Exiles were shot, were
+#    razed in the 1960s redevelopment; the district itself is visitable, so it is kept as a place with that said.
+#  - Angels Flight is linked for Criss Cross, M and Kiss Me Deadly: the cars ran on Third Street then and run half a
+#    block south now (see the place's note from the earlier batch).
+# Left out because Wikipedia doesn't confirm a Los Angeles location:
+#  - North by Northwest (Wikidata says Griffith Park; the article names Wasco, New York, Chicago, Mount Rushmore and MGM).
+#  - Easy Rider (no LA location named), Point Blank (the Los Angeles River money drop is only in the plot),
+#    Safety Last! (as in the earlier batch), I Confess (Wikidata says Hollywood; the article doesn't).
+#  - Recreation (1914): Echo Park Lake's article says it takes place there, but it has no article of its own to check.
+# Left out because the place is gone, not visitable, or outside the city of Los Angeles:
+#  - The Graduate's Ambassador Hotel (demolished), Stalag 17's prison-camp set on the John Show Ranch in Woodland Hills
+#    (now a church), Double Indemnity's Jerry's Market, Big Business's private house in Cheviot Hills.
+#  - Studio-lot films at MGM in Culver City (North by Northwest's interiors, Singin' in the Rain) and anything in
+#    Pasadena, Glendale, Santa Monica or Beverly Hills; Sunset Boulevard's road scenes in Griffith Park are not added
+#    here (the film is already in the database).
+#  - Obscure films at already-linked places: While the City Sleeps (1928, City Hall in the background), The Unfaithful,
+#    Shockproof, I, the Jury, Indestructible Man, Caprice and Marlowe (Bradbury Building).
+# Sources disagree (recorded as discrepancies): where The Birth of a Nation's battle scenes were shot; who directed
+# Twenty Minutes of Love; the release year of House on Haunted Hill and of Kiss Me Deadly; Henry Lehrman's birth date;
+# Michael Curtiz's, Phil Tucker's and Kent Mackenzie's death dates.
+batch:
+  title: "Los Angeles films before 1970"
+  requested: "About 25 more famous films released before 1970, shot at specific Los Angeles places, as artworks (kind: film) linked to their directors and to the places they were filmed"
+  date: 2026-10-10
+
+sources:
+  # Films
+  - {key: wp-kid-auto-races-at-venice-1914, title: "Kid Auto Races at Venice (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kid_Auto_Races_at_Venice"}
+  - {key: wp-twenty-minutes-of-love-1914, title: "Twenty Minutes of Love (Wikipedia)", url: "https://en.wikipedia.org/wiki/Twenty_Minutes_of_Love"}
+  - {key: wp-the-birth-of-a-nation-1915, title: "The Birth of a Nation (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Birth_of_a_Nation"}
+  - {key: wp-cops-1922, title: "Cops (1922 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cops_(1922_film)"}
+  - {key: wp-the-gold-rush-1925, title: "The Gold Rush (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Gold_Rush"}
+  - {key: wp-the-jazz-singer-1927, title: "The Jazz Singer (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Jazz_Singer"}
+  - {key: wp-city-lights-1931, title: "City Lights (Wikipedia)", url: "https://en.wikipedia.org/wiki/City_Lights"}
+  - {key: wp-female-1933, title: "Female (1933 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Female_(1933_film)"}
+  - {key: wp-modern-times-1936, title: "Modern Times (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Modern_Times_(film)"}
+  - {key: wp-the-great-dictator-1940, title: "The Great Dictator (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Great_Dictator"}
+  - {key: wp-criss-cross-1949, title: "Criss Cross (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Criss_Cross_(film)"}
+  - {key: wp-d-o-a-1950, title: "D.O.A. (1950 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/D.O.A._(1950_film)"}
+  - {key: wp-m-1951, title: "M (1951 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/M_(1951_film)"}
+  - {key: wp-cry-danger-1951, title: "Cry Danger (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cry_Danger"}
+  - {key: wp-robot-monster-1953, title: "Robot Monster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robot_Monster"}
+  - {key: wp-them-1954, title: "Them! (Wikipedia)", url: "https://en.wikipedia.org/wiki/Them!"}
+  - {key: wp-kiss-me-deadly-1955, title: "Kiss Me Deadly (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kiss_Me_Deadly"}
+  - {key: wp-the-searchers-1956, title: "The Searchers (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Searchers"}
+  - {key: wp-invasion-of-the-body-snatchers-1956, title: "Invasion of the Body Snatchers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Invasion_of_the_Body_Snatchers"}
+  - {key: wp-war-of-the-colossal-beast-1958, title: "War of the Colossal Beast (Wikipedia)", url: "https://en.wikipedia.org/wiki/War_of_the_Colossal_Beast"}
+  - {key: wp-house-on-haunted-hill-1958, title: "House on Haunted Hill (Wikipedia)", url: "https://en.wikipedia.org/wiki/House_on_Haunted_Hill"}
+  - {key: wp-the-exiles-1961, title: "The Exiles (1961 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Exiles_(1961_film)"}
+  - {key: wp-the-graduate-1967, title: "The Graduate (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Graduate"}
+  - {key: wp-hello-dolly-1969, title: "Hello, Dolly! (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hello,_Dolly!_(film)"}
+  # New places
+  - {key: wp-sunset-bronson-studios, title: "Sunset Bronson Studios (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sunset_Bronson_Studios"}
+  - {key: wp-ennis-house, title: "Ennis House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ennis_House"}
+  - {key: wp-bunker-hill-los-angeles, title: "Bunker Hill, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bunker_Hill,_Los_Angeles"}
+  - {key: wp-bronson-canyon, title: "Bronson Canyon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bronson_Canyon"}
+  - {key: wp-los-angeles-river, title: "Los Angeles River (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_River"}
+  - {key: wp-echo-park-lake, title: "Echo Park Lake (Wikipedia)", url: "https://en.wikipedia.org/wiki/Echo_Park_Lake"}
+  - {key: wp-fox-studio-lot, title: "Fox Studio Lot (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fox_Studio_Lot"}
+  # Directors
+  - {key: wp-henry-lehrman, title: "Henry Lehrman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Lehrman"}
+  - {key: wd-henry-lehrman, title: "Henry Lehrman (Wikidata Q84780)", url: "https://www.wikidata.org/wiki/Q84780"}
+  - {key: wp-buster-keaton, title: "Buster Keaton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Buster_Keaton"}
+  - {key: wp-edward-f-cline, title: "Edward F. Cline (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_F._Cline"}
+  - {key: wp-alan-crosland, title: "Alan Crosland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alan_Crosland"}
+  - {key: wp-michael-curtiz, title: "Michael Curtiz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_Curtiz"}
+  - {key: wd-michael-curtiz, title: "Michael Curtiz (Wikidata Q51491)", url: "https://www.wikidata.org/wiki/Q51491"}
+  - {key: wp-robert-siodmak, title: "Robert Siodmak (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Siodmak"}
+  - {key: wp-joseph-losey, title: "Joseph Losey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joseph_Losey"}
+  - {key: wp-robert-parrish, title: "Robert Parrish (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Parrish"}
+  - {key: wp-phil-tucker, title: "Phil Tucker (Wikipedia)", url: "https://en.wikipedia.org/wiki/Phil_Tucker"}
+  - {key: wd-phil-tucker, title: "Phil Tucker (Wikidata Q7182495)", url: "https://www.wikidata.org/wiki/Q7182495"}
+  - {key: wp-gordon-douglas, title: "Gordon Douglas (director) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gordon_Douglas_(director)"}
+  - {key: wp-robert-aldrich, title: "Robert Aldrich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Aldrich"}
+  - {key: wp-john-ford, title: "John Ford (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Ford"}
+  - {key: wp-don-siegel, title: "Don Siegel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Don_Siegel"}
+  - {key: wp-bert-i-gordon, title: "Bert I. Gordon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bert_I._Gordon"}
+  - {key: wp-william-castle, title: "William Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Castle"}
+  - {key: wp-kent-mackenzie, title: "Kent Mackenzie (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kent_Mackenzie"}
+  - {key: wd-kent-mackenzie, title: "Kent Mackenzie (Wikidata Q19864473)", url: "https://www.wikidata.org/wiki/Q19864473"}
+  - {key: wp-mike-nichols, title: "Mike Nichols (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mike_Nichols"}
+  - {key: wp-gene-kelly, title: "Gene Kelly (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gene_Kelly"}
+
+people:
+  # Directors (Charlie Chaplin, D. W. Griffith and Rudolph Maté already exist). All type Artist; not built out.
+  - {key: henry-lehrman, name: Henry Lehrman, type: Artist, roles: [film director, actor], born: 1881-03-30, died: 1946-11-07, prominence: 2,
+     note: "Keystone director of Chaplin's first films, Making a Living and Kid Auto Races at Venice (1914); later fiancé of Virginia Rappe.",
+     coverage: not-read, coverage_note: "Added as director of Kid Auto Races at Venice.", sources: [wp-henry-lehrman]}
+  - {key: buster-keaton, name: Buster Keaton, type: Artist, roles: [film director, actor], born: 1895-10-04, died: 1966-02-01, prominence: 4,
+     note: "\"The Great Stone Face\": silent comedian and filmmaker of Cops, Sherlock Jr. and The General; co-directed his shorts with Edward F. Cline.",
+     coverage: not-read, coverage_note: "Added as co-director of Cops.", sources: [wp-buster-keaton]}
+  - {key: edward-f-cline, name: Edward F. Cline, type: Artist, roles: [film director], born: 1891-11-04, died: 1961-05-22, prominence: 2,
+     note: "Keystone gag man turned director; co-directed Buster Keaton's shorts, including Cops (1922), and later W. C. Fields comedies.",
+     coverage: not-read, coverage_note: "Added as co-director of Cops.", sources: [wp-edward-f-cline]}
+  - {key: alan-crosland, name: Alan Crosland, type: Artist, roles: [film director], born: 1894-08-10, died: 1936-07-16, prominence: 2,
+     note: "American director of Don Juan (1926), the first feature with a synchronized soundtrack, and The Jazz Singer (1927), the first with spoken dialogue.",
+     coverage: not-read, coverage_note: "Added as director of The Jazz Singer.", sources: [wp-alan-crosland]}
+  - {key: michael-curtiz, name: Michael Curtiz, type: Artist, roles: [film director], born: 1886-12-25, died: 1962-04-10, prominence: 4,
+     note: "Hungarian-American director of 102 Hollywood films, mostly at Warner Bros.: The Adventures of Robin Hood, Casablanca, Mildred Pierce.",
+     coverage: not-read, coverage_note: "Added as director of Female (1933).", sources: [wp-michael-curtiz]}
+  - {key: robert-siodmak, name: Robert Siodmak, type: Artist, roles: [film director], born: 1900-08-08, died: 1973-03-10, prominence: 2,
+     note: "German director best known for Hollywood film noir: The Killers (1946) and Criss Cross (1949).",
+     coverage: not-read, coverage_note: "Added as director of Criss Cross.", sources: [wp-robert-siodmak]}
+  - {key: joseph-losey, name: Joseph Losey, type: Artist, roles: [film director], born: 1909-01-14, died: 1984-06-22, prominence: 3,
+     note: "American director blacklisted in the 1950s; worked on in Britain (The Servant, The Go-Between). Made M (1951) in Los Angeles.",
+     coverage: not-read, coverage_note: "Added as director of M (1951).", sources: [wp-joseph-losey]}
+  - {key: robert-parrish, name: Robert Parrish, type: Artist, roles: [film director], born: 1916-01-04, died: 1995-12-04, prominence: 1,
+     note: "Former child actor and Oscar-winning editor (Body and Soul) who turned director with Cry Danger (1951).",
+     coverage: not-read, coverage_note: "Added as director of Cry Danger.", sources: [wp-robert-parrish]}
+  - {key: phil-tucker, name: Phil Tucker, type: Artist, roles: [film director], born: 1927-05-22, died: 1985-11-30, prominence: 1,
+     note: "Director of the B movie Robot Monster (1953), later a film editor.",
+     coverage: not-read, coverage_note: "Added as director of Robot Monster.", sources: [wp-phil-tucker]}
+  - {key: gordon-douglas, name: Gordon Douglas, type: Artist, roles: [film director], born: 1907-12-15, died: 1993-09-29, prominence: 2,
+     note: "American director across five decades and many genres; directed Them! (1954).",
+     coverage: not-read, coverage_note: "Added as director of Them!.", sources: [wp-gordon-douglas]}
+  - {key: robert-aldrich, name: Robert Aldrich, type: Artist, roles: [film director], born: 1918-08-09, died: 1983-12-05, prominence: 3,
+     note: "American director of Kiss Me Deadly (1955), What Ever Happened to Baby Jane? and The Dirty Dozen; president of the Directors Guild.",
+     coverage: not-read, coverage_note: "Added as director of Kiss Me Deadly.", sources: [wp-robert-aldrich]}
+  - {key: john-ford, name: John Ford, type: Artist, roles: [film director], born: 1894-02-01, died: 1973-08-31, prominence: 4,
+     note: "American director of over 130 films and a record four Best Director Oscars; Westerns such as Stagecoach and The Searchers.",
+     coverage: not-read, coverage_note: "Added as director of The Searchers.", sources: [wp-john-ford]}
+  - {key: don-siegel, name: Don Siegel, type: Artist, roles: [film director], born: 1912-10-26, died: 1991-04-20, prominence: 3,
+     note: "American director of Invasion of the Body Snatchers (1956), Dirty Harry and Escape from Alcatraz.",
+     coverage: not-read, coverage_note: "Added as director of Invasion of the Body Snatchers.", sources: [wp-don-siegel]}
+  - {key: bert-i-gordon, name: Bert I. Gordon, type: Artist, roles: [film director], born: 1922-09-24, died: 2023-03-08, prominence: 1,
+     note: "\"Mr. B.I.G.\": director of giant-monster B movies such as The Amazing Colossal Man and War of the Colossal Beast.",
+     coverage: not-read, coverage_note: "Added as director of War of the Colossal Beast.", sources: [wp-bert-i-gordon]}
+  - {key: william-castle, name: William Castle, type: Artist, roles: [film director], born: 1914-04-24, died: 1977-05-31, prominence: 2,
+     note: "American director of horror B movies sold with gimmicks, like the flying skeleton of House on Haunted Hill.",
+     coverage: not-read, coverage_note: "Added as director of House on Haunted Hill.", sources: [wp-william-castle]}
+  - {key: kent-mackenzie, name: Kent Mackenzie, type: Artist, roles: [film director], born: 1930-04-06, died: 1980-05-16, prominence: 1,
+     note: "English-American director remembered for The Exiles (1961), about young Native Americans on Bunker Hill.",
+     coverage: not-read, coverage_note: "Added as director of The Exiles.", sources: [wp-kent-mackenzie]}
+  - {key: mike-nichols, name: Mike Nichols, type: Artist, roles: [film director], born: 1931-11-06, died: 2014-11-19, prominence: 4,
+     note: "American director and comedian (Nichols and May); won the Best Director Oscar for The Graduate (1967); one of the few EGOT winners.",
+     coverage: not-read, coverage_note: "Added as director of The Graduate.", sources: [wp-mike-nichols]}
+  - {key: gene-kelly, name: Gene Kelly, type: Artist, roles: [film director, actor], born: 1912-08-23, died: 1996-02-02, prominence: 4,
+     note: "American dancer, actor and director; co-directed Singin' in the Rain with Stanley Donen and directed Hello, Dolly! (1969).",
+     coverage: not-read, coverage_note: "Added as director of Hello, Dolly!.", sources: [wp-gene-kelly]}
+
+places:
+  - key: chaplin-keaton-lloyd-alley
+    name: Chaplin-Keaton-Lloyd Alley
+    kind: alley
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.101
+    lng: -118.329
+    visitable: true
+    visit_site: "A one-block alley near Hollywood Boulevard and Cahuenga Boulevard, Hollywood"
+    note: "One-block Hollywood alley where many silent films were shot, Keaton's Cops (1922) among them; later renamed after Chaplin, Keaton and Lloyd."
+    sources: [wp-cops-1922]
+  - key: sunset-bronson-studios
+    name: Sunset Bronson Studios (Old Warner Brothers Studio)
+    historical_name: Warner Bros. Studio, Sunset Boulevard
+    kind: film studio
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.098
+    lng: -118.321
+    founded: 1919
+    visitable: false
+    visit_site: "A working studio; the Executive Office Building is seen from Sunset Boulevard at Bronson Avenue, Hollywood"
+    note: "Warner Bros.' studio on Sunset Boulevard, where The Jazz Singer, the first talking feature, was filmed in 1927. Later KTLA and Tribune Studios; a Los Angeles Historic-Cultural Monument (1977), its Executive Office Building on the National Register (2002)."
+    sources: [wp-sunset-bronson-studios]
+  - key: ennis-house
+    name: Ennis House
+    kind: house
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.117
+    lng: -118.293
+    founded: 1925
+    architect: "Frank Lloyd Wright"
+    built_by: "Charles and Mabel Ennis; Lloyd Wright supervised construction"
+    visitable: true
+    visit_site: "2607 Glendower Avenue, Los Feliz: exterior from the street; a private house, open to the public at least 12 days a year under an easement"
+    note: "Mayan Revival textile-block house by Frank Lloyd Wright, finished 1925. A favourite filming location since Female (1933); House on Haunted Hill made it famous as a haunted house, and it is J. F. Sebastian's home in Blade Runner."
+    sources: [wp-ennis-house]
+  - key: bunker-hill-los-angeles
+    name: Bunker Hill
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.053
+    lng: -118.252
+    visitable: true
+    visit_site: "Downtown district around Grand Avenue and Angels Flight; the Victorian streets seen in the films are gone"
+    note: "Downtown hill of Victorian mansions and rooming houses, a favourite film noir setting in the 1940s and 1950s (Criss Cross, M, Cry Danger, Kiss Me Deadly). Lowered and rebuilt with high-rises from the 1960s."
+    sources: [wp-bunker-hill-los-angeles]
+  - key: bronson-canyon
+    name: Bronson Canyon (Bronson Caves)
+    kind: canyon
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.122
+    lng: -118.314
+    founded: 1903
+    built_by: "Quarried by the Union Rock Company from 1903 to the late 1920s, leaving the caves"
+    visitable: true
+    visit_site: "Griffith Park, a short walk from the north end of Canyon Drive"
+    note: "Old quarry in the southwest of Griffith Park whose short tunnel and craggy walls have stood in for wilderness in westerns and science fiction for a century; the Batcave entrance in the 1960s Batman series."
+    sources: [wp-bronson-canyon, wp-griffith-park]
+  - key: los-angeles-river
+    name: Los Angeles River
+    kind: river
+    region: California
+    country: United States
+    lat: 34.042
+    lng: -118.228
+    visitable: true
+    visit_site: "The concrete channel east of Downtown, seen from the First to Seventh Street bridges"
+    note: "River flowing 51 miles from Canoga Park through the San Fernando Valley and Downtown to Long Beach; set in a concrete channel after the floods of the early 20th century. Its storm-channel stretch east of Downtown is a much-used filming location."
+    sources: [wp-los-angeles-river, wp-them-1954]
+  - key: echo-park-lake
+    name: Echo Park Lake
+    kind: park
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.073
+    lng: -118.261
+    founded: 1868
+    visitable: true
+    visit_site: "Echo Park, off Glendale Boulevard: the lake, boathouse and lotus beds"
+    note: "Reservoir of 1868 made a park in the 1890s, beside the early studios of Edendale; Keystone shot comedies here until the city banned them for trampling the flowers."
+    sources: [wp-echo-park-lake]
+  - key: fox-studio-lot
+    name: Fox Studio Lot
+    historical_name: Fox Movietone City
+    kind: film studio
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.051
+    lng: -118.413
+    founded: 1928
+    built_by: "William Fox, for the Fox Film Corporation"
+    visitable: false
+    visit_site: "A working studio in Century City, off Pico Boulevard; not open to visitors"
+    note: "20th Century Fox's studio from 1935; its northern land was sold in 1961 and became Century City. The backlot's New York Street was built for Hello, Dolly! (1969) and rebuilt from 2023."
+    sources: [wp-fox-studio-lot]
+
+artworks:
+  # 1910s-1920s
+  - key: kid-auto-races-at-venice-1914
+    name: Kid Auto Races at Venice
+    kind: film
+    made: 1914
+    prominence: 4
+    note: "Keystone short and the first film released with Chaplin's Little Tramp; shot at a real pushcar race in Venice, with Chaplin improvising in front of the spectators."
+    people:
+      - {person: henry-lehrman, role: creator}
+    places:
+      - {place: venice-los-angeles, role: filmed}
+    sources: [wp-kid-auto-races-at-venice-1914]
+  - key: twenty-minutes-of-love-1914
+    name: Twenty Minutes of Love
+    kind: film
+    made: 1914
+    prominence: 2
+    note: "Keystone short, widely reported as Chaplin's directorial debut; it takes place at Echo Park Lake, where Keystone filmed in the 1910s."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: echo-park-lake, role: filmed}
+    sources: [wp-twenty-minutes-of-love-1914, wp-echo-park-lake]
+  - key: the-birth-of-a-nation-1915
+    name: The Birth of a Nation
+    kind: film
+    made: 1915
+    prominence: 4
+    note: "Griffith's three-hour Civil War epic, notorious for glorifying the Ku Klux Klan. Griffith Park's article says its battle scenes were filmed in the park; the film's own article puts much of the filming on the Griffith Ranch in the San Fernando Valley."
+    people:
+      - {person: d-w-griffith, role: creator}
+    places:
+      - {place: griffith-park, role: filmed}
+    sources: [wp-the-birth-of-a-nation-1915, wp-griffith-park]
+  - key: cops-1922
+    name: Cops
+    kind: film
+    made: 1922
+    prominence: 3
+    note: "Keaton two-reeler in which the whole Los Angeles Police Department chases him; shot in part in the Hollywood alley later named Chaplin-Keaton-Lloyd Alley."
+    people:
+      - {person: buster-keaton, role: creator}
+      - {person: edward-f-cline, role: creator}
+    places:
+      - {place: chaplin-keaton-lloyd-alley, role: filmed}
+    sources: [wp-cops-1922]
+  - key: the-gold-rush-1925
+    name: The Gold Rush
+    kind: film
+    made: 1925
+    prominence: 4
+    note: "Only the opening was kept from the location shoot near Truckee; the rest was shot on Klondike sets on the back lot and stages of Chaplin's studio on La Brea."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: chaplin-studios, role: filmed}
+    sources: [wp-the-gold-rush-1925, wp-chaplin-studios]
+  - key: the-jazz-singer-1927
+    name: The Jazz Singer
+    kind: film
+    made: 1927
+    prominence: 5
+    note: "The first feature with synchronized singing and speech, which ended the silent era; filmed at Warner Bros.' Sunset Boulevard studio, with Lower East Side exteriors shot in New York."
+    people:
+      - {person: alan-crosland, role: creator}
+    places:
+      - {place: sunset-bronson-studios, role: filmed}
+    sources: [wp-the-jazz-singer-1927, wp-sunset-bronson-studios]
+  # 1930s-1940s
+  - key: city-lights-1931
+    name: City Lights
+    kind: film
+    made: 1931
+    prominence: 4
+    note: "Chaplin's Tramp and the blind flower girl; shot at his studio on La Brea, which lists it among the classics made there."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: chaplin-studios, role: filmed}
+    sources: [wp-city-lights-1931, wp-chaplin-studios]
+  - key: female-1933
+    name: Female
+    kind: film
+    made: 1933
+    prominence: 1
+    note: "Pre-Code Warner drama made at Burbank; the exteriors of the heroine's house are the Ennis House, its first appearance in a film."
+    people:
+      - {person: michael-curtiz, role: creator}
+    places:
+      - {place: ennis-house, role: filmed}
+    sources: [wp-female-1933, wp-ennis-house]
+  - key: modern-times-1936
+    name: Modern Times
+    kind: film
+    made: 1936
+    prominence: 4
+    note: "The Tramp's last appearance; Chaplin closed in his studio's two open-air stages as sound stages before filming it there."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: chaplin-studios, role: filmed}
+    sources: [wp-modern-times-1936, wp-chaplin-studios]
+  - key: the-great-dictator-1940
+    name: The Great Dictator
+    kind: film
+    made: 1940
+    prominence: 4
+    note: "Chaplin's first true sound film, a satire of Hitler; shot at his studio on La Brea."
+    people:
+      - {person: charlie-chaplin, role: creator}
+    places:
+      - {place: chaplin-studios, role: filmed}
+    sources: [wp-the-great-dictator-1940, wp-chaplin-studios]
+  - key: criss-cross-1949
+    name: Criss Cross
+    kind: film
+    made: 1949
+    prominence: 2
+    note: "Film noir shot partly on Bunker Hill: the heist is planned in the Sunshine Apartments on the Third Street steps, with Angels Flight seen through the windows."
+    people:
+      - {person: robert-siodmak, role: creator}
+    places:
+      - {place: bunker-hill-los-angeles, role: filmed}
+      - {place: angels-flight, role: filmed}
+    sources: [wp-criss-cross-1949, wp-angels-flight, wp-bunker-hill-los-angeles]
+  # 1950s
+  - key: d-o-a-1950
+    name: D.O.A.
+    kind: film
+    made: 1950
+    prominence: 3
+    note: "Noir about a poisoned man hunting his killer; the confrontation is in the Bradbury Building, with the Million Dollar Theater's marquee across Broadway in the background."
+    people:
+      - {person: rudolph-mate, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-d-o-a-1950, wp-bradbury-building]
+  - key: m-1951
+    name: M
+    kind: film
+    made: 1951
+    prominence: 2
+    note: "Remake of Fritz Lang's M moved to Los Angeles: shot on Bunker Hill and around Angels Flight, with a long chase through the Bradbury Building's basement, stairways, elevators and roof."
+    people:
+      - {person: joseph-losey, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+      - {place: bunker-hill-los-angeles, role: filmed}
+      - {place: angels-flight, role: filmed}
+    sources: [wp-m-1951, wp-bradbury-building, wp-bunker-hill-los-angeles]
+  - key: cry-danger-1951
+    name: Cry Danger
+    kind: film
+    made: 1951
+    prominence: 1
+    note: "Dick Powell noir shot on Bunker Hill, around the Crosley Hotel at Third and Grand."
+    people:
+      - {person: robert-parrish, role: creator}
+    places:
+      - {place: bunker-hill-los-angeles, role: filmed}
+    sources: [wp-cry-danger-1951, wp-bunker-hill-los-angeles]
+  - key: robot-monster-1953
+    name: Robot Monster
+    kind: film
+    made: 1953
+    prominence: 2
+    note: "3D B movie often called one of the worst ever made; apart from a few scenes, filmed outdoors in Bronson Canyon."
+    people:
+      - {person: phil-tucker, role: creator}
+    places:
+      - {place: bronson-canyon, role: filmed}
+    sources: [wp-robot-monster-1953]
+  - key: them-1954
+    name: Them!
+    kind: film
+    made: 1954
+    prominence: 3
+    note: "Giant-ant science fiction; the entrance to the ants' last nest was filmed in the concrete channel of the Los Angeles River between the First and Seventh Street bridges."
+    people:
+      - {person: gordon-douglas, role: creator}
+    places:
+      - {place: los-angeles-river, role: filmed}
+    sources: [wp-them-1954]
+  - key: kiss-me-deadly-1955
+    name: Kiss Me Deadly
+    kind: film
+    made: 1955
+    prominence: 3
+    note: "Mike Hammer noir, \"a time capsule of Los Angeles\", much of it filmed on Bunker Hill; Angels Flight appears in it."
+    people:
+      - {person: robert-aldrich, role: creator}
+    places:
+      - {place: bunker-hill-los-angeles, role: filmed}
+      - {place: angels-flight, role: filmed}
+    sources: [wp-kiss-me-deadly-1955, wp-angels-flight, wp-bunker-hill-los-angeles]
+  - key: the-searchers-1956
+    name: The Searchers
+    kind: film
+    made: 1956
+    prominence: 4
+    note: "John Wayne western filmed mainly in Monument Valley; additional scenes were shot in Bronson Canyon, which Griffith Park's article names as the location of the climactic scene."
+    people:
+      - {person: john-ford, role: creator}
+    places:
+      - {place: bronson-canyon, role: filmed}
+    sources: [wp-the-searchers-1956, wp-griffith-park]
+  - key: invasion-of-the-body-snatchers-1956
+    name: Invasion of the Body Snatchers
+    kind: film
+    made: 1956
+    prominence: 4
+    note: "The town of Santa Mira was pieced together from Los Angeles-area locations, among them Bronson Canyon, Beachwood Canyon and Los Feliz; much of it was shot at the Allied Artists studio in Hollywood."
+    people:
+      - {person: don-siegel, role: creator}
+    places:
+      - {place: bronson-canyon, role: filmed}
+    sources: [wp-invasion-of-the-body-snatchers-1956, wp-griffith-park]
+  - key: war-of-the-colossal-beast-1958
+    name: War of the Colossal Beast
+    kind: film
+    made: 1958
+    prominence: 1
+    note: "Giant-man B movie; its climax, the colossus's end on power lines, was shot at Griffith Observatory."
+    people:
+      - {person: bert-i-gordon, role: creator}
+    places:
+      - {place: griffith-observatory, role: filmed}
+    sources: [wp-war-of-the-colossal-beast-1958, wp-griffith-park]
+  - key: house-on-haunted-hill-1958
+    name: House on Haunted Hill
+    kind: film
+    made: 1958
+    prominence: 3
+    note: "Vincent Price horror film; the exterior of the house is Frank Lloyd Wright's Ennis House in Los Feliz, and the interiors are sound stages. First shown in December 1958, in general release 1959."
+    people:
+      - {person: william-castle, role: creator}
+    places:
+      - {place: ennis-house, role: filmed}
+    sources: [wp-house-on-haunted-hill-1958, wp-ennis-house]
+  # 1960s
+  - key: the-exiles-1961
+    name: The Exiles
+    kind: film
+    made: 1961
+    prominence: 2
+    note: "Semi-documentary following a day in the lives of young Native Americans living on Bunker Hill in the late 1950s, shortly before the district was razed."
+    people:
+      - {person: kent-mackenzie, role: creator}
+    places:
+      - {place: bunker-hill-los-angeles, role: filmed}
+    sources: [wp-the-exiles-1961, wp-bunker-hill-los-angeles]
+  - key: the-graduate-1967
+    name: The Graduate
+    kind: film
+    made: 1967
+    prominence: 4
+    note: "Many of the Berkeley campus exteriors were filmed on the brick campus of the University of Southern California."
+    people:
+      - {person: mike-nichols, role: creator}
+    places:
+      - {place: university-of-southern-california, role: filmed}
+    sources: [wp-the-graduate-1967]
+  - key: hello-dolly-1969
+    name: Hello, Dolly!
+    kind: film
+    made: 1969
+    prominence: 3
+    note: "Its 1890s New York scenes were filmed on the 20th Century Fox lot in Century City, where the New York Street set was built for it in 1967; some of the exteriors still exist."
+    people:
+      - {person: gene-kelly, role: creator}
+    places:
+      - {place: fox-studio-lot, role: filmed}
+    sources: [wp-hello-dolly-1969, wp-fox-studio-lot]
+
+discrepancies:
+  - key: birth-of-a-nation-battle-scenes-location
+    question: Were The Birth of a Nation's battle scenes filmed in Griffith Park or on the Griffith Ranch?
+    about: [{artwork: the-birth-of-a-nation-1915}, {place: griffith-park}]
+    field: place
+    claims:
+      - {value: "Griffith Park", sources: [wp-griffith-park], note: "Griffith filmed the battle scenes in the park in 1915, as Lillian Gish described in her memoirs"}
+      - {value: "Griffith Ranch, San Fernando Valley", sources: [wp-the-birth-of-a-nation-1915], note: "Much of the filming was on the Griffith Ranch; Petersburg scenes at today's Forest Lawn; others in Whittier, Ojai Valley and Big Bear Lake"}
+    note: "The film is linked to Griffith Park on the park article's word; the two may both be true, but neither article mentions the other."
+  - key: twenty-minutes-of-love-director
+    question: Did Charlie Chaplin or Joseph Maddern direct Twenty Minutes of Love?
+    about: [{artwork: twenty-minutes-of-love-1914}]
+    field: creator
+    claims:
+      - {value: "Charlie Chaplin", sources: [wp-twenty-minutes-of-love-1914], note: "Widely reported as Chaplin's directorial debut"}
+      - {value: "Joseph Maddern", sources: [wp-twenty-minutes-of-love-1914], note: "Some sources name Maddern, while crediting Chaplin as the creative force"}
+    note: "The record credits Chaplin, as most sources do."
+  - key: house-on-haunted-hill-release-year
+    question: Is House on Haunted Hill a 1958 or a 1959 film?
+    about: [{artwork: house-on-haunted-hill-1958}]
+    field: made
+    claims:
+      - {value: "1958", sources: [wp-house-on-haunted-hill-1958], note: "A 1958 film; limited release on 17 December 1958, San Francisco premiere 14 January 1959"}
+      - {value: "1959", sources: [wp-ennis-house], note: "The Ennis House article calls it the 1959 film"}
+    note: "The record uses 1958, the first release; the difference is limited versus general release."
+  - key: kiss-me-deadly-release-year
+    question: Is Kiss Me Deadly a 1955 or a 1956 film?
+    about: [{artwork: kiss-me-deadly-1955}]
+    field: made
+    claims:
+      - {value: "1955", sources: [wp-kiss-me-deadly-1955], note: "Lead: a 1955 American film noir"}
+      - {value: "1956", sources: [wp-bunker-hill-los-angeles], note: "Bunker Hill's list of films gives Kiss Me Deadly (1956)"}
+    note: "The record uses 1955, from the film's own article."
+  - key: henry-lehrman-birth-date
+    question: Was Henry Lehrman born on 30 March 1881, or in 1886?
+    about: [{person: henry-lehrman}]
+    field: born
+    claims:
+      - {value: "1881-03-30", sources: [wp-henry-lehrman], note: "Wikipedia lead"}
+      - {value: "1886-03-30", sources: [wd-henry-lehrman], note: "One of two Wikidata dates of birth"}
+      - {value: "1886-04-21", sources: [wd-henry-lehrman], note: "The other Wikidata date of birth"}
+    note: "The record uses Wikipedia's 1881-03-30."
+  - key: michael-curtiz-death-date
+    question: Did Michael Curtiz die on 10 April or 10 March 1962?
+    about: [{person: michael-curtiz}]
+    field: died
+    claims:
+      - {value: "1962-04-10", sources: [wp-michael-curtiz], note: "Wikipedia lead; also one of Wikidata's two dates"}
+      - {value: "1962-03-10", sources: [wd-michael-curtiz], note: "Second Wikidata date of death"}
+    note: "The record uses 1962-04-10."
+  - key: phil-tucker-death-date
+    question: Did Phil Tucker die on 30 November or 1 December 1985?
+    about: [{person: phil-tucker}]
+    field: died
+    claims:
+      - {value: "1985-11-30", sources: [wp-phil-tucker], note: "Wikipedia lead; also one of Wikidata's two dates"}
+      - {value: "1985-12-01", sources: [wd-phil-tucker], note: "Second Wikidata date of death"}
+    note: "The record uses 1985-11-30."
+  - key: kent-mackenzie-death-date
+    question: Did Kent Mackenzie die in May 1980 or May 1990?
+    about: [{person: kent-mackenzie}]
+    field: died
+    claims:
+      - {value: "1980-05-16", sources: [wp-kent-mackenzie], note: "Wikipedia lead; also one of Wikidata's two dates"}
+      - {value: "1990 (May)", sources: [wd-kent-mackenzie], note: "Second Wikidata date of death, to the month"}
+    note: "The record uses 1980-05-16."
