@@ -137,6 +137,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ## Done
 
+#### [P2] Pick a country: realms in the timeline search and a realm focus in the Year view
+`type: enhancement` · `area: site` · `status: done` · `issue: #86`
+
+Timeline search knows realms (Byzantine Empire, France 1300 to 1500): title holders there plus close family, and anyone with a place there. Year view: a realm heading, the realm on the map, or typing "Scotland 1300" focuses the page on that realm (rulers, people around them, events, makers in its modern country); a chip clears it and the URL keeps it. Gaps name who came before and after. Done 2026-10-09.
+Source: Ty, 2026-10-09.
+
 #### [P2] Show buttons: choose which groups appear in the timeline and Year view
 `type: enhancement` · `area: site` · `status: done` · `issue: #82`
 
