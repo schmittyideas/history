@@ -259,3 +259,6 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .cat-chip[aria-pressed="false"] { background: transparent; color: var(--muted); text-decoration: line-through; }
 .cat-chip[aria-pressed="false"] .dot { background: transparent; }
 .cat-chip:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }
+
+/* Name cards sit beside the lines now, so give them a halo where a marriage or descent line passes behind */
+.person .name, .person .dates, .person .rank { paint-order: stroke; stroke: var(--lane); stroke-width: 3px; stroke-linejoin: round; }
