@@ -1,0 +1,4077 @@
+# Notes for the reviewer
+# - 74 patrons named in the painters' articles (popes, cardinals, kings, queens, ministers, collectors), from their English Wikipedia articles, with titles and realms (22 new realms), born/died/buried moments where the article names the place, and image links where the licence allows.
+# - 89 patron links: found by searching the painters' article text for each patron's name near words such as commission, court, appointed, then judged by an agent on the sentences alone. Links are kept only where the article says the patron employed, commissioned or appointed the painter; sitters and passing mentions are left out. 19 links already existed (years updated only).
+# - Thomas Cromwell was not written (agent gap): his one link is left out.
+# - Articles were cut at 32,000 characters, so some death places and later titles are missing and left out, not guessed.
+# - Every person is `coverage: partly`. Coordinates of new places are approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Patrons of the painters: popes, monarchs, ministers and collectors, with their patron links'
+  requested: Add the patrons the painters served (popes, kings, cardinals, collectors) and link them to the painters whose articles say they employed or commissioned them
+  date: '2026-10-10'
+sources:
+- key: wp-julius-ii
+  title: Julius II (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Julius_II
+- key: wp-cardinal-richelieu
+  title: Cardinal Richelieu (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cardinal_Richelieu
+- key: wp-leo-x
+  title: Leo X (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Leo_X
+- key: wp-clement-vii
+  title: Clement VII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Clement_VII
+- key: wp-urban-viii
+  title: Urban VIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Urban_VIII
+- key: wp-cardinal-mazarin
+  title: Cardinal Mazarin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cardinal_Mazarin
+- key: wp-scipione-borghese
+  title: Scipione Borghese (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Scipione_Borghese
+- key: wp-clement-viii
+  title: Clement VIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Clement_VIII
+- key: wp-pius-v
+  title: Pius V (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Pius_V
+- key: wp-innocent-x
+  title: Innocent X (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Innocent_X
+- key: wp-paul-iii
+  title: Paul III (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Paul_III
+- key: wp-gregory-xiii
+  title: Gregory XIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Gregory_XIII
+- key: wp-sixtus-v
+  title: Sixtus V (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Sixtus_V
+- key: wp-paul-v
+  title: Paul V (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Paul_V
+- key: wp-pius-vii
+  title: Pius VII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Pius_VII
+- key: wp-francesco-barberini
+  title: Francesco Barberini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Barberini_(1597%E2%80%931679)
+- key: wp-julius-iii
+  title: Julius III (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Julius_III
+- key: wp-alexander-vii
+  title: Alexander VII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Alexander_VII
+- key: wp-clement-xiv
+  title: Clement XIV (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pope_Clement_XIV
+- key: wp-napoleon-i
+  title: Napoleon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Napoleon
+- key: wp-napoleon-iii
+  title: Napoleon III (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Napoleon_III
+- key: wp-louis-xiv
+  title: Louis XIV (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_XIV
+- key: wp-charles-v-holy-roman-emperor
+  title: Charles V (Holy Roman Emperor) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_V,_Holy_Roman_Emperor
+- key: wp-philip-iv-of-spain
+  title: Philip IV of Spain (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Philip_IV_of_Spain
+- key: wp-louis-xv
+  title: Louis XV (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_XV
+- key: wp-alexander-ii-of-russia
+  title: Alexander II of Russia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexander_II_of_Russia
+- key: wp-josephine-de-beauharnais
+  title: Joséphine de Beauharnais (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jos%C3%A9phine_de_Beauharnais
+- key: wp-francis-i-of-france
+  title: Francis I (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francis_I_of_France
+- key: wp-louis-philippe-i
+  title: Louis Philippe I (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_Philippe_I
+- key: wp-peter-the-great
+  title: Peter the Great (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Peter_the_Great
+- key: wp-marie-de-medici
+  title: Marie de' Medici (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marie_de%27_Medici
+- key: wp-lorenzo-de-medici
+  title: Lorenzo de' Medici (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lorenzo_de%27_Medici
+- key: wp-rudolf-ii-holy-roman-emperor
+  title: Rudolf II (Holy Roman Emperor) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rudolf_II,_Holy_Roman_Emperor
+- key: wp-nicholas-ii-of-russia
+  title: Nicholas II of Russia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicholas_II
+- key: wp-alexander-iii-of-russia
+  title: Alexander III of Russia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexander_III_of_Russia
+- key: wp-louis-xiii
+  title: Louis XIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_XIII
+- key: wp-isabella-clara-eugenia
+  title: Isabella Clara Eugenia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isabella_Clara_Eugenia
+- key: wp-louis-xvi
+  title: Louis XVI (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_XVI
+- key: wp-louis-xviii
+  title: Louis XVIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louis_XVIII
+- key: wp-catherine-the-great
+  title: Catherine the Great (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Catherine_the_Great
+- key: wp-frederick-the-great
+  title: Frederick the Great (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frederick_the_Great
+- key: wp-henrietta-maria
+  title: Henrietta Maria (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henrietta_Maria_of_France
+- key: wp-eugenie-de-montijo
+  title: Eugénie de Montijo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Eug%C3%A9nie_de_Montijo
+- key: wp-cosimo-i-de-medici-grand-duke-of-tuscany
+  title: Cosimo I de' Medici (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cosimo_I_de%27_Medici
+- key: wp-cosimo-iii-de-medici-grand-duke-of-tuscany
+  title: Cosimo III de' Medici (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cosimo_III_de%27_Medici
+- key: wp-madame-de-pompadour
+  title: Madame de Pompadour (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Madame_de_Pompadour
+- key: wp-christina-queen-of-sweden
+  title: Christina (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christina,_Queen_of_Sweden
+- key: wp-anne-of-austria
+  title: Anne of Austria (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anne_of_Austria
+- key: wp-albert-vii-archduke-of-austria
+  title: Albert VII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albert_VII_of_Austria
+- key: wp-isabella-d-este
+  title: Isabella d'Este (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isabella_d%27Este
+- key: wp-agostino-chigi
+  title: Agostino Chigi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Agostino_Chigi
+- key: wp-george-villiers-1st-duke-of-buckingham
+  title: George Villiers, 1st Duke of Buckingham (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Villiers,_1st_Duke_of_Buckingham
+- key: wp-philip-iii-of-spain
+  title: Philip III (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Philip_III_of_Spain
+- key: wp-charles-iii-of-spain
+  title: Charles III (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_III_of_Spain
+- key: wp-margaret-of-austria-duchess-of-savoy
+  title: Margaret of Austria (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Margaret_of_Austria,_Duchess_of_Savoy
+- key: wp-maria-theresa
+  title: Maria Theresa (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maria_Theresa
+- key: wp-joseph-ii-holy-roman-emperor
+  title: Joseph II (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joseph_II,_Holy_Roman_Emperor
+- key: wp-federico-da-montefeltro
+  title: Federico da Montefeltro (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Federico_da_Montefeltro
+- key: wp-federico-ii-gonzaga-duke-of-mantua
+  title: Federico II Gonzaga (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Federico_II_Gonzaga_of_Mantua
+- key: wp-ludovico-sforza
+  title: Ludovico Sforza (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ludovico_Sforza
+- key: wp-thomas-more
+  title: Thomas More (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_More
+- key: wp-thomas-howard-21st-earl-of-arundel
+  title: Thomas Howard, 14th Earl of Arundel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Howard,_14th_Earl_of_Arundel
+- key: wp-jean-baptiste-colbert
+  title: Jean-Baptiste Colbert (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Baptiste_Colbert
+- key: wp-christian-viii-of-denmark
+  title: Christian VIII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christian_VIII
+- key: wp-charles-iv-of-spain
+  title: Charles IV (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_IV_of_Spain
+- key: wp-ferdinand-vii-of-spain
+  title: Ferdinand VII (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ferdinand_VII
+- key: wp-frederick-iii-elector-of-saxony
+  title: Frederick III, Elector of Saxony (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frederick_III_of_Saxony
+- key: wp-ludwig-i-of-bavaria
+  title: Ludwig I of Bavaria (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ludwig_I_of_Bavaria
+- key: wp-christian-iv-of-denmark
+  title: Christian IV (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christian_IV_of_Denmark
+- key: wp-gustavus-adolphus-of-sweden
+  title: Gustavus Adolphus (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustavus_Adolphus
+- key: wp-archduke-leopold-wilhelm-of-austria
+  title: Archduke Leopold Wilhelm of Austria (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Archduke_Leopold_Wilhelm_of_Austria
+- key: wp-vincenzo-i-gonzaga
+  title: Vincenzo I Gonzaga (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vincenzo_I_Gonzaga
+- key: wp-francesco-ii-sforza
+  title: Francesco II Sforza (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_II_Sforza
+- key: wp-alfonso-i-d-este-duke-of-ferrara
+  title: Alfonso I d'Este (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alfonso_I_d%27Este
+realms:
+- name: French Empire
+  region: Western Europe
+  country: France
+- name: Spain
+  region: Western Europe
+  country: Spain
+- name: Portugal
+  region: Western Europe
+  country: Portugal
+- name: Tsardom of Russia
+  region: Eastern Europe
+  country: Russia
+- name: Russian Empire
+  region: Eastern Europe
+  country: Russia
+- name: Prussia
+  region: Western Europe
+  country: Germany
+- name: Habsburg Netherlands
+  region: Western Europe
+  country: Belgium
+- name: Florence
+  region: Western Europe
+  country: Italy
+- name: Tuscany
+  region: Western Europe
+  country: Italy
+- name: Parma
+  region: Western Europe
+  country: Italy
+- name: Naples
+  region: Western Europe
+  country: Italy
+- name: Sicily
+  region: Western Europe
+  country: Italy
+- name: Mantua
+  region: Western Europe
+  country: Italy
+- name: Montferrat
+  region: Western Europe
+  country: Italy
+- name: Milan
+  region: Western Europe
+  country: Italy
+- name: Urbino
+  region: Western Europe
+  country: Italy
+- name: Savoy
+  region: Western Europe
+  country: Italy
+- name: Austria
+  region: Western Europe
+  country: Austria
+- name: Bavaria
+  region: Western Europe
+  country: Germany
+- name: Saxony
+  region: Western Europe
+  country: Germany
+- name: Ferrara
+  region: Western Europe
+  country: Italy
+- name: Spanish Netherlands
+  region: Western Europe
+  country: Belgium
+places:
+- key: chapel-of-the-sorbonne
+  name: Chapel of the Sorbonne
+  kind: church
+  region: Ile-de-France
+  country: France
+  city: Paris
+  lat: 48.848
+  lng: 2.343
+  sources:
+  - wp-cardinal-richelieu
+- key: santa-maria-maggiore-rome
+  name: Santa Maria Maggiore
+  kind: church
+  region: Lazio
+  country: Italy
+  city: Rome
+  lat: 41.898
+  lng: 12.498
+  sources:
+  - wp-paul-v
+- key: quirinal-palace
+  name: Quirinal Palace
+  kind: palace
+  region: Lazio
+  country: Italy
+  city: Rome
+  lat: 41.899
+  lng: 12.487
+  sources:
+  - wp-paul-v
+- key: fano
+  name: Fano
+  kind: city
+  region: Marche
+  country: Italy
+  lat: 43.844
+  lng: 13.017
+  sources:
+  - wp-clement-viii
+- key: artena
+  name: Artena
+  kind: city
+  region: Lazio
+  country: Italy
+  lat: 41.737
+  lng: 12.923
+  sources:
+  - wp-scipione-borghese
+- key: sant-agnese-in-agone
+  name: Sant'Agnese in Agone
+  kind: church
+  region: Lazio
+  country: Italy
+  city: Rome
+  lat: 41.899
+  lng: 12.473
+  sources:
+  - wp-innocent-x
+- key: cesena
+  name: Cesena
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.139
+  lng: 12.243
+  sources:
+  - wp-pius-vii
+- key: monte-san-savino
+  name: Monte San Savino
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.333
+  lng: 11.737
+  sources:
+  - wp-julius-iii
+- key: santarcangelo-di-romagna
+  name: Santarcangelo di Romagna
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.064
+  lng: 12.447
+  sources:
+  - wp-clement-xiv
+- key: santi-apostoli-rome
+  name: Santi Apostoli
+  kind: church
+  region: Lazio
+  country: Italy
+  city: Rome
+  lat: 41.897
+  lng: 12.483
+  sources:
+  - wp-clement-xiv
+- key: canino
+  name: Canino
+  kind: city
+  region: Lazio
+  country: Italy
+  lat: 42.465
+  lng: 11.754
+  sources:
+  - wp-paul-iii
+- key: albisola-superiore
+  name: Albisola Superiore
+  kind: city
+  region: Liguria
+  country: Italy
+  lat: 44.336
+  lng: 8.512
+  sources:
+  - wp-julius-ii
+- key: bosco-marengo
+  name: Bosco Marengo
+  kind: city
+  region: Piedmont
+  country: Italy
+  lat: 44.8
+  lng: 8.683
+  sources:
+  - wp-pius-v
+- key: grottammare
+  name: Grottammare
+  kind: city
+  region: Marche
+  country: Italy
+  lat: 42.985
+  lng: 13.867
+  sources:
+  - wp-sixtus-v
+- key: barberino-val-d-elsa
+  name: Barberino Val d'Elsa
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.549
+  lng: 11.176
+  sources:
+  - wp-urban-viii
+- key: pescina
+  name: Pescina
+  kind: city
+  region: Abruzzo
+  country: Italy
+  lat: 41.969
+  lng: 13.649
+  sources:
+  - wp-cardinal-mazarin
+- key: ajaccio
+  name: Ajaccio
+  kind: city
+  region: Corsica
+  country: France
+  lat: 41.919
+  lng: 8.739
+  sources:
+  - wp-napoleon-i
+- key: saint-helena
+  name: Saint Helena
+  kind: island
+  region: Saint Helena
+  country: Saint Helena (British Overseas Territory)
+  lat: -15.965
+  lng: -5.709
+  sources:
+  - wp-napoleon-i
+- key: tuileries-palace
+  name: Tuileries Palace
+  kind: palace
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.863
+  lng: 2.327
+  sources:
+  - wp-napoleon-iii
+- key: palais-royal
+  name: Palais-Royal
+  kind: palace
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.864
+  lng: 2.337
+  sources:
+  - wp-louis-philippe-i
+- key: chateau-de-cognac
+  name: Chateau de Cognac
+  kind: castle
+  city: Cognac
+  region: Charente
+  country: France
+  lat: 45.696
+  lng: -0.329
+  sources:
+  - wp-francis-i-of-france
+- key: palace-of-valsain
+  name: Palace of Valsain
+  kind: palace
+  city: Segovia
+  region: Segovia
+  country: Spain
+  lat: 40.898
+  lng: -4.011
+  sources:
+  - wp-isabella-clara-eugenia
+- key: szczecin
+  name: Szczecin
+  historical_name: Stettin
+  kind: city
+  region: West Pomerania
+  country: Poland
+  lat: 53.428
+  lng: 14.553
+  sources:
+  - wp-catherine-the-great
+- key: berlin-palace
+  name: Berlin Palace
+  kind: palace
+  city: Berlin
+  country: Germany
+  lat: 52.517
+  lng: 13.401
+  sources:
+  - wp-frederick-the-great
+- key: sanssouci
+  name: Sanssouci
+  kind: palace
+  city: Potsdam
+  region: Brandenburg
+  country: Germany
+  lat: 52.404
+  lng: 13.039
+  sources:
+  - wp-frederick-the-great
+- key: alexander-palace
+  name: Alexander Palace
+  kind: palace
+  city: Tsarskoye Selo
+  region: Saint Petersburg
+  country: Russia
+  lat: 59.717
+  lng: 30.396
+  sources:
+  - wp-nicholas-ii-of-russia
+- key: yekaterinburg
+  name: Yekaterinburg
+  kind: city
+  region: Sverdlovsk Oblast
+  country: Russia
+  lat: 56.839
+  lng: 60.605
+  sources:
+  - wp-nicholas-ii-of-russia
+- key: villa-careggi
+  name: Villa di Careggi
+  kind: villa
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.805
+  lng: 11.243
+  sources:
+  - wp-lorenzo-de-medici
+- key: medici-chapels
+  name: Medici Chapels (New Sacristy), San Lorenzo
+  kind: chapel
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.775
+  lng: 11.254
+  sources:
+  - wp-lorenzo-de-medici
+- key: st-michaels-abbey-farnborough
+  name: St Michael's Abbey, Farnborough
+  kind: abbey
+  city: Farnborough
+  region: Hampshire
+  country: England
+  lat: 51.293
+  lng: -0.76
+  sources:
+  - wp-eugenie-de-montijo
+- key: brooksby
+  name: Brooksby
+  kind: village
+  region: Leicestershire
+  country: England
+  lat: 52.723
+  lng: -1.036
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- key: portsmouth
+  name: Portsmouth
+  kind: city
+  region: Hampshire
+  country: England
+  lat: 50.799
+  lng: -1.091
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- key: castello-di-petroia
+  name: Castello di Petroia
+  kind: castle
+  city: Gubbio
+  region: Umbria
+  country: Italy
+  lat: 43.36
+  lng: 12.54
+  sources:
+  - wp-federico-da-montefeltro
+- key: marmirolo
+  name: Marmirolo
+  kind: town
+  region: Lombardy
+  country: Italy
+  lat: 45.206
+  lng: 10.851
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- key: couvent-des-capucines-paris
+  name: Couvent des Capucines
+  kind: convent
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.868
+  lng: 2.329
+  sources:
+  - wp-madame-de-pompadour
+- key: basilica-of-san-lorenzo-florence
+  name: Basilica of San Lorenzo
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.775
+  lng: 11.254
+  sources:
+  - wp-cosimo-iii-de-medici-grand-duke-of-tuscany
+- key: royal-monastery-of-brou
+  name: Royal Monastery of Brou
+  kind: monastery
+  city: Bourg-en-Bresse
+  region: Auvergne-Rhone-Alpes
+  country: France
+  lat: 46.197
+  lng: 5.244
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- key: reims
+  name: Reims
+  kind: city
+  region: Grand Est
+  country: France
+  lat: 49.258
+  lng: 4.032
+  sources:
+  - wp-jean-baptiste-colbert
+- key: finchingfield
+  name: Finchingfield
+  kind: village
+  region: Essex
+  country: England
+  lat: 51.955
+  lng: 0.452
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- key: arundel
+  name: Arundel
+  kind: town
+  region: West Sussex
+  country: England
+  lat: 50.855
+  lng: -0.558
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- key: amalienborg-palace
+  name: Amalienborg Palace
+  kind: palace
+  city: Copenhagen
+  country: Denmark
+  lat: 55.684
+  lng: 12.593
+  sources:
+  - wp-christian-viii-of-denmark
+- key: roskilde-cathedral
+  name: Roskilde Cathedral
+  kind: cathedral
+  city: Roskilde
+  region: Zealand
+  country: Denmark
+  lat: 55.643
+  lng: 12.08
+  visitable: true
+  sources:
+  - wp-christian-viii-of-denmark
+  - wp-christian-iv-of-denmark
+- key: torgau
+  name: Torgau
+  kind: city
+  region: Saxony
+  country: Germany
+  lat: 51.56
+  lng: 13.005
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- key: lochau
+  name: Lochau (Annaburg)
+  historical_name: Lochau
+  kind: hunting castle
+  region: Saxony-Anhalt
+  country: Germany
+  lat: 51.797
+  lng: 13.043
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- key: st-boniface-abbey-munich
+  name: St. Boniface's Abbey, Munich
+  kind: abbey
+  city: Munich
+  region: Bavaria
+  country: Germany
+  lat: 48.146
+  lng: 11.566
+  visitable: true
+  built_by: Ludwig I of Bavaria
+  sources:
+  - wp-ludwig-i-of-bavaria
+- key: luetzen
+  name: Lützen
+  kind: town
+  region: Saxony-Anhalt
+  country: Germany
+  lat: 51.254
+  lng: 12.141
+  sources:
+  - wp-gustavus-adolphus-of-sweden
+- key: wiener-neustadt
+  name: Wiener Neustadt
+  kind: city
+  region: Lower Austria
+  country: Austria
+  lat: 47.815
+  lng: 16.243
+  sources:
+  - wp-archduke-leopold-wilhelm-of-austria
+people:
+- key: julius-ii
+  name: Julius II
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1443-12-05'
+  died: '1513-02-21'
+  house: della Rovere
+  realm: Papacy
+  prominence: 5
+  note: Pope 1503-1513 who commissioned the Raphael Rooms and Michelangelo's Sistine Chapel paintings, founded the Vatican Museums and began rebuilding St Peter's.
+  sources:
+  - wp-julius-ii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/af/Pope_Julius_II.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Pope_Julius_II.jpg/500px-Pope_Julius_II.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: cardinal-richelieu
+  name: Cardinal Richelieu
+  type: Clergy
+  roles:
+  - cardinal
+  - statesman
+  - patron
+  born: '1585-09-09'
+  died: '1642-12-04'
+  house: du Plessis
+  realm: France
+  prominence: 4
+  note: 'Chief minister of Louis XIII and a famous patron of the arts: his chief portraitist was Philippe de Champaigne, he built the Palais-Cardinal, rebuilt the Sorbonne and founded the Academie Francaise.'
+  sources:
+  - wp-cardinal-richelieu
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Champaigne_portrait_richelieu_eb.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Champaigne_portrait_richelieu_eb.jpg/500px-Champaigne_portrait_richelieu_eb.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Champaigne_portrait_richelieu_eb.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: leo-x
+  name: Leo X
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1475-12-11'
+  died: '1521-12-01'
+  house: Medici
+  realm: Papacy
+  prominence: 4
+  note: Medici pope 1513-1521, a significant patron of the arts under whom Raphael decorated the Vatican rooms and work on St Peter's continued.
+  sources:
+  - wp-leo-x
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg/500px-Raffaello%2C_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici%2C_1518%2C_03.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Raffaello,_ritratto_di_papa_leone_X_tra_i_cardinali_luigi_de%27_rossi_e_giulio_de%27_medici,_1518,_03.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: clement-vii
+  name: Clement VII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1478-05-26'
+  died: '1534-09-25'
+  house: Medici
+  realm: Papacy
+  prominence: 3
+  note: Medici pope 1523-1534 who commissioned works from Raphael, Benvenuto Cellini and Michelangelo, including The Last Judgment in the Sistine Chapel.
+  sources:
+  - wp-clement-vii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg/500px-El_papa_Clemente_VII%2C_por_Sebastiano_del_Piombo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:El_papa_Clemente_VII,_por_Sebastiano_del_Piombo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: urban-viii
+  name: Urban VIII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: 1568
+  died: '1644-07-29'
+  house: Barberini
+  realm: Papacy
+  prominence: 4
+  note: Barberini pope 1623-1644, a prominent patron who commissioned Bernini's baldacchino, the Palazzo Barberini and portrait busts.
+  sources:
+  - wp-urban-viii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0a/Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0a/Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg/500px-Pietro_da_Cortona_-_Portrait_of_Urban_VIII_%28ca._1624-1627%29_-_Google_Art_Project_-_edited.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pietro_da_Cortona_-_Portrait_of_Urban_VIII_(ca._1624-1627)_-_Google_Art_Project_-_edited.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: cardinal-mazarin
+  name: Cardinal Mazarin
+  type: Clergy
+  roles:
+  - cardinal
+  - statesman
+  - patron
+  born: '1602-07-14'
+  died: '1661-03-09'
+  realm: France
+  prominence: 4
+  note: Italian-born chief minister of Louis XIII and Louis XIV who recommended artists to bring from Rome and commissioned a bust of Richelieu from Bernini in 1640.
+  sources:
+  - wp-cardinal-mazarin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/17/Cardinal_Mazarin_by_Pierre_Mignard_%28Mus%C3%A9e_Cond%C3%A9%29_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Cardinal_Mazarin_by_Pierre_Mignard_%28Mus%C3%A9e_Cond%C3%A9%29_%28cropped%29.jpg/500px-Cardinal_Mazarin_by_Pierre_Mignard_%28Mus%C3%A9e_Cond%C3%A9%29_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Cardinal_Mazarin_by_Pierre_Mignard_(Mus%C3%A9e_Cond%C3%A9)_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: scipione-borghese
+  name: Scipione Borghese
+  type: Clergy
+  roles:
+  - cardinal
+  - patron
+  - collector
+  born: '1577-09-01'
+  died: '1633-10-02'
+  house: Borghese
+  prominence: 4
+  note: Cardinal nephew of Paul V and art collector who patronised Caravaggio and Bernini and founded the collection at the Villa Borghese.
+  sources:
+  - wp-scipione-borghese
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg/500px-Portrait_of_Cardinal_Scipione_Borghese_%28by_Ottavio_Leoni%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Cardinal_Scipione_Borghese_(by_Ottavio_Leoni).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: clement-viii
+  name: Clement VIII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1536-02-24'
+  died: '1605-03-03'
+  house: Aldobrandini
+  realm: Papacy
+  prominence: 2
+  note: Pope 1592-1605 who published the Clementine Vulgate and improved the Vatican Library; the article names no artists he commissioned.
+  sources:
+  - wp-clement-viii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/1280282369_clement-viii.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/1280282369_clement-viii.jpg/500px-1280282369_clement-viii.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:1280282369_clement-viii.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: pius-v
+  name: Pius V
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1504-01-17'
+  died: '1572-05-01'
+  house: Ghislieri
+  realm: Papacy
+  prominence: 3
+  note: Dominican pope 1566-1572 who commissioned the first complete edition of Aquinas (the editio Piana); a patron of learning, with no artists named in the article.
+  sources:
+  - wp-pius-v
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Bartolomeo_Passarotti_-_Pius_V.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Bartolomeo_Passarotti_-_Pius_V.jpg/500px-Bartolomeo_Passarotti_-_Pius_V.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bartolomeo_Passarotti_-_Pius_V.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: innocent-x
+  name: Innocent X
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1574-05-07'
+  died: '1655-01-07'
+  house: Pamphili
+  realm: Papacy
+  prominence: 3
+  note: Pamphili pope 1644-1655 who had Bernini erect the Fountain of the Four Rivers in Piazza Navona and sat for Velazquez's portrait.
+  sources:
+  - wp-innocent-x
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7f/Retrato_del_Papa_Inocencio_X._Roma%2C_by_Diego_Vel%C3%A1zquez.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7f/Retrato_del_Papa_Inocencio_X._Roma%2C_by_Diego_Vel%C3%A1zquez.jpg/500px-Retrato_del_Papa_Inocencio_X._Roma%2C_by_Diego_Vel%C3%A1zquez.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Retrato_del_Papa_Inocencio_X._Roma,_by_Diego_Vel%C3%A1zquez.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: paul-iii
+  name: Paul III
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1468-02-29'
+  died: '1549-11-10'
+  house: Farnese
+  realm: Papacy
+  prominence: 4
+  note: Farnese pope 1534-1549, a significant patron of Michelangelo, whose Last Judgement in the Sistine Chapel was painted in his reign.
+  sources:
+  - wp-paul-iii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg/500px-Portrait_of_Pope_Paul_III_Farnese_%28by_Titian%29_-_National_Museum_of_Capodimonte.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Paul_III_Farnese_(by_Titian)_-_National_Museum_of_Capodimonte.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: gregory-xiii
+  name: Gregory XIII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1502-01-07'
+  died: '1585-04-10'
+  house: Boncompagni
+  realm: Papacy
+  prominence: 3
+  note: Pope 1572-1585 who commissioned the Gregorian calendar and Giorgio Vasari's frescoes in the Sala Regia, built the Gregorian chapel in St Peter's and extended the Quirinal Palace.
+  sources:
+  - wp-gregory-xiii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Ritratto_di_Gregorio_XIII_-_Passarotti.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Ritratto_di_Gregorio_XIII_-_Passarotti.jpg/500px-Ritratto_di_Gregorio_XIII_-_Passarotti.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ritratto_di_Gregorio_XIII_-_Passarotti.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: sixtus-v
+  name: Sixtus V
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1521-12-13'
+  died: '1590-08-27'
+  house: Peretti
+  realm: Papacy
+  prominence: 4
+  note: Pope 1585-1590 who replanned Rome with the architect Domenico Fontana, completed the dome of St Peter's and raised four obelisks.
+  sources:
+  - wp-sixtus-v
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg/500px-%28Albi%29_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:(Albi)_Cath%C3%A9drale_Sainte-C%C3%A9cile_-_Tr%C3%A8sor_-_Portrait_du_pape_Sixte_V_-_PalissyIM81001477.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: paul-v
+  name: Paul V
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1552-09-17'
+  died: '1621-01-28'
+  house: Borghese
+  realm: Papacy
+  prominence: 3
+  note: Borghese pope 1605-1621 who completed St Peter's, improved the Vatican Library and Archives and restored the Aqua Traiana; uncle of Scipione Borghese.
+  sources:
+  - wp-paul-v
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Pope_Paul_V_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Pope_Paul_V_%28cropped%29.jpg/500px-Pope_Paul_V_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pope_Paul_V_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: pius-vii
+  name: Pius VII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1742-08-14'
+  died: '1823-08-20'
+  house: Chiaramonti
+  realm: Papacy
+  prominence: 4
+  note: Benedictine pope 1800-1823 who made Rome a home for artists such as Antonio Canova and Peter von Cornelius.
+  sources:
+  - wp-pius-vii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Sir_Thomas_Lawrence_-_Portrait_of_Pope_Pius_VII.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Sir_Thomas_Lawrence_-_Portrait_of_Pope_Pius_VII.jpg/500px-Sir_Thomas_Lawrence_-_Portrait_of_Pope_Pius_VII.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sir_Thomas_Lawrence_-_Portrait_of_Pope_Pius_VII.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: francesco-barberini
+  name: Francesco Barberini
+  type: Clergy
+  roles:
+  - cardinal
+  - patron
+  born: '1597-09-23'
+  died: '1679-12-10'
+  house: Barberini
+  prominence: 3
+  note: Cardinal nephew of Urban VIII and a highly significant patron who bought early Poussin paintings and secured St Peter's altarpiece commissions for artists such as Lanfranco, Sacchi and Pietro da
+    Cortona.
+  sources:
+  - wp-francesco-barberini
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ad/Francesco_Barberini.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Francesco_Barberini.jpg/500px-Francesco_Barberini.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Francesco_Barberini.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: julius-iii
+  name: Julius III
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1487-09-10'
+  died: '1555-03-23'
+  house: Ciocchi del Monte
+  realm: Papacy
+  prominence: 3
+  note: Pope 1550-1555 who brought the composer Palestrina to Rome as maestro di cappella and had Ammannati, Vasari and Michelangelo advise on his villa gardens.
+  sources:
+  - wp-julius-iii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/Girolamo_Sicciolante_-_Paus_Julius_IIIFXD.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Girolamo_Sicciolante_-_Paus_Julius_IIIFXD.jpg/500px-Girolamo_Sicciolante_-_Paus_Julius_IIIFXD.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Girolamo_Sicciolante_-_Paus_Julius_IIIFXD.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: alexander-vii
+  name: Alexander VII
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1599-02-13'
+  died: '1667-05-22'
+  house: Chigi
+  realm: Papacy
+  prominence: 3
+  note: Chigi pope 1655-1667 and a great patron of Bernini (St Peter's colonnade, Santa Maria del Popolo) who also employed Pietro da Cortona.
+  sources:
+  - wp-alexander-vii
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg/500px-Portrait_of_Pope_Alexander_VII_Chigi_%28by_Giovanni_Battista_Gaulli_-_Baciccio%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Pope_Alexander_VII_Chigi_(by_Giovanni_Battista_Gaulli_-_Baciccio).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: clement-xiv
+  name: Clement XIV
+  type: Clergy
+  roles:
+  - pope
+  - patron
+  born: '1705-10-31'
+  died: '1774-09-22'
+  realm: Papacy
+  prominence: 2
+  note: Franciscan pope 1769-1774; the article names no art he commissioned, but his tomb was sculpted by Antonio Canova.
+  sources:
+  - wp-clement-xiv
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/Giovanni_Domenico_Porta_%E2%80%93_Ritratto_di_papa_Clemente_XIV_%28c._1770%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Giovanni_Domenico_Porta_%E2%80%93_Ritratto_di_papa_Clemente_XIV_%28c._1770%29.jpg/500px-Giovanni_Domenico_Porta_%E2%80%93_Ritratto_di_papa_Clemente_XIV_%28c._1770%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giovanni_Domenico_Porta_%E2%80%93_Ritratto_di_papa_Clemente_XIV_(c._1770).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+- key: napoleon-i
+  name: Napoleon
+  type: Royalty
+  roles:
+  - emperor
+  - general
+  - patron
+  born: '1769-08-15'
+  died: '1821-05-05'
+  house: Bonaparte
+  realm: France
+  prominence: 5
+  note: Emperor of the French 1804-1814 and again in 1815, after rising as a general; crowned at Notre Dame with Pope Pius VII. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg/500px-Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_-_The_Emperor_Napoleon_in_His_Study_at_the_Tuileries_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-napoleon-i
+- key: napoleon-iii
+  name: Napoleon III
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1808-04-20'
+  died: '1873-01-09'
+  house: Bonaparte
+  realm: France
+  prominence: 4
+  note: President of France 1848-1852, then Emperor of the French 1852-1870; commissioned Haussmann's grand reconstruction of Paris.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0c/Alexandre_Cabanel_002.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Alexandre_Cabanel_002.jpg/500px-Alexandre_Cabanel_002.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alexandre_Cabanel_002.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-napoleon-iii
+- key: louis-xiv
+  name: Louis XIV
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1638-09-05'
+  died: '1715-09-01'
+  house: Bourbon
+  realm: France
+  prominence: 5
+  note: The Sun King, who ruled from Versailles; patron of Molière, Racine, Boileau, Lully and the painter Le Brun.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5f/Louis_XIV_of_France.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Louis_XIV_of_France.jpg/500px-Louis_XIV_of_France.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Louis_XIV_of_France.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-xiv
+- key: charles-v-holy-roman-emperor
+  name: Charles V (Holy Roman Emperor)
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1500-02-24'
+  died: '1558-09-21'
+  house: Habsburg
+  realm: Holy Roman Empire
+  prominence: 5
+  note: Holy Roman Emperor 1519-1556 and King of Spain 1516-1556, ruler of the empire on which the sun never set. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6f/Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg/500px-Portrait_of_Charles_V%2C_Holy_Roman_Emperor%2C_seated_%281500%E2%80%931558%29%2C_formerly_attributed_to_Titian_%28Alte_Pinakothek%2C_Munich%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Charles_V,_Holy_Roman_Emperor,_seated_(1500%E2%80%931558),_formerly_attributed_to_Titian_(Alte_Pinakothek,_Munich).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-charles-v-holy-roman-emperor
+- key: philip-iv-of-spain
+  name: Philip IV of Spain
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1605-04-08'
+  died: '1665-09-17'
+  house: Habsburg
+  realm: Spain
+  prominence: 3
+  note: King of Spain 1621-1665, remembered for his patronage of the arts, including Diego Velázquez, whom he summoned to Madrid in 1624.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a4/Philip_IV_of_Spain_-_Vel%C3%A1zquez_1644.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Philip_IV_of_Spain_-_Vel%C3%A1zquez_1644.jpg/500px-Philip_IV_of_Spain_-_Vel%C3%A1zquez_1644.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Philip_IV_of_Spain_-_Vel%C3%A1zquez_1644.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-philip-iv-of-spain
+- key: louis-xv
+  name: Louis XV
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1710-02-15'
+  died: '1774-05-10'
+  house: Bourbon
+  realm: France
+  prominence: 3
+  note: King of France 1715-1774, great-grandson and successor of Louis XIV. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c6/Louis_XV%2C_King_of_France_%281710-1774%29_edited_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/Louis_XV%2C_King_of_France_%281710-1774%29_edited_2.jpg/500px-Louis_XV%2C_King_of_France_%281710-1774%29_edited_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Louis_XV,_King_of_France_(1710-1774)_edited_2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-xv
+- key: alexander-ii-of-russia
+  name: Alexander II of Russia
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1818-04-29'
+  died: '1881-03-13'
+  house: Romanov
+  realm: Russia
+  prominence: 4
+  note: Emperor of Russia 1855-1881, the Liberator who abolished serfdom in 1861, assassinated in Saint Petersburg. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Zar_Alexander_II_%28cropped%29_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Zar_Alexander_II_%28cropped%29_%28cropped%29.jpg/500px-Zar_Alexander_II_%28cropped%29_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Zar_Alexander_II_(cropped)_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-alexander-ii-of-russia
+- key: josephine-de-beauharnais
+  name: Joséphine de Beauharnais
+  type: Royalty
+  roles:
+  - empress
+  - collector
+  - patron
+  born: '1763-06-23'
+  died: '1814-05-29'
+  house: Bonaparte
+  realm: France
+  prominence: 3
+  note: First wife of Napoleon and Empress of the French 1804-1810; a leading collector of sculpture and painting and patron of Gros, who also worked with David and Gérard, at Malmaison.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f3/Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project_%28cropped%2C_Josephine_detail%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project_%28cropped%2C_Josephine_detail%29.jpg/500px-Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project_%28cropped%2C_Josephine_detail%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Baron_Fran%C3%A7ois_G%C3%A9rard_-_Jos%C3%A9phine_in_coronation_costume_-_Google_Art_Project_(cropped,_Josephine_detail).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-josephine-de-beauharnais
+- key: francis-i-of-france
+  name: Francis I
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1494-09-12'
+  died: '1547-03-31'
+  house: Valois-Angoulême
+  realm: France
+  prominence: 4
+  note: King of France 1515-1547, a prodigious patron who brought Leonardo da Vinci to France and employed Cellini, Rosso Fiorentino, Giulio Romano and Primaticcio.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/87/Fran%C3%A7ois_Ier_Louvre.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Fran%C3%A7ois_Ier_Louvre.jpg/500px-Fran%C3%A7ois_Ier_Louvre.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Ier_Louvre.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-francis-i-of-france
+- key: louis-philippe-i
+  name: Louis Philippe I
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1773-10-06'
+  died: '1850-08-26'
+  house: Orléans
+  realm: France
+  prominence: 3
+  note: The Citizen King of the French 1830-1848. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/06/1841_portrait_painting_of_Louis_Philippe_I_%28King_of_the_French%29_by_Winterhalter.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/1841_portrait_painting_of_Louis_Philippe_I_%28King_of_the_French%29_by_Winterhalter.jpg/500px-1841_portrait_painting_of_Louis_Philippe_I_%28King_of_the_French%29_by_Winterhalter.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:1841_portrait_painting_of_Louis_Philippe_I_(King_of_the_French)_by_Winterhalter.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-philippe-i
+- key: peter-the-great
+  name: Peter the Great
+  type: Royalty
+  roles:
+  - tsar
+  - emperor
+  - patron
+  born: '1672-06-09'
+  died: '1725-02-08'
+  house: Romanov
+  realm: Russia
+  prominence: 4
+  note: Tsar of Russia from 1682 and first Emperor from 1721, founder of Saint Petersburg; bought anatomical and herbarium collections and paintings for his Kunstkamera.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d6/Inconnu_d%27apr%C3%A8s_J.-M._Nattier%2C_Portrait_de_Pierre_Ier_%28mus%C3%A9e_de_l%E2%80%99Ermitage%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/Inconnu_d%27apr%C3%A8s_J.-M._Nattier%2C_Portrait_de_Pierre_Ier_%28mus%C3%A9e_de_l%E2%80%99Ermitage%29.jpg/500px-Inconnu_d%27apr%C3%A8s_J.-M._Nattier%2C_Portrait_de_Pierre_Ier_%28mus%C3%A9e_de_l%E2%80%99Ermitage%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Inconnu_d%27apr%C3%A8s_J.-M._Nattier,_Portrait_de_Pierre_Ier_(mus%C3%A9e_de_l%E2%80%99Ermitage).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-peter-the-great
+- key: marie-de-medici
+  name: Marie de' Medici
+  type: Royalty
+  roles:
+  - queen
+  - regent
+  - patron
+  born: '1575-04-26'
+  died: '1642-07-03'
+  house: Medici
+  realm: France
+  prominence: 3
+  note: Queen of France as wife of Henry IV and regent 1610-1617; an art collector who commissioned Rubens's Marie de' Medici cycle for the Luxembourg Palace.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9a/Frans_Pourbus%2C_the_Younger_-_Marie_de_M%C3%A9dicis_-_1920.1034_-_Art_Institute_of_Chicago.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Frans_Pourbus%2C_the_Younger_-_Marie_de_M%C3%A9dicis_-_1920.1034_-_Art_Institute_of_Chicago.jpg/500px-Frans_Pourbus%2C_the_Younger_-_Marie_de_M%C3%A9dicis_-_1920.1034_-_Art_Institute_of_Chicago.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Frans_Pourbus,_the_Younger_-_Marie_de_M%C3%A9dicis_-_1920.1034_-_Art_Institute_of_Chicago.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-marie-de-medici
+- key: lorenzo-de-medici
+  name: Lorenzo de' Medici
+  type: Patron
+  roles:
+  - statesman
+  - patron
+  born: '1449-01-01'
+  died: '1492-04-08'
+  house: Medici
+  realm: Florence
+  prominence: 4
+  note: Lorenzo the Magnificent, de facto ruler of Florence and the most powerful patron of Renaissance culture in Italy; sponsored Botticelli and Michelangelo.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/10/Lorenzo_de_Medici.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/10/Lorenzo_de_Medici.jpg/500px-Lorenzo_de_Medici.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lorenzo_de_Medici.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-lorenzo-de-medici
+- key: rudolf-ii-holy-roman-emperor
+  name: Rudolf II (Holy Roman Emperor)
+  type: Royalty
+  roles:
+  - emperor
+  - collector
+  - patron
+  born: '1552-07-18'
+  died: '1612-01-20'
+  house: Habsburg
+  realm: Holy Roman Empire
+  prominence: 3
+  note: Holy Roman Emperor 1576-1612 who held court in Prague; a great patron of Northern Mannerist art with the most impressive collections in Europe of his day.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Martino_Rota_%28workshop%29_Portrait_of_Emperor_Rudolf.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Martino_Rota_%28workshop%29_Portrait_of_Emperor_Rudolf.jpg/500px-Martino_Rota_%28workshop%29_Portrait_of_Emperor_Rudolf.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Martino_Rota_(workshop)_Portrait_of_Emperor_Rudolf.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-rudolf-ii-holy-roman-emperor
+- key: nicholas-ii-of-russia
+  name: Nicholas II of Russia
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1868-05-18'
+  died: '1918-07-17'
+  house: Romanov
+  realm: Russia
+  prominence: 4
+  note: Last Emperor of Russia 1894-1917, executed with his family at Yekaterinburg. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Mikola_II_%28cropped%29-2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Mikola_II_%28cropped%29-2.jpg/500px-Mikola_II_%28cropped%29-2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Mikola_II_(cropped)-2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-nicholas-ii-of-russia
+- key: alexander-iii-of-russia
+  name: Alexander III of Russia
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1845-03-10'
+  died: '1894-11-01'
+  house: Romanov
+  realm: Russia
+  prominence: 3
+  note: Emperor of Russia 1881-1894; a patron of the ballet who commissioned Fabergé to make the first jeweled Easter egg for his wife in 1885.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/51/Tsar_Alexander_III_c._1885.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/51/Tsar_Alexander_III_c._1885.jpg/500px-Tsar_Alexander_III_c._1885.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Tsar_Alexander_III_c._1885.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-alexander-iii-of-russia
+- key: louis-xiii
+  name: Louis XIII
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1601-09-27'
+  died: '1643-05-14'
+  house: Bourbon
+  realm: France
+  prominence: 3
+  note: King of France 1610-1643; commissioned Nicolas Poussin and Philippe de Champaigne to decorate the Louvre Palace.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Luis_XIII%2C_rey_de_Francia_%28Philippe_de_Champaigne%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Luis_XIII%2C_rey_de_Francia_%28Philippe_de_Champaigne%29.jpg/500px-Luis_XIII%2C_rey_de_Francia_%28Philippe_de_Champaigne%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Luis_XIII,_rey_de_Francia_(Philippe_de_Champaigne).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-xiii
+- key: isabella-clara-eugenia
+  name: Isabella Clara Eugenia
+  type: Royalty
+  roles:
+  - sovereign
+  - patron
+  born: '1566-08-12'
+  died: '1633-12-01'
+  house: Habsburg
+  realm: Habsburg Netherlands
+  prominence: 3
+  note: Sovereign of the Habsburg Netherlands with her husband Albert 1598-1621, then governess; patron of Rubens, who made The Triumph of the Eucharist tapestry series for her.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Isabella_Rubens.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Isabella_Rubens.jpg/500px-Isabella_Rubens.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Isabella_Rubens.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-isabella-clara-eugenia
+- key: louis-xvi
+  name: Louis XVI
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1754-08-23'
+  died: '1793-01-21'
+  house: Bourbon
+  realm: France
+  prominence: 4
+  note: Last king of France before the Revolution, executed by guillotine in 1793. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ce/Antoine-Fran%C3%A7ois_Callet_-_Louis_XVI%2C_roi_de_France_et_de_Navarre_%281754-1793%29%2C_rev%C3%AAtu_du_grand_costume_royal_en_1779_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Antoine-Fran%C3%A7ois_Callet_-_Louis_XVI%2C_roi_de_France_et_de_Navarre_%281754-1793%29%2C_rev%C3%AAtu_du_grand_costume_royal_en_1779_-_Google_Art_Project.jpg/500px-Antoine-Fran%C3%A7ois_Callet_-_Louis_XVI%2C_roi_de_France_et_de_Navarre_%281754-1793%29%2C_rev%C3%AAtu_du_grand_costume_royal_en_1779_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antoine-Fran%C3%A7ois_Callet_-_Louis_XVI,_roi_de_France_et_de_Navarre_(1754-1793),_rev%C3%AAtu_du_grand_costume_royal_en_1779_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-xvi
+- key: louis-xviii
+  name: Louis XVIII
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1755-11-17'
+  died: '1824-09-16'
+  house: Bourbon
+  realm: France
+  prominence: 3
+  note: King of France 1814-1824 after 23 years of exile, brother of Louis XVI. The trimmed article text does not cover his art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg/500px-G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-louis-xviii
+- key: catherine-the-great
+  name: Catherine the Great
+  type: Royalty
+  roles:
+  - empress
+  - patron
+  born: '1729-05-02'
+  died: '1796-11-17'
+  house: Romanov
+  realm: Russia
+  prominence: 4
+  note: Empress of Russia 1762-1796. The trimmed article text does not cover her art patronage.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kunsthistorisches_Museum%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kunsthistorisches_Museum%29.jpg/500px-Catherine_II_after_Roslin%2C_Rokotov_%281780s%2C_Kunsthistorisches_Museum%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Catherine_II_after_Roslin,_Rokotov_(1780s,_Kunsthistorisches_Museum).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-catherine-the-great
+- key: frederick-the-great
+  name: Frederick the Great
+  type: Royalty
+  roles:
+  - king
+  - patron
+  born: '1712-01-24'
+  died: '1786-08-17'
+  house: Hohenzollern
+  realm: Prussia
+  prominence: 4
+  note: King of Prussia 1740-1786, remembered for his patronage of the arts and the Enlightenment; buried at Sanssouci in Potsdam.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5d/Friedrich_der_Gro%C3%9Fe_-_Johann_Georg_Ziesenis_-_Google_Cultural_Institute_%28cropped_2%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5d/Friedrich_der_Gro%C3%9Fe_-_Johann_Georg_Ziesenis_-_Google_Cultural_Institute_%28cropped_2%29.jpg/500px-Friedrich_der_Gro%C3%9Fe_-_Johann_Georg_Ziesenis_-_Google_Cultural_Institute_%28cropped_2%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Friedrich_der_Gro%C3%9Fe_-_Johann_Georg_Ziesenis_-_Google_Cultural_Institute_(cropped_2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-frederick-the-great
+- key: henrietta-maria
+  name: Henrietta Maria
+  type: Royalty
+  roles:
+  - queen
+  - collector
+  - patron
+  born: '1609-11-25'
+  died: '1669-09-10'
+  house: Bourbon
+  realm: England
+  prominence: 2
+  note: Queen of England, Scotland and Ireland 1625-1649 as wife of Charles I; patron of Orazio Gentileschi, Guido Reni, Anthony van Dyck, Hubert Le Sueur and the miniaturists Petitot and Bourdier.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c2/Workshop_of_Anthony_van_Dyck_-_Portrait_of_Henrietta_Maria_de_Bourbon%2C_Queen_of_England.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Workshop_of_Anthony_van_Dyck_-_Portrait_of_Henrietta_Maria_de_Bourbon%2C_Queen_of_England.jpg/500px-Workshop_of_Anthony_van_Dyck_-_Portrait_of_Henrietta_Maria_de_Bourbon%2C_Queen_of_England.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Workshop_of_Anthony_van_Dyck_-_Portrait_of_Henrietta_Maria_de_Bourbon,_Queen_of_England.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-henrietta-maria
+- key: eugenie-de-montijo
+  name: Eugénie de Montijo
+  type: Royalty
+  roles:
+  - empress
+  - patron
+  born: '1826-05-05'
+  died: '1920-07-11'
+  house: Bonaparte
+  realm: France
+  prominence: 3
+  note: Empress of the French 1853-1870 as wife of Napoleon III; she curated the Musée Chinois at the Palace of Fontainebleau.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/Eug%C3%A9nie_de_Montijo%2C_Kejsarinna_av_Frankrike.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Eug%C3%A9nie_de_Montijo%2C_Kejsarinna_av_Frankrike.jpg/500px-Eug%C3%A9nie_de_Montijo%2C_Kejsarinna_av_Frankrike.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Eug%C3%A9nie_de_Montijo,_Kejsarinna_av_Frankrike.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-eugenie-de-montijo
+- key: cosimo-i-de-medici-grand-duke-of-tuscany
+  name: Cosimo I de' Medici
+  type: Royalty
+  roles:
+  - duke
+  - patron
+  born: '1519-06-12'
+  died: '1574-04-21'
+  house: Medici
+  realm: Tuscany
+  prominence: 3
+  note: Duke of Florence from 1537 and first Grand Duke of Tuscany from 1569; built the Uffizi and patronised Vasari, Cellini, Pontormo and Bronzino.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Agnolo_Bronzino_-_Cosimo_I_de%27_Medici_in_armour_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Agnolo_Bronzino_-_Cosimo_I_de%27_Medici_in_armour_-_Google_Art_Project.jpg/500px-Agnolo_Bronzino_-_Cosimo_I_de%27_Medici_in_armour_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Agnolo_Bronzino_-_Cosimo_I_de%27_Medici_in_armour_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-cosimo-i-de-medici-grand-duke-of-tuscany
+- key: cosimo-iii-de-medici-grand-duke-of-tuscany
+  name: Cosimo III de' Medici
+  type: Nobility
+  roles:
+  - patron
+  born: '1642-08-14'
+  died: '1723-10-31'
+  house: Medici
+  realm: Tuscany
+  prominence: 2
+  note: Grand Duke of Tuscany 1670-1723; his patronage helped the Scottish artists John Smibert and John Alexander.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a7/Volterrano%2C_Cosimo_III_de%27_Medici_in_grand_ducal_robes_%28Warsaw_Royal_Castle%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/Volterrano%2C_Cosimo_III_de%27_Medici_in_grand_ducal_robes_%28Warsaw_Royal_Castle%29.jpg/500px-Volterrano%2C_Cosimo_III_de%27_Medici_in_grand_ducal_robes_%28Warsaw_Royal_Castle%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Volterrano,_Cosimo_III_de%27_Medici_in_grand_ducal_robes_(Warsaw_Royal_Castle).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-cosimo-iii-de-medici-grand-duke-of-tuscany
+- key: madame-de-pompadour
+  name: Madame de Pompadour
+  type: Nobility
+  roles:
+  - patron
+  born: '1721-12-29'
+  died: '1764-04-15'
+  realm: France
+  prominence: 3
+  note: Chief mistress of Louis XV; patron of Boucher, Nattier and Drouais, of the Sevres porcelain factory and of Voltaire.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Charles_Andr%C3%A9_Van_Loo_-_Madame_de_Pompadour_en_belle_jardini%C3%A8re_-_v.1754-1755FXD.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Charles_Andr%C3%A9_Van_Loo_-_Madame_de_Pompadour_en_belle_jardini%C3%A8re_-_v.1754-1755FXD.jpg/500px-Charles_Andr%C3%A9_Van_Loo_-_Madame_de_Pompadour_en_belle_jardini%C3%A8re_-_v.1754-1755FXD.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Charles_Andr%C3%A9_Van_Loo_-_Madame_de_Pompadour_en_belle_jardini%C3%A8re_-_v.1754-1755FXD.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-madame-de-pompadour
+- key: christina-queen-of-sweden
+  name: Christina
+  type: Royalty
+  roles:
+  - patron
+  born: '1626-12-18'
+  died: '1689-04-19'
+  house: Vasa
+  realm: Sweden
+  prominence: 4
+  note: Queen of Sweden 1632-1654, who abdicated and settled in Rome; collector of books and art and protector of Baroque artists, composers and musicians.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2e/Swedish_queen_Drottning_Kristina_portrait_by_S%C3%A9bastien_Bourdon_stor.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/2/2e/Swedish_queen_Drottning_Kristina_portrait_by_S%C3%A9bastien_Bourdon_stor.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Swedish_queen_Drottning_Kristina_portrait_by_S%C3%A9bastien_Bourdon_stor.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-christina-queen-of-sweden
+- key: anne-of-austria
+  name: Anne of Austria
+  type: Royalty
+  roles:
+  - patron
+  - regent
+  born: '1601-09-22'
+  died: '1666-01-20'
+  house: Habsburg
+  realm: France
+  prominence: 3
+  note: Queen of France by marriage to Louis XIII and regent for Louis XIV; commissioned the convent of Val-de-Grace.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/After_Rubens_-_Anne_of_Austria%2C_Queen_of_France_-_Versailles_MV_3410.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/After_Rubens_-_Anne_of_Austria%2C_Queen_of_France_-_Versailles_MV_3410.jpg/500px-After_Rubens_-_Anne_of_Austria%2C_Queen_of_France_-_Versailles_MV_3410.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:After_Rubens_-_Anne_of_Austria,_Queen_of_France_-_Versailles_MV_3410.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-anne-of-austria
+- key: albert-vii-archduke-of-austria
+  name: Albert VII
+  type: Royalty
+  roles:
+  - patron
+  born: '1559-11-13'
+  died: '1621-07-13'
+  house: Habsburg
+  realm: Habsburg Netherlands
+  prominence: 3
+  note: Archduke who ruled the Habsburg Netherlands jointly with his wife Isabella Clara Eugenia; appointed Peter Paul Rubens as court painter in 1609.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Rubens_-_arquiduquealbertoVII01.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Rubens_-_arquiduquealbertoVII01.jpg/500px-Rubens_-_arquiduquealbertoVII01.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rubens_-_arquiduquealbertoVII01.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-albert-vii-archduke-of-austria
+- key: isabella-d-este
+  name: Isabella d'Este
+  type: Nobility
+  roles:
+  - patron
+  born: '1474-05-19'
+  died: '1539-02-13'
+  house: Este
+  realm: Mantua
+  prominence: 5
+  note: Marchioness of Mantua; patron of Mantegna, Perugino, Leonardo, Titian, Giovanni Bellini, Raphael and many other artists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/Leonardo_da_Vinci%2C_Portrait_of_Isabella_d%27Este.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Leonardo_da_Vinci%2C_Portrait_of_Isabella_d%27Este.jpg/500px-Leonardo_da_Vinci%2C_Portrait_of_Isabella_d%27Este.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci,_Portrait_of_Isabella_d%27Este.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-isabella-d-este
+- key: agostino-chigi
+  name: Agostino Chigi
+  type: Patron
+  roles:
+  - banker
+  - patron
+  born: '1466-11-29'
+  died: '1520-04-11'
+  house: Chigi
+  realm: Papacy
+  prominence: 4
+  note: Sienese banker in Rome, patron of Raphael, Peruzzi, Sebastiano del Piombo and Sodoma; built the Villa Farnesina.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/43/Anonimo_Agostino_Chigi.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/4/43/Anonimo_Agostino_Chigi.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anonimo_Agostino_Chigi.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-agostino-chigi
+- key: george-villiers-1st-duke-of-buckingham
+  name: George Villiers, 1st Duke of Buckingham
+  type: Nobility
+  roles:
+  - courtier
+  - patron
+  born: '1592-08-20'
+  died: '1628-08-23'
+  house: Villiers
+  realm: England
+  prominence: 3
+  note: Favourite of James I and Charles I and Lord High Admiral; patron of Rubens, Van Dyck and Mytens.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_%28by_Peter_Paul_Rubens%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_%28by_Peter_Paul_Rubens%29.jpg/500px-Portrait_of_George_Villiers%2C_1st_Duke_of_Buckingham_%28by_Peter_Paul_Rubens%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_George_Villiers,_1st_Duke_of_Buckingham_(by_Peter_Paul_Rubens).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- key: philip-iii-of-spain
+  name: Philip III
+  type: Royalty
+  roles:
+  - patron
+  born: '1578-04-14'
+  died: '1621-03-31'
+  house: Habsburg
+  realm: Spain
+  prominence: 3
+  note: King of Spain and Portugal 1598-1621; included as a Habsburg patron (his art patronage is not in the captured part of the article).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5f/Felipe_III_de_Espa%C3%B1a.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5f/Felipe_III_de_Espa%C3%B1a.jpg/500px-Felipe_III_de_Espa%C3%B1a.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Felipe_III_de_Espa%C3%B1a.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-philip-iii-of-spain
+- key: charles-iii-of-spain
+  name: Charles III
+  type: Royalty
+  roles:
+  - patron
+  born: '1716-01-20'
+  died: '1788-12-14'
+  house: Bourbon
+  realm: Spain
+  prominence: 3
+  note: King of Spain 1759-1788 and earlier of Naples and Sicily; built the Palace of Caserta, the Teatro di San Carlo and the Capodimonte palace and porcelain factory.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2d/Charles_III_of_Spain_high_resolution.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Charles_III_of_Spain_high_resolution.jpg/500px-Charles_III_of_Spain_high_resolution.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Charles_III_of_Spain_high_resolution.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-charles-iii-of-spain
+- key: margaret-of-austria-duchess-of-savoy
+  name: Margaret of Austria
+  type: Royalty
+  roles:
+  - patron
+  - regent
+  born: '1480-01-10'
+  died: '1530-12-01'
+  house: Habsburg
+  realm: Habsburg Netherlands
+  prominence: 3
+  note: Governor of the Habsburg Netherlands and Duchess of Savoy; art collector, patron of Bernaert van Orley and Conrad Meit, and builder of the Royal Monastery of Brou.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Portrait_of_Archduchess_Margaret_of_Austria%2C_Duchess_of_Savoy_%281480%E2%80%931530%29%2C_in_widow%27s_dress%2C_by_Bernard_van_Orley.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Portrait_of_Archduchess_Margaret_of_Austria%2C_Duchess_of_Savoy_%281480%E2%80%931530%29%2C_in_widow%27s_dress%2C_by_Bernard_van_Orley.jpg/500px-Portrait_of_Archduchess_Margaret_of_Austria%2C_Duchess_of_Savoy_%281480%E2%80%931530%29%2C_in_widow%27s_dress%2C_by_Bernard_van_Orley.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Archduchess_Margaret_of_Austria,_Duchess_of_Savoy_(1480%E2%80%931530),_in_widow%27s_dress,_by_Bernard_van_Orley.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- key: maria-theresa
+  name: Maria Theresa
+  type: Royalty
+  roles:
+  - patron
+  born: '1717-05-13'
+  died: '1780-11-29'
+  house: Habsburg
+  realm: Austria
+  prominence: 5
+  note: Ruler of the Habsburg monarchy 1740-1780; included as a Habsburg patron (her art patronage is not in the captured part of the article).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/Kaiserin_Maria_Theresia_%28HRR%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Kaiserin_Maria_Theresia_%28HRR%29.jpg/500px-Kaiserin_Maria_Theresia_%28HRR%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kaiserin_Maria_Theresia_(HRR).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-maria-theresa
+- key: joseph-ii-holy-roman-emperor
+  name: Joseph II
+  type: Royalty
+  roles:
+  - emperor
+  - patron
+  born: '1741-03-13'
+  died: '1790-02-20'
+  house: Habsburg-Lorraine
+  realm: Holy Roman Empire
+  prominence: 4
+  note: Holy Roman Emperor 1765-1790, a supporter of the arts, particularly of the composers Mozart and Salieri.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Anton_von_Maron_006.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Anton_von_Maron_006.png/500px-Anton_von_Maron_006.png
+  image_page: https://commons.wikimedia.org/wiki/File:Anton_von_Maron_006.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-joseph-ii-holy-roman-emperor
+- key: federico-da-montefeltro
+  name: Federico da Montefeltro
+  type: Nobility
+  roles:
+  - condottiero
+  - patron
+  born: '1422-06-07'
+  died: '1482-09-10'
+  house: Montefeltro
+  realm: Urbino
+  prominence: 4
+  note: Lord and first Duke of Urbino and a condottiero; built the Ducal Palace of Urbino and a great library, and was painted by Pedro Berruguete.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/dc/Federico_da_Montefeltro.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Federico_da_Montefeltro.jpg/500px-Federico_da_Montefeltro.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Federico_da_Montefeltro.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-federico-da-montefeltro
+- key: federico-ii-gonzaga-duke-of-mantua
+  name: Federico II Gonzaga
+  type: Nobility
+  roles:
+  - patron
+  born: '1500-05-17'
+  died: 1540
+  house: Gonzaga
+  realm: Mantua
+  prominence: 4
+  note: First Duke of Mantua; commissioned the Palazzo Te from Giulio Romano and bought works by Correggio and Titian.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Tiziano_-_Federico_II_Gonzaga_%281529%29_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Tiziano_-_Federico_II_Gonzaga_%281529%29_2.jpg/500px-Tiziano_-_Federico_II_Gonzaga_%281529%29_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Tiziano_-_Federico_II_Gonzaga_(1529)_2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- key: ludovico-sforza
+  name: Ludovico Sforza
+  type: Nobility
+  roles:
+  - patron
+  born: '1452-08-03'
+  died: '1508-05-27'
+  house: Sforza
+  realm: Milan
+  prominence: 4
+  note: Duke of Milan 1494-1499, known as il Moro; his court employed Leonardo da Vinci and Donato Bramante.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Pala_Sforzesca_-_detail_01.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Pala_Sforzesca_-_detail_01.jpg/500px-Pala_Sforzesca_-_detail_01.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pala_Sforzesca_-_detail_01.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-ludovico-sforza
+- key: thomas-more
+  name: Thomas More
+  type: Government
+  roles:
+  - patron
+  - lawyer
+  - writer
+  born: '1478-02-07'
+  died: '1535-07-06'
+  realm: England
+  prominence: 4
+  note: English lawyer, humanist and author of Utopia, Lord Chancellor to Henry VIII, shown in Hans Holbein the Younger's portraits.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg/500px-Hans_Holbein%2C_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_Holbein,_the_Younger_-_Sir_Thomas_More_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-thomas-more
+- key: thomas-howard-21st-earl-of-arundel
+  name: Thomas Howard, 14th Earl of Arundel
+  type: Nobility
+  roles:
+  - patron
+  - collector
+  born: '1585-07-07'
+  died: '1646-10-04'
+  house: Howard
+  realm: England
+  prominence: 3
+  note: English courtier and diplomat, the 'Collector Earl', who commissioned portraits from Rubens, Van Dyck and others and gathered the Arundel Marbles.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/Thomas-howard-rubensportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Thomas-howard-rubensportrait.jpg/500px-Thomas-howard-rubensportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Thomas-howard-rubensportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- key: jean-baptiste-colbert
+  name: Jean-Baptiste Colbert
+  type: Government
+  roles:
+  - patron
+  - minister
+  born: '1619-08-29'
+  died: '1683-09-06'
+  realm: France
+  prominence: 4
+  note: First Minister of State to Louis XIV who founded the Gobelins tapestry works and royal academies and enriched the Louvre with pictures and statues.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/76/Colbert1666.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Colbert1666.jpg/500px-Colbert1666.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Colbert1666.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-jean-baptiste-colbert
+- key: christian-viii-of-denmark
+  name: Christian VIII
+  type: Royalty
+  roles:
+  - patron
+  born: '1786-09-18'
+  died: '1848-01-20'
+  house: Oldenburg
+  realm: Denmark
+  prominence: 2
+  note: King of Denmark 1839-1848 and briefly King of Norway in 1814; the article records his patronage of astronomy and science.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Kong_Christian_d._8..jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Kong_Christian_d._8..jpg/500px-Kong_Christian_d._8..jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kong_Christian_d._8..jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-christian-viii-of-denmark
+- key: charles-iv-of-spain
+  name: Charles IV
+  type: Royalty
+  roles:
+  - patron
+  born: '1748-11-11'
+  died: 1819
+  house: Bourbon
+  realm: Spain
+  prominence: 3
+  note: King of Spain 1788-1808, deposed by Napoleon; the article's lead portrait is by Francisco Goya.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2e/Carlos_IV_de_rojo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Carlos_IV_de_rojo.jpg/500px-Carlos_IV_de_rojo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carlos_IV_de_rojo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-charles-iv-of-spain
+- key: ferdinand-vii-of-spain
+  name: Ferdinand VII
+  type: Royalty
+  roles:
+  - patron
+  born: '1784-10-14'
+  died: '1833-09-29'
+  house: Bourbon
+  realm: Spain
+  prominence: 3
+  note: King of Spain 1808-1833, restored after Napoleon's occupation; the article's lead portrait is by Vicente Lopez Portana.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/Fernando_VII_-_Vicente_L%C3%B3pez.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Fernando_VII_-_Vicente_L%C3%B3pez.jpg/500px-Fernando_VII_-_Vicente_L%C3%B3pez.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fernando_VII_-_Vicente_L%C3%B3pez.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-ferdinand-vii-of-spain
+- key: frederick-iii-elector-of-saxony
+  name: Frederick III, Elector of Saxony
+  type: Nobility
+  roles:
+  - patron
+  - elector
+  born: '1463-01-17'
+  died: '1525-05-05'
+  house: Wettin
+  realm: Saxony
+  prominence: 4
+  note: Frederick the Wise, protector of Martin Luther, founder of the University of Wittenberg and employer of Lucas Cranach the Elder as court painter from 1504.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/Lucas_Cranach_d.%C3%84._-_Friedrich_III._von_Sachsen%2C_genannt_der_Weise_%28Liechtenstein_Collection%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/Lucas_Cranach_d.%C3%84._-_Friedrich_III._von_Sachsen%2C_genannt_der_Weise_%28Liechtenstein_Collection%29.jpg/500px-Lucas_Cranach_d.%C3%84._-_Friedrich_III._von_Sachsen%2C_genannt_der_Weise_%28Liechtenstein_Collection%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d.%C3%84._-_Friedrich_III._von_Sachsen,_genannt_der_Weise_(Liechtenstein_Collection).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- key: ludwig-i-of-bavaria
+  name: Ludwig I of Bavaria
+  type: Royalty
+  roles:
+  - patron
+  - collector
+  born: '1786-08-25'
+  died: '1868-02-29'
+  house: Wittelsbach
+  realm: Bavaria
+  prominence: 4
+  note: King of Bavaria 1825-1848 who commissioned neoclassical Munich (Glyptothek, Pinakotheken, Walhalla) and collected paintings and sculpture.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Joseph_Karl_Stieler_-_King_Ludwig_I_in_his_Coronation_Robes_-_WGA21796.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Joseph_Karl_Stieler_-_King_Ludwig_I_in_his_Coronation_Robes_-_WGA21796.jpg/500px-Joseph_Karl_Stieler_-_King_Ludwig_I_in_his_Coronation_Robes_-_WGA21796.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Joseph_Karl_Stieler_-_King_Ludwig_I_in_his_Coronation_Robes_-_WGA21796.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-ludwig-i-of-bavaria
+- key: christian-iv-of-denmark
+  name: Christian IV
+  type: Royalty
+  roles:
+  - patron
+  born: '1577-04-12'
+  died: '1648-02-28'
+  house: Oldenburg
+  realm: Denmark
+  prominence: 4
+  note: King of Denmark and Norway 1588-1648, a renaissance king who hired musicians and artists from across Europe, among them John Dowland.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Christian_IV_Pieter_Isaacsz_1612.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Christian_IV_Pieter_Isaacsz_1612.jpg/500px-Christian_IV_Pieter_Isaacsz_1612.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Christian_IV_Pieter_Isaacsz_1612.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-christian-iv-of-denmark
+- key: gustavus-adolphus-of-sweden
+  name: Gustavus Adolphus
+  type: Royalty
+  roles:
+  - patron
+  - collector
+  born: 1594
+  died: '1632-11-06'
+  house: Vasa
+  realm: Sweden
+  prominence: 4
+  note: King of Sweden 1611-1632 and Thirty Years' War commander, who took books from Jesuit libraries as spoils.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Attributed_to_Jacob_Hoefnagel_-_Gustavus_Adolphus%2C_King_of_Sweden_1611-1632_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Attributed_to_Jacob_Hoefnagel_-_Gustavus_Adolphus%2C_King_of_Sweden_1611-1632_-_Google_Art_Project.jpg/500px-Attributed_to_Jacob_Hoefnagel_-_Gustavus_Adolphus%2C_King_of_Sweden_1611-1632_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Attributed_to_Jacob_Hoefnagel_-_Gustavus_Adolphus,_King_of_Sweden_1611-1632_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-gustavus-adolphus-of-sweden
+- key: archduke-leopold-wilhelm-of-austria
+  name: Archduke Leopold Wilhelm of Austria
+  type: Nobility
+  roles:
+  - patron
+  - collector
+  born: '1614-01-05'
+  died: '1662-11-20'
+  house: Habsburg
+  realm: Holy Roman Empire
+  prominence: 3
+  note: Habsburg soldier and Governor of the Spanish Netherlands whose art collection, kept by David Teniers the Younger, is now in the Kunsthistorisches Museum, Vienna.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6c/Archduke_Leopold_Wilhelm_of_Austria_by_Pieter_Thijs.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Archduke_Leopold_Wilhelm_of_Austria_by_Pieter_Thijs.jpg/500px-Archduke_Leopold_Wilhelm_of_Austria_by_Pieter_Thijs.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Archduke_Leopold_Wilhelm_of_Austria_by_Pieter_Thijs.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-archduke-leopold-wilhelm-of-austria
+- key: vincenzo-i-gonzaga
+  name: Vincenzo I Gonzaga
+  type: Nobility
+  roles:
+  - patron
+  born: '1562-09-21'
+  died: '1612-02-09'
+  house: Gonzaga
+  realm: Mantua
+  prominence: 3
+  note: Duke of Mantua 1587-1612, patron of the arts and sciences who employed Monteverdi and Rubens.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Portrait_of_Duke_Vincenzo_I_Gonzaga_with_the_Collar_of_the_Order_of_the_Redeemer.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Portrait_of_Duke_Vincenzo_I_Gonzaga_with_the_Collar_of_the_Order_of_the_Redeemer.png/500px-Portrait_of_Duke_Vincenzo_I_Gonzaga_with_the_Collar_of_the_Order_of_the_Redeemer.png
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Duke_Vincenzo_I_Gonzaga_with_the_Collar_of_the_Order_of_the_Redeemer.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-vincenzo-i-gonzaga
+- key: francesco-ii-sforza
+  name: Francesco II Sforza
+  type: Nobility
+  roles:
+  - patron
+  born: '1495-02-04'
+  died: '1535-11-01'
+  house: Sforza
+  realm: Milan
+  prominence: 2
+  note: Last Sforza Duke of Milan (1521-1535); the article credits him with a cultural and economic recovery of his state.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Portrait_of_Francesco_II_Sforza_-_copy_from_Titian.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Portrait_of_Francesco_II_Sforza_-_copy_from_Titian.jpg/500px-Portrait_of_Francesco_II_Sforza_-_copy_from_Titian.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Francesco_II_Sforza_-_copy_from_Titian.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-francesco-ii-sforza
+- key: alfonso-i-d-este-duke-of-ferrara
+  name: Alfonso I d'Este
+  type: Nobility
+  roles:
+  - patron
+  born: '1476-07-21'
+  died: '1534-10-31'
+  house: Este
+  realm: Ferrara
+  prominence: 3
+  note: Duke of Ferrara 1505-1534, artillery commander and patron of Giovanni Bellini, Titian and Dosso Dossi, who built the Camerino d'alabastro.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/14/Bemberg_Fondation_Toulouse_-_Portrait_d%27Alphonse_dEste_-_Titien_Inv.1053.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Bemberg_Fondation_Toulouse_-_Portrait_d%27Alphonse_dEste_-_Titien_Inv.1053.jpg/500px-Bemberg_Fondation_Toulouse_-_Portrait_d%27Alphonse_dEste_-_Titien_Inv.1053.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bemberg_Fondation_Toulouse_-_Portrait_d%27Alphonse_dEste_-_Titien_Inv.1053.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, titles and art patronage captured; full biography and events not built out.
+  sources:
+  - wp-alfonso-i-d-este-duke-of-ferrara
+titles:
+- person: julius-ii
+  title: Pope
+  realm: Papacy
+  from: 1503
+  to: '1513-02-21'
+  sources:
+  - wp-julius-ii
+- person: leo-x
+  title: Pope
+  realm: Papacy
+  from: '1513-03-09'
+  to: '1521-12-01'
+  sources:
+  - wp-leo-x
+- person: clement-vii
+  title: Pope
+  realm: Papacy
+  from: '1523-11-19'
+  to: '1534-09-25'
+  sources:
+  - wp-clement-vii
+- person: urban-viii
+  title: Pope
+  realm: Papacy
+  from: '1623-08-06'
+  to: '1644-07-29'
+  sources:
+  - wp-urban-viii
+- person: clement-viii
+  title: Pope
+  realm: Papacy
+  from: '1592-01-30'
+  to: '1605-03-03'
+  sources:
+  - wp-clement-viii
+- person: pius-v
+  title: Pope
+  realm: Papacy
+  from: '1566-01-07'
+  to: '1572-05-01'
+  sources:
+  - wp-pius-v
+- person: innocent-x
+  title: Pope
+  realm: Papacy
+  from: '1644-09-15'
+  to: '1655-01-07'
+  sources:
+  - wp-innocent-x
+- person: paul-iii
+  title: Pope
+  realm: Papacy
+  from: '1534-10-13'
+  to: '1549-11-10'
+  sources:
+  - wp-paul-iii
+- person: gregory-xiii
+  title: Pope
+  realm: Papacy
+  from: '1572-05-13'
+  to: '1585-04-10'
+  sources:
+  - wp-gregory-xiii
+- person: sixtus-v
+  title: Pope
+  realm: Papacy
+  from: '1585-04-24'
+  to: '1590-08-27'
+  sources:
+  - wp-sixtus-v
+- person: paul-v
+  title: Pope
+  realm: Papacy
+  from: '1605-05-16'
+  to: '1621-01-28'
+  sources:
+  - wp-paul-v
+- person: pius-vii
+  title: Pope
+  realm: Papacy
+  from: '1800-03-14'
+  to: '1823-08-20'
+  sources:
+  - wp-pius-vii
+- person: julius-iii
+  title: Pope
+  realm: Papacy
+  from: '1550-02-22'
+  to: '1555-03-23'
+  sources:
+  - wp-julius-iii
+- person: alexander-vii
+  title: Pope
+  realm: Papacy
+  from: '1655-04-07'
+  to: '1667-05-22'
+  sources:
+  - wp-alexander-vii
+- person: clement-xiv
+  title: Pope
+  realm: Papacy
+  from: '1769-05-19'
+  to: '1774-09-22'
+  sources:
+  - wp-clement-xiv
+- person: cardinal-richelieu
+  title: Chief Minister of France
+  realm: France
+  from: 1624
+  to: '1642-12-04'
+  sources:
+  - wp-cardinal-richelieu
+- person: cardinal-mazarin
+  title: Chief Minister of France
+  realm: France
+  from: 1642
+  to: '1661-03-09'
+  sources:
+  - wp-cardinal-mazarin
+- person: napoleon-i
+  title: First Consul
+  realm: France
+  from: 1799
+  to: '1804-05-18'
+  note: Became First Consul after the Coup of 18 Brumaire in November 1799; the end date is the day he became Emperor.
+  sources:
+  - wp-napoleon-i
+- person: napoleon-i
+  title: Emperor of the French
+  realm: French Empire
+  from: '1804-05-18'
+  to: 1814
+  note: First reign, ended by his first abdication in 1814.
+  sources:
+  - wp-napoleon-i
+- person: napoleon-i
+  title: Emperor of the French
+  realm: French Empire
+  from: 1815
+  to: 1815
+  note: Brief restoration during the Hundred Days.
+  sources:
+  - wp-napoleon-i
+- person: napoleon-iii
+  title: President of France
+  realm: France
+  from: 1848
+  to: 1852
+  sources:
+  - wp-napoleon-iii
+- person: napoleon-iii
+  title: Emperor of the French
+  realm: French Empire
+  from: 1852
+  to: 1870
+  sources:
+  - wp-napoleon-iii
+- person: louis-xiv
+  title: King of France
+  realm: France
+  from: '1643-05-14'
+  to: '1715-09-01'
+  sources:
+  - wp-louis-xiv
+- person: louis-xv
+  title: King of France
+  realm: France
+  from: '1715-09-01'
+  to: '1774-05-10'
+  sources:
+  - wp-louis-xv
+- person: louis-xvi
+  title: King of France
+  realm: France
+  from: '1774-05-10'
+  to: '1792-09-21'
+  note: Used the style king of the French from 1791; the monarchy was abolished on 21 September 1792.
+  sources:
+  - wp-louis-xvi
+- person: louis-xviii
+  title: King of France
+  realm: France
+  from: 1814
+  to: '1824-09-16'
+  note: Interrupted by the Hundred Days in 1815.
+  sources:
+  - wp-louis-xviii
+- person: louis-xiii
+  title: King of France
+  realm: France
+  from: '1610-05-14'
+  to: '1643-05-14'
+  sources:
+  - wp-louis-xiii
+  - wp-henrietta-maria
+- person: francis-i-of-france
+  title: King of France
+  realm: France
+  from: 1515
+  to: '1547-03-31'
+  sources:
+  - wp-francis-i-of-france
+- person: louis-philippe-i
+  title: King of the French
+  realm: France
+  from: 1830
+  to: 1848
+  sources:
+  - wp-louis-philippe-i
+- person: charles-v-holy-roman-emperor
+  title: Holy Roman Emperor
+  realm: Holy Roman Empire
+  from: 1519
+  to: 1556
+  sources:
+  - wp-charles-v-holy-roman-emperor
+- person: charles-v-holy-roman-emperor
+  title: King of Spain
+  realm: Spain
+  from: 1516
+  to: 1556
+  note: As Charles I, co-monarch of Castile and Aragon with his mother from 1516.
+  sources:
+  - wp-charles-v-holy-roman-emperor
+- person: philip-iv-of-spain
+  title: King of Spain
+  realm: Spain
+  from: 1621
+  to: '1665-09-17'
+  sources:
+  - wp-philip-iv-of-spain
+- person: philip-iv-of-spain
+  title: King of Portugal
+  realm: Portugal
+  from: 1621
+  to: 1640
+  note: Styled Philip III of Portugal; the Iberian Union collapsed in 1640.
+  sources:
+  - wp-philip-iv-of-spain
+- person: alexander-ii-of-russia
+  title: Emperor of Russia
+  realm: Russian Empire
+  from: '1855-03-02'
+  to: '1881-03-13'
+  note: Dates as given in the article.
+  sources:
+  - wp-alexander-ii-of-russia
+- person: alexander-iii-of-russia
+  title: Emperor of Russia
+  realm: Russian Empire
+  from: '1881-03-13'
+  to: '1894-11-01'
+  note: Dates as given in the article.
+  sources:
+  - wp-alexander-iii-of-russia
+- person: nicholas-ii-of-russia
+  title: Emperor of Russia
+  realm: Russian Empire
+  from: '1894-11-01'
+  to: 1917
+  note: Ended by his abdication in March 1917.
+  sources:
+  - wp-nicholas-ii-of-russia
+- person: josephine-de-beauharnais
+  title: Empress of the French
+  realm: French Empire
+  from: '1804-05-18'
+  to: '1810-01-10'
+  note: Ended when the marriage was annulled.
+  sources:
+  - wp-josephine-de-beauharnais
+- person: eugenie-de-montijo
+  title: Empress of the French
+  realm: French Empire
+  from: '1853-01-30'
+  to: '1870-09-04'
+  sources:
+  - wp-eugenie-de-montijo
+- person: peter-the-great
+  title: Tsar of Russia
+  realm: Tsardom of Russia
+  from: 1682
+  to: 1721
+  note: Reigned jointly with his brother Ivan V until 1696; became an independent sovereign in 1694 when his mother died.
+  sources:
+  - wp-peter-the-great
+- person: peter-the-great
+  title: Emperor of Russia
+  realm: Russian Empire
+  from: 1721
+  to: 1725
+  note: First emperor of Russia.
+  sources:
+  - wp-peter-the-great
+- person: marie-de-medici
+  title: Queen of France
+  realm: France
+  from: 1600
+  to: 1610
+  note: Married Henry IV in 1600 (contract March 1600, ceremonies October-December); Henry was assassinated in 1610.
+  sources:
+  - wp-marie-de-medici
+- person: marie-de-medici
+  title: Regent of France
+  realm: France
+  from: 1610
+  to: 1617
+  note: Her mandate legally expired in 1614 when Louis XIII came of age, but she kept power until removed by a coup in 1617.
+  sources:
+  - wp-marie-de-medici
+- person: lorenzo-de-medici
+  title: Ruler of Florence
+  realm: Florence
+  from: 1469
+  to: '1492-04-08'
+  note: De facto ruler of the Florentine Republic from his father's death in 1469.
+  sources:
+  - wp-lorenzo-de-medici
+- person: rudolf-ii-holy-roman-emperor
+  title: Holy Roman Emperor
+  realm: Holy Roman Empire
+  from: 1576
+  to: '1612-01-20'
+  sources:
+  - wp-rudolf-ii-holy-roman-emperor
+- person: rudolf-ii-holy-roman-emperor
+  title: King of Hungary
+  realm: Hungary
+  from: 1572
+  to: 1608
+  note: Styled Rudolf I as King of Hungary and Croatia.
+  sources:
+  - wp-rudolf-ii-holy-roman-emperor
+- person: rudolf-ii-holy-roman-emperor
+  title: King of Bohemia
+  realm: Bohemia
+  from: 1575
+  to: 1611
+  note: The article gives the end as 1608/1611; see discrepancy rudolf-ii-bohemia-end.
+  sources:
+  - wp-rudolf-ii-holy-roman-emperor
+- person: isabella-clara-eugenia
+  title: Sovereign of the Habsburg Netherlands
+  realm: Habsburg Netherlands
+  from: 1598
+  to: 1621
+  note: Ruled jointly with her husband Archduke Albert VII; also the Free County of Burgundy.
+  sources:
+  - wp-isabella-clara-eugenia
+- person: isabella-clara-eugenia
+  title: Governor of the Spanish Netherlands
+  realm: Habsburg Netherlands
+  from: 1621
+  to: 1633
+  note: Governess after Albert's death, until her own death; the regions returned to the Spanish Habsburgs.
+  sources:
+  - wp-isabella-clara-eugenia
+- person: catherine-the-great
+  title: Empress of Russia
+  realm: Russian Empire
+  from: '1762-07-09'
+  to: '1796-11-17'
+  note: Dates as given in the article.
+  sources:
+  - wp-catherine-the-great
+- person: frederick-the-great
+  title: King of Prussia
+  realm: Prussia
+  from: 1740
+  to: '1786-08-17'
+  note: Titled King in Prussia until he declared himself King of Prussia after annexing Royal Prussia in 1772.
+  sources:
+  - wp-frederick-the-great
+- person: henrietta-maria
+  title: Queen of England
+  realm: England
+  from: '1625-06-13'
+  to: '1649-01-30'
+  note: Queen consort of Charles I; she was never crowned.
+  sources:
+  - wp-henrietta-maria
+- person: henrietta-maria
+  title: Queen of Scotland
+  realm: Scotland
+  from: '1625-06-13'
+  to: '1649-01-30'
+  sources:
+  - wp-henrietta-maria
+- person: henrietta-maria
+  title: Queen of Ireland
+  realm: Ireland
+  from: '1625-06-13'
+  to: '1649-01-30'
+  sources:
+  - wp-henrietta-maria
+- person: cosimo-i-de-medici-grand-duke-of-tuscany
+  title: Duke of Florence
+  realm: Florence
+  from: 1537
+  to: 1569
+  sources:
+  - wp-cosimo-i-de-medici-grand-duke-of-tuscany
+- person: cosimo-i-de-medici-grand-duke-of-tuscany
+  title: Grand Duke of Tuscany
+  realm: Tuscany
+  from: 1569
+  to: '1574-04-21'
+  note: First grand duke of Tuscany.
+  sources:
+  - wp-cosimo-i-de-medici-grand-duke-of-tuscany
+- person: cosimo-iii-de-medici-grand-duke-of-tuscany
+  title: Grand Duke of Tuscany
+  realm: Tuscany
+  from: 1670
+  to: 1723
+  sources:
+  - wp-cosimo-iii-de-medici-grand-duke-of-tuscany
+- person: christina-queen-of-sweden
+  title: Queen of Sweden
+  realm: Sweden
+  from: 1632
+  to: '1654-06-06'
+  note: Abdicated in favour of Charles X Gustav.
+  sources:
+  - wp-christina-queen-of-sweden
+- person: anne-of-austria
+  title: Queen of France
+  realm: France
+  from: 1615
+  to: 1643
+  note: By marriage to Louis XIII.
+  sources:
+  - wp-anne-of-austria
+- person: anne-of-austria
+  title: Regent of France
+  realm: France
+  from: 1643
+  to: 1651
+  note: For her son Louis XIV.
+  sources:
+  - wp-anne-of-austria
+- person: albert-vii-archduke-of-austria
+  title: Governor General of the Habsburg Netherlands
+  realm: Habsburg Netherlands
+  from: 1596
+  to: 1598
+  sources:
+  - wp-albert-vii-archduke-of-austria
+- person: albert-vii-archduke-of-austria
+  title: Sovereign of the Habsburg Netherlands
+  realm: Habsburg Netherlands
+  from: 1598
+  to: 1621
+  note: Jointly with his wife Isabella Clara Eugenia.
+  sources:
+  - wp-albert-vii-archduke-of-austria
+- person: albert-vii-archduke-of-austria
+  title: Archduke of Austria
+  realm: Austria
+  from: 1619
+  to: 1619
+  note: A few months in 1619; abdicated in favour of Ferdinand II.
+  sources:
+  - wp-albert-vii-archduke-of-austria
+- person: isabella-d-este
+  title: Marchioness of Mantua
+  realm: Mantua
+  from: 1490
+  to: 1519
+  note: By marriage to Francesco II Gonzaga; she then ruled as regent for her son Federico.
+  sources:
+  - wp-isabella-d-este
+- person: george-villiers-1st-duke-of-buckingham
+  title: Duke of Buckingham
+  realm: England
+  from: 1623
+  to: 1628
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- person: george-villiers-1st-duke-of-buckingham
+  title: Lord High Admiral of England
+  realm: England
+  from: 1619
+  to: 1628
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- person: philip-iii-of-spain
+  title: King of Spain
+  realm: Spain
+  from: 1598
+  to: 1621
+  sources:
+  - wp-philip-iii-of-spain
+- person: philip-iii-of-spain
+  title: King of Portugal
+  realm: Portugal
+  from: 1598
+  to: 1621
+  note: Reigned as Philip II of Portugal.
+  sources:
+  - wp-philip-iii-of-spain
+- person: charles-iii-of-spain
+  title: Duke of Parma and Piacenza
+  realm: Parma
+  from: 1731
+  to: 1735
+  sources:
+  - wp-charles-iii-of-spain
+- person: charles-iii-of-spain
+  title: King of Naples
+  realm: Naples
+  from: 1735
+  to: 1759
+  sources:
+  - wp-charles-iii-of-spain
+- person: charles-iii-of-spain
+  title: King of Sicily
+  realm: Sicily
+  from: 1735
+  to: 1759
+  sources:
+  - wp-charles-iii-of-spain
+- person: charles-iii-of-spain
+  title: King of Spain
+  realm: Spain
+  from: 1759
+  to: 1788
+  sources:
+  - wp-charles-iii-of-spain
+- person: margaret-of-austria-duchess-of-savoy
+  title: Duchess of Savoy
+  realm: Savoy
+  from: 1501
+  to: 1504
+  note: By marriage to Philibert II, who died in September 1504.
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- person: margaret-of-austria-duchess-of-savoy
+  title: Governor of the Habsburg Netherlands
+  realm: Habsburg Netherlands
+  from: 1507
+  to: 1515
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- person: margaret-of-austria-duchess-of-savoy
+  title: Governor of the Habsburg Netherlands
+  realm: Habsburg Netherlands
+  from: 1519
+  to: 1530
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- person: maria-theresa
+  title: Archduchess of Austria
+  realm: Austria
+  from: 1740
+  to: 1780
+  sources:
+  - wp-maria-theresa
+- person: maria-theresa
+  title: Queen of Hungary
+  realm: Hungary
+  from: 1740
+  to: 1780
+  sources:
+  - wp-maria-theresa
+- person: maria-theresa
+  title: Queen of Bohemia
+  realm: Bohemia
+  from: 1743
+  to: 1780
+  note: Crowned 12 May 1743; her reign began in 1740.
+  sources:
+  - wp-maria-theresa
+- person: joseph-ii-holy-roman-emperor
+  title: Holy Roman Emperor
+  realm: Holy Roman Empire
+  from: '1765-08-18'
+  to: '1790-02-20'
+  sources:
+  - wp-joseph-ii-holy-roman-emperor
+- person: federico-da-montefeltro
+  title: Count of Urbino
+  realm: Urbino
+  from: 1444
+  to: 1474
+  sources:
+  - wp-federico-da-montefeltro
+- person: federico-da-montefeltro
+  title: Duke of Urbino
+  realm: Urbino
+  from: 1474
+  to: 1482
+  sources:
+  - wp-federico-da-montefeltro
+- person: federico-ii-gonzaga-duke-of-mantua
+  title: Marquis of Mantua
+  realm: Mantua
+  from: '1519-04-03'
+  to: 1530
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- person: federico-ii-gonzaga-duke-of-mantua
+  title: Duke of Mantua
+  realm: Mantua
+  from: 1530
+  to: 1540
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- person: federico-ii-gonzaga-duke-of-mantua
+  title: Marquis of Montferrat
+  realm: Montferrat
+  from: 1536
+  to: 1540
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- person: ludovico-sforza
+  title: Duke of Milan
+  realm: Milan
+  from: 1494
+  to: 1499
+  sources:
+  - wp-ludovico-sforza
+- person: thomas-more
+  title: Lord Chancellor of England
+  realm: England
+  from: 1529
+  to: 1532
+  note: October 1529 to May 1532
+  sources:
+  - wp-thomas-more
+- person: jean-baptiste-colbert
+  title: First Minister of State
+  realm: France
+  from: 1661
+  to: '1683-09-06'
+  sources:
+  - wp-jean-baptiste-colbert
+- person: christian-viii-of-denmark
+  title: King of Norway
+  realm: Norway
+  from: '1814-05-17'
+  to: 1814
+  note: Elected 17 May 1814 as Christian Frederick; abdicated after the Convention of Moss (14 August 1814)
+  sources:
+  - wp-christian-viii-of-denmark
+- person: christian-viii-of-denmark
+  title: King of Denmark
+  realm: Denmark
+  from: '1839-12-03'
+  to: '1848-01-20'
+  sources:
+  - wp-christian-viii-of-denmark
+- person: charles-iv-of-spain
+  title: King of Spain
+  realm: Spain
+  from: 1788
+  to: 1808
+  sources:
+  - wp-charles-iv-of-spain
+- person: ferdinand-vii-of-spain
+  title: King of Spain
+  realm: Spain
+  from: 1808
+  to: '1833-09-29'
+  note: Abdicated 6 May 1808 and was held by Napoleon until 1813; Joseph Bonaparte was king meanwhile
+  sources:
+  - wp-ferdinand-vii-of-spain
+- person: frederick-iii-elector-of-saxony
+  title: Elector of Saxony
+  realm: Saxony
+  from: 1486
+  to: '1525-05-05'
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- person: ludwig-i-of-bavaria
+  title: King of Bavaria
+  realm: Bavaria
+  from: 1825
+  to: '1848-03-20'
+  sources:
+  - wp-ludwig-i-of-bavaria
+- person: christian-iv-of-denmark
+  title: King of Denmark
+  realm: Denmark
+  from: 1588
+  to: '1648-02-28'
+  note: Personal rule from 1596
+  sources:
+  - wp-christian-iv-of-denmark
+- person: christian-iv-of-denmark
+  title: King of Norway
+  realm: Norway
+  from: 1588
+  to: '1648-02-28'
+  sources:
+  - wp-christian-iv-of-denmark
+- person: gustavus-adolphus-of-sweden
+  title: King of Sweden
+  realm: Sweden
+  from: 1611
+  to: '1632-11-06'
+  sources:
+  - wp-gustavus-adolphus-of-sweden
+- person: archduke-leopold-wilhelm-of-austria
+  title: Governor of the Spanish Netherlands
+  realm: Spanish Netherlands
+  from: 1647
+  to: 1656
+  sources:
+  - wp-archduke-leopold-wilhelm-of-austria
+- person: vincenzo-i-gonzaga
+  title: Duke of Mantua
+  realm: Mantua
+  from: 1587
+  to: '1612-02-09'
+  sources:
+  - wp-vincenzo-i-gonzaga
+- person: vincenzo-i-gonzaga
+  title: Duke of Montferrat
+  realm: Montferrat
+  from: 1587
+  to: '1612-02-09'
+  sources:
+  - wp-vincenzo-i-gonzaga
+- person: francesco-ii-sforza
+  title: Duke of Milan
+  realm: Milan
+  from: 1521
+  to: '1535-11-01'
+  sources:
+  - wp-francesco-ii-sforza
+- person: alfonso-i-d-este-duke-of-ferrara
+  title: Duke of Ferrara
+  realm: Ferrara
+  from: 1505
+  to: '1534-10-31'
+  sources:
+  - wp-alfonso-i-d-este-duke-of-ferrara
+links:
+- patron: agostino-chigi
+  artist: il-sodoma
+  from: 1508
+  sources:
+  - wp-il-sodoma
+- patron: agostino-chigi
+  artist: raphael
+  sources:
+  - wp-raphael
+- patron: albert-vii-archduke-of-austria
+  artist: jan-brueghel-the-elder
+  sources:
+  - wp-jan-brueghel-the-elder
+- patron: albert-vii-archduke-of-austria
+  artist: peter-paul-rubens
+  from: 1609
+  sources:
+  - wp-peter-paul-rubens
+- patron: alexander-iii-of-russia
+  artist: albert-edelfelt
+  sources:
+  - wp-albert-edelfelt
+- patron: alexander-vi
+  artist: pinturicchio
+  sources:
+  - wp-pinturicchio
+- patron: alfonso-i-d-este-duke-of-ferrara
+  artist: titian
+  sources:
+  - wp-titian
+- patron: anne-boleyn
+  artist: hans-holbein-the-younger
+  from: 1532
+  sources:
+  - wp-hans-holbein-the-younger
+- patron: archduke-leopold-wilhelm-of-austria
+  artist: david-teniers-the-younger
+  from: 1651
+  sources:
+  - wp-david-teniers-the-younger
+- patron: cardinal-richelieu
+  artist: charles-le-brun
+  sources:
+  - wp-charles-le-brun
+- patron: cardinal-richelieu
+  artist: nicolas-poussin
+  sources:
+  - wp-nicolas-poussin
+- patron: cardinal-richelieu
+  artist: simon-vouet
+  from: 1632
+  sources:
+  - wp-simon-vouet
+- patron: charles-ii-of-england
+  artist: willem-van-de-velde-the-younger
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- patron: charles-iii-of-spain
+  artist: giovanni-battista-tiepolo
+  from: 1761
+  sources:
+  - wp-giovanni-battista-tiepolo
+- patron: charles-v-holy-roman-emperor
+  artist: jan-gossaert
+  from: 1516
+  sources:
+  - wp-jan-gossaert
+- patron: christian-viii-of-denmark
+  artist: johan-christian-dahl
+  sources:
+  - wp-johan-christian-dahl
+- patron: christina-queen-of-sweden
+  artist: jacob-jordaens
+  from: 1648
+  sources:
+  - wp-jacob-jordaens
+- patron: clement-vii
+  artist: baccio-bandinelli
+  sources:
+  - wp-baccio-bandinelli
+- patron: clement-vii
+  artist: michelangelo
+  sources:
+  - wp-michelangelo
+- patron: clement-vii
+  artist: sebastiano-del-piombo
+  from: 1516
+  sources:
+  - wp-sebastiano-del-piombo
+- patron: clement-viii
+  artist: lavinia-fontana
+  from: 1604
+  sources:
+  - wp-lavinia-fontana
+- patron: cosimo-i-de-medici-grand-duke-of-tuscany
+  artist: bronzino
+  sources:
+  - wp-bronzino
+- patron: cosimo-iii-de-medici-grand-duke-of-tuscany
+  artist: luca-giordano
+  sources:
+  - wp-luca-giordano
+- patron: edward-vii
+  artist: jules-bastien-lepage
+  from: 1879
+  to: 1879
+  sources:
+  - wp-jules-bastien-lepage
+- patron: federico-ii-gonzaga-duke-of-mantua
+  artist: antonio-da-correggio
+  sources:
+  - wp-antonio-da-correggio
+- patron: francesco-barberini
+  artist: nicolas-poussin
+  sources:
+  - wp-nicolas-poussin
+- patron: francesco-barberini
+  artist: pietro-da-cortona
+  sources:
+  - wp-pietro-da-cortona
+- patron: francis-i-of-france
+  artist: francesco-primaticcio
+  sources:
+  - wp-francesco-primaticcio
+- patron: francis-i-of-france
+  artist: rosso-fiorentino
+  from: 1530
+  sources:
+  - wp-rosso-fiorentino
+- patron: frederick-iii-elector-of-saxony
+  artist: lucas-cranach-the-elder
+  from: 1504
+  sources:
+  - wp-lucas-cranach-the-elder
+- patron: george-iii
+  artist: benjamin-west
+  sources:
+  - wp-benjamin-west
+- patron: george-iii
+  artist: johan-zoffany
+  from: 1764
+  sources:
+  - wp-johan-zoffany
+- patron: george-iii
+  artist: thomas-gainsborough
+  from: 1780
+  sources:
+  - wp-thomas-gainsborough
+- patron: george-iii
+  artist: thomas-lawrence
+  from: 1792
+  sources:
+  - wp-thomas-lawrence
+- patron: george-iv
+  artist: thomas-lawrence
+  from: 1810
+  sources:
+  - wp-thomas-lawrence
+- patron: gregory-xiii
+  artist: lavinia-fontana
+  sources:
+  - wp-lavinia-fontana
+- patron: henry-viii-of-england
+  artist: hans-holbein-the-younger
+  from: 1535
+  sources:
+  - wp-hans-holbein-the-younger
+- patron: isabella-clara-eugenia
+  artist: peter-paul-rubens
+  from: 1609
+  sources:
+  - wp-peter-paul-rubens
+- patron: isabella-d-este
+  artist: lorenzo-costa
+  from: 1509
+  sources:
+  - wp-lorenzo-costa
+- patron: josephine-de-beauharnais
+  artist: pierre-joseph-redoute
+  from: 1798
+  to: 1814
+  sources:
+  - wp-pierre-joseph-redoute
+- patron: julius-ii
+  artist: il-sodoma
+  sources:
+  - wp-il-sodoma
+- patron: julius-ii
+  artist: luca-signorelli
+  from: 1508
+  sources:
+  - wp-luca-signorelli
+- patron: julius-ii
+  artist: michelangelo
+  from: 1505
+  sources:
+  - wp-michelangelo
+- patron: julius-ii
+  artist: pietro-perugino
+  sources:
+  - wp-pietro-perugino
+- patron: julius-ii
+  artist: raphael
+  sources:
+  - wp-raphael
+- patron: leo-x
+  artist: raphael
+  sources:
+  - wp-raphael
+- patron: lorenzo-de-medici
+  artist: michelangelo
+  sources:
+  - wp-michelangelo
+- patron: lorenzo-de-medici
+  artist: sandro-botticelli
+  sources:
+  - wp-sandro-botticelli
+- patron: louis-philippe-i
+  artist: ary-scheffer
+  sources:
+  - wp-ary-scheffer
+- patron: louis-philippe-i
+  artist: horace-vernet
+  sources:
+  - wp-horace-vernet
+- patron: louis-xiii
+  artist: nicolas-poussin
+  sources:
+  - wp-nicolas-poussin
+- patron: louis-xiii
+  artist: simon-vouet
+  sources:
+  - wp-simon-vouet
+- patron: louis-xiv
+  artist: charles-le-brun
+  from: 1662
+  sources:
+  - wp-charles-le-brun
+- patron: louis-xv
+  artist: jean-simeon-chardin
+  from: 1752
+  sources:
+  - wp-jean-simeon-chardin
+- patron: louis-xviii
+  artist: adelaide-labille-guiard
+  from: 1788
+  sources:
+  - wp-adelaide-labille-guiard
+- patron: louis-xviii
+  artist: elisabeth-vigee-le-brun
+  from: 1776
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- patron: louis-xviii
+  artist: francois-gerard
+  sources:
+  - wp-francois-gerard
+- patron: ludovico-sforza
+  artist: leonardo-da-vinci
+  sources:
+  - wp-leonardo-da-vinci
+- patron: ludwig-i-of-bavaria
+  artist: joseph-karl-stieler
+  sources:
+  - wp-joseph-karl-stieler
+- patron: madame-de-pompadour
+  artist: francois-boucher
+  sources:
+  - wp-francois-boucher
+- patron: marie-de-medici
+  artist: peter-paul-rubens
+  from: 1621
+  sources:
+  - wp-peter-paul-rubens
+- patron: maximilian-i-holy-roman-emperor
+  artist: albrecht-altdorfer
+  from: 1513
+  sources:
+  - wp-albrecht-altdorfer
+- patron: maximilian-i-holy-roman-emperor
+  artist: albrecht-durer
+  from: 1512
+  sources:
+  - wp-albrecht-durer
+- patron: napoleon-i
+  artist: antoine-jean-gros
+  sources:
+  - wp-antoine-jean-gros
+- patron: napoleon-i
+  artist: francois-gerard
+  sources:
+  - wp-francois-gerard
+- patron: napoleon-i
+  artist: jean-auguste-dominique-ingres
+  from: 1803
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- patron: napoleon-iii
+  artist: jean-baptiste-carpeaux
+  sources:
+  - wp-jean-baptiste-carpeaux
+- patron: nicholas-ii-of-russia
+  artist: leon-bakst
+  sources:
+  - wp-leon-bakst
+- patron: peter-the-great
+  artist: jean-marc-nattier
+  sources:
+  - wp-jean-marc-nattier
+- patron: philip-ii-of-spain
+  artist: federico-zuccari
+  from: 1585
+  sources:
+  - wp-federico-zuccari
+- patron: philip-ii-of-spain
+  artist: sofonisba-anguissola
+  sources:
+  - wp-sofonisba-anguissola
+- patron: philip-iv-of-spain
+  artist: alonso-cano
+  sources:
+  - wp-alonso-cano
+- patron: philip-iv-of-spain
+  artist: claude-lorrain
+  from: 1634
+  to: 1635
+  sources:
+  - wp-claude-lorrain
+- patron: philip-iv-of-spain
+  artist: david-teniers-the-younger
+  sources:
+  - wp-david-teniers-the-younger
+- patron: philip-iv-of-spain
+  artist: diego-velazquez
+  sources:
+  - wp-diego-velazquez
+- patron: philip-iv-of-spain
+  artist: francisco-de-zurbaran
+  sources:
+  - wp-francisco-de-zurbaran
+- patron: philip-iv-of-spain
+  artist: gerard-ter-borch
+  sources:
+  - wp-gerard-ter-borch
+- patron: pius-v
+  artist: giorgio-vasari
+  from: 1566
+  sources:
+  - wp-giorgio-vasari
+- patron: victoria-of-the-united-kingdom
+  artist: franz-xaver-winterhalter
+  sources:
+  - wp-franz-xaver-winterhalter
+- patron: prince-albert-of-saxe-coburg-and-gotha
+  artist: franz-xaver-winterhalter
+  sources:
+  - wp-franz-xaver-winterhalter
+- patron: victoria-of-the-united-kingdom
+  artist: edwin-landseer
+  sources:
+  - wp-edwin-landseer
+- patron: rudolf-ii-holy-roman-emperor
+  artist: giuseppe-arcimboldo
+  sources:
+  - wp-giuseppe-arcimboldo
+- patron: rudolf-ii-holy-roman-emperor
+  artist: hans-von-aachen
+  from: 1592
+  sources:
+  - wp-hans-von-aachen
+- patron: scipione-borghese
+  artist: gerard-van-honthorst
+  sources:
+  - wp-gerard-van-honthorst
+- patron: sixtus-iv
+  artist: domenico-ghirlandaio
+  from: 1481
+  sources:
+  - wp-domenico-ghirlandaio
+- patron: sixtus-iv
+  artist: sandro-botticelli
+  from: 1481
+  sources:
+  - wp-sandro-botticelli
+- patron: thomas-more
+  artist: hans-holbein-the-younger
+  from: 1526
+  sources:
+  - wp-hans-holbein-the-younger
+- patron: urban-viii
+  artist: pietro-da-cortona
+  from: 1633
+  sources:
+  - wp-pietro-da-cortona
+moments:
+- person: julius-ii
+  role: born
+  place: albisola-superiore
+  year: 1443
+  sources:
+  - wp-julius-ii
+- person: cardinal-richelieu
+  role: born
+  place: paris
+  year: 1585
+  sources:
+  - wp-cardinal-richelieu
+- person: cardinal-richelieu
+  role: buried
+  place: chapel-of-the-sorbonne
+  year: 1642
+  sources:
+  - wp-cardinal-richelieu
+- person: leo-x
+  role: born
+  place: florence
+  year: 1475
+  sources:
+  - wp-leo-x
+- person: leo-x
+  role: buried
+  place: santa-maria-sopra-minerva
+  year: 1521
+  sources:
+  - wp-leo-x
+- person: clement-vii
+  role: born
+  place: florence
+  year: 1478
+  sources:
+  - wp-clement-vii
+- person: urban-viii
+  role: born
+  place: barberino-val-d-elsa
+  year: 1568
+  sources:
+  - wp-urban-viii
+- person: cardinal-mazarin
+  role: born
+  place: pescina
+  year: 1602
+  sources:
+  - wp-cardinal-mazarin
+- person: scipione-borghese
+  role: born
+  place: artena
+  year: 1577
+  sources:
+  - wp-scipione-borghese
+- person: scipione-borghese
+  role: died
+  place: rome
+  year: 1633
+  sources:
+  - wp-scipione-borghese
+- person: scipione-borghese
+  role: buried
+  place: santa-maria-maggiore-rome
+  year: 1633
+  sources:
+  - wp-scipione-borghese
+- person: clement-viii
+  role: born
+  place: fano
+  year: 1536
+  sources:
+  - wp-clement-viii
+- person: clement-viii
+  role: buried
+  place: santa-maria-maggiore-rome
+  year: 1605
+  sources:
+  - wp-clement-viii
+- person: pius-v
+  role: born
+  place: bosco-marengo
+  year: 1504
+  sources:
+  - wp-pius-v
+- person: pius-v
+  role: buried
+  place: santa-maria-maggiore-rome
+  year: 1588
+  sources:
+  - wp-pius-v
+- person: innocent-x
+  role: born
+  place: rome
+  year: 1574
+  sources:
+  - wp-innocent-x
+- person: innocent-x
+  role: buried
+  place: sant-agnese-in-agone
+  year: 1655
+  sources:
+  - wp-innocent-x
+- person: paul-iii
+  role: born
+  place: canino
+  year: 1468
+  sources:
+  - wp-paul-iii
+- person: paul-iii
+  role: buried
+  place: st-peters-basilica-rome
+  year: 1549
+  sources:
+  - wp-paul-iii
+- person: gregory-xiii
+  role: born
+  place: bologna
+  year: 1502
+  sources:
+  - wp-gregory-xiii
+- person: sixtus-v
+  role: born
+  place: grottammare
+  year: 1521
+  sources:
+  - wp-sixtus-v
+- person: paul-v
+  role: born
+  place: rome
+  year: 1552
+  sources:
+  - wp-paul-v
+- person: paul-v
+  role: died
+  place: quirinal-palace
+  year: 1621
+  sources:
+  - wp-paul-v
+- person: paul-v
+  role: buried
+  place: santa-maria-maggiore-rome
+  year: 1621
+  sources:
+  - wp-paul-v
+- person: pius-vii
+  role: born
+  place: cesena
+  year: 1742
+  sources:
+  - wp-pius-vii
+- person: pius-vii
+  role: buried
+  place: st-peters-basilica-rome
+  year: 1823
+  sources:
+  - wp-pius-vii
+- person: francesco-barberini
+  role: born
+  place: florence
+  year: 1597
+  sources:
+  - wp-francesco-barberini
+- person: francesco-barberini
+  role: died
+  place: rome
+  year: 1679
+  sources:
+  - wp-francesco-barberini
+- person: julius-iii
+  role: born
+  place: monte-san-savino
+  year: 1487
+  sources:
+  - wp-julius-iii
+- person: alexander-vii
+  role: born
+  place: siena
+  year: 1599
+  sources:
+  - wp-alexander-vii
+- person: clement-xiv
+  role: born
+  place: santarcangelo-di-romagna
+  year: 1705
+  sources:
+  - wp-clement-xiv
+- person: clement-xiv
+  role: buried
+  place: santi-apostoli-rome
+  year: 1774
+  sources:
+  - wp-clement-xiv
+- person: napoleon-i
+  role: born
+  place: ajaccio
+  year: 1769
+  sources:
+  - wp-napoleon-i
+- person: napoleon-i
+  role: died
+  place: saint-helena
+  year: 1821
+  sources:
+  - wp-napoleon-i
+- person: napoleon-iii
+  role: born
+  place: tuileries-palace
+  year: 1808
+  sources:
+  - wp-napoleon-iii
+- person: louis-xiv
+  role: born
+  place: chateau-de-saint-germain-en-laye
+  year: 1638
+  sources:
+  - wp-louis-xiv
+- person: philip-iv-of-spain
+  role: born
+  place: valladolid
+  year: 1605
+  sources:
+  - wp-philip-iv-of-spain
+- person: louis-xv
+  role: born
+  place: palace-of-versailles
+  year: 1710
+  sources:
+  - wp-louis-xv
+- person: louis-xvi
+  role: born
+  place: palace-of-versailles
+  year: 1754
+  sources:
+  - wp-louis-xvi
+- person: louis-xviii
+  role: born
+  place: palace-of-versailles
+  year: 1755
+  sources:
+  - wp-louis-xviii
+- person: alexander-ii-of-russia
+  role: died
+  place: st-petersburg
+  year: 1881
+  sources:
+  - wp-alexander-ii-of-russia
+- person: alexander-iii-of-russia
+  role: born
+  place: st-petersburg
+  year: 1845
+  sources:
+  - wp-alexander-iii-of-russia
+- person: francis-i-of-france
+  role: born
+  place: chateau-de-cognac
+  year: 1494
+  sources:
+  - wp-francis-i-of-france
+- person: louis-philippe-i
+  role: born
+  place: palais-royal
+  year: 1773
+  sources:
+  - wp-louis-philippe-i
+- person: marie-de-medici
+  role: born
+  place: palazzo-pitti
+  year: 1575
+  sources:
+  - wp-marie-de-medici
+- person: marie-de-medici
+  role: died
+  place: cologne
+  year: 1642
+  sources:
+  - wp-marie-de-medici
+- person: lorenzo-de-medici
+  role: died
+  place: villa-careggi
+  year: 1492
+  sources:
+  - wp-lorenzo-de-medici
+- person: lorenzo-de-medici
+  role: buried
+  place: medici-chapels
+  sources:
+  - wp-lorenzo-de-medici
+- person: rudolf-ii-holy-roman-emperor
+  role: born
+  place: vienna
+  year: 1552
+  sources:
+  - wp-rudolf-ii-holy-roman-emperor
+- person: nicholas-ii-of-russia
+  role: born
+  place: alexander-palace
+  year: 1868
+  sources:
+  - wp-nicholas-ii-of-russia
+- person: nicholas-ii-of-russia
+  role: died
+  place: yekaterinburg
+  year: 1918
+  sources:
+  - wp-nicholas-ii-of-russia
+- person: louis-xiii
+  role: born
+  place: fontainebleau-castle
+  year: 1601
+  sources:
+  - wp-louis-xiii
+- person: louis-xiii
+  role: died
+  place: paris
+  year: 1643
+  sources:
+  - wp-louis-xiii
+- person: isabella-clara-eugenia
+  role: born
+  place: palace-of-valsain
+  year: 1566
+  sources:
+  - wp-isabella-clara-eugenia
+- person: isabella-clara-eugenia
+  role: died
+  place: brussels
+  year: 1633
+  sources:
+  - wp-isabella-clara-eugenia
+- person: catherine-the-great
+  role: born
+  place: szczecin
+  year: 1729
+  sources:
+  - wp-catherine-the-great
+- person: frederick-the-great
+  role: born
+  place: berlin-palace
+  year: 1712
+  sources:
+  - wp-frederick-the-great
+- person: frederick-the-great
+  role: buried
+  place: sanssouci
+  sources:
+  - wp-frederick-the-great
+- person: henrietta-maria
+  role: born
+  place: louvre-palace
+  year: 1609
+  sources:
+  - wp-henrietta-maria
+- person: henrietta-maria
+  role: died
+  place: paris
+  year: 1669
+  sources:
+  - wp-henrietta-maria
+- person: eugenie-de-montijo
+  role: born
+  place: granada
+  year: 1826
+  sources:
+  - wp-eugenie-de-montijo
+- person: eugenie-de-montijo
+  role: buried
+  place: st-michaels-abbey-farnborough
+  sources:
+  - wp-eugenie-de-montijo
+- person: cosimo-i-de-medici-grand-duke-of-tuscany
+  role: born
+  place: florence
+  year: 1519
+  sources:
+  - wp-cosimo-i-de-medici-grand-duke-of-tuscany
+- person: cosimo-iii-de-medici-grand-duke-of-tuscany
+  role: buried
+  place: basilica-of-san-lorenzo-florence
+  year: 1723
+  sources:
+  - wp-cosimo-iii-de-medici-grand-duke-of-tuscany
+- person: madame-de-pompadour
+  role: born
+  place: paris
+  year: 1721
+  sources:
+  - wp-madame-de-pompadour
+- person: madame-de-pompadour
+  role: buried
+  place: couvent-des-capucines-paris
+  year: 1764
+  sources:
+  - wp-madame-de-pompadour
+- person: christina-queen-of-sweden
+  role: born
+  place: stockholm
+  year: 1626
+  sources:
+  - wp-christina-queen-of-sweden
+- person: christina-queen-of-sweden
+  role: buried
+  place: st-peters-basilica-rome
+  year: 1689
+  sources:
+  - wp-christina-queen-of-sweden
+- person: anne-of-austria
+  role: born
+  place: valladolid
+  year: 1601
+  sources:
+  - wp-anne-of-austria
+- person: anne-of-austria
+  role: buried
+  place: basilica-of-saint-denis
+  year: 1666
+  sources:
+  - wp-anne-of-austria
+- person: isabella-d-este
+  role: born
+  place: ferrara
+  year: 1474
+  sources:
+  - wp-isabella-d-este
+- person: agostino-chigi
+  role: born
+  place: siena
+  year: 1466
+  sources:
+  - wp-agostino-chigi
+- person: george-villiers-1st-duke-of-buckingham
+  role: born
+  place: brooksby
+  year: 1592
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- person: george-villiers-1st-duke-of-buckingham
+  role: died
+  place: portsmouth
+  year: 1628
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- person: george-villiers-1st-duke-of-buckingham
+  role: buried
+  place: westminster-abbey
+  year: 1628
+  sources:
+  - wp-george-villiers-1st-duke-of-buckingham
+- person: philip-iii-of-spain
+  role: born
+  place: madrid
+  year: 1578
+  sources:
+  - wp-philip-iii-of-spain
+- person: charles-iii-of-spain
+  role: born
+  place: madrid
+  year: 1716
+  sources:
+  - wp-charles-iii-of-spain
+- person: margaret-of-austria-duchess-of-savoy
+  role: born
+  place: brussels
+  year: 1480
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- person: margaret-of-austria-duchess-of-savoy
+  role: buried
+  place: royal-monastery-of-brou
+  year: 1530
+  sources:
+  - wp-margaret-of-austria-duchess-of-savoy
+- person: maria-theresa
+  role: born
+  place: vienna
+  year: 1717
+  sources:
+  - wp-maria-theresa
+- person: joseph-ii-holy-roman-emperor
+  role: born
+  place: vienna
+  year: 1741
+  sources:
+  - wp-joseph-ii-holy-roman-emperor
+- person: federico-da-montefeltro
+  role: born
+  place: castello-di-petroia
+  year: 1422
+  sources:
+  - wp-federico-da-montefeltro
+- person: federico-da-montefeltro
+  role: died
+  place: ferrara
+  year: 1482
+  sources:
+  - wp-federico-da-montefeltro
+- person: federico-ii-gonzaga-duke-of-mantua
+  role: died
+  place: marmirolo
+  year: 1540
+  sources:
+  - wp-federico-ii-gonzaga-duke-of-mantua
+- person: ludovico-sforza
+  role: born
+  place: milan
+  year: 1452
+  sources:
+  - wp-ludovico-sforza
+- person: thomas-more
+  role: born
+  place: london
+  year: 1478
+  sources:
+  - wp-thomas-more
+- person: thomas-howard-21st-earl-of-arundel
+  role: born
+  place: finchingfield
+  year: 1585
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- person: thomas-howard-21st-earl-of-arundel
+  role: died
+  place: padua
+  year: 1646
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- person: thomas-howard-21st-earl-of-arundel
+  role: buried
+  place: arundel
+  year: 1646
+  sources:
+  - wp-thomas-howard-21st-earl-of-arundel
+- person: jean-baptiste-colbert
+  role: born
+  place: reims
+  year: 1619
+  sources:
+  - wp-jean-baptiste-colbert
+- person: christian-viii-of-denmark
+  role: born
+  place: christiansborg-palace
+  year: 1786
+  sources:
+  - wp-christian-viii-of-denmark
+- person: christian-viii-of-denmark
+  role: died
+  place: amalienborg-palace
+  year: 1848
+  sources:
+  - wp-christian-viii-of-denmark
+- person: christian-viii-of-denmark
+  role: buried
+  place: roskilde-cathedral
+  year: 1848
+  sources:
+  - wp-christian-viii-of-denmark
+- person: charles-iv-of-spain
+  role: born
+  place: naples
+  year: 1748
+  sources:
+  - wp-charles-iv-of-spain
+- person: charles-iv-of-spain
+  role: died
+  place: naples
+  year: 1819
+  sources:
+  - wp-charles-iv-of-spain
+- person: ferdinand-vii-of-spain
+  role: born
+  place: el-escorial
+  year: 1784
+  sources:
+  - wp-ferdinand-vii-of-spain
+- person: frederick-iii-elector-of-saxony
+  role: born
+  place: torgau
+  year: 1463
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- person: frederick-iii-elector-of-saxony
+  role: died
+  place: lochau
+  year: 1525
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- person: frederick-iii-elector-of-saxony
+  role: buried
+  place: wittenberg
+  year: 1525
+  sources:
+  - wp-frederick-iii-elector-of-saxony
+- person: ludwig-i-of-bavaria
+  role: born
+  place: strasbourg
+  year: 1786
+  sources:
+  - wp-ludwig-i-of-bavaria
+- person: ludwig-i-of-bavaria
+  role: died
+  place: nice
+  year: 1868
+  sources:
+  - wp-ludwig-i-of-bavaria
+- person: ludwig-i-of-bavaria
+  role: buried
+  place: st-boniface-abbey-munich
+  year: 1868
+  sources:
+  - wp-ludwig-i-of-bavaria
+- person: christian-iv-of-denmark
+  role: born
+  place: frederiksborg-castle
+  year: 1577
+  sources:
+  - wp-christian-iv-of-denmark
+- person: christian-iv-of-denmark
+  role: died
+  place: copenhagen
+  year: 1648
+  sources:
+  - wp-christian-iv-of-denmark
+- person: christian-iv-of-denmark
+  role: buried
+  place: roskilde-cathedral
+  year: 1648
+  sources:
+  - wp-christian-iv-of-denmark
+- person: gustavus-adolphus-of-sweden
+  role: born
+  place: stockholm
+  year: 1594
+  sources:
+  - wp-gustavus-adolphus-of-sweden
+- person: gustavus-adolphus-of-sweden
+  role: died
+  place: luetzen
+  year: 1632
+  sources:
+  - wp-gustavus-adolphus-of-sweden
+- person: archduke-leopold-wilhelm-of-austria
+  role: born
+  place: wiener-neustadt
+  year: 1614
+  sources:
+  - wp-archduke-leopold-wilhelm-of-austria
+discrepancies:
+- key: henrietta-maria-born
+  question: What was Henrietta Maria's birth date?
+  about:
+  - person: henrietta-maria
+  field: born
+  claims:
+  - value: 25 November 1609
+    sources:
+    - wp-henrietta-maria
+    note: Date given in the article's lead and early-life section.
+  - value: 26 November 1609
+    sources:
+    - wp-henrietta-maria
+    note: Some historians give this date.
+  - value: 16 November 1609 (Old Style)
+    sources:
+    - wp-henrietta-maria
+    note: Often recorded in England, which still used the Julian calendar.
+  note: The record uses 25 November 1609, as the article's lead does.
+- key: rudolf-ii-bohemia-end
+  question: When did Rudolf II's reign as King of Bohemia end?
+  about:
+  - person: rudolf-ii-holy-roman-emperor
+  field: date
+  claims:
+  - value: '1608'
+    sources:
+    - wp-rudolf-ii-holy-roman-emperor
+    note: The lead gives 1575-1608/1611, the same span as his rule in Hungary and Austria.
+  - value: '1611'
+    sources:
+    - wp-rudolf-ii-holy-roman-emperor
+    note: The other end date in the lead.
+  note: The title row uses 1611 for now; the article does not say which is better supported.
+- key: federico-ii-gonzaga-duke-of-mantua-died
+  question: On what date did Federico II Gonzaga die in 1540?
+  about:
+  - person: federico-ii-gonzaga-duke-of-mantua
+  field: died
+  claims:
+  - value: 28 August 1540 (article lead)
+    sources:
+    - wp-federico-ii-gonzaga-duke-of-mantua
+  - value: 28 June 1540 at his villa at Marmirolo (article text)
+    sources:
+    - wp-federico-ii-gonzaga-duke-of-mantua
+  note: The record holds the year 1540 only, since the two dates in the same article disagree.
+- key: charles-iv-of-spain-died
+  question: On what day did Charles IV of Spain die in January 1819?
+  about:
+  - person: charles-iv-of-spain
+  field: died
+  claims:
+  - value: 20 January 1819
+    sources:
+    - wp-charles-iv-of-spain
+    note: Lead of the article
+  - value: 19 January 1819
+    sources:
+    - wp-charles-iv-of-spain
+    note: Later and death section of the same article
+  note: Record holds the year only.
+- key: jean-baptiste-colbert-controller-general-start
+  question: When did Colbert become Controller-General of Finances?
+  about:
+  - person: jean-baptiste-colbert
+  field: date
+  claims:
+  - value: '1661'
+    sources:
+    - wp-jean-baptiste-colbert
+    note: 'Lead: took over as Controller-General after Fouquet''s arrest (Intendant of Finances 4 May 1661)'
+  - value: '1665'
+    sources:
+    - wp-jean-baptiste-colbert
+    note: Biography section
+  note: No Controller-General title is recorded until settled.
