@@ -68,15 +68,6 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### In progress
 
-#### [P2] Western painters from 1500 (target 500), in gated batches
-`type: task` · `area: data` · `status: in progress` · `issue: #98`
-
-Painters of Europe and the US from 1500 to today, about 40 per batch, ranked by Wikipedia sitelinks (Wikidata), one batch merged at a time with a stop for Ty's go after each. Batch 1 (41 Renaissance to Romanticism masters) done 2026-10-10. Each person is marked `coverage: partly`; portfolios, artwork images and the missing patrons (popes, Philip IV, Napoleon, Medici) come later.
-Source: Ty, 2026-10-10.
-
-
-### Ready (ranked)
-
 #### [P1] Places: today's location (city, county, country) and current coordinates
 `type: task` · `area: data` · `status: ready` · `issue: #39`
 
@@ -145,6 +136,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ---
 
 ## Done
+
+#### [P2] Western painters from 1500: 500 painters in 12 batches
+`type: task` · `area: data` · `status: done` · `issue: #98`
+
+500 painters of Europe and the US, 1500 to today, ranked by Wikipedia sitelinks: Leonardo to the postwar masters, in 12 batches (PRs #99-#111, one batch had to be re-sent in a fix PR). Each has dates, places, life moments, a lead image link, one or two key artworks (no images yet), teacher and patron links where the article names someone already in the database, and `coverage: partly`. Done 2026-10-10. Left for later: patrons not yet in the database (popes, Philip IV, Napoleon, the Medici, Louis XIV, Napoleon III); artwork images (#62); full portfolios; about 40 more painters of the same list (batch 13 article files were downloaded but not run), plus Josef Capek and Amrita Sher-Gil (articles missing in batch 5); and famous painters whose Wikipedia lead says "artist" not "painter" were missed by the filter.
+Source: Ty, 2026-10-10.
 
 #### [P1] Only the first 1,000 rows of each table loaded; Wikipedia links for rulers
 `type: bug` · `area: site` · `status: done` · `issue: #88`

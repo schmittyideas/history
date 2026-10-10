@@ -87,6 +87,13 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - **Images:** Wikipedia lead images are public domain for most 17th-century people; some files are local to en.wikipedia (no Commons record, so no licence): skip those. The Commons "Artist" field carries who made the image (it names the engraver of a portrait "after" a painter), so capture it as an artwork record's creator, not just the person's picture.
 - **Gaps:** the `image_credit` for the 44 existing person images is in the downloaded Commons data but was not stored (issue #62).
 
+## Lessons from the 500 painters (12 batches, 2026-10-10)
+
+- **Cost:** 500 painters used about 3 weekly points (57% to 60%) and about 30 session points; roughly 7M tokens in 48 research agents and 1M in the main session. Each batch of 42 cost about 0.25 weekly point.
+- **Pipeline:** rank candidates with Wikidata (SPARQL, sitelinks) and check each Wikipedia lead says "painter"; download articles with `fetch2`-style script (cap 32,000 characters; set `PYTHONIOENCODING=utf-8` or accented titles crash it); four Sonnet agents of about 10 people each write fragments; a merge script dedupes keys, drops places already in the database (so re-sends never overwrite them) and a ship script plans, opens the PR, waits for the preview and merges only if it passed. Launch the next batch's agents while the previous batch merges.
+- **Mistakes to avoid:** a ship script that merges on a failed preview (batch 4 teacher link to an unknown person; nothing was written, a fix PR re-sent it); never `git add -A` (it staged other sessions' `.claude/worktrees`); a teacher/patron link needs a person already in the database or the batch.
+- **Gaps:** most patrons are not people in the database yet, so patron links are few. Run the ruler build-outs first, then re-run patron links for the painters.
+
 ## How to run it
 
 - **One build-out at a time** is the simplest. If the session can start parallel cloud sessions, at most two at once, each on its own issue, own branches and own intake files (see CLAUDE.md, Running in parallel).
