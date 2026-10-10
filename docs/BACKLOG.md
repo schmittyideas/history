@@ -131,23 +131,19 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ### Ready (ranked)
 
-#### [P3] Painters: finish the list (batch 13, missed painters, two missing articles)
-`type: task` · `area: data` · `status: ready` · `issue: #113`
+#### [P2] Popularity tiers from Wikipedia sitelinks
+`type: enhancement` · `area: data` · `status: ready` · `issue: #118`
 
-About 40 more candidates from the Wikidata ranking (batch 13, articles already downloaded), Josef Capek and Amrita Sher-Gil (articles missing in batch 5), and famous painters whose Wikipedia lead says "artist" not "painter" (Matisse and Dali were added by hand; others may be missing). Use the pipeline in docs/BUILDOUT.md.
+Each person now has `sitelinks` (Wikipedia language editions, from Wikidata; 1,101 people, read 2026-10-10). Next: agree tier thresholds (proposal: 150+ icons, 100-149, 60-99, 40-59, under 40), set `prominence` or a tier from them, and use tiers on the site (labels, default filters, the Year view's makers list). Artists today: 18 / 21 / 96 / 193 / 266 across those tiers.
 Source: Ty, 2026-10-10.
-
-#### [P3] Painters: add patron links once the patrons are in the database
-`type: task` · `area: data` · `status: blocked` · `issue: #114`
-
-Most painters have no patron links because the patrons (popes, Philip IV, Charles V, Napoleon and Napoleon III, Louis XIV, the Medici, Este dukes) are not people in the database yet. Blocked on the ruler build-outs. Afterwards re-read each painter's article and add the patron links.
-Source: Ty, 2026-10-10.
-
-### Icebox
-
----
 
 ## Done
+
+#### [P3] Painters: batch 13 and the patrons of the painters
+`type: task` · `area: data` · `status: done` · `issue: #113, #114`
+
+Batch 13 added 41 painters (the list now stands at 541, including the two missing articles; Capek and Sher-Gil are in). 74 patrons (popes, cardinals, kings and queens, ministers, collectors) were added with titles and 22 new realms, and 89 patron links to painters were made from what each painter's article says (found by name search, then judged on the sentences). Done 2026-10-10. Left: Thomas Cromwell was not written; painters whose Wikipedia lead says "artist" not "painter" may still be missing; patrons not on the 74 (minor nobles, bankers) are only in artwork notes.
+Source: Ty, 2026-10-10.
 
 #### [P2] Western painters from 1500: 500 painters in 12 batches
 `type: task` · `area: data` · `status: done` · `issue: #98`
