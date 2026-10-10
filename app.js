@@ -138,18 +138,20 @@ const TYPE_WORDS = [
   [/\b(writers?|poets?|playwrights?|novelists?|authors?)\b/gi, "Writer"],
   [/\b(composers?|musicians?)\b/gi, "Composer"],
   [/\b(inventors?|scientists?|philosophers?)\b/gi, "Scholar"],
+  [/\b(mayors?|governors?|presidents?|politicians?|government)\b/gi, "Government"],
 ];
-const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors" };
+const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials" };
 // Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
 // Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
 const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
 // Artists are those with an artistic role (an Artist-typed astronomer-architect like Wren is an architect, not an artist).
-const ARCHITECT = /architect/i, ART_ROLE = /paint|miniatur|engrav|etch|sculpt|carv|goldsmith|illustrat|draughts|print|(?<!landscape )designer/i;
+const ARCHITECT = /architect/i, ART_ROLE = /paint|miniatur|engrav|etch|sculpt|carv|goldsmith|illustrat|draughts|print|(?<!landscape )designer|film|actor|actress|animat|cinematograph/i;
 const CATS = [
   // Each group has a colour: its button and the lifespan bars of its people share it, so the buttons are the colour key.
   { key: "royalty", label: "Royalty", color: "var(--woad)", test: p => p.type === "Royalty" },
   { key: "nobility", label: "Nobility", color: "var(--weld)", test: p => p.type === "Nobility" },
   { key: "clergy", label: "Clergy", color: "var(--stitch)", test: p => p.type === "Clergy" },
+  { key: "government", label: "Government", color: "var(--verdigris)", test: p => p.type === "Government" },
   { key: "artists", label: "Artists", color: "var(--ochre)", test: p => p.type === "Artist" && (!(p.roles || []).length || hasRole(p, ART_ROLE)) },
   { key: "architects", label: "Architects", color: "var(--walnut)", test: p => hasRole(p, ARCHITECT) },
   { key: "writers", label: "Writers", color: "var(--lichen)", test: p => p.type === "Writer" },
@@ -301,7 +303,7 @@ function computeView(db, f) {
 
 /* ------------------------------------------------------------------ lanes */
 
-const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Artist", "Writer", "Composer", "Scholar"];
+const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar"];
 
 function familyOrder(db, members, ids) {
   const order = [], seen = new Set();
@@ -464,10 +466,17 @@ function crownPath(x, y, w = 12) {
   const h = w * .75;
   return `M${x},${y + h} L${x},${y + h * .2} L${x + w * .27},${y + h * .55} L${x + w / 2},${y} L${x + w * .73},${y + h * .55} L${x + w},${y + h * .2} L${x + w},${y + h} Z`;
 }
-// The same crown as a standalone inline icon for HTML text (Year view, side panel).
-function crownIcon(label = "Held a title") {
+// Elected and appointed offices (mayors, governors, presidents: type Government) get a column, not a crown.
+const isOffice = p => p?.type === "Government";
+function columnPath(x, y, w = 12) {
+  const h = w * .75, X = f => x + w * f, Y = f => y + h * f;
+  return `M${X(.08)},${y} H${X(.92)} V${Y(.2)} H${X(.74)} V${Y(.8)} H${x + w} V${y + h} H${x} V${Y(.8)} H${X(.26)} V${Y(.2)} H${X(.08)} Z`;
+}
+const titleMarkPath = (p, x, y, w) => (isOffice(p) ? columnPath : crownPath)(x, y, w);
+// The same mark as a standalone inline icon for HTML text (Year view, side panel).
+function crownIcon(label = "Held a title", p = null) {
   const svg = el("svg", { viewBox: "0 0 12 10", width: 13, height: 11, class: "crown-icon", role: "img", "aria-label": label });
-  el("path", { d: crownPath(0, .5, 12) }, svg);
+  el("path", { d: titleMarkPath(p, 0, .5, 12) }, svg);
   return svg;
 }
 let groups = {}, eventGroups = {};
@@ -624,10 +633,10 @@ function render() {
     const inLaw = db.marriedIn.has(p.id);
     const g = el("g", { class: "person", tabindex: 0, role: "button", "aria-label": `${p.name}, ${fmtYear(p.birth_year) ?? "birth unknown"} to ${fmtYear(p.death_year) ?? "unknown"}` }, svg);
     const titles = db.titlesOf(p.id);
-    el("title", {}, g).textContent = `${p.name} (${fmtSpan(p.birth_year, p.death_year)})` + titles.map(t => `\n♛ ${t.title}, ${reignSpan(t)}`).join("");
+    el("title", {}, g).textContent = `${p.name} (${fmtSpan(p.birth_year, p.death_year)})` + titles.map(t => `\n${isOffice(p) ? "▪" : "♛"} ${t.title}, ${reignSpan(t)}`).join("");
     // A crown sits above the name of anyone who held a title (in the requested years, if the request names some).
     const head = headlineTitle(p.id, S.filter?.from, S.filter?.to);
-    const crown = (cy, w) => el("path", { d: crownPath(cx - w / 2, cy, w), class: "crown" + (head.title.disputed ? " disputed" : "") }, g);
+    const crown = (cy, w) => el("path", { d: titleMarkPath(p, cx - w / 2, cy, w), class: "crown" + (head.title.disputed ? " disputed" : "") }, g);
     // The name card (crown, name, dates, title) sits just above the top of this person's own bar, not in a
     // header row: in a long span, someone born late would otherwise have their name far above their line.
     // dy is how far their bar starts below the chart's top; people born at the start keep the header spot.
@@ -831,7 +840,7 @@ function select(id) {
     ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
-    ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(), " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
+    ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(isOffice(p) ? "Held an office" : "Held a title", p), isOffice(p) ? " Offices" : " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
       title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
       text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
     ["Sources", sourceLinks(db.sourcesFor("person", p.key))],
@@ -1195,7 +1204,7 @@ function renderYear() {
   // Hidden by the Show buttons: someone held a title (in the focused realm, if any) but their group is off.
   const hiddenRulers = !inRange.length && db.titles.some(t => overlaps(t.start_year, t.end_year, a, b) && (!Y.realm || t.realm === Y.realm));
   if (hiddenRulers) {
-    rulers.append(h("p", { class: "hint", text: "Rulers are hidden by the Show buttons above (Royalty, Nobility, Clergy)." }));
+    rulers.append(h("p", { class: "hint", text: "Rulers are hidden by the Show buttons above (Royalty, Nobility, Clergy, Government)." }));
   } else if (!inRange.length && Y.realm) {
     // A realm in focus with no holder: an interregnum or a gap in the data. Say which years we do have for it.
     const rs = db.titles.filter(t => t.realm === Y.realm).sort((x, y) => byYear(x.start_year, y.start_year));
@@ -1241,7 +1250,7 @@ function renderYear() {
         // "year 5 of 22": works for offices and regencies as well as reigns.
         const nth = single && t.start_year != null
           ? ` · year ${yearsBetween(t.start_year, a) + 1}` + (t.end_year != null ? ` of ${yearsBetween(t.start_year, t.end_year) + 1}` : "") : "";
-        list.append(h("li", { class: t.disputed ? "disputed" : "" }, crownIcon(t.disputed ? "Disputed claim" : "Held this title"), " ", yPerson(p),
+        list.append(h("li", { class: t.disputed ? "disputed" : "" }, crownIcon(t.disputed ? "Disputed claim" : "Held this title", p), " ", yPerson(p),
           h("span", { class: "yrs", text: ` ${reignSpan(t)}${t.disputed ? " · disputed" : ""}${nth}` }),
           wikiLink(p),
           t.note ? h("div", { class: "tnote", text: t.note }) : null));
