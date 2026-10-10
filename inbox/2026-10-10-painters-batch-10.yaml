@@ -1,0 +1,2948 @@
+# Notes for the reviewer
+# - 42 painters: Renaissance and Mannerist Europe, the Dutch and Flemish, and 20th-century figures, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: Painters, batch 10
+  requested: Western painters from 1500, batch 10
+  date: '2026-10-10'
+sources:
+- key: wp-martin-schongauer
+  title: Martin Schongauer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Martin_Schongauer
+- key: wp-lorenzo-costa
+  title: Lorenzo Costa (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lorenzo_Costa
+- key: wp-jan-gossaert
+  title: Jan Gossaert (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_Gossaert
+- key: wp-palma-vecchio
+  title: Palma Vecchio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Palma_Vecchio
+- key: wp-bernardino-luini
+  title: Bernardino Luini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bernardino_Luini
+- key: wp-lucas-van-leyden
+  title: Lucas van Leyden (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lucas_van_Leyden
+- key: wp-niccolo-dell-abbate
+  title: Niccolo dell'Abbate (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Niccol%C3%B2_dell%27Abbate
+- key: wp-giovanni-battista-moroni
+  title: Giovanni Battista Moroni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giovanni_Battista_Moroni
+- key: wp-federico-zuccari
+  title: Federico Zuccari (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Federico_Zuccari
+- key: wp-francesco-albani
+  title: Francesco Albani (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Albani
+- key: wp-pieter-claesz
+  title: Pieter Claesz (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pieter_Claesz
+- key: wp-alonso-cano
+  title: Alonso Cano (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alonso_Cano
+- key: wp-jan-brueghel-the-younger
+  title: Jan Brueghel the Younger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_Brueghel_the_Younger
+- key: wp-ferdinand-bol
+  title: Ferdinand Bol (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ferdinand_Bol
+- key: wp-elisabetta-sirani
+  title: Elisabetta Sirani (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Elisabetta_Sirani
+- key: wp-jean-marc-nattier
+  title: Jean-Marc Nattier (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Marc_Nattier
+- key: wp-pompeo-batoni
+  title: Pompeo Batoni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pompeo_Batoni
+- key: wp-salomon-gessner
+  title: Salomon Gessner (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Salomon_Gessner
+- key: wp-anne-louis-girodet-de-roussy-trioson
+  title: Anne-Louis Girodet de Roussy-Trioson (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anne-Louis_Girodet_de_Roussy-Trioson
+- key: wp-edwin-landseer
+  title: Edwin Landseer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edwin_Landseer
+- key: wp-hermann-goldschmidt
+  title: Hermann Goldschmidt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hermann_Goldschmidt
+- key: wp-richard-parkes-bonington
+  title: Richard Parkes Bonington (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Richard_Parkes_Bonington
+- key: wp-andreas-achenbach
+  title: Andreas Achenbach (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andreas_Achenbach
+- key: wp-eugene-fromentin
+  title: Eugene Fromentin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Eug%C3%A8ne_Fromentin
+- key: wp-jean-baptiste-carpeaux
+  title: Jean-Baptiste Carpeaux (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Baptiste_Carpeaux
+- key: wp-felicien-rops
+  title: Felicien Rops (Wikipedia)
+  url: https://en.wikipedia.org/wiki/F%C3%A9licien_Rops
+- key: wp-anton-von-werner
+  title: Anton von Werner (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anton_von_Werner
+- key: wp-henryk-siemiradzki
+  title: Henryk Siemiradzki (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henryk_Siemiradzki
+- key: wp-leonid-pasternak
+  title: Leonid Pasternak (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Leonid_Pasternak
+- key: wp-hugo-simberg
+  title: Hugo Simberg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hugo_Simberg
+- key: wp-albert-marquet
+  title: Albert Marquet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albert_Marquet
+- key: wp-gino-severini
+  title: Gino Severini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gino_Severini
+- key: wp-charles-demuth
+  title: Charles Demuth (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_Demuth
+- key: wp-han-van-meegeren
+  title: Han van Meegeren (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Han_van_Meegeren
+- key: wp-lyubov-popova
+  title: Lyubov Popova (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lyubov_Popova
+- key: wp-sophie-taeuber-arp
+  title: Sophie Taeuber-Arp (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Sophie_Taeuber-Arp
+- key: wp-ben-nicholson
+  title: Ben Nicholson (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ben_Nicholson
+- key: wp-dorothea-tanning
+  title: Dorothea Tanning (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Dorothea_Tanning
+- key: wp-bernard-buffet
+  title: Bernard Buffet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bernard_Buffet
+- key: wp-wolf-vostell
+  title: Wolf Vostell (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Wolf_Vostell
+- key: wp-martin-kippenberger
+  title: Martin Kippenberger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Martin_Kippenberger
+- key: wp-alfred-freddy-krupa
+  title: Alfred Freddy Krupa (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alfred_Freddy_Krupa
+places:
+- key: colmar
+  name: Colmar
+  kind: city
+  region: Alsace
+  country: France
+  lat: 48.079
+  lng: 7.358
+  sources:
+  - wp-martin-schongauer
+- key: breisach
+  name: Breisach
+  kind: city
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 48.03
+  lng: 7.582
+  sources:
+  - wp-martin-schongauer
+- key: san-giacomo-maggiore-bologna
+  name: San Giacomo Maggiore, Bologna
+  kind: church
+  city: Bologna
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.497
+  lng: 11.352
+  visitable: true
+  sources:
+  - wp-lorenzo-costa
+- key: maubeuge
+  name: Maubeuge
+  kind: city
+  region: Nord
+  country: France
+  lat: 50.278
+  lng: 3.973
+  sources:
+  - wp-jan-gossaert
+- key: middelburg
+  name: Middelburg
+  kind: city
+  region: Zeeland
+  country: Netherlands
+  lat: 51.499
+  lng: 3.61
+  sources:
+  - wp-jan-gossaert
+- key: wijk-bij-duurstede
+  name: Wijk bij Duurstede
+  kind: city
+  region: Utrecht
+  country: Netherlands
+  lat: 51.975
+  lng: 5.34
+  sources:
+  - wp-jan-gossaert
+- key: serina
+  name: Serina
+  kind: town
+  region: Lombardy
+  country: Italy
+  lat: 45.833
+  lng: 9.733
+  sources:
+  - wp-palma-vecchio
+- key: runo-dumenza
+  name: Runo, Dumenza
+  kind: village
+  region: Lombardy
+  country: Italy
+  lat: 46.046
+  lng: 8.723
+  sources:
+  - wp-bernardino-luini
+- key: santa-maria-dei-miracoli-saronno
+  name: Santa Maria dei Miracoli, Saronno
+  kind: church
+  city: Saronno
+  region: Lombardy
+  country: Italy
+  lat: 45.627
+  lng: 9.034
+  visitable: true
+  sources:
+  - wp-bernardino-luini
+- key: santa-maria-degli-angeli-lugano
+  name: Santa Maria degli Angeli, Lugano
+  kind: church
+  city: Lugano
+  region: Ticino
+  country: Switzerland
+  lat: 46.003
+  lng: 8.951
+  visitable: true
+  sources:
+  - wp-bernardino-luini
+- key: rocca-di-scandiano
+  name: Rocca di Scandiano
+  kind: castle
+  city: Scandiano
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.598
+  lng: 10.69
+  visitable: true
+  sources:
+  - wp-niccolo-dell-abbate
+- key: albino
+  name: Albino
+  kind: town
+  region: Lombardy
+  country: Italy
+  lat: 45.766
+  lng: 9.797
+  sources:
+  - wp-giovanni-battista-moroni
+- key: sant-angelo-in-vado
+  name: Sant'Angelo in Vado
+  kind: town
+  region: Marche
+  country: Italy
+  lat: 43.662
+  lng: 12.417
+  sources:
+  - wp-federico-zuccari
+- key: florence-cathedral
+  name: Florence Cathedral (Santa Maria del Fiore)
+  kind: cathedral
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.773
+  lng: 11.256
+  visitable: true
+  sources:
+  - wp-federico-zuccari
+- key: escorial
+  name: El Escorial
+  kind: palace
+  city: San Lorenzo de El Escorial
+  region: Community of Madrid
+  country: Spain
+  lat: 40.589
+  lng: -4.148
+  visitable: true
+  sources:
+  - wp-federico-zuccari
+- key: ancona
+  name: Ancona
+  kind: city
+  region: Marche
+  country: Italy
+  lat: 43.617
+  lng: 13.517
+  sources:
+  - wp-federico-zuccari
+- key: berchem-antwerp
+  name: Berchem
+  kind: town
+  city: Antwerp
+  region: Antwerp
+  country: Belgium
+  lat: 51.196
+  lng: 4.432
+  sources:
+  - wp-pieter-claesz
+- key: granada-cathedral
+  name: Granada Cathedral
+  kind: cathedral
+  city: Granada
+  region: Andalusia
+  country: Spain
+  lat: 37.176
+  lng: -3.6
+  visitable: true
+  sources:
+  - wp-alonso-cano
+- key: valletta
+  name: Valletta
+  kind: city
+  region: Malta
+  country: Malta
+  lat: 35.898
+  lng: 14.514
+  visitable: true
+  sources:
+  - wp-jan-brueghel-the-younger
+- key: lucca
+  name: Lucca
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.843
+  lng: 10.503
+  visitable: true
+  sources:
+  - wp-pompeo-batoni
+- key: san-gregorio-magno-al-celio
+  name: San Gregorio Magno al Celio
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.885
+  lng: 12.493
+  visitable: true
+  sources:
+  - wp-pompeo-batoni
+- key: montargis
+  name: Montargis
+  kind: city
+  region: Loiret
+  country: France
+  lat: 47.997
+  lng: 2.733
+  visitable: true
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- key: nelsons-column
+  name: Nelson's Column
+  kind: monument
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.508
+  lng: -0.128
+  visitable: true
+  sources:
+  - wp-edwin-landseer
+- key: fontainebleau
+  name: Fontainebleau
+  kind: city
+  region: Seine-et-Marne
+  country: France
+  lat: 48.404
+  lng: 2.7
+  visitable: true
+  sources:
+  - wp-hermann-goldschmidt
+- key: arnold
+  name: Arnold
+  kind: town
+  region: Nottinghamshire
+  country: England
+  lat: 53.005
+  lng: -1.13
+  sources:
+  - wp-richard-parkes-bonington
+- key: namur
+  name: Namur
+  kind: city
+  region: Wallonia
+  country: Belgium
+  lat: 50.467
+  lng: 4.867
+  sources:
+  - wp-felicien-rops
+- key: odessa
+  name: Odessa
+  kind: city
+  region: Odesa Oblast
+  country: Ukraine
+  lat: 46.482
+  lng: 30.723
+  sources:
+  - wp-leonid-pasternak
+- key: hamina
+  name: Hamina
+  kind: town
+  region: Kymenlaakso
+  country: Finland
+  lat: 60.569
+  lng: 27.198
+  sources:
+  - wp-hugo-simberg
+- key: tampere-cathedral
+  name: Tampere Cathedral
+  kind: church
+  city: Tampere
+  region: Pirkanmaa
+  country: Finland
+  lat: 61.495
+  lng: 23.764
+  visitable: true
+  sources:
+  - wp-hugo-simberg
+- key: ahtari
+  name: Ahtari
+  kind: town
+  region: South Ostrobothnia
+  country: Finland
+  lat: 62.553
+  lng: 24.108
+  sources:
+  - wp-hugo-simberg
+- key: montegufoni-castle
+  name: Montegufoni Castle
+  kind: castle
+  city: Montespertoli
+  region: Tuscany
+  country: Italy
+  lat: 43.598
+  lng: 11.04
+  sources:
+  - wp-gino-severini
+- key: becon-les-bruyeres
+  name: Bécon-les-Bruyères
+  kind: town
+  city: Courbevoie
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.905
+  lng: 2.272
+  sources:
+  - wp-jean-baptiste-carpeaux
+- key: corbeil-essonnes
+  name: Corbeil-Essonnes
+  kind: town
+  region: Essonne
+  country: France
+  lat: 48.61
+  lng: 2.482
+  sources:
+  - wp-felicien-rops
+- key: la-frette-sur-seine
+  name: La Frette-sur-Seine
+  kind: town
+  region: Val-d'Oise
+  country: France
+  lat: 48.975
+  lng: 2.176
+  sources:
+  - wp-albert-marquet
+- key: frankfurt-oder
+  name: Frankfurt (Oder)
+  kind: city
+  region: Brandenburg
+  country: Germany
+  lat: 52.347
+  lng: 14.551
+  sources:
+  - wp-anton-von-werner
+- key: pechenihy
+  name: Pechenihy (Novo-Belgorod)
+  kind: town
+  region: Kharkiv Oblast
+  country: Ukraine
+  lat: 49.88
+  lng: 36.95
+  sources:
+  - wp-henryk-siemiradzki
+- key: lancaster-pennsylvania
+  name: Lancaster
+  kind: city
+  region: Pennsylvania
+  country: United States
+  lat: 40.038
+  lng: -76.306
+  visitable: true
+  sources:
+  - wp-charles-demuth
+- key: roquebrune-cap-martin
+  name: Roquebrune-Cap-Martin
+  kind: village
+  region: Provence-Alpes-Cote d'Azur
+  country: France
+  lat: 43.763
+  lng: 7.466
+  visitable: true
+  sources:
+  - wp-han-van-meegeren
+- key: denham
+  name: Denham
+  kind: village
+  region: Buckinghamshire
+  country: England
+  lat: 51.575
+  lng: -0.499
+  visitable: true
+  sources:
+  - wp-ben-nicholson
+- key: st-ives
+  name: St Ives
+  kind: town
+  region: Cornwall
+  country: England
+  lat: 50.211
+  lng: -5.48
+  visitable: true
+  sources:
+  - wp-ben-nicholson
+- key: galesburg
+  name: Galesburg
+  kind: city
+  region: Illinois
+  country: United States
+  lat: 40.948
+  lng: -90.371
+  visitable: true
+  sources:
+  - wp-dorothea-tanning
+- key: tourtour
+  name: Tourtour
+  kind: village
+  region: Var
+  country: France
+  lat: 43.588
+  lng: 6.3
+  visitable: true
+  sources:
+  - wp-bernard-buffet
+- key: leverkusen
+  name: Leverkusen
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.046
+  lng: 6.984
+  visitable: true
+  sources:
+  - wp-wolf-vostell
+- key: malpartida-de-caceres
+  name: Malpartida de Caceres
+  kind: town
+  region: Extremadura
+  country: Spain
+  lat: 39.446
+  lng: -6.505
+  visitable: true
+  sources:
+  - wp-wolf-vostell
+- key: dortmund
+  name: Dortmund
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 51.514
+  lng: 7.468
+  visitable: true
+  sources:
+  - wp-martin-kippenberger
+- key: karlovac
+  name: Karlovac
+  kind: city
+  region: Karlovac County
+  country: Croatia
+  lat: 45.487
+  lng: 15.548
+  visitable: true
+  sources:
+  - wp-alfred-freddy-krupa
+- key: tokyo
+  name: Tokyo
+  kind: city
+  region: Kanto
+  country: Japan
+  lat: 35.676
+  lng: 139.65
+  visitable: true
+  sources:
+  - wp-alfred-freddy-krupa
+people:
+- key: martin-schongauer
+  name: Martin Schongauer
+  type: Artist
+  roles:
+  - engraver
+  - painter
+  born: 1450
+  born_estimated: true
+  died: '1491-02-02'
+  prominence: 4
+  note: Alsatian engraver and painter, the most important printmaker north of the Alps before Albrecht Durer; 116 engravings are attributed to him.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e9/Hans_Burgkmair_d.%C3%84._-_Bildnis_Martin_Schongauer_%28Kopie%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Hans_Burgkmair_d.%C3%84._-_Bildnis_Martin_Schongauer_%28Kopie%29.jpg/500px-Hans_Burgkmair_d.%C3%84._-_Bildnis_Martin_Schongauer_%28Kopie%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_Burgkmair_d.%C3%84._-_Bildnis_Martin_Schongauer_(Kopie).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and one dated painting captured; the 116 engravings and the Breisach Last Judgment not built out.
+  sources:
+  - wp-martin-schongauer
+- key: lorenzo-costa
+  name: Lorenzo Costa
+  type: Artist
+  roles:
+  - painter
+  born: 1460
+  died: '1535-03-05'
+  prominence: 3
+  note: Italian painter of Ferrara and Bologna who became court painter at Mantua to the Gonzaga and Isabella d'Este.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Lorenzo_Costa_002.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Lorenzo_Costa_002.jpg/500px-Lorenzo_Costa_002.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lorenzo_Costa_002.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the Bentivoglio Altarpiece captured; patrons (Gonzaga, Isabella d'Este) not linked as they are not yet in the database; other works not built out.
+  sources:
+  - wp-lorenzo-costa
+- key: jan-gossaert
+  name: Jan Gossaert
+  type: Artist
+  roles:
+  - painter
+  born: 1478
+  born_estimated: true
+  died: '1532-10-01'
+  prominence: 4
+  note: Painter from the Low Countries (also called Jan Mabuse), a leader of Romanism who brought Italian Renaissance elements north after his 1508-09 trip to Rome.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e8/Jan_Gossart_-_Portrait_of_a_Man_%28Self-Portrait%29%2C_circa_1520-1525%2C_1951.6.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Jan_Gossart_-_Portrait_of_a_Man_%28Self-Portrait%29%2C_circa_1520-1525%2C_1951.6.jpg/500px-Jan_Gossart_-_Portrait_of_a_Man_%28Self-Portrait%29%2C_circa_1520-1525%2C_1951.6.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jan_Gossart_-_Portrait_of_a_Man_(Self-Portrait),_circa_1520-1525,_1951.6.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two signed works captured; Habsburg-circle patrons (Philip of Burgundy, Adolf of Burgundy, Christian II) and pupils not linked as they are not yet in the database; other
+    works not built out.
+  sources:
+  - wp-jan-gossaert
+- key: palma-vecchio
+  name: Palma Vecchio
+  type: Artist
+  roles:
+  - painter
+  born: 1480
+  born_estimated: true
+  died: '1528-07-30'
+  prominence: 3
+  note: Venetian painter of the Italian High Renaissance, born Jacopo Palma, leading painter in Venice after Titian and known for half-length beauties and sacre conversazioni.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d6/1480-1528_jacopo_negretti_da_bergamo_detto_palma_il_vecchio.tif
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/1480-1528_jacopo_negretti_da_bergamo_detto_palma_il_vecchio.tif/lossy-page1-500px-1480-1528_jacopo_negretti_da_bergamo_detto_palma_il_vecchio.tif.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:1480-1528_jacopo_negretti_da_bergamo_detto_palma_il_vecchio.tif
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and birthplace captured; no dated work or patron named in the article; works list not built out.
+  sources:
+  - wp-palma-vecchio
+- key: bernardino-luini
+  name: Bernardino Luini
+  type: Artist
+  roles:
+  - painter
+  born: 1480
+  born_estimated: true
+  died: 1532
+  prominence: 3
+  note: North Italian painter of Leonardo's circle in Milan, known for graceful female figures and frescoes at Saronno and Lugano.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/64/Bernardino_Luini.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Bernardino_Luini.jpg/500px-Bernardino_Luini.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bernardino_Luini.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two fresco cycles captured; the Work list and other commissions (Villa Pelucca, Certosa di Pavia) not built out.
+  sources:
+  - wp-bernardino-luini
+- key: lucas-van-leyden
+  name: Lucas van Leyden
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1494
+  died: '1533-08-08'
+  prominence: 4
+  note: Dutch painter and printmaker in engraving and woodcut, among the first Dutch genre painters, active mainly in Leiden.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ca/GG_160.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/ca/GG_160.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:GG_160.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two print works captured; teachers (his father Huygh Jacobsz, Cornelis Engelbrechtsz) not linked as they are not yet in the database; paintings and other prints not built
+    out.
+  sources:
+  - wp-lucas-van-leyden
+- key: niccolo-dell-abbate
+  name: Niccolo dell'Abbate
+  type: Artist
+  roles:
+  - painter
+  born: 1509
+  born_estimated: true
+  died: 1571
+  prominence: 3
+  note: Mannerist painter in fresco and oils from Modena who joined the School of Fontainebleau and introduced mythological landscapes to French art.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/L%27Enl%C3%A8vement_de_Proserpine_-_Nicol%C3%B2_dell%27Abbate_-_Mus%C3%A9e_du_Louvre_Peintures_RF_3772_-_photo_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/L%27Enl%C3%A8vement_de_Proserpine_-_Nicol%C3%B2_dell%27Abbate_-_Mus%C3%A9e_du_Louvre_Peintures_RF_3772_-_photo_2.jpg/500px-L%27Enl%C3%A8vement_de_Proserpine_-_Nicol%C3%B2_dell%27Abbate_-_Mus%C3%A9e_du_Louvre_Peintures_RF_3772_-_photo_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:L%27Enl%C3%A8vement_de_Proserpine_-_Nicol%C3%B2_dell%27Abbate_-_Mus%C3%A9e_du_Louvre_Peintures_RF_3772_-_photo_2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one ceiling painting captured; Fontainebleau and Paris commissions, tapestry designs and other works not built out.
+  sources:
+  - wp-niccolo-dell-abbate
+- key: giovanni-battista-moroni
+  name: Giovanni Battista Moroni
+  type: Artist
+  roles:
+  - painter
+  born: 1520
+  born_estimated: true
+  died: '1578-02-05'
+  prominence: 4
+  note: Italian Mannerist painter from Albino near Bergamo, one of the great portrait painters of the Cinquecento.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6f/Giuseppe_Siccardi_-_Giovan_Battista_Moroni_%28retouched%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Giuseppe_Siccardi_-_Giovan_Battista_Moroni_%28retouched%29.jpg/500px-Giuseppe_Siccardi_-_Giovan_Battista_Moroni_%28retouched%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giuseppe_Siccardi_-_Giovan_Battista_Moroni_(retouched).jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places and training noted; no dated work captured (the article dates portraits only by inscription); portraits and public collections not built out.
+  sources:
+  - wp-giovanni-battista-moroni
+- key: federico-zuccari
+  name: Federico Zuccari
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - architect
+  born: 1540
+  born_estimated: true
+  died: 1609
+  prominence: 3
+  note: Italian late Mannerist painter, draughtsman, architect and art writer who worked across Italy and in Spain, France, the Low Countries and England, and was first president of the Accademia di San
+    Luca.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg/500px-Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fede_Galizia_-_Portrait_of_Federico_Zuccaro.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels, Philip II commission and the Florence dome fresco captured; brother Taddeo and other patrons (Grimani, Farnese, Leicester) not linked as not yet in the database; drawings
+    and fresco list not built out.
+  sources:
+  - wp-federico-zuccari
+- key: francesco-albani
+  name: Francesco Albani
+  type: Artist
+  roles:
+  - painter
+  born: 1578
+  died: '1660-10-04'
+  prominence: 3
+  note: Italian Baroque painter of the Bolognese school, a pupil of the Carracci, known for idyllic landscapes and small mythological pictures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b5/Francesco_Albani%2C_Autoritratto_%281635_circa%29_02.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Francesco_Albani%2C_Autoritratto_%281635_circa%29_02.jpg/500px-Francesco_Albani%2C_Autoritratto_%281635_circa%29_02.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Francesco_Albani,_Autoritratto_(1635_circa)_02.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, teachers, places and two dated works captured; Roman frescoes, patrons (Scipione Borghese, Gonzaga, Maurice of Savoy) and pupils not built out.
+  sources:
+  - wp-francesco-albani
+- key: pieter-claesz
+  name: Pieter Claesz
+  type: Artist
+  roles:
+  - painter
+  born: 1597
+  born_estimated: true
+  died: '1660-01-01'
+  prominence: 3
+  note: Dutch Golden Age still-life painter in Haarlem, with Willem Claeszoon Heda a leading exponent of the breakfast piece and vanitas themes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4a/N%C3%BCrnberg_%E2%80%94_GNM_2013-09-07_Mattes_%2864%29.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/N%C3%BCrnberg_%E2%80%94_GNM_2013-09-07_Mattes_%2864%29.JPG/500px-N%C3%BCrnberg_%E2%80%94_GNM_2013-09-07_Mattes_%2864%29.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:N%C3%BCrnberg_%E2%80%94_GNM_2013-09-07_Mattes_(64).JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and Haarlem move captured; no dated work or death place in the article; pupils (including his son Nicolaes Berchem) not linked as not yet in the database.
+  sources:
+  - wp-pieter-claesz
+- key: alonso-cano
+  name: Alonso Cano
+  type: Artist
+  roles:
+  - painter
+  - architect
+  - sculptor
+  born: '1601-03-19'
+  died: '1667-09-03'
+  prominence: 3
+  note: Spanish Baroque painter, architect and sculptor born in Granada; painter to Philip IV and architect of Granada Cathedral's facade.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/21/Alonso_Cano.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/2/21/Alonso_Cano.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alonso_Cano.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, Granada Cathedral post and one key work captured; the list of works (Prado, Madrid, Detroit and others) not built out.
+  sources:
+  - wp-alonso-cano
+- key: jan-brueghel-the-younger
+  name: Jan Brueghel the Younger
+  type: Artist
+  roles:
+  - painter
+  born: '1601-09-13'
+  died: '1678-09-01'
+  prominence: 3
+  note: Flemish Baroque painter of Antwerp, son of Jan Brueghel the Elder, who took over his father's workshop; known for landscapes, allegories and village scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Landscape_with_Pan_and_Syrinx_by_Sir_Peter_Paul_Rubens_Jan_Breughel_the_Younger.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Landscape_with_Pan_and_Syrinx_by_Sir_Peter_Paul_Rubens_Jan_Breughel_the_Younger.jpg/500px-Landscape_with_Pan_and_Syrinx_by_Sir_Peter_Paul_Rubens_Jan_Breughel_the_Younger.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Landscape_with_Pan_and_Syrinx_by_Sir_Peter_Paul_Rubens_Jan_Breughel_the_Younger.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training under his father, Italian travels and two dated works captured; about 340 attributed works and collaborators not built out.
+  sources:
+  - wp-jan-brueghel-the-younger
+- key: ferdinand-bol
+  name: Ferdinand Bol
+  type: Artist
+  roles:
+  - painter
+  - etcher
+  - draughtsman
+  born: '1616-06-24'
+  died: '1680-08-24'
+  prominence: 3
+  note: Dutch painter, etcher and draftsman of Amsterdam, a pupil of Rembrandt whose work was long confused with his master's.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/Ferdinand_Bol.Self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Ferdinand_Bol.Self-portrait.jpg/500px-Ferdinand_Bol.Self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ferdinand_Bol.Self-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeship under Rembrandt, Amsterdam career and pupil Kneller captured; individual works not built out (no dated work in the article text).
+  sources:
+  - wp-ferdinand-bol
+- key: elisabetta-sirani
+  name: Elisabetta Sirani
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1638-01-08'
+  died: '1665-08-28'
+  prominence: 3
+  note: Italian Baroque painter and printmaker of Bologna, who ran her father's workshop and founded a painting school for women before dying at 27.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e7/Elisabetta_Sirani_Autorretrato_Museo_Pushkin_Moscu.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Elisabetta_Sirani_Autorretrato_Museo_Pushkin_Moscu.jpg/500px-Elisabetta_Sirani_Autorretrato_Museo_Pushkin_Moscu.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Elisabetta_Sirani_Autorretrato_Museo_Pushkin_Moscu.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Bologna places, school and two dated works captured; pupils, father and sisters (not in the database) and her other 200 paintings not built out.
+  sources:
+  - wp-elisabetta-sirani
+- key: jean-marc-nattier
+  name: Jean-Marc Nattier
+  type: Artist
+  roles:
+  - painter
+  born: '1685-03-17'
+  died: '1766-11-07'
+  prominence: 3
+  note: French painter born in Paris, noted for portraits of the ladies of Louis XV's court in classical mythological dress.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/61/Louis_Tocqu%C3%A9%2C_Jean-Marc_Nattier_%281740s%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Louis_Tocqu%C3%A9%2C_Jean-Marc_Nattier_%281740s%29.jpg/500px-Louis_Tocqu%C3%A9%2C_Jean-Marc_Nattier_%281740s%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Louis_Tocqu%C3%A9,_Jean-Marc_Nattier_(1740s).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Paris and Amsterdam moments and two dated portraits captured; sitters such as Marie Leszczynska and Pompadour, and the many museum holdings, not built out.
+  sources:
+  - wp-jean-marc-nattier
+- key: pompeo-batoni
+  name: Pompeo Batoni
+  type: Artist
+  roles:
+  - painter
+  born: '1708-01-25'
+  died: '1787-02-04'
+  prominence: 4
+  note: Italian painter of Lucca and Rome, famed for Grand Tour portraits of British visitors and a precursor of Neoclassicism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/06/Pompeo_Batoni_-_Selbstbildnis_-_1057_-_Bavarian_State_Painting_Collections.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Pompeo_Batoni_-_Selbstbildnis_-_1057_-_Bavarian_State_Painting_Collections.jpg/500px-Pompeo_Batoni_-_Selbstbildnis_-_1057_-_Bavarian_State_Painting_Collections.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pompeo_Batoni_-_Selbstbildnis_-_1057_-_Bavarian_State_Painting_Collections.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Rome career, burial and two dated altarpieces captured; sitters (popes, emperors, British travellers), masters and followers not linked.
+  sources:
+  - wp-pompeo-batoni
+- key: salomon-gessner
+  name: Salomon Gessner
+  type: Artist
+  roles:
+  - painter
+  - graphic artist
+  - poet
+  born: '1730-04-01'
+  died: '1788-03-02'
+  prominence: 2
+  note: Swiss painter, graphic artist and poet of Zurich, best known for his Idylls, and first publisher of the Neue Zurcher Zeitung.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Anton_Graff_Salomon_Gessner.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/81/Anton_Graff_Salomon_Gessner.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anton_Graff_Salomon_Gessner.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Zurich and Berlin moments and his first painting captured; the Idyllen and other writings, offices and the porcelain post not built out.
+  sources:
+  - wp-salomon-gessner
+- key: anne-louis-girodet-de-roussy-trioson
+  name: Anne-Louis Girodet de Roussy-Trioson
+  type: Artist
+  roles:
+  - painter
+  born: '1767-01-29'
+  died: '1824-12-09'
+  prominence: 3
+  note: French painter, a pupil of Jacques-Louis David and an early Romantic, remembered for Sleep of Endymion and portraits of the Bonaparte family.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/02/Anne-Louis_Girodet_autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Anne-Louis_Girodet_autoportrait.jpg/500px-Anne-Louis_Girodet_autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anne-Louis_Girodet_autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher David, Rome years and two dated works captured; his many pupils (none in the database) and illustrations not built out.
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- key: edwin-landseer
+  name: Edwin Landseer
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1802-03-07'
+  died: '1873-10-01'
+  prominence: 4
+  note: English painter and sculptor of animals, favoured by Queen Victoria, who made the lions at the base of Nelson's Column.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f0/Sir_Edwin_Henry_Landseer_by_Sir_Francis_Grant_%282%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Sir_Edwin_Henry_Landseer_by_Sir_Francis_Grant_%282%29.jpg/500px-Sir_Edwin_Henry_Landseer_by_Sir_Francis_Grant_%282%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sir_Edwin_Henry_Landseer_by_Sir_Francis_Grant_(2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, royal patronage, the Nelson's Column lions and one famous painting captured; other paintings and his teachers (not in the database) not built out.
+  sources:
+  - wp-edwin-landseer
+- key: hermann-goldschmidt
+  name: Hermann Goldschmidt
+  type: Artist
+  roles:
+  - painter
+  - astronomer
+  born: '1802-06-17'
+  died: 1866
+  died_estimated: true
+  prominence: 2
+  note: German-French painter who turned astronomer and discovered 14 asteroids, beginning with Lutetia in 1852.
+  coverage: partly
+  coverage_note: Dates, places and training captured; asteroid discoveries (Lutetia 1852 and 13 others) and awards not built out as events; no dated paintings in the article.
+  sources:
+  - wp-hermann-goldschmidt
+- key: richard-parkes-bonington
+  name: Richard Parkes Bonington
+  type: Artist
+  roles:
+  - painter
+  born: '1802-10-25'
+  died: '1828-09-23'
+  prominence: 4
+  note: English Romantic landscape painter who worked largely in France; known for coastal scenes in oil and watercolour, and an influential figure despite dying at 25.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/Richard_Parkes_Bonington_by_Margaret_Sarah_Carpenter_%28n%C3%A9e_Geddes%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Richard_Parkes_Bonington_by_Margaret_Sarah_Carpenter_%28n%C3%A9e_Geddes%29.jpg/500px-Richard_Parkes_Bonington_by_Margaret_Sarah_Carpenter_%28n%C3%A9e_Geddes%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Richard_Parkes_Bonington_by_Margaret_Sarah_Carpenter_(n%C3%A9e_Geddes).jpg
+  image_license: Public domain
+  sources:
+  - wp-richard-parkes-bonington
+  coverage: partly
+  coverage_note: Dates, teachers, places and moments captured; no works list captured.
+- key: andreas-achenbach
+  name: Andreas Achenbach
+  type: Artist
+  roles:
+  - painter
+  born: '1815-09-29'
+  died: '1910-04-01'
+  prominence: 3
+  note: German Romantic landscape and seascape painter, a founder of the Dusseldorf School.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ee/Andreas_Achenbach_by_Overbeck.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/Andreas_Achenbach_by_Overbeck.jpg/500px-Andreas_Achenbach_by_Overbeck.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Andreas_Achenbach_by_Overbeck.jpg
+  image_license: Public domain
+  sources:
+  - wp-andreas-achenbach
+  coverage: partly
+  coverage_note: Dates, teachers, students and places captured; works list empty in source.
+- key: eugene-fromentin
+  name: Eugène Fromentin
+  type: Artist
+  roles:
+  - painter
+  - writer
+  born: '1820-10-24'
+  died: '1876-08-27'
+  prominence: 3
+  note: French painter and writer, an early pictorial interpreter of Algeria; author of Les Maîtres d'autrefois.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/01/Eug%C3%A8ne_Fromentin.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/0/01/Eug%C3%A8ne_Fromentin.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Fromentin.jpg
+  image_license: Public domain
+  sources:
+  - wp-eugene-fromentin
+  coverage: partly
+  coverage_note: Dates, birth and death place and books captured; no dated work captured.
+- key: jean-baptiste-carpeaux
+  name: Jean-Baptiste Carpeaux
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  born: '1827-05-11'
+  died: '1875-10-12'
+  prominence: 4
+  note: French sculptor and painter of the Second Empire, known for La Danse at the Opera Garnier and the Neapolitan Fisherboy.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/64/Jean-Baptiste_Carpeaux.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Jean-Baptiste_Carpeaux.png/500px-Jean-Baptiste_Carpeaux.png
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Carpeaux.png
+  image_license: Public domain
+  sources:
+  - wp-jean-baptiste-carpeaux
+  coverage: partly
+  coverage_note: Dates, training, Rome years and one key work captured; other works listed in article not built out.
+- key: felicien-rops
+  name: Félicien Rops
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - illustrator
+  - caricaturist
+  born: '1833-07-07'
+  died: '1898-08-23'
+  prominence: 3
+  note: Belgian Symbolist artist and prolific printmaker, illustrator of Baudelaire, Verlaine and Mallarmé.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Felicien_Rops_c1860.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Felicien_Rops_c1860.jpg/500px-Felicien_Rops_c1860.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Felicien_Rops_c1860.jpg
+  image_license: Public domain
+  sources:
+  - wp-felicien-rops
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; article text cut at 32,000 characters, so later sections are unread; portfolio not built out.
+- key: anton-von-werner
+  name: Anton von Werner
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1843-05-09'
+  died: '1915-01-04'
+  prominence: 3
+  note: German Realist history painter of the Franco-Prussian War and the unification of Germany, director of the Berlin Academy.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/84/Anton_von_werner_selbstbildnis_1885.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/Anton_von_werner_selbstbildnis_1885.jpg/500px-Anton_von_werner_selbstbildnis_1885.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anton_von_werner_selbstbildnis_1885.jpg
+  image_license: Public domain
+  sources:
+  - wp-anton-von-werner
+  coverage: partly
+  coverage_note: Dates, training, patrons and places captured; no dated work (article gives titles only).
+- key: henryk-siemiradzki
+  name: Henryk Siemiradzki
+  type: Artist
+  roles:
+  - painter
+  born: '1843-10-24'
+  died: '1902-08-23'
+  prominence: 3
+  note: Polish academic history painter who worked mostly in Rome, known for scenes of ancient Rome and the New Testament.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D0%B5%D0%BC%D0%B8%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D0%B5%D0%BC%D0%B8%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE.JPG/500px-%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D0%B5%D0%BC%D0%B8%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:%D0%A4%D0%BE%D1%82%D0%BE%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D1%8F_%D0%A1%D0%B5%D0%BC%D0%B8%D1%80%D0%B0%D0%B4%D1%81%D0%BA%D0%BE%D0%B3%D0%BE.JPG
+  image_license: Public domain
+  sources:
+  - wp-henryk-siemiradzki
+  coverage: partly
+  coverage_note: Dates, training, places and one key work captured; full portfolio not built out.
+- key: leonid-pasternak
+  name: Leonid Pasternak
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1862-04-03'
+  died: '1945-05-31'
+  prominence: 3
+  note: Russian Impressionist painter, portraitist and illustrator of Tolstoy, father of the poet Boris Pasternak.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Leonid_Pasternak_-_self-portrait_%281908%2C_Pskov%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Leonid_Pasternak_-_self-portrait_%281908%2C_Pskov%29.jpg/500px-Leonid_Pasternak_-_self-portrait_%281908%2C_Pskov%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Leonid_Pasternak_-_self-portrait_(1908,_Pskov).jpg
+  image_license: Public domain
+  sources:
+  - wp-leonid-pasternak
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; Works section empty in source.
+- key: hugo-simberg
+  name: Hugo Simberg
+  type: Artist
+  roles:
+  - painter
+  - graphic artist
+  born: '1873-06-24'
+  died: '1917-07-12'
+  prominence: 3
+  note: Finnish Symbolist painter and graphic artist, best known for The Wounded Angel.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/19/Portrait_photograph_of_Hugo_Simberg_%281899-1906%29_%28crop%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/19/Portrait_photograph_of_Hugo_Simberg_%281899-1906%29_%28crop%29.jpg/500px-Portrait_photograph_of_Hugo_Simberg_%281899-1906%29_%28crop%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_photograph_of_Hugo_Simberg_(1899-1906)_(crop).jpg
+  image_license: CC BY 4.0
+  sources:
+  - wp-hugo-simberg
+  coverage: partly
+  coverage_note: Dates, teachers, places and church decoration captured; works have no clear year in article.
+- key: albert-marquet
+  name: Albert Marquet
+  type: Artist
+  roles:
+  - painter
+  born: '1875-03-27'
+  died: '1947-06-14'
+  prominence: 3
+  note: French painter, an early Fauve and lifelong friend of Matisse, known for harbour and city views.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/40/Self-Portrait_Albert_Marquet_%281904%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/Self-Portrait_Albert_Marquet_%281904%29.jpg/500px-Self-Portrait_Albert_Marquet_%281904%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-Portrait_Albert_Marquet_(1904).jpg
+  image_license: Public domain
+  sources:
+  - wp-albert-marquet
+  coverage: partly
+  coverage_note: Dates, teacher, places captured; no dated work.
+- key: gino-severini
+  name: Gino Severini
+  type: Artist
+  roles:
+  - painter
+  born: '1883-04-07'
+  died: '1966-02-26'
+  prominence: 4
+  note: Italian painter and leading Futurist who divided his life between Paris and Rome, later a neo-classicist and muralist.
+  sources:
+  - wp-gino-severini
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; full portfolio not built out.
+- key: charles-demuth
+  name: Charles Demuth
+  type: Artist
+  roles:
+  - painter
+  born: '1883-11-08'
+  died: '1935-10-23'
+  prominence: 3
+  note: American painter of Lancaster, Pennsylvania, known for watercolors and the Precisionist style, and for his poster portraits such as I Saw the Figure 5 in Gold.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Charles_Demuth-_Self-Portrait%2C_1907.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/b/be/Charles_Demuth-_Self-Portrait%2C_1907.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Charles_Demuth-_Self-Portrait,_1907.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, death place, training and one dated work captured; the poster portraits, Paris and New York years and full portfolio not built out.
+  sources:
+  - wp-charles-demuth
+- key: han-van-meegeren
+  name: Han van Meegeren
+  type: Artist
+  roles:
+  - painter
+  born: '1889-10-10'
+  died: '1947-12-30'
+  prominence: 4
+  note: Dutch painter and portraitist, one of the most ingenious art forgers of the 20th century, who sold a forged Vermeer to Hermann Goering.
+  coverage: partly
+  coverage_note: Dates, birth and death places, key forgeries (Supper at Emmaus, Hertje) and workplaces captured; the full list of forgeries and the trial detail not built out.
+  sources:
+  - wp-han-van-meegeren
+- key: lyubov-popova
+  name: Lyubov Popova
+  type: Artist
+  roles:
+  - painter
+  - designer
+  born: '1889-04-24'
+  died: '1924-05-25'
+  prominence: 4
+  note: Russian-Soviet avant-garde artist who moved from Cubo-Futurism and Suprematism to Constructivism, designing for theatre, textiles and print.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fb/Lyubov_Popova.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/f/fb/Lyubov_Popova.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lyubov_Popova.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, death place, movements and one dated work captured; teachers and collaborators not in the database are not linked, and the stage and textile designs are not built out.
+  sources:
+  - wp-lyubov-popova
+- key: sophie-taeuber-arp
+  name: Sophie Taeuber-Arp
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - textile designer
+  - architect
+  - dancer
+  born: '1889-01-19'
+  died: '1943-01-14'
+  prominence: 4
+  note: Swiss artist and designer, a Zurich Dada figure and pioneer of concrete art and geometric abstraction, married to Jean Arp.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sophie_Taeuber.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/a/a1/Sophie_Taeuber.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sophie_Taeuber.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, marriage, workplaces and two dated works captured; the Aubette interior, the Cercle et Carre years and the full portfolio not built out.
+  sources:
+  - wp-sophie-taeuber-arp
+- key: ben-nicholson
+  name: Ben Nicholson
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1894-04-10'
+  died: '1982-02-06'
+  prominence: 4
+  note: English painter and sculptor of abstract compositions and low reliefs, a leading promoter of abstract art in England and a long-time resident of St Ives.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Ben_Nicholson_by_Mabel_Pryde.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Ben_Nicholson_by_Mabel_Pryde.jpg/500px-Ben_Nicholson_by_Mabel_Pryde.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ben_Nicholson_by_Mabel_Pryde.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, training and the first wood relief captured; other works, prizes and collections not built out.
+  sources:
+  - wp-ben-nicholson
+- key: dorothea-tanning
+  name: Dorothea Tanning
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - sculptor
+  - writer
+  - poet
+  born: '1910-08-25'
+  died: '2012-01-31'
+  prominence: 3
+  note: American Surrealist-influenced painter, printmaker, sculptor and writer, self-taught, and the wife of Max Ernst.
+  coverage: partly
+  coverage_note: Dates, places, marriage and two dated paintings captured; the soft sculptures, books and exhibitions not built out.
+  sources:
+  - wp-dorothea-tanning
+- key: bernard-buffet
+  name: Bernard Buffet
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - illustrator
+  born: '1928-07-10'
+  died: '1999-10-04'
+  prominence: 3
+  note: French figurative painter, printmaker and illustrator, hugely popular in the 1950s and later out of favour with critics.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/14/Portrait_of_the_Artist_%281954%29_Benard_Buffet_in_Tate_Museum.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Portrait_of_the_Artist_%281954%29_Benard_Buffet_in_Tate_Museum.jpg/500px-Portrait_of_the_Artist_%281954%29_Benard_Buffet_in_Tate_Museum.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_the_Artist_(1954)_Benard_Buffet_in_Tate_Museum.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, birth and death places and two dated works captured; patrons, teachers and the museum collections are not linked, and the full oeuvre is not built out.
+  sources:
+  - wp-bernard-buffet
+- key: wolf-vostell
+  name: Wolf Vostell
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1932-10-14'
+  died: '1998-04-03'
+  prominence: 3
+  note: German painter and sculptor, an early video and installation artist, pioneer of Happenings and co-founder of Fluxus, known for De-coll/age and concrete car sculptures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Wolf_Vostell%2C_1980_in_Spain.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Wolf_Vostell%2C_1980_in_Spain.jpg/500px-Wolf_Vostell%2C_1980_in_Spain.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Wolf_Vostell,_1980_in_Spain.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; the many Happenings, the Dali project and the Vostell Archive not built out.
+  sources:
+  - wp-wolf-vostell
+- key: martin-kippenberger
+  name: Martin Kippenberger
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - photographer
+  - sculptor
+  born: '1953-02-25'
+  died: '1997-03-07'
+  prominence: 4
+  note: German painter, sculptor and installation and performance artist, known for prolific work in many styles and a provocative public persona.
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; the lamp sculptures, hotel drawings, Metro-Net series and exhibitions not built out.
+  sources:
+  - wp-martin-kippenberger
+- key: alfred-freddy-krupa
+  name: Alfred Freddy Krupa
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1971-06-14'
+  prominence: 1
+  note: Croatian painter and book illustrator, author of the New Ink Art Manifesto (1996).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e9/Alfred_freddy_krupa-1541323687.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Alfred_freddy_krupa-1541323687.jpg/500px-Alfred_freddy_krupa-1541323687.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alfred_freddy_krupa-1541323687.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, birthplace and career outline captured; the short article names no dated work, so no artwork is recorded.
+  sources:
+  - wp-alfred-freddy-krupa
+artworks:
+- key: madonna-of-the-rose-bower
+  name: Madonna of the Rose Bower
+  kind: painting
+  made: 1473
+  collection: Dominican church, Colmar
+  people:
+  - person: martin-schongauer
+    role: creator
+  prominence: 4
+  note: His only dated painting; made for St Martin's Church, Colmar, and moved to the nearby Dominican church in 1973.
+  sources:
+  - wp-martin-schongauer
+- key: bentivoglio-altarpiece
+  name: Bentivoglio Altarpiece
+  kind: altarpiece
+  made: 1483
+  people:
+  - person: lorenzo-costa
+    role: creator
+  prominence: 3
+  note: Painted with other frescoes for the Bentivoglio chapel in San Giacomo Maggiore, Bologna; the article calls it famous.
+  sources:
+  - wp-lorenzo-costa
+- key: neptune-and-amphitrite-gossaert
+  name: Neptune and Amphitrite
+  made: 1516
+  collection: Berlin
+  people:
+  - person: jan-gossaert
+    role: creator
+  prominence: 3
+  note: One of only two signed pictures of his 1516-17 period named in the article.
+  sources:
+  - wp-jan-gossaert
+- key: madonna-with-jean-carondelet
+  name: Madonna with a portrait of Jean Carondelet
+  made: 1517
+  collection: Louvre
+  people:
+  - person: jan-gossaert
+    role: creator
+  prominence: 3
+  sources:
+  - wp-jan-gossaert
+- key: luini-passion-and-crucifixion-lugano
+  name: Passion and Crucifixion
+  kind: fresco
+  made: 1529
+  collection: Santa Maria degli Angeli, Lugano
+  people:
+  - person: bernardino-luini
+    role: creator
+  places:
+  - place: santa-maria-degli-angeli-lugano
+    role: made
+  prominence: 3
+  note: Described as one of his masterworks.
+  sources:
+  - wp-bernardino-luini
+- key: luini-saronno-frescoes
+  name: Frescoes of the life of the Virgin and Christ
+  kind: fresco
+  made: 1525
+  estimated: true
+  people:
+  - person: bernardino-luini
+    role: creator
+  places:
+  - place: santa-maria-dei-miracoli-saronno
+    role: made
+  prominence: 3
+  note: Completed around 1525 for the sanctuary of Santa Maria dei Miracoli, Saronno; he returned in 1531 to complete more.
+  sources:
+  - wp-bernardino-luini
+- key: power-of-women-woodcuts
+  name: The Power of Women
+  kind: woodcut series
+  made: 1513
+  made_end: 1517
+  people:
+  - person: lucas-van-leyden
+    role: creator
+  prominence: 3
+  note: Two sets of woodcuts, large (from 1513) and small (from 1517).
+  sources:
+  - wp-lucas-van-leyden
+- key: mohammed-and-the-murdered-monk
+  name: Mohammed and the Murdered Monk
+  kind: print
+  made: 1508
+  people:
+  - person: lucas-van-leyden
+    role: creator
+  prominence: 2
+  note: His earliest known print, made when he was perhaps only 14.
+  sources:
+  - wp-lucas-van-leyden
+- key: dell-abbate-concert-scandiano
+  name: Concert
+  kind: ceiling painting
+  made: 1540
+  made_end: 1543
+  estimated: true
+  people:
+  - person: niccolo-dell-abbate
+    role: creator
+  places:
+  - place: rocca-di-scandiano
+    role: made
+  prominence: 3
+  note: Courtly ceiling of young musicians in perspective (sotto in su), dated by the article to the early 1540s, in the Rocca di Scandiano.
+  sources:
+  - wp-niccolo-dell-abbate
+- key: last-judgement-florence-cathedral-dome
+  name: Last Judgement (dome of Florence Cathedral)
+  kind: fresco
+  made: 1576
+  made_end: 1579
+  people:
+  - person: federico-zuccari
+    role: creator
+  places:
+  - place: florence-cathedral
+    role: made
+  prominence: 4
+  note: Begun by Giorgio Vasari and left unfinished at his death in 1574; completed by Zuccari with assistants, on a new design.
+  sources:
+  - wp-federico-zuccari
+- key: albani-loves-of-venus-and-diana
+  name: Loves of Venus and Diana
+  kind: painting
+  made: 1617
+  estimated: true
+  collection: Galleria Borghese, Rome
+  people:
+  - person: francesco-albani
+    role: creator
+  prominence: 3
+  note: Four-roundel cycle for Cardinal Scipione Borghese, the first of his four landscape cycles.
+  sources:
+  - wp-francesco-albani
+- key: albani-annunciation-dal-bellangelo
+  name: Annunciation 'dal bell'angelo'
+  kind: altarpiece
+  made: 1632
+  collection: San Bartolomeo, Bologna
+  people:
+  - person: francesco-albani
+    role: creator
+  prominence: 3
+  sources:
+  - wp-francesco-albani
+- key: inmaculada-del-facistol
+  name: Inmaculada del Facistol
+  made: 1655
+  made_end: 1656
+  people:
+  - person: alonso-cano
+    role: creator
+  places:
+  - place: granada-cathedral
+    role: held
+  prominence: 3
+  note: In the sacristy of Granada Cathedral.
+  sources:
+  - wp-alonso-cano
+- key: view-of-the-palace-of-brussels-with-archdukes-albert-and-isabella
+  name: View of the palace of Brussels with Archdukes Albert and Isabella
+  made: 1627
+  estimated: true
+  collection: Museo del Prado
+  people:
+  - person: jan-brueghel-the-younger
+    role: creator
+  places:
+  - place: museo-del-prado
+    role: held
+  prominence: 3
+  note: Made in collaboration with Sebastiaen Vrancx (not in the database).
+  sources:
+  - wp-jan-brueghel-the-younger
+- key: allegory-of-abundance-jan-brueghel-the-younger
+  name: Allegory of abundance
+  made: 1624
+  estimated: true
+  collection: Museo del Prado
+  people:
+  - person: jan-brueghel-the-younger
+    role: creator
+  places:
+  - place: museo-del-prado
+    role: held
+  prominence: 2
+  sources:
+  - wp-jan-brueghel-the-younger
+- key: baptism-of-christ-sirani
+  name: The Baptism of Christ
+  kind: altarpiece
+  made: 1658
+  people:
+  - person: elisabetta-sirani
+    role: creator
+  places:
+  - place: certosa-di-bologna
+    role: made-for
+  prominence: 3
+  note: One of at least 13 public altarpieces she painted; made at the Certosa di Bologna.
+  sources:
+  - wp-elisabetta-sirani
+- key: portia-wounding-her-thigh
+  name: Portia Wounding Her Thigh
+  kind: painting
+  made: 1664
+  people:
+  - person: elisabetta-sirani
+    role: creator
+  prominence: 3
+  note: Commissioned, per the article, by the Bolognese fabric merchant Simone Tassi (not in the database).
+  sources:
+  - wp-elisabetta-sirani
+- key: marquise-d-antin-nattier
+  name: Portrait of Mathilde de Canisy, marquise d'Antin
+  kind: portrait
+  made: 1738
+  collection: Musee Jacquemart-Andre, Paris
+  people:
+  - person: jean-marc-nattier
+    role: creator
+  prominence: 3
+  note: The sitter is not in the database.
+  sources:
+  - wp-jean-marc-nattier
+- key: madame-de-maison-rouge-as-diana
+  name: Madame de Maison-Rouge as Diana
+  kind: portrait
+  made: 1756
+  collection: Metropolitan Museum of Art
+  people:
+  - person: jean-marc-nattier
+    role: creator
+  prominence: 2
+  sources:
+  - wp-jean-marc-nattier
+- key: madonna-on-a-throne-with-four-saints-gabrielli
+  name: Madonna on a Throne with Child and four Saints and Blesseds of the Gabrielli family
+  kind: altarpiece
+  made: 1732
+  made_end: 1733
+  people:
+  - person: pompeo-batoni
+    role: creator
+  places:
+  - place: san-gregorio-magno-al-celio
+    role: made-for
+  prominence: 3
+  note: Batoni's first independent commission, for the Gabrielli family chapel; a second version of 1736 is at the Gallerie dell'Accademia, Venice.
+  sources:
+  - wp-pompeo-batoni
+- key: ecstasy-of-saint-catherine-of-siena-batoni
+  name: The Ecstasy of Saint Catherine of Siena
+  made: 1743
+  people:
+  - person: pompeo-batoni
+    role: creator
+  prominence: 3
+  sources:
+  - wp-pompeo-batoni
+- key: die-nacht-gessner
+  name: Die Nacht
+  kind: painting
+  made: 1753
+  people:
+  - person: salomon-gessner
+    role: creator
+  prominence: 2
+  note: The article calls it his first painting.
+  sources:
+  - wp-salomon-gessner
+- key: sleep-of-endymion
+  name: Sleep of Endymion
+  made: 1791
+  collection: Louvre
+  people:
+  - person: anne-louis-girodet-de-roussy-trioson
+    role: creator
+  prominence: 3
+  note: The article also calls it Endymion-dormant and Effet de lune; exhibited to acclaim at the Salon of 1793.
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- key: atala-au-tombeau
+  name: Atala au tombeau
+  made: 1808
+  people:
+  - person: anne-louis-girodet-de-roussy-trioson
+    role: creator
+  prominence: 3
+  note: Based on Chateaubriand's novel Atala (1801); the article says it won immense popularity.
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- key: the-monarch-of-the-glen
+  name: The Monarch of the Glen
+  kind: painting
+  made: 1851
+  people:
+  - person: edwin-landseer
+    role: creator
+  prominence: 4
+  sources:
+  - wp-edwin-landseer
+- key: landseer-lions-nelsons-column
+  name: Lions at the base of Nelson's Column
+  kind: sculpture
+  medium: bronze
+  made: 1858
+  made_end: 1867
+  people:
+  - person: edwin-landseer
+    role: creator
+  places:
+  - place: nelsons-column
+    role: displayed
+  prominence: 4
+  note: Commissioned by the government in 1858 and installed in 1867; cast at Carlo Marochetti's Kensington studio.
+  sources:
+  - wp-edwin-landseer
+- key: ugolino-and-his-sons
+  name: Ugolino and His Sons
+  kind: sculpture
+  made: 1861
+  collection: Metropolitan Museum of Art
+  people:
+  - person: jean-baptiste-carpeaux
+    role: creator
+  prominence: 3
+  note: Versions also in other museums including the Musée d'Orsay.
+  sources:
+  - wp-jean-baptiste-carpeaux
+- key: pornocrates
+  name: Pornocrates
+  made: 1878
+  people:
+  - person: felicien-rops
+    role: creator
+  prominence: 3
+  sources:
+  - wp-felicien-rops
+- key: neros-torches
+  name: Nero's Torches (Pochodnie Nerona)
+  kind: painting
+  made: 1876
+  estimated: true
+  collection: Sukiennice Museum, Kraków
+  people:
+  - person: henryk-siemiradzki
+    role: creator
+  places:
+  - place: krakow
+    role: held
+  prominence: 3
+  note: Painted around 1876; offered by Siemiradzki to the Polish National Museum in 1879.
+  sources:
+  - wp-henryk-siemiradzki
+- key: portrait-of-albert-einstein-pasternak
+  name: Portrait of Albert Einstein
+  kind: painting
+  made: 1924
+  collection: Mathematics and Computer Science Library, Hebrew University of Jerusalem
+  people:
+  - person: leonid-pasternak
+    role: creator
+  prominence: 2
+  note: Einstein is not yet in the database, so no subject link.
+  sources:
+  - wp-leonid-pasternak
+- key: dynamic-hieroglyph-of-the-bal-tabarin
+  name: Dynamic Hieroglyph of the Bal Tabarin
+  made: 1912
+  people:
+  - person: gino-severini
+    role: creator
+  prominence: 3
+  sources:
+  - wp-gino-severini
+- key: my-egypt
+  name: My Egypt
+  kind: painting
+  made: 1927
+  people:
+  - person: charles-demuth
+    role: creator
+  places:
+  - place: lancaster-pennsylvania
+    role: depicts
+  prominence: 3
+  note: Depicts two Lancaster grain silos, inviting comparison with pharaonic monuments.
+  sources:
+  - wp-charles-demuth
+- key: the-supper-at-emmaus-van-meegeren
+  name: The Supper at Emmaus (forged Vermeer)
+  kind: painting
+  made: 1936
+  made_end: 1937
+  collection: Museum Boijmans Van Beuningen
+  people:
+  - person: han-van-meegeren
+    role: creator
+  prominence: 4
+  note: Van Meegeren's forgery in the style of Vermeer, accepted by Abraham Bredius in 1937 as a genuine Vermeer and bought by the Rembrandt Society for the Boijmans museum; proved a forgery in 1945-47.
+    Collection as the article states it was donated there; present location not stated.
+  sources:
+  - wp-han-van-meegeren
+- key: hertje
+  name: Hertje (The Fawn)
+  kind: painting
+  made: 1921
+  people:
+  - person: han-van-meegeren
+    role: creator
+  prominence: 2
+  note: Van Meegeren's own painting of Princess Juliana's tame roe deer; popular in the Netherlands.
+  sources:
+  - wp-han-van-meegeren
+- key: the-violin-popova
+  name: The Violin
+  kind: painting
+  made: 1914
+  people:
+  - person: lyubov-popova
+    role: creator
+  prominence: 3
+  note: Suggests her development from Cubism towards the "painterly architectonics" series of 1916-1918.
+  sources:
+  - wp-lyubov-popova
+- key: tete-dada
+  name: Tete Dada (Dada Head)
+  kind: sculpture
+  medium: turned polychromed wood
+  made: 1920
+  people:
+  - person: sophie-taeuber-arp
+    role: creator
+  prominence: 3
+  note: One of a set of abstract Dada Heads that resemble hatmakers' stands; among her most famous works.
+  sources:
+  - wp-sophie-taeuber-arp
+- key: dynamic-circles
+  name: Dynamic Circles
+  made: 1934
+  people:
+  - person: sophie-taeuber-arp
+    role: creator
+  prominence: 2
+  note: An early use of polka dots in fine art, from her circle-based period.
+  sources:
+  - wp-sophie-taeuber-arp
+- key: white-relief-1933
+  name: White Relief
+  kind: relief
+  medium: wood
+  made: 1933
+  people:
+  - person: ben-nicholson
+    role: creator
+  places:
+  - place: paris
+    role: made
+  prominence: 3
+  note: His first wood relief, containing only right angles and circles.
+  sources:
+  - wp-ben-nicholson
+- key: birthday-tanning
+  name: Birthday
+  kind: painting
+  made: 1942
+  collection: Philadelphia Museum of Art
+  people:
+  - person: dorothea-tanning
+    role: creator
+  - person: dorothea-tanning
+    role: subject
+  prominence: 3
+  note: Her iconic self-portrait, which led Max Ernst to her studio.
+  sources:
+  - wp-dorothea-tanning
+- key: eine-kleine-nachtmusik
+  name: Eine Kleine Nachtmusik
+  kind: painting
+  made: 1943
+  collection: Tate Modern
+  people:
+  - person: dorothea-tanning
+    role: creator
+  prominence: 2
+  sources:
+  - wp-dorothea-tanning
+- key: d-apres-le-sommeil-courbet
+  name: D'apres Le Sommeil (Courbet)
+  kind: painting
+  made: 1955
+  people:
+  - person: bernard-buffet
+    role: creator
+  prominence: 2
+  note: Buffet's homage to Gustave Courbet, whom he named as his primary model.
+  sources:
+  - wp-bernard-buffet
+- key: portrait-of-yves-saint-laurent-buffet
+  name: Portrait of Yves Saint Laurent
+  kind: drawing
+  medium: graphite
+  made: 1958
+  collection: Pierre Berge - Yves Saint Laurent Foundation Collection
+  people:
+  - person: bernard-buffet
+    role: creator
+  prominence: 2
+  sources:
+  - wp-bernard-buffet
+- key: concrete-traffic
+  name: Concrete Traffic
+  kind: sculpture
+  made: 1970
+  collection: University of Chicago campus
+  people:
+  - person: wolf-vostell
+    role: creator
+  places:
+  - place: chicago
+    role: made
+  prominence: 3
+  note: A 1957 Cadillac encased in concrete at a happening sponsored by the Museum of Contemporary Art Chicago; moved to the University of Chicago campus, restored 2016.
+  sources:
+  - wp-wolf-vostell
+- key: 6-tv-de-coll-age
+  name: 6 TV De-coll/age
+  kind: installation
+  made: 1963
+  collection: Museo Reina Sofia, Madrid
+  people:
+  - person: wolf-vostell
+    role: creator
+  places:
+  - place: madrid
+    role: held
+  prominence: 3
+  note: Shown at the Smolin Gallery, New York; marks him as a pioneer of video art and installation.
+  sources:
+  - wp-wolf-vostell
+- key: martin-ab-in-die-ecke-und-scham-dich
+  name: Martin, ab in die Ecke und scham Dich (Martin, into the Corner, You Should Be Ashamed of Yourself)
+  kind: sculpture
+  made: 1989
+  people:
+  - person: martin-kippenberger
+    role: creator
+  - person: martin-kippenberger
+    role: subject
+  prominence: 3
+  note: Life-size dressed mannequins of himself placed facing the wall.
+  sources:
+  - wp-martin-kippenberger
+- key: blass-vor-neid-steht-er-vor-deiner-tuer
+  name: Blass vor Neid steht er vor deiner Tuer (Pale with Envy, He Stands Outside Your Door)
+  kind: painting
+  made: 1981
+  people:
+  - person: martin-kippenberger
+    role: creator
+  prominence: 2
+  note: Twenty-one individual canvases shown as one work, each with its own title and no consistent style.
+  sources:
+  - wp-martin-kippenberger
+links:
+- teacher: ludovico-carracci
+  student: francesco-albani
+  sources:
+  - wp-francesco-albani
+- teacher: annibale-carracci
+  student: francesco-albani
+  sources:
+  - wp-francesco-albani
+- patron: philip-ii-of-spain
+  artist: federico-zuccari
+  from: 1585
+  to: 1588
+  sources:
+  - wp-federico-zuccari
+- teacher: rembrandt
+  student: ferdinand-bol
+  sources:
+  - wp-ferdinand-bol
+- teacher: ferdinand-bol
+  student: godfrey-kneller
+  sources:
+  - wp-ferdinand-bol
+- teacher: jan-brueghel-the-elder
+  student: jan-brueghel-the-younger
+  sources:
+  - wp-jan-brueghel-the-younger
+- teacher: jacques-louis-david
+  student: anne-louis-girodet-de-roussy-trioson
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- patron: victoria-of-the-united-kingdom
+  artist: edwin-landseer
+  sources:
+  - wp-edwin-landseer
+- teacher: edwin-landseer
+  student: victoria-of-the-united-kingdom
+  sources:
+  - wp-edwin-landseer
+- teacher: edwin-landseer
+  student: prince-albert-of-saxe-coburg-and-gotha
+  sources:
+  - wp-edwin-landseer
+- teacher: antoine-jean-gros
+  student: richard-parkes-bonington
+  sources:
+  - wp-richard-parkes-bonington
+- teacher: gustave-moreau
+  student: albert-marquet
+  sources:
+  - wp-albert-marquet
+- teacher: akseli-gallen-kallela
+  student: hugo-simberg
+  sources:
+  - wp-hugo-simberg
+- teacher: helene-schjerfbeck
+  student: hugo-simberg
+  sources:
+  - wp-hugo-simberg
+- spouse: sophie-taeuber-arp
+  to: jean-arp
+  year: 1922
+  sources:
+  - wp-sophie-taeuber-arp
+- spouse: dorothea-tanning
+  to: max-ernst
+  year: 1946
+  sources:
+  - wp-dorothea-tanning
+moments:
+- person: martin-schongauer
+  role: born
+  place: colmar
+  year: 1450
+  sources:
+  - wp-martin-schongauer
+- person: martin-schongauer
+  role: worked
+  place: colmar
+  year: 1471
+  sources:
+  - wp-martin-schongauer
+- person: martin-schongauer
+  role: worked
+  place: breisach
+  year: 1488
+  sources:
+  - wp-martin-schongauer
+- person: martin-schongauer
+  role: died
+  place: breisach
+  year: 1491
+  sources:
+  - wp-martin-schongauer
+- person: lorenzo-costa
+  role: born
+  place: ferrara
+  year: 1460
+  sources:
+  - wp-lorenzo-costa
+- person: lorenzo-costa
+  role: worked
+  place: san-giacomo-maggiore-bologna
+  year: 1483
+  sources:
+  - wp-lorenzo-costa
+- person: lorenzo-costa
+  role: worked
+  place: mantua
+  year: 1509
+  sources:
+  - wp-lorenzo-costa
+- person: lorenzo-costa
+  role: died
+  place: mantua
+  year: 1535
+  sources:
+  - wp-lorenzo-costa
+- person: jan-gossaert
+  role: born
+  place: maubeuge
+  year: 1478
+  sources:
+  - wp-jan-gossaert
+- person: jan-gossaert
+  role: worked
+  place: rome
+  year: 1508
+  sources:
+  - wp-jan-gossaert
+- person: jan-gossaert
+  role: worked
+  place: middelburg
+  year: 1509
+  sources:
+  - wp-jan-gossaert
+- person: jan-gossaert
+  role: worked
+  place: wijk-bij-duurstede
+  year: 1517
+  sources:
+  - wp-jan-gossaert
+- person: jan-gossaert
+  role: died
+  place: antwerp
+  year: 1532
+  sources:
+  - wp-jan-gossaert
+- person: palma-vecchio
+  role: born
+  place: serina
+  year: 1480
+  sources:
+  - wp-palma-vecchio
+- person: palma-vecchio
+  role: worked
+  place: venice
+  year: 1510
+  sources:
+  - wp-palma-vecchio
+- person: bernardino-luini
+  role: born
+  place: runo-dumenza
+  year: 1480
+  sources:
+  - wp-bernardino-luini
+- person: bernardino-luini
+  role: worked
+  place: milan
+  year: 1500
+  sources:
+  - wp-bernardino-luini
+- person: bernardino-luini
+  role: worked
+  place: santa-maria-dei-miracoli-saronno
+  year: 1525
+  sources:
+  - wp-bernardino-luini
+- person: bernardino-luini
+  role: worked
+  place: santa-maria-degli-angeli-lugano
+  year: 1529
+  sources:
+  - wp-bernardino-luini
+- person: bernardino-luini
+  role: died
+  place: milan
+  year: 1532
+  sources:
+  - wp-bernardino-luini
+- person: lucas-van-leyden
+  role: born
+  place: leiden
+  year: 1494
+  sources:
+  - wp-lucas-van-leyden
+- person: lucas-van-leyden
+  role: died
+  place: leiden
+  year: 1533
+  sources:
+  - wp-lucas-van-leyden
+- person: niccolo-dell-abbate
+  role: born
+  place: modena
+  year: 1509
+  sources:
+  - wp-niccolo-dell-abbate
+- person: niccolo-dell-abbate
+  role: worked
+  place: bologna
+  year: 1547
+  sources:
+  - wp-niccolo-dell-abbate
+- person: niccolo-dell-abbate
+  role: worked
+  place: fontainebleau-castle
+  year: 1552
+  sources:
+  - wp-niccolo-dell-abbate
+- person: niccolo-dell-abbate
+  role: died
+  place: fontainebleau-castle
+  year: 1571
+  sources:
+  - wp-niccolo-dell-abbate
+- person: giovanni-battista-moroni
+  role: born
+  place: albino
+  year: 1520
+  sources:
+  - wp-giovanni-battista-moroni
+- person: giovanni-battista-moroni
+  role: worked
+  place: trento
+  year: 1546
+  sources:
+  - wp-giovanni-battista-moroni
+- person: giovanni-battista-moroni
+  role: worked
+  place: bergamo
+  year: 1557
+  sources:
+  - wp-giovanni-battista-moroni
+- person: giovanni-battista-moroni
+  role: died
+  place: albino
+  year: 1578
+  sources:
+  - wp-giovanni-battista-moroni
+- person: federico-zuccari
+  role: born
+  place: sant-angelo-in-vado
+  year: 1540
+  sources:
+  - wp-federico-zuccari
+- person: federico-zuccari
+  role: worked
+  place: venice
+  year: 1565
+  sources:
+  - wp-federico-zuccari
+- person: federico-zuccari
+  role: worked
+  place: florence-cathedral
+  year: 1576
+  sources:
+  - wp-federico-zuccari
+- person: federico-zuccari
+  role: worked
+  place: escorial
+  year: 1586
+  sources:
+  - wp-federico-zuccari
+- person: federico-zuccari
+  role: died
+  place: ancona
+  year: 1609
+  sources:
+  - wp-federico-zuccari
+- person: francesco-albani
+  role: born
+  place: bologna
+  year: 1578
+  sources:
+  - wp-francesco-albani
+- person: francesco-albani
+  role: worked
+  place: rome
+  year: 1600
+  sources:
+  - wp-francesco-albani
+- person: francesco-albani
+  role: worked
+  place: mantua
+  year: 1621
+  sources:
+  - wp-francesco-albani
+- person: francesco-albani
+  role: worked
+  place: florence
+  year: 1633
+  sources:
+  - wp-francesco-albani
+- person: francesco-albani
+  role: died
+  place: bologna
+  year: 1660
+  sources:
+  - wp-francesco-albani
+- person: pieter-claesz
+  role: born
+  place: berchem-antwerp
+  year: 1597
+  sources:
+  - wp-pieter-claesz
+- person: pieter-claesz
+  role: worked
+  place: haarlem
+  year: 1620
+  sources:
+  - wp-pieter-claesz
+- person: alonso-cano
+  role: born
+  place: granada
+  year: 1601
+  sources:
+  - wp-alonso-cano
+- person: alonso-cano
+  role: worked
+  place: granada-cathedral
+  year: 1652
+  sources:
+  - wp-alonso-cano
+- person: jan-brueghel-the-younger
+  role: born
+  place: antwerp
+  year: 1601
+  sources:
+  - wp-jan-brueghel-the-younger
+- person: jan-brueghel-the-younger
+  role: worked
+  place: valletta
+  year: 1623
+  sources:
+  - wp-jan-brueghel-the-younger
+- person: jan-brueghel-the-younger
+  role: worked
+  place: palermo
+  year: 1624
+  sources:
+  - wp-jan-brueghel-the-younger
+- person: jan-brueghel-the-younger
+  role: died
+  place: antwerp
+  year: 1678
+  sources:
+  - wp-jan-brueghel-the-younger
+- person: ferdinand-bol
+  role: born
+  place: dordrecht
+  year: 1616
+  sources:
+  - wp-ferdinand-bol
+- person: ferdinand-bol
+  role: worked
+  place: amsterdam
+  year: 1652
+  sources:
+  - wp-ferdinand-bol
+- person: ferdinand-bol
+  role: died
+  place: amsterdam
+  year: 1680
+  sources:
+  - wp-ferdinand-bol
+- person: elisabetta-sirani
+  role: born
+  place: bologna
+  year: 1638
+  sources:
+  - wp-elisabetta-sirani
+- person: elisabetta-sirani
+  role: worked
+  place: certosa-di-bologna
+  year: 1658
+  sources:
+  - wp-elisabetta-sirani
+- person: elisabetta-sirani
+  role: died
+  place: bologna
+  year: 1665
+  sources:
+  - wp-elisabetta-sirani
+- person: elisabetta-sirani
+  role: buried
+  place: san-domenico-bologna
+  year: 1665
+  sources:
+  - wp-elisabetta-sirani
+- person: jean-marc-nattier
+  role: born
+  place: paris
+  year: 1685
+  sources:
+  - wp-jean-marc-nattier
+- person: jean-marc-nattier
+  role: worked
+  place: amsterdam
+  year: 1715
+  sources:
+  - wp-jean-marc-nattier
+- person: jean-marc-nattier
+  role: died
+  place: paris
+  year: 1766
+  sources:
+  - wp-jean-marc-nattier
+- person: pompeo-batoni
+  role: born
+  place: lucca
+  year: 1708
+  sources:
+  - wp-pompeo-batoni
+- person: pompeo-batoni
+  role: worked
+  place: rome
+  year: 1727
+  sources:
+  - wp-pompeo-batoni
+- person: pompeo-batoni
+  role: worked
+  place: san-gregorio-magno-al-celio
+  year: 1732
+  sources:
+  - wp-pompeo-batoni
+- person: pompeo-batoni
+  role: died
+  place: rome
+  year: 1787
+  sources:
+  - wp-pompeo-batoni
+- person: pompeo-batoni
+  role: buried
+  place: san-lorenzo-in-lucina
+  year: 1787
+  sources:
+  - wp-pompeo-batoni
+- person: salomon-gessner
+  role: worked
+  place: berlin
+  year: 1749
+  sources:
+  - wp-salomon-gessner
+- person: salomon-gessner
+  role: worked
+  place: zurich
+  year: 1780
+  sources:
+  - wp-salomon-gessner
+- person: anne-louis-girodet-de-roussy-trioson
+  role: born
+  place: montargis
+  year: 1767
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- person: anne-louis-girodet-de-roussy-trioson
+  role: worked
+  place: rome
+  year: 1789
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- person: anne-louis-girodet-de-roussy-trioson
+  role: died
+  place: paris
+  year: 1824
+  sources:
+  - wp-anne-louis-girodet-de-roussy-trioson
+- person: edwin-landseer
+  role: born
+  place: london
+  year: 1802
+  sources:
+  - wp-edwin-landseer
+- person: edwin-landseer
+  role: buried
+  place: st-pauls-cathedral
+  year: 1873
+  sources:
+  - wp-edwin-landseer
+- person: hermann-goldschmidt
+  role: born
+  place: frankfurt
+  year: 1802
+  sources:
+  - wp-hermann-goldschmidt
+- person: hermann-goldschmidt
+  role: worked
+  place: paris
+  year: 1836
+  sources:
+  - wp-hermann-goldschmidt
+- person: hermann-goldschmidt
+  role: died
+  place: fontainebleau
+  year: 1866
+  sources:
+  - wp-hermann-goldschmidt
+- person: richard-parkes-bonington
+  role: born
+  place: arnold
+  year: 1802
+  sources:
+  - wp-richard-parkes-bonington
+- person: richard-parkes-bonington
+  role: worked
+  place: paris
+  year: 1818
+  sources:
+  - wp-richard-parkes-bonington
+- person: richard-parkes-bonington
+  role: worked
+  place: venice
+  year: 1826
+  sources:
+  - wp-richard-parkes-bonington
+- person: richard-parkes-bonington
+  role: died
+  place: london
+  year: 1828
+  sources:
+  - wp-richard-parkes-bonington
+- person: andreas-achenbach
+  role: worked
+  place: dusseldorf
+  year: 1827
+  sources:
+  - wp-andreas-achenbach
+- person: eugene-fromentin
+  role: born
+  place: la-rochelle
+  year: 1820
+  sources:
+  - wp-eugene-fromentin
+- person: eugene-fromentin
+  role: died
+  place: la-rochelle
+  year: 1876
+  sources:
+  - wp-eugene-fromentin
+- person: jean-baptiste-carpeaux
+  role: born
+  place: valenciennes
+  year: 1827
+  sources:
+  - wp-jean-baptiste-carpeaux
+- person: jean-baptiste-carpeaux
+  role: worked
+  place: rome
+  year: 1854
+  sources:
+  - wp-jean-baptiste-carpeaux
+- person: jean-baptiste-carpeaux
+  role: died
+  place: becon-les-bruyeres
+  year: 1875
+  sources:
+  - wp-jean-baptiste-carpeaux
+- person: felicien-rops
+  role: born
+  place: namur
+  year: 1833
+  sources:
+  - wp-felicien-rops
+- person: felicien-rops
+  role: worked
+  place: brussels
+  year: 1851
+  sources:
+  - wp-felicien-rops
+- person: felicien-rops
+  role: worked
+  place: paris
+  year: 1862
+  sources:
+  - wp-felicien-rops
+- person: felicien-rops
+  role: died
+  place: corbeil-essonnes
+  year: 1898
+  sources:
+  - wp-felicien-rops
+- person: anton-von-werner
+  role: born
+  place: frankfurt-oder
+  year: 1843
+  sources:
+  - wp-anton-von-werner
+- person: anton-von-werner
+  role: worked
+  place: rome
+  year: 1868
+  sources:
+  - wp-anton-von-werner
+- person: anton-von-werner
+  role: worked
+  place: berlin
+  year: 1871
+  sources:
+  - wp-anton-von-werner
+- person: anton-von-werner
+  role: died
+  place: berlin
+  year: 1915
+  sources:
+  - wp-anton-von-werner
+- person: henryk-siemiradzki
+  role: born
+  place: pechenihy
+  year: 1843
+  sources:
+  - wp-henryk-siemiradzki
+- person: henryk-siemiradzki
+  role: worked
+  place: st-petersburg
+  year: 1864
+  sources:
+  - wp-henryk-siemiradzki
+- person: henryk-siemiradzki
+  role: worked
+  place: munich
+  year: 1870
+  sources:
+  - wp-henryk-siemiradzki
+- person: henryk-siemiradzki
+  role: worked
+  place: rome
+  year: 1872
+  sources:
+  - wp-henryk-siemiradzki
+- person: leonid-pasternak
+  role: born
+  place: odessa
+  year: 1862
+  sources:
+  - wp-leonid-pasternak
+- person: leonid-pasternak
+  role: worked
+  place: moscow
+  year: 1889
+  sources:
+  - wp-leonid-pasternak
+- person: leonid-pasternak
+  role: worked
+  place: berlin
+  year: 1921
+  sources:
+  - wp-leonid-pasternak
+- person: leonid-pasternak
+  role: died
+  place: oxford
+  year: 1945
+  sources:
+  - wp-leonid-pasternak
+- person: hugo-simberg
+  role: born
+  place: hamina
+  year: 1873
+  sources:
+  - wp-hugo-simberg
+- person: hugo-simberg
+  role: worked
+  place: tampere-cathedral
+  year: 1904
+  sources:
+  - wp-hugo-simberg
+- person: hugo-simberg
+  role: died
+  place: ahtari
+  year: 1917
+  sources:
+  - wp-hugo-simberg
+- person: albert-marquet
+  role: born
+  place: bordeaux
+  year: 1875
+  sources:
+  - wp-albert-marquet
+- person: albert-marquet
+  role: worked
+  place: paris
+  year: 1890
+  sources:
+  - wp-albert-marquet
+- person: albert-marquet
+  role: died
+  place: la-frette-sur-seine
+  year: 1947
+  sources:
+  - wp-albert-marquet
+- person: gino-severini
+  role: born
+  place: cortona
+  year: 1883
+  sources:
+  - wp-gino-severini
+- person: gino-severini
+  role: worked
+  place: rome
+  year: 1899
+  sources:
+  - wp-gino-severini
+- person: gino-severini
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-gino-severini
+- person: gino-severini
+  role: worked
+  place: montegufoni-castle
+  year: 1921
+  sources:
+  - wp-gino-severini
+- person: gino-severini
+  role: died
+  place: paris
+  year: 1966
+  sources:
+  - wp-gino-severini
+- person: charles-demuth
+  role: born
+  place: lancaster-pennsylvania
+  year: 1883
+  sources:
+  - wp-charles-demuth
+- person: charles-demuth
+  role: died
+  place: lancaster-pennsylvania
+  year: 1935
+  sources:
+  - wp-charles-demuth
+- person: charles-demuth
+  role: buried
+  place: lancaster-pennsylvania
+  year: 1935
+  sources:
+  - wp-charles-demuth
+- person: han-van-meegeren
+  role: born
+  place: deventer
+  year: 1889
+  sources:
+  - wp-han-van-meegeren
+- person: han-van-meegeren
+  role: died
+  place: amsterdam
+  year: 1947
+  sources:
+  - wp-han-van-meegeren
+- person: han-van-meegeren
+  role: worked
+  place: roquebrune-cap-martin
+  year: 1932
+  sources:
+  - wp-han-van-meegeren
+- person: han-van-meegeren
+  role: worked
+  place: nice
+  year: 1938
+  sources:
+  - wp-han-van-meegeren
+- person: han-van-meegeren
+  role: worked
+  place: laren
+  year: 1940
+  sources:
+  - wp-han-van-meegeren
+- person: lyubov-popova
+  role: died
+  place: moscow
+  year: 1924
+  sources:
+  - wp-lyubov-popova
+- person: lyubov-popova
+  role: worked
+  place: paris
+  year: 1912
+  sources:
+  - wp-lyubov-popova
+- person: sophie-taeuber-arp
+  role: born
+  place: davos
+  year: 1889
+  sources:
+  - wp-sophie-taeuber-arp
+- person: sophie-taeuber-arp
+  role: worked
+  place: zurich
+  year: 1916
+  sources:
+  - wp-sophie-taeuber-arp
+- person: sophie-taeuber-arp
+  role: worked
+  place: strasbourg
+  year: 1926
+  sources:
+  - wp-sophie-taeuber-arp
+- person: sophie-taeuber-arp
+  role: worked
+  place: meudon
+  year: 1928
+  sources:
+  - wp-sophie-taeuber-arp
+- person: ben-nicholson
+  role: born
+  place: denham
+  year: 1894
+  sources:
+  - wp-ben-nicholson
+- person: ben-nicholson
+  role: died
+  place: hampstead
+  year: 1982
+  sources:
+  - wp-ben-nicholson
+- person: ben-nicholson
+  role: worked
+  place: st-ives
+  year: 1939
+  sources:
+  - wp-ben-nicholson
+- person: dorothea-tanning
+  role: born
+  place: galesburg
+  year: 1910
+  sources:
+  - wp-dorothea-tanning
+- person: dorothea-tanning
+  role: died
+  place: new-york-city
+  year: 2012
+  sources:
+  - wp-dorothea-tanning
+- person: dorothea-tanning
+  role: worked
+  place: chicago
+  year: 1930
+  sources:
+  - wp-dorothea-tanning
+- person: dorothea-tanning
+  role: worked
+  place: new-york-city
+  year: 1935
+  sources:
+  - wp-dorothea-tanning
+- person: dorothea-tanning
+  role: worked
+  place: paris
+  year: 1949
+  sources:
+  - wp-dorothea-tanning
+- person: bernard-buffet
+  role: born
+  place: paris
+  year: 1928
+  sources:
+  - wp-bernard-buffet
+- person: bernard-buffet
+  role: died
+  place: tourtour
+  year: 1999
+  sources:
+  - wp-bernard-buffet
+- person: wolf-vostell
+  role: born
+  place: leverkusen
+  year: 1932
+  sources:
+  - wp-wolf-vostell
+- person: wolf-vostell
+  role: worked
+  place: paris
+  year: 1958
+  sources:
+  - wp-wolf-vostell
+- person: wolf-vostell
+  role: worked
+  place: berlin
+  year: 1970
+  sources:
+  - wp-wolf-vostell
+- person: wolf-vostell
+  role: worked
+  place: malpartida-de-caceres
+  year: 1976
+  sources:
+  - wp-wolf-vostell
+- person: martin-kippenberger
+  role: born
+  place: dortmund
+  year: 1953
+  sources:
+  - wp-martin-kippenberger
+- person: martin-kippenberger
+  role: died
+  place: vienna
+  year: 1997
+  sources:
+  - wp-martin-kippenberger
+- person: martin-kippenberger
+  role: worked
+  place: berlin
+  year: 1978
+  sources:
+  - wp-martin-kippenberger
+- person: alfred-freddy-krupa
+  role: born
+  place: karlovac
+  year: 1971
+  sources:
+  - wp-alfred-freddy-krupa
+- person: alfred-freddy-krupa
+  role: worked
+  place: tokyo
+  year: 1998
+  sources:
+  - wp-alfred-freddy-krupa
+discrepancies:
+- key: jan-gossaert-birthplace
+  question: Where was Jan Gossaert born?
+  about:
+  - person: jan-gossaert
+  field: place
+  claims:
+  - value: Maubeuge
+    sources:
+    - wp-jan-gossaert
+    note: Karel van Mander's claim; the name Mabuse comes from it.
+  - value: Duurstede Castle
+    sources:
+    - wp-jan-gossaert
+    note: RKD says there is evidence for this.
+  note: The record uses Maubeuge for now.
+- key: bernardino-luini-trainer
+  question: Who trained Bernardino Luini in Milan?
+  about:
+  - person: bernardino-luini
+  field: teacher
+  claims:
+  - value: Giovan Stefano Scotto
+    sources:
+    - wp-bernardino-luini
+    note: According to Lomazzo.
+  - value: Ambrogio Bergognone
+    sources:
+    - wp-bernardino-luini
+    note: '''For others'' he was a pupil of Bergognone.'
+  note: No teacher link recorded.
+- key: giovanni-battista-moroni-master
+  question: Who was Moroni's master?
+  about:
+  - person: giovanni-battista-moroni
+  field: teacher
+  claims:
+  - value: Alessandro Bonvicino (Moretto)
+    sources:
+    - wp-giovanni-battista-moroni
+    note: The article's Biography section says he trained under him in Brescia.
+  - value: Lorenzo Lotto
+    sources:
+    - wp-giovanni-battista-moroni
+    note: A later passage of the same article calls Lotto 'his master'.
+  note: No teacher link recorded. The article also says 19th-century claims that Titian trained him are improbable.
+- key: martin-schongauer-trainer
+  question: Who trained Martin Schongauer as an engraver?
+  about:
+  - person: martin-schongauer
+  field: teacher
+  claims:
+  - value: Master E. S.
+    sources:
+    - wp-martin-schongauer
+    note: The traditional view; scholars now doubt it.
+  - value: His father Caspar Schongauer
+    a goldsmith: null
+    sources:
+    - wp-martin-schongauer
+    note: The article says he presumably taught his son engraving.
+  note: No teacher link recorded.
+- key: francesco-albani-birth-date
+  question: On what date in 1578 was Francesco Albani born?
+  about:
+  - person: francesco-albani
+  field: born
+  claims:
+  - value: 17 March 1578
+    sources:
+    - wp-francesco-albani
+  - value: 17 August 1578
+    sources:
+    - wp-francesco-albani
+  note: The record holds the year only.
+- key: niccolo-dell-abbate-birth-year
+  question: In which year was Niccolo dell'Abbate born?
+  about:
+  - person: niccolo-dell-abbate
+  field: born
+  claims:
+  - value: '1509'
+    sources:
+    - wp-niccolo-dell-abbate
+  - value: '1512'
+    sources:
+    - wp-niccolo-dell-abbate
+  note: The record uses 1509, marked estimated.
+- key: hermann-goldschmidt-died
+  question: On what date did Hermann Goldschmidt die in 1866?
+  about:
+  - person: hermann-goldschmidt
+  field: died
+  claims:
+  - value: 30 August 1866 or 10 September 1866
+    sources:
+    - wp-hermann-goldschmidt
+    note: The article's lead gives the two alternatives.
+  - value: 26 August 1866
+    sources:
+    - wp-hermann-goldschmidt
+    note: The article's Life and work section.
+  note: The record keeps only the year, 1866, which all three dates share.
