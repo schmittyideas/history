@@ -151,7 +151,8 @@ PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "hou
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
                  "born_estimated": "birth_estimated", "died_estimated": "death_estimated",
                  "image_url": "image_url", "image_thumb": "image_thumb", "image_page": "image_page", "image_license": "image_license",
-                 "coverage": "coverage", "coverage_note": "coverage_note"}
+                 "coverage": "coverage", "coverage_note": "coverage_note",
+                 "sitelinks": "sitelinks", "sitelinks_on": "sitelinks_on"}
 PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "kind", "region": "region",
                 "city": "city", "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
                 "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",
@@ -312,6 +313,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.errors.append(f"person `{k}`: prominence must be 1–5")
             if x.get("portrait"):
                 ref("artwork", x["portrait"], f"person `{k}` portrait")
+            if x.get("sitelinks") is not None and not (isinstance(x["sitelinks"], int) and x["sitelinks"] >= 0):
+                p.errors.append(f"person `{k}`: sitelinks must be a whole number")
             if x.get("coverage") is not None and x["coverage"] not in COVERAGE:
                 p.errors.append(f"person `{k}`: coverage must be one of {', '.join(COVERAGE)}")
             elif x.get("coverage") == "partly" and not x.get("coverage_note"):
