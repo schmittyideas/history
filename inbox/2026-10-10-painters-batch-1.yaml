@@ -1,0 +1,3760 @@
+# Notes for the reviewer
+# - 41 painters from 1500 on, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; each carries a lead image (links only, public domain / CC0 / CC BY-SA).
+# - Every person is `coverage: partly`: dates, teachers, patrons, places and one or two key works, no full portfolio. Artworks have no images yet (issue #62).
+# - The article texts were cut at 22,000 characters, so late sections (death places, late patrons) are missing for the longest articles; those facts are left out, not guessed.
+# - Patron links are mostly missing: popes, Philip IV, Charles V, Louis XIV, Napoleon, the Medici and others are not in the database yet. Their patronage is in the artwork notes only.
+# - Coordinates of new places are present-day and approximate (from general knowledge, not the articles).
+# - Artemisia: her death is recorded as c. 1654 (her last known commission); the article says the time is disputed but not between sources, so no discrepancy is recorded.
+
+batch:
+  title: 'Painters, batch 1: Renaissance to Romanticism (41 painters)'
+  requested: 'Western painters from 1500, first batch of about 500: the most famous masters, with teachers, patrons, places and one key work each'
+  date: '2026-10-10'
+sources:
+- key: wp-leonardo-da-vinci
+  title: Leonardo da Vinci (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Leonardo_da_Vinci
+- key: wp-michelangelo
+  title: Michelangelo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Michelangelo
+- key: wp-raphael
+  title: Raphael (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Raphael
+- key: wp-titian
+  title: Titian (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Titian
+- key: wp-sandro-botticelli
+  title: Sandro Botticelli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Sandro_Botticelli
+- key: wp-giorgione
+  title: Giorgione (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giorgione
+- key: wp-domenico-ghirlandaio
+  title: Domenico Ghirlandaio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Domenico_Ghirlandaio
+- key: wp-andrea-del-sarto
+  title: Andrea del Sarto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrea_del_Sarto
+- key: wp-giorgio-vasari
+  title: Giorgio Vasari (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giorgio_Vasari
+- key: wp-sofonisba-anguissola
+  title: Sofonisba Anguissola (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Sofonisba_Anguissola
+- key: wp-tintoretto
+  title: Tintoretto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Tintoretto
+- key: wp-paolo-veronese
+  title: Paolo Veronese (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paolo_Veronese
+- key: wp-caravaggio
+  title: Caravaggio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Caravaggio
+- key: wp-artemisia-gentileschi
+  title: Artemisia Gentileschi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Artemisia_Gentileschi
+- key: wp-guido-reni
+  title: Guido Reni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Guido_Reni
+- key: wp-canaletto
+  title: Canaletto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Canaletto
+- key: wp-giovanni-battista-tiepolo
+  title: Giovanni Battista Tiepolo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giovanni_Battista_Tiepolo
+- key: wp-el-greco
+  title: El Greco (Wikipedia)
+  url: https://en.wikipedia.org/wiki/El_Greco
+- key: wp-bartolome-esteban-murillo
+  title: Bartolome Esteban Murillo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bartolom%C3%A9_Esteban_Murillo
+- key: wp-francisco-de-zurbaran
+  title: Francisco de Zurbaran (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francisco_de_Zurbar%C3%A1n
+- key: wp-albrecht-durer
+  title: Albrecht Dürer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albrecht_D%C3%BCrer
+- key: wp-hans-holbein-the-younger
+  title: Hans Holbein the Younger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger
+- key: wp-hieronymus-bosch
+  title: Hieronymus Bosch (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hieronymus_Bosch
+- key: wp-pieter-bruegel-the-elder
+  title: Pieter Bruegel the Elder (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pieter_Bruegel_the_Elder
+- key: wp-lucas-cranach-the-elder
+  title: Lucas Cranach the Elder (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lucas_Cranach_the_Elder
+- key: wp-rembrandt
+  title: Rembrandt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rembrandt
+- key: wp-johannes-vermeer
+  title: Johannes Vermeer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Johannes_Vermeer
+- key: wp-frans-hals
+  title: Frans Hals (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frans_Hals
+- key: wp-peter-paul-rubens
+  title: Peter Paul Rubens (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Peter_Paul_Rubens
+- key: wp-jan-steen
+  title: Jan Steen (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_Steen
+- key: wp-diego-velazquez
+  title: Diego Velázquez (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Diego_Vel%C3%A1zquez
+- key: wp-francisco-goya
+  title: Francisco Goya (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francisco_Goya
+- key: wp-nicolas-poussin
+  title: Nicolas Poussin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicolas_Poussin
+- key: wp-jacques-louis-david
+  title: Jacques-Louis David (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jacques-Louis_David
+- key: wp-jean-auguste-dominique-ingres
+  title: Jean-Auguste-Dominique Ingres (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Auguste-Dominique_Ingres
+- key: wp-eugene-delacroix
+  title: Eugène Delacroix (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Eug%C3%A8ne_Delacroix
+- key: wp-antoine-watteau
+  title: Antoine Watteau (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antoine_Watteau
+- key: wp-j-m-w-turner
+  title: J. M. W. Turner (Wikipedia)
+  url: https://en.wikipedia.org/wiki/J._M._W._Turner
+- key: wp-john-constable
+  title: John Constable (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Constable
+- key: wp-thomas-gainsborough
+  title: Thomas Gainsborough (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Gainsborough
+- key: wp-joshua-reynolds
+  title: Joshua Reynolds (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joshua_Reynolds
+places:
+- key: vinci
+  name: Vinci
+  kind: town
+  region: Tuscany
+  country: Italy
+  lat: 43.784
+  lng: 10.926
+  visitable: true
+  sources:
+  - wp-leonardo-da-vinci
+- key: clos-luce
+  name: Clos Luce
+  kind: manor house
+  city: Amboise
+  region: Centre-Val de Loire
+  country: France
+  lat: 47.409
+  lng: 1.0
+  visitable: true
+  sources:
+  - wp-leonardo-da-vinci
+- key: milan
+  name: Milan
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.464
+  lng: 9.19
+  visitable: true
+  sources:
+  - wp-leonardo-da-vinci
+- key: caprese-michelangelo
+  name: Caprese Michelangelo
+  kind: town
+  region: Tuscany
+  country: Italy
+  lat: 43.639
+  lng: 11.986
+  visitable: true
+  sources:
+  - wp-michelangelo
+- key: urbino
+  name: Urbino
+  kind: city
+  region: Marche
+  country: Italy
+  lat: 43.726
+  lng: 12.636
+  visitable: true
+  sources:
+  - wp-raphael
+- key: pieve-di-cadore
+  name: Pieve di Cadore
+  kind: town
+  region: Veneto
+  country: Italy
+  lat: 46.43
+  lng: 12.364
+  visitable: true
+  sources:
+  - wp-titian
+- key: padua
+  name: Padua
+  kind: city
+  region: Veneto
+  country: Italy
+  lat: 45.407
+  lng: 11.877
+  visitable: true
+  sources:
+  - wp-titian
+- key: fondaco-dei-tedeschi
+  name: Fondaco dei Tedeschi
+  kind: warehouse
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.438
+  lng: 12.336
+  visitable: true
+  sources:
+  - wp-giorgione
+  - wp-titian
+- key: santa-maria-gloriosa-dei-frari
+  name: Basilica di Santa Maria Gloriosa dei Frari
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.437
+  lng: 12.327
+  visitable: true
+  sources:
+  - wp-titian
+- key: castelfranco-veneto
+  name: Castelfranco Veneto
+  kind: town
+  region: Veneto
+  country: Italy
+  lat: 45.672
+  lng: 11.926
+  visitable: true
+  sources:
+  - wp-giorgione
+- key: ognissanti-florence
+  name: Ognissanti
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.774
+  lng: 11.244
+  visitable: true
+  sources:
+  - wp-sandro-botticelli
+- key: santa-maria-novella-florence
+  name: Santa Maria Novella
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.774
+  lng: 11.249
+  visitable: true
+  sources:
+  - wp-domenico-ghirlandaio
+- key: santissima-annunziata-florence
+  name: Basilica della Santissima Annunziata
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.797
+  lng: 11.259
+  visitable: true
+  sources:
+  - wp-andrea-del-sarto
+- key: palazzo-vecchio
+  name: Palazzo Vecchio
+  kind: palace
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.769
+  lng: 11.256
+  visitable: true
+  sources:
+  - wp-giorgio-vasari
+  - wp-domenico-ghirlandaio
+- key: vasari-corridor
+  name: Vasari Corridor
+  kind: passageway
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.768
+  lng: 11.255
+  architect: Giorgio Vasari
+  sources:
+  - wp-giorgio-vasari
+- key: cremona
+  name: Cremona
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.133
+  lng: 10.042
+  visitable: true
+  sources:
+  - wp-sofonisba-anguissola
+- key: madrid
+  name: Madrid
+  kind: city
+  region: Community of Madrid
+  country: Spain
+  lat: 40.417
+  lng: -3.704
+  visitable: true
+  sources:
+  - wp-sofonisba-anguissola
+- key: genoa
+  name: Genoa
+  kind: city
+  region: Liguria
+  country: Italy
+  lat: 44.406
+  lng: 8.934
+  visitable: true
+  sources:
+  - wp-sofonisba-anguissola
+- key: san-giorgio-dei-genovesi-palermo
+  name: Church of San Giorgio dei Genovesi
+  kind: church
+  city: Palermo
+  region: Sicily
+  country: Italy
+  lat: 38.119
+  lng: 13.364
+  visitable: true
+  sources:
+  - wp-sofonisba-anguissola
+- key: bologna
+  name: Bologna
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.494
+  lng: 11.343
+  visitable: true
+  sources:
+  - wp-guido-reni
+- key: mantua
+  name: Mantua
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.157
+  lng: 10.791
+  visitable: true
+  sources:
+  - wp-paolo-veronese
+- key: fuente-de-cantos
+  name: Fuente de Cantos
+  kind: town
+  region: Extremadura
+  country: Spain
+  lat: 38.25
+  lng: -6.306
+  visitable: true
+  sources:
+  - wp-francisco-de-zurbaran
+- key: doges-palace
+  name: Doge's Palace
+  kind: palace
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.434
+  lng: 12.34
+  visitable: true
+  sources:
+  - wp-tintoretto
+  - wp-paolo-veronese
+- key: madonna-dell-orto
+  name: Madonna dell'Orto
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.444
+  lng: 12.33
+  visitable: true
+  sources:
+  - wp-tintoretto
+  - wp-giovanni-battista-tiepolo
+- key: scuola-grande-di-san-rocco
+  name: Scuola Grande di San Rocco
+  kind: confraternity hall
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.437
+  lng: 12.325
+  visitable: true
+  sources:
+  - wp-tintoretto
+- key: san-sebastiano-venice
+  name: San Sebastiano
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.431
+  lng: 12.317
+  visitable: true
+  sources:
+  - wp-paolo-veronese
+- key: san-lio-venice
+  name: San Lio
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.437
+  lng: 12.34
+  visitable: true
+  sources:
+  - wp-canaletto
+- key: san-luigi-dei-francesi
+  name: San Luigi dei Francesi
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.899
+  lng: 12.471
+  visitable: true
+  sources:
+  - wp-caravaggio
+- key: casino-dell-aurora
+  name: Casino dell'Aurora (Palazzo Pallavicini-Rospigliosi)
+  kind: pavilion
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.903
+  lng: 12.488
+  visitable: true
+  built_by: Commissioned by Cardinal Scipione Borghese
+  sources:
+  - wp-guido-reni
+- key: san-domenico-bologna
+  name: Basilica of San Domenico
+  kind: church
+  city: Bologna
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.49
+  lng: 11.343
+  visitable: true
+  sources:
+  - wp-guido-reni
+- key: wurzburg-residence
+  name: Wurzburg Residence
+  kind: palace
+  city: Wurzburg
+  region: Bavaria
+  country: Germany
+  lat: 49.793
+  lng: 9.939
+  visitable: true
+  architect: Balthasar Neumann (the staircase)
+  sources:
+  - wp-giovanni-battista-tiepolo
+- key: royal-palace-of-madrid
+  name: Royal Palace of Madrid
+  kind: palace
+  city: Madrid
+  region: Community of Madrid
+  country: Spain
+  lat: 40.418
+  lng: -3.714
+  visitable: true
+  sources:
+  - wp-giovanni-battista-tiepolo
+- key: santo-domingo-el-antiguo
+  name: Santo Domingo el Antiguo
+  kind: church
+  city: Toledo
+  region: Castile-La Mancha
+  country: Spain
+  lat: 39.857
+  lng: -4.027
+  visitable: true
+  sources:
+  - wp-el-greco
+- key: nuremberg
+  name: Nuremberg
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 49.452
+  lng: 11.077
+  sources:
+  - wp-albrecht-durer
+- key: antwerp
+  name: Antwerp
+  kind: city
+  region: Antwerp Province
+  country: Belgium
+  lat: 51.22
+  lng: 4.4
+  sources:
+  - wp-peter-paul-rubens
+- key: augsburg
+  name: Augsburg
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 48.371
+  lng: 10.898
+  sources:
+  - wp-hans-holbein-the-younger
+- key: basel
+  name: Basel
+  kind: city
+  region: Basel-Stadt
+  country: Switzerland
+  lat: 47.558
+  lng: 7.588
+  sources:
+  - wp-hans-holbein-the-younger
+- key: lucerne
+  name: Lucerne
+  kind: city
+  region: Canton of Lucerne
+  country: Switzerland
+  lat: 47.05
+  lng: 8.309
+  sources:
+  - wp-hans-holbein-the-younger
+- key: s-hertogenbosch
+  name: '''s-Hertogenbosch'
+  kind: city
+  region: North Brabant
+  country: Netherlands
+  lat: 51.699
+  lng: 5.304
+  sources:
+  - wp-hieronymus-bosch
+- key: breda
+  name: Breda
+  kind: city
+  region: North Brabant
+  country: Netherlands
+  lat: 51.589
+  lng: 4.776
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: brussels
+  name: Brussels
+  kind: city
+  region: Brussels-Capital Region
+  country: Belgium
+  lat: 50.85
+  lng: 4.352
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: kapellekerk-brussels
+  name: Kapellekerk (Chapel Church), Brussels
+  kind: church
+  city: Brussels
+  region: Brussels-Capital Region
+  country: Belgium
+  lat: 50.841
+  lng: 4.346
+  visitable: true
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: kronach
+  name: Kronach
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 50.241
+  lng: 11.327
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: wittenberg
+  name: Wittenberg
+  kind: city
+  region: Saxony-Anhalt
+  country: Germany
+  lat: 51.866
+  lng: 12.644
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: weimar
+  name: Weimar
+  kind: city
+  region: Thuringia
+  country: Germany
+  lat: 50.98
+  lng: 11.329
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: jacobsfriedhof-weimar
+  name: Jacobsfriedhof, Weimar
+  kind: cemetery
+  city: Weimar
+  region: Thuringia
+  country: Germany
+  lat: 50.975
+  lng: 11.335
+  visitable: true
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: leiden
+  name: Leiden
+  kind: city
+  region: South Holland
+  country: Netherlands
+  lat: 52.16
+  lng: 4.497
+  sources:
+  - wp-rembrandt
+- key: amsterdam
+  name: Amsterdam
+  kind: city
+  region: North Holland
+  country: Netherlands
+  lat: 52.37
+  lng: 4.895
+  sources:
+  - wp-rembrandt
+- key: westerkerk-amsterdam
+  name: Westerkerk, Amsterdam
+  kind: church
+  city: Amsterdam
+  region: North Holland
+  country: Netherlands
+  lat: 52.374
+  lng: 4.884
+  visitable: true
+  sources:
+  - wp-rembrandt
+- key: delft
+  name: Delft
+  kind: city
+  region: South Holland
+  country: Netherlands
+  lat: 52.012
+  lng: 4.359
+  sources:
+  - wp-johannes-vermeer
+- key: oude-kerk-delft
+  name: Oude Kerk (Old Church), Delft
+  kind: church
+  city: Delft
+  region: South Holland
+  country: Netherlands
+  lat: 52.012
+  lng: 4.361
+  visitable: true
+  sources:
+  - wp-johannes-vermeer
+- key: haarlem
+  name: Haarlem
+  kind: city
+  region: North Holland
+  country: Netherlands
+  lat: 52.381
+  lng: 4.637
+  sources:
+  - wp-frans-hals
+- key: grote-kerk-haarlem
+  name: Grote Kerk (St Bavo), Haarlem
+  kind: church
+  city: Haarlem
+  region: North Holland
+  country: Netherlands
+  lat: 52.381
+  lng: 4.636
+  visitable: true
+  sources:
+  - wp-frans-hals
+- key: pieterskerk-leiden
+  name: Pieterskerk, Leiden
+  kind: church
+  city: Leiden
+  region: South Holland
+  country: Netherlands
+  lat: 52.158
+  lng: 4.493
+  visitable: true
+  sources:
+  - wp-jan-steen
+- key: siegen
+  name: Siegen
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.875
+  lng: 8.024
+  sources:
+  - wp-peter-paul-rubens
+- key: museo-del-prado
+  name: Prado Museum
+  kind: museum
+  city: Madrid
+  region: Community of Madrid
+  country: Spain
+  lat: 40.414
+  lng: -3.692
+  visitable: true
+  sources:
+  - wp-hieronymus-bosch
+- key: kunsthistorisches-museum-vienna
+  name: Kunsthistorisches Museum
+  kind: museum
+  city: Vienna
+  region: Vienna
+  country: Austria
+  lat: 48.203
+  lng: 16.362
+  visitable: true
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: cathedral-of-our-lady-antwerp
+  name: Cathedral of Our Lady, Antwerp
+  kind: cathedral
+  city: Antwerp
+  region: Antwerp Province
+  country: Belgium
+  lat: 51.22
+  lng: 4.401
+  visitable: true
+  sources:
+  - wp-peter-paul-rubens
+- key: rubenshuis-antwerp
+  name: Rubenshuis
+  kind: house museum
+  city: Antwerp
+  region: Antwerp Province
+  country: Belgium
+  lat: 51.218
+  lng: 4.409
+  founded: 1610
+  built_by: Peter Paul Rubens (house and studio he designed)
+  architect: Peter Paul Rubens
+  visitable: true
+  visit_site: Rubenshuis Museum
+  sources:
+  - wp-peter-paul-rubens
+- key: fuendetodos
+  name: Fuendetodos
+  kind: village
+  region: Aragon
+  country: Spain
+  lat: 41.32
+  lng: -0.998
+  visitable: true
+  sources:
+  - wp-francisco-goya
+- key: zaragoza
+  name: Zaragoza
+  kind: city
+  region: Aragon
+  country: Spain
+  lat: 41.649
+  lng: -0.888
+  visitable: true
+  sources:
+  - wp-francisco-goya
+- key: bordeaux
+  name: Bordeaux
+  kind: city
+  region: Nouvelle-Aquitaine
+  country: France
+  lat: 44.838
+  lng: -0.579
+  visitable: true
+  sources:
+  - wp-francisco-goya
+- key: les-andelys
+  name: Les Andelys
+  kind: town
+  region: Normandy
+  country: France
+  lat: 49.246
+  lng: 1.411
+  visitable: true
+  sources:
+  - wp-nicolas-poussin
+- key: san-lorenzo-in-lucina
+  name: San Lorenzo in Lucina
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.903
+  lng: 12.479
+  visitable: true
+  sources:
+  - wp-nicolas-poussin
+- key: montauban
+  name: Montauban
+  kind: city
+  region: Occitanie
+  country: France
+  lat: 44.018
+  lng: 1.355
+  visitable: true
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- key: toulouse
+  name: Toulouse
+  kind: city
+  region: Occitanie
+  country: France
+  lat: 43.605
+  lng: 1.444
+  visitable: true
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- key: charenton-saint-maurice
+  name: Charenton-Saint-Maurice
+  kind: town
+  region: Val-de-Marne
+  country: France
+  lat: 48.815
+  lng: 2.431
+  visitable: true
+  sources:
+  - wp-eugene-delacroix
+- key: tangier
+  name: Tangier
+  kind: city
+  region: Tanger-Tetouan-Al Hoceima
+  country: Morocco
+  lat: 35.759
+  lng: -5.834
+  visitable: true
+  sources:
+  - wp-eugene-delacroix
+- key: champrosay
+  name: Champrosay
+  kind: village
+  city: Draveil
+  region: Essonne
+  country: France
+  lat: 48.68
+  lng: 2.411
+  visitable: true
+  sources:
+  - wp-eugene-delacroix
+- key: pere-lachaise-cemetery
+  name: Pere Lachaise Cemetery
+  kind: cemetery
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.861
+  lng: 2.393
+  visitable: true
+  sources:
+  - wp-eugene-delacroix
+- key: valenciennes
+  name: Valenciennes
+  kind: city
+  region: Hauts-de-France
+  country: France
+  lat: 50.357
+  lng: 3.523
+  visitable: true
+  sources:
+  - wp-antoine-watteau
+- key: sandycombe-lodge
+  name: Sandycombe Lodge
+  kind: house
+  city: Twickenham
+  region: Greater London
+  country: England
+  lat: 51.447
+  lng: -0.333
+  built_by: J. M. W. Turner
+  visitable: true
+  sources:
+  - wp-j-m-w-turner
+- key: chelsea
+  name: Chelsea
+  kind: district
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.487
+  lng: -0.169
+  visitable: true
+  sources:
+  - wp-j-m-w-turner
+- key: east-bergholt
+  name: East Bergholt
+  kind: village
+  region: Suffolk
+  country: England
+  lat: 51.969
+  lng: 1.017
+  visitable: true
+  sources:
+  - wp-john-constable
+- key: brighton
+  name: Brighton
+  kind: city
+  region: East Sussex
+  country: England
+  lat: 50.823
+  lng: -0.137
+  visitable: true
+  sources:
+  - wp-john-constable
+- key: st-john-at-hampstead-church
+  name: St John-at-Hampstead Church
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.556
+  lng: -0.178
+  visitable: true
+  sources:
+  - wp-john-constable
+- key: sudbury
+  name: Sudbury
+  kind: town
+  region: Suffolk
+  country: England
+  lat: 52.038
+  lng: 0.73
+  visitable: true
+  sources:
+  - wp-thomas-gainsborough
+- key: ipswich
+  name: Ipswich
+  kind: town
+  region: Suffolk
+  country: England
+  lat: 52.056
+  lng: 1.148
+  visitable: true
+  sources:
+  - wp-thomas-gainsborough
+- key: bath
+  name: Bath
+  kind: city
+  region: Somerset
+  country: England
+  lat: 51.381
+  lng: -2.36
+  visitable: true
+  sources:
+  - wp-thomas-gainsborough
+- key: st-annes-church-kew
+  name: St Anne's Church, Kew
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.484
+  lng: -0.288
+  visitable: true
+  sources:
+  - wp-thomas-gainsborough
+- key: plympton
+  name: Plympton
+  kind: town
+  region: Devon
+  country: England
+  lat: 50.39
+  lng: -4.05
+  visitable: true
+  sources:
+  - wp-joshua-reynolds
+people:
+- key: leonardo-da-vinci
+  name: Leonardo da Vinci
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - sculptor
+  - architect
+  - engineer
+  - scientist
+  born: '1452-04-15'
+  died: '1519-05-02'
+  prominence: 5
+  note: Italian polymath of the High Renaissance, painter of the Mona Lisa and The Last Supper, also known for his notebooks and inventions.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Francesco_Melzi_-_Portrait_of_Leonardo_%28colour_correction%29.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Francesco_Melzi_-_Portrait_of_Leonardo_%28colour_correction%29.png/500px-Francesco_Melzi_-_Portrait_of_Leonardo_%28colour_correction%29.png
+  image_page: https://commons.wikimedia.org/wiki/File:Francesco_Melzi_-_Portrait_of_Leonardo_(colour_correction).png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Verrocchio training (teacher not in database), Sforza/Borgia/Francis I service and one key work captured; notebooks, inventions and full portfolio not built out.
+  sources:
+  - wp-leonardo-da-vinci
+- key: michelangelo
+  name: Michelangelo
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - architect
+  - poet
+  born: '1475-03-06'
+  died: '1564-02-18'
+  prominence: 5
+  note: Italian sculptor, painter, architect and poet of the High Renaissance, maker of David, the Sistine Chapel ceiling and the dome of St Peter's.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg/500px-Michelangelo_Daniele_da_Volterra_%28dettaglio%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Michelangelo_Daniele_da_Volterra_(dettaglio).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeship, main places and three key works captured; Pieta, Last Judgment, tomb of Julius II, architecture, death place and patrons (popes not in database) not built out.
+  sources:
+  - wp-michelangelo
+- key: raphael
+  name: Raphael
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: 1483
+  died: '1520-04-06'
+  prominence: 5
+  note: Italian painter and architect of the High Renaissance, best known for the Raphael Rooms in the Vatican and The School of Athens.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Raffaello_Sanzio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Raffaello_Sanzio.jpg/500px-Raffaello_Sanzio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Vatican work and one dated early work captured; the Raphael Rooms, architecture, portraits and workshop not built out.
+  sources:
+  - wp-raphael
+- key: titian
+  name: Titian
+  type: Artist
+  roles:
+  - painter
+  born: 1488
+  born_estimated: true
+  died: '1576-08-27'
+  prominence: 4
+  note: Italian painter, the most important artist of Renaissance Venetian painting, born in Pieve di Cadore.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg/500px-Titian_-_Self-portrait_%28Museo_del_Prado%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Titian_-_Self-portrait_(Museo_del_Prado).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, early training claims, Venice and Padua work and one key work captured; the Habsburg and papal patrons, mythological series and later works not built out.
+  sources:
+  - wp-titian
+- key: sandro-botticelli
+  name: Sandro Botticelli
+  type: Artist
+  roles:
+  - painter
+  born: 1445
+  born_estimated: true
+  died: '1510-05-17'
+  prominence: 4
+  note: Florentine painter of the Early Renaissance, best known for The Birth of Venus and Primavera, patronised by the Medici.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/Sandro_Botticelli_083.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Sandro_Botticelli_083.jpg/500px-Sandro_Botticelli_083.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_083.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Lippi apprenticeship (teacher not in database), Sistine Chapel work and two key works captured; later religious works, portraits and the Medici patronage not built out.
+  sources:
+  - wp-sandro-botticelli
+- key: giorgione
+  name: Giorgione
+  type: Artist
+  roles:
+  - painter
+  born: 1475
+  born_estimated: true
+  died: '1510-09-17'
+  prominence: 4
+  note: Venetian painter of the High Renaissance from Castelfranco Veneto, who co-founded the Venetian school with Titian; only about six surviving paintings are firmly attributed to him.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a2/Self_portrait%2C_by_Giorgio_da_Castelfranco.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Self_portrait%2C_by_Giorgio_da_Castelfranco.jpg/500px-Self_portrait%2C_by_Giorgio_da_Castelfranco.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self_portrait,_by_Giorgio_da_Castelfranco.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, death-place dispute, Venice and Castelfranco work and the one securely dated painting captured; Tempest, Sleeping Venus and attributions not built out.
+  sources:
+  - wp-giorgione
+- key: domenico-ghirlandaio
+  name: Domenico Ghirlandaio
+  type: Artist
+  roles:
+  - painter
+  born: 1448
+  died: '1494-01-11'
+  prominence: 3
+  note: Florentine Renaissance painter known for large fresco cycles, head of the largest workshop in Florence and the teacher of Michelangelo.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Domenico_Ghirlandaio_Self_Portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Domenico_Ghirlandaio_Self_Portrait.jpg/500px-Domenico_Ghirlandaio_Self_Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Domenico_Ghirlandaio_Self_Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Sistine Chapel work, Florence places and the Tornabuoni Chapel cycle captured; Sassetti Chapel, altarpieces and portraits not built out.
+  sources:
+  - wp-domenico-ghirlandaio
+- key: andrea-del-sarto
+  name: Andrea del Sarto
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1486-07-16'
+  died: '1530-09-29'
+  prominence: 3
+  note: Florentine painter of the High Renaissance and early Mannerism, known as Andrea senza errori for his fresco decoration and altarpieces.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9c/Sarto%2C_Andrea_del_-_Self-portrait_-_Uffizi.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Sarto%2C_Andrea_del_-_Self-portrait_-_Uffizi.jpg/500px-Sarto%2C_Andrea_del_-_Self-portrait_-_Uffizi.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sarto,_Andrea_del_-_Self-portrait_-_Uffizi.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Florence frescoes, visit to France and two key works captured; Scalzo cycle detail, portraits and pupils other than Vasari not built out.
+  sources:
+  - wp-andrea-del-sarto
+- key: giorgio-vasari
+  name: Giorgio Vasari
+  type: Artist
+  roles:
+  - painter
+  - architect
+  - art historian
+  - biographer
+  born: '1511-07-30'
+  died: '1574-06-27'
+  prominence: 4
+  note: Italian Mannerist painter and architect from Arezzo, court artist to the Medici in Florence and author of the Lives of the Most Excellent Painters, Sculptors, and Architects.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b2/Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg/500px-Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, Florence and Rome work, Vasari Corridor and two dated paintings captured; the Lives as a work, Medici patronage (Cosimo I not in database) and architecture beyond the Corridor
+    not built out.
+  sources:
+  - wp-giorgio-vasari
+- key: sofonisba-anguissola
+  name: Sofonisba Anguissola
+  type: Artist
+  roles:
+  - painter
+  born: 1532
+  born_estimated: true
+  died: '1629-11-16'
+  prominence: 3
+  note: Italian Renaissance portrait painter from Cremona, court painter and lady-in-waiting in Spain, and a pioneer of women's careers as artists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg/500px-Sofonisba_Anguissola%2C_Selvportr%C3%A6t_ved_staffeliet%2C_1556%2C_Museum_Castle_in_%C5%81a%C5%84cut.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sofonisba_Anguissola,_Selvportr%C3%A6t_ved_staffeliet,_1556,_Museum_Castle_in_%C5%81a%C5%84cut.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, Michelangelo guidance, Spanish court service, places and one key work captured; sitters (royal family not in database), other works and sisters not built out.
+  sources:
+  - wp-sofonisba-anguissola
+- key: tintoretto
+  name: Tintoretto
+  type: Artist
+  roles:
+  - painter
+  born: 1518
+  died: '1594-05-31'
+  prominence: 4
+  note: Venetian Renaissance painter of the Mannerist style, called il Furioso for his speed and bold brushwork, best known for his work for the Scuola Grande di San Rocco and the Doge's Palace.
+  sources:
+  - wp-tintoretto
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/73/Tintoretto-selfport.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Tintoretto-selfport.jpg/500px-Tintoretto-selfport.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Tintoretto-selfport.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, teacher, places and one key work captured; full portfolio, pupils (Marietta, Domenico) and Doge's Palace cycles not built out.
+- key: paolo-veronese
+  name: Paolo Veronese
+  type: Artist
+  roles:
+  - painter
+  born: 1528
+  died: '1588-04-19'
+  prominence: 4
+  note: Italian Renaissance painter based in Venice, one of the great trio of Venetian cinquecento painters, famed for huge feast scenes and as a colorist.
+  sources:
+  - wp-paolo-veronese
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/Paolo_Veronese%2C_avtoportret.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Paolo_Veronese%2C_avtoportret.jpg/500px-Paolo_Veronese%2C_avtoportret.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Paolo_Veronese,_avtoportret.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeships, places and two key works captured; ceilings, Villa Barbaro, portraits and workshop pupils not built out.
+- key: caravaggio
+  name: Caravaggio
+  type: Artist
+  roles:
+  - painter
+  born: '1571-09-29'
+  died: '1610-07-18'
+  prominence: 5
+  note: Italian painter active in Rome whose realism and dramatic chiaroscuro (tenebrism) shaped Baroque painting.
+  sources:
+  - wp-caravaggio
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/73/Bild-Ottavio_Leoni%2C_Caravaggio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/Bild-Ottavio_Leoni%2C_Caravaggio.jpg/500px-Bild-Ottavio_Leoni%2C_Caravaggio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bild-Ottavio_Leoni,_Caravaggio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeship, Rome and two key works captured; the local article text is cut off before the flight from Rome, Naples, Malta and Sicily, and his place of death, so those are missing.
+- key: artemisia-gentileschi
+  name: Artemisia Gentileschi
+  type: Artist
+  roles:
+  - painter
+  born: '1593-07-08'
+  died: 1654
+  died_estimated: true
+  prominence: 4
+  note: Italian Baroque painter, the first woman admitted to the Accademia delle Arti del Disegno in Florence, known for powerful paintings of women from myth and the Bible.
+  sources:
+  - wp-artemisia-gentileschi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/05/Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg/500px-Self-portrait_as_the_Allegory_of_Painting_%28La_Pittura%29_-_Artemisia_Gentileschi.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-portrait_as_the_Allegory_of_Painting_(La_Pittura)_-_Artemisia_Gentileschi.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, father as teacher, patrons, places and two key works captured; the article text is cut off during the English period, so her return to Naples and the many other works are not built
+    out.
+- key: guido-reni
+  name: Guido Reni
+  type: Artist
+  roles:
+  - painter
+  born: '1575-11-04'
+  died: '1642-08-18'
+  prominence: 4
+  note: Italian Baroque painter of the Bolognese School with a classical manner, the most famous Italian artist of his generation, known for L'Aurora.
+  sources:
+  - wp-guido-reni
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Guido_Reni_-_Self-portrait_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Guido_Reni_-_Self-portrait_2.jpg/500px-Guido_Reni_-_Self-portrait_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Guido_Reni_-_Self-portrait_2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, patron families and two key works captured; full anthology of works and his many pupils not built out.
+- key: canaletto
+  name: Canaletto
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1697-10-18'
+  died: '1768-04-19'
+  prominence: 4
+  note: Venetian painter of cityscapes (vedute) of Venice, Rome and London, hugely popular with English visitors on the Grand Tour.
+  sources:
+  - wp-canaletto
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Giovanni_Antonio_Canal.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Giovanni_Antonio_Canal.jpg/500px-Giovanni_Antonio_Canal.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giovanni_Antonio_Canal.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places, English period and one key work captured; later works, etchings and pupils not built out.
+- key: giovanni-battista-tiepolo
+  name: Giovanni Battista Tiepolo
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1696-03-05'
+  died: '1770-03-27'
+  prominence: 4
+  note: Venetian Rococo painter and printmaker, described as the greatest decorative painter of eighteenth-century Europe, who worked in Italy, Germany and Spain.
+  sources:
+  - wp-giovanni-battista-tiepolo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4e/Tiepolo%2C_Giovanni_Battista_-_Fresken_Treppenhaus_des_W%C3%BCrzburger_Residenzschlosses%2C_Szenen_zur_Apotheose_des_F%C3%BCrstbischofs%2C_Detail_Giovanni_Battista_Tiepolo_-_1750-1753.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Tiepolo%2C_Giovanni_Battista_-_Fresken_Treppenhaus_des_W%C3%BCrzburger_Residenzschlosses%2C_Szenen_zur_Apotheose_des_F%C3%BCrstbischofs%2C_Detail_Giovanni_Battista_Tiepolo_-_1750-1753.jpg/500px-thumbnail.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Tiepolo,_Giovanni_Battista_-_Fresken_Treppenhaus_des_W%C3%BCrzburger_Residenzschlosses,_Szenen_zur_Apotheose_des_F%C3%BCrstbischofs,_Detail_Giovanni_Battista_Tiepolo_-_1750-1753.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places and the Wuerzburg staircase fresco captured; the many Venetian villa and church cycles, etchings and his sons not built out.
+- key: el-greco
+  name: El Greco
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - architect
+  born: '1541-10-01'
+  died: '1614-04-07'
+  prominence: 4
+  note: Greek painter, sculptor and architect of the Spanish Renaissance, trained in Crete and Venice and active in Toledo from 1577, known for elongated figures and expressive colour.
+  sources:
+  - wp-el-greco
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg/500px-El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:El_Greco_-_Portrait_of_a_Man_-_WGA10554.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Titian link, Philip II commissions, places and one key work captured; the rest of the Toledo commissions and his son Jorge Manuel not built out.
+- key: bartolome-esteban-murillo
+  name: Bartolome Esteban Murillo
+  type: Artist
+  roles:
+  - painter
+  born: 1617
+  born_estimated: true
+  died: '1682-04-03'
+  prominence: 4
+  note: Spanish Baroque painter of Seville, best known for religious works and lively paintings of street children.
+  sources:
+  - wp-bartolome-esteban-murillo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b5/Autorretrato_de_Murillo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Autorretrato_de_Murillo.jpg/500px-Autorretrato_de_Murillo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Autorretrato_de_Murillo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; the San Francisco cycle, Immaculate Conceptions and pupils not built out.
+- key: francisco-de-zurbaran
+  name: Francisco de Zurbaran
+  type: Artist
+  roles:
+  - painter
+  born: 1598
+  died: '1664-08-27'
+  prominence: 3
+  note: Spanish Baroque painter of religious scenes and still lifes in forceful chiaroscuro, nicknamed the Spanish Caravaggio, and painter to Philip IV.
+  sources:
+  - wp-francisco-de-zurbaran
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Francisco_de_Zurbar%C3%A1n_autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Francisco_de_Zurbar%C3%A1n_autoportrait.jpg/500px-Francisco_de_Zurbar%C3%A1n_autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Francisco_de_Zurbar%C3%A1n_autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; the monastery cycles, Jacob and his twelve sons and his place of death not built out.
+- key: albrecht-durer
+  name: Albrecht Dürer
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1471-05-21'
+  died: '1528-04-06'
+  prominence: 4
+  note: German Renaissance painter and printmaker from Nuremberg, famed for his woodcuts and engravings and patronised by Emperor Maximilian I from 1512.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/40/D%C3%BCrer_Alte_Pinakothek.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/40/D%C3%BCrer_Alte_Pinakothek.jpg/500px-D%C3%BCrer_Alte_Pinakothek.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:D%C3%BCrer_Alte_Pinakothek.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Venice and Antwerp stays, Maximilian I patronage and two famous prints captured; full list of paintings, prints and treatises not built out; death place not in the trimmed
+    article text.
+  sources:
+  - wp-albrecht-durer
+- key: hans-holbein-the-younger
+  name: Hans Holbein the Younger
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1497
+  born_estimated: true
+  died: 1543
+  prominence: 4
+  note: German painter and printmaker active in Switzerland and England, one of the greatest portraitists of the 16th century and King's Painter to Henry VIII.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/500px-Hans_Holbein_the_Younger%2C_self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger,_self-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Basel and England periods, royal and Boleyn patronage and two key works captured; portraits of sitters, book designs and miniatures not built out; death place not in the trimmed
+    article text.
+  sources:
+  - wp-hans-holbein-the-younger
+- key: hieronymus-bosch
+  name: Hieronymus Bosch
+  type: Artist
+  roles:
+  - painter
+  born: 1450
+  born_estimated: true
+  died: 1516
+  prominence: 4
+  note: Early Netherlandish painter from 's-Hertogenbosch in Brabant, known for fantastical religious scenes such as The Garden of Earthly Delights.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2d/Jheronimus_Bosch_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Jheronimus_Bosch_%28cropped%29.jpg/500px-Jheronimus_Bosch_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jheronimus_Bosch_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, one triptych captured; other works and attribution debates (about 25 paintings accepted) not built out.
+  sources:
+  - wp-hieronymus-bosch
+- key: pieter-bruegel-the-elder
+  name: Pieter Bruegel the Elder
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1525
+  born_estimated: true
+  died: '1569-09-09'
+  prominence: 4
+  note: Flemish Renaissance painter and printmaker of landscapes and peasant scenes, working in Antwerp and Brussels.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/28/Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg/500px-Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer%2C_ca._1566_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pieter_Bruegel_the_Elder_-_The_Painter_and_the_Buyer,_ca._1566_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth-place dispute, Italy trip, Antwerp and Brussels years and one Months series painting captured; other paintings and the print series not built out.
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: lucas-cranach-the-elder
+  name: Lucas Cranach the Elder
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1472
+  born_estimated: true
+  died: '1553-10-16'
+  prominence: 3
+  note: German Renaissance painter and printmaker, court painter to the Electors of Saxony in Wittenberg and friend of Martin Luther.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/22/Lucas_Cranach_d._%C3%84._063.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Lucas_Cranach_d._%C3%84._063.jpg/500px-Lucas_Cranach_d._%C3%84._063.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lucas_Cranach_d._%C3%84._063.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, court-painter career and his oldest surviving painting captured; electors and Luther not linked (not in database); the many portraits, nudes and altarpieces not built out.
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: rembrandt
+  name: Rembrandt
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - draughtsman
+  born: '1606-07-15'
+  died: '1669-10-04'
+  prominence: 5
+  note: Dutch Golden Age painter, printmaker and draughtsman, one of the greatest visual artists in Western art, from Leiden and later Amsterdam.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg/500px-Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Leiden and Amsterdam years, burial and two major group portraits captured; teachers and pupils not in database so not linked; self-portraits, etchings and later works not built out.
+  sources:
+  - wp-rembrandt
+- key: johannes-vermeer
+  name: Johannes Vermeer
+  type: Artist
+  roles:
+  - painter
+  born: 1632
+  died: '1675-12-15'
+  prominence: 4
+  note: Dutch Golden Age painter of domestic interiors who lived all his life in Delft and was rediscovered in the 19th century.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/46/Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg/500px-Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Cropped_version_of_Jan_Vermeer_van_Delft_002.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Delft life and burial and one dated work captured; the other 30-odd paintings (mostly undated in the article) not built out.
+  sources:
+  - wp-johannes-vermeer
+- key: frans-hals
+  name: Frans Hals
+  type: Artist
+  roles:
+  - painter
+  born: 1582
+  born_estimated: true
+  died: '1666-08-26'
+  prominence: 4
+  note: Dutch Golden Age portrait painter of Haarlem, born in Antwerp, known for lively portraits and militia group portraits.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/After_Frans_Hals_-_Portrait_of_Frans_Hals_-_Indianapolis.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/After_Frans_Hals_-_Portrait_of_Frans_Hals_-_Indianapolis.jpg/500px-After_Frans_Hals_-_Portrait_of_Frans_Hals_-_Indianapolis.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:After_Frans_Hals_-_Portrait_of_Frans_Hals_-_Indianapolis.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Haarlem life, burial and one breakthrough group portrait captured; teacher and pupils not in database so not linked; other portraits not built out.
+  sources:
+  - wp-frans-hals
+- key: peter-paul-rubens
+  name: Peter Paul Rubens
+  type: Artist
+  roles:
+  - painter
+  born: '1577-06-28'
+  died: '1640-05-30'
+  prominence: 4
+  note: Flemish Baroque painter and diplomat based in Antwerp, knighted by Philip IV of Spain and Charles I of England.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg/500px-Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_%28after_restoration%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Self-portrait_-_RH.S.180_-_Rubenshuis_(after_restoration).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels, Antwerp house, pupil van Dyck and two major works captured; Gonzaga, Medici and Habsburg patrons not in database so not linked; later years and the full oeuvre not built
+    out (article text trimmed before his death).
+  sources:
+  - wp-peter-paul-rubens
+- key: jan-steen
+  name: Jan Steen
+  type: Artist
+  roles:
+  - painter
+  born: 1626
+  born_estimated: true
+  died: 1679
+  prominence: 3
+  note: Dutch Golden Age genre painter from Leiden, known for lively, humorous household scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/05/Jan_Steen_010.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Jan_Steen_010.jpg/500px-Jan_Steen_010.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jan_Steen_010.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, residences, burial and one dated work captured; teachers (Knupfer, van Ostade, van Goyen) and pupil Brakenburgh not in database so not linked; other paintings not built out.
+  sources:
+  - wp-jan-steen
+- key: diego-velazquez
+  name: Diego Velázquez
+  type: Artist
+  roles:
+  - painter
+  born: 1599
+  died: '1660-08-06'
+  prominence: 4
+  note: Spanish Baroque painter, the leading artist at the court of Philip IV of Spain, best known for Las Meninas (1656).
+  coverage: partly
+  coverage_note: Dates, apprenticeship, move to Madrid, Italian journeys and two key works captured; full portfolio and sitters not built out.
+  sources:
+  - wp-diego-velazquez
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6c/Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg/500px-Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_Autorretrato_45_x_38_cm_-_Colecci%C3%B3n_Real_Academia_de_Bellas_Artes_de_San_Carlos_-_Museo_de_Bellas_Artes_de_Valencia.jpg
+  image_license: Public domain
+- key: francisco-goya
+  name: Francisco Goya
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1746-03-30'
+  died: '1828-04-16'
+  prominence: 4
+  note: Spanish Romantic painter and printmaker, court painter to the Spanish Crown, known for The Third of May 1808, the Black Paintings and the Disasters of War prints.
+  coverage: partly
+  coverage_note: Dates, training, court career, places and two key works captured; print series and full portfolio not built out.
+  sources:
+  - wp-francisco-goya
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg/500px-Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vicente_L%C3%B3pez_Porta%C3%B1a_-_el_pintor_Francisco_de_Goya.jpg
+  image_license: Public domain
+- key: nicolas-poussin
+  name: Nicolas Poussin
+  type: Artist
+  roles:
+  - painter
+  born: 1594
+  died: '1665-11-19'
+  prominence: 3
+  note: French painter of the classical Baroque who worked mostly in Rome, known for clarity and order in religious and mythological scenes.
+  coverage: partly
+  coverage_note: Dates, places, career phases and one key work captured; patrons not in the database yet and full portfolio not built out.
+  sources:
+  - wp-nicolas-poussin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Nicolas_Poussin_078.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Nicolas_Poussin_078.jpg/500px-Nicolas_Poussin_078.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Nicolas_Poussin_078.jpg
+  image_license: Public domain
+- key: jacques-louis-david
+  name: Jacques-Louis David
+  type: Artist
+  roles:
+  - painter
+  born: '1748-08-30'
+  died: '1825-12-29'
+  prominence: 4
+  note: French Neoclassical painter, supporter of the Revolution and later of Napoleon, known for Oath of the Horatii, The Death of Marat and The Coronation of Napoleon.
+  coverage: partly
+  coverage_note: Dates, training, pupil Ingres linked, places and two key works captured; later career and full portfolio not built out.
+  sources:
+  - wp-jacques-louis-david
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c6/David_Self_Portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/David_Self_Portrait.jpg/500px-David_Self_Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:David_Self_Portrait.jpg
+  image_license: Public domain
+- key: jean-auguste-dominique-ingres
+  name: Jean-Auguste-Dominique Ingres
+  type: Artist
+  roles:
+  - painter
+  born: '1780-08-29'
+  died: '1867-01-14'
+  prominence: 4
+  note: French Neoclassical painter and defender of academic orthodoxy, best known for his portraits and for La Grande Odalisque.
+  coverage: partly
+  coverage_note: Dates, training under David, places and two key works captured; place of death and full portfolio not built out.
+  sources:
+  - wp-jean-auguste-dominique-ingres
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/94/Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg/500px-Portrait_de_Jean-Auguste-Dominique_Ingres_%281780-1867%29%2C_peintre._PH10351_%28Cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_de_Jean-Auguste-Dominique_Ingres_(1780-1867),_peintre._PH10351_(Cropped).jpg
+  image_license: CC0
+- key: eugene-delacroix
+  name: Eugène Delacroix
+  type: Artist
+  roles:
+  - painter
+  - lithographer
+  born: '1798-04-26'
+  died: '1863-08-13'
+  prominence: 4
+  note: French Romantic painter, leader of the Romantic school and rival of Ingres, best known for Liberty Leading the People.
+  coverage: partly
+  coverage_note: Dates, training, places and two key works captured; murals and full portfolio not built out.
+  sources:
+  - wp-eugene-delacroix
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e9/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg/500px-F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Nadar_1820-1910_portraits_Eug%C3%A8ne_Delacroix_restored.jpg
+  image_license: Public domain
+- key: antoine-watteau
+  name: Antoine Watteau
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: 1684
+  died: '1721-07-18'
+  prominence: 3
+  note: French painter and draughtsman who invented the fete galante and shifted Baroque toward Rococo.
+  coverage: partly
+  coverage_note: Dates, training and places captured; no dated key work captured and full portfolio not built out.
+  sources:
+  - wp-antoine-watteau
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/90/%28Treviso%29_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/%28Treviso%29_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg/500px-%28Treviso%29_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:(Treviso)_The_painter_Antoine_Watteau_by_Rosalba_Carriera_-_Museo_civico_di_Santa_Caterina.jpg
+  image_license: CC BY-SA 4.0
+- key: j-m-w-turner
+  name: J. M. W. Turner
+  type: Artist
+  roles:
+  - painter
+  born: '1775-04-23'
+  died: '1851-12-19'
+  prominence: 4
+  note: English Romantic landscape painter, famed for his handling of light and atmosphere, who inspired the Impressionists.
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; patrons not in the database yet and full portfolio not built out.
+  sources:
+  - wp-j-m-w-turner
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Turner_selfportrait_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Turner_selfportrait_%28cropped%29.jpg/500px-Turner_selfportrait_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Turner_selfportrait_(cropped).jpg
+  image_license: Public domain
+- key: john-constable
+  name: John Constable
+  type: Artist
+  roles:
+  - painter
+  born: '1776-06-11'
+  died: '1837-03-31'
+  prominence: 4
+  note: English Romantic landscape painter of the Stour valley (Constable Country), best known for The Hay Wain.
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; the other six-footers and full portfolio not built out.
+  sources:
+  - wp-john-constable
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/John_Constable_by_Ramsay_Richard_Reinagle.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/John_Constable_by_Ramsay_Richard_Reinagle.jpg/500px-John_Constable_by_Ramsay_Richard_Reinagle.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Constable_by_Ramsay_Richard_Reinagle.jpg
+  image_license: Public domain
+- key: thomas-gainsborough
+  name: Thomas Gainsborough
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - printmaker
+  born: 1727
+  died: '1788-08-02'
+  prominence: 3
+  note: English portrait and landscape painter, a founding member of the Royal Academy and rival of Joshua Reynolds.
+  coverage: partly
+  coverage_note: Dates, places, royal patronage and two dated works captured; The Blue Boy and other works have no year in the article, full portfolio not built out.
+  sources:
+  - wp-thomas-gainsborough
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/Thomas_Gainsborough_by_Thomas_Gainsborough.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Thomas_Gainsborough_by_Thomas_Gainsborough.jpg/500px-Thomas_Gainsborough_by_Thomas_Gainsborough.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Thomas_Gainsborough_by_Thomas_Gainsborough.jpg
+  image_license: Public domain
+- key: joshua-reynolds
+  name: Joshua Reynolds
+  type: Artist
+  roles:
+  - painter
+  born: '1723-07-16'
+  died: '1792-02-23'
+  prominence: 3
+  note: English portrait painter, first president of the Royal Academy and Principal Painter to George III.
+  coverage: partly
+  coverage_note: Dates, places, royal office and two dated works captured; full portfolio not built out.
+  sources:
+  - wp-joshua-reynolds
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9c/Sir_Joshua_Reynolds_-_Self-Portrait_-_Google_Art_Project_%282315517%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Sir_Joshua_Reynolds_-_Self-Portrait_-_Google_Art_Project_%282315517%29.jpg/500px-Sir_Joshua_Reynolds_-_Self-Portrait_-_Google_Art_Project_%282315517%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sir_Joshua_Reynolds_-_Self-Portrait_-_Google_Art_Project_(2315517).jpg
+  image_license: Public domain
+artworks:
+- key: mona-lisa
+  name: Mona Lisa
+  kind: painting
+  made: 1503
+  people:
+  - person: leonardo-da-vinci
+    role: creator
+  prominence: 5
+  note: Begun in 1503 as a portrait of Lisa del Giocondo and worked on into Leonardo's later years; the article gives no completion year. Sitter not in the database.
+  sources:
+  - wp-leonardo-da-vinci
+- key: david-michelangelo
+  name: David
+  kind: sculpture
+  medium: Carrara marble
+  made: 1504
+  collection: Accademia, Florence
+  people:
+  - person: michelangelo
+    role: creator
+  prominence: 5
+  note: Colossal statue completed in 1504; first intended for Florence Cathedral, then placed in the Piazza della Signoria, with a replica there since 1910.
+  sources:
+  - wp-michelangelo
+- key: sistine-chapel-ceiling
+  name: Sistine Chapel ceiling
+  kind: fresco
+  made: 1508
+  made_end: 1512
+  people:
+  - person: michelangelo
+    role: creator
+  places:
+  - place: sistine-chapel
+    role: made
+  prominence: 5
+  note: Nine Genesis scenes and over 300 figures, commissioned by Pope Julius II (not in the database).
+  sources:
+  - wp-michelangelo
+- key: marriage-of-the-virgin-raphael
+  name: The Marriage of the Virgin
+  kind: painting
+  made: 1504
+  collection: Brera
+  people:
+  - person: raphael
+    role: creator
+  prominence: 3
+  note: Early work for a church in Citta di Castello. The School of Athens was not used because the article gives no clear year for it.
+  sources:
+  - wp-raphael
+- key: assumption-of-the-virgin-titian
+  name: Assumption of the Virgin
+  kind: painting
+  made: 1516
+  people:
+  - person: titian
+    role: creator
+  places:
+  - place: santa-maria-gloriosa-dei-frari
+    role: held
+  prominence: 4
+  note: Completed in 1516 for the high altar of the Frari (commissioned 1515); described as his masterpiece and largest single panel.
+  sources:
+  - wp-titian
+- key: birth-of-venus
+  name: The Birth of Venus
+  made: 1485
+  estimated: true
+  collection: Uffizi
+  people:
+  - person: sandro-botticelli
+    role: creator
+  prominence: 4
+  note: One of Botticelli's two most famous mythological paintings, with Primavera.
+  sources:
+  - wp-sandro-botticelli
+- key: primavera
+  name: Primavera
+  made: 1482
+  estimated: true
+  collection: Uffizi
+  people:
+  - person: sandro-botticelli
+    role: creator
+  prominence: 4
+  sources:
+  - wp-sandro-botticelli
+- key: laura-giorgione
+  name: Laura
+  kind: painting
+  made: 1506
+  people:
+  - person: giorgione
+    role: creator
+  prominence: 3
+  note: The only Giorgione painting with a reliable date (1 June 1506); the article names no collection.
+  sources:
+  - wp-giorgione
+- key: tornabuoni-chapel-frescoes
+  name: Tornabuoni Chapel frescoes
+  kind: fresco
+  made: 1485
+  made_end: 1490
+  people:
+  - person: domenico-ghirlandaio
+    role: creator
+  places:
+  - place: santa-maria-novella-florence
+    role: made
+  prominence: 3
+  note: Lives of the Virgin Mary and St John the Baptist in the choir of Santa Maria Novella, paid for by the Tornabuoni and Tornaquinci families; contains 21 portraits of them.
+  sources:
+  - wp-domenico-ghirlandaio
+- key: madonna-of-the-harpies
+  name: Madonna of the Harpies
+  kind: painting
+  made: 1517
+  collection: Uffizi
+  people:
+  - person: andrea-del-sarto
+    role: creator
+  prominence: 3
+  note: Altarpiece completed in 1517 for the convent of San Francesco dei Macci.
+  sources:
+  - wp-andrea-del-sarto
+- key: last-supper-san-salvi
+  name: Last Supper at San Salvi
+  made: 1527
+  collection: Museo del Cenacolo di Andrea del Sarto
+  people:
+  - person: andrea-del-sarto
+    role: creator
+  prominence: 2
+  note: His last important painting; the article does not say whether it is a fresco.
+  sources:
+  - wp-andrea-del-sarto
+- key: sala-dei-cento-giorni
+  name: Sala dei Cento Giorni frescoes
+  kind: fresco
+  made: 1547
+  people:
+  - person: giorgio-vasari
+    role: creator
+  places:
+  - place: rome
+    role: made
+  prominence: 2
+  note: Frescoes in the hall of the chancery in the Palazzo della Cancelleria, Rome.
+  sources:
+  - wp-giorgio-vasari
+- key: adoration-of-the-magi-vasari
+  name: The Adoration of the Magi (Vasari)
+  kind: painting
+  made: 1566
+  made_end: 1567
+  people:
+  - person: giorgio-vasari
+    role: creator
+  prominence: 2
+  note: Commissioned by Pope Pius V in 1566 (not in the database) and completed in February 1567.
+  sources:
+  - wp-giorgio-vasari
+- key: game-of-chess-anguissola
+  name: The Game of Chess
+  kind: painting
+  made: 1555
+  collection: National Museum in Poznan
+  people:
+  - person: sofonisba-anguissola
+    role: creator
+  prominence: 4
+  note: Her most famous picture, showing her sisters Lucia, Minerva and Europa; sitters not in the database.
+  sources:
+  - wp-sofonisba-anguissola
+- key: miracle-of-the-slave
+  name: Miracle of the Slave
+  kind: painting
+  made: 1548
+  estimated: true
+  people:
+  - person: tintoretto
+    role: creator
+  prominence: 4
+  note: Large decoration for the Scuola di San Marco, commissioned in 1548; the article gives the commission year, not the completion year. It made his name.
+  sources:
+  - wp-tintoretto
+- key: wedding-at-cana-veronese
+  name: The Wedding at Cana
+  kind: painting
+  made: 1562
+  made_end: 1563
+  people:
+  - person: paolo-veronese
+    role: creator
+  prominence: 4
+  note: Painted for the refectory of the San Giorgio Maggiore monastery, Venice, commissioned by the Benedictine monks.
+  sources:
+  - wp-paolo-veronese
+- key: feast-in-the-house-of-levi
+  name: The Feast in the House of Levi
+  kind: painting
+  made: 1573
+  people:
+  - person: paolo-veronese
+    role: creator
+  prominence: 4
+  note: Painted as a Last Supper for the refectory of Santi Giovanni e Paolo, Venice; retitled after Veronese was summoned before the Inquisition on 18 July 1573.
+  sources:
+  - wp-paolo-veronese
+- key: calling-of-saint-matthew
+  name: The Calling of Saint Matthew
+  kind: painting
+  made: 1600
+  people:
+  - person: caravaggio
+    role: creator
+  places:
+  - place: san-luigi-dei-francesi
+    role: made-for
+  prominence: 5
+  note: Delivered in 1600 with The Martyrdom of Saint Matthew for the Contarelli Chapel; an immediate sensation.
+  sources:
+  - wp-caravaggio
+- key: amor-vincit-omnia
+  name: Amor Vincit Omnia
+  kind: painting
+  made: 1602
+  people:
+  - person: caravaggio
+    role: creator
+  prominence: 3
+  note: Painted in 1602 for Vincenzo Giustiniani, a member of Cardinal del Monte's circle.
+  sources:
+  - wp-caravaggio
+- key: susanna-and-the-elders-gentileschi
+  name: Susanna and the Elders
+  kind: painting
+  made: 1610
+  collection: Schonborn collection, Pommersfelden
+  people:
+  - person: artemisia-gentileschi
+    role: creator
+  prominence: 4
+  note: Her earliest surviving work, painted at 17.
+  sources:
+  - wp-artemisia-gentileschi
+- key: judith-slaying-holofernes-uffizi
+  name: Judith Slaying Holofernes (Uffizi version)
+  kind: painting
+  made: 1614
+  made_end: 1620
+  collection: Uffizi, Florence
+  people:
+  - person: artemisia-gentileschi
+    role: creator
+  prominence: 4
+  note: Her second version of the subject, painted in Florence; the first (1612-13) is in the Museo di Capodimonte, Naples.
+  sources:
+  - wp-artemisia-gentileschi
+- key: aurora-guido-reni
+  name: L'Aurora
+  kind: fresco
+  made: 1616
+  people:
+  - person: guido-reni
+    role: creator
+  places:
+  - place: casino-dell-aurora
+    role: made
+  prominence: 4
+  note: His fresco masterpiece in the Casino dell'Aurora, Rome; documents show he was paid on completion on 24 September 1616.
+  sources:
+  - wp-guido-reni
+- key: massacre-of-the-innocents-reni
+  name: Massacre of the Innocents
+  kind: painting
+  made: 1611
+  collection: Pinacoteca Nazionale, Bologna
+  people:
+  - person: guido-reni
+    role: creator
+  places:
+  - place: san-domenico-bologna
+    role: made-for
+  prominence: 3
+  note: Painted for San Domenico; an important reference for French Neoclassicism.
+  sources:
+  - wp-guido-reni
+- key: the-stonemasons-yard
+  name: The Stonemason's Yard
+  kind: painting
+  made: 1725
+  estimated: true
+  collection: National Gallery, London
+  people:
+  - person: canaletto
+    role: creator
+  prominence: 3
+  note: Regarded as one of his finest works; depicts a humble working area of Venice.
+  sources:
+  - wp-canaletto
+- key: allegory-of-the-planets-and-continents
+  name: Allegory of the Planets and Continents
+  kind: fresco
+  made: 1750
+  made_end: 1753
+  people:
+  - person: giovanni-battista-tiepolo
+    role: creator
+  places:
+  - place: wurzburg-residence
+    role: made
+  prominence: 4
+  note: Ceiling fresco over the grand staircase of the Wurzburg Residence, completed November 1753; includes portraits of Tiepolo, his son Giandomenico, the prince-bishop and Balthasar Neumann.
+  sources:
+  - wp-giovanni-battista-tiepolo
+- key: burial-of-the-count-of-orgaz
+  name: The Burial of the Count of Orgaz
+  kind: painting
+  made: 1586
+  estimated: true
+  people:
+  - person: el-greco
+    role: creator
+  prominence: 4
+  note: Commissioned 12 March 1586 and now his best-known work; the article gives the commission date, not the completion year.
+  sources:
+  - wp-el-greco
+- key: the-young-beggar-murillo
+  name: The Young Beggar
+  kind: painting
+  made: 1645
+  estimated: true
+  collection: Musee du Louvre
+  people:
+  - person: bartolome-esteban-murillo
+    role: creator
+  prominence: 3
+  note: The first of his many paintings of children; the influence of Velazquez is apparent.
+  sources:
+  - wp-bartolome-esteban-murillo
+- key: apotheosis-of-saint-thomas-aquinas
+  name: The Apotheosis of Saint Thomas Aquinas
+  kind: painting
+  made: 1631
+  collection: Museum of Fine Arts of Seville
+  people:
+  - person: francisco-de-zurbaran
+    role: creator
+  prominence: 3
+  note: His largest composition, painted for the church of the college of St Thomas, Seville.
+  sources:
+  - wp-francisco-de-zurbaran
+- key: melencolia-i
+  name: Melencolia I
+  kind: print
+  medium: engraving
+  made: 1514
+  people:
+  - person: albrecht-durer
+    role: creator
+  prominence: 4
+  note: One of Dürer's three most famous engravings of 1513-1514, called much-debated in the article.
+  sources:
+  - wp-albrecht-durer
+- key: durers-rhinoceros
+  name: Rhinoceros
+  kind: print
+  medium: woodcut
+  made: 1515
+  people:
+  - person: albrecht-durer
+    role: creator
+  prominence: 4
+  note: Woodcut of an Indian rhinoceros made from a written description and sketch by another artist; Dürer never saw the animal.
+  sources:
+  - wp-albrecht-durer
+- key: the-ambassadors
+  name: The Ambassadors
+  kind: painting
+  made: 1533
+  people:
+  - person: hans-holbein-the-younger
+    role: creator
+  prominence: 5
+  note: Life-sized panel of Jean de Dinteville, ambassador of Francis I, and Georges de Selve, Bishop of Lavaur, with an anamorphic skull.
+  sources:
+  - wp-hans-holbein-the-younger
+- key: henry-viii-whitehall-mural
+  name: Henry VIII Whitehall mural (with Henry VII)
+  kind: wall painting
+  made: 1537
+  people:
+  - person: hans-holbein-the-younger
+    role: creator
+  - person: henry-viii-of-england
+    role: subject
+  - person: jane-seymour
+    role: subject
+  places:
+  - place: palace-of-whitehall
+    role: made-for
+  prominence: 4
+  note: Holbein's most famous image, Henry VIII in a heroic pose; the mural was destroyed by fire in 1698 and is known from a cartoon fragment, engravings and a 1667 copy by Remigius van Leemput.
+  sources:
+  - wp-hans-holbein-the-younger
+- key: garden-of-earthly-delights
+  name: The Garden of Earthly Delights
+  kind: painting
+  made: 1495
+  made_end: 1505
+  estimated: true
+  collection: Prado Museum, Madrid
+  people:
+  - person: hieronymus-bosch
+    role: creator
+  places:
+  - place: museo-del-prado
+    role: held
+  prominence: 5
+  note: Triptych with the Garden of Eden on the left, a panorama of nude figures in the centre and a hellscape on the right.
+  sources:
+  - wp-hieronymus-bosch
+- key: hunters-in-the-snow
+  name: The Hunters in the Snow
+  kind: painting
+  made: 1565
+  collection: Kunsthistorisches Museum, Vienna
+  people:
+  - person: pieter-bruegel-the-elder
+    role: creator
+  places:
+  - place: kunsthistorisches-museum-vienna
+    role: held
+  prominence: 5
+  note: December-January panel from the Months of the Year series commissioned in 1565 by Niclaes Jonghelinck of Antwerp.
+  sources:
+  - wp-pieter-bruegel-the-elder
+- key: rest-of-the-virgin-during-the-flight-into-egypt
+  name: Rest of the Virgin during the Flight into Egypt
+  kind: painting
+  made: 1504
+  people:
+  - person: lucas-cranach-the-elder
+    role: creator
+  prominence: 3
+  note: The oldest extant picture by Cranach.
+  sources:
+  - wp-lucas-cranach-the-elder
+- key: the-night-watch
+  name: The Night Watch
+  kind: painting
+  made: 1642
+  people:
+  - person: rembrandt
+    role: creator
+  prominence: 5
+  note: The most substantial of Rembrandt's group portrait commissions.
+  sources:
+  - wp-rembrandt
+- key: anatomy-lesson-of-dr-nicolaes-tulp
+  name: Anatomy Lesson of Dr. Nicolaes Tulp
+  kind: painting
+  made: 1632
+  people:
+  - person: rembrandt
+    role: creator
+  prominence: 4
+  note: Large portrait commission from Rembrandt's early Amsterdam years.
+  sources:
+  - wp-rembrandt
+- key: allegory-of-faith
+  name: The Allegory of Faith
+  kind: painting
+  made: 1670
+  made_end: 1672
+  people:
+  - person: johannes-vermeer
+    role: creator
+  prominence: 3
+  note: One of Vermeer's two allegories, with symbolic religious content; Liedtke suggests it was made for a learned Catholic patron.
+  sources:
+  - wp-johannes-vermeer
+- key: banquet-of-the-officers-of-the-st-george-militia-company
+  name: The Banquet of the Officers of the St George Militia Company
+  kind: painting
+  made: 1616
+  people:
+  - person: frans-hals
+    role: creator
+  prominence: 4
+  note: Life-sized group portrait that was Hals's breakthrough; he painted the company three times.
+  sources:
+  - wp-frans-hals
+- key: descent-from-the-cross-rubens
+  name: The Descent from the Cross
+  kind: altarpiece
+  made: 1611
+  made_end: 1614
+  people:
+  - person: peter-paul-rubens
+    role: creator
+  places:
+  - place: cathedral-of-our-lady-antwerp
+    role: made-for
+  prominence: 4
+  note: With The Raising of the Cross (1610), established Rubens as Flanders' leading painter.
+  sources:
+  - wp-peter-paul-rubens
+- key: marie-de-medici-cycle
+  name: Marie de' Medici cycle
+  kind: painting cycle
+  made: 1621
+  made_end: 1625
+  collection: Louvre
+  people:
+  - person: peter-paul-rubens
+    role: creator
+  prominence: 4
+  note: Allegorical cycle commissioned in 1621 by Marie de' Medici for the Luxembourg Palace in Paris and installed in 1625; Marie is not in the database so no patron link.
+  sources:
+  - wp-peter-paul-rubens
+- key: rhetoricians-at-a-window
+  name: Rhetoricians at a Window
+  kind: painting
+  made: 1658
+  made_end: 1665
+  collection: Philadelphia Museum of Art
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+  note: Shows members of the Rederijkers (rhetoricians), whose theatre influenced Steen's work.
+  sources:
+  - wp-jan-steen
+- key: las-meninas
+  name: Las Meninas
+  kind: painting
+  made: 1656
+  people:
+  - person: diego-velazquez
+    role: creator
+  prominence: 5
+  note: Velazquez's magnum opus, also called The Maids of Honour; the article gives no collection for it.
+  sources:
+  - wp-diego-velazquez
+- key: surrender-of-breda
+  name: The Surrender of Breda
+  kind: painting
+  made: 1634
+  made_end: 1635
+  people:
+  - person: diego-velazquez
+    role: creator
+  prominence: 4
+  note: Painted for the Palacio del Buen Retiro; Velazquez's only extant painting of contemporary history.
+  sources:
+  - wp-diego-velazquez
+- key: the-third-of-may-1808
+  name: The Third of May 1808
+  kind: painting
+  made: 1814
+  people:
+  - person: francisco-goya
+    role: creator
+  prominence: 4
+  note: Painted in 1814 with The Second of May 1808, about the Peninsular War.
+  sources:
+  - wp-francisco-goya
+- key: charles-iv-of-spain-and-his-family
+  name: Charles IV of Spain and His Family
+  kind: painting
+  made: 1800
+  made_end: 1801
+  people:
+  - person: francisco-goya
+    role: creator
+  prominence: 4
+  note: Group portrait of the Spanish royal family; Charles IV is not yet in the database, so he is not linked as a subject.
+  sources:
+  - wp-francisco-goya
+- key: death-of-germanicus
+  name: The Death of Germanicus
+  kind: painting
+  made: 1627
+  collection: Minneapolis Institute of Arts
+  people:
+  - person: nicolas-poussin
+    role: creator
+  prominence: 3
+  note: Painted for Cardinal Francesco Barberini (not in the database); it established Poussin's reputation.
+  sources:
+  - wp-nicolas-poussin
+- key: oath-of-the-horatii
+  name: Oath of the Horatii
+  kind: painting
+  made: 1784
+  people:
+  - person: jacques-louis-david
+    role: creator
+  places:
+  - place: rome
+    role: made
+  prominence: 4
+  note: Painted in Rome after David went there with his wife and pupils.
+  sources:
+  - wp-jacques-louis-david
+- key: death-of-socrates
+  name: The Death of Socrates
+  kind: painting
+  made: 1787
+  people:
+  - person: jacques-louis-david
+    role: creator
+  prominence: 3
+  note: Exhibited at the Salon of 1787.
+  sources:
+  - wp-jacques-louis-david
+- key: jupiter-and-thetis
+  name: Jupiter and Thetis
+  kind: painting
+  made: 1811
+  people:
+  - person: jean-auguste-dominique-ingres
+    role: creator
+  places:
+  - place: rome
+    role: made
+  prominence: 3
+  note: Ingres's final student exercise as a Prix de Rome holder, a scene from the Iliad.
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- key: la-grande-odalisque
+  name: La Grande Odalisque
+  kind: painting
+  made: 1819
+  people:
+  - person: jean-auguste-dominique-ingres
+    role: creator
+  prominence: 4
+  note: Year is when Ingres sent it to the Paris Salon of 1819; it was first commissioned by Joachim Murat (not in the database).
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- key: liberty-leading-the-people
+  name: Liberty Leading the People
+  kind: painting
+  made: 1830
+  collection: Louvre, Paris
+  people:
+  - person: eugene-delacroix
+    role: creator
+  places:
+  - place: louvre-palace
+    role: held
+  prominence: 4
+  note: Delacroix's best-known painting, about the 1830 revolution against Charles X.
+  sources:
+  - wp-eugene-delacroix
+- key: death-of-sardanapalus
+  name: The Death of Sardanapalus
+  kind: painting
+  made: 1827
+  made_end: 1828
+  people:
+  - person: eugene-delacroix
+    role: creator
+  prominence: 3
+  note: Based on a play by Byron.
+  sources:
+  - wp-eugene-delacroix
+- key: dutch-boats-in-a-gale
+  name: Dutch Boats in a Gale
+  kind: painting
+  made: 1801
+  people:
+  - person: j-m-w-turner
+    role: creator
+  prominence: 3
+  note: Commissioned by Francis Egerton, 3rd Duke of Bridgewater (not in the database); shown at the Royal Academy in 1801, which is the year used.
+  sources:
+  - wp-j-m-w-turner
+- key: snow-storm-steam-boat-off-a-harbours-mouth
+  name: 'Snow Storm: Steam-Boat off a Harbour''s Mouth'
+  kind: painting
+  made: 1842
+  people:
+  - person: j-m-w-turner
+    role: creator
+  prominence: 4
+  note: Panned by The Athenaeum at the time; now considered one of his masterpieces.
+  sources:
+  - wp-j-m-w-turner
+- key: the-hay-wain
+  name: The Hay Wain
+  kind: painting
+  made: 1821
+  collection: National Gallery, London
+  people:
+  - person: john-constable
+    role: creator
+  prominence: 4
+  note: Shown at the Royal Academy in 1821; sold in 1824 and exhibited at the Paris Salon, where it won a gold medal.
+  sources:
+  - wp-john-constable
+- key: wivenhoe-park
+  name: Wivenhoe Park
+  kind: painting
+  made: 1816
+  people:
+  - person: john-constable
+    role: creator
+  prominence: 3
+  note: Commissioned by Major-General Francis Slater Rebow (not in the database) to paint his country home in Essex.
+  sources:
+  - wp-john-constable
+- key: portrait-of-johann-christian-bach
+  name: Portrait of Johann Christian Bach
+  kind: painting
+  made: 1776
+  collection: National Portrait Gallery, London
+  people:
+  - person: thomas-gainsborough
+    role: creator
+  prominence: 3
+  note: Painted at Bach's request for Padre Martini's collection of musicians' portraits; Bach is not in the database.
+  sources:
+  - wp-thomas-gainsborough
+- key: rev-john-chafy-playing-the-violoncello
+  name: The Rev. John Chafy Playing the Violoncello in a Landscape
+  kind: painting
+  made: 1750
+  made_end: 1752
+  estimated: true
+  collection: Tate Gallery, London
+  people:
+  - person: thomas-gainsborough
+    role: creator
+  prominence: 2
+  note: Painted while Gainsborough was still in Suffolk.
+  sources:
+  - wp-thomas-gainsborough
+- key: age-of-innocence
+  name: Age of Innocence
+  kind: painting
+  made: 1788
+  people:
+  - person: joshua-reynolds
+    role: creator
+  prominence: 3
+  note: Reynolds's best-known study of a child; the sitter is uncertain.
+  sources:
+  - wp-joshua-reynolds
+- key: portrait-of-lord-heathfield
+  name: Portrait of George Augustus Eliott, Lord Heathfield
+  kind: painting
+  made: 1787
+  people:
+  - person: joshua-reynolds
+    role: creator
+  prominence: 3
+  note: Shows the defender of Gibraltar with the key of the Rock; Heathfield is not in the database.
+  sources:
+  - wp-joshua-reynolds
+links:
+- teacher: domenico-ghirlandaio
+  student: michelangelo
+  sources:
+  - wp-domenico-ghirlandaio
+- teacher: andrea-del-sarto
+  student: giorgio-vasari
+  sources:
+  - wp-andrea-del-sarto
+- teacher: michelangelo
+  student: sofonisba-anguissola
+  sources:
+  - wp-sofonisba-anguissola
+- teacher: giorgione
+  student: titian
+  sources:
+  - wp-giorgione
+  - wp-titian
+- patron: sixtus-iv
+  artist: sandro-botticelli
+  from: 1481
+  to: 1482
+  sources:
+  - wp-sandro-botticelli
+- patron: sixtus-iv
+  artist: domenico-ghirlandaio
+  from: 1481
+  sources:
+  - wp-domenico-ghirlandaio
+- patron: philip-ii-of-spain
+  artist: sofonisba-anguissola
+  from: 1559
+  sources:
+  - wp-sofonisba-anguissola
+- teacher: orazio-gentileschi
+  student: artemisia-gentileschi
+  sources:
+  - wp-artemisia-gentileschi
+- teacher: titian
+  student: tintoretto
+  sources:
+  - wp-tintoretto
+- teacher: titian
+  student: el-greco
+  sources:
+  - wp-el-greco
+- patron: philip-ii-of-spain
+  artist: el-greco
+  sources:
+  - wp-el-greco
+- patron: charles-i-of-england
+  artist: artemisia-gentileschi
+  from: 1638
+  to: 1642
+  sources:
+  - wp-artemisia-gentileschi
+- patron: maximilian-i-holy-roman-emperor
+  artist: albrecht-durer
+  from: 1512
+  to: 1519
+  sources:
+  - wp-albrecht-durer
+- patron: anne-boleyn
+  artist: hans-holbein-the-younger
+  from: 1532
+  sources:
+  - wp-hans-holbein-the-younger
+- patron: henry-viii-of-england
+  artist: hans-holbein-the-younger
+  from: 1535
+  to: 1543
+  sources:
+  - wp-hans-holbein-the-younger
+- teacher: peter-paul-rubens
+  student: anthony-van-dyck
+  sources:
+  - wp-peter-paul-rubens
+- teacher: jacques-louis-david
+  student: jean-auguste-dominique-ingres
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- patron: george-iii
+  artist: thomas-gainsborough
+  from: 1780
+  sources:
+  - wp-thomas-gainsborough
+- patron: george-iii
+  artist: joshua-reynolds
+  from: 1784
+  sources:
+  - wp-joshua-reynolds
+moments:
+- person: leonardo-da-vinci
+  role: born
+  place: vinci
+  year: 1452
+  sources:
+  - wp-leonardo-da-vinci
+- person: leonardo-da-vinci
+  role: worked
+  place: milan
+  year: 1482
+  sources:
+  - wp-leonardo-da-vinci
+- person: leonardo-da-vinci
+  role: worked
+  place: apostolic-palace
+  year: 1513
+  sources:
+  - wp-leonardo-da-vinci
+- person: leonardo-da-vinci
+  role: died
+  place: clos-luce
+  year: 1519
+  sources:
+  - wp-leonardo-da-vinci
+- person: leonardo-da-vinci
+  role: buried
+  place: amboise-castle
+  year: 1519
+  sources:
+  - wp-leonardo-da-vinci
+- person: michelangelo
+  role: born
+  place: caprese-michelangelo
+  year: 1475
+  sources:
+  - wp-michelangelo
+- person: michelangelo
+  role: worked
+  place: rome
+  year: 1496
+  sources:
+  - wp-michelangelo
+- person: michelangelo
+  role: worked
+  place: florence
+  year: 1499
+  sources:
+  - wp-michelangelo
+- person: michelangelo
+  role: worked
+  place: sistine-chapel
+  year: 1508
+  sources:
+  - wp-michelangelo
+- person: raphael
+  role: born
+  place: urbino
+  year: 1483
+  sources:
+  - wp-raphael
+- person: raphael
+  role: worked
+  place: florence
+  year: 1504
+  sources:
+  - wp-raphael
+- person: raphael
+  role: worked
+  place: apostolic-palace
+  year: 1508
+  sources:
+  - wp-raphael
+- person: titian
+  role: born
+  place: pieve-di-cadore
+  year: 1488
+  sources:
+  - wp-titian
+- person: titian
+  role: worked
+  place: fondaco-dei-tedeschi
+  year: 1509
+  sources:
+  - wp-titian
+- person: titian
+  role: worked
+  place: padua
+  year: 1511
+  sources:
+  - wp-titian
+- person: titian
+  role: worked
+  place: santa-maria-gloriosa-dei-frari
+  year: 1516
+  sources:
+  - wp-titian
+- person: sandro-botticelli
+  role: born
+  place: florence
+  year: 1445
+  sources:
+  - wp-sandro-botticelli
+- person: sandro-botticelli
+  role: worked
+  place: pisa
+  year: 1474
+  sources:
+  - wp-sandro-botticelli
+- person: sandro-botticelli
+  role: worked
+  place: sistine-chapel
+  year: 1481
+  sources:
+  - wp-sandro-botticelli
+- person: sandro-botticelli
+  role: buried
+  place: ognissanti-florence
+  year: 1510
+  sources:
+  - wp-sandro-botticelli
+- person: giorgione
+  role: worked
+  place: castelfranco-veneto
+  year: 1504
+  sources:
+  - wp-giorgione
+- person: giorgione
+  role: worked
+  place: fondaco-dei-tedeschi
+  year: 1507
+  sources:
+  - wp-giorgione
+- person: domenico-ghirlandaio
+  role: born
+  place: florence
+  year: 1448
+  sources:
+  - wp-domenico-ghirlandaio
+- person: domenico-ghirlandaio
+  role: worked
+  place: sistine-chapel
+  year: 1481
+  sources:
+  - wp-domenico-ghirlandaio
+- person: domenico-ghirlandaio
+  role: worked
+  place: santa-maria-novella-florence
+  year: 1485
+  sources:
+  - wp-domenico-ghirlandaio
+- person: domenico-ghirlandaio
+  role: worked
+  place: palazzo-vecchio
+  year: 1481
+  sources:
+  - wp-domenico-ghirlandaio
+- person: domenico-ghirlandaio
+  role: buried
+  place: santa-maria-novella-florence
+  year: 1494
+  sources:
+  - wp-domenico-ghirlandaio
+- person: andrea-del-sarto
+  role: born
+  place: florence
+  year: 1486
+  sources:
+  - wp-andrea-del-sarto
+- person: andrea-del-sarto
+  role: worked
+  place: santissima-annunziata-florence
+  year: 1509
+  sources:
+  - wp-andrea-del-sarto
+- person: andrea-del-sarto
+  role: worked
+  place: paris
+  year: 1518
+  sources:
+  - wp-andrea-del-sarto
+- person: andrea-del-sarto
+  role: died
+  place: florence
+  year: 1530
+  sources:
+  - wp-andrea-del-sarto
+- person: giorgio-vasari
+  role: born
+  place: arezzo
+  year: 1511
+  sources:
+  - wp-giorgio-vasari
+- person: giorgio-vasari
+  role: worked
+  place: rome
+  year: 1547
+  sources:
+  - wp-giorgio-vasari
+- person: giorgio-vasari
+  role: worked
+  place: palazzo-vecchio
+  year: 1555
+  sources:
+  - wp-giorgio-vasari
+- person: giorgio-vasari
+  role: died
+  place: florence
+  year: 1574
+  sources:
+  - wp-giorgio-vasari
+- person: sofonisba-anguissola
+  role: born
+  place: cremona
+  year: 1532
+  sources:
+  - wp-sofonisba-anguissola
+- person: sofonisba-anguissola
+  role: worked
+  place: madrid
+  year: 1559
+  sources:
+  - wp-sofonisba-anguissola
+- person: sofonisba-anguissola
+  role: worked
+  place: genoa
+  year: 1584
+  sources:
+  - wp-sofonisba-anguissola
+- person: sofonisba-anguissola
+  role: died
+  place: palermo
+  year: 1629
+  sources:
+  - wp-sofonisba-anguissola
+- person: sofonisba-anguissola
+  role: buried
+  place: san-giorgio-dei-genovesi-palermo
+  year: 1629
+  sources:
+  - wp-sofonisba-anguissola
+- person: tintoretto
+  role: born
+  place: venice
+  year: 1518
+  sources:
+  - wp-tintoretto
+- person: tintoretto
+  role: died
+  place: venice
+  year: 1594
+  sources:
+  - wp-tintoretto
+- person: tintoretto
+  role: buried
+  place: madonna-dell-orto
+  year: 1594
+  sources:
+  - wp-tintoretto
+- person: tintoretto
+  role: worked
+  place: scuola-grande-di-san-rocco
+  year: 1565
+  sources:
+  - wp-tintoretto
+- person: tintoretto
+  role: worked
+  place: doges-palace
+  year: 1560
+  sources:
+  - wp-tintoretto
+- person: paolo-veronese
+  role: born
+  place: verona
+  year: 1528
+  sources:
+  - wp-paolo-veronese
+- person: paolo-veronese
+  role: died
+  place: venice
+  year: 1588
+  sources:
+  - wp-paolo-veronese
+- person: paolo-veronese
+  role: worked
+  place: mantua
+  year: 1552
+  sources:
+  - wp-paolo-veronese
+- person: paolo-veronese
+  role: worked
+  place: doges-palace
+  year: 1553
+  sources:
+  - wp-paolo-veronese
+- person: paolo-veronese
+  role: worked
+  place: san-sebastiano-venice
+  year: 1556
+  sources:
+  - wp-paolo-veronese
+- person: caravaggio
+  role: born
+  place: milan
+  year: 1571
+  sources:
+  - wp-caravaggio
+- person: caravaggio
+  role: worked
+  place: milan
+  year: 1584
+  sources:
+  - wp-caravaggio
+- person: caravaggio
+  role: worked
+  place: rome
+  year: 1592
+  sources:
+  - wp-caravaggio
+- person: caravaggio
+  role: worked
+  place: san-luigi-dei-francesi
+  year: 1600
+  sources:
+  - wp-caravaggio
+- person: artemisia-gentileschi
+  role: born
+  place: rome
+  year: 1593
+  sources:
+  - wp-artemisia-gentileschi
+- person: artemisia-gentileschi
+  role: worked
+  place: florence
+  year: 1612
+  sources:
+  - wp-artemisia-gentileschi
+- person: artemisia-gentileschi
+  role: worked
+  place: rome
+  year: 1620
+  sources:
+  - wp-artemisia-gentileschi
+- person: artemisia-gentileschi
+  role: worked
+  place: naples
+  year: 1630
+  sources:
+  - wp-artemisia-gentileschi
+- person: artemisia-gentileschi
+  role: worked
+  place: london
+  year: 1638
+  sources:
+  - wp-artemisia-gentileschi
+- person: guido-reni
+  role: born
+  place: bologna
+  year: 1575
+  sources:
+  - wp-guido-reni
+- person: guido-reni
+  role: died
+  place: bologna
+  year: 1642
+  sources:
+  - wp-guido-reni
+- person: guido-reni
+  role: buried
+  place: san-domenico-bologna
+  year: 1642
+  sources:
+  - wp-guido-reni
+- person: guido-reni
+  role: worked
+  place: rome
+  year: 1601
+  sources:
+  - wp-guido-reni
+- person: guido-reni
+  role: worked
+  place: casino-dell-aurora
+  year: 1616
+  sources:
+  - wp-guido-reni
+- person: canaletto
+  role: born
+  place: venice
+  year: 1697
+  sources:
+  - wp-canaletto
+- person: canaletto
+  role: buried
+  place: san-lio-venice
+  year: 1768
+  sources:
+  - wp-canaletto
+- person: canaletto
+  role: worked
+  place: rome
+  year: 1718
+  sources:
+  - wp-canaletto
+- person: canaletto
+  role: worked
+  place: london
+  year: 1746
+  sources:
+  - wp-canaletto
+- person: giovanni-battista-tiepolo
+  role: born
+  place: venice
+  year: 1696
+  sources:
+  - wp-giovanni-battista-tiepolo
+- person: giovanni-battista-tiepolo
+  role: died
+  place: madrid
+  year: 1770
+  sources:
+  - wp-giovanni-battista-tiepolo
+- person: giovanni-battista-tiepolo
+  role: buried
+  place: madonna-dell-orto
+  year: 1770
+  sources:
+  - wp-giovanni-battista-tiepolo
+- person: giovanni-battista-tiepolo
+  role: worked
+  place: wurzburg-residence
+  year: 1750
+  sources:
+  - wp-giovanni-battista-tiepolo
+- person: giovanni-battista-tiepolo
+  role: worked
+  place: royal-palace-of-madrid
+  year: 1761
+  sources:
+  - wp-giovanni-battista-tiepolo
+- person: el-greco
+  role: died
+  place: toledo
+  year: 1614
+  sources:
+  - wp-el-greco
+- person: el-greco
+  role: buried
+  place: santo-domingo-el-antiguo
+  year: 1614
+  sources:
+  - wp-el-greco
+- person: el-greco
+  role: worked
+  place: venice
+  year: 1567
+  sources:
+  - wp-el-greco
+- person: el-greco
+  role: worked
+  place: rome
+  year: 1570
+  sources:
+  - wp-el-greco
+- person: el-greco
+  role: worked
+  place: toledo
+  year: 1577
+  sources:
+  - wp-el-greco
+- person: bartolome-esteban-murillo
+  role: died
+  place: seville
+  year: 1682
+  sources:
+  - wp-bartolome-esteban-murillo
+- person: bartolome-esteban-murillo
+  role: worked
+  place: seville
+  year: 1645
+  sources:
+  - wp-bartolome-esteban-murillo
+- person: bartolome-esteban-murillo
+  role: worked
+  place: madrid
+  year: 1658
+  sources:
+  - wp-bartolome-esteban-murillo
+- person: francisco-de-zurbaran
+  role: born
+  place: fuente-de-cantos
+  year: 1598
+  sources:
+  - wp-francisco-de-zurbaran
+- person: francisco-de-zurbaran
+  role: worked
+  place: seville
+  year: 1614
+  sources:
+  - wp-francisco-de-zurbaran
+- person: francisco-de-zurbaran
+  role: worked
+  place: seville
+  year: 1629
+  sources:
+  - wp-francisco-de-zurbaran
+- person: francisco-de-zurbaran
+  role: worked
+  place: madrid
+  year: 1658
+  sources:
+  - wp-francisco-de-zurbaran
+- person: albrecht-durer
+  role: born
+  place: nuremberg
+  year: 1471
+  sources:
+  - wp-albrecht-durer
+- person: albrecht-durer
+  role: worked
+  place: venice
+  year: 1506
+  sources:
+  - wp-albrecht-durer
+- person: albrecht-durer
+  role: worked
+  place: antwerp
+  year: 1520
+  sources:
+  - wp-albrecht-durer
+- person: hans-holbein-the-younger
+  role: born
+  place: augsburg
+  year: 1497
+  sources:
+  - wp-hans-holbein-the-younger
+- person: hans-holbein-the-younger
+  role: worked
+  place: basel
+  year: 1515
+  sources:
+  - wp-hans-holbein-the-younger
+- person: hans-holbein-the-younger
+  role: worked
+  place: lucerne
+  year: 1517
+  sources:
+  - wp-hans-holbein-the-younger
+- person: hans-holbein-the-younger
+  role: worked
+  place: london
+  year: 1526
+  sources:
+  - wp-hans-holbein-the-younger
+- person: hans-holbein-the-younger
+  role: worked
+  place: london
+  year: 1532
+  sources:
+  - wp-hans-holbein-the-younger
+- person: hieronymus-bosch
+  role: born
+  place: s-hertogenbosch
+  year: 1450
+  sources:
+  - wp-hieronymus-bosch
+- person: hieronymus-bosch
+  role: worked
+  place: s-hertogenbosch
+  year: 1486
+  sources:
+  - wp-hieronymus-bosch
+- person: pieter-bruegel-the-elder
+  role: born
+  place: breda
+  year: 1525
+  sources:
+  - wp-pieter-bruegel-the-elder
+- person: pieter-bruegel-the-elder
+  role: worked
+  place: rome
+  year: 1553
+  sources:
+  - wp-pieter-bruegel-the-elder
+- person: pieter-bruegel-the-elder
+  role: worked
+  place: antwerp
+  year: 1555
+  sources:
+  - wp-pieter-bruegel-the-elder
+- person: pieter-bruegel-the-elder
+  role: died
+  place: brussels
+  year: 1569
+  sources:
+  - wp-pieter-bruegel-the-elder
+- person: pieter-bruegel-the-elder
+  role: buried
+  place: kapellekerk-brussels
+  year: 1569
+  sources:
+  - wp-pieter-bruegel-the-elder
+- person: lucas-cranach-the-elder
+  role: born
+  place: kronach
+  year: 1472
+  sources:
+  - wp-lucas-cranach-the-elder
+- person: lucas-cranach-the-elder
+  role: worked
+  place: wittenberg
+  year: 1504
+  sources:
+  - wp-lucas-cranach-the-elder
+- person: lucas-cranach-the-elder
+  role: worked
+  place: augsburg
+  year: 1550
+  sources:
+  - wp-lucas-cranach-the-elder
+- person: lucas-cranach-the-elder
+  role: died
+  place: weimar
+  year: 1553
+  sources:
+  - wp-lucas-cranach-the-elder
+- person: lucas-cranach-the-elder
+  role: buried
+  place: jacobsfriedhof-weimar
+  year: 1553
+  sources:
+  - wp-lucas-cranach-the-elder
+- person: rembrandt
+  role: born
+  place: leiden
+  year: 1606
+  sources:
+  - wp-rembrandt
+- person: rembrandt
+  role: worked
+  place: leiden
+  year: 1625
+  sources:
+  - wp-rembrandt
+- person: rembrandt
+  role: worked
+  place: amsterdam
+  year: 1631
+  sources:
+  - wp-rembrandt
+- person: rembrandt
+  role: buried
+  place: westerkerk-amsterdam
+  year: 1669
+  sources:
+  - wp-rembrandt
+- person: johannes-vermeer
+  role: worked
+  place: delft
+  year: 1653
+  sources:
+  - wp-johannes-vermeer
+- person: johannes-vermeer
+  role: died
+  place: delft
+  year: 1675
+  sources:
+  - wp-johannes-vermeer
+- person: johannes-vermeer
+  role: buried
+  place: oude-kerk-delft
+  year: 1675
+  sources:
+  - wp-johannes-vermeer
+- person: frans-hals
+  role: born
+  place: antwerp
+  year: 1582
+  sources:
+  - wp-frans-hals
+- person: frans-hals
+  role: worked
+  place: haarlem
+  year: 1610
+  sources:
+  - wp-frans-hals
+- person: frans-hals
+  role: died
+  place: haarlem
+  year: 1666
+  sources:
+  - wp-frans-hals
+- person: frans-hals
+  role: buried
+  place: grote-kerk-haarlem
+  year: 1666
+  sources:
+  - wp-frans-hals
+- person: peter-paul-rubens
+  role: born
+  place: siegen
+  year: 1577
+  sources:
+  - wp-peter-paul-rubens
+- person: peter-paul-rubens
+  role: worked
+  place: rome
+  year: 1601
+  sources:
+  - wp-peter-paul-rubens
+- person: peter-paul-rubens
+  role: worked
+  place: rubenshuis-antwerp
+  year: 1610
+  sources:
+  - wp-peter-paul-rubens
+- person: peter-paul-rubens
+  role: worked
+  place: madrid
+  year: 1628
+  sources:
+  - wp-peter-paul-rubens
+- person: peter-paul-rubens
+  role: worked
+  place: london
+  year: 1629
+  sources:
+  - wp-peter-paul-rubens
+- person: jan-steen
+  role: born
+  place: leiden
+  year: 1626
+  sources:
+  - wp-jan-steen
+- person: jan-steen
+  role: worked
+  place: delft
+  year: 1654
+  sources:
+  - wp-jan-steen
+- person: jan-steen
+  role: worked
+  place: haarlem
+  year: 1660
+  sources:
+  - wp-jan-steen
+- person: jan-steen
+  role: died
+  place: leiden
+  year: 1679
+  sources:
+  - wp-jan-steen
+- person: jan-steen
+  role: buried
+  place: pieterskerk-leiden
+  year: 1679
+  sources:
+  - wp-jan-steen
+- person: diego-velazquez
+  role: born
+  place: seville
+  year: 1599
+  sources:
+  - wp-diego-velazquez
+- person: diego-velazquez
+  role: worked
+  place: madrid
+  year: 1623
+  sources:
+  - wp-diego-velazquez
+- person: diego-velazquez
+  role: worked
+  place: rome
+  year: 1650
+  sources:
+  - wp-diego-velazquez
+- person: francisco-goya
+  role: born
+  place: fuendetodos
+  year: 1746
+  sources:
+  - wp-francisco-goya
+- person: francisco-goya
+  role: worked
+  place: zaragoza
+  year: 1771
+  sources:
+  - wp-francisco-goya
+- person: francisco-goya
+  role: worked
+  place: madrid
+  year: 1775
+  sources:
+  - wp-francisco-goya
+- person: francisco-goya
+  role: worked
+  place: bordeaux
+  year: 1824
+  sources:
+  - wp-francisco-goya
+- person: francisco-goya
+  role: died
+  place: bordeaux
+  year: 1828
+  sources:
+  - wp-francisco-goya
+- person: nicolas-poussin
+  role: born
+  place: les-andelys
+  year: 1594
+  sources:
+  - wp-nicolas-poussin
+- person: nicolas-poussin
+  role: worked
+  place: paris
+  year: 1612
+  sources:
+  - wp-nicolas-poussin
+- person: nicolas-poussin
+  role: worked
+  place: rome
+  year: 1624
+  sources:
+  - wp-nicolas-poussin
+- person: nicolas-poussin
+  role: died
+  place: rome
+  year: 1665
+  sources:
+  - wp-nicolas-poussin
+- person: nicolas-poussin
+  role: buried
+  place: san-lorenzo-in-lucina
+  year: 1665
+  sources:
+  - wp-nicolas-poussin
+- person: jacques-louis-david
+  role: born
+  place: paris
+  year: 1748
+  sources:
+  - wp-jacques-louis-david
+- person: jacques-louis-david
+  role: worked
+  place: rome
+  year: 1775
+  sources:
+  - wp-jacques-louis-david
+- person: jacques-louis-david
+  role: worked
+  place: paris
+  year: 1780
+  sources:
+  - wp-jacques-louis-david
+- person: jacques-louis-david
+  role: died
+  place: brussels
+  year: 1825
+  sources:
+  - wp-jacques-louis-david
+- person: jean-auguste-dominique-ingres
+  role: born
+  place: montauban
+  year: 1780
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- person: jean-auguste-dominique-ingres
+  role: worked
+  place: toulouse
+  year: 1791
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- person: jean-auguste-dominique-ingres
+  role: worked
+  place: paris
+  year: 1797
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- person: jean-auguste-dominique-ingres
+  role: worked
+  place: rome
+  year: 1806
+  sources:
+  - wp-jean-auguste-dominique-ingres
+- person: eugene-delacroix
+  role: born
+  place: charenton-saint-maurice
+  year: 1798
+  sources:
+  - wp-eugene-delacroix
+- person: eugene-delacroix
+  role: worked
+  place: tangier
+  year: 1832
+  sources:
+  - wp-eugene-delacroix
+- person: eugene-delacroix
+  role: worked
+  place: champrosay
+  year: 1844
+  sources:
+  - wp-eugene-delacroix
+- person: eugene-delacroix
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1863
+  sources:
+  - wp-eugene-delacroix
+- person: antoine-watteau
+  role: born
+  place: valenciennes
+  year: 1684
+  sources:
+  - wp-antoine-watteau
+- person: antoine-watteau
+  role: worked
+  place: paris
+  year: 1702
+  sources:
+  - wp-antoine-watteau
+- person: antoine-watteau
+  role: worked
+  place: london
+  year: 1720
+  sources:
+  - wp-antoine-watteau
+- person: j-m-w-turner
+  role: born
+  place: london
+  year: 1775
+  sources:
+  - wp-j-m-w-turner
+- person: j-m-w-turner
+  role: worked
+  place: sandycombe-lodge
+  year: 1811
+  sources:
+  - wp-j-m-w-turner
+- person: j-m-w-turner
+  role: died
+  place: chelsea
+  year: 1851
+  sources:
+  - wp-j-m-w-turner
+- person: j-m-w-turner
+  role: buried
+  place: st-pauls-cathedral
+  year: 1851
+  sources:
+  - wp-j-m-w-turner
+- person: john-constable
+  role: born
+  place: east-bergholt
+  year: 1776
+  sources:
+  - wp-john-constable
+- person: john-constable
+  role: worked
+  place: london
+  year: 1799
+  sources:
+  - wp-john-constable
+- person: john-constable
+  role: worked
+  place: brighton
+  year: 1824
+  sources:
+  - wp-john-constable
+- person: john-constable
+  role: buried
+  place: st-john-at-hampstead-church
+  year: 1837
+  sources:
+  - wp-john-constable
+- person: thomas-gainsborough
+  role: born
+  place: sudbury
+  year: 1727
+  sources:
+  - wp-thomas-gainsborough
+- person: thomas-gainsborough
+  role: worked
+  place: ipswich
+  year: 1752
+  sources:
+  - wp-thomas-gainsborough
+- person: thomas-gainsborough
+  role: worked
+  place: bath
+  year: 1759
+  sources:
+  - wp-thomas-gainsborough
+- person: thomas-gainsborough
+  role: worked
+  place: london
+  year: 1774
+  sources:
+  - wp-thomas-gainsborough
+- person: thomas-gainsborough
+  role: buried
+  place: st-annes-church-kew
+  year: 1788
+  sources:
+  - wp-thomas-gainsborough
+- person: joshua-reynolds
+  role: born
+  place: plympton
+  year: 1723
+  sources:
+  - wp-joshua-reynolds
+- person: joshua-reynolds
+  role: worked
+  place: london
+  year: 1753
+  sources:
+  - wp-joshua-reynolds
+- person: joshua-reynolds
+  role: died
+  place: london
+  year: 1792
+  sources:
+  - wp-joshua-reynolds
+- person: joshua-reynolds
+  role: buried
+  place: st-pauls-cathedral
+  year: 1792
+  sources:
+  - wp-joshua-reynolds
+discrepancies:
+- key: leonardo-da-vinci-born
+  question: Where was Leonardo da Vinci born?
+  about:
+  - person: leonardo-da-vinci
+  field: place
+  claims:
+  - value: In or near Vinci, traditionally at the hamlet of Anchiano (local oral tradition recorded by Emanuele Repetti)
+    sources:
+    - wp-leonardo-da-vinci
+  - value: A house in Florence that Ser Piero almost certainly had
+    sources:
+    - wp-leonardo-da-vinci
+    note: The article calls this still possible.
+  note: The record uses Vinci, the best-supported place per the article.
+- key: raphael-born
+  question: On what day was Raphael born in 1483?
+  about:
+  - person: raphael
+  field: born
+  claims:
+  - value: 28 March 1483
+    sources:
+    - wp-raphael
+  - value: 6 April 1483
+    sources:
+    - wp-raphael
+  note: The record holds the year 1483 only.
+- key: titian-born
+  question: When was Titian born?
+  about:
+  - person: titian
+  field: born
+  claims:
+  - value: 1474 (Titian's own claim in a letter to Philip II)
+    sources:
+    - wp-titian
+    note: The article calls this most unlikely.
+  - value: Between 1473 and after 1482 (contemporaries in his old age)
+    sources:
+    - wp-titian
+  - value: Between 1488 and 1490 (most modern scholars)
+    sources:
+    - wp-titian
+  note: The record uses 1488, marked estimated, as the earliest year of the likeliest range.
+- key: giorgione-died
+  question: Where did Giorgione die and where was he buried?
+  about:
+  - person: giorgione
+  field: place
+  claims:
+  - value: Island of Poveglia in the Venetian lagoon (the usual view)
+    sources:
+    - wp-giorgione
+  - value: Island of Lazzaretto Nuovo (archival document published in 2011)
+    sources:
+    - wp-giorgione
+  note: Both were plague quarantine islands. No death moment is recorded until settled.
+- key: giorgione-titian-teacher
+  question: Was Titian Giorgione's pupil, or were both pupils of Giovanni Bellini?
+  about:
+  - person: giorgione
+  - person: titian
+  field: teacher
+  claims:
+  - value: Titian was Giorgione's disciple (Vasari)
+    sources:
+    - wp-giorgione
+  - value: Both were pupils of Giovanni Bellini and lived together in his home (Ridolfi)
+    sources:
+    - wp-giorgione
+  - value: Giorgione was one of Titian's four masters (Dolce), with no documentation found
+    sources:
+    - wp-titian
+  note: The teacher link giorgione to titian follows Vasari and Dolce; treat it as contested.
+- key: domenico-ghirlandaio-born
+  question: Is Ghirlandaio's birth day known?
+  about:
+  - person: domenico-ghirlandaio
+  field: born
+  claims:
+  - value: 2 June 1448 (given in the article's opening line)
+    sources:
+    - wp-domenico-ghirlandaio
+  - value: Day and month of birth undocumented; recorded as dying in early January of his forty-fifth year
+    sources:
+    - wp-domenico-ghirlandaio
+  note: The record holds the year 1448 only.
+- key: artemisia-gentileschi-born
+  question: In what year was Artemisia Gentileschi born?
+  about:
+  - person: artemisia-gentileschi
+  field: born
+  claims:
+  - value: 8 July 1593
+    sources:
+    - wp-artemisia-gentileschi
+  - value: 1590 (the birth certificate from the Archivio di Stato)
+    sources:
+    - wp-artemisia-gentileschi
+  note: The record uses 1593-07-08, the date the article gives as her birth.
+- key: caravaggio-born-place
+  question: Was Caravaggio born in Milan or in the town of Caravaggio?
+  about:
+  - person: caravaggio
+  field: place
+  claims:
+  - value: Milan
+    sources:
+    - wp-caravaggio
+  - value: Caravaggio (previously assumed)
+    sources:
+    - wp-caravaggio
+  note: The record uses Milan, as the article states.
+- key: el-greco-born-place
+  question: Was El Greco born in the village of Fodele or in Candia (Heraklion), Crete?
+  about:
+  - person: el-greco
+  field: place
+  claims:
+  - value: Fodele
+    sources:
+    - wp-el-greco
+  - value: Candia (Heraklion)
+    sources:
+    - wp-el-greco
+  note: No birth moment recorded, because the article does not choose.
+- key: murillo-born-place
+  question: Was Murillo born in Seville or in Pilas?
+  about:
+  - person: bartolome-esteban-murillo
+  field: place
+  claims:
+  - value: Seville
+    sources:
+    - wp-bartolome-esteban-murillo
+  - value: Pilas
+    sources:
+    - wp-bartolome-esteban-murillo
+  note: No birth moment recorded. Murillo was baptised in Seville in 1618, late December 1617 is the probable birth.
+- key: pieter-bruegel-the-elder-born-place
+  question: Where was Pieter Bruegel the Elder born?
+  about:
+  - person: pieter-bruegel-the-elder
+  field: place
+  claims:
+  - value: Breda
+    sources:
+    - wp-pieter-bruegel-the-elder
+    note: Recorded by Lodovico Guicciardini (1567); modern scholars place his childhood in Breda itself.
+  - value: A village near Breda called 'Brueghel' (matches no known place)
+    sources:
+    - wp-pieter-bruegel-the-elder
+    note: Karel van Mander (1604).
+  note: The record uses Breda, the better-supported reading per the article.
