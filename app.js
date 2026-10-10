@@ -274,7 +274,7 @@ function familyWithin(db, id, steps) {
 
 function placeMatches(place, regions) {
   if (!place) return false;
-  const vals = [place.name, place.historical_name, place.region, place.modern_country].filter(Boolean).map(v => v.toLowerCase());
+  const vals = [place.name, place.historical_name, place.city, place.region, place.modern_country].filter(Boolean).map(v => v.toLowerCase());
   return regions.some(r => vals.includes(r.toLowerCase()));
 }
 
@@ -310,7 +310,11 @@ function computeView(db, f) {
   let events = db.events.filter(e => Number.isFinite(e.start_year));
   if (catsFiltering()) events = events.filter(e => { const ppl = db.peopleInEvent(e.id); return !ppl.length || ppl.some(x => shown.has(x.person.id)); });
   if (f.from != null) events = events.filter(e => e.start_year <= f.to && (e.end_year ?? e.start_year) >= f.from);
-  if (f.regions.length || f.missingRegions.length || f.realms.length) events = events.filter(e => placeMatches(db.placeById[e.place_id], f.regions) || db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
+  // An event (or film) stays if it happened in a searched region, or in a searched realm's own city or country
+  // (so "Los Angeles" keeps the films shot there), or if someone in view took part.
+  const where = [...f.regions, ...f.realms];
+  if (f.regions.length || f.missingRegions.length || f.realms.length) events = events.filter(e =>
+    (e.placeIds || [e.place_id]).some(id => placeMatches(db.placeById[id], where)) || db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
   if (f.focus != null || f.types.size) events = events.filter(e => db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
   return { people, events, warnings };
 }
