@@ -1,0 +1,741 @@
+# Los Angeles films, 1970-1999: more famous films shot at specific Los Angeles places (part of a "top 100 LA film
+# locations" set; the 1921-2016 batch and the before-1970 batch came first). Same conventions as
+# 2026-10-10-los-angeles-film-locations.yaml: each film is an artwork (kind: film) linked to its director (creator) and
+# to the places it was shot (role: filmed). The note says what was shot where; no cast, plot or posters.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 with tools/wiki.py (revision IDs in the session
+# scratchpad). Candidates came from Wikidata "filming location" (P915) and the landmarks' film lists; every film-place
+# claim below is stated in the film's article, the place's article, or both (the cited sources say which).
+# Reused from earlier batches: ennis-house, los-angeles-river, mike-nichols, ridley-scott, and the existing places
+# (Union Station, Griffith Observatory, Bradbury Building, Santa Monica Pier, Watts, Watts Towers, Venice, Coliseum,
+# Central Library, Hollywood Roosevelt).
+# Stated honestly:
+#  - Coordinates of new places are from the Wikipedia infoboxes, rounded.
+#  - Directors are added with life dates and one line only (coverage: not-read, "added as director of ...").
+#  - Dick Richards: Wikipedia gives the birth year only (1936); Wikidata says 9 July 1936. The record uses the year.
+#  - The Fabulous Baker Boys: the film's article puts "Makin' Whoopee" in the Biltmore's Crystal Ballroom, the
+#    Hollywood Roosevelt's article in its Cinegrill nightclub. Both hotels are linked; recorded as a discrepancy.
+#  - Several links rest on a place article's list of films only (the film's own article names no locations there):
+#    Farewell, My Lovely and 1941 (Santa Monica Pier), Bugsy (Union Station, Biltmore), To Live and Die in L.A.
+#    (Union Station, Los Angeles River), Terminator 2 (Los Angeles River; the film's article names the Bull Creek
+#    spillway for the truck chase), Black Rain and The Rocketeer (Ennis House), Menace II Society (Watts Towers),
+#    American History X (Venice High School, Lincoln Heights Jail), L.A. Confidential (Lincoln Heights Jail).
+# Left out:
+#  - Already in the database: Chinatown, The Sting, The Bad News Bears, Blade Runner, Ghostbusters, Back to the Future,
+#    Die Hard, Forrest Gump. New places for them (Blade Runner's Ennis House, Chinatown's LA River) are not added here.
+#  - Outside Los Angeles city / Santa Monica / Venice: Pulp Fiction (Hawthorne Grill), Beverly Hills Cop (Pasadena),
+#    Heat's Kate Mantilini diner (Beverly Hills), L.A. Confidential's Formosa Cafe (West Hollywood), Randy's Donuts
+#    (Inglewood), Point Break's Fox Hills Mall, Speed (its LAX finale was shot at Mojave Airport).
+#  - Not confirmed or contradicted: The Terminator and other films only listed as "appeared in" at Griffith Observatory
+#    (kept out, as in the earlier batch); Silver Streak (Union Station's list, but its article says Toronto Union
+#    Station); Falling Down (the Santa Monica Pier list names it, but its article sets the end on Venice Pier and
+#    names Lynwood as a filming location); White Men Can't Jump and Speed (Venice's list only, nothing in the film
+#    articles); Grease at John Marshall High School (that school's list, but the film's article puts Rydell at Venice
+#    High); The Long Goodbye (Marlowe's apartment is not named); Swingers' Dresden Lounge and the Derby (no articles;
+#    the film is linked to Los Feliz instead); the Elm Street house at 1428 North Genesee Avenue (private home, no
+#    article; named in the film's note only).
+#  - Kept out to stay near 25 films: Colors, Ricochet, Heathers, Ruthless People, Lethal Weapon 4, Earthquake,
+#    Repo Man (all confirmed in a place article; candidates for a later batch).
+batch:
+  title: "Los Angeles films, 1970-1999"
+  requested: "About 25 more famous films released 1970-1999 shot at specific Los Angeles places, for a top-100 LA film locations set"
+  date: 2026-10-10
+
+sources:
+  # Films
+  - {key: wp-the-way-we-were-1973, title: "The Way We Were (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Way_We_Were"}
+  - {key: wp-conquest-of-the-planet-of-the-apes-1972, title: "Conquest of the Planet of the Apes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Conquest_of_the_Planet_of_the_Apes"}
+  - {key: wp-farewell-my-lovely-1975, title: "Farewell, My Lovely (1975 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Farewell,_My_Lovely_(1975_film)"}
+  - {key: wp-grease-1978, title: "Grease (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grease_(film)"}
+  - {key: wp-1941-1979, title: "1941 (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/1941_(film)"}
+  - {key: wp-fast-times-at-ridgemont-high-1982, title: "Fast Times at Ridgemont High (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fast_Times_at_Ridgemont_High"}
+  - {key: wp-a-nightmare-on-elm-street-1984, title: "A Nightmare on Elm Street (Wikipedia)", url: "https://en.wikipedia.org/wiki/A_Nightmare_on_Elm_Street"}
+  - {key: wp-to-live-and-die-in-la-1985, title: "To Live and Die in L.A. (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/To_Live_and_Die_in_L.A._(film)"}
+  - {key: wp-the-fabulous-baker-boys-1989, title: "The Fabulous Baker Boys (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Fabulous_Baker_Boys"}
+  - {key: wp-black-rain-1989, title: "Black Rain (1989 American film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Black_Rain_(1989_American_film)"}
+  - {key: wp-terminator-2-1991, title: "Terminator 2: Judgment Day (Wikipedia)", url: "https://en.wikipedia.org/wiki/Terminator_2:_Judgment_Day"}
+  - {key: wp-the-rocketeer-1991, title: "The Rocketeer (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Rocketeer_(film)"}
+  - {key: wp-the-last-boy-scout-1991, title: "The Last Boy Scout (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Last_Boy_Scout"}
+  - {key: wp-point-break-1991, title: "Point Break (1991 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Point_Break_(1991_film)"}
+  - {key: wp-bugsy-1991, title: "Bugsy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bugsy"}
+  - {key: wp-menace-ii-society-1993, title: "Menace II Society (Wikipedia)", url: "https://en.wikipedia.org/wiki/Menace_II_Society"}
+  - {key: wp-in-the-line-of-fire-1993, title: "In the Line of Fire (Wikipedia)", url: "https://en.wikipedia.org/wiki/In_the_Line_of_Fire"}
+  - {key: wp-wolf-1994, title: "Wolf (1994 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wolf_(1994_film)"}
+  - {key: wp-true-lies-1994, title: "True Lies (Wikipedia)", url: "https://en.wikipedia.org/wiki/True_Lies"}
+  - {key: wp-strange-days-1995, title: "Strange Days (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Strange_Days_(film)"}
+  - {key: wp-heat-1995, title: "Heat (1995 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heat_(1995_film)"}
+  - {key: wp-matilda-1996, title: "Matilda (1996 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Matilda_(1996_film)"}
+  - {key: wp-star-trek-first-contact-1996, title: "Star Trek: First Contact (Wikipedia)", url: "https://en.wikipedia.org/wiki/Star_Trek:_First_Contact"}
+  - {key: wp-swingers-1996, title: "Swingers (1996 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Swingers_(1996_film)"}
+  - {key: wp-la-confidential-1997, title: "L.A. Confidential (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/L.A._Confidential_(film)"}
+  - {key: wp-the-big-lebowski-1998, title: "The Big Lebowski (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Big_Lebowski"}
+  - {key: wp-american-history-x-1998, title: "American History X (Wikipedia)", url: "https://en.wikipedia.org/wiki/American_History_X"}
+  # New places
+  - {key: wp-century-city, title: "Century City (Wikipedia)", url: "https://en.wikipedia.org/wiki/Century_City"}
+  - {key: wp-venice-high-school-los-angeles, title: "Venice High School (Los Angeles) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Venice_High_School_(Los_Angeles)"}
+  - {key: wp-sherman-oaks-galleria, title: "Sherman Oaks Galleria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sherman_Oaks_Galleria"}
+  - {key: wp-van-nuys-high-school, title: "Van Nuys High School (Wikipedia)", url: "https://en.wikipedia.org/wiki/Van_Nuys_High_School"}
+  - {key: wp-john-marshall-high-school-los-angeles, title: "John Marshall High School (Los Angeles) (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Marshall_High_School_(Los_Angeles)"}
+  - {key: wp-lincoln-heights-jail, title: "Lincoln Heights Jail (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lincoln_Heights_Jail"}
+  - {key: wp-the-biltmore-los-angeles, title: "The Biltmore Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Biltmore_Los_Angeles"}
+  - {key: wp-westin-bonaventure-hotel, title: "Westin Bonaventure Hotel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Westin_Bonaventure_Hotel"}
+  - {key: wp-fourfortyfour-south-flower, title: "FourFortyFour South Flower (Wikipedia)", url: "https://en.wikipedia.org/wiki/FourFortyFour_South_Flower"}
+  - {key: wp-los-angeles-international-airport, title: "Los Angeles International Airport (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_International_Airport"}
+  - {key: wp-doheny-library, title: "Doheny Library (Wikipedia)", url: "https://en.wikipedia.org/wiki/Doheny_Library"}
+  - {key: wp-los-feliz-los-angeles, title: "Los Feliz, Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Feliz,_Los_Angeles"}
+  - {key: wp-crossroads-of-the-world, title: "Crossroads of the World (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crossroads_of_the_World"}
+  - {key: wp-frolic-room, title: "Frolic Room (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frolic_Room"}
+  - {key: wp-hollywood-star-lanes, title: "Hollywood Star Lanes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Star_Lanes"}
+  - {key: wp-sheats-goldstein-residence, title: "Sheats–Goldstein Residence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sheats%E2%80%93Goldstein_Residence"}
+  # Directors
+  - {key: wp-sydney-pollack, title: "Sydney Pollack (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sydney_Pollack"}
+  - {key: wp-j-lee-thompson, title: "J. Lee Thompson (Wikipedia)", url: "https://en.wikipedia.org/wiki/J._Lee_Thompson"}
+  - {key: wp-dick-richards, title: "Dick Richards (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dick_Richards"}
+  - {key: wp-randal-kleiser, title: "Randal Kleiser (Wikipedia)", url: "https://en.wikipedia.org/wiki/Randal_Kleiser"}
+  - {key: wp-steven-spielberg, title: "Steven Spielberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Steven_Spielberg"}
+  - {key: wp-amy-heckerling, title: "Amy Heckerling (Wikipedia)", url: "https://en.wikipedia.org/wiki/Amy_Heckerling"}
+  - {key: wp-wes-craven, title: "Wes Craven (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wes_Craven"}
+  - {key: wp-william-friedkin, title: "William Friedkin (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Friedkin"}
+  - {key: wp-steve-kloves, title: "Steve Kloves (Wikipedia)", url: "https://en.wikipedia.org/wiki/Steve_Kloves"}
+  - {key: wp-james-cameron, title: "James Cameron (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Cameron"}
+  - {key: wp-joe-johnston, title: "Joe Johnston (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joe_Johnston"}
+  - {key: wp-tony-scott, title: "Tony Scott (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tony_Scott"}
+  - {key: wp-kathryn-bigelow, title: "Kathryn Bigelow (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kathryn_Bigelow"}
+  - {key: wp-barry-levinson, title: "Barry Levinson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Barry_Levinson"}
+  - {key: wp-hughes-brothers, title: "Hughes brothers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albert_and_Allen_Hughes"}
+  - {key: wp-wolfgang-petersen, title: "Wolfgang Petersen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wolfgang_Petersen"}
+  - {key: wp-michael-mann, title: "Michael Mann (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michael_Mann"}
+  - {key: wp-danny-devito, title: "Danny DeVito (Wikipedia)", url: "https://en.wikipedia.org/wiki/Danny_DeVito"}
+  - {key: wp-jonathan-frakes, title: "Jonathan Frakes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jonathan_Frakes"}
+  - {key: wp-doug-liman, title: "Doug Liman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Doug_Liman"}
+  - {key: wp-curtis-hanson, title: "Curtis Hanson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Curtis_Hanson"}
+  - {key: wp-coen-brothers, title: "Coen brothers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joel_and_Ethan_Coen"}
+  - {key: wp-tony-kaye, title: "Tony Kaye (director) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tony_Kaye_(director)"}
+
+people:
+  # Directors (Ridley Scott and Mike Nichols already exist). All type Artist, role film director; not built out.
+  - {key: sydney-pollack, name: Sydney Pollack, type: Artist, roles: [film director, actor], born: 1934-07-01, died: 2008-05-26, prominence: 3,
+     note: "American director and producer: They Shoot Horses, Don't They?, The Way We Were (1973), Tootsie, and Out of Africa, which won him Best Director and Best Picture.",
+     coverage: not-read, coverage_note: "Added as director of The Way We Were.", sources: [wp-sydney-pollack]}
+  - {key: j-lee-thompson, name: J. Lee Thompson, type: Artist, roles: [film director], born: 1914-08-01, died: 2002-08-30, prominence: 2,
+     note: "English director of thrillers and adventure films: Ice Cold in Alex, The Guns of Navarone, the original Cape Fear, and two Planet of the Apes sequels.",
+     coverage: not-read, coverage_note: "Added as director of Conquest of the Planet of the Apes.", sources: [wp-j-lee-thompson]}
+  - {key: dick-richards, name: Dick Richards, type: Artist, roles: [film director], born: 1936, prominence: 1,
+     note: "American director, producer and screenwriter; directed Robert Mitchum as Philip Marlowe in Farewell, My Lovely (1975).",
+     coverage: not-read, coverage_note: "Added as director of Farewell, My Lovely.", sources: [wp-dick-richards]}
+  - {key: randal-kleiser, name: Randal Kleiser, type: Artist, roles: [film director], born: 1946-07-20, prominence: 2,
+     note: "American director of Grease (1978, his feature debut), The Blue Lagoon and Flight of the Navigator.",
+     coverage: not-read, coverage_note: "Added as director of Grease.", sources: [wp-randal-kleiser]}
+  - {key: steven-spielberg, name: Steven Spielberg, type: Artist, roles: [film director], born: 1946-12-18, prominence: 5,
+     note: "American director, the highest-grossing of all time: Jaws, Close Encounters, E.T., the Indiana Jones films; also the war comedy 1941 (1979).",
+     coverage: not-read, coverage_note: "Added as director of 1941.", sources: [wp-steven-spielberg]}
+  - {key: amy-heckerling, name: Amy Heckerling, type: Artist, roles: [film director], born: 1954-05-07, prominence: 2,
+     note: "American writer and director; feature debut Fast Times at Ridgemont High (1982), later Look Who's Talking and Clueless.",
+     coverage: not-read, coverage_note: "Added as director of Fast Times at Ridgemont High.", sources: [wp-amy-heckerling]}
+  - {key: wes-craven, name: Wes Craven, type: Artist, roles: [film director], born: 1939-08-02, died: 2015-08-30, prominence: 3,
+     note: "American horror filmmaker: The Last House on the Left, A Nightmare on Elm Street (1984), which began the franchise, and the Scream films.",
+     coverage: not-read, coverage_note: "Added as director of A Nightmare on Elm Street.", sources: [wp-wes-craven]}
+  - {key: william-friedkin, name: William Friedkin, type: Artist, roles: [film director], born: 1935-08-29, died: 2023-08-07, prominence: 3,
+     note: "American New Hollywood director: The French Connection (Best Picture and Best Director), The Exorcist, Sorcerer, To Live and Die in L.A. (1985).",
+     coverage: not-read, coverage_note: "Added as director of To Live and Die in L.A.", sources: [wp-william-friedkin]}
+  - {key: steve-kloves, name: Steve Kloves, type: Artist, roles: [film director, writer], born: 1960-03-18, prominence: 2,
+     note: "American screenwriter and director; wrote and directed The Fabulous Baker Boys (1989) and adapted all but one of the Harry Potter novels for film.",
+     coverage: not-read, coverage_note: "Added as director of The Fabulous Baker Boys.", sources: [wp-steve-kloves]}
+  - {key: james-cameron, name: James Cameron, type: Artist, roles: [film director], born: 1954-08-16, prominence: 4,
+     note: "Canadian and New Zealand filmmaker: The Terminator, Aliens, Terminator 2 (1991), True Lies (1994), Titanic and the Avatar films.",
+     coverage: not-read, coverage_note: "Added as director of Terminator 2 and True Lies.", sources: [wp-james-cameron]}
+  - {key: joe-johnston, name: Joe Johnston, type: Artist, roles: [film director], born: 1950-05-13, prominence: 2,
+     note: "American director of effects-driven films: Honey, I Shrunk the Kids, The Rocketeer (1991), Jumanji, Captain America: The First Avenger.",
+     coverage: not-read, coverage_note: "Added as director of The Rocketeer.", sources: [wp-joe-johnston]}
+  - {key: tony-scott, name: Tony Scott, type: Artist, roles: [film director], born: 1944-06-21, died: 2012-08-19, prominence: 3,
+     note: "English director of action films, younger brother of Ridley Scott: Top Gun, The Last Boy Scout (1991), True Romance, Crimson Tide.",
+     coverage: not-read, coverage_note: "Added as director of The Last Boy Scout.", sources: [wp-tony-scott]}
+  - {key: kathryn-bigelow, name: Kathryn Bigelow, type: Artist, roles: [film director], born: 1951-11-27, prominence: 3,
+     note: "American director of Point Break (1991), Strange Days (1995) and The Hurt Locker, which made her the first woman to win Best Director.",
+     coverage: not-read, coverage_note: "Added as director of Point Break and Strange Days.", sources: [wp-kathryn-bigelow]}
+  - {key: barry-levinson, name: Barry Levinson, type: Artist, roles: [film director], born: 1942-04-06, prominence: 3,
+     note: "American filmmaker: Diner, Rain Man (Oscar for Best Director), Bugsy (1991).",
+     coverage: not-read, coverage_note: "Added as director of Bugsy.", sources: [wp-barry-levinson]}
+  - {key: albert-hughes, name: Albert Hughes, type: Artist, roles: [film director], born: 1972-04-01, prominence: 2,
+     note: "American director, one of the twin Hughes Brothers: Menace II Society (1993, their debut), Dead Presidents, From Hell.",
+     coverage: not-read, coverage_note: "Added as co-director of Menace II Society.", sources: [wp-hughes-brothers]}
+  - {key: allen-hughes, name: Allen Hughes, type: Artist, roles: [film director], born: 1972-04-01, prominence: 2,
+     note: "American director, one of the twin Hughes Brothers: Menace II Society (1993, their debut), Dead Presidents, From Hell.",
+     coverage: not-read, coverage_note: "Added as co-director of Menace II Society.", sources: [wp-hughes-brothers]}
+  - {key: wolfgang-petersen, name: Wolfgang Petersen, type: Artist, roles: [film director], born: 1941-03-14, died: 2022-08-12, prominence: 3,
+     note: "German director of Das Boot and The NeverEnding Story; in Hollywood, In the Line of Fire (1993), Outbreak and Air Force One.",
+     coverage: not-read, coverage_note: "Added as director of In the Line of Fire.", sources: [wp-wolfgang-petersen]}
+  - {key: michael-mann, name: Michael Mann, type: Artist, roles: [film director], born: 1943-02-05, prominence: 3,
+     note: "American director of stylized crime dramas: Thief, Manhunter, Heat (1995), The Insider, Collateral.",
+     coverage: not-read, coverage_note: "Added as director of Heat (1995) and Collateral (2004).", sources: [wp-michael-mann]}
+  - {key: danny-devito, name: Danny DeVito, type: Artist, roles: [film director, actor], born: 1944-11-17, prominence: 3,
+     note: "American actor (Taxi, It's Always Sunny in Philadelphia) and director; directed and co-produced Matilda (1996).",
+     coverage: not-read, coverage_note: "Added as director of Matilda.", sources: [wp-danny-devito]}
+  - {key: jonathan-frakes, name: Jonathan Frakes, type: Artist, roles: [film director, actor], born: 1952-08-19, prominence: 2,
+     note: "American actor, William Riker in Star Trek: The Next Generation, and director of Star Trek: First Contact (1996).",
+     coverage: not-read, coverage_note: "Added as director of Star Trek: First Contact.", sources: [wp-jonathan-frakes]}
+  - {key: doug-liman, name: Doug Liman, type: Artist, roles: [film director], born: 1965-07-24, prominence: 2,
+     note: "American director of Swingers (1996), Go, The Bourne Identity and Edge of Tomorrow.",
+     coverage: not-read, coverage_note: "Added as director of Swingers.", sources: [wp-doug-liman]}
+  - {key: curtis-hanson, name: Curtis Hanson, type: Artist, roles: [film director], born: 1945-03-24, died: 2016-09-20, prominence: 3,
+     note: "American director, writer and producer who grew up in Los Angeles; directed and co-wrote L.A. Confidential (1997).",
+     coverage: not-read, coverage_note: "Added as director of L.A. Confidential.", sources: [wp-curtis-hanson]}
+  - {key: joel-coen, name: Joel Coen, type: Artist, roles: [film director], born: 1954-11-29, prominence: 4,
+     note: "American filmmaker, the elder of the Coen brothers: Blood Simple, Fargo, The Big Lebowski (1998), No Country for Old Men.",
+     coverage: not-read, coverage_note: "Added as co-director of The Big Lebowski.", sources: [wp-coen-brothers]}
+  - {key: ethan-coen, name: Ethan Coen, type: Artist, roles: [film director], born: 1957-09-21, prominence: 4,
+     note: "American filmmaker, the younger of the Coen brothers; until 2004 credited as producer of their films, which the brothers wrote and directed together.",
+     coverage: not-read, coverage_note: "Added as co-director of The Big Lebowski.", sources: [wp-coen-brothers]}
+  - {key: tony-kaye, name: Tony Kaye, type: Artist, roles: [film director], born: 1952-07-08, prominence: 2,
+     note: "English director of films, music videos and advertisements; feature debut American History X (1998).",
+     coverage: not-read, coverage_note: "Added as director of American History X.", sources: [wp-tony-kaye]}
+
+places:
+  - key: century-city
+    name: Century City
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.056
+    lng: -118.417
+    founded: 1963
+    built_by: "Spyros Skouras and Edmond Herrscher of 20th Century Fox; master plan by Welton Becket Associates"
+    visitable: true
+    visit_site: "Avenue of the Stars and the towers south of Santa Monica Boulevard"
+    note: "Business district on the former 20th Century Fox backlot; its first building opened in 1963. Fox Plaza (Die Hard) is here."
+    sources: [wp-century-city]
+  - key: venice-high-school-los-angeles
+    name: Venice High School
+    kind: school
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.999
+    lng: -118.443
+    founded: 1911
+    visitable: true
+    visit_site: "Exterior and the Myrna Loy statue, 13000 Venice Boulevard; a working school"
+    note: "Public high school in Venice, founded 1911; Rydell High in Grease (1978), whose opening shot is its Myrna Loy statue, and used in many other films."
+    sources: [wp-venice-high-school-los-angeles]
+  - key: sherman-oaks-galleria
+    name: Sherman Oaks Galleria
+    kind: shopping mall
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.154
+    lng: -118.467
+    founded: 1980
+    visitable: true
+    visit_site: "Ventura and Sepulveda boulevards, Sherman Oaks; rebuilt in 1999-2002 as an open-air centre"
+    note: "Three-level mall opened on 30 October 1980, the heart of the Valley girl mall culture; the mall of Fast Times at Ridgemont High. Closed in 1999 and reopened in 2002 as a very different open-air centre."
+    sources: [wp-sherman-oaks-galleria]
+  - key: van-nuys-high-school
+    name: Van Nuys High School
+    kind: school
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.190
+    lng: -118.454
+    founded: 1914
+    visitable: true
+    visit_site: "Exterior only; a working school in Van Nuys"
+    note: "Public high school in the San Fernando Valley; Ridgemont High in Fast Times at Ridgemont High, and used for Christine and other films."
+    sources: [wp-van-nuys-high-school]
+  - key: john-marshall-high-school-los-angeles
+    name: John Marshall High School
+    kind: school
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.108
+    lng: -118.278
+    founded: 1931
+    visitable: true
+    visit_site: "Collegiate Gothic main building, 3939 Tracy Street, Los Feliz (exterior; a working school)"
+    note: "Public high school in Los Feliz whose Collegiate Gothic main building was saved after the 1971 earthquake; seen in A Nightmare on Elm Street and many other productions."
+    sources: [wp-john-marshall-high-school-los-angeles]
+  - key: lincoln-heights-jail
+    name: Lincoln Heights Jail
+    kind: former jail
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.077
+    lng: -118.225
+    founded: 1931
+    visitable: true
+    visit_site: "Art Deco exterior beside the Los Angeles River, Lincoln Heights; the building is not open"
+    note: "Art Deco jail of the late 1920s, used as a jail until 1965 and since then a filming location; a Los Angeles Historic-Cultural Monument (1993)."
+    sources: [wp-lincoln-heights-jail]
+  - key: the-biltmore-los-angeles
+    name: The Biltmore Los Angeles (Millennium Biltmore Hotel)
+    kind: hotel
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.049
+    lng: -118.253
+    founded: 1923
+    architect: "Schultze and Weaver"
+    visitable: true
+    visit_site: "Hotel lobby and Crystal Ballroom, opposite Pershing Square, Downtown"
+    note: "Hotel opened 1 October 1923 opposite Pershing Square, one of the most-filmed hotels in Los Angeles; its Crystal Ballroom appears in True Lies and The Fabulous Baker Boys."
+    sources: [wp-the-biltmore-los-angeles]
+  - key: westin-bonaventure-hotel
+    name: Westin Bonaventure Hotel
+    kind: hotel
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.053
+    lng: -118.256
+    founded: 1977
+    architect: "John C. Portman Jr."
+    visitable: true
+    visit_site: "Lobby and glass elevators, 404 South Figueroa Street, Downtown"
+    note: "33-storey hotel of five glass cylinders, built 1974-1977; Fredric Jameson's example of postmodern space, and a frequent filming location (In the Line of Fire, Strange Days, Rain Man)."
+    sources: [wp-westin-bonaventure-hotel]
+  - key: fourfortyfour-south-flower
+    name: FourFortyFour South Flower (Citigroup Center)
+    kind: office tower
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.052
+    lng: -118.255
+    founded: 1981
+    architect: "Albert C. Martin & Associates"
+    visitable: true
+    visit_site: "Exterior and plaza, 444 South Flower Street, Bunker Hill"
+    note: "48-storey tower completed in 1981, formerly Citigroup Center; the bank heist and street shootout of Heat take place here."
+    sources: [wp-fourfortyfour-south-flower, wp-heat-1995]
+  - key: los-angeles-international-airport
+    name: Los Angeles International Airport (LAX)
+    historical_name: Mines Field
+    kind: airport
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 33.943
+    lng: -118.408
+    founded: 1928
+    visitable: true
+    visit_site: "Terminals and the Googie Theme Building (1961), Westchester"
+    note: "The city's main airport, opened 2 October 1928 in Westchester; among the world's busiest. Numerous films have been set or filmed partly there."
+    sources: [wp-los-angeles-international-airport]
+  - key: doheny-library
+    name: Doheny Library (Edward L. Doheny Jr. Memorial Library)
+    kind: library
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.020
+    lng: -118.284
+    founded: 1932
+    architect: "Ralph Adams Cram (exterior), Samuel Lunden (interiors and working drawings)"
+    built_by: "Edward L. Doheny, in memory of his son"
+    visitable: true
+    visit_site: "Centre of the University of Southern California campus, University Park"
+    note: "USC's central library, given by the oil magnate Edward L. Doheny in memory of his murdered son. Filmed in The Graduate (the fountain and main door) and as the library of Matilda (1996)."
+    sources: [wp-doheny-library]
+  - key: los-feliz-los-angeles
+    name: Los Feliz
+    kind: district
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.112
+    lng: -118.285
+    visitable: true
+    visit_site: "Vermont and Hillhurst avenues, below Griffith Park"
+    note: "Hillside district below Griffith Park, home of the Ennis House and John Marshall High School; its bars are the nightlife of Swingers (1996)."
+    sources: [wp-los-feliz-los-angeles]
+  - key: crossroads-of-the-world
+    name: Crossroads of the World
+    kind: shopping centre
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.098
+    lng: -118.336
+    founded: 1936
+    architect: "Robert V. Derrah"
+    visitable: true
+    visit_site: "Sunset Boulevard at Las Palmas Avenue, Hollywood (now offices; seen from the street)"
+    note: "Open-air mall of 1936 with a central building shaped like an ocean liner, called America's first outdoor shopping mall; now offices. Dressed as a cinema for the opening premiere of L.A. Confidential."
+    sources: [wp-crossroads-of-the-world, wp-la-confidential-1997]
+  - key: frolic-room
+    name: Frolic Room
+    kind: bar
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.101
+    lng: -118.326
+    founded: 1930
+    visitable: true
+    visit_site: "6245 Hollywood Boulevard, next to the Pantages Theatre"
+    note: "Hollywood bar of 1930 known for its neon sign and its link to the Black Dahlia; a favourite film location (L.A. Confidential, Once Upon a Time in Hollywood)."
+    sources: [wp-frolic-room]
+  - key: hollywood-star-lanes
+    name: Hollywood Star Lanes
+    kind: bowling alley
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.091
+    lng: -118.304
+    founded: 1961
+    ended: 2002
+    visitable: false
+    visit_site: "Demolished; Kingsley Elementary School stands on the site on Santa Monica Boulevard"
+    note: "32-lane bowling alley opened in January 1961; all the bowling scenes of The Big Lebowski were shot here. Closed on 8 August 2002 after the school district took the land."
+    sources: [wp-hollywood-star-lanes]
+  - key: sheats-goldstein-residence
+    name: Sheats–Goldstein Residence
+    kind: house
+    city: Los Angeles
+    region: California
+    country: United States
+    lat: 34.094
+    lng: -118.435
+    founded: 1963
+    architect: "John Lautner"
+    visitable: false
+    visit_site: "Private house in Beverly Crest, promised to LACMA in 2016"
+    note: "Organic modernist house by John Lautner, built 1961-1963 on a sandstone ledge above Benedict Canyon; Jackie Treehorn's house in The Big Lebowski."
+    sources: [wp-sheats-goldstein-residence]
+
+artworks:
+  # 1970s
+  - key: conquest-of-the-planet-of-the-apes-1972
+    name: Conquest of the Planet of the Apes
+    kind: film
+    made: 1972
+    prominence: 2
+    note: "Its primary location was Century City, the former Fox backlot, whose new monochrome towers stood in for the bleak future city."
+    people:
+      - {person: j-lee-thompson, role: creator}
+    places:
+      - {place: century-city, role: filmed}
+    sources: [wp-conquest-of-the-planet-of-the-apes-1972]
+  - key: the-way-we-were-1973
+    name: The Way We Were
+    kind: film
+    made: 1973
+    prominence: 3
+    note: "Barbra Streisand and Robert Redford romance; one scene was shot at Los Angeles Union Station (a scene Arthur Laurents fought to cut)."
+    people:
+      - {person: sydney-pollack, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+    sources: [wp-the-way-we-were-1973, wp-los-angeles-union-station]
+  - key: farewell-my-lovely-1975
+    name: Farewell, My Lovely
+    kind: film
+    made: 1975
+    prominence: 2
+    note: "Robert Mitchum's Philip Marlowe, shot in Los Angeles in February-April 1975; the Santa Monica Pier lists it among the films that feature it prominently."
+    people:
+      - {person: dick-richards, role: creator}
+    places:
+      - {place: santa-monica-pier, role: filmed}
+    sources: [wp-farewell-my-lovely-1975, wp-santa-monica-pier]
+  - key: grease-1978
+    name: Grease
+    kind: film
+    made: 1978
+    prominence: 4
+    note: "Rydell High's exteriors (the parking lot, the \"Summer Nights\" bleachers, the sports scenes) were shot at Venice High School in summer 1977; the Thunder Road race in the Los Angeles River channel between the First and Seventh Street bridges."
+    people:
+      - {person: randal-kleiser, role: creator}
+    places:
+      - {place: venice-high-school-los-angeles, role: filmed}
+      - {place: los-angeles-river, role: filmed}
+    sources: [wp-grease-1978, wp-venice-high-school-los-angeles]
+  - key: 1941-1979
+    name: "1941"
+    kind: film
+    made: 1979
+    prominence: 2
+    note: "Spielberg's war comedy about a Japanese submarine scare, set around Santa Monica; the Santa Monica Pier lists it among the films that feature it prominently."
+    people:
+      - {person: steven-spielberg, role: creator}
+    places:
+      - {place: santa-monica-pier, role: filmed}
+    sources: [wp-1941-1979, wp-santa-monica-pier]
+  # 1980s
+  - key: fast-times-at-ridgemont-high-1982
+    name: Fast Times at Ridgemont High
+    kind: film
+    made: 1982
+    prominence: 3
+    note: "Mall scenes filmed after hours at the Sherman Oaks Galleria; Ridgemont High is Van Nuys High School, whose wolf mascot the film kept."
+    people:
+      - {person: amy-heckerling, role: creator}
+    places:
+      - {place: sherman-oaks-galleria, role: filmed}
+      - {place: van-nuys-high-school, role: filmed}
+    sources: [wp-fast-times-at-ridgemont-high-1982, wp-sherman-oaks-galleria, wp-van-nuys-high-school]
+  - key: a-nightmare-on-elm-street-1984
+    name: A Nightmare on Elm Street
+    kind: film
+    made: 1984
+    prominence: 3
+    note: "Shot in Los Angeles: the high school is John Marshall High School, the boiler room and police station interiors the Lincoln Heights Jail; Nancy's house is a private home at 1428 North Genesee Avenue."
+    people:
+      - {person: wes-craven, role: creator}
+    places:
+      - {place: john-marshall-high-school-los-angeles, role: filmed}
+      - {place: lincoln-heights-jail, role: filmed}
+    sources: [wp-a-nightmare-on-elm-street-1984, wp-lincoln-heights-jail]
+  - key: to-live-and-die-in-la-1985
+    name: To Live and Die in L.A.
+    kind: film
+    made: 1985
+    prominence: 2
+    note: "Neo-noir about Secret Service agents; Union Station and the Los Angeles River both list it among films shot there, and a chase runs along LAX's moving walkways."
+    people:
+      - {person: william-friedkin, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+      - {place: los-angeles-river, role: filmed}
+      - {place: los-angeles-international-airport, role: filmed}
+    sources: [wp-to-live-and-die-in-la-1985, wp-los-angeles-union-station, wp-los-angeles-river]
+  - key: the-fabulous-baker-boys-1989
+    name: The Fabulous Baker Boys
+    kind: film
+    made: 1989
+    prominence: 2
+    note: "Interiors and musical numbers at the Biltmore; Michelle Pfeiffer's \"Makin' Whoopee\" on the piano is placed in the Biltmore's Crystal Ballroom by the film's article and in the Hollywood Roosevelt's Cinegrill by the hotel's (see the discrepancy)."
+    people:
+      - {person: steve-kloves, role: creator}
+    places:
+      - {place: the-biltmore-los-angeles, role: filmed}
+      - {place: hollywood-roosevelt-hotel, role: filmed}
+    sources: [wp-the-fabulous-baker-boys-1989, wp-hollywood-roosevelt-hotel]
+  - key: black-rain-1989
+    name: Black Rain
+    kind: film
+    made: 1989
+    prominence: 2
+    note: "Set in Osaka; scenes the crew could not finish in Japan were shot in downtown Los Angeles, and LAX stood in for Osaka airport. A matte of a high-rise was added to the Ennis House for its scenes."
+    people:
+      - {person: ridley-scott, role: creator}
+    places:
+      - {place: ennis-house, role: filmed}
+      - {place: los-angeles-international-airport, role: filmed}
+    sources: [wp-black-rain-1989, wp-ennis-house]
+  # 1990s
+  - key: terminator-2-1991
+    name: "Terminator 2: Judgment Day"
+    kind: film
+    made: 1991
+    prominence: 4
+    note: "Shot around Los Angeles; the T-1000's truck chase was filmed in the Bull Creek spillway, and the Los Angeles River lists the film among those shot in its channel."
+    people:
+      - {person: james-cameron, role: creator}
+    places:
+      - {place: los-angeles-river, role: filmed}
+    sources: [wp-terminator-2-1991, wp-los-angeles-river]
+  - key: the-rocketeer-1991
+    name: The Rocketeer
+    kind: film
+    made: 1991
+    prominence: 2
+    note: "1930s-set adventure; scenes at Griffith Observatory filmed in November 1990, and the Ennis House lists it among its notable films."
+    people:
+      - {person: joe-johnston, role: creator}
+    places:
+      - {place: griffith-observatory, role: filmed}
+      - {place: ennis-house, role: filmed}
+    sources: [wp-the-rocketeer-1991, wp-ennis-house]
+  - key: the-last-boy-scout-1991
+    name: The Last Boy Scout
+    kind: film
+    made: 1991
+    prominence: 2
+    note: "Filmed mainly around Los Angeles; the football stadium scenes at the Los Angeles Memorial Coliseum (and San Diego Stadium)."
+    people:
+      - {person: tony-scott, role: creator}
+    places:
+      - {place: los-angeles-memorial-coliseum, role: filmed}
+    sources: [wp-the-last-boy-scout-1991]
+  - key: point-break-1991
+    name: Point Break
+    kind: film
+    made: 1991
+    prominence: 3
+    note: "Surf-heist thriller; Los Angeles locations included Venice, Santa Monica and Manhattan Beach (the finale's Bells Beach is in Oregon)."
+    people:
+      - {person: kathryn-bigelow, role: creator}
+    places:
+      - {place: venice-los-angeles, role: filmed}
+    sources: [wp-point-break-1991]
+  - key: bugsy-1991
+    name: Bugsy
+    kind: film
+    made: 1991
+    prominence: 3
+    note: "Warren Beatty as Bugsy Siegel, shot in Los Angeles, Pasadena and the desert; Union Station and the Biltmore both list it among films shot there."
+    people:
+      - {person: barry-levinson, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+      - {place: the-biltmore-los-angeles, role: filmed}
+    sources: [wp-bugsy-1991, wp-los-angeles-union-station, wp-the-biltmore-los-angeles]
+  - key: menace-ii-society-1993
+    name: Menace II Society
+    kind: film
+    made: 1993
+    prominence: 3
+    note: "Shot in Watts, with Jordan Downs residents as extras; the Watts Towers are seen at the start of the film."
+    people:
+      - {person: albert-hughes, role: creator}
+      - {person: allen-hughes, role: creator}
+    places:
+      - {place: watts, role: filmed}
+      - {place: watts-towers, role: filmed}
+    sources: [wp-menace-ii-society-1993, wp-watts-towers]
+  - key: in-the-line-of-fire-1993
+    name: In the Line of Fire
+    kind: film
+    made: 1993
+    prominence: 3
+    note: "The climax was shot in the lobby and glass elevators of the Bonaventure Hotel; Frank and Lilly's earlier scenes at the nearby Biltmore."
+    people:
+      - {person: wolfgang-petersen, role: creator}
+    places:
+      - {place: westin-bonaventure-hotel, role: filmed}
+      - {place: the-biltmore-los-angeles, role: filmed}
+    sources: [wp-in-the-line-of-fire-1993]
+  - key: wolf-1994
+    name: Wolf
+    kind: film
+    made: 1994
+    prominence: 2
+    note: "Jack Nicholson's publishing offices are in the Bradbury Building; also shot in New York and on Long Island."
+    people:
+      - {person: mike-nichols, role: creator}
+    places:
+      - {place: bradbury-building, role: filmed}
+    sources: [wp-wolf-1994, wp-bradbury-building]
+  - key: true-lies-1994
+    name: True Lies
+    kind: film
+    made: 1994
+    prominence: 3
+    note: "The closing ballroom dance and the lobby of the fictional Hotel Marquis in Washington were shot in the Biltmore's Crystal Ballroom."
+    people:
+      - {person: james-cameron, role: creator}
+    places:
+      - {place: the-biltmore-los-angeles, role: filmed}
+    sources: [wp-true-lies-1994]
+  - key: strange-days-1995
+    name: Strange Days
+    kind: film
+    made: 1995
+    prominence: 2
+    note: "The millennium-eve crowd finale was shot at 5th and Flower streets, between the Bonaventure Hotel and the Central Library; the production rented half the Bonaventure's rooms."
+    people:
+      - {person: kathryn-bigelow, role: creator}
+    places:
+      - {place: westin-bonaventure-hotel, role: filmed}
+      - {place: los-angeles-central-library, role: filmed}
+    sources: [wp-strange-days-1995]
+  - key: heat-1995
+    name: Heat
+    kind: film
+    made: 1995
+    prominence: 4
+    note: "Shot entirely on location at 85 Los Angeles sites, no soundstages: the bank heist and shootout at the Citigroup Center (now FourFortyFour South Flower), the finale at LAX."
+    people:
+      - {person: michael-mann, role: creator}
+    places:
+      - {place: fourfortyfour-south-flower, role: filmed}
+      - {place: los-angeles-international-airport, role: filmed}
+    sources: [wp-heat-1995]
+  - key: matilda-1996
+    name: Matilda
+    kind: film
+    made: 1996
+    prominence: 2
+    note: "The library scenes were filmed at USC's Doheny Library (entrance, rotunda and a hall, with a reference desk and stacks added); it is not named in the film."
+    people:
+      - {person: danny-devito, role: creator}
+    places:
+      - {place: doheny-library, role: filmed}
+    sources: [wp-matilda-1996, wp-doheny-library]
+  - key: star-trek-first-contact-1996
+    name: "Star Trek: First Contact"
+    kind: film
+    made: 1996
+    prominence: 2
+    note: "The last location shoot was the art deco restaurant in Union Station, standing in for the Dixon Hill holonovel."
+    people:
+      - {person: jonathan-frakes, role: creator}
+    places:
+      - {place: los-angeles-union-station, role: filmed}
+    sources: [wp-star-trek-first-contact-1996]
+  - key: swingers-1996
+    name: Swingers
+    kind: film
+    made: 1996
+    prominence: 2
+    note: "Filmed in Los Angeles nightclubs, above all in Los Feliz: the Dresden Lounge and the Derby, partly documentary-style with real patrons."
+    people:
+      - {person: doug-liman, role: creator}
+    places:
+      - {place: los-feliz-los-angeles, role: filmed}
+    sources: [wp-swingers-1996]
+  - key: la-confidential-1997
+    name: L.A. Confidential
+    kind: film
+    made: 1997
+    prominence: 4
+    note: "1950s Hollywood landmarks: the Crossroads of the World dressed as a cinema for the opening premiere, the Frolic Room on Hollywood Boulevard; part was filmed at the Lincoln Heights Jail."
+    people:
+      - {person: curtis-hanson, role: creator}
+    places:
+      - {place: crossroads-of-the-world, role: filmed}
+      - {place: frolic-room, role: filmed}
+      - {place: lincoln-heights-jail, role: filmed}
+    sources: [wp-la-confidential-1997, wp-lincoln-heights-jail]
+  - key: the-big-lebowski-1998
+    name: The Big Lebowski
+    kind: film
+    made: 1998
+    prominence: 4
+    note: "All the bowling scenes were shot over three weeks at Hollywood Star Lanes (demolished 2002); Jackie Treehorn's house is Lautner's Sheats–Goldstein Residence."
+    people:
+      - {person: joel-coen, role: creator}
+      - {person: ethan-coen, role: creator}
+    places:
+      - {place: hollywood-star-lanes, role: filmed}
+      - {place: sheats-goldstein-residence, role: filmed}
+    sources: [wp-the-big-lebowski-1998, wp-hollywood-star-lanes]
+  - key: american-history-x-1998
+    name: American History X
+    kind: film
+    made: 1998
+    prominence: 3
+    note: "Shot in Los Angeles and Venice Beach (the basketball-court game); Venice High School lists it among its films, and some prison scenes were shot on the Lincoln Heights Jail roof."
+    people:
+      - {person: tony-kaye, role: creator}
+    places:
+      - {place: venice-los-angeles, role: filmed}
+      - {place: venice-high-school-los-angeles, role: filmed}
+      - {place: lincoln-heights-jail, role: filmed}
+    sources: [wp-american-history-x-1998, wp-venice-high-school-los-angeles, wp-lincoln-heights-jail]
+
+discrepancies:
+  - key: fabulous-baker-boys-makin-whoopee-location
+    question: "Where was \"Makin' Whoopee\" in The Fabulous Baker Boys shot: the Biltmore's Crystal Ballroom or the Hollywood Roosevelt's Cinegrill?"
+    about: [{artwork: the-fabulous-baker-boys-1989}]
+    field: place
+    claims:
+      - {value: "The Biltmore Los Angeles, Crystal Ballroom", sources: [wp-the-fabulous-baker-boys-1989], note: "Film article, Production"}
+      - {value: "Hollywood Roosevelt Hotel, Cinegrill nightclub", sources: [wp-hollywood-roosevelt-hotel], note: "Hotel article, film section"}
+    note: "Both hotels are linked as filmed: the film article also places other interiors and musical sequences at the Biltmore."
