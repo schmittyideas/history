@@ -1,0 +1,2843 @@
+# Notes for the reviewer
+# - 41 painters: the remaining candidates of the ranking, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 13: the remaining candidates (41)'
+  requested: Western painters from 1500, batch 13
+  date: '2026-10-10'
+sources:
+- key: wp-catharina-van-hemessen
+  title: Catharina van Hemessen (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Catharina_van_Hemessen
+- key: wp-cornelis-van-haarlem
+  title: Cornelis van Haarlem (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cornelis_van_Haarlem
+- key: wp-bartholomeus-van-der-helst
+  title: Bartholomeus van der Helst (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bartholomeus_van_der_Helst
+- key: wp-willem-van-de-velde-the-younger
+  title: Willem van de Velde the Younger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Willem_van_de_Velde_the_Younger
+- key: wp-mary-beale
+  title: Mary Beale (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mary_Beale
+- key: wp-nicolaes-maes
+  title: Nicolaes Maes (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicolaes_Maes
+- key: wp-francesco-solimena
+  title: Francesco Solimena (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Solimena
+- key: wp-giambattista-pittoni
+  title: Giambattista Pittoni (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giambattista_Pittoni
+- key: wp-georg-wenzeslaus-von-knobelsdorff
+  title: Georg Wenzeslaus von Knobelsdorff (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georg_Wenzeslaus_von_Knobelsdorff
+- key: wp-hubert-robert
+  title: Hubert Robert (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hubert_Robert
+- key: wp-johan-zoffany
+  title: Johan Zoffany (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Johan_Zoffany
+- key: wp-charles-willson-peale
+  title: Charles Willson Peale (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_Willson_Peale
+- key: wp-jens-juel
+  title: Jens Juel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jens_Juel_(painter)
+- key: wp-john-trumbull
+  title: John Trumbull (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Trumbull
+- key: wp-pierre-joseph-redoute
+  title: Pierre-Joseph Redouté (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre-Joseph_Redout%C3%A9
+- key: wp-carl-gustav-carus
+  title: Carl Gustav Carus (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carl_Gustav_Carus
+- key: wp-john-martin
+  title: John Martin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Martin_(painter)
+- key: wp-ferdinand-georg-waldmuller
+  title: Ferdinand Georg Waldmüller (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ferdinand_Georg_Waldm%C3%BCller
+- key: wp-leon-cogniet
+  title: Léon Cogniet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/L%C3%A9on_Cogniet
+- key: wp-ary-scheffer
+  title: Ary Scheffer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ary_Scheffer
+- key: wp-narcisse-virgilio-diaz
+  title: Narcisse Virgilio Díaz (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Narcisse_Virgilio_D%C3%ADaz
+- key: wp-rudolf-von-alt
+  title: Rudolf von Alt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rudolf_von_Alt
+- key: wp-emanuel-leutze
+  title: Emanuel Leutze (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Emanuel_Leutze
+- key: wp-arthur-hughes
+  title: Arthur Hughes (artist) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Arthur_Hughes_(artist)
+- key: wp-jules-cheret
+  title: Jules Chéret (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jules_Ch%C3%A9ret
+- key: wp-carolus-duran
+  title: Carolus-Duran (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carolus-Duran
+- key: wp-jean-paul-laurens
+  title: Jean-Paul Laurens (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Paul_Laurens
+- key: wp-mihaly-munkacsy
+  title: Mihály Munkácsy (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mih%C3%A1ly_Munk%C3%A1csy
+- key: wp-harriet-backer
+  title: Harriet Backer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Harriet_Backer
+- key: wp-jean-beraud
+  title: Jean Béraud (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean_B%C3%A9raud
+- key: wp-anna-bilinska
+  title: Anna Bilińska (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anna_Bili%C5%84ska
+- key: wp-vlaho-bukovac
+  title: Vlaho Bukovac (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vlaho_Bukovac
+- key: wp-fernand-khnopff
+  title: Fernand Khnopff (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fernand_Khnopff
+- key: wp-anton-azbe
+  title: Anton Ažbe (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anton_A%C5%BEbe
+- key: wp-igor-grabar
+  title: Igor Grabar (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Igor_Grabar
+- key: wp-mikhail-larionov
+  title: Mikhail Larionov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mikhail_Larionov
+- key: wp-frans-masereel
+  title: Frans Masereel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frans_Masereel
+- key: wp-jeanne-hebuterne
+  title: Jeanne Hebuterne (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jeanne_H%C3%A9buterne
+- key: wp-kara-walker
+  title: Kara Walker (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kara_Walker
+- key: wp-josef-capek
+  title: Josef Capek (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Josef_%C4%8Capek
+- key: wp-amrita-sher-gil
+  title: Amrita Sher-Gil (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Amrita_Sher-Gil
+places:
+- key: barrow-suffolk
+  name: Barrow
+  kind: village
+  region: Suffolk
+  country: England
+  lat: 52.236
+  lng: 0.573
+  visitable: true
+  sources:
+  - wp-mary-beale
+- key: allbrook
+  name: Allbrook
+  kind: village
+  city: Eastleigh
+  region: Hampshire
+  country: England
+  lat: 50.986
+  lng: -1.343
+  visitable: true
+  sources:
+  - wp-mary-beale
+- key: st-jamess-church-piccadilly
+  name: St James's Church, Piccadilly
+  kind: church
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.509
+  lng: -0.137
+  visitable: true
+  sources:
+  - wp-mary-beale
+  - wp-willem-van-de-velde-the-younger
+- key: canale-di-serino
+  name: Canale di Serino
+  kind: town
+  region: Avellino
+  country: Italy
+  lat: 40.894
+  lng: 14.87
+  visitable: true
+  sources:
+  - wp-francesco-solimena
+- key: barra-naples
+  name: Barra
+  kind: district
+  city: Naples
+  region: Campania
+  country: Italy
+  lat: 40.838
+  lng: 14.337
+  visitable: true
+  sources:
+  - wp-francesco-solimena
+- key: san-giacomo-dellorio-venice
+  name: San Giacomo dell'Orio
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.438
+  lng: 12.325
+  visitable: true
+  sources:
+  - wp-giambattista-pittoni
+- key: kukadlo
+  name: Kukadlo (Kuckadel)
+  kind: village
+  region: Lubusz Voivodeship
+  country: Poland
+  lat: 52.09
+  lng: 15.08
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: potsdam
+  name: Potsdam
+  kind: city
+  region: Brandenburg
+  country: Germany
+  lat: 52.399
+  lng: 13.066
+  visitable: true
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: sanssouci-palace
+  name: Sanssouci Palace
+  kind: palace
+  city: Potsdam
+  region: Brandenburg
+  country: Germany
+  lat: 52.404
+  lng: 13.038
+  founded: 1747
+  built_by: Frederick II of Prussia
+  architect: Georg Wenzeslaus von Knobelsdorff
+  visitable: true
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: berlin-state-opera
+  name: Berlin State Opera (Staatsoper Unter den Linden)
+  kind: opera house
+  city: Berlin
+  region: Berlin
+  country: Germany
+  lat: 52.517
+  lng: 13.395
+  architect: Georg Wenzeslaus von Knobelsdorff
+  visitable: true
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: charlottenburg-palace
+  name: Charlottenburg Palace
+  kind: palace
+  city: Berlin
+  region: Berlin
+  country: Germany
+  lat: 52.521
+  lng: 13.296
+  visitable: true
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: rheinsberg-palace
+  name: Rheinsberg Palace
+  kind: palace
+  city: Rheinsberg
+  region: Brandenburg
+  country: Germany
+  lat: 53.099
+  lng: 12.894
+  visitable: true
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: strand-on-the-green
+  name: Strand-on-the-Green
+  kind: district
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.488
+  lng: -0.289
+  visitable: true
+  sources:
+  - wp-johan-zoffany
+- key: calcutta
+  name: Calcutta (Kolkata)
+  kind: city
+  region: West Bengal
+  country: India
+  lat: 22.573
+  lng: 88.364
+  visitable: true
+  sources:
+  - wp-johan-zoffany
+- key: queen-annes-county-maryland
+  name: Queen Anne's County
+  kind: county
+  region: Maryland
+  country: United States
+  lat: 38.95
+  lng: -76.08
+  visitable: true
+  sources:
+  - wp-charles-willson-peale
+- key: st-peters-church-philadelphia
+  name: St. Peter's Episcopal Church
+  kind: church
+  city: Philadelphia
+  region: Pennsylvania
+  country: United States
+  lat: 39.941
+  lng: -75.147
+  visitable: true
+  sources:
+  - wp-charles-willson-peale
+- key: balslev
+  name: Balslev
+  kind: village
+  region: Funen
+  country: Denmark
+  lat: 55.48
+  lng: 9.95
+  visitable: true
+  sources:
+  - wp-jens-juel
+- key: assistens-cemetery
+  name: Assistens Cemetery
+  kind: cemetery
+  city: Copenhagen
+  region: Capital Region
+  country: Denmark
+  lat: 55.692
+  lng: 12.549
+  visitable: true
+  sources:
+  - wp-jens-juel
+- key: lebanon-connecticut
+  name: Lebanon, Connecticut
+  kind: town
+  region: Connecticut
+  country: United States
+  lat: 41.636
+  lng: -72.213
+  visitable: true
+  sources:
+  - wp-john-trumbull
+- key: saint-hubert-belgium
+  name: Saint-Hubert
+  kind: town
+  region: Luxembourg Province
+  country: Belgium
+  lat: 50.027
+  lng: 5.375
+  visitable: true
+  sources:
+  - wp-pierre-joseph-redoute
+- key: trinitatis-cemetery-dresden
+  name: Trinitatis Cemetery
+  kind: cemetery
+  city: Dresden
+  region: Saxony
+  country: Germany
+  lat: 51.049
+  lng: 13.757
+  visitable: true
+  sources:
+  - wp-carl-gustav-carus
+- key: haydon-bridge
+  name: Haydon Bridge
+  kind: village
+  region: Northumberland
+  country: England
+  lat: 54.974
+  lng: -2.247
+  visitable: true
+  sources:
+  - wp-john-martin
+- key: douglas-isle-of-man
+  name: Douglas
+  kind: city
+  region: Isle of Man
+  country: Isle of Man
+  lat: 54.15
+  lng: -4.48
+  visitable: true
+  sources:
+  - wp-john-martin
+- key: kirk-braddan-cemetery
+  name: Kirk Braddan cemetery
+  kind: cemetery
+  city: Douglas
+  region: Isle of Man
+  country: Isle of Man
+  lat: 54.175
+  lng: -4.51
+  visitable: true
+  sources:
+  - wp-john-martin
+- key: hinterbruehl
+  name: Hinterbrühl
+  kind: town
+  region: Lower Austria
+  country: Austria
+  lat: 48.088
+  lng: 16.256
+  visitable: true
+  sources:
+  - wp-ferdinand-georg-waldmuller
+- key: saint-nicolas-des-champs
+  name: Saint-Nicolas-des-Champs
+  kind: church
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.866
+  lng: 2.355
+  visitable: true
+  sources:
+  - wp-leon-cogniet
+- key: menton
+  name: Menton
+  kind: city
+  region: Provence-Alpes-Cote d'Azur
+  country: France
+  lat: 43.775
+  lng: 7.497
+  visitable: true
+  sources:
+  - wp-narcisse-virgilio-diaz
+- key: washington-dc
+  name: Washington, D.C.
+  kind: city
+  region: District of Columbia
+  country: United States
+  lat: 38.907
+  lng: -77.037
+  visitable: true
+  sources:
+  - wp-emanuel-leutze
+- key: glenwood-cemetery-washington
+  name: Glenwood Cemetery
+  kind: cemetery
+  city: Washington, D.C.
+  region: District of Columbia
+  country: United States
+  lat: 38.923
+  lng: -77.002
+  visitable: true
+  sources:
+  - wp-emanuel-leutze
+- key: kew-green
+  name: Kew Green
+  kind: green
+  city: London
+  region: Greater London
+  country: United Kingdom
+  lat: 51.482
+  lng: -0.289
+  visitable: true
+  sources:
+  - wp-arthur-hughes
+- key: hotel-de-ville-paris
+  name: Hôtel de Ville, Paris
+  kind: town hall
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.857
+  lng: 2.352
+  visitable: true
+  sources:
+  - wp-jules-cheret
+- key: fourquevaux
+  name: Fourquevaux
+  kind: village
+  region: Haute-Garonne
+  country: France
+  lat: 43.482
+  lng: 1.585
+  visitable: true
+  sources:
+  - wp-jean-paul-laurens
+- key: munkacs
+  name: Munkács (Mukachevo)
+  kind: city
+  region: Zakarpattia Oblast
+  country: Ukraine
+  lat: 48.44
+  lng: 22.718
+  visitable: true
+  sources:
+  - wp-mihaly-munkacsy
+- key: kerepesi-cemetery
+  name: Kerepesi Cemetery
+  kind: cemetery
+  city: Budapest
+  region: Budapest
+  country: Hungary
+  lat: 47.497
+  lng: 19.093
+  visitable: true
+  sources:
+  - wp-mihaly-munkacsy
+- key: holmestrand
+  name: Holmestrand
+  kind: town
+  region: Vestfold
+  country: Norway
+  lat: 59.489
+  lng: 10.314
+  visitable: true
+  sources:
+  - wp-harriet-backer
+- key: sandvika
+  name: Sandvika
+  kind: town
+  region: Akershus
+  country: Norway
+  lat: 59.89
+  lng: 10.524
+  visitable: true
+  sources:
+  - wp-harriet-backer
+- key: var-frelsers-gravlund
+  name: Vår Frelsers gravlund
+  kind: cemetery
+  city: Oslo
+  region: Oslo
+  country: Norway
+  lat: 59.917
+  lng: 10.748
+  visitable: true
+  sources:
+  - wp-harriet-backer
+- key: montparnasse-cemetery
+  name: Montparnasse Cemetery
+  kind: cemetery
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.839
+  lng: 2.326
+  visitable: true
+  sources:
+  - wp-jean-beraud
+- key: zlatopol
+  name: Zlatopol
+  kind: town
+  city: Novomyrhorod
+  region: Kirovohrad Oblast
+  country: Ukraine
+  lat: 48.77
+  lng: 31.65
+  sources:
+  - wp-anna-bilinska
+- key: powazki-cemetery
+  name: Powązki Cemetery
+  kind: cemetery
+  city: Warsaw
+  region: Masovia
+  country: Poland
+  lat: 52.25
+  lng: 20.973
+  visitable: true
+  sources:
+  - wp-anna-bilinska
+- key: cavtat
+  name: Cavtat
+  kind: town
+  region: Dubrovnik-Neretva County
+  country: Croatia
+  lat: 42.581
+  lng: 18.216
+  visitable: true
+  sources:
+  - wp-vlaho-bukovac
+- key: zagreb
+  name: Zagreb
+  kind: city
+  country: Croatia
+  lat: 45.815
+  lng: 15.982
+  visitable: true
+  sources:
+  - wp-vlaho-bukovac
+- key: tiraspol
+  name: Tiraspol
+  kind: city
+  country: Moldova
+  lat: 46.84
+  lng: 29.643
+  sources:
+  - wp-mikhail-larionov
+- key: blankenberge
+  name: Blankenberge
+  kind: town
+  region: West Flanders
+  country: Belgium
+  lat: 51.313
+  lng: 3.132
+  sources:
+  - wp-frans-masereel
+- key: meaux
+  name: Meaux
+  kind: town
+  region: Seine-et-Marne
+  country: France
+  lat: 48.96
+  lng: 2.878
+  sources:
+  - wp-jeanne-hebuterne
+- key: stockton-california
+  name: Stockton
+  kind: city
+  region: California
+  country: United States
+  lat: 37.958
+  lng: -121.291
+  sources:
+  - wp-kara-walker
+- key: hronov
+  name: Hronov
+  kind: town
+  region: Hradec Kralove Region
+  country: Czech Republic
+  lat: 50.485
+  lng: 16.184
+  sources:
+  - wp-josef-capek
+- key: laeken-cemetery
+  name: Laeken Cemetery
+  kind: cemetery
+  city: Brussels
+  region: Brussels-Capital Region
+  country: Belgium
+  lat: 50.882
+  lng: 4.348
+  visitable: true
+  sources:
+  - wp-fernand-khnopff
+- key: ivry-cemetery
+  name: Ivry Cemetery
+  kind: cemetery
+  city: Ivry-sur-Seine
+  region: Val-de-Marne
+  country: France
+  lat: 48.813
+  lng: 2.388
+  visitable: true
+  sources:
+  - wp-mikhail-larionov
+- key: shimla
+  name: Shimla
+  kind: city
+  region: Himachal Pradesh
+  country: India
+  lat: 31.104
+  lng: 77.173
+  visitable: true
+  sources:
+  - wp-amrita-sher-gil
+people:
+- key: catharina-van-hemessen
+  name: Catharina van Hemessen
+  type: Artist
+  roles:
+  - painter
+  born: 1528
+  died: 1565
+  died_estimated: true
+  prominence: 3
+  note: Flemish Renaissance painter, the earliest female Flemish painter with verifiable surviving work, known for small portraits of women and a 1548 self-portrait at an easel.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b5/Hemessen-Selbstbildnis.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Hemessen-Selbstbildnis.jpg/500px-Hemessen-Selbstbildnis.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hemessen-Selbstbildnis.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the 1548 self-portrait captured; her other surviving portraits and religious works not listed. Patron Maria of Austria and father Jan Sanders van Hemessen are not yet
+    in the database.
+  sources:
+  - wp-catharina-van-hemessen
+- key: cornelis-van-haarlem
+  name: Cornelis van Haarlem
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: 1562
+  died: '1638-11-11'
+  prominence: 3
+  note: Dutch Golden Age painter and draughtsman, a leading Northern Mannerist of the Haarlem Mannerists and a forerunner of Frans Hals as a portraitist.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Cornelis_van_Haarlem_Self-portrait_06112012_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Cornelis_van_Haarlem_Self-portrait_06112012_2.jpg/500px-Cornelis_van_Haarlem_Self-portrait_06112012_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Cornelis_van_Haarlem_Self-portrait_06112012_2.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, training, the Haarlem Academy circle and pupils captured; individual works not built out (article gives no dated work with a clear year).
+  sources:
+  - wp-cornelis-van-haarlem
+- key: bartholomeus-van-der-helst
+  name: Bartholomeus van der Helst
+  type: Artist
+  roles:
+  - painter
+  born: 1613
+  born_estimated: true
+  died: 1670
+  prominence: 4
+  note: Dutch Golden Age portrait painter, the most popular portraitist of Amsterdam in the mid 17th century, known for group portraits of civic guards.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/58/Bartholomeus_van_der_Helst_self_portrait_1667_cropped.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Bartholomeus_van_der_Helst_self_portrait_1667_cropped.jpg/500px-Bartholomeus_van_der_Helst_self_portrait_1667_cropped.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bartholomeus_van_der_Helst_self_portrait_1667_cropped.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; other portraits, genre scenes and collaborations not listed.
+  sources:
+  - wp-bartholomeus-van-der-helst
+- key: willem-van-de-velde-the-younger
+  name: Willem van de Velde the Younger
+  type: Artist
+  roles:
+  - painter
+  born: 1633
+  died: '1707-04-06'
+  prominence: 4
+  note: Dutch marine painter who moved to England with his father and worked for Charles II.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/be/Willem_van_de_Velde_II_%281633-1707%29_-_%28by_Lodewijk_van_der_Helst%2C_1672%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Willem_van_de_Velde_II_%281633-1707%29_-_%28by_Lodewijk_van_der_Helst%2C_1672%29.jpg/500px-Willem_van_de_Velde_II_%281633-1707%29_-_%28by_Lodewijk_van_der_Helst%2C_1672%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Willem_van_de_Velde_II_(1633-1707)_-_(by_Lodewijk_van_der_Helst,_1672).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, royal patronage captured; no individual works with a clear year in the article. Father Willem van de Velde the Elder and teacher Simon de Vlieger are not yet in the database.
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- key: mary-beale
+  name: Mary Beale
+  type: Artist
+  roles:
+  - painter
+  - writer
+  born: 1633
+  died: 1699
+  prominence: 3
+  note: English Baroque portrait painter and writer, one of the first English women to work as a professional painter and the main earner for her family.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/27/Mary_beale_self_portrait.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Mary_beale_self_portrait.JPG/500px-Mary_beale_self_portrait.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Mary_beale_self_portrait.JPG
+  image_license: CC BY-SA 2.5
+  coverage: partly
+  coverage_note: Dates, places, career and the Lely connection captured; no individual painting with a clear year named in the article; sitters such as John Tillotson not yet in the database.
+  sources:
+  - wp-mary-beale
+- key: nicolaes-maes
+  name: Nicolaes Maes
+  type: Artist
+  roles:
+  - painter
+  born: 1634
+  died: 1693
+  prominence: 4
+  note: Dutch painter and pupil of Rembrandt, known for domestic genre scenes in the 1650s and later the leading portrait painter of Amsterdam.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/83/Nicolaes_Maes_-_Self-portrait.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Nicolaes_Maes_-_Self-portrait.jpeg/500px-Nicolaes_Maes_-_Self-portrait.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Nicolaes_Maes_-_Self-portrait.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and two works captured; other biblical, genre and portrait works not listed; pupils (Justus de Gelder and others) not yet in the database.
+  sources:
+  - wp-nicolaes-maes
+- key: francesco-solimena
+  name: Francesco Solimena
+  type: Artist
+  roles:
+  - painter
+  born: '1657-10-04'
+  died: '1747-04-03'
+  prominence: 4
+  note: Italian Baroque painter who dominated Neapolitan painting from the 1690s, with a large workshop of pupils.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Francesco_Solimena_001.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Francesco_Solimena_001.jpg/500px-Francesco_Solimena_001.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Francesco_Solimena_001.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two late works captured; the many frescoes, altarpieces and portraits not built out. Patrons Orsini (Benedict XIII), Charles III of Spain and Victor Amadeus II, and pupils
+    such as Conca, De Mura and Giaquinto, are not yet in the database.
+  sources:
+  - wp-francesco-solimena
+- key: giambattista-pittoni
+  name: Giambattista Pittoni
+  type: Artist
+  roles:
+  - painter
+  born: '1687-06-06'
+  died: '1767-11-06'
+  prominence: 3
+  note: Venetian late Baroque and Rococo painter, second president of the Venetian Academy of Fine Arts, with commissions from courts across Europe.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/Giambattista_Pittoni%2C_portrait_from_Longhi_1762%2C_cropped.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Giambattista_Pittoni%2C_portrait_from_Longhi_1762%2C_cropped.jpg/500px-Giambattista_Pittoni%2C_portrait_from_Longhi_1762%2C_cropped.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giambattista_Pittoni,_portrait_from_Longhi_1762,_cropped.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one dated commission captured; the 247 catalogued paintings and foreign patrons (Augustus II and III of Poland, Philip V of Spain, Clemens August of Bavaria) not yet linked.
+  sources:
+  - wp-giambattista-pittoni
+- key: georg-wenzeslaus-von-knobelsdorff
+  name: Georg Wenzeslaus von Knobelsdorff
+  type: Artist
+  roles:
+  - architect
+  - painter
+  born: '1699-02-17'
+  died: '1753-09-16'
+  prominence: 3
+  note: Prussian officer, painter and architect, Frederick the Great's chief architect, who designed the Berlin opera house, Sanssouci and the Frederician Rococo interiors.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8a/Georg_Wenzeslaus_von_Knobelsdorff_1738.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Georg_Wenzeslaus_von_Knobelsdorff_1738.jpg/500px-Georg_Wenzeslaus_von_Knobelsdorff_1738.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Georg_Wenzeslaus_von_Knobelsdorff_1738.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, main buildings (Rheinsberg, Berlin opera house, Charlottenburg wing, Sanssouci, Potsdam City Palace) captured; article read to the end of the architecture sections but Monbijou,
+    Tiergarten, French Church and other works not given as places. Frederick II of Prussia and teacher Antoine Pesne are not yet in the database.
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- key: hubert-robert
+  name: Hubert Robert
+  type: Artist
+  roles:
+  - painter
+  born: '1733-05-22'
+  died: '1808-04-15'
+  prominence: 4
+  note: French painter of landscapes and capricci of ruins, nicknamed Robert des ruines, who also advised on picturesque garden design.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fa/%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Hubert_Robert_%281788%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Hubert_Robert_%281788%29.jpg/500px-%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Hubert_Robert_%281788%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Hubert_Robert_(1788).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Rome and Paris years, Panini link and one dated work captured; garden commissions (Méréville, Ermenonville, Petit Trianon, Bagatelle) and the 1793 imprisonment not built out.
+  sources:
+  - wp-hubert-robert
+- key: johan-zoffany
+  name: Johan Zoffany
+  type: Artist
+  roles:
+  - painter
+  born: '1733-03-13'
+  died: '1810-11-11'
+  prominence: 4
+  note: German-born neoclassical painter active in England, Italy and India, known for theatrical conversation pieces and portraits for George III.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/Johan_Zoffany_-_Self-portrait_as_David_with_the_head_of_Goliath_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Johan_Zoffany_-_Self-portrait_as_David_with_the_head_of_Goliath_-_Google_Art_Project.jpg/500px-Johan_Zoffany_-_Self-portrait_as_David_with_the_head_of_Goliath_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Johan_Zoffany_-_Self-portrait_as_David_with_the_head_of_Goliath_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, royal patronage and two dated works captured; the Works section of the article is empty in the local text, so the full portfolio is not built out. Queen Charlotte, Maria
+    Theresa and Warren Hastings are not yet in the database.
+  sources:
+  - wp-johan-zoffany
+- key: charles-willson-peale
+  name: Charles Willson Peale
+  type: Artist
+  roles:
+  - painter
+  born: '1741-04-15'
+  died: '1827-02-22'
+  prominence: 4
+  note: American portrait painter of the Revolutionary era, also a soldier, naturalist and founder of the Philadelphia Museum.
+  sources:
+  - wp-charles-willson-peale
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Charles_Willson_Peale_-_Charles_Willson_Peale_Self-Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Charles_Willson_Peale_-_Charles_Willson_Peale_Self-Portrait_-_Google_Art_Project.jpg/500px-Charles_Willson_Peale_-_Charles_Willson_Peale_Self-Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Charles_Willson_Peale_-_Charles_Willson_Peale_Self-Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers (Copley, West), places, two key works captured; museum, sons' careers and full portfolio not built out.
+- key: jens-juel
+  name: Jens Juel
+  type: Artist
+  roles:
+  - painter
+  born: '1745-05-12'
+  died: '1802-12-27'
+  prominence: 3
+  note: Danish portrait painter, regarded as the leading Danish portraitist of the 18th century, court painter and director of the Royal Danish Academy.
+  sources:
+  - wp-jens-juel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Selbstbildnis_an_der_Staffelei_%281766%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Selbstbildnis_an_der_Staffelei_%281766%29.jpg/500px-Selbstbildnis_an_der_Staffelei_%281766%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Selbstbildnis_an_der_Staffelei_(1766).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and career outline captured; individual works not built out.
+- key: john-trumbull
+  name: John Trumbull
+  type: Artist
+  roles:
+  - painter
+  born: '1756-06-06'
+  died: '1843-11-10'
+  prominence: 4
+  note: American painter and Revolutionary War officer, known as the Painter of the Revolution for his history paintings.
+  sources:
+  - wp-john-trumbull
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ac/Self_Portrait_by_John_Trumbull_circa_1802.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Self_Portrait_by_John_Trumbull_circa_1802.jpeg/500px-Self_Portrait_by_John_Trumbull_circa_1802.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Self_Portrait_by_John_Trumbull_circa_1802.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (West), places and one key work captured; other Revolution paintings and portraits not built out.
+- key: pierre-joseph-redoute
+  name: Pierre-Joseph Redouté
+  type: Artist
+  roles:
+  - painter
+  - botanical illustrator
+  born: '1759-07-10'
+  died: '1840-06-19'
+  prominence: 4
+  note: Painter and botanist from the Austrian Netherlands, famed for watercolours of roses and lilies and called the Raphael of flowers.
+  sources:
+  - wp-pierre-joseph-redoute
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4a/Portrait_de_Pierre-Joseph_Redout.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Portrait_de_Pierre-Joseph_Redout.jpg/500px-Portrait_de_Pierre-Joseph_Redout.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_de_Pierre-Joseph_Redout.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; patrons (Marie Antoinette, Josephine) and teachers not linked because not in the database; other publications not built out.
+- key: carl-gustav-carus
+  name: Carl Gustav Carus
+  type: Artist
+  roles:
+  - painter
+  - physician
+  born: '1789-01-03'
+  died: '1869-07-28'
+  prominence: 3
+  note: German physician, physiologist and Romantic landscape painter, a pupil of Caspar David Friedrich and a writer on psychology and art theory.
+  sources:
+  - wp-carl-gustav-carus
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a8/Carl_Gustav_Carus_Gem%C3%A4lde_von_Johann_Carl_R%C3%B6ssler.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Carl_Gustav_Carus_Gem%C3%A4lde_von_Johann_Carl_R%C3%B6ssler.jpg/500px-Carl_Gustav_Carus_Gem%C3%A4lde_von_Johann_Carl_R%C3%B6ssler.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carl_Gustav_Carus_Gem%C3%A4lde_von_Johann_Carl_R%C3%B6ssler.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Friedrich), places captured; no individual paintings named with years in the article; scientific writings not built out.
+- key: john-martin
+  name: John Martin
+  type: Artist
+  roles:
+  - painter
+  - engraver
+  - illustrator
+  born: '1789-07-19'
+  died: '1854-02-17'
+  prominence: 4
+  note: English Romantic painter and mezzotint engraver of vast, dramatic biblical scenes, called the most popular painter of his day.
+  sources:
+  - wp-john-martin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2b/John_Martin_by_Henry_Warren.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/John_Martin_by_Henry_Warren.jpg/500px-John_Martin_by_Henry_Warren.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Martin_by_Henry_Warren.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; engravings, engineering plans and other paintings not built out.
+- key: ferdinand-georg-waldmuller
+  name: Ferdinand Georg Waldmüller
+  type: Artist
+  roles:
+  - painter
+  born: '1793-01-15'
+  died: '1865-08-23'
+  prominence: 3
+  note: Austrian painter, one of the most important of the Biedermeier period, known for portraits, landscapes and scenes of rural life.
+  sources:
+  - wp-ferdinand-georg-waldmuller
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6f/Ferdinand_Georg_Waldmueller_Selbstbildnis_mit_Laterne%2C_1825.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Ferdinand_Georg_Waldmueller_Selbstbildnis_mit_Laterne%2C_1825.jpg/500px-Ferdinand_Georg_Waldmueller_Selbstbildnis_mit_Laterne%2C_1825.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ferdinand_Georg_Waldmueller_Selbstbildnis_mit_Laterne,_1825.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; other works and restitution cases not built out.
+- key: leon-cogniet
+  name: Léon Cogniet
+  type: Artist
+  roles:
+  - painter
+  born: '1794-08-29'
+  died: '1880-11-20'
+  prominence: 3
+  note: French history and portrait painter, best remembered as a teacher of more than one hundred students.
+  sources:
+  - wp-leon-cogniet
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/26/L%C3%A9on_Cogniet_self-portrait_1818.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/L%C3%A9on_Cogniet_self-portrait_1818.jpg/500px-L%C3%A9on_Cogniet_self-portrait_1818.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:L%C3%A9on_Cogniet_self-portrait_1818.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Guerin), places and one dated work captured; students and later murals not built out.
+- key: ary-scheffer
+  name: Ary Scheffer
+  type: Artist
+  roles:
+  - painter
+  born: '1795-02-10'
+  died: '1858-06-15'
+  prominence: 3
+  note: Dutch-French Romantic painter of literary and religious subjects and portraits, drawing teacher to Louis-Philippe's children.
+  sources:
+  - wp-ary-scheffer
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/97/Ary_Scheffer_Self-portrait_Rijksmuseum_SK_A_4748.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Ary_Scheffer_Self-portrait_Rijksmuseum_SK_A_4748.jpg/500px-Ary_Scheffer_Self-portrait_Rijksmuseum_SK_A_4748.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ary_Scheffer_Self-portrait_Rijksmuseum_SK_A_4748.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Guerin), places and two dated works captured; patrons not linked because not in the database; other works not built out.
+- key: narcisse-virgilio-diaz
+  name: Narcisse Virgilio Díaz
+  type: Artist
+  roles:
+  - painter
+  born: '1807-08-20'
+  died: '1876-11-18'
+  prominence: 3
+  note: French painter of the Barbizon school, known for forest scenes and storms.
+  sources:
+  - wp-narcisse-virgilio-diaz
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/38/Narcisse_Virgilio_D%C3%ADaz.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/3/38/Narcisse_Virgilio_D%C3%ADaz.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Narcisse_Virgilio_D%C3%ADaz.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Rousseau), places and two dated works captured; other works not built out.
+- key: rudolf-von-alt
+  name: Rudolf von Alt
+  type: Artist
+  roles:
+  - painter
+  born: '1812-08-28'
+  died: '1905-03-12'
+  prominence: 3
+  note: Austrian landscape and architectural watercolourist of Vienna, known for detailed views and interiors.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/Rudolf-von-Alt-1890.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Rudolf-von-Alt-1890.jpg/500px-Rudolf-von-Alt-1890.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rudolf-von-Alt-1890.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death place and style captured; no dated works named by the article, so no artworks.
+  sources:
+  - wp-rudolf-von-alt
+- key: emanuel-leutze
+  name: Emanuel Leutze
+  type: Artist
+  roles:
+  - painter
+  born: '1816-05-24'
+  died: '1868-07-18'
+  prominence: 3
+  note: German-born American history painter of the Düsseldorf school, best known for Washington Crossing the Delaware.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4c/Emanuel_Leutze.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Emanuel_Leutze.jpg/500px-Emanuel_Leutze.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Emanuel_Leutze.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the best-known work captured; other works (Westward Ho!, Columbus paintings) and teachers not in the database not built out.
+  sources:
+  - wp-emanuel-leutze
+- key: arthur-hughes
+  name: Arthur Hughes
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1832-01-27'
+  died: '1915-12-22'
+  prominence: 3
+  note: English painter and illustrator associated with the Pre-Raphaelites, known for April Love and The Long Engagement.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/83/Arthur_Hughes_by_Arthur_Hughes.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Arthur_Hughes_by_Arthur_Hughes.jpg/500px-Arthur_Hughes_by_Arthur_Hughes.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Arthur_Hughes_by_Arthur_Hughes.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and links to the Pre-Raphaelite circle captured; no artwork has a clear year in the article, so none added; illustrations not built out.
+  sources:
+  - wp-arthur-hughes
+- key: jules-cheret
+  name: Jules Chéret
+  type: Artist
+  roles:
+  - painter
+  - lithographer
+  born: '1836-05-31'
+  died: '1932-09-23'
+  prominence: 4
+  note: French painter and lithographer, master of Belle Époque poster art, called the father of the modern poster.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Ch%C3%A9ret%2C_Jules%2C_Nadar%2C_Gallica.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Ch%C3%A9ret%2C_Jules%2C_Nadar%2C_Gallica.jpg/500px-Ch%C3%A9ret%2C_Jules%2C_Nadar%2C_Gallica.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ch%C3%A9ret,_Jules,_Nadar,_Gallica.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and the Hôtel de Ville murals captured; individual posters not built out.
+  sources:
+  - wp-jules-cheret
+- key: carolus-duran
+  name: Carolus-Duran
+  type: Artist
+  roles:
+  - painter
+  born: '1837-07-04'
+  died: '1917-02-17'
+  prominence: 3
+  note: French society portrait painter and teacher of the Belle Époque, director of the French Academy in Rome 1905 to 1913.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4a/Portrait_of_Carolus-Duran.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Portrait_of_Carolus-Duran.jpg/500px-Portrait_of_Carolus-Duran.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Carolus-Duran.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, career, places, Sargent link and two dated works captured; most pupils (not in the database) and the portrait catalogue not built out.
+  sources:
+  - wp-carolus-duran
+- key: jean-paul-laurens
+  name: Jean-Paul Laurens
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1838-03-28'
+  died: '1921-03-23'
+  prominence: 3
+  note: French academic history painter and teacher at the Académie Julian, known for public decorations such as the Panthéon Saint Genevieve series.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Laurens_-_Self_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Laurens_-_Self_portrait.jpg/500px-Laurens_-_Self_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Laurens_-_Self_portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death place and teacher captured; the article gives no years for his public commissions, so no artworks.
+  sources:
+  - wp-jean-paul-laurens
+- key: mihaly-munkacsy
+  name: Mihály Munkácsy
+  type: Artist
+  roles:
+  - painter
+  born: '1844-02-20'
+  died: '1900-05-01'
+  prominence: 4
+  note: Hungarian painter who lived in Paris, known for genre pictures and large biblical paintings such as his Christ trilogy.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Munk%C3%A1csy_Self-portrait_1870s.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Munk%C3%A1csy_Self-portrait_1870s.jpg/500px-Munk%C3%A1csy_Self-portrait_1870s.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Munk%C3%A1csy_Self-portrait_1870s.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, training and two key works captured; Golgotha, Ecce Homo, the Parliament and Vienna ceiling works and many genre pictures not built out.
+  sources:
+  - wp-mihaly-munkacsy
+- key: harriet-backer
+  name: Harriet Backer
+  type: Artist
+  roles:
+  - painter
+  born: '1845-01-21'
+  died: '1932-03-25'
+  prominence: 3
+  note: Norwegian painter and pioneer among women artists, best known for detailed interior scenes of light and shadow.
+  coverage: partly
+  coverage_note: Dates, places, teachers and career captured; no artwork has a clear making year in the article, so none added.
+  sources:
+  - wp-harriet-backer
+- key: jean-beraud
+  name: Jean Béraud
+  type: Artist
+  roles:
+  - painter
+  born: '1849-01-12'
+  died: '1935-10-04'
+  prominence: 3
+  note: French painter of Belle Époque Paris street, cafe and nightlife scenes, between academic art and Impressionism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/Jean_B%C3%A9raud%2C_by_Jean_B%C3%A9raud.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Jean_B%C3%A9raud%2C_by_Jean_B%C3%A9raud.jpg/500px-Jean_B%C3%A9raud%2C_by_Jean_B%C3%A9raud.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean_B%C3%A9raud,_by_Jean_B%C3%A9raud.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher and one breakthrough work captured; the Paris street scenes not built out.
+  sources:
+  - wp-jean-beraud
+- key: anna-bilinska
+  name: Anna Bilińska
+  type: Artist
+  roles:
+  - painter
+  born: '1854-12-08'
+  died: '1893-04-08'
+  prominence: 3
+  note: Polish realist portrait painter, called the first internationally known Polish woman artist, who worked in Paris for about a decade.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Self-portrait_by_Anna_Bili%C5%84ska-Bohdanowiczowa%2C_1887.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Self-portrait_by_Anna_Bili%C5%84ska-Bohdanowiczowa%2C_1887.jpg/500px-Self-portrait_by_Anna_Bili%C5%84ska-Bohdanowiczowa%2C_1887.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-portrait_by_Anna_Bili%C5%84ska-Bohdanowiczowa,_1887.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two portraits captured; teachers not in the database and the wider portfolio not built out.
+  sources:
+  - wp-anna-bilinska
+- key: vlaho-bukovac
+  name: Vlaho Bukovac
+  type: Artist
+  roles:
+  - painter
+  born: '1855-07-04'
+  died: '1922-04-23'
+  prominence: 3
+  note: Croatian painter and academic, known for the nude Une fleur and the 1895 curtain of the Croatian National Theatre; court painter to Serbian, Yugoslav and Montenegrin dynasties.
+  sources:
+  - wp-vlaho-bukovac
+  coverage: partly
+  coverage_note: Dates, teacher, places and two key works captured; Serbian and Montenegrin court portraits and Prague teaching not built out.
+- key: fernand-khnopff
+  name: Fernand Khnopff
+  type: Artist
+  roles:
+  - painter
+  born: '1858-09-12'
+  died: '1921-11-12'
+  prominence: 4
+  note: Belgian symbolist painter and a founder of Les XX, best known for Caress of the Sphinx.
+  sources:
+  - wp-fernand-khnopff
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/13/Fernand_Khnopff.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Fernand_Khnopff.jpg/500px-Fernand_Khnopff.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fernand_Khnopff.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and one key work captured; full portfolio and stage designs not built out.
+- key: anton-azbe
+  name: Anton Ažbe
+  type: Artist
+  roles:
+  - painter
+  - teacher
+  born: '1862-05-30'
+  died: 1905
+  prominence: 3
+  note: Slovene realist painter whose Munich school trained a generation of Eastern European painters.
+  sources:
+  - wp-anton-azbe
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/73/1904_photo_of_Anton_A%C5%BEbe.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/73/1904_photo_of_Anton_A%C5%BEbe.jpg/500px-1904_photo_of_Anton_A%C5%BEbe.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:1904_photo_of_Anton_A%C5%BEbe.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, school and main pupils captured; his few surviving works not catalogued.
+- key: igor-grabar
+  name: Igor Grabar
+  type: Artist
+  roles:
+  - painter
+  - art historian
+  - restorer
+  born: '1871-03-25'
+  died: '1960-05-16'
+  prominence: 3
+  note: Russian Post-Impressionist painter, art historian and restorer, director of the Tretyakov Gallery from 1913.
+  sources:
+  - wp-igor-grabar
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Grabar_portrait_-_Kustodiev%2C_1916.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Grabar_portrait_-_Kustodiev%2C_1916.jpg/500px-Grabar_portrait_-_Kustodiev%2C_1916.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Grabar_portrait_-_Kustodiev,_1916.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, schools and Tretyakov role captured; works and death place not built out (article text cut).
+- key: mikhail-larionov
+  name: Mikhail Larionov
+  type: Artist
+  roles:
+  - painter
+  born: '1881-06-03'
+  died: '1964-05-10'
+  prominence: 3
+  note: Russian avant-garde painter, co-inventor of Rayonism with Natalia Goncharova and founder of Knave of Diamonds and Donkey's Tail.
+  sources:
+  - wp-mikhail-larionov
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Mikhail_Fyodorovich_Larionov.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Mikhail_Fyodorovich_Larionov.jpg/500px-Mikhail_Fyodorovich_Larionov.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Mikhail_Fyodorovich_Larionov.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, places and movements captured; individual dated works not built out.
+- key: frans-masereel
+  name: Frans Masereel
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1889-07-31'
+  died: '1972-01-03'
+  prominence: 3
+  note: Belgian painter and graphic artist working mainly in France, known for wordless woodcut novels such as Passionate Journey.
+  sources:
+  - wp-frans-masereel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cb/Jules_De_Bruycker_-_Frans_Masereel_in_his_studio.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/cb/Jules_De_Bruycker_-_Frans_Masereel_in_his_studio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jules_De_Bruycker_-_Frans_Masereel_in_his_studio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; other wordless novels and paintings not built out.
+- key: jeanne-hebuterne
+  name: Jeanne Hebuterne
+  type: Artist
+  roles:
+  - painter
+  - art model
+  born: '1898-04-06'
+  died: '1920-01-26'
+  prominence: 2
+  note: French painter and art model, best known as the subject and common-law wife of Amedeo Modigliani.
+  sources:
+  - wp-jeanne-hebuterne
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1a/Jeanne_Hebuterne_seated.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/1/1a/Jeanne_Hebuterne_seated.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jeanne_Hebuterne_seated.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace and life with Modigliani captured; her own works not catalogued.
+- key: kara-walker
+  name: Kara Walker
+  type: Artist
+  roles:
+  - painter
+  - silhouettist
+  - printmaker
+  - sculptor
+  - installation artist
+  - filmmaker
+  born: '1969-11-26'
+  prominence: 4
+  note: American contemporary artist known for room-size cut-paper silhouette tableaux on race, gender and the antebellum South; MacArthur fellow in 1997.
+  sources:
+  - wp-kara-walker
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/Kara_Walker_Interview_Camden_Arts_Centre_01.47_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Kara_Walker_Interview_Camden_Arts_Centre_01.47_%28cropped%29.jpg/500px-Kara_Walker_Interview_Camden_Arts_Centre_01.47_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kara_Walker_Interview_Camden_Arts_Centre_01.47_(cropped).jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Birth, education and two key works captured; later exhibitions and films not built out.
+- key: josef-capek
+  name: Josef Capek
+  type: Artist
+  roles:
+  - painter
+  - writer
+  - poet
+  born: '1887-03-23'
+  died: 1945
+  prominence: 3
+  note: Czech painter, writer and poet, a Cubist who developed a playful minimalist style and was credited with inventing the word robot.
+  sources:
+  - wp-josef-capek
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/09/Josef_Capek_1937.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Josef_Capek_1937.jpg/500px-Josef_Capek_1937.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Josef_Capek_1937.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and death in Bergen-Belsen captured; works not catalogued.
+- key: amrita-sher-gil
+  name: Amrita Sher-Gil
+  type: Artist
+  roles:
+  - painter
+  born: '1913-01-30'
+  died: '1941-12-05'
+  prominence: 4
+  note: Hungarian-Indian painter, a pioneer of modern Indian art, whose Paris breakthrough was Young Girls (1932).
+  sources:
+  - wp-amrita-sher-gil
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/91/Amrita_Sher-Gil_2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Amrita_Sher-Gil_2.jpg/500px-Amrita_Sher-Gil_2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Amrita_Sher-Gil_2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, places and one key work captured; South Indian trilogy and later works not built out.
+artworks:
+- key: self-portrait-at-easel-catharina-van-hemessen
+  name: Self-Portrait at the Easel
+  kind: painting
+  made: 1548
+  collection: Kunstmuseum Basel
+  people:
+  - person: catharina-van-hemessen
+    role: creator
+  - person: catharina-van-hemessen
+    role: subject
+  prominence: 4
+  note: Often given as the first self-portrait of an artist at an easel, inscribed with her name, 1548 and her age, 20.
+  sources:
+  - wp-catharina-van-hemessen
+- key: banquet-of-the-amsterdam-civic-guard-1648
+  name: Banquet of the Amsterdam Civic Guard in Celebration of the Peace of Munster
+  kind: painting
+  made: 1648
+  collection: Rijksmuseum
+  people:
+  - person: bartholomeus-van-der-helst
+    role: creator
+  prominence: 4
+  note: Large group portrait of 25 people that Houbraken said sealed van der Helst's fame.
+  sources:
+  - wp-bartholomeus-van-der-helst
+- key: portrait-of-paulus-potter-van-der-helst
+  name: Portrait of Paulus Potter
+  kind: painting
+  made: 1654
+  people:
+  - person: bartholomeus-van-der-helst
+    role: creator
+  - person: paulus-potter
+    role: subject
+  prominence: 2
+  note: Based on a self-portrait Potter made shortly before his early death.
+  sources:
+  - wp-bartholomeus-van-der-helst
+- key: the-virtuous-woman-maes
+  name: The Virtuous Woman
+  kind: painting
+  made: 1655
+  estimated: true
+  collection: Wallace Collection
+  people:
+  - person: nicolaes-maes
+    role: creator
+  prominence: 3
+  note: A housewife sewing a shirt in a tidy interior, with an open Bible, possibly a depiction of Proverbs 31.
+  sources:
+  - wp-nicolaes-maes
+- key: six-governors-of-the-amsterdam-surgeons-guild
+  name: Six Governors of the Amsterdam Surgeons' Guild
+  kind: painting
+  made: 1680
+  made_end: 1681
+  collection: Rijksmuseum
+  people:
+  - person: nicolaes-maes
+    role: creator
+  prominence: 2
+  note: Maes's one group portrait of a guild.
+  sources:
+  - wp-nicolaes-maes
+- key: expulsion-of-heliodorus-solimena
+  name: Expulsion of Heliodorus from the Temple
+  kind: fresco
+  made: 1725
+  people:
+  - person: francesco-solimena
+    role: creator
+  prominence: 3
+  note: Vast fresco seen in Naples as a statement of his classical allegiance; the article says it was not well received.
+  sources:
+  - wp-francesco-solimena
+- key: battle-of-alexander-and-darius-solimena
+  name: Battle of Alexander and Darius
+  kind: painting
+  made: 1735
+  made_end: 1736
+  collection: Monastery of San Lorenzo, El Escorial
+  people:
+  - person: francesco-solimena
+    role: creator
+  prominence: 3
+  note: Commissioned by Charles III, Bourbon ruler of Naples, for the Real Sitio de San Ildefonso.
+  sources:
+  - wp-francesco-solimena
+- key: st-elizabeth-distributing-alms-pittoni
+  name: St. Elizabeth Distributing Alms to the Poor
+  kind: painting
+  made: 1734
+  people:
+  - person: giambattista-pittoni
+    role: creator
+  prominence: 2
+  note: Painted for the castle of Bad Mergentheim for Clemens August of Bavaria.
+  sources:
+  - wp-giambattista-pittoni
+- key: the-port-of-rome-hubert-robert
+  name: The Port of Rome, ornamented with different Monuments of Architecture, Ancient and Modern
+  kind: painting
+  made: 1766
+  people:
+  - person: hubert-robert
+    role: creator
+  prominence: 3
+  note: Roman capriccio with which he was received into the Academie royale de peinture et de sculpture in 1766.
+  sources:
+  - wp-hubert-robert
+- key: queen-charlotte-and-her-two-eldest-children
+  name: Queen Charlotte and Her Two Eldest Children
+  kind: painting
+  made: 1765
+  people:
+  - person: johan-zoffany
+    role: creator
+  places: []
+  prominence: 3
+  note: Informal scene showing the queen at her toilette inside Buckingham House.
+  sources:
+  - wp-johan-zoffany
+- key: colonel-mordaunts-cock-fight
+  name: Colonel Mordaunt's Cock Fight
+  kind: painting
+  made: 1784
+  made_end: 1786
+  collection: Tate
+  people:
+  - person: johan-zoffany
+    role: creator
+  prominence: 3
+  note: History painting made in India, described by Maya Jasanoff as the liveliest illustration of early colonial India.
+  sources:
+  - wp-johan-zoffany
+- key: the-staircase-group
+  name: The Staircase Group
+  kind: painting
+  made: 1795
+  collection: Philadelphia Museum of Art
+  people:
+  - person: charles-willson-peale
+    role: creator
+  prominence: 4
+  note: Trompe-l'oeil double portrait of the painter's sons Raphaelle and Titian.
+  sources:
+  - wp-charles-willson-peale
+- key: washington-at-princeton-peale
+  name: Washington at Princeton
+  kind: painting
+  made: 1779
+  people:
+  - person: charles-willson-peale
+    role: creator
+  prominence: 3
+  note: Sold in 2005 for a record price for a North American portrait.
+  sources:
+  - wp-charles-willson-peale
+- key: declaration-of-independence-trumbull
+  name: Declaration of Independence
+  kind: painting
+  made: 1817
+  people:
+  - person: john-trumbull
+    role: creator
+  prominence: 4
+  note: One of four Trumbull paintings in the United States Capitol rotunda; shown on the reverse of the two-dollar bill.
+  sources:
+  - wp-john-trumbull
+- key: les-roses-redoute
+  name: Les Roses
+  made: 1817
+  made_end: 1824
+  people:
+  - person: pierre-joseph-redoute
+    role: creator
+  prominence: 4
+  note: Three volumes of rose plates; the article names him as well known for it.
+  sources:
+  - wp-pierre-joseph-redoute
+- key: belshazzars-feast-martin
+  name: Belshazzar's Feast
+  kind: painting
+  made: 1820
+  people:
+  - person: john-martin
+    role: creator
+  prominence: 4
+  note: His triumph; five thousand people paid to see it.
+  sources:
+  - wp-john-martin
+- key: destruction-of-pompeii-and-herculaneum-martin
+  name: The Destruction of Pompeii and Herculaneum
+  kind: painting
+  made: 1822
+  people:
+  - person: john-martin
+    role: creator
+  prominence: 3
+  note: Thought lost in the Tate flood of 1928, rediscovered and restored for the 2011-12 exhibition.
+  sources:
+  - wp-john-martin
+- key: portrait-of-beethoven-waldmuller
+  name: Portrait of Ludwig van Beethoven
+  kind: painting
+  made: 1823
+  collection: Kunsthistorisches Museum, Vienna
+  people:
+  - person: ferdinand-georg-waldmuller
+    role: creator
+  prominence: 3
+  note: Part of the museum's musical collection.
+  sources:
+  - wp-ferdinand-georg-waldmuller
+- key: helen-rescued-by-castor-and-pollux-cogniet
+  name: Helen Rescued by Castor and Pollux
+  kind: painting
+  made: 1817
+  people:
+  - person: leon-cogniet
+    role: creator
+  prominence: 2
+  note: Won the Prix de Rome in 1817.
+  sources:
+  - wp-leon-cogniet
+- key: francesca-da-rimini-scheffer
+  name: Francesca da Rimini
+  kind: painting
+  made: 1836
+  people:
+  - person: ary-scheffer
+    role: creator
+  prominence: 3
+  note: Scene from Dante's Inferno; particularly highly praised.
+  sources:
+  - wp-ary-scheffer
+- key: christus-consolator-scheffer
+  name: Christus Consolator
+  kind: painting
+  made: 1836
+  collection: Van Gogh Museum, Amsterdam
+  people:
+  - person: ary-scheffer
+    role: creator
+  prominence: 3
+  note: The prime version is in the Van Gogh Museum; a reduced version was rediscovered in Minnesota in 2007.
+  sources:
+  - wp-ary-scheffer
+- key: the-pearl-fairy-diaz
+  name: The Pearl Fairy
+  kind: painting
+  made: 1857
+  people:
+  - person: narcisse-virgilio-diaz
+    role: creator
+  prominence: 3
+  note: Named by the article among his most notable works.
+  sources:
+  - wp-narcisse-virgilio-diaz
+- key: the-storm-diaz
+  name: The Storm
+  kind: painting
+  made: 1871
+  people:
+  - person: narcisse-virgilio-diaz
+    role: creator
+  prominence: 3
+  note: Named by the article among his most notable works.
+  sources:
+  - wp-narcisse-virgilio-diaz
+- key: washington-crossing-the-delaware
+  name: Washington Crossing the Delaware
+  kind: painting
+  made: 1850
+  made_end: 1851
+  collection: Metropolitan Museum of Art
+  people:
+  - person: emanuel-leutze
+    role: creator
+  places:
+  - place: metropolitan-museum-of-art
+    role: held
+  prominence: 5
+  note: First version finished 1850 (destroyed in a 1942 bombing raid); this larger replica, now at the Met, was shown in New York in October 1851.
+  sources:
+  - wp-emanuel-leutze
+- key: the-joys-of-life-hotel-de-ville
+  name: The Joys of Life
+  kind: mural
+  made: 1895
+  people:
+  - person: jules-cheret
+    role: creator
+  places:
+  - place: hotel-de-ville-paris
+    role: made-for
+  prominence: 3
+  note: Series of murals added to the walls of Paris's Hôtel de Ville; four of the five scenes show performing arts, the fifth is called Toys.
+  sources:
+  - wp-jules-cheret
+- key: murdered-carolus-duran
+  name: Murdered (The Assassination)
+  kind: painting
+  made: 1866
+  people:
+  - person: carolus-duran
+    role: creator
+  prominence: 3
+  note: One of his first successes, after which he became best known as a portrait painter.
+  sources:
+  - wp-carolus-duran
+- key: the-lady-in-gloves-carolus-duran
+  name: The Lady in Gloves
+  kind: painting
+  made: 1869
+  people:
+  - person: carolus-duran
+    role: creator
+  prominence: 3
+  note: Painted with his future wife, the pastellist Pauline Croizette (not in the database), posing; the article dates it 1869.
+  sources:
+  - wp-carolus-duran
+- key: the-last-day-of-a-condemned-man
+  name: The Last Day of a Condemned Man
+  kind: painting
+  made: 1869
+  people:
+  - person: mihaly-munkacsy
+    role: creator
+  prominence: 4
+  note: Considered his first masterpiece; won the Gold Medal of the Paris Salon in 1870.
+  sources:
+  - wp-mihaly-munkacsy
+- key: christ-in-front-of-pilate
+  name: Christ in front of Pilate
+  kind: painting
+  made: 1882
+  people:
+  - person: mihaly-munkacsy
+    role: creator
+  prominence: 4
+  note: First of the Christ trilogy for dealer Charles Sedelmeyer (Golgotha 1884, Ecce Homo 1896); bought in 2014 by the Hungarian government.
+  sources:
+  - wp-mihaly-munkacsy
+- key: on-the-way-back-from-the-funeral
+  name: On the Way Back from the Funeral
+  kind: painting
+  made: 1876
+  people:
+  - person: jean-beraud
+    role: creator
+  prominence: 2
+  note: The painting with which he first gained recognition, in 1876.
+  sources:
+  - wp-jean-beraud
+- key: self-portrait-with-apron-and-brushes
+  name: Self-Portrait with Apron and Brushes
+  kind: painting
+  made: 1887
+  people:
+  - person: anna-bilinska
+    role: creator
+  - person: anna-bilinska
+    role: subject
+  prominence: 3
+  note: Developed a new self-portrait pose, placing the artist in front of a model's backdrop.
+  sources:
+  - wp-anna-bilinska
+- key: by-the-window-bilinska
+  name: By the Window
+  kind: painting
+  medium: pastel
+  made: 1890
+  people:
+  - person: anna-bilinska
+    role: creator
+  prominence: 2
+  note: Regarded by 19th-century critics as her most modern painting; probably painted on a summer holiday at Boyardville.
+  sources:
+  - wp-anna-bilinska
+- key: une-fleur
+  name: Une fleur (A Flower)
+  kind: painting
+  made: 1887
+  people:
+  - person: vlaho-bukovac
+    role: creator
+  prominence: 3
+  note: Nude created in Bukovac's French period; sold at Bonhams in 2006 as Reclining Nude.
+  sources:
+  - wp-vlaho-bukovac
+- key: reformation-of-croatian-literature-and-art
+  name: The Reformation of Croatian Literature and Art
+  kind: theatre curtain
+  made: 1895
+  people:
+  - person: vlaho-bukovac
+    role: creator
+  prominence: 2
+  note: Curtain of the Croatian National Theatre in Zagreb.
+  sources:
+  - wp-vlaho-bukovac
+- key: caress-of-the-sphinx
+  name: Caress of the Sphinx (L'Art ou Des Caresses)
+  kind: painting
+  made: 1896
+  people:
+  - person: fernand-khnopff
+    role: creator
+  prominence: 4
+  note: Probably Khnopff's most famous painting; influenced the Vienna Secession and Klimt.
+  sources:
+  - wp-fernand-khnopff
+- key: passionate-journey
+  name: Passionate Journey
+  kind: wordless novel
+  made: 1919
+  people:
+  - person: frans-masereel
+    role: creator
+  prominence: 3
+  note: Generally said to be the greatest of Masereel's over 40 wordless novels in woodcuts.
+  sources:
+  - wp-frans-masereel
+- key: gone-an-historical-romance
+  name: Gone, An Historical Romance of a Civil War as It Occurred Between the Dusky Thighs of One Young Negress and Her Heart
+  kind: cut-paper silhouette mural
+  made: 1994
+  people:
+  - person: kara-walker
+    role: creator
+  prominence: 3
+  note: Brought Walker to the art world's attention; its title refers to Gone with the Wind.
+  sources:
+  - wp-kara-walker
+- key: a-subtlety-or-the-marvelous-sugar-baby
+  name: A Subtlety, or the Marvelous Sugar Baby
+  kind: installation
+  made: 2014
+  people:
+  - person: kara-walker
+    role: creator
+  prominence: 3
+  note: Large-scale public sculptural installation with Creative Time, made on the occasion of the demolition of the Domino Sugar Refining Plant.
+  sources:
+  - wp-kara-walker
+- key: young-girls-sher-gil
+  name: Young Girls
+  kind: painting
+  medium: oil
+  made: 1932
+  people:
+  - person: amrita-sher-gil
+    role: creator
+  prominence: 3
+  note: Breakthrough work; won a gold medal and her election as Associate of the Grand Salon in Paris in 1933.
+  sources:
+  - wp-amrita-sher-gil
+links:
+- teacher: rembrandt
+  student: nicolaes-maes
+  sources:
+  - wp-nicolaes-maes
+- teacher: giovanni-paolo-panini
+  student: hubert-robert
+  sources:
+  - wp-hubert-robert
+- patron: charles-ii-of-england
+  artist: willem-van-de-velde-the-younger
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- patron: george-iii
+  artist: johan-zoffany
+  from: 1764
+  sources:
+  - wp-johan-zoffany
+- teacher: john-singleton-copley
+  student: charles-willson-peale
+  sources:
+  - wp-charles-willson-peale
+- teacher: benjamin-west
+  student: charles-willson-peale
+  sources:
+  - wp-charles-willson-peale
+- teacher: benjamin-west
+  student: john-trumbull
+  sources:
+  - wp-john-trumbull
+- teacher: caspar-david-friedrich
+  student: carl-gustav-carus
+  sources:
+  - wp-carl-gustav-carus
+- teacher: pierre-narcisse-guerin
+  student: leon-cogniet
+  sources:
+  - wp-leon-cogniet
+- teacher: pierre-narcisse-guerin
+  student: ary-scheffer
+  sources:
+  - wp-ary-scheffer
+- teacher: theodore-rousseau
+  student: narcisse-virgilio-diaz
+  sources:
+  - wp-narcisse-virgilio-diaz
+- teacher: leon-cogniet
+  student: jean-paul-laurens
+  sources:
+  - wp-jean-paul-laurens
+- teacher: carolus-duran
+  student: john-singer-sargent
+  sources:
+  - wp-carolus-duran
+- teacher: leon-bonnat
+  student: jean-beraud
+  sources:
+  - wp-jean-beraud
+- teacher: leon-bonnat
+  student: harriet-backer
+  sources:
+  - wp-harriet-backer
+- teacher: jean-leon-gerome
+  student: harriet-backer
+  sources:
+  - wp-harriet-backer
+- teacher: alexandre-cabanel
+  student: vlaho-bukovac
+  sources:
+  - wp-vlaho-bukovac
+- teacher: jules-joseph-lefebvre
+  student: fernand-khnopff
+  sources:
+  - wp-fernand-khnopff
+- teacher: anton-azbe
+  student: igor-grabar
+  sources:
+  - wp-anton-azbe
+- teacher: anton-azbe
+  student: alexej-von-jawlensky
+  sources:
+  - wp-anton-azbe
+- teacher: anton-azbe
+  student: marianne-von-werefkin
+  sources:
+  - wp-anton-azbe
+- teacher: anton-azbe
+  student: wassily-kandinsky
+  sources:
+  - wp-anton-azbe
+- teacher: anton-azbe
+  student: kuzma-petrov-vodkin
+  sources:
+  - wp-anton-azbe
+- teacher: anton-azbe
+  student: nadezda-petrovic
+  sources:
+  - wp-anton-azbe
+- teacher: ilya-repin
+  student: igor-grabar
+  sources:
+  - wp-igor-grabar
+- teacher: isaac-levitan
+  student: mikhail-larionov
+  sources:
+  - wp-mikhail-larionov
+- teacher: valentin-serov
+  student: mikhail-larionov
+  sources:
+  - wp-mikhail-larionov
+moments:
+- person: catharina-van-hemessen
+  role: worked
+  place: antwerp
+  year: 1561
+  sources:
+  - wp-catharina-van-hemessen
+- person: catharina-van-hemessen
+  role: worked
+  place: s-hertogenbosch
+  year: 1565
+  sources:
+  - wp-catharina-van-hemessen
+- person: cornelis-van-haarlem
+  role: born
+  place: haarlem
+  year: 1562
+  sources:
+  - wp-cornelis-van-haarlem
+- person: cornelis-van-haarlem
+  role: worked
+  place: antwerp
+  year: 1580
+  sources:
+  - wp-cornelis-van-haarlem
+- person: cornelis-van-haarlem
+  role: worked
+  place: haarlem
+  year: 1583
+  sources:
+  - wp-cornelis-van-haarlem
+- person: bartholomeus-van-der-helst
+  role: born
+  place: haarlem
+  year: 1613
+  sources:
+  - wp-bartholomeus-van-der-helst
+- person: bartholomeus-van-der-helst
+  role: worked
+  place: amsterdam
+  year: 1637
+  sources:
+  - wp-bartholomeus-van-der-helst
+- person: bartholomeus-van-der-helst
+  role: died
+  place: amsterdam
+  year: 1670
+  sources:
+  - wp-bartholomeus-van-der-helst
+- person: willem-van-de-velde-the-younger
+  role: born
+  place: leiden
+  year: 1633
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- person: willem-van-de-velde-the-younger
+  role: worked
+  place: amsterdam
+  year: 1652
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- person: willem-van-de-velde-the-younger
+  role: died
+  place: london
+  year: 1707
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- person: willem-van-de-velde-the-younger
+  role: buried
+  place: st-jamess-church-piccadilly
+  year: 1707
+  sources:
+  - wp-willem-van-de-velde-the-younger
+- person: mary-beale
+  role: born
+  place: barrow-suffolk
+  year: 1633
+  sources:
+  - wp-mary-beale
+- person: mary-beale
+  role: worked
+  place: allbrook
+  year: 1664
+  sources:
+  - wp-mary-beale
+- person: mary-beale
+  role: died
+  place: london
+  year: 1699
+  sources:
+  - wp-mary-beale
+- person: mary-beale
+  role: buried
+  place: st-jamess-church-piccadilly
+  year: 1699
+  sources:
+  - wp-mary-beale
+- person: nicolaes-maes
+  role: born
+  place: dordrecht
+  year: 1634
+  sources:
+  - wp-nicolaes-maes
+- person: nicolaes-maes
+  role: worked
+  place: amsterdam
+  year: 1648
+  sources:
+  - wp-nicolaes-maes
+- person: nicolaes-maes
+  role: worked
+  place: dordrecht
+  year: 1653
+  sources:
+  - wp-nicolaes-maes
+- person: nicolaes-maes
+  role: worked
+  place: amsterdam
+  year: 1673
+  sources:
+  - wp-nicolaes-maes
+- person: nicolaes-maes
+  role: buried
+  place: oude-kerk-amsterdam
+  year: 1693
+  sources:
+  - wp-nicolaes-maes
+- person: francesco-solimena
+  role: born
+  place: canale-di-serino
+  year: 1657
+  sources:
+  - wp-francesco-solimena
+- person: francesco-solimena
+  role: worked
+  place: naples
+  year: 1674
+  sources:
+  - wp-francesco-solimena
+- person: francesco-solimena
+  role: worked
+  place: salerno
+  year: 1680
+  sources:
+  - wp-francesco-solimena
+- person: francesco-solimena
+  role: died
+  place: barra-naples
+  year: 1747
+  sources:
+  - wp-francesco-solimena
+- person: giambattista-pittoni
+  role: born
+  place: venice
+  year: 1687
+  sources:
+  - wp-giambattista-pittoni
+- person: giambattista-pittoni
+  role: worked
+  place: venice
+  year: 1720
+  sources:
+  - wp-giambattista-pittoni
+- person: giambattista-pittoni
+  role: died
+  place: venice
+  year: 1767
+  sources:
+  - wp-giambattista-pittoni
+- person: giambattista-pittoni
+  role: buried
+  place: san-giacomo-dellorio-venice
+  year: 1767
+  sources:
+  - wp-giambattista-pittoni
+- person: georg-wenzeslaus-von-knobelsdorff
+  role: born
+  place: kukadlo
+  year: 1699
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- person: georg-wenzeslaus-von-knobelsdorff
+  role: worked
+  place: charlottenburg-palace
+  year: 1741
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- person: georg-wenzeslaus-von-knobelsdorff
+  role: worked
+  place: sanssouci-palace
+  year: 1745
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- person: georg-wenzeslaus-von-knobelsdorff
+  role: died
+  place: berlin
+  year: 1753
+  sources:
+  - wp-georg-wenzeslaus-von-knobelsdorff
+- person: hubert-robert
+  role: born
+  place: paris
+  year: 1733
+  sources:
+  - wp-hubert-robert
+- person: hubert-robert
+  role: worked
+  place: rome
+  year: 1754
+  sources:
+  - wp-hubert-robert
+- person: hubert-robert
+  role: worked
+  place: paris
+  year: 1765
+  sources:
+  - wp-hubert-robert
+- person: johan-zoffany
+  role: born
+  place: frankfurt
+  year: 1733
+  sources:
+  - wp-johan-zoffany
+- person: johan-zoffany
+  role: worked
+  place: rome
+  year: 1750
+  sources:
+  - wp-johan-zoffany
+- person: johan-zoffany
+  role: worked
+  place: london
+  year: 1760
+  sources:
+  - wp-johan-zoffany
+- person: johan-zoffany
+  role: worked
+  place: calcutta
+  year: 1783
+  sources:
+  - wp-johan-zoffany
+- person: johan-zoffany
+  role: died
+  place: strand-on-the-green
+  year: 1810
+  sources:
+  - wp-johan-zoffany
+- person: johan-zoffany
+  role: buried
+  place: st-annes-church-kew
+  year: 1810
+  sources:
+  - wp-johan-zoffany
+- person: charles-willson-peale
+  role: born
+  place: queen-annes-county-maryland
+  year: 1741
+  sources:
+  - wp-charles-willson-peale
+- person: charles-willson-peale
+  role: worked
+  place: philadelphia
+  year: 1775
+  sources:
+  - wp-charles-willson-peale
+- person: charles-willson-peale
+  role: buried
+  place: st-peters-church-philadelphia
+  year: 1827
+  sources:
+  - wp-charles-willson-peale
+- person: jens-juel
+  role: born
+  place: balslev
+  year: 1745
+  sources:
+  - wp-jens-juel
+- person: jens-juel
+  role: worked
+  place: rome
+  year: 1772
+  sources:
+  - wp-jens-juel
+- person: jens-juel
+  role: worked
+  place: geneva
+  year: 1777
+  sources:
+  - wp-jens-juel
+- person: jens-juel
+  role: worked
+  place: copenhagen
+  year: 1780
+  sources:
+  - wp-jens-juel
+- person: jens-juel
+  role: died
+  place: copenhagen
+  year: 1802
+  sources:
+  - wp-jens-juel
+- person: jens-juel
+  role: buried
+  place: assistens-cemetery
+  year: 1802
+  sources:
+  - wp-jens-juel
+- person: john-trumbull
+  role: born
+  place: lebanon-connecticut
+  year: 1756
+  sources:
+  - wp-john-trumbull
+- person: john-trumbull
+  role: worked
+  place: london
+  year: 1780
+  sources:
+  - wp-john-trumbull
+- person: john-trumbull
+  role: worked
+  place: paris
+  year: 1786
+  sources:
+  - wp-john-trumbull
+- person: john-trumbull
+  role: died
+  place: new-york-city
+  year: 1843
+  sources:
+  - wp-john-trumbull
+- person: pierre-joseph-redoute
+  role: born
+  place: saint-hubert-belgium
+  year: 1759
+  sources:
+  - wp-pierre-joseph-redoute
+- person: pierre-joseph-redoute
+  role: worked
+  place: paris
+  year: 1782
+  sources:
+  - wp-pierre-joseph-redoute
+- person: pierre-joseph-redoute
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1840
+  sources:
+  - wp-pierre-joseph-redoute
+- person: carl-gustav-carus
+  role: born
+  place: leipzig
+  year: 1789
+  sources:
+  - wp-carl-gustav-carus
+- person: carl-gustav-carus
+  role: worked
+  place: dresden
+  year: 1814
+  sources:
+  - wp-carl-gustav-carus
+- person: carl-gustav-carus
+  role: died
+  place: dresden
+  year: 1869
+  sources:
+  - wp-carl-gustav-carus
+- person: carl-gustav-carus
+  role: buried
+  place: trinitatis-cemetery-dresden
+  year: 1869
+  sources:
+  - wp-carl-gustav-carus
+- person: john-martin
+  role: born
+  place: haydon-bridge
+  year: 1789
+  sources:
+  - wp-john-martin
+- person: john-martin
+  role: worked
+  place: london
+  year: 1806
+  sources:
+  - wp-john-martin
+- person: john-martin
+  role: died
+  place: douglas-isle-of-man
+  year: 1854
+  sources:
+  - wp-john-martin
+- person: john-martin
+  role: buried
+  place: kirk-braddan-cemetery
+  year: 1854
+  sources:
+  - wp-john-martin
+- person: ferdinand-georg-waldmuller
+  role: worked
+  place: vienna
+  year: 1817
+  sources:
+  - wp-ferdinand-georg-waldmuller
+- person: ferdinand-georg-waldmuller
+  role: died
+  place: hinterbruehl
+  year: 1865
+  sources:
+  - wp-ferdinand-georg-waldmuller
+- person: leon-cogniet
+  role: born
+  place: paris
+  year: 1794
+  sources:
+  - wp-leon-cogniet
+- person: leon-cogniet
+  role: worked
+  place: rome
+  year: 1817
+  sources:
+  - wp-leon-cogniet
+- person: leon-cogniet
+  role: worked
+  place: saint-nicolas-des-champs
+  year: 1827
+  sources:
+  - wp-leon-cogniet
+- person: leon-cogniet
+  role: worked
+  place: louvre-palace
+  year: 1833
+  sources:
+  - wp-leon-cogniet
+- person: leon-cogniet
+  role: died
+  place: paris
+  year: 1880
+  sources:
+  - wp-leon-cogniet
+- person: leon-cogniet
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1880
+  sources:
+  - wp-leon-cogniet
+- person: ary-scheffer
+  role: worked
+  place: paris
+  year: 1811
+  sources:
+  - wp-ary-scheffer
+- person: ary-scheffer
+  role: died
+  place: argenteuil
+  year: 1858
+  sources:
+  - wp-ary-scheffer
+- person: ary-scheffer
+  role: buried
+  place: montmartre-cemetery
+  year: 1858
+  sources:
+  - wp-ary-scheffer
+- person: narcisse-virgilio-diaz
+  role: born
+  place: bordeaux
+  year: 1807
+  sources:
+  - wp-narcisse-virgilio-diaz
+- person: narcisse-virgilio-diaz
+  role: worked
+  place: brussels
+  year: 1870
+  sources:
+  - wp-narcisse-virgilio-diaz
+- person: narcisse-virgilio-diaz
+  role: died
+  place: menton
+  year: 1876
+  sources:
+  - wp-narcisse-virgilio-diaz
+- person: rudolf-von-alt
+  role: born
+  place: vienna
+  year: 1812
+  sources:
+  - wp-rudolf-von-alt
+- person: rudolf-von-alt
+  role: died
+  place: vienna
+  year: 1905
+  sources:
+  - wp-rudolf-von-alt
+- person: emanuel-leutze
+  role: born
+  place: schwabisch-gmund
+  year: 1816
+  sources:
+  - wp-emanuel-leutze
+- person: emanuel-leutze
+  role: worked
+  place: dusseldorf
+  year: 1845
+  sources:
+  - wp-emanuel-leutze
+- person: emanuel-leutze
+  role: worked
+  place: new-york-city
+  year: 1859
+  sources:
+  - wp-emanuel-leutze
+- person: emanuel-leutze
+  role: died
+  place: washington-dc
+  year: 1868
+  sources:
+  - wp-emanuel-leutze
+- person: emanuel-leutze
+  role: buried
+  place: glenwood-cemetery-washington
+  year: 1868
+  sources:
+  - wp-emanuel-leutze
+- person: arthur-hughes
+  role: born
+  place: london
+  year: 1832
+  sources:
+  - wp-arthur-hughes
+- person: arthur-hughes
+  role: died
+  place: kew-green
+  year: 1915
+  sources:
+  - wp-arthur-hughes
+- person: jules-cheret
+  role: born
+  place: paris
+  year: 1836
+  sources:
+  - wp-jules-cheret
+- person: jules-cheret
+  role: worked
+  place: london
+  year: 1859
+  sources:
+  - wp-jules-cheret
+- person: jules-cheret
+  role: worked
+  place: hotel-de-ville-paris
+  year: 1895
+  sources:
+  - wp-jules-cheret
+- person: jules-cheret
+  role: buried
+  place: cimetiere-saint-vincent
+  year: 1932
+  sources:
+  - wp-jules-cheret
+- person: carolus-duran
+  role: worked
+  place: paris
+  year: 1853
+  sources:
+  - wp-carolus-duran
+- person: carolus-duran
+  role: worked
+  place: rome
+  year: 1862
+  sources:
+  - wp-carolus-duran
+- person: carolus-duran
+  role: worked
+  place: rome
+  year: 1905
+  sources:
+  - wp-carolus-duran
+- person: jean-paul-laurens
+  role: born
+  place: fourquevaux
+  year: 1838
+  sources:
+  - wp-jean-paul-laurens
+- person: jean-paul-laurens
+  role: died
+  place: paris
+  year: 1921
+  sources:
+  - wp-jean-paul-laurens
+- person: mihaly-munkacsy
+  role: born
+  place: munkacs
+  year: 1844
+  sources:
+  - wp-mihaly-munkacsy
+- person: mihaly-munkacsy
+  role: worked
+  place: vienna
+  year: 1865
+  sources:
+  - wp-mihaly-munkacsy
+- person: mihaly-munkacsy
+  role: worked
+  place: kunsthistorisches-museum-vienna
+  year: 1888
+  sources:
+  - wp-mihaly-munkacsy
+- person: mihaly-munkacsy
+  role: died
+  place: bonn
+  year: 1900
+  sources:
+  - wp-mihaly-munkacsy
+- person: mihaly-munkacsy
+  role: buried
+  place: kerepesi-cemetery
+  year: 1900
+  sources:
+  - wp-mihaly-munkacsy
+- person: harriet-backer
+  role: born
+  place: holmestrand
+  year: 1845
+  sources:
+  - wp-harriet-backer
+- person: harriet-backer
+  role: worked
+  place: munich
+  year: 1874
+  sources:
+  - wp-harriet-backer
+- person: harriet-backer
+  role: worked
+  place: paris
+  year: 1880
+  sources:
+  - wp-harriet-backer
+- person: harriet-backer
+  role: worked
+  place: sandvika
+  year: 1888
+  sources:
+  - wp-harriet-backer
+- person: harriet-backer
+  role: buried
+  place: var-frelsers-gravlund
+  year: 1932
+  sources:
+  - wp-harriet-backer
+- person: jean-beraud
+  role: born
+  place: saint-petersburg
+  year: 1849
+  sources:
+  - wp-jean-beraud
+- person: jean-beraud
+  role: died
+  place: paris
+  year: 1935
+  sources:
+  - wp-jean-beraud
+- person: jean-beraud
+  role: buried
+  place: montparnasse-cemetery
+  year: 1935
+  sources:
+  - wp-jean-beraud
+- person: anna-bilinska
+  role: born
+  place: zlatopol
+  year: 1854
+  sources:
+  - wp-anna-bilinska
+- person: anna-bilinska
+  role: worked
+  place: paris
+  year: 1882
+  sources:
+  - wp-anna-bilinska
+- person: anna-bilinska
+  role: died
+  place: warsaw
+  year: 1893
+  sources:
+  - wp-anna-bilinska
+- person: anna-bilinska
+  role: buried
+  place: powazki-cemetery
+  year: 1893
+  sources:
+  - wp-anna-bilinska
+- person: vlaho-bukovac
+  role: born
+  place: cavtat
+  year: 1855
+  sources:
+  - wp-vlaho-bukovac
+- person: vlaho-bukovac
+  role: worked
+  place: zagreb
+  year: 1893
+  sources:
+  - wp-vlaho-bukovac
+- person: vlaho-bukovac
+  role: worked
+  place: prague
+  year: 1903
+  sources:
+  - wp-vlaho-bukovac
+- person: vlaho-bukovac
+  role: died
+  place: prague
+  year: 1922
+  sources:
+  - wp-vlaho-bukovac
+- person: fernand-khnopff
+  role: worked
+  place: brussels
+  year: 1864
+  sources:
+  - wp-fernand-khnopff
+- person: fernand-khnopff
+  role: buried
+  place: laeken-cemetery
+  year: 1921
+  sources:
+  - wp-fernand-khnopff
+- person: anton-azbe
+  role: worked
+  place: vienna
+  year: 1882
+  sources:
+  - wp-anton-azbe
+- person: anton-azbe
+  role: worked
+  place: munich
+  year: 1884
+  sources:
+  - wp-anton-azbe
+- person: igor-grabar
+  role: worked
+  place: munich
+  year: 1896
+  sources:
+  - wp-igor-grabar
+- person: igor-grabar
+  role: worked
+  place: tretyakov-gallery
+  year: 1913
+  sources:
+  - wp-igor-grabar
+- person: mikhail-larionov
+  role: born
+  place: tiraspol
+  year: 1881
+  sources:
+  - wp-mikhail-larionov
+- person: mikhail-larionov
+  role: worked
+  place: paris
+  year: 1915
+  sources:
+  - wp-mikhail-larionov
+- person: mikhail-larionov
+  role: died
+  place: fontenay-aux-roses
+  year: 1964
+  sources:
+  - wp-mikhail-larionov
+- person: mikhail-larionov
+  role: buried
+  place: ivry-cemetery
+  year: 1964
+  sources:
+  - wp-mikhail-larionov
+- person: frans-masereel
+  role: born
+  place: blankenberge
+  year: 1889
+  sources:
+  - wp-frans-masereel
+- person: frans-masereel
+  role: worked
+  place: paris
+  year: 1911
+  sources:
+  - wp-frans-masereel
+- person: frans-masereel
+  role: worked
+  place: nice
+  year: 1949
+  sources:
+  - wp-frans-masereel
+- person: frans-masereel
+  role: died
+  place: avignon
+  year: 1972
+  sources:
+  - wp-frans-masereel
+- person: frans-masereel
+  role: buried
+  place: ghent
+  year: 1972
+  sources:
+  - wp-frans-masereel
+- person: jeanne-hebuterne
+  role: born
+  place: meaux
+  year: 1898
+  sources:
+  - wp-jeanne-hebuterne
+- person: jeanne-hebuterne
+  role: worked
+  place: nice
+  year: 1918
+  sources:
+  - wp-jeanne-hebuterne
+- person: kara-walker
+  role: born
+  place: stockton-california
+  year: 1969
+  sources:
+  - wp-kara-walker
+- person: josef-capek
+  role: born
+  place: hronov
+  year: 1887
+  sources:
+  - wp-josef-capek
+- person: josef-capek
+  role: died
+  place: bergen
+  year: 1945
+  sources:
+  - wp-josef-capek
+- person: amrita-sher-gil
+  role: born
+  place: budapest
+  year: 1913
+  sources:
+  - wp-amrita-sher-gil
+- person: amrita-sher-gil
+  role: worked
+  place: shimla
+  year: 1921
+  sources:
+  - wp-amrita-sher-gil
+- person: amrita-sher-gil
+  role: worked
+  place: paris
+  year: 1930
+  sources:
+  - wp-amrita-sher-gil
+- person: amrita-sher-gil
+  role: worked
+  place: lahore
+  year: 1941
+  sources:
+  - wp-amrita-sher-gil
+discrepancies:
+- key: pierre-joseph-redoute-died
+  question: On what day did Redouté die?
+  about:
+  - person: pierre-joseph-redoute
+  field: died
+  claims:
+  - value: 19 June 1840
+    sources:
+    - wp-pierre-joseph-redoute
+    note: Given in the article lead
+  - value: 20 June 1840
+    sources:
+    - wp-pierre-joseph-redoute
+    note: The article body says he died on 19 or 20 June 1840
+  note: The record uses 19 June 1840, as in the article lead.
+- key: anton-azbe-died
+  question: On which day did Anton Azbe die?
+  about:
+  - person: anton-azbe
+  field: died
+  claims:
+  - value: 5 August 1905
+    sources:
+    - wp-anton-azbe
+  - value: 6 August 1905
+    sources:
+    - wp-anton-azbe
+  note: The article gives "5 or 6 August 1905"; the record holds the year 1905 only.
+- key: josef-capek-died
+  question: When did Josef Capek die?
+  about:
+  - person: josef-capek
+  field: died
+  claims:
+  - value: April 1945 in Bergen-Belsen
+    sources:
+    - wp-josef-capek
+  - value: 30 April 1947 (date a 1948 court set as the day he could not have survived)
+    sources:
+    - wp-josef-capek
+  note: His remains were never found; the record uses 1945.
