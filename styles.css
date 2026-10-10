@@ -121,6 +121,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.5vw
 .marriage-yr { font-family: var(--mono); font-size: 10px; fill: var(--stitch); }
 .hit { fill: transparent; }
 .crown { fill: var(--gold); pointer-events: none; }
+.film-mark { stroke: var(--panel); stroke-width: 1; }
 .crown.disputed { fill-opacity: .45; }
 .reign { fill: var(--gold); pointer-events: none; }
 .reign.disputed { fill-opacity: .4; }
