@@ -1,0 +1,3285 @@
+# Notes for the reviewer
+# - 42 painters: Italian Renaissance and baroque, Victorians, Russians and Scandinavians, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 6: Italian Renaissance and baroque, Victorians and Russians (42 painters)'
+  requested: Western painters from 1500, batch 6
+  date: '2026-10-10'
+sources:
+- key: wp-luca-signorelli
+  title: Luca Signorelli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Luca_Signorelli
+- key: wp-pinturicchio
+  title: Pinturicchio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pinturicchio
+- key: wp-filippino-lippi
+  title: Filippino Lippi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Filippino_Lippi
+- key: wp-piero-di-cosimo
+  title: Piero di Cosimo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Piero_di_Cosimo
+- key: wp-vittore-carpaccio
+  title: Vittore Carpaccio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vittore_Carpaccio
+- key: wp-lorenzo-lotto
+  title: Lorenzo Lotto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lorenzo_Lotto
+- key: wp-pontormo
+  title: Pontormo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pontormo
+- key: wp-giulio-romano
+  title: Giulio Romano (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giulio_Romano
+- key: wp-parmigianino
+  title: Parmigianino (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Parmigianino
+- key: wp-annibale-carracci
+  title: Annibale Carracci (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Annibale_Carracci
+- key: wp-pieter-brueghel-the-younger
+  title: Pieter Brueghel the Younger (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pieter_Brueghel_the_Younger
+- key: wp-jan-brueghel-the-elder
+  title: Jan Brueghel the Elder (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_Brueghel_the_Elder
+- key: wp-guercino
+  title: Guercino (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Guercino
+- key: wp-pietro-da-cortona
+  title: Pietro da Cortona (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pietro_da_Cortona
+- key: wp-salvator-rosa
+  title: Salvator Rosa (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Salvator_Rosa
+- key: wp-jacob-van-ruisdael
+  title: Jacob van Ruisdael (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jacob_van_Ruisdael
+- key: wp-jean-simeon-chardin
+  title: Jean Siméon Chardin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean_Sim%C3%A9on_Chardin
+- key: wp-bernardo-bellotto
+  title: Bernardo Bellotto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bernardo_Bellotto
+- key: wp-anton-raphael-mengs
+  title: Anton Raphael Mengs (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anton_Raphael_Mengs
+- key: wp-joseph-wright-of-derby
+  title: Joseph Wright of Derby (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Joseph_Wright_of_Derby
+- key: wp-henry-fuseli
+  title: Henry Fuseli (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henry_Fuseli
+- key: wp-alexander-andreyevich-ivanov
+  title: Alexander Andreyevich Ivanov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexander_Andreyevich_Ivanov
+- key: wp-carl-spitzweg
+  title: Carl Spitzweg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carl_Spitzweg
+- key: wp-frederic-leighton
+  title: Frederic Leighton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frederic_Leighton
+- key: wp-edward-burne-jones
+  title: Edward Burne-Jones (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edward_Burne-Jones
+- key: wp-lawrence-alma-tadema
+  title: Lawrence Alma-Tadema (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lawrence_Alma-Tadema
+- key: wp-james-tissot
+  title: James Tissot (Wikipedia)
+  url: https://en.wikipedia.org/wiki/James_Tissot
+- key: wp-john-william-waterhouse
+  title: John William Waterhouse (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_William_Waterhouse
+- key: wp-ferdinand-hodler
+  title: Ferdinand Hodler (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ferdinand_Hodler
+- key: wp-mikhail-vrubel
+  title: Mikhail Vrubel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mikhail_Vrubel
+- key: wp-lovis-corinth
+  title: Lovis Corinth (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lovis_Corinth
+- key: wp-james-ensor
+  title: James Ensor (Wikipedia)
+  url: https://en.wikipedia.org/wiki/James_Ensor
+- key: wp-niko-pirosmani
+  title: Niko Pirosmani (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Niko_Pirosmani
+- key: wp-mikhail-nesterov
+  title: Mikhail Nesterov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mikhail_Nesterov
+- key: wp-felix-vallotton
+  title: Félix Vallotton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/F%C3%A9lix_Vallotton
+- key: wp-leon-bakst
+  title: Léon Bakst (Wikipedia)
+  url: https://en.wikipedia.org/wiki/L%C3%A9on_Bakst
+- key: wp-boris-kustodiev
+  title: Boris Kustodiev (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Boris_Kustodiev
+- key: wp-natalia-goncharova
+  title: Natalia Goncharova (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Natalia_Goncharova
+- key: wp-john-bauer
+  title: John Bauer (illustrator) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Bauer_(illustrator)
+- key: wp-laszlo-moholy-nagy
+  title: László Moholy-Nagy (Wikipedia)
+  url: https://en.wikipedia.org/wiki/L%C3%A1szl%C3%B3_Moholy-Nagy
+- key: wp-maria-prymachenko
+  title: Maria Prymachenko (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maria_Prymachenko
+- key: wp-istvan-sandorfi
+  title: István Sándorfi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Istv%C3%A1n_S%C3%A1ndorfi
+places:
+- key: orvieto-cathedral
+  name: Orvieto Cathedral
+  kind: cathedral
+  city: Orvieto
+  region: Umbria
+  country: Italy
+  lat: 42.717
+  lng: 12.113
+  visitable: true
+  sources:
+  - wp-luca-signorelli
+- key: cortona
+  name: Cortona
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.275
+  lng: 11.986
+  visitable: true
+  sources:
+  - wp-luca-signorelli
+- key: santa-maria-del-popolo
+  name: Santa Maria del Popolo
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.911
+  lng: 12.476
+  visitable: true
+  sources:
+  - wp-pinturicchio
+- key: prato
+  name: Prato
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.881
+  lng: 11.097
+  visitable: true
+  sources:
+  - wp-filippino-lippi
+- key: brancacci-chapel
+  name: Brancacci Chapel (Santa Maria del Carmine)
+  kind: chapel
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.768
+  lng: 11.241
+  visitable: true
+  sources:
+  - wp-filippino-lippi
+- key: santa-maria-novella
+  name: Santa Maria Novella (Strozzi Chapel)
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.775
+  lng: 11.249
+  visitable: true
+  sources:
+  - wp-filippino-lippi
+- key: koper
+  name: Koper (Capo d'Istria)
+  kind: city
+  region: Slovene Littoral
+  country: Slovenia
+  lat: 45.548
+  lng: 13.73
+  visitable: true
+  sources:
+  - wp-vittore-carpaccio
+- key: scuola-di-san-giorgio-degli-schiavoni
+  name: Scuola di San Giorgio degli Schiavoni
+  kind: scuola
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.434
+  lng: 12.343
+  visitable: true
+  sources:
+  - wp-vittore-carpaccio
+- key: treviso
+  name: Treviso
+  kind: city
+  region: Veneto
+  country: Italy
+  lat: 45.667
+  lng: 12.243
+  visitable: true
+  sources:
+  - wp-lorenzo-lotto
+- key: bergamo
+  name: Bergamo
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.698
+  lng: 9.677
+  visitable: true
+  sources:
+  - wp-lorenzo-lotto
+- key: loreto
+  name: Loreto
+  kind: city
+  region: Marche
+  country: Italy
+  lat: 43.44
+  lng: 13.608
+  visitable: true
+  sources:
+  - wp-lorenzo-lotto
+- key: pontorme
+  name: Pontorme
+  kind: village
+  city: Empoli
+  region: Tuscany
+  country: Italy
+  lat: 43.715
+  lng: 10.953
+  visitable: true
+  sources:
+  - wp-pontormo
+- key: certosa-di-galluzzo
+  name: Certosa di Galluzzo
+  kind: monastery
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.731
+  lng: 11.226
+  visitable: true
+  sources:
+  - wp-pontormo
+- key: villa-medici-poggio-a-caiano
+  name: Medici villa at Poggio a Caiano
+  kind: villa
+  region: Tuscany
+  country: Italy
+  lat: 43.818
+  lng: 11.014
+  visitable: true
+  sources:
+  - wp-pontormo
+- key: santa-felicita
+  name: Santa Felicita (Capponi Chapel)
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.766
+  lng: 11.253
+  visitable: true
+  sources:
+  - wp-pontormo
+- key: palazzo-del-te
+  name: Palazzo del Te
+  kind: palace
+  city: Mantua
+  region: Lombardy
+  country: Italy
+  lat: 45.144
+  lng: 10.787
+  founded: 1524
+  founded_estimated: true
+  architect: Giulio Romano
+  visitable: true
+  sources:
+  - wp-giulio-romano
+- key: casalmaggiore
+  name: Casalmaggiore
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.134
+  lng: 10.423
+  visitable: true
+  sources:
+  - wp-parmigianino
+- key: palazzo-farnese
+  name: Palazzo Farnese
+  kind: palace
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.896
+  lng: 12.472
+  sources:
+  - wp-annibale-carracci
+- key: pantheon-rome
+  name: Pantheon
+  kind: temple and church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.899
+  lng: 12.477
+  visitable: true
+  sources:
+  - wp-annibale-carracci
+- key: cento
+  name: Cento
+  kind: town
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.727
+  lng: 11.288
+  sources:
+  - wp-guercino
+- key: piacenza
+  name: Piacenza
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 45.052
+  lng: 9.693
+  sources:
+  - wp-guercino
+- key: casino-ludovisi-rome
+  name: Casino dell'Aurora (Villa Ludovisi)
+  kind: villa
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.906
+  lng: 12.49
+  visitable: true
+  sources:
+  - wp-guercino
+- key: palazzo-barberini
+  name: Palazzo Barberini
+  kind: palace
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.904
+  lng: 12.489
+  visitable: true
+  sources:
+  - wp-pietro-da-cortona
+- key: palazzo-pitti
+  name: Palazzo Pitti
+  kind: palace
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.765
+  lng: 11.25
+  visitable: true
+  sources:
+  - wp-pietro-da-cortona
+- key: santi-luca-e-martina-rome
+  name: Santi Luca e Martina
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.893
+  lng: 12.486
+  visitable: true
+  architect: Pietro da Cortona
+  sources:
+  - wp-pietro-da-cortona
+- key: santa-maria-degli-angeli-e-dei-martiri-rome
+  name: Santa Maria degli Angeli e dei Martiri
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.903
+  lng: 12.497
+  visitable: true
+  sources:
+  - wp-salvator-rosa
+- key: usti-nad-labem
+  name: Ústí nad Labem
+  kind: city
+  region: Ústí nad Labem Region
+  country: Czech Republic
+  lat: 50.661
+  lng: 14.053
+  sources:
+  - wp-anton-raphael-mengs
+- key: sant-eusebio-rome
+  name: Sant'Eusebio
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.895
+  lng: 12.505
+  visitable: true
+  sources:
+  - wp-anton-raphael-mengs
+- key: derby
+  name: Derby
+  kind: city
+  region: Derbyshire
+  country: England
+  lat: 52.922
+  lng: -1.476
+  sources:
+  - wp-joseph-wright-of-derby
+- key: liverpool
+  name: Liverpool
+  kind: city
+  region: Merseyside
+  country: England
+  lat: 53.408
+  lng: -2.992
+  sources:
+  - wp-joseph-wright-of-derby
+- key: scarborough
+  name: Scarborough
+  kind: city
+  region: North Yorkshire
+  country: England
+  lat: 54.283
+  lng: -0.4
+  sources:
+  - wp-frederic-leighton
+- key: birmingham
+  name: Birmingham
+  kind: city
+  region: West Midlands
+  country: England
+  lat: 52.486
+  lng: -1.89
+  sources:
+  - wp-edward-burne-jones
+- key: rottingdean
+  name: Rottingdean
+  kind: village
+  region: East Sussex
+  country: England
+  city: Brighton
+  lat: 50.805
+  lng: -0.054
+  sources:
+  - wp-edward-burne-jones
+- key: dronryp
+  name: Dronryp
+  kind: village
+  region: Friesland
+  country: Netherlands
+  lat: 53.194
+  lng: 5.62
+  sources:
+  - wp-lawrence-alma-tadema
+- key: nantes
+  name: Nantes
+  kind: city
+  region: Loire-Atlantique
+  country: France
+  lat: 47.218
+  lng: -1.554
+  sources:
+  - wp-james-tissot
+- key: chateau-de-buillon
+  name: Chateau de Buillon
+  kind: chateau
+  region: Doubs
+  country: France
+  lat: 47.15
+  lng: 5.93
+  sources:
+  - wp-james-tissot
+- key: omsk
+  name: Omsk
+  kind: city
+  region: Omsk Oblast
+  country: Russia
+  lat: 54.989
+  lng: 73.368
+  sources:
+  - wp-mikhail-vrubel
+- key: tapiau
+  name: Tapiau (Gvardeysk)
+  kind: town
+  region: Kaliningrad Oblast
+  country: Russia
+  lat: 54.659
+  lng: 21.079
+  sources:
+  - wp-lovis-corinth
+- key: zandvoort
+  name: Zandvoort
+  kind: town
+  region: North Holland
+  country: Netherlands
+  lat: 52.371
+  lng: 4.531
+  sources:
+  - wp-lovis-corinth
+- key: stahnsdorf
+  name: Stahnsdorf
+  kind: town
+  region: Brandenburg
+  country: Germany
+  lat: 52.385
+  lng: 13.225
+  sources:
+  - wp-lovis-corinth
+- key: ostend
+  name: Ostend
+  kind: city
+  region: West Flanders
+  country: Belgium
+  lat: 51.23
+  lng: 2.912
+  sources:
+  - wp-james-ensor
+- key: geneva
+  name: Geneva
+  kind: city
+  region: Geneva
+  country: Switzerland
+  lat: 46.204
+  lng: 6.143
+  sources:
+  - wp-ferdinand-hodler
+- key: mirzaani
+  name: Mirzaani
+  kind: village
+  region: Kakheti
+  country: Georgia
+  lat: 41.64
+  lng: 45.8
+  sources:
+  - wp-niko-pirosmani
+- key: tbilisi
+  name: Tbilisi
+  kind: city
+  country: Georgia
+  lat: 41.715
+  lng: 44.827
+  sources:
+  - wp-niko-pirosmani
+- key: abastumani
+  name: Abastumani
+  kind: town
+  region: Samtskhe-Javakheti
+  country: Georgia
+  lat: 41.756
+  lng: 42.826
+  sources:
+  - wp-mikhail-nesterov
+- key: lausanne
+  name: Lausanne
+  kind: city
+  region: Vaud
+  country: Switzerland
+  lat: 46.52
+  lng: 6.633
+  sources:
+  - wp-felix-vallotton
+- key: grodno
+  name: Grodno
+  kind: city
+  region: Grodno Region
+  country: Belarus
+  lat: 53.669
+  lng: 23.813
+  sources:
+  - wp-leon-bakst
+- key: rueil-malmaison
+  name: Rueil-Malmaison
+  kind: town
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.877
+  lng: 2.189
+  sources:
+  - wp-leon-bakst
+- key: cimetiere-des-batignolles
+  name: Cimetière des Batignolles
+  kind: cemetery
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.894
+  lng: 2.321
+  sources:
+  - wp-leon-bakst
+- key: waddesdon-manor
+  name: Waddesdon Manor
+  kind: country house
+  region: Buckinghamshire
+  country: England
+  lat: 51.838
+  lng: -0.93
+  visitable: true
+  sources:
+  - wp-leon-bakst
+- key: astrakhan
+  name: Astrakhan
+  kind: city
+  region: Astrakhan Oblast
+  country: Russia
+  lat: 46.347
+  lng: 48.034
+  sources:
+  - wp-boris-kustodiev
+- key: nagaevo
+  name: Nagaevo
+  kind: village
+  region: Tula Oblast
+  country: Russia
+  lat: 53.6
+  lng: 36.3
+  sources:
+  - wp-natalia-goncharova
+- key: jonkoping
+  name: Jönköping
+  kind: city
+  region: Jönköping County
+  country: Sweden
+  lat: 57.782
+  lng: 14.161
+  sources:
+  - wp-john-bauer
+- key: lake-vattern
+  name: Lake Vättern
+  kind: lake
+  country: Sweden
+  lat: 58.3
+  lng: 14.6
+  sources:
+  - wp-john-bauer
+- key: ostra-cemetery-jonkoping
+  name: Östra Cemetery
+  kind: cemetery
+  city: Jönköping
+  region: Jönköping County
+  country: Sweden
+  lat: 57.78
+  lng: 14.18
+  sources:
+  - wp-john-bauer
+- key: granna
+  name: Gränna
+  kind: town
+  region: Jönköping County
+  country: Sweden
+  lat: 58.026
+  lng: 14.458
+  sources:
+  - wp-john-bauer
+- key: bacsborsod
+  name: Bácsborsód
+  kind: village
+  region: Bács-Kiskun County
+  country: Hungary
+  lat: 46.12
+  lng: 19.15
+  sources:
+  - wp-laszlo-moholy-nagy
+- key: chicago
+  name: Chicago
+  kind: city
+  region: Illinois
+  country: United States
+  lat: 41.878
+  lng: -87.63
+  sources:
+  - wp-laszlo-moholy-nagy
+- key: graceland-cemetery
+  name: Graceland Cemetery
+  kind: cemetery
+  city: Chicago
+  region: Illinois
+  country: United States
+  lat: 41.954
+  lng: -87.66
+  sources:
+  - wp-laszlo-moholy-nagy
+- key: budapest
+  name: Budapest
+  kind: city
+  country: Hungary
+  lat: 47.498
+  lng: 19.04
+  sources:
+  - wp-istvan-sandorfi
+people:
+- key: luca-signorelli
+  name: Luca Signorelli
+  type: Artist
+  roles:
+  - painter
+  born: 1441
+  born_estimated: true
+  died: '1523-10-16'
+  prominence: 4
+  note: Italian Renaissance painter from Cortona, noted as a draftsman and for foreshortening; best known for the Last Judgment frescoes in Orvieto Cathedral.
+  sources:
+  - wp-luca-signorelli
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/Signorelli%2C_Luca_-_selfportrait_alone.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Signorelli%2C_Luca_-_selfportrait_alone.jpg/500px-Signorelli%2C_Luca_-_selfportrait_alone.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Signorelli,_Luca_-_selfportrait_alone.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher link, places, Orvieto frescoes captured; full list of works not built out.
+- key: pinturicchio
+  name: Pinturicchio
+  type: Artist
+  roles:
+  - painter
+  born: 1454
+  died: 1513
+  prominence: 3
+  note: Italian Renaissance painter of Perugia (born Bernardino di Betto), known for fresco cycles in Rome and Umbria including the Borgia Apartments.
+  sources:
+  - wp-pinturicchio
+  coverage: partly
+  coverage_note: Dates, patron, assistant link, places and Borgia Apartments captured; full portfolio not built out.
+- key: filippino-lippi
+  name: Filippino Lippi
+  type: Artist
+  roles:
+  - painter
+  born: 1457
+  born_estimated: true
+  died: '1504-04-18'
+  prominence: 3
+  note: Italian Renaissance painter mostly working in Florence, son of Fra Filippo Lippi and trained with Botticelli; completed the Brancacci Chapel.
+  sources:
+  - wp-filippino-lippi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/97/Filippino_Lippi_007.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Filippino_Lippi_007.jpg/500px-Filippino_Lippi_007.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Filippino_Lippi_007.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher link, places and one key work captured; full portfolio not built out.
+- key: piero-di-cosimo
+  name: Piero di Cosimo
+  type: Artist
+  roles:
+  - painter
+  born: '1462-01-02'
+  died: '1522-04-12'
+  prominence: 3
+  note: Florentine painter known for mythological and allegorical subjects, landscapes and a reputation for eccentricity.
+  sources:
+  - wp-piero-di-cosimo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b4/Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg/500px-Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Piero_di_Cosimo_-_Liberazione_di_Andromeda_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, pupils and places captured; no artwork with a clear year captured; full portfolio not built out.
+- key: vittore-carpaccio
+  name: Vittore Carpaccio
+  type: Artist
+  roles:
+  - painter
+  born: 1460
+  born_estimated: true
+  died: 1525
+  died_estimated: true
+  prominence: 3
+  note: Italian painter of the Venetian school, known for narrative cycles such as the Legend of Saint Ursula and detailed views of Venice.
+  sources:
+  - wp-vittore-carpaccio
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Vittore_Carpaccio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Vittore_Carpaccio.jpg/500px-Vittore_Carpaccio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vittore_Carpaccio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; teacher link left out (article is uncertain); full portfolio not built out.
+- key: lorenzo-lotto
+  name: Lorenzo Lotto
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - illustrator
+  born: 1480
+  born_estimated: true
+  died: 1556
+  died_estimated: true
+  prominence: 3
+  note: Italian Renaissance painter, draughtsman and illustrator born in Venice, who worked mostly in other north Italian towns; altarpieces and psychological portraits.
+  sources:
+  - wp-lorenzo-lotto
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Lotto_Lorenzo_%28attributed%29_presumably_self_portrait_31862-p.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Lotto_Lorenzo_%28attributed%29_presumably_self_portrait_31862-p.jpg/500px-Lotto_Lorenzo_%28attributed%29_presumably_self_portrait_31862-p.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lotto_Lorenzo_(attributed)_presumably_self_portrait_31862-p.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key portrait captured; full portfolio not built out.
+- key: pontormo
+  name: Pontormo
+  type: Artist
+  roles:
+  - painter
+  born: '1494-05-24'
+  died: '1557-01-02'
+  prominence: 4
+  note: Italian Mannerist painter and portraitist of the Florentine school (Jacopo Carucci), known for the Deposition in the Capponi Chapel.
+  sources:
+  - wp-pontormo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/138_le_vite%2C_jacopo_pontormo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/138_le_vite%2C_jacopo_pontormo.jpg/500px-138_le_vite%2C_jacopo_pontormo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:138_le_vite,_jacopo_pontormo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, pupil, places and the Deposition captured; other works not built out.
+- key: giulio-romano
+  name: Giulio Romano
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: 1499
+  born_estimated: true
+  died: '1546-11-01'
+  prominence: 4
+  note: Italian Mannerist painter and architect (Giulio Pippi), pupil of Raphael, who worked for Federico Gonzaga in Mantua; known for the Palazzo del Te.
+  sources:
+  - wp-giulio-romano
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/75/Titian_-_Portrait_of_Giulio_Romano_-_WGA22947.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Titian_-_Portrait_of_Giulio_Romano_-_WGA22947.jpg/500px-Titian_-_Portrait_of_Giulio_Romano_-_WGA22947.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Titian_-_Portrait_of_Giulio_Romano_-_WGA22947.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher link, places and the Palazzo del Te frescoes captured; full portfolio not built out.
+- key: parmigianino
+  name: Parmigianino
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1503-01-11'
+  died: '1540-08-24'
+  prominence: 4
+  note: Italian Mannerist painter and printmaker of Parma (Girolamo Francesco Maria Mazzola), known for the Madonna with the Long Neck.
+  sources:
+  - wp-parmigianino
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ab/Parmigianino_Selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Parmigianino_Selfportrait.jpg/500px-Parmigianino_Selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Parmigianino_Selfportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; full portfolio not built out.
+- key: annibale-carracci
+  name: Annibale Carracci
+  type: Artist
+  roles:
+  - painter
+  born: '1560-11-03'
+  died: '1609-07-15'
+  prominence: 4
+  note: Italian painter of Bologna and Rome, a founder of the Baroque Bolognese school, known for the Farnese Gallery ceiling.
+  sources:
+  - wp-annibale-carracci
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d3/Annibale_Carracci%2C_Autoritratto_.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Annibale_Carracci%2C_Autoritratto_.jpg/500px-Annibale_Carracci%2C_Autoritratto_.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Annibale_Carracci,_Autoritratto_.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, pupil link, places and the Farnese ceiling captured; full portfolio not built out.
+- key: pieter-brueghel-the-younger
+  name: Pieter Brueghel the Younger
+  type: Artist
+  roles:
+  - painter
+  born: 1564
+  born_estimated: true
+  died: 1638
+  died_estimated: true
+  prominence: 3
+  note: Flemish painter of Antwerp, eldest son of Pieter Bruegel the Elder, known for numerous copies of his father's work and original village scenes.
+  sources:
+  - wp-pieter-brueghel-the-younger
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4e/Van_Dyck_Pieter_Brueghel_the_Younger.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Van_Dyck_Pieter_Brueghel_the_Younger.jpg/500px-Van_Dyck_Pieter_Brueghel_the_Younger.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Van_Dyck_Pieter_Brueghel_the_Younger.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, parent link and places captured; no artwork with a single clear year captured; full portfolio not built out.
+- key: jan-brueghel-the-elder
+  name: Jan Brueghel the Elder
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: 1568
+  died: '1625-01-13'
+  prominence: 4
+  note: Flemish Baroque painter, son of Pieter Bruegel the Elder and court painter to the archdukes of the Spanish Netherlands; known for flower still lifes, paradise landscapes and collaborations with
+    Rubens.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7e/Peter_Paul_Rubens_-_Familie_van_Jan_Brueghel_de_Oude.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Peter_Paul_Rubens_-_Familie_van_Jan_Brueghel_de_Oude.jpg/500px-Peter_Paul_Rubens_-_Familie_van_Jan_Brueghel_de_Oude.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Peter_Paul_Rubens_-_Familie_van_Jan_Brueghel_de_Oude.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Italian years, court appointment and two collaborative works captured; patrons (Borromeo, Archduke Albert and Isabella), teachers and the wider portfolio not built out.
+  sources:
+  - wp-jan-brueghel-the-elder
+- key: guercino
+  name: Guercino
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1591-02-08'
+  died: '1666-12-22'
+  prominence: 4
+  note: Italian Baroque painter and draughtsman from Cento, active in Rome and Bologna; his early tumultuous naturalism gave way to classical balance.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/42/Self-portrait_by_Guercino.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Self-portrait_by_Guercino.jpg/500px-Self-portrait_by_Guercino.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-portrait_by_Guercino.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Rome years, Piacenza frescoes and two dated works captured; patrons (Gregory XV, Ludovisi) and pupils not in the database, full portfolio not built out.
+  sources:
+  - wp-guercino
+- key: pietro-da-cortona
+  name: Pietro da Cortona
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: 1596
+  born_estimated: true
+  died: '1669-05-16'
+  prominence: 4
+  note: Italian Baroque painter and architect (born Pietro Berrettini) known for his illusionistic ceiling frescoes in the Palazzo Barberini in Rome and the Palazzo Pitti in Florence.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/86/Ajaccio_Da_Cortona_Autoportrait.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ajaccio_Da_Cortona_Autoportrait.JPG/500px-Ajaccio_Da_Cortona_Autoportrait.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Ajaccio_Da_Cortona_Autoportrait.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, main fresco cycles, two works and two buildings captured; patrons (Urban VIII, Barberini, Sacchetti, Ferdinando II de' Medici), teachers and pupils not in the database, architecture
+    not built out.
+  sources:
+  - wp-pietro-da-cortona
+- key: salvator-rosa
+  name: Salvator Rosa
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1615
+  died: 1673
+  prominence: 4
+  note: Italian Baroque painter, etcher, poet and satirist from Naples whose wild, romanticised landscapes influenced later Romanticism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/24/Salvator_rosa%2C_autoritratto%2C_1650-60_ca_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Salvator_rosa%2C_autoritratto%2C_1650-60_ca_%28cropped%29.jpg/500px-Salvator_rosa%2C_autoritratto%2C_1650-60_ca_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Salvator_rosa,_autoritratto,_1650-60_ca_(cropped).jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, moves between Naples, Rome and Florence, and one dated work captured; patrons, teachers (Falcone, Ribera) and large history paintings without clear years not built out.
+  sources:
+  - wp-salvator-rosa
+- key: jacob-van-ruisdael
+  name: Jacob van Ruisdael
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - printmaker
+  born: 1629
+  born_estimated: true
+  died: '1682-03-10'
+  prominence: 4
+  note: Dutch Golden Age landscape painter, draughtsman and etcher, generally considered the pre-eminent landscape painter of his time.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/27/The_Windmill_at_Wijk_bij_Duurstede_1670_Ruisdael.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/The_Windmill_at_Wijk_bij_Duurstede_1670_Ruisdael.jpg/500px-The_Windmill_at_Wijk_bij_Duurstede_1670_Ruisdael.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:The_Windmill_at_Wijk_bij_Duurstede_1670_Ruisdael.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Haarlem and Amsterdam years and two early dated works captured; late and Amsterdam-period works and the pupil Hobbema (not in the database) not built out.
+  sources:
+  - wp-jacob-van-ruisdael
+- key: jean-simeon-chardin
+  name: Jean Siméon Chardin
+  type: Artist
+  roles:
+  - painter
+  born: '1699-11-02'
+  died: '1779-12-06'
+  prominence: 4
+  note: French 18th-century painter, a master of still life and of domestic genre scenes of kitchen maids and children.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7c/Chardin_pastel_selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Chardin_pastel_selfportrait.jpg/500px-Chardin_pastel_selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Chardin_pastel_selfportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Paris life, the Louvre studio and two dated works captured; teachers (Cazes, Coypel), patron Louis XV and the wider portfolio not built out.
+  sources:
+  - wp-jean-simeon-chardin
+- key: bernardo-bellotto
+  name: Bernardo Bellotto
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1721
+  born_estimated: true
+  died: '1780-11-17'
+  prominence: 3
+  note: Venetian view painter (vedutista), nephew and pupil of Canaletto, famous for his views of Dresden, Vienna and Warsaw, where he was court painter to Stanislaw August.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4d/Bernardo_Bellotto.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Bernardo_Bellotto.jpg/500px-Bernardo_Bellotto.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bernardo_Bellotto.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels (Rome, Dresden, Vienna, Munich, Warsaw), teacher Canaletto and two dated works captured; patrons (Augustus III, Maria Theresa, Stanislaw August) not in the database, full
+    list of works not built out.
+  sources:
+  - wp-bernardo-bellotto
+- key: anton-raphael-mengs
+  name: Anton Raphael Mengs
+  type: Artist
+  roles:
+  - painter
+  born: '1728-03-12'
+  died: '1779-06-29'
+  prominence: 3
+  note: Bohemian-born German Neoclassical painter, friend of Winckelmann, who worked in Rome and for Charles III of Spain in Madrid.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/77/Mengs%2C_Selbstbildnis.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Mengs%2C_Selbstbildnis.jpg/500px-Mengs%2C_Selbstbildnis.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Mengs,_Selbstbildnis.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Rome and Madrid years and two dated works captured; patron Charles III of Spain not in the database (existing key charles-iii is the modern king), pupils and Winckelmann not in the
+    database, Madrid ceiling not dated.
+  sources:
+  - wp-anton-raphael-mengs
+- key: joseph-wright-of-derby
+  name: Joseph Wright of Derby
+  type: Artist
+  roles:
+  - painter
+  born: '1734-09-03'
+  died: '1797-08-29'
+  prominence: 4
+  note: English painter of portraits and landscapes, known for candle-lit tenebrist scenes of science and the Industrial Revolution and for his links to the Lunar Society.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/05/Joseph_Wright_of_Derby_-_self-portrait_c.1780_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Joseph_Wright_of_Derby_-_self-portrait_c.1780_-_Google_Art_Project.jpg/500px-Joseph_Wright_of_Derby_-_self-portrait_c.1780_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_-_self-portrait_c.1780_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Derby/London/Liverpool years and two dated works captured; patrons (Wedgwood, Arkwright), teacher Thomas Hudson and Lunar Society figures not in the database, later works not built
+    out.
+  sources:
+  - wp-joseph-wright-of-derby
+- key: henry-fuseli
+  name: Henry Fuseli
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1741-02-07'
+  died: '1825-04-17'
+  prominence: 3
+  note: Swiss painter, draughtsman and writer on art who spent much of his career in Britain; best known for The Nightmare and other supernatural subjects.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Henry_Fuseli_by_James_Northcote.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Henry_Fuseli_by_James_Northcote.jpg/500px-Henry_Fuseli_by_James_Northcote.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henry_Fuseli_by_James_Northcote.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Zurich/Rome/London years and two dated works captured; patron Boydell, Lavater, Wollstonecraft and pupils (Wilkie, Landseer, Etty, Haydon) not in the database, Milton Gallery works
+    not built out.
+  sources:
+  - wp-henry-fuseli
+- key: alexander-andreyevich-ivanov
+  name: Alexander Andreyevich Ivanov
+  type: Artist
+  roles:
+  - painter
+  born: '1806-07-28'
+  died: '1858-07-15'
+  prominence: 3
+  note: Russian painter in the waning Neoclassical tradition who spent most of his life in Rome, best known for The Appearance of Christ Before the People.
+  sources:
+  - wp-alexander-andreyevich-ivanov
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/33/Alexander_Andreyevich_Ivanov.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Alexander_Andreyevich_Ivanov.jpg/500px-Alexander_Andreyevich_Ivanov.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alexander_Andreyevich_Ivanov.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, and two key works captured; teachers, patrons and the full portfolio not built out.
+- key: carl-spitzweg
+  name: Carl Spitzweg
+  type: Artist
+  roles:
+  - painter
+  born: '1808-02-05'
+  died: '1885-09-23'
+  prominence: 3
+  note: German late-Romantic painter of Biedermeier genre scenes, best known for The Poor Poet.
+  sources:
+  - wp-carl-spitzweg
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3d/Carl_Spitzweg.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3d/Carl_Spitzweg.jpg/500px-Carl_Spitzweg.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carl_Spitzweg.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, travels and two key works captured; the full portfolio (over 1,500 works) not built out.
+- key: frederic-leighton
+  name: Frederic Leighton
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - sculptor
+  born: '1830-12-03'
+  died: '1896-01-25'
+  prominence: 4
+  note: British Victorian painter, draughtsman and sculptor of classical and biblical subjects, President of the Royal Academy 1878-96 and the first painter made a peer.
+  sources:
+  - wp-frederic-leighton
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f3/1880_Frederic_Leighton_-_Self_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/1880_Frederic_Leighton_-_Self_portrait.jpg/500px-1880_Frederic_Leighton_-_Self_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:1880_Frederic_Leighton_-_Self_portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key sculpture captured; teachers (Steinle, Costa) not in the database; full portfolio not built out.
+- key: edward-burne-jones
+  name: Edward Burne-Jones
+  type: Artist
+  roles:
+  - painter
+  - designer
+  born: '1833-08-28'
+  died: '1898-06-17'
+  prominence: 4
+  note: English Pre-Raphaelite painter and designer, partner with William Morris in Morris and Co., known for stained glass and mythic and Arthurian paintings.
+  sources:
+  - wp-edward-burne-jones
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Edward_Burne-Jones_Photogravure_Hollyer.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/81/Edward_Burne-Jones_Photogravure_Hollyer.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edward_Burne-Jones_Photogravure_Hollyer.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key painting captured; stained glass, tapestries, illustrations and the full portfolio not built out.
+- key: lawrence-alma-tadema
+  name: Lawrence Alma-Tadema
+  type: Artist
+  roles:
+  - painter
+  born: '1836-01-08'
+  died: '1912-06-25'
+  prominence: 4
+  note: Dutch-born painter who settled in Britain, famous for luxurious scenes of ancient Rome and Egypt.
+  sources:
+  - wp-lawrence-alma-tadema
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/Lawrence_Alma-Tadema_1870_%282%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Lawrence_Alma-Tadema_1870_%282%29.jpg/500px-Lawrence_Alma-Tadema_1870_%282%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lawrence_Alma-Tadema_1870_(2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teachers (not in the database) and two key works captured; the opus list and full portfolio not built out.
+- key: james-tissot
+  name: James Tissot
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  - caricaturist
+  born: '1836-10-15'
+  died: '1902-08-08'
+  prominence: 3
+  note: French painter and illustrator known for genre scenes of Victorian high society and later a Life of Christ series.
+  sources:
+  - wp-james-tissot
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/ba/James_Tissot_Self_Portrait_%281865%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/James_Tissot_Self_Portrait_%281865%29.jpg/500px-James_Tissot_Self_Portrait_%281865%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:James_Tissot_Self_Portrait_(1865).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; teachers (Flandrin, Lamothe) not in the database; full portfolio not built out.
+- key: john-william-waterhouse
+  name: John William Waterhouse
+  type: Artist
+  roles:
+  - painter
+  born: 1849
+  died: '1917-02-10'
+  prominence: 4
+  note: English painter of women from classical myth, Arthurian legend and Shakespeare, moving from Academic to Pre-Raphaelite style.
+  sources:
+  - wp-john-william-waterhouse
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/The_late_John_William_Waterhouse_in_his_studio.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/The_late_John_William_Waterhouse_in_his_studio.jpg/500px-The_late_John_William_Waterhouse_in_his_studio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:The_late_John_William_Waterhouse_in_his_studio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; the full portfolio not built out.
+- key: ferdinand-hodler
+  name: Ferdinand Hodler
+  type: Artist
+  roles:
+  - painter
+  born: '1853-03-14'
+  died: '1918-05-19'
+  prominence: 4
+  note: Swiss painter who moved from realism to a personal Symbolism he called parallelism.
+  sources:
+  - wp-ferdinand-hodler
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Selbstbildnis_mit_aufgerissenen_Augen_III_%281912%29_-_Ferdinand_Hodler.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Selbstbildnis_mit_aufgerissenen_Augen_III_%281912%29_-_Ferdinand_Hodler.jpg/500px-Selbstbildnis_mit_aufgerissenen_Augen_III_%281912%29_-_Ferdinand_Hodler.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Selbstbildnis_mit_aufgerissenen_Augen_III_(1912)_-_Ferdinand_Hodler.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; teachers (Sommer, Menn) not in the database; full portfolio not built out.
+- key: mikhail-vrubel
+  name: Mikhail Vrubel
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - sculptor
+  born: '1856-03-17'
+  died: '1910-04-14'
+  prominence: 4
+  note: Russian Symbolist and Art Nouveau painter, draughtsman and sculptor, known for his Demon paintings.
+  sources:
+  - wp-mikhail-vrubel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/60/Vrubel_1900.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Vrubel_1900.jpg/500px-Vrubel_1900.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vrubel_1900.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, Kyiv and Moscow work, and one key work captured; article text is cut at 32,000 characters so the Moscow period, death place and later life are missing.
+- key: lovis-corinth
+  name: Lovis Corinth
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - writer
+  born: '1858-07-21'
+  died: '1925-07-17'
+  prominence: 4
+  note: German painter and printmaker whose mature work joined impressionism and expressionism, president of the Berlin Secession.
+  sources:
+  - wp-lovis-corinth
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b9/Lovis_Corinth_1887.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/Lovis_Corinth_1887.jpg/500px-Lovis_Corinth_1887.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lovis_Corinth_1887.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teachers and two key works captured; prints and the full portfolio not built out.
+- key: james-ensor
+  name: James Ensor
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1860-04-13'
+  died: '1949-11-19'
+  prominence: 4
+  note: Belgian painter and printmaker of masks, skeletons and carnival scenes, an influence on expressionism and surrealism.
+  sources:
+  - wp-james-ensor
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/Ensor_voor_zijn_schildersezel%2C_James_Ensor%2C_1890%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2809.001.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Ensor_voor_zijn_schildersezel%2C_James_Ensor%2C_1890%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2809.001.jpeg/500px-Ensor_voor_zijn_schildersezel%2C_James_Ensor%2C_1890%2C_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen%2C_2809.001.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Ensor_voor_zijn_schildersezel,_James_Ensor,_1890,_Koninklijk_Museum_voor_Schone_Kunsten_Antwerpen,_2809.001.jpeg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; the full portfolio not built out.
+- key: niko-pirosmani
+  name: Niko Pirosmani
+  type: Artist
+  roles:
+  - painter
+  born: 1862
+  died: 1918
+  prominence: 4
+  note: Self-taught Georgian naive painter, famed after death for rustic scenes of everyday Georgia painted on black oilcloth.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/Niko_Pirosmani_1916.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Niko_Pirosmani_1916.jpg/500px-Niko_Pirosmani_1916.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Niko_Pirosmani_1916.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Tbilisi work and career summary captured; no dated key work in the article; full portfolio not built out.
+  sources:
+  - wp-niko-pirosmani
+- key: mikhail-nesterov
+  name: Mikhail Nesterov
+  type: Artist
+  roles:
+  - painter
+  born: '1862-05-31'
+  died: '1942-10-18'
+  prominence: 3
+  note: Russian and Soviet Symbolist painter of the Peredvizhniki and Mir iskusstva, known for religious works and his Saint Sergius series.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/97/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%9C.%D0%92.%D0%9D%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2%D0%B0.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%9C.%D0%92.%D0%9D%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2%D0%B0.jpg/500px-%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%9C.%D0%92.%D0%9D%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2%D0%B0.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82_%D0%9C.%D0%92.%D0%9D%D0%B5%D1%81%D1%82%D0%B5%D1%80%D0%BE%D0%B2%D0%B0.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teachers, church commissions and one dated portrait captured; the Saint Sergius series and other works not built out.
+  sources:
+  - wp-mikhail-nesterov
+- key: felix-vallotton
+  name: Félix Vallotton
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1865-12-28'
+  died: '1925-12-29'
+  prominence: 3
+  note: Swiss-born French painter and printmaker of Les Nabis, a leading figure in the modern woodcut.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/Vallotton-Autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Vallotton-Autoportrait.jpg/500px-Vallotton-Autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vallotton-Autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Paris training and two dated paintings captured; woodcut series and later paintings not built out.
+  sources:
+  - wp-felix-vallotton
+- key: leon-bakst
+  name: Léon Bakst
+  type: Artist
+  roles:
+  - painter
+  - set designer
+  - costume designer
+  born: '1866-02-08'
+  died: '1924-12-27'
+  prominence: 4
+  note: Russian painter and scene and costume designer of the Ballets Russes, born Leyb-Khaim Rosenberg, known for exotic, richly coloured designs.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/Bakst_self.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Bakst_self.JPG/500px-Bakst_self.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Bakst_self.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Chagall as pupil and the Waddesdon Manor panels captured; Ballets Russes productions not built out as works.
+  sources:
+  - wp-leon-bakst
+- key: boris-kustodiev
+  name: Boris Kustodiev
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - stage designer
+  born: '1878-03-07'
+  died: '1927-05-28'
+  prominence: 3
+  note: Russian painter, draughtsman and stage designer, known for colourful scenes of provincial merchant life such as The Merchant's Wife.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Kustodiev_BM.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/6a/Kustodiev_BM.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kustodiev_BM.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Repin as teacher and two dated paintings captured; book illustrations and stage designs not built out.
+  sources:
+  - wp-boris-kustodiev
+- key: natalia-goncharova
+  name: Natalia Goncharova
+  type: Artist
+  roles:
+  - painter
+  - costume designer
+  - set designer
+  - illustrator
+  born: '1881-07-03'
+  died: '1962-10-17'
+  prominence: 4
+  note: Russian avant-garde painter and designer, co-inventor of Rayonism with Mikhail Larionov, who moved to Paris and worked for the Ballets Russes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/73/Natalia_Sergeyevna_Goncharova.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/7/73/Natalia_Sergeyevna_Goncharova.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Natalia_Sergeyevna_Goncharova.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, movements and two dated works captured; ballet designs and fashion work not built out.
+  sources:
+  - wp-natalia-goncharova
+- key: john-bauer
+  name: John Bauer
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1882-06-04'
+  died: '1918-11-20'
+  prominence: 3
+  note: Swedish painter and illustrator, best known for his illustrations of the folklore anthology Bland tomtar och troll (Among Gnomes and Trolls).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/46/John_Bauer_artist_Sweden.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/John_Bauer_artist_Sweden.jpg/500px-John_Bauer_artist_Sweden.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Bauer_artist_Sweden.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, shipwreck death and two dated paintings captured; the Among Gnomes and Trolls plates not built out. Article may be cut at the 11,000 characters read, later sections (works,
+    legacy) not read in full.
+  sources:
+  - wp-john-bauer
+- key: laszlo-moholy-nagy
+  name: László Moholy-Nagy
+  type: Artist
+  roles:
+  - painter
+  - photographer
+  - sculptor
+  - designer
+  born: '1895-07-20'
+  died: '1946-11-24'
+  prominence: 4
+  note: Hungarian painter, photographer and Bauhaus teacher who founded the New Bauhaus in Chicago, pioneer of kinetic sculpture and light art.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/82/Laszlo_Moholy-Nagy_-_photography_from_NARA_-_281845.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Laszlo_Moholy-Nagy_-_photography_from_NARA_-_281845.jpg/500px-Laszlo_Moholy-Nagy_-_photography_from_NARA_-_281845.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Laszlo_Moholy-Nagy_-_photography_from_NARA_-_281845.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Bauhaus and Chicago years and the Light-Space Modulator captured; films, photograms and writings not built out.
+  sources:
+  - wp-laszlo-moholy-nagy
+- key: maria-prymachenko
+  name: Maria Prymachenko
+  type: Artist
+  roles:
+  - painter
+  born: '1909-01-12'
+  died: '1997-08-18'
+  prominence: 3
+  note: Self-taught Ukrainian folk and naive painter (also embroidery and ceramics), praised by Picasso, whose works drew on Polesian folk traditions.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Stamp_of_Ukraine_Prymachenko_%28cropped%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/8b/Stamp_of_Ukraine_Prymachenko_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Stamp_of_Ukraine_Prymachenko_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Kyiv workshop and career summary captured; no work with a clear year in the article; portfolio not built out.
+  sources:
+  - wp-maria-prymachenko
+- key: istvan-sandorfi
+  name: István Sándorfi
+  type: Artist
+  roles:
+  - painter
+  born: '1948-06-12'
+  died: '2007-12-26'
+  prominence: 2
+  note: Hungarian-born hyperrealist painter who worked in France as Étienne Sandorfi, known for large self-portraits.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/49/Exposition_de_Budapest%2C_novembre_2006.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Exposition_de_Budapest%2C_novembre_2006.JPG/500px-Exposition_de_Budapest%2C_novembre_2006.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Exposition_de_Budapest,_novembre_2006.JPG
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, birthplace and career outline captured; the exhibitions list was not in the text read; no dated work named.
+  sources:
+  - wp-istvan-sandorfi
+artworks:
+- key: last-judgment-orvieto-signorelli
+  name: Last Judgment frescoes, San Brizio Chapel
+  kind: fresco
+  made: 1499
+  made_end: 1503
+  collection: Orvieto Cathedral
+  people:
+  - person: luca-signorelli
+    role: creator
+  places:
+  - place: orvieto-cathedral
+    role: made
+  prominence: 4
+  note: Signorelli's masterpiece, in the Cappella Nuova (San Brizio Chapel); the contract was signed 5 April 1499.
+  sources:
+  - wp-luca-signorelli
+- key: borgia-apartments-frescoes
+  name: Borgia Apartments frescoes
+  kind: fresco
+  made: 1492
+  made_end: 1494
+  estimated: true
+  people:
+  - person: pinturicchio
+    role: creator
+  - person: alexander-vi
+    role: patron
+  places:
+  - place: apostolic-palace
+    role: made
+  prominence: 3
+  note: Frescoes in a suite of six rooms in the Apostolic Palace; five rooms still keep them.
+  sources:
+  - wp-pinturicchio
+- key: apparition-of-the-virgin-to-st-bernard
+  name: Apparition of the Virgin to St. Bernard
+  medium: oil on panel
+  made: 1485
+  made_end: 1487
+  collection: Badia Fiorentina, Florence
+  people:
+  - person: filippino-lippi
+    role: creator
+  prominence: 3
+  note: Described as Filippino Lippi's most popular painting; the works list in the article gives 1486.
+  sources:
+  - wp-filippino-lippi
+- key: miracle-of-the-relic-of-the-cross-at-the-ponte-di-rialto
+  name: Miracle of the Relic of the Cross at the Ponte di Rialto
+  made: 1496
+  people:
+  - person: vittore-carpaccio
+    role: creator
+  prominence: 3
+  note: A large urban scene of Venice for the Scuola Grande di San Giovanni Evangelista.
+  sources:
+  - wp-vittore-carpaccio
+- key: saint-augustine-in-his-study
+  name: Saint Augustine in His Study
+  made: 1502
+  estimated: true
+  people:
+  - person: vittore-carpaccio
+    role: creator
+  prominence: 3
+  note: Painted shortly after 1502 and signed VICTOR CARPATHIVS FINGEBAT.
+  sources:
+  - wp-vittore-carpaccio
+- key: portrait-of-andrea-odoni
+  name: Portrait of Andrea Odoni
+  kind: portrait
+  made: 1527
+  collection: Royal Art Collection, Hampton Court
+  people:
+  - person: lorenzo-lotto
+    role: creator
+  prominence: 3
+  note: Painted in Venice; it later influenced Titian's portrait of Jacopo Strada.
+  sources:
+  - wp-lorenzo-lotto
+- key: deposition-from-the-cross-pontormo
+  name: The Deposition from the Cross
+  kind: altarpiece
+  medium: canvas
+  made: 1528
+  collection: Capponi Chapel, Santa Felicita, Florence
+  people:
+  - person: pontormo
+    role: creator
+  places:
+  - place: santa-felicita
+    role: held
+  prominence: 4
+  note: Generally considered Pontormo's surviving masterpiece.
+  sources:
+  - wp-pontormo
+- key: palazzo-del-te-frescoes
+  name: Palazzo del Te frescoes
+  kind: fresco
+  made: 1525
+  made_end: 1535
+  estimated: true
+  people:
+  - person: giulio-romano
+    role: creator
+  places:
+  - place: palazzo-del-te
+    role: made
+  prominence: 4
+  note: Famous illusionistic frescoes in the suburban palace outside Mantua.
+  sources:
+  - wp-giulio-romano
+- key: vision-of-saint-jerome-parmigianino
+  name: Vision of Saint Jerome
+  made: 1526
+  made_end: 1527
+  collection: National Gallery, London
+  people:
+  - person: parmigianino
+    role: creator
+  places:
+  - place: london
+    role: held
+  prominence: 3
+  note: Altarpiece agreed in January 1526 for San Salvatore in Lauro, Rome.
+  sources:
+  - wp-parmigianino
+- key: madonna-with-the-long-neck
+  name: Madonna with the Long Neck
+  made: 1534
+  people:
+  - person: parmigianino
+    role: creator
+  prominence: 4
+  note: Made for the chapel of the family of Elena Baiardi.
+  sources:
+  - wp-parmigianino
+- key: farnese-ceiling
+  name: The Loves of the Gods (Farnese ceiling)
+  kind: fresco
+  made: 1597
+  made_end: 1605
+  people:
+  - person: annibale-carracci
+    role: creator
+  places:
+  - place: palazzo-farnese
+    role: made
+  prominence: 4
+  note: Ceiling of the grand salon of the Palazzo Farnese; the article's works list dates the frescoes 1597-1605, while Annibale arrived in Rome in 1595.
+  sources:
+  - wp-annibale-carracci
+- key: battle-of-the-amazons-brueghel-rubens
+  name: The Battle of the Amazons
+  made: 1598
+  made_end: 1600
+  estimated: true
+  collection: Sanssouci Picture Gallery
+  people:
+  - person: jan-brueghel-the-elder
+    role: creator
+  - person: peter-paul-rubens
+    role: creator
+  prominence: 3
+  note: First collaboration of Jan Brueghel the Elder and Rubens, dated c. 1598-1600.
+  sources:
+  - wp-jan-brueghel-the-elder
+- key: madonna-in-a-floral-wreath-brueghel-rubens
+  name: Madonna in a Floral Wreath
+  made: 1621
+  collection: Alte Pinakothek
+  people:
+  - person: jan-brueghel-the-elder
+    role: creator
+  - person: peter-paul-rubens
+    role: creator
+  prominence: 3
+  note: Garland painting by Brueghel and Rubens. The article gives 1621 in one place and c. 1616-18 in another (see discrepancy).
+  sources:
+  - wp-jan-brueghel-the-elder
+- key: aurora-guercino-villa-ludovisi
+  name: Aurora
+  kind: fresco
+  made: 1621
+  people:
+  - person: guercino
+    role: creator
+  places:
+  - place: casino-ludovisi-rome
+    role: made
+  prominence: 4
+  note: Ceiling fresco of the Aurora myth at the casino of the Villa Ludovisi, painted for Cardinal Ludovico Ludovisi, the pope's nephew.
+  sources:
+  - wp-guercino
+- key: et-in-arcadia-ego-guercino
+  name: Et in Arcadia ego
+  kind: painting
+  made: 1618
+  made_end: 1622
+  estimated: true
+  people:
+  - person: guercino
+    role: creator
+  prominence: 3
+  note: Contains the first known use of the Latin motto, later taken up by Poussin.
+  sources:
+  - wp-guercino
+- key: allegory-of-divine-providence-and-barberini-power
+  name: Allegory of Divine Providence and Barberini Power
+  kind: fresco
+  made: 1633
+  made_end: 1639
+  people:
+  - person: pietro-da-cortona
+    role: creator
+  places:
+  - place: palazzo-barberini
+    role: made
+  prominence: 5
+  note: Ceiling fresco of the grand salon of the Palazzo Barberini, commissioned by Urban VIII in 1633 and completed six years later.
+  sources:
+  - wp-pietro-da-cortona
+- key: stoning-of-saint-stephen-pietro-da-cortona
+  name: The Stoning of Saint Stephen
+  kind: painting
+  made: 1660
+  collection: Hermitage Museum
+  people:
+  - person: pietro-da-cortona
+    role: creator
+  prominence: 2
+  note: Painted for the church of Sant'Ambrogio della Massima in Rome.
+  sources:
+  - wp-pietro-da-cortona
+- key: music-allegory-salvator-rosa
+  name: Music (allegory)
+  kind: painting
+  made: 1641
+  estimated: true
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 2
+  note: Allegory of Music, c. 1641; Lucrezia Paolini was likely the model.
+  sources:
+  - wp-salvator-rosa
+- key: dune-landscape-ruisdael-1646
+  name: Dune Landscape
+  kind: painting
+  made: 1646
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 2
+  note: One of Ruisdael's earliest dated works.
+  sources:
+  - wp-jacob-van-ruisdael
+- key: view-of-naarden-ruisdael-1647
+  name: View of Naarden with the Church at Muiderberg in the Distance
+  kind: painting
+  made: 1647
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 2
+  note: Ruisdael's first panoramic landscape.
+  sources:
+  - wp-jacob-van-ruisdael
+- key: the-governess-chardin
+  name: The Governess
+  kind: painting
+  made: 1739
+  collection: National Gallery of Canada
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+  note: Marks Chardin's shift from working-class subjects to slightly more spacious bourgeois scenes.
+  sources:
+  - wp-jean-simeon-chardin
+- key: the-copper-cistern-chardin
+  name: The Copper Cistern
+  kind: painting
+  made: 1735
+  estimated: true
+  collection: Louvre
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+  note: Example of kitchen utensils entering Chardin's work in the 1730s.
+  sources:
+  - wp-jean-simeon-chardin
+- key: dresden-from-the-right-bank-of-the-elbe-bellotto
+  name: Dresden from the Right Bank of the Elbe Above the Augustus Bridge
+  kind: painting
+  made: 1747
+  collection: Gemäldegalerie Alte Meister
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  places:
+  - place: dresden
+    role: depicts
+  prominence: 3
+  note: View of Dresden painted soon after Bellotto's move there in 1747.
+  sources:
+  - wp-bernardo-bellotto
+- key: view-of-warsaw-from-the-praga-suburb-bellotto
+  name: View of Warsaw with the Vistula from the Praga Suburb
+  kind: painting
+  made: 1770
+  collection: Royal Castle, Warsaw
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  places:
+  - place: warsaw
+    role: depicts
+  prominence: 3
+  note: One of the 26 Warsaw views painted 1770-1780 for the Panorama Room of the Royal Castle.
+  sources:
+  - wp-bernardo-bellotto
+- key: school-of-athens-copy-mengs
+  name: The School of Athens (copy after Raphael)
+  kind: painting
+  medium: oil on canvas
+  made: 1752
+  made_end: 1755
+  collection: Victoria and Albert Museum
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  - person: raphael
+    role: after
+  prominence: 3
+  note: Full-size copy of Raphael's fresco made for the Duke of Northumberland's London home, with the composition adapted to a rectangle.
+  sources:
+  - wp-anton-raphael-mengs
+- key: sant-eusebio-dome-fresco-mengs
+  name: Dome fresco of Sant'Eusebio
+  kind: fresco
+  made: 1757
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  places:
+  - place: sant-eusebio-rome
+    role: made
+  prominence: 2
+  note: Fresco on the dome of the church of Sant'Eusebio in Rome.
+  sources:
+  - wp-anton-raphael-mengs
+- key: an-experiment-on-a-bird-in-the-air-pump-wright
+  name: An Experiment on a Bird in the Air Pump
+  kind: painting
+  made: 1768
+  collection: National Gallery
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 4
+  note: Candle-lit scene of an early experiment on air and life, among Wright's best-known works.
+  sources:
+  - wp-joseph-wright-of-derby
+- key: a-philosopher-lecturing-on-the-orrery-wright
+  name: A Philosopher Lecturing on the Orrery
+  kind: painting
+  made: 1766
+  collection: Derby Museum and Art Gallery
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+  note: Shows an early mechanism demonstrating the planets' movement around the Sun.
+  sources:
+  - wp-joseph-wright-of-derby
+- key: the-nightmare-fuseli
+  name: The Nightmare
+  kind: painting
+  made: 1782
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 4
+  note: First Fuseli painting to attract particular attention, exhibited in 1782; he painted several versions. The year is the exhibition year; the article gives no earlier date.
+  sources:
+  - wp-henry-fuseli
+- key: night-hag-visiting-the-lapland-witches-fuseli
+  name: Night-Hag visiting the Lapland Witches
+  kind: painting
+  made: 1796
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 2
+  note: Echoes the themes of The Nightmare (horror, dark magic and sexuality).
+  sources:
+  - wp-henry-fuseli
+- key: appearance-of-christ-before-the-people
+  name: The Appearance of Christ Before the People
+  made: 1837
+  made_end: 1857
+  people:
+  - person: alexander-andreyevich-ivanov
+    role: creator
+  places:
+  - place: rome
+    role: made
+  prominence: 4
+  note: Ivanov's magnum opus, worked on for 20 years in Rome.
+  sources:
+  - wp-alexander-andreyevich-ivanov
+- key: the-poor-poet
+  name: The Poor Poet
+  made: 1839
+  people:
+  - person: carl-spitzweg
+    role: creator
+  prominence: 4
+  note: Spitzweg's best-known and most popular work.
+  sources:
+  - wp-carl-spitzweg
+- key: athlete-wrestling-with-a-python
+  name: Athlete Wrestling with a Python
+  kind: sculpture
+  made: 1877
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+  note: Considered at the time to inaugurate the New Sculpture in Britain.
+  sources:
+  - wp-frederic-leighton
+- key: king-cophetua-and-the-beggar-maid
+  name: King Cophetua and the Beggar Maid
+  made: 1884
+  people:
+  - person: edward-burne-jones
+    role: creator
+  prominence: 4
+  note: The article places it in 1884, after The Wheel of Fortune (shown 1883); unclear whether 1884 is the date of making or of showing.
+  sources:
+  - wp-edward-burne-jones
+- key: the-roses-of-heliogabalus
+  name: The Roses of Heliogabalus
+  made: 1888
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 4
+  note: One of his most famous paintings, showing the emperor Elagabalus smothering guests under rose petals.
+  sources:
+  - wp-lawrence-alma-tadema
+- key: the-ball-on-shipboard
+  name: The Ball on Shipboard
+  made: 1874
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+  note: Shows contemporary national flags sewn into a large awning.
+  sources:
+  - wp-james-tissot
+- key: ophelia-waterhouse-1888
+  name: Ophelia (1888)
+  made: 1888
+  collection: Lord Lloyd-Webber
+  people:
+  - person: john-william-waterhouse
+    role: creator
+  prominence: 4
+  note: Submitted for his Royal Academy diploma; he painted Ophelia again in 1894 and 1909 or 1910.
+  sources:
+  - wp-john-william-waterhouse
+- key: night-hodler
+  name: Night
+  made: 1890
+  people:
+  - person: ferdinand-hodler
+    role: creator
+  prominence: 4
+  note: Marked Hodler's turn to Symbolism; withdrawn from a Geneva show in 1891 as obscene, then praised in Paris.
+  sources:
+  - wp-ferdinand-hodler
+- key: the-demon-seated
+  name: The Demon Seated
+  made: 1890
+  people:
+  - person: mikhail-vrubel
+    role: creator
+  prominence: 4
+  note: Opened Vrubel's Moscow period.
+  sources:
+  - wp-mikhail-vrubel
+- key: the-blinded-samson
+  name: The Blinded Samson
+  made: 1912
+  people:
+  - person: lovis-corinth
+    role: creator
+  prominence: 3
+  note: One of his self-portraits in costume.
+  sources:
+  - wp-lovis-corinth
+- key: christs-entry-into-brussels-in-1889
+  name: Christ's Entry Into Brussels in 1889
+  made: 1888
+  made_end: 1889
+  collection: J. Paul Getty Museum, Los Angeles
+  people:
+  - person: james-ensor
+    role: creator
+  prominence: 4
+  note: Ensor's most ambitious painting, rejected by Les XX and first shown in 1929.
+  sources:
+  - wp-james-ensor
+- key: portrait-of-ivan-pavlov-nesterov
+  name: Portrait of Ivan Pavlov
+  made: 1935
+  note: Awarded the Stalin Prize in 1941, one of the first given to an artist.
+  people:
+  - person: mikhail-nesterov
+    role: creator
+  prominence: 3
+  sources:
+  - wp-mikhail-nesterov
+- key: the-ball-vallotton
+  name: The Ball
+  made: 1899
+  collection: Musée d'Orsay
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+  sources:
+  - wp-felix-vallotton
+- key: bathers-on-a-summer-evening
+  name: Bathers on a Summer Evening
+  made: 1892
+  made_end: 1893
+  collection: Kunsthaus Zürich
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+  sources:
+  - wp-felix-vallotton
+- key: sleeping-beauty-panels-bakst
+  name: Sleeping Beauty series (Bakst room)
+  made: 1913
+  note: Seven panels lining an oval, theatrical "Bakst room"; made for James and Dorothy de Rothschild.
+  people:
+  - person: leon-bakst
+    role: creator
+  places:
+  - place: waddesdon-manor
+    role: made-for
+  prominence: 3
+  sources:
+  - wp-leon-bakst
+- key: the-merchants-wife-kustodiev
+  name: The Merchant's Wife
+  made: 1918
+  note: The article calls it the most famous of his paintings.
+  people:
+  - person: boris-kustodiev
+    role: creator
+  prominence: 4
+  sources:
+  - wp-boris-kustodiev
+- key: maslenitsa-kustodiev
+  name: Pancake Tuesday (Maslenitsa)
+  made: 1916
+  people:
+  - person: boris-kustodiev
+    role: creator
+  prominence: 3
+  sources:
+  - wp-boris-kustodiev
+- key: the-evangelists-goncharova
+  name: The Evangelists
+  made: 1910
+  made_end: 1911
+  note: Confiscated by the censor at the Donkey's Tail exhibition (1912) as blasphemous.
+  people:
+  - person: natalia-goncharova
+    role: creator
+  prominence: 4
+  sources:
+  - wp-natalia-goncharova
+- key: airplane-over-a-train-goncharova
+  name: Airplane over a Train
+  made: 1912
+  note: Cited as a leading Cubo-Futurist work.
+  people:
+  - person: natalia-goncharova
+    role: creator
+  prominence: 3
+  sources:
+  - wp-natalia-goncharova
+- key: the-fairy-princess-bauer
+  name: Sagoprinsessan (The Fairy Princess)
+  kind: painting
+  medium: oil
+  made: 1905
+  collection: Jönköpings läns museum
+  note: Sketched in 1904; shows his future wife Ester Ellqvist.
+  people:
+  - person: john-bauer
+    role: creator
+  prominence: 3
+  sources:
+  - wp-john-bauer
+- key: the-root-trolls-bauer
+  name: Rottrollen (The Root Trolls)
+  made: 1917
+  note: Shows his son Bengt sleeping among troll-shaped roots.
+  people:
+  - person: john-bauer
+    role: creator
+  prominence: 3
+  sources:
+  - wp-john-bauer
+- key: light-space-modulator
+  name: Light-Space Modulator (Lichtrequisit einer elektrischen Bühne)
+  kind: sculpture
+  made: 1928
+  made_end: 1930
+  note: Kinetic sculpture of industrial materials, built with architect Istvan Seboek for the Deutscher Werkbund exhibition in Paris, 1930.
+  people:
+  - person: laszlo-moholy-nagy
+    role: creator
+  prominence: 4
+  sources:
+  - wp-laszlo-moholy-nagy
+links:
+- patron: alexander-vi
+  artist: pinturicchio
+  from: 1492
+  to: 1494
+  sources:
+  - wp-pinturicchio
+- teacher: pietro-perugino
+  student: pinturicchio
+  sources:
+  - wp-pinturicchio
+- teacher: sandro-botticelli
+  student: filippino-lippi
+  sources:
+  - wp-filippino-lippi
+- teacher: piero-di-cosimo
+  student: andrea-del-sarto
+  sources:
+  - wp-piero-di-cosimo
+- teacher: andrea-del-sarto
+  student: pontormo
+  sources:
+  - wp-pontormo
+- teacher: piero-di-cosimo
+  student: pontormo
+  sources:
+  - wp-pontormo
+- teacher: pontormo
+  student: bronzino
+  sources:
+  - wp-pontormo
+- teacher: raphael
+  student: giulio-romano
+  sources:
+  - wp-giulio-romano
+- teacher: annibale-carracci
+  student: guido-reni
+  sources:
+  - wp-annibale-carracci
+- parent: pieter-bruegel-the-elder
+  child: pieter-brueghel-the-younger
+  sources:
+  - wp-pieter-brueghel-the-younger
+- teacher: canaletto
+  student: bernardo-bellotto
+  sources:
+  - wp-bernardo-bellotto
+- teacher: william-adolphe-bouguereau
+  student: lovis-corinth
+  sources:
+  - wp-lovis-corinth
+- teacher: vasily-perov
+  student: mikhail-nesterov
+  sources:
+  - wp-mikhail-nesterov
+- teacher: ilya-repin
+  student: boris-kustodiev
+  sources:
+  - wp-boris-kustodiev
+- teacher: leon-bakst
+  student: marc-chagall
+  sources:
+  - wp-leon-bakst
+moments:
+- person: luca-signorelli
+  role: born
+  place: cortona
+  sources:
+  - wp-luca-signorelli
+- person: luca-signorelli
+  role: worked
+  place: sistine-chapel
+  year: 1481
+  sources:
+  - wp-luca-signorelli
+- person: luca-signorelli
+  role: worked
+  place: orvieto-cathedral
+  year: 1499
+  sources:
+  - wp-luca-signorelli
+- person: luca-signorelli
+  role: died
+  place: cortona
+  year: 1523
+  sources:
+  - wp-luca-signorelli
+- person: luca-signorelli
+  role: buried
+  place: cortona
+  year: 1523
+  sources:
+  - wp-luca-signorelli
+- person: pinturicchio
+  role: born
+  place: perugia
+  year: 1454
+  sources:
+  - wp-pinturicchio
+- person: pinturicchio
+  role: worked
+  place: sistine-chapel
+  year: 1481
+  sources:
+  - wp-pinturicchio
+- person: pinturicchio
+  role: worked
+  place: santa-maria-del-popolo
+  year: 1484
+  sources:
+  - wp-pinturicchio
+- person: pinturicchio
+  role: worked
+  place: apostolic-palace
+  year: 1492
+  sources:
+  - wp-pinturicchio
+- person: filippino-lippi
+  role: born
+  place: prato
+  sources:
+  - wp-filippino-lippi
+- person: filippino-lippi
+  role: worked
+  place: brancacci-chapel
+  year: 1483
+  sources:
+  - wp-filippino-lippi
+- person: filippino-lippi
+  role: worked
+  place: santa-maria-novella
+  year: 1487
+  sources:
+  - wp-filippino-lippi
+- person: filippino-lippi
+  role: worked
+  place: rome
+  year: 1488
+  sources:
+  - wp-filippino-lippi
+- person: piero-di-cosimo
+  role: born
+  place: florence
+  year: 1462
+  sources:
+  - wp-piero-di-cosimo
+- person: piero-di-cosimo
+  role: worked
+  place: sistine-chapel
+  year: 1481
+  sources:
+  - wp-piero-di-cosimo
+- person: piero-di-cosimo
+  role: worked
+  place: rome
+  year: 1482
+  sources:
+  - wp-piero-di-cosimo
+- person: vittore-carpaccio
+  role: born
+  place: venice
+  sources:
+  - wp-vittore-carpaccio
+- person: vittore-carpaccio
+  role: worked
+  place: venice
+  year: 1490
+  sources:
+  - wp-vittore-carpaccio
+- person: vittore-carpaccio
+  role: worked
+  place: scuola-di-san-giorgio-degli-schiavoni
+  year: 1502
+  sources:
+  - wp-vittore-carpaccio
+- person: vittore-carpaccio
+  role: died
+  place: koper
+  sources:
+  - wp-vittore-carpaccio
+- person: lorenzo-lotto
+  role: born
+  place: venice
+  sources:
+  - wp-lorenzo-lotto
+- person: lorenzo-lotto
+  role: worked
+  place: treviso
+  year: 1503
+  sources:
+  - wp-lorenzo-lotto
+- person: lorenzo-lotto
+  role: worked
+  place: rome
+  year: 1508
+  sources:
+  - wp-lorenzo-lotto
+- person: lorenzo-lotto
+  role: worked
+  place: bergamo
+  year: 1513
+  sources:
+  - wp-lorenzo-lotto
+- person: lorenzo-lotto
+  role: worked
+  place: loreto
+  year: 1552
+  sources:
+  - wp-lorenzo-lotto
+- person: pontormo
+  role: born
+  place: pontorme
+  year: 1494
+  sources:
+  - wp-pontormo
+- person: pontormo
+  role: worked
+  place: villa-medici-poggio-a-caiano
+  year: 1519
+  sources:
+  - wp-pontormo
+- person: pontormo
+  role: worked
+  place: certosa-di-galluzzo
+  year: 1522
+  sources:
+  - wp-pontormo
+- person: pontormo
+  role: worked
+  place: santa-felicita
+  year: 1528
+  sources:
+  - wp-pontormo
+- person: giulio-romano
+  role: born
+  place: rome
+  sources:
+  - wp-giulio-romano
+- person: giulio-romano
+  role: worked
+  place: mantua
+  year: 1524
+  sources:
+  - wp-giulio-romano
+- person: giulio-romano
+  role: worked
+  place: palazzo-del-te
+  year: 1525
+  sources:
+  - wp-giulio-romano
+- person: giulio-romano
+  role: died
+  place: mantua
+  year: 1546
+  sources:
+  - wp-giulio-romano
+- person: parmigianino
+  role: born
+  place: parma
+  year: 1503
+  sources:
+  - wp-parmigianino
+- person: parmigianino
+  role: worked
+  place: rome
+  year: 1524
+  sources:
+  - wp-parmigianino
+- person: parmigianino
+  role: worked
+  place: bologna
+  year: 1527
+  sources:
+  - wp-parmigianino
+- person: parmigianino
+  role: died
+  place: casalmaggiore
+  year: 1540
+  sources:
+  - wp-parmigianino
+- person: annibale-carracci
+  role: born
+  place: bologna
+  year: 1560
+  sources:
+  - wp-annibale-carracci
+- person: annibale-carracci
+  role: worked
+  place: rome
+  year: 1595
+  sources:
+  - wp-annibale-carracci
+- person: annibale-carracci
+  role: worked
+  place: palazzo-farnese
+  year: 1597
+  sources:
+  - wp-annibale-carracci
+- person: annibale-carracci
+  role: buried
+  place: pantheon-rome
+  year: 1609
+  sources:
+  - wp-annibale-carracci
+- person: pieter-brueghel-the-younger
+  role: born
+  place: brussels
+  sources:
+  - wp-pieter-brueghel-the-younger
+- person: pieter-brueghel-the-younger
+  role: worked
+  place: antwerp
+  year: 1583
+  sources:
+  - wp-pieter-brueghel-the-younger
+- person: jan-brueghel-the-elder
+  role: born
+  place: brussels
+  year: 1568
+  sources:
+  - wp-jan-brueghel-the-elder
+- person: jan-brueghel-the-elder
+  role: worked
+  place: naples
+  year: 1590
+  sources:
+  - wp-jan-brueghel-the-elder
+- person: jan-brueghel-the-elder
+  role: worked
+  place: rome
+  year: 1592
+  sources:
+  - wp-jan-brueghel-the-elder
+- person: jan-brueghel-the-elder
+  role: worked
+  place: milan
+  year: 1595
+  sources:
+  - wp-jan-brueghel-the-elder
+- person: jan-brueghel-the-elder
+  role: died
+  place: antwerp
+  year: 1625
+  sources:
+  - wp-jan-brueghel-the-elder
+- person: guercino
+  role: born
+  place: cento
+  year: 1591
+  sources:
+  - wp-guercino
+- person: guercino
+  role: worked
+  place: rome
+  year: 1621
+  sources:
+  - wp-guercino
+- person: guercino
+  role: worked
+  place: piacenza
+  year: 1626
+  sources:
+  - wp-guercino
+- person: guercino
+  role: died
+  place: bologna
+  year: 1666
+  sources:
+  - wp-guercino
+- person: pietro-da-cortona
+  role: born
+  place: cortona
+  year: 1596
+  sources:
+  - wp-pietro-da-cortona
+- person: pietro-da-cortona
+  role: worked
+  place: palazzo-barberini
+  year: 1633
+  sources:
+  - wp-pietro-da-cortona
+- person: pietro-da-cortona
+  role: worked
+  place: palazzo-pitti
+  year: 1637
+  sources:
+  - wp-pietro-da-cortona
+- person: pietro-da-cortona
+  role: died
+  place: rome
+  year: 1669
+  sources:
+  - wp-pietro-da-cortona
+- person: salvator-rosa
+  role: born
+  place: naples
+  year: 1615
+  sources:
+  - wp-salvator-rosa
+- person: salvator-rosa
+  role: worked
+  place: rome
+  year: 1634
+  sources:
+  - wp-salvator-rosa
+- person: salvator-rosa
+  role: worked
+  place: viterbo
+  year: 1639
+  sources:
+  - wp-salvator-rosa
+- person: salvator-rosa
+  role: worked
+  place: florence
+  year: 1640
+  sources:
+  - wp-salvator-rosa
+- person: salvator-rosa
+  role: buried
+  place: santa-maria-degli-angeli-e-dei-martiri-rome
+  year: 1673
+  sources:
+  - wp-salvator-rosa
+- person: jacob-van-ruisdael
+  role: born
+  place: haarlem
+  year: 1629
+  sources:
+  - wp-jacob-van-ruisdael
+- person: jacob-van-ruisdael
+  role: worked
+  place: amsterdam
+  year: 1657
+  sources:
+  - wp-jacob-van-ruisdael
+- person: jacob-van-ruisdael
+  role: died
+  place: amsterdam
+  year: 1682
+  sources:
+  - wp-jacob-van-ruisdael
+- person: jacob-van-ruisdael
+  role: buried
+  place: grote-kerk-haarlem
+  year: 1682
+  sources:
+  - wp-jacob-van-ruisdael
+- person: jean-simeon-chardin
+  role: born
+  place: paris
+  year: 1699
+  sources:
+  - wp-jean-simeon-chardin
+- person: jean-simeon-chardin
+  role: worked
+  place: fontainebleau-castle
+  year: 1731
+  sources:
+  - wp-jean-simeon-chardin
+- person: jean-simeon-chardin
+  role: worked
+  place: louvre-palace
+  year: 1757
+  sources:
+  - wp-jean-simeon-chardin
+- person: jean-simeon-chardin
+  role: died
+  place: paris
+  year: 1779
+  sources:
+  - wp-jean-simeon-chardin
+- person: bernardo-bellotto
+  role: born
+  place: venice
+  year: 1721
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: worked
+  place: rome
+  year: 1742
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: worked
+  place: dresden
+  year: 1747
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: worked
+  place: vienna
+  year: 1758
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: worked
+  place: munich
+  year: 1761
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: worked
+  place: warsaw
+  year: 1768
+  sources:
+  - wp-bernardo-bellotto
+- person: bernardo-bellotto
+  role: died
+  place: warsaw
+  year: 1780
+  sources:
+  - wp-bernardo-bellotto
+- person: anton-raphael-mengs
+  role: born
+  place: usti-nad-labem
+  year: 1728
+  sources:
+  - wp-anton-raphael-mengs
+- person: anton-raphael-mengs
+  role: worked
+  place: rome
+  year: 1741
+  sources:
+  - wp-anton-raphael-mengs
+- person: anton-raphael-mengs
+  role: worked
+  place: madrid
+  year: 1761
+  sources:
+  - wp-anton-raphael-mengs
+- person: anton-raphael-mengs
+  role: died
+  place: rome
+  year: 1779
+  sources:
+  - wp-anton-raphael-mengs
+- person: joseph-wright-of-derby
+  role: born
+  place: derby
+  year: 1734
+  sources:
+  - wp-joseph-wright-of-derby
+- person: joseph-wright-of-derby
+  role: worked
+  place: london
+  year: 1751
+  sources:
+  - wp-joseph-wright-of-derby
+- person: joseph-wright-of-derby
+  role: worked
+  place: liverpool
+  year: 1768
+  sources:
+  - wp-joseph-wright-of-derby
+- person: joseph-wright-of-derby
+  role: died
+  place: derby
+  year: 1797
+  sources:
+  - wp-joseph-wright-of-derby
+- person: henry-fuseli
+  role: born
+  place: zurich
+  year: 1741
+  sources:
+  - wp-henry-fuseli
+- person: henry-fuseli
+  role: worked
+  place: rome
+  year: 1770
+  sources:
+  - wp-henry-fuseli
+- person: henry-fuseli
+  role: worked
+  place: london
+  year: 1779
+  sources:
+  - wp-henry-fuseli
+- person: henry-fuseli
+  role: died
+  place: london
+  year: 1825
+  sources:
+  - wp-henry-fuseli
+- person: henry-fuseli
+  role: buried
+  place: st-pauls-cathedral
+  year: 1825
+  sources:
+  - wp-henry-fuseli
+- person: alexander-andreyevich-ivanov
+  role: born
+  place: st-petersburg
+  year: 1806
+  sources:
+  - wp-alexander-andreyevich-ivanov
+- person: alexander-andreyevich-ivanov
+  role: worked
+  place: rome
+  year: 1837
+  sources:
+  - wp-alexander-andreyevich-ivanov
+- person: alexander-andreyevich-ivanov
+  role: died
+  place: st-petersburg
+  year: 1858
+  sources:
+  - wp-alexander-andreyevich-ivanov
+- person: carl-spitzweg
+  role: born
+  place: munich
+  year: 1808
+  sources:
+  - wp-carl-spitzweg
+- person: carl-spitzweg
+  role: died
+  place: munich
+  year: 1885
+  sources:
+  - wp-carl-spitzweg
+- person: carl-spitzweg
+  role: buried
+  place: munich
+  year: 1885
+  sources:
+  - wp-carl-spitzweg
+- person: frederic-leighton
+  role: born
+  place: scarborough
+  year: 1830
+  sources:
+  - wp-frederic-leighton
+- person: frederic-leighton
+  role: worked
+  place: paris
+  year: 1855
+  sources:
+  - wp-frederic-leighton
+- person: frederic-leighton
+  role: worked
+  place: london
+  year: 1860
+  sources:
+  - wp-frederic-leighton
+- person: edward-burne-jones
+  role: born
+  place: birmingham
+  year: 1833
+  sources:
+  - wp-edward-burne-jones
+- person: edward-burne-jones
+  role: worked
+  place: london
+  year: 1867
+  sources:
+  - wp-edward-burne-jones
+- person: edward-burne-jones
+  role: buried
+  place: rottingdean
+  year: 1898
+  sources:
+  - wp-edward-burne-jones
+- person: lawrence-alma-tadema
+  role: born
+  place: dronryp
+  year: 1836
+  sources:
+  - wp-lawrence-alma-tadema
+- person: lawrence-alma-tadema
+  role: worked
+  place: antwerp
+  year: 1852
+  sources:
+  - wp-lawrence-alma-tadema
+- person: lawrence-alma-tadema
+  role: worked
+  place: london
+  year: 1870
+  sources:
+  - wp-lawrence-alma-tadema
+- person: lawrence-alma-tadema
+  role: died
+  place: wiesbaden
+  year: 1912
+  sources:
+  - wp-lawrence-alma-tadema
+- person: lawrence-alma-tadema
+  role: buried
+  place: st-pauls-cathedral
+  year: 1912
+  sources:
+  - wp-lawrence-alma-tadema
+- person: james-tissot
+  role: born
+  place: nantes
+  year: 1836
+  sources:
+  - wp-james-tissot
+- person: james-tissot
+  role: worked
+  place: london
+  year: 1871
+  sources:
+  - wp-james-tissot
+- person: james-tissot
+  role: died
+  place: chateau-de-buillon
+  year: 1902
+  sources:
+  - wp-james-tissot
+- person: james-tissot
+  role: buried
+  place: chateau-de-buillon
+  year: 1902
+  sources:
+  - wp-james-tissot
+- person: john-william-waterhouse
+  role: born
+  place: rome
+  year: 1849
+  sources:
+  - wp-john-william-waterhouse
+- person: john-william-waterhouse
+  role: worked
+  place: london
+  year: 1854
+  sources:
+  - wp-john-william-waterhouse
+- person: john-william-waterhouse
+  role: buried
+  place: london
+  year: 1917
+  sources:
+  - wp-john-william-waterhouse
+- person: ferdinand-hodler
+  role: born
+  place: bern
+  year: 1853
+  sources:
+  - wp-ferdinand-hodler
+- person: ferdinand-hodler
+  role: worked
+  place: geneva
+  year: 1871
+  sources:
+  - wp-ferdinand-hodler
+- person: ferdinand-hodler
+  role: worked
+  place: madrid
+  year: 1878
+  sources:
+  - wp-ferdinand-hodler
+- person: mikhail-vrubel
+  role: born
+  place: omsk
+  year: 1856
+  sources:
+  - wp-mikhail-vrubel
+- person: mikhail-vrubel
+  role: worked
+  place: kyiv
+  year: 1884
+  sources:
+  - wp-mikhail-vrubel
+- person: mikhail-vrubel
+  role: worked
+  place: moscow
+  year: 1890
+  sources:
+  - wp-mikhail-vrubel
+- person: lovis-corinth
+  role: born
+  place: tapiau
+  year: 1858
+  sources:
+  - wp-lovis-corinth
+- person: lovis-corinth
+  role: worked
+  place: munich
+  year: 1880
+  sources:
+  - wp-lovis-corinth
+- person: lovis-corinth
+  role: worked
+  place: berlin
+  year: 1900
+  sources:
+  - wp-lovis-corinth
+- person: lovis-corinth
+  role: died
+  place: zandvoort
+  year: 1925
+  sources:
+  - wp-lovis-corinth
+- person: lovis-corinth
+  role: buried
+  place: stahnsdorf
+  year: 1925
+  sources:
+  - wp-lovis-corinth
+- person: james-ensor
+  role: worked
+  place: brussels
+  year: 1877
+  sources:
+  - wp-james-ensor
+- person: james-ensor
+  role: died
+  place: ostend
+  year: 1949
+  sources:
+  - wp-james-ensor
+- person: niko-pirosmani
+  role: born
+  place: mirzaani
+  year: 1862
+  sources:
+  - wp-niko-pirosmani
+- person: niko-pirosmani
+  role: worked
+  place: tbilisi
+  year: 1870
+  sources:
+  - wp-niko-pirosmani
+- person: mikhail-nesterov
+  role: worked
+  place: moscow
+  year: 1874
+  sources:
+  - wp-mikhail-nesterov
+- person: mikhail-nesterov
+  role: worked
+  place: abastumani
+  year: 1898
+  sources:
+  - wp-mikhail-nesterov
+- person: felix-vallotton
+  role: born
+  place: lausanne
+  year: 1865
+  sources:
+  - wp-felix-vallotton
+- person: felix-vallotton
+  role: worked
+  place: paris
+  year: 1882
+  sources:
+  - wp-felix-vallotton
+- person: felix-vallotton
+  role: died
+  place: paris
+  year: 1925
+  sources:
+  - wp-felix-vallotton
+- person: leon-bakst
+  role: born
+  place: grodno
+  year: 1866
+  sources:
+  - wp-leon-bakst
+- person: leon-bakst
+  role: worked
+  place: paris
+  year: 1893
+  sources:
+  - wp-leon-bakst
+- person: leon-bakst
+  role: died
+  place: rueil-malmaison
+  year: 1924
+  sources:
+  - wp-leon-bakst
+- person: leon-bakst
+  role: buried
+  place: cimetiere-des-batignolles
+  year: 1924
+  sources:
+  - wp-leon-bakst
+- person: boris-kustodiev
+  role: born
+  place: astrakhan
+  year: 1878
+  sources:
+  - wp-boris-kustodiev
+- person: boris-kustodiev
+  role: worked
+  place: saint-petersburg
+  year: 1896
+  sources:
+  - wp-boris-kustodiev
+- person: boris-kustodiev
+  role: died
+  place: saint-petersburg
+  year: 1927
+  sources:
+  - wp-boris-kustodiev
+- person: natalia-goncharova
+  role: born
+  place: nagaevo
+  year: 1881
+  sources:
+  - wp-natalia-goncharova
+- person: natalia-goncharova
+  role: worked
+  place: moscow
+  year: 1892
+  sources:
+  - wp-natalia-goncharova
+- person: natalia-goncharova
+  role: worked
+  place: paris
+  year: 1921
+  sources:
+  - wp-natalia-goncharova
+- person: natalia-goncharova
+  role: died
+  place: paris
+  year: 1962
+  sources:
+  - wp-natalia-goncharova
+- person: john-bauer
+  role: born
+  place: jonkoping
+  year: 1882
+  sources:
+  - wp-john-bauer
+- person: john-bauer
+  role: worked
+  place: stockholm
+  year: 1898
+  sources:
+  - wp-john-bauer
+- person: john-bauer
+  role: worked
+  place: granna
+  year: 1914
+  sources:
+  - wp-john-bauer
+- person: john-bauer
+  role: died
+  place: lake-vattern
+  year: 1918
+  sources:
+  - wp-john-bauer
+- person: john-bauer
+  role: buried
+  place: ostra-cemetery-jonkoping
+  year: 1922
+  sources:
+  - wp-john-bauer
+- person: laszlo-moholy-nagy
+  role: born
+  place: bacsborsod
+  year: 1895
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: laszlo-moholy-nagy
+  role: worked
+  place: berlin
+  year: 1920
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: laszlo-moholy-nagy
+  role: worked
+  place: weimar
+  year: 1923
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: laszlo-moholy-nagy
+  role: worked
+  place: london
+  year: 1935
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: laszlo-moholy-nagy
+  role: worked
+  place: chicago
+  year: 1937
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: laszlo-moholy-nagy
+  role: died
+  place: chicago
+  year: 1946
+  sources:
+  - wp-laszlo-moholy-nagy
+- person: maria-prymachenko
+  role: worked
+  place: kyiv
+  year: 1935
+  sources:
+  - wp-maria-prymachenko
+- person: istvan-sandorfi
+  role: born
+  place: budapest
+  year: 1948
+  sources:
+  - wp-istvan-sandorfi
+- person: istvan-sandorfi
+  role: worked
+  place: paris
+  year: 1973
+  sources:
+  - wp-istvan-sandorfi
+discrepancies:
+- key: luca-signorelli-born
+  question: When was Luca Signorelli born?
+  about:
+  - person: luca-signorelli
+  field: born
+  claims:
+  - value: '1441'
+    sources:
+    - wp-luca-signorelli
+    note: Earliest proposed birth date
+  - value: '1445'
+    sources:
+    - wp-luca-signorelli
+    note: Latest proposed birth date
+  note: The record uses 1441, marked approximate; the article says dates between 1441 and 1445 have been proposed.
+- key: piero-di-cosimo-died
+  question: When did Piero di Cosimo die?
+  about:
+  - person: piero-di-cosimo
+  field: died
+  claims:
+  - value: '1521'
+    sources:
+    - wp-piero-di-cosimo
+    note: Given by Vasari and repeated by many sources including Britannica
+  - value: '1522-04-12'
+    sources:
+    - wp-piero-di-cosimo
+    note: Contemporary documents show he died of plague on this date
+  note: The record uses 1522-04-12, the date from contemporary documents.
+- key: vittore-carpaccio-died
+  question: When did Vittore Carpaccio die?
+  about:
+  - person: vittore-carpaccio
+  field: died
+  claims:
+  - value: '1525'
+    sources:
+    - wp-vittore-carpaccio
+  - value: '1526'
+    sources:
+    - wp-vittore-carpaccio
+  note: The article says he died between 1525 and 1526; the record uses c. 1525.
+- key: pietro-da-cortona-born
+  question: In which year was Pietro da Cortona born?
+  about:
+  - person: pietro-da-cortona
+  field: born
+  claims:
+  - value: 1 November 1596
+    sources:
+    - wp-pietro-da-cortona
+  - value: 1 November 1597
+    sources:
+    - wp-pietro-da-cortona
+  note: The article gives "1 November 1596 or 1597". The record holds 1596, marked estimated.
+- key: salvator-rosa-born
+  question: On what date was Salvator Rosa born?
+  about:
+  - person: salvator-rosa
+  field: born
+  claims:
+  - value: 20 June 1615
+    sources:
+    - wp-salvator-rosa
+  - value: 21 July 1615
+    sources:
+    - wp-salvator-rosa
+  note: Year 1615 is agreed; the day is disputed, so the record holds the year only.
+- key: salvator-rosa-died
+  question: On what date did Salvator Rosa die?
+  about:
+  - person: salvator-rosa
+  field: died
+  claims:
+  - value: 15 March 1673
+    sources:
+    - wp-salvator-rosa
+    note: Lead paragraph
+  - value: 17 March 1673
+    sources:
+    - wp-salvator-rosa
+    note: Biography section (married 4 March, died 17 March)
+  note: Both dates are within the same article. The record holds the year 1673 only.
+- key: jacob-van-ruisdael-born
+  question: In which year was Jacob van Ruisdael born?
+  about:
+  - person: jacob-van-ruisdael
+  field: born
+  claims:
+  - value: '1628'
+    sources:
+    - wp-jacob-van-ruisdael
+  - value: '1629'
+    sources:
+    - wp-jacob-van-ruisdael
+  note: The article says "1628 or 1629" (lead gives c. 1629). The record holds 1629, marked estimated.
+- key: bernardo-bellotto-born
+  question: When was Bernardo Bellotto born?
+  about:
+  - person: bernardo-bellotto
+  field: born
+  claims:
+  - value: c. 1721/1722
+    sources:
+    - wp-bernardo-bellotto
+  - value: 30 January 1721
+    sources:
+    - wp-bernardo-bellotto
+  note: The record holds 1721, marked estimated.
+- key: madonna-in-a-floral-wreath-brueghel-rubens-date
+  question: When was the Madonna in a Floral Wreath by Brueghel and Rubens made?
+  about:
+  - artwork: madonna-in-a-floral-wreath-brueghel-rubens
+  field: date
+  claims:
+  - value: '1621'
+    sources:
+    - wp-jan-brueghel-the-elder
+    note: Garland paintings section
+  - value: c. 1616-18
+    sources:
+    - wp-jan-brueghel-the-elder
+    note: Collaborations section
+  note: Both dates are in the same article. The record holds 1621.
+- key: lawrence-alma-tadema-died
+  question: On what day did Alma-Tadema die in 1912?
+  about:
+  - person: lawrence-alma-tadema
+  field: died
+  claims:
+  - value: '1912-06-25'
+    sources:
+    - wp-lawrence-alma-tadema
+    note: Given in the article's lead
+  - value: '1912-06-28'
+    sources:
+    - wp-lawrence-alma-tadema
+    note: Given in the article's biography section
+  note: The record uses 25 June (lead); the same article gives 28 June in its body.
+- key: natalia-goncharova-paris-move
+  question: When did Goncharova move to Paris?
+  about:
+  - person: natalia-goncharova
+  field: place
+  claims:
+  - value: 1921 (lead and early-life summary)
+    sources:
+    - wp-natalia-goncharova
+  - value: 29 April 1914, leaving Russia with Larionov (later career section)
+    sources:
+    - wp-natalia-goncharova
+  note: The same article gives both; the record uses 1921 for her Paris residence.
