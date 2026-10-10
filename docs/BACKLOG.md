@@ -131,13 +131,13 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ### Ready (ranked)
 
-#### [P2] Popularity tiers from Wikipedia sitelinks
-`type: enhancement` · `area: data` · `status: ready` · `issue: #118`
-
-Each person now has `sitelinks` (Wikipedia language editions, from Wikidata; 1,101 people, read 2026-10-10). Next: agree tier thresholds (proposal: 150+ icons, 100-149, 60-99, 40-59, under 40), set `prominence` or a tier from them, and use tiers on the site (labels, default filters, the Year view's makers list). Artists today: 18 / 21 / 96 / 193 / 266 across those tiers.
-Source: Ty, 2026-10-10.
-
 ## Done
+
+#### [P2] Popularity tiers from Wikipedia sitelinks
+`type: enhancement` · `area: data` · `status: done` · `issue: #118`
+
+Every person has `sitelinks` (Wikipedia language editions, from Wikidata; read 2026-10-10). Artists, writers, composers and scholars get prominence from it (150+ = 5, 100-149 = 4, 60-99 = 3, 40-59 = 2, under 40 = 1), and the site has Fame buttons (Icons, Famous, Well known, Everyone; default Well known) that hide the long tail of those groups. Rulers are never hidden by it. Done 2026-10-10. Left: keep `sitelinks` current (re-read now and then); apply tiers to label size on the timeline.
+Source: Ty, 2026-10-10.
 
 #### [P3] Painters: batch 13 and the patrons of the painters
 `type: task` · `area: data` · `status: done` · `issue: #113, #114`

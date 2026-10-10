@@ -173,8 +173,20 @@ const CATS = [
   { key: "patrons", label: "Patrons", color: "var(--indigo)", test: p => p.type === "Patron" },
 ];
 const catsOf = p => { const ks = CATS.filter(c => c.test(p)).map(c => c.key); return ks.length ? ks : ["other"]; };
-const catsFiltering = () => S.catsOff.size > 0;
-const catOn = p => !!p && catsOf(p).some(k => !S.catsOff.has(k));
+// Fame: artists, writers, composers and scholars are ranked by how many Wikipedia language editions cover them (sitelinks).
+// The cut-off hides the long tail by default; rulers and officials are never hidden by it. Whoever you searched for or selected always shows.
+const FAME = [
+  { key: "icons", label: "Icons", min: 150 },
+  { key: "famous", label: "Famous", min: 100 },
+  { key: "known", label: "Well known", min: 60 },
+  { key: "all", label: "Everyone", min: 0 },
+];
+const FAME_TYPES = ["Artist", "Writer", "Composer", "Scholar"];
+const fameMin = () => (FAME.find(f => f.key === S.fame) || FAME[2]).min;
+const fameFiltering = () => fameMin() > 0;
+const fameOn = p => !p || !FAME_TYPES.includes(p.type) || fameMin() === 0 || p.sitelinks == null || p.sitelinks >= fameMin() || p.id === S.selected || p.id === S.filter?.focus;
+const catsFiltering = () => S.catsOff.size > 0 || fameFiltering();
+const catOn = p => !!p && catsOf(p).some(k => !S.catsOff.has(k)) && fameOn(p);
 // An event stays if it has nobody attached, or anyone in it is shown.
 const eventCatOn = (db, e) => { const ppl = db.peopleInEvent(e.id); return !ppl.length || ppl.some(x => catOn(x.person)); };
 const COMMON_REGIONS = ["italy","france","england","spain","germany","scotland","wales","ireland","normandy","flanders","rome","venice","florence","milan","naples","sicily","papal states","portugal","netherlands","austria","burgundy","aquitaine","brittany","london","paris","jerusalem","byzantium","constantinople","holy roman empire"];
@@ -387,6 +399,7 @@ const S = {
   layers: { spouses: store.get("spouses", true), events: store.get("events", true) },
   zoom: 2, zoomAuto: true,
   selected: null, mapMode: "selected", catsOff: new Set(store.get("catsOff", [])),
+  fame: store.get("fame", "known"),
   trail: [], layout: null,
 };
 
@@ -1601,6 +1614,18 @@ function renderCats() {
         h("i", { class: "dot", "aria-hidden": "true" }), `${c.label} `, h("b", { text: n })));
     });
     if (S.catsOff.size) box.append(h("button", { type: "button", class: "plink", onclick: () => { S.catsOff.clear(); applyCats(); }, text: "Show everyone" }));
+    // Fame row: how far down the Wikipedia ranking to show artists, writers, composers and scholars.
+    const cultural = db.people.filter(p => FAME_TYPES.includes(p.type));
+    if (cultural.some(p => p.sitelinks != null)) {
+      const row = h("div", { class: "fame" }, h("span", { class: "lbl", text: "Fame" }));
+      FAME.forEach(f => {
+        const n = cultural.filter(p => p.sitelinks == null || p.sitelinks >= f.min).length;
+        row.append(h("button", { type: "button", class: "chip", "aria-pressed": S.fame === f.key,
+          title: f.min ? `Artists, writers, composers and scholars with at least ${f.min} Wikipedia editions` : "Everyone, including the long tail",
+          onclick: () => { S.fame = f.key; store.set("fame", f.key); applyCats(); } }, `${f.label} `, h("b", { text: n })));
+      });
+      box.append(row);
+    }
   });
 }
 function applyCats() {
