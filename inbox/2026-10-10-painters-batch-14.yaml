@@ -1,0 +1,4906 @@
+# Notes for the reviewer
+# - 55 more artists: pre-1500 masters, sculptors, architects and graphic artists, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, sculptors and architects, batch 14: pre-1500 masters, sculptors, architects, graphic artists (55)'
+  requested: 'The gaps in artists: pre-1500 masters, sculptors, major architects and graphic artists'
+  date: '2026-10-10'
+sources:
+- key: wp-giotto
+  title: Giotto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giotto
+- key: wp-cimabue
+  title: Cimabue (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cimabue
+- key: wp-duccio
+  title: Duccio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Duccio
+- key: wp-simone-martini
+  title: Simone Martini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Simone_Martini
+- key: wp-masaccio
+  title: Masaccio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Masaccio
+- key: wp-fra-angelico
+  title: Fra Angelico (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fra_Angelico
+- key: wp-fra-filippo-lippi
+  title: Filippo Lippi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Filippo_Lippi
+- key: wp-paolo-uccello
+  title: Paolo Uccello (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paolo_Uccello
+- key: wp-piero-della-francesca
+  title: Piero della Francesca (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Piero_della_Francesca
+- key: wp-jan-van-eyck
+  title: Jan van Eyck (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_van_Eyck
+- key: wp-rogier-van-der-weyden
+  title: Rogier van der Weyden (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rogier_van_der_Weyden
+- key: wp-hans-memling
+  title: Hans Memling (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hans_Memling
+- key: wp-giovanni-bellini
+  title: Giovanni Bellini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giovanni_Bellini
+- key: wp-andrea-mantegna
+  title: Andrea Mantegna (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrea_Mantegna
+- key: wp-antonello-da-messina
+  title: Antonello da Messina (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antonello_da_Messina
+- key: wp-andrei-rublev
+  title: Andrei Rublev (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrei_Rublev
+- key: wp-donatello
+  title: Donatello (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Donatello
+- key: wp-lorenzo-ghiberti
+  title: Lorenzo Ghiberti (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Lorenzo_Ghiberti
+- key: wp-filippo-brunelleschi
+  title: Filippo Brunelleschi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Filippo_Brunelleschi
+- key: wp-andrea-del-verrocchio
+  title: Andrea del Verrocchio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrea_del_Verrocchio
+- key: wp-leon-battista-alberti
+  title: Leon Battista Alberti (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Leon_Battista_Alberti
+- key: wp-auguste-rodin
+  title: Auguste Rodin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Auguste_Rodin
+- key: wp-gian-lorenzo-bernini
+  title: Gian Lorenzo Bernini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gian_Lorenzo_Bernini
+- key: wp-antonio-canova
+  title: Antonio Canova (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antonio_Canova
+- key: wp-bertel-thorvaldsen
+  title: Bertel Thorvaldsen (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bertel_Thorvaldsen
+- key: wp-camille-claudel
+  title: Camille Claudel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Camille_Claudel
+- key: wp-benvenuto-cellini
+  title: Benvenuto Cellini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Benvenuto_Cellini
+- key: wp-giambologna
+  title: Giambologna (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giambologna
+- key: wp-henry-moore
+  title: Henry Moore (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henry_Moore
+- key: wp-barbara-hepworth
+  title: Barbara Hepworth (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Barbara_Hepworth
+- key: wp-alexander-calder
+  title: Alexander Calder (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexander_Calder
+- key: wp-andrea-palladio
+  title: Andrea Palladio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrea_Palladio
+- key: wp-donato-bramante
+  title: Donato Bramante (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Donato_Bramante
+- key: wp-gustave-eiffel
+  title: Gustave Eiffel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustave_Eiffel
+- key: wp-karl-friedrich-schinkel
+  title: Karl Friedrich Schinkel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Karl_Friedrich_Schinkel
+- key: wp-antoni-gaudi
+  title: Antoni Gaudi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antoni_Gaud%C3%AD
+- key: wp-le-corbusier
+  title: Le Corbusier (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Le_Corbusier
+- key: wp-walter-gropius
+  title: Walter Gropius (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Walter_Gropius
+- key: wp-ludwig-mies-van-der-rohe
+  title: Ludwig Mies van der Rohe (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ludwig_Mies_van_der_Rohe
+- key: wp-alvar-aalto
+  title: Alvar Aalto (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alvar_Aalto
+- key: wp-i-m-pei
+  title: I. M. Pei (Wikipedia)
+  url: https://en.wikipedia.org/wiki/I._M._Pei
+- key: wp-zaha-hadid
+  title: Zaha Hadid (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Zaha_Hadid
+- key: wp-renzo-piano
+  title: Renzo Piano (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Renzo_Piano
+- key: wp-santiago-calatrava
+  title: Santiago Calatrava (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Santiago_Calatrava
+- key: wp-m-c-escher
+  title: M. C. Escher (Wikipedia)
+  url: https://en.wikipedia.org/wiki/M._C._Escher
+- key: wp-gustave-dore
+  title: Gustave Doré (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustave_Dor%C3%A9
+- key: wp-john-james-audubon
+  title: John James Audubon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_James_Audubon
+- key: wp-maria-sibylla-merian
+  title: Maria Sibylla Merian (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maria_Sibylla_Merian
+- key: wp-marcel-duchamp
+  title: Marcel Duchamp (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marcel_Duchamp
+- key: wp-man-ray
+  title: Man Ray (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Man_Ray
+- key: wp-kathe-kollwitz
+  title: Käthe Kollwitz (Wikipedia)
+  url: https://en.wikipedia.org/wiki/K%C3%A4the_Kollwitz
+- key: wp-aubrey-beardsley
+  title: Aubrey Beardsley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Aubrey_Beardsley
+- key: wp-beatrix-potter
+  title: Beatrix Potter (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Beatrix_Potter
+- key: wp-banksy
+  title: Banksy (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Banksy
+- key: wp-marina-abramovic
+  title: Marina Abramović (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marina_Abramovi%C4%87
+places:
+- key: tournai
+  name: Tournai
+  kind: city
+  region: Hainaut
+  country: Belgium
+  lat: 50.606
+  lng: 3.389
+  visitable: true
+  sources:
+  - wp-rogier-van-der-weyden
+- key: maaseik
+  name: Maaseik
+  kind: city
+  region: Limburg
+  country: Belgium
+  lat: 51.097
+  lng: 5.79
+  visitable: true
+  sources:
+  - wp-jan-van-eyck
+- key: spoleto
+  name: Spoleto
+  kind: city
+  region: Umbria
+  country: Italy
+  lat: 42.735
+  lng: 12.738
+  visitable: true
+  sources:
+  - wp-fra-filippo-lippi
+- key: sansepolcro
+  name: Sansepolcro
+  historical_name: Borgo Santo Sepolcro
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.571
+  lng: 12.141
+  visitable: true
+  sources:
+  - wp-piero-della-francesca
+- key: san-giovanni-valdarno
+  name: San Giovanni Valdarno
+  historical_name: Castel San Giovanni di Altura
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.568
+  lng: 11.527
+  visitable: true
+  sources:
+  - wp-masaccio
+- key: vicchio
+  name: Vicchio
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.917
+  lng: 11.455
+  visitable: true
+  sources:
+  - wp-fra-angelico
+- key: pratovecchio
+  name: Pratovecchio
+  kind: city
+  region: Tuscany
+  country: Italy
+  lat: 43.783
+  lng: 11.717
+  visitable: true
+  sources:
+  - wp-paolo-uccello
+- key: rimini
+  name: Rimini
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.06
+  lng: 12.568
+  visitable: true
+  sources:
+  - wp-piero-della-francesca
+- key: scrovegni-chapel
+  name: Scrovegni Chapel
+  historical_name: Arena Chapel
+  kind: chapel
+  city: Padua
+  region: Veneto
+  country: Italy
+  lat: 45.411
+  lng: 11.879
+  visitable: true
+  built_by: Commissioned by Enrico degli Scrovegni
+  sources:
+  - wp-giotto
+- key: basilica-of-san-francesco-arezzo
+  name: Basilica of San Francesco, Arezzo
+  kind: church
+  city: Arezzo
+  region: Tuscany
+  country: Italy
+  lat: 43.466
+  lng: 11.882
+  visitable: true
+  sources:
+  - wp-piero-della-francesca
+- key: seligenstadt
+  name: Seligenstadt
+  kind: town
+  region: Hesse
+  country: Germany
+  lat: 50.046
+  lng: 8.978
+  visitable: true
+  sources:
+  - wp-hans-memling
+- key: san-zaccaria-venice
+  name: Church of San Zaccaria
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.434
+  lng: 12.343
+  visitable: true
+  sources:
+  - wp-giovanni-bellini
+- key: santi-giovanni-e-paolo-venice
+  name: Basilica of Santi Giovanni e Paolo
+  kind: church
+  city: Venice
+  region: Veneto
+  country: Italy
+  lat: 45.439
+  lng: 12.341
+  visitable: true
+  sources:
+  - wp-giovanni-bellini
+- key: isola-di-carturo
+  name: Isola di Carturo
+  kind: town
+  region: Veneto
+  country: Italy
+  lat: 45.533
+  lng: 11.824
+  sources:
+  - wp-andrea-mantegna
+- key: ovetari-chapel-padua
+  name: Ovetari Chapel
+  kind: chapel
+  city: Padua
+  region: Veneto
+  country: Italy
+  lat: 45.412
+  lng: 11.879
+  visitable: true
+  sources:
+  - wp-andrea-mantegna
+- key: palazzo-ducale-mantua
+  name: Palazzo Ducale, Mantua
+  kind: palace
+  city: Mantua
+  region: Lombardy
+  country: Italy
+  lat: 45.16
+  lng: 10.798
+  visitable: true
+  sources:
+  - wp-andrea-mantegna
+- key: messina
+  name: Messina
+  kind: city
+  region: Sicily
+  country: Italy
+  lat: 38.193
+  lng: 15.554
+  visitable: true
+  sources:
+  - wp-antonello-da-messina
+- key: andronikov-monastery
+  name: Andronikov Monastery
+  kind: monastery
+  city: Moscow
+  region: Moscow
+  country: Russia
+  lat: 55.748
+  lng: 37.674
+  visitable: true
+  sources:
+  - wp-andrei-rublev
+- key: trinity-lavra-of-st-sergius
+  name: Trinity Lavra of St. Sergius
+  kind: monastery
+  city: Sergiev Posad
+  region: Moscow Oblast
+  country: Russia
+  lat: 56.315
+  lng: 38.13
+  visitable: true
+  sources:
+  - wp-andrei-rublev
+- key: dormition-cathedral-vladimir
+  name: Dormition Cathedral, Vladimir
+  kind: cathedral
+  city: Vladimir
+  region: Vladimir Oblast
+  country: Russia
+  lat: 56.131
+  lng: 40.411
+  visitable: true
+  sources:
+  - wp-andrei-rublev
+- key: pelago
+  name: Pelago
+  kind: town
+  region: Tuscany
+  country: Italy
+  lat: 43.777
+  lng: 11.495
+  visitable: true
+  sources:
+  - wp-lorenzo-ghiberti
+- key: santa-croce-florence
+  name: Basilica of Santa Croce
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.769
+  lng: 11.262
+  visitable: true
+  sources:
+  - wp-lorenzo-ghiberti
+- key: florence-baptistery
+  name: Florence Baptistery (Battistero di San Giovanni)
+  kind: baptistery
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.773
+  lng: 11.255
+  visitable: true
+  sources:
+  - wp-lorenzo-ghiberti
+  - wp-filippo-brunelleschi
+- key: ospedale-degli-innocenti-florence
+  name: Ospedale degli Innocenti (Foundling Hospital)
+  kind: hospital
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.777
+  lng: 11.263
+  founded: 1419
+  architect: Filippo Brunelleschi
+  visitable: true
+  sources:
+  - wp-filippo-brunelleschi
+- key: basilica-of-santo-spirito-florence
+  name: Basilica of Santo Spirito
+  kind: church
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.767
+  lng: 11.247
+  architect: Filippo Brunelleschi
+  visitable: true
+  sources:
+  - wp-filippo-brunelleschi
+- key: pazzi-chapel-florence
+  name: Pazzi Chapel
+  kind: chapel
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.768
+  lng: 11.263
+  architect: Filippo Brunelleschi
+  visitable: true
+  sources:
+  - wp-filippo-brunelleschi
+- key: palazzo-rucellai-florence
+  name: Palazzo Rucellai
+  kind: palace
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.772
+  lng: 11.25
+  architect: Leon Battista Alberti (facade, 1446-1451); executed by Bernardo Rossellino
+  visitable: true
+  sources:
+  - wp-leon-battista-alberti
+- key: tempio-malatestiano-rimini
+  name: Tempio Malatestiano
+  kind: church
+  city: Rimini
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.06
+  lng: 12.568
+  architect: Leon Battista Alberti
+  visitable: true
+  sources:
+  - wp-leon-battista-alberti
+- key: basilica-of-sant-andrea-mantua
+  name: Basilica of Sant'Andrea, Mantua
+  kind: church
+  city: Mantua
+  region: Lombardy
+  country: Italy
+  lat: 45.157
+  lng: 10.79
+  founded: 1471
+  architect: Leon Battista Alberti
+  visitable: true
+  sources:
+  - wp-leon-battista-alberti
+- key: san-sebastiano-mantua
+  name: San Sebastiano, Mantua
+  kind: church
+  city: Mantua
+  region: Lombardy
+  country: Italy
+  lat: 45.15
+  lng: 10.795
+  founded: 1458
+  architect: Leon Battista Alberti
+  visitable: true
+  sources:
+  - wp-leon-battista-alberti
+- key: hotel-biron-paris
+  name: Hotel Biron
+  kind: townhouse
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.855
+  lng: 2.315
+  visitable: true
+  sources:
+  - wp-auguste-rodin
+- key: possagno
+  name: Possagno
+  kind: town
+  region: Veneto
+  country: Italy
+  lat: 45.848
+  lng: 11.886
+  visitable: true
+  sources:
+  - wp-antonio-canova
+- key: tempio-canoviano
+  name: Tempio Canoviano
+  kind: church
+  city: Possagno
+  region: Veneto
+  country: Italy
+  lat: 45.847
+  lng: 11.887
+  founded: 1819
+  built_by: Antonio Canova (designed, financed and partly built it; foundation stone laid 11 July 1819, opened 1830, completed 1836)
+  architect: Antonio Canova
+  visitable: true
+  sources:
+  - wp-antonio-canova
+- key: castleford
+  name: Castleford
+  kind: town
+  region: West Yorkshire
+  country: England
+  lat: 53.725
+  lng: -1.358
+  visitable: true
+  sources:
+  - wp-henry-moore
+- key: perry-green
+  name: Perry Green
+  kind: village
+  region: Hertfordshire
+  country: England
+  lat: 51.866
+  lng: 0.092
+  visitable: true
+  sources:
+  - wp-henry-moore
+- key: wakefield
+  name: Wakefield
+  kind: city
+  region: West Yorkshire
+  country: England
+  lat: 53.683
+  lng: -1.499
+  visitable: true
+  sources:
+  - wp-barbara-hepworth
+- key: montfavet
+  name: Montfavet
+  kind: town
+  city: Avignon
+  region: Vaucluse
+  country: France
+  lat: 43.932
+  lng: 4.876
+  visitable: true
+  sources:
+  - wp-camille-claudel
+- key: fere-en-tardenois
+  name: Fere-en-Tardenois
+  kind: town
+  region: Aisne
+  country: France
+  lat: 49.199
+  lng: 3.52
+  visitable: true
+  sources:
+  - wp-camille-claudel
+- key: thorvaldsen-museum
+  name: Thorvaldsen Museum
+  kind: museum
+  city: Copenhagen
+  region: Capital Region
+  country: Denmark
+  lat: 55.676
+  lng: 12.578
+  founded: 1837
+  built_by: Built from public collection funds to house Thorvaldsen's works
+  architect: Michael Gottlieb Bindesboll
+  visitable: true
+  sources:
+  - wp-bertel-thorvaldsen
+- key: fermignano
+  name: Fermignano
+  kind: town
+  region: Marche
+  country: Italy
+  lat: 43.687
+  lng: 12.64
+  visitable: true
+  sources:
+  - wp-donato-bramante
+- key: loggia-dei-lanzi
+  name: Loggia dei Lanzi
+  kind: loggia
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.769
+  lng: 11.256
+  visitable: true
+  sources:
+  - wp-giambologna
+- key: roxbury-connecticut
+  name: Roxbury, Connecticut
+  kind: town
+  region: Connecticut
+  country: United States
+  lat: 41.558
+  lng: -73.325
+  sources:
+  - wp-alexander-calder
+- key: sache
+  name: Sache
+  kind: village
+  region: Indre-et-Loire
+  country: France
+  lat: 47.256
+  lng: 0.567
+  visitable: true
+  sources:
+  - wp-alexander-calder
+- key: unesco-headquarters-paris
+  name: UNESCO headquarters
+  kind: headquarters
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.85
+  lng: 2.306
+  visitable: true
+  sources:
+  - wp-alexander-calder
+- key: united-nations-headquarters
+  name: United Nations headquarters
+  kind: headquarters
+  city: New York City
+  region: New York
+  country: United States
+  lat: 40.749
+  lng: -73.968
+  visitable: true
+  sources:
+  - wp-barbara-hepworth
+- key: abingdon-street-gardens
+  name: Abingdon Street Gardens
+  kind: garden
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.498
+  lng: -0.125
+  visitable: true
+  sources:
+  - wp-henry-moore
+- key: apsley-house
+  name: Apsley House
+  kind: house
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.503
+  lng: -0.151
+  visitable: true
+  sources:
+  - wp-antonio-canova
+- key: galleria-borghese
+  name: Galleria Borghese
+  kind: museum
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.914
+  lng: 12.492
+  visitable: true
+  sources:
+  - wp-gian-lorenzo-bernini
+- key: cornaro-chapel-rome
+  name: Cornaro Chapel (Santa Maria della Vittoria)
+  kind: chapel
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.905
+  lng: 12.494
+  founded: 1651
+  built_by: Commissioned by Cardinal Federico Cornaro; inaugurated 1651
+  architect: Gian Lorenzo Bernini
+  visitable: true
+  sources:
+  - wp-gian-lorenzo-bernini
+- key: vicenza
+  name: Vicenza
+  kind: city
+  region: Veneto
+  country: Italy
+  lat: 45.547
+  lng: 11.545
+  visitable: true
+  sources:
+  - wp-andrea-palladio
+- key: teatro-olimpico-vicenza
+  name: Teatro Olimpico
+  kind: theatre
+  city: Vicenza
+  region: Veneto
+  country: Italy
+  lat: 45.548
+  lng: 11.546
+  founded: 1580
+  built_by: Built for the Olympic Society of Vicenza; construction began February 1580, completed by Vincenzo Scamozzi and inaugurated 1584
+  architect: Andrea Palladio (completed by Vincenzo Scamozzi)
+  visitable: true
+  sources:
+  - wp-andrea-palladio
+- key: basilica-palladiana
+  name: Basilica Palladiana
+  kind: town hall
+  city: Vicenza
+  region: Veneto
+  country: Italy
+  lat: 45.548
+  lng: 11.544
+  architect: Andrea Palladio (added the two-story loggias from 1546 to an older building finished in 1459; completed 1617)
+  visitable: true
+  sources:
+  - wp-andrea-palladio
+- key: santa-corona-vicenza
+  name: Santa Corona
+  kind: church
+  city: Vicenza
+  region: Veneto
+  country: Italy
+  lat: 45.55
+  lng: 11.544
+  visitable: true
+  sources:
+  - wp-andrea-palladio
+- key: santa-maria-presso-san-satiro
+  name: Santa Maria presso San Satiro
+  kind: church
+  city: Milan
+  region: Lombardy
+  country: Italy
+  lat: 45.462
+  lng: 9.187
+  architect: Donato Bramante (trompe-l'oeil choir, 1482-1486)
+  visitable: true
+  sources:
+  - wp-donato-bramante
+- key: neuruppin
+  name: Neuruppin
+  kind: city
+  region: Brandenburg
+  country: Germany
+  lat: 52.925
+  lng: 12.803
+  visitable: true
+  sources:
+  - wp-karl-friedrich-schinkel
+- key: altes-museum
+  name: Altes Museum
+  kind: museum
+  city: Berlin
+  region: Berlin
+  country: Germany
+  lat: 52.519
+  lng: 13.399
+  founded: 1830
+  architect: Karl Friedrich Schinkel
+  visitable: true
+  sources:
+  - wp-karl-friedrich-schinkel
+- key: eiffel-tower
+  name: Eiffel Tower
+  kind: tower
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.858
+  lng: 2.294
+  founded: 1889
+  built_by: Gustave Eiffel's company; designed by Maurice Koechlin and Emile Nouguier, with Stephen Sauvestre
+  architect: Stephen Sauvestre (architectural embellishments)
+  visitable: true
+  sources:
+  - wp-gustave-eiffel
+- key: levallois-perret
+  name: Levallois-Perret
+  kind: city
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.895
+  lng: 2.288
+  visitable: true
+  sources:
+  - wp-gustave-eiffel
+- key: levallois-perret-cemetery
+  name: Levallois-Perret Cemetery
+  kind: cemetery
+  city: Levallois-Perret
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.894
+  lng: 2.285
+  visitable: true
+  sources:
+  - wp-gustave-eiffel
+- key: reus
+  name: Reus
+  kind: city
+  region: Tarragona
+  country: Spain
+  lat: 41.156
+  lng: 1.107
+  visitable: true
+  sources:
+  - wp-antoni-gaudi
+- key: sagrada-familia
+  name: Sagrada Familia
+  kind: church
+  city: Barcelona
+  region: Catalonia
+  country: Spain
+  lat: 41.404
+  lng: 2.174
+  architect: Antoni Gaudi (in charge from 1883, changing the initial design)
+  visitable: true
+  sources:
+  - wp-antoni-gaudi
+- key: la-chaux-de-fonds
+  name: La Chaux-de-Fonds
+  kind: city
+  region: Neuchatel
+  country: Switzerland
+  lat: 47.099
+  lng: 6.826
+  visitable: true
+  sources:
+  - wp-le-corbusier
+- key: villa-savoye
+  name: Villa Savoye
+  kind: house
+  city: Poissy
+  region: Yvelines
+  country: France
+  lat: 48.924
+  lng: 2.027
+  founded: 1931
+  architect: Le Corbusier
+  visitable: true
+  sources:
+  - wp-le-corbusier
+- key: fagus-factory
+  name: Fagus Factory
+  kind: factory
+  city: Alfeld
+  region: Lower Saxony
+  country: Germany
+  lat: 51.985
+  lng: 9.822
+  founded: 1911
+  architect: Walter Gropius and Adolf Meyer (facade)
+  visitable: true
+  sources:
+  - wp-walter-gropius
+- key: dessau
+  name: Dessau
+  kind: city
+  region: Saxony-Anhalt
+  country: Germany
+  lat: 51.836
+  lng: 12.23
+  visitable: true
+  sources:
+  - wp-walter-gropius
+- key: bauhaus-dessau
+  name: Bauhaus Dessau
+  kind: school
+  city: Dessau
+  region: Saxony-Anhalt
+  country: Germany
+  lat: 51.839
+  lng: 12.228
+  architect: Walter Gropius (designed 1925-26)
+  visitable: true
+  sources:
+  - wp-walter-gropius
+- key: aachen
+  name: Aachen
+  kind: city
+  region: North Rhine-Westphalia
+  country: Germany
+  lat: 50.776
+  lng: 6.084
+  visitable: true
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+- key: barcelona-pavilion
+  name: Barcelona Pavilion
+  kind: pavilion
+  city: Barcelona
+  region: Catalonia
+  country: Spain
+  lat: 41.371
+  lng: 2.15
+  founded: 1929
+  architect: Ludwig Mies van der Rohe
+  visitable: true
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+- key: farnsworth-house
+  name: Edith Farnsworth House
+  kind: house
+  city: Plano
+  region: Illinois
+  country: United States
+  lat: 41.667
+  lng: -88.547
+  founded: 1951
+  architect: Ludwig Mies van der Rohe
+  visitable: true
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+- key: kuortane
+  name: Kuortane
+  kind: town
+  region: South Ostrobothnia
+  country: Finland
+  lat: 62.805
+  lng: 23.508
+  visitable: true
+  sources:
+  - wp-alvar-aalto
+- key: jyvaskyla
+  name: Jyvaskyla
+  kind: city
+  region: Central Finland
+  country: Finland
+  lat: 62.242
+  lng: 25.747
+  visitable: true
+  sources:
+  - wp-alvar-aalto
+- key: turku
+  name: Turku
+  kind: city
+  region: Southwest Finland
+  country: Finland
+  lat: 60.452
+  lng: 22.267
+  visitable: true
+  sources:
+  - wp-alvar-aalto
+- key: paimio-sanatorium
+  name: Paimio Sanatorium
+  kind: sanatorium
+  city: Paimio
+  region: Southwest Finland
+  country: Finland
+  lat: 60.456
+  lng: 22.686
+  architect: Alvar Aalto
+  visitable: true
+  sources:
+  - wp-alvar-aalto
+- key: viipuri-library
+  name: Viipuri Library
+  kind: library
+  city: Vyborg
+  region: Leningrad Oblast
+  country: Russia
+  lat: 60.709
+  lng: 28.753
+  founded: 1935
+  architect: Alvar Aalto
+  visitable: true
+  sources:
+  - wp-alvar-aalto
+- key: guangzhou
+  name: Guangzhou
+  kind: city
+  region: Guangdong
+  country: China
+  lat: 23.129
+  lng: 113.264
+  visitable: true
+  sources:
+  - wp-i-m-pei
+- key: kennedy-library
+  name: John F. Kennedy Presidential Library and Museum
+  kind: library
+  city: Boston
+  region: Massachusetts
+  country: United States
+  lat: 42.316
+  lng: -71.035
+  founded: 1979
+  architect: I. M. Pei
+  visitable: true
+  sources:
+  - wp-i-m-pei
+- key: baghdad
+  name: Baghdad
+  kind: city
+  country: Iraq
+  lat: 33.315
+  lng: 44.366
+  visitable: true
+  sources:
+  - wp-zaha-hadid
+- key: miami
+  name: Miami
+  kind: city
+  region: Florida
+  country: United States
+  lat: 25.762
+  lng: -80.192
+  visitable: true
+  sources:
+  - wp-zaha-hadid
+- key: maxxi
+  name: MAXXI (National Museum of Arts of the 21st Century)
+  kind: museum
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.928
+  lng: 12.468
+  founded: 2010
+  architect: Zaha Hadid
+  visitable: true
+  sources:
+  - wp-zaha-hadid
+- key: heydar-aliyev-center
+  name: Heydar Aliyev Center
+  kind: cultural centre
+  city: Baku
+  country: Azerbaijan
+  lat: 40.396
+  lng: 49.868
+  founded: 2013
+  architect: Zaha Hadid
+  visitable: true
+  sources:
+  - wp-zaha-hadid
+- key: centre-pompidou
+  name: Centre Georges Pompidou
+  kind: museum
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.861
+  lng: 2.352
+  founded: 1977
+  architect: Renzo Piano and Richard Rogers, with Gianfranco Franchini
+  visitable: true
+  sources:
+  - wp-renzo-piano
+- key: the-shard
+  name: The Shard
+  kind: skyscraper
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.504
+  lng: -0.087
+  founded: 2012
+  architect: Renzo Piano
+  visitable: true
+  sources:
+  - wp-renzo-piano
+- key: puente-del-alamillo
+  name: Puente del Alamillo
+  kind: bridge
+  city: Seville
+  region: Andalusia
+  country: Spain
+  lat: 37.418
+  lng: -5.995
+  founded: 1992
+  architect: Santiago Calatrava
+  visitable: true
+  sources:
+  - wp-santiago-calatrava
+- key: bac-de-roda-bridge
+  name: Bac de Roda Bridge
+  kind: bridge
+  city: Barcelona
+  region: Catalonia
+  country: Spain
+  lat: 41.412
+  lng: 2.196
+  founded: 1987
+  architect: Santiago Calatrava
+  visitable: true
+  sources:
+  - wp-santiago-calatrava
+- key: leeuwarden
+  name: Leeuwarden
+  kind: city
+  region: Friesland
+  country: Netherlands
+  lat: 53.201
+  lng: 5.799
+  visitable: true
+  sources:
+  - wp-m-c-escher
+- key: hilversum
+  name: Hilversum
+  kind: city
+  region: North Holland
+  country: Netherlands
+  lat: 52.223
+  lng: 5.176
+  visitable: true
+  sources:
+  - wp-m-c-escher
+- key: baarn
+  name: Baarn
+  kind: city
+  region: Utrecht
+  country: Netherlands
+  lat: 52.212
+  lng: 5.289
+  visitable: true
+  sources:
+  - wp-m-c-escher
+- key: les-cayes
+  name: Les Cayes
+  kind: city
+  region: Sud
+  country: Haiti
+  lat: 18.194
+  lng: -73.748
+  visitable: true
+  sources:
+  - wp-john-james-audubon
+- key: henderson-kentucky
+  name: Henderson
+  kind: city
+  region: Kentucky
+  country: United States
+  lat: 37.836
+  lng: -87.59
+  visitable: true
+  sources:
+  - wp-john-james-audubon
+- key: wieuwerd
+  name: Wieuwerd
+  kind: village
+  region: Friesland
+  country: Netherlands
+  lat: 53.136
+  lng: 5.866
+  visitable: true
+  sources:
+  - wp-maria-sibylla-merian
+- key: konigsberg
+  name: Königsberg
+  historical_name: Königsberg (now Kaliningrad)
+  kind: city
+  region: Kaliningrad Oblast
+  country: Russia
+  lat: 54.71
+  lng: 20.511
+  visitable: true
+  sources:
+  - wp-kathe-kollwitz
+- key: moritzburg
+  name: Moritzburg
+  kind: town
+  region: Saxony
+  country: Germany
+  lat: 51.163
+  lng: 13.7
+  visitable: true
+  sources:
+  - wp-kathe-kollwitz
+- key: near-sawrey
+  name: Near Sawrey
+  kind: village
+  region: Cumbria
+  country: England
+  lat: 54.358
+  lng: -2.973
+  visitable: true
+  sources:
+  - wp-beatrix-potter
+people:
+- key: giotto
+  name: Giotto
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: 1267
+  born_estimated: true
+  died: '1337-01-08'
+  prominence: 3
+  note: Florentine painter and architect of the Proto-Renaissance, best known for the Scrovegni (Arena) Chapel frescoes in Padua and for designing the Florence campanile.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Giotto%2C_Santa_Maria_Novella.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/1/1b/Giotto%2C_Santa_Maria_Novella.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giotto,_Santa_Maria_Novella.jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, birthplace dispute, main working places, Scrovegni Chapel captured; other panels, Assisi and Santa Croce works not built out.
+  sources:
+  - wp-giotto
+  sitelinks: 98
+  sitelinks_on: '2026-10-10'
+- key: cimabue
+  name: Cimabue
+  type: Artist
+  roles:
+  - painter
+  born: 1240
+  born_estimated: true
+  died: 1302
+  died_estimated: true
+  prominence: 3
+  note: Florentine painter and mosaic designer, one of the first great Italian painters to break from the Italo-Byzantine style.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/ce/CimabueSantaMariaNovella.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/ce/CimabueSantaMariaNovella.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:CimabueSantaMariaNovella.jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, birth and death places, Santa Trinita Maesta captured; Assisi frescoes, crucifixes and Pisa mosaic not built out.
+  sources:
+  - wp-cimabue
+  sitelinks: 61
+  sitelinks_on: '2026-10-10'
+- key: duccio
+  name: Duccio di Buoninsegna
+  type: Artist
+  roles:
+  - painter
+  born: 1255
+  born_estimated: true
+  died: 1318
+  died_estimated: true
+  prominence: 3
+  note: Sienese painter of the late 13th and early 14th century, credited with founding the Sienese school; best known for the Maesta for Siena Cathedral.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e3/Duccio_di_Buoninsegna%2C_Rucellai_Madonna%2C_after_1285%2C_Uffiz.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Duccio_di_Buoninsegna%2C_Rucellai_Madonna%2C_after_1285%2C_Uffiz.jpg/500px-Duccio_di_Buoninsegna%2C_Rucellai_Madonna%2C_after_1285%2C_Uffiz.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_Rucellai_Madonna,_after_1285,_Uffiz.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, Siena base and the two securely dated works captured; the other surviving panels and the followers not built out.
+  sources:
+  - wp-duccio
+  sitelinks: 65
+  sitelinks_on: '2026-10-10'
+- key: simone-martini
+  name: Simone Martini
+  type: Artist
+  roles:
+  - painter
+  born: 1284
+  born_estimated: true
+  died: 1344
+  prominence: 2
+  note: Sienese painter, a major figure of early Italian painting who influenced International Gothic; died in the service of the papal court at Avignon.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Simone_Martini_-_Frontispice_du_Virgile.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Simone_Martini_-_Frontispice_du_Virgile.jpg/500px-Simone_Martini_-_Frontispice_du_Virgile.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Simone_Martini_-_Frontispice_du_Virgile.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the 1315 Maesta captured; Assisi frescoes, Naples and Pisa works and the Avignon years not built out.
+  sources:
+  - wp-simone-martini
+  sitelinks: 52
+  sitelinks_on: '2026-10-10'
+- key: masaccio
+  name: Masaccio
+  type: Artist
+  roles:
+  - painter
+  born: '1401-12-21'
+  died: 1428
+  prominence: 3
+  note: Florentine painter regarded as the first great painter of the Italian Quattrocento; pioneered linear perspective, as in the Holy Trinity and the Brancacci Chapel frescoes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Masaccio_Self_Portrait.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/9/96/Masaccio_Self_Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Masaccio_Self_Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Brancacci Chapel, Pisa Altarpiece and Holy Trinity captured; the panel paintings and place of death not built out (article gives no place of death).
+  sources:
+  - wp-masaccio
+  sitelinks: 80
+  sitelinks_on: '2026-10-10'
+- key: fra-angelico
+  name: Fra Angelico
+  type: Artist
+  roles:
+  - painter
+  born: 1395
+  born_estimated: true
+  died: '1455-02-18'
+  prominence: 3
+  note: Dominican friar and painter of the early Florentine Renaissance, known for the frescoes of San Marco in Florence and beatified in 1982.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/41/Fra_Angelico_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/Fra_Angelico_portrait.jpg/500px-Fra_Angelico_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fra_Angelico_portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, papal patrons and the San Marco Altarpiece captured; the San Marco cell frescoes and the full list of works not built out.
+  sources:
+  - wp-fra-angelico
+  sitelinks: 77
+  sitelinks_on: '2026-10-10'
+- key: fra-filippo-lippi
+  name: Fra Filippo Lippi
+  type: Artist
+  roles:
+  - painter
+  born: 1406
+  born_estimated: true
+  died: 1469
+  prominence: 2
+  note: Florentine Carmelite priest and Early Renaissance painter, master of a workshop that taught Botticelli; best known for the frescoes of Prato and Spoleto cathedrals.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3c/Lippi_z13.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3c/Lippi_z13.jpg/500px-Lippi_z13.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Lippi_z13.jpg
+  image_license: CC BY-SA 2.5
+  coverage: partly
+  coverage_note: Dates, places, pupils and two dated works captured; the Prato frescoes, altarpieces and Uffizi Madonnas not built out.
+  sources:
+  - wp-fra-filippo-lippi
+  sitelinks: 52
+  sitelinks_on: '2026-10-10'
+- key: paolo-uccello
+  name: Paolo Uccello
+  type: Artist
+  roles:
+  - painter
+  born: 1397
+  died: '1475-12-10'
+  prominence: 2
+  note: Florentine painter and mathematician noted for pioneering work on perspective; best known for the three Battle of San Romano panels.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2b/Cinq_ma%C3%AEtres_de_la_Renaissance_florentine_-_Uccello_%28Louvre%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Cinq_ma%C3%AEtres_de_la_Renaissance_florentine_-_Uccello_%28Louvre%29.jpg/500px-Cinq_ma%C3%AEtres_de_la_Renaissance_florentine_-_Uccello_%28Louvre%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Cinq_ma%C3%AEtres_de_la_Renaissance_florentine_-_Uccello_(Louvre).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeship to Ghiberti, travels and the Battle of San Romano captured; frescoes, stained glass and the works list not built out.
+  sources:
+  - wp-paolo-uccello
+  sitelinks: 59
+  sitelinks_on: '2026-10-10'
+- key: piero-della-francesca
+  name: Piero della Francesca
+  type: Artist
+  roles:
+  - painter
+  born: 1415
+  born_estimated: true
+  died: '1492-10-12'
+  prominence: 3
+  note: Italian painter, mathematician and geometer of the Early Renaissance, best known for The History of the True Cross frescoes in Arezzo.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814799608033%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814799608033%29.jpg/500px-Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814799608033%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Delle_vite_de%27_pi%C3%B9_eccellenti_pittori,_scultori,_et_architetti_(1648)_(14799608033).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Montefeltro patronage and two key works captured; treatises, Urbino paintings and the remaining works not built out.
+  sources:
+  - wp-piero-della-francesca
+  sitelinks: 68
+  sitelinks_on: '2026-10-10'
+- key: jan-van-eyck
+  name: Jan van Eyck
+  type: Artist
+  roles:
+  - painter
+  born: 1390
+  born_estimated: true
+  died: '1441-07-09'
+  prominence: 3
+  note: Early Netherlandish painter active in Bruges and court painter to Philip the Good; best known for the Ghent Altarpiece and the Arnolfini Portrait.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/33/Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg/500px-Jan_van_Eyck_-_Portrait_of_a_Man_%28Self_Portrait%3F%29_1433.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jan_van_Eyck_-_Portrait_of_a_Man_(Self_Portrait%3F)_1433.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, two key works captured; patrons (Philip the Good, John of Bavaria) not linked as they are not yet in the database; other portraits and Madonnas not built out.
+  sources:
+  - wp-jan-van-eyck
+  sitelinks: 86
+  sitelinks_on: '2026-10-10'
+- key: rogier-van-der-weyden
+  name: Rogier van der Weyden
+  type: Artist
+  roles:
+  - painter
+  born: 1399
+  born_estimated: true
+  died: '1464-06-18'
+  prominence: 3
+  note: Early Netherlandish painter from Tournai, official painter of Brussels, widely regarded as the most influential Northern painter of the 15th century.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Rogier_Lamp_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Rogier_Lamp_%28cropped%29.jpg/500px-Rogier_Lamp_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rogier_Lamp_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the Descent from the Cross captured; teacher Robert Campin and patron Philip the Good not linked (not in database); Miraflores Altarpiece and portraits not built out.
+  sources:
+  - wp-rogier-van-der-weyden
+  sitelinks: 61
+  sitelinks_on: '2026-10-10'
+- key: hans-memling
+  name: Hans Memling
+  type: Artist
+  roles:
+  - painter
+  born: 1430
+  born_estimated: true
+  died: '1494-08-11'
+  prominence: 2
+  note: German-Flemish Early Netherlandish painter, trained in Rogier van der Weyden's Brussels workshop and a leading master at Bruges, known for portraits and donor portraits.
+  sources:
+  - wp-hans-memling
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Hans_Memling_-_Self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Hans_Memling_-_Self-portrait.jpg/500px-Hans_Memling_-_Self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_Memling_-_Self-portrait.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, teacher, places and one dated work captured; the Last Judgment (Gdansk, in place by 1473), the Passion altarpiece (contract 1477) and other works not built out.
+  sitelinks: 52
+  sitelinks_on: '2026-10-10'
+- key: giovanni-bellini
+  name: Giovanni Bellini
+  type: Artist
+  roles:
+  - painter
+  born: 1430
+  born_estimated: true
+  died: 1516
+  prominence: 3
+  note: Venetian Renaissance painter of altarpieces and Madonnas who shaped Venetian oil painting and taught Giorgione and Titian.
+  sources:
+  - wp-giovanni-bellini
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/11/Giovanni_Bellini_Felt%C3%A9telezett%C3%96narck%C3%A9peKJ.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/Giovanni_Bellini_Felt%C3%A9telezett%C3%96narck%C3%A9peKJ.jpg/500px-Giovanni_Bellini_Felt%C3%A9telezett%C3%96narck%C3%A9peKJ.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giovanni_Bellini_Felt%C3%A9telezett%C3%96narck%C3%A9peKJ.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, pupils, patrons, places and two altarpieces captured; the Doge's Palace history paintings (lost in 1577), other altarpieces and family (Jacopo, Gentile) not built out.
+  sitelinks: 73
+  sitelinks_on: '2026-10-10'
+- key: andrea-mantegna
+  name: Andrea Mantegna
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1431
+  born_estimated: true
+  died: '1506-09-13'
+  prominence: 3
+  note: Italian Renaissance painter and engraver of Padua and Mantua, court artist to the Gonzaga, known for sculptural figures, perspective and the Camera degli Sposi.
+  sources:
+  - wp-andrea-mantegna
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/42/Mantegna_Bronze_Bust_San_Andrea_Mantua.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/42/Mantegna_Bronze_Bust_San_Andrea_Mantua.png/500px-Mantegna_Bronze_Bust_San_Andrea_Mantua.png
+  image_page: https://commons.wikimedia.org/wiki/File:Mantegna_Bronze_Bust_San_Andrea_Mantua.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, patrons, places and two key works captured; full list of altarpieces, engravings and the Isabella d'Este studiolo paintings not built out.
+  sitelinks: 70
+  sitelinks_on: '2026-10-10'
+- key: antonello-da-messina
+  name: Antonello da Messina
+  type: Artist
+  roles:
+  - painter
+  born: 1430
+  born_estimated: true
+  died: 1479
+  prominence: 2
+  note: Sicilian Early Renaissance painter whose Netherlandish-influenced portraits and oil technique influenced Venetian painting.
+  sources:
+  - wp-antonello-da-messina
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ed/Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg/500px-Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antonello_da_Messina_-_Portrait_of_a_Man_-_National_Gallery_London.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; Condottiero, San Cassiano and San Gregorio altarpieces and Virgin Annunciate (no year given) not built out; teacher Niccolo Colantonio not yet
+    in the database.
+  sitelinks: 59
+  sitelinks_on: '2026-10-10'
+- key: andrei-rublev
+  name: Andrei Rublev
+  type: Artist
+  roles:
+  - painter
+  - icon painter
+  born: 1360
+  born_estimated: true
+  died: 1430
+  died_estimated: true
+  prominence: 3
+  note: Russian painter of Orthodox icons and frescoes, canonized as a saint, whose Trinity icon is his only fully authenticated work.
+  sources:
+  - wp-andrei-rublev
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/07/Podgorica%2C_cattedrale_della_resurrezione_di_cristo%2C_interno_0_Andrej_Rublev.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Podgorica%2C_cattedrale_della_resurrezione_di_cristo%2C_interno_0_Andrej_Rublev.JPG/500px-Podgorica%2C_cattedrale_della_resurrezione_di_cristo%2C_interno_0_Andrej_Rublev.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Podgorica,_cattedrale_della_resurrezione_di_cristo,_interno_0_Andrej_Rublev.JPG
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, places and the Trinity icon captured; Theophanes the Greek (trained him) and Daniel Chorny (collaborator) not yet in the database; Khitrovo Gospels miniature and Saviour Cathedral
+    frescoes not built out.
+  sitelinks: 70
+  sitelinks_on: '2026-10-10'
+- key: donatello
+  name: Donatello
+  type: Artist
+  roles:
+  - sculptor
+  born: 1386
+  born_estimated: true
+  died: '1466-12-13'
+  prominence: 4
+  note: Florentine sculptor who founded Early Renaissance sculpture; made the first freestanding nude male statue since antiquity, the bronze David, largely for the Medici.
+  sources:
+  - wp-donatello
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/Donatello%2C_miracolo_della_mula%2C_1446-49_ca._%28pd%2C_museo_antoniano%29_37_uomo_che_si_allontana%2C_forse_autoritratto_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Donatello%2C_miracolo_della_mula%2C_1446-49_ca._%28pd%2C_museo_antoniano%29_37_uomo_che_si_allontana%2C_forse_autoritratto_%28cropped%29.jpg/500px-Donatello%2C_miracolo_della_mula%2C_1446-49_ca._%28pd%2C_museo_antoniano%29_37_uomo_che_si_allontana%2C_forse_autoritratto_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Donatello,_miracolo_della_mula,_1446-49_ca._(pd,_museo_antoniano)_37_uomo_che_si_allontana,_forse_autoritratto_(cropped).jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, training, two Davids and a few moments captured; article text cut at 32,000 characters (Padua, Siena, later life and death place missing); Orsanmichele statues, pulpits and Medici
+    patrons (Cosimo, not in the database) not built out.
+  sitelinks: 108
+  sitelinks_on: '2026-10-10'
+- key: lorenzo-ghiberti
+  name: Lorenzo Ghiberti
+  type: Artist
+  roles:
+  - sculptor
+  - goldsmith
+  born: 1378
+  died: 1455
+  prominence: 2
+  note: Florentine sculptor and goldsmith, creator of the two sets of bronze doors for the Florence Baptistery, including the Gates of Paradise.
+  sources:
+  - wp-lorenzo-ghiberti
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Ghiberti.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Ghiberti.png/500px-Ghiberti.png
+  image_page: https://commons.wikimedia.org/wiki/File:Ghiberti.png
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, workshop pupils, places and the two Baptistery doors captured; Orsanmichele statues, Commentarii and later door-case work not built out.
+  sitelinks: 53
+  sitelinks_on: '2026-10-10'
+- key: filippo-brunelleschi
+  name: Filippo Brunelleschi
+  type: Artist
+  roles:
+  - architect
+  - goldsmith
+  - sculptor
+  born: 1377
+  died: '1446-04-15'
+  prominence: 3
+  note: Florentine architect, founding figure of Renaissance architecture, who designed the dome of Florence Cathedral and described linear perspective.
+  sources:
+  - wp-filippo-brunelleschi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Masaccio%2C_cappella_brancacci%2C_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi-184.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Masaccio%2C_cappella_brancacci%2C_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi-184.jpg/500px-Masaccio%2C_cappella_brancacci%2C_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi-184.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Masaccio,_cappella_brancacci,_san_pietro_in_cattedra._ritratto_di_filippo_brunelleschi-184.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places for his main Florence buildings and the 1401 competition panel captured; Old Sacristy, San Lorenzo nave, Palazzo di Parte Guelfa, fortifications and boat patent not built
+    out; patron Giovanni di Bicci de' Medici not in the database.
+  sitelinks: 69
+  sitelinks_on: '2026-10-10'
+- key: andrea-del-verrocchio
+  name: Andrea del Verrocchio
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - goldsmith
+  born: 1435
+  born_estimated: true
+  died: 1488
+  prominence: 3
+  note: Florentine sculptor, painter and goldsmith who ran a leading workshop and taught Leonardo da Vinci; best known for the Colleoni equestrian statue in Venice.
+  sources:
+  - wp-andrea-del-verrocchio
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/aa/Andrea_del_Castagno%2C_portrait_de_Verrocchio%2C_vers_1470.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Andrea_del_Castagno%2C_portrait_de_Verrocchio%2C_vers_1470.jpg/500px-Andrea_del_Castagno%2C_portrait_de_Verrocchio%2C_vers_1470.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Andrea_del_Castagno,_portrait_de_Verrocchio,_vers_1470.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, pupils, patron, places and the Baptism of Christ captured; Medici tombs, David, Incredulity of St Thomas and the Colleoni statue (no clear completion year) not built out.
+  sitelinks: 66
+  sitelinks_on: '2026-10-10'
+- key: leon-battista-alberti
+  name: Leon Battista Alberti
+  type: Artist
+  roles:
+  - architect
+  - writer
+  born: '1404-02-14'
+  died: '1472-04-25'
+  prominence: 3
+  note: Italian Renaissance polymath, humanist author and architect, who wrote the first Renaissance treatises on painting and architecture and designed Sant'Andrea in Mantua.
+  sources:
+  - wp-leon-battista-alberti
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/Leon_Battista_Alberti%2C_Self-Portrait%2C_c._1435%2C_NGA_43845.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Leon_Battista_Alberti%2C_Self-Portrait%2C_c._1435%2C_NGA_43845.jpg/500px-Leon_Battista_Alberti%2C_Self-Portrait%2C_c._1435%2C_NGA_43845.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Leon_Battista_Alberti,_Self-Portrait,_c._1435,_NGA_43845.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, patrons, main buildings as places and moments captured; treatises, cryptography and literary works not built out; patrons Leonello d'Este and Sigismondo Malatesta not in the database.
+  sitelinks: 89
+  sitelinks_on: '2026-10-10'
+- key: auguste-rodin
+  name: Auguste Rodin
+  type: Artist
+  roles:
+  - sculptor
+  born: '1840-11-12'
+  died: '1917-11-17'
+  prominence: 4
+  note: French sculptor generally considered the founder of modern sculpture, known for The Thinker, The Kiss, The Burghers of Calais and The Gates of Hell.
+  sources:
+  - wp-auguste-rodin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/94/Auguste_Rodin_by_George_Charles_Beresford_%28NPG_x6573%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Auguste_Rodin_by_George_Charles_Beresford_%28NPG_x6573%29.jpg/500px-Auguste_Rodin_by_George_Charles_Beresford_%28NPG_x6573%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Auguste_Rodin_by_George_Charles_Beresford_(NPG_x6573).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, students, places and two key works captured; article cut at 32,000 characters (death place and later-life sections missing); Gates of Hell, Balzac and Victor Hugo monuments, busts
+    and drawings not built out.
+  sitelinks: 131
+  sitelinks_on: '2026-10-10'
+- key: gian-lorenzo-bernini
+  name: Gian Lorenzo Bernini
+  type: Artist
+  roles:
+  - sculptor
+  - architect
+  - painter
+  born: '1598-12-07'
+  died: '1680-11-28'
+  prominence: 3
+  note: Italian sculptor, architect and city planner, credited with creating the Baroque style of sculpture; the leading artist of papal Rome.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d5/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg/500px-Gian_Lorenzo_Bernini%2C_self-portrait%2C_c1623.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gian_Lorenzo_Bernini,_self-portrait,_c1623.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, popes and Borghese patrons, Paris visit, St Peter's appointment and two key works captured; article text cut off at the Paris visit, so later life, death place and full
+    list of works are missing.
+  sources:
+  - wp-gian-lorenzo-bernini
+  sitelinks: 80
+  sitelinks_on: '2026-10-10'
+- key: antonio-canova
+  name: Antonio Canova
+  type: Artist
+  roles:
+  - sculptor
+  born: '1757-11-01'
+  died: '1822-10-13'
+  prominence: 3
+  note: Italian Neoclassical sculptor, often regarded as the greatest of the Neoclassical artists, famous for his marble sculptures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Antonio_Canova_Selfportrait_1792.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Antonio_Canova_Selfportrait_1792.jpg/500px-Antonio_Canova_Selfportrait_1792.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antonio_Canova_Selfportrait_1792.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Napoleonic patrons, Tempio Canoviano and two key works captured; full list of works not built out.
+  sources:
+  - wp-antonio-canova
+  sitelinks: 61
+  sitelinks_on: '2026-10-10'
+- key: bertel-thorvaldsen
+  name: Bertel Thorvaldsen
+  type: Artist
+  roles:
+  - sculptor
+  - medalist
+  born: '1770-11-19'
+  died: '1844-03-24'
+  prominence: 2
+  note: Danish-Icelandic Neoclassical sculptor and medalist who spent 1797-1838 in Rome and was seen as Canova's successor.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d9/Bertel_Thorvaldsen_by_Karl_Begas_1820.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/Bertel_Thorvaldsen_by_Karl_Begas_1820.jpg/500px-Bertel_Thorvaldsen_by_Karl_Begas_1820.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bertel_Thorvaldsen_by_Karl_Begas_1820.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, a professor, one patron, museum and two key works captured; full list of works not built out.
+  sources:
+  - wp-bertel-thorvaldsen
+  sitelinks: 52
+  sitelinks_on: '2026-10-10'
+- key: camille-claudel
+  name: Camille Claudel
+  type: Artist
+  roles:
+  - sculptor
+  born: '1864-12-08'
+  died: '1943-10-19'
+  prominence: 2
+  note: French sculptor known for figurative works in bronze and marble, Rodin's pupil and associate, who spent her last thirty years in an asylum.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7e/Camille_Claudel_-_photographie_C%C3%A9sar.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Camille_Claudel_-_photographie_C%C3%A9sar.jpg/500px-Camille_Claudel_-_photographie_C%C3%A9sar.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Camille_Claudel_-_photographie_C%C3%A9sar.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Rodin link and two key works captured; other works and the museum are not built out.
+  sources:
+  - wp-camille-claudel
+  sitelinks: 53
+  sitelinks_on: '2026-10-10'
+- key: benvenuto-cellini
+  name: Benvenuto Cellini
+  type: Artist
+  roles:
+  - goldsmith
+  - sculptor
+  - writer
+  born: '1500-11-03'
+  died: '1571-02-13'
+  prominence: 3
+  note: Italian goldsmith, sculptor and author, known for the Cellini Salt Cellar, Perseus with the Head of Medusa and his autobiography.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ec/CelliniBust.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/CelliniBust.jpg/500px-CelliniBust.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:CelliniBust.jpg
+  image_license: CC BY-SA 2.5
+  coverage: partly
+  coverage_note: Dates, places, popes and princes he served captured; no artworks added because the article gives no clear year for Perseus or the Saliera.
+  sources:
+  - wp-benvenuto-cellini
+  sitelinks: 66
+  sitelinks_on: '2026-10-10'
+- key: giambologna
+  name: Giambologna
+  type: Artist
+  roles:
+  - sculptor
+  born: 1529
+  died: '1608-08-13'
+  prominence: 2
+  note: Flemish-born sculptor, the last significant Italian Renaissance sculptor, who worked for the Medici in Florence in a late Mannerist style.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Portrait_of_Giambologna.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Portrait_of_Giambologna.jpg/500px-Portrait_of_Giambologna.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Giambologna.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; pupils, patrons beyond the Medici and the rest of his works not built out.
+  sources:
+  - wp-giambologna
+  sitelinks: 46
+  sitelinks_on: '2026-10-10'
+- key: henry-moore
+  name: Henry Moore
+  type: Artist
+  roles:
+  - sculptor
+  - draughtsman
+  born: '1898-07-30'
+  died: '1986-08-31'
+  prominence: 3
+  note: English sculptor and draughtsman, best known for semi-abstract monumental bronzes of reclining figures and mother-and-child groups.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/17/Henry_Moore_in_workshop_Allan_Warren_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Henry_Moore_in_workshop_Allan_Warren_%28cropped%29.jpg/500px-Henry_Moore_in_workshop_Allan_Warren_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henry_Moore_in_workshop_Allan_Warren_(cropped).jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, birth and death places, Perry Green home and one key work captured; the many public commissions and war drawings not built out.
+  sources:
+  - wp-henry-moore
+  sitelinks: 71
+  sitelinks_on: '2026-10-10'
+- key: barbara-hepworth
+  name: Barbara Hepworth
+  type: Artist
+  roles:
+  - sculptor
+  - draughtsman
+  born: '1903-01-10'
+  died: '1975-05-20'
+  prominence: 2
+  note: English modernist sculptor of pierced abstract forms, a leading figure of the St Ives artists' colony, who died in a fire at her studio.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/63/Barbara_Hepworth_%281966%29_by_Erling_Mandelmann.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/63/Barbara_Hepworth_%281966%29_by_Erling_Mandelmann.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Barbara_Hepworth_(1966)_by_Erling_Mandelmann.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, birth and death places, St Ives years and one key work captured; other works, spouses and the museum not built out.
+  sources:
+  - wp-barbara-hepworth
+  sitelinks: 41
+  sitelinks_on: '2026-10-10'
+- key: alexander-calder
+  name: Alexander Calder
+  type: Artist
+  roles:
+  - sculptor
+  born: '1898-07-22'
+  died: '1976-11-11'
+  prominence: 2
+  note: American sculptor known for his kinetic mobiles, static stabiles and monumental public sculptures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d5/Alexander_Calder_1947_-_Photo_by_Carl_Van_Vechten.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/d/d5/Alexander_Calder_1947_-_Photo_by_Carl_Van_Vechten.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alexander_Calder_1947_-_Photo_by_Carl_Van_Vechten.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, studio places and two works captured; death place not stated in the article; most monumental works and stage sets not built out.
+  sources:
+  - wp-alexander-calder
+  sitelinks: 55
+  sitelinks_on: '2026-10-10'
+- key: andrea-palladio
+  name: Andrea Palladio
+  type: Artist
+  roles:
+  - architect
+  born: '1508-11-30'
+  died: '1580-08-19'
+  prominence: 3
+  note: Italian Renaissance architect of the Venetian Republic, best known for Vicenza's palaces and the Veneto villas, and author of The Four Books of Architecture.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e4/Andrea_Palladio2.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Andrea_Palladio2.jpeg/500px-Andrea_Palladio2.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Andrea_Palladio2.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, two Vicenza buildings and the Four Books captured; the villas and his patrons (Trissino, Barbaro; not in database) not built out.
+  sources:
+  - wp-andrea-palladio
+  sitelinks: 79
+  sitelinks_on: '2026-10-10'
+- key: donato-bramante
+  name: Donato Bramante
+  type: Artist
+  roles:
+  - architect
+  - painter
+  born: 1444
+  died: '1514-04-11'
+  prominence: 3
+  note: Italian architect and painter who brought Renaissance architecture to Milan and the High Renaissance style to Rome, planner of the new St Peter's.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/Donato_Bramante.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/3/35/Donato_Bramante.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Donato_Bramante.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, Milan and Rome periods, two patrons and two key works captured; death place not stated; the rest of his list of works not built out.
+  sources:
+  - wp-donato-bramante
+  sitelinks: 76
+  sitelinks_on: '2026-10-10'
+- key: gustave-eiffel
+  name: Gustave Eiffel
+  type: Artist
+  roles:
+  - engineer
+  born: '1832-12-15'
+  died: '1923-12-27'
+  prominence: 4
+  note: French civil engineer known for iron bridges and viaducts, the Eiffel Tower (1889) and the structure of the Statue of Liberty.
+  sources:
+  - wp-gustave-eiffel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5e/Gustave_Eiffel_1888_Nadar2.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Gustave_Eiffel_1888_Nadar2.jpg/500px-Gustave_Eiffel_1888_Nadar2.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gustave_Eiffel_1888_Nadar2.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, death and burial, his firm's base and the Eiffel Tower captured; his other bridges, viaducts and the Panama locks not built out. Birthplace town not given in the article text read
+    (only the Cote-d'Or).
+  sitelinks: 101
+  sitelinks_on: '2026-10-10'
+- key: karl-friedrich-schinkel
+  name: Karl Friedrich Schinkel
+  type: Artist
+  roles:
+  - architect
+  - painter
+  - city planner
+  born: '1781-03-13'
+  died: '1841-10-09'
+  prominence: 3
+  note: Prussian architect of Neoclassical and Gothic Revival buildings in and around Berlin, including the Altes Museum.
+  sources:
+  - wp-karl-friedrich-schinkel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/85/Schinkel1.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Schinkel1.jpg/500px-Schinkel1.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Schinkel1.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places and the Altes Museum captured; his other Berlin buildings, paintings and stage designs not built out. Teachers (the Gillys) and his royal patron are not in
+    the database yet.
+  sitelinks: 67
+  sitelinks_on: '2026-10-10'
+- key: antoni-gaudi
+  name: Antoni Gaudi
+  type: Artist
+  roles:
+  - architect
+  - designer
+  born: '1852-06-25'
+  died: '1926-06-10'
+  prominence: 4
+  note: Catalan architect, the greatest exponent of Catalan Modernisme, best known for the Sagrada Familia in Barcelona.
+  sources:
+  - wp-antoni-gaudi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Antoni_Gaudi_1878.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/72/Antoni_Gaudi_1878.jpg/500px-Antoni_Gaudi_1878.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antoni_Gaudi_1878.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial, and the Sagrada Familia captured; Park Guell, Palau Guell, Casa Batllo and his patron Eusebi Guell not built out (Guell not in the database).
+  sitelinks: 131
+  sitelinks_on: '2026-10-10'
+- key: le-corbusier
+  name: Le Corbusier
+  type: Artist
+  roles:
+  - architect
+  - painter
+  - urban planner
+  - writer
+  born: '1887-10-06'
+  died: '1965-08-27'
+  prominence: 5
+  note: Swiss-born French architectural designer, a pioneer of modern architecture and planner of Chandigarh, known for the Villa Savoye.
+  sources:
+  - wp-le-corbusier
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/Le_Corbusier_%281964%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Le_Corbusier_%281964%29.jpg/500px-Le_Corbusier_%281964%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Le_Corbusier_(1964).jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, birthplace, early training and the Villa Savoye captured; Chandigarh, Ronchamp, the Unite d'habitation and the death place not built out (the article text was cut before them).
+  sitelinks: 200
+  sitelinks_on: '2026-10-10'
+- key: walter-gropius
+  name: Walter Gropius
+  type: Artist
+  roles:
+  - architect
+  born: '1883-05-18'
+  died: '1969-07-05'
+  prominence: 3
+  note: German-American architect, founder of the Bauhaus school and a leading figure of the International Style.
+  sources:
+  - wp-walter-gropius
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b5/WalterGropius-1919.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/WalterGropius-1919.jpg/500px-WalterGropius-1919.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:WalterGropius-1919.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Bauhaus years, and the Fagus Factory and Bauhaus Dessau building captured; later US work (TAC, Harvard buildings) and Behrens' office not linked (Behrens
+    not in the database).
+  sitelinks: 89
+  sitelinks_on: '2026-10-10'
+- key: ludwig-mies-van-der-rohe
+  name: Ludwig Mies van der Rohe
+  type: Artist
+  roles:
+  - architect
+  - interior designer
+  born: '1886-03-27'
+  died: '1969-08-17'
+  prominence: 3
+  note: German-American architect, last director of the Bauhaus, known for the Barcelona Pavilion, the Farnsworth House and "less is more".
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/59/Ludwig_Mies_van_der_Rohe_in_Arts_%26_Architecture%2C_June_1960_issue.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Ludwig_Mies_van_der_Rohe_in_Arts_%26_Architecture%2C_June_1960_issue.jpg/500px-Ludwig_Mies_van_der_Rohe_in_Arts_%26_Architecture%2C_June_1960_issue.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ludwig_Mies_van_der_Rohe_in_Arts_%26_Architecture,_June_1960_issue.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, burial and three key buildings captured; Seagram Building, Villa Tugendhat, IIT campus and the place of death not built out. Teachers (Behrens, Bruno Paul) not in the database.
+  sitelinks: 88
+  sitelinks_on: '2026-10-10'
+- key: alvar-aalto
+  name: Alvar Aalto
+  type: Artist
+  roles:
+  - architect
+  - designer
+  born: '1898-02-03'
+  died: '1976-05-11'
+  prominence: 3
+  note: Finnish architect and designer, known for humane modernist buildings, bent-plywood furniture and glassware.
+  sources:
+  - wp-alvar-aalto
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/25/Alvar_Aalto1.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/Alvar_Aalto1.jpg/500px-Alvar_Aalto1.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alvar_Aalto1.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death, burial, working bases and three key buildings captured; Villa Mairea, Saynatsalo Town Hall, furniture and the Ahlstrom-Gullichsen patrons not built out.
+  sitelinks: 97
+  sitelinks_on: '2026-10-10'
+- key: i-m-pei
+  name: I. M. Pei
+  type: Artist
+  roles:
+  - architect
+  born: '1917-04-26'
+  died: '2019-05-16'
+  prominence: 3
+  note: Chinese-American architect, Pritzker Prize winner, known for the Louvre pyramid, the National Gallery East Building and the Kennedy Library.
+  sources:
+  - wp-i-m-pei
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/39/Itzhak_Perlman_with_I.M._Pei%2C_architect%2C_looking_at_model_of_NYC_Convention_Center_%2803124v%29_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Itzhak_Perlman_with_I.M._Pei%2C_architect%2C_looking_at_model_of_NYC_Convention_Center_%2803124v%29_%28cropped%29.jpg/500px-Itzhak_Perlman_with_I.M._Pei%2C_architect%2C_looking_at_model_of_NYC_Convention_Center_%2803124v%29_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Itzhak_Perlman_with_I.M._Pei,_architect,_looking_at_model_of_NYC_Convention_Center_(03124v)_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Harvard and New York working years and the Kennedy Library captured; Louvre pyramid year, East Building, Bank of China Tower and the place of death not built out (article
+    text was cut before them).
+  sitelinks: 93
+  sitelinks_on: '2026-10-10'
+- key: zaha-hadid
+  name: Zaha Hadid
+  type: Artist
+  roles:
+  - architect
+  - artist
+  - designer
+  born: '1950-10-31'
+  died: '2016-03-31'
+  prominence: 3
+  note: Iraqi-British architect, first woman to win the Pritzker Prize, known for flowing forms such as the MAXXI museum and the Heydar Aliyev Center.
+  sources:
+  - wp-zaha-hadid
+  coverage: partly
+  coverage_note: Dates, birth, death, burial, working bases and two key buildings captured; London Aquatics Centre, Vitra Fire Station, Guangzhou Opera House and other works not built out. Teachers (Koolhaas,
+    Zenghelis, Tschumi) not in the database.
+  sitelinks: 96
+  sitelinks_on: '2026-10-10'
+- key: renzo-piano
+  name: Renzo Piano
+  type: Artist
+  roles:
+  - architect
+  born: '1937-09-14'
+  prominence: 3
+  note: Italian architect, Pritzker Prize winner in 1998, known for the Centre Pompidou (with Richard Rogers) and The Shard.
+  sources:
+  - wp-renzo-piano
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0f/Renzo_Piano%2C_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Renzo_Piano%2C_portrait.jpg/500px-Renzo_Piano%2C_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Renzo_Piano,_portrait.jpg
+  image_license: CC BY-SA 2.0
+  coverage: partly
+  coverage_note: Dates, birthplace and two key buildings captured; Menil Collection, Kansai Airport, Whitney Museum and others not built out. Louis Kahn and Richard Rogers not in the database, so no links.
+  sitelinks: 70
+  sitelinks_on: '2026-10-10'
+- key: santiago-calatrava
+  name: Santiago Calatrava
+  type: Artist
+  roles:
+  - architect
+  - structural engineer
+  - sculptor
+  - painter
+  born: '1951-07-28'
+  prominence: 3
+  note: Spanish-Swiss architect and engineer known for bridges with leaning pylons, stations and museums with sculptural, organic forms.
+  sources:
+  - wp-santiago-calatrava
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8c/Santiago_Calatrava_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Santiago_Calatrava_%28cropped%29.jpg/500px-Santiago_Calatrava_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Santiago_Calatrava_(cropped).jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, birthplace, Zurich office and two early bridges captured; City of Arts and Sciences, Milwaukee Art Museum, Turning Torso and the WTC Hub not built out.
+  sitelinks: 71
+  sitelinks_on: '2026-10-10'
+- key: m-c-escher
+  name: M. C. Escher
+  type: Artist
+  roles:
+  - graphic artist
+  - printmaker
+  born: '1898-06-17'
+  died: '1972-03-27'
+  prominence: 3
+  note: Dutch graphic artist whose woodcuts, lithographs and mezzotints explore mathematics, impossible objects and tessellation.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4d/Maurits_Cornelis_Escher.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Maurits_Cornelis_Escher.jpg/500px-Maurits_Cornelis_Escher.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Maurits_Cornelis_Escher.jpg
+  image_license: CC0
+  sources:
+  - wp-m-c-escher
+  coverage: partly
+  coverage_note: Dates, places lived, two key works captured; full list of prints not built out.
+  sitelinks: 87
+  sitelinks_on: '2026-10-10'
+- key: gustave-dore
+  name: Gustave Doré
+  type: Artist
+  roles:
+  - illustrator
+  - printmaker
+  born: '1832-01-06'
+  died: '1883-01-23'
+  prominence: 3
+  note: French artist best known for wood-engraved illustrations of the Bible, Dante's Divine Comedy and Don Quixote.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Photograph_of_Gustave_Dor%C3%A9_by_Nadar%2C_between_1856_and_1858.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Photograph_of_Gustave_Dor%C3%A9_by_Nadar%2C_between_1856_and_1858.jpg/500px-Photograph_of_Gustave_Dor%C3%A9_by_Nadar%2C_between_1856_and_1858.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Photograph_of_Gustave_Dor%C3%A9_by_Nadar,_between_1856_and_1858.jpg
+  image_license: Public domain
+  sources:
+  - wp-gustave-dore
+  coverage: partly
+  coverage_note: Dates, birth and death places and one key work captured; the many illustrated editions are not built out.
+  sitelinks: 79
+  sitelinks_on: '2026-10-10'
+- key: john-james-audubon
+  name: John James Audubon
+  type: Artist
+  roles:
+  - painter
+  - naturalist
+  - ornithologist
+  born: '1785-04-26'
+  died: '1851-01-27'
+  prominence: 3
+  note: French-American artist and ornithologist known for The Birds of America; his work and conduct are also criticised (plagiarism, slave-owning).
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8e/John_James_Audubon_1826.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/John_James_Audubon_1826.jpg/500px-John_James_Audubon_1826.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_James_Audubon_1826.jpg
+  image_license: Public domain
+  sources:
+  - wp-john-james-audubon
+  coverage: partly
+  coverage_note: Dates, birthplace, Kentucky years and The Birds of America captured; article cut at 32,000 characters, so later life and death place not captured.
+  sitelinks: 77
+  sitelinks_on: '2026-10-10'
+- key: maria-sibylla-merian
+  name: Maria Sibylla Merian
+  type: Artist
+  roles:
+  - naturalist
+  - entomologist
+  - scientific illustrator
+  - engraver
+  born: '1647-04-02'
+  died: '1717-01-13'
+  prominence: 3
+  note: German-Dutch naturalist and illustrator who documented insect metamorphosis in Europe and Suriname.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/Bildnis_der_Maria_Sibylla_Merian%2C_1679.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Bildnis_der_Maria_Sibylla_Merian%2C_1679.jpg/500px-Bildnis_der_Maria_Sibylla_Merian%2C_1679.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Bildnis_der_Maria_Sibylla_Merian,_1679.jpg
+  image_license: Public domain
+  sources:
+  - wp-maria-sibylla-merian
+  coverage: partly
+  coverage_note: Dates, places lived, pupil Rachel Ruysch and Metamorphosis Insectorum Surinamensium captured; caterpillar books not built out; article cut at 32,000 characters.
+  sitelinks: 73
+  sitelinks_on: '2026-10-10'
+- key: marcel-duchamp
+  name: Marcel Duchamp
+  type: Artist
+  roles:
+  - painter
+  born: '1887-07-28'
+  died: '1968-10-02'
+  prominence: 3
+  note: French-American artist, Dada figure and progenitor of conceptual art, famous for the readymade Fountain.
+  sources:
+  - wp-marcel-duchamp
+  coverage: partly
+  coverage_note: Dates, New York years and two key works captured; birth and death places not in the text read; article cut at 32,000 characters.
+  sitelinks: 91
+  sitelinks_on: '2026-10-10'
+- key: man-ray
+  name: Man Ray
+  type: Artist
+  roles:
+  - photographer
+  - painter
+  born: '1890-08-27'
+  died: '1976-11-18'
+  prominence: 3
+  note: American-born, French-naturalized Dada and Surrealist artist and photography innovator, noted for rayographs; born Emmanuel Radnitzky.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/60/Man_Ray_Paris_1934.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Man_Ray_Paris_1934.jpg/500px-Man_Ray_Paris_1934.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Man_Ray_Paris_1934.jpg
+  image_license: Public domain
+  sources:
+  - wp-man-ray
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; films and portrait photography not built out.
+  sitelinks: 68
+  sitelinks_on: '2026-10-10'
+- key: kathe-kollwitz
+  name: Käthe Kollwitz
+  type: Artist
+  roles:
+  - printmaker
+  - painter
+  - sculptor
+  born: '1867-07-08'
+  died: '1945-04-22'
+  prominence: 3
+  note: German artist whose print cycles The Weavers and The Peasant War depict poverty, hunger and war.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/K%C3%A4the_Kollwitz_by_Hugo_Erfurth%2C_1927.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/K%C3%A4the_Kollwitz_by_Hugo_Erfurth%2C_1927.jpg/500px-K%C3%A4the_Kollwitz_by_Hugo_Erfurth%2C_1927.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:K%C3%A4the_Kollwitz_by_Hugo_Erfurth,_1927.jpg
+  image_license: Public domain
+  sources:
+  - wp-kathe-kollwitz
+  coverage: partly
+  coverage_note: Dates, places and the Grieving Parents memorial captured; print cycles not built out as artworks; teachers not in the database.
+  sitelinks: 60
+  sitelinks_on: '2026-10-10'
+- key: aubrey-beardsley
+  name: Aubrey Beardsley
+  type: Artist
+  roles:
+  - illustrator
+  born: '1872-08-21'
+  died: '1898-03-16'
+  prominence: 2
+  note: English illustrator of the aesthetic movement whose black ink drawings influenced Art Nouveau; died of tuberculosis aged 25.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fa/Aubrey_Beardsley_by_Frederick_Hollyer%2C_1893_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Aubrey_Beardsley_by_Frederick_Hollyer%2C_1893_%28cropped%29.jpg/500px-Aubrey_Beardsley_by_Frederick_Hollyer%2C_1893_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Aubrey_Beardsley_by_Frederick_Hollyer,_1893_(cropped).jpg
+  image_license: Public domain
+  sources:
+  - wp-aubrey-beardsley
+  coverage: partly
+  coverage_note: Dates, birth and death places and Le Morte d'Arthur captured; Salome, Yellow Book and Savoy work not built out.
+  sitelinks: 47
+  sitelinks_on: '2026-10-10'
+- key: beatrix-potter
+  name: Beatrix Potter
+  type: Artist
+  roles:
+  - illustrator
+  - writer
+  - naturalist
+  born: '1866-07-28'
+  died: '1943-12-22'
+  prominence: 3
+  note: English illustrator, author and conservationist, best known for The Tale of Peter Rabbit; left her land to the National Trust.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/93/Beatrix_Potter_by_King_cropped.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/Beatrix_Potter_by_King_cropped.jpg/500px-Beatrix_Potter_by_King_cropped.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Beatrix_Potter_by_King_cropped.jpg
+  image_license: Public domain
+  sources:
+  - wp-beatrix-potter
+  coverage: partly
+  coverage_note: Dates, places and Peter Rabbit captured; other tales, fungi paintings and Hill Top not built out; article cut at 32,000 characters.
+  sitelinks: 88
+  sitelinks_on: '2026-10-10'
+- key: banksy
+  name: Banksy
+  type: Artist
+  roles:
+  - street artist
+  - political activist
+  - film director
+  prominence: 3
+  note: Pseudonymous England-based street artist from the Bristol scene, known for stencilled satire and the film Exit Through the Gift Shop.
+  sources:
+  - wp-banksy
+  coverage: partly
+  coverage_note: Career outline and an early mural captured; later works, exhibitions and auction sales not built out; article cut at 32,000 characters.
+  sitelinks: 76
+  sitelinks_on: '2026-10-10'
+- key: marina-abramovic
+  name: Marina Abramović
+  type: Artist
+  roles:
+  - performance artist
+  - conceptual artist
+  born: '1946-11-30'
+  prominence: 3
+  note: Serbian performance artist exploring endurance, the body and the audience; founded the Marina Abramović Institute in 2007.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/26/Marina_Abramovi%C4%87_-_The_Artist_Is_Present_-_Viennale_2012_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Marina_Abramovi%C4%87_-_The_Artist_Is_Present_-_Viennale_2012_%28cropped%29.jpg/500px-Marina_Abramovi%C4%87_-_The_Artist_Is_Present_-_Viennale_2012_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Marina_Abramovi%C4%87_-_The_Artist_Is_Present_-_Viennale_2012_(cropped).jpg
+  image_license: CC BY-SA 3.0
+  sources:
+  - wp-marina-abramovic
+  coverage: partly
+  coverage_note: Dates, birthplace, move to Amsterdam and two key performances captured; Ulay collaborations and later work not built out; article cut at 32,000 characters.
+  sitelinks: 72
+  sitelinks_on: '2026-10-10'
+artworks:
+- key: scrovegni-chapel-frescoes
+  name: Scrovegni Chapel fresco cycle
+  kind: fresco
+  made: 1305
+  estimated: true
+  people:
+  - person: giotto
+    role: creator
+  places:
+  - place: scrovegni-chapel
+    role: made
+  prominence: 5
+  note: Giotto's masterwork, 37 scenes of the Life of the Virgin and the Life of Christ plus the Last Judgement; commissioned by Enrico degli Scrovegni.
+  sources:
+  - wp-giotto
+- key: santa-trinita-maesta
+  name: Maesta of Santa Trinita
+  kind: painting
+  made: 1290
+  made_end: 1300
+  estimated: true
+  collection: Uffizi, Florence
+  people:
+  - person: cimabue
+    role: creator
+  prominence: 4
+  note: Painted for the church of Santa Trinita in Florence; dated c. 1290-1300.
+  sources:
+  - wp-cimabue
+- key: duccio-maesta
+  name: Maesta (Siena Cathedral high altar)
+  kind: painting
+  medium: egg tempera on wood panel with gold leaf
+  made: 1308
+  made_end: 1311
+  people:
+  - person: duccio
+    role: creator
+  places:
+  - place: siena
+    role: made-for
+  prominence: 5
+  note: Commissioned for the high altar of Siena Cathedral in 1308; completed by June 1311.
+  sources:
+  - wp-duccio
+- key: rucellai-madonna
+  name: Rucellai Madonna
+  kind: painting
+  medium: egg tempera on wood panel with gold leaf
+  made: 1285
+  collection: Galleria degli Uffizi
+  people:
+  - person: duccio
+    role: creator
+  prominence: 4
+  note: Commissioned in April 1285 by the Compagnia del Laudesi di Maria Vergine for a chapel in Santa Maria Novella, Florence.
+  sources:
+  - wp-duccio
+- key: simone-martini-maesta
+  name: Maesta (Palazzo Pubblico, Siena)
+  kind: painting
+  made: 1315
+  collection: Palazzo Pubblico, Siena
+  people:
+  - person: simone-martini
+    role: creator
+  places:
+  - place: siena
+    role: held
+  prominence: 4
+  note: Among Martini's first documented works.
+  sources:
+  - wp-simone-martini
+- key: holy-trinity-masaccio
+  name: Holy Trinity
+  kind: fresco
+  made: 1425
+  made_end: 1428
+  collection: Santa Maria Novella, Florence
+  people:
+  - person: masaccio
+    role: creator
+  places:
+  - place: santa-maria-novella-florence
+    role: held
+  prominence: 5
+  note: Considered by many Masaccio's masterwork and the earliest surviving painting to use systematic linear perspective.
+  sources:
+  - wp-masaccio
+- key: san-marco-altarpiece
+  name: San Marco Altarpiece
+  kind: painting
+  made: 1439
+  people:
+  - person: fra-angelico
+    role: creator
+  prominence: 4
+  note: Completed in 1439 for the convent of San Marco, Florence; created the sacra conversazione genre. Dispersed after Napoleon's campaigns, with panels now in several collections.
+  sources:
+  - wp-fra-angelico
+- key: spoleto-cathedral-apse-frescoes
+  name: Life of the Virgin frescoes, Spoleto Cathedral
+  kind: fresco
+  made: 1467
+  made_end: 1469
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  places:
+  - place: spoleto
+    role: made
+  prominence: 3
+  note: Lippi's last work, in the apse of Spoleto Cathedral; completed after his death by assistants under Fra Diamante.
+  sources:
+  - wp-fra-filippo-lippi
+- key: lippi-coronation-of-the-virgin-sant-ambrogio
+  name: Coronation of the Virgin (Sant'Ambrogio altarpiece)
+  kind: painting
+  made: 1441
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+  note: Altarpiece painted for the nuns of Sant'Ambrogio; celebrated in Robert Browning's poem "Fra Lippo Lippi" (1855).
+  sources:
+  - wp-fra-filippo-lippi
+- key: battle-of-san-romano
+  name: The Battle of San Romano
+  kind: painting
+  made: 1450
+  made_end: 1456
+  estimated: true
+  people:
+  - person: paolo-uccello
+    role: creator
+  prominence: 4
+  note: Three panels for the Palazzo Medici, in London (National Gallery), the Uffizi and the Louvre, commemorating the Florentine victory over the Sienese in 1432. Article dates them c. 1450-1456 by stylistic
+    comparison.
+  sources:
+  - wp-paolo-uccello
+- key: history-of-the-true-cross
+  name: The History of the True Cross
+  kind: fresco
+  made: 1452
+  made_end: 1464
+  collection: Basilica of San Francesco, Arezzo
+  people:
+  - person: piero-della-francesca
+    role: creator
+  places:
+  - place: basilica-of-san-francesco-arezzo
+    role: made
+  prominence: 5
+  note: Fresco cycle begun in 1452 when Piero replaced Bicci di Lorenzo; finished 1464. Generally considered among his masterworks.
+  sources:
+  - wp-piero-della-francesca
+- key: baptism-of-christ-piero
+  name: The Baptism of Christ
+  kind: painting
+  made: 1450
+  estimated: true
+  collection: National Gallery, London
+  people:
+  - person: piero-della-francesca
+    role: creator
+  prominence: 4
+  note: Completed c. 1450 for the high altar of the priory church of S. Giovanni Battista at Sansepolcro.
+  sources:
+  - wp-piero-della-francesca
+- key: ghent-altarpiece
+  name: Ghent Altarpiece
+  kind: painting
+  made: 1420
+  made_end: 1432
+  estimated: true
+  people:
+  - person: jan-van-eyck
+    role: creator
+  places:
+  - place: ghent
+    role: displayed
+  prominence: 5
+  note: Begun c. 1420 by his brother Hubert and completed in 1432 by Jan; consecrated 6 May 1432 at Saint Bavo Cathedral. Painted for Jodocus Vijdt and Elisabeth Borluut.
+  sources:
+  - wp-jan-van-eyck
+- key: arnolfini-portrait
+  name: Arnolfini Portrait
+  kind: painting
+  made: 1434
+  people:
+  - person: jan-van-eyck
+    role: creator
+  prominence: 5
+  note: Signed "Johannes de eyck fuit hic 1434". The article also dates it 1432 elsewhere (see discrepancy).
+  sources:
+  - wp-jan-van-eyck
+- key: descent-from-the-cross-van-der-weyden
+  name: The Descent from the Cross
+  kind: painting
+  made: 1435
+  collection: Museo del Prado, Madrid
+  people:
+  - person: rogier-van-der-weyden
+    role: creator
+  prominence: 5
+  note: Article says he "completed his Deposition in 1435", considered his masterpiece, and separately names the Descent from the Cross in the Prado as his best-documented work.
+  sources:
+  - wp-rogier-van-der-weyden
+- key: crucifixion-with-scenes-from-the-passion-memling
+  name: Crucifixion with scenes from the Passion
+  kind: painting
+  made: 1491
+  collection: St. Annen Museum, Lubeck
+  people:
+  - person: hans-memling
+    role: creator
+  places:
+  - place: lubeck
+    role: held
+  prominence: 3
+  note: Large Crucifixion from Lubeck Cathedral, now in the St. Annen Museum.
+  sources:
+  - wp-hans-memling
+- key: san-zaccaria-altarpiece
+  name: San Zaccaria Altarpiece
+  kind: altarpiece
+  made: 1505
+  people:
+  - person: giovanni-bellini
+    role: creator
+  places:
+  - place: san-zaccaria-venice
+    role: made-for
+  prominence: 4
+  note: Holy Conversation altarpiece, considered perhaps the most beautiful and imposing of his altarpieces.
+  sources:
+  - wp-giovanni-bellini
+- key: san-giobbe-altarpiece
+  name: San Giobbe Altarpiece
+  kind: altarpiece
+  made: 1478
+  estimated: true
+  people:
+  - person: giovanni-bellini
+    role: creator
+  prominence: 3
+  note: Holy Conversation altarpiece, dated c. 1478 in the article.
+  sources:
+  - wp-giovanni-bellini
+- key: camera-degli-sposi
+  name: Camera degli Sposi
+  kind: fresco
+  made: 1474
+  estimated: true
+  people:
+  - person: andrea-mantegna
+    role: creator
+  places:
+  - place: palazzo-ducale-mantua
+    role: made
+  prominence: 4
+  note: Fresco decoration of the Wedding Chamber in the Palazzo Ducale, with portraits of the Gonzaga family; decoration finished presumably in 1474.
+  sources:
+  - wp-andrea-mantegna
+- key: triumphs-of-caesar
+  name: Triumphs of Caesar
+  kind: painting
+  medium: tempera
+  made: 1486
+  made_end: 1492
+  estimated: true
+  collection: Hampton Court Palace
+  people:
+  - person: andrea-mantegna
+    role: creator
+  places:
+  - place: hampton-court-palace
+    role: held
+  prominence: 4
+  note: Nine tempera pictures, begun before 1488 and finished around 1492 (the works list gives c. 1486); sold in 1628 to Charles I of England.
+  sources:
+  - wp-andrea-mantegna
+- key: salting-madonna-antonello
+  name: Salting Madonna
+  kind: painting
+  made: 1460
+  people:
+  - person: antonello-da-messina
+    role: creator
+  prominence: 3
+  note: Combines standard iconography and Flemish style with attention to the volume of the figures.
+  sources:
+  - wp-antonello-da-messina
+- key: annunciation-antonello-syracuse
+  name: Annunciation (Syracuse)
+  kind: painting
+  made: 1474
+  collection: Syracuse
+  people:
+  - person: antonello-da-messina
+    role: creator
+  prominence: 3
+  sources:
+  - wp-antonello-da-messina
+- key: trinity-icon-rublev
+  name: Trinity (icon)
+  kind: icon
+  made: 1410
+  estimated: true
+  collection: Holy Trinity Cathedral, Trinity Lavra of St. Sergius
+  people:
+  - person: andrei-rublev
+    role: creator
+  places:
+  - place: trinity-lavra-of-st-sergius
+    role: held
+  prominence: 4
+  note: The only work authenticated as entirely his; based on the Hospitality of Abraham, returned to the Trinity Lavra in June 2024.
+  sources:
+  - wp-andrei-rublev
+- key: donatello-bronze-david
+  name: David (bronze)
+  kind: sculpture
+  medium: bronze
+  made: 1434
+  made_end: 1440
+  estimated: true
+  collection: Bargello Museum
+  people:
+  - person: donatello
+    role: creator
+  prominence: 4
+  note: First known freestanding nude statue since antiquity; commission undocumented, most likely made for Cosimo de' Medici between 1434 and 1440, and first recorded in 1469.
+  sources:
+  - wp-donatello
+- key: donatello-marble-david
+  name: David (marble)
+  kind: sculpture
+  medium: marble
+  made: 1409
+  estimated: true
+  people:
+  - person: donatello
+    role: creator
+  places:
+  - place: palazzo-vecchio
+    role: displayed
+  prominence: 3
+  note: Reworked from 1416, when the cathedral surrendered it to the republic, which placed it in the Palazzo Vecchio. Date disputed within the article (see discrepancy).
+  sources:
+  - wp-donatello
+- key: gates-of-paradise
+  name: Gates of Paradise
+  kind: sculpture
+  medium: gilded bronze
+  made: 1425
+  made_end: 1452
+  people:
+  - person: lorenzo-ghiberti
+    role: creator
+  places:
+  - place: florence-baptistery
+    role: made-for
+  prominence: 4
+  note: East doors of the Florence Baptistery, ten Old Testament panels, named by Michelangelo; 27 years' work from the 1425 commission.
+  sources:
+  - wp-lorenzo-ghiberti
+- key: baptistery-first-doors-ghiberti
+  name: Florence Baptistery bronze doors (first set)
+  kind: sculpture
+  medium: gilded bronze
+  made: 1403
+  made_end: 1424
+  people:
+  - person: lorenzo-ghiberti
+    role: creator
+  places:
+  - place: florence-baptistery
+    role: made-for
+  prominence: 4
+  note: Twenty-eight panels won in the 1401 competition; contract signed 1403 and doors placed on 19 April 1424; later moved to the north side.
+  sources:
+  - wp-lorenzo-ghiberti
+- key: sacrifice-of-isaac-brunelleschi
+  name: Sacrifice of Isaac (competition panel)
+  kind: relief
+  medium: bronze
+  made: 1401
+  made_end: 1402
+  people:
+  - person: filippo-brunelleschi
+    role: creator
+  prominence: 3
+  note: His trial panel for the Baptistery doors competition, now in the Bargello (Ghiberti's panel won the commission).
+  sources:
+  - wp-filippo-brunelleschi
+- key: baptism-of-christ-verrocchio
+  name: The Baptism of Christ
+  kind: painting
+  made: 1474
+  made_end: 1475
+  collection: Uffizi Gallery
+  people:
+  - person: andrea-del-verrocchio
+    role: creator
+  - person: leonardo-da-vinci
+    role: creator
+  prominence: 4
+  note: Leonardo, then a youth in the workshop, painted the angel on the left and part of the background.
+  sources:
+  - wp-andrea-del-verrocchio
+- key: the-burghers-of-calais
+  name: The Burghers of Calais
+  kind: sculpture
+  medium: bronze
+  made: 1884
+  made_end: 1889
+  people:
+  - person: auguste-rodin
+    role: creator
+  places:
+  - place: calais
+    role: displayed
+  prominence: 4
+  note: Begun 1884, first displayed 1889 to general acclaim; placed in Calais in 1895.
+  sources:
+  - wp-auguste-rodin
+- key: the-thinker
+  name: The Thinker
+  kind: sculpture
+  medium: bronze
+  made: 1879
+  made_end: 1889
+  people:
+  - person: auguste-rodin
+    role: creator
+  prominence: 4
+  note: Originally titled The Poet; the 27.5-inch bronze was designed for the lintel of The Gates of Hell.
+  sources:
+  - wp-auguste-rodin
+- key: apollo-and-daphne-bernini
+  name: Apollo and Daphne
+  kind: sculpture
+  made: 1622
+  made_end: 1625
+  collection: Galleria Borghese
+  people:
+  - person: gian-lorenzo-bernini
+    role: creator
+  places:
+  - place: galleria-borghese
+    role: held
+  prominence: 5
+  note: One of the four masterpieces of 1619-1625 that established Bernini's reputation.
+  sources:
+  - wp-gian-lorenzo-bernini
+- key: ecstasy-of-saint-teresa
+  name: Ecstasy of Saint Teresa
+  kind: sculpture
+  medium: marble
+  made: 1651
+  people:
+  - person: gian-lorenzo-bernini
+    role: creator
+  places:
+  - place: cornaro-chapel-rome
+    role: made-for
+  prominence: 5
+  note: Centre of the Cornaro Chapel, which the article says was inaugurated in 1651; the year is the chapel's inauguration, not a stated completion year of the statue.
+  sources:
+  - wp-gian-lorenzo-bernini
+- key: psyche-revived-by-cupids-kiss
+  name: Psyche Revived by Cupid's Kiss
+  kind: sculpture
+  made: 1787
+  people:
+  - person: antonio-canova
+    role: creator
+  prominence: 4
+  note: Commissioned in 1787 by Colonel John Campbell; regarded as a masterpiece of Neoclassical sculpture.
+  sources:
+  - wp-antonio-canova
+- key: napoleon-as-mars-the-peacemaker
+  name: Napoleon as Mars the Peacemaker
+  kind: statue
+  made: 1802
+  made_end: 1806
+  people:
+  - person: antonio-canova
+    role: creator
+  - person: napoleon-i
+    role: subject
+  places:
+  - place: apsley-house
+    role: held
+  prominence: 4
+  note: Begun after a 1802 bust commission; the original went to the Duke of Wellington in 1815 and is at Apsley House.
+  sources:
+  - wp-antonio-canova
+- key: lion-monument-lucerne
+  name: Lion Monument
+  kind: monument
+  made: 1819
+  people:
+  - person: bertel-thorvaldsen
+    role: creator
+  places:
+  - place: lucerne
+    role: displayed
+  prominence: 4
+  note: Commemorates more than six hundred Swiss Guards who died defending the Tuileries in the French Revolution.
+  sources:
+  - wp-bertel-thorvaldsen
+- key: adonis-thorvaldsen
+  name: Adonis
+  kind: statue
+  medium: marble
+  made: 1808
+  made_end: 1832
+  people:
+  - person: bertel-thorvaldsen
+    role: creator
+  - person: ludwig-i-of-bavaria
+    role: patron
+  prominence: 3
+  note: Commissioned by Ludwig I of Bavaria in 1808 and finished in 1832; one of the few marbles carved solely by Thorvaldsen's own hand.
+  sources:
+  - wp-bertel-thorvaldsen
+- key: the-waltz-claudel
+  name: The Waltz
+  kind: sculpture
+  made: 1893
+  people:
+  - person: camille-claudel
+    role: creator
+  prominence: 4
+  note: Her best-known work, kept by Claude Debussy in his studio.
+  sources:
+  - wp-camille-claudel
+- key: the-mature-age-claudel
+  name: The Mature Age
+  kind: sculpture
+  made: 1900
+  people:
+  - person: camille-claudel
+    role: creator
+  prominence: 4
+  note: Allegory of the three stages of life; Rodin's reaction on first seeing it in 1899 ended his support for her.
+  sources:
+  - wp-camille-claudel
+- key: abduction-of-a-sabine-woman
+  name: Abduction of a Sabine Woman
+  kind: sculpture
+  medium: marble
+  made: 1574
+  made_end: 1582
+  people:
+  - person: giambologna
+    role: creator
+  places:
+  - place: loggia-dei-lanzi
+    role: held
+  prominence: 4
+  note: Three figures carved from a single block for Francesco I de' Medici; the title was given after it was in place in the Loggia dei Lanzi.
+  sources:
+  - wp-giambologna
+- key: knife-edge-two-piece
+  name: Knife Edge Two Piece
+  kind: sculpture
+  made: 1962
+  made_end: 1965
+  people:
+  - person: henry-moore
+    role: creator
+  places:
+  - place: abingdon-street-gardens
+    role: displayed
+  prominence: 3
+  note: Given to the City of London in 1967; Moore's most prominent piece in Britain, opposite the Houses of Parliament.
+  sources:
+  - wp-henry-moore
+- key: single-form-hepworth
+  name: Single Form
+  kind: sculpture
+  made: 1964
+  people:
+  - person: barbara-hepworth
+    role: creator
+  places:
+  - place: united-nations-headquarters
+    role: displayed
+  prominence: 4
+  note: Dag Hammarskjold memorial commission, commissioned by Jacob Blaustein in 1961; stands in the plaza of the United Nations building.
+  sources:
+  - wp-barbara-hepworth
+- key: spirale-calder
+  name: Spirale
+  kind: sculpture
+  made: 1958
+  people:
+  - person: alexander-calder
+    role: creator
+  places:
+  - place: unesco-headquarters-paris
+    role: made-for
+  prominence: 3
+  note: Monumental mobile for UNESCO in Paris; Jean Prouve built the steel base in France.
+  sources:
+  - wp-alexander-calder
+- key: cirque-calder
+  name: Cirque Calder
+  kind: sculpture
+  made: 1926
+  collection: Whitney Museum of American Art
+  people:
+  - person: alexander-calder
+    role: creator
+  places:
+  - place: paris
+    role: made
+  prominence: 3
+  note: Miniature circus of wire, cloth, string and found objects begun in Paris in 1926; the year is when he began it.
+  sources:
+  - wp-alexander-calder
+- key: four-books-of-architecture
+  name: The Four Books of Architecture (I quattro libri dell'architettura)
+  kind: treatise
+  made: 1570
+  people:
+  - person: andrea-palladio
+    role: creator
+  places:
+  - place: venice
+    role: made
+  prominence: 4
+  note: Published in Venice in 1570; secured his reputation as the most influential figure in the renewal of classical architecture.
+  sources:
+  - wp-andrea-palladio
+- key: tempietto-san-pietro-in-montorio
+  name: Tempietto
+  made: 1502
+  people:
+  - person: donato-bramante
+    role: creator
+  places:
+  - place: san-pietro-in-montorio
+    role: made
+  prominence: 4
+  note: Small domed sanctuary on the Janiculum marking the start of the High Renaissance in Rome (1502).
+  sources:
+  - wp-donato-bramante
+- key: choir-of-santa-maria-presso-san-satiro
+  name: Trompe-l'oeil choir of Santa Maria presso San Satiro
+  made: 1482
+  made_end: 1486
+  people:
+  - person: donato-bramante
+    role: creator
+  - person: ludovico-sforza
+    role: patron
+  places:
+  - place: santa-maria-presso-san-satiro
+    role: made
+  prominence: 3
+  note: Theatrical apse in bas-relief combining perspective with Roman details because space was limited. Ludovico Sforza made Bramante virtually his court architect from 1476.
+  sources:
+  - wp-donato-bramante
+- key: relativity-escher
+  name: Relativity
+  kind: print
+  made: 1953
+  people:
+  - person: m-c-escher
+    role: creator
+  prominence: 4
+  note: Impossible stairs with multiple gravitational perspectives; inspired Roger Penrose's tribar.
+  sources:
+  - wp-m-c-escher
+- key: drawing-hands
+  name: Drawing Hands
+  made: 1948
+  people:
+  - person: m-c-escher
+    role: creator
+  prominence: 4
+  note: Two hands each drawing the other.
+  sources:
+  - wp-m-c-escher
+- key: london-a-pilgrimage
+  name: 'London: A Pilgrimage'
+  kind: book
+  made: 1872
+  people:
+  - person: gustave-dore
+    role: creator
+  places:
+  - place: london
+    role: depicts
+  prominence: 3
+  note: Book of 180 wood engravings made with Blanchard Jerrold; a commercial success but criticised for its focus on poverty.
+  sources:
+  - wp-gustave-dore
+- key: the-birds-of-america
+  name: The Birds of America
+  kind: book
+  made: 1827
+  made_end: 1838
+  people:
+  - person: john-james-audubon
+    role: creator
+  prominence: 4
+  note: Double-elephant folio of colour plates engraved in Scotland and England, with the text Ornithological Biography (1831-1839).
+  sources:
+  - wp-john-james-audubon
+- key: metamorphosis-insectorum-surinamensium
+  name: Metamorphosis Insectorum Surinamensium
+  kind: book
+  made: 1705
+  people:
+  - person: maria-sibylla-merian
+    role: creator
+  prominence: 4
+  note: Large volume with 60 engraved plates after Merian's designs, showing insect life cycles of Suriname.
+  sources:
+  - wp-maria-sibylla-merian
+- key: nude-descending-a-staircase-no-2
+  name: Nude Descending a Staircase, No. 2
+  kind: painting
+  made: 1912
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 4
+  note: Duchamp's first controversial work; scandalised the 1913 Armory Show in New York.
+  sources:
+  - wp-marcel-duchamp
+- key: fountain-duchamp
+  name: Fountain
+  made: 1917
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 5
+  note: A urinal signed "R. Mutt", submitted to the Society of Independent Artists exhibition; chosen in 2004 as the most influential artwork of the 20th century.
+  sources:
+  - wp-marcel-duchamp
+- key: le-violon-d-ingres
+  name: Le Violon d'Ingres
+  kind: photograph
+  made: 1924
+  people:
+  - person: man-ray
+    role: creator
+  prominence: 4
+  note: Photograph of Kiki de Montparnasse (Alice Prin) with f-holes superimposed, inspired by Ingres; sold in 2022 for $12.4 million.
+  sources:
+  - wp-man-ray
+- key: the-grieving-parents
+  name: The Grieving Parents
+  kind: sculpture
+  made: 1925
+  made_end: 1932
+  people:
+  - person: kathe-kollwitz
+    role: creator
+  prominence: 3
+  note: Memorial to her son Peter; placed in the Roggevelde cemetery in 1932, later moved to Vladslo German war cemetery.
+  sources:
+  - wp-kathe-kollwitz
+- key: le-morte-d-arthur-beardsley
+  name: Le Morte d'Arthur (illustrations)
+  kind: book illustration
+  made: 1893
+  people:
+  - person: aubrey-beardsley
+    role: creator
+  prominence: 3
+  note: His first commission, illustrating Malory's work for J. M. Dent.
+  sources:
+  - wp-aubrey-beardsley
+- key: the-tale-of-peter-rabbit
+  name: The Tale of Peter Rabbit
+  kind: book
+  made: 1902
+  people:
+  - person: beatrix-potter
+    role: creator
+  prominence: 4
+  note: Her first commercially published work.
+  sources:
+  - wp-beatrix-potter
+- key: the-mild-mild-west
+  name: The Mild Mild West
+  kind: mural
+  made: 1997
+  people:
+  - person: banksy
+    role: creator
+  places:
+  - place: bristol
+    role: made
+  prominence: 3
+  note: 'His first known large wall mural, on Stokes Croft, Bristol: a teddy bear throwing a Molotov cocktail at riot police.'
+  sources:
+  - wp-banksy
+- key: rhythm-0
+  name: Rhythm 0
+  kind: performance
+  made: 1974
+  people:
+  - person: marina-abramovic
+    role: creator
+  places:
+  - place: naples
+    role: made
+  prominence: 3
+  note: She placed 72 objects on a table for the public to use on her as they chose.
+  sources:
+  - wp-marina-abramovic
+- key: the-artist-is-present
+  name: The Artist Is Present
+  kind: performance
+  made: 2010
+  people:
+  - person: marina-abramovic
+    role: creator
+  prominence: 4
+  note: 736-hour 30-minute silent performance in the atrium of the Museum of Modern Art, New York, during her 2010 retrospective.
+  sources:
+  - wp-marina-abramovic
+links:
+- patron: eugene-iv
+  artist: fra-angelico
+  from: 1445
+  sources:
+  - wp-fra-angelico
+- patron: nicholas-v
+  artist: fra-angelico
+  from: 1447
+  to: 1449
+  sources:
+  - wp-fra-angelico
+- patron: federico-da-montefeltro
+  artist: piero-della-francesca
+  sources:
+  - wp-piero-della-francesca
+- teacher: fra-filippo-lippi
+  student: sandro-botticelli
+  sources:
+  - wp-fra-filippo-lippi
+- teacher: fra-filippo-lippi
+  student: filippino-lippi
+  sources:
+  - wp-fra-filippo-lippi
+- teacher: lorenzo-ghiberti
+  student: paolo-uccello
+  sources:
+  - wp-paolo-uccello
+- teacher: rogier-van-der-weyden
+  student: hans-memling
+  sources:
+  - wp-hans-memling
+- teacher: giovanni-bellini
+  student: giorgione
+  sources:
+  - wp-giovanni-bellini
+- teacher: giovanni-bellini
+  student: titian
+  sources:
+  - wp-giovanni-bellini
+- patron: isabella-d-este
+  artist: giovanni-bellini
+  from: 1501
+  to: 1504
+  sources:
+  - wp-giovanni-bellini
+- patron: alfonso-i-d-este-duke-of-ferrara
+  artist: giovanni-bellini
+  from: 1514
+  sources:
+  - wp-giovanni-bellini
+- patron: innocent-viii
+  artist: andrea-mantegna
+  from: 1488
+  to: 1490
+  sources:
+  - wp-andrea-mantegna
+- patron: isabella-d-este
+  artist: andrea-mantegna
+  from: 1497
+  sources:
+  - wp-andrea-mantegna
+- teacher: lorenzo-ghiberti
+  student: donatello
+  sources:
+  - wp-lorenzo-ghiberti
+  - wp-donatello
+- teacher: andrea-del-verrocchio
+  student: leonardo-da-vinci
+  sources:
+  - wp-andrea-del-verrocchio
+- teacher: andrea-del-verrocchio
+  student: lorenzo-di-credi
+  sources:
+  - wp-andrea-del-verrocchio
+- teacher: andrea-del-verrocchio
+  student: pietro-perugino
+  sources:
+  - wp-andrea-del-verrocchio
+- patron: lorenzo-de-medici
+  artist: andrea-del-verrocchio
+  sources:
+  - wp-andrea-del-verrocchio
+- patron: nicholas-v
+  artist: leon-battista-alberti
+  from: 1447
+  sources:
+  - wp-leon-battista-alberti
+- patron: pius-ii
+  artist: leon-battista-alberti
+  from: 1459
+  sources:
+  - wp-leon-battista-alberti
+- teacher: auguste-rodin
+  student: camille-claudel
+  sources:
+  - wp-auguste-rodin
+- teacher: auguste-rodin
+  student: constantin-brancusi
+  sources:
+  - wp-auguste-rodin
+- patron: urban-viii
+  artist: gian-lorenzo-bernini
+  from: 1623
+  to: 1644
+  sources:
+  - wp-gian-lorenzo-bernini
+- patron: scipione-borghese
+  artist: gian-lorenzo-bernini
+  sources:
+  - wp-gian-lorenzo-bernini
+- patron: innocent-x
+  artist: gian-lorenzo-bernini
+  from: 1648
+  sources:
+  - wp-gian-lorenzo-bernini
+- patron: alexander-vii
+  artist: gian-lorenzo-bernini
+  from: 1655
+  to: 1667
+  sources:
+  - wp-gian-lorenzo-bernini
+- patron: louis-xiv
+  artist: gian-lorenzo-bernini
+  from: 1665
+  to: 1665
+  sources:
+  - wp-gian-lorenzo-bernini
+- patron: napoleon-i
+  artist: antonio-canova
+  from: 1802
+  to: 1809
+  sources:
+  - wp-antonio-canova
+- patron: josephine-de-beauharnais
+  artist: antonio-canova
+  from: 1814
+  to: 1814
+  sources:
+  - wp-antonio-canova
+- teacher: nicolai-abildgaard
+  student: bertel-thorvaldsen
+  sources:
+  - wp-bertel-thorvaldsen
+- patron: ludwig-i-of-bavaria
+  artist: bertel-thorvaldsen
+  from: 1808
+  to: 1832
+  sources:
+  - wp-bertel-thorvaldsen
+- patron: clement-vii
+  artist: benvenuto-cellini
+  sources:
+  - wp-benvenuto-cellini
+- patron: paul-iii
+  artist: benvenuto-cellini
+  sources:
+  - wp-benvenuto-cellini
+- patron: francis-i-of-france
+  artist: benvenuto-cellini
+  sources:
+  - wp-benvenuto-cellini
+- patron: cosimo-i-de-medici-grand-duke-of-tuscany
+  artist: benvenuto-cellini
+  from: 1545
+  sources:
+  - wp-benvenuto-cellini
+- patron: i-m-pei
+  artist: alexander-calder
+  from: 1966
+  to: 1966
+  sources:
+  - wp-alexander-calder
+- patron: ludovico-sforza
+  artist: donato-bramante
+  from: 1476
+  sources:
+  - wp-donato-bramante
+- patron: julius-ii
+  artist: donato-bramante
+  from: 1503
+  sources:
+  - wp-donato-bramante
+- teacher: maria-sibylla-merian
+  student: rachel-ruysch
+  sources:
+  - wp-maria-sibylla-merian
+moments:
+- person: giotto
+  role: born
+  place: florence
+  year: 1267
+  sources:
+  - wp-giotto
+- person: giotto
+  role: worked
+  place: rome
+  year: 1297
+  sources:
+  - wp-giotto
+- person: giotto
+  role: worked
+  place: padua
+  year: 1305
+  sources:
+  - wp-giotto
+- person: giotto
+  role: worked
+  place: naples
+  year: 1329
+  sources:
+  - wp-giotto
+- person: giotto
+  role: buried
+  place: santa-reparata-florence
+  year: 1337
+  sources:
+  - wp-giotto
+- person: cimabue
+  role: born
+  place: florence
+  year: 1240
+  sources:
+  - wp-cimabue
+- person: cimabue
+  role: worked
+  place: rome
+  year: 1272
+  sources:
+  - wp-cimabue
+- person: cimabue
+  role: worked
+  place: pisa
+  year: 1301
+  sources:
+  - wp-cimabue
+- person: cimabue
+  role: died
+  place: pisa
+  year: 1302
+  sources:
+  - wp-cimabue
+- person: duccio
+  role: born
+  place: siena
+  year: 1255
+  sources:
+  - wp-duccio
+- person: duccio
+  role: worked
+  place: siena
+  year: 1308
+  sources:
+  - wp-duccio
+- person: duccio
+  role: died
+  place: siena
+  year: 1318
+  sources:
+  - wp-duccio
+- person: simone-martini
+  role: born
+  place: siena
+  year: 1284
+  sources:
+  - wp-simone-martini
+- person: simone-martini
+  role: worked
+  place: siena
+  year: 1315
+  sources:
+  - wp-simone-martini
+- person: simone-martini
+  role: worked
+  place: naples
+  year: 1317
+  sources:
+  - wp-simone-martini
+- person: simone-martini
+  role: worked
+  place: pisa
+  year: 1319
+  sources:
+  - wp-simone-martini
+- person: simone-martini
+  role: died
+  place: avignon
+  year: 1344
+  sources:
+  - wp-simone-martini
+- person: masaccio
+  role: born
+  place: san-giovanni-valdarno
+  year: 1401
+  sources:
+  - wp-masaccio
+- person: masaccio
+  role: worked
+  place: florence
+  year: 1422
+  sources:
+  - wp-masaccio
+- person: masaccio
+  role: worked
+  place: brancacci-chapel
+  year: 1425
+  sources:
+  - wp-masaccio
+- person: masaccio
+  role: worked
+  place: pisa
+  year: 1426
+  sources:
+  - wp-masaccio
+- person: fra-angelico
+  role: born
+  place: vicchio
+  year: 1395
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: worked
+  place: fiesole
+  year: 1423
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: worked
+  place: florence
+  year: 1436
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: worked
+  place: rome
+  year: 1445
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: worked
+  place: orvieto
+  year: 1447
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: died
+  place: rome
+  year: 1455
+  sources:
+  - wp-fra-angelico
+- person: fra-angelico
+  role: buried
+  place: santa-maria-sopra-minerva
+  year: 1455
+  sources:
+  - wp-fra-angelico
+- person: fra-filippo-lippi
+  role: born
+  place: florence
+  year: 1406
+  sources:
+  - wp-fra-filippo-lippi
+- person: fra-filippo-lippi
+  role: worked
+  place: prato
+  year: 1456
+  sources:
+  - wp-fra-filippo-lippi
+- person: fra-filippo-lippi
+  role: worked
+  place: spoleto
+  year: 1467
+  sources:
+  - wp-fra-filippo-lippi
+- person: fra-filippo-lippi
+  role: died
+  place: spoleto
+  year: 1469
+  sources:
+  - wp-fra-filippo-lippi
+- person: fra-filippo-lippi
+  role: buried
+  place: spoleto
+  year: 1469
+  sources:
+  - wp-fra-filippo-lippi
+- person: paolo-uccello
+  role: born
+  place: pratovecchio
+  year: 1397
+  sources:
+  - wp-paolo-uccello
+- person: paolo-uccello
+  role: worked
+  place: venice
+  year: 1425
+  sources:
+  - wp-paolo-uccello
+- person: paolo-uccello
+  role: worked
+  place: padua
+  year: 1444
+  sources:
+  - wp-paolo-uccello
+- person: paolo-uccello
+  role: worked
+  place: urbino
+  year: 1465
+  sources:
+  - wp-paolo-uccello
+- person: paolo-uccello
+  role: died
+  place: florence
+  year: 1475
+  sources:
+  - wp-paolo-uccello
+- person: piero-della-francesca
+  role: born
+  place: sansepolcro
+  year: 1415
+  sources:
+  - wp-piero-della-francesca
+- person: piero-della-francesca
+  role: worked
+  place: rimini
+  year: 1451
+  sources:
+  - wp-piero-della-francesca
+- person: piero-della-francesca
+  role: worked
+  place: arezzo
+  year: 1452
+  sources:
+  - wp-piero-della-francesca
+- person: piero-della-francesca
+  role: died
+  place: sansepolcro
+  year: 1492
+  sources:
+  - wp-piero-della-francesca
+- person: jan-van-eyck
+  role: born
+  place: maaseik
+  year: 1390
+  sources:
+  - wp-jan-van-eyck
+- person: jan-van-eyck
+  role: worked
+  place: the-hague
+  year: 1422
+  sources:
+  - wp-jan-van-eyck
+- person: jan-van-eyck
+  role: worked
+  place: lisbon
+  year: 1428
+  sources:
+  - wp-jan-van-eyck
+- person: jan-van-eyck
+  role: worked
+  place: bruges
+  year: 1429
+  sources:
+  - wp-jan-van-eyck
+- person: jan-van-eyck
+  role: died
+  place: bruges
+  year: 1441
+  sources:
+  - wp-jan-van-eyck
+- person: rogier-van-der-weyden
+  role: born
+  place: tournai
+  year: 1399
+  sources:
+  - wp-rogier-van-der-weyden
+- person: rogier-van-der-weyden
+  role: worked
+  place: tournai
+  year: 1427
+  sources:
+  - wp-rogier-van-der-weyden
+- person: rogier-van-der-weyden
+  role: worked
+  place: brussels
+  year: 1435
+  sources:
+  - wp-rogier-van-der-weyden
+- person: rogier-van-der-weyden
+  role: died
+  place: brussels
+  year: 1464
+  sources:
+  - wp-rogier-van-der-weyden
+- person: hans-memling
+  role: born
+  place: seligenstadt
+  year: 1430
+  sources:
+  - wp-hans-memling
+- person: hans-memling
+  role: worked
+  place: brussels
+  year: 1455
+  sources:
+  - wp-hans-memling
+- person: hans-memling
+  role: worked
+  place: bruges
+  year: 1465
+  sources:
+  - wp-hans-memling
+- person: hans-memling
+  role: died
+  place: bruges
+  year: 1494
+  sources:
+  - wp-hans-memling
+- person: giovanni-bellini
+  role: born
+  place: venice
+  year: 1430
+  sources:
+  - wp-giovanni-bellini
+- person: giovanni-bellini
+  role: worked
+  place: venice
+  year: 1470
+  sources:
+  - wp-giovanni-bellini
+- person: giovanni-bellini
+  role: worked
+  place: doges-palace
+  year: 1480
+  sources:
+  - wp-giovanni-bellini
+- person: giovanni-bellini
+  role: buried
+  place: santi-giovanni-e-paolo-venice
+  year: 1516
+  sources:
+  - wp-giovanni-bellini
+- person: andrea-mantegna
+  role: born
+  place: isola-di-carturo
+  year: 1431
+  sources:
+  - wp-andrea-mantegna
+- person: andrea-mantegna
+  role: worked
+  place: ovetari-chapel-padua
+  year: 1448
+  sources:
+  - wp-andrea-mantegna
+- person: andrea-mantegna
+  role: worked
+  place: mantua
+  year: 1460
+  sources:
+  - wp-andrea-mantegna
+- person: andrea-mantegna
+  role: worked
+  place: rome
+  year: 1488
+  sources:
+  - wp-andrea-mantegna
+- person: andrea-mantegna
+  role: died
+  place: mantua
+  year: 1506
+  sources:
+  - wp-andrea-mantegna
+- person: antonello-da-messina
+  role: born
+  place: messina
+  year: 1430
+  sources:
+  - wp-antonello-da-messina
+- person: antonello-da-messina
+  role: worked
+  place: naples
+  year: 1450
+  sources:
+  - wp-antonello-da-messina
+- person: antonello-da-messina
+  role: worked
+  place: reggio-calabria
+  year: 1457
+  sources:
+  - wp-antonello-da-messina
+- person: antonello-da-messina
+  role: worked
+  place: venice
+  year: 1475
+  sources:
+  - wp-antonello-da-messina
+- person: antonello-da-messina
+  role: died
+  place: messina
+  year: 1479
+  sources:
+  - wp-antonello-da-messina
+- person: andrei-rublev
+  role: worked
+  place: moscow
+  year: 1405
+  sources:
+  - wp-andrei-rublev
+- person: andrei-rublev
+  role: worked
+  place: dormition-cathedral-vladimir
+  year: 1408
+  sources:
+  - wp-andrei-rublev
+- person: andrei-rublev
+  role: worked
+  place: trinity-lavra-of-st-sergius
+  year: 1425
+  sources:
+  - wp-andrei-rublev
+- person: andrei-rublev
+  role: died
+  place: andronikov-monastery
+  year: 1430
+  sources:
+  - wp-andrei-rublev
+- person: donatello
+  role: born
+  place: florence
+  year: 1386
+  sources:
+  - wp-donatello
+- person: donatello
+  role: worked
+  place: florence-cathedral
+  year: 1409
+  sources:
+  - wp-donatello
+- person: donatello
+  role: worked
+  place: rome
+  year: 1430
+  sources:
+  - wp-donatello
+- person: lorenzo-ghiberti
+  role: born
+  place: pelago
+  year: 1378
+  sources:
+  - wp-lorenzo-ghiberti
+- person: lorenzo-ghiberti
+  role: worked
+  place: rimini
+  year: 1400
+  sources:
+  - wp-lorenzo-ghiberti
+- person: lorenzo-ghiberti
+  role: worked
+  place: florence-baptistery
+  year: 1403
+  sources:
+  - wp-lorenzo-ghiberti
+- person: lorenzo-ghiberti
+  role: died
+  place: florence
+  year: 1455
+  sources:
+  - wp-lorenzo-ghiberti
+- person: lorenzo-ghiberti
+  role: buried
+  place: santa-croce-florence
+  year: 1455
+  sources:
+  - wp-lorenzo-ghiberti
+- person: filippo-brunelleschi
+  role: born
+  place: florence
+  year: 1377
+  sources:
+  - wp-filippo-brunelleschi
+- person: filippo-brunelleschi
+  role: worked
+  place: ospedale-degli-innocenti-florence
+  year: 1419
+  sources:
+  - wp-filippo-brunelleschi
+- person: filippo-brunelleschi
+  role: worked
+  place: florence-cathedral
+  year: 1420
+  sources:
+  - wp-filippo-brunelleschi
+- person: filippo-brunelleschi
+  role: worked
+  place: rome
+  year: 1432
+  sources:
+  - wp-filippo-brunelleschi
+- person: filippo-brunelleschi
+  role: buried
+  place: florence-cathedral
+  year: 1446
+  sources:
+  - wp-filippo-brunelleschi
+- person: andrea-del-verrocchio
+  role: born
+  place: florence
+  year: 1435
+  sources:
+  - wp-andrea-del-verrocchio
+- person: andrea-del-verrocchio
+  role: worked
+  place: florence
+  year: 1467
+  sources:
+  - wp-andrea-del-verrocchio
+- person: andrea-del-verrocchio
+  role: worked
+  place: venice
+  year: 1483
+  sources:
+  - wp-andrea-del-verrocchio
+- person: andrea-del-verrocchio
+  role: died
+  place: venice
+  year: 1488
+  sources:
+  - wp-andrea-del-verrocchio
+- person: leon-battista-alberti
+  role: born
+  place: genoa
+  year: 1404
+  sources:
+  - wp-leon-battista-alberti
+- person: leon-battista-alberti
+  role: worked
+  place: rome
+  year: 1431
+  sources:
+  - wp-leon-battista-alberti
+- person: leon-battista-alberti
+  role: worked
+  place: santa-maria-novella-florence
+  year: 1448
+  sources:
+  - wp-leon-battista-alberti
+- person: leon-battista-alberti
+  role: worked
+  place: tempio-malatestiano-rimini
+  year: 1450
+  sources:
+  - wp-leon-battista-alberti
+- person: leon-battista-alberti
+  role: died
+  place: rome
+  year: 1472
+  sources:
+  - wp-leon-battista-alberti
+- person: auguste-rodin
+  role: born
+  place: paris
+  year: 1840
+  sources:
+  - wp-auguste-rodin
+- person: auguste-rodin
+  role: worked
+  place: brussels
+  year: 1871
+  sources:
+  - wp-auguste-rodin
+- person: auguste-rodin
+  role: worked
+  place: meudon
+  year: 1897
+  sources:
+  - wp-auguste-rodin
+- person: auguste-rodin
+  role: worked
+  place: hotel-biron-paris
+  year: 1908
+  sources:
+  - wp-auguste-rodin
+- person: gian-lorenzo-bernini
+  role: born
+  place: naples
+  year: 1598
+  sources:
+  - wp-gian-lorenzo-bernini
+- person: gian-lorenzo-bernini
+  role: worked
+  place: rome
+  year: 1606
+  sources:
+  - wp-gian-lorenzo-bernini
+- person: gian-lorenzo-bernini
+  role: worked
+  place: st-peters-basilica-rome
+  year: 1629
+  sources:
+  - wp-gian-lorenzo-bernini
+- person: gian-lorenzo-bernini
+  role: worked
+  place: paris
+  year: 1665
+  sources:
+  - wp-gian-lorenzo-bernini
+- person: antonio-canova
+  role: born
+  place: possagno
+  year: 1757
+  sources:
+  - wp-antonio-canova
+- person: antonio-canova
+  role: worked
+  place: venice
+  year: 1779
+  sources:
+  - wp-antonio-canova
+- person: antonio-canova
+  role: worked
+  place: rome
+  year: 1780
+  sources:
+  - wp-antonio-canova
+- person: antonio-canova
+  role: died
+  place: venice
+  year: 1822
+  sources:
+  - wp-antonio-canova
+- person: antonio-canova
+  role: buried
+  place: tempio-canoviano
+  year: 1822
+  sources:
+  - wp-antonio-canova
+- person: bertel-thorvaldsen
+  role: born
+  place: copenhagen
+  year: 1770
+  sources:
+  - wp-bertel-thorvaldsen
+- person: bertel-thorvaldsen
+  role: worked
+  place: rome
+  year: 1797
+  sources:
+  - wp-bertel-thorvaldsen
+- person: bertel-thorvaldsen
+  role: died
+  place: copenhagen
+  year: 1844
+  sources:
+  - wp-bertel-thorvaldsen
+- person: bertel-thorvaldsen
+  role: buried
+  place: thorvaldsen-museum
+  year: 1844
+  sources:
+  - wp-bertel-thorvaldsen
+- person: camille-claudel
+  role: born
+  place: fere-en-tardenois
+  year: 1864
+  sources:
+  - wp-camille-claudel
+- person: camille-claudel
+  role: worked
+  place: paris
+  year: 1881
+  sources:
+  - wp-camille-claudel
+- person: camille-claudel
+  role: died
+  place: montfavet
+  year: 1943
+  sources:
+  - wp-camille-claudel
+- person: benvenuto-cellini
+  role: born
+  place: florence
+  year: 1500
+  sources:
+  - wp-benvenuto-cellini
+- person: benvenuto-cellini
+  role: worked
+  place: florence
+  year: 1545
+  sources:
+  - wp-benvenuto-cellini
+- person: benvenuto-cellini
+  role: died
+  place: florence
+  year: 1571
+  sources:
+  - wp-benvenuto-cellini
+- person: benvenuto-cellini
+  role: buried
+  place: santissima-annunziata-florence
+  year: 1571
+  sources:
+  - wp-benvenuto-cellini
+- person: giambologna
+  role: born
+  place: douai
+  year: 1529
+  sources:
+  - wp-giambologna
+- person: giambologna
+  role: worked
+  place: rome
+  year: 1550
+  sources:
+  - wp-giambologna
+- person: giambologna
+  role: worked
+  place: florence
+  year: 1553
+  sources:
+  - wp-giambologna
+- person: giambologna
+  role: died
+  place: florence
+  year: 1608
+  sources:
+  - wp-giambologna
+- person: giambologna
+  role: buried
+  place: santissima-annunziata-florence
+  year: 1608
+  sources:
+  - wp-giambologna
+- person: henry-moore
+  role: born
+  place: castleford
+  year: 1898
+  sources:
+  - wp-henry-moore
+- person: henry-moore
+  role: worked
+  place: perry-green
+  year: 1940
+  sources:
+  - wp-henry-moore
+- person: henry-moore
+  role: died
+  place: perry-green
+  year: 1986
+  sources:
+  - wp-henry-moore
+- person: barbara-hepworth
+  role: born
+  place: wakefield
+  year: 1903
+  sources:
+  - wp-barbara-hepworth
+- person: barbara-hepworth
+  role: worked
+  place: st-ives
+  year: 1939
+  sources:
+  - wp-barbara-hepworth
+- person: barbara-hepworth
+  role: died
+  place: st-ives
+  year: 1975
+  sources:
+  - wp-barbara-hepworth
+- person: alexander-calder
+  role: born
+  place: philadelphia
+  year: 1898
+  sources:
+  - wp-alexander-calder
+- person: alexander-calder
+  role: worked
+  place: paris
+  year: 1926
+  sources:
+  - wp-alexander-calder
+- person: alexander-calder
+  role: worked
+  place: roxbury-connecticut
+  year: 1933
+  sources:
+  - wp-alexander-calder
+- person: alexander-calder
+  role: worked
+  place: sache
+  year: 1963
+  sources:
+  - wp-alexander-calder
+- person: andrea-palladio
+  role: born
+  place: padua
+  year: 1508
+  sources:
+  - wp-andrea-palladio
+- person: andrea-palladio
+  role: worked
+  place: vicenza
+  year: 1524
+  sources:
+  - wp-andrea-palladio
+- person: andrea-palladio
+  role: worked
+  place: venice
+  year: 1570
+  sources:
+  - wp-andrea-palladio
+- person: andrea-palladio
+  role: buried
+  place: santa-corona-vicenza
+  year: 1580
+  sources:
+  - wp-andrea-palladio
+- person: donato-bramante
+  role: born
+  place: fermignano
+  year: 1444
+  sources:
+  - wp-donato-bramante
+- person: donato-bramante
+  role: worked
+  place: milan
+  year: 1474
+  sources:
+  - wp-donato-bramante
+- person: donato-bramante
+  role: worked
+  place: rome
+  year: 1499
+  sources:
+  - wp-donato-bramante
+- person: gustave-eiffel
+  role: worked
+  place: levallois-perret
+  year: 1866
+  sources:
+  - wp-gustave-eiffel
+- person: gustave-eiffel
+  role: died
+  place: paris
+  year: 1923
+  sources:
+  - wp-gustave-eiffel
+- person: gustave-eiffel
+  role: buried
+  place: levallois-perret-cemetery
+  year: 1923
+  sources:
+  - wp-gustave-eiffel
+- person: karl-friedrich-schinkel
+  role: born
+  place: neuruppin
+  year: 1781
+  sources:
+  - wp-karl-friedrich-schinkel
+- person: karl-friedrich-schinkel
+  role: died
+  place: berlin
+  year: 1841
+  sources:
+  - wp-karl-friedrich-schinkel
+- person: antoni-gaudi
+  role: born
+  place: reus
+  year: 1852
+  sources:
+  - wp-antoni-gaudi
+- person: antoni-gaudi
+  role: worked
+  place: barcelona
+  year: 1883
+  sources:
+  - wp-antoni-gaudi
+- person: antoni-gaudi
+  role: died
+  place: barcelona
+  year: 1926
+  sources:
+  - wp-antoni-gaudi
+- person: antoni-gaudi
+  role: buried
+  place: sagrada-familia
+  year: 1926
+  sources:
+  - wp-antoni-gaudi
+- person: le-corbusier
+  role: born
+  place: la-chaux-de-fonds
+  year: 1887
+  sources:
+  - wp-le-corbusier
+- person: le-corbusier
+  role: worked
+  place: paris
+  year: 1908
+  sources:
+  - wp-le-corbusier
+- person: walter-gropius
+  role: born
+  place: berlin
+  year: 1883
+  sources:
+  - wp-walter-gropius
+- person: walter-gropius
+  role: worked
+  place: weimar
+  year: 1919
+  sources:
+  - wp-walter-gropius
+- person: walter-gropius
+  role: worked
+  place: dessau
+  year: 1925
+  sources:
+  - wp-walter-gropius
+- person: walter-gropius
+  role: worked
+  place: cambridge-massachusetts
+  year: 1937
+  sources:
+  - wp-walter-gropius
+- person: walter-gropius
+  role: died
+  place: boston
+  year: 1969
+  sources:
+  - wp-walter-gropius
+- person: ludwig-mies-van-der-rohe
+  role: born
+  place: aachen
+  year: 1886
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+- person: ludwig-mies-van-der-rohe
+  role: buried
+  place: graceland-cemetery
+  year: 1969
+  sources:
+  - wp-ludwig-mies-van-der-rohe
+- person: alvar-aalto
+  role: born
+  place: kuortane
+  year: 1898
+  sources:
+  - wp-alvar-aalto
+- person: alvar-aalto
+  role: worked
+  place: jyvaskyla
+  year: 1923
+  sources:
+  - wp-alvar-aalto
+- person: alvar-aalto
+  role: worked
+  place: turku
+  year: 1927
+  sources:
+  - wp-alvar-aalto
+- person: alvar-aalto
+  role: died
+  place: helsinki
+  year: 1976
+  sources:
+  - wp-alvar-aalto
+- person: alvar-aalto
+  role: buried
+  place: hietaniemi-cemetery
+  year: 1976
+  sources:
+  - wp-alvar-aalto
+- person: i-m-pei
+  role: born
+  place: guangzhou
+  year: 1917
+  sources:
+  - wp-i-m-pei
+- person: i-m-pei
+  role: worked
+  place: cambridge-massachusetts
+  year: 1945
+  sources:
+  - wp-i-m-pei
+- person: i-m-pei
+  role: worked
+  place: new-york-city
+  year: 1948
+  sources:
+  - wp-i-m-pei
+- person: zaha-hadid
+  role: born
+  place: baghdad
+  year: 1950
+  sources:
+  - wp-zaha-hadid
+- person: zaha-hadid
+  role: worked
+  place: london
+  year: 1972
+  sources:
+  - wp-zaha-hadid
+- person: zaha-hadid
+  role: worked
+  place: rotterdam
+  year: 1977
+  sources:
+  - wp-zaha-hadid
+- person: zaha-hadid
+  role: died
+  place: miami
+  year: 2016
+  sources:
+  - wp-zaha-hadid
+- person: zaha-hadid
+  role: buried
+  place: brookwood-cemetery
+  year: 2016
+  sources:
+  - wp-zaha-hadid
+- person: renzo-piano
+  role: born
+  place: genoa
+  year: 1937
+  sources:
+  - wp-renzo-piano
+- person: renzo-piano
+  role: worked
+  place: paris
+  year: 1973
+  sources:
+  - wp-renzo-piano
+- person: santiago-calatrava
+  role: born
+  place: valencia
+  year: 1951
+  sources:
+  - wp-santiago-calatrava
+- person: santiago-calatrava
+  role: worked
+  place: zurich
+  year: 1981
+  sources:
+  - wp-santiago-calatrava
+- person: santiago-calatrava
+  role: worked
+  place: barcelona
+  year: 1984
+  sources:
+  - wp-santiago-calatrava
+- person: m-c-escher
+  role: born
+  place: leeuwarden
+  year: 1898
+  sources:
+  - wp-m-c-escher
+- person: m-c-escher
+  role: worked
+  place: rome
+  year: 1923
+  sources:
+  - wp-m-c-escher
+- person: m-c-escher
+  role: worked
+  place: baarn
+  year: 1941
+  sources:
+  - wp-m-c-escher
+- person: m-c-escher
+  role: died
+  place: hilversum
+  year: 1972
+  sources:
+  - wp-m-c-escher
+- person: m-c-escher
+  role: buried
+  place: baarn
+  year: 1972
+  sources:
+  - wp-m-c-escher
+- person: gustave-dore
+  role: born
+  place: strasbourg
+  year: 1832
+  sources:
+  - wp-gustave-dore
+- person: gustave-dore
+  role: died
+  place: paris
+  year: 1883
+  sources:
+  - wp-gustave-dore
+- person: john-james-audubon
+  role: born
+  place: les-cayes
+  year: 1785
+  sources:
+  - wp-john-james-audubon
+- person: john-james-audubon
+  role: worked
+  place: henderson-kentucky
+  year: 1810
+  sources:
+  - wp-john-james-audubon
+- person: maria-sibylla-merian
+  role: worked
+  place: nuremberg
+  year: 1670
+  sources:
+  - wp-maria-sibylla-merian
+- person: maria-sibylla-merian
+  role: worked
+  place: wieuwerd
+  year: 1685
+  sources:
+  - wp-maria-sibylla-merian
+- person: maria-sibylla-merian
+  role: worked
+  place: amsterdam
+  year: 1691
+  sources:
+  - wp-maria-sibylla-merian
+- person: maria-sibylla-merian
+  role: died
+  place: amsterdam
+  year: 1717
+  sources:
+  - wp-maria-sibylla-merian
+- person: marcel-duchamp
+  role: worked
+  place: new-york-city
+  year: 1915
+  sources:
+  - wp-marcel-duchamp
+- person: man-ray
+  role: born
+  place: philadelphia
+  year: 1890
+  sources:
+  - wp-man-ray
+- person: man-ray
+  role: worked
+  place: paris
+  year: 1921
+  sources:
+  - wp-man-ray
+- person: man-ray
+  role: worked
+  place: hollywood
+  year: 1940
+  sources:
+  - wp-man-ray
+- person: man-ray
+  role: buried
+  place: paris
+  year: 1976
+  sources:
+  - wp-man-ray
+- person: kathe-kollwitz
+  role: born
+  place: konigsberg
+  year: 1867
+  sources:
+  - wp-kathe-kollwitz
+- person: kathe-kollwitz
+  role: worked
+  place: berlin
+  year: 1891
+  sources:
+  - wp-kathe-kollwitz
+- person: kathe-kollwitz
+  role: died
+  place: moritzburg
+  year: 1945
+  sources:
+  - wp-kathe-kollwitz
+- person: aubrey-beardsley
+  role: born
+  place: brighton
+  year: 1872
+  sources:
+  - wp-aubrey-beardsley
+- person: aubrey-beardsley
+  role: died
+  place: menton
+  year: 1898
+  sources:
+  - wp-aubrey-beardsley
+- person: aubrey-beardsley
+  role: buried
+  place: menton
+  year: 1898
+  sources:
+  - wp-aubrey-beardsley
+- person: beatrix-potter
+  role: born
+  place: london
+  year: 1866
+  sources:
+  - wp-beatrix-potter
+- person: beatrix-potter
+  role: died
+  place: near-sawrey
+  year: 1943
+  sources:
+  - wp-beatrix-potter
+- person: banksy
+  role: worked
+  place: bristol
+  year: 1997
+  sources:
+  - wp-banksy
+- person: marina-abramovic
+  role: born
+  place: belgrade
+  year: 1946
+  sources:
+  - wp-marina-abramovic
+- person: marina-abramovic
+  role: worked
+  place: amsterdam
+  year: 1976
+  sources:
+  - wp-marina-abramovic
+discrepancies:
+- key: giotto-birthplace
+  question: Where was Giotto born?
+  about:
+  - person: giotto
+  field: place
+  claims:
+  - value: Florence
+    sources:
+    - wp-giotto
+    note: Recent research presents documentary evidence that he was born in Florence, son of a blacksmith.
+  - value: Colle di Romagnano or Colle Vespignano (Vespignano)
+    sources:
+    - wp-giotto
+    note: Tradition says a farmhouse at Colle di Romagnano; a plaque at Colle Vespignano has claimed it since 1850.
+  note: Record uses Florence moment (documentary evidence). The article also says his birth date is disputed.
+- key: giotto-apprenticeship-cimabue
+  question: Was Giotto a pupil of Cimabue?
+  about:
+  - person: giotto
+  - person: cimabue
+  field: teacher
+  claims:
+  - value: Giotto was apprenticed to Cimabue
+    sources:
+    - wp-giotto
+    - wp-cimabue
+    note: Vasari's account, including the story of the painted fly.
+  - value: Giotto was not Cimabue's pupil
+    sources:
+    - wp-giotto
+    - wp-cimabue
+    note: Many scholars treat Vasari's account as legend, citing earlier sources.
+  note: No teacher link recorded.
+- key: giotto-assisi-attribution
+  question: Did Giotto paint the St Francis fresco cycle in the Upper Church at Assisi?
+  about:
+  - person: giotto
+  field: attribution
+  claims:
+  - value: Yes, attributed to Giotto
+    sources:
+    - wp-giotto
+    note: Traditional attribution, convenient in the absence of evidence to the contrary.
+  - value: No, by other hands
+    sources:
+    - wp-giotto
+    note: Technical examinations in 2002 gave strong evidence against; four hands from Rome identified.
+  note: Not captured as a Giotto work in this batch.
+- key: giotto-burial
+  question: Where was Giotto buried?
+  about:
+  - person: giotto
+  field: place
+  claims:
+  - value: Florence Cathedral
+    sources:
+    - wp-giotto
+    note: 'Vasari: on the left of the entrance, marked by a white marble plaque.'
+  - value: Church of Santa Reparata
+    sources:
+    - wp-giotto
+    note: Other sources; the article says the two reports are explained because Santa Reparata lies directly beneath the cathedral.
+  note: Record uses santa-reparata-florence. Bones found there in the 1970s are of disputed identity.
+- key: simone-martini-teacher
+  question: Who was Simone Martini's teacher?
+  about:
+  - person: simone-martini
+  field: teacher
+  claims:
+  - value: Duccio di Buoninsegna
+    sources:
+    - wp-simone-martini
+    note: It is thought he was Duccio's pupil.
+  - value: Giotto
+    sources:
+    - wp-simone-martini
+    note: 'Vasari: pupil of Giotto, with whom he went to Rome.'
+  note: No teacher link recorded.
+- key: duccio-teacher
+  question: With whom did Duccio train?
+  about:
+  - person: duccio
+  field: teacher
+  claims:
+  - value: Cimabue
+    sources:
+    - wp-duccio
+    note: Many believe he studied under Cimabue.
+  - value: A Byzantine master in Constantinople
+    sources:
+    - wp-duccio
+    note: Others think he travelled there.
+  note: Article says where and with whom he studied is still a matter of great debate. No teacher link recorded.
+- key: lippi-death-cause
+  question: How did Filippo Lippi die?
+  about:
+  - person: fra-filippo-lippi
+  field: died
+  claims:
+  - value: Poisoned by relatives of Lucrezia Buti
+    sources:
+    - wp-fra-filippo-lippi
+    note: Said to have happened before a papal dispensation to marry arrived.
+  - value: Poisoned by relatives of a woman who replaced Lucrezia
+    sources:
+    - wp-fra-filippo-lippi
+    note: Another version.
+  note: Article says the mode of death is disputed. Record holds death at Spoleto in 1469 only.
+- key: jan-van-eyck-born
+  question: When was Jan van Eyck born?
+  about:
+  - person: jan-van-eyck
+  field: born
+  claims:
+  - value: c. 1380
+    sources:
+    - wp-jan-van-eyck
+    note: Argued by some scholars.
+  - value: c. 1390
+    sources:
+    - wp-jan-van-eyck
+    note: Lead gives c. before 1390.
+  - value: 1395 at the latest
+    sources:
+    - wp-jan-van-eyck
+    note: Inferred from his 1422-24 rank of master painter with assistants.
+  note: Neither the date nor the place of birth is documented. Record uses c. 1390 and Maaseik (identified in the late 16th century).
+- key: arnolfini-portrait-date
+  question: When was the Arnolfini Portrait made?
+  about:
+  - artwork: arnolfini-portrait
+  field: date
+  claims:
+  - value: '1434'
+    sources:
+    - wp-jan-van-eyck
+    note: The signature reads Johannes de eyck fuit hic 1434.
+  - value: '1432'
+    sources:
+    - wp-jan-van-eyck
+    note: The article's portraits section refers to it as the Arnolfini Portrait of 1432.
+  note: Record uses 1434, the inscribed date.
+- key: giovanni-bellini-died
+  question: On what date did Giovanni Bellini die in 1516?
+  about:
+  - person: giovanni-bellini
+  field: died
+  claims:
+  - value: 29 December 1516
+    sources:
+    - wp-giovanni-bellini
+    note: Lead paragraph
+  - value: 29 November 1516
+    sources:
+    - wp-giovanni-bellini
+    note: Body text, citing Marin Sanudo's diary
+  note: The record holds the year 1516 only.
+- key: antonello-da-messina-born
+  question: When was Antonello da Messina born?
+  about:
+  - person: antonello-da-messina
+  field: born
+  claims:
+  - value: c. 1425-1430
+    sources:
+    - wp-antonello-da-messina
+    note: Lead paragraph
+  - value: around 1429-1431
+    sources:
+    - wp-antonello-da-messina
+    note: Early life section
+  note: The record uses c. 1430, within both ranges.
+- key: lorenzo-ghiberti-died
+  question: Did Ghiberti die on 1 December 1455, or was that the day he was buried?
+  about:
+  - person: lorenzo-ghiberti
+  field: died
+  claims:
+  - value: Died 1 December 1455
+    sources:
+    - wp-lorenzo-ghiberti
+    note: Lead paragraph
+  - value: Buried at Santa Croce on 1 December 1455 after dying of a fever
+    sources:
+    - wp-lorenzo-ghiberti
+    note: Later life section
+  note: The record holds the year 1455 only.
+- key: gates-of-paradise-date
+  question: Over what years were the Gates of Paradise made?
+  about:
+  - artwork: gates-of-paradise
+  field: date
+  claims:
+  - value: 1425-1452 (commissioned 1425, 27 years' work)
+    sources:
+    - wp-lorenzo-ghiberti
+  - value: 1424-1451
+    sources:
+    - wp-donatello
+  note: The record uses 1425-1452 from Ghiberti's own article.
+- key: brunelleschi-rome-visit
+  question: Did Brunelleschi visit Rome in 1402-1404 to study its ruins?
+  about:
+  - person: filippo-brunelleschi
+  field: place
+  claims:
+  - value: Visited Rome 1402-1404, almost certainly with Donatello
+    sources:
+    - wp-filippo-brunelleschi
+  - value: Some historians dispute it; first definitely documented stay in Rome is 1432
+    sources:
+    - wp-filippo-brunelleschi
+  note: The record includes only the documented 1432 stay as a moment.
+- key: san-sebastiano-mantua-date
+  question: When was San Sebastiano in Mantua begun?
+  about:
+  - place: san-sebastiano-mantua
+  field: date
+  claims:
+  - value: '1460'
+    sources:
+    - wp-leon-battista-alberti
+    note: Lead paragraph
+  - value: begun 1458
+    sources:
+    - wp-leon-battista-alberti
+    note: Other buildings list
+  note: The record uses 1458.
+- key: donatello-marble-david-date
+  question: When was Donatello's marble David made?
+  about:
+  - artwork: donatello-marble-david
+  field: date
+  claims:
+  - value: c. 1408-09
+    sources:
+    - wp-donatello
+    note: 'Bronze David section: his stone David of about 1408-09'
+  - value: perhaps 1412, or slightly later; reworked from 1416
+    sources:
+    - wp-donatello
+    note: Early statues section
+  note: The record uses c. 1409.
+- key: thorvaldsen-born
+  question: When was Bertel Thorvaldsen born?
+  about:
+  - person: bertel-thorvaldsen
+  field: born
+  claims:
+  - value: 19 November 1770
+    sources:
+    - wp-bertel-thorvaldsen
+    note: Date given in the article; his birth certificate and baptismal records have never been found, only a confirmation record of 1787.
+  - value: '1768'
+    sources:
+    - wp-bertel-thorvaldsen
+    note: Given as 'according to some accounts'.
+  note: The record uses 1770, the date the article gives.
+- key: calder-born
+  question: On what day in 1898 was Alexander Calder born?
+  about:
+  - person: alexander-calder
+  field: born
+  claims:
+  - value: '1898-07-22'
+    sources:
+    - wp-alexander-calder
+    note: Birth certificate at Philadelphia City Hall, from a hand-written ledger; the date used in the article's lead.
+  - value: '1898-08-22'
+    sources:
+    - wp-alexander-calder
+    note: His mother's account; his family asserted the city officials had made a mistake.
+  note: The record uses 22 July, the birth certificate and article lead.
+- key: palladio-death-place
+  question: Where did Andrea Palladio die?
+  about:
+  - person: andrea-palladio
+  field: place
+  claims:
+  - value: Vicenza
+    sources:
+    - wp-andrea-palladio
+  - value: Maser
+    sources:
+    - wp-andrea-palladio
+  note: The article says "either Vicenza or Maser", so no died moment is recorded. He was buried in Santa Corona, Vicenza.
+- key: tempietto-patron
+  question: Who commissioned Bramante's Tempietto at San Pietro in Montorio?
+  about:
+  - artwork: tempietto-san-pietro-in-montorio
+  field: attribution
+  claims:
+  - value: Ferdinand of Aragon and Isabella of Castile
+    sources:
+    - wp-donato-bramante
+  - value: Pope Julius II
+    sources:
+    - wp-donato-bramante
+    note: The article says 'possibly Julius II'; its lead says Julius II appointed him to build the sanctuary.
+  note: No patron is recorded on the artwork while this is open.
+- key: antoni-gaudi-born-place
+  question: Was Antoni Gaudi born in Reus or in Riudoms?
+  about:
+  - person: antoni-gaudi
+  field: place
+  claims:
+  - value: Reus
+    sources:
+    - wp-antoni-gaudi
+    note: Most of his identification documents give Reus; baptised in Reus the day after birth.
+  - value: Riudoms
+    sources:
+    - wp-antoni-gaudi
+    note: From 1915 Gaudi himself said Riudoms, his paternal family's village.
+  note: The record uses Reus, the better documented.
+- key: aalto-paimio-sanatorium-completed
+  question: When was the Paimio Sanatorium completed?
+  about:
+  - place: paimio-sanatorium
+  field: date
+  claims:
+  - value: '1932'
+    sources:
+    - wp-alvar-aalto
+    note: Prose says the sanatorium was completed in 1932.
+  - value: 1928-1933
+    sources:
+    - wp-alvar-aalto
+    note: The works list gives 1928-1933.
+  note: Same article gives both; no founded year is recorded for now.
