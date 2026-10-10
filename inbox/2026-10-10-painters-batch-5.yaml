@@ -1,0 +1,3347 @@
+# Notes for the reviewer
+# - 40 painters of the second rank: Perugino to the Pre-Raphaelites, Russians and Scandinavians, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 5: Renaissance to Symbolism, the second rank (40 painters)'
+  requested: 'Western painters from 1500, batch 5: Perugino to Pre-Raphaelites, Russians, Scandinavians and Central Europeans'
+  date: '2026-10-10'
+sources:
+- key: wp-pietro-perugino
+  title: Pietro Perugino (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pietro_Perugino
+- key: wp-albrecht-altdorfer
+  title: Albrecht Altdorfer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albrecht_Altdorfer
+- key: wp-matthias-grunewald
+  title: Matthias Grünewald (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Matthias_Gr%C3%BCnewald
+- key: wp-antonio-da-correggio
+  title: Antonio da Correggio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Antonio_da_Correggio
+- key: wp-bronzino
+  title: Bronzino (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bronzino
+- key: wp-giuseppe-arcimboldo
+  title: Giuseppe Arcimboldo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giuseppe_Arcimboldo
+- key: wp-jusepe-de-ribera
+  title: Jusepe de Ribera (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jusepe_de_Ribera
+- key: wp-georges-de-la-tour
+  title: Georges de La Tour (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georges_de_La_Tour
+- key: wp-claude-lorrain
+  title: Claude Lorrain (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Claude_Lorrain
+- key: wp-charles-le-brun
+  title: Charles Le Brun (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles_Le_Brun
+- key: wp-francois-boucher
+  title: François Boucher (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fran%C3%A7ois_Boucher
+- key: wp-jean-honore-fragonard
+  title: Jean-Honoré Fragonard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Honor%C3%A9_Fragonard
+- key: wp-angelica-kauffman
+  title: Angelica Kauffman (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Angelica_Kauffman
+- key: wp-elisabeth-vigee-le-brun
+  title: Élisabeth Vigée Le Brun (Wikipedia)
+  url: https://en.wikipedia.org/wiki/%C3%89lisabeth_Vig%C3%A9e_Le_Brun
+- key: wp-william-blake
+  title: William Blake (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Blake
+- key: wp-caspar-david-friedrich
+  title: Caspar David Friedrich (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Caspar_David_Friedrich
+- key: wp-theodore-gericault
+  title: Théodore Géricault (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Th%C3%A9odore_G%C3%A9ricault
+- key: wp-francesco-hayez
+  title: Francesco Hayez (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Hayez
+- key: wp-karl-bryullov
+  title: Karl Bryullov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Karl_Bryullov
+- key: wp-ivan-aivazovsky
+  title: Ivan Aivazovsky (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ivan_Aivazovsky
+- key: wp-arnold-bocklin
+  title: Arnold Böcklin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Arnold_B%C3%B6cklin
+- key: wp-william-holman-hunt
+  title: William Holman Hunt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William_Holman_Hunt
+- key: wp-dante-gabriel-rossetti
+  title: Dante Gabriel Rossetti (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Dante_Gabriel_Rossetti
+- key: wp-john-everett-millais
+  title: John Everett Millais (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Everett_Millais
+- key: wp-ivan-shishkin
+  title: Ivan Shishkin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ivan_Shishkin
+- key: wp-vasily-perov
+  title: Vasily Perov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vasily_Perov
+- key: wp-ivan-kramskoi
+  title: Ivan Kramskoi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ivan_Kramskoi
+- key: wp-jan-matejko
+  title: Jan Matejko (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jan_Matejko
+- key: wp-vasily-vereshchagin
+  title: Vasily Vereshchagin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vasily_Vereshchagin
+- key: wp-ilya-repin
+  title: Ilya Repin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ilya_Repin
+- key: wp-max-liebermann
+  title: Max Liebermann (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Max_Liebermann
+- key: wp-viktor-vasnetsov
+  title: Viktor Vasnetsov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Viktor_Vasnetsov
+- key: wp-vasily-surikov
+  title: Vasily Surikov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vasily_Surikov
+- key: wp-alphonse-mucha
+  title: Alphonse Mucha (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alphonse_Mucha
+- key: wp-isaac-levitan
+  title: Isaac Levitan (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isaac_Levitan
+- key: wp-anders-zorn
+  title: Anders Zorn (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anders_Zorn
+- key: wp-valentin-serov
+  title: Valentin Serov (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Valentin_Serov
+- key: wp-akseli-gallen-kallela
+  title: Akseli Gallen-Kallela (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Akseli_Gallen-Kallela
+- key: wp-nicholas-roerich
+  title: Nicholas Roerich (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nicholas_Roerich
+- key: wp-constantin-brancusi
+  title: Constantin Brancusi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Constantin_Br%C3%A2ncu%C8%99i
+places:
+- key: citta-della-pieve
+  name: Città della Pieve
+  kind: town
+  region: Umbria
+  country: Italy
+  lat: 42.953
+  lng: 12.007
+  visitable: true
+  sources:
+  - wp-pietro-perugino
+- key: fontignano
+  name: Fontignano
+  kind: village
+  region: Umbria
+  country: Italy
+  city: Perugia
+  lat: 43.017
+  lng: 12.15
+  visitable: true
+  sources:
+  - wp-pietro-perugino
+- key: collegio-del-cambio-perugia
+  name: Collegio del Cambio (Sala delle Udienze)
+  kind: guild hall
+  city: Perugia
+  region: Umbria
+  country: Italy
+  lat: 43.1115
+  lng: 12.3893
+  visitable: true
+  sources:
+  - wp-pietro-perugino
+- key: regensburg
+  name: Regensburg
+  kind: city
+  region: Bavaria
+  country: Germany
+  lat: 49.013
+  lng: 12.102
+  visitable: true
+  sources:
+  - wp-albrecht-altdorfer
+- key: innsbruck
+  name: Innsbruck
+  kind: city
+  region: Tyrol
+  country: Austria
+  lat: 47.269
+  lng: 11.404
+  visitable: true
+  sources:
+  - wp-albrecht-altdorfer
+- key: isenheim
+  name: Isenheim
+  kind: village
+  region: Grand Est
+  country: France
+  lat: 47.906
+  lng: 7.267
+  visitable: true
+  sources:
+  - wp-matthias-grunewald
+- key: mainz
+  name: Mainz
+  kind: city
+  region: Rhineland-Palatinate
+  country: Germany
+  lat: 49.992
+  lng: 8.247
+  visitable: true
+  sources:
+  - wp-matthias-grunewald
+- key: correggio
+  name: Correggio
+  kind: town
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.77
+  lng: 10.782
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+- key: san-francesco-correggio
+  name: San Francesco
+  Correggio: null
+  kind: church
+  city: Correggio
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.77
+  lng: 10.783
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+- key: parma
+  name: Parma
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.801
+  lng: 10.328
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+  - wp-jusepe-de-ribera
+- key: modena
+  name: Modena
+  kind: city
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.647
+  lng: 10.925
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+- key: parma-cathedral
+  name: Parma Cathedral
+  kind: cathedral
+  city: Parma
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.8015
+  lng: 10.3305
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+- key: san-giovanni-evangelista-parma
+  name: San Giovanni Evangelista
+  Parma: null
+  kind: church
+  city: Parma
+  region: Emilia-Romagna
+  country: Italy
+  lat: 44.7985
+  lng: 10.3315
+  visitable: true
+  sources:
+  - wp-antonio-da-correggio
+- key: jativa
+  name: Játiva
+  kind: town
+  region: Valencian Community
+  country: Spain
+  lat: 38.99
+  lng: -0.52
+  visitable: true
+  sources:
+  - wp-jusepe-de-ribera
+- key: vic-sur-seille
+  name: Vic-sur-Seille
+  kind: town
+  region: Grand Est
+  country: France
+  lat: 48.783
+  lng: 6.535
+  visitable: true
+  sources:
+  - wp-georges-de-la-tour
+- key: luneville
+  name: Lunéville
+  kind: town
+  region: Grand Est
+  country: France
+  lat: 48.592
+  lng: 6.497
+  visitable: true
+  sources:
+  - wp-georges-de-la-tour
+- key: chamagne
+  name: Chamagne
+  kind: village
+  region: Grand Est
+  country: France
+  lat: 48.366
+  lng: 6.332
+  visitable: true
+  sources:
+  - wp-claude-lorrain
+- key: palace-of-versailles
+  name: Palace of Versailles
+  kind: palace
+  city: Versailles
+  region: Île-de-France
+  country: France
+  lat: 48.805
+  lng: 2.12
+  visitable: true
+  sources:
+  - wp-charles-le-brun
+- key: chateau-de-vaux-le-vicomte
+  name: Château de Vaux-le-Vicomte
+  kind: chateau
+  city: Maincy
+  region: Île-de-France
+  country: France
+  lat: 48.566
+  lng: 2.714
+  visitable: true
+  sources:
+  - wp-charles-le-brun
+- key: grasse
+  name: Grasse
+  kind: city
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.658
+  lng: 6.925
+  sources:
+  - wp-jean-honore-fragonard
+- key: greifswald
+  name: Greifswald
+  kind: city
+  region: Mecklenburg-Vorpommern
+  country: Germany
+  lat: 54.093
+  lng: 13.381
+  sources:
+  - wp-caspar-david-friedrich
+- key: copenhagen
+  name: Copenhagen
+  kind: city
+  region: Capital Region
+  country: Denmark
+  lat: 55.676
+  lng: 12.568
+  sources:
+  - wp-caspar-david-friedrich
+- key: trinitatis-friedhof-dresden
+  name: Trinitatis-Friedhof (Trinity Cemetery)
+  kind: cemetery
+  city: Dresden
+  region: Saxony
+  country: Germany
+  lat: 51.045
+  lng: 13.757
+  visitable: true
+  sources:
+  - wp-caspar-david-friedrich
+- key: sant-andrea-delle-fratte
+  name: Sant'Andrea delle Fratte
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.903
+  lng: 12.482
+  visitable: true
+  sources:
+  - wp-angelica-kauffman
+- key: chiaramonti-museum-vatican
+  name: Chiaramonti Museum corridor (Vatican Museums)
+  kind: museum
+  region: Vatican City
+  country: Vatican City
+  lat: 41.906
+  lng: 12.454
+  visitable: true
+  sources:
+  - wp-francesco-hayez
+- key: manziana
+  name: Manziana
+  kind: town
+  region: Lazio
+  country: Italy
+  lat: 42.13
+  lng: 12.108
+  sources:
+  - wp-karl-bryullov
+- key: feodosia
+  name: Feodosia
+  kind: city
+  region: Crimea
+  country: Ukraine
+  lat: 45.032
+  lng: 35.379
+  sources:
+  - wp-ivan-aivazovsky
+- key: st-sargis-church-feodosia
+  name: St. Sargis Armenian Church
+  kind: church
+  city: Feodosia
+  region: Crimea
+  country: Ukraine
+  lat: 45.027
+  lng: 35.386
+  visitable: true
+  sources:
+  - wp-ivan-aivazovsky
+- key: fiesole
+  name: Fiesole
+  kind: town
+  region: Tuscany
+  country: Italy
+  lat: 43.807
+  lng: 11.293
+  sources:
+  - wp-arnold-bocklin
+- key: cimitero-degli-allori
+  name: Cimitero degli Allori
+  kind: cemetery
+  city: Florence
+  region: Tuscany
+  country: Italy
+  lat: 43.738
+  lng: 11.226
+  visitable: true
+  sources:
+  - wp-arnold-bocklin
+- key: felpham
+  name: Felpham
+  kind: village
+  region: West Sussex
+  country: England
+  lat: 50.791
+  lng: -0.682
+  sources:
+  - wp-william-blake
+- key: southampton-england
+  name: Southampton
+  kind: city
+  region: Hampshire
+  country: England
+  lat: 50.909
+  lng: -1.404
+  visitable: true
+  sources:
+  - wp-john-everett-millais
+- key: birchington-on-sea
+  name: Birchington-on-Sea
+  kind: town
+  region: Kent
+  country: England
+  lat: 51.372
+  lng: 1.304
+  visitable: true
+  sources:
+  - wp-dante-gabriel-rossetti
+- key: yelabuga
+  name: Yelabuga
+  kind: town
+  region: Tatarstan
+  country: Russia
+  lat: 55.762
+  lng: 52.056
+  visitable: true
+  sources:
+  - wp-ivan-shishkin
+- key: tobolsk
+  name: Tobolsk
+  kind: city
+  region: Tyumen Oblast
+  country: Russia
+  lat: 58.199
+  lng: 68.254
+  visitable: true
+  sources:
+  - wp-vasily-perov
+- key: cherepovets
+  name: Cherepovets
+  kind: city
+  region: Vologda Oblast
+  country: Russia
+  lat: 59.127
+  lng: 37.909
+  visitable: true
+  sources:
+  - wp-vasily-vereshchagin
+- key: chuguev
+  name: Chuguev
+  kind: town
+  region: Kharkiv Oblast
+  country: Ukraine
+  lat: 49.836
+  lng: 36.686
+  visitable: true
+  sources:
+  - wp-ilya-repin
+- key: lopyal
+  name: Lopyal
+  kind: village
+  region: Kirov Oblast
+  country: Russia
+  lat: 57.2
+  lng: 49.6
+  sources:
+  - wp-viktor-vasnetsov
+- key: krakow
+  name: Kraków
+  kind: city
+  region: Lesser Poland
+  country: Poland
+  lat: 50.065
+  lng: 19.945
+  visitable: true
+  sources:
+  - wp-jan-matejko
+- key: st-marys-basilica-krakow
+  name: St. Mary's Basilica, Kraków
+  kind: church
+  city: Kraków
+  region: Lesser Poland
+  country: Poland
+  lat: 50.062
+  lng: 19.939
+  visitable: true
+  sources:
+  - wp-jan-matejko
+- key: st-vladimirs-cathedral-kyiv
+  name: St Vladimir's Cathedral, Kyiv
+  kind: cathedral
+  city: Kyiv
+  country: Ukraine
+  lat: 50.445
+  lng: 30.514
+  visitable: true
+  sources:
+  - wp-viktor-vasnetsov
+- key: penaty-kuokkala
+  name: Penaty Memorial Estate, Kuokkala
+  kind: estate
+  city: Saint Petersburg
+  region: Saint Petersburg
+  country: Russia
+  lat: 60.157
+  lng: 29.865
+  visitable: true
+  built_by: Ilya Repin and Natalia Nordman
+  sources:
+  - wp-ilya-repin
+- key: liebermann-villa-wannsee
+  name: Liebermann Villa
+  kind: house
+  city: Berlin
+  region: Berlin
+  country: Germany
+  lat: 52.425
+  lng: 13.164
+  visitable: true
+  built_by: Max Liebermann
+  architect: Paul Otto August Baumgarten
+  sources:
+  - wp-max-liebermann
+- key: 18-melbury-road-london
+  name: 18 Melbury Road, Holland Park
+  kind: house
+  city: London
+  region: Greater London
+  country: England
+  lat: 51.501
+  lng: -0.205
+  visitable: false
+  sources:
+  - wp-william-holman-hunt
+- key: ivancice
+  name: Ivancice
+  kind: town
+  region: South Moravian Region
+  country: Czech Republic
+  lat: 49.101
+  lng: 16.378
+  sources:
+  - wp-alphonse-mucha
+- key: vysehrad-cemetery
+  name: Vysehrad Cemetery
+  kind: cemetery
+  city: Prague
+  region: Prague
+  country: Czech Republic
+  lat: 50.064
+  lng: 14.42
+  visitable: true
+  sources:
+  - wp-alphonse-mucha
+- key: municipal-house-prague
+  name: Municipal House (Lord Mayor's Hall)
+  kind: civic building
+  city: Prague
+  region: Prague
+  country: Czech Republic
+  lat: 50.088
+  lng: 14.428
+  visitable: true
+  sources:
+  - wp-alphonse-mucha
+- key: zbiroh-castle
+  name: Zbiroh Castle
+  kind: castle
+  region: Plzen Region
+  country: Czech Republic
+  lat: 49.865
+  lng: 13.775
+  sources:
+  - wp-alphonse-mucha
+- key: kybartai
+  name: Kybartai (Kibarty)
+  kind: town
+  region: Marijampole County
+  country: Lithuania
+  lat: 54.639
+  lng: 22.789
+  sources:
+  - wp-isaac-levitan
+- key: tretyakov-gallery
+  name: Tretyakov Gallery
+  kind: museum
+  city: Moscow
+  region: Moscow
+  country: Russia
+  lat: 55.741
+  lng: 37.62
+  visitable: true
+  sources:
+  - wp-isaac-levitan
+  - wp-valentin-serov
+- key: vagankovo-cemetery
+  name: Vagankovo Cemetery
+  kind: cemetery
+  city: Moscow
+  region: Moscow
+  country: Russia
+  lat: 55.762
+  lng: 37.552
+  visitable: true
+  sources:
+  - wp-vasily-surikov
+- key: mora
+  name: Mora
+  kind: town
+  region: Dalarna
+  country: Sweden
+  lat: 61.006
+  lng: 14.538
+  sources:
+  - wp-anders-zorn
+- key: zorngarden
+  name: Zorngarden
+  kind: house museum
+  city: Mora
+  region: Dalarna
+  country: Sweden
+  lat: 61.005
+  lng: 14.54
+  founded: 1910
+  built_by: Anders and Emma Zorn
+  visitable: true
+  visit_site: Zorn Collections (Zornmuseet and Zorngarden)
+  sources:
+  - wp-anders-zorn
+- key: pori
+  name: Pori
+  kind: city
+  region: Satakunta
+  country: Finland
+  lat: 61.485
+  lng: 21.797
+  sources:
+  - wp-akseli-gallen-kallela
+- key: helsinki
+  name: Helsinki
+  kind: city
+  region: Uusimaa
+  country: Finland
+  lat: 60.17
+  lng: 24.941
+  sources:
+  - wp-akseli-gallen-kallela
+- key: nairobi
+  name: Nairobi
+  kind: city
+  region: Nairobi County
+  country: Kenya
+  lat: -1.286
+  lng: 36.817
+  sources:
+  - wp-akseli-gallen-kallela
+- key: tarvaspaa
+  name: Tarvaspaa (Gallen-Kallela Museum)
+  kind: house museum
+  city: Espoo
+  region: Uusimaa
+  country: Finland
+  lat: 60.217
+  lng: 24.832
+  founded: 1913
+  built_by: Akseli Gallen-Kallela
+  architect: Akseli Gallen-Kallela
+  visitable: true
+  visit_site: Gallen-Kallela Museum
+  sources:
+  - wp-akseli-gallen-kallela
+- key: kalela-ruovesi
+  name: Kalela
+  kind: cabin
+  region: Pirkanmaa
+  country: Finland
+  lat: 61.945
+  lng: 24.075
+  founded: 1895
+  built_by: Akseli Gallen-Kallela
+  architect: Akseli Gallen-Kallela
+  sources:
+  - wp-akseli-gallen-kallela
+- key: juselius-mausoleum-pori
+  name: Juselius Mausoleum
+  kind: mausoleum
+  city: Pori
+  region: Satakunta
+  country: Finland
+  lat: 61.478
+  lng: 21.807
+  sources:
+  - wp-akseli-gallen-kallela
+- key: kullu
+  name: Kullu
+  kind: town
+  region: Himachal Pradesh
+  country: India
+  lat: 31.958
+  lng: 77.109
+  sources:
+  - wp-nicholas-roerich
+- key: darjeeling
+  name: Darjeeling
+  kind: town
+  region: West Bengal
+  country: India
+  lat: 27.041
+  lng: 88.266
+  sources:
+  - wp-nicholas-roerich
+- key: hobita
+  name: Hobita
+  kind: village
+  region: Gorj County
+  country: Romania
+  lat: 45.08
+  lng: 23.34
+  sources:
+  - wp-constantin-brancusi
+- key: bucharest
+  name: Bucharest
+  kind: city
+  region: Bucharest
+  country: Romania
+  lat: 44.426
+  lng: 26.103
+  sources:
+  - wp-constantin-brancusi
+- key: targu-jiu-ensemble
+  name: Targu Jiu sculptural ensemble
+  kind: monument
+  city: Targu Jiu
+  region: Gorj County
+  country: Romania
+  lat: 45.037
+  lng: 23.282
+  founded: 1938
+  built_by: Constantin Brancusi
+  architect: Constantin Brancusi
+  sources:
+  - wp-constantin-brancusi
+- key: impasse-ronsin-studio-paris
+  name: Brancusi's studio
+  Impasse Ronsin: null
+  kind: studio
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.844
+  lng: 2.313
+  founded: 1916
+  sources:
+  - wp-constantin-brancusi
+people:
+- key: pietro-perugino
+  name: Pietro Perugino
+  type: Artist
+  roles:
+  - painter
+  born: 1446
+  born_estimated: true
+  died: 1523
+  prominence: 4
+  note: Italian Renaissance painter of the Umbrian school, best known for the Sistine Chapel Delivery of the Keys and as the teacher of Raphael.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/Pietro_Perugino_031.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Pietro_Perugino_031.jpg/500px-Pietro_Perugino_031.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pietro_Perugino_031.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Sistine Chapel work, Cambio hall, Raphael as pupil and one key work captured; the long list of altarpieces is not built out.
+  sources:
+  - wp-pietro-perugino
+- key: albrecht-altdorfer
+  name: Albrecht Altdorfer
+  type: Artist
+  roles:
+  - painter
+  - engraver
+  - architect
+  born: 1480
+  born_estimated: true
+  died: '1538-02-12'
+  prominence: 3
+  note: German Renaissance painter, engraver and architect of Regensburg, a leader of the Danube School and an early painter of pure landscape.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fa/Albrecht_Altdorfer_XVII.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Albrecht_Altdorfer_XVII.jpg/500px-Albrecht_Altdorfer_XVII.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Albrecht_Altdorfer_XVII.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Regensburg and Innsbruck, Maximilian I service and the Battle of Alexander captured; prints, drawings and other panels not built out.
+  sources:
+  - wp-albrecht-altdorfer
+- key: matthias-grunewald
+  name: Matthias Grünewald
+  type: Artist
+  roles:
+  - painter
+  born: 1470
+  born_estimated: true
+  died: '1528-08-31'
+  prominence: 4
+  note: German Renaissance painter of religious works in a late medieval style, best known for the Isenheim Altarpiece.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/61/Grunewald_Self_Portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Grunewald_Self_Portrait.jpg/500px-Grunewald_Self_Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Grunewald_Self_Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places worked and the Isenheim Altarpiece captured; the other surviving paintings and drawings are not built out.
+  sources:
+  - wp-matthias-grunewald
+- key: antonio-da-correggio
+  name: Antonio da Correggio
+  type: Artist
+  roles:
+  - painter
+  born: 1489
+  born_estimated: true
+  died: '1534-03-05'
+  prominence: 4
+  note: Italian High Renaissance painter of the Parma school, known for illusionistic dome frescoes in Parma and the Loves of Jupiter series.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fc/Antonio_Allegri_da_Correggio.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/f/fc/Antonio_Allegri_da_Correggio.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Antonio_Allegri_da_Correggio.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the two Parma dome frescoes captured; the mythological series and altarpieces are not built out.
+  sources:
+  - wp-antonio-da-correggio
+- key: bronzino
+  name: Bronzino
+  type: Artist
+  roles:
+  - painter
+  born: '1503-11-17'
+  died: '1572-11-23'
+  prominence: 4
+  note: Florentine Mannerist painter and court portraitist of Cosimo I de' Medici, best known for Venus, Cupid, Folly and Time.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/eb/Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg/500px-Alessandro_Allori%2C_santissima_trinit%C3%A0%2C_1567-1571_circa%2C_ritratto_dei_maestri%2C_bronzino_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alessandro_Allori,_santissima_trinit%C3%A0,_1567-1571_circa,_ritratto_dei_maestri,_bronzino_(cropped).jpg
+  image_license: CC BY 3.0
+  coverage: partly
+  coverage_note: Dates, Florence, Medici patronage (Cosimo I not yet in the database) and one key work captured; the Medici portraits and frescoes are not built out.
+  sources:
+  - wp-bronzino
+- key: giuseppe-arcimboldo
+  name: Giuseppe Arcimboldo
+  type: Artist
+  roles:
+  - painter
+  born: '1527-04-05'
+  died: '1593-07-11'
+  prominence: 4
+  note: Italian Mannerist painter and Habsburg court painter, best known for composite portrait heads made of fruit, vegetables, flowers and books.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Giuseppe_Arcimboldo_-_Self_Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Giuseppe_Arcimboldo_-_Self_Portrait_-_Google_Art_Project.jpg/500px-Giuseppe_Arcimboldo_-_Self_Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giuseppe_Arcimboldo_-_Self_Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Habsburg court service and Milan captured; no individual work with a clear year in the article, so no artworks yet.
+  sources:
+  - wp-giuseppe-arcimboldo
+- key: jusepe-de-ribera
+  name: Jusepe de Ribera
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: 1591
+  died: '1652-11-03'
+  prominence: 4
+  note: Spanish Baroque painter and printmaker who worked in Naples, known for tenebrist martyrdoms and portraits of beggars as philosophers.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f6/Ribera_-_Self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f6/Ribera_-_Self-portrait.jpg/500px-Ribera_-_Self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ribera_-_Self-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Játiva, Parma, Rome and Naples and two dated works captured; prints and the many Prado paintings not built out.
+  sources:
+  - wp-jusepe-de-ribera
+- key: georges-de-la-tour
+  name: Georges de La Tour
+  type: Artist
+  roles:
+  - painter
+  born: '1593-03-13'
+  died: '1652-01-30'
+  prominence: 4
+  note: French Baroque painter of Lorraine, known for candlelit chiaroscuro scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/12/La_Tour.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/La_Tour.jpg/500px-La_Tour.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:La_Tour.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and places captured; the article names no work with a clear year, so no artworks yet.
+  sources:
+  - wp-georges-de-la-tour
+- key: claude-lorrain
+  name: Claude Lorrain
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - etcher
+  born: 1604
+  born_estimated: true
+  died: '1682-11-23'
+  prominence: 4
+  note: Baroque landscape painter born in the Duchy of Lorraine who spent most of his life in Rome.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/82/Claude_Gell%C3%A9e%2C_dit_le_Lorrain%2C_Self-portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Claude_Gell%C3%A9e%2C_dit_le_Lorrain%2C_Self-portrait.jpg/500px-Claude_Gell%C3%A9e%2C_dit_le_Lorrain%2C_Self-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Claude_Gell%C3%A9e,_dit_le_Lorrain,_Self-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, apprenticeships, Rome and two dated works captured; patrons (Urban VIII, Massimo, Colonna) and the Liber Veritatis not built out.
+  sources:
+  - wp-claude-lorrain
+- key: charles-le-brun
+  name: Charles Le Brun
+  type: Artist
+  roles:
+  - painter
+  born: 1619
+  died: '1690-02-12'
+  prominence: 4
+  note: French painter and First Painter to Louis XIV, director of the Académie royale and the Gobelins, who decorated Versailles.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/Nicolas_de_Largilli%C3%A8re_-_Portrait_of_Charles_Le_Brun_-_WGA12471.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Nicolas_de_Largilli%C3%A8re_-_Portrait_of_Charles_Le_Brun_-_WGA12471.jpg/500px-Nicolas_de_Largilli%C3%A8re_-_Portrait_of_Charles_Le_Brun_-_WGA12471.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Nicolas_de_Largilli%C3%A8re_-_Portrait_of_Charles_Le_Brun_-_WGA12471.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Rome, Vaux-le-Vicomte, Versailles and the Hall of Mirrors captured; Louvre, Gobelins and Alexander series not built out; Louis XIV not yet in the database.
+  sources:
+  - wp-charles-le-brun
+- key: francois-boucher
+  name: François Boucher
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  - etcher
+  born: '1703-09-29'
+  died: '1770-05-30'
+  prominence: 4
+  note: French Rococo painter and First Painter to the King, patronised by Madame de Pompadour and known for idyllic and mythological scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f9/Boucher_par_Gustav_Lundberg_1741.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Boucher_par_Gustav_Lundberg_1741.jpg/500px-Boucher_par_Gustav_Lundberg_1741.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Boucher_par_Gustav_Lundberg_1741.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Paris, David as pupil and two dated works captured; tapestry designs, prints and Pompadour portraits not built out.
+  sources:
+  - wp-francois-boucher
+- key: jean-honore-fragonard
+  name: Jean-Honoré Fragonard
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1732-04-05'
+  died: '1806-08-22'
+  prominence: 4
+  note: French late Rococo painter and printmaker, best known for intimate genre scenes such as The Swing.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9e/Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg/500px-Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Honor%C3%A9_Fragonard_-_Self-portrait_with_smiling_face.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Boucher), places and one dated work captured; The Swing has no year in the article; place of death not given; full portfolio not built out.
+  sources:
+  - wp-jean-honore-fragonard
+- key: angelica-kauffman
+  name: Angelica Kauffman
+  type: Artist
+  roles:
+  - painter
+  born: '1741-10-30'
+  died: '1807-11-05'
+  prominence: 4
+  note: Swiss Neoclassical history painter and portraitist, a founding member of the Royal Academy in London, who worked in London and Rome.
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; teachers and patrons are people not yet in the database; full portfolio not built out.
+  sources:
+  - wp-angelica-kauffman
+- key: elisabeth-vigee-le-brun
+  name: Élisabeth Vigée Le Brun
+  type: Artist
+  roles:
+  - painter
+  born: '1755-04-16'
+  died: '1842-03-30'
+  prominence: 4
+  note: French portrait painter of the late Ancien Régime, portraitist to Marie Antoinette, who worked across Europe during her exile.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg/500px-Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-portrait_in_a_Straw_Hat_by_Elisabeth-Louise_Vig%C3%A9e-Lebrun.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, Rome years and two dated works captured; the local article text is cut off after her Rome stay (later exile in Austria, Russia and Germany, place of death not read);
+    full portfolio not built out.
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- key: william-blake
+  name: William Blake
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - poet
+  born: '1757-11-28'
+  died: '1827-08-12'
+  prominence: 4
+  note: English poet, painter and printmaker of the Romantic age, inventor of relief etching and author of illuminated books such as Songs of Innocence and of Experience.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/00/William_Blake_by_Thomas_Phillips.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/William_Blake_by_Thomas_Phillips.jpg/500px-William_Blake_by_Thomas_Phillips.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Blake_by_Thomas_Phillips.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; Songs of Innocence and of Experience, the Job and Dante illustrations have no clear year in the article; full portfolio not built out.
+  sources:
+  - wp-william-blake
+- key: caspar-david-friedrich
+  name: Caspar David Friedrich
+  type: Artist
+  roles:
+  - painter
+  born: '1774-09-05'
+  died: '1840-05-07'
+  prominence: 4
+  note: German Romantic landscape painter, regarded as the most important German artist of his generation, known for contemplative figures set against vast landscapes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ac/Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg/500px-Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gerhard_von_K%C3%BCgelgen_portrait_of_Friedrich.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; teachers and Russian patrons (Nikolai Pavlovich, Zhukovsky) are not in the database yet; full portfolio not built out.
+  sources:
+  - wp-caspar-david-friedrich
+- key: theodore-gericault
+  name: Théodore Géricault
+  type: Artist
+  roles:
+  - painter
+  - lithographer
+  born: '1791-09-26'
+  died: '1824-01-26'
+  prominence: 4
+  note: French painter and lithographer, a pioneer of Romanticism, best known for The Raft of the Medusa.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9b/Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg/500px-Horace_Vernet%2C_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault%2C_probably_1822_or_1823%2C_1998.84%2C_MET.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Horace_Vernet,_Jean-Louis-Andr%C3%A9-Th%C3%A9odore_Gericault,_probably_1822_or_1823,_1998.84,_MET.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, places and the Raft of the Medusa captured; teachers Carle Vernet and Guerin are not in the database yet; other works not built out.
+  sources:
+  - wp-theodore-gericault
+- key: francesco-hayez
+  name: Francesco Hayez
+  type: Artist
+  roles:
+  - painter
+  - lithographer
+  born: '1791-02-10'
+  died: '1882-02-12'
+  prominence: 3
+  note: Italian Romantic painter of Milan, known for historical paintings, political allegories and portraits, and for The Kiss.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c3/Hayez_-_Selbstportr%C3%A4t_im_Alter_von_78_Jahren%2C_1869%2C_GE_2578.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/Hayez_-_Selbstportr%C3%A4t_im_Alter_von_78_Jahren%2C_1869%2C_GE_2578.jpg/500px-Hayez_-_Selbstportr%C3%A4t_im_Alter_von_78_Jahren%2C_1869%2C_GE_2578.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hayez_-_Selbstportr%C3%A4t_im_Alter_von_78_Jahren,_1869,_GE_2578.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; teachers (Canova and others) and patrons (Charles Albert, Ferdinand I of Austria) are not in the database yet; full portfolio not built out.
+  sources:
+  - wp-francesco-hayez
+- key: karl-bryullov
+  name: Karl Bryullov
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1799-12-23'
+  died: '1852-06-23'
+  prominence: 3
+  note: Russian Romantic painter and draughtsman, best known for The Last Day of Pompeii.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Brjullov.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Brjullov.jpg/500px-Brjullov.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Brjullov.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and The Last Day of Pompeii captured; the article is short and lists no teachers or patrons by name; portfolio not built out.
+  sources:
+  - wp-karl-bryullov
+- key: ivan-aivazovsky
+  name: Ivan Aivazovsky
+  type: Artist
+  roles:
+  - painter
+  born: '1817-07-29'
+  died: '1900-05-02'
+  prominence: 4
+  note: Russian Romantic painter of Armenian parentage, one of the greatest masters of marine art, mostly based in Feodosia, Crimea.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/Aivazovsky_-_Self-portrait_1874_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Aivazovsky_-_Self-portrait_1874_%28cropped%29.jpg/500px-Aivazovsky_-_Self-portrait_1874_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Aivazovsky_-_Self-portrait_1874_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places captured; no artwork added because the article gives no year for The Ninth Wave; his teachers (Vorobiev, Tanneur, Sauerweid) and patrons are not in the database; full portfolio
+    not built out.
+  sources:
+  - wp-ivan-aivazovsky
+- key: arnold-bocklin
+  name: Arnold Böcklin
+  type: Artist
+  roles:
+  - painter
+  born: '1827-10-16'
+  died: '1901-01-16'
+  prominence: 3
+  note: Swiss Symbolist painter, best known for the five versions of Isle of the Dead.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ef/Arnold_B%C3%B6cklin_%281827_-_1901%29%2C_Selbstportrait_%281873%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Arnold_B%C3%B6cklin_%281827_-_1901%29%2C_Selbstportrait_%281873%29.jpg/500px-Arnold_B%C3%B6cklin_%281827_-_1901%29%2C_Selbstportrait_%281873%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_(1827_-_1901),_Selbstportrait_(1873).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and Isle of the Dead captured; teacher Schirmer is not in the database yet; other works not built out.
+  sources:
+  - wp-arnold-bocklin
+- key: william-holman-hunt
+  name: William Holman Hunt
+  type: Artist
+  roles:
+  - painter
+  born: '1827-04-02'
+  died: '1910-09-07'
+  prominence: 3
+  note: English Pre-Raphaelite painter, a founder of the Brotherhood, known for detailed, symbolic religious works such as The Light of the World.
+  sources:
+  - wp-william-holman-hunt
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/70/William_Holman_Hunt_-_Selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/William_Holman_Hunt_-_Selfportrait.jpg/500px-William_Holman_Hunt_-_Selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Holman_Hunt_-_Selfportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, burial, Holy Land travel, studio and one key work captured; full portfolio and pupils not built out.
+- key: dante-gabriel-rossetti
+  name: Dante Gabriel Rossetti
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  - poet
+  born: '1828-05-12'
+  died: '1882-04-09'
+  prominence: 4
+  note: English poet, illustrator and painter who co-founded the Pre-Raphaelite Brotherhood in 1848; later known for sensual, medievalist paintings of women.
+  sources:
+  - wp-dante-gabriel-rossetti
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/84/William_Holman_Hunt_-_Portrait_of_Dante_Gabriel_Rossetti_at_22_years_of_Age_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/84/William_Holman_Hunt_-_Portrait_of_Dante_Gabriel_Rossetti_at_22_years_of_Age_-_Google_Art_Project.jpg/500px-William_Holman_Hunt_-_Portrait_of_Dante_Gabriel_Rossetti_at_22_years_of_Age_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Holman_Hunt_-_Portrait_of_Dante_Gabriel_Rossetti_at_22_years_of_Age_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher context and two early works captured; later paintings, poems and book designs not built out.
+- key: john-everett-millais
+  name: John Everett Millais
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1829-06-08'
+  died: '1896-08-13'
+  prominence: 4
+  note: English Pre-Raphaelite painter and illustrator, known for Ophelia and later popular works; first artist made a baronet.
+  sources:
+  - wp-john-everett-millais
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/23/Sir_John_Everett_Millais%2C_1st_Bt_by_Charles_Robert_Leslie.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Sir_John_Everett_Millais%2C_1st_Bt_by_Charles_Robert_Leslie.jpg/500px-Sir_John_Everett_Millais%2C_1st_Bt_by_Charles_Robert_Leslie.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Sir_John_Everett_Millais,_1st_Bt_by_Charles_Robert_Leslie.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; later landscapes, portraits and illustrations not built out.
+- key: ivan-shishkin
+  name: Ivan Shishkin
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1832-01-25'
+  died: '1898-03-20'
+  prominence: 3
+  note: Russian Realist landscape painter and draughtsman, a founding member of the Peredvizhniki, known for forest landscapes.
+  sources:
+  - wp-ivan-shishkin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1b/Ivan_Shishkin_restoration.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Ivan_Shishkin_restoration.jpg/500px-Ivan_Shishkin_restoration.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ivan_Shishkin_restoration.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, travels and one late work captured; portfolio and etchings not built out.
+- key: vasily-perov
+  name: Vasily Perov
+  type: Artist
+  roles:
+  - painter
+  born: '1834-01-02'
+  died: '1882-06-10'
+  prominence: 3
+  note: Russian Realist genre painter and a founding member of the Peredvizhniki.
+  sources:
+  - wp-vasily-perov
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/ae/V.Perov_by_I.Kramskoy_%281881%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/V.Perov_by_I.Kramskoy_%281881%29.jpg/500px-V.Perov_by_I.Kramskoy_%281881%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:V.Perov_by_I.Kramskoy_(1881).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and career outline captured; no individually dated work given in the article, so no artwork built out.
+- key: ivan-kramskoi
+  name: Ivan Kramskoi
+  type: Artist
+  roles:
+  - painter
+  - art critic
+  born: '1837-06-08'
+  died: '1887-04-05'
+  prominence: 3
+  note: Russian Realist painter and art critic, the leading spokesman of the Peredvizhniki.
+  sources:
+  - wp-ivan-kramskoi
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2d/Kramskoi_by_Repin.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Kramskoi_by_Repin.jpg/500px-Kramskoi_by_Repin.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Kramskoi_by_Repin.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teaching links and one key work captured; birthplace, portraits and critical writings not built out.
+- key: jan-matejko
+  name: Jan Matejko
+  type: Artist
+  roles:
+  - painter
+  born: '1838-06-24'
+  died: '1893-11-01'
+  prominence: 4
+  note: Polish history painter, regarded as Poland's national painter, known for large scenes from Polish history.
+  sources:
+  - wp-jan-matejko
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cf/Jan_Matejko_1901_%28612306%29_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Jan_Matejko_1901_%28612306%29_%28cropped%29.jpg/500px-Jan_Matejko_1901_%28612306%29_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jan_Matejko_1901_(612306)_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; students, portraits and the rest of the portfolio not built out.
+- key: vasily-vereshchagin
+  name: Vasily Vereshchagin
+  type: Artist
+  roles:
+  - painter
+  - war artist
+  born: '1842-10-26'
+  died: '1904-04-13'
+  prominence: 3
+  note: Russian painter, war artist and traveller, known for realistic battle scenes and Central Asian series.
+  sources:
+  - wp-vasily-vereshchagin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/65/%D0%92%D0%B5%D1%80%D0%B5%D1%89%D0%B0%D0%B3%D0%B8%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2B_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/%D0%92%D0%B5%D1%80%D0%B5%D1%89%D0%B0%D0%B3%D0%B8%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2B_%28cropped%29.jpg/500px-%D0%92%D0%B5%D1%80%D0%B5%D1%89%D0%B0%D0%B3%D0%B8%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2B_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%D0%92%D0%B5%D1%80%D0%B5%D1%89%D0%B0%D0%B3%D0%B8%D0%BD_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87%2B_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, travels and one work captured; Turkestan series and war pictures not built out.
+- key: ilya-repin
+  name: Ilya Repin
+  type: Artist
+  roles:
+  - painter
+  born: '1844-08-05'
+  died: '1930-09-29'
+  prominence: 4
+  note: Russian Realist painter, among the most renowned artists of 19th-century Russia, known for Barge Haulers on the Volga and many portraits.
+  sources:
+  - wp-ilya-repin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/RepinSelfPortrait_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/RepinSelfPortrait_%28cropped%29.jpg/500px-RepinSelfPortrait_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:RepinSelfPortrait_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher and two key works captured; portraits and later works not built out.
+- key: max-liebermann
+  name: Max Liebermann
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1847-07-20'
+  died: '1935-02-08'
+  prominence: 3
+  note: German painter and printmaker, a leading proponent of Impressionism in Germany and president of the Berlin Secession.
+  sources:
+  - wp-max-liebermann
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d5/Hilsdorf%2C_Jacob_-_Max_Liebermann_%28Zeno_Fotografie%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Hilsdorf%2C_Jacob_-_Max_Liebermann_%28Zeno_Fotografie%29.jpg/500px-Hilsdorf%2C_Jacob_-_Max_Liebermann_%28Zeno_Fotografie%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hilsdorf,_Jacob_-_Max_Liebermann_(Zeno_Fotografie).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; article cut at 32,000 characters so later life and death place not read; portraits not built out.
+- key: viktor-vasnetsov
+  name: Viktor Vasnetsov
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1848-05-15'
+  died: '1926-07-23'
+  prominence: 3
+  note: Russian painter and draughtsman of mythological and historical subjects, a key figure of the Russian Revivalist movement.
+  sources:
+  - wp-viktor-vasnetsov
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Vasnetsov_VM.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Vasnetsov_VM.jpg/500px-Vasnetsov_VM.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vasnetsov_VM.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teacher and two dated works captured; Bogatyrs, icons and architectural designs not built out.
+- key: vasily-surikov
+  name: Vasily Surikov
+  type: Artist
+  roles:
+  - painter
+  born: '1848-01-24'
+  died: '1916-03-19'
+  prominence: 4
+  note: Russian Realist painter in Moscow, renowned for large history pictures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/66/Surikov_Avtoportret_1913.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Surikov_Avtoportret_1913.jpg/500px-Surikov_Avtoportret_1913.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Surikov_Avtoportret_1913.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and burial captured; no artwork added (the article gives no clear year for a named work; Principal works list is empty in the text); full portfolio not built out.
+  sources:
+  - wp-vasily-surikov
+- key: alphonse-mucha
+  name: Alphonse Mucha
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1860-07-24'
+  died: '1939-07-14'
+  prominence: 4
+  note: Czech painter, illustrator and graphic artist of the Paris Art Nouveau, known for his Sarah Bernhardt posters and The Slav Epic.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/9f/Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg/500px-Photographic_selfportrait_of_Alfons_Mucha%2C_1928_%282%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Photographic_selfportrait_of_Alfons_Mucha,_1928_(2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two key works captured; patron Count Belasi and many other posters, panels and designs not built out. Article gives no place of death.
+  sources:
+  - wp-alphonse-mucha
+- key: isaac-levitan
+  name: Isaac Levitan
+  type: Artist
+  roles:
+  - painter
+  born: '1860-08-30'
+  died: '1900-08-04'
+  prominence: 4
+  note: Russian landscape painter who advanced the "mood landscape".
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/58/Shurygin_Levitan_1889.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Shurygin_Levitan_1889.jpg/500px-Shurygin_Levitan_1889.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Shurygin_Levitan_1889.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher Perov, birthplace, Moscow and one key work captured; teachers Savrasov and Polenov not in the database; other works not built out. Article gives no exact place of death (last
+    year at Chekhov's home in Crimea).
+  sources:
+  - wp-isaac-levitan
+- key: anders-zorn
+  name: Anders Zorn
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - etcher
+  born: '1860-02-18'
+  died: '1920-08-22'
+  prominence: 4
+  note: Swedish painter, sculptor and etcher, one of the most acclaimed portraitists of his era.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Anders_Zorn_1908.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Anders_Zorn_1908.jpg/500px-Anders_Zorn_1908.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anders_Zorn_1908.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Zorngarden and one key work captured; sitters (Oscar II, three US presidents) not in the database; Works list in the article is empty; full portfolio not built out.
+  sources:
+  - wp-anders-zorn
+- key: valentin-serov
+  name: Valentin Serov
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1865-01-19'
+  died: '1911-12-05'
+  prominence: 4
+  note: Russian painter and draughtsman, generally considered the primary portraitist of his generation.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e9/Valentin_Serov_%281901-2%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/e/e9/Valentin_Serov_%281901-2%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Valentin_Serov_(1901-2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher Repin, places and two works captured; teacher Chistyakov and his students (Kuznetsov, Saryan, Petrov-Vodkin and others) are not in the database; portrait sitters and other
+    works not built out.
+  sources:
+  - wp-valentin-serov
+- key: akseli-gallen-kallela
+  name: Akseli Gallen-Kallela
+  type: Artist
+  roles:
+  - painter
+  born: '1865-04-26'
+  died: '1931-03-07'
+  prominence: 4
+  note: Finnish painter and leading figure of Finnish romantic nationalism, best known for his Kalevala paintings.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/Akseli_Gallen-Kallela.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Akseli_Gallen-Kallela.jpg/500px-Akseli_Gallen-Kallela.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Akseli_Gallen-Kallela.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two works captured; teachers Edelfelt and von Becker not in the database; Kalevala series and later frescoes not built out.
+  sources:
+  - wp-akseli-gallen-kallela
+- key: nicholas-roerich
+  name: Nicholas Roerich
+  type: Artist
+  roles:
+  - painter
+  - writer
+  - archaeologist
+  born: '1874-10-09'
+  died: '1947-12-13'
+  prominence: 3
+  note: Russian painter, writer and theosophist, known for Himalayan landscapes, Ballets Russes designs and the Roerich Pact.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/51/N_Roerich.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/51/N_Roerich.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:N_Roerich.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels, places and one work captured; stage designs, expeditions and the Roerich Pact not built out as events; place of death disputed within the article (see discrepancy).
+  sources:
+  - wp-nicholas-roerich
+- key: constantin-brancusi
+  name: Constantin Brancusi
+  type: Artist
+  roles:
+  - sculptor
+  - painter
+  - photographer
+  born: '1876-02-19'
+  died: '1957-03-16'
+  prominence: 4
+  note: Romanian sculptor, painter and photographer, a pioneer of modernism and called the patriarch of modern sculpture.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f2/Edward_Steichen_-_Brancusi.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Edward_Steichen_-_Brancusi.jpg/500px-Edward_Steichen_-_Brancusi.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Edward_Steichen_-_Brancusi.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, the Targu Jiu ensemble and two works captured; Rodin, Modigliani, Duchamp and other contacts not linked; other sculptures not built out. Article gives no place of death.
+  sources:
+  - wp-constantin-brancusi
+artworks:
+- key: delivery-of-the-keys-perugino
+  name: Delivery of the Keys
+  kind: fresco
+  made: 1481
+  made_end: 1482
+  collection: Sistine Chapel, Vatican City
+  people:
+  - person: pietro-perugino
+    role: creator
+  - person: sixtus-iv
+    role: patron
+  places:
+  - place: sistine-chapel
+    role: held
+  prominence: 4
+  note: One of the Sistine Chapel wall frescoes Perugino painted after Sixtus IV called him to Rome.
+  sources:
+  - wp-pietro-perugino
+- key: battle-of-alexander-at-issus
+  name: The Battle of Alexander at Issus
+  kind: painting
+  made: 1529
+  collection: Alte Pinakothek, Munich
+  people:
+  - person: albrecht-altdorfer
+    role: creator
+  prominence: 4
+  note: Commissioned by William IV, Duke of Bavaria, as one of eight historical battle scenes for the Residenz in Munich.
+  sources:
+  - wp-albrecht-altdorfer
+- key: isenheim-altarpiece
+  name: Isenheim Altarpiece
+  kind: altarpiece
+  made: 1512
+  made_end: 1516
+  estimated: true
+  collection: Musée d'Unterlinden, Colmar
+  people:
+  - person: matthias-grunewald
+    role: creator
+  prominence: 5
+  note: Nine images on twelve panels in three views, with a carved and gilded wood centre by Nikolaus Hagenauer.
+  sources:
+  - wp-matthias-grunewald
+- key: vision-of-st-john-on-patmos-correggio
+  name: Vision of St John on Patmos
+  kind: fresco
+  made: 1520
+  made_end: 1521
+  people:
+  - person: antonio-da-correggio
+    role: creator
+  places:
+  - place: san-giovanni-evangelista-parma
+    role: held
+  prominence: 3
+  note: Illusionistic dome decoration in the church of San Giovanni Evangelista.
+  sources:
+  - wp-antonio-da-correggio
+- key: assumption-of-the-virgin-correggio
+  name: Assumption of the Virgin
+  kind: fresco
+  made: 1524
+  estimated: true
+  people:
+  - person: antonio-da-correggio
+    role: creator
+  places:
+  - place: parma-cathedral
+    role: held
+  prominence: 4
+  note: Dome of Parma Cathedral, seen from below with receding layers of figures, a model for later dome decoration.
+  sources:
+  - wp-antonio-da-correggio
+- key: venus-cupid-folly-and-time
+  name: Venus, Cupid, Folly and Time
+  kind: painting
+  made: 1544
+  made_end: 1545
+  estimated: true
+  people:
+  - person: bronzino
+    role: creator
+  prominence: 4
+  note: Probably Bronzino's best-known work, an erotic allegory now in London.
+  sources:
+  - wp-bronzino
+- key: the-clubfoot
+  name: The Clubfoot
+  kind: painting
+  made: 1642
+  people:
+  - person: jusepe-de-ribera
+    role: creator
+  prominence: 3
+  note: Cited in the article as showing the shift in the early 1630s from stark tenebrism to more diffused lighting.
+  sources:
+  - wp-jusepe-de-ribera
+- key: adoration-of-the-shepherds-ribera
+  name: Adoration of the Shepherds
+  kind: painting
+  made: 1650
+  collection: Louvre
+  people:
+  - person: jusepe-de-ribera
+    role: creator
+  prominence: 3
+  sources:
+  - wp-jusepe-de-ribera
+- key: landscape-with-cattle-and-peasants
+  name: Landscape with Cattle and Peasants
+  kind: painting
+  made: 1629
+  collection: Philadelphia Museum of Art
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 2
+  note: The first dated painting by Claude, already showing a well-developed style.
+  sources:
+  - wp-claude-lorrain
+- key: embarkation-of-the-queen-of-sheba
+  name: Seaport with the Embarkation of the Queen of Sheba
+  kind: painting
+  made: 1648
+  collection: National Gallery, London
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 4
+  note: Cited as showing Claude's innovation of making the sun itself a source of light.
+  sources:
+  - wp-claude-lorrain
+- key: galerie-des-glaces-ceiling
+  name: Ceiling murals of the Galerie des Glaces
+  kind: mural
+  made: 1679
+  made_end: 1684
+  people:
+  - person: charles-le-brun
+    role: creator
+  places:
+  - place: palace-of-versailles
+    role: made
+  prominence: 4
+  note: Great Hall of Mirrors at Versailles, part of Le Brun's decoration of the palace for Louis XIV.
+  sources:
+  - wp-charles-le-brun
+- key: rinaldo-and-armida-boucher
+  name: Rinaldo and Armida
+  kind: painting
+  made: 1734
+  people:
+  - person: francois-boucher
+    role: creator
+  prominence: 3
+  note: Boucher's reception piece for the Académie de peinture et de sculpture.
+  sources:
+  - wp-francois-boucher
+- key: the-breakfast-boucher
+  name: The Breakfast
+  kind: painting
+  made: 1739
+  people:
+  - person: francois-boucher
+    role: creator
+  prominence: 3
+  note: A family scene for which Boucher used his own wife and children as models.
+  sources:
+  - wp-francois-boucher
+- key: coresus-sacrificing-himself-to-save-callirhoe
+  name: Coresus Sacrificing Himself to Save Callirhoe
+  made: 1765
+  prominence: 3
+  note: Won Fragonard admission to the Academy in 1765; bought by the king and reproduced at the Gobelins factory.
+  people:
+  - person: jean-honore-fragonard
+    role: creator
+  sources:
+  - wp-jean-honore-fragonard
+- key: self-portrait-hesitating-between-painting-and-music
+  name: Self-Portrait Hesitating Between Painting and Music
+  made: 1794
+  prominence: 3
+  note: Kauffman shows the difficult choice between painting and music she faced.
+  people:
+  - person: angelica-kauffman
+    role: creator
+  - person: angelica-kauffman
+    role: subject
+  sources:
+  - wp-angelica-kauffman
+- key: elements-of-art-royal-academy-ceiling
+  name: The Elements of Art (Invention, Design, Composition, Coloring)
+  made: 1778
+  made_end: 1780
+  prominence: 3
+  note: Paintings for the ceiling of the Royal Academy's Council Room at Somerset House, painted with Biagio Rebecca; perhaps her greatest work.
+  people:
+  - person: angelica-kauffman
+    role: creator
+  sources:
+  - wp-angelica-kauffman
+- key: marie-antoinette-and-her-children
+  name: Marie Antoinette and her Children
+  kind: painting
+  made: 1787
+  prominence: 4
+  note: Meant to improve the Queen's public image; hung at Versailles but taken down after the Dauphin's death in 1789. Marie Antoinette is not yet in the database, so no subject link.
+  people:
+  - person: elisabeth-vigee-le-brun
+    role: creator
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- key: self-portrait-in-a-straw-hat-vigee-le-brun
+  name: Self-portrait in a Straw Hat
+  made: 1782
+  prominence: 3
+  note: A free imitation of Rubens's Le Chapeau de Paille.
+  people:
+  - person: elisabeth-vigee-le-brun
+    role: creator
+  - person: elisabeth-vigee-le-brun
+    role: subject
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- key: jerusalem-the-emanation-of-the-giant-albion
+  name: Jerusalem The Emanation of the Giant Albion
+  made: 1804
+  made_end: 1820
+  prominence: 3
+  note: Blake's most ambitious work, begun on his return to London in 1804.
+  people:
+  - person: william-blake
+    role: creator
+  sources:
+  - wp-william-blake
+- key: tetschen-altar-cross-in-the-mountains
+  name: Cross in the Mountains (Tetschen Altar)
+  made: 1808
+  prominence: 4
+  note: Friedrich's first major painting, an altarpiece panel said to have been commissioned for a family chapel in Tetschen, Bohemia; his first painting to receive wide publicity.
+  people:
+  - person: caspar-david-friedrich
+    role: creator
+  sources:
+  - wp-caspar-david-friedrich
+- key: the-sea-of-ice-wreck-of-the-hope
+  name: The Wreck of the Hope (The Sea of Ice)
+  made: 1823
+  made_end: 1824
+  prominence: 3
+  note: Also known as The Polar Sea.
+  people:
+  - person: caspar-david-friedrich
+    role: creator
+  sources:
+  - wp-caspar-david-friedrich
+- key: the-raft-of-the-medusa
+  name: The Raft of the Medusa
+  kind: painting
+  made: 1818
+  made_end: 1819
+  prominence: 5
+  note: Depicts the aftermath of the wreck of the French ship Méduse; a scandal at the Paris Salon of 1819 and a bridge between neo-classicism and romanticism.
+  people:
+  - person: theodore-gericault
+    role: creator
+  sources:
+  - wp-theodore-gericault
+- key: the-kiss-hayez
+  name: The Kiss (Il bacio)
+  made: 1859
+  estimated: true
+  prominence: 4
+  collection: Pinacoteca di Brera, Milan
+  note: Year is the exhibition date (exh. 1859) given in the article; Hayez often did not date his works. Greeted the unification of Italy; now his best-known work.
+  people:
+  - person: francesco-hayez
+    role: creator
+  sources:
+  - wp-francesco-hayez
+- key: the-last-day-of-pompeii
+  name: The Last Day of Pompeii
+  made: 1830
+  made_end: 1833
+  prominence: 4
+  note: Vast composition compared by Pushkin and Gogol to Rubens and Van Dyck; created a sensation in Italy.
+  people:
+  - person: karl-bryullov
+    role: creator
+  sources:
+  - wp-karl-bryullov
+- key: isle-of-the-dead-bocklin
+  name: Isle of the Dead
+  made: 1880
+  made_end: 1886
+  prominence: 4
+  note: Five versions painted 1880 to 1886; the first was commissioned by a Madame Berna, and the setting partly evokes the English Cemetery in Florence.
+  people:
+  - person: arnold-bocklin
+    role: creator
+  sources:
+  - wp-arnold-bocklin
+- key: the-light-of-the-world
+  name: The Light of the World
+  kind: painting
+  made: 1851
+  made_end: 1853
+  collection: Keble College, Oxford
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 4
+  note: The article's biography dates it 1851-1853; a later version (1900) is in St Paul's Cathedral, London.
+  sources:
+  - wp-william-holman-hunt
+- key: the-girlhood-of-mary-virgin
+  name: The Girlhood of Mary Virgin
+  kind: painting
+  medium: oil
+  made: 1849
+  people:
+  - person: dante-gabriel-rossetti
+    role: creator
+  prominence: 3
+  note: Rossetti's first major oil painting, finished in 1849.
+  sources:
+  - wp-dante-gabriel-rossetti
+- key: ecce-ancilla-domini
+  name: Ecce Ancilla Domini!
+  kind: painting
+  made: 1850
+  people:
+  - person: dante-gabriel-rossetti
+    role: creator
+  prominence: 3
+  note: Exhibited in 1850 and harshly criticised.
+  sources:
+  - wp-dante-gabriel-rossetti
+- key: ophelia-millais
+  name: Ophelia
+  kind: painting
+  made: 1851
+  made_end: 1852
+  people:
+  - person: john-everett-millais
+    role: creator
+  prominence: 4
+  note: Described as the embodiment of the historical and naturalist focus of the Pre-Raphaelites.
+  sources:
+  - wp-john-everett-millais
+- key: christ-in-the-house-of-his-parents
+  name: Christ in the House of His Parents
+  kind: painting
+  made: 1849
+  made_end: 1850
+  people:
+  - person: john-everett-millais
+    role: creator
+  prominence: 3
+  note: Controversial for its realistic working-class Holy Family.
+  sources:
+  - wp-john-everett-millais
+- key: the-pine-grove-shishkin
+  name: The Pine Grove
+  kind: painting
+  made: 1898
+  people:
+  - person: ivan-shishkin
+    role: creator
+  prominence: 2
+  note: Completed in 1898, the year he died.
+  sources:
+  - wp-ivan-shishkin
+- key: christ-in-the-desert-kramskoi
+  name: Christ in the Desert
+  kind: painting
+  made: 1872
+  collection: Tretyakov Gallery
+  people:
+  - person: ivan-kramskoi
+    role: creator
+  prominence: 3
+  sources:
+  - wp-ivan-kramskoi
+- key: stanczyk
+  name: Stańczyk
+  kind: painting
+  made: 1862
+  people:
+  - person: jan-matejko
+    role: creator
+  prominence: 4
+  note: Court jester shown as the conscience of the country; one of Matejko's best known works.
+  sources:
+  - wp-jan-matejko
+- key: battle-of-grunwald
+  name: Battle of Grunwald
+  kind: painting
+  made: 1878
+  people:
+  - person: jan-matejko
+    role: creator
+  prominence: 4
+  sources:
+  - wp-jan-matejko
+- key: crucifixion-by-the-romans-vereshchagin
+  name: Crucifixion by the Romans
+  kind: painting
+  made: 1887
+  people:
+  - person: vasily-vereshchagin
+    role: creator
+  prominence: 2
+  note: Part of a controversial series of three execution pictures.
+  sources:
+  - wp-vasily-vereshchagin
+- key: barge-haulers-on-the-volga
+  name: Barge Haulers on the Volga
+  kind: painting
+  made: 1873
+  people:
+  - person: ilya-repin
+    role: creator
+  prominence: 4
+  note: Commissioned by Grand Duke Vladimir Alexandrovich; completed in 1873.
+  sources:
+  - wp-ilya-repin
+- key: reply-of-the-zaporozhian-cossacks
+  name: Reply of the Zaporozhian Cossacks
+  kind: painting
+  made: 1880
+  made_end: 1891
+  people:
+  - person: ilya-repin
+    role: creator
+  prominence: 4
+  note: Called his most famous historical work; he painted a second version.
+  sources:
+  - wp-ilya-repin
+- key: recreation-time-in-the-amsterdam-orphanage
+  name: Recreation Time in the Amsterdam Orphanage
+  kind: painting
+  made: 1881
+  made_end: 1882
+  people:
+  - person: max-liebermann
+    role: creator
+  prominence: 3
+  note: Early use of his light-filtered 'sunspots'.
+  sources:
+  - wp-max-liebermann
+- key: woman-with-goats-liebermann
+  name: Woman with Goats
+  kind: painting
+  made: 1889
+  people:
+  - person: max-liebermann
+    role: creator
+  prominence: 2
+  note: Painted at Katwijk; won the Great Gold Medal.
+  sources:
+  - wp-max-liebermann
+- key: alionushka
+  name: Alionushka
+  kind: painting
+  made: 1881
+  people:
+  - person: viktor-vasnetsov
+    role: creator
+  prominence: 3
+  sources:
+  - wp-viktor-vasnetsov
+- key: the-knight-at-the-crossroads
+  name: The Knight at the Crossroads
+  kind: painting
+  made: 1878
+  people:
+  - person: viktor-vasnetsov
+    role: creator
+  prominence: 3
+  sources:
+  - wp-viktor-vasnetsov
+- key: girl-with-peaches
+  name: The Girl with Peaches
+  kind: painting
+  made: 1887
+  collection: Tretyakov Gallery
+  people:
+  - person: valentin-serov
+    role: creator
+  places:
+  - place: tretyakov-gallery
+    role: held
+  prominence: 4
+  note: Early portrait by Serov; the article calls it one of the greatest works of his early period.
+  sources:
+  - wp-valentin-serov
+- key: portrait-of-isaac-levitan-serov
+  name: Portrait of Isaac Levitan
+  kind: portrait
+  made: 1893
+  collection: Tretyakov Gallery
+  people:
+  - person: valentin-serov
+    role: creator
+  - person: isaac-levitan
+    role: subject
+  places:
+  - place: tretyakov-gallery
+    role: held
+  prominence: 3
+  sources:
+  - wp-valentin-serov
+- key: vladimirka
+  name: Vladimirka
+  kind: painting
+  made: 1892
+  collection: Tretyakov Gallery
+  people:
+  - person: isaac-levitan
+    role: creator
+  places:
+  - place: tretyakov-gallery
+    role: held
+  prominence: 3
+  note: A "mood landscape"; the article lists it with Evening Bells (1892) and Eternal Rest (1894), all in the Tretyakov Gallery.
+  sources:
+  - wp-isaac-levitan
+- key: midsummer-dance-zorn
+  name: Midsummer Dance
+  made: 1897
+  collection: Nationalmuseum
+  people:
+  - person: anders-zorn
+    role: creator
+  places:
+  - place: nationalmuseum-stockholm
+    role: held
+  prominence: 4
+  note: Dancers in the evening light of a rural Midsummer's Eve celebration.
+  sources:
+  - wp-anders-zorn
+- key: slav-epic
+  name: The Slav Epic
+  kind: painting
+  medium: egg tempera
+  made: 1912
+  made_end: 1926
+  people:
+  - person: alphonse-mucha
+    role: creator
+  places:
+  - place: zbiroh-castle
+    role: made
+  prominence: 4
+  note: Series of twenty monumental canvases on the history of the Slavic peoples; given to the city of Prague in 1928 and considered by Mucha his most important work.
+  sources:
+  - wp-alphonse-mucha
+- key: gismonda-poster
+  name: Gismonda poster
+  kind: poster
+  made: 1895
+  people:
+  - person: alphonse-mucha
+    role: creator
+  prominence: 4
+  note: Poster for Sarah Bernhardt in the play Gismonda, in the streets of Paris on 1 January 1895; it made Mucha suddenly famous.
+  sources:
+  - wp-alphonse-mucha
+- key: old-woman-with-a-cat
+  name: Old Woman with a Cat
+  kind: painting
+  made: 1885
+  people:
+  - person: akseli-gallen-kallela
+    role: creator
+  prominence: 3
+  note: Executed in the coastal village of Salo and completed in Paris; shown in 1886 and a breakthrough for a new realist tradition in Finnish art.
+  sources:
+  - wp-akseli-gallen-kallela
+- key: juselius-mausoleum-frescoes
+  name: Frescoes of the Juselius Mausoleum
+  kind: fresco
+  made: 1901
+  made_end: 1903
+  people:
+  - person: akseli-gallen-kallela
+    role: creator
+  places:
+  - place: juselius-mausoleum-pori
+    role: made-for
+  prominence: 3
+  note: Damaged by dampness and destroyed by fire in December 1931; repainted from the sketches by the artist's son Jorma, finished 1939.
+  sources:
+  - wp-akseli-gallen-kallela
+- key: architectural-studies-roerich
+  name: Architectural Studies
+  kind: painting
+  made: 1904
+  made_end: 1905
+  people:
+  - person: nicholas-roerich
+    role: creator
+  prominence: 3
+  note: Dozens of paintings of fortresses, monasteries and churches made on two trips through Russia, published 1904-1905; it inspired his activism for architectural preservation.
+  sources:
+  - wp-nicholas-roerich
+- key: bird-in-space
+  name: Bird in Space
+  kind: sculpture
+  made: 1923
+  people:
+  - person: constantin-brancusi
+    role: creator
+  prominence: 4
+  note: Series begun in 1923 in marble and bronze; a bronze detained by US customs in 1926 led to Brancusi v. United States (1928), which accepted it as a work of art.
+  sources:
+  - wp-constantin-brancusi
+- key: the-kiss-brancusi-grave
+  name: The Kiss (Montparnasse Cemetery)
+  kind: sculpture
+  made: 1909
+  people:
+  - person: constantin-brancusi
+    role: creator
+  places:
+  - place: cimetiere-du-montparnasse
+    role: held
+  prominence: 3
+  note: Carved in 1909 and installed in 1911 on the grave of Tatiana Rachewskaia.
+  sources:
+  - wp-constantin-brancusi
+links:
+- teacher: pietro-perugino
+  student: raphael
+  sources:
+  - wp-pietro-perugino
+- patron: sixtus-iv
+  artist: pietro-perugino
+  sources:
+  - wp-pietro-perugino
+- patron: maximilian-i-holy-roman-emperor
+  artist: albrecht-altdorfer
+  from: 1513
+  sources:
+  - wp-albrecht-altdorfer
+- teacher: nicolas-poussin
+  student: charles-le-brun
+  sources:
+  - wp-charles-le-brun
+- teacher: francois-boucher
+  student: jacques-louis-david
+  sources:
+  - wp-francois-boucher
+- teacher: francois-boucher
+  student: jean-honore-fragonard
+  sources:
+  - wp-jean-honore-fragonard
+- teacher: ivan-kramskoi
+  student: ilya-repin
+  sources:
+  - wp-ilya-repin
+- teacher: ivan-kramskoi
+  student: viktor-vasnetsov
+  sources:
+  - wp-viktor-vasnetsov
+- teacher: jean-leon-gerome
+  student: vasily-vereshchagin
+  sources:
+  - wp-vasily-vereshchagin
+- teacher: ilya-repin
+  student: valentin-serov
+  sources:
+  - wp-valentin-serov
+- teacher: vasily-perov
+  student: isaac-levitan
+  sources:
+  - wp-isaac-levitan
+moments:
+- person: pietro-perugino
+  role: born
+  place: citta-della-pieve
+  sources:
+  - wp-pietro-perugino
+- person: pietro-perugino
+  role: worked
+  place: florence
+  year: 1486
+  sources:
+  - wp-pietro-perugino
+- person: pietro-perugino
+  role: worked
+  place: collegio-del-cambio-perugia
+  year: 1496
+  sources:
+  - wp-pietro-perugino
+- person: pietro-perugino
+  role: worked
+  place: sistine-chapel
+  year: 1480
+  sources:
+  - wp-pietro-perugino
+- person: pietro-perugino
+  role: died
+  place: fontignano
+  year: 1523
+  sources:
+  - wp-pietro-perugino
+- person: albrecht-altdorfer
+  role: worked
+  place: regensburg
+  year: 1505
+  sources:
+  - wp-albrecht-altdorfer
+- person: albrecht-altdorfer
+  role: worked
+  place: innsbruck
+  year: 1513
+  sources:
+  - wp-albrecht-altdorfer
+- person: albrecht-altdorfer
+  role: worked
+  place: vienna
+  year: 1535
+  sources:
+  - wp-albrecht-altdorfer
+- person: albrecht-altdorfer
+  role: died
+  place: regensburg
+  year: 1538
+  sources:
+  - wp-albrecht-altdorfer
+- person: matthias-grunewald
+  role: worked
+  place: frankfurt
+  year: 1510
+  sources:
+  - wp-matthias-grunewald
+- person: matthias-grunewald
+  role: worked
+  place: mainz
+  year: 1511
+  sources:
+  - wp-matthias-grunewald
+- person: matthias-grunewald
+  role: worked
+  place: isenheim
+  year: 1512
+  sources:
+  - wp-matthias-grunewald
+- person: antonio-da-correggio
+  role: born
+  place: correggio
+  sources:
+  - wp-antonio-da-correggio
+- person: antonio-da-correggio
+  role: worked
+  place: modena
+  year: 1503
+  sources:
+  - wp-antonio-da-correggio
+- person: antonio-da-correggio
+  role: worked
+  place: parma
+  year: 1516
+  sources:
+  - wp-antonio-da-correggio
+- person: antonio-da-correggio
+  role: died
+  place: correggio
+  year: 1534
+  sources:
+  - wp-antonio-da-correggio
+- person: antonio-da-correggio
+  role: buried
+  place: san-francesco-correggio
+  year: 1534
+  sources:
+  - wp-antonio-da-correggio
+- person: bronzino
+  role: born
+  place: florence
+  year: 1503
+  sources:
+  - wp-bronzino
+- person: bronzino
+  role: worked
+  place: palazzo-vecchio
+  year: 1540
+  sources:
+  - wp-bronzino
+- person: bronzino
+  role: died
+  place: florence
+  year: 1572
+  sources:
+  - wp-bronzino
+- person: giuseppe-arcimboldo
+  role: worked
+  place: vienna
+  year: 1562
+  sources:
+  - wp-giuseppe-arcimboldo
+- person: giuseppe-arcimboldo
+  role: worked
+  place: milan
+  year: 1587
+  sources:
+  - wp-giuseppe-arcimboldo
+- person: jusepe-de-ribera
+  role: born
+  place: jativa
+  year: 1591
+  sources:
+  - wp-jusepe-de-ribera
+- person: jusepe-de-ribera
+  role: worked
+  place: parma
+  year: 1611
+  sources:
+  - wp-jusepe-de-ribera
+- person: jusepe-de-ribera
+  role: worked
+  place: rome
+  year: 1613
+  sources:
+  - wp-jusepe-de-ribera
+- person: jusepe-de-ribera
+  role: worked
+  place: naples
+  year: 1616
+  sources:
+  - wp-jusepe-de-ribera
+- person: jusepe-de-ribera
+  role: died
+  place: naples
+  year: 1652
+  sources:
+  - wp-jusepe-de-ribera
+- person: georges-de-la-tour
+  role: born
+  place: vic-sur-seille
+  year: 1593
+  sources:
+  - wp-georges-de-la-tour
+- person: georges-de-la-tour
+  role: worked
+  place: luneville
+  year: 1620
+  sources:
+  - wp-georges-de-la-tour
+- person: georges-de-la-tour
+  role: died
+  place: luneville
+  year: 1652
+  sources:
+  - wp-georges-de-la-tour
+- person: claude-lorrain
+  role: born
+  place: chamagne
+  sources:
+  - wp-claude-lorrain
+- person: claude-lorrain
+  role: worked
+  place: naples
+  year: 1620
+  sources:
+  - wp-claude-lorrain
+- person: claude-lorrain
+  role: worked
+  place: rome
+  year: 1622
+  sources:
+  - wp-claude-lorrain
+- person: claude-lorrain
+  role: died
+  place: rome
+  year: 1682
+  sources:
+  - wp-claude-lorrain
+- person: charles-le-brun
+  role: born
+  place: paris
+  year: 1619
+  sources:
+  - wp-charles-le-brun
+- person: charles-le-brun
+  role: worked
+  place: rome
+  year: 1642
+  sources:
+  - wp-charles-le-brun
+- person: charles-le-brun
+  role: worked
+  place: chateau-de-vaux-le-vicomte
+  year: 1661
+  sources:
+  - wp-charles-le-brun
+- person: charles-le-brun
+  role: worked
+  place: palace-of-versailles
+  year: 1679
+  sources:
+  - wp-charles-le-brun
+- person: charles-le-brun
+  role: died
+  place: paris
+  year: 1690
+  sources:
+  - wp-charles-le-brun
+- person: francois-boucher
+  role: born
+  place: paris
+  year: 1703
+  sources:
+  - wp-francois-boucher
+- person: francois-boucher
+  role: died
+  place: paris
+  year: 1770
+  sources:
+  - wp-francois-boucher
+- person: jean-honore-fragonard
+  role: born
+  place: grasse
+  year: 1732
+  sources:
+  - wp-jean-honore-fragonard
+- person: jean-honore-fragonard
+  role: worked
+  place: rome
+  year: 1756
+  sources:
+  - wp-jean-honore-fragonard
+- person: jean-honore-fragonard
+  role: worked
+  place: grasse
+  year: 1790
+  sources:
+  - wp-jean-honore-fragonard
+- person: angelica-kauffman
+  role: born
+  place: chur
+  year: 1741
+  sources:
+  - wp-angelica-kauffman
+- person: angelica-kauffman
+  role: worked
+  place: florence
+  year: 1762
+  sources:
+  - wp-angelica-kauffman
+- person: angelica-kauffman
+  role: worked
+  place: london
+  year: 1766
+  sources:
+  - wp-angelica-kauffman
+- person: angelica-kauffman
+  role: died
+  place: rome
+  year: 1807
+  sources:
+  - wp-angelica-kauffman
+- person: angelica-kauffman
+  role: buried
+  place: sant-andrea-delle-fratte
+  year: 1807
+  sources:
+  - wp-angelica-kauffman
+- person: elisabeth-vigee-le-brun
+  role: born
+  place: paris
+  year: 1755
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- person: elisabeth-vigee-le-brun
+  role: worked
+  place: rome
+  year: 1789
+  sources:
+  - wp-elisabeth-vigee-le-brun
+- person: william-blake
+  role: born
+  place: london
+  year: 1757
+  sources:
+  - wp-william-blake
+- person: william-blake
+  role: worked
+  place: westminster-abbey
+  year: 1774
+  sources:
+  - wp-william-blake
+- person: william-blake
+  role: worked
+  place: felpham
+  year: 1800
+  sources:
+  - wp-william-blake
+- person: william-blake
+  role: died
+  place: london
+  year: 1827
+  sources:
+  - wp-william-blake
+- person: william-blake
+  role: buried
+  place: bunhill-fields
+  year: 1827
+  sources:
+  - wp-william-blake
+- person: caspar-david-friedrich
+  role: born
+  place: greifswald
+  year: 1774
+  sources:
+  - wp-caspar-david-friedrich
+- person: caspar-david-friedrich
+  role: worked
+  place: copenhagen
+  year: 1794
+  sources:
+  - wp-caspar-david-friedrich
+- person: caspar-david-friedrich
+  role: worked
+  place: dresden
+  year: 1798
+  sources:
+  - wp-caspar-david-friedrich
+- person: caspar-david-friedrich
+  role: died
+  place: dresden
+  year: 1840
+  sources:
+  - wp-caspar-david-friedrich
+- person: caspar-david-friedrich
+  role: buried
+  place: trinitatis-friedhof-dresden
+  year: 1840
+  sources:
+  - wp-caspar-david-friedrich
+- person: theodore-gericault
+  role: born
+  place: rouen
+  year: 1791
+  sources:
+  - wp-theodore-gericault
+- person: theodore-gericault
+  role: worked
+  place: rome
+  year: 1816
+  sources:
+  - wp-theodore-gericault
+- person: theodore-gericault
+  role: worked
+  place: london
+  year: 1820
+  sources:
+  - wp-theodore-gericault
+- person: theodore-gericault
+  role: died
+  place: paris
+  year: 1824
+  sources:
+  - wp-theodore-gericault
+- person: theodore-gericault
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1824
+  sources:
+  - wp-theodore-gericault
+- person: francesco-hayez
+  role: born
+  place: venice
+  year: 1791
+  sources:
+  - wp-francesco-hayez
+- person: francesco-hayez
+  role: worked
+  place: rome
+  year: 1809
+  sources:
+  - wp-francesco-hayez
+- person: francesco-hayez
+  role: worked
+  place: chiaramonti-museum-vatican
+  year: 1816
+  sources:
+  - wp-francesco-hayez
+- person: francesco-hayez
+  role: worked
+  place: milan
+  year: 1823
+  sources:
+  - wp-francesco-hayez
+- person: francesco-hayez
+  role: died
+  place: milan
+  year: 1882
+  sources:
+  - wp-francesco-hayez
+- person: karl-bryullov
+  role: born
+  place: saint-petersburg
+  year: 1799
+  sources:
+  - wp-karl-bryullov
+- person: karl-bryullov
+  role: worked
+  place: rome
+  year: 1830
+  sources:
+  - wp-karl-bryullov
+- person: karl-bryullov
+  role: worked
+  place: saint-petersburg
+  year: 1836
+  sources:
+  - wp-karl-bryullov
+- person: karl-bryullov
+  role: died
+  place: manziana
+  year: 1852
+  sources:
+  - wp-karl-bryullov
+- person: ivan-aivazovsky
+  role: born
+  place: feodosia
+  year: 1817
+  sources:
+  - wp-ivan-aivazovsky
+- person: ivan-aivazovsky
+  role: worked
+  place: saint-petersburg
+  year: 1833
+  sources:
+  - wp-ivan-aivazovsky
+- person: ivan-aivazovsky
+  role: worked
+  place: feodosia
+  year: 1845
+  sources:
+  - wp-ivan-aivazovsky
+- person: ivan-aivazovsky
+  role: died
+  place: feodosia
+  year: 1900
+  sources:
+  - wp-ivan-aivazovsky
+- person: ivan-aivazovsky
+  role: buried
+  place: st-sargis-church-feodosia
+  year: 1900
+  sources:
+  - wp-ivan-aivazovsky
+- person: arnold-bocklin
+  role: born
+  place: basel
+  year: 1827
+  sources:
+  - wp-arnold-bocklin
+- person: arnold-bocklin
+  role: worked
+  place: rome
+  year: 1850
+  sources:
+  - wp-arnold-bocklin
+- person: arnold-bocklin
+  role: worked
+  place: florence
+  year: 1876
+  sources:
+  - wp-arnold-bocklin
+- person: arnold-bocklin
+  role: died
+  place: fiesole
+  year: 1901
+  sources:
+  - wp-arnold-bocklin
+- person: arnold-bocklin
+  role: buried
+  place: cimitero-degli-allori
+  year: 1901
+  sources:
+  - wp-arnold-bocklin
+- person: william-holman-hunt
+  role: born
+  place: london
+  year: 1827
+  sources:
+  - wp-william-holman-hunt
+- person: william-holman-hunt
+  role: worked
+  place: 18-melbury-road-london
+  year: 1903
+  sources:
+  - wp-william-holman-hunt
+- person: william-holman-hunt
+  role: buried
+  place: st-pauls-cathedral
+  year: 1910
+  sources:
+  - wp-william-holman-hunt
+- person: dante-gabriel-rossetti
+  role: born
+  place: london
+  year: 1828
+  sources:
+  - wp-dante-gabriel-rossetti
+- person: dante-gabriel-rossetti
+  role: died
+  place: birchington-on-sea
+  year: 1882
+  sources:
+  - wp-dante-gabriel-rossetti
+- person: dante-gabriel-rossetti
+  role: buried
+  place: birchington-on-sea
+  year: 1882
+  sources:
+  - wp-dante-gabriel-rossetti
+- person: john-everett-millais
+  role: born
+  place: southampton-england
+  year: 1829
+  sources:
+  - wp-john-everett-millais
+- person: john-everett-millais
+  role: worked
+  place: london
+  year: 1840
+  sources:
+  - wp-john-everett-millais
+- person: john-everett-millais
+  role: buried
+  place: st-pauls-cathedral
+  year: 1896
+  sources:
+  - wp-john-everett-millais
+- person: ivan-shishkin
+  role: born
+  place: yelabuga
+  year: 1832
+  sources:
+  - wp-ivan-shishkin
+- person: ivan-shishkin
+  role: worked
+  place: munich
+  year: 1861
+  sources:
+  - wp-ivan-shishkin
+- person: ivan-shishkin
+  role: worked
+  place: zurich
+  year: 1863
+  sources:
+  - wp-ivan-shishkin
+- person: ivan-shishkin
+  role: worked
+  place: dusseldorf
+  year: 1864
+  sources:
+  - wp-ivan-shishkin
+- person: ivan-shishkin
+  role: died
+  place: saint-petersburg
+  year: 1898
+  sources:
+  - wp-ivan-shishkin
+- person: vasily-perov
+  role: born
+  place: tobolsk
+  year: 1834
+  sources:
+  - wp-vasily-perov
+- person: vasily-perov
+  role: worked
+  place: moscow
+  year: 1853
+  sources:
+  - wp-vasily-perov
+- person: vasily-perov
+  role: worked
+  place: paris
+  year: 1862
+  sources:
+  - wp-vasily-perov
+- person: vasily-perov
+  role: died
+  place: moscow
+  year: 1882
+  sources:
+  - wp-vasily-perov
+- person: ivan-kramskoi
+  role: worked
+  place: saint-petersburg
+  year: 1857
+  sources:
+  - wp-ivan-kramskoi
+- person: jan-matejko
+  role: born
+  place: krakow
+  year: 1838
+  sources:
+  - wp-jan-matejko
+- person: jan-matejko
+  role: worked
+  place: munich
+  year: 1859
+  sources:
+  - wp-jan-matejko
+- person: jan-matejko
+  role: worked
+  place: st-marys-basilica-krakow
+  year: 1889
+  sources:
+  - wp-jan-matejko
+- person: jan-matejko
+  role: died
+  place: krakow
+  year: 1893
+  sources:
+  - wp-jan-matejko
+- person: vasily-vereshchagin
+  role: born
+  place: cherepovets
+  year: 1842
+  sources:
+  - wp-vasily-vereshchagin
+- person: vasily-vereshchagin
+  role: worked
+  place: paris
+  year: 1864
+  sources:
+  - wp-vasily-vereshchagin
+- person: vasily-vereshchagin
+  role: worked
+  place: munich
+  year: 1871
+  sources:
+  - wp-vasily-vereshchagin
+- person: ilya-repin
+  role: born
+  place: chuguev
+  year: 1844
+  sources:
+  - wp-ilya-repin
+- person: ilya-repin
+  role: worked
+  place: saint-petersburg
+  year: 1863
+  sources:
+  - wp-ilya-repin
+- person: ilya-repin
+  role: worked
+  place: paris
+  year: 1873
+  sources:
+  - wp-ilya-repin
+- person: ilya-repin
+  role: worked
+  place: penaty-kuokkala
+  year: 1899
+  sources:
+  - wp-ilya-repin
+- person: ilya-repin
+  role: buried
+  place: penaty-kuokkala
+  year: 1930
+  sources:
+  - wp-ilya-repin
+- person: max-liebermann
+  role: born
+  place: berlin
+  year: 1847
+  sources:
+  - wp-max-liebermann
+- person: max-liebermann
+  role: worked
+  place: paris
+  year: 1873
+  sources:
+  - wp-max-liebermann
+- person: max-liebermann
+  role: worked
+  place: munich
+  year: 1878
+  sources:
+  - wp-max-liebermann
+- person: max-liebermann
+  role: worked
+  place: berlin
+  year: 1884
+  sources:
+  - wp-max-liebermann
+- person: max-liebermann
+  role: worked
+  place: liebermann-villa-wannsee
+  year: 1910
+  sources:
+  - wp-max-liebermann
+- person: viktor-vasnetsov
+  role: born
+  place: lopyal
+  year: 1848
+  sources:
+  - wp-viktor-vasnetsov
+- person: viktor-vasnetsov
+  role: worked
+  place: saint-petersburg
+  year: 1868
+  sources:
+  - wp-viktor-vasnetsov
+- person: viktor-vasnetsov
+  role: worked
+  place: paris
+  year: 1876
+  sources:
+  - wp-viktor-vasnetsov
+- person: viktor-vasnetsov
+  role: worked
+  place: st-vladimirs-cathedral-kyiv
+  year: 1884
+  sources:
+  - wp-viktor-vasnetsov
+- person: viktor-vasnetsov
+  role: died
+  place: moscow
+  year: 1926
+  sources:
+  - wp-viktor-vasnetsov
+- person: vasily-surikov
+  role: worked
+  place: st-petersburg
+  year: 1868
+  sources:
+  - wp-vasily-surikov
+- person: vasily-surikov
+  role: worked
+  place: moscow
+  year: 1877
+  sources:
+  - wp-vasily-surikov
+- person: vasily-surikov
+  role: died
+  place: moscow
+  year: 1916
+  sources:
+  - wp-vasily-surikov
+- person: vasily-surikov
+  role: buried
+  place: vagankovo-cemetery
+  year: 1916
+  sources:
+  - wp-vasily-surikov
+- person: alphonse-mucha
+  role: born
+  place: ivancice
+  year: 1860
+  sources:
+  - wp-alphonse-mucha
+- person: alphonse-mucha
+  role: worked
+  place: munich
+  year: 1885
+  sources:
+  - wp-alphonse-mucha
+- person: alphonse-mucha
+  role: worked
+  place: paris
+  year: 1888
+  sources:
+  - wp-alphonse-mucha
+- person: alphonse-mucha
+  role: worked
+  place: municipal-house-prague
+  year: 1910
+  sources:
+  - wp-alphonse-mucha
+- person: alphonse-mucha
+  role: buried
+  place: vysehrad-cemetery
+  year: 1939
+  sources:
+  - wp-alphonse-mucha
+- person: isaac-levitan
+  role: born
+  place: kybartai
+  year: 1860
+  sources:
+  - wp-isaac-levitan
+- person: isaac-levitan
+  role: worked
+  place: moscow
+  year: 1870
+  sources:
+  - wp-isaac-levitan
+- person: anders-zorn
+  role: born
+  place: mora
+  year: 1860
+  sources:
+  - wp-anders-zorn
+- person: anders-zorn
+  role: worked
+  place: stockholm
+  year: 1875
+  sources:
+  - wp-anders-zorn
+- person: anders-zorn
+  role: worked
+  place: zorngarden
+  year: 1886
+  sources:
+  - wp-anders-zorn
+- person: valentin-serov
+  role: born
+  place: st-petersburg
+  year: 1865
+  sources:
+  - wp-valentin-serov
+- person: valentin-serov
+  role: worked
+  place: moscow
+  year: 1897
+  sources:
+  - wp-valentin-serov
+- person: valentin-serov
+  role: died
+  place: moscow
+  year: 1911
+  sources:
+  - wp-valentin-serov
+- person: akseli-gallen-kallela
+  role: born
+  place: pori
+  year: 1865
+  sources:
+  - wp-akseli-gallen-kallela
+- person: akseli-gallen-kallela
+  role: worked
+  place: helsinki
+  year: 1876
+  sources:
+  - wp-akseli-gallen-kallela
+- person: akseli-gallen-kallela
+  role: worked
+  place: paris
+  year: 1884
+  sources:
+  - wp-akseli-gallen-kallela
+- person: akseli-gallen-kallela
+  role: worked
+  place: nairobi
+  year: 1909
+  sources:
+  - wp-akseli-gallen-kallela
+- person: akseli-gallen-kallela
+  role: died
+  place: stockholm
+  year: 1931
+  sources:
+  - wp-akseli-gallen-kallela
+- person: nicholas-roerich
+  role: born
+  place: st-petersburg
+  year: 1874
+  sources:
+  - wp-nicholas-roerich
+- person: nicholas-roerich
+  role: worked
+  place: florence
+  year: 1906
+  sources:
+  - wp-nicholas-roerich
+- person: nicholas-roerich
+  role: worked
+  place: london
+  year: 1919
+  sources:
+  - wp-nicholas-roerich
+- person: nicholas-roerich
+  role: worked
+  place: darjeeling
+  year: 1923
+  sources:
+  - wp-nicholas-roerich
+- person: nicholas-roerich
+  role: died
+  place: kullu
+  year: 1947
+  sources:
+  - wp-nicholas-roerich
+- person: constantin-brancusi
+  role: born
+  place: hobita
+  year: 1876
+  sources:
+  - wp-constantin-brancusi
+- person: constantin-brancusi
+  role: worked
+  place: bucharest
+  year: 1898
+  sources:
+  - wp-constantin-brancusi
+- person: constantin-brancusi
+  role: worked
+  place: paris
+  year: 1904
+  sources:
+  - wp-constantin-brancusi
+- person: constantin-brancusi
+  role: worked
+  place: targu-jiu-ensemble
+  year: 1937
+  sources:
+  - wp-constantin-brancusi
+- person: constantin-brancusi
+  role: buried
+  place: cimetiere-du-montparnasse
+  year: 1957
+  sources:
+  - wp-constantin-brancusi
+discrepancies:
+- key: pietro-perugino-born
+  question: When was Perugino born?
+  about:
+  - person: pietro-perugino
+  field: born
+  claims:
+  - value: '1446'
+    sources:
+    - wp-pietro-perugino
+    note: Earliest of the range inferred from his age at death as given by Vasari and Giovanni Santi.
+  - value: '1452'
+    sources:
+    - wp-pietro-perugino
+    note: Latest of the same range.
+  note: The record uses 1446, marked estimated. The exact date is unknown.
+- key: albrecht-altdorfer-born-place
+  question: Was Altdorfer born in Regensburg or in Altdorf?
+  about:
+  - person: albrecht-altdorfer
+  field: place
+  claims:
+  - value: Regensburg
+    sources:
+    - wp-albrecht-altdorfer
+  - value: Altdorf
+    sources:
+    - wp-albrecht-altdorfer
+  note: The article says "Regensburg or Altdorf", so no born moment is recorded.
+- key: matthias-grunewald-born
+  question: When was Grünewald born?
+  about:
+  - person: matthias-grunewald
+  field: born
+  claims:
+  - value: c. 1470
+    sources:
+    - wp-matthias-grunewald
+    note: The article's lead.
+  - value: '1475'
+    sources:
+    - wp-matthias-grunewald
+    note: Estimated from Sandrart's account of him working on Dürer's altarpiece about 1505, a task done by apprentices.
+  note: The record uses c. 1470 (the lead).
+- key: matthias-grunewald-died
+  question: When did Grünewald die?
+  about:
+  - person: matthias-grunewald
+  field: died
+  claims:
+  - value: '1528-08-31'
+    sources:
+    - wp-matthias-grunewald
+    note: The article's lead.
+  - value: '1532'
+    sources:
+    - wp-matthias-grunewald
+    note: Life section says he most probably died in 1532, although sources vary.
+  note: The record uses 31 August 1528 (the lead). The article itself is inconsistent.
+- key: isenheim-altarpiece-date
+  question: When was the Isenheim Altarpiece finished?
+  about:
+  - artwork: isenheim-altarpiece
+  field: date
+  claims:
+  - value: c. 1512 to 1516
+    sources:
+    - wp-matthias-grunewald
+    note: The article's lead.
+  - value: 1512 to 1514 or 1515 / completed 1515
+    sources:
+    - wp-matthias-grunewald
+    note: Life and Works sections.
+  note: The record uses 1512 to 1516, marked estimated.
+- key: claude-lorrain-born
+  question: When was Claude Lorrain born?
+  about:
+  - person: claude-lorrain
+  field: born
+  claims:
+  - value: '1600'
+    sources:
+    - wp-claude-lorrain
+    note: Given on his tombstone and in the article's lead as c. 1600.
+  - value: c. 1604 or 1605
+    sources:
+    - wp-claude-lorrain
+    note: Contemporary sources indicate a later date.
+  note: The record uses 1604, marked estimated, following the contemporary sources.
+- key: charles-le-brun-died
+  question: On what day did Le Brun die?
+  about:
+  - person: charles-le-brun
+  field: died
+  claims:
+  - value: '1690-02-12'
+    sources:
+    - wp-charles-le-brun
+    note: The article's lead.
+  - value: '1690-02-22'
+    sources:
+    - wp-charles-le-brun
+    note: The Later years section.
+  note: The record uses 12 February (the lead). The article itself is inconsistent.
+- key: jusepe-de-ribera-died
+  question: When did Ribera die?
+  about:
+  - person: jusepe-de-ribera
+  field: died
+  claims:
+  - value: '1652-11-03'
+    sources:
+    - wp-jusepe-de-ribera
+    note: The article's lead.
+  - value: September 1652
+    sources:
+    - wp-jusepe-de-ribera
+    note: The Later life section.
+  note: The record uses 3 November 1652 (the lead). The article itself is inconsistent.
+- key: jusepe-de-ribera-born
+  question: When was Ribera born?
+  about:
+  - person: jusepe-de-ribera
+  field: born
+  claims:
+  - value: '1591'
+    sources:
+    - wp-jusepe-de-ribera
+    note: Baptised 17 February 1591 in Játiva; the year was positively established only in 1923.
+  - value: '1587'
+    sources:
+    - wp-jusepe-de-ribera
+    note: Long believed, now shown to be false by 20th-century documents.
+  status: resolved
+  resolution: 1591, from the Játiva baptismal record. The record holds the baptism year as the birth year.
+- key: jusepe-de-ribera-born-place
+  question: Where was Ribera born?
+  about:
+  - person: jusepe-de-ribera
+  field: place
+  claims:
+  - value: Játiva
+    sources:
+    - wp-jusepe-de-ribera
+    note: Baptismal record.
+  - value: Gallipoli
+    sources:
+    - wp-jusepe-de-ribera
+    note: De Dominici.
+  - value: Lecce
+    sources:
+    - wp-jusepe-de-ribera
+    note: Celano.
+  status: resolved
+  resolution: Játiva, shown by 20th-century documents; the Italian claims are disproved.
+- key: dante-gabriel-rossetti-died
+  question: On what day did Dante Gabriel Rossetti die in 1882?
+  about:
+  - person: dante-gabriel-rossetti
+  field: died
+  claims:
+  - value: '1882-04-09'
+    sources:
+    - wp-dante-gabriel-rossetti
+    note: The article's lead gives 9 April 1882.
+  - value: '1882-04-10'
+    sources:
+    - wp-dante-gabriel-rossetti
+    note: The article's Decline and death section says he died on 10 April, Easter Sunday.
+  note: The record uses 9 April, as in the lead. Both dates come from the same Wikipedia article.
+- key: the-light-of-the-world-date
+  question: When was Holman Hunt's The Light of the World painted?
+  about:
+  - artwork: the-light-of-the-world
+  field: date
+  claims:
+  - value: 1851-1853
+    sources:
+    - wp-william-holman-hunt
+    note: Biography section.
+  - value: '1854'
+    sources:
+    - wp-william-holman-hunt
+    note: Partial list of works in the same article.
+  note: The record uses 1851-1853.
+- key: nicholas-roerich-died-place
+  question: Where did Nicholas Roerich die?
+  about:
+  - person: nicholas-roerich
+  field: place
+  claims:
+  - value: Kullu
+    sources:
+    - wp-nicholas-roerich
+    note: 'The article''s Death section: died in Kullu on December 13, 1947.'
+  - value: Naggar
+    sources:
+    - wp-nicholas-roerich
+    note: 'The article''s lead: lived in various places until his death in Naggar, India.'
+  note: The record uses Kullu (the explicit Death section). Naggar is where the Roerich estate stands.
