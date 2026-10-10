@@ -1,0 +1,2888 @@
+# Notes for the reviewer
+# - 42 painters: Northern Renaissance, Dutch Golden Age, Romantic and early modern, ranked by Wikipedia sitelinks (Wikidata), from English Wikipedia articles; lead images are links only (public domain or free licences).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database have no links; they are named in each person's coverage note. Places already in the database are not re-sent.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: Painters, batch 9
+  requested: Western painters from 1500, batch 9
+  date: '2026-10-10'
+sources:
+- key: wp-gerard-david
+  title: Gerard David (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gerard_David
+- key: wp-hans-holbein-the-elder
+  title: Hans Holbein the Elder (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hans_Holbein_the_Elder
+- key: wp-dosso-dossi
+  title: Dosso Dossi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Dosso_Dossi
+- key: wp-rosso-fiorentino
+  title: Rosso Fiorentino (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rosso_Fiorentino
+- key: wp-francesco-primaticcio
+  title: Francesco Primaticcio (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Primaticcio
+- key: wp-francois-clouet
+  title: François Clouet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fran%C3%A7ois_Clouet
+- key: wp-karel-van-mander
+  title: Karel van Mander (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Karel_van_Mander
+- key: wp-pierre-mignard
+  title: Pierre Mignard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre_Mignard
+- key: wp-gerrit-dou
+  title: Gerrit Dou (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gerrit_Dou
+- key: wp-carel-fabritius
+  title: Carel Fabritius (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carel_Fabritius
+- key: wp-gabriel-metsu
+  title: Gabriël Metsu (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gabri%C3%ABl_Metsu
+- key: wp-josefa-de-obidos
+  title: Josefa de Óbidos (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Josefa_de_%C3%93bidos
+- key: wp-meindert-hobbema
+  title: Meindert Hobbema (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Meindert_Hobbema
+- key: wp-andrea-pozzo
+  title: Andrea Pozzo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Andrea_Pozzo
+- key: wp-rachel-ruysch
+  title: Rachel Ruysch (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rachel_Ruysch
+- key: wp-giovanni-paolo-panini
+  title: Giovanni Paolo Panini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Giovanni_Paolo_Panini
+- key: wp-claude-joseph-vernet
+  title: Claude-Joseph Vernet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Claude-Joseph_Vernet
+- key: wp-george-stubbs
+  title: George Stubbs (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Stubbs
+- key: wp-jean-baptiste-greuze
+  title: Jean-Baptiste Greuze (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Baptiste_Greuze
+- key: wp-francois-gerard
+  title: François Gérard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fran%C3%A7ois_G%C3%A9rard
+- key: wp-christoffer-wilhelm-eckersberg
+  title: Christoffer Wilhelm Eckersberg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christoffer_Wilhelm_Eckersberg
+- key: wp-johan-christian-dahl
+  title: Johan Christian Dahl (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Johan_Christian_Dahl
+- key: wp-george-catlin
+  title: George Catlin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Catlin
+- key: wp-rodolphe-topffer
+  title: Rodolphe Töpffer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rodolphe_T%C3%B6pffer
+- key: wp-ernest-meissonier
+  title: Ernest Meissonier (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ernest_Meissonier
+- key: wp-jules-breton
+  title: Jules Breton (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jules_Breton
+- key: wp-anselm-feuerbach
+  title: Anselm Feuerbach (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anselm_Feuerbach
+- key: wp-leon-bonnat
+  title: Léon Bonnat (Wikipedia)
+  url: https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat
+- key: wp-anton-mauve
+  title: Anton Mauve (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Anton_Mauve
+- key: wp-christian-krohg
+  title: Christian Krohg (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Christian_Krohg
+- key: wp-francesco-filippini
+  title: Francesco Filippini (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Francesco_Filippini
+- key: wp-louise-abbema
+  title: Louise Abbéma (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louise_Abb%C3%A9ma
+- key: wp-marianne-von-werefkin
+  title: Marianne von Werefkin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Marianne_von_Werefkin
+- key: wp-kuzma-petrov-vodkin
+  title: Kuzma Petrov-Vodkin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kuzma_Petrov-Vodkin
+- key: wp-carlo-carra
+  title: Carlo Carra (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Carlo_Carr%C3%A0
+- key: wp-max-pechstein
+  title: Max Pechstein (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Max_Pechstein
+- key: wp-george-bellows
+  title: George Bellows (Wikipedia)
+  url: https://en.wikipedia.org/wiki/George_Bellows
+- key: wp-luigi-russolo
+  title: Luigi Russolo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Luigi_Russolo
+- key: wp-thomas-hart-benton
+  title: Thomas Hart Benton (painter) (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Hart_Benton_(painter)
+- key: wp-remedios-varo
+  title: Remedios Varo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Remedios_Varo
+- key: wp-pierre-soulages
+  title: Pierre Soulages (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre_Soulages
+- key: wp-jorg-immendorff
+  title: Jorg Immendorff (Wikipedia)
+  url: https://en.wikipedia.org/wiki/J%C3%B6rg_Immendorff
+places:
+- key: oudewater
+  name: Oudewater
+  kind: city
+  region: Utrecht
+  country: Netherlands
+  lat: 52.025
+  lng: 4.866
+  visitable: true
+  sources:
+  - wp-gerard-david
+- key: church-of-our-lady-bruges
+  name: Church of Our Lady, Bruges
+  kind: church
+  city: Bruges
+  region: West Flanders
+  country: Belgium
+  lat: 51.205
+  lng: 3.225
+  visitable: true
+  sources:
+  - wp-gerard-david
+- key: weingarten-abbey
+  name: Weingarten Abbey
+  kind: abbey
+  city: Weingarten
+  region: Baden-Wurttemberg
+  country: Germany
+  lat: 47.806
+  lng: 9.639
+  visitable: true
+  sources:
+  - wp-hans-holbein-the-elder
+- key: issenheim
+  name: Issenheim
+  kind: town
+  region: Grand Est
+  country: France
+  lat: 47.909
+  lng: 7.192
+  visitable: true
+  sources:
+  - wp-hans-holbein-the-elder
+- key: san-giovanni-del-dosso
+  name: San Giovanni del Dosso
+  kind: village
+  region: Lombardy
+  country: Italy
+  lat: 44.99
+  lng: 11.16
+  visitable: true
+  sources:
+  - wp-dosso-dossi
+- key: tours
+  name: Tours
+  kind: city
+  region: Centre-Val de Loire
+  country: France
+  lat: 47.394
+  lng: 0.685
+  visitable: true
+  sources:
+  - wp-francois-clouet
+- key: meulebeke
+  name: Meulebeke
+  kind: town
+  region: West Flanders
+  country: Belgium
+  lat: 50.953
+  lng: 3.289
+  visitable: true
+  sources:
+  - wp-karel-van-mander
+- key: troyes
+  name: Troyes
+  kind: city
+  region: Grand Est
+  country: France
+  lat: 48.297
+  lng: 4.074
+  visitable: true
+  sources:
+  - wp-pierre-mignard
+- key: middenbeemster
+  name: Middenbeemster
+  kind: village
+  region: North Holland
+  country: Netherlands
+  lat: 52.55
+  lng: 4.916
+  visitable: true
+  sources:
+  - wp-carel-fabritius
+- key: nieuwe-kerk-amsterdam
+  name: Nieuwe Kerk, Amsterdam
+  kind: church
+  city: Amsterdam
+  region: North Holland
+  country: Netherlands
+  lat: 52.373
+  lng: 4.892
+  visitable: true
+  sources:
+  - wp-gabriel-metsu
+- key: obidos
+  name: Óbidos
+  kind: town
+  region: Oeste
+  country: Portugal
+  lat: 39.36
+  lng: -9.157
+  sources:
+  - wp-josefa-de-obidos
+- key: coimbra
+  name: Coimbra
+  kind: city
+  region: Coimbra District
+  country: Portugal
+  lat: 40.211
+  lng: -8.429
+  sources:
+  - wp-josefa-de-obidos
+- key: trento
+  name: Trento
+  kind: city
+  region: Trentino-Alto Adige
+  country: Italy
+  lat: 46.07
+  lng: 11.121
+  sources:
+  - wp-andrea-pozzo
+- key: tournus
+  name: Tournus
+  kind: town
+  region: Saône-et-Loire
+  country: France
+  lat: 46.565
+  lng: 4.909
+  sources:
+  - wp-jean-baptiste-greuze
+- key: sant-ignazio-rome
+  name: Church of Sant'Ignazio
+  kind: church
+  city: Rome
+  region: Lazio
+  country: Italy
+  lat: 41.899
+  lng: 12.481
+  visitable: true
+  sources:
+  - wp-andrea-pozzo
+- key: jesuit-church-vienna
+  name: Jesuit Church (Vienna)
+  kind: church
+  city: Vienna
+  region: Vienna
+  country: Austria
+  lat: 48.208
+  lng: 16.379
+  visitable: true
+  sources:
+  - wp-andrea-pozzo
+- key: bergen
+  name: Bergen
+  kind: city
+  region: Vestland
+  country: Norway
+  lat: 60.391
+  lng: 5.322
+  visitable: true
+  sources:
+  - wp-johan-christian-dahl
+- key: jersey-city
+  name: Jersey City
+  kind: city
+  region: New Jersey
+  country: United States
+  lat: 40.728
+  lng: -74.078
+  visitable: true
+  sources:
+  - wp-george-catlin
+- key: antibes
+  name: Antibes
+  kind: city
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.581
+  lng: 7.125
+  visitable: true
+  sources:
+  - wp-ernest-meissonier
+- key: courrieres
+  name: Courrières
+  kind: village
+  region: Pas-de-Calais
+  country: France
+  lat: 50.456
+  lng: 2.947
+  visitable: true
+  sources:
+  - wp-jules-breton
+- key: speyer
+  name: Speyer
+  kind: city
+  region: Rhineland-Palatinate
+  country: Germany
+  lat: 49.318
+  lng: 8.431
+  visitable: true
+  sources:
+  - wp-anselm-feuerbach
+- key: bayonne
+  name: Bayonne
+  kind: city
+  region: Pyrénées-Atlantiques
+  country: France
+  lat: 43.493
+  lng: -1.475
+  visitable: true
+  visit_site: Musée Bonnat
+  sources:
+  - wp-leon-bonnat
+- key: monchy-saint-eloi
+  name: Monchy-Saint-Éloi
+  kind: village
+  region: Oise
+  country: France
+  lat: 49.275
+  lng: 2.478
+  sources:
+  - wp-leon-bonnat
+- key: zaandam
+  name: Zaandam
+  kind: town
+  region: North Holland
+  country: Netherlands
+  lat: 52.439
+  lng: 4.826
+  visitable: true
+  sources:
+  - wp-anton-mauve
+- key: laren
+  name: Laren
+  kind: village
+  region: North Holland
+  country: Netherlands
+  lat: 52.257
+  lng: 5.226
+  visitable: true
+  sources:
+  - wp-anton-mauve
+- key: arnhem
+  name: Arnhem
+  kind: city
+  region: Gelderland
+  country: Netherlands
+  lat: 51.985
+  lng: 5.899
+  visitable: true
+  sources:
+  - wp-anton-mauve
+- key: brescia
+  name: Brescia
+  kind: city
+  region: Lombardy
+  country: Italy
+  lat: 45.541
+  lng: 10.212
+  visitable: true
+  sources:
+  - wp-francesco-filippini
+- key: etampes
+  name: Étampes
+  kind: town
+  region: Essonne
+  country: France
+  lat: 48.434
+  lng: 2.161
+  visitable: true
+  sources:
+  - wp-louise-abbema
+- key: tula
+  name: Tula
+  kind: city
+  region: Tula Oblast
+  country: Russia
+  lat: 54.193
+  lng: 37.617
+  sources:
+  - wp-marianne-von-werefkin
+- key: ascona
+  name: Ascona
+  kind: town
+  region: Ticino
+  country: Switzerland
+  lat: 46.157
+  lng: 8.771
+  sources:
+  - wp-marianne-von-werefkin
+- key: khvalynsk
+  name: Khvalynsk
+  kind: town
+  region: Saratov Oblast
+  country: Russia
+  lat: 52.495
+  lng: 48.103
+  sources:
+  - wp-kuzma-petrov-vodkin
+- key: quargnento
+  name: Quargnento
+  kind: town
+  region: Piedmont
+  country: Italy
+  lat: 44.986
+  lng: 8.44
+  sources:
+  - wp-carlo-carra
+- key: zwickau
+  name: Zwickau
+  kind: city
+  region: Saxony
+  country: Germany
+  lat: 50.718
+  lng: 12.496
+  sources:
+  - wp-max-pechstein
+- key: columbus-ohio
+  name: Columbus, Ohio
+  kind: city
+  region: Ohio
+  country: United States
+  lat: 39.961
+  lng: -82.999
+  sources:
+  - wp-george-bellows
+- key: woodstock-new-york
+  name: Woodstock, New York
+  kind: town
+  region: New York
+  country: United States
+  lat: 42.041
+  lng: -74.118
+  sources:
+  - wp-george-bellows
+- key: neosho-missouri
+  name: Neosho, Missouri
+  kind: city
+  region: Missouri
+  country: United States
+  lat: 36.869
+  lng: -94.368
+  sources:
+  - wp-thomas-hart-benton
+- key: kansas-city-missouri
+  name: Kansas City, Missouri
+  kind: city
+  region: Missouri
+  country: United States
+  lat: 39.1
+  lng: -94.578
+  sources:
+  - wp-thomas-hart-benton
+- key: angles-girona
+  name: Angles
+  kind: town
+  region: Girona
+  country: Spain
+  lat: 41.951
+  lng: 2.637
+  sources:
+  - wp-remedios-varo
+- key: rodez
+  name: Rodez
+  kind: city
+  region: Aveyron
+  country: France
+  lat: 44.35
+  lng: 2.575
+  sources:
+  - wp-pierre-soulages
+- key: nimes
+  name: Nimes
+  kind: city
+  region: Gard
+  country: France
+  lat: 43.837
+  lng: 4.36
+  sources:
+  - wp-pierre-soulages
+- key: abbey-church-of-sainte-foy-conques
+  name: Abbey Church of Sainte-Foy
+  kind: church
+  city: Conques
+  region: Aveyron
+  country: France
+  lat: 44.599
+  lng: 2.398
+  visitable: true
+  sources:
+  - wp-pierre-soulages
+- key: bleckede
+  name: Bleckede
+  kind: town
+  region: Lower Saxony
+  country: Germany
+  lat: 53.294
+  lng: 10.719
+  sources:
+  - wp-jorg-immendorff
+people:
+- key: gerard-david
+  name: Gerard David
+  type: Artist
+  roles:
+  - painter
+  - manuscript illuminator
+  born: 1460
+  born_estimated: true
+  died: '1523-08-13'
+  prominence: 4
+  note: Early Netherlandish painter and manuscript illuminator of Bruges, known for his brilliant use of colour and religious scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/6c/Gerard_David_selfportrait_in_The_Virgin_among_the_Virgins.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Gerard_David_selfportrait_in_The_Virgin_among_the_Virgins.jpg/500px-Gerard_David_selfportrait_in_The_Virgin_among_the_Virgins.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gerard_David_selfportrait_in_The_Virgin_among_the_Virgins.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and burial places, Bruges career and the one documented work captured; his pupils, illuminated manuscripts and other altarpieces not built out.
+  sources:
+  - wp-gerard-david
+- key: hans-holbein-the-elder
+  name: Hans Holbein the Elder
+  type: Artist
+  roles:
+  - painter
+  born: 1460
+  born_estimated: true
+  died: 1524
+  prominence: 3
+  note: German painter of Augsburg who led the shift from late Gothic to Renaissance style; father of Ambrosius and Hans Holbein the Younger.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Hans_holbein_the_Elder_self_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Hans_holbein_the_Elder_self_portrait.jpg/500px-Hans_holbein_the_Elder_self_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Hans_holbein_the_Elder_self_portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, family and his two sons as pupils captured; the altarpieces, windows and drawings not built out.
+  sources:
+  - wp-hans-holbein-the-elder
+- key: dosso-dossi
+  name: Dosso Dossi
+  type: Artist
+  roles:
+  - painter
+  born: 1489
+  born_estimated: true
+  died: 1542
+  prominence: 3
+  note: Italian Renaissance painter of the School of Ferrara and court artist to the Este dukes, known for mythological and allegorical paintings.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7c/Dosso_Dossi_%28cropped%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/7/7c/Dosso_Dossi_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Dosso_Dossi_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace and Este court service captured; works are named in the article without dates, so no artwork records yet.
+  sources:
+  - wp-dosso-dossi
+- key: rosso-fiorentino
+  name: Rosso Fiorentino
+  type: Artist
+  roles:
+  - painter
+  born: '1495-03-08'
+  died: '1540-11-14'
+  prominence: 4
+  note: Florentine Mannerist painter in oil and fresco who worked at the court of Francis I at Fontainebleau; known for the Volterra Deposition.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/43/Houghton_Typ_525_68.864_-_Vasari%2C_Le_vite_-_Il_Rosso.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Houghton_Typ_525_68.864_-_Vasari%2C_Le_vite_-_Il_Rosso.jpg/500px-Houghton_Typ_525_68.864_-_Vasari%2C_Le_vite_-_Il_Rosso.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Houghton_Typ_525_68.864_-_Vasari,_Le_vite_-_Il_Rosso.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, moves to Rome and France captured; the Deposition altarpieces are named without a year in the article, so no artwork records yet.
+  sources:
+  - wp-rosso-fiorentino
+- key: francesco-primaticcio
+  name: Francesco Primaticcio
+  type: Artist
+  roles:
+  - painter
+  - architect
+  - sculptor
+  born: '1504-04-30'
+  died: 1570
+  prominence: 3
+  note: Italian Mannerist painter, architect and sculptor of Bologna who spent most of his career in France, directing the decoration of Fontainebleau after Rosso's death.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7d/Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814803742183%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7d/Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814803742183%29.jpg/500px-Delle_vite_de%27_pi%C3%B9_eccellenti_pittori%2C_scultori%2C_et_architetti_%281648%29_%2814803742183%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Delle_vite_de%27_pi%C3%B9_eccellenti_pittori,_scultori,_et_architetti_(1648)_(14803742183).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training under Giulio Romano, Fontainebleau career and the Salle d'Hercule captured; the Valois Chapel, tapestry cartoons and festival designs not built out.
+  sources:
+  - wp-francesco-primaticcio
+- key: francois-clouet
+  name: François Clouet
+  type: Artist
+  roles:
+  - painter
+  - miniaturist
+  born: 1510
+  born_estimated: true
+  died: '1572-12-22'
+  prominence: 3
+  note: French Renaissance miniaturist and painter, son of Jean Clouet, known for detailed portraits of the French royal family.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Fran%C3%A7ois-Clouet.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/5/5b/Fran%C3%A7ois-Clouet.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois-Clouet.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace and royal office captured; attributed portraits are named without years, so no artwork records yet; sitters (Francis I, Henry II, Charles IX, Mary Queen of Scots) not
+    in the database.
+  sources:
+  - wp-francois-clouet
+- key: karel-van-mander
+  name: Karel van Mander
+  type: Artist
+  roles:
+  - painter
+  - playwright
+  - poet
+  - art historian
+  born: 1548
+  died: '1606-09-02'
+  prominence: 3
+  note: Flemish painter, poet and art theorist in the Dutch Republic, best known as author of the Schilder-boeck (1604) and a leader of the Haarlem Mannerists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/Karel-van-mander-schilderboeck.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Karel-van-mander-schilderboeck.JPG/500px-Karel-van-mander-schilderboeck.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Karel-van-mander-schilderboeck.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, travels, Haarlem years, pupil Frans Hals and the Schilder-boeck captured; few paintings survive and none are dated in the article; his literary works not built out.
+  sources:
+  - wp-karel-van-mander
+- key: pierre-mignard
+  name: Pierre Mignard
+  type: Artist
+  roles:
+  - painter
+  born: '1612-11-17'
+  died: '1695-05-30'
+  prominence: 3
+  note: French painter of religious and mythological scenes and portraits, called Mignard le Romain, rival of Charles Le Brun and first painter to Louis XIV after 1690.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/2f/Pierre_Mignard_-_Self-portrait.png
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/2/2f/Pierre_Mignard_-_Self-portrait.png
+  image_page: https://commons.wikimedia.org/wiki/File:Pierre_Mignard_-_Self-portrait.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, Rome and Paris career and rivalry captured; no individual works with years are given in the article, so no artwork records yet.
+  sources:
+  - wp-pierre-mignard
+- key: gerrit-dou
+  name: Gerrit Dou
+  type: Artist
+  roles:
+  - painter
+  born: '1613-04-07'
+  died: '1675-02-09'
+  prominence: 4
+  note: Dutch Golden Age painter of Leiden, a pupil of Rembrandt and leader of the fijnschilders, known for small, highly polished genre scenes and candlelit night-pieces.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/97/Dou%2C_Gerard_-_Self-Portrait_-_c._1665_no_background.png
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/9/97/Dou%2C_Gerard_-_Self-Portrait_-_c._1665_no_background.png
+  image_page: https://commons.wikimedia.org/wiki/File:Dou,_Gerard_-_Self-Portrait_-_c._1665_no_background.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training under Rembrandt, pupils, patrons named and two dated masterpieces captured; the long list of works not built out.
+  sources:
+  - wp-gerrit-dou
+- key: carel-fabritius
+  name: Carel Fabritius
+  type: Artist
+  roles:
+  - painter
+  born: 1622
+  died: '1654-10-12'
+  prominence: 4
+  note: Dutch painter of the Delft School, a pupil of Rembrandt who developed his own style; known for The Goldfinch and killed in the Delft gunpowder explosion.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/07/Carel_Fabritius_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Carel_Fabritius_-_Self-Portrait_-_Google_Art_Project.jpg/500px-Carel_Fabritius_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carel_Fabritius_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, training, death in the 1654 Delft explosion and two dated works captured; only about a dozen paintings survive and the rest not built out.
+  sources:
+  - wp-carel-fabritius
+- key: gabriel-metsu
+  name: Gabriël Metsu
+  type: Artist
+  roles:
+  - painter
+  born: 1629
+  died: 1667
+  prominence: 3
+  note: Dutch painter of Leiden and Amsterdam in history, genre, still-life and portrait painting, influenced by Gerrit Dou and the fijnschilders.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4f/Gabriel_Metsu_-_Portrait_de_l%27artiste_avec_son_%C3%A9pouse.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Gabriel_Metsu_-_Portrait_de_l%27artiste_avec_son_%C3%A9pouse.jpg/500px-Gabriel_Metsu_-_Portrait_de_l%27artiste_avec_son_%C3%A9pouse.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gabriel_Metsu_-_Portrait_de_l%27artiste_avec_son_%C3%A9pouse.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, training, Hinlopen patronage and two dated works captured; the works list in the article is empty and the rest of his 133 works not built out.
+  sources:
+  - wp-gabriel-metsu
+- key: josefa-de-obidos
+  name: Josefa de Óbidos
+  type: Artist
+  roles:
+  - painter
+  born: 1630
+  born_estimated: true
+  died: '1684-07-22'
+  prominence: 3
+  note: Spanish-born Portuguese Baroque painter, known for altarpieces and still lifes; about 150 works are attributed to her.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d3/JosefaObidos1.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/JosefaObidos1.jpg/500px-JosefaObidos1.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:JosefaObidos1.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, two works captured; altarpieces, still lifes and the months series not built out.
+  sources:
+  - wp-josefa-de-obidos
+- key: meindert-hobbema
+  name: Meindert Hobbema
+  type: Artist
+  roles:
+  - painter
+  born: 1638
+  born_estimated: true
+  died: '1709-12-07'
+  prominence: 4
+  note: Dutch Golden Age landscape painter of woodland scenes and water mills, pupil of Jacob van Ruisdael; best known for The Avenue at Middelharnis.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/0d/Portret_van_Meindert_Hobbema%2C_RP-T-1940-528.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Portret_van_Meindert_Hobbema%2C_RP-T-1940-528.jpg/500px-Portret_van_Meindert_Hobbema%2C_RP-T-1940-528.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portret_van_Meindert_Hobbema,_RP-T-1940-528.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, teacher, places and one key work captured; other landscapes (Wallace Collection, Mauritshuis, Getty) not built out.
+  sources:
+  - wp-meindert-hobbema
+- key: andrea-pozzo
+  name: Andrea Pozzo
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: '1642-11-30'
+  died: '1709-08-31'
+  prominence: 4
+  note: Italian Jesuit brother and Baroque painter, architect and stage designer, famed for quadratura ceiling frescoes, above all in Sant'Ignazio in Rome.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/47/Andrea_Pozzo%2C_autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Andrea_Pozzo%2C_autoportrait.jpg/500px-Andrea_Pozzo%2C_autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Andrea_Pozzo,_autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, main places and the Sant'Ignazio ceiling captured; other Jesuit church decorations, altars, the perspective treatise and Vienna works not built out.
+  sources:
+  - wp-andrea-pozzo
+- key: rachel-ruysch
+  name: Rachel Ruysch
+  type: Artist
+  roles:
+  - painter
+  born: '1664-06-03'
+  died: '1750-10-12'
+  prominence: 4
+  note: Dutch Golden Age still-life painter who specialised in flowers and became internationally famous; court painter to the Elector Palatine from 1708.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bd/Portrait_of_Rachel_Ruysch_by_Godfried_Schalcken.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/Portrait_of_Rachel_Ruysch_by_Godfried_Schalcken.jpg/500px-Portrait_of_Rachel_Ruysch_by_Godfried_Schalcken.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Rachel_Ruysch_by_Godfried_Schalcken.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and career captured; no individual dated work named in the article, so no artwork added.
+  sources:
+  - wp-rachel-ruysch
+- key: giovanni-paolo-panini
+  name: Giovanni Paolo Panini
+  type: Artist
+  roles:
+  - painter
+  - architect
+  born: '1691-06-17'
+  died: '1765-10-21'
+  prominence: 4
+  note: Italian Baroque painter and architect of Rome, a leading vedutista known for views of Rome's antiquities and picture-gallery scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/69/Giovanni_Paolo_Pannini_by_Blanchet.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/69/Giovanni_Paolo_Pannini_by_Blanchet.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Pannini_by_Blanchet.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places captured; no famous work with a clear year in the article; pupils (Hubert Robert, Joli, Clérisseau) not in database yet.
+  sources:
+  - wp-giovanni-paolo-panini
+- key: claude-joseph-vernet
+  name: Claude-Joseph Vernet
+  type: Artist
+  roles:
+  - painter
+  born: '1714-08-14'
+  died: '1789-12-03'
+  prominence: 3
+  note: French painter of seascapes and seaports, active in Rome for twenty years, best known for the Ports of France series painted for the crown.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Joseph_Vernet_%281778%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Joseph_Vernet_%281778%29.jpg/500px-%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Joseph_Vernet_%281778%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%C3%89lisabeth-Louise_Vig%C3%A9e-Le_Brun_-_Joseph_Vernet_(1778).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teachers (not in database) and one key work captured; the Ports of France series and Four Times of the Day not built out.
+  sources:
+  - wp-claude-joseph-vernet
+- key: george-stubbs
+  name: George Stubbs
+  type: Artist
+  roles:
+  - painter
+  born: '1724-08-25'
+  died: '1806-07-10'
+  prominence: 4
+  note: English painter best known for his paintings of horses, self-taught, with a deep knowledge of anatomy; painted Whistlejacket.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a8/George_Stubbs_-_self_portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/George_Stubbs_-_self_portrait.jpg/500px-George_Stubbs_-_self_portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:George_Stubbs_-_self_portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, one patron link and the lion-attacking-a-horse series captured; Whistlejacket (no year in article), animal portraits and the anatomy book not built out.
+  sources:
+  - wp-george-stubbs
+- key: jean-baptiste-greuze
+  name: Jean-Baptiste Greuze
+  type: Artist
+  roles:
+  - painter
+  born: '1725-08-21'
+  died: '1805-03-04'
+  prominence: 4
+  note: French painter of portraits, sentimental genre scenes and history painting, admired by Diderot.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bc/Jean-Baptiste_Greuze_-_Self-Portrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Jean-Baptiste_Greuze_-_Self-Portrait.jpg/500px-Jean-Baptiste_Greuze_-_Self-Portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Baptiste_Greuze_-_Self-Portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Academy quarrel and one Salon work captured; other genre paintings not built out.
+  sources:
+  - wp-jean-baptiste-greuze
+- key: francois-gerard
+  name: François Gérard
+  type: Artist
+  roles:
+  - painter
+  born: '1770-05-04'
+  died: '1837-01-11'
+  prominence: 3
+  note: French neoclassical painter, pupil of David, court painter to Napoleon and first painter to Louis XVIII and Charles X; best remembered as a portraitist.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8c/Fran%C3%A7ois_G%C3%A9rard_%281770%E2%80%931837%29%2C_later_Baron_G%C3%A9rard_MET_DP327712.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Fran%C3%A7ois_G%C3%A9rard_%281770%E2%80%931837%29%2C_later_Baron_G%C3%A9rard_MET_DP327712.jpg/500px-Fran%C3%A7ois_G%C3%A9rard_%281770%E2%80%931837%29%2C_later_Baron_G%C3%A9rard_MET_DP327712.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_G%C3%A9rard_(1770%E2%80%931837),_later_Baron_G%C3%A9rard_MET_DP327712.jpg
+  image_license: CC0
+  coverage: partly
+  coverage_note: Dates, teachers, places and two history paintings captured; sitters and patrons (Napoleon, Louis XVIII, Charles X not in database) not linked.
+  sources:
+  - wp-francois-gerard
+- key: christoffer-wilhelm-eckersberg
+  name: Christoffer Wilhelm Eckersberg
+  type: Artist
+  roles:
+  - painter
+  born: '1783-01-02'
+  died: '1853-07-22'
+  prominence: 4
+  note: Danish painter, the "Father of Danish painting", who founded the Golden Age of Danish Painting and taught at the Royal Danish Academy of Art.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e0/C.W._Eckersberg._%281832%29_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/C.W._Eckersberg._%281832%29_%28cropped%29.jpg/500px-C.W._Eckersberg._%281832%29_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:C.W._Eckersberg._(1832)_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, teachers, places and one key work captured; marine paintings, Christiansborg commissions and pupils not built out (the Pupils list is empty in the local text).
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- key: johan-christian-dahl
+  name: Johan Christian Dahl
+  type: Artist
+  roles:
+  - painter
+  born: '1788-02-24'
+  died: '1857-10-14'
+  prominence: 4
+  note: Norwegian Romantic landscape painter, the father of Norwegian landscape painting, who lived mostly in Dresden.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/17/Carl_Christian_Vogel_von_Vogelstein_-_Johan_Christian_Clausen_Dahl.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Carl_Christian_Vogel_von_Vogelstein_-_Johan_Christian_Clausen_Dahl.jpg/500px-Carl_Christian_Vogel_von_Vogelstein_-_Johan_Christian_Clausen_Dahl.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carl_Christian_Vogel_von_Vogelstein_-_Johan_Christian_Clausen_Dahl.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, friendship with Caspar David Friedrich, and one key work captured; patron (Prince Christian Frederik), students (Baade, Balke, Fearnley) and full list of works not built
+    out.
+  sources:
+  - wp-johan-christian-dahl
+- key: george-catlin
+  name: George Catlin
+  type: Artist
+  roles:
+  - painter
+  born: '1796-07-26'
+  died: '1872-12-23'
+  prominence: 4
+  note: American painter and author known for his portraits of Native Americans of the Plains and his travelling Indian Gallery.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5e/William_Fisk_-_George_Catlin_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/William_Fisk_-_George_Catlin_-_Google_Art_Project.jpg/500px-William_Fisk_-_George_Catlin_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:William_Fisk_-_George_Catlin_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, the Indian Gallery and one dated work captured; the later Cartoon Collection, books and South American travels not built out.
+  sources:
+  - wp-george-catlin
+- key: rodolphe-topffer
+  name: Rodolphe Töpffer
+  type: Artist
+  roles:
+  - painter
+  - cartoonist
+  born: '1799-01-31'
+  died: '1846-06-08'
+  prominence: 3
+  note: Swiss teacher, painter and caricaturist, regarded as the father of the comic strip for his illustrated stories such as Histoire de Mr. Vieux Bois.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/32/Rodolfe_Toepffer.png
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/3/32/Rodolfe_Toepffer.png
+  image_page: https://commons.wikimedia.org/wiki/File:Rodolfe_Toepffer.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, Geneva career and one early graphic story captured; the other six published stories, essays and landscape paintings not built out. Place of death not named in the article.
+  sources:
+  - wp-rodolphe-topffer
+- key: ernest-meissonier
+  name: Ernest Meissonier
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1815-02-21'
+  died: '1891-01-31'
+  prominence: 3
+  note: French academic painter famous for minutely detailed scenes of Napoleonic campaigns and genre scenes, one of the most successful artists of the Second Empire.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d1/Ernest_Meissonier_by_RJ_Bingham_ca_1860-75b.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Ernest_Meissonier_by_RJ_Bingham_ca_1860-75b.jpg/500px-Ernest_Meissonier_by_RJ_Bingham_ca_1860-75b.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Ernest_Meissonier_by_RJ_Bingham_ca_1860-75b.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, Solferino commission and one key work captured; teacher (Cogniet) and patron (Napoleon III) not linked as they are not in the database; full portfolio not built out.
+  sources:
+  - wp-ernest-meissonier
+- key: jules-breton
+  name: Jules Breton
+  type: Artist
+  roles:
+  - painter
+  born: '1827-05-01'
+  died: '1906-07-05'
+  prominence: 3
+  note: French naturalist painter of rural life in Artois, best known for The Song of the Lark and The Gleaners.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Jules_Breton_%28cropped%29.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/1/16/Jules_Breton_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jules_Breton_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training places and one key work captured; teachers (De Vigne, Wappers, Drolling) not linked as they are not in the database; other works not built out.
+  sources:
+  - wp-jules-breton
+- key: anselm-feuerbach
+  name: Anselm Feuerbach
+  type: Artist
+  roles:
+  - painter
+  born: '1829-09-12'
+  died: '1880-01-04'
+  prominence: 3
+  note: German neoclassical painter of the 19th century, one of the Deutschroemer, who worked in Rome and Vienna and died in Venice.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/Anselm_Feuerbach_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Anselm_Feuerbach_-_Self-Portrait_-_Google_Art_Project.jpg/500px-Anselm_Feuerbach_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Anselm_Feuerbach_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places and two dated works captured; patrons (Grand Duke Friedrich of Baden, Count Schack) not linked as not in the database; his Vienna students and other works not built
+    out.
+  sources:
+  - wp-anselm-feuerbach
+- key: leon-bonnat
+  name: Léon Bonnat
+  type: Artist
+  roles:
+  - painter
+  born: '1833-06-20'
+  died: '1922-09-08'
+  prominence: 3
+  note: French academic portraitist and influential teacher at the Ecole des Beaux-Arts, who founded the Musee Bonnat in Bayonne.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/3e/L%C3%A9on_Bonnat_-_Autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/L%C3%A9on_Bonnat_-_Autoportrait.jpg/500px-L%C3%A9on_Bonnat_-_Autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:L%C3%A9on_Bonnat_-_Autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places, teaching links to students already in the database and the Bayonne museum captured; no single work has a clear year in the article, so no artwork; other students
+    not in the database not built out.
+  sources:
+  - wp-leon-bonnat
+- key: anton-mauve
+  name: Anton Mauve
+  type: Artist
+  roles:
+  - painter
+  born: '1838-09-18'
+  died: '1888-02-05'
+  prominence: 3
+  note: Dutch realist painter and leading member of the Hague School, known for peasants and sheep, and an early teacher of Vincent van Gogh.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/AntonMauve.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/d/de/AntonMauve.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:AntonMauve.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and the van Gogh link captured; no work has a clear year in the article, so no artwork; masters (Van Os, Verschuur) not in the database.
+  sources:
+  - wp-anton-mauve
+- key: christian-krohg
+  name: Christian Krohg
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1852-08-13'
+  died: '1925-10-16'
+  prominence: 3
+  note: Norwegian naturalist painter, illustrator, author and journalist, first professor at the Norwegian Academy of Arts and a leading figure in the move from romanticism to naturalism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/34/Portrett_av_Christian_Krohg%2C_ca_1903.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Portrett_av_Christian_Krohg%2C_ca_1903.jpg/500px-Portrett_av_Christian_Krohg%2C_ca_1903.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Portrett_av_Christian_Krohg,_ca_1903.jpg
+  image_license: CC BY 2.0
+  coverage: partly
+  coverage_note: Dates, training, places and career captured; the painting Albertine has no year in the article, so no artwork; teachers (Gude, Gussow) not in the database.
+  sources:
+  - wp-christian-krohg
+- key: francesco-filippini
+  name: Francesco Filippini
+  type: Artist
+  roles:
+  - painter
+  born: '1853-09-18'
+  died: '1895-03-06'
+  prominence: 1
+  note: Italian painter from Brescia in Lombardy, a landscape painter influenced by Tranquillo Cremona.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/0/03/Francesco_Filippini%2C_Autoritratto_giovanile%2C_1873-1875%2C_olio_su_cartone%2C_32_x_21_cm%2C_Musei_Civici_d%27Arte_e_storia_%28Brescia%29%2C_inv._1526.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Francesco_Filippini%2C_Autoritratto_giovanile%2C_1873-1875%2C_olio_su_cartone%2C_32_x_21_cm%2C_Musei_Civici_d%27Arte_e_storia_%28Brescia%29%2C_inv._1526.jpg/500px-Francesco_Filippini%2C_Autoritratto_giovanile%2C_1873-1875%2C_olio_su_cartone%2C_32_x_21_cm%2C_Musei_Civici_d%27Arte_e_storia_%28Brescia%29%2C_inv._1526.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Francesco_Filippini,_Autoritratto_giovanile,_1873-1875,_olio_su_cartone,_32_x_21_cm,_Musei_Civici_d%27Arte_e_storia_(Brescia),_inv._1526.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and training captured; the article names no dated works, so no artwork.
+  sources:
+  - wp-francesco-filippini
+- key: louise-abbema
+  name: Louise Abbéma
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - designer
+  born: '1853-10-30'
+  died: '1927-07-29'
+  prominence: 2
+  note: French painter, sculptor and designer of the Belle Epoque, official painter of the Third Republic and a portraitist of Sarah Bernhardt.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d5/Louise_Abb%C3%A9ma_1914_%282%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Louise_Abb%C3%A9ma_1914_%282%29.jpg/500px-Louise_Abb%C3%A9ma_1914_%282%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Louise_Abb%C3%A9ma_1914_(2).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places and career captured; teachers (Chaplin, Henner, Carolus-Duran) not in the database; no work has a clear year in the article, so no artwork.
+  sources:
+  - wp-louise-abbema
+- key: marianne-von-werefkin
+  name: Marianne von Werefkin
+  type: Artist
+  roles:
+  - painter
+  born: '1860-09-10'
+  died: '1938-02-06'
+  prominence: 3
+  note: Russian-born Expressionist painter active in Munich and, from 1914, Switzerland; founded the Brotherhood of St. Luke and was a leading figure of the circle around the Blue Rider.
+  sources:
+  - wp-marianne-von-werefkin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Werefkin%2C_Marianne_von_-_Selfportrait_I_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Werefkin%2C_Marianne_von_-_Selfportrait_I_-_Google_Art_Project.jpg/500px-Werefkin%2C_Marianne_von_-_Selfportrait_I_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Werefkin,_Marianne_von_-_Selfportrait_I_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher, places and one dated work captured; full portfolio and exhibitions not built out.
+- key: kuzma-petrov-vodkin
+  name: Kuzma Petrov-Vodkin
+  type: Artist
+  roles:
+  - painter
+  born: '1878-11-05'
+  died: '1939-02-15'
+  prominence: 3
+  note: Russian and Soviet painter known for icon-influenced work and his "spherical perspective"; first president of the Leningrad Union of Artists.
+  sources:
+  - wp-kuzma-petrov-vodkin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Kuzma_petrov-vodkin%2C_autoritratto%2C_1918%2C_dett.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Kuzma_petrov-vodkin%2C_autoritratto%2C_1918%2C_dett.JPG/500px-Kuzma_petrov-vodkin%2C_autoritratto%2C_1918%2C_dett.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:Kuzma_petrov-vodkin,_autoritratto,_1918,_dett.JPG
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, teachers, places and one key work captured; other works and his writings not built out.
+- key: carlo-carra
+  name: Carlo Carra
+  type: Artist
+  roles:
+  - painter
+  born: '1881-02-11'
+  died: '1966-04-13'
+  prominence: 4
+  note: Italian painter, a leading Futurist and later co-founder with de Chirico of metaphysical painting; best known for The Funeral of the Anarchist Galli.
+  sources:
+  - wp-carlo-carra
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_%28cropped%29.jpg/500px-Carr%C3%A0_in_front_of_Le_Figaro%2C_Paris%2C_9_February_1912_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Carr%C3%A0_in_front_of_Le_Figaro,_Paris,_9_February_1912_(cropped).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one key work captured; later works and writings not built out.
+- key: max-pechstein
+  name: Max Pechstein
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1881-12-31'
+  died: '1955-06-29'
+  prominence: 3
+  note: German Expressionist painter and printmaker, a member of Die Brucke whose work was classed as Degenerate Art by the Nazis.
+  sources:
+  - wp-max-pechstein
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/Fotothek_df_pk_0000220_029_Portr%C3%A4ts%2C_Max_Pechstein_%28cropped%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Fotothek_df_pk_0000220_029_Portr%C3%A4ts%2C_Max_Pechstein_%28cropped%29.jpg/500px-Fotothek_df_pk_0000220_029_Portr%C3%A4ts%2C_Max_Pechstein_%28cropped%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fotothek_df_pk_0000220_029_Portr%C3%A4ts,_Max_Pechstein_(cropped).jpg
+  image_license: CC BY-SA 3.0 de
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; the Works list and prints not built out.
+- key: george-bellows
+  name: George Bellows
+  type: Artist
+  roles:
+  - painter
+  born: 1882
+  died: '1925-01-08'
+  prominence: 4
+  note: American realist painter of the Ashcan circle, known for bold scenes of New York City life and his boxing paintings.
+  sources:
+  - wp-george-bellows
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/39/George_bellows.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/George_bellows.jpg/500px-George_bellows.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:George_bellows.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one dated work captured; boxing series, lithographs and war works not built out.
+- key: luigi-russolo
+  name: Luigi Russolo
+  type: Artist
+  roles:
+  - painter
+  - composer
+  born: '1885-04-30'
+  died: '1947-02-04'
+  prominence: 3
+  note: Italian Futurist painter and composer, author of The Art of Noises (1913) and builder of the Intonarumori noise instruments.
+  sources:
+  - wp-luigi-russolo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8c/Luigi_Russolo_ca._1916.gif
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8c/Luigi_Russolo_ca._1916.gif/500px-Luigi_Russolo_ca._1916.gif
+  image_page: https://commons.wikimedia.org/wiki/File:Luigi_Russolo_ca._1916.gif
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and the noise-music work captured; no paintings dated in the article, no birth or death place given.
+- key: thomas-hart-benton
+  name: Thomas Hart Benton
+  type: Artist
+  roles:
+  - painter
+  - muralist
+  - printmaker
+  born: '1889-04-15'
+  died: '1975-01-19'
+  prominence: 4
+  note: American Regionalist painter and muralist from Missouri, teacher of Jackson Pollock.
+  sources:
+  - wp-thomas-hart-benton
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/d2/Tom_benton.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/Tom_benton.jpg/500px-Tom_benton.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Tom_benton.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, teaching and one mural cycle captured; other murals, lithographs and students not built out.
+- key: remedios-varo
+  name: Remedios Varo
+  type: Artist
+  roles:
+  - painter
+  - writer
+  - graphic artist
+  born: '1908-12-16'
+  died: '1963-10-08'
+  prominence: 4
+  note: Spanish Surrealist painter who fled Europe for Mexico in 1941, known for fantastical scenes mixing science, mysticism and magic.
+  sources:
+  - wp-remedios-varo
+  coverage: partly
+  coverage_note: Dates, places and her last finished canvas captured; other works and writings not built out.
+- key: pierre-soulages
+  name: Pierre Soulages
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - sculptor
+  born: '1919-12-24'
+  died: '2022-10-25'
+  prominence: 4
+  note: French abstract painter known as the painter of black, who named his practice Outrenoir and made the stained-glass windows of the abbey church at Conques.
+  sources:
+  - wp-pierre-soulages
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/655446-artiste-pierre-soulages.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/655446-artiste-pierre-soulages.jpg/500px-655446-artiste-pierre-soulages.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:655446-artiste-pierre-soulages.jpg
+  image_license: CC BY-SA 3.0
+  coverage: partly
+  coverage_note: Dates, places and the Conques windows captured; individual Peinture canvases not built out.
+- key: jorg-immendorff
+  name: Jorg Immendorff
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - stage designer
+  born: '1945-06-14'
+  died: 2007
+  prominence: 3
+  note: German painter, sculptor and professor of the Neue Wilde, best known for the political Cafe Deutschland series.
+  sources:
+  - wp-jorg-immendorff
+  coverage: partly
+  coverage_note: Dates, places and the Cafe Deutschland series captured; other cycles and sculptures not built out.
+artworks:
+- key: virgin-among-the-virgins
+  name: The Virgin among the Virgins
+  kind: painting
+  made: 1509
+  estimated: true
+  collection: Rouen museum
+  people:
+  - person: gerard-david
+    role: creator
+  places:
+  - place: rouen
+    role: held
+  prominence: 4
+  note: David's only documented work; he donated it to the Carmelite Nuns of Sion at Bruges. The year is that of the self-portrait within it, per the article (1509).
+  sources:
+  - wp-gerard-david
+- key: salle-d-hercule-fontainebleau
+  name: Salle d'Hercule, Fontainebleau
+  made: 1530
+  made_end: 1559
+  estimated: true
+  people:
+  - person: francesco-primaticcio
+    role: creator
+  places:
+  - place: fontainebleau-castle
+    role: made
+  prominence: 3
+  note: Primaticcio's masterpiece; he and his team worked on it from the 1530s to 1559 (start year approximate).
+  sources:
+  - wp-francesco-primaticcio
+- key: the-dropsical-woman
+  name: The Dropsical Woman
+  made: 1663
+  collection: Louvre
+  people:
+  - person: gerrit-dou
+    role: creator
+  prominence: 3
+  note: Generally considered Dou's chef-d'oeuvre, with The Dutch Housewife.
+  sources:
+  - wp-gerrit-dou
+- key: the-dutch-housewife
+  name: The Dutch Housewife
+  made: 1650
+  collection: Louvre
+  people:
+  - person: gerrit-dou
+    role: creator
+  prominence: 3
+  sources:
+  - wp-gerrit-dou
+- key: a-view-of-delft-with-a-musical-instrument-sellers-stall
+  name: A View of Delft, with a Musical Instrument Seller's Stall
+  made: 1652
+  collection: National Gallery, London
+  people:
+  - person: carel-fabritius
+    role: creator
+  places:
+  - place: delft
+    role: depicts
+  prominence: 3
+  note: Shows Fabritius's interest in exaggerated perspective.
+  sources:
+  - wp-carel-fabritius
+- key: the-goldfinch-fabritius
+  name: The Goldfinch
+  made: 1654
+  people:
+  - person: carel-fabritius
+    role: creator
+  prominence: 4
+  note: Found intact among the ruins after the Delft explosion of 1654 that killed Fabritius.
+  sources:
+  - wp-carel-fabritius
+- key: woman-taken-in-adultery-metsu
+  name: Woman Taken in Adultery
+  made: 1653
+  collection: Louvre
+  people:
+  - person: gabriel-metsu
+    role: creator
+  prominence: 3
+  note: Painted under the influence of Rembrandt, per the article.
+  sources:
+  - wp-gabriel-metsu
+- key: the-sick-child-metsu
+  name: The Sick Child
+  made: 1664
+  estimated: true
+  collection: Rijksmuseum
+  people:
+  - person: gabriel-metsu
+    role: creator
+  prominence: 3
+  sources:
+  - wp-gabriel-metsu
+- key: portrait-of-faustino-das-neves
+  name: Portrait of Faustino das Neves
+  kind: portrait
+  made: 1670
+  estimated: true
+  collection: Municipal Museum of Óbidos
+  people:
+  - person: josefa-de-obidos
+    role: creator
+  places:
+  - place: obidos
+    role: held
+  prominence: 3
+  note: Described in the article as her best known portrait.
+  sources:
+  - wp-josefa-de-obidos
+- key: mystical-marriage-of-st-catherine-josefa
+  name: Mystical Marriage of St. Catherine
+  kind: painting
+  medium: on copper
+  made: 1647
+  collection: Museu Nacional de Arte Antiga, Lisbon
+  people:
+  - person: josefa-de-obidos
+    role: creator
+  places:
+  - place: coimbra
+    role: made-for
+  prominence: 2
+  note: Her first signed painting, made for the Augustinian Monastery of Santa Cruz in Coimbra.
+  sources:
+  - wp-josefa-de-obidos
+- key: the-avenue-at-middelharnis
+  name: The Avenue at Middelharnis
+  kind: painting
+  made: 1689
+  collection: National Gallery, London
+  people:
+  - person: meindert-hobbema
+    role: creator
+  places:
+  - place: london
+    role: held
+  prominence: 4
+  note: A late, accurate view of a specific man-made landscape, unlike his usual woodland scenes.
+  sources:
+  - wp-meindert-hobbema
+- key: apotheosis-of-st-ignatius-pozzo
+  name: Apotheosis of St. Ignatius (nave ceiling of Sant'Ignazio)
+  kind: fresco
+  made: 1685
+  made_end: 1694
+  people:
+  - person: andrea-pozzo
+    role: creator
+  places:
+  - place: sant-ignazio-rome
+    role: made-for
+  prominence: 4
+  note: Illusionistic ceiling and trompe-l'oeil dome on canvas, 17 m across, called his masterpiece. The article gives the painting dates for the dome, apse and ceiling together as 1685-1694.
+  sources:
+  - wp-andrea-pozzo
+- key: the-port-of-rochefort
+  name: The Port of Rochefort
+  kind: painting
+  made: 1763
+  collection: Musée national de la Marine
+  people:
+  - person: claude-joseph-vernet
+    role: creator
+  prominence: 3
+  note: From the series of the seaports of France painted by royal command.
+  sources:
+  - wp-claude-joseph-vernet
+- key: a-lion-attacking-a-horse-stubbs
+  name: A Lion Attacking a Horse
+  kind: painting
+  made: 1762
+  made_end: 1763
+  estimated: true
+  collection: Yale Center for British Art
+  people:
+  - person: george-stubbs
+    role: creator
+  prominence: 4
+  note: Life-size, the earliest of a series of at least 17 images on the theme; commissioned by the 2nd Marquess of Rockingham (not in the database).
+  sources:
+  - wp-george-stubbs
+- key: le-mauvais-fils-puni
+  name: Le Mauvais fils puni (The Wicked Son Punished)
+  kind: painting
+  made: 1765
+  collection: Louvre
+  people:
+  - person: jean-baptiste-greuze
+    role: creator
+  prominence: 3
+  note: Exhibited at the Salon of 1765 with La Malédiction paternelle, when Greuze reached the height of his reputation.
+  sources:
+  - wp-jean-baptiste-greuze
+- key: belisaire-gerard
+  name: Bélisaire
+  kind: painting
+  made: 1795
+  people:
+  - person: francois-gerard
+    role: creator
+  prominence: 3
+  note: Called his famous Bélisaire in the article.
+  sources:
+  - wp-francois-gerard
+- key: entry-of-henri-iv-into-paris-gerard
+  name: L'Entrée d'Henri IV à Paris
+  kind: painting
+  made: 1817
+  collection: Versailles
+  people:
+  - person: francois-gerard
+    role: creator
+  prominence: 3
+  note: History painting made in homage to the returned Louis XVIII.
+  sources:
+  - wp-francois-gerard
+- key: nathanson-family-portrait
+  name: The Nathanson Family (Det Nathansonske Familiebillede)
+  kind: portrait
+  made: 1818
+  people:
+  - person: christoffer-wilhelm-eckersberg
+    role: creator
+  prominence: 3
+  note: One of his best known portraits of the Copenhagen middle class.
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- key: fra-stalheim
+  name: Fra Stalheim
+  kind: painting
+  made: 1842
+  collection: National Museum of Art, Architecture and Design, Oslo
+  people:
+  - person: johan-christian-dahl
+    role: creator
+  places:
+  - place: oslo
+    role: held
+  prominence: 3
+  note: Listed among Dahl's significant works as Stalheim (1842), a monumental mountain view; the article lists it in the Oslo museum's collection.
+  sources:
+  - wp-johan-christian-dahl
+- key: comanche-feats-of-horsemanship
+  name: Comanche Feats of Horsemanship
+  kind: painting
+  made: 1834
+  people:
+  - person: george-catlin
+    role: creator
+  prominence: 3
+  note: Painted by Catlin in 1834; the article notes it featured in an episode of the series Watchmen.
+  sources:
+  - wp-george-catlin
+- key: histoire-de-mr-vieux-bois
+  name: Histoire de Mr. Vieux Bois
+  kind: illustrated book
+  made: 1827
+  people:
+  - person: rodolphe-topffer
+    role: creator
+  prominence: 4
+  note: Completed by 1827 but not published until 1837; 30 pages of captioned panels, translated in the United States in 1842 as The Adventures of Obadiah Oldbuck, considered one of the earliest European
+    comics.
+  sources:
+  - wp-rodolphe-topffer
+- key: the-quarrel-meissonier
+  name: The Quarrel (La Rixe)
+  kind: painting
+  made: 1855
+  people:
+  - person: ernest-meissonier
+    role: creator
+  prominence: 3
+  note: Exhibited in 1855 with The Gamblers, at what the article calls the highest mark of his achievement; presented by Napoleon III to the English Court.
+  sources:
+  - wp-ernest-meissonier
+- key: the-song-of-the-lark
+  name: The Song of the Lark
+  kind: painting
+  made: 1884
+  collection: Art Institute of Chicago
+  people:
+  - person: jules-breton
+    role: creator
+  prominence: 4
+  note: Named in 1934 the most beloved work of art in America in a Chicago Daily News contest; gave Willa Cather's 1915 novel its title.
+  sources:
+  - wp-jules-breton
+- key: hafiz-at-the-fountain
+  name: Hafiz at the Fountain
+  kind: painting
+  made: 1852
+  people:
+  - person: anselm-feuerbach
+    role: creator
+  places:
+  - place: paris
+    role: made
+  prominence: 3
+  note: Feuerbach's first masterpiece, produced in Paris.
+  sources:
+  - wp-anselm-feuerbach
+- key: the-symposium-of-plato-feuerbach
+  name: The Symposium of Plato
+  kind: painting
+  made: 1869
+  made_end: 1874
+  people:
+  - person: anselm-feuerbach
+    role: creator
+  prominence: 3
+  note: Two versions were painted between 1869 and 1874.
+  sources:
+  - wp-anselm-feuerbach
+- key: zwillinge-werefkin
+  name: Zwillinge (Twins)
+  kind: painting
+  made: 1909
+  people:
+  - person: marianne-von-werefkin
+    role: creator
+  prominence: 2
+  sources:
+  - wp-marianne-von-werefkin
+- key: bathing-of-a-red-horse
+  name: Bathing of a Red Horse
+  kind: painting
+  made: 1912
+  note: Described in the article as his most iconic work and a symbol of the coming social changes.
+  people:
+  - person: kuzma-petrov-vodkin
+    role: creator
+  prominence: 4
+  sources:
+  - wp-kuzma-petrov-vodkin
+- key: the-funeral-of-the-anarchist-galli
+  name: The Funeral of the Anarchist Galli
+  kind: painting
+  made: 1911
+  note: Carra's best-known Futurist work.
+  people:
+  - person: carlo-carra
+    role: creator
+  prominence: 4
+  sources:
+  - wp-carlo-carra
+- key: the-yellow-mask-i
+  name: The Yellow Mask I
+  kind: painting
+  made: 1910
+  note: Portrait of a woman wearing a yellow mask.
+  people:
+  - person: max-pechstein
+    role: creator
+  prominence: 2
+  sources:
+  - wp-max-pechstein
+- key: men-of-the-docks
+  name: Men of the Docks
+  kind: painting
+  made: 1912
+  collection: National Gallery, London
+  note: Depicts the Brooklyn docks with the Manhattan skyline behind.
+  people:
+  - person: george-bellows
+    role: creator
+  places:
+  - place: brooklyn
+    role: depicts
+  prominence: 3
+  sources:
+  - wp-george-bellows
+- key: america-today
+  name: America Today
+  kind: mural
+  made: 1930
+  made_end: 1931
+  note: Ten-panel mural cycle painted for the New School for Social Research in New York City.
+  people:
+  - person: thomas-hart-benton
+    role: creator
+  prominence: 4
+  sources:
+  - wp-thomas-hart-benton
+- key: still-life-reviving
+  name: Still Life Reviving
+  kind: painting
+  made: 1963
+  note: Varo's final finished canvas.
+  people:
+  - person: remedios-varo
+    role: creator
+  prominence: 3
+  sources:
+  - wp-remedios-varo
+- key: conques-stained-glass-windows
+  name: Stained-glass windows of the Abbey Church of Sainte-Foy
+  kind: stained glass
+  made: 1987
+  made_end: 1994
+  note: 104 windows made after about 700 tests at a small factory near Munster, Germany.
+  people:
+  - person: pierre-soulages
+    role: creator
+  places:
+  - place: abbey-church-of-sainte-foy-conques
+    role: made-for
+  prominence: 4
+  sources:
+  - wp-pierre-soulages
+- key: cafe-deutschland
+  name: Cafe Deutschland
+  kind: painting series
+  made: 1977
+  made_end: 1984
+  note: Sixteen large paintings inspired by Renato Guttuso's Caffe Greco; disco-goers stand for the conflict between East and West Germany.
+  people:
+  - person: jorg-immendorff
+    role: creator
+  prominence: 3
+  sources:
+  - wp-jorg-immendorff
+links:
+- teacher: hans-holbein-the-elder
+  student: hans-holbein-the-younger
+  sources:
+  - wp-hans-holbein-the-elder
+- teacher: andrea-del-sarto
+  student: rosso-fiorentino
+  sources:
+  - wp-rosso-fiorentino
+- teacher: giulio-romano
+  student: francesco-primaticcio
+  sources:
+  - wp-francesco-primaticcio
+- teacher: karel-van-mander
+  student: frans-hals
+  sources:
+  - wp-karel-van-mander
+- teacher: simon-vouet
+  student: pierre-mignard
+  sources:
+  - wp-pierre-mignard
+- teacher: rembrandt
+  student: gerrit-dou
+  sources:
+  - wp-gerrit-dou
+- teacher: rembrandt
+  student: carel-fabritius
+  sources:
+  - wp-carel-fabritius
+- teacher: gerrit-dou
+  student: gabriel-metsu
+  sources:
+  - wp-gerrit-dou
+  - wp-gabriel-metsu
+- teacher: jacob-van-ruisdael
+  student: meindert-hobbema
+  sources:
+  - wp-meindert-hobbema
+- teacher: jacques-louis-david
+  student: francois-gerard
+  sources:
+  - wp-francois-gerard
+- teacher: nicolai-abildgaard
+  student: christoffer-wilhelm-eckersberg
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- teacher: jacques-louis-david
+  student: christoffer-wilhelm-eckersberg
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- patron: george-iv
+  artist: george-stubbs
+  sources:
+  - wp-george-stubbs
+- teacher: leon-bonnat
+  student: john-singer-sargent
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: gustave-caillebotte
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: georges-braque
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: thomas-eakins
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: raoul-dufy
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: edvard-munch
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: henri-de-toulouse-lautrec
+  sources:
+  - wp-leon-bonnat
+- teacher: leon-bonnat
+  student: peder-severin-kryer
+  sources:
+  - wp-leon-bonnat
+- teacher: paul-delaroche
+  student: leon-bonnat
+  sources:
+  - wp-leon-bonnat
+- teacher: thomas-couture
+  student: anselm-feuerbach
+  sources:
+  - wp-anselm-feuerbach
+- teacher: anton-mauve
+  student: vincent-van-gogh
+  sources:
+  - wp-anton-mauve
+- teacher: ilya-repin
+  student: marianne-von-werefkin
+  sources:
+  - wp-marianne-von-werefkin
+- teacher: marianne-von-werefkin
+  student: alexej-von-jawlensky
+  sources:
+  - wp-marianne-von-werefkin
+- teacher: valentin-serov
+  student: kuzma-petrov-vodkin
+  sources:
+  - wp-kuzma-petrov-vodkin
+- teacher: isaac-levitan
+  student: kuzma-petrov-vodkin
+  sources:
+  - wp-kuzma-petrov-vodkin
+- teacher: konstantin-korovin
+  student: kuzma-petrov-vodkin
+  sources:
+  - wp-kuzma-petrov-vodkin
+- teacher: thomas-hart-benton
+  student: jackson-pollock
+  sources:
+  - wp-thomas-hart-benton
+moments:
+- person: gerard-david
+  role: born
+  place: oudewater
+  sources:
+  - wp-gerard-david
+- person: gerard-david
+  role: worked
+  place: bruges
+  year: 1483
+  sources:
+  - wp-gerard-david
+- person: gerard-david
+  role: buried
+  place: church-of-our-lady-bruges
+  year: 1523
+  sources:
+  - wp-gerard-david
+- person: hans-holbein-the-elder
+  role: born
+  place: augsburg
+  sources:
+  - wp-hans-holbein-the-elder
+- person: hans-holbein-the-elder
+  role: worked
+  place: weingarten-abbey
+  year: 1493
+  sources:
+  - wp-hans-holbein-the-elder
+- person: hans-holbein-the-elder
+  role: worked
+  place: augsburg
+  year: 1494
+  sources:
+  - wp-hans-holbein-the-elder
+- person: hans-holbein-the-elder
+  role: died
+  place: issenheim
+  year: 1524
+  sources:
+  - wp-hans-holbein-the-elder
+- person: dosso-dossi
+  role: born
+  place: san-giovanni-del-dosso
+  sources:
+  - wp-dosso-dossi
+- person: dosso-dossi
+  role: worked
+  place: mantua
+  year: 1512
+  sources:
+  - wp-dosso-dossi
+- person: dosso-dossi
+  role: worked
+  place: ferrara
+  year: 1514
+  sources:
+  - wp-dosso-dossi
+- person: rosso-fiorentino
+  role: born
+  place: florence
+  year: 1495
+  sources:
+  - wp-rosso-fiorentino
+- person: rosso-fiorentino
+  role: worked
+  place: rome
+  year: 1523
+  sources:
+  - wp-rosso-fiorentino
+- person: rosso-fiorentino
+  role: worked
+  place: fontainebleau-castle
+  year: 1530
+  sources:
+  - wp-rosso-fiorentino
+- person: francesco-primaticcio
+  role: born
+  place: bologna
+  year: 1504
+  sources:
+  - wp-francesco-primaticcio
+- person: francesco-primaticcio
+  role: worked
+  place: fontainebleau-castle
+  year: 1532
+  sources:
+  - wp-francesco-primaticcio
+- person: francois-clouet
+  role: born
+  place: tours
+  sources:
+  - wp-francois-clouet
+- person: karel-van-mander
+  role: born
+  place: meulebeke
+  year: 1548
+  sources:
+  - wp-karel-van-mander
+- person: karel-van-mander
+  role: worked
+  place: rome
+  year: 1573
+  sources:
+  - wp-karel-van-mander
+- person: karel-van-mander
+  role: worked
+  place: haarlem
+  year: 1583
+  sources:
+  - wp-karel-van-mander
+- person: pierre-mignard
+  role: born
+  place: troyes
+  year: 1612
+  sources:
+  - wp-pierre-mignard
+- person: pierre-mignard
+  role: worked
+  place: rome
+  year: 1635
+  sources:
+  - wp-pierre-mignard
+- person: pierre-mignard
+  role: worked
+  place: paris
+  year: 1657
+  sources:
+  - wp-pierre-mignard
+- person: pierre-mignard
+  role: died
+  place: paris
+  year: 1695
+  sources:
+  - wp-pierre-mignard
+- person: gerrit-dou
+  role: born
+  place: leiden
+  year: 1613
+  sources:
+  - wp-gerrit-dou
+- person: gerrit-dou
+  role: died
+  place: leiden
+  year: 1675
+  sources:
+  - wp-gerrit-dou
+- person: carel-fabritius
+  role: born
+  place: middenbeemster
+  year: 1622
+  sources:
+  - wp-carel-fabritius
+- person: carel-fabritius
+  role: worked
+  place: delft
+  year: 1650
+  sources:
+  - wp-carel-fabritius
+- person: carel-fabritius
+  role: died
+  place: delft
+  year: 1654
+  sources:
+  - wp-carel-fabritius
+- person: carel-fabritius
+  role: buried
+  place: oude-kerk-delft
+  year: 1654
+  sources:
+  - wp-carel-fabritius
+- person: gabriel-metsu
+  role: worked
+  place: leiden
+  year: 1648
+  sources:
+  - wp-gabriel-metsu
+- person: gabriel-metsu
+  role: worked
+  place: amsterdam
+  year: 1655
+  sources:
+  - wp-gabriel-metsu
+- person: gabriel-metsu
+  role: buried
+  place: nieuwe-kerk-amsterdam
+  year: 1667
+  sources:
+  - wp-gabriel-metsu
+- person: josefa-de-obidos
+  role: born
+  place: seville
+  year: 1630
+  sources:
+  - wp-josefa-de-obidos
+- person: josefa-de-obidos
+  role: worked
+  place: coimbra
+  year: 1646
+  sources:
+  - wp-josefa-de-obidos
+- person: josefa-de-obidos
+  role: worked
+  place: obidos
+  year: 1661
+  sources:
+  - wp-josefa-de-obidos
+- person: josefa-de-obidos
+  role: buried
+  place: obidos
+  year: 1684
+  sources:
+  - wp-josefa-de-obidos
+- person: meindert-hobbema
+  role: born
+  place: amsterdam
+  year: 1638
+  sources:
+  - wp-meindert-hobbema
+- person: meindert-hobbema
+  role: worked
+  place: amsterdam
+  year: 1668
+  sources:
+  - wp-meindert-hobbema
+- person: meindert-hobbema
+  role: died
+  place: amsterdam
+  year: 1709
+  sources:
+  - wp-meindert-hobbema
+- person: meindert-hobbema
+  role: buried
+  place: westerkerk-amsterdam
+  year: 1709
+  sources:
+  - wp-meindert-hobbema
+- person: andrea-pozzo
+  role: born
+  place: trento
+  year: 1642
+  sources:
+  - wp-andrea-pozzo
+- person: andrea-pozzo
+  role: worked
+  place: milan
+  year: 1668
+  sources:
+  - wp-andrea-pozzo
+- person: andrea-pozzo
+  role: worked
+  place: rome
+  year: 1681
+  sources:
+  - wp-andrea-pozzo
+- person: andrea-pozzo
+  role: died
+  place: vienna
+  year: 1709
+  sources:
+  - wp-andrea-pozzo
+- person: andrea-pozzo
+  role: buried
+  place: jesuit-church-vienna
+  year: 1709
+  sources:
+  - wp-andrea-pozzo
+- person: rachel-ruysch
+  role: born
+  place: the-hague
+  year: 1664
+  sources:
+  - wp-rachel-ruysch
+- person: rachel-ruysch
+  role: worked
+  place: amsterdam
+  year: 1679
+  sources:
+  - wp-rachel-ruysch
+- person: rachel-ruysch
+  role: worked
+  place: the-hague
+  year: 1699
+  sources:
+  - wp-rachel-ruysch
+- person: rachel-ruysch
+  role: worked
+  place: dusseldorf
+  year: 1708
+  sources:
+  - wp-rachel-ruysch
+- person: rachel-ruysch
+  role: died
+  place: amsterdam
+  year: 1750
+  sources:
+  - wp-rachel-ruysch
+- person: giovanni-paolo-panini
+  role: born
+  place: piacenza
+  year: 1691
+  sources:
+  - wp-giovanni-paolo-panini
+- person: giovanni-paolo-panini
+  role: worked
+  place: rome
+  year: 1711
+  sources:
+  - wp-giovanni-paolo-panini
+- person: giovanni-paolo-panini
+  role: died
+  place: rome
+  year: 1765
+  sources:
+  - wp-giovanni-paolo-panini
+- person: claude-joseph-vernet
+  role: born
+  place: avignon
+  year: 1714
+  sources:
+  - wp-claude-joseph-vernet
+- person: claude-joseph-vernet
+  role: worked
+  place: rome
+  year: 1734
+  sources:
+  - wp-claude-joseph-vernet
+- person: claude-joseph-vernet
+  role: worked
+  place: paris
+  year: 1753
+  sources:
+  - wp-claude-joseph-vernet
+- person: claude-joseph-vernet
+  role: died
+  place: paris
+  year: 1789
+  sources:
+  - wp-claude-joseph-vernet
+- person: george-stubbs
+  role: born
+  place: liverpool
+  year: 1724
+  sources:
+  - wp-george-stubbs
+- person: george-stubbs
+  role: worked
+  place: york
+  year: 1745
+  sources:
+  - wp-george-stubbs
+- person: george-stubbs
+  role: worked
+  place: london
+  year: 1759
+  sources:
+  - wp-george-stubbs
+- person: george-stubbs
+  role: died
+  place: london
+  year: 1806
+  sources:
+  - wp-george-stubbs
+- person: jean-baptiste-greuze
+  role: born
+  place: tournus
+  year: 1725
+  sources:
+  - wp-jean-baptiste-greuze
+- person: jean-baptiste-greuze
+  role: died
+  place: paris
+  year: 1805
+  sources:
+  - wp-jean-baptiste-greuze
+- person: francois-gerard
+  role: born
+  place: rome
+  year: 1770
+  sources:
+  - wp-francois-gerard
+- person: francois-gerard
+  role: worked
+  place: paris
+  year: 1791
+  sources:
+  - wp-francois-gerard
+- person: christoffer-wilhelm-eckersberg
+  role: worked
+  place: copenhagen
+  year: 1803
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- person: christoffer-wilhelm-eckersberg
+  role: worked
+  place: paris
+  year: 1811
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- person: christoffer-wilhelm-eckersberg
+  role: worked
+  place: rome
+  year: 1813
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- person: christoffer-wilhelm-eckersberg
+  role: died
+  place: copenhagen
+  year: 1853
+  sources:
+  - wp-christoffer-wilhelm-eckersberg
+- person: johan-christian-dahl
+  role: born
+  place: bergen
+  year: 1788
+  sources:
+  - wp-johan-christian-dahl
+- person: johan-christian-dahl
+  role: worked
+  place: copenhagen
+  year: 1811
+  sources:
+  - wp-johan-christian-dahl
+- person: johan-christian-dahl
+  role: worked
+  place: dresden
+  year: 1818
+  sources:
+  - wp-johan-christian-dahl
+- person: johan-christian-dahl
+  role: died
+  place: dresden
+  year: 1857
+  sources:
+  - wp-johan-christian-dahl
+- person: johan-christian-dahl
+  role: buried
+  place: bergen
+  year: 1934
+  sources:
+  - wp-johan-christian-dahl
+- person: george-catlin
+  role: born
+  place: wilkes-barre
+  year: 1796
+  sources:
+  - wp-george-catlin
+- person: george-catlin
+  role: worked
+  place: st-louis
+  year: 1830
+  sources:
+  - wp-george-catlin
+- person: george-catlin
+  role: worked
+  place: paris
+  year: 1845
+  sources:
+  - wp-george-catlin
+- person: george-catlin
+  role: died
+  place: jersey-city
+  year: 1872
+  sources:
+  - wp-george-catlin
+- person: george-catlin
+  role: buried
+  place: green-wood-cemetery
+  year: 1872
+  sources:
+  - wp-george-catlin
+- person: rodolphe-topffer
+  role: born
+  place: geneva
+  year: 1799
+  sources:
+  - wp-rodolphe-topffer
+- person: rodolphe-topffer
+  role: worked
+  place: paris
+  year: 1819
+  sources:
+  - wp-rodolphe-topffer
+- person: rodolphe-topffer
+  role: worked
+  place: geneva
+  year: 1823
+  sources:
+  - wp-rodolphe-topffer
+- person: ernest-meissonier
+  role: born
+  place: lyon
+  year: 1815
+  sources:
+  - wp-ernest-meissonier
+- person: ernest-meissonier
+  role: worked
+  place: poissy
+  year: 1846
+  sources:
+  - wp-ernest-meissonier
+- person: ernest-meissonier
+  role: worked
+  place: antibes
+  year: 1868
+  sources:
+  - wp-ernest-meissonier
+- person: ernest-meissonier
+  role: died
+  place: paris
+  year: 1891
+  sources:
+  - wp-ernest-meissonier
+- person: jules-breton
+  role: born
+  place: courrieres
+  year: 1827
+  sources:
+  - wp-jules-breton
+- person: jules-breton
+  role: worked
+  place: ghent
+  year: 1843
+  sources:
+  - wp-jules-breton
+- person: jules-breton
+  role: worked
+  place: paris
+  year: 1847
+  sources:
+  - wp-jules-breton
+- person: jules-breton
+  role: worked
+  place: courrieres
+  year: 1854
+  sources:
+  - wp-jules-breton
+- person: jules-breton
+  role: died
+  place: paris
+  year: 1906
+  sources:
+  - wp-jules-breton
+- person: anselm-feuerbach
+  role: born
+  place: speyer
+  year: 1829
+  sources:
+  - wp-anselm-feuerbach
+- person: anselm-feuerbach
+  role: worked
+  place: antwerp
+  year: 1850
+  sources:
+  - wp-anselm-feuerbach
+- person: anselm-feuerbach
+  role: worked
+  place: paris
+  year: 1851
+  sources:
+  - wp-anselm-feuerbach
+- person: anselm-feuerbach
+  role: worked
+  place: vienna
+  year: 1873
+  sources:
+  - wp-anselm-feuerbach
+- person: anselm-feuerbach
+  role: died
+  place: venice
+  year: 1880
+  sources:
+  - wp-anselm-feuerbach
+- person: leon-bonnat
+  role: born
+  place: bayonne
+  year: 1833
+  sources:
+  - wp-leon-bonnat
+- person: leon-bonnat
+  role: worked
+  place: madrid
+  year: 1846
+  sources:
+  - wp-leon-bonnat
+- person: leon-bonnat
+  role: worked
+  place: rome
+  year: 1858
+  sources:
+  - wp-leon-bonnat
+- person: leon-bonnat
+  role: died
+  place: monchy-saint-eloi
+  year: 1922
+  sources:
+  - wp-leon-bonnat
+- person: leon-bonnat
+  role: buried
+  place: bayonne
+  year: 1922
+  sources:
+  - wp-leon-bonnat
+- person: anton-mauve
+  role: born
+  place: zaandam
+  year: 1838
+  sources:
+  - wp-anton-mauve
+- person: anton-mauve
+  role: worked
+  place: the-hague
+  year: 1872
+  sources:
+  - wp-anton-mauve
+- person: anton-mauve
+  role: worked
+  place: laren
+  year: 1886
+  sources:
+  - wp-anton-mauve
+- person: anton-mauve
+  role: died
+  place: arnhem
+  year: 1888
+  sources:
+  - wp-anton-mauve
+- person: christian-krohg
+  role: born
+  place: oslo
+  year: 1852
+  sources:
+  - wp-christian-krohg
+- person: christian-krohg
+  role: worked
+  place: paris
+  year: 1881
+  sources:
+  - wp-christian-krohg
+- person: christian-krohg
+  role: worked
+  place: skagen
+  year: 1882
+  sources:
+  - wp-christian-krohg
+- person: christian-krohg
+  role: died
+  place: oslo
+  year: 1925
+  sources:
+  - wp-christian-krohg
+- person: christian-krohg
+  role: buried
+  place: oslo
+  year: 1925
+  sources:
+  - wp-christian-krohg
+- person: francesco-filippini
+  role: born
+  place: brescia
+  year: 1853
+  sources:
+  - wp-francesco-filippini
+- person: francesco-filippini
+  role: worked
+  place: milan
+  year: 1880
+  sources:
+  - wp-francesco-filippini
+- person: francesco-filippini
+  role: died
+  place: milan
+  year: 1895
+  sources:
+  - wp-francesco-filippini
+- person: louise-abbema
+  role: born
+  place: etampes
+  year: 1853
+  sources:
+  - wp-louise-abbema
+- person: louise-abbema
+  role: died
+  place: paris
+  year: 1927
+  sources:
+  - wp-louise-abbema
+- person: marianne-von-werefkin
+  role: born
+  place: tula
+  year: 1860
+  sources:
+  - wp-marianne-von-werefkin
+- person: marianne-von-werefkin
+  role: worked
+  place: munich
+  year: 1896
+  sources:
+  - wp-marianne-von-werefkin
+- person: marianne-von-werefkin
+  role: worked
+  place: zurich
+  year: 1917
+  sources:
+  - wp-marianne-von-werefkin
+- person: marianne-von-werefkin
+  role: worked
+  place: ascona
+  year: 1918
+  sources:
+  - wp-marianne-von-werefkin
+- person: marianne-von-werefkin
+  role: died
+  place: ascona
+  year: 1938
+  sources:
+  - wp-marianne-von-werefkin
+- person: kuzma-petrov-vodkin
+  role: born
+  place: khvalynsk
+  year: 1878
+  sources:
+  - wp-kuzma-petrov-vodkin
+- person: kuzma-petrov-vodkin
+  role: worked
+  place: saint-petersburg
+  year: 1895
+  sources:
+  - wp-kuzma-petrov-vodkin
+- person: kuzma-petrov-vodkin
+  role: worked
+  place: paris
+  year: 1906
+  sources:
+  - wp-kuzma-petrov-vodkin
+- person: kuzma-petrov-vodkin
+  role: died
+  place: saint-petersburg
+  year: 1939
+  sources:
+  - wp-kuzma-petrov-vodkin
+- person: carlo-carra
+  role: born
+  place: quargnento
+  year: 1881
+  sources:
+  - wp-carlo-carra
+- person: carlo-carra
+  role: worked
+  place: paris
+  year: 1899
+  sources:
+  - wp-carlo-carra
+- person: carlo-carra
+  role: worked
+  place: milan
+  year: 1901
+  sources:
+  - wp-carlo-carra
+- person: carlo-carra
+  role: died
+  place: milan
+  year: 1966
+  sources:
+  - wp-carlo-carra
+- person: max-pechstein
+  role: born
+  place: zwickau
+  year: 1881
+  sources:
+  - wp-max-pechstein
+- person: max-pechstein
+  role: worked
+  place: paris
+  year: 1908
+  sources:
+  - wp-max-pechstein
+- person: max-pechstein
+  role: worked
+  place: berlin
+  year: 1908
+  sources:
+  - wp-max-pechstein
+- person: max-pechstein
+  role: died
+  place: berlin
+  year: 1955
+  sources:
+  - wp-max-pechstein
+- person: max-pechstein
+  role: buried
+  place: berlin
+  year: 1955
+  sources:
+  - wp-max-pechstein
+- person: george-bellows
+  role: born
+  place: columbus-ohio
+  year: 1882
+  sources:
+  - wp-george-bellows
+- person: george-bellows
+  role: worked
+  place: new-york-city
+  year: 1904
+  sources:
+  - wp-george-bellows
+- person: george-bellows
+  role: worked
+  place: woodstock-new-york
+  year: 1920
+  sources:
+  - wp-george-bellows
+- person: george-bellows
+  role: died
+  place: new-york-city
+  year: 1925
+  sources:
+  - wp-george-bellows
+- person: george-bellows
+  role: buried
+  place: green-wood-cemetery
+  year: 1925
+  sources:
+  - wp-george-bellows
+- person: thomas-hart-benton
+  role: born
+  place: neosho-missouri
+  year: 1889
+  sources:
+  - wp-thomas-hart-benton
+- person: thomas-hart-benton
+  role: worked
+  place: paris
+  year: 1909
+  sources:
+  - wp-thomas-hart-benton
+- person: thomas-hart-benton
+  role: worked
+  place: new-york-city
+  year: 1912
+  sources:
+  - wp-thomas-hart-benton
+- person: thomas-hart-benton
+  role: worked
+  place: kansas-city-missouri
+  year: 1935
+  sources:
+  - wp-thomas-hart-benton
+- person: remedios-varo
+  role: born
+  place: angles-girona
+  year: 1908
+  sources:
+  - wp-remedios-varo
+- person: remedios-varo
+  role: worked
+  place: madrid
+  year: 1924
+  sources:
+  - wp-remedios-varo
+- person: remedios-varo
+  role: worked
+  place: barcelona
+  year: 1932
+  sources:
+  - wp-remedios-varo
+- person: remedios-varo
+  role: worked
+  place: paris
+  year: 1937
+  sources:
+  - wp-remedios-varo
+- person: remedios-varo
+  role: worked
+  place: mexico-city
+  year: 1941
+  sources:
+  - wp-remedios-varo
+- person: pierre-soulages
+  role: born
+  place: rodez
+  year: 1919
+  sources:
+  - wp-pierre-soulages
+- person: pierre-soulages
+  role: worked
+  place: abbey-church-of-sainte-foy-conques
+  year: 1987
+  sources:
+  - wp-pierre-soulages
+- person: pierre-soulages
+  role: died
+  place: nimes
+  year: 2022
+  sources:
+  - wp-pierre-soulages
+- person: jorg-immendorff
+  role: born
+  place: bleckede
+  year: 1945
+  sources:
+  - wp-jorg-immendorff
+- person: jorg-immendorff
+  role: worked
+  place: dusseldorf
+  year: 1963
+  sources:
+  - wp-jorg-immendorff
+- person: jorg-immendorff
+  role: died
+  place: dusseldorf
+  year: 2007
+  sources:
+  - wp-jorg-immendorff
+discrepancies:
+- key: gerard-david-born
+  question: When was Gerard David born?
+  about:
+  - person: gerard-david
+  field: born
+  claims:
+  - value: c. 1460
+    sources:
+    - wp-gerard-david
+    note: Given in the article's opening line.
+  - value: c. 1450-1460
+    sources:
+    - wp-gerard-david
+    note: Approximated from his apparent age of about 50 in the 1509 self-portrait.
+  note: The record uses c. 1460.
+- key: hans-holbein-the-elder-born
+  question: When was Hans Holbein the Elder born?
+  about:
+  - person: hans-holbein-the-elder
+  field: born
+  claims:
+  - value: c. 1460
+    sources:
+    - wp-hans-holbein-the-elder
+  - value: c. 1465
+    sources:
+    - wp-hans-holbein-the-elder
+  note: The article gives c. 1460/65 and says the birth date is unknown. The record uses c. 1460.
+- key: hans-holbein-the-elder-died-place
+  question: Where did Hans Holbein the Elder die?
+  about:
+  - person: hans-holbein-the-elder
+  field: place
+  claims:
+  - value: Issenheim
+    sources:
+    - wp-hans-holbein-the-elder
+    note: Stated in the Life section's first paragraph.
+  - value: Unknown location
+    sources:
+    - wp-hans-holbein-the-elder
+    note: The same article says he fled Issenheim for Basel and died two years later at an unknown location.
+  note: The record uses Issenheim, 1524.
+- key: gabriel-metsu-teacher
+  question: Who trained Gabriel Metsu?
+  about:
+  - person: gabriel-metsu
+  - person: gerrit-dou
+  field: teacher
+  claims:
+  - value: Gerrit Dou
+    sources:
+    - wp-gabriel-metsu
+    - wp-gerrit-dou
+    note: Per Houbraken; the Metsu article adds that Dou's influence is not apparent before about 1653.
+  - value: Nicolaus Knuepfer and Jan Weenix in Utrecht
+    sources:
+    - wp-gabriel-metsu
+    note: Described as possible.
+  note: The record links Dou as teacher.
+- key: andrea-pozzo-vienna-move
+  question: In which year did Andrea Pozzo move to Vienna?
+  about:
+  - person: andrea-pozzo
+  field: date
+  claims:
+  - value: '1702'
+    sources:
+    - wp-andrea-pozzo
+  - value: '1703'
+    sources:
+    - wp-andrea-pozzo
+    note: Article writes "1702 (1703?)".
+  note: The record uses 1702 (the article's first-given year).
+- key: a-lion-attacking-a-horse-stubbs-inspiration
+  question: Was Stubbs's lion-attacking-a-horse theme inspired by a horse killed by a lion in North Africa, or by the Roman sculpture Lion Seizing a Horse seen in Rome in 1754?
+  about:
+  - artwork: a-lion-attacking-a-horse-stubbs
+  - person: george-stubbs
+  field: origin
+  claims:
+  - value: A visit to North Africa
+    sources:
+    - wp-george-stubbs
+    note: Anecdote first published in 1808 and repeated by H. W. Janson.
+  - value: The antique sculpture seen in Rome in 1754
+    sources:
+    - wp-george-stubbs
+    note: Research published in 1965 argued he never travelled to Africa.
+  note: The article calls the 1965 argument persuasive; no change to the records.
+- key: george-bellows-born
+  question: What was George Bellows's exact birth date?
+  about:
+  - person: george-bellows
+  field: born
+  claims:
+  - value: 12 August 1882
+    sources:
+    - wp-george-bellows
+    note: The article gives 'August 12 or August 19, 1882'.
+  - value: 19 August 1882
+    sources:
+    - wp-george-bellows
+  note: The record holds the year 1882 only, since the day is uncertain.
+- key: jorg-immendorff-died
+  question: On what day did Jorg Immendorff die?
+  about:
+  - person: jorg-immendorff
+  field: died
+  claims:
+  - value: 28 May 2007
+    sources:
+    - wp-jorg-immendorff
+    note: Given in the article's lead.
+  - value: 27 May 2007
+    sources:
+    - wp-jorg-immendorff
+    note: Given in the article's section on his death.
+  note: The record holds the year 2007 only.
+- key: remedios-varo-born
+  question: In what year was Remedios Varo born?
+  about:
+  - person: remedios-varo
+  field: born
+  claims:
+  - value: '1908'
+    sources:
+    - wp-remedios-varo
+    note: Born 16 December 1908 per the article.
+  - value: '1913'
+    sources:
+    - wp-remedios-varo
+    note: The article says that from the late 1930s Varo herself gave 1913 as her birth year.
+  note: The record uses 1908, the date the article gives as her actual birth.
