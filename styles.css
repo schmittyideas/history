@@ -14,6 +14,10 @@
   --sea: #d6dcdc;
   --land: #f1efe8;
   --gold: #b07d1a;      /* gilt thread: titles and reigns */
+  --walnut: #7a5733;    /* walnut dye: architects */
+  --lichen: #3e7563;    /* lichen dye: writers */
+  --rose: #a34d6d;      /* rose madder: composers */
+  --slate: #4f6479;     /* slate grey-blue: scholars */
   --display: "IM Fell English SC", "Times New Roman", serif;
   --body: "Literata", Georgia, serif;
   --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -22,13 +26,13 @@
   :root:not([data-theme="light"]) {
     --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
     --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-    --sea: #10151d; --land: #262d39; --gold: #e3b84f; color-scheme: dark;
+    --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --linen: #161b24; --panel: #1e2430; --ink: #e6e3d8; --muted: #9aa1ab; --rule: #39414f; --lane: #1b212b;
   --woad: #7fa3d6; --madder: #e0806f; --weld: #c9c46a; --stitch: #b5a3d6; --ochre: #e0a463;
-  --sea: #10151d; --land: #262d39; --gold: #e3b84f; color-scheme: dark;
+  --sea: #10151d; --land: #262d39; --gold: #e3b84f; --walnut: #c89d6e; --lichen: #7cc0a8; --rose: #e08aab; --slate: #9db3c9; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html, body { margin: 0; }
@@ -246,7 +250,12 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .event:hover .event-line.reach, .event:focus-visible .event-line.reach, .event.sel .event-line.reach { display: inline; }
 .event.sel .event-line { stroke-width: 2; stroke-dasharray: none; }
 
-/* Group buttons under the title: who shows in the timeline and the Year view */
-.cats { margin-top: 4px; }
-.cats .toggle-chip { font-size: 13px; }
+/* Group buttons (under the timeline's search box, and above the year in the Year view): who shows, and the colour key */
 .cats .plink { font-size: 13px; margin-left: 4px; }
+.cat-chip { cursor: pointer; padding: 3px 10px; gap: 6px; font-size: 13px; color: var(--ink); border-color: color-mix(in srgb, var(--c) 50%, var(--rule)); }
+.cat-chip .dot { width: 10px; height: 10px; border-radius: 2px; background: var(--c); border: 1.5px solid var(--c); flex: none; }
+.cat-chip b { font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); }
+.cat-chip[aria-pressed="true"] { background: color-mix(in srgb, var(--c) 16%, var(--panel)); border-color: var(--c); }
+.cat-chip[aria-pressed="false"] { background: transparent; color: var(--muted); text-decoration: line-through; }
+.cat-chip[aria-pressed="false"] .dot { background: transparent; }
+.cat-chip:focus-visible { outline: 2px solid var(--c); outline-offset: 2px; }

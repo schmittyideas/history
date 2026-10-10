@@ -74,7 +74,7 @@ Commit messages: plain imperative title ("Add …", "Intake: …"), a short body
 
 - Colours come from the tokens at the top of `styles.css` (Bayeux Tapestry wools: woad, madder, weld, stitch, ochre, gold), redefined for dark mode. Never hard-code a colour.
 - Views: Timeline (lanes of lives, events lane, side panel with a places map) and Year (rulers by realm and world region, a border map, artists, writers and thinkers with what they did that year, events, births and deaths). Links go both ways between them. The Year view's makers section lists types Artist, Writer, Composer and Scholar, so give cultural figures one of those types.
-- The **Show** buttons under the title filter both views by group (Royalty, Nobility, Clergy, Artists, Architects, Writers, Composers, Scholars). Groups match `type`, and Architects match the `architect` role, so set types and roles carefully.
+- The **Show** buttons filter both views by group (Royalty, Nobility, Clergy, Artists, Architects, Writers, Composers, Scholars). They sit under the timeline's search box and between the Year form and the year, and double as the colour key: each group has a colour token (woad, weld, stitch, ochre, walnut, lichen, rose, slate) that its people's lifespan bars share. Groups match `type`; Architects match the `architect` role and Artists need an artistic role (painter, engraver, sculptor…), so set types and roles carefully.
 - Crowns mark people who held a title; the gold strip beside a lifespan bar marks the years held.
 - Person, event and place panels show a **Sources** row linking each cited source ("Wikipedia: …", new tab). So a record without a source shows "None recorded": always cite one.
 - Keep it working at 375px wide and in both themes. Check that it does.

@@ -131,16 +131,18 @@ const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes an
 // Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
 // Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
 const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
-const ARCHITECT = /architect/i, BUILDER_ONLY = /^(architect|landscape designer|master mason|surveyor)$/i;
+// Artists are those with an artistic role (an Artist-typed astronomer-architect like Wren is an architect, not an artist).
+const ARCHITECT = /architect/i, ART_ROLE = /paint|miniatur|engrav|etch|sculpt|carv|goldsmith|illustrat|draughts|print|(?<!landscape )designer/i;
 const CATS = [
-  { key: "royalty", label: "Royalty", test: p => p.type === "Royalty" },
-  { key: "nobility", label: "Nobility", test: p => p.type === "Nobility" },
-  { key: "clergy", label: "Clergy", test: p => p.type === "Clergy" },
-  { key: "artists", label: "Artists", test: p => p.type === "Artist" && (!(p.roles || []).length || (p.roles || []).some(r => !BUILDER_ONLY.test(r))) },
-  { key: "architects", label: "Architects", test: p => hasRole(p, ARCHITECT) },
-  { key: "writers", label: "Writers", test: p => p.type === "Writer" },
-  { key: "composers", label: "Composers", test: p => p.type === "Composer" },
-  { key: "scholars", label: "Scholars", test: p => p.type === "Scholar" },
+  // Each group has a colour: its button and the lifespan bars of its people share it, so the buttons are the colour key.
+  { key: "royalty", label: "Royalty", color: "var(--woad)", test: p => p.type === "Royalty" },
+  { key: "nobility", label: "Nobility", color: "var(--weld)", test: p => p.type === "Nobility" },
+  { key: "clergy", label: "Clergy", color: "var(--stitch)", test: p => p.type === "Clergy" },
+  { key: "artists", label: "Artists", color: "var(--ochre)", test: p => p.type === "Artist" && (!(p.roles || []).length || hasRole(p, ART_ROLE)) },
+  { key: "architects", label: "Architects", color: "var(--walnut)", test: p => hasRole(p, ARCHITECT) },
+  { key: "writers", label: "Writers", color: "var(--lichen)", test: p => p.type === "Writer" },
+  { key: "composers", label: "Composers", color: "var(--rose)", test: p => p.type === "Composer" },
+  { key: "scholars", label: "Scholars", color: "var(--slate)", test: p => p.type === "Scholar" },
 ];
 const catsOf = p => { const ks = CATS.filter(c => c.test(p)).map(c => c.key); return ks.length ? ks : ["other"]; };
 const catsFiltering = () => S.catsOff.size > 0;
@@ -414,7 +416,8 @@ function renderTrail() {
 
 /* ------------------------------------------------------------------ chart */
 
-const colorFor = t => t === "Nobility" ? "var(--weld)" : t === "Royalty" ? "var(--woad)" : "var(--ochre)";
+// A person's colour is their first group's (see CATS); anyone in no group is muted.
+const colorFor = p => (CATS.find(c => c.test(p)) || { color: "var(--muted)" }).color;
 
 // Crowns: who held a title, and which one to name. Sovereign titles outrank dukes, counts and offices.
 const SOVEREIGN = /\b(king|queen|emperor|empress|caliph|sultan|tsar|pope|high king|grand prince|doge|khan|lady of the english)\b/i;
@@ -621,7 +624,7 @@ function render() {
       el("text", { x: cx, y: TOP - 12, "text-anchor": "middle", class: "name", style: "font-size:11px" }, g).textContent = short.length > 9 ? short.slice(0, 8) + "…" : short;
       if (head) crown(TOP - 34, 12);
     }
-    const color = colorFor(p.type);
+    const color = colorFor(p);
     const top = y(s ?? y0), hgt = Math.max(2, y(d ?? s ?? y0) - top);
     if (inLaw) el("rect", { x: cx - Z.bar / 2 + .75, y: top, width: Z.bar - 1.5, height: hgt, rx: 3, fill: color, "fill-opacity": .22, stroke: color, "stroke-width": 1.5, "stroke-dasharray": p.birth_year == null ? "4 3" : null, class: "bar" }, g);
     else el("rect", { x: cx - Z.bar / 2, y: top, width: Z.bar, height: hgt, rx: 3, fill: color, class: "bar" }, g);
@@ -682,7 +685,7 @@ function renderOverview() {
     const p = S.db.byId[id];
     const s = S.db.startOf(p), d = S.db.endOf(p);
     if (s == null) return;
-    el("rect", { x: cx * sx - 1, y: L.y(s) * sy, width: Math.max(2, L.Z.bar * sx), height: Math.max(2, (L.y(d) - L.y(s)) * sy), fill: colorFor(p.type), opacity: S.db.marriedIn.has(p.id) ? .45 : 1 }, svg);
+    el("rect", { x: cx * sx - 1, y: L.y(s) * sy, width: Math.max(2, L.Z.bar * sx), height: Math.max(2, (L.y(d) - L.y(s)) * sy), fill: colorFor(p), opacity: S.db.marriedIn.has(p.id) ? .45 : 1 }, svg);
   });
   S.ovWindow = el("rect", { class: "ov-window", x: 0, y: 0, width: 10, height: OH }, svg);
   S.ovScale = { sx, sy, OW, OH };
@@ -804,7 +807,7 @@ function select(id) {
   const dl = h("dl");
   rows.forEach(([k, v]) => dl.append(h("dt", {}, k), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(
-    h("div", { class: "kind", style: `color:${colorFor(p.type)}`, text: (p.type || "Person") + (db.marriedIn.has(id) ? " · married in" : "") }),
+    h("div", { class: "kind", style: `color:${colorFor(p)}`, text: (p.type || "Person") + (db.marriedIn.has(id) ? " · married in" : "") }),
     h("h2", { text: p.name }), dl,
     h("button", { type: "button", class: "btn ghost", onclick: () => run(p.name, { pushTrail: true }), text: `Show ${p.name}'s family` })
   );
@@ -936,7 +939,7 @@ function drawMap() {
     if (s.length) routes = [{ event: db.eventById[S.selected.id], stops: s, color: "var(--madder)" }]; else emptyMsg = "No place recorded for this event yet.";
   } else if (S.selected?.kind === "person") {
     const p = db.byId[S.selected.id], s = stopsForPerson(p.id);
-    if (s.length) routes = [{ person: p, stops: s, color: colorFor(p.type) }]; else emptyMsg = `No places recorded for ${p.name} yet.`;
+    if (s.length) routes = [{ person: p, stops: s, color: colorFor(p) }]; else emptyMsg = `No places recorded for ${p.name} yet.`;
   } else if (S.selected?.kind === "place") {
     const pl = db.placeById[S.selected.id], s = stopsForPlace(pl.id);
     if (pl.lat != null && pl.lng != null) routes = [{ place: pl, stops: s.length ? s : [{ year: null, what: "", place: pl }], color: "var(--ink)" }];
@@ -1456,17 +1459,22 @@ function setGroup(g) {
 
 // The group buttons under the title. Counts are people in the database; the choice is remembered per browser.
 function renderCats() {
-  const box = $("cats"), db = S.db; box.innerHTML = "";
-  box.append(h("span", { class: "lbl", text: "Show" }));
-  const groups = [...CATS, { key: "other", label: "Other" }];
-  groups.forEach(c => {
-    const n = db.people.filter(p => catsOf(p).includes(c.key)).length;
-    if (!n) return;
-    const on = !S.catsOff.has(c.key);
-    box.append(h("button", { type: "button", class: "chip toggle-chip", "aria-pressed": on, title: on ? `Hide ${c.label.toLowerCase()}` : `Show ${c.label.toLowerCase()}`,
-      onclick: () => { on ? S.catsOff.add(c.key) : S.catsOff.delete(c.key); applyCats(); }, text: `${c.label} ${n}` }));
+  // The same buttons appear in both views: under the timeline's search box, and between the Year form and the year.
+  const db = S.db, groups = [...CATS, { key: "other", label: "Other", color: "var(--muted)" }];
+  document.querySelectorAll(".cats").forEach(box => {
+    box.innerHTML = "";
+    box.append(h("span", { class: "lbl", text: "Show" }));
+    groups.forEach(c => {
+      const n = db.people.filter(p => catsOf(p).includes(c.key)).length;
+      if (!n) return;
+      const on = !S.catsOff.has(c.key);
+      box.append(h("button", { type: "button", class: "chip cat-chip", style: `--c:${c.color}`, "aria-pressed": on,
+        title: on ? `Hide ${c.label.toLowerCase()}` : `Show ${c.label.toLowerCase()}`,
+        onclick: () => { on ? S.catsOff.add(c.key) : S.catsOff.delete(c.key); applyCats(); } },
+        h("i", { class: "dot", "aria-hidden": "true" }), `${c.label} `, h("b", { text: n })));
+    });
+    if (S.catsOff.size) box.append(h("button", { type: "button", class: "plink", onclick: () => { S.catsOff.clear(); applyCats(); }, text: "Show everyone" }));
   });
-  if (S.catsOff.size) box.append(h("button", { type: "button", class: "plink", onclick: () => { S.catsOff.clear(); applyCats(); }, text: "Show everyone" }));
 }
 function applyCats() {
   store.set("catsOff", [...S.catsOff]);
