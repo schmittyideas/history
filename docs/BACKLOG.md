@@ -131,6 +131,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ### Ready (ranked)
 
+#### [P3] Artists: remaining gaps (photographers, non-Western, below the 70-edition cut)
+`type: task` · `area: data` · `status: ready` · `issue: #126`
+
+Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, merged 2026-10-10) closed the biggest gaps. Still missing: professional photographers, non-Western artists (Hokusai, Kahlo, Rivera, Tagore; outside the Europe/US scope), and lesser-known artists not on the painter list. Artwork images are #62.
+Source: Ty, 2026-10-10.
+
 ## Done
 
 #### [P2] Popularity tiers from Wikipedia sitelinks
