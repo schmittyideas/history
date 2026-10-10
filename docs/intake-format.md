@@ -86,13 +86,13 @@ Paintings, prints, miniatures, sculptures and other works as records of their ow
 | Field | Meaning |
 |---|---|
 | `key`, `name` | Required for new artworks ("portrait-of-inigo-jones-after-van-dyck") |
-| `kind`, `medium` | painting, print, miniature, sculpture, drawing, …; "oil on canvas". Leave out what the source does not say |
+| `kind`, `medium` | painting, print, miniature, sculpture, drawing, film, …; a `film` with a year shows on the timeline beside the events and on each place it was `filmed` at, with its `creator` as director; "oil on canvas". Leave out what the source does not say |
 | `made`, `made_end` | Year (or span) it was made; years only (BC negative). `estimated: true` for "c." |
 | `after` | Key of the artwork this one copies or is based on (an engraving after a painting) |
 | `collection` | Where it is now ("Chatsworth House") |
 | `image_url`, `image_thumb`, `image_page`, `image_license`, `image_credit` | Links to the picture and a thumbnail; the Commons (or museum) page where author and licence can be checked; short licence name; credit line as the source gives it |
 | `people` | List of `{person: key, role: …}`. Roles: `creator`, `subject` (portrayed), `patron` (commissioned it), `after` (the artist of the original it copies), `engraver`, `owner` |
-| `places` | List of `{place: key, role: …}`. Roles: `made`, `depicts`, `held`, `made-for`, `displayed` |
+| `places` | List of `{place: key, role: …}`. Roles: `made`, `depicts`, `held`, `made-for`, `displayed`, `filmed` (a film shot scenes there) |
 | `events` | List of `{event: key, role: …}`. Roles: `depicts`, `commemorates`, `made-during` |
 | `prominence`, `obsidian_link`, `note`, `sources` | As above |
 
