@@ -262,3 +262,10 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 
 /* Name cards sit beside the lines now, so give them a halo where a marriage or descent line passes behind */
 .person .name, .person .dates, .person .rank { paint-order: stroke; stroke: var(--lane); stroke-width: 3px; stroke-linejoin: round; }
+
+/* Year view: a realm heading focuses the page on that realm */
+.realm-link { border: 0; background: transparent; padding: 0; font: inherit; color: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--muted) 40%, transparent); text-underline-offset: 3px; }
+.realm-link:hover { color: var(--ink); text-decoration-color: currentColor; }
+.realm-link:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+.focus-chip { gap: 8px; }
+.focus-chip .hint { font-size: 13px; }

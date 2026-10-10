@@ -103,6 +103,9 @@ function indexData(raw) {
     parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
     eventsAt, momentsAt, titles,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
+    countryOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.modern_country])),
+    // Every realm a title names (England, Byzantine Empire, Kievan Rus'), for searching and focusing.
+    realmNames: [...new Set([...titles.map(t => t.realm), ...(raw.realms || []).map(r => r.name)])].filter(Boolean),
     titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
     // Artworks a person made (artwork_people role "creator").
     worksBy: id => {
@@ -153,7 +156,7 @@ const COMMON_REGIONS = ["italy","france","england","spain","germany","scotland",
 const STOP = new Set("a an and or the of in on at to for from with who were was is are during time times all show me see view overlap overlapping between era period age around circa c about people persons".split(" "));
 
 function parseQuery(text, db) {
-  const f = { raw: text, from: null, to: null, types: new Set(), regions: [], missingRegions: [], focus: null, ignored: [] };
+  const f = { raw: text, from: null, to: null, types: new Set(), regions: [], missingRegions: [], realms: [], focus: null, ignored: [] };
   let t = " " + text.replace(/[’']/g, "'") + " ";
   let m;
   // Era markers: "384 BC", "AD 14", "4th century BC", "400–300 BC". Plain numbers are AD.
@@ -201,9 +204,20 @@ function parseQuery(text, db) {
     if (re.test(t)) { f.focus = id; t = t.replace(re, " "); break; }
   }
 
-  // Regions: anything the places table knows, plus common region names.
+  // Realms: anything a title rules ("Byzantine Empire", "France", "Kievan Rus'"), longest first. A realm that is
+  // also a place name (England) counts as both, so its rulers and the people with places there all match.
   const known = new Map();
   db.places.forEach(p => [p.name, p.historical_name, p.region, p.modern_country].forEach(v => { if (v && v.length > 2) known.set(v.toLowerCase(), v); }));
+  for (const r of (db.realmNames || []).slice().sort((x, y) => y.length - x.length)) {
+    const re = new RegExp(`(^|[^\\w])${esc(r)}(?![\\w])`, "i");
+    if (re.test(t)) {
+      f.realms.push(r);
+      if (known.has(r.toLowerCase())) f.regions.push(known.get(r.toLowerCase()));
+      t = t.replace(re, " ");
+    }
+  }
+
+  // Regions: anything the places table knows, plus common region names.
   const candidates = [...new Set([...known.keys(), ...COMMON_REGIONS])].sort((a, b) => b.length - a.length);
   for (const c of candidates) {
     const re = new RegExp(`(^|[^\\w])${esc(c)}(?![\\w])`, "i");
@@ -218,7 +232,7 @@ function parseQuery(text, db) {
 }
 
 function isEmptyFilter(f) {
-  return f.from == null && !f.types.size && !f.regions.length && !f.missingRegions.length && f.focus == null;
+  return f.from == null && !f.types.size && !f.regions.length && !f.missingRegions.length && !f.realms.length && f.focus == null;
 }
 
 /* ------------------------------------------------------------------ filtering */
@@ -258,9 +272,10 @@ function computeView(db, f) {
     });
   }
   if (f.missingRegions.length) warnings.push(`No places recorded yet for ${f.missingRegions.join(", ")}`);
-  if (f.regions.length || f.missingRegions.length) {
+  if (f.regions.length || f.missingRegions.length || f.realms.length) {
     const pool = new Set(people.map(p => p.id));
-    const hit = new Set(people.filter(p => db.placesOfPerson(p.id).some(pl => placeMatches(pl, f.regions))).map(p => p.id));
+    const ruled = p => db.titlesOf(p.id).some(t => f.realms.includes(t.realm) && (f.from == null || overlaps(t.start_year, t.end_year, f.from, f.to)));
+    const hit = new Set(people.filter(p => (f.regions.length && db.placesOfPerson(p.id).some(pl => placeMatches(pl, f.regions))) || (f.realms.length && ruled(p))).map(p => p.id));
     // Include close family of matched people, so sparse place data doesn't hide relatives.
     [...hit].forEach(id => db.neighbours(id).forEach(n => { if (pool.has(n.id)) hit.add(n.id); }));
     people = people.filter(p => hit.has(p.id));
@@ -270,7 +285,7 @@ function computeView(db, f) {
   let events = db.events.filter(e => Number.isFinite(e.start_year));
   if (catsFiltering()) events = events.filter(e => { const ppl = db.peopleInEvent(e.id); return !ppl.length || ppl.some(x => shown.has(x.person.id)); });
   if (f.from != null) events = events.filter(e => e.start_year <= f.to && (e.end_year ?? e.start_year) >= f.from);
-  if (f.regions.length || f.missingRegions.length) events = events.filter(e => placeMatches(db.placeById[e.place_id], f.regions) || db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
+  if (f.regions.length || f.missingRegions.length || f.realms.length) events = events.filter(e => placeMatches(db.placeById[e.place_id], f.regions) || db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
   if (f.focus != null || f.types.size) events = events.filter(e => db.peopleInEvent(e.id).some(x => shown.has(x.person.id)));
   return { people, events, warnings };
 }
@@ -384,10 +399,13 @@ function renderChips() {
     h("button", { type: "button", "aria-label": `Remove ${value}`, title: "Remove", onclick: onRemove, text: "×" }));
   const rerun = mut => { mut(); S.view = computeView(S.db, S.filter); S.query = describe(S.filter); $("q").value = S.query; renderChips(); render(); };
   if (f.from != null) box.append(chip("Years", f.from === f.to ? `alive in ${fmtYear(f.from)}` : fmtSpan(f.from, f.to), () => rerun(() => { f.from = f.to = null; })),
-    h("button", { type: "button", class: "plink", onclick: () => openYear(f.from, f.to), text: "Who ruled then?" }));
+    h("button", { type: "button", class: "plink", onclick: () => openYear(f.from, f.to, f.realms[0] || null), text: f.realms.length ? `Who ruled ${f.realms[0]} then?` : "Who ruled then?" }));
   f.types.forEach(t => box.append(chip("Who", TYPE_LABEL[t] || t, () => rerun(() => f.types.delete(t)))));
-  f.regions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.regions = f.regions.filter(x => x !== r); }))));
+  // A place that is also a realm (England) shows once, as the Realm chip.
+  f.regions.filter(r => !f.realms.some(x => x.toLowerCase() === r.toLowerCase()))
+    .forEach(r => box.append(chip("Where", r, () => rerun(() => { f.regions = f.regions.filter(x => x !== r); }))));
   f.missingRegions.forEach(r => box.append(chip("Where", r, () => rerun(() => { f.missingRegions = f.missingRegions.filter(x => x !== r); }))));
+  f.realms.forEach(r => box.append(chip("Realm", r, () => rerun(() => { f.realms = f.realms.filter(x => x !== r); f.regions = f.regions.filter(x => x.toLowerCase() !== r.toLowerCase()); }))));
   if (f.focus != null) box.append(chip("Around", S.db.byId[f.focus].name, () => rerun(() => { f.focus = null; })));
   S.view.warnings.forEach(w => box.append(h("span", { class: "chip warn", text: w })));
   if (f.ignored.length) box.append(h("span", { class: "chip warn", text: `Not understood: ${f.ignored.join(" ")}` }));
@@ -396,7 +414,7 @@ function renderChips() {
 function describe(f) {
   const parts = [];
   if (f.focus != null) parts.push(S.db.byId[f.focus].name);
-  parts.push(...f.regions, ...f.missingRegions);
+  parts.push(...f.realms, ...f.regions.filter(r => !f.realms.some(x => x.toLowerCase() === r.toLowerCase())), ...f.missingRegions);
   if (f.from != null) parts.push(rangeQuery(f.from, f.to));
   f.types.forEach(t => parts.push(TYPE_LABEL[t] || t));
   return parts.join(" ");
@@ -1030,7 +1048,8 @@ function setMapMode(m) {
 // Who ruled where, and what happened, in a year or a span. Rulers come from the titles table,
 // grouped by realm, so it grows to any country as titles are added.
 
-const Y = { from: null, to: null, hidden: new Set(store.get("hiddenRegions", [])) };
+// realm: the realm the page is focused on (its rulers, their events and people), or null for the whole world.
+const Y = { from: null, to: null, realm: null, hidden: new Set(store.get("hiddenRegions", [])) };
 // World regions in display order (matches sql/008). Realms not yet given a region go under Other.
 const REGIONS = ["Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
   "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania", "Other"];
@@ -1068,23 +1087,33 @@ function syncYearUrl() {
   const p = new URLSearchParams({ view: "year" });
   if (Y.from != null) p.set("y", yearQuery(Y.from));
   if (Y.to != null && Y.to !== Y.from) p.set("to", yearQuery(Y.to, Y.from < 0));
+  if (Y.realm) p.set("realm", Y.realm);
   try { history.replaceState(null, "", "?" + p.toString()); } catch (e) {}
 }
 
 // Opens the Year view on a year or span, from anywhere in the site.
-function openYear(from, to) {
+function openYear(from, to, realm) {
   Y.from = from; Y.to = to ?? from;
+  if (realm !== undefined) Y.realm = realm || null;
   $("year-from").value = from != null ? yearQuery(from) : "";
   $("year-to").value = Y.to !== Y.from ? yearQuery(Y.to, from < 0) : "";
   showView("year");
   renderYear();
 }
 
+// Focuses the Year view on one realm (null for the whole world), keeping the years.
+function focusRealm(realm) {
+  Y.realm = realm || null;
+  syncYearUrl(); renderYear();
+  window.scrollTo({ top: $("year-out").getBoundingClientRect().top + scrollY - 12, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+}
+
 // Reads the two boxes with the same rules as the main request box: "1060", "384 BC", "11th century", "1060 to 1100".
+// A realm named in the first box ("Scotland 1300") focuses the page on it, as in the timeline's search.
 function readYearForm() {
   const a = $("year-from").value.trim(), b = $("year-to").value.trim();
   if (!a) return { error: "Type a year, e.g. 1060." };
-  const fa = parseQuery(a, S.db);
+  const fa = parseQuery(a, S.db), realm = fa.realms[0];
   if (fa.from == null) return { error: `Couldn't read "${a}" as a year. Try 1060, 384 BC or 11th century.` };
   let from = fa.from, to = fa.to;
   if (b) {
@@ -1092,7 +1121,7 @@ function readYearForm() {
     if (fb.from == null) return { error: `Couldn't read "${b}" as a year.` };
     to = fb.to;
   }
-  return from <= to ? { from, to } : { from: to, to: from };
+  return from <= to ? { from, to, realm } : { from: to, to: from, realm };
 }
 
 function renderYear() {
@@ -1108,7 +1137,12 @@ function renderYear() {
   const span = single ? 1 : yearsBetween(a, b) + 1;
 
   // Rulers, grouped by realm, then by title in the order each title first appears.
-  const inRange = db.titles.filter(t => overlaps(t.start_year, t.end_year, a, b) && catOn(db.byId[t.entity_id]));
+  const inRange = db.titles.filter(t => overlaps(t.start_year, t.end_year, a, b) && catOn(db.byId[t.entity_id]) && (!Y.realm || t.realm === Y.realm));
+  // With a realm in focus: its title holders and their close family are "its people"; its places are those in its modern country.
+  const holders = new Set(inRange.map(t => t.entity_id));
+  const realmPeople = new Set([...holders].flatMap(id => [id, ...db.neighbours(id).map(n => n.id)]));
+  const realmCountry = Y.realm ? db.countryOf[Y.realm] : null;
+  const inRealm = p => !Y.realm || realmPeople.has(p.id);
   // Realms with the most rulers in the span first (the main kingdoms), then by name.
   const count = r => inRange.filter(t => t.realm === r).length;
   const realms = [...new Set(inRange.map(t => t.realm))].sort((x, y) => count(y) - count(x) || x.localeCompare(y));
@@ -1123,6 +1157,9 @@ function renderYear() {
     });
   }
 
+  if (Y.realm) out.append(h("div", { class: "chips focus-chip" }, h("span", { class: "lbl", text: "Focused on" }),
+    h("span", { class: "chip" }, h("b", { text: Y.realm }), h("button", { type: "button", "aria-label": "Show the whole world", title: "Show the whole world", onclick: () => focusRealm(null), text: "×" })),
+    h("span", { class: "hint", text: "Its rulers, the people around them, and their events." })));
   out.append(h("div", { class: "year-head" },
     h("h2", { text: label }),
     h("button", { type: "button", class: "btn ghost", onclick: toTimeline(() => run(rangeQuery(a, b), { pushTrail: true })), text: "Show these years on the timeline" })));
@@ -1130,9 +1167,17 @@ function renderYear() {
   const rulers = h("section", { class: "year-sec" }, h("h3", { text: single ? "Who ruled" : "Who ruled, in order" }));
   const shown = realms.filter(r => !Y.hidden.has(regionOf(r)));
   out.append(yearMap(a, b, shown));
-  const hiddenRulers = !inRange.length && db.titles.some(t => overlaps(t.start_year, t.end_year, a, b));
+  // Hidden by the Show buttons: someone held a title (in the focused realm, if any) but their group is off.
+  const hiddenRulers = !inRange.length && db.titles.some(t => overlaps(t.start_year, t.end_year, a, b) && (!Y.realm || t.realm === Y.realm));
   if (hiddenRulers) {
     rulers.append(h("p", { class: "hint", text: "Rulers are hidden by the Show buttons above (Royalty, Nobility, Clergy)." }));
+  } else if (!inRange.length && Y.realm) {
+    // A realm in focus with no holder: an interregnum or a gap in the data. Say which years we do have for it.
+    const rs = db.titles.filter(t => t.realm === Y.realm).sort((x, y) => byYear(x.start_year, y.start_year));
+    const before = rs.filter(t => t.end_year != null && t.end_year < a).pop(), after = rs.find(t => t.start_year > b);
+    rulers.append(h("p", { class: "hint" }, `No ruler of ${Y.realm} is recorded for ${label}.`,
+      before ? [" Before: ", yPerson(db.byId[before.entity_id], ` (to ${fmtYear(before.end_year)})`), "."] : "",
+      after ? [" After: ", yPerson(db.byId[after.entity_id], ` (from ${fmtYear(after.start_year)})`), "."] : ""));
   } else if (!inRange.length) {
     const ys = db.titles.flatMap(t => [t.start_year, t.end_year]).filter(Number.isFinite);
     rulers.append(h("p", { class: "hint", text: db.titles.length
@@ -1157,7 +1202,10 @@ function renderYear() {
   shown.forEach(realm => {
     const ts = inRange.filter(t => t.realm === realm);
     const names = [...new Set(ts.slice().sort((x, y) => byYear(x.start_year, y.start_year)).map(t => t.title))];
-    const card = h("article", { class: "realm-card", "data-realm": realm }, h("h4", { text: realm }));
+    // The heading focuses the page on this realm (or back to the whole world when it's already in focus).
+    const card = h("article", { class: "realm-card", "data-realm": realm }, h("h4", {},
+      h("button", { type: "button", class: "realm-link", title: Y.realm ? "Show the whole world" : `Focus on ${realm}`,
+        onclick: () => focusRealm(Y.realm ? null : realm), text: realm })));
     names.forEach(name => {
       const holders = ts.filter(t => t.title === name).sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
       const row = h("div", { class: "title-row-y" }, h("div", { class: "tname", text: name }));
@@ -1179,11 +1227,13 @@ function renderYear() {
     gridFor(realm).append(card);
   });
   out.append(rulers);
-  out.append(makersSection(a, b, single, label));
+  out.append(makersSection(a, b, single, label, realmCountry));
 
   // Events in the span, in date order.
   // Within a year, dated events first in date order, then those known only by year.
-  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b) && eventCatOn(db, e))
+  const evInRealm = e => !Y.realm || db.peopleInEvent(e.id).some(x => realmPeople.has(x.person.id))
+    || (realmCountry && db.placeById[e.place_id]?.modern_country === realmCountry);
+  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, a, b) && eventCatOn(db, e) && evInRealm(e))
     .sort((x, y) => byYear(x.start_year, y.start_year) || !x.start_date - !y.start_date || (x.start_date || "").localeCompare(y.start_date || ""));
   const evSec = h("section", { class: "year-sec" }, h("h3", { text: `Events (${evs.length})` }));
   if (!evs.length) evSec.append(h("p", { class: "hint", text: `No events recorded for ${label} yet.` }));
@@ -1199,8 +1249,8 @@ function renderYear() {
   out.append(evSec);
 
   // Births and deaths in the span.
-  const born = db.people.filter(p => catOn(p) && p.birth_year != null && p.birth_year >= a && p.birth_year <= b).sort((x, y) => byYear(x.birth_year, y.birth_year));
-  const died = db.people.filter(p => catOn(p) && p.death_year != null && p.death_year >= a && p.death_year <= b).sort((x, y) => byYear(x.death_year, y.death_year));
+  const born = db.people.filter(p => catOn(p) && inRealm(p) && p.birth_year != null && p.birth_year >= a && p.birth_year <= b).sort((x, y) => byYear(x.birth_year, y.birth_year));
+  const died = db.people.filter(p => catOn(p) && inRealm(p) && p.death_year != null && p.death_year >= a && p.death_year <= b).sort((x, y) => byYear(x.death_year, y.death_year));
   const bd = h("section", { class: "year-sec two" });
   [["Born", born, "birth"], ["Died", died, "death"]].forEach(([title, list, k]) => {
     const sec = h("div", {}, h("h3", { text: `${title} (${list.length})` }));
@@ -1216,10 +1266,12 @@ function renderYear() {
 // Artists, writers, composers and scholars alive in the span, grouped by type, each with what they did in it:
 // their events, life moments (with the place) and the artworks they made.
 const MAKER_TYPES = ["Artist", "Writer", "Composer", "Scholar"];
-function makersSection(a, b, single, label) {
+function makersSection(a, b, single, label, country) {
   const db = S.db, inSpan = (s, e) => overlaps(s, e ?? s, a, b);
   const alive = p => (p.birth_year != null || p.death_year != null) && inSpan(p.birth_year ?? p.death_year, p.death_year ?? p.birth_year);
-  const makers = db.people.filter(p => MAKER_TYPES.includes(p.type) && alive(p) && catOn(p));
+  // With a realm in focus, the makers are those with a recorded place in its modern country.
+  const makers = db.people.filter(p => MAKER_TYPES.includes(p.type) && alive(p) && catOn(p)
+    && (!Y.realm || (country && db.placesOfPerson(p.id).some(pl => pl.modern_country === country))));
   const sec = h("section", { class: "year-sec" }, h("h3", { text: `Artists, writers and thinkers (${makers.length})` }));
   if (!makers.length) { sec.append(h("p", { class: "hint", text: `None recorded for ${label} yet.` })); return sec; }
   const grid = h("div", { class: "realms" });
@@ -1338,7 +1390,7 @@ function yearMap(a, b, realmsInView) {
         el("title", {}, p).textContent = (pr.NAME || "Unnamed") + (realms ? `: ${realms.join(", ")}. Click for its rulers.` : "");
         if (realms) {
           p.setAttribute("tabindex", 0); p.setAttribute("role", "button");
-          const go = () => jumpToRealm(realms[0]);
+          const go = () => focusRealm(realms[0]);
           p.addEventListener("click", go);
           p.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
           const name = realms.length === 1 ? realms[0] : pr.NAME, area = path.area(f);
@@ -1368,8 +1420,8 @@ function yearMap(a, b, realmsInView) {
         labelFor["pin:" + realm] = { name: realm, realms: [realm], area: 300, xy, point: true };
         const c = el("circle", { cx: xy[0], cy: xy[1], class: "hm-pin", tabindex: 0, role: "button", "aria-label": `${realm}: show its rulers` }, pg);
         el("title", {}, c).textContent = `${realm}. Click for its rulers.`;
-        c.addEventListener("click", () => jumpToRealm(realm));
-        c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); jumpToRealm(realm); } });
+        c.addEventListener("click", () => focusRealm(realm));
+        c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); focusRealm(realm); } });
         pins.push(c);
         bx0 = Math.min(bx0, xy[0]); by0 = Math.min(by0, xy[1]); bx1 = Math.max(bx1, xy[0]); by1 = Math.max(by1, xy[1]);
       });
@@ -1509,7 +1561,7 @@ function wire() {
     e.preventDefault();
     const r = readYearForm();
     Y.error = r.error || null;
-    if (!r.error) { Y.from = r.from; Y.to = r.to; }
+    if (!r.error) { Y.from = r.from; Y.to = r.to; if (r.realm) Y.realm = r.realm; }
     syncYearUrl(); renderYear();
   });
   document.querySelectorAll("#year-form .examples button").forEach(b => b.addEventListener("click", () => {
@@ -1562,6 +1614,7 @@ async function init() {
   run(params.get("q") || "");
   if (params.get("view") === "year") {
     $("year-from").value = params.get("y") || ""; $("year-to").value = params.get("to") || "";
+    Y.realm = params.get("realm") || null;
     showView("year");
     if ($("year-from").value) $("year-form").requestSubmit(); else renderYear();
   }
