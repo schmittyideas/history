@@ -1,0 +1,3542 @@
+# Notes for the reviewer
+# - 42 painters (Impressionism, Post-Impressionism, Realism, academic painting), ranked by Wikipedia sitelinks, from English Wikipedia articles; lead images are links only (public domain, one CC BY-SA 4.0).
+# - Every person is `coverage: partly`; artworks have no images yet. Articles were cut at 32,000 characters: death places and late sections are missing where that bit, and left out rather than guessed.
+# - Teachers and patrons not yet in the database (Gleyre, Couture, Napoleon III and others) have no links; they are named in each person's coverage note.
+# - Coordinates of new places are present-day and approximate (general knowledge, not the articles).
+
+batch:
+  title: 'Painters, batch 2: Impressionists and Post-Impressionists (42 painters)'
+  requested: 'Western painters from 1500, batch 2: Impressionism, Post-Impressionism, Realism and academic painting, with teachers, places and key works'
+  date: '2026-10-10'
+sources:
+- key: wp-vincent-van-gogh
+  title: Vincent van Gogh (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vincent_van_Gogh
+- key: wp-claude-monet
+  title: Claude Monet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Claude_Monet
+- key: wp-paul-cezanne
+  title: Paul Cézanne (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paul_C%C3%A9zanne
+- key: wp-paul-gauguin
+  title: Paul Gauguin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paul_Gauguin
+- key: wp-edouard-manet
+  title: Édouard Manet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/%C3%89douard_Manet
+- key: wp-edgar-degas
+  title: Edgar Degas (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Edgar_Degas
+- key: wp-pierre-auguste-renoir
+  title: Pierre-Auguste Renoir (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre-Auguste_Renoir
+- key: wp-camille-pissarro
+  title: Camille Pissarro (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Camille_Pissarro
+- key: wp-georges-seurat
+  title: Georges Seurat (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Georges_Seurat
+- key: wp-berthe-morisot
+  title: Berthe Morisot (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Berthe_Morisot
+- key: wp-alfred-sisley
+  title: Alfred Sisley (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alfred_Sisley
+- key: wp-mary-cassatt
+  title: Mary Cassatt (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mary_Cassatt
+- key: wp-henri-de-toulouse-lautrec
+  title: Henri de Toulouse-Lautrec (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henri_de_Toulouse-Lautrec
+- key: wp-gustave-caillebotte
+  title: Gustave Caillebotte (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustave_Caillebotte
+- key: wp-frederic-bazille
+  title: Frédéric Bazille (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Bazille
+- key: wp-paul-signac
+  title: Paul Signac (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Paul_Signac
+- key: wp-odilon-redon
+  title: Odilon Redon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Odilon_Redon
+- key: wp-henri-rousseau
+  title: Henri Rousseau (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henri_Rousseau
+- key: wp-gustave-courbet
+  title: Gustave Courbet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustave_Courbet
+- key: wp-jean-baptiste-camille-corot
+  title: Jean-Baptiste-Camille Corot (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Baptiste-Camille_Corot
+- key: wp-jean-francois-millet
+  title: Jean-François Millet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-Fran%C3%A7ois_Millet
+- key: wp-honore-daumier
+  title: Honoré Daumier (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Honor%C3%A9_Daumier
+- key: wp-eugene-boudin
+  title: Eugène Boudin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Eug%C3%A8ne_Boudin
+- key: wp-theodore-rousseau
+  title: Théodore Rousseau (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Th%C3%A9odore_Rousseau
+- key: wp-charles-francois-daubigny
+  title: Charles-François Daubigny (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Charles-Fran%C3%A7ois_Daubigny
+- key: wp-james-mcneill-whistler
+  title: James McNeill Whistler (Wikipedia)
+  url: https://en.wikipedia.org/wiki/James_McNeill_Whistler
+- key: wp-john-singer-sargent
+  title: John Singer Sargent (Wikipedia)
+  url: https://en.wikipedia.org/wiki/John_Singer_Sargent
+- key: wp-winslow-homer
+  title: Winslow Homer (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Winslow_Homer
+- key: wp-thomas-eakins
+  title: Thomas Eakins (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thomas_Eakins
+- key: wp-edouard-vuillard
+  title: Édouard Vuillard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/%C3%89douard_Vuillard
+- key: wp-pierre-bonnard
+  title: Pierre Bonnard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre_Bonnard
+- key: wp-maurice-denis
+  title: Maurice Denis (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maurice_Denis
+- key: wp-emile-bernard
+  title: Émile Bernard (Wikipedia)
+  url: https://en.wikipedia.org/wiki/%C3%89mile_Bernard
+- key: wp-suzanne-valadon
+  title: Suzanne Valadon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Suzanne_Valadon
+- key: wp-maurice-utrillo
+  title: Maurice Utrillo (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Maurice_Utrillo
+- key: wp-gustave-moreau
+  title: Gustave Moreau (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gustave_Moreau
+- key: wp-pierre-puvis-de-chavannes
+  title: Pierre Puvis de Chavannes (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pierre_Puvis_de_Chavannes
+- key: wp-rosa-bonheur
+  title: Rosa Bonheur (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rosa_Bonheur
+- key: wp-william-adolphe-bouguereau
+  title: William-Adolphe Bouguereau (Wikipedia)
+  url: https://en.wikipedia.org/wiki/William-Adolphe_Bouguereau
+- key: wp-jean-leon-gerome
+  title: Jean-Léon Gérôme (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Jean-L%C3%A9on_G%C3%A9r%C3%B4me
+- key: wp-alexandre-cabanel
+  title: Alexandre Cabanel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alexandre_Cabanel
+- key: wp-henri-fantin-latour
+  title: Henri Fantin-Latour (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Henri_Fantin-Latour
+places:
+- key: zundert
+  name: Zundert
+  kind: village
+  region: North Brabant
+  country: Netherlands
+  lat: 51.468
+  lng: 4.656
+  sources:
+  - wp-vincent-van-gogh
+- key: nuenen
+  name: Nuenen
+  kind: village
+  region: North Brabant
+  country: Netherlands
+  lat: 51.47
+  lng: 5.553
+  sources:
+  - wp-vincent-van-gogh
+- key: arles
+  name: Arles
+  kind: city
+  region: Bouches-du-Rhone
+  country: France
+  lat: 43.677
+  lng: 4.628
+  sources:
+  - wp-vincent-van-gogh
+  - wp-paul-gauguin
+- key: auvers-sur-oise
+  name: Auvers-sur-Oise
+  kind: village
+  region: Val-d'Oise
+  country: France
+  lat: 49.072
+  lng: 2.168
+  sources:
+  - wp-vincent-van-gogh
+  - wp-paul-cezanne
+- key: le-havre
+  name: Le Havre
+  kind: city
+  region: Seine-Maritime
+  country: France
+  lat: 49.494
+  lng: 0.108
+  sources:
+  - wp-claude-monet
+- key: argenteuil
+  name: Argenteuil
+  kind: town
+  region: Val-d'Oise
+  country: France
+  lat: 48.947
+  lng: 2.247
+  sources:
+  - wp-claude-monet
+- key: vetheuil
+  name: Vétheuil
+  kind: village
+  region: Val-d'Oise
+  country: France
+  lat: 49.07
+  lng: 1.985
+  sources:
+  - wp-claude-monet
+- key: giverny
+  name: Giverny
+  kind: village
+  region: Eure
+  country: France
+  lat: 49.076
+  lng: 1.534
+  sources:
+  - wp-claude-monet
+- key: aix-en-provence
+  name: Aix-en-Provence
+  kind: city
+  region: Bouches-du-Rhone
+  country: France
+  lat: 43.53
+  lng: 5.447
+  sources:
+  - wp-paul-cezanne
+- key: atelier-de-cezanne
+  name: Atelier de Cézanne (Les Lauves studio)
+  kind: studio
+  city: Aix-en-Provence
+  region: Bouches-du-Rhone
+  country: France
+  lat: 43.549
+  lng: 5.437
+  founded: 1902
+  built_by: Paul Cézanne (had the studio built to his needs on the Chemin des Lauves)
+  visitable: true
+  visit_site: Atelier de Cézanne
+  sources:
+  - wp-paul-cezanne
+- key: pont-aven
+  name: Pont-Aven
+  kind: village
+  region: Finistere
+  country: France
+  lat: 47.852
+  lng: -3.75
+  sources:
+  - wp-paul-gauguin
+- key: papeete
+  name: Papeete
+  kind: city
+  region: Tahiti
+  country: French Polynesia
+  lat: -17.535
+  lng: -149.569
+  sources:
+  - wp-paul-gauguin
+- key: new-orleans
+  name: New Orleans
+  kind: city
+  region: Louisiana
+  country: United States
+  lat: 29.951
+  lng: -90.072
+  sources:
+  - wp-edgar-degas
+- key: limoges
+  name: Limoges
+  kind: city
+  region: Haute-Vienne
+  country: France
+  lat: 45.833
+  lng: 1.261
+  sources:
+  - wp-pierre-auguste-renoir
+- key: cagnes-sur-mer
+  name: Cagnes-sur-Mer
+  kind: town
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.664
+  lng: 7.149
+  sources:
+  - wp-pierre-auguste-renoir
+- key: charlotte-amalie
+  name: Charlotte Amalie
+  kind: town
+  region: Saint Thomas
+  country: US Virgin Islands
+  lat: 18.342
+  lng: -64.932
+  sources:
+  - wp-camille-pissarro
+- key: pontoise
+  name: Pontoise
+  kind: town
+  region: Val-d'Oise
+  country: France
+  lat: 49.051
+  lng: 2.101
+  sources:
+  - wp-camille-pissarro
+  - wp-paul-cezanne
+- key: eragny-sur-epte
+  name: Éragny-sur-Epte
+  kind: village
+  region: Oise
+  country: France
+  lat: 49.24
+  lng: 1.8
+  sources:
+  - wp-camille-pissarro
+- key: passy-cemetery
+  name: Passy Cemetery
+  kind: cemetery
+  city: Paris
+  region: Ile-de-France
+  country: France
+  lat: 48.862
+  lng: 2.281
+  sources:
+  - wp-edouard-manet
+  - wp-berthe-morisot
+- key: honfleur
+  name: Honfleur
+  kind: town
+  region: Calvados
+  country: France
+  lat: 49.419
+  lng: 0.233
+  sources:
+  - wp-alfred-sisley
+- key: penarth
+  name: Penarth
+  kind: town
+  region: Vale of Glamorgan
+  country: Wales
+  lat: 51.434
+  lng: -3.172
+  sources:
+  - wp-alfred-sisley
+- key: allegheny-pittsburgh
+  name: Allegheny (Pittsburgh North Side)
+  kind: neighbourhood
+  city: Pittsburgh
+  region: Pennsylvania
+  country: United States
+  lat: 40.455
+  lng: -80.004
+  visitable: true
+  sources:
+  - wp-mary-cassatt
+- key: chateau-de-beaufresne
+  name: Château de Beaufresne
+  kind: château
+  city: Le Mesnil-Théribus
+  region: Oise
+  country: France
+  lat: 49.282
+  lng: 1.995
+  visitable: false
+  sources:
+  - wp-mary-cassatt
+- key: le-mesnil-theribus
+  name: Le Mesnil-Théribus
+  kind: village
+  region: Oise
+  country: France
+  lat: 49.285
+  lng: 1.995
+  visitable: true
+  sources:
+  - wp-mary-cassatt
+- key: albi
+  name: Albi
+  kind: city
+  region: Tarn
+  country: France
+  lat: 43.929
+  lng: 2.148
+  visitable: true
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: chateau-malrome
+  name: Château Malromé
+  kind: château
+  city: Saint-André-du-Bois
+  region: Gironde
+  country: France
+  lat: 44.55
+  lng: -0.21
+  visitable: true
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: verdelais-cemetery
+  name: Verdelais Cemetery
+  kind: cemetery
+  city: Verdelais
+  region: Gironde
+  country: France
+  lat: 44.565
+  lng: -0.28
+  visitable: true
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: petit-gennevilliers
+  name: Petit-Gennevilliers
+  kind: town
+  city: Gennevilliers
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.93
+  lng: 2.29
+  visitable: true
+  sources:
+  - wp-gustave-caillebotte
+- key: montpellier
+  name: Montpellier
+  kind: city
+  region: Hérault
+  country: France
+  lat: 43.611
+  lng: 3.877
+  visitable: true
+  sources:
+  - wp-frederic-bazille
+- key: beaune-la-rolande-battlefield
+  name: Beaune-la-Rolande battlefield
+  kind: battlefield
+  city: Beaune-la-Rolande
+  region: Loiret
+  country: France
+  lat: 48.07
+  lng: 2.43
+  visitable: true
+  sources:
+  - wp-frederic-bazille
+- key: protestant-cemetery-montpellier
+  name: Protestant Cemetery
+  Montpellier: null
+  kind: cemetery
+  city: Montpellier
+  region: Hérault
+  country: France
+  lat: 43.607
+  lng: 3.89
+  visitable: true
+  sources:
+  - wp-frederic-bazille
+- key: saint-tropez
+  name: Saint-Tropez
+  kind: town
+  region: Var
+  country: France
+  lat: 43.272
+  lng: 6.64
+  visitable: true
+  sources:
+  - wp-paul-signac
+- key: castel-beranger
+  name: Castel Béranger
+  kind: apartment building
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.85
+  lng: 2.268
+  architect: Hector Guimard
+  visitable: true
+  sources:
+  - wp-paul-signac
+- key: chateau-de-domecy-sur-le-vault
+  name: Château de Domecy-sur-le-Vault
+  kind: château
+  city: Domecy-sur-le-Vault
+  region: Yonne
+  country: France
+  lat: 47.4
+  lng: 3.85
+  visitable: false
+  sources:
+  - wp-odilon-redon
+- key: laval
+  name: Laval
+  kind: city
+  region: Mayenne
+  country: France
+  lat: 48.07
+  lng: -0.77
+  visitable: true
+  sources:
+  - wp-henri-rousseau
+- key: necker-hospital
+  name: Necker Hospital
+  kind: hospital
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.847
+  lng: 2.315
+  visitable: false
+  sources:
+  - wp-henri-rousseau
+- key: ornans
+  name: Ornans
+  kind: town
+  region: Doubs
+  country: France
+  lat: 47.101
+  lng: 6.147
+  visitable: true
+  sources:
+  - wp-gustave-courbet
+- key: la-tour-de-peilz
+  name: La Tour-de-Peilz
+  kind: town
+  region: Vaud
+  country: Switzerland
+  lat: 46.451
+  lng: 6.86
+  visitable: true
+  sources:
+  - wp-gustave-courbet
+- key: gruchy
+  name: Gruchy, Gréville-Hague
+  kind: village
+  region: Manche
+  country: France
+  lat: 49.665
+  lng: -1.84
+  visitable: true
+  sources:
+  - wp-jean-francois-millet
+- key: barbizon
+  name: Barbizon
+  kind: village
+  region: Seine-et-Marne
+  country: France
+  lat: 48.445
+  lng: 2.6
+  visitable: true
+  sources:
+  - wp-jean-francois-millet
+  - wp-jean-baptiste-camille-corot
+- key: marseille
+  name: Marseille
+  kind: city
+  region: Provence-Alpes-Côte d'Azur
+  country: France
+  lat: 43.296
+  lng: 5.37
+  visitable: true
+  sources:
+  - wp-honore-daumier
+- key: valmondois
+  name: Valmondois
+  kind: village
+  region: Val-d'Oise
+  country: France
+  lat: 49.083
+  lng: 2.183
+  visitable: true
+  sources:
+  - wp-honore-daumier
+- key: deauville
+  name: Deauville
+  kind: town
+  region: Calvados
+  country: France
+  lat: 49.357
+  lng: 0.075
+  visitable: true
+  sources:
+  - wp-eugene-boudin
+- key: saint-vincent-cemetery-montmartre
+  name: Saint-Vincent Cemetery
+  Montmartre: null
+  kind: cemetery
+  city: Paris
+  region: Île-de-France
+  country: France
+  lat: 48.889
+  lng: 2.341
+  visitable: true
+  sources:
+  - wp-eugene-boudin
+- key: lowell
+  name: Lowell
+  kind: city
+  region: Massachusetts
+  country: United States
+  lat: 42.633
+  lng: -71.316
+  visitable: true
+  sources:
+  - wp-james-mcneill-whistler
+- key: st-petersburg
+  name: Saint Petersburg
+  kind: city
+  region: Saint Petersburg
+  country: Russia
+  lat: 59.934
+  lng: 30.335
+  visitable: true
+  sources:
+  - wp-james-mcneill-whistler
+- key: boston
+  name: Boston
+  kind: city
+  region: Massachusetts
+  country: United States
+  lat: 42.36
+  lng: -71.059
+  visitable: true
+  sources:
+  - wp-winslow-homer
+- key: new-york-city
+  name: New York City
+  kind: city
+  region: New York
+  country: United States
+  lat: 40.713
+  lng: -74.006
+  visitable: true
+  sources:
+  - wp-winslow-homer
+- key: prouts-neck
+  name: Prouts Neck
+  kind: village
+  city: Scarborough
+  region: Maine
+  country: United States
+  lat: 43.545
+  lng: -70.322
+  visitable: true
+  visit_site: Winslow Homer Studio (Portland Museum of Art tours)
+  sources:
+  - wp-winslow-homer
+- key: cullercoats
+  name: Cullercoats
+  kind: village
+  region: Tyne and Wear
+  country: United Kingdom
+  lat: 55.033
+  lng: -1.432
+  visitable: true
+  sources:
+  - wp-winslow-homer
+- key: mount-auburn-cemetery
+  name: Mount Auburn Cemetery
+  kind: cemetery
+  city: Cambridge
+  region: Massachusetts
+  country: United States
+  lat: 42.375
+  lng: -71.145
+  visitable: true
+  sources:
+  - wp-winslow-homer
+- key: boston-public-library
+  name: Boston Public Library
+  kind: library
+  city: Boston
+  region: Massachusetts
+  country: United States
+  lat: 42.349
+  lng: -71.078
+  visitable: true
+  visit_site: Sargent's Triumph of Religion murals
+  sources:
+  - wp-john-singer-sargent
+- key: philadelphia
+  name: Philadelphia
+  kind: city
+  region: Pennsylvania
+  country: United States
+  lat: 39.953
+  lng: -75.164
+  visitable: true
+  sources:
+  - wp-thomas-eakins
+- key: pennsylvania-academy-of-the-fine-arts
+  name: Pennsylvania Academy of the Fine Arts
+  kind: art school
+  city: Philadelphia
+  region: Pennsylvania
+  country: United States
+  lat: 39.955
+  lng: -75.164
+  architect: Frank Furness (new building opened 1876)
+  visitable: true
+  sources:
+  - wp-thomas-eakins
+- key: the-woodlands-cemetery
+  name: The Woodlands Cemetery
+  kind: cemetery
+  city: Philadelphia
+  region: Pennsylvania
+  country: United States
+  lat: 39.948
+  lng: -75.2
+  visitable: true
+  sources:
+  - wp-thomas-eakins
+- key: cuiseaux
+  name: Cuiseaux
+  kind: town
+  region: Saône-et-Loire
+  country: France
+  lat: 46.489
+  lng: 5.395
+  visitable: true
+  sources:
+  - wp-edouard-vuillard
+- key: la-baule
+  name: La Baule
+  kind: town
+  region: Loire-Atlantique
+  country: France
+  lat: 47.286
+  lng: -2.393
+  visitable: true
+  sources:
+  - wp-edouard-vuillard
+- key: fontenay-aux-roses
+  name: Fontenay-aux-Roses
+  kind: town
+  region: Hauts-de-Seine
+  country: France
+  lat: 48.79
+  lng: 2.29
+  visitable: true
+  sources:
+  - wp-pierre-bonnard
+- key: cannes
+  name: Cannes
+  kind: city
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.552
+  lng: 7.017
+  visitable: true
+  sources:
+  - wp-pierre-bonnard
+- key: le-cannet
+  name: Le Cannet
+  kind: town
+  region: Alpes-Maritimes
+  country: France
+  lat: 43.577
+  lng: 7.018
+  visitable: true
+  sources:
+  - wp-pierre-bonnard
+- key: granville
+  name: Granville
+  kind: town
+  region: Manche
+  country: France
+  lat: 48.838
+  lng: -1.597
+  visitable: true
+  sources:
+  - wp-maurice-denis
+- key: perros-guirec
+  name: Perros-Guirec
+  kind: town
+  region: Côtes-d'Armor
+  country: France
+  lat: 48.815
+  lng: -3.44
+  visitable: true
+  sources:
+  - wp-maurice-denis
+- key: le-prieure-saint-germain-en-laye
+  name: The Priory (Le Prieuré), Saint-Germain-en-Laye
+  kind: house
+  city: Saint-Germain-en-Laye
+  region: Yvelines
+  country: France
+  lat: 48.897
+  lng: 2.093
+  visitable: true
+  visit_site: Musée Maurice Denis
+  sources:
+  - wp-maurice-denis
+- key: notre-dame-du-raincy
+  name: Church of Notre-Dame du Raincy
+  kind: church
+  city: Le Raincy
+  region: Seine-Saint-Denis
+  country: France
+  lat: 48.9
+  lng: 2.509
+  founded: 1924
+  architect: Auguste Perret
+  visitable: true
+  sources:
+  - wp-maurice-denis
+- key: lille
+  name: Lille
+  kind: city
+  region: Hauts-de-France
+  country: France
+  lat: 50.629
+  lng: 3.057
+  visitable: true
+  sources:
+  - wp-emile-bernard
+- key: le-pouldu
+  name: Le Pouldu
+  kind: village
+  region: Brittany
+  country: France
+  city: Clohars-Carnoët
+  lat: 47.77
+  lng: -3.545
+  visitable: true
+  sources:
+  - wp-emile-bernard
+- key: bessines-sur-gartempe
+  name: Bessines-sur-Gartempe
+  kind: town
+  region: Haute-Vienne
+  country: France
+  lat: 46.103
+  lng: 1.362
+  visitable: true
+  sources:
+  - wp-suzanne-valadon
+- key: montmartre
+  name: Montmartre
+  kind: district
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.886
+  lng: 2.341
+  visitable: true
+  sources:
+  - wp-suzanne-valadon
+  - wp-maurice-utrillo
+- key: cimetiere-de-saint-ouen
+  name: Cimetière de Saint-Ouen
+  kind: cemetery
+  region: Île-de-France
+  country: France
+  city: Saint-Ouen
+  lat: 48.908
+  lng: 2.337
+  visitable: true
+  sources:
+  - wp-suzanne-valadon
+- key: dax
+  name: Dax
+  kind: city
+  region: Landes
+  country: France
+  lat: 43.71
+  lng: -1.052
+  visitable: true
+  sources:
+  - wp-maurice-utrillo
+- key: cimetiere-saint-vincent
+  name: Cimetière Saint-Vincent
+  kind: cemetery
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.889
+  lng: 2.34
+  visitable: true
+  sources:
+  - wp-maurice-utrillo
+- key: cimetiere-de-montmartre
+  name: Cimetière de Montmartre
+  kind: cemetery
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.887
+  lng: 2.33
+  visitable: true
+  sources:
+  - wp-gustave-moreau
+  - wp-jean-leon-gerome
+- key: musee-gustave-moreau
+  name: Musée Gustave Moreau
+  kind: museum
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.877
+  lng: 2.338
+  visitable: true
+  visit_site: Musée national Gustave Moreau, 14 rue de la Rochefoucauld
+  sources:
+  - wp-gustave-moreau
+- key: musee-de-picardie
+  name: Musée de Picardie
+  kind: museum
+  region: Hauts-de-France
+  country: France
+  city: Amiens
+  lat: 49.894
+  lng: 2.296
+  visitable: true
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- key: pantheon-paris
+  name: Panthéon
+  kind: church
+  historical_name: Church of Sainte-Geneviève
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.846
+  lng: 2.346
+  visitable: true
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- key: palais-des-beaux-arts-de-lyon
+  name: Palais des Beaux-Arts de Lyon
+  kind: museum
+  region: Auvergne-Rhône-Alpes
+  country: France
+  city: Lyon
+  lat: 45.767
+  lng: 4.834
+  visitable: true
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- key: chateau-de-by
+  name: Château de By
+  kind: chateau
+  region: Seine-et-Marne
+  country: France
+  city: Thomery
+  lat: 48.386
+  lng: 2.8
+  visitable: true
+  visit_site: Château de Rosa Bonheur (museum)
+  sources:
+  - wp-rosa-bonheur
+- key: la-rochelle
+  name: La Rochelle
+  kind: city
+  region: Charente-Maritime
+  country: France
+  lat: 46.16
+  lng: -1.152
+  visitable: true
+  sources:
+  - wp-william-adolphe-bouguereau
+- key: villa-medici
+  name: Villa Medici
+  kind: villa
+  region: Lazio
+  country: Italy
+  city: Rome
+  lat: 41.907
+  lng: 12.48
+  visitable: true
+  sources:
+  - wp-william-adolphe-bouguereau
+  - wp-alexandre-cabanel
+- key: cimetiere-du-montparnasse
+  name: Cimetière du Montparnasse
+  kind: cemetery
+  region: Île-de-France
+  country: France
+  city: Paris
+  lat: 48.839
+  lng: 2.326
+  visitable: true
+  sources:
+  - wp-william-adolphe-bouguereau
+  - wp-henri-fantin-latour
+- key: vesoul
+  name: Vesoul
+  kind: city
+  region: Haute-Saône
+  country: France
+  lat: 47.62
+  lng: 6.155
+  visitable: true
+  sources:
+  - wp-jean-leon-gerome
+- key: cimetiere-saint-lazare-montpellier
+  name: Cimetière Saint-Lazare
+  kind: cemetery
+  region: Hérault
+  country: France
+  city: Montpellier
+  lat: 43.617
+  lng: 3.873
+  visitable: true
+  sources:
+  - wp-alexandre-cabanel
+- key: grenoble
+  name: Grenoble
+  kind: city
+  region: Isère
+  country: France
+  lat: 45.188
+  lng: 5.724
+  visitable: true
+  sources:
+  - wp-henri-fantin-latour
+- key: bure-orne
+  name: Buré
+  kind: village
+  region: Orne
+  country: France
+  lat: 48.5
+  lng: 0.48
+  visitable: true
+  sources:
+  - wp-henri-fantin-latour
+people:
+- key: vincent-van-gogh
+  name: Vincent van Gogh
+  type: Artist
+  roles:
+  - painter
+  born: '1853-03-30'
+  died: '1890-07-29'
+  prominence: 5
+  note: Dutch Post-Impressionist painter, famous for bold colour and expressive brushwork; he sold little in his lifetime and became famous after his death.
+  sources:
+  - wp-vincent-van-gogh
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg/500px-Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_%28454045%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project_(454045).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, life stages by place (Nuenen, Antwerp, Paris, Arles) and two works captured; article cut before Saint-Remy and Auvers, full portfolio not built out.
+- key: claude-monet
+  name: Claude Monet
+  type: Artist
+  roles:
+  - painter
+  born: '1840-11-14'
+  died: '1926-12-05'
+  prominence: 5
+  note: French painter and founder of Impressionism, known for series paintings of haystacks, Rouen Cathedral and the water lilies of his garden at Giverny.
+  sources:
+  - wp-claude-monet
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a4/Claude_Monet_1899_Nadar_crop.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/Claude_Monet_1899_Nadar_crop.jpg/500px-Claude_Monet_1899_Nadar_crop.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Claude_Monet_1899_Nadar_crop.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Boudin), places where he lived and one key work captured; article cut before the Venice trip and death, series paintings not built out.
+- key: paul-cezanne
+  name: Paul Cézanne
+  type: Artist
+  roles:
+  - painter
+  born: '1839-01-19'
+  died: '1906-10-22'
+  prominence: 5
+  note: French Post-Impressionist painter whose structural approach to form bridged Impressionism and Cubism.
+  sources:
+  - wp-paul-cezanne
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Paul-Cezanne.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/c/c4/Paul-Cezanne.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Paul-Cezanne.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, mentor (Pissarro), places, his Les Lauves studio and one dated work captured; full portfolio (Sainte-Victoire, Bathers series) not built out.
+- key: paul-gauguin
+  name: Paul Gauguin
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  - ceramist
+  born: '1848-06-07'
+  died: '1903-05-08'
+  prominence: 4
+  note: French Post-Impressionist and Symbolist painter who worked in Brittany, Martinique and Tahiti and developed Synthetism.
+  sources:
+  - wp-paul-gauguin
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Paul_Gauguin_1891.png
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Paul_Gauguin_1891.png/500px-Paul_Gauguin_1891.png
+  image_page: https://commons.wikimedia.org/wiki/File:Paul_Gauguin_1891.png
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, mentor (Pissarro), places in France and Tahiti and one dated work captured; article cut before his last years and death place, Tahitian works not built out.
+- key: edouard-manet
+  name: Édouard Manet
+  type: Artist
+  roles:
+  - painter
+  born: '1832-01-23'
+  died: '1883-04-30'
+  prominence: 4
+  note: French modernist painter, a pivotal figure in the move from Realism to Impressionism, best known for Luncheon on the Grass and Olympia.
+  sources:
+  - wp-edouard-manet
+  image_url: https://upload.wikimedia.org/wikipedia/commons/2/20/%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg/500px-%C3%89douard_Manet%2C_en_buste%2C_de_face_-_Nadar.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:%C3%89douard_Manet,_en_buste,_de_face_-_Nadar.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places and two dated works captured; teacher Couture and student Gonzales not in the database; full portfolio not built out.
+- key: edgar-degas
+  name: Edgar Degas
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1834-07-19'
+  died: '1917-09-27'
+  prominence: 4
+  note: French Impressionist famous for pastels and paintings of dancers, racehorses and Parisian life, and for his wax sculpture Little Dancer.
+  sources:
+  - wp-edgar-degas
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a3/Self-portrait_by_Edgar_Degas.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Self-portrait_by_Edgar_Degas.jpg/500px-Self-portrait_by_Edgar_Degas.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-portrait_by_Edgar_Degas.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places (Paris, Naples, New Orleans), teaching of Valadon and two works captured; dancer, racecourse and monotype series not built out.
+- key: pierre-auguste-renoir
+  name: Pierre-Auguste Renoir
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1841-02-25'
+  died: '1919-12-03'
+  prominence: 4
+  note: French Impressionist known for sunlit scenes of people and the female nude, such as Dance at Le Moulin de la Galette.
+  sources:
+  - wp-pierre-auguste-renoir
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/67/Pierre_Auguste_Renoir%2C_uncropped_image.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Pierre_Auguste_Renoir%2C_uncropped_image.jpg/500px-Pierre_Auguste_Renoir%2C_uncropped_image.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pierre_Auguste_Renoir,_uncropped_image.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; patron Paul Berard and teacher Gleyre not in the database; full portfolio not built out.
+- key: camille-pissarro
+  name: Camille Pissarro
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1830-07-10'
+  died: '1903-11-13'
+  prominence: 4
+  note: Danish-French Impressionist and Neo-Impressionist born on Saint Thomas, called the dean of the Impressionists and a mentor to Cezanne and Gauguin.
+  sources:
+  - wp-camille-pissarro
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/ef/Pissarro-portrait.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/e/ef/Pissarro-portrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Pissarro-portrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, teacher (Corot), students (Cezanne, Gauguin), places and one dated work captured; the landscape paintings are not built out.
+- key: georges-seurat
+  name: Georges Seurat
+  type: Artist
+  roles:
+  - painter
+  - draughtsman
+  born: '1859-12-02'
+  died: '1891-03-29'
+  prominence: 4
+  note: French Post-Impressionist who devised pointillism and chromoluminarism and began Neo-Impressionism with A Sunday Afternoon on the Island of La Grande Jatte.
+  sources:
+  - wp-georges-seurat
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/76/Georges_Seurat_1888.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Georges_Seurat_1888.jpg/500px-Georges_Seurat_1888.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Georges_Seurat_1888.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, burial and one key work captured; the article's lists of paintings and drawings are empty, so other works not built out.
+- key: berthe-morisot
+  name: Berthe Morisot
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1841-01-14'
+  died: '1895-03-02'
+  prominence: 3
+  note: French Impressionist painter and printmaker, known for intimate domestic scenes, who exhibited at all but one of the Impressionist shows.
+  sources:
+  - wp-berthe-morisot
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/91/Morisot_berthe_photo.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Morisot_berthe_photo.jpg/500px-Morisot_berthe_photo.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Morisot_berthe_photo.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places and one dated work captured; teachers Guichard and Oudinot not in the database; the long works list not built out.
+- key: alfred-sisley
+  name: Alfred Sisley
+  type: Artist
+  roles:
+  - painter
+  born: '1839-10-30'
+  died: '1899-01-29'
+  prominence: 3
+  note: British-French Impressionist landscape painter, born in Paris, known for scenes along the Seine, the Thames at Hampton Court and Moret-sur-Loing.
+  sources:
+  - wp-alfred-sisley
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bf/Alfred_Sisley_photo_full.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/b/bf/Alfred_Sisley_photo_full.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Alfred_Sisley_photo_full.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and places captured; no work given with a clear year in the article, so no artwork added; patrons Faure and Depeaux not in the database.
+- key: mary-cassatt
+  name: Mary Cassatt
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1844-05-22'
+  died: '1926-06-14'
+  prominence: 4
+  note: American painter and printmaker who lived in France and exhibited with the Impressionists, known for intimate scenes of women and of mothers with children.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/18/Mary_Cassatt_photograph_1913.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Mary_Cassatt_photograph_1913.jpg/500px-Mary_Cassatt_photograph_1913.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Mary_Cassatt_photograph_1913.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, teacher (Gérôme), residence in Paris and one dated work captured; full portfolio, prints and other teachers (Couture, Chaplin) not built out.
+  sources:
+  - wp-mary-cassatt
+- key: henri-de-toulouse-lautrec
+  name: Henri de Toulouse-Lautrec
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - draughtsman
+  - illustrator
+  born: '1864-11-24'
+  died: '1901-09-09'
+  prominence: 4
+  note: French painter, printmaker and poster artist of Montmartre and Belle Époque Paris nightlife, counted among the Post-Impressionists.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/aa/Photolautrec.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Photolautrec.jpg/500px-Photolautrec.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Photolautrec.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, Paris studies and two dated works captured; posters, prints and full portfolio not built out; teachers Princeteau, Bonnat and Cormon not linked (not
+    in database).
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: gustave-caillebotte
+  name: Gustave Caillebotte
+  type: Artist
+  roles:
+  - painter
+  born: '1848-08-19'
+  died: '1894-02-21'
+  prominence: 3
+  note: French Impressionist painter and patron of the Impressionists, known for realistic views of urban Paris, whose bequeathed collection became the core of the state's Impressionist holdings.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/53/Gustave_Caillebotte_photo_c1878.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Gustave_Caillebotte_photo_c1878.jpg/500px-Gustave_Caillebotte_photo_c1878.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gustave_Caillebotte_photo_c1878.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, patronage of Monet and one key work captured; full portfolio and bequest collection not built out; teacher Bonnat not linked (not in database).
+  sources:
+  - wp-gustave-caillebotte
+- key: frederic-bazille
+  name: Frédéric Bazille
+  type: Artist
+  roles:
+  - painter
+  born: '1841-12-06'
+  died: '1870-11-28'
+  prominence: 3
+  note: French Impressionist painter of figures set in plein-air landscapes, killed in the Franco-Prussian War at 28.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/45/Fr%C3%A9d%C3%A9ric_Bazille_004.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/45/Fr%C3%A9d%C3%A9ric_Bazille_004.jpg/500px-Fr%C3%A9d%C3%A9ric_Bazille_004.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Bazille_004.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, Paris years and one key work captured; the list of main works is not built out; teacher Gleyre not linked (not in database).
+  sources:
+  - wp-frederic-bazille
+- key: paul-signac
+  name: Paul Signac
+  type: Artist
+  roles:
+  - painter
+  born: '1863-11-11'
+  died: '1935-08-15'
+  prominence: 3
+  note: French Neo-Impressionist painter who with Seurat developed Pointillism, known for seascapes and views of ports, and president of the Société des Artistes Indépendants from 1908.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/Paul_Signac%2C_ca._1883.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Paul_Signac%2C_ca._1883.jpg/500px-Paul_Signac%2C_ca._1883.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Paul_Signac,_ca._1883.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, Saint-Tropez and Paris residences and one dated work captured; full portfolio, writings and other works not built out.
+  sources:
+  - wp-paul-signac
+- key: odilon-redon
+  name: Odilon Redon
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - draughtsman
+  born: '1840-04-20'
+  died: '1916-07-06'
+  prominence: 3
+  note: French Symbolist draughtsman, printmaker and painter, known for his charcoal and lithograph noirs and later colour pastels and oils, a precursor of Surrealism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/4c/Odilon_Redon_vers_1880.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Odilon_Redon_vers_1880.jpg/500px-Odilon_Redon_vers_1880.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Odilon_Redon_vers_1880.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, brief study under Gérôme and the Domecy panels captured; noirs, albums and other works not built out; teacher Bresdin and patron Domecy not linked (not in
+    database).
+  sources:
+  - wp-odilon-redon
+- key: henri-rousseau
+  name: Henri Rousseau
+  type: Artist
+  roles:
+  - painter
+  born: '1844-05-21'
+  died: '1910-09-02'
+  prominence: 4
+  note: French self-taught Naive (Primitive) post-Impressionist painter known as Le Douanier, famous for his jungle scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/fc/Rousseau_Joyeux_Farceurs_Dornac_crop.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Rousseau_Joyeux_Farceurs_Dornac_crop.jpg/500px-Rousseau_Joyeux_Farceurs_Dornac_crop.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rousseau_Joyeux_Farceurs_Dornac_crop.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, move to Paris and one dated work captured; jungle paintings and other works not built out. He claimed no teacher, only some advice from Clément and Gérôme,
+    so no teacher link.
+  sources:
+  - wp-henri-rousseau
+- key: gustave-courbet
+  name: Gustave Courbet
+  type: Artist
+  roles:
+  - painter
+  born: '1819-06-10'
+  died: '1877-12-31'
+  prominence: 4
+  note: French painter who led the Realism movement, known for unidealized peasants and workers, and exiled to Switzerland after the Paris Commune.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7b/Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg/500px-Gustave_Courbet%2C_photograph_Atelier_Nadar%2C_c._1860s.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Gustave_Courbet,_photograph_Atelier_Nadar,_c._1860s.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and death places, Paris years and two dated works captured; Paris Commune role, sculpture and other works not built out.
+  sources:
+  - wp-gustave-courbet
+- key: jean-baptiste-camille-corot
+  name: Jean-Baptiste-Camille Corot
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1796-07-16'
+  died: '1875-02-22'
+  prominence: 4
+  note: French landscape and portrait painter and etcher, a pivotal figure between Neo-Classical tradition and the plein-air innovations of Impressionism.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/c5/Camille_Corot_by_%C3%89tienne_Carjat.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Camille_Corot_by_%C3%89tienne_Carjat.jpg/500px-Camille_Corot_by_%C3%89tienne_Carjat.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Camille_Corot_by_%C3%89tienne_Carjat.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, Italy and Barbizon years, pupils and two dated works captured; full portfolio not built out; teachers Michallon and Bertin not linked (not in database).
+  sources:
+  - wp-jean-baptiste-camille-corot
+- key: jean-francois-millet
+  name: Jean-François Millet
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1814-10-04'
+  died: '1875-01-20'
+  prominence: 4
+  note: French Realist painter and a founder of the Barbizon school, noted for his paintings of peasant farmers such as The Gleaners and The Angelus.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/46/Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg/500px-Jean-Fran%C3%A7ois_Millet_by_Nadar%2C_Metropolitan_Museum_copy.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_by_Nadar,_Metropolitan_Museum_copy.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth place, Paris and Barbizon years and two dated works captured; place of death is not named in the article; teachers (Du Mouchel, Langlois, Delaroche) and patrons (Sensier, Appleton,
+    Gavet) not linked (not in database); etchings and other works not built out.
+  sources:
+  - wp-jean-francois-millet
+- key: honore-daumier
+  name: Honoré Daumier
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  - printmaker
+  born: '1808-02-26'
+  died: 1879
+  prominence: 4
+  note: French painter, sculptor and printmaker, best known for his satirical lithographs of French politics and society for Le Charivari.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/Honor%C3%A9_Daumier_c1850_-_crop.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Honor%C3%A9_Daumier_c1850_-_crop.jpg/500px-Honor%C3%A9_Daumier_c1850_-_crop.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Honor%C3%A9_Daumier_c1850_-_crop.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, early training, where he lived and worked, and two dated works captured; the full body of lithographs, paintings and sculptures not built out.
+  sources:
+  - wp-honore-daumier
+- key: eugene-boudin
+  name: Eugène Boudin
+  type: Artist
+  roles:
+  - painter
+  born: '1824-07-12'
+  died: '1898-08-08'
+  prominence: 3
+  note: French marine and landscape painter from Normandy, one of the first to paint outdoors, and an early influence on Claude Monet.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/6/61/Boudin.jpeg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/6/61/Boudin.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Boudin.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates and the main places of his life captured; no individual work is dated in the article, so no artwork added.
+  sources:
+  - wp-eugene-boudin
+- key: theodore-rousseau
+  name: Théodore Rousseau
+  type: Artist
+  roles:
+  - painter
+  born: '1812-04-15'
+  died: '1867-12-22'
+  prominence: 3
+  note: French landscape painter of the Barbizon School, known as "le grand refusé" for his repeated rejection by the Salon.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/bb/Theodore_Rousseau.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Theodore_Rousseau.jpg/500px-Theodore_Rousseau.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Theodore_Rousseau.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace and Barbizon years captured; the article gives no clear making-year for his named works, so no artwork added.
+  sources:
+  - wp-theodore-rousseau
+- key: charles-francois-daubigny
+  name: Charles-François Daubigny
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1817-02-15'
+  died: '1878-02-19'
+  prominence: 3
+  note: French Barbizon school landscape painter and etcher, a precursor of Impressionism who worked from a floating studio boat.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/9/95/Charles_francois_daubigny.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Charles_francois_daubigny.jpg/500px-Charles_francois_daubigny.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Charles_francois_daubigny.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, family training, Barbizon and Auvers links, burial and one dated work captured; prints and later paintings not built out.
+  sources:
+  - wp-charles-francois-daubigny
+- key: james-mcneill-whistler
+  name: James McNeill Whistler
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  born: '1834-07-10'
+  died: '1903-07-17'
+  prominence: 4
+  note: American painter and printmaker based mostly in the UK, a leading voice of "art for art's sake", best known for Whistler's Mother and the Nocturnes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Whistler_Selbstportr%C3%A4t.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Whistler_Selbstportr%C3%A4t.jpg/500px-Whistler_Selbstportr%C3%A4t.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Whistler_Selbstportr%C3%A4t.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, early places, two dated works and the Ruskin context read; the article text was cut short, so later life, death place and burial are missing; etchings and nocturnes not built out.
+  sources:
+  - wp-james-mcneill-whistler
+- key: john-singer-sargent
+  name: John Singer Sargent
+  type: Artist
+  roles:
+  - painter
+  born: '1856-01-12'
+  died: '1925-04-15'
+  prominence: 4
+  note: American expatriate portrait painter, born in Florence and based in Paris then London, known for Portrait of Madame X and his society portraits.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a5/John_Singer_Sargent_1903.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/John_Singer_Sargent_1903.jpg/500px-John_Singer_Sargent_1903.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:John_Singer_Sargent_1903.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, main places and two dated works captured; the article text was cut short, so the death place is missing; the portraits, watercolours and murals are not built out.
+  sources:
+  - wp-john-singer-sargent
+- key: winslow-homer
+  name: Winslow Homer
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  born: '1836-02-24'
+  died: '1910-09-29'
+  prominence: 4
+  note: American landscape painter and illustrator, best known for his marine subjects and watercolours, and a leading figure of 19th-century American art.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/8a/Winslow_Homer_by_Sarony.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Winslow_Homer_by_Sarony.jpeg/500px-Winslow_Homer_by_Sarony.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Winslow_Homer_by_Sarony.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places of work, burial and one key work captured; other paintings, illustrations and watercolours not built out.
+  sources:
+  - wp-winslow-homer
+- key: thomas-eakins
+  name: Thomas Eakins
+  type: Artist
+  roles:
+  - painter
+  - photographer
+  - sculptor
+  born: '1844-07-25'
+  died: '1916-06-25'
+  prominence: 4
+  note: American realist painter, photographer, sculptor and teacher of Philadelphia, known for The Gross Clinic and his rowing pictures.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/7c/Eakins_selfportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Eakins_selfportrait.jpg/500px-Eakins_selfportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Eakins_selfportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training under Gerome, places, burial and two dated works captured; the article text was cut short before the legacy section; portraits and photographs not built out.
+  sources:
+  - wp-thomas-eakins
+- key: edouard-vuillard
+  name: Édouard Vuillard
+  type: Artist
+  roles:
+  - painter
+  - printmaker
+  - decorative artist
+  born: '1868-11-11'
+  died: '1940-06-21'
+  prominence: 3
+  note: French painter, decorative artist and printmaker, a member of Les Nabis known for flattened, patterned interior scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Self-Portrait%2C_Aged_21_A21192.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Self-Portrait%2C_Aged_21_A21192.jpg/500px-Self-Portrait%2C_Aged_21_A21192.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self-Portrait,_Aged_21_A21192.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, training, places, Nabis years and one dated work captured; the later portraits and murals not built out.
+  sources:
+  - wp-edouard-vuillard
+- key: pierre-bonnard
+  name: Pierre Bonnard
+  type: Artist
+  roles:
+  - painter
+  - illustrator
+  - printmaker
+  born: '1867-10-03'
+  died: '1947-01-23'
+  prominence: 4
+  note: French painter, illustrator and printmaker, a founder of Les Nabis known for his colourful, intimate domestic scenes.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/3/39/T%C3%AAte_de_Bonnard_%28Portrait_photograph_of_Pierre_Bonnard%29%2C_c.1899%2C_Mus%C3%A9e_d%27Orsay%2C_restaur%C3%A9e.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/T%C3%AAte_de_Bonnard_%28Portrait_photograph_of_Pierre_Bonnard%29%2C_c.1899%2C_Mus%C3%A9e_d%27Orsay%2C_restaur%C3%A9e.jpg/500px-T%C3%AAte_de_Bonnard_%28Portrait_photograph_of_Pierre_Bonnard%29%2C_c.1899%2C_Mus%C3%A9e_d%27Orsay%2C_restaur%C3%A9e.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:T%C3%AAte_de_Bonnard_(Portrait_photograph_of_Pierre_Bonnard),_c.1899,_Mus%C3%A9e_d%27Orsay,_restaur%C3%A9e.jpg
+  image_license: CC BY-SA 4.0
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; his lithographs, illustrations and later still lifes not built out.
+  sources:
+  - wp-pierre-bonnard
+- key: maurice-denis
+  name: Maurice Denis
+  type: Artist
+  roles:
+  - painter
+  - decorative artist
+  - writer
+  born: '1870-11-25'
+  died: 1943
+  prominence: 3
+  note: French painter, decorative artist and theorist of Les Nabis and Symbolism, later a leading painter of sacred art and church decoration.
+  image_url: https://upload.wikimedia.org/wikipedia/commons/a/a6/MauriceDenis-AutoportraitDevantLePrieure.JPG
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/MauriceDenis-AutoportraitDevantLePrieure.JPG/500px-MauriceDenis-AutoportraitDevantLePrieure.JPG
+  image_page: https://commons.wikimedia.org/wiki/File:MauriceDenis-AutoportraitDevantLePrieure.JPG
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, church and mural commissions and two dated works captured; the many lithographs, book illustrations and murals not built out.
+  sources:
+  - wp-maurice-denis
+- key: emile-bernard
+  name: Émile Bernard
+  type: Artist
+  roles:
+  - painter
+  - writer
+  born: '1868-04-28'
+  died: '1941-04-16'
+  prominence: 3
+  note: French Post-Impressionist painter and writer, associated with Cloisonnism and Synthetism and a friend of Van Gogh and Gauguin.
+  sources:
+  - wp-emile-bernard
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/82/Zelfportret_Rijksmuseum_SK-A-3263.jpeg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Zelfportret_Rijksmuseum_SK-A-3263.jpeg/500px-Zelfportret_Rijksmuseum_SK-A-3263.jpeg
+  image_page: https://commons.wikimedia.org/wiki/File:Zelfportret_Rijksmuseum_SK-A-3263.jpeg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, main places worked and one dated work captured; the Works list in the article is empty in the text read, so the portfolio is not built out.
+- key: suzanne-valadon
+  name: Suzanne Valadon
+  type: Artist
+  roles:
+  - painter
+  born: '1865-09-23'
+  died: '1938-04-07'
+  prominence: 3
+  note: French painter from Montmartre, a former model, noted for unidealised nudes; the first woman painter admitted to the Société Nationale des Beaux-Arts, and mother of Maurice Utrillo.
+  sources:
+  - wp-suzanne-valadon
+  image_url: https://upload.wikimedia.org/wikipedia/commons/1/1a/Suzanne_Valadon_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Suzanne_Valadon_-_Self-Portrait_-_Google_Art_Project.jpg/500px-Suzanne_Valadon_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Suzanne_Valadon_-_Self-Portrait_-_Google_Art_Project.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birthplace, burial, teacher link to Degas and one major Salon painting captured; other works and exhibitions not built out.
+- key: maurice-utrillo
+  name: Maurice Utrillo
+  type: Artist
+  roles:
+  - painter
+  born: '1883-12-26'
+  died: '1955-11-05'
+  prominence: 3
+  note: French painter of the School of Paris, born in Montmartre, who specialised in cityscapes of the quarter.
+  sources:
+  - wp-maurice-utrillo
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/41/Maurice_Utrillo%2C_ca._1915-1920.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/4/41/Maurice_Utrillo%2C_ca._1915-1920.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Maurice_Utrillo,_ca._1915-1920.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth, death and burial places, teacher link and paternity question captured; the article names no dated key work other than a 1936 painting, so no artwork is recorded.
+- key: gustave-moreau
+  name: Gustave Moreau
+  type: Artist
+  roles:
+  - painter
+  born: '1826-04-06'
+  died: '1898-04-18'
+  prominence: 4
+  note: French Symbolist painter of biblical and mythological subjects, teacher of Matisse and Rouault, whose home and studio became the Musée Gustave Moreau.
+  sources:
+  - wp-gustave-moreau
+  image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/GustaveMoreau02.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/GustaveMoreau02.jpg/500px-GustaveMoreau02.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:GustaveMoreau02.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places, a mentorship link and two major dated works captured; his many pupils (Matisse, Rouault and others) are not yet in the database, so those teacher links are missing.
+- key: pierre-puvis-de-chavannes
+  name: Pierre Puvis de Chavannes
+  type: Artist
+  roles:
+  - painter
+  born: '1824-12-14'
+  died: '1898-10-24'
+  prominence: 4
+  note: French muralist known as 'the painter for France', co-founder of the Société Nationale des Beaux-Arts, whose Symbolist-leaning classicism influenced a generation.
+  sources:
+  - wp-pierre-puvis-de-chavannes
+  image_url: https://upload.wikimedia.org/wikipedia/commons/8/81/Puvis_de_Chavannes.jpg
+  image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/81/Puvis_de_Chavannes.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Puvis_de_Chavannes.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth area, a teacher link to Delacroix and three mural sites captured; the full list of commissions is not built out.
+- key: rosa-bonheur
+  name: Rosa Bonheur
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1822-03-16'
+  died: '1899-05-25'
+  prominence: 4
+  note: French animal painter and sculptor, widely considered the most famous woman painter of the nineteenth century, best known for The Horse Fair.
+  sources:
+  - wp-rosa-bonheur
+  image_url: https://upload.wikimedia.org/wikipedia/commons/4/46/Rosa_Bonheur_agee.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/46/Rosa_Bonheur_agee.jpg/500px-Rosa_Bonheur_agee.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Rosa_Bonheur_agee.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and her best-known painting captured; other works (Ploughing in the Nivernais, Highland Shepherd) and her sculpture not built out.
+- key: william-adolphe-bouguereau
+  name: William-Adolphe Bouguereau
+  type: Artist
+  roles:
+  - painter
+  born: '1825-11-30'
+  died: '1905-08-19'
+  prominence: 4
+  note: French academic painter of mythological and genre subjects, the quintessential Salon painter of his generation and a teacher at the Académie Julian.
+  sources:
+  - wp-william-adolphe-bouguereau
+  image_url: https://upload.wikimedia.org/wikipedia/commons/d/dd/Self_portrait%2C_by_William_Bouguereau.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dd/Self_portrait%2C_by_William_Bouguereau.jpg/500px-Self_portrait%2C_by_William_Bouguereau.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self_portrait,_by_William_Bouguereau.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and two dated works captured; the Notable works list is empty in the text read, and teachers (Picot, Sage) and pupils are not yet in the database.
+- key: jean-leon-gerome
+  name: Jean-Léon Gérôme
+  type: Artist
+  roles:
+  - painter
+  - sculptor
+  born: '1824-05-11'
+  died: '1904-01-10'
+  prominence: 4
+  note: French academic painter and sculptor of historical and Orientalist subjects, one of the three most successful artists of the Second Empire and a leading teacher at the École des Beaux-Arts.
+  sources:
+  - wp-jean-leon-gerome
+  image_url: https://upload.wikimedia.org/wikipedia/commons/5/5c/Jean-Leon_Gerome.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Jean-Leon_Gerome.jpg/500px-Jean-Leon_Gerome.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, birth and burial places, three student links and one famous painting captured; sculptures, other paintings and most students not built out.
+- key: alexandre-cabanel
+  name: Alexandre Cabanel
+  type: Artist
+  roles:
+  - painter
+  born: '1823-09-28'
+  died: '1889-01-23'
+  prominence: 3
+  note: French academic painter of historical, classical and religious subjects and Napoleon III's preferred painter, best known for The Birth of Venus.
+  sources:
+  - wp-alexandre-cabanel
+  image_url: https://upload.wikimedia.org/wikipedia/commons/c/cf/Self_Portrait_%28Alexandre_Cabanel%29.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Self_Portrait_%28Alexandre_Cabanel%29.jpg/500px-Self_Portrait_%28Alexandre_Cabanel%29.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Self_Portrait_(Alexandre_Cabanel).jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, death and burial places, Villa Medici residence and his best-known painting captured; Napoleon III (not in the database) is not linked as patron, and other works are not built out.
+- key: henri-fantin-latour
+  name: Henri Fantin-Latour
+  type: Artist
+  roles:
+  - painter
+  - lithographer
+  born: '1836-01-14'
+  died: '1904-08-25'
+  prominence: 3
+  note: French painter and lithographer, best known for flower still lifes and group portraits of Parisian artists and writers.
+  sources:
+  - wp-henri-fantin-latour
+  image_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Henri_Fantin-Latour_autoportrait.jpg
+  image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Henri_Fantin-Latour_autoportrait.jpg/500px-Henri_Fantin-Latour_autoportrait.jpg
+  image_page: https://commons.wikimedia.org/wiki/File:Henri_Fantin-Latour_autoportrait.jpg
+  image_license: Public domain
+  coverage: partly
+  coverage_note: Dates, places and one group portrait with its sitters captured; still lifes and other group portraits not built out, and his teachers are not yet in the database.
+artworks:
+- key: the-potato-eaters
+  name: The Potato Eaters
+  kind: painting
+  made: 1885
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  places:
+  - place: nuenen
+    role: made
+  prominence: 5
+  note: Van Gogh's first major work, painted in Nuenen in May 1885 and sent to Theo as the culmination of his peasant studies.
+  sources:
+  - wp-vincent-van-gogh
+- key: cafe-terrace-at-night
+  name: Cafe Terrace at Night
+  kind: painting
+  made: 1888
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  places:
+  - place: arles
+    role: made
+  prominence: 4
+  note: Painted in Arles in September 1888 as part of the decoration for the Yellow House.
+  sources:
+  - wp-vincent-van-gogh
+- key: impression-sunrise
+  name: Impression, Sunrise
+  kind: painting
+  made: 1872
+  people:
+  - person: claude-monet
+    role: creator
+  places:
+  - place: le-havre
+    role: depicts
+  prominence: 5
+  note: A hazy view of Le Havre port, shown at the first Impressionist exhibition in 1874; its title gave Impressionism its name.
+  sources:
+  - wp-claude-monet
+- key: portrait-of-louis-auguste-cezanne-reading-levenement
+  name: Portrait of Louis-Auguste Cézanne, the Artist's Father, Reading "L'Événement"
+  kind: painting
+  made: 1866
+  collection: National Gallery of Art, Washington, D.C.
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+  note: Probably the portrait shown as "Portrait de M. L. A." at the Salon, Cezanne's first and last successful Salon submission.
+  sources:
+  - wp-paul-cezanne
+- key: the-yellow-christ
+  name: The Yellow Christ
+  kind: painting
+  made: 1889
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 4
+  note: Often cited as a quintessential Cloisonnist work, reduced to areas of pure colour with heavy black outlines.
+  sources:
+  - wp-paul-gauguin
+- key: olympia-manet
+  name: Olympia
+  kind: painting
+  made: 1863
+  people:
+  - person: edouard-manet
+    role: creator
+  prominence: 5
+  note: A nude whose pose is based on Titian's Venus of Urbino; accepted by the Salon in 1865, where it caused a scandal.
+  sources:
+  - wp-edouard-manet
+- key: a-bar-at-the-folies-bergere
+  name: A Bar at the Folies-Bergère
+  kind: painting
+  made: 1882
+  people:
+  - person: edouard-manet
+    role: creator
+  prominence: 4
+  note: Manet's last major work, shown at the Salon of 1882.
+  sources:
+  - wp-edouard-manet
+- key: the-bellelli-family
+  name: The Bellelli Family
+  kind: painting
+  made: 1858
+  made_end: 1867
+  estimated: true
+  people:
+  - person: edgar-degas
+    role: creator
+  prominence: 4
+  note: Early masterpiece portraying Degas's aunt, her husband and their children; first studies made in Naples in 1858, left unfinished until 1867 (article gives c. 1858-67).
+  sources:
+  - wp-edgar-degas
+- key: little-dancer-of-fourteen-years
+  name: The Little Dancer of Fourteen Years
+  kind: sculpture
+  medium: wax with real hair and a cloth tutu
+  made: 1881
+  estimated: true
+  people:
+  - person: edgar-degas
+    role: creator
+  prominence: 4
+  note: Degas's only sculpture shown in his lifetime, displayed at the sixth Impressionist exhibition in 1881 (year is the exhibition year); the model was Marie van Goethem.
+  sources:
+  - wp-edgar-degas
+- key: dance-at-le-moulin-de-la-galette
+  name: Dance at Le Moulin de la Galette
+  kind: painting
+  made: 1876
+  people:
+  - person: pierre-auguste-renoir
+    role: creator
+  prominence: 5
+  note: An open-air scene at a popular dance garden on the Butte Montmartre, one of the best-known Impressionist works.
+  sources:
+  - wp-pierre-auguste-renoir
+- key: the-large-bathers-renoir
+  name: The Large Bathers
+  kind: painting
+  made: 1884
+  made_end: 1887
+  collection: Philadelphia Museum of Art
+  people:
+  - person: pierre-auguste-renoir
+    role: creator
+  prominence: 4
+  note: Painted during Renoir's "Ingres period", when he returned to a more classical manner with firm outlines.
+  sources:
+  - wp-pierre-auguste-renoir
+- key: turpitudes-sociales
+  name: Turpitudes sociales
+  kind: album of drawings
+  made: 1889
+  people:
+  - person: camille-pissarro
+    role: creator
+  prominence: 2
+  note: Album of 30 caricature and allegory drawings on social issues, made as a gift for his niece to strengthen her anarchist leanings.
+  sources:
+  - wp-camille-pissarro
+- key: a-sunday-afternoon-on-the-island-of-la-grande-jatte
+  name: A Sunday Afternoon on the Island of La Grande Jatte
+  kind: painting
+  made: 1884
+  made_end: 1886
+  collection: Art Institute of Chicago
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 5
+  note: Began Neo-Impressionism; shown first at the Impressionist exhibition of May-June 1886 after two years of work and about 60 studies.
+  sources:
+  - wp-georges-seurat
+- key: the-cradle-morisot
+  name: The Cradle
+  kind: painting
+  medium: oil on canvas
+  made: 1872
+  collection: Musée d'Orsay
+  people:
+  - person: berthe-morisot
+    role: creator
+  prominence: 4
+  note: Depicts current trends in nursery furniture, showing Morisot's interest in domestic and women's life.
+  sources:
+  - wp-berthe-morisot
+- key: little-girl-in-a-blue-armchair
+  name: Little Girl in a Blue Armchair
+  made: 1878
+  people:
+  - person: mary-cassatt
+    role: creator
+  prominence: 4
+  note: One of three accomplished works Cassatt made in 1878 for the next Impressionist exhibition.
+  sources:
+  - wp-mary-cassatt
+- key: salon-de-la-rue-des-moulins
+  name: Salon de la Rue des Moulins
+  made: 1894
+  people:
+  - person: henri-de-toulouse-lautrec
+    role: creator
+  prominence: 3
+  note: Painted from memory in his studio in 1894, from his brothel series.
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: the-laundress-toulouse-lautrec
+  name: The Laundress
+  made: 1888
+  people:
+  - person: henri-de-toulouse-lautrec
+    role: creator
+  prominence: 3
+  note: The red-headed model Carmen Gaudin appears in it.
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- key: paris-street-rainy-day
+  name: Paris Street; Rainy Day
+  made: 1877
+  collection: Art Institute of Chicago
+  people:
+  - person: gustave-caillebotte
+    role: creator
+  prominence: 4
+  note: Caillebotte's best-known work; the Art Institute of Chicago acquired it in 1964.
+  sources:
+  - wp-gustave-caillebotte
+- key: family-reunion-bazille
+  name: Family Reunion
+  made: 1867
+  made_end: 1868
+  collection: Musée d'Orsay
+  people:
+  - person: frederic-bazille
+    role: creator
+  prominence: 3
+  note: Bazille's best-known painting.
+  sources:
+  - wp-frederic-bazille
+- key: in-the-time-of-harmony
+  name: In the Time of Harmony
+  made: 1893
+  people:
+  - person: paul-signac
+    role: creator
+  prominence: 3
+  note: Originally titled In the Time of Anarchy; retitled because of political repression of anarchists.
+  sources:
+  - wp-paul-signac
+- key: domecy-decorative-panels
+  name: Decorative panels for the Château de Domecy
+  kind: decorative panels
+  made: 1900
+  made_end: 1901
+  collection: Musée d'Orsay (fifteen of the panels, acquired 1988)
+  people:
+  - person: odilon-redon
+    role: creator
+  places:
+  - place: chateau-de-domecy-sur-le-vault
+    role: made-for
+  prominence: 3
+  note: Seventeen panels commissioned in 1899 by Baron Robert de Domecy for his dining room; marks Redon's transition from ornamental to abstract painting.
+  sources:
+  - wp-odilon-redon
+- key: the-sleeping-gypsy
+  name: The Sleeping Gypsy
+  made: 1897
+  collection: Barnes Foundation
+  people:
+  - person: henri-rousseau
+    role: creator
+  prominence: 4
+  note: One of Rousseau's most famous paintings.
+  sources:
+  - wp-henri-rousseau
+- key: the-stone-breakers
+  name: The Stone Breakers
+  made: 1849
+  made_end: 1850
+  people:
+  - person: gustave-courbet
+    role: creator
+  prominence: 4
+  note: Called the first of Courbet's great works; exhibited at the Paris Salon of 1850 and destroyed in the bombing of Dresden in 1945.
+  sources:
+  - wp-gustave-courbet
+- key: the-origin-of-the-world
+  name: The Origin of the World
+  made: 1866
+  people:
+  - person: gustave-courbet
+    role: creator
+  prominence: 3
+  note: Not publicly exhibited until 1988.
+  sources:
+  - wp-gustave-courbet
+- key: hagar-in-the-wilderness-corot
+  name: Hagar in the Wilderness
+  made: 1835
+  people:
+  - person: jean-baptiste-camille-corot
+    role: creator
+  prominence: 3
+  note: Biblical painting that created a sensation at the Salon of 1835 (Agar dans le desert).
+  sources:
+  - wp-jean-baptiste-camille-corot
+- key: view-at-narni
+  name: View at Narni
+  made: 1827
+  people:
+  - person: jean-baptiste-camille-corot
+    role: creator
+  prominence: 2
+  note: Corot's first Salon entry, reworked from a plein-air study of a Roman aqueduct ruin.
+  sources:
+  - wp-jean-baptiste-camille-corot
+- key: the-gleaners
+  name: The Gleaners
+  made: 1857
+  collection: Musée d'Orsay
+  people:
+  - person: jean-francois-millet
+    role: creator
+  prominence: 4
+  note: Submitted to the Salon of 1857; one of Millet's most well-known paintings.
+  sources:
+  - wp-jean-francois-millet
+- key: the-angelus
+  name: The Angelus
+  made: 1857
+  people:
+  - person: jean-francois-millet
+    role: creator
+  prominence: 4
+  note: Commissioned by Thomas Gold Appleton, completed in summer 1857 as Prayer for the Potato Crop and retitled in 1859.
+  sources:
+  - wp-jean-francois-millet
+- key: rue-transnonain-15-april-1834
+  name: Rue Transnonain, 15 April 1834
+  kind: lithograph
+  made: 1834
+  people:
+  - person: honore-daumier
+    role: creator
+  prominence: 4
+  note: Lithograph of the massacre in the Rue Transnonain during the April 1834 riots in Paris; police confiscated the prints and the stone.
+  sources:
+  - wp-honore-daumier
+- key: the-republic-daumier
+  name: The Republic
+  kind: oil sketch
+  made: 1848
+  collection: Musée d'Orsay
+  people:
+  - person: honore-daumier
+    role: creator
+  prominence: 2
+  note: Oil sketch for the 1848 competition for an allegory of the new Republic; it reached the final 20 but Daumier never made the full painting.
+  sources:
+  - wp-honore-daumier
+- key: springtime-daubigny
+  name: Springtime
+  kind: painting
+  made: 1857
+  collection: Louvre
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+  note: Named by the article among Daubigny's most ambitious canvases.
+  sources:
+  - wp-charles-francois-daubigny
+- key: arrangement-in-grey-and-black-no-1
+  name: Arrangement in Grey and Black No. 1 (Whistler's Mother)
+  kind: painting
+  made: 1871
+  collection: Musée d'Orsay
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 4
+  note: Whistler's most famous painting, a portrait of his mother, bought by the French government as the first Whistler work in a public collection.
+  sources:
+  - wp-james-mcneill-whistler
+- key: harmony-in-blue-and-gold-the-peacock-room
+  name: 'Harmony in Blue and Gold: The Peacock Room'
+  kind: interior decorative mural
+  made: 1876
+  made_end: 1877
+  collection: Freer Gallery of Art, Smithsonian, Washington, D.C.
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 3
+  note: Whistler's masterpiece of interior decorative mural art, painted over a room designed by Thomas Jeckyll for Frederick Leyland's china collection.
+  sources:
+  - wp-james-mcneill-whistler
+- key: portrait-of-madame-x
+  name: Portrait of Madame X (Madame Pierre Gautreau)
+  kind: painting
+  made: 1884
+  collection: Metropolitan Museum of Art
+  people:
+  - person: john-singer-sargent
+    role: creator
+  prominence: 4
+  note: Scandalous at the 1884 Paris Salon; it likely prompted Sargent's move to London, and he sold it to the Metropolitan Museum in 1916.
+  sources:
+  - wp-john-singer-sargent
+- key: carnation-lily-lily-rose
+  name: Carnation, Lily, Lily, Rose
+  kind: painting
+  made: 1887
+  collection: Tate
+  people:
+  - person: john-singer-sargent
+    role: creator
+  prominence: 3
+  note: Sargent's first major success at the Royal Academy, painted on site at Broadway in the Cotswolds and bought at once by the Tate Gallery.
+  sources:
+  - wp-john-singer-sargent
+- key: breezing-up
+  name: Breezing Up
+  kind: painting
+  made: 1876
+  collection: National Gallery of Art, Washington, D.C.
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 4
+  note: Homer's iconic painting of a father and three boys sailing, shown at the 1876 Centennial Exposition in Philadelphia.
+  sources:
+  - wp-winslow-homer
+- key: the-gross-clinic
+  name: The Gross Clinic
+  kind: painting
+  made: 1875
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 4
+  note: Eakins's large painting of the surgeon Dr. Samuel D. Gross operating before students at Jefferson Medical College, which bought it for $200.
+  sources:
+  - wp-thomas-eakins
+- key: max-schmitt-in-a-single-scull
+  name: Max Schmitt in a Single Scull
+  kind: painting
+  made: 1871
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+  note: The first and most famous of Eakins's rowing scenes; he painted himself in a scull behind Schmitt.
+  sources:
+  - wp-thomas-eakins
+- key: the-public-gardens-vuillard
+  name: The Public Gardens (Les Jardins Publics)
+  kind: painting
+  medium: peinture à la colle
+  made: 1894
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+  note: A series of six panels of children in the parks of Paris, commissioned from Vuillard on 24 August 1894 by Alexandre Natanson and finished the same year.
+  sources:
+  - wp-edouard-vuillard
+- key: women-in-the-garden-bonnard
+  name: Women in the Garden
+  kind: painting
+  made: 1890
+  made_end: 1891
+  collection: Musée d'Orsay
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+  note: Four decorative panels modelled on Japanese kakemono scrolls, with flat silhouettes of Bonnard's sister Andrée and his cousin Berthe Schaedin.
+  sources:
+  - wp-pierre-bonnard
+- key: the-almond-tree-in-blossom
+  name: The Almond Tree in Blossom
+  kind: painting
+  made: 1947
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 2
+  note: Bonnard's last painting, finished a week before his death.
+  sources:
+  - wp-pierre-bonnard
+- key: homage-to-cezanne
+  name: Homage to Cézanne
+  kind: painting
+  made: 1900
+  people:
+  - person: maurice-denis
+    role: creator
+  - person: odilon-redon
+    role: subject
+  - person: edouard-vuillard
+    role: subject
+  - person: pierre-bonnard
+    role: subject
+  prominence: 3
+  note: Group portrait of Cézanne's friends, many of them former Nabis, painted after Cézanne's death.
+  sources:
+  - wp-maurice-denis
+- key: bacchus-and-ariadne-denis
+  name: Bacchus and Ariadne
+  kind: painting
+  made: 1907
+  people:
+  - person: maurice-denis
+    role: creator
+  prominence: 2
+  note: Neoclassical painting set on the beach at Perros-Guirec, showing a family romping nude.
+  places:
+  - place: perros-guirec
+    role: depicts
+  sources:
+  - wp-maurice-denis
+- key: la-grandmere-bernard
+  name: La Grandmère
+  kind: painting
+  made: 1887
+  people:
+  - person: emile-bernard
+    role: creator
+  prominence: 2
+  note: Portrait of the artist's grandmother, painted on the coast in September 1887.
+  sources:
+  - wp-emile-bernard
+- key: la-joie-de-vivre-valadon
+  name: Joy of Life (La Joie de vivre)
+  kind: painting
+  made: 1911
+  people:
+  - person: suzanne-valadon
+    role: creator
+  prominence: 3
+  note: One of her large Salon oils on sexual pleasure, shown at the Salon in 1911.
+  sources:
+  - wp-suzanne-valadon
+- key: oedipus-and-the-sphinx-moreau
+  name: Oedipus and the Sphinx
+  kind: painting
+  made: 1864
+  collection: Metropolitan Museum of Art
+  people:
+  - person: gustave-moreau
+    role: creator
+  prominence: 4
+  note: Won a medal at the Paris Salon of 1864 and established his reputation.
+  sources:
+  - wp-gustave-moreau
+- key: salome-dancing-before-herod-moreau
+  name: Salome Dancing before Herod
+  kind: painting
+  made: 1876
+  people:
+  - person: gustave-moreau
+    role: creator
+  prominence: 3
+  note: Completed in 1876; announced the more painterly style of his later work.
+  sources:
+  - wp-gustave-moreau
+- key: the-horse-fair-bonheur
+  name: The Horse Fair (Le marché aux chevaux)
+  kind: painting
+  made: 1851
+  made_end: 1855
+  collection: Metropolitan Museum of Art
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 4
+  note: Started in 1851, first shown at the Paris Salon in 1853 and finished in 1855; depicts the horse market on the boulevard de l'Hôpital, Paris. A reduced version is in the National Gallery, London.
+  sources:
+  - wp-rosa-bonheur
+- key: dante-and-virgil-in-hell-bouguereau
+  name: Dante and Virgil in Hell
+  kind: painting
+  made: 1850
+  people:
+  - person: william-adolphe-bouguereau
+    role: creator
+  prominence: 3
+  note: An early neo-classical work, entered for the Prix de Rome of 1850.
+  sources:
+  - wp-william-adolphe-bouguereau
+- key: bather-bouguereau-1864
+  name: Bather
+  kind: painting
+  made: 1864
+  people:
+  - person: william-adolphe-bouguereau
+    role: creator
+  prominence: 3
+  note: Shown in Ghent in 1864 where it was a spectacular success and bought by the museum.
+  sources:
+  - wp-william-adolphe-bouguereau
+- key: pollice-verso-gerome
+  name: Pollice Verso
+  kind: painting
+  made: 1872
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 4
+  note: A painting of gladiators in the Colosseum, one of his most famous works; bought by Alexander Turney Stewart for 80,000 francs.
+  sources:
+  - wp-jean-leon-gerome
+- key: the-birth-of-venus-cabanel
+  name: The Birth of Venus
+  kind: painting
+  made: 1863
+  collection: Musée d'Orsay
+  people:
+  - person: alexandre-cabanel
+    role: creator
+  prominence: 4
+  note: Exhibited at the Salon of 1863 and bought at once by Napoleon III. A smaller replica of 1875 is at the Metropolitan Museum of Art.
+  sources:
+  - wp-alexandre-cabanel
+- key: a-studio-at-les-batignolles-fantin-latour
+  name: A Studio at Les Batignolles
+  kind: painting
+  made: 1870
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  - person: edouard-manet
+    role: subject
+  - person: pierre-auguste-renoir
+    role: subject
+  - person: frederic-bazille
+    role: subject
+  - person: claude-monet
+    role: subject
+  prominence: 3
+  note: Group portrait with Manet painting at the centre; a tribute to Manet. Also shows Zacharie Astruc and Emile Zola, who are not in the database.
+  sources:
+  - wp-henri-fantin-latour
+links:
+- teacher: eugene-boudin
+  student: claude-monet
+  sources:
+  - wp-claude-monet
+- teacher: camille-pissarro
+  student: paul-cezanne
+  sources:
+  - wp-paul-cezanne
+  - wp-camille-pissarro
+- teacher: camille-pissarro
+  student: paul-gauguin
+  sources:
+  - wp-paul-gauguin
+  - wp-camille-pissarro
+- teacher: jean-baptiste-camille-corot
+  student: camille-pissarro
+  sources:
+  - wp-camille-pissarro
+- teacher: edgar-degas
+  student: suzanne-valadon
+  sources:
+  - wp-edgar-degas
+- teacher: jean-leon-gerome
+  student: mary-cassatt
+  sources:
+  - wp-mary-cassatt
+- teacher: jean-leon-gerome
+  student: odilon-redon
+  sources:
+  - wp-odilon-redon
+- patron: gustave-caillebotte
+  artist: claude-monet
+  sources:
+  - wp-gustave-caillebotte
+- teacher: jean-baptiste-camille-corot
+  student: eugene-boudin
+  sources:
+  - wp-jean-baptiste-camille-corot
+- teacher: jean-baptiste-camille-corot
+  student: berthe-morisot
+  sources:
+  - wp-jean-baptiste-camille-corot
+- teacher: jean-leon-gerome
+  student: thomas-eakins
+  sources:
+  - wp-thomas-eakins
+- teacher: jean-leon-gerome
+  student: edouard-vuillard
+  sources:
+  - wp-edouard-vuillard
+- teacher: suzanne-valadon
+  student: maurice-utrillo
+  sources:
+  - wp-maurice-utrillo
+- teacher: gustave-moreau
+  student: edgar-degas
+  sources:
+  - wp-gustave-moreau
+- teacher: eugene-delacroix
+  student: pierre-puvis-de-chavannes
+  sources:
+  - wp-pierre-puvis-de-chavannes
+moments:
+- person: vincent-van-gogh
+  role: born
+  place: zundert
+  year: 1853
+  sources:
+  - wp-vincent-van-gogh
+- person: vincent-van-gogh
+  role: worked
+  place: nuenen
+  year: 1883
+  sources:
+  - wp-vincent-van-gogh
+- person: vincent-van-gogh
+  role: worked
+  place: paris
+  year: 1886
+  sources:
+  - wp-vincent-van-gogh
+- person: vincent-van-gogh
+  role: worked
+  place: arles
+  year: 1888
+  sources:
+  - wp-vincent-van-gogh
+- person: vincent-van-gogh
+  role: died
+  place: auvers-sur-oise
+  year: 1890
+  sources:
+  - wp-vincent-van-gogh
+- person: claude-monet
+  role: born
+  place: paris
+  year: 1840
+  sources:
+  - wp-claude-monet
+- person: claude-monet
+  role: worked
+  place: le-havre
+  year: 1845
+  sources:
+  - wp-claude-monet
+- person: claude-monet
+  role: worked
+  place: argenteuil
+  year: 1871
+  sources:
+  - wp-claude-monet
+- person: claude-monet
+  role: worked
+  place: vetheuil
+  year: 1878
+  sources:
+  - wp-claude-monet
+- person: claude-monet
+  role: worked
+  place: giverny
+  year: 1883
+  sources:
+  - wp-claude-monet
+- person: paul-cezanne
+  role: born
+  place: aix-en-provence
+  year: 1839
+  sources:
+  - wp-paul-cezanne
+- person: paul-cezanne
+  role: worked
+  place: paris
+  year: 1861
+  sources:
+  - wp-paul-cezanne
+- person: paul-cezanne
+  role: worked
+  place: auvers-sur-oise
+  year: 1872
+  sources:
+  - wp-paul-cezanne
+- person: paul-cezanne
+  role: worked
+  place: atelier-de-cezanne
+  year: 1903
+  sources:
+  - wp-paul-cezanne
+- person: paul-cezanne
+  role: died
+  place: aix-en-provence
+  year: 1906
+  sources:
+  - wp-paul-cezanne
+- person: paul-cezanne
+  role: buried
+  place: aix-en-provence
+  year: 1906
+  sources:
+  - wp-paul-cezanne
+- person: paul-gauguin
+  role: born
+  place: paris
+  year: 1848
+  sources:
+  - wp-paul-gauguin
+- person: paul-gauguin
+  role: worked
+  place: pont-aven
+  year: 1886
+  sources:
+  - wp-paul-gauguin
+- person: paul-gauguin
+  role: worked
+  place: arles
+  year: 1888
+  sources:
+  - wp-paul-gauguin
+- person: paul-gauguin
+  role: worked
+  place: papeete
+  year: 1891
+  sources:
+  - wp-paul-gauguin
+- person: edouard-manet
+  role: born
+  place: paris
+  year: 1832
+  sources:
+  - wp-edouard-manet
+- person: edouard-manet
+  role: died
+  place: paris
+  year: 1883
+  sources:
+  - wp-edouard-manet
+- person: edouard-manet
+  role: buried
+  place: passy-cemetery
+  year: 1883
+  sources:
+  - wp-edouard-manet
+- person: edgar-degas
+  role: born
+  place: paris
+  year: 1834
+  sources:
+  - wp-edgar-degas
+- person: edgar-degas
+  role: worked
+  place: naples
+  year: 1858
+  sources:
+  - wp-edgar-degas
+- person: edgar-degas
+  role: worked
+  place: new-orleans
+  year: 1872
+  sources:
+  - wp-edgar-degas
+- person: edgar-degas
+  role: died
+  place: paris
+  year: 1917
+  sources:
+  - wp-edgar-degas
+- person: pierre-auguste-renoir
+  role: born
+  place: limoges
+  year: 1841
+  sources:
+  - wp-pierre-auguste-renoir
+- person: pierre-auguste-renoir
+  role: worked
+  place: paris
+  year: 1844
+  sources:
+  - wp-pierre-auguste-renoir
+- person: pierre-auguste-renoir
+  role: worked
+  place: cagnes-sur-mer
+  year: 1907
+  sources:
+  - wp-pierre-auguste-renoir
+- person: pierre-auguste-renoir
+  role: died
+  place: cagnes-sur-mer
+  year: 1919
+  sources:
+  - wp-pierre-auguste-renoir
+- person: camille-pissarro
+  role: born
+  place: charlotte-amalie
+  year: 1830
+  sources:
+  - wp-camille-pissarro
+- person: camille-pissarro
+  role: worked
+  place: pontoise
+  year: 1872
+  sources:
+  - wp-camille-pissarro
+- person: camille-pissarro
+  role: worked
+  place: eragny-sur-epte
+  year: 1884
+  sources:
+  - wp-camille-pissarro
+- person: camille-pissarro
+  role: died
+  place: paris
+  year: 1903
+  sources:
+  - wp-camille-pissarro
+- person: camille-pissarro
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1903
+  sources:
+  - wp-camille-pissarro
+- person: georges-seurat
+  role: born
+  place: paris
+  year: 1859
+  sources:
+  - wp-georges-seurat
+- person: georges-seurat
+  role: worked
+  place: gravelines
+  year: 1890
+  sources:
+  - wp-georges-seurat
+- person: georges-seurat
+  role: died
+  place: paris
+  year: 1891
+  sources:
+  - wp-georges-seurat
+- person: georges-seurat
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1891
+  sources:
+  - wp-georges-seurat
+- person: berthe-morisot
+  role: born
+  place: bourges
+  year: 1841
+  sources:
+  - wp-berthe-morisot
+- person: berthe-morisot
+  role: died
+  place: paris
+  year: 1895
+  sources:
+  - wp-berthe-morisot
+- person: berthe-morisot
+  role: buried
+  place: passy-cemetery
+  year: 1895
+  sources:
+  - wp-berthe-morisot
+- person: alfred-sisley
+  role: born
+  place: paris
+  year: 1839
+  sources:
+  - wp-alfred-sisley
+- person: alfred-sisley
+  role: worked
+  place: london
+  year: 1857
+  sources:
+  - wp-alfred-sisley
+- person: alfred-sisley
+  role: worked
+  place: honfleur
+  year: 1867
+  sources:
+  - wp-alfred-sisley
+- person: alfred-sisley
+  role: worked
+  place: penarth
+  year: 1897
+  sources:
+  - wp-alfred-sisley
+- person: mary-cassatt
+  role: born
+  place: allegheny-pittsburgh
+  year: 1844
+  sources:
+  - wp-mary-cassatt
+- person: mary-cassatt
+  role: worked
+  place: paris
+  year: 1874
+  sources:
+  - wp-mary-cassatt
+- person: mary-cassatt
+  role: died
+  place: chateau-de-beaufresne
+  year: 1926
+  sources:
+  - wp-mary-cassatt
+- person: mary-cassatt
+  role: buried
+  place: le-mesnil-theribus
+  year: 1926
+  sources:
+  - wp-mary-cassatt
+- person: henri-de-toulouse-lautrec
+  role: born
+  place: albi
+  year: 1864
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- person: henri-de-toulouse-lautrec
+  role: worked
+  place: paris
+  year: 1882
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- person: henri-de-toulouse-lautrec
+  role: died
+  place: chateau-malrome
+  year: 1901
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- person: henri-de-toulouse-lautrec
+  role: buried
+  place: verdelais-cemetery
+  year: 1901
+  sources:
+  - wp-henri-de-toulouse-lautrec
+- person: gustave-caillebotte
+  role: born
+  place: paris
+  year: 1848
+  sources:
+  - wp-gustave-caillebotte
+- person: gustave-caillebotte
+  role: worked
+  place: petit-gennevilliers
+  year: 1888
+  sources:
+  - wp-gustave-caillebotte
+- person: gustave-caillebotte
+  role: died
+  place: petit-gennevilliers
+  year: 1894
+  sources:
+  - wp-gustave-caillebotte
+- person: gustave-caillebotte
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1894
+  sources:
+  - wp-gustave-caillebotte
+- person: frederic-bazille
+  role: born
+  place: montpellier
+  year: 1841
+  sources:
+  - wp-frederic-bazille
+- person: frederic-bazille
+  role: worked
+  place: paris
+  year: 1862
+  sources:
+  - wp-frederic-bazille
+- person: frederic-bazille
+  role: died
+  place: beaune-la-rolande-battlefield
+  year: 1870
+  sources:
+  - wp-frederic-bazille
+- person: frederic-bazille
+  role: buried
+  place: protestant-cemetery-montpellier
+  year: 1870
+  sources:
+  - wp-frederic-bazille
+- person: paul-signac
+  role: born
+  place: paris
+  year: 1863
+  sources:
+  - wp-paul-signac
+- person: paul-signac
+  role: worked
+  place: saint-tropez
+  year: 1897
+  sources:
+  - wp-paul-signac
+- person: paul-signac
+  role: worked
+  place: castel-beranger
+  year: 1897
+  sources:
+  - wp-paul-signac
+- person: paul-signac
+  role: died
+  place: paris
+  year: 1935
+  sources:
+  - wp-paul-signac
+- person: paul-signac
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1935
+  sources:
+  - wp-paul-signac
+- person: odilon-redon
+  role: born
+  place: bordeaux
+  year: 1840
+  sources:
+  - wp-odilon-redon
+- person: odilon-redon
+  role: worked
+  place: paris
+  year: 1871
+  sources:
+  - wp-odilon-redon
+- person: odilon-redon
+  role: died
+  place: paris
+  year: 1916
+  sources:
+  - wp-odilon-redon
+- person: henri-rousseau
+  role: born
+  place: laval
+  year: 1844
+  sources:
+  - wp-henri-rousseau
+- person: henri-rousseau
+  role: worked
+  place: paris
+  year: 1868
+  sources:
+  - wp-henri-rousseau
+- person: henri-rousseau
+  role: died
+  place: necker-hospital
+  year: 1910
+  sources:
+  - wp-henri-rousseau
+- person: gustave-courbet
+  role: born
+  place: ornans
+  year: 1819
+  sources:
+  - wp-gustave-courbet
+- person: gustave-courbet
+  role: worked
+  place: paris
+  year: 1839
+  sources:
+  - wp-gustave-courbet
+- person: gustave-courbet
+  role: died
+  place: la-tour-de-peilz
+  year: 1877
+  sources:
+  - wp-gustave-courbet
+- person: jean-baptiste-camille-corot
+  role: born
+  place: paris
+  year: 1796
+  sources:
+  - wp-jean-baptiste-camille-corot
+- person: jean-baptiste-camille-corot
+  role: worked
+  place: rome
+  year: 1825
+  sources:
+  - wp-jean-baptiste-camille-corot
+- person: jean-baptiste-camille-corot
+  role: worked
+  place: barbizon
+  year: 1829
+  sources:
+  - wp-jean-baptiste-camille-corot
+- person: jean-baptiste-camille-corot
+  role: died
+  place: paris
+  year: 1875
+  sources:
+  - wp-jean-baptiste-camille-corot
+- person: jean-baptiste-camille-corot
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1875
+  sources:
+  - wp-jean-baptiste-camille-corot
+- person: jean-francois-millet
+  role: born
+  place: gruchy
+  year: 1814
+  sources:
+  - wp-jean-francois-millet
+- person: jean-francois-millet
+  role: worked
+  place: paris
+  year: 1837
+  sources:
+  - wp-jean-francois-millet
+- person: jean-francois-millet
+  role: worked
+  place: barbizon
+  year: 1849
+  sources:
+  - wp-jean-francois-millet
+- person: honore-daumier
+  role: born
+  place: marseille
+  year: 1808
+  sources:
+  - wp-honore-daumier
+- person: honore-daumier
+  role: worked
+  place: paris
+  year: 1816
+  sources:
+  - wp-honore-daumier
+- person: honore-daumier
+  role: worked
+  place: barbizon
+  year: 1853
+  sources:
+  - wp-honore-daumier
+- person: honore-daumier
+  role: worked
+  place: valmondois
+  year: 1865
+  sources:
+  - wp-honore-daumier
+- person: eugene-boudin
+  role: born
+  place: honfleur
+  year: 1824
+  sources:
+  - wp-eugene-boudin
+- person: eugene-boudin
+  role: worked
+  place: le-havre
+  year: 1835
+  sources:
+  - wp-eugene-boudin
+- person: eugene-boudin
+  role: worked
+  place: bordeaux
+  year: 1873
+  sources:
+  - wp-eugene-boudin
+- person: eugene-boudin
+  role: died
+  place: deauville
+  year: 1898
+  sources:
+  - wp-eugene-boudin
+- person: eugene-boudin
+  role: buried
+  place: saint-vincent-cemetery-montmartre
+  year: 1898
+  sources:
+  - wp-eugene-boudin
+- person: theodore-rousseau
+  role: born
+  place: paris
+  year: 1812
+  sources:
+  - wp-theodore-rousseau
+- person: theodore-rousseau
+  role: worked
+  place: barbizon
+  year: 1848
+  sources:
+  - wp-theodore-rousseau
+- person: charles-francois-daubigny
+  role: born
+  place: paris
+  year: 1817
+  sources:
+  - wp-charles-francois-daubigny
+- person: charles-francois-daubigny
+  role: worked
+  place: barbizon
+  year: 1843
+  sources:
+  - wp-charles-francois-daubigny
+- person: charles-francois-daubigny
+  role: died
+  place: paris
+  year: 1878
+  sources:
+  - wp-charles-francois-daubigny
+- person: charles-francois-daubigny
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1878
+  sources:
+  - wp-charles-francois-daubigny
+- person: james-mcneill-whistler
+  role: born
+  place: lowell
+  year: 1834
+  sources:
+  - wp-james-mcneill-whistler
+- person: james-mcneill-whistler
+  role: worked
+  place: st-petersburg
+  year: 1842
+  sources:
+  - wp-james-mcneill-whistler
+- person: james-mcneill-whistler
+  role: worked
+  place: paris
+  year: 1855
+  sources:
+  - wp-james-mcneill-whistler
+- person: james-mcneill-whistler
+  role: worked
+  place: london
+  year: 1859
+  sources:
+  - wp-james-mcneill-whistler
+- person: james-mcneill-whistler
+  role: worked
+  place: chelsea
+  year: 1866
+  sources:
+  - wp-james-mcneill-whistler
+- person: john-singer-sargent
+  role: born
+  place: florence
+  year: 1856
+  sources:
+  - wp-john-singer-sargent
+- person: john-singer-sargent
+  role: worked
+  place: paris
+  year: 1874
+  sources:
+  - wp-john-singer-sargent
+- person: john-singer-sargent
+  role: worked
+  place: chelsea
+  year: 1886
+  sources:
+  - wp-john-singer-sargent
+- person: john-singer-sargent
+  role: worked
+  place: boston-public-library
+  year: 1895
+  sources:
+  - wp-john-singer-sargent
+- person: winslow-homer
+  role: born
+  place: boston
+  year: 1836
+  sources:
+  - wp-winslow-homer
+- person: winslow-homer
+  role: worked
+  place: new-york-city
+  year: 1859
+  sources:
+  - wp-winslow-homer
+- person: winslow-homer
+  role: worked
+  place: cullercoats
+  year: 1881
+  sources:
+  - wp-winslow-homer
+- person: winslow-homer
+  role: worked
+  place: prouts-neck
+  year: 1883
+  sources:
+  - wp-winslow-homer
+- person: winslow-homer
+  role: died
+  place: prouts-neck
+  year: 1910
+  sources:
+  - wp-winslow-homer
+- person: winslow-homer
+  role: buried
+  place: mount-auburn-cemetery
+  year: 1910
+  sources:
+  - wp-winslow-homer
+- person: thomas-eakins
+  role: born
+  place: philadelphia
+  year: 1844
+  sources:
+  - wp-thomas-eakins
+- person: thomas-eakins
+  role: worked
+  place: paris
+  year: 1866
+  sources:
+  - wp-thomas-eakins
+- person: thomas-eakins
+  role: worked
+  place: pennsylvania-academy-of-the-fine-arts
+  year: 1876
+  sources:
+  - wp-thomas-eakins
+- person: thomas-eakins
+  role: buried
+  place: the-woodlands-cemetery
+  year: 1916
+  sources:
+  - wp-thomas-eakins
+- person: edouard-vuillard
+  role: born
+  place: cuiseaux
+  year: 1868
+  sources:
+  - wp-edouard-vuillard
+- person: edouard-vuillard
+  role: worked
+  place: paris
+  year: 1877
+  sources:
+  - wp-edouard-vuillard
+- person: edouard-vuillard
+  role: died
+  place: la-baule
+  year: 1940
+  sources:
+  - wp-edouard-vuillard
+- person: pierre-bonnard
+  role: born
+  place: fontenay-aux-roses
+  year: 1867
+  sources:
+  - wp-pierre-bonnard
+- person: pierre-bonnard
+  role: worked
+  place: paris
+  year: 1888
+  sources:
+  - wp-pierre-bonnard
+- person: pierre-bonnard
+  role: worked
+  place: cannes
+  year: 1925
+  sources:
+  - wp-pierre-bonnard
+- person: pierre-bonnard
+  role: died
+  place: le-cannet
+  year: 1947
+  sources:
+  - wp-pierre-bonnard
+- person: maurice-denis
+  role: born
+  place: granville
+  year: 1870
+  sources:
+  - wp-maurice-denis
+- person: maurice-denis
+  role: worked
+  place: rome
+  year: 1898
+  sources:
+  - wp-maurice-denis
+- person: maurice-denis
+  role: worked
+  place: perros-guirec
+  year: 1898
+  sources:
+  - wp-maurice-denis
+- person: maurice-denis
+  role: worked
+  place: le-prieure-saint-germain-en-laye
+  year: 1915
+  sources:
+  - wp-maurice-denis
+- person: maurice-denis
+  role: worked
+  place: notre-dame-du-raincy
+  year: 1924
+  sources:
+  - wp-maurice-denis
+- person: maurice-denis
+  role: died
+  place: paris
+  year: 1943
+  sources:
+  - wp-maurice-denis
+- person: emile-bernard
+  role: born
+  place: lille
+  year: 1868
+  sources:
+  - wp-emile-bernard
+- person: emile-bernard
+  role: worked
+  place: pont-aven
+  year: 1886
+  sources:
+  - wp-emile-bernard
+- person: emile-bernard
+  role: worked
+  place: le-pouldu
+  year: 1889
+  sources:
+  - wp-emile-bernard
+- person: emile-bernard
+  role: worked
+  place: paris
+  year: 1904
+  sources:
+  - wp-emile-bernard
+- person: suzanne-valadon
+  role: born
+  place: bessines-sur-gartempe
+  year: 1865
+  sources:
+  - wp-suzanne-valadon
+- person: suzanne-valadon
+  role: worked
+  place: montmartre
+  year: 1880
+  sources:
+  - wp-suzanne-valadon
+- person: suzanne-valadon
+  role: buried
+  place: cimetiere-de-saint-ouen
+  year: 1938
+  sources:
+  - wp-suzanne-valadon
+- person: maurice-utrillo
+  role: born
+  place: montmartre
+  year: 1883
+  sources:
+  - wp-maurice-utrillo
+- person: maurice-utrillo
+  role: died
+  place: dax
+  year: 1955
+  sources:
+  - wp-maurice-utrillo
+- person: maurice-utrillo
+  role: buried
+  place: cimetiere-saint-vincent
+  year: 1955
+  sources:
+  - wp-maurice-utrillo
+- person: gustave-moreau
+  role: born
+  place: paris
+  year: 1826
+  sources:
+  - wp-gustave-moreau
+- person: gustave-moreau
+  role: worked
+  place: musee-gustave-moreau
+  year: 1853
+  sources:
+  - wp-gustave-moreau
+- person: gustave-moreau
+  role: buried
+  place: cimetiere-de-montmartre
+  year: 1898
+  sources:
+  - wp-gustave-moreau
+- person: pierre-puvis-de-chavannes
+  role: born
+  place: lyon
+  year: 1824
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- person: pierre-puvis-de-chavannes
+  role: worked
+  place: musee-de-picardie
+  year: 1861
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- person: pierre-puvis-de-chavannes
+  role: worked
+  place: pantheon-paris
+  year: 1874
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- person: pierre-puvis-de-chavannes
+  role: worked
+  place: palais-des-beaux-arts-de-lyon
+  year: 1883
+  sources:
+  - wp-pierre-puvis-de-chavannes
+- person: rosa-bonheur
+  role: born
+  place: bordeaux
+  year: 1822
+  sources:
+  - wp-rosa-bonheur
+- person: rosa-bonheur
+  role: worked
+  place: chateau-de-by
+  year: 1859
+  sources:
+  - wp-rosa-bonheur
+- person: rosa-bonheur
+  role: died
+  place: chateau-de-by
+  year: 1899
+  sources:
+  - wp-rosa-bonheur
+- person: rosa-bonheur
+  role: buried
+  place: pere-lachaise-cemetery
+  year: 1899
+  sources:
+  - wp-rosa-bonheur
+- person: william-adolphe-bouguereau
+  role: born
+  place: la-rochelle
+  year: 1825
+  sources:
+  - wp-william-adolphe-bouguereau
+- person: william-adolphe-bouguereau
+  role: worked
+  place: villa-medici
+  year: 1851
+  sources:
+  - wp-william-adolphe-bouguereau
+- person: william-adolphe-bouguereau
+  role: died
+  place: la-rochelle
+  year: 1905
+  sources:
+  - wp-william-adolphe-bouguereau
+- person: william-adolphe-bouguereau
+  role: buried
+  place: cimetiere-du-montparnasse
+  year: 1905
+  sources:
+  - wp-william-adolphe-bouguereau
+- person: jean-leon-gerome
+  role: born
+  place: vesoul
+  year: 1824
+  sources:
+  - wp-jean-leon-gerome
+- person: jean-leon-gerome
+  role: buried
+  place: cimetiere-de-montmartre
+  year: 1904
+  sources:
+  - wp-jean-leon-gerome
+- person: alexandre-cabanel
+  role: worked
+  place: villa-medici
+  year: 1845
+  sources:
+  - wp-alexandre-cabanel
+- person: alexandre-cabanel
+  role: died
+  place: paris
+  year: 1889
+  sources:
+  - wp-alexandre-cabanel
+- person: alexandre-cabanel
+  role: buried
+  place: cimetiere-saint-lazare-montpellier
+  year: 1889
+  sources:
+  - wp-alexandre-cabanel
+- person: henri-fantin-latour
+  role: born
+  place: grenoble
+  year: 1836
+  sources:
+  - wp-henri-fantin-latour
+- person: henri-fantin-latour
+  role: died
+  place: bure-orne
+  year: 1904
+  sources:
+  - wp-henri-fantin-latour
+- person: henri-fantin-latour
+  role: buried
+  place: cimetiere-du-montparnasse
+  year: 1904
+  sources:
+  - wp-henri-fantin-latour
+discrepancies:
+- key: georges-seurat-cause-of-death
+  question: What caused Georges Seurat's death in 1891?
+  about:
+  - person: georges-seurat
+  field: died
+  claims:
+  - value: A form of meningitis
+    sources:
+    - wp-georges-seurat
+    note: The article says the cause is uncertain.
+  - value: Pneumonia
+    sources:
+    - wp-georges-seurat
+  - value: Infectious angina
+    sources:
+    - wp-georges-seurat
+  - value: Diphtheria
+    sources:
+    - wp-georges-seurat
+  note: Date and place of death (29 March 1891, Paris) are not in question; only the cause. His son died two weeks later of the same disease.
+- key: honore-daumier-died
+  question: On which day in February 1879 did Honoré Daumier die?
+  about:
+  - person: honore-daumier
+  field: died
+  claims:
+  - value: 10 February 1879
+    sources:
+    - wp-honore-daumier
+    note: Given in the article lead; some sources state this date.
+  - value: 11 February 1879
+    sources:
+    - wp-honore-daumier
+    note: Other sources state this date.
+  note: The record holds the year 1879 only, because the article says sources conflict on the day.
+- key: maurice-denis-died
+  question: On which day in November 1943 did Maurice Denis die?
+  about:
+  - person: maurice-denis
+  field: died
+  claims:
+  - value: 13 November 1943
+    sources:
+    - wp-maurice-denis
+    note: Date in the article lead.
+  - value: 2 November 1943
+    sources:
+    - wp-maurice-denis
+    note: Listed in some sources.
+  - value: 3 November 1943
+    sources:
+    - wp-maurice-denis
+    note: Listed in some sources.
+  note: The record holds the year 1943 only, because the article says the day is variously listed as the 2nd, 3rd or 13th.
+- key: maurice-utrillo-father
+  question: Who was Maurice Utrillo's father?
+  about:
+  - person: maurice-utrillo
+  - person: suzanne-valadon
+  field: father
+  claims:
+  - value: Miquel Utrillo, a Spanish artist, who signed a document acknowledging paternity in 1891
+    sources:
+    - wp-maurice-utrillo
+    note: The article says it remains unclear whether he was the actual father.
+  - value: Possibly an amateur painter named Boissy, Pierre Puvis de Chavannes, or Renoir (speculation)
+    sources:
+    - wp-maurice-utrillo
+  note: Valadon never revealed the father. The record leaves the father out.
+- key: musee-gustave-moreau-townhouse-purchase
+  question: In which year did Moreau's father buy the townhouse at 14 rue de la Rochefoucauld?
+  about:
+  - person: gustave-moreau
+  - place: musee-gustave-moreau
+  field: date
+  claims:
+  - value: '1852'
+    sources:
+    - wp-gustave-moreau
+    note: Given in the article's introduction.
+  - value: '1853'
+    sources:
+    - wp-gustave-moreau
+    note: Given in the Education and early career section.
+  note: The article contradicts itself. The moment for Moreau working at the townhouse uses 1853.
