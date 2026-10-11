@@ -273,6 +273,17 @@ def test_bad_dates_are_errors_not_crashes():
     assert "event `ides` `date`" in text and "there is no year 0" in text, text
     assert "`1066-13-40` is not a year" in text and "`c. 44` is not a year" in text, text
 
+def test_a_moment_year_must_be_a_year_not_a_full_date():
+    """A full date in a moment's year passed the preview but made the apply fail (integer column)."""
+    db = FakeDB(snapshot())
+    docs = [("m.yaml", {"batch": {"title": "t"},
+             "moments": [{"person": "henry-i-of-england", "role": "died", "place": "lyons-la-foret", "year": "1135-12-01"},
+                         {"person": "henry-i-of-england", "role": "buried", "place": "lyons-la-foret", "year": 1136}]})]
+    plan = intake.plan_files(intake.World(db), docs)
+    text = " ".join(plan.errors)
+    assert "a life moment takes a year only" in text and "1135-12-01" in text and "use `1135`" in text, plan.errors
+    assert "buried" not in text, plan.errors  # a plain year is fine
+
 def test_discrepancies_are_stored_and_surfaced():
     db = FakeDB(snapshot())
     src = [{"key": "a", "title": "A"}, {"key": "b", "title": "B"}]
