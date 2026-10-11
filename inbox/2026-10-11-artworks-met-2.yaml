@@ -1,0 +1,3054 @@
+# Notes for the reviewer
+# - Public-domain paintings by our painters, read through the official Metropolitan Museum of Art API (https://metmuseum.github.io/); nothing was scraped. Only works the museum marks as public domain / CC0 with an image. Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 151 new artworks (works already in the database were skipped: 138) (images are hotlinked from the museum's servers, CC0).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Metropolitan Museum of Art open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Metropolitan Museum of Art
+  date: '2026-10-11'
+sources:
+- key: met-open-access
+  title: The Metropolitan Museum of Art Collection API (Open Access)
+  url: https://metmuseum.github.io/
+artworks:
+- key: antoine-dominique-sauveur-aubert-born-1817-the-a-paul-cezanne
+  name: Antoine Dominique Sauveur Aubert (born 1817), the Artist's Uncle, as a Monk
+  kind: painting
+  made: 1866
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1993.400.1
+  museum_url: https://www.metmuseum.org/art/collection/search/435869
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1977.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1977.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435869
+  image_license: CC0
+  image_credit: The Walter H. and Leonore Annenberg Collection, Gift of Walter H. and Leonore Annenberg, 1993, Bequest of Walter H. Annenberg, 2002; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: the-abduction-of-the-sabine-women-nicolas-poussin
+  name: The Abduction of the Sabine Women
+  kind: painting
+  made: 1633
+  made_end: 1634
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '46.160'
+  museum_url: https://www.metmuseum.org/art/collection/search/437329
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-29324-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-29324-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437329
+  image_license: CC0
+  image_credit: Harris Brisbane Dick Fund, 1946; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: nicolas-poussin
+    role: creator
+  prominence: 4
+- key: the-crucifixion-paolo-uccello
+  name: The Crucifixion
+  kind: painting
+  made: 1453
+  made_end: 1457
+  estimated: true
+  medium: Tempera on wood, gold ground
+  museum: metropolitan-museum-of-art
+  accession: 1997.117.9
+  museum_url: https://www.metmuseum.org/art/collection/search/438028
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-25222-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-25222-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438028
+  image_license: CC0
+  image_credit: Bequest of Lore Heinemann, in memory of her husband, Dr. Rudolf J. Heinemann, 1996; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: paolo-uccello
+    role: creator
+  prominence: 3
+- key: christ-crowned-with-thorns-antonello-da-messina
+  name: Christ Crowned with Thorns
+  kind: painting
+  made: 1450
+  made_end: 1479
+  medium: Oil, possibly over tempera, on wood
+  museum: metropolitan-museum-of-art
+  accession: 32.100.82
+  museum_url: https://www.metmuseum.org/art/collection/search/435580
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT285189.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT285189.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435580
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: antonello-da-messina
+    role: creator
+  prominence: 3
+- key: portrait-of-a-young-man-antonello-da-messina
+  name: Portrait of a Young Man
+  kind: painting
+  made: 1465
+  made_end: 1475
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 14.40.645
+  museum_url: https://www.metmuseum.org/art/collection/search/435581
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP120669.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP120669.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435581
+  image_license: CC0
+  image_credit: Bequest of Benjamin Altman, 1913; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: antonello-da-messina
+    role: creator
+  prominence: 3
+- key: porte-de-la-reine-at-aigues-mortes-frederic-bazille
+  name: Porte de la Reine at Aigues-Mortes
+  kind: painting
+  made: 1867
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1988.221'
+  museum_url: https://www.metmuseum.org/art/collection/search/435626
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-17243-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-17243-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435626
+  image_license: CC0
+  image_credit: Purchase, Gift of Raymonde Paul, in memory of her brother, C. Michael Paul, by exchange, 1988; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-bazille
+    role: creator
+  prominence: 3
+- key: cafe-house-cairo-casting-bullets-jean-leon-gerome
+  name: Cafe House, Cairo (Casting Bullets)
+  kind: painting
+  made: 1870
+  made_end: 1884
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 05.13.4
+  museum_url: https://www.metmuseum.org/art/collection/search/436481
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-39097-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-39097-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436481
+  image_license: CC0
+  image_credit: Bequest of Henry H. Cook, 1905; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: prayer-in-the-mosque-jean-leon-gerome
+  name: Prayer in the Mosque
+  kind: painting
+  made: 1870
+  made_end: 1874
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.130
+  museum_url: https://www.metmuseum.org/art/collection/search/436482
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1971.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1971.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436482
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: pygmalion-and-galatea-jean-leon-gerome
+  name: Pygmalion and Galatea
+  kind: painting
+  made: 1885
+  made_end: 1895
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '27.200'
+  museum_url: https://www.metmuseum.org/art/collection/search/436483
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14201-005.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-005.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436483
+  image_license: CC0
+  image_credit: Gift of Louis C. Raegner, 1927; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: island-of-the-dead-arnold-bocklin
+  name: Island of the Dead
+  kind: painting
+  made: 1880
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '26.90'
+  museum_url: https://www.metmuseum.org/art/collection/search/435683
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14201-003.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-003.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435683
+  image_license: CC0
+  image_credit: Reisinger Fund, 1926; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: arnold-bocklin
+    role: creator
+  prominence: 3
+- key: roman-landscape-arnold-bocklin
+  name: Roman Landscape
+  kind: painting
+  made: 1850
+  made_end: 1852
+  estimated: true
+  medium: Oil on canvas, several pieces joined
+  museum: metropolitan-museum-of-art
+  accession: '26.100'
+  museum_url: https://www.metmuseum.org/art/collection/search/435684
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-23285-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-23285-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435684
+  image_license: CC0
+  image_credit: Gift of Fearon Galleries Inc., 1926; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: arnold-bocklin
+    role: creator
+  prominence: 3
+- key: portia-john-everett-millais
+  name: Portia
+  kind: painting
+  made: 1886
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '06.1328'
+  museum_url: https://www.metmuseum.org/art/collection/search/437092
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP169564.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP169564.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437092
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Wolfe Fund, 1906; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: john-everett-millais
+    role: creator
+  prominence: 3
+- key: charity-guido-reni
+  name: Charity
+  kind: painting
+  made: 1625
+  made_end: 1635
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1974.348'
+  museum_url: https://www.metmuseum.org/art/collection/search/437422
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT10776.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT10776.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437422
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Charles Wrightsman, 1974; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: guido-reni
+    role: creator
+  prominence: 3
+- key: the-immaculate-conception-guido-reni
+  name: The Immaculate Conception
+  kind: painting
+  made: 1627
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '59.32'
+  museum_url: https://www.metmuseum.org/art/collection/search/437423
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1138.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1138.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437423
+  image_license: CC0
+  image_credit: Victor Wilbour Memorial Fund, 1959; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: guido-reni
+    role: creator
+  prominence: 4
+- key: the-dissolute-household-jan-steen
+  name: The Dissolute Household
+  kind: painting
+  made: 1663
+  made_end: 1664
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1982.60.31
+  museum_url: https://www.metmuseum.org/art/collection/search/437747
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP146465.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP146465.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437747
+  image_license: CC0
+  image_credit: The Jack and Belle Linsky Collection, 1982; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: the-lovesick-maiden-jan-steen
+  name: The Lovesick Maiden
+  kind: painting
+  made: 1655
+  made_end: 1665
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 46.13.2
+  museum_url: https://www.metmuseum.org/art/collection/search/437748
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP147594.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP147594.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437748
+  image_license: CC0
+  image_credit: Bequest of Helen Swift Neilson, 1945; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: merry-company-on-a-terrace-jan-steen
+  name: Merry Company on a Terrace
+  kind: painting
+  made: 1665
+  made_end: 1675
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '58.89'
+  museum_url: https://www.metmuseum.org/art/collection/search/437749
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP146455.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP146455.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437749
+  image_license: CC0
+  image_credit: Fletcher Fund, 1958; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 4
+- key: chrysanthemums-in-the-garden-at-petit-gennevilli-gustave-caillebotte
+  name: Chrysanthemums in the Garden at Petit-Gennevilliers
+  kind: painting
+  made: 1893
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2014.736'
+  museum_url: https://www.metmuseum.org/art/collection/search/671456
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP341200.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP341200.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/671456
+  image_license: CC0
+  image_credit: Gift of the Honorable John C. Whitehead, 2014; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: gustave-caillebotte
+    role: creator
+  prominence: 3
+- key: self-portrait-umberto-boccioni
+  name: Self-Portrait
+  kind: painting
+  made: 1905
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1990.38.4
+  museum_url: https://www.metmuseum.org/art/collection/search/485551
+  image_url: https://images.metmuseum.org/CRDImages/ma/original/LC-1990_38_4-overall-20240701-01.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ma/web-large/LC-1990_38_4-overall-20240701-01.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/485551
+  image_license: CC0
+  image_credit: Bequest of Lydia Winston Malbin, 1989; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 3
+- key: on-the-beach-at-trouville-eugene-boudin
+  name: On the Beach at Trouville
+  kind: painting
+  made: 1863
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 07.88.4
+  museum_url: https://www.metmuseum.org/art/collection/search/435749
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1032.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1032.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435749
+  image_license: CC0
+  image_credit: Bequest of Amelia B. Lazarus, 1907; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: beaulieu-the-bay-of-fourmis-eugene-boudin
+  name: 'Beaulieu: The Bay of Fourmis'
+  kind: painting
+  made: 1892
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 39.65.2
+  museum_url: https://www.metmuseum.org/art/collection/search/435750
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-17451-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-17451-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435750
+  image_license: CC0
+  image_credit: Bequest of Jacob Ruppert, 1939; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: village-by-a-river-eugene-boudin
+  name: Village by a River
+  kind: painting
+  made: 1867
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '59.140'
+  museum_url: https://www.metmuseum.org/art/collection/search/435751
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-23422-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-23422-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435751
+  image_license: CC0
+  image_credit: Gift of Arthur J. Neumark, 1959; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: salome-with-the-head-of-john-the-baptist-gustave-moreau
+  name: Salome with the Head of John the Baptist
+  kind: painting
+  made: 1871
+  made_end: 1881
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 2018.289.6
+  museum_url: https://www.metmuseum.org/art/collection/search/782308
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-15575-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-15575-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/782308
+  image_license: CC0
+  image_credit: Gift of the Eugene V. and Clare E. Thaw Charitable Trust, 2018; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: gustave-moreau
+    role: creator
+  prominence: 3
+- key: the-fortune-teller-georges-de-la-tour
+  name: The Fortune-Teller
+  kind: painting
+  made: 1630
+  made_end: 1639
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '60.30'
+  museum_url: https://www.metmuseum.org/art/collection/search/436838
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14286-015.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14286-015.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436838
+  image_license: CC0
+  image_credit: Rogers Fund, 1960; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: georges-de-la-tour
+    role: creator
+  prominence: 4
+- key: the-penitent-magdalen-georges-de-la-tour
+  name: The Penitent Magdalen
+  kind: painting
+  made: 1635
+  made_end: 1645
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1978.517'
+  museum_url: https://www.metmuseum.org/art/collection/search/436839
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-27910-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-27910-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436839
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Charles Wrightsman, 1978; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: georges-de-la-tour
+    role: creator
+  prominence: 4
+- key: the-sacrifice-of-polyxena-charles-le-brun
+  name: The Sacrifice of Polyxena
+  kind: painting
+  made: 1647
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2013.183'
+  museum_url: https://www.metmuseum.org/art/collection/search/442761
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP317722.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP317722.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/442761
+  image_license: CC0
+  image_credit: Purchase, 2012 Benefit Fund, and Bequest of Grace Wilkes and Fletcher Fund, by exchange, 2013; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: charles-le-brun
+    role: creator
+  prominence: 3
+- key: the-jabach-family-charles-le-brun
+  name: The Jabach Family
+  kind: painting
+  made: 1655
+  made_end: 1665
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2014.250'
+  museum_url: https://www.metmuseum.org/art/collection/search/626692
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP352819.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP352819.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/626692
+  image_license: CC0
+  image_credit: Purchase, Mrs. Charles Wrightsman Gift, in honor of Keith Christiansen, 2014; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: charles-le-brun
+    role: creator
+  prominence: 4
+- key: arcadia-thomas-eakins
+  name: Arcadia
+  kind: painting
+  made: 1880
+  made_end: 1883
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 67.187.125
+  museum_url: https://www.metmuseum.org/art/collection/search/10810
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT221513.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT221513.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10810
+  image_license: CC0
+  image_credit: Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: the-artist-s-wife-and-his-setter-dog-thomas-eakins
+  name: The Artist's Wife and His Setter Dog
+  kind: painting
+  made: 1881
+  made_end: 1889
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '23.139'
+  museum_url: https://www.metmuseum.org/art/collection/search/10811
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT2037.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT2037.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10811
+  image_license: CC0
+  image_credit: Fletcher Fund, 1923; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: carmelita-requena-thomas-eakins
+  name: Carmelita Requena
+  kind: painting
+  made: 1869
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1979.135.2
+  museum_url: https://www.metmuseum.org/art/collection/search/10812
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT9827.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT9827.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10812
+  image_license: CC0
+  image_credit: Bequest of Mary Cushing Fosburgh, 1978; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: saint-andrew-simone-martini
+  name: Saint Andrew
+  kind: painting
+  made: 1321
+  made_end: 1331
+  estimated: true
+  medium: Tempera on wood, gold ground
+  museum: metropolitan-museum-of-art
+  accession: 41.100.23
+  museum_url: https://www.metmuseum.org/art/collection/search/437675
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP343101.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP343101.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437675
+  image_license: CC0
+  image_credit: Gift of George Blumenthal, 1941; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: simone-martini
+    role: creator
+  prominence: 4
+- key: saint-bartholomew-simone-martini
+  name: Saint Bartholomew
+  kind: painting
+  made: 1317
+  made_end: 1319
+  estimated: true
+  medium: Tempera on wood, gold ground
+  museum: metropolitan-museum-of-art
+  accession: 43.98.10
+  museum_url: https://www.metmuseum.org/art/collection/search/437677
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-12431-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-12431-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437677
+  image_license: CC0
+  image_credit: Maitland F. Griggs Collection, Bequest of Maitland F. Griggs, 1943; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: simone-martini
+    role: creator
+  prominence: 3
+- key: madonna-and-child-enthroned-with-two-angels-fra-filippo-lippi
+  name: Madonna and Child Enthroned with Two Angels
+  kind: painting
+  made: 1435
+  made_end: 1445
+  estimated: true
+  medium: Tempera and gold on wood, transferred from wood
+  museum: metropolitan-museum-of-art
+  accession: 49.7.9
+  museum_url: https://www.metmuseum.org/art/collection/search/436895
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-20746-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-20746-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436895
+  image_license: CC0
+  image_credit: The Jules Bache Collection, 1949; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+- key: portrait-of-a-woman-with-a-man-at-a-casement-fra-filippo-lippi
+  name: Portrait of a Woman with a Man at a Casement
+  kind: painting
+  made: 1435
+  made_end: 1445
+  estimated: true
+  medium: Tempera on wood
+  museum: metropolitan-museum-of-art
+  accession: 89.15.19
+  museum_url: https://www.metmuseum.org/art/collection/search/436896
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP159891.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP159891.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436896
+  image_license: CC0
+  image_credit: Marquand Collection, Gift of Henry G. Marquand, 1889; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 4
+- key: saint-lawrence-enthroned-with-saints-and-donors-fra-filippo-lippi
+  name: Saint Lawrence Enthroned with Saints and Donors
+  kind: painting
+  made: 1440
+  made_end: 1449
+  medium: Tempera on wood, gold ground
+  museum: metropolitan-museum-of-art
+  accession: 35.31.1a–c
+  museum_url: https://www.metmuseum.org/art/collection/search/436897
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-17016-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-17016-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436897
+  image_license: CC0
+  image_credit: Rogers Fund, 1935; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+- key: virgin-and-child-with-saints-catherine-of-alexan-hans-memling
+  name: Virgin and Child with Saints Catherine of Alexandria and Barbara
+  kind: painting
+  made: 1480
+  made_end: 1483
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 14.40.634
+  museum_url: https://www.metmuseum.org/art/collection/search/437054
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-33354-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-33354-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437054
+  image_license: CC0
+  image_credit: Bequest of Benjamin Altman, 1913; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 3
+- key: portrait-of-an-old-man-hans-memling
+  name: Portrait of an Old Man
+  kind: painting
+  made: 1470
+  made_end: 1480
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 14.40.648
+  museum_url: https://www.metmuseum.org/art/collection/search/437055
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP336526.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP336526.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437055
+  image_license: CC0
+  image_credit: Bequest of Benjamin Altman, 1913; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 3
+- key: tommaso-di-folco-portinari-14281501-maria-portin-hans-memling
+  name: Tommaso di Folco Portinari (1428–1501); Maria Portinari (Maria Maddalena Baroncelli, born 1456)
+  kind: painting
+  made: 1465
+  made_end: 1475
+  estimated: true
+  medium: Oil on oak
+  museum: metropolitan-museum-of-art
+  accession: 14.40.626–27
+  museum_url: https://www.metmuseum.org/art/collection/search/437056
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-44362-005.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-44362-005.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437056
+  image_license: CC0
+  image_credit: Bequest of Benjamin Altman, 1913; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 4
+- key: the-horse-fair-rosa-bonheur
+  name: The Horse Fair
+  kind: painting
+  made: 1852
+  made_end: 1855
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '87.25'
+  museum_url: https://www.metmuseum.org/art/collection/search/435702
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-23550-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-23550-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435702
+  image_license: CC0
+  image_credit: Gift of Cornelius Vanderbilt, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 4
+- key: weaning-the-calves-rosa-bonheur
+  name: Weaning the Calves
+  kind: painting
+  made: 1879
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.109
+  museum_url: https://www.metmuseum.org/art/collection/search/435703
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT2579.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT2579.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435703
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: a-limier-briquet-hound-rosa-bonheur
+  name: A Limier Briquet Hound
+  kind: painting
+  made: 1856
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.77
+  museum_url: https://www.metmuseum.org/art/collection/search/435704
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP123961.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP123961.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435704
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: the-silver-tureen-jean-simeon-chardin
+  name: The Silver Tureen
+  kind: painting
+  made: 1728
+  made_end: 1730
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '59.9'
+  museum_url: https://www.metmuseum.org/art/collection/search/435887
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP356136.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP356136.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435887
+  image_license: CC0
+  image_credit: Fletcher Fund, 1959; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+- key: soap-bubbles-jean-simeon-chardin
+  name: Soap Bubbles
+  kind: painting
+  made: 1733
+  made_end: 1734
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '49.24'
+  museum_url: https://www.metmuseum.org/art/collection/search/435888
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP356133.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP356133.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435888
+  image_license: CC0
+  image_credit: Wentworth Fund, 1949; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 4
+- key: an-egyptian-in-a-doorway-lawrence-alma-tadema
+  name: An Egyptian in a Doorway
+  kind: painting
+  made: 1865
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 2017.202.1
+  museum_url: https://www.metmuseum.org/art/collection/search/441350
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-16686-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-16686-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/441350
+  image_license: CC0
+  image_credit: Gift of Kenneth Jay Lane, 2017; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 3
+- key: the-assumption-of-the-virgin-with-saints-michael-luca-signorelli
+  name: The Assumption of the Virgin with Saints Michael and Benedict
+  kind: painting
+  made: 1493
+  made_end: 1496
+  estimated: true
+  medium: Oil and gold on wood
+  museum: metropolitan-museum-of-art
+  accession: '29.164'
+  museum_url: https://www.metmuseum.org/art/collection/search/437673
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP102429.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP102429.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437673
+  image_license: CC0
+  image_credit: Purchase, Joseph Pulitzer Bequest, 1929; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: luca-signorelli
+    role: creator
+  prominence: 3
+- key: madonna-and-child-luca-signorelli
+  name: Madonna and Child
+  kind: painting
+  made: 1505
+  made_end: 1507
+  estimated: true
+  medium: Oil and gold on wood
+  museum: metropolitan-museum-of-art
+  accession: 49.7.13
+  museum_url: https://www.metmuseum.org/art/collection/search/437674
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-25976-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-25976-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437674
+  image_license: CC0
+  image_credit: The Jules Bache Collection, 1949; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: luca-signorelli
+    role: creator
+  prominence: 3
+- key: the-meditation-on-the-passion-vittore-carpaccio
+  name: The Meditation on the Passion
+  kind: painting
+  made: 1485
+  made_end: 1495
+  estimated: true
+  medium: Oil and tempera on wood
+  museum: metropolitan-museum-of-art
+  accession: '11.118'
+  museum_url: https://www.metmuseum.org/art/collection/search/435851
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP296427.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP296427.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435851
+  image_license: CC0
+  image_credit: John Stewart Kennedy Fund, 1911; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: vittore-carpaccio
+    role: creator
+  prominence: 4
+- key: two-children-teasing-a-cat-annibale-carracci
+  name: Two Children Teasing a Cat
+  kind: painting
+  made: 1587
+  made_end: 1588
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1994.142'
+  museum_url: https://www.metmuseum.org/art/collection/search/435852
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP243404.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP243404.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435852
+  image_license: CC0
+  image_credit: Purchase, Gwynne Andrews Fund, and Bequests of Collis P. Huntington and Ogden Mills, by exchange, 1994; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: annibale-carracci
+    role: creator
+  prominence: 3
+- key: the-coronation-of-the-virgin-annibale-carracci
+  name: The Coronation of the Virgin
+  kind: painting
+  made: 1595
+  made_end: 1609
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1971.155'
+  museum_url: https://www.metmuseum.org/art/collection/search/435853
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-27033-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-27033-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435853
+  image_license: CC0
+  image_credit: Purchase, Bequest of Miss Adelaide Milton de Groot (1876-1967), by exchange, and Dr. and Mrs. Manuel Porter and sons Gift, in honor of Mrs. Sarah Porter, 1971; Metropolitan Museum of Art,
+    Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: annibale-carracci
+    role: creator
+  prominence: 4
+- key: the-burial-of-christ-annibale-carracci
+  name: The Burial of Christ
+  kind: painting
+  made: 1595
+  medium: Oil on copper
+  museum: metropolitan-museum-of-art
+  accession: '1998.188'
+  museum_url: https://www.metmuseum.org/art/collection/search/438338
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP312834.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP312834.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438338
+  image_license: CC0
+  image_credit: Purchase, Edwin L. Weisl Jr. Gift, 1998; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: annibale-carracci
+    role: creator
+  prominence: 3
+- key: johann-joachim-winckelmann-17171768-anton-raphael-mengs
+  name: Johann Joachim Winckelmann (1717–1768)
+  kind: painting
+  made: 1772
+  made_end: 1782
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '48.141'
+  museum_url: https://www.metmuseum.org/art/collection/search/437067
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP120383.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP120383.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437067
+  image_license: CC0
+  image_credit: Harris Brisbane Dick Fund, 1948; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: self-portrait-anton-raphael-mengs
+  name: Self-Portrait
+  kind: painting
+  made: 1776
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2010.445'
+  museum_url: https://www.metmuseum.org/art/collection/search/441115
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP240926.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP240926.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/441115
+  image_license: CC0
+  image_credit: Harris Brisbane Dick Fund, 2010; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: the-mountain-ford-thomas-cole
+  name: The Mountain Ford
+  kind: painting
+  made: 1846
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 15.30.63
+  museum_url: https://www.metmuseum.org/art/collection/search/10496
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT216681.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT216681.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10496
+  image_license: CC0
+  image_credit: Bequest of Maria DeWitt Jesup, from the collection of her husband, Morris K. Jesup, 1914; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 3
+- key: view-from-mount-holyoke-northampton-massachusett-thomas-cole
+  name: View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm—The Oxbow
+  kind: painting
+  made: 1836
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '08.228'
+  museum_url: https://www.metmuseum.org/art/collection/search/10497
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DP-12550-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DP-12550-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10497
+  image_license: CC0
+  image_credit: Gift of Mrs. Russell Sage, 1908; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 4
+- key: the-titan-s-goblet-thomas-cole
+  name: The Titan's Goblet
+  kind: painting
+  made: 1833
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 04.29.2
+  museum_url: https://www.metmuseum.org/art/collection/search/10499
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DP-12799-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DP-12799-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10499
+  image_license: CC0
+  image_credit: Gift of Samuel P. Avery Jr., 1904; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 3
+- key: madonna-and-child-filippino-lippi
+  name: Madonna and Child
+  kind: painting
+  made: 1483
+  made_end: 1484
+  estimated: true
+  medium: Tempera, oil, and gold on wood
+  museum: metropolitan-museum-of-art
+  accession: 49.7.10
+  museum_url: https://www.metmuseum.org/art/collection/search/436892
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP243637.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP243637.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436892
+  image_license: CC0
+  image_credit: The Jules Bache Collection, 1949; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: filippino-lippi
+    role: creator
+  prominence: 4
+- key: the-descent-from-the-cross-filippino-lippi
+  name: The Descent from the Cross
+  kind: painting
+  made: 1477
+  made_end: 1504
+  medium: Tempera on wood
+  museum: metropolitan-museum-of-art
+  accession: '12.168'
+  museum_url: https://www.metmuseum.org/art/collection/search/436893
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-21983-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-21983-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436893
+  image_license: CC0
+  image_credit: John Stewart Kennedy Fund, 1912; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: filippino-lippi
+    role: creator
+  prominence: 3
+- key: the-virgin-of-the-nativity-filippino-lippi
+  name: The Virgin of the Nativity
+  kind: painting
+  made: 1495
+  made_end: 1505
+  estimated: true
+  medium: Tempera and gold on wood
+  museum: metropolitan-museum-of-art
+  accession: '1982.73'
+  museum_url: https://www.metmuseum.org/art/collection/search/436894
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT7272.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT7272.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436894
+  image_license: CC0
+  image_credit: Gift of Donald S. Klopfer, 1982; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: filippino-lippi
+    role: creator
+  prominence: 3
+- key: landscape-with-a-village-in-the-distance-jacob-van-ruisdael
+  name: Landscape with a Village in the Distance
+  kind: painting
+  made: 1646
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 65.181.10
+  museum_url: https://www.metmuseum.org/art/collection/search/437545
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP145939.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP145939.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437545
+  image_license: CC0
+  image_credit: Bequest of Adele L. Lehman, in memory of Arthur Lehman, 1965; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: the-forest-stream-jacob-van-ruisdael
+  name: The Forest Stream
+  kind: painting
+  made: 1655
+  made_end: 1665
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 89.15.4
+  museum_url: https://www.metmuseum.org/art/collection/search/437546
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP146457.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP146457.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437546
+  image_license: CC0
+  image_credit: Marquand Collection, Gift of Henry G. Marquand, 1889; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: grainfields-jacob-van-ruisdael
+  name: Grainfields
+  kind: painting
+  made: 1664
+  made_end: 1669
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 32.100.14
+  museum_url: https://www.metmuseum.org/art/collection/search/437547
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP146453.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP146453.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437547
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: the-edge-of-the-woods-at-monts-girard-fontainebl-theodore-rousseau
+  name: The Edge of the Woods at Monts-Girard, Fontainebleau Forest
+  kind: painting
+  made: 1852
+  made_end: 1854
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '96.27'
+  museum_url: https://www.metmuseum.org/art/collection/search/437514
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT4574.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT4574.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437514
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Wolfe Fund, 1896; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: a-meadow-bordered-by-trees-theodore-rousseau
+  name: A Meadow Bordered by Trees
+  kind: painting
+  made: 1840
+  made_end: 1865
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 11.45.5
+  museum_url: https://www.metmuseum.org/art/collection/search/437515
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-19627-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-19627-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437515
+  image_license: CC0
+  image_credit: Bequest of Robert Graham Dun, 1900; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: an-old-chapel-in-a-valley-theodore-rousseau
+  name: An Old Chapel in a Valley
+  kind: painting
+  made: 1832
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '03.28'
+  museum_url: https://www.metmuseum.org/art/collection/search/437516
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-19583-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-19583-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437516
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Wolfe Fund, 1903; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: the-love-song-edward-burne-jones
+  name: The Love Song
+  kind: painting
+  made: 1868
+  made_end: 1877
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '47.26'
+  museum_url: https://www.metmuseum.org/art/collection/search/435826
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP323394.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP323394.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435826
+  image_license: CC0
+  image_credit: The Alfred N. Punnett Endowment Fund, 1947; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: edward-burne-jones
+    role: creator
+  prominence: 4
+- key: tea-james-tissot
+  name: Tea
+  kind: painting
+  made: 1872
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '1998.170'
+  museum_url: https://www.metmuseum.org/art/collection/search/438098
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-24385-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-24385-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438098
+  image_license: CC0
+  image_credit: Gift of Mrs. Charles Wrightsman, 1998; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: in-full-sunlight-en-plein-soleil-james-tissot
+  name: In Full Sunlight (En plein soleil)
+  kind: painting
+  made: 1876
+  made_end: 1886
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '2006.278'
+  museum_url: https://www.metmuseum.org/art/collection/search/438887
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-21607-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-21607-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438887
+  image_license: CC0
+  image_credit: Gift of Mrs. Charles Wrightsman, 2006; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: spring-morning-james-tissot
+  name: Spring Morning
+  kind: painting
+  made: 1870
+  made_end: 1880
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2009.359'
+  museum_url: https://www.metmuseum.org/art/collection/search/440729
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP232138.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP232138.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/440729
+  image_license: CC0
+  image_credit: Gift of Mrs. Charles Wrightsman, 2009; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: the-dream-of-the-shepherd-der-traum-des-hirten-ferdinand-hodler
+  name: The Dream of the Shepherd (Der Traum des Hirten)
+  kind: painting
+  made: 1896
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2013.1134'
+  museum_url: https://www.metmuseum.org/art/collection/search/634108
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP318843.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP318843.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/634108
+  image_license: CC0
+  image_credit: Purchase, European Paintings Funds, Lila Acheson Wallace Gift, Catharine Lorillard Wolfe Collection, Wolfe Fund, Charles and Jessie Price Gift, funds from various donors, and Bequests of
+    Collis P. Huntington and Isaac D. Fletcher, by exchange, 2013; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: ferdinand-hodler
+    role: creator
+  prominence: 4
+- key: still-life-with-roses-and-fruit-henri-fantin-latour
+  name: Still Life with Roses and Fruit
+  kind: painting
+  made: 1863
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1987.119'
+  museum_url: https://www.metmuseum.org/art/collection/search/436292
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT8649.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT8649.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436292
+  image_license: CC0
+  image_credit: Bequest of Alice A. Hay, 1987; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: still-life-with-flowers-and-fruit-henri-fantin-latour
+  name: Still Life with Flowers and Fruit
+  kind: painting
+  made: 1866
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1980.3'
+  museum_url: https://www.metmuseum.org/art/collection/search/436293
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1980.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1980.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436293
+  image_license: CC0
+  image_credit: Purchase, Mr. and Mrs. Richard J. Bernhard Gift, by exchange, 1980; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: still-life-with-pansies-henri-fantin-latour
+  name: Still Life with Pansies
+  kind: painting
+  made: 1874
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '66.194'
+  museum_url: https://www.metmuseum.org/art/collection/search/436294
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1576.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1576.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436294
+  image_license: CC0
+  image_credit: The Mr. and Mrs. Henry Ittleson Jr. Purchase Fund, 1966; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: putto-with-garlands-pinturicchio
+  name: Putto with garlands
+  kind: painting
+  made: 1504
+  made_end: 1514
+  estimated: true
+  medium: Fresco, transferred to canvas and attached to wood panels
+  museum: metropolitan-museum-of-art
+  accession: 14.114.1
+  museum_url: https://www.metmuseum.org/art/collection/search/209257
+  image_url: https://images.metmuseum.org/CRDImages/es/original/DP-21340-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/es/web-large/DP-21340-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/209257
+  image_license: CC0
+  image_credit: Rogers Fund, 1914; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pinturicchio
+    role: creator
+  prominence: 3
+- key: a-woodland-road-with-travelers-jan-brueghel-the-elder
+  name: A Woodland Road with Travelers
+  kind: painting
+  made: 1607
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '1974.293'
+  museum_url: https://www.metmuseum.org/art/collection/search/435810
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-19631-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-19631-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435810
+  image_license: CC0
+  image_credit: Purchase, Fletcher, Rogers, Pfeiffer, Dodge, Harris Brisbane Dick, and Louis V. Bell Funds, and Joseph Pulitzer Bequest, 1974; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-brueghel-the-elder
+    role: creator
+  prominence: 3
+- key: landscape-with-travelers-on-a-woodland-path-jan-brueghel-the-elder
+  name: Landscape with Travelers on a Woodland Path
+  kind: painting
+  made: 1602
+  made_end: 1612
+  estimated: true
+  medium: Oil on copper
+  museum: metropolitan-museum-of-art
+  accession: 2001.216.1
+  museum_url: https://www.metmuseum.org/art/collection/search/438465
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-24113-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-24113-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438465
+  image_license: CC0
+  image_credit: Bequest of Hertha Katz, 2000; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-brueghel-the-elder
+    role: creator
+  prominence: 3
+- key: samson-captured-by-the-philistines-guercino
+  name: Samson Captured by the Philistines
+  kind: painting
+  made: 1619
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1984.459.2
+  museum_url: https://www.metmuseum.org/art/collection/search/436603
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT503.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT503.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436603
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Charles Wrightsman, 1984; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: guercino
+    role: creator
+  prominence: 4
+- key: the-vocation-of-saint-aloysius-luigi-gonzaga-guercino
+  name: The Vocation of Saint Aloysius (Luigi) Gonzaga
+  kind: painting
+  made: 1645
+  made_end: 1655
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 1973.311.3
+  museum_url: https://www.metmuseum.org/art/collection/search/436604
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT1956.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT1956.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436604
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Charles Wrightsman, 1973; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: guercino
+    role: creator
+  prominence: 3
+- key: pirna-the-obertor-from-the-south-bernardo-bellotto
+  name: 'Pirna: The Obertor from the South'
+  kind: painting
+  made: 1753
+  made_end: 1757
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1991.306'
+  museum_url: https://www.metmuseum.org/art/collection/search/435646
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT4602.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT4602.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435646
+  image_license: CC0
+  image_credit: Wrightsman Fund, 1991; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  prominence: 3
+- key: vaprio-d-adda-bernardo-bellotto
+  name: Vaprio d'Adda
+  kind: painting
+  made: 1744
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '39.142'
+  museum_url: https://www.metmuseum.org/art/collection/search/435647
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT4603.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT4603.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435647
+  image_license: CC0
+  image_credit: Purchase, Joseph Pulitzer Bequest, 1939; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  prominence: 3
+- key: the-night-hag-visiting-lapland-witches-henry-fuseli
+  name: The Night-Hag Visiting Lapland Witches
+  kind: painting
+  made: 1796
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1980.411'
+  museum_url: https://www.metmuseum.org/art/collection/search/436423
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-26884-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-26884-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436423
+  image_license: CC0
+  image_credit: Purchase, Bequest of Lillian S. Timken, by exchange, and Victor Wilbour Memorial, The Alfred N. Punnett Endowment, Marquand and Charles B. Curtis Funds, 1980; Metropolitan Museum of Art,
+    Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: echo-alexandre-cabanel
+  name: Echo
+  kind: painting
+  made: 1874
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 65.258.1
+  museum_url: https://www.metmuseum.org/art/collection/search/435829
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP208016.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP208016.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435829
+  image_license: CC0
+  image_credit: Gift of Mary Phelps Smith, in memory of her husband, Howard Caswell Smith, 1965; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: alexandre-cabanel
+    role: creator
+  prominence: 3
+- key: catharine-lorillard-wolfe-18281887-alexandre-cabanel
+  name: Catharine Lorillard Wolfe (1828–1887)
+  kind: painting
+  made: 1876
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.82
+  museum_url: https://www.metmuseum.org/art/collection/search/435830
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT11971.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT11971.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435830
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: alexandre-cabanel
+    role: creator
+  prominence: 3
+- key: a-hunting-scene-piero-di-cosimo
+  name: A Hunting Scene
+  kind: painting
+  made: 1494
+  made_end: 1500
+  estimated: true
+  medium: Tempera and oil transferred to Masonite
+  museum: metropolitan-museum-of-art
+  accession: 75.7.2
+  museum_url: https://www.metmuseum.org/art/collection/search/437283
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-19296-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-19296-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437283
+  image_license: CC0
+  image_credit: Gift of Robert Gordon, 1875; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 4
+- key: the-return-from-the-hunt-piero-di-cosimo
+  name: The Return from the Hunt
+  kind: painting
+  made: 1494
+  made_end: 1500
+  estimated: true
+  medium: Tempera and oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 75.7.1
+  museum_url: https://www.metmuseum.org/art/collection/search/437284
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-24048-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-24048-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437284
+  image_license: CC0
+  image_credit: Gift of Robert Gordon, 1875; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 3
+- key: the-young-saint-john-the-baptist-piero-di-cosimo
+  name: The Young Saint John the Baptist
+  kind: painting
+  made: 1480
+  made_end: 1482
+  estimated: true
+  medium: Tempera and oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 22.60.52
+  museum_url: https://www.metmuseum.org/art/collection/search/437285
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-25978-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-25978-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437285
+  image_license: CC0
+  image_credit: The Bequest of Michael Dreicer, 1921; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 3
+- key: brother-gregorio-belo-of-vicenza-lorenzo-lotto
+  name: Brother Gregorio Belo of Vicenza
+  kind: painting
+  made: 1547
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '65.117'
+  museum_url: https://www.metmuseum.org/art/collection/search/436917
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-17152-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-17152-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436917
+  image_license: CC0
+  image_credit: Rogers Fund, 1965; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lorenzo-lotto
+    role: creator
+  prominence: 3
+- key: venus-and-cupid-lorenzo-lotto
+  name: Venus and Cupid
+  kind: painting
+  made: 1520
+  made_end: 1529
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1986.138'
+  museum_url: https://www.metmuseum.org/art/collection/search/436918
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-25975-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-25975-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436918
+  image_license: CC0
+  image_credit: Purchase, Mrs. Charles Wrightsman Gift, in honor of Marietta Tree, 1986; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lorenzo-lotto
+    role: creator
+  prominence: 4
+- key: lucia-frederic-leighton
+  name: Lucia
+  kind: painting
+  made: 1875
+  made_end: 1880
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.79
+  museum_url: https://www.metmuseum.org/art/collection/search/436868
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP164848.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP164848.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436868
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: lachrymae-frederic-leighton
+  name: Lachrymae
+  kind: painting
+  made: 1894
+  made_end: 1895
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '96.28'
+  museum_url: https://www.metmuseum.org/art/collection/search/436869
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP124813.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP124813.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436869
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Wolfe Fund, 1896; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: the-return-of-persephone-frederic-leighton
+  name: The Return of Persephone
+  kind: painting
+  made: 1890
+  made_end: 1891
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 2021.10.1
+  museum_url: https://www.metmuseum.org/art/collection/search/847023
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-21913-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-21913-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/847023
+  image_license: CC0
+  image_credit: Bequest of James David Draper, from the Robert Isaacson Collection, 2019; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: the-beach-late-afternoon-winslow-homer
+  name: The Beach, Late Afternoon
+  kind: painting
+  made: 1869
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 67.187.207
+  museum_url: https://www.metmuseum.org/art/collection/search/11111
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DP-16284-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DP-16284-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/11111
+  image_license: CC0
+  image_credit: Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: camp-fire-winslow-homer
+  name: Camp Fire
+  kind: painting
+  made: 1880
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '27.181'
+  museum_url: https://www.metmuseum.org/art/collection/search/11112
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT2829.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT2829.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/11112
+  image_license: CC0
+  image_credit: Gift of Josephine Pomeroy Hendrick, in the name of Henry Keney Pomeroy, 1927; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: cannon-rock-winslow-homer
+  name: Cannon Rock
+  kind: painting
+  made: 1895
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '06.1281'
+  museum_url: https://www.metmuseum.org/art/collection/search/11113
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/ap06.1281.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/ap06.1281.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/11113
+  image_license: CC0
+  image_credit: Gift of George A. Hearn, 1906; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: the-holy-family-with-shepherds-jacob-jordaens
+  name: The Holy Family with Shepherds
+  kind: painting
+  made: 1616
+  medium: Oil on canvas, transferred from wood
+  museum: metropolitan-museum-of-art
+  accession: 67.187.76
+  museum_url: https://www.metmuseum.org/art/collection/search/436798
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-15761-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-15761-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436798
+  image_license: CC0
+  image_credit: Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacob-jordaens
+    role: creator
+  prominence: 3
+- key: the-holy-family-with-saint-anne-and-the-young-ba-jacob-jordaens
+  name: The Holy Family with Saint Anne and the Young Baptist and His Parents
+  kind: painting
+  made: 1620
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '71.11'
+  museum_url: https://www.metmuseum.org/art/collection/search/436799
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/ep71.11.R.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/ep71.11.R.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436799
+  image_license: CC0
+  image_credit: Purchase, 1871; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacob-jordaens
+    role: creator
+  prominence: 3
+- key: the-aegean-sea-frederic-edwin-church
+  name: The Aegean Sea
+  kind: painting
+  made: 1874
+  made_end: 1877
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '02.23'
+  museum_url: https://www.metmuseum.org/art/collection/search/10480
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/ap02.23.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/ap02.23.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10480
+  image_license: CC0
+  image_credit: Bequest of Mrs. William H. Osborn, 1902; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 3
+- key: heart-of-the-andes-frederic-edwin-church
+  name: Heart of the Andes
+  kind: painting
+  made: 1859
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '09.95'
+  museum_url: https://www.metmuseum.org/art/collection/search/10481
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT78.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT78.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10481
+  image_license: CC0
+  image_credit: Bequest of Margaret E. Dows, 1909; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 4
+- key: the-parthenon-frederic-edwin-church
+  name: The Parthenon
+  kind: painting
+  made: 1871
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 15.30.67
+  museum_url: https://www.metmuseum.org/art/collection/search/10482
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT1540.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT1540.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10482
+  image_license: CC0
+  image_credit: Bequest of Maria DeWitt Jesup, from the collection of her husband, Morris K. Jesup, 1914; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 3
+- key: portrait-of-a-prelate-lavinia-fontana
+  name: Portrait of a Prelate
+  kind: painting
+  made: 1575
+  made_end: 1585
+  estimated: true
+  medium: Oil on copper
+  museum: metropolitan-museum-of-art
+  accession: 62.122.141
+  museum_url: https://www.metmuseum.org/art/collection/search/436310
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-26943-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-26943-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436310
+  image_license: CC0
+  image_credit: Bequest of Millie Bruhl Fredrick, 1962; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lavinia-fontana
+    role: creator
+  prominence: 3
+- key: jean-baptiste-colbert-16191683-philippe-de-champaigne
+  name: Jean-Baptiste Colbert (1619–1683)
+  kind: painting
+  made: 1655
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '51.34'
+  museum_url: https://www.metmuseum.org/art/collection/search/435886
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-27911-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-27911-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435886
+  image_license: CC0
+  image_credit: Gift of The Wildenstein Foundation Inc., 1951; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: philippe-de-champaigne
+    role: creator
+  prominence: 3
+- key: the-annunciation-philippe-de-champaigne
+  name: The Annunciation
+  kind: painting
+  made: 1639
+  made_end: 1649
+  estimated: true
+  medium: Oil on oak
+  museum: metropolitan-museum-of-art
+  accession: '2004.31'
+  museum_url: https://www.metmuseum.org/art/collection/search/438724
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT5656.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT5656.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438724
+  image_license: CC0
+  image_credit: Wrightsman Fund, 2004; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: philippe-de-champaigne
+    role: creator
+  prominence: 3
+- key: interior-with-a-young-couple-pieter-de-hooch
+  name: Interior with a Young Couple
+  kind: painting
+  made: 1662
+  made_end: 1665
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 14.40.613
+  museum_url: https://www.metmuseum.org/art/collection/search/436675
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP145906.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP145906.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436675
+  image_license: CC0
+  image_credit: Bequest of Benjamin Altman, 1913; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: woman-with-a-water-pitcher-and-a-man-by-a-bed-pieter-de-hooch
+  name: Woman with a Water Pitcher, and a Man by a Bed
+  kind: painting
+  made: 1667
+  made_end: 1670
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 32.100.15
+  museum_url: https://www.metmuseum.org/art/collection/search/436676
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP143173.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP143173.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436676
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: paying-the-hostess-pieter-de-hooch
+  name: Paying the Hostess
+  kind: painting
+  made: 1665
+  made_end: 1675
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '58.144'
+  museum_url: https://www.metmuseum.org/art/collection/search/436677
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP145406.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP145406.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436677
+  image_license: CC0
+  image_credit: Gift of Stuart Borchard and Evelyn B. Metzger, 1958; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: portrait-of-a-woman-called-maria-taylor-byrd-godfrey-kneller
+  name: Portrait of a Woman, Called Maria Taylor Byrd
+  kind: painting
+  made: 1700
+  made_end: 1725
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '25.108'
+  museum_url: https://www.metmuseum.org/art/collection/search/12980
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT357259.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT357259.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/12980
+  image_license: CC0
+  image_credit: Fletcher Fund, 1925; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: charles-beauclerk-16701726-duke-of-st-albans-godfrey-kneller
+  name: Charles Beauclerk (1670–1726), Duke of St. Albans
+  kind: painting
+  made: 1690
+  made_end: 1695
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 39.65.8
+  museum_url: https://www.metmuseum.org/art/collection/search/436823
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP169383.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP169383.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436823
+  image_license: CC0
+  image_credit: Bequest of Jacob Ruppert, 1939; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: lady-mary-berkeley-godfrey-kneller
+  name: Lady Mary Berkeley
+  kind: painting
+  made: 1695
+  made_end: 1705
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 96.30.6
+  museum_url: https://www.metmuseum.org/art/collection/search/436824
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP167136.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP167136.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436824
+  image_license: CC0
+  image_credit: Gift of George A. Hearn, 1896; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: canadian-rockies-lake-louise-albert-bierstadt
+  name: Canadian Rockies (Lake Louise)
+  kind: painting
+  made: 1886
+  made_end: 1889
+  estimated: true
+  medium: Oil on paper mounted to board
+  museum: metropolitan-museum-of-art
+  accession: 1982.119.1
+  museum_url: https://www.metmuseum.org/art/collection/search/10149
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT7282.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT7282.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10149
+  image_license: CC0
+  image_credit: Bequest of Ruth Alms Barnard, 1981; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: merced-river-yosemite-valley-albert-bierstadt
+  name: Merced River, Yosemite Valley
+  kind: painting
+  made: 1866
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 09.214.1
+  museum_url: https://www.metmuseum.org/art/collection/search/10150
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT2961.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT2961.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10150
+  image_license: CC0
+  image_credit: Gift of the sons of William Paton, 1909; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: mountain-scene-albert-bierstadt
+  name: Mountain Scene
+  kind: painting
+  made: 1880
+  made_end: 1890
+  medium: Oil on paper
+  museum: metropolitan-museum-of-art
+  accession: 1979.490.2
+  museum_url: https://www.metmuseum.org/art/collection/search/10151
+  image_url: https://images.metmuseum.org/CRDImages/ad/original/DT9506.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ad/web-large/DT9506.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/10151
+  image_license: CC0
+  image_credit: Gift of Mrs. J. Augustus Barnard, 1979; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: nymph-of-the-spring-lucas-cranach-the-younger
+  name: Nymph of the Spring
+  kind: painting
+  made: 1540
+  made_end: 1555
+  estimated: true
+  medium: Oil on beech panel
+  museum: metropolitan-museum-of-art
+  accession: 1975.1.136
+  museum_url: https://www.metmuseum.org/art/collection/search/459078
+  image_url: https://images.metmuseum.org/CRDImages/rl/original/DP159773.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/rl/web-large/DP159773.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/459078
+  image_license: CC0
+  image_credit: Robert Lehman Collection, 1975; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lucas-cranach-the-younger
+    role: creator
+  prominence: 3
+- key: christ-and-the-adulteress-lucas-cranach-the-younger
+  name: Christ and the Adulteress
+  kind: painting
+  made: 1545
+  made_end: 1550
+  estimated: true
+  medium: Oil on beech
+  museum: metropolitan-museum-of-art
+  accession: 1982.60.35
+  museum_url: https://www.metmuseum.org/art/collection/search/436034
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP280360.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP280360.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436034
+  image_license: CC0
+  image_credit: The Jack and Belle Linsky Collection, 1982; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lucas-cranach-the-younger
+    role: creator
+  prominence: 3
+- key: christ-blessing-the-children-lucas-cranach-the-younger
+  name: Christ Blessing the Children
+  kind: painting
+  made: 1545
+  made_end: 1550
+  estimated: true
+  medium: Oil on beech
+  museum: metropolitan-museum-of-art
+  accession: 1982.60.36
+  museum_url: https://www.metmuseum.org/art/collection/search/436035
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP280362.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP280362.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436035
+  image_license: CC0
+  image_credit: The Jack and Belle Linsky Collection, 1982; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: lucas-cranach-the-younger
+    role: creator
+  prominence: 3
+- key: the-lamentation-ludovico-carracci
+  name: The Lamentation
+  kind: painting
+  made: 1577
+  made_end: 1587
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2000.68'
+  museum_url: https://www.metmuseum.org/art/collection/search/438427
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-26972-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-26972-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438427
+  image_license: CC0
+  image_credit: Purchase, Lila Acheson Wallace and The Annenberg Foundation Gifts; Harris Brisbane Dick, Rogers, and Gwynne Andrews Funds; Pat and John Rosenwald, Mark Fisch and Rachel Davidson, and Jon
+    and Barbara Landau Gifts; Gift of Mortimer D. Sackler, Theresa Sackler and Family; and Victor Wilbour Memorial, Marquand, The Alfred N. Punnett Endowment, and Charles B. Curtis Funds, 2000; Metropolitan
+    Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: ludovico-carracci
+    role: creator
+  prominence: 3
+- key: the-denial-of-saint-peter-ludovico-carracci
+  name: The Denial of Saint Peter
+  kind: painting
+  made: 1611
+  made_end: 1621
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2024.593'
+  museum_url: https://www.metmuseum.org/art/collection/search/438561
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-40824-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-40824-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438561
+  image_license: CC0
+  image_credit: Gift of Mark Fisch and an Anonymous Donor, 2024; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: ludovico-carracci
+    role: creator
+  prominence: 3
+- key: madonna-and-child-with-saints-ludovico-carracci
+  name: Madonna and Child with Saints
+  kind: painting
+  made: 1607
+  medium: Oil on copper
+  museum: metropolitan-museum-of-art
+  accession: '2007.330'
+  museum_url: https://www.metmuseum.org/art/collection/search/438776
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP153642.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP153642.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438776
+  image_license: CC0
+  image_credit: Gift of Mark Fisch and Rachel Davidson, 2007; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: ludovico-carracci
+    role: creator
+  prominence: 3
+- key: woman-playing-a-guitar-simon-vouet
+  name: Woman Playing a Guitar
+  kind: painting
+  made: 1613
+  made_end: 1623
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2017.242'
+  museum_url: https://www.metmuseum.org/art/collection/search/747607
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-12928-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-12928-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/747607
+  image_license: CC0
+  image_credit: Purchase, 2017 Benefit Fund; Lila Acheson Wallace Gift; Mary Trumbull Adams and Victor Wilbour Memorial Funds; Friends of European Paintings and Henry and Lucy Moses Fund Inc. Gifts; Gift
+    of Julia A. Berwind, by exchange; Charles and Jessie Price, Otto Naumann, Mr. and Mrs. Richard L. Chilton Jr., and Sally and Howard Lepow Gifts; Charles B. Curtis Fund; and Theodocia and Joseph Arkus
+    Gift, 2017; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: simon-vouet
+    role: creator
+  prominence: 3
+- key: diana-leaving-for-the-hunt-simon-vouet
+  name: Diana Leaving for the Hunt
+  kind: painting
+  made: 1635
+  made_end: 1645
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2026.544'
+  museum_url: https://www.metmuseum.org/art/collection/search/890822
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/LC-L_2023_15.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/LC-L_2023_15.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/890822
+  image_license: CC0
+  image_credit: Gift of Lynda and Stewart Resnick, 2026; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: simon-vouet
+    role: creator
+  prominence: 3
+- key: sandy-road-with-a-farmhouse-jan-van-goyen
+  name: Sandy Road with a Farmhouse
+  kind: painting
+  made: 1627
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '1972.25'
+  museum_url: https://www.metmuseum.org/art/collection/search/436555
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP147598.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP147598.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436555
+  image_license: CC0
+  image_credit: Bequest of Myra Mortimer Pinter, 1972; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: country-house-near-the-water-jan-van-goyen
+  name: Country House near the Water
+  kind: painting
+  made: 1646
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 32.100.6
+  museum_url: https://www.metmuseum.org/art/collection/search/436556
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP145923.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP145923.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436556
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: the-pelkus-gate-near-utrecht-jan-van-goyen
+  name: The Pelkus Gate near Utrecht
+  kind: painting
+  made: 1646
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 45.146.3
+  museum_url: https://www.metmuseum.org/art/collection/search/436557
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP145926.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP145926.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436557
+  image_license: CC0
+  image_credit: Gift of Francis Neilson, 1945; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: portrait-of-a-general-officer-hyacinthe-rigaud
+  name: Portrait of a General Officer
+  kind: painting
+  made: 1705
+  made_end: 1715
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '59.119'
+  museum_url: https://www.metmuseum.org/art/collection/search/437463
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-413-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-413-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437463
+  image_license: CC0
+  image_credit: The Alfred N. Punnett Endowment Fund, 1959; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hyacinthe-rigaud
+    role: creator
+  prominence: 3
+- key: louis-xv-17101774-as-a-child-hyacinthe-rigaud
+  name: Louis XV (1710–1774) as a Child
+  kind: painting
+  made: 1716
+  made_end: 1724
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '60.6'
+  museum_url: https://www.metmuseum.org/art/collection/search/437464
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP312842.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP312842.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437464
+  image_license: CC0
+  image_credit: Purchase, Mary Wetmore Shively Bequest, in memory of her husband, Henry L. Shively, M.D., 1960; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hyacinthe-rigaud
+    role: creator
+  prominence: 3
+- key: portrait-of-a-man-hyacinthe-rigaud
+  name: Portrait of a Man
+  kind: painting
+  made: 1693
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 48.187.733
+  museum_url: https://www.metmuseum.org/art/collection/search/437465
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP275490.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP275490.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437465
+  image_license: CC0
+  image_credit: Bequest of Catherine D. Wentworth, 1948; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hyacinthe-rigaud
+    role: creator
+  prominence: 3
+- key: fantastic-landscape-francesco-guardi
+  name: Fantastic Landscape
+  kind: painting
+  made: 1760
+  made_end: 1770
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '41.80'
+  museum_url: https://www.metmuseum.org/art/collection/search/436593
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-18296-023.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-18296-023.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436593
+  image_license: CC0
+  image_credit: Rogers Fund, 1941; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: the-empress-eugenie-eugenie-de-montijo-18261920--franz-xaver-winterhalter
+  name: The Empress Eugénie (Eugénie de Montijo, 1826–1920, Condesa de Teba)
+  kind: painting
+  made: 1854
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1978.403'
+  museum_url: https://www.metmuseum.org/art/collection/search/437942
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT10159.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT10159.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437942
+  image_license: CC0
+  image_credit: Purchase, Mr. and Mrs. Claus von Bülow Gift, 1978; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: franz-xaver-winterhalter
+    role: creator
+  prominence: 3
+- key: countess-alexander-nikolaevitch-lamsdorff-maria--franz-xaver-winterhalter
+  name: Countess Alexander Nikolaevitch Lamsdorff (Maria Ivanovna Beck, 1835–1866)
+  kind: painting
+  made: 1859
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 67.187.119
+  museum_url: https://www.metmuseum.org/art/collection/search/437943
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT2553.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT2553.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437943
+  image_license: CC0
+  image_credit: Bequest of Miss Adelaide Milton de Groot (1876-1967), 1967; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: franz-xaver-winterhalter
+    role: creator
+  prominence: 3
+- key: florinda-franz-xaver-winterhalter
+  name: Florinda
+  kind: painting
+  made: 1853
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '01.21'
+  museum_url: https://www.metmuseum.org/art/collection/search/437944
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP159188.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP159188.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437944
+  image_license: CC0
+  image_credit: Bequest of William H. Webb, 1899; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: franz-xaver-winterhalter
+    role: creator
+  prominence: 3
+- key: the-artist-s-sitting-room-in-ritterstrasse-adolph-menzel
+  name: The Artist's Sitting Room in Ritterstrasse
+  kind: painting
+  made: 1851
+  medium: Oil on cardboard
+  museum: metropolitan-museum-of-art
+  accession: '2009.64'
+  museum_url: https://www.metmuseum.org/art/collection/search/440726
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP232136.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP232136.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/440726
+  image_license: CC0
+  image_credit: Purchase, Nineteenth-Century, Modern and Contemporary Funds, Leonora Brenauer Bequest, in memory of her father, Joseph B. Brenauer, Catharine Lorillard Wolfe Collection, Wolfe Fund, and
+    Paul L. and Marlene A. Herring and John D. Herring Gift, 2009; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: adolph-menzel
+    role: creator
+  prominence: 3
+- key: night-scene-on-the-volga-alexei-savrasov
+  name: Night Scene on the Volga
+  kind: painting
+  made: 1871
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 1972.145.4
+  museum_url: https://www.metmuseum.org/art/collection/search/437631
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-23542-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-23542-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437631
+  image_license: CC0
+  image_credit: Gift of Humanities Fund Inc., 1972; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: alexei-savrasov
+    role: creator
+  prominence: 3
+- key: portrait-of-a-man-hugo-van-der-goes
+  name: Portrait of a Man
+  kind: painting
+  made: 1470
+  made_end: 1480
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 29.100.15
+  museum_url: https://www.metmuseum.org/art/collection/search/436521
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP347299.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP347299.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436521
+  image_license: CC0
+  image_credit: H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hugo-van-der-goes
+    role: creator
+  prominence: 3
+- key: a-benedictine-monk-hugo-van-der-goes
+  name: A Benedictine Monk
+  kind: painting
+  made: 1480
+  made_end: 1483
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 22.60.53
+  museum_url: https://www.metmuseum.org/art/collection/search/436522
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-19585-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-19585-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436522
+  image_license: CC0
+  image_credit: The Bequest of Michael Dreicer, 1921; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hugo-van-der-goes
+    role: creator
+  prominence: 3
+- key: the-adoration-of-the-magi-hugo-van-der-goes
+  name: The Adoration of the Magi
+  kind: painting
+  made: 1470
+  made_end: 1499
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: '71.100'
+  museum_url: https://www.metmuseum.org/art/collection/search/436523
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP332733.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP332733.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436523
+  image_license: CC0
+  image_credit: Purchase, 1871; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: hugo-van-der-goes
+    role: creator
+  prominence: 3
+- key: landscape-with-the-flight-into-egypt-aelbert-cuyp
+  name: Landscape with the Flight into Egypt
+  kind: painting
+  made: 1645
+  made_end: 1655
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 1973.155.2
+  museum_url: https://www.metmuseum.org/art/collection/search/436061
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP143208.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP143208.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436061
+  image_license: CC0
+  image_credit: Bequest of Josephine Bieber, in memory of her husband, Siegfried Bieber, 1970; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: piping-shepherds-aelbert-cuyp
+  name: Piping Shepherds
+  kind: painting
+  made: 1643
+  made_end: 1644
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 25.110.15
+  museum_url: https://www.metmuseum.org/art/collection/search/436062
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP143163.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP143163.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436062
+  image_license: CC0
+  image_credit: Bequest of Collis P. Huntington, 1900; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: equestrian-portrait-of-cornelis-16391680-and-mic-aelbert-cuyp
+  name: Equestrian Portrait of Cornelis (1639–1680) and Michiel Pompe van Meerdervoort (1638–1653) with Their Tutor and Coachman
+  kind: painting
+  made: 1652
+  made_end: 1653
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 32.100.20
+  museum_url: https://www.metmuseum.org/art/collection/search/436063
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP146442.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP146442.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436063
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: soap-bubbles-thomas-couture
+  name: Soap Bubbles
+  kind: painting
+  made: 1859
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.22
+  museum_url: https://www.metmuseum.org/art/collection/search/436030
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-24386-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-24386-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436030
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-couture
+    role: creator
+  prominence: 3
+- key: saint-francis-federico-barocci
+  name: Saint Francis
+  kind: painting
+  made: 1600
+  made_end: 1604
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2003.281'
+  museum_url: https://www.metmuseum.org/art/collection/search/438688
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP104367.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP104367.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438688
+  image_license: CC0
+  image_credit: Purchase, Lila Acheson Wallace Gift and 2002 Benefit Fund, 2003; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: federico-barocci
+    role: creator
+  prominence: 3
+- key: the-allegory-of-the-sorbonne-pierre-puvis-de-chavannes
+  name: The Allegory of the Sorbonne
+  kind: painting
+  made: 1889
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 29.100.117
+  museum_url: https://www.metmuseum.org/art/collection/search/437343
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14201-031.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-031.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437343
+  image_license: CC0
+  image_credit: H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: the-shepherd-s-song-pierre-puvis-de-chavannes
+  name: The Shepherd's Song
+  kind: painting
+  made: 1891
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '06.177'
+  museum_url: https://www.metmuseum.org/art/collection/search/437344
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14201-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437344
+  image_license: CC0
+  image_credit: Rogers Fund, 1906; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 4
+- key: inter-artes-et-naturam-between-art-and-nature-pierre-puvis-de-chavannes
+  name: Inter artes et naturam (Between Art and Nature)
+  kind: painting
+  made: 1885
+  made_end: 1900
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 58.15.2
+  museum_url: https://www.metmuseum.org/art/collection/search/437346
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-14201-039.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-14201-039.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437346
+  image_license: CC0
+  image_credit: Gift of Mrs. Harry Payne Bingham, 1958; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: the-baptism-of-christ-jacopo-bassano
+  name: The Baptism of Christ
+  kind: painting
+  made: 1585
+  made_end: 1595
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2012.99'
+  museum_url: https://www.metmuseum.org/art/collection/search/440393
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP276931.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP276931.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/440393
+  image_license: CC0
+  image_credit: Gift of Mark Fisch and Rachel Davidson, 2012; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: jacopo-bassano
+    role: creator
+  prominence: 4
+- key: a-peasant-with-a-bird-adriaen-brouwer
+  name: A Peasant with a Bird
+  kind: painting
+  made: 1626
+  made_end: 1638
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 32.100.3
+  museum_url: https://www.metmuseum.org/art/collection/search/435805
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/ep32.100.3.bw.R.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/ep32.100.3.bw.R.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435805
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: adriaen-brouwer
+    role: creator
+  prominence: 3
+- key: a-peasant-woman-picking-fleas-off-a-dog-adriaen-brouwer
+  name: A Peasant Woman Picking Fleas off a Dog
+  kind: painting
+  made: 1626
+  made_end: 1627
+  estimated: true
+  medium: Oil on wood
+  museum: metropolitan-museum-of-art
+  accession: 32.100.1
+  museum_url: https://www.metmuseum.org/art/collection/search/435806
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/ep32.100.1.bw.R.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/ep32.100.1.bw.R.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/435806
+  image_license: CC0
+  image_credit: The Friedsam Collection, Bequest of Michael Friedsam, 1931; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: adriaen-brouwer
+    role: creator
+  prominence: 3
+- key: the-calmady-children-emily-1818-1906-and-laura-a-thomas-lawrence
+  name: The Calmady Children (Emily, 1818–?1906, and Laura Anne, 1820–1894)
+  kind: painting
+  made: 1823
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 25.110.1
+  museum_url: https://www.metmuseum.org/art/collection/search/436850
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP162148.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP162148.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436850
+  image_license: CC0
+  image_credit: Bequest of Collis P. Huntington, 1900; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: elizabeth-farren-born-about-1759-died-1829-later-thomas-lawrence
+  name: Elizabeth Farren (born about 1759, died 1829), Later Countess of Derby
+  kind: painting
+  made: 1790
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 50.135.5
+  museum_url: https://www.metmuseum.org/art/collection/search/436851
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP169218.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP169218.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436851
+  image_license: CC0
+  image_credit: Bequest of Edward S. Harkness, 1940; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 4
+- key: john-julius-angerstein-17361823-thomas-lawrence
+  name: John Julius Angerstein (1736–1823)
+  kind: painting
+  made: 1789
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 65.181.9
+  museum_url: https://www.metmuseum.org/art/collection/search/436852
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP162165.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP162165.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/436852
+  image_license: CC0
+  image_credit: Bequest of Adele L. Lehman, in memory of Arthur Lehman, 1965; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: francois-gerard-17701837-later-baron-gerard-antoine-jean-gros
+  name: François Gérard (1770–1837), later Baron Gérard
+  kind: painting
+  made: 1785
+  made_end: 1795
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '2002.441'
+  museum_url: https://www.metmuseum.org/art/collection/search/438603
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP327712.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP327712.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438603
+  image_license: CC0
+  image_credit: Gift of Mrs. Charles Wrightsman, 2002; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: antoine-jean-gros
+    role: creator
+  prominence: 3
+- key: bertel-thorvaldsen-17681844-with-the-bust-of-hor-horace-vernet
+  name: Bertel Thorvaldsen (1768–1844) with the Bust of Horace Vernet
+  kind: painting
+  made: 1833
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '62.254'
+  museum_url: https://www.metmuseum.org/art/collection/search/437887
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT2137.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT2137.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437887
+  image_license: CC0
+  image_credit: Gift of Dr. Rudolf J. Heinemann, 1962; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: horace-vernet
+    role: creator
+  prominence: 3
+- key: the-start-of-the-race-of-the-riderless-horses-horace-vernet
+  name: The Start of the Race of the Riderless Horses
+  kind: painting
+  made: 1820
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: 87.15.47
+  museum_url: https://www.metmuseum.org/art/collection/search/437888
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DP-25221-001.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DP-25221-001.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/437888
+  image_license: CC0
+  image_credit: Catharine Lorillard Wolfe Collection, Bequest of Catharine Lorillard Wolfe, 1887; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: horace-vernet
+    role: creator
+  prominence: 3
+- key: jean-louis-andre-theodore-gericault-17911824-horace-vernet
+  name: Jean-Louis-André-Théodore Géricault (1791–1824)
+  kind: painting
+  made: 1822
+  made_end: 1823
+  estimated: true
+  medium: Oil on canvas
+  museum: metropolitan-museum-of-art
+  accession: '1998.84'
+  museum_url: https://www.metmuseum.org/art/collection/search/438033
+  image_url: https://images.metmuseum.org/CRDImages/ep/original/DT4276.jpg
+  image_thumb: https://images.metmuseum.org/CRDImages/ep/web-large/DT4276.jpg
+  image_page: https://www.metmuseum.org/art/collection/search/438033
+  image_license: CC0
+  image_credit: Purchase, Gift of Joanne Toor Cummings, by exchange, 1998; Metropolitan Museum of Art, Open Access
+  sources:
+  - met-open-access
+  people:
+  - person: horace-vernet
+    role: creator
+  prominence: 3
