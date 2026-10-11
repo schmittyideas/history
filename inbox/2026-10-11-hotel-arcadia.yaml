@@ -1,0 +1,87 @@
+# Hotel Arcadia, Santa Monica (1887–1909), asked for by Ty.
+# Source: https://en.wikipedia.org/wiki/Hotel_Arcadia and the linked articles, read 2026-10-11.
+# - Opening year: the hotel's article lead says 1886, its category and the Arcadia Bandini article say 1887.
+#   The record holds 1887; a discrepancy records both.
+# - Jesup W. Scott (builder) has no article: named in built_by only, not added as a person.
+# - Tina Mesmer fits none of the types (she was neither royalty nor a maker); typed Other.
+# - Arcadia Bandini's husbands Abel Stearns and Robert S. Baker aren't in the database yet: left for a later batch.
+# - The 1903 shooting date is from Tina Mesmer's article (Friday, September 4, 1903); the LA Times report is dated the 5th.
+batch:
+  title: Hotel Arcadia, Santa Monica
+  date: 2026-10-11
+
+sources:
+  - {key: wp-hotel-arcadia, title: "Hotel Arcadia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hotel_Arcadia"}
+  - {key: wp-tina-mesmer, title: "Tina Mesmer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tina_Mesmer"}
+  - {key: wp-arcadia-bandini-de-stearns-baker, title: "Arcadia Bandini de Stearns Baker (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arcadia_Bandini_de_Stearns_Baker"}
+  - {key: commons-hotel-arcadia-c1890, title: "Hotel Arcadia, Santa Monica - Seaside (Wikimedia Commons)", url: "https://commons.wikimedia.org/wiki/File:Hotel_Arcadia,_Santa_Monica_-_Seaside_(2).jpg"}
+
+places:
+  - key: hotel-arcadia
+    name: Hotel Arcadia
+    kind: hotel
+    city: Santa Monica
+    region: California
+    country: United States
+    lat: 34.0101
+    lng: -118.492
+    founded: 1887
+    ended: 1909
+    visitable: false
+    built_by: "Jesup W. Scott; named for Arcadia Bandini de Stearns Baker"
+    note: "Five-storey oceanfront hotel on Ocean Avenue between Colorado and Front (now Pico Boulevard), with glass observatories facing the beach; called the finest seaside hotel in the state. Patronage declined and it was demolished in 1909."
+    sources: [wp-hotel-arcadia, wp-arcadia-bandini-de-stearns-baker]
+
+people:
+  - {key: arcadia-bandini-de-stearns-baker, name: Arcadia Bandini de Stearns Baker, type: Patron, born: 1827, died: 1912, prominence: 2,
+     note: "Californio landowner, the \"godmother of Santa Monica\": laid out the original city plan and gave land for Palisades Park, a veterans' home, schools and churches. The Hotel Arcadia was named for her.",
+     coverage: partly, coverage_note: "Life dates, Santa Monica role and the hotel; her marriages to Abel Stearns (1841) and Robert S. Baker (1875) not yet linked.",
+     sources: [wp-arcadia-bandini-de-stearns-baker]}
+  - {key: tina-mesmer, name: Tina Mesmer, type: Other, born: 1864-02-29, died: 1948-08-11, prominence: 1,
+     note: "Mary Agnes Christina \"Tina\" Mesmer Griffith, wife of Griffith J. Griffith, who shot her at the Hotel Arcadia in 1903; she survived, losing an eye.",
+     coverage: partly, coverage_note: "Marriage and the 1903 shooting; family and later life not captured.",
+     sources: [wp-tina-mesmer]}
+
+events:
+  - key: griffith-shooting-hotel-arcadia-1903
+    name: Griffith J. Griffith shoots his wife at the Hotel Arcadia
+    type: Crime
+    date: 1903-09-04
+    place: hotel-arcadia
+    prominence: 2
+    note: "He shot Tina Mesmer in the face in their room as she packed to return to Los Angeles after a month's stay. She survived but lost an eye; he served under two years in San Quentin."
+    people:
+      - {person: griffith-j-griffith, role: shooter}
+      - {person: tina-mesmer, role: victim}
+    sources: [wp-hotel-arcadia, wp-tina-mesmer]
+
+artworks:
+  - key: hotel-arcadia-photograph-c1890
+    name: Hotel Arcadia, Santa Monica
+    kind: photograph
+    made: 1890
+    estimated: true
+    image_url: "https://upload.wikimedia.org/wikipedia/commons/9/90/Hotel_Arcadia%2C_Santa_Monica_-_Seaside_%282%29.jpg"
+    image_thumb: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Hotel_Arcadia%2C_Santa_Monica_-_Seaside_%282%29.jpg/330px-Hotel_Arcadia%2C_Santa_Monica_-_Seaside_%282%29.jpg"
+    image_page: "https://commons.wikimedia.org/wiki/File:Hotel_Arcadia,_Santa_Monica_-_Seaside_(2).jpg"
+    image_license: Public domain (US)
+    note: "Photographer unknown."
+    places:
+      - {place: hotel-arcadia, role: depicts}
+    sources: [commons-hotel-arcadia-c1890]
+
+links:
+  - {spouse: griffith-j-griffith, to: tina-mesmer, year: 1887, sources: [wp-tina-mesmer]}
+
+moments:
+  - {person: arcadia-bandini-de-stearns-baker, role: died, place: santa-monica, year: 1912, sources: [wp-arcadia-bandini-de-stearns-baker]}
+
+discrepancies:
+  - key: hotel-arcadia-opening-year
+    question: When did the Hotel Arcadia open?
+    about: [{place: hotel-arcadia}]
+    field: founded
+    claims:
+      - {value: "1886", sources: [wp-hotel-arcadia], note: "the article's lead"}
+      - {value: "1887", sources: [wp-hotel-arcadia, wp-arcadia-bandini-de-stearns-baker], note: "the hotel's category and the Arcadia Bandini article"}
+    note: "The record holds 1887, which two sources give."
