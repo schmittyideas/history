@@ -1019,15 +1019,18 @@ async function diningNearby(pl, dl) {
   try {
     const headers = { apikey: c.key, "Content-Type": "application/json" };
     if (!c.key.startsWith("sb_")) headers.Authorization = `Bearer ${c.key}`;
-    const r = await fetch(`${c.url}/rest/v1/rpc/nearby_dining`, { method: "POST", headers,
+    const ask = () => fetch(`${c.url}/rest/v1/rpc/nearby_dining`, { method: "POST", headers,
       body: JSON.stringify({ lat: Number(pl.lat), lng: Number(pl.lng), radius_m: NEARBY_KM * 1000, max_results: 8 }) });
+    // One retry: a dropped request shouldn't leave the row saying the database is down.
+    let r = await ask().catch(() => null);
+    if (!r?.ok) r = await new Promise(ok => setTimeout(ok, 800)).then(ask);
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     // The place itself (Musso & Frank, linked with `external: {system: dining}`) isn't "nearby" itself.
     const self = new Set(S.db.externalFor("place", pl.key).filter(l => l.system === "dining").map(l => l.external_id));
     const rows = (await r.json()).filter(x => !self.has(x.id));
     if (S.selected?.kind !== "place" || S.selected.id !== pl.id) return;   // another place was picked meanwhile
     const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
-    diningPins(rows);
+    try { diningPins(rows); } catch (e) { console.warn("dining pins:", e); }   // the list still shows if the map can't
     dd.replaceChildren(...joinNodes(rows.map(x => {
       const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
       return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
