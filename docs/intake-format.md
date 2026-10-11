@@ -245,6 +245,23 @@ log:
       - {place: barfleur}
 ```
 
+### `external` (on any person, place, event, artwork or museum)
+Links from one of our records to its entry in another database, so its data stays there and we only point at it: a film's entry in the entertainment database, later the restaurants and bars near a place. One link per record and system; re-sending it updates the link.
+
+| Field | Meaning |
+|---|---|
+| `system` | Which database: `entertainment`, `imdb`, `tmdb`, `restaurants`, `wikidata`, … (required) |
+| `id` | That database's own id for the entry (`tt0095016`) |
+| `url` | A link to the entry's page. An `id` or a `url` is required |
+| `label`, `note` | How the link reads on the site; anything worth knowing |
+
+```yaml
+artworks:
+  - key: die-hard-1988
+    external:
+      - {system: entertainment, id: tt0095016, url: "https://…/tt0095016"}
+```
+
 ## What the preview checks
 
 Before anything is applied, the preview lists every addition and update, and flags:
