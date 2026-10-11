@@ -1154,8 +1154,45 @@ function stopsForPlace(id) {
   return stops.sort((a, b) => byYear(a.year, b.year) || a.rank - b.rank || (a.date || "").localeCompare(b.date || ""));
 }
 
+// Street map (Leaflet + OpenStreetMap tiles) for anything that fits in a city or county: the coastline map
+// is blank at that scale. Wider views (a king's travels, a war) keep the coastline map.
+const STREET_SPAN = 1.5;   // degrees of latitude or longitude: about 150 km
+let streetMap = null;
+function drawStreetMap(host, routes, numbered, placeMode, fit) {
+  const box = h("div", { class: "street-map", role: "region", "aria-label": "Street map of places" });
+  host.append(box);
+  streetMap = L.map(box, { scrollWheelZoom: false, zoomControl: true, attributionControl: true });
+  streetMap.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(streetMap);
+  const css = getComputedStyle(document.documentElement);
+  const colorOf = c => c.startsWith("var(") ? css.getPropertyValue(c.slice(4, -1)).trim() : c;
+  const bounds = [];
+  let n = 0;
+  routes.forEach(r => {
+    const ll = r.stops.map(s => [Number(s.place.lat), Number(s.place.lng)]);
+    if (S.mapMode !== "everyone" && r.person && ll.length > 1) L.polyline(ll, { color: colorOf(r.color), weight: 2, opacity: .6, dashArray: "4 4" }).addTo(streetMap);
+    const byPlace = new Map();
+    r.stops.forEach(s => { s.n = ++n; if (!byPlace.has(s.place.id)) byPlace.set(s.place.id, []); byPlace.get(s.place.id).push(s); });
+    byPlace.forEach(items => {
+      const pl = items[0].place, at = [Number(pl.lat), Number(pl.lng)];
+      const label = !numbered ? "" : placeMode ? (items[0].what ? String(items.length) : "") : items.map(s => s.n).join(",");
+      const icon = L.divIcon({ className: "street-pin-wrap", iconSize: null,
+        html: `<span class="street-pin${label.length > 1 ? " wide" : ""}" style="background:${r.color}">${label}</span>` });
+      const m = L.marker(at, { icon, keyboard: true, title: `Show ${pl.name}`, alt: pl.name }).addTo(streetMap);
+      m.bindTooltip(pl.name, { direction: "top", offset: [0, -8] });
+      m.on("click", () => selectPlace(pl.id));
+      bounds.push(at);
+    });
+  });
+  const view = fit?.length ? fit : bounds;
+  if (new Set(view.map(String)).size === 1) streetMap.setView(view[0], 15);
+  else streetMap.fitBounds(view, { padding: [24, 24], maxZoom: 16 });
+}
+
 function drawMap() {
   const host = $("map"), list = $("stops");
+  if (streetMap) { streetMap.remove(); streetMap = null; }
   host.innerHTML = ""; list.innerHTML = "";
   const W = 340, H = 280, db = S.db;
   let routes = [], emptyMsg = "";
@@ -1187,8 +1224,15 @@ function drawMap() {
     const pl = (lon1 - lon0) * .18, pa = (lat1 - lat0) * .18;
     lon0 -= pl; lon1 += pl; lat0 -= pa; lat1 += pa;
   }
-  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Map of places" }, host);
-  if (window.d3 && window.HISTORY_LAND) {
+  // Street map when the pins fit in a city or county, or when most of them do (the 2028 Games: 30 venues in
+  // Southern California and two in Oklahoma City): it then fits that cluster, and the few far pins sit off-screen.
+  const median = a => a.slice().sort((x, y) => x - y)[Math.floor(a.length / 2)];
+  const mLon = pts.length ? median(pts.map(p => p[0])) : 0, mLat = pts.length ? median(pts.map(p => p[1])) : 0;
+  const cluster = pts.filter(p => Math.abs(p[0] - mLon) <= STREET_SPAN / 2 && Math.abs(p[1] - mLat) <= STREET_SPAN / 2);
+  const street = window.L && pts.length && cluster.length >= pts.length * .75;
+  if (street) drawStreetMap(host, routes, S.mapMode !== "everyone", placeMode, cluster.map(p => [p[1], p[0]]));
+  const svg = street ? null : el("svg", { viewBox: `0 0 ${W} ${H}`, role: "img", "aria-label": "Map of places" }, host);
+  if (!street && window.d3 && window.HISTORY_LAND) {
     const proj = d3.geoMercator().fitExtent([[10, 10], [W - 10, H - 10]], { type: "MultiPoint", coordinates: [[lon0, lat0], [lon1, lat1], [lon0, lat1], [lon1, lat0]] });
     const path = d3.geoPath(proj);
     el("rect", { width: W, height: H }, el("clipPath", { id: "mapclip" }, el("defs", {}, svg)));
