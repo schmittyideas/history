@@ -13,5 +13,5 @@ World borders for snapshot years, shown at the top of the site's Year view.
 **Accuracy:** the source calls itself a work in progress. Borders before the modern era are approximate and often disputed, and the source warns that fixed borders mean little before the Peace of Westphalia (1648).
 
 **Files:**
-- `world_1000.geojson`, `world_1100.geojson`: one snapshot each. The Year view uses the latest snapshot at or before the year asked for, up to 99 years back.
+- `world_1000.geojson`, `world_1100.geojson`, `world_1200.geojson`, `world_1300.geojson`, `world_1400.geojson`, `world_1500.geojson`: one snapshot each (1200 to 1500 added 2026-10-11, produced the same way from the same commit). The Year view uses the latest snapshot at or before the year asked for, up to 99 years back.
 - `index.json`: which years exist, and which map names belong to which realm in the database (`realms.name` → `NAME` in the map). A realm can match several names (Denmark is "Denmark-Norway" in 1000 and "Denmark" in 1100).
