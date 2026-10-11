@@ -120,6 +120,12 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - **Mistakes to avoid:** a ship script that merges on a failed preview (batch 4 teacher link to an unknown person; nothing was written, a fix PR re-sent it); never `git add -A` (it staged other sessions' `.claude/worktrees`); a teacher/patron link needs a person already in the database or the batch.
 - **Gaps:** most patrons are not people in the database yet, so patron links are few. Run the ruler build-outs first, then re-run patron links for the painters.
 
+## Lessons from the museum collection runs (2026-10-11)
+
+- **Routes that worked:** official APIs (Met v1.1 search, Art Institute, Cleveland), open-data CSVs on GitHub (National Gallery of Art with open-access images; MoMA and Tate metadata only, no images), Linked Art (Rijksmuseum), and **Wikidata + Commons** for museums whose own terms forbid reading (Louvre, National Gallery London, and 100+ others). The Wikidata route gave 14,484 candidate paintings by our painters in one pass; 1,589 best-documented ones were imported.
+- **Gotchas:** the Met retired its v1 search on 2026-10-01 and the Rijksmuseum's key API is gone, so record each museum's `data_notes` with the date. The Art Institute's IIIF images did not load in the desktop app's built-in browser. Single-word painter names (Rembrandt) need an exact-name rule or they match Rembrandt Peale. Wikidata labels can come through as an id (Q...): check museum names. A big SPARQL `VALUES` query must be POSTed and chunked.
+- **Cost:** the scripted collection costs almost no tokens; the research agents (100 museums' terms) cost about 0.5M tokens and gave thin results for roughly a third.
+
 ## How to run it
 
 - **One build-out at a time** is the simplest. If the session can start parallel cloud sessions, at most two at once, each on its own issue, own branches and own intake files (see CLAUDE.md, Running in parallel).
