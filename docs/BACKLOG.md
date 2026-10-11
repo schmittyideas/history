@@ -92,11 +92,11 @@ Source: Ty, 2026-10-08 (item 2 session).
 Rulers and dates left out of item 3: Sadasiva Raya, the Deccan sultans of Talikota, Vijaya Sena's reign, several placeholder title starts, the Pandyas, Yadavas, Kashmir, the Ahoms, the Malwa, Jaunpur and Bengal sultanates, and the later Mughals. Full list in the issue.
 Source: Ty, 2026-10-09 (item 3 session).
 
-#### [P2] Build-out: East Asian dynasties, 1000–1600
-`type: task` · `area: data` · `status: ready` · `issue: #33`
+#### [P3] Fill the gaps left in the East Asian batches
+`type: task` · `area: data` · `status: ready` · `issue: #151`
 
-Song, Liao, Jin, Yuan, Ming; Japan's emperors, shoguns and Hōjō regents; Goryeo and Joseon; Đại Việt. Queue item 4.
-Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
+Rulers and dates left out of item 4: the last Song, Jin and Western Xia rulers, the Hōjō regents Tokiyori and Takatoki (no start year in their articles), most Japanese emperors, Goryeo kings between Gongmin and Joseon, the Trần and Lý emperors outside the list, Tibet, Ryukyu and Champa. Full list in the issue.
+Source: Ty, 2026-10-11 (item 4 session).
 
 #### [P2] Build-out: Ottoman sultans and the Seljuks of Rum, 1077–1600
 `type: task` · `area: data` · `status: ready` · `issue: #133`
@@ -144,6 +144,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Build-out: East Asian dynasties, 1000–1600
+`type: task` · `area: data` · `status: done` · `issue: #33`
+
+120 rulers with 122 title rows, 52 places, 113 events, 103 discrepancies and 13 realms, checked against their English Wikipedia articles, in five batches: Song, Liao, Jin and Western Xia (27, PRs #141 and #142), the Mongol Empire, Yuan and Ming (21, #144), Japan's emperors, shoguns and Hōjō regents (29, #148), Korea's Goryeo and Joseon (22, #149) and Vietnam, the Khmer Empire and Pagan (21, #150). Everyone is marked `coverage: partly`. The preview now refuses a full date in a life moment's year (#146). Done 2026-10-11. Left for later: the gaps item above.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
 #### [P2] Show artworks and portraits on the site
 `type: enhancement` · `area: site` · `status: done` · `issue: #62`
