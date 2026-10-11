@@ -1,0 +1,9 @@
+# Links Musso & Frank Grill to its entry in the dining database (RouteWeaver dining.establishments).
+batch:
+  title: Musso & Frank Grill dining link
+  date: 2026-10-11
+
+places:
+  - key: musso-frank-grill
+    external:
+      - {system: dining, id: d5d67d18-ecf8-4bcb-8e46-70b9d81ce3ef, url: "http://www.mussoandfrank.com/", label: "Dining: Musso & Frank Grill (6667 Hollywood Blvd)"}
