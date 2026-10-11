@@ -104,12 +104,11 @@ Source: Ty, 2026-10-11 (item 4 session).
 Left out of item 5: the interregnum princes' reign dates, the later Sultans of Rum and the Anatolian beyliks, Ottomans after 1595, viziers and powerful women, the opponents named only in notes (Ismail I, Hunyadi, Skanderbeg and others), and unlocated battle sites. Full list in the issue.
 Source: Ty, 2026-10-11 (item 5 session).
 
-#### [P2] Build-out: the world, century by century (1100–1500) with maps
-`type: task` · `area: data` · `status: ready` · `issue: #34`
+#### [P3] Fill the gaps in the 1100-1500 snapshot years
+`type: task` · `area: data` · `status: ready` · `issue: #178`
 
-The world-in-1000 build repeated for 1100–1500, plus border snapshots in `data/maps/`. Queue item 6 (after the Ottoman item, which it needs).
-Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
-
+Realms with rulers near a snapshot year but none at it (Poland in 1100, 1200 and 1500, the Hoysalas and Vijayanagara in 1300, Bahmani, the Inca and others), title rows left out for missing dates, and states the maps draw that have no ruler at all. Full list in the issue.
+Source: Ty, 2026-10-11 (item 6 session).
 
 #### [P2] Add Emperor Henry V
 `type: task` · `area: data` · `status: ready` · `issue: #6`
@@ -144,6 +143,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Build-out: the world, century by century (1100–1500) with maps
+`type: task` · `area: data` · `status: done` · `issue: #34`
+
+Border snapshots for 1200, 1300, 1400 and 1500 (PR #168), with `index.json` mapping 100 realms to the map's state names and capital pins for realms the maps do not draw. Rulers for the states each snapshot shows that had none: 133 people, 159 title rows, 74 places, 49 events (38 new and 11 link-only), 51 discrepancies and 42 realms, in five batches: 1100 (23 people, PR #169), 1200 (24, #170), 1300 (29, #175), 1400 (28, #176) and 1500 (29, #177), checked against their English Wikipedia articles. Everyone is `coverage: partly`. Done 2026-10-11. Left for later: the gaps item above.
+Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
 #### [P2] Build-out: Ottoman sultans and the Seljuks of Rum, 1077–1600
 `type: task` · `area: data` · `status: done` · `issue: #133`
