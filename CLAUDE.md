@@ -111,6 +111,6 @@ As of October 2026 there's a large build-out queue, run on Ty's cloud session cr
 
 Work through the task you were given without stopping to ask. Quality beats quantity:
 - Check every ruler, date and event against its source. If a fact can't be confirmed, leave it out and say so in the batch file.
-- Keep batches to about 60–80 records, so each preview stays readable and a mistake stays small.
+- Keep batches to about 150 rows in the preview (the "N to add" line), so each preview stays readable and a mistake stays small. Ty raised this from 60–80 on 2026-10-11 after batches of 110–200 rows stayed clean.
 - Don't start schema changes or large site redesigns unattended unless the task says so. Data batches and small, tested site fixes are fine.
 - Finish with a short summary on the last PR or issue: what was added, what was skipped and why, and any open questions for Ty.
