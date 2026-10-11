@@ -48,7 +48,7 @@ Supabase project `alhvzdvabugmkeqmvmiz`, schema `public`. Tables: `entities` (pe
    ```
    Fix every error, and every warning unless it's expected (a deliberate source-less claim, say).
 3. Tooling: run `PYTHONIOENCODING=utf-8 python tests/test_intake.py` (must print ALL TESTS PASSED).
-4. Site: serve with `python -m http.server 8765` and check in a browser: the console has no errors, light and dark both work, phone width (375px) has no sideways scroll. Browsers cache `app.js` hard; reload with the cache bypassed.
+4. Site: bump the `?v=` tag on `styles.css`, `config.js` and `app.js` in `index.html` whenever one of them changes, so visitors' browsers fetch the new copy. Serve with `python -m http.server 8765` and check in a browser: the console has no errors, light and dark both work, phone width (375px) has no sideways scroll. Browsers cache `app.js` hard; reload with the cache bypassed.
 5. Push, open the PR (body: what changed, how it was checked; end with the Claude Code line), wait for the `preview` check, merge with a merge commit, watch `Intake apply` succeed, then check the live site.
 6. Update the backlog and the GitHub Project (below).
 
