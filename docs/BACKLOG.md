@@ -27,12 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P2] Show artworks and portraits on the site
-`type: enhancement` · `area: site` · `status: ready` · `issue: #62`
-
-Show a person's portrait (thumbnail, credit line, link to its Commons page) and an Artworks row on person, place and event panels, linking maker, sitter, place and event. Then backfill artworks for the 44 existing person images from their Commons credits (the credits are in the Wikipedia image data; only the link and licence were stored so far). Needs the artworks table (sql/011).
-Source: Ty, 2026-10-08.
-
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
 
@@ -151,6 +145,11 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P2] Show artworks and portraits on the site
+`type: enhancement` · `area: site` · `status: done` · `issue: #62`
+
+The person panel shows the portrait (Wikipedia lead image, with a Commons credit link) and a gallery of works in open museum collections, each linking to the museum's own page, plus works that show the person. Done 2026-10-11. Left: artwork, place and event panels do not show pictures yet; museum pages (a museum's works in one place); the Art Institute of Chicago's images did not load in the desktop app's built-in browser (they load from artic.edu; untested in a normal browser, and failures are hidden).
+Source: Ty, 2026-10-08.
 #### [P2] Museums table and the museum links on artworks
 `type: enhancement` · `area: data` · `status: done` · `issue: #128`
 
