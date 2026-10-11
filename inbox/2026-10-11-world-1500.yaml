@@ -1,0 +1,818 @@
+batch:
+  title: "The world in 1500: rulers of the main states"
+  requested: "One ruler for each major state on the Year-view map at 1500 (snapshot-year batch of the build-out), with a few dated events of 1478-1501"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp6 directory); nothing was fetched. Line 1-3 of every file was checked. 28 of the 29 plan lines had the right article and none is a disambiguation page. GAP: Mahmud_Shah_Bahmani has no file in wp6 (the Bahmani Sultanate, an existing realm, therefore has no ruler in this batch). Headings that differ from the plan title: Qansuh_al-Ghawri is "Al-Ashraf Qansuh al-Ghuri" (key qansuh-al-ghawri), Husayn_Bayqarah is "Sultan Husayn Bayqara" (key husayn-bayqara), Mengli_I_Giray is "Menli I Giray" (key mengli-i-giray), John,_King_of_Denmark is "Hans, King of Denmark" (key hans-of-denmark), Frederick_IV_of_Naples is "Frederick of Naples" (key frederick-of-naples), Immadi_Narasimha_Raya is "Narasimha Raya II" (key narasimha-raya-ii), Nzinga_a_Nkuwu is "Joao I of Kongo" (key joao-i-of-kongo), Louis_XII_of_France is "Louis XII" (key louis-xii-of-france), Askia_Mohammad_I is "Askia Muhammad I" (key askia-muhammad-i), Lê_Hiến_Tông keeps its plan title (key le-hien-tong), Na'od (key naod), Ismail_I (key ismail-i). The Lê Hiến Tông, Binnya Ran II, Ashikaga Yoshizumi, Rana Raimal, Narasimha Raya II, Ahuitzotl, Joao I of Kongo, Ramathibodi II and Menli articles are short and were read in full; the long ones (Ismail I, Ivan III, Vladislaus II, Hans, Louis XII, Askia, Ozolua, Alauddin Husain Shah, Husayn Bayqara) were read through the reign, death and succession. Not worked through: Ozolua's long sections on the Portuguese trading post, art and traditions; Alauddin Husain Shah's Tripura/Arakan, culture and architecture sections; Louis XII's later reign after 1500 beyond the Italian wars; the family sections of Husayn Bayqara and Ismail I.
+# - New realms (9): Ava Kingdom, Hanthawaddy Kingdom, Malacca Sultanate, Safavid Iran, Crimean Khanate, Bengal Sultanate, Songhai Empire, Kingdom of Kongo, Kingdom of Benin (all from the plan lines; spellings and regions as in the plan). The plan also lists Inca Empire (Huayna Capac) but no title row was entered for him (see below), so that realm is NOT defined here; whoever adds his reign defines it (Americas, Peru). Realms only referenced: Mamluk Sultanate, Grand Duchy of Moscow, Grand Duchy of Lithuania, Ethiopian Empire (the 1300 batch), Aragon (the 1100 batch), Aztec Empire and Ayutthaya Kingdom (the 1400 batch); existing realms Japan, Ashikaga shogunate, Dai Viet, Timurid Empire, Mewar, Vijayanagara Empire, Poland, Hungary, Bohemia, Denmark, Norway, Sweden, Portugal, Naples, France, Venice. So the 1100, 1300 and 1400 batches must be applied first. The sources wp-battle-of-chaldiran and the event battle-of-chaldiran-1514 are in the Ottoman batch (2026-10-11-ottoman-seljuk-rum.yaml); that batch must be applied first too.
+# - Title wording differs from the plan where the article gives another rank, or where the plan wording is not in the article. Husayn Bayqara: the article calls him 'the Timurid ruler of Herat' (also 'ruler of Khurasan', and styles him Sultan), so the row reads 'Sultan of Herat' in realm Timurid Empire, not the existing 'Amir of the Timurid Empire'; the realm now has two wordings, each following its article. Binnya Ran II: 'King of Hanthawaddy' (the article: 'king of the Kingdom of Hanthawaddy'; the plan wording 'King of Pegu' is not in it). Ismail I: 'Shah of Iran' (plan), from the article's 'founder and first shah of Safavid Iran, ruling from 1501'; the article also says he took 'Padshah-i Iran (King of Iran)' in July 1501 and 'Shah of Iran' after a victory in 1502 (see discrepancy). Joao I: 'Manikongo' (plan; the article spells ManiKongo). Ahuitzotl: 'Huey Tlatoani' (the article: 'Huey Tlatoani of the city of Tenochtitlan'), unlike Huitzilihuitl's 'Tlatoani of Tenochtitlan' in the 1400 batch, because his article gives the 'Huey' form. Ramathibodi II: 'King of Ayutthaya' (the plan; the article also makes him King of Sukhothai 1485-1491, not entered: no Sukhothai realm). Alexander Jagiellon: 'Grand Duke of Lithuania' (the article's wording; same as Vytautas's row from the 1400 batch) and 'King of Poland'. Qansuh: 'Mamluk Sultan' (the article: penultimate Mamluk Sultan). Na'od: 'Emperor of Ethiopia' (same as Dawit I in the 1400 batch). Mahmud Shah: 'Sultan of Malacca'. Hans: 'King of Denmark / Norway / Sweden'. Meñli: 'Khan of Crimea' (the article: khan of the Crimean Khanate; it also says he proclaimed himself Khagan in 1502).
+# - Title rows NOT entered because the article states no start of the reign: (1) Narasimha Raya II (Vijayanagara Emperor): his article gives only the death of his father Saluva Narasimha in 1491 ('the elder son was assassinated within a few weeks... this brought the second son to the throne') and the regency of Tuluva Narasa Nayaka for twelve years until 1503; it never gives his own accession year, so the person is entered with no title (a reviewer who accepts 1491 as 'his father's death and the next weeks' can add the row, end 1505, killed at Penukonda; the Vijayanagara Empire has no ruler at 1500 in this batch until then). (2) Huayna Capac (Sapa Inca, realm Inca Empire): the article gives his father Tupac Inca Yupanqui's reign as 1471-1493, his own birth only as 'before 1493', and his death in 1527; no accession year, so no title and no Inca Empire realm. (3) Mahmud Shah Bahmani: no article file (gap above).
+# - Other titles NOT entered: Ferdinand II of Castile 1475-1504 (Isabella I is the Castilian ruler in the database; the plan asked only for Aragon; the article makes him king of Castile jure uxoris from Isabella's succession in 1474, as 'Ferdinand V', and regent from 1507); Ferdinand as king of Navarre (conquered 1512; no start date) and of Naples/Sicily/Valencia/Sardinia/Mallorca; Louis XII as King of Naples (as Louis III, 1501-1504, lead years only), as Duke of Milan (the article gives the conquest of 1499-1500 but no accession date for the duchy; the Milan realm has no ruler at 1500 here) and Duke of Orleans; Hans as Duke of Schleswig and Holstein (1482-1513, with his brother Frederick); Vladislaus's other titles (King of Croatia 1490-1516, Dalmatia and so on); Ramathibodi II as King of Sukhothai 1485; Menli I Giray's earlier reigns of 1466 (elected 1468 by the nobles, per the article) and 1469-1475 (the row is the third reign, 1478-1515, which covers 1500); Askia Muhammad's second reign of April 1537 to his death (he returned in 1537, conferred the regalia on his son Ismail); Mahmud Shah of Malacca as pretender 1513-1528; Alexander Jagiellon's Polish row starts at his coronation (12 December 1501, per the Alexander article), the election was on 3 October 1501.
+# - Not ruler at exactly 1500: Qansuh al-Ghawri (Mamluk Sultan from 1501; the article's lead says 1501-1516 and gives no day, so the row starts 1501; the Mamluk throne at 1500 is not covered by any article in this batch), Ismail I (Shah from 1501; he was in the field in 1500 with 7,000 Qizilbash at Erzincan), Alexander Jagiellon in Poland (1501), Minkhaung II (died 7 April 1501, but ruled all of 1500), Go-Kashiwabara (he became emperor on 16 November 1500; the lead gives the day), Binnya Ran II and the others rule through 1500. Louis XII, Manuel I, Vladislaus II and Frederick of Naples (1496-1501) are rulers in 1500.
+# - Dates given as year because the article gives no day or only a month: Hans's accession in Denmark (1482; the article says acclaimed in spring 1482, crowned at Copenhagen on 18 May 1483), in Norway (1483; the coronation at Trondheim was on 20 July 1483) and in Sweden (1497, crowned at Stockholm five days after the settlement of 6 October 1497, so about 11 October, an inference not entered); the end of his Swedish reign (1501: the Swedes renounced allegiance in August 1501, no day); Askia Muhammad's accession (the Battle of Anfao in April 1493, month only) and abdication (August 1528); Ismail's accession (July 1501 or 22 December 1501, see discrepancy); Frederick of Naples's accession (1496; the coronation was on 26 June 1497); Louis XII's accession IS dated (7 April 1498); Alauddin Husain Shah (1494); Rana Raimal (1473-1509); Ramathibodi II's birth ('1472/73', so 1472 marked estimated) and death (July or 10 October 1529, see discrepancy); Ahuitzotl (7 Rabbit = 1486; 10 Rabbit = 1502); Narasimha Raya II's death year only (1505).
+# - Moment years are integers only (checked). Coordinates are general knowledge, 2-3 decimals; Aalborghus Castle, Madrigalejo, Penukonda and the Jeronimos are the article's names. Buried at Granada: Ferdinand's entombment year is not given, so that moment has no year. Husayn Bayqara died after beginning to march against the Uzbeks; the article gives no place of death. Alauddin Husain Shah is 'possibly buried in Gaur near the Qadam Rasul Mosque' (not entered as a moment). Askia was exiled to an island in the Niger; he died and was buried in Gao in 1538.
+# - Discrepancies recorded below (8): when and how Ismail I became shah; when Alauddin Husain Shah's reign began (1493 or 1494); when Askia Muhammad made the pilgrimage (1496 or 1497-1498); when Ozolua's reign ended (c. 1504 or c. 1517); how Qansuh al-Ghawri met his end; how and where Na'od died; the date of Ramathibodi II's death (July or 10 October 1529); when Frederick of Naples married Anne of Savoy (11 September 1478 or summer 1479). Seen and not entered (a range inside one article, a calendar point, or not about a record here): Go-Kashiwabara's death (the lead gives 18 May 1526; the body gives the Daiei 6, 4th month, 7th day, which is the same day, but writes it '(1525)', a calendar-conversion slip, so the record uses 18 May 1526); Go-Kashiwabara's coronation delayed to 22 March 1521 for lack of money; Husayn Bayqara's birth 'June or July 1438' and his interruption of 1470 (the Aq Qoyunlu held Herat from 7 July 1470 for six weeks); the Ottoman raid and Zonchio dates for Agostino Barbarigo; Qansuh's birth ('between 1441 and 1446': no born year entered); Huayna Capac's birth ('may have been born in 1468 at Tumebamba', lead 'Tumipampa', 'exact place and date unknown'); Ozolua's Portuguese contact of 1485 or 1486 (a range) and the name of the place he died; Mahmud Shah of Malacca's succession (Ahmad Shah, killed by his father in 1513, no accession year); the Hungarian coronation, 18 September 1490, against the election, 15 July 1490 (the row uses the coronation, like the Polish rows).
+# - Events: 9 new events (Annexation of Novgorod 1478, Great stand on the Ugra 1480, Battle of Vedrosha 1500, Capture of Tabriz 1501, Vasco da Gama's route to India 1498, Treaty of Granada 1500, French conquest of Milan 1499-1500, Expansion of the Templo Mayor 1487, Askia Muhammad's pilgrimage 1496-1498) and 1 link-only update to an existing event (battle-of-chaldiran-1514 gets Ismail I as defeated). Left out for size: Cabral's voyage to Brazil (1500, year only in Manuel's article), the Battle of Hemmingstedt (Hans's defeat by the Dithmarschen peasants, the advance on 17 February 1500 and the battle the next day or so: the article gives no clear battle date), the Battle of Rotebro (28 September 1497), the Battle of Krbava Field (11 September 1493) and Vladislaus's election, Ferdinand's fall of Granada (Castile's, existing fall-of-granada-1492), the Battle of Merv (1510), Marj Dabiq (24 August 1516), Chaldiran is link-only. The brief's Union of Mielnik 1501 is NOT in the Alexander Jagiellon article (nor in Ivan III's or Vladislaus's), so it is left out; the Treaty of Granada is dated 11 November 1500 in both the Louis XII and Frederick of Naples articles (the Ferdinand article says only 1500, no day). The Great Temple event is called an expansion because the Ahuitzotl article says 'expansion of the Great Pyramid or Templo Mayor in 8 Reed (1487)'; it says nothing of a dedication.
+# - Existing records reused, not redefined: people isabella-i-of-castile, rana-sanga, rana-kumbha, selim-i; places moscow (not used), krakow, prague, szekesfehervar, budapest, vilnius-cathedral, lisbon, granada, naples, tours, copenhagen, stockholm, tenochtitlan, basilica-of-saint-denis; event battle-of-chaldiran-1514. Obsidian: no links. Images: none. Not checked against the database: hans-of-denmark, ferdinand-ii-of-aragon, manuel-i-of-portugal, louis-xii-of-france and the other keys were grepped in inbox/*.yaml and the 1400 draft only (no hit), not in the live database; the preview will flag a duplicate.
+
+sources:
+  - {key: wp-emperor-go-kashiwabara,  title: "Emperor Go-Kashiwabara (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Emperor_Go-Kashiwabara"}
+  - {key: wp-ashikaga-yoshizumi,      title: "Ashikaga Yoshizumi (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshizumi"}
+  - {key: wp-le-hien-tong,            title: "Le Hien Tong (Wikipedia)",               url: "https://en.wikipedia.org/wiki/L%C3%AA_Hi%E1%BA%BFn_T%C3%B4ng"}
+  - {key: wp-ramathibodi-ii,          title: "Ramathibodi II (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Ramathibodi_II"}
+  - {key: wp-minkhaung-ii,            title: "Minkhaung II (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Minkhaung_II"}
+  - {key: wp-binnya-ran-ii,           title: "Binnya Ran II (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Binnya_Ran_II"}
+  - {key: wp-mahmud-shah-of-malacca,  title: "Mahmud Shah of Malacca (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Mahmud_Shah_of_Malacca"}
+  - {key: wp-qansuh-al-ghawri,        title: "Al-Ashraf Qansuh al-Ghuri (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Al-Ashraf_Qansuh_al-Ghuri"}
+  - {key: wp-ismail-i,                title: "Ismail I (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Ismail_I"}
+  - {key: wp-husayn-bayqara,          title: "Sultan Husayn Bayqara (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Sultan_Husayn_Bayqara"}
+  - {key: wp-mengli-i-giray,          title: "Menli I Giray (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Me%C3%B1li_I_Giray"}
+  - {key: wp-ivan-iii-of-russia,      title: "Ivan III of Russia (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Ivan_III_of_Russia"}
+  - {key: wp-alexander-jagiellon,     title: "Alexander Jagiellon (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Alexander_Jagiellon"}
+  - {key: wp-vladislaus-ii-of-hungary, title: "Vladislaus II of Hungary (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Vladislaus_II_of_Hungary"}
+  - {key: wp-hans-of-denmark,         title: "Hans, King of Denmark (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Hans%2C_King_of_Denmark"}
+  - {key: wp-manuel-i-of-portugal,    title: "Manuel I of Portugal (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Manuel_I_of_Portugal"}
+  - {key: wp-ferdinand-ii-of-aragon,  title: "Ferdinand II of Aragon (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Ferdinand_II_of_Aragon"}
+  - {key: wp-frederick-of-naples,     title: "Frederick of Naples (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Frederick_of_Naples"}
+  - {key: wp-louis-xii-of-france,     title: "Louis XII (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Louis_XII"}
+  - {key: wp-agostino-barbarigo,      title: "Agostino Barbarigo (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Agostino_Barbarigo"}
+  - {key: wp-narasimha-raya-ii,       title: "Narasimha Raya II (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Narasimha_Raya_II"}
+  - {key: wp-alauddin-husain-shah,    title: "Alauddin Husain Shah (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Alauddin_Husain_Shah"}
+  - {key: wp-rana-raimal,             title: "Rana Raimal (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Rana_Raimal"}
+  - {key: wp-naod,                    title: "Na'od (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Na%27od"}
+  - {key: wp-askia-muhammad-i,        title: "Askia Muhammad I (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Askia_Muhammad_I"}
+  - {key: wp-joao-i-of-kongo,         title: "Joao I of Kongo (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Jo%C3%A3o_I_of_Kongo"}
+  - {key: wp-ozolua,                  title: "Ozolua (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Ozolua"}
+  - {key: wp-ahuitzotl,               title: "Ahuitzotl (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Ahuitzotl"}
+  - {key: wp-huayna-capac,            title: "Huayna Capac (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Huayna_Capac"}
+
+realms:
+  - {name: Ava Kingdom,           region: Southeast Asia,              country: Myanmar, note: "Upper Burma; Minkhaung II was king 1480-1501 and saw Ava's hold decline (his article)"}
+  - {name: Hanthawaddy Kingdom,   region: Southeast Asia,              country: Myanmar, note: "Mon kingdom of Lower Burma; Binnya Ran II was its 17th king, 1492-1526 (his article)"}
+  - {name: Malacca Sultanate,     region: Southeast Asia,              country: Malaysia, note: "Mahmud Shah was sultan 1488-1511; Portugal took Malacca in 1511 (his article)"}
+  - {name: Safavid Iran,          region: Middle East and North Africa, country: Iran, note: "Founded by Ismail I, shah from 1501; Twelver Shi'ism was made the state religion (his article)"}
+  - {name: Crimean Khanate,       region: Eastern Europe,              country: Ukraine, note: "Menli I Giray was khan 1478-1515, a vassal of the Ottomans, and took Saray in 1502 (his article)"}
+  - {name: Bengal Sultanate,      region: South Asia,                  country: Bangladesh, note: "Alauddin Husain Shah, founder of the Hussain Shahi dynasty, reigned 1494-1519 (his article)"}
+  - {name: Songhai Empire,        region: Sub-Saharan Africa,          country: Mali, note: "Askia Muhammad I founded the Askia dynasty (reigned from 1493); Gao was the capital, Timbuktu a second capital (his article)"}
+  - {name: Kingdom of Kongo,      region: Sub-Saharan Africa,          country: Angola, note: "Joao I (Nzinga a Nkuwu) was the fifth Manikongo, 1470-1509; Portuguese sailors arrived in 1483 (his article)"}
+  - {name: Kingdom of Benin,      region: Sub-Saharan Africa,          country: Nigeria, note: "Ozolua was the fifteenth Oba; the first sustained contact with Portugal falls in his reign (his article)"}
+
+people:
+  - key: emperor-go-kashiwabara
+    name: Emperor Go-Kashiwabara
+    type: Royalty
+    realm: Japan
+    born: 1462-11-19
+    died: 1526-05-18
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "104th emperor of Japan, first son of Emperor Go-Tsuchimikado; reigned from 16 November 1500 to 1526 (the lead gives 19 May 1526 as the end). His reign marked the nadir of imperial authority: after the Onin War the court was too poor to hold his formal coronation until 22 March 1521, with money from Honganji Jitsunyo and the Muromachi bakufu, and ceremonies were suspended in 1525 for lack of funds. Father of Emperor Go-Nara. Tomb at Fukakusa no kita no misasagi, Fushimi-ku, Kyoto."
+    sources: [wp-emperor-go-kashiwabara]
+  - key: ashikaga-yoshizumi
+    name: Ashikaga Yoshizumi
+    type: Royalty
+    realm: Ashikaga shogunate
+    house: Ashikaga
+    born: 1481-01-15
+    died: 1511-09-06
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "11th shogun of the Ashikaga shogunate, 1494-1508, son of Ashikaga Masatomo and adopted by the 8th shogun Ashikaga Yoshimasa. Installed as Sei-i Taishogun by Hosokawa Masamoto in 1494; stripped of the title in 1508 by the 10th shogun Ashikaga Yoshitane, who became shogun a second time. Called Yoshitoh, Yoshitaka and, from July 1502, Yoshizumi. Two of his sons became shoguns: Yoshiharu (12th, by Akiko) and Yoshihide (14th, nominal powers); Yoshitsuna was a son by a daughter of Shiba or Rokkaku."
+    sources: [wp-ashikaga-yoshizumi]
+  - key: le-hien-tong
+    name: Le Hien Tong
+    type: Royalty
+    realm: Đại Việt
+    house: Le
+    born: 1461-08-10
+    died: 1504-05-24
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "6th emperor of Vietnam's Le dynasty, reigning over Dai Viet from 1497 to 1504; son of Le Thanh Tong (1442-1497), whose legal code he promulgated. His death in 1504 marked the beginning of the sixteenth-century crisis of Dai Viet, which lasted 88 years until the Trinh lords drove the Mac dynasty from the capital Thang Long. The article is a short stub."
+    sources: [wp-le-hien-tong]
+  - key: ramathibodi-ii
+    name: Ramathibodi II
+    type: Royalty
+    realm: Ayutthaya Kingdom
+    house: Suphannaphum
+    born: 1472
+    born_estimated: true
+    died: 1529
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Prince Chettathirat, youngest of Trailokanat's three sons, born 1472/73 (the article gives both years). King of Sukhothai from 1485, passed over when Borommaracha III took the throne in 1488, and King of Ayutthaya from 1491 to 1529 under the name Ramathibodi II, which reunified the two kingdoms. In 1500 he sent forces against the Sultanate of Malacca (failed, but won tribute from Malacca, Pattani, Pahang and Kelantan); repelled Lanna in 1513 and sacked Lampang in 1515; set up the Siamese corvee system in 1518; made a treaty with the Portuguese embassy of Duarte Fernandes in 1518 (the first Europeans to reach Siam). Died in July or on 10 October 1529 (see discrepancy), during Halley's Comet; succeeded by his son Borommaracha IV."
+    sources: [wp-ramathibodi-ii]
+  - key: minkhaung-ii
+    name: Minkhaung II
+    type: Royalty
+    realm: Ava Kingdom
+    born: 1446-10-09
+    died: 1501-04-07
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Ava from 1480 (regnal name Thirithuddhamma Yaza) to his death on 7 April 1501, eldest son of Thihathura. His 20-year reign began Ava's decline: Yamethin revolted at his accession and stayed independent; Prome and Tharrawaddy broke away in 1482; Mohnyin, Mogaung, Momeik and Kale left by the mid-1490s. He leaned on Mingyi Nyo of Toungoo, who killed his own uncle in 1485 and was formally granted Toungoo. Made his eldest son Thihathura II joint-king in 1485; the son died in March 1501, a month before him; succeeded by Narapati II (Shwenankyawshin)."
+    sources: [wp-minkhaung-ii]
+  - key: binnya-ran-ii
+    name: Binnya Ran II
+    type: Royalty
+    realm: Hanthawaddy Kingdom
+    born: 1469
+    died: 1526
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "17th king of Hanthawaddy (Lower Burma) from 1492 to 1526, revered for gentleness though his first act was to put all royal kinsmen to death. Answered Mingyi Nyo of Toungoo's raid with a raid on Toungoo itself (the Ava article dates it 1495). In 1501 he led an army up the Irrawaddy to worship at the Shwezigon Pagoda at Pagan inside Ava's land, telling the king of Prome he could conquer both him and Ava but wished only to worship; he returned peacefully. At least four senior queens in 1495 and at least three sons."
+    sources: [wp-binnya-ran-ii]
+  - key: mahmud-shah-of-malacca
+    name: Mahmud Shah of Malacca
+    type: Royalty
+    realm: Malacca Sultanate
+    died: 1528
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sultan of Malacca from 1488 to 1511, installed very young on his father Alauddin Riayat Shah's death, with the bendahara Tun Perak as regent (Perak died 1498). Known as ruthless; executed Bendahara Tun Mutahir and his family. After Diogo Lopes de Sequeira's visit (1509-1510) he plotted to kill him; Afonso de Albuquerque took Malacca in 1511. He fled to Pahang and then Bintan, led a Malay confederacy that attacked Portuguese Malacca in 1515-1519, killed his son Ahmad Shah in 1513 and was pretender 1513-1528; the Portuguese destroyed Bintan in 1526 and he died in Kampar, Riau in 1528. Father of Muzaffar Shah (Perak) and Alauddin Riayat Shah II (Johor)."
+    sources: [wp-mahmud-shah-of-malacca]
+  - key: qansuh-al-ghawri
+    name: Al-Ashraf Qansuh al-Ghawri
+    type: Royalty
+    realm: Mamluk Sultanate
+    house: Burji
+    died: 1516-08-24
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Penultimate Mamluk sultan, one of the last and most powerful of the Burji dynasty, who reigned from 1501 to 1516. Born between 1441 and 1446 (the article gives no year), bought by Qaitbay and schooled at the al-Ghuri military school in Cairo; made sultan against his will after a revolt of emirs against Tuman bay I. Cast guns on a scale new to the Mamluks and fitted out a fleet of 50 ships against the Portuguese (defeated at Diu in 1509 after winning at Chaul in 1508). Received an envoy of the King of Georgia on 15 June 1512. Led the army against Selim I and fell at Marj Dabiq near Aleppo on 24 August 1516, betrayed by Janbirdi al-Ghazali and Khayr Beg; the Mamluk state fell to the Ottomans. Not yet sultan at 1500."
+    sources: [wp-qansuh-al-ghawri]
+  - key: ismail-i
+    name: Ismail I
+    type: Royalty
+    realm: Safavid Iran
+    house: Safavid
+    born: 1487-07-17
+    died: 1524-05-23
+    prominence: 5
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Founder and first shah of Safavid Iran, ruling from 1501 to his death in 1524. Born at Ardabil, son of Shaykh Haydar; his father was killed in 1488, and he hid in Gilan from 1494. With about 7,000 Qizilbash at Erzincan in the summer of 1500 he marched on Shirvan, won at Sharur against the Aq Qoyunlu and took Tabriz in 1501, was crowned shah there in 1501 (see discrepancy) and made Twelver Shi'ism the official religion. By 1510 he held all of Iran, Mesopotamia (Baghdad in 1508), Khorasan and the Caucasus, and killed Muhammad Shaybani at Merv in 1510. Beaten by Selim I at Chaldiran in 1514, wounded and almost captured; thereafter he drank heavily and never campaigned again. Wrote Turkic poetry as Khata'i. Died 23 May 1524 aged 36, buried in Ardabil; succeeded by his eldest son Tahmasp I."
+    sources: [wp-ismail-i]
+  - key: husayn-bayqara
+    name: Sultan Husayn Bayqara
+    type: Royalty
+    realm: Timurid Empire
+    house: Timurid
+    born: 1438
+    died: 1506-05-04
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Timurid ruler of Herat from 1469 until his death on 4 May 1506, with a brief interruption in 1470; the last Timurid ruler of consequence in Khorasan. Born in Herat in June or July 1438 (the article gives both months). After years as a mercenary in Merv and Khwarazm he took Herat on 24 March 1469, beat Yadgar Muhammad at Chenaran on 15 September 1469 and held the Oxus as his border. Patron of the poets Jami (died 1492) and Ali-Shir Nava'i (died 1501) and of an 'explosion of architecture' in Herat (a madrasa and mausoleum in the Musalla complex, where he is buried; the palace Bagh-e Jahan-ara); ill with palsy for twenty years. A son, Badi' al-Zaman, besieged Herat in 1499. Babur's Transoxiana fell to the Uzbeks in 1501; Husayn died as he began to march against them. The article calls him ruler of Herat and Khurasan and styles him Sultan; the row says 'Sultan of Herat'."
+    sources: [wp-husayn-bayqara]
+  - key: mengli-i-giray
+    name: Meñli I Giray
+    type: Royalty
+    realm: Crimean Khanate
+    house: Giray
+    born: 1445
+    died: 1515
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sixth son of Haci I Giray, thrice khan of the Crimean Khanate (1466, 1469-1475 and 1478-1515). After the Ottomans took Kaffa in May 1475 he was carried to Constantinople and restored in the spring of 1478 as an Ottoman vassal. Allied with Ivan III of Moscow in 1480 against Poland-Lithuania, the Great Horde and Astrakhan, a factor in the stand on the Ugra; ravaged Kiev in September 1482; devastated Podolia and Volyn from 1489 to 1500. In 1502 he beat the last khan of the Golden Horde, took Saray and proclaimed himself Khagan. Buried in the Durbe of Salaciq in Bakhchysarai, where he commissioned the Zincirli Medrese (1500), the Durbe (1501) and the Demir Qapi (1503). Father of Mehmed I Giray and Sahib I Giray."
+    sources: [wp-mengli-i-giray]
+  - key: ivan-iii-of-russia
+    name: Ivan III of Russia
+    type: Royalty
+    realm: Grand Duchy of Moscow
+    house: Rurikid
+    born: 1440-01-22
+    died: 1505-10-27
+    prominence: 5
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ivan the Great, Grand Prince of Moscow and all Russia from 1462 until his death on 27 October 1505, co-ruler with his blind father Vasily II beforehand. Gathered the Russian lands: beat Novgorod at the Shelon on 14 July 1471 and annexed it on 15 January 1478, took Tver (1485) and Vyatka (1489); his stand on the Ugra in 1480 ended the Tatar yoke. Married Sophia Palaiologina in 1472, took the double-headed eagle and the title tsar in correspondence with other monarchs; rebuilt the Moscow Kremlin; a new law code (Sudebnik). Beat Alexander of Lithuania at Vedrosha on 14 July 1500 and won 19 towns by the truce of 1503. Set aside his grandson Dmitry for Vasily III, crowned co-regent on 14 April 1502. Allied with Hans of Denmark and with Menli I Giray."
+    sources: [wp-ivan-iii-of-russia]
+  - key: alexander-jagiellon
+    name: Alexander Jagiellon
+    type: Royalty
+    realm: Grand Duchy of Lithuania
+    house: Jagiellon
+    born: 1461-08-05
+    died: 1506-08-19
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Fourth son of Casimir IV, elected Grand Duke of Lithuania in July 1492 and King of Poland from 1501 until his death in 1506 (elected 3 October, crowned 12 December 1501, after the sudden death of John I Albert on 17 June 1501). Made peace with Ivan III in 1494 and married Ivan's daughter Helena in Vilnius on 15 February 1495; the war resumed in 1500 and the Lithuanians were routed at Vedrosha, so the truce of 25 March 1503 cost about a third of Lithuania (19 towns). In Poland the Sejm took away his control of the mint and passed the Nihil novi act in 1505. Favoured the Lithuanian magnate Michael Glinski, whose victory at Kletsk on 5 August 1506 reached him on his deathbed in Vilnius. His sarcophagus was found in Vilnius Cathedral in 1931. Brother of Vladislaus II."
+    sources: [wp-alexander-jagiellon]
+  - key: vladislaus-ii-of-hungary
+    name: Vladislaus II of Hungary
+    type: Royalty
+    realm: Hungary
+    house: Jagiellon
+    born: 1456-03-01
+    died: 1516-03-13
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eldest son of Casimir IV, King of Bohemia from 1471 (elected 27 May, crowned 22 August 1471 at Prague) and of Hungary and Croatia from 1490 (elected 15 July, crowned 18 September 1490 at Szekesfehervar), to his death in Buda on 13 March 1516. Divided the Bohemian lands with Matthias Corvinus at the Peace of Olomouc (21 July 1479), accepted Hussite/Catholic parity in 1485, and won Hungary against John Corvinus, Maximilian and his brother John Albert (Peace of Pressburg, 7 November 1491). Known as 'Dobzse Laszlo' ('Very Well') for approving every decision of the Royal Council; the Black Army was dissolved in 1493 and the Ottomans crushed the Croats at Krbava Field on 11 September 1493. Vladislav Hall at Prague Castle (1493-1502); the Vladislav land order signed in 1502. Married Barbara of Brandenburg (1476), Beatrice of Naples (1490) and Anne of Foix (crowned 29 September 1502); father of Louis II. Funeral at Szekesfehervar."
+    sources: [wp-vladislaus-ii-of-hungary]
+  - key: hans-of-denmark
+    name: Hans of Denmark
+    type: Royalty
+    realm: Denmark
+    house: Oldenburg
+    born: 1455-02-02
+    died: 1513-02-20
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Hans (John), eldest surviving son of Christian I, born probably at Aalborg. King of Denmark from 1482 (crowned at Copenhagen on 18 May 1483), of Norway from 1483 (crowned at Trondheim on 20 July 1483) and, as Johan II, of Sweden from 1497 to 1501, ruled under the Kalmar Union. Co-duke of Schleswig and Holstein with his brother Frederick (divided in 1490). Beat Sten Sture at Rotebro on 28 September 1497 and was crowned in Stockholm; lost the Swedes in August 1501 and was never allowed into Stockholm again after the settlement of 1507-1509; was crushed by the Dithmarschen peasants at Hemmingstedt in February 1500. Founded a permanent Danish navy; allied with Ivan III of Moscow. Married Christina of Saxony in 1478. Died at Aalborghus Castle after a fall from his horse; buried in the Franciscan friary church at Odense, later moved to St Canute's Cathedral; succeeded by Christian II."
+    sources: [wp-hans-of-denmark]
+  - key: manuel-i-of-portugal
+    name: Manuel I of Portugal
+    type: Royalty
+    realm: Portugal
+    house: Aviz
+    born: 1469-05-31
+    died: 1521-12-13
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Manuel the Fortunate, born at Alcochete, ninth child of Ferdinand, Duke of Viseu; Duke of Beja and Viseu before succeeding his cousin John II in 1495. His reign (1495-1521) saw Vasco da Gama reach India (1498), Cabral reach Brazil (1500), the capture of Goa (1510), Malacca (1511) and Ormuz (1515); he founded the Casa da India, built in the Manueline style (Jeronimos Monastery) and issued the Manueline Ordinances. Decreed in 1496 that Jews convert or leave, then converted them all. Married three times: Isabella of Aragon (1497-1498), Maria of Aragon (1500-1517) and Eleanor of Austria (1518-1521). Died of fever at Ribeira Palace, Lisbon, on 13 December 1521; first buried at Restelo Church, moved to the Jeronimos in 1551."
+    sources: [wp-manuel-i-of-portugal]
+  - key: ferdinand-ii-of-aragon
+    name: Ferdinand II of Aragon
+    type: Royalty
+    realm: Aragon
+    house: Trastamara
+    born: 1452-03-10
+    died: 1516-01-23
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ferdinand the Catholic, born at Sos del Rey Catolico, King of Aragon from 1479 to his death in 1516 and King of Castile (as Ferdinand V) from 1475 to 1504 jointly with Isabella I, whom he married on 19 October 1469 at Valladolid. With her he took Granada in 1492, issued the Alhambra Decree (March 1492), sponsored Columbus and signed the Treaty of Tordesillas (1494). Drove the French out of Naples (by 1496), made the partition agreement with Louis XII in 1500 and won Naples himself by 1504 through Gonzalo Fernandez de Cordoba. Regent of Castile for Joanna from 1507, conquered most of Navarre in 1512. Married Germaine of Foix in 1506 (Blois). Died at Madrigalejo and was entombed in the Capilla Real, Granada."
+    sources: [wp-ferdinand-ii-of-aragon]
+  - key: frederick-of-naples
+    name: Frederick of Naples
+    type: Royalty
+    realm: Naples
+    house: Trastamara
+    born: 1452-04-19
+    died: 1504-11-09
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Frederick IV or Frederick of Aragon, born at Naples, second son of Ferdinand I and the last king of Naples of the Neapolitan Trastamara line, ruling from 1496 to 1501 after his nephew Ferdinand II; crowned on 26 June 1497. Raised at the courts of Burgundy and of Louis XI (married Anne of Savoy, 1478 or 1479 by the article's two statements, she died in 1480; then Isabella del Balzo). Betrayed by his cousin Ferdinand of Aragon in the secret Treaty of Granada of 11 November 1500 and deposed in 1501 by Louis XII of France and Ferdinand; he first learned of it from the announcement in the Vatican. Given the county of Maine and a pension, he followed Louis, returned to Tours in March 1503 and died there on 9 November 1504."
+    sources: [wp-frederick-of-naples]
+  - key: louis-xii-of-france
+    name: Louis XII of France
+    type: Royalty
+    realm: France
+    house: Valois-Orleans
+    born: 1462-06-27
+    died: 1515-01-01
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Louis of Orleans, born at the Chateau de Blois, Duke of Orleans from the age of three, who rebelled in the Mad War and was captured at Saint-Aubin-du-Cormier on 28 July 1488. Succeeded his cousin Charles VIII as King of France on 7 April 1498, had his marriage to Joan annulled and married Anne of Brittany; later Mary Tudor (9 October 1514). 'Father of the People' (1506) for lower taxes and legal reform (Ordinance of Blois, 1499). Invaded Milan in August 1499 (entry on 6 October), lost and retook it in early 1500, signed the Treaty of Granada with Ferdinand on 11 November 1500 and took Naples in 1501 (King of Naples as Louis III, 1501-1504); won Agnadello on 14 May 1509 but lost Milan to the Swiss in 1513. Died on the night of 1 January 1515; interred at Saint-Denis; succeeded by Francis I."
+    sources: [wp-louis-xii-of-france]
+  - key: agostino-barbarigo
+    name: Agostino Barbarigo
+    type: Nobility
+    realm: Venice
+    house: Barbarigo
+    born: 1419-06-03
+    died: 1501-09-20
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Doge of Venice from 1486 to his death on 20 September 1501, brother of Doge Marco Barbarigo, who held office less than a year. The Clock Tower in the Piazza San Marco was designed and completed in his reign. Built the Italian coalition of 1495 against Charles VIII (Fornovo); Venice annexed Cyprus and several Romagna strongholds. Relations with Bayezid II turned to open war in 1499 (defeat at Zonchio, loss of Lepanto, then Modone and Corone); against his own wish Venice signed the Treaty of Blois with Louis XII in February 1499 against Milan. Peace with the Ottomans came in 1503 (after his death). His dogaressa was Elisabetta Soranzo."
+    sources: [wp-agostino-barbarigo]
+  - key: narasimha-raya-ii
+    name: Narasimha Raya II
+    type: Royalty
+    realm: Vijayanagara Empire
+    house: Saluva
+    born: 1468
+    died: 1505
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Immadi Narasimha Raya, third and last emperor of the Saluva dynasty, born 1468, who came to the throne as a teenager after his father Saluva Narasimha died in 1491 and his elder brother Thimma Bhupala was assassinated within weeks. Real power lay with the regent Tuluva Narasa Nayaka until 1503, then with the regent's son Tuluva Vira Narasimha Raya, who made himself Dalavayi and Sarvadhikari. Assassinated in 1505 at the fortress of Penukonda, probably by Vira Narasimha's men; the Tuluva dynasty followed. NO TITLE ROW: the article never gives the year his reign began (see header)."
+    sources: [wp-narasimha-raya-ii]
+  - key: alauddin-husain-shah
+    name: Alauddin Husain Shah
+    type: Royalty
+    realm: Bengal Sultanate
+    house: Hussain Shahi
+    died: 1519
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Founder of the Hussain Shahi dynasty and an independent Sultan of Bengal, r. 1494-1519, who seized the throne by assassinating the Abyssinian Sultan Shamsuddin Muzaffar Shah (r. 1491-1493), whom he had served as wazir; his origin is uncertain (Sayyid Arab, with a Bengali mother in one account). Disbanded the palace guard and removed Habshis from office; sheltered Husain Shah Sharqi of Jaunpur, which led to Sikandar Lodi's expedition of 1496 and a treaty at Barh dividing the land east and west. Took Kamata-Kamrup (invasion of 1499) with his general Shah Ismail Ghazi; Orissa was a vassal by 1515; pushed into Sylhet and Kachar and sent armies to Tripura. Built the Kherur Mosque at Chandpara in 1494. Reigns of Husain Shah and Nusrat Shah are the 'golden age' of the sultanate. Died in 1519; possibly buried at Gaur; succeeded by his son Nusrat Shah."
+    sources: [wp-alauddin-husain-shah]
+  - key: rana-raimal
+    name: Rana Raimal
+    type: Royalty
+    realm: Mewar
+    house: Sisodia
+    died: 1509
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Rana Raimal Singh, Rajput ruler of Mewar r. 1473-1509, younger son of Rana Kumbha and father of Rana Sanga. Came to power by defeating his patricide brother Rana Udai Singh I (who had killed Kumbha and ruled five years) at Jawar, Darimpur and Pangarh. Beat Ghiyas Shah of Malwa's attack on Chittor and his general Zafar Khan at Mandalgarh and Kairabad; married Shringar Devi, daughter of Rao Jodha, ending the conflict with the Rathores; Godwar, Toda and Ajmer were retaken by his eldest son Prithviraj; repaired the Eklingji temple at Chittor. His last years were marked by conflict between his sons (Prithviraj and Jaimal were killed) and Sanga was recalled to Chittor before Raimal died."
+    sources: [wp-rana-raimal]
+  - key: naod
+    name: Na'od
+    type: Royalty
+    realm: Ethiopian Empire
+    house: Solomonic
+    died: 1507
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Emperor of Ethiopia from 1494 to 31 July 1507 (regnal name Anbasa Bazar), second son of Baeda Maryam I and Kalyupe, born at Gabarge. Relied like his predecessor on the Queen Mother Eleni and faced internal dissension, but won many victories over Muslim forces. A poet in Amharic and Ge'ez and an author of religious books. Began the Mekane Selassie church in Amhara (completed by his son Lebna Dengel in 1530; burned by Ahmad ibn Ibrahim on 3 November 1531), where he was buried. Killed in battle (see discrepancy). Father of Lebna Dengel, who succeeded him."
+    sources: [wp-naod]
+  - key: askia-muhammad-i
+    name: Askia Muhammad I
+    type: Royalty
+    realm: Songhai Empire
+    house: Askia
+    born: 1443
+    died: 1538
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Askia the Great (Muhammad Ture), general under Sunni Ali, who rose in 1492 against Sunni Baru, beat him at Anfao outside Gao in April 1493 and took the title Askia. Made the hajj (see discrepancy) with 500 horse and 1,000 foot and returned with the titles al-Hajj and Khalifa. Expanded the empire from Taghaza to the borders of Yatenga and from Air to Futa Djallon (Kano and Hausa lands, Agadez in 1515, Diafunu in 1501), set up provinces, ministries and a professional slave army with Gao as capital and Timbuktu a second capital, and based law on the sharia. Went blind; forced to abdicate by his son Askia Musa in August 1528, exiled to an island in the Niger and restored in April 1537 with his son Ismail. Died in 1538 and was buried in Gao."
+    sources: [wp-askia-muhammad-i]
+  - key: joao-i-of-kongo
+    name: Joao I of Kongo
+    type: Royalty
+    realm: Kingdom of Kongo
+    house: Kongo
+    born: 1440
+    born_estimated: true
+    died: 1509
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Nzinga a Nkuwu, fifth Manikongo of Kongo from 1470 to 1509. A Portuguese caravel under Diogo Cao reached the Congo estuary in 1483; Kongo emissaries taken to Lisbon were baptised and returned in 1491. He was baptised on 3 May 1491 and took the name Joao, built a church and used Portuguese soldiers against Bateke raiders in Nsundi, but gave up the faith in 1495 (the church required monogamy). Kongo had grown to 100,000 square kilometres under him. Married his first cousin Queen Nzinga a Nlaza; their son Nzinga Mbemba (Afonso I) succeeded him in 1509."
+    sources: [wp-joao-i-of-kongo]
+  - key: ozolua
+    name: Ozolua
+    type: Royalty
+    realm: Kingdom of Benin
+    house: Eweka
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Okpame (Okpamen), youngest son of Ewuare, fifteenth Oba of Benin, called Ozolua n'Ibaromi (the Conqueror). Said to have killed Prince Owere before being exiled to Ora; recalled after about three years of rule by the Uzama chiefs and crowned at Usama. Frequent campaigns in Ishan, Uromi, Uzea and Owo; the first sustained Portuguese contact (Joao Afonso d'Aveiro in 1485 or 1486, with a trading post at Ughoton) falls in his reign. Egharevba dates his accession to about 1481. His reign end is disputed (see discrepancy); died violently on his last campaign in the Uromi-Uzea region. Father of Esigie and Aruanran. No birth or death year in the article."
+    sources: [wp-ozolua]
+  - key: ahuitzotl
+    name: Ahuitzotl
+    type: Royalty
+    realm: Aztec Empire
+    house: Mexica
+    died: 1502
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eighth ruler of the Mexica, Huey Tlatoani of Tenochtitlan, son of Atotoztli II, who took power in 7 Rabbit (1486) after his brother Tizoc and died in 10 Rabbit (1502); succeeded by his nephew Moctezuma II. Perhaps the greatest military leader of pre-Columbian Mesoamerica: put down a Huastec revolt, more than doubled Aztec lands and conquered the Mixtec, Zapotec and others from the Pacific coast to western Guatemala. Oversaw a major rebuilding of Tenochtitlan including the expansion of the Templo Mayor in 8 Reed (1487). Father of Chimalpilli II and Cuauhtemoc."
+    sources: [wp-ahuitzotl]
+  - key: huayna-capac
+    name: Huayna Capac
+    type: Royalty
+    realm: Inca Empire
+    house: Hanan
+    died: 1527
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eleventh Sapa Inca of Tawantinsuyu, son and successor of Tupac Inca Yupanqui (r. 1471-1493), born before 1493 (the exact place and date are unknown; he may have been born in 1468 at Tumebamba). Tawantinsuyu reached its greatest extent under him: south along the Chilean coast, north through Ecuador and southern Colombia (the story of Quito and Paccha Duchicela comes from Juan de Velasco); rebuilt Quito as a second capital, developed Cochabamba and greatly extended the road network and qullqa storehouses. Knew of the Spanish off the coast by 1515. Died in 1527 at Quito, possibly of a European disease; his death and that of his heir Ninan Cuyochi began the civil war between Huascar and Atahualpa. NO TITLE ROW: the article gives no year for the start of his reign (see header)."
+    sources: [wp-huayna-capac]
+
+titles:
+  - {person: emperor-go-kashiwabara, title: Emperor of Japan, realm: Japan, from: 1500-11-16, to: 1526-05-19, note: "The lead: reigned from 16 November 1500 to 19 May 1526; coronation held only in 1521", sources: [wp-emperor-go-kashiwabara]}
+  - {person: ashikaga-yoshizumi, title: Shogun, realm: Ashikaga shogunate, from: 1494, to: 1508, note: "The lead: reigned 1494-1508; installed by Hosokawa Masamoto in 1494, stripped of the title in 1508 by Ashikaga Yoshitane", sources: [wp-ashikaga-yoshizumi]}
+  - {person: le-hien-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1497, to: 1504, note: "The lead: 6th emperor of the Le dynasty reigning over Dai Viet from 1497 to 1504; the article gives no day for the start, he died on 24 May 1504", sources: [wp-le-hien-tong]}
+  - {person: ramathibodi-ii, title: King of Ayutthaya, realm: Ayutthaya Kingdom, from: 1491, to: 1529, note: "The lead: King of Ayutthaya from 1491 to 1529, after the death of Borommaracha III; King of Sukhothai from 1485 (not entered). Death in July or on 10 October 1529 (see discrepancy)", sources: [wp-ramathibodi-ii]}
+  - {person: minkhaung-ii, title: King of Ava, realm: Ava Kingdom, from: 1480, to: 1501-04-07, note: "King of Ava from 1480, when Thihathura died, to his death on 7 April 1501", sources: [wp-minkhaung-ii]}
+  - {person: binnya-ran-ii, title: King of Hanthawaddy, realm: Hanthawaddy Kingdom, from: 1492, to: 1526, note: "The lead: 17th king of the Kingdom of Hanthawaddy from 1492 to 1526 (the plan wording was King of Pegu; the article does not use it)", sources: [wp-binnya-ran-ii]}
+  - {person: mahmud-shah-of-malacca, title: Sultan of Malacca, realm: Malacca Sultanate, from: 1488, to: 1511, note: "The lead: Sultan of Malacca from 1488 to 1511, and again as pretender from 1513 to 1528; the Portuguese took Malacca in 1511", sources: [wp-mahmud-shah-of-malacca]}
+  - {person: qansuh-al-ghawri, title: Mamluk Sultan, realm: Mamluk Sultanate, from: 1501, to: 1516-08-24, note: "The lead: reigned from 1501 to 1516 (no day for the start); killed at Marj Dabiq on 24 August 1516. Not sultan at exactly 1500", sources: [wp-qansuh-al-ghawri]}
+  - {person: ismail-i, title: Shah of Iran, realm: Safavid Iran, from: 1501, to: 1524-05-23, note: "The lead: founder and first shah of Safavid Iran, ruling from 1501 until his death in 1524; the day of the enthronement is disputed within the article (see discrepancy)", sources: [wp-ismail-i]}
+  - {person: husayn-bayqara, title: Sultan of Herat, realm: Timurid Empire, from: 1469-03-24, to: 1506-05-04, note: "Timurid ruler of Herat from 1469 to 4 May 1506 (the lead), with a brief interruption in 1470; took Herat on 24 March 1469. The article calls him ruler of Herat and Khurasan and styles him Sultan, hence this wording rather than 'Amir of the Timurid Empire'", sources: [wp-husayn-bayqara]}
+  - {person: mengli-i-giray, title: Khan of Crimea, realm: Crimean Khanate, from: 1478, to: 1515, note: "Third reign, 'spring of 1478' to his death in 1515, as an Ottoman vassal; earlier reigns in 1466 and 1469-1475 not entered", sources: [wp-mengli-i-giray]}
+  - {person: ivan-iii-of-russia, title: Grand Prince of Moscow, realm: Grand Duchy of Moscow, from: 1462, to: 1505-10-27, note: "The lead: Grand Prince of Moscow and all Russia from 1462 until his death on 27 October 1505 (no day for the start), co-ruler with his father before", sources: [wp-ivan-iii-of-russia]}
+  - {person: alexander-jagiellon, title: Grand Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1492, to: 1506-08-19, note: "Elected by the Lithuanians in July 1492 (month only); in Poland John I Albert claimed to be Supreme Duke over him", sources: [wp-alexander-jagiellon]}
+  - {person: alexander-jagiellon, title: King of Poland, realm: Poland, from: 1501-12-12, to: 1506-08-19, note: "King of Poland from 1501 (the lead); elected 3 October and crowned 12 December 1501, after his brother John I Albert died on 17 June 1501; the row starts on the coronation day", sources: [wp-alexander-jagiellon]}
+  - {person: vladislaus-ii-of-hungary, title: King of Hungary, realm: Hungary, from: 1490-09-18, to: 1516-03-13, note: "King of Hungary and Croatia from 1490 (lead); elected 15 July, crowned at Szekesfehervar on 18 September 1490; died at Buda on 13 March 1516", sources: [wp-vladislaus-ii-of-hungary]}
+  - {person: vladislaus-ii-of-hungary, title: King of Bohemia, realm: Bohemia, from: 1471-08-22, to: 1516-03-13, note: "King of Bohemia from 1471 (lead); elected at Kutna Hora on 27 May and crowned in Prague on 22 August 1471; the lands of the Bohemian Crown were divided with Matthias Corvinus from the Peace of Olomouc (21 July 1479) until Matthias's death in 1490", sources: [wp-vladislaus-ii-of-hungary]}
+  - {person: hans-of-denmark, title: King of Denmark, realm: Denmark, from: 1482, to: 1513-02-20, note: "The lead: King of Denmark from 1482 to 1513; acclaimed in the spring of 1482 and crowned at Copenhagen on 18 May 1483; died 20 February 1513", sources: [wp-hans-of-denmark]}
+  - {person: hans-of-denmark, title: King of Norway, realm: Norway, from: 1483, to: 1513-02-20, note: "The lead: King of Norway from 1483 to 1513; crowned at Trondheim on 20 July 1483", sources: [wp-hans-of-denmark]}
+  - {person: hans-of-denmark, title: King of Sweden, realm: Sweden, from: 1497, to: 1501, note: "The lead: King of Sweden (Johan II) from 1497 to 1501; entered Stockholm and was crowned after the settlement with Sten Sture of 6 October 1497; the Swedish council renounced its allegiance in August 1501 and he sailed for Denmark", sources: [wp-hans-of-denmark]}
+  - {person: manuel-i-of-portugal, title: King of Portugal, realm: Portugal, from: 1495, to: 1521-12-13, note: "The lead: King of Portugal from 1495 to 1521, succeeding his cousin John II (no day for the start); died 13 December 1521", sources: [wp-manuel-i-of-portugal]}
+  - {person: ferdinand-ii-of-aragon, title: King of Aragon, realm: Aragon, from: 1479, to: 1516-01-23, note: "The lead: King of Aragon from 1479 until his death on 23 January 1516, succeeding his father John II (no day for the start); King of Castile jure uxoris 1475-1504 not entered", sources: [wp-ferdinand-ii-of-aragon]}
+  - {person: frederick-of-naples, title: King of Naples, realm: Naples, from: 1496, to: 1501, note: "The lead: ruling from 1496 to 1501 after his nephew Ferdinand II died; crowned on 26 June 1497; deposed in 1501 (August: Naples fell to the French army)", sources: [wp-frederick-of-naples]}
+  - {person: louis-xii-of-france, title: King of France, realm: France, from: 1498-04-07, to: 1515-01-01, note: "Succeeded Charles VIII on 7 April 1498 (the article); died on 1 January 1515", sources: [wp-louis-xii-of-france]}
+  - {person: agostino-barbarigo, title: Doge of Venice, realm: Venice, from: 1486, to: 1501-09-20, note: "The lead: Doge of Venice from 1486 until his death in 1501; his brother Marco preceded him; died 20 September 1501", sources: [wp-agostino-barbarigo]}
+  - {person: alauddin-husain-shah, title: Sultan of Bengal, realm: Bengal Sultanate, from: 1494, to: 1519, note: "The lead: r. 1494-1519 (the article also quotes 'between 1493 and 1519'; see discrepancy); succeeded by Nusrat Shah in 1519", sources: [wp-alauddin-husain-shah]}
+  - {person: rana-raimal, title: Rana of Mewar, realm: Mewar, from: 1473, to: 1509, note: "The lead: r. 1473-1509; the next Rana of Mewar is Rana Sanga, from 24 May 1509", sources: [wp-rana-raimal]}
+  - {person: naod, title: Emperor of Ethiopia, realm: Ethiopian Empire, from: 1494, to: 1507-07-31, note: "The lead: Emperor of Ethiopia from 1494 to 31 July 1507 (regnal name Anbasa Bazar)", sources: [wp-naod]}
+  - {person: askia-muhammad-i, title: Askia of Songhai, realm: Songhai Empire, from: 1493, to: 1528, note: "Took power after the Battle of Anfao in April 1493 (month only) and reigned until forced to abdicate in August 1528 (month only); he was restored in April 1537 and lived to 1538 (not entered as a second row)", sources: [wp-askia-muhammad-i]}
+  - {person: joao-i-of-kongo, title: Manikongo, realm: Kingdom of Kongo, from: 1470, to: 1509, note: "The lead: 5th ManiKongo of Kongo between 1470 and 1509; succeeded by his son Afonso I", sources: [wp-joao-i-of-kongo]}
+  - {person: ozolua, title: Oba of Benin, realm: Kingdom of Benin, from: 1481, from_estimated: true, to: 1517, to_estimated: true, note: "Egharevba places his accession about 1481 (Kaplan 1481-1504; Blackmun about 1480-1517); the end is disputed: 1504 (Egharevba, Kaplan) against about 1517 (Blackmun; Bradbury: Portuguese reports point to a death in late 1516 or early 1517, and Hastings has him still ruling in 1514 and 1515). The row uses about 1517; see discrepancy", sources: [wp-ozolua]}
+  - {person: ahuitzotl, title: Huey Tlatoani, realm: Aztec Empire, from: 1486, to: 1502, note: "The article: took power in 7 Rabbit (1486) after his brother Tizoc; died in 10 Rabbit (1502); succeeded by his nephew Moctezuma II. Huey Tlatoani of Tenochtitlan", sources: [wp-ahuitzotl]}
+
+places:
+  - key: novgorod
+    name: Novgorod
+    kind: city
+    region: Novgorod Oblast
+    country: Russia
+    lat: 58.522
+    lng: 31.269
+    visitable: true
+    note: "Rival republic annexed by Ivan III: Novgorod recognised his direct rule in a document sealed by Archbishop Feofil on 15 January 1478; its veche was abolished (Ivan III's article)."
+    sources: [wp-ivan-iii-of-russia]
+  - key: tabriz
+    name: Tabriz
+    kind: city
+    region: East Azerbaijan
+    country: Iran
+    lat: 38.08
+    lng: 46.292
+    visitable: true
+    note: "Capital of the Safavids; Ismail I took it in 1501 and was crowned shah there; Selim I entered it on 5 September 1514 after Chaldiran (Ismail I's article)."
+    sources: [wp-ismail-i]
+  - key: ardabil
+    name: Ardabil
+    kind: city
+    region: Ardabil
+    country: Iran
+    lat: 38.249
+    lng: 48.296
+    visitable: true
+    note: "Birthplace (17 July 1487) and burial place of Ismail I, and the seat of the Safavid Sufi order."
+    sources: [wp-ismail-i]
+  - key: herat
+    name: Herat
+    kind: city
+    region: Herat Province
+    country: Afghanistan
+    lat: 34.343
+    lng: 62.199
+    visitable: true
+    note: "Timurid capital of Khurasan; birthplace of Husayn Bayqara, whom it made ruler from 1469; his madrasa and mausoleum stand in the Musalla complex, where he is buried."
+    sources: [wp-husayn-bayqara]
+  - key: bakhchysarai
+    name: Bakhchysarai
+    kind: city
+    region: Crimea
+    country: Ukraine
+    lat: 44.752
+    lng: 33.862
+    visitable: true
+    note: "Capital of the Crimean Khanate; Menli I Giray is buried in the Durbe of Salaciq here and commissioned the Demir Qapi portal of the palace."
+    sources: [wp-mengli-i-giray]
+  - key: vilnius
+    name: Vilnius
+    kind: city
+    country: Lithuania
+    lat: 54.687
+    lng: 25.28
+    visitable: true
+    note: "Where Alexander Jagiellon married Helena of Moscow on 15 February 1495 and died in 1506 (news of Kletsk reached him on his deathbed here)."
+    sources: [wp-alexander-jagiellon]
+  - key: alcochete
+    name: Alcochete
+    kind: city
+    region: Setubal District
+    country: Portugal
+    lat: 38.755
+    lng: -8.961
+    visitable: true
+    note: "Birthplace of Manuel I of Portugal on 31 May 1469."
+    sources: [wp-manuel-i-of-portugal]
+  - key: jeronimos-monastery
+    name: Jeronimos Monastery
+    kind: monastery
+    city: Lisbon
+    region: Belem
+    country: Portugal
+    lat: 38.698
+    lng: -9.206
+    visitable: true
+    note: "Built with Manuel I's sponsorship; the royal pantheon of the House of Aviz, where Manuel's remains were moved in 1551."
+    sources: [wp-manuel-i-of-portugal]
+  - key: sos-del-rey-catolico
+    name: Sos del Rey Catolico
+    kind: town
+    region: Zaragoza Province
+    country: Spain
+    lat: 42.5
+    lng: -1.215
+    visitable: true
+    note: "Birthplace of Ferdinand II of Aragon on 10 March 1452."
+    sources: [wp-ferdinand-ii-of-aragon]
+  - key: madrigalejo
+    name: Madrigalejo
+    kind: town
+    region: Extremadura
+    country: Spain
+    lat: 39.17
+    lng: -5.6
+    visitable: true
+    note: "Where Ferdinand II died on 23 January 1516."
+    sources: [wp-ferdinand-ii-of-aragon]
+  - key: blois
+    name: Blois
+    kind: city
+    region: Loir-et-Cher
+    country: France
+    lat: 47.586
+    lng: 1.335
+    visitable: true
+    note: "Birthplace of Louis XII (Chateau de Blois, 27 June 1462); Ferdinand II married Germaine of Foix here in 1506."
+    sources: [wp-louis-xii-of-france, wp-ferdinand-ii-of-aragon]
+  - key: aalborghus-castle
+    name: Aalborghus Castle
+    kind: castle
+    city: Aalborg
+    region: North Jutland
+    country: Denmark
+    lat: 57.05
+    lng: 9.92
+    visitable: true
+    note: "Where Hans of Denmark died in 1513 after being thrown from his horse."
+    sources: [wp-hans-of-denmark]
+  - key: odense
+    name: Odense
+    kind: city
+    region: Funen
+    country: Denmark
+    lat: 55.396
+    lng: 10.388
+    visitable: true
+    note: "Hans was buried in the Franciscan friary church; in 1807 the church was demolished and the royal bodies moved to St Canute's Cathedral."
+    sources: [wp-hans-of-denmark]
+  - key: gao
+    name: Gao
+    kind: city
+    region: Gao Region
+    country: Mali
+    lat: 16.27
+    lng: -0.04
+    visitable: true
+    note: "Songhai capital where Askia Muhammad took power after Anfao in 1493 and where he died and was buried in 1538; Timbuktu was a second capital."
+    sources: [wp-askia-muhammad-i]
+  - key: mecca
+    name: Mecca
+    kind: city
+    region: Makkah Province
+    country: Saudi Arabia
+    lat: 21.389
+    lng: 39.857
+    visitable: false
+    note: "Destination of Askia Muhammad's hajj, with 500 horsemen and 1,000 infantry (Askia Muhammad I's article)."
+    sources: [wp-askia-muhammad-i]
+  - key: penukonda
+    name: Penukonda
+    kind: fort
+    region: Andhra Pradesh
+    country: India
+    lat: 14.085
+    lng: 77.6
+    visitable: true
+    note: "Fortress where Narasimha Raya II was assassinated in 1505, probably by henchmen of Tuluva Vira Narasimha Raya."
+    sources: [wp-narasimha-raya-ii]
+  - key: quito
+    name: Quito
+    kind: city
+    region: Pichincha
+    country: Ecuador
+    lat: -0.18
+    lng: -78.47
+    visitable: true
+    note: "Rebuilt by Huayna Capac as the empire's second capital; he died here in 1527, according to the article."
+    sources: [wp-huayna-capac]
+  - key: malacca
+    name: Malacca
+    kind: city
+    region: Malacca
+    country: Malaysia
+    lat: 2.19
+    lng: 102.25
+    visitable: true
+    note: "Capital of the Malacca Sultanate; Afonso de Albuquerque captured it in 1511, ending the sultanate (Mahmud Shah's article)."
+    sources: [wp-mahmud-shah-of-malacca]
+
+events:
+  - key: annexation-of-novgorod-1478
+    name: Annexation of Novgorod
+    type: Conquest
+    date: 1478-01-15
+    place: novgorod
+    people:
+      - {person: ivan-iii-of-russia, role: victor}
+    prominence: 4
+    note: "After a first campaign in 1471 (the Shelon, 14 July; peace of 11 August 1471) and six years of factional strife, Ivan III marched against Novgorod in 1477; surrounded by his army, Novgorod recognised his direct rule over the city and its hinterland in a document signed and sealed by Archbishop Feofil on 15 January 1478. Ivan took more than four-fifths of its land, the veche and its offices were abolished, and the acquisition nearly doubled his realm; he then took the title sovereign of all Russia."
+    sources: [wp-ivan-iii-of-russia]
+  - key: great-stand-on-the-ugra-1480
+    name: Great stand on the Ugra River
+    type: Standoff
+    year: 1480
+    people:
+      - {person: ivan-iii-of-russia, role: victor}
+      - {person: mengli-i-giray, role: ally}
+    prominence: 4
+    note: "Ivan III refused tribute to Ahmed Khan of the Great Horde in 1476; in 1480 Ahmed invaded and the Muscovite and Tatar hosts faced each other across the Ugra River through the autumn until 11 November 1480, when Ahmed retreated into the steppe. Traditional Russian historiography marks it as the end of the 'Tatar yoke'. Menli I Giray's alliance with Ivan of 1480 was an important factor. The article gives no place beyond the river."
+    sources: [wp-ivan-iii-of-russia, wp-mengli-i-giray]
+  - key: battle-of-vedrosha-1500
+    name: Battle of Vedrosha
+    type: Battle
+    date: 1500-07-14
+    people:
+      - {person: ivan-iii-of-russia, role: victor}
+      - {person: alexander-jagiellon, role: defeated}
+    prominence: 3
+    note: "In the full-scale war that broke out in 1500 the Lithuanians were routed at Vedrosha on 14 July 1500 (Ivan III's article). Alexander could only garrison Smolensk and other strongholds, and his wife Helena mediated the truce of 25 March 1503, which gave up about a third of Lithuania (19 towns). The articles give no place."
+    sources: [wp-ivan-iii-of-russia, wp-alexander-jagiellon]
+  - key: capture-of-tabriz-1501
+    name: Ismail I takes Tabriz
+    type: Conquest
+    year: 1501
+    place: tabriz
+    people:
+      - {person: ismail-i, role: victor}
+    prominence: 4
+    note: "After beating the Shirvanshah (winter 1500) and the Aq Qoyunlu ruler Alvand at Sharur, Ismail occupied Tabriz, took the title Padshah-i Iran in July 1501 and made it the Safavid capital; Twelver Shi'ism was declared the official religion. The enthronement day is disputed (see discrepancy). Month of the occupation is not given."
+    sources: [wp-ismail-i]
+  - key: vasco-da-gama-route-to-india-1498
+    name: Vasco da Gama reaches India
+    type: Voyage
+    year: 1498
+    people:
+      - {person: manuel-i-of-portugal, role: sponsor}
+    prominence: 5
+    note: "The discovery of a maritime route to India by Vasco da Gama in 1498, sponsored by Manuel I, which led to the Portuguese India Armadas and a Portuguese monopoly of the spice trade. Qansuh al-Ghawri's article adds that da Gama pushed across the Indian Ocean to Malabar and Kozhikode after the Cape in 1498. The Manuel article gives the year only, no place or day."
+    sources: [wp-manuel-i-of-portugal, wp-qansuh-al-ghawri]
+  - key: treaty-of-granada-1500
+    name: Treaty of Granada (partition of Naples)
+    type: Treaty
+    date: 1500-11-11
+    place: granada
+    people:
+      - {person: louis-xii-of-france, role: signatory}
+      - {person: ferdinand-ii-of-aragon, role: signatory}
+      - {person: frederick-of-naples, role: betrayed}
+    prominence: 4
+    note: "A secret treaty signed on 11 November 1500 by Louis XII and Ferdinand II (and Isabella) to conquer and divide the Kingdom of Naples: Louis would take Naples, Terra di Lavoro and the Abruzzo with the titles King of Jerusalem and King of Naples, Ferdinand Apulia and Calabria as duke (Frederick's article; Ferdinand's article gives Campania and the Abruzzi, including Naples, to the French). Pope Alexander VI named both kings his vassals; Frederick learned his fate from the announcement in the Vatican. The French and Aragonese forces occupied Naples in 1501; the agreement fell apart and Ferdinand won Naples by 1504."
+    sources: [wp-louis-xii-of-france, wp-frederick-of-naples, wp-ferdinand-ii-of-aragon]
+  - key: french-conquest-of-milan-1499
+    name: French conquest of Milan
+    type: Conquest
+    year: 1499
+    end_year: 1500
+    people:
+      - {person: louis-xii-of-france, role: victor}
+    prominence: 3
+    note: "On 10 August 1499 Marshal Trivulzio's army crossed into the Duchy of Milan; Ludovico Sforza fled on the night of 2 September and Louis XII entered Milan in triumph on 6 October 1499. Sforza returned in January-February 1500 (welcomed back on 5 February 1500), but was captured when La Tremoille retook the city, and spent the rest of his life in a French prison. Milan stayed French for twelve years; Louis remained Duke of Milan."
+    sources: [wp-louis-xii-of-france]
+  - key: templo-mayor-expansion-1487
+    name: Expansion of the Templo Mayor
+    type: Building
+    year: 1487
+    place: tenochtitlan
+    people:
+      - {person: ahuitzotl, role: patron}
+    prominence: 3
+    note: "Ahuitzotl supervised a major rebuilding of Tenochtitlan on a grander scale, including the expansion of the Great Pyramid or Templo Mayor in the year 8 Reed (1487). The article does not say it was a dedication."
+    sources: [wp-ahuitzotl]
+  - key: askia-muhammad-hajj-1496
+    name: Askia Muhammad's pilgrimage to Mecca
+    type: Pilgrimage
+    year: 1496
+    end_year: 1498
+    place: mecca
+    people:
+      - {person: askia-muhammad-i, role: pilgrim}
+    prominence: 3
+    note: "Askia Muhammad made the hajj with 500 horsemen and 1,000 infantry, gave charitably, set up a hostel for West African pilgrims in Medina and returned to Gao nearly two years later with 50,000 ducats of debt and the titles al-Hajj and Khalifa. The dating is inconsistent in the article (see discrepancy): 1496 against 1497-1498."
+    sources: [wp-askia-muhammad-i]
+  - key: battle-of-chaldiran-1514
+    people:
+      - {person: ismail-i, role: defeated}
+    sources: [wp-ismail-i]
+
+moments:
+  - {person: ismail-i,               role: born,   place: ardabil, year: 1487}
+  - {person: ismail-i,               role: buried, place: ardabil, year: 1524}
+  - {person: husayn-bayqara,         role: born,   place: herat, year: 1438}
+  - {person: husayn-bayqara,         role: buried, place: herat, year: 1506}
+  - {person: mengli-i-giray,         role: buried, place: bakhchysarai, year: 1515}
+  - {person: mahmud-shah-of-malacca, role: lived,  place: malacca, year: 1488}
+  - {person: alexander-jagiellon,    role: died,   place: vilnius, year: 1506}
+  - {person: alexander-jagiellon,    role: buried, place: vilnius-cathedral, year: 1506}
+  - {person: vladislaus-ii-of-hungary, role: born,    place: krakow, year: 1456}
+  - {person: vladislaus-ii-of-hungary, role: crowned, place: prague, year: 1471}
+  - {person: vladislaus-ii-of-hungary, role: crowned, place: szekesfehervar, year: 1490}
+  - {person: vladislaus-ii-of-hungary, role: died,    place: budapest, year: 1516}
+  - {person: vladislaus-ii-of-hungary, role: buried,  place: szekesfehervar, year: 1516}
+  - {person: hans-of-denmark,        role: crowned, place: copenhagen, year: 1483}
+  - {person: hans-of-denmark,        role: crowned, place: stockholm, year: 1497}
+  - {person: hans-of-denmark,        role: died,    place: aalborghus-castle, year: 1513}
+  - {person: hans-of-denmark,        role: buried,  place: odense, year: 1513}
+  - {person: manuel-i-of-portugal,   role: born,   place: alcochete, year: 1469}
+  - {person: manuel-i-of-portugal,   role: died,   place: lisbon, year: 1521}
+  - {person: manuel-i-of-portugal,   role: buried, place: jeronimos-monastery, year: 1551}
+  - {person: ferdinand-ii-of-aragon, role: born,   place: sos-del-rey-catolico, year: 1452}
+  - {person: ferdinand-ii-of-aragon, role: died,   place: madrigalejo, year: 1516}
+  - {person: ferdinand-ii-of-aragon, role: buried, place: granada}
+  - {person: frederick-of-naples,    role: born,   place: naples, year: 1452}
+  - {person: frederick-of-naples,    role: died,   place: tours, year: 1504}
+  - {person: louis-xii-of-france,    role: born,   place: blois, year: 1462}
+  - {person: louis-xii-of-france,    role: buried, place: basilica-of-saint-denis, year: 1515}
+  - {person: narasimha-raya-ii,      role: died,   place: penukonda, year: 1505}
+  - {person: askia-muhammad-i,       role: died,   place: gao, year: 1538}
+  - {person: askia-muhammad-i,       role: buried, place: gao, year: 1538}
+  - {person: huayna-capac,           role: died,   place: quito, year: 1527}
+
+links:
+  - {spouse: ferdinand-ii-of-aragon, to: isabella-i-of-castile, year: 1469}
+  - {parent: rana-kumbha, child: rana-raimal}
+  - {parent: rana-raimal, child: rana-sanga}
+
+discrepancies:
+  - key: ismail-i-accession
+    question: When, and with what title, did Ismail I become shah?
+    about: [{person: ismail-i}, {event: capture-of-tabriz-1501}]
+    field: from
+    claims:
+      - {value: "July 1501", sources: [wp-ismail-i], note: "'In July 1501, following his occupation of Tabriz, Ismail took the title Padshah-i Iran (King of Iran)'; the lead says he ruled from 1501"}
+      - {value: "22 December 1501", sources: [wp-ismail-i], note: "Qasem Beg Hayati Tabrizi (fl. 1554) says the enthronement at Tabriz took place immediately after the Battle of Sharur on 1 Jumada al-Thani 907 / 22 December 1501, the only narrative source with an exact date"}
+      - {value: "1502", sources: [wp-ismail-i], note: "'After defeating an Aq Qoyunlu army in 1502, Ismail took the title of Shah of Iran'"}
+    note: "The title row uses 1501, the year the lead and both other accounts share for the start of his rule; the day and the exact title are left open."
+  - key: alauddin-husain-shah-accession
+    question: When did Alauddin Husain Shah's reign begin?
+    about: [{person: alauddin-husain-shah}]
+    field: from
+    claims:
+      - {value: "1494", sources: [wp-alauddin-husain-shah], note: "The lead gives r. 1494-1519, and the Kherur Mosque at Chandpara was built 'in the first year of his reign in 1494'"}
+      - {value: "1493", sources: [wp-alauddin-husain-shah], note: "Nitish Sengupta, quoted in the article: he 'ruled Gaur between 1493 and 1519'; the predecessor Shamsuddin Muzaffar Shah is given r. 1491-1493"}
+    note: "The title row uses 1494, the lead's year and the year of the first dated building."
+  - key: askia-muhammad-hajj-date
+    question: When did Askia Muhammad make the pilgrimage to Mecca?
+    about: [{person: askia-muhammad-i}, {event: askia-muhammad-hajj-1496}]
+    field: date
+    claims:
+      - {value: "1496", sources: [wp-askia-muhammad-i], note: "Reign section: 'In 1496 he made the hajj to Mecca', away for nearly two years"}
+      - {value: "1497-1498", sources: [wp-askia-muhammad-i], note: "Name section: 'After going on the hajj in 1497-1498, he also became known as Askia al-Hajj Muhammad'"}
+    note: "The event runs 1496 to 1498, covering both accounts."
+  - key: ozolua-end-of-reign
+    question: When did Ozolua's reign end?
+    about: [{person: ozolua}]
+    field: to
+    claims:
+      - {value: "about 1504", sources: [wp-ozolua], note: "Egharevba places his last Uromi campaign about 1503 and Esigie's accession in 1504; Kaplan gives about 1481-1504"}
+      - {value: "about 1517", sources: [wp-ozolua], note: "Blackmun dates the reign about 1480-1517 and Esigie about 1517-1550; Bradbury read Portuguese reports of 1516-1517 as the death of a Benin ruler in late 1516 or early 1517, though he called this speculative; Hastings has Ozolua still ruling in 1514 and 1515; Sargent dates Esigie about 1509-1536"}
+    note: "The title row uses about 1517 (the later claims are tied to dated Portuguese records of 1514-1517) and marks it estimated; the start is about 1481 in the same article (Egharevba; Blackmun has 1480)."
+  - key: qansuh-al-ghawri-death
+    question: How did Qansuh al-Ghawri die at Marj Dabiq on 24 August 1516?
+    about: [{person: qansuh-al-ghawri}]
+    field: died
+    claims:
+      - {value: "Killed on the field and his head carried to the Ottoman sultan", sources: [wp-qansuh-al-ghawri], note: "'Al-Ashraf Qansuh al-Ghuri himself fell upon the field and his head was carried to the Conqueror'; the Ottoman account has him beheaded by an Ottoman soldier whom Selim I would have put to death but pardoned"}
+      - {value: "Found alive on the field, his head cut off and buried to keep it from the enemy", sources: [wp-qansuh-al-ghawri], note: "'According to some the Sultan was found alive on the field, and his head cut off and buried to prevent its falling into the enemy's hands'; the article adds that Khayr Beg spread a report of his death to precipitate the Egyptian flight"}
+    note: "The record uses the date 24 August 1516 (the lead and the Marj Dabiq account); the manner of death is left open."
+  - key: naod-death
+    question: How and where did Na'od die?
+    about: [{person: naod}]
+    field: place
+    claims:
+      - {value: "Killed in battle by Imam Mahfuz of the Adal Sultanate", sources: [wp-naod], note: "The article's Reign section"}
+      - {value: "Killed near Jejeno (possibly Mekane Selassie) while campaigning against Muslim forces", sources: [wp-naod], note: "G.W.B. Huntingford, quoted in the article"}
+      - {value: "Died on his way to repulse a Muslim raid in the eastern provinces", sources: [wp-naod], note: "Taddesse Tamrat, quoted in the article"}
+    note: "No death place is recorded. The article also says he was buried in a tomb inside the church of Mekane Selassie, which was completed only in 1530 by his son."
+  - key: ramathibodi-ii-death-date
+    question: When did Ramathibodi II die in 1529?
+    about: [{person: ramathibodi-ii}]
+    field: died
+    claims:
+      - {value: "July 1529", sources: [wp-ramathibodi-ii], note: "The lead: 'either July or 10 October 1529'"}
+      - {value: "10 October 1529", sources: [wp-ramathibodi-ii], note: "The Siamese Chronicles quoted in the article: Sunday, the 8th day of the waxing moon in the 12th month, Chula Sakarat 891, during a great comet"}
+    note: "Only the year 1529 is recorded for the death and the end of the title."
+  - key: frederick-of-naples-first-marriage
+    question: When did Frederick of Naples marry Anne of Savoy?
+    about: [{person: frederick-of-naples}]
+    field: date
+    claims:
+      - {value: "11 September 1478, in Milan", sources: [wp-frederick-of-naples], note: "Marriages and children section"}
+      - {value: "summer of 1479", sources: [wp-frederick-of-naples], note: "Court of Louis XI section: 'In the summer of 1479, Frederick married Anne of Savoy', after which he lived at Louis XI's court until her death in 1480"}
+    note: "Not tied to a date field of a record in this batch; the marriage is not entered as a link."
