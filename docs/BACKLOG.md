@@ -1,6 +1,6 @@
 # History Timeline backlog
 
-Last updated 2026-10-08 · Board: [GitHub Project](https://github.com/users/schmittyideas/projects/1)
+Last updated 2026-10-11 · Board: [GitHub Project](https://github.com/users/schmittyideas/projects/1)
 
 One list of bugs, tasks and ideas for the site, the data and the tooling.
 
@@ -143,6 +143,18 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Los Angeles: mayors, Hollywood, film locations and the 2028 Olympics
+`type: task` · `area: data` · `status: done` · `issue: #182`
+
+The area is all of LA County (plus the Olympic venues in Anaheim, Pomona, San Clemente and Oklahoma City). Added: every mayor since 1900 with a "Mayor of Los Angeles" title (#91); Hollywood and the main visitor landmarks (#93); 98 films at 61 places, as `artworks` of kind film linked as `filmed`, in four batches (#96, #120, #122, #123); the 2028 Olympics and Paralympics with 32 venues on one event (#134); the Hotel Arcadia (#143); Musso & Frank linked to its dining entry (#147). Every claim checked against English Wikipedia; disagreements recorded. Done 2026-10-11. Left for later: about 30 visitor places in the city (museums in Exposition Park, Grand Central Market, Little Tokyo, the Zoo…), greater-LA sights (Rodeo Drive, the Sunset Strip, the Huntington, the Queen Mary), the films left out for being outside the city line, Abel Stearns and Robert S. Baker, and linking the films to the entertainment database once its location and ids are known.
+Source: Ty, 2026-10-09 to 2026-10-11.
+
+#### [P2] Site: offices, films, venues, Nearby, dining and a street map
+`type: enhancement` · `area: site` · `status: done` · `issue: #183`
+
+Government and Patron types with Show buttons, and a column instead of a crown for offices (#90, #94); films in the events lane, a film panel and "Films shot here" (#95); realm searches keep a city's own events (#97); `external_links` (sql/015) and `event_places` (sql/016) with intake support and tests (#131, #132); Nearby and Big events nearby on place panels, now 5 km (#131, #136); "Eat and drink nearby" from RouteWeaver's `nearby_dining` API, Metro Advisor picks only, as a list and as map pins (#139, #145, #150, #153); a Leaflet street map on OpenStreetMap tiles for city-sized views (#152); version tags so browsers load new files (#154). Done 2026-10-11. Left: searching event names ("olympics" finds nothing yet); some dining types look wrong in RouteWeaver (Pizzeria da Michele shows as a cocktail bar); RouteWeaver dropped requests for three minutes on 2026-10-11 (522/525), worth watching.
+Source: Ty, 2026-10-10 to 2026-10-11.
 
 #### [P2] Build-out: the world, century by century (1100–1500) with maps
 `type: task` · `area: data` · `status: done` · `issue: #34`
