@@ -1,0 +1,341 @@
+# Los Angeles 2028: the Summer Olympics and Paralympics, and where they will happen.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-10 (wikitext; revision IDs below):
+#   "2028 Summer Olympics" rev 1378337444 (dates, ceremonies, venues section and the competition calendar,
+#   which the article dates to LA28's schedule of 12 November 2025); "Venues of the 2028 Summer Olympics and
+#   Paralympics" rev 1379633073 (venue tables, last venue-plan update 15 April 2025, Paralympic plan 3 June 2025);
+#   "2028 Summer Paralympics" rev 1374314041; each venue's own article; and the sport articles that exist
+#   (most "<sport> at the 2028 Summer Olympics" titles still redirect to the main article).
+# THE PLAN IS STILL CHANGING. Every date here is the scheduled date as of those revisions, not something that
+# has happened; the notes say so. Where articles disagree there is a `discrepancies` entry.
+#
+# MODELLING. The Games are one event, 2028-summer-olympics (named like 1932-summer-olympics and
+# 1984-summer-olympics, type "Olympic Games"), with the Coliseum as its main `place` and every other venue linked
+# through the event's `places` list (event_places, sql/016): role venue, start, finish or village, and a note
+# with the sports held there and their scheduled days (from the Olympic calendar). No per-sport events. The
+# Paralympics are one event with SoFi Stadium (their opening ceremony) as main place and their venues the same
+# way. The Olympic opening ceremony (SoFi Stadium, co-hosted by the Coliseum) and closing ceremony (Coliseum)
+# are events of their own.
+#
+# EVERY SPORT-VENUE PAIRING is confirmed in two places: the venues article plus the sport's own article or the
+# venue's own article. Temporary venues on an existing site are that site (Sepulveda Basin, Venice Beach, the
+# Long Beach waterfront = Downtown Long Beach, Alamitos Beach). Existing keys reused: los-angeles-memorial-coliseum,
+# dodger-stadium, griffith-observatory, venice-los-angeles, university-of-california-los-angeles, and
+# universal-studios-hollywood (our record for the Universal studio site; squash is on the Universal Studios Lot).
+#
+# LEFT OUT:
+#  - Grand Park (race walking): the venues article marks it "citation needed" and no other article confirms it.
+#  - LA Clays Shooting Sports Park / Whittier Narrows Clay Shooting Center, South El Monte (shotgun): only the
+#    venues article names it; the South El Monte and Whittier Narrows articles don't, and Shooting has no article.
+#  - The six preliminary football stadiums outside the area: Etihad Park (New York), ScottsMiracle-Gro Field
+#    (Columbus), Geodis Park (Nashville), Energizer Park (St. Louis), PayPal Park (San Jose) and Snapdragon Stadium
+#    (San Diego). The last two are in California but outside Los Angeles County and the agreed extra cities.
+#  - Non-competition sites: Main Press Center (NFL Los Angeles at Hollywood Park), International Broadcast Center
+#    (Warner Bros. Ranch, Burbank), Media Village (USC), the Oklahoma City University sub-village.
+#  - The Olympic marathon route and the race-walk course: not final (see discrepancy 2028-olympic-marathon-start).
+#  - Paralympic venue links the venue's own article doesn't confirm: wheelchair tennis at Dignity Health Sports
+#    Park and paratriathlon / marathon start at Venice Beach (only the venues article gives them).
+#  - Images: Commons licences not checked in this batch.
+# Small things noticed: the Diving article once says "16 and 22 June" but means July (its schedule and the main
+# calendar say July); the main article gives 351 medal events in its text and 353 in its infobox.
+batch:
+  title: "Los Angeles 2028 Olympics and Paralympics venues"
+  requested: "The 2028 Summer Olympics and Paralympics: the Games, ceremonies and every competition venue in Southern California and Oklahoma City, linked to the Games"
+  date: 2026-10-10
+
+sources:
+  - {key: wp-2028-summer-olympics, title: "2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/2028_Summer_Olympics"}
+  - {key: wp-venues-of-the-2028-summer-olympics-and-paralympics, title: "Venues of the 2028 Summer Olympics and Paralympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Venues_of_the_2028_Summer_Olympics_and_Paralympics"}
+  - {key: wp-2028-summer-paralympics, title: "2028 Summer Paralympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/2028_Summer_Paralympics"}
+  # Sport articles
+  - {key: wp-athletics-at-the-2028-summer-olympics, title: "Athletics at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Athletics_at_the_2028_Summer_Olympics"}
+  - {key: wp-football-at-the-2028-summer-olympics, title: "Football at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Football_at_the_2028_Summer_Olympics"}
+  - {key: wp-baseball-at-the-2028-summer-olympics, title: "Baseball at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Baseball_at_the_2028_Summer_Olympics"}
+  - {key: wp-softball-at-the-2028-summer-olympics, title: "Softball at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Softball_at_the_2028_Summer_Olympics"}
+  - {key: wp-basketball-at-the-2028-summer-olympics, title: "Basketball at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Basketball_at_the_2028_Summer_Olympics"}
+  - {key: wp-boxing-at-the-2028-summer-olympics, title: "Boxing at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Boxing_at_the_2028_Summer_Olympics"}
+  - {key: wp-cricket-at-the-2028-summer-olympics, title: "Cricket at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cricket_at_the_2028_Summer_Olympics"}
+  - {key: wp-diving-at-the-2028-summer-olympics, title: "Diving at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Diving_at_the_2028_Summer_Olympics"}
+  - {key: wp-equestrian-events-at-the-2028-summer-olympics, title: "Equestrian events at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Equestrian_events_at_the_2028_Summer_Olympics"}
+  - {key: wp-field-hockey-at-the-2028-summer-olympics, title: "Field hockey at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Field_hockey_at_the_2028_Summer_Olympics"}
+  - {key: wp-flag-football-at-the-2028-summer-olympics, title: "Flag football at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Flag_football_at_the_2028_Summer_Olympics"}
+  - {key: wp-sailing-at-the-2028-summer-olympics, title: "Sailing at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sailing_at_the_2028_Summer_Olympics"}
+  - {key: wp-squash-at-the-2028-summer-olympics, title: "Squash at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Squash_at_the_2028_Summer_Olympics"}
+  - {key: wp-surfing-at-the-2028-summer-olympics, title: "Surfing at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Surfing_at_the_2028_Summer_Olympics"}
+  - {key: wp-volleyball-at-the-2028-summer-olympics, title: "Volleyball at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Volleyball_at_the_2028_Summer_Olympics"}
+  - {key: wp-artistic-swimming-at-the-2028-summer-olympics, title: "Artistic swimming at the 2028 Summer Olympics (Wikipedia)", url: "https://en.wikipedia.org/wiki/Artistic_swimming_at_the_2028_Summer_Olympics"}
+  # Venue articles (Coliseum, Dodger Stadium, Griffith Observatory, Venice, UCLA and Universal sources already exist)
+  - {key: wp-dignity-health-sports-park, title: "Dignity Health Sports Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dignity_Health_Sports_Park"}
+  - {key: wp-velo-sports-center, title: "Velo Sports Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Velo_Sports_Center"}
+  - {key: wp-crypto-com-arena, title: "Crypto.com Arena (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crypto.com_Arena"}
+  - {key: wp-los-angeles-convention-center, title: "Los Angeles Convention Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Convention_Center"}
+  - {key: wp-peacock-theater, title: "Peacock Theater (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peacock_Theater"}
+  - {key: wp-bmo-stadium, title: "BMO Stadium (Wikipedia)", url: "https://en.wikipedia.org/wiki/BMO_Stadium"}
+  - {key: wp-galen-center, title: "Galen Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Galen_Center"}
+  - {key: wp-sofi-stadium, title: "SoFi Stadium (Wikipedia)", url: "https://en.wikipedia.org/wiki/SoFi_Stadium"}
+  - {key: wp-intuit-dome, title: "Intuit Dome (Wikipedia)", url: "https://en.wikipedia.org/wiki/Intuit_Dome"}
+  - {key: wp-rose-bowl-stadium, title: "Rose Bowl (stadium) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rose_Bowl_(stadium)"}
+  - {key: wp-rose-bowl-aquatics-center, title: "Rose Bowl Aquatics Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rose_Bowl_Aquatics_Center"}
+  - {key: wp-downtown-long-beach, title: "Downtown Long Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Downtown_Long_Beach"}
+  - {key: wp-long-beach-convention-and-entertainment-center, title: "Long Beach Convention and Entertainment Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Long_Beach_Convention_and_Entertainment_Center"}
+  - {key: wp-alamitos-beach-long-beach-california, title: "Alamitos Beach, Long Beach, California (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alamitos_Beach,_Long_Beach,_California"}
+  - {key: wp-belmont-veterans-memorial-pier, title: "Belmont Veterans Memorial Pier (Wikipedia)", url: "https://en.wikipedia.org/wiki/Belmont_Veterans_Memorial_Pier"}
+  - {key: wp-port-of-los-angeles, title: "Port of Los Angeles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Port_of_Los_Angeles"}
+  - {key: wp-long-beach-marine-stadium, title: "Long Beach Marine Stadium (Wikipedia)", url: "https://en.wikipedia.org/wiki/Long_Beach_Marine_Stadium"}
+  - {key: wp-sepulveda-dam, title: "Sepulveda Dam (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sepulveda_Dam"}
+  - {key: wp-knight-riders-cricket-ground, title: "Knight Riders Cricket Ground (Wikipedia)", url: "https://en.wikipedia.org/wiki/Knight_Riders_Cricket_Ground"}
+  - {key: wp-honda-center, title: "Honda Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Honda_Center"}
+  - {key: wp-city-of-industry-california, title: "City of Industry, California (Wikipedia)", url: "https://en.wikipedia.org/wiki/City_of_Industry,_California"}
+  - {key: wp-riviera-country-club, title: "Riviera Country Club (Wikipedia)", url: "https://en.wikipedia.org/wiki/Riviera_Country_Club"}
+  - {key: wp-santa-anita-park, title: "Santa Anita Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Santa_Anita_Park"}
+  - {key: wp-trestles-surfing, title: "Trestles (surfing) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Trestles_(surfing)"}
+  - {key: wp-universal-studios-lot, title: "Universal Studios Lot (Wikipedia)", url: "https://en.wikipedia.org/wiki/Universal_Studios_Lot"}
+  - {key: wp-devon-park-stadium, title: "Devon Park (stadium) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Devon_Park_(stadium)"}
+  - {key: wp-boathouse-district, title: "Boathouse District (Wikipedia)", url: "https://en.wikipedia.org/wiki/Boathouse_District"}
+  - {key: wp-los-angeles-zoo, title: "Los Angeles Zoo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Angeles_Zoo"}
+
+places:
+  # Carson Zone (California State University, Dominguez Hills campus)
+  - {key: dignity-health-sports-park, name: Dignity Health Sports Park, kind: stadium, city: Carson, region: California, country: United States,
+     lat: 33.864, lng: -118.261, founded: 2003, visitable: true,
+     note: "Sports complex on the Cal State Dominguez Hills campus, opened 1 June 2003; home of the LA Galaxy. As 'Carson Stadium' in 2028 its stadium, tennis courts and fields are to host rugby sevens, archery, tennis and field hockey.",
+     sources: [wp-dignity-health-sports-park, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: velo-sports-center, name: Velo Sports Center, kind: velodrome, city: Carson, region: California, country: United States,
+     lat: 33.8589, lng: -118.2597, founded: 2004, visitable: true,
+     note: "Indoor velodrome opened in 2004 beside Dignity Health Sports Park; 'Carson Velodrome' for the 2028 track cycling.",
+     sources: [wp-velo-sports-center, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # DTLA Zone
+  - {key: crypto-com-arena, name: Crypto.com Arena, historical_name: Staples Center, kind: arena, city: Los Angeles, region: California, country: United States,
+     lat: 34.0431, lng: -118.2672, founded: 1999, visitable: true,
+     note: "Downtown arena opened 17 October 1999 (Staples Center until 2021), home of the Lakers. 'DTLA Arena' in 2028: artistic gymnastics, trampoline and the boxing finals.",
+     sources: [wp-crypto-com-arena, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: los-angeles-convention-center, name: Los Angeles Convention Center, kind: convention centre, city: Los Angeles, region: California, country: United States,
+     lat: 34.0397, lng: -118.2703, founded: 1971, visitable: true,
+     note: "Built 1971 on South Figueroa Street. In 2028 to host fencing, taekwondo, judo, wrestling and table tennis; its use depends on a $2.6 billion expansion approved on 19 September 2025, paused for the Games.",
+     sources: [wp-los-angeles-convention-center, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: peacock-theater, name: Peacock Theater, kind: theatre, city: Los Angeles, region: California, country: United States,
+     lat: 34.0444, lng: -118.2652, founded: 2007, visitable: true,
+     note: "Theatre at L.A. Live, opened 17 October 2007. In 2028: boxing preliminaries and weightlifting. Coordinates approximate (the article gives none).",
+     sources: [wp-peacock-theater, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # Exposition Park Zone
+  - {key: bmo-stadium, name: BMO Stadium, kind: stadium, city: Los Angeles, region: California, country: United States,
+     lat: 34.0128, lng: -118.2841, founded: 2018, visitable: true,
+     note: "Soccer stadium in Exposition Park, opened 18 April 2018 as the home of Los Angeles FC. 'Exposition Park Stadium' in 2028: flag football (its Olympic debut) and lacrosse.",
+     sources: [wp-bmo-stadium, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: galen-center, name: Galen Center, kind: arena, city: Los Angeles, region: California, country: United States,
+     lat: 34.021, lng: -118.280, founded: 2006, visitable: true,
+     note: "USC's arena, opened 12 October 2006. In 2028: badminton and rhythmic gymnastics.",
+     sources: [wp-galen-center, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # Inglewood Zone
+  - {key: sofi-stadium, name: SoFi Stadium, kind: stadium, city: Inglewood, region: California, country: United States,
+     lat: 33.953, lng: -118.339, founded: 2020, visitable: true,
+     note: "Stadium of the Rams and Chargers at Hollywood Park, opened 8 September 2020. As '2028 Stadium' it is to share the Olympic opening ceremony with the Coliseum, hold swimming (38,000 seats, the largest Olympic swimming venue yet) and open the Paralympics.",
+     sources: [wp-sofi-stadium, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: intuit-dome, name: Intuit Dome, kind: arena, city: Inglewood, region: California, country: United States,
+     lat: 33.9451, lng: -118.3431, founded: 2024, visitable: true,
+     note: "The Clippers' arena, opened 15 August 2024. In 2028: basketball (5x5).",
+     sources: [wp-intuit-dome, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # Pasadena
+  - {key: rose-bowl-stadium, name: Rose Bowl, kind: stadium, city: Pasadena, region: California, country: United States,
+     lat: 34.161, lng: -118.168, founded: 1922, visitable: true,
+     note: "Opened 28 October 1922; the 1984 Olympic football final was played here. In 2028 it is to host the football knockout matches and finals, and with the Coliseum becomes the first stadium to host three Olympic Games.",
+     sources: [wp-rose-bowl-stadium, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: rose-bowl-aquatics-center, name: Rose Bowl Aquatics Center, kind: aquatics centre, city: Pasadena, region: California, country: United States,
+     lat: 34.1513, lng: -118.1644, founded: 1990, visitable: true,
+     note: "Public pools beside the Rose Bowl, opened 1990. Chosen in September 2025 for 2028 Olympic diving instead of the 1932 Swim Stadium in Exposition Park; closes for renovation from April 2027.",
+     sources: [wp-rose-bowl-aquatics-center, wp-diving-at-the-2028-summer-olympics]}
+  # Long Beach Zone
+  - {key: downtown-long-beach, name: Downtown Long Beach, kind: district, city: Long Beach, region: California, country: United States,
+     lat: 33.7721, lng: -118.1935, visitable: true,
+     note: "Long Beach's waterfront centre. Its temporary 'Long Beach Waterfront' venue is to host coastal rowing and 10 km open-water (marathon) swimming in 2028.",
+     sources: [wp-downtown-long-beach, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: long-beach-convention-and-entertainment-center, name: Long Beach Convention and Entertainment Center, kind: convention centre, city: Long Beach, region: California, country: United States,
+     lat: 33.7639, lng: -118.1883, founded: 1962, visitable: true,
+     note: "Convention centre and Long Beach Arena (1962). In 1984 it held fencing and the arena volleyball. In 2028: target shooting inside, artistic swimming, water polo and sport climbing in temporary venues on its grounds, and handball in the arena.",
+     sources: [wp-long-beach-convention-and-entertainment-center, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: alamitos-beach-long-beach-california, name: Alamitos Beach, kind: beach, city: Long Beach, region: California, country: United States,
+     lat: 33.7681, lng: -118.1752, visitable: true,
+     note: "Beach and neighbourhood east of downtown Long Beach. Temporary courts here are to host 2028 beach volleyball (first planned for Santa Monica State Beach).",
+     sources: [wp-alamitos-beach-long-beach-california, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: belmont-veterans-memorial-pier, name: Belmont Veterans Memorial Pier, kind: pier, city: Long Beach, region: California, country: United States,
+     lat: 33.7554, lng: -118.1489, visitable: true,
+     note: "Fishing pier in Belmont Heights (renamed in 2005). Belmont Shore was the 1984 sailing venue; in 2028 the board events (kiteboarding, windfoiling) stay here.",
+     sources: [wp-belmont-veterans-memorial-pier, wp-sailing-at-the-2028-summer-olympics]}
+  - {key: port-of-los-angeles, name: Port of Los Angeles, kind: harbour, city: Los Angeles, region: California, country: United States,
+     lat: 33.73, lng: -118.2625, founded: 1907, visitable: true,
+     note: "The city's port at San Pedro, founded 9 December 1907. The 2028 dinghy, multihull and skiff sailing was moved here from Belmont Shore.",
+     sources: [wp-port-of-los-angeles, wp-sailing-at-the-2028-summer-olympics]}
+  - {key: long-beach-marine-stadium, name: Long Beach Marine Stadium, kind: rowing course, city: Long Beach, region: California, country: United States,
+     lat: 33.7611, lng: -118.1216, founded: 1932, visitable: true,
+     note: "Dredged for the 1932 Olympic rowing: the first man-made rowing course in the United States (California Historical Landmark 1014). In 2028: rowing and canoe sprint, on a 1,500 m course because of a 1955 bridge.",
+     sources: [wp-long-beach-marine-stadium, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # Valley Zone
+  - {key: sepulveda-basin-recreation-area, name: Sepulveda Basin Recreation Area, kind: park, city: Los Angeles, region: California, country: United States,
+     lat: 34.1671, lng: -118.4732, visitable: true,
+     note: "Parkland behind the Sepulveda Dam (1941) in the San Fernando Valley; Wikipedia covers it under Sepulveda Dam. Temporary 'Valley Complex' venues here are to host 3x3 basketball, BMX, modern pentathlon and skateboarding in 2028.",
+     sources: [wp-sepulveda-dam, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # Other Southern California venues
+  - {key: knight-riders-cricket-ground, name: Knight Riders Cricket Ground, kind: cricket ground, city: Pomona, region: California, country: United States,
+     lat: 34.0864, lng: -117.7664, founded: 2026, visitable: true,
+     note: "Opened 1 July 2026 at the Fairplex, home of the Los Angeles Knight Riders; the only new permanent venue in the area built ahead of the Games. To host Olympic T20 cricket, the sport's first Olympic appearance since 1900, expanded to 15,000 seats.",
+     sources: [wp-knight-riders-cricket-ground, wp-cricket-at-the-2028-summer-olympics]}
+  - {key: honda-center, name: Honda Center, kind: arena, city: Anaheim, region: California, country: United States,
+     lat: 33.8078, lng: -117.8767, founded: 1993, visitable: true,
+     note: "Anaheim's arena, opened 17 June 1993, home of the Ducks; renovated by 2027. In 2028: indoor volleyball.",
+     sources: [wp-honda-center, wp-volleyball-at-the-2028-summer-olympics]}
+  - {key: industry-hills-mountain-bike-course, name: Industry Hills Mountain Bike Course, kind: mountain bike course, city: City of Industry, region: California, country: United States,
+     lat: 34.0264, lng: -117.9412,
+     note: "Temporary 2028 Olympic mountain-bike course beside the Pacific Palms Resort, chosen over Bonelli Regional Park and the Santa Monica Mountains. No article of its own; coordinates from the venues article's map.",
+     sources: [wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-city-of-industry-california]}
+  - {key: riviera-country-club, name: Riviera Country Club, kind: golf club, city: Los Angeles, region: California, country: United States,
+     lat: 34.05, lng: -118.50, founded: 1926, visitable: false,
+     note: "Private club in Pacific Palisades, founded 1926. It held the 1932 Olympic dressage and the riding in modern pentathlon, and is to host Olympic golf in 2028.",
+     sources: [wp-riviera-country-club, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: santa-anita-park, name: Santa Anita Park, kind: racecourse, city: Arcadia, region: California, country: United States,
+     lat: 34.1406, lng: -118.0444, founded: 1934, visitable: true,
+     note: "Racecourse opened 25 December 1934. The 1984 Olympic equestrian venue; chosen again in April 2025 for 2028 Olympic and Paralympic equestrian (first planned for Galway Downs, Temecula).",
+     sources: [wp-santa-anita-park, wp-equestrian-events-at-the-2028-summer-olympics]}
+  - {key: trestles-surfing, name: Trestles, kind: surf break, city: San Clemente, region: California, country: United States,
+     lat: 33.385, lng: -117.595, visitable: true,
+     note: "Surf breaks (Upper, Lower and Middle Trestles) at the San Clemente / San Onofre boundary, long a world-tour stop. Trestles State Beach is to host Olympic surfing in 2028.",
+     sources: [wp-trestles-surfing, wp-surfing-at-the-2028-summer-olympics]}
+  - {key: los-angeles-zoo, name: Los Angeles Zoo, kind: zoo, city: Los Angeles, region: California, country: United States,
+     lat: 34.1481, lng: -118.2839, founded: 1966, visitable: true,
+     note: "City zoo in Griffith Park, opened 28 November 1966. Start of the 2028 Olympic road time trials and start and finish of the Paralympic road cycling.",
+     sources: [wp-los-angeles-zoo, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  # OKC Zone
+  - {key: devon-park-stadium, name: Devon Park, kind: stadium, city: Oklahoma City, region: Oklahoma, country: United States,
+     lat: 35.5248, lng: -97.4637, founded: 1987, visitable: true,
+     note: "Softball stadium opened 1987, home of the Women's College World Series. 'OKC Softball Park' for 2028 Olympic softball, moved to Oklahoma City in June 2024 to save building a temporary venue in Los Angeles.",
+     sources: [wp-devon-park-stadium, wp-softball-at-the-2028-summer-olympics]}
+  - {key: boathouse-district, name: Boathouse District (Riversport OKC), kind: boathouse district, city: Oklahoma City, region: Oklahoma, country: United States,
+     lat: 35.4579, lng: -97.5025, visitable: true,
+     note: "Boathouses and the RIVERSPORT adventure park on the Oklahoma River, built from 2006 (Chesapeake Boathouse). 'OKC Whitewater Center' for 2028 Olympic canoe slalom.",
+     sources: [wp-boathouse-district, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+
+events:
+  - key: 2028-summer-olympics
+    name: 2028 Summer Olympics
+    type: Olympic Games
+    date: 2028-07-14
+    end_year: 2028
+    place: los-angeles-memorial-coliseum
+    prominence: 5
+    note: "Scheduled for 14-30 July 2028 (as of October 2026): Los Angeles's third Games after 1932 and 1984, making it the third three-time host city after London and Paris. Awarded on 13 September 2017. Some 351 medal events in 36 sports, with flag football and squash new and cricket, lacrosse and baseball/softball returning. The Coliseum, the main site, holds athletics (15-30 July, in the first week for the first time since 1968), the opening ceremony with SoFi Stadium and the closing ceremony; it is the first stadium to host Olympic athletics at three Games. No new permanent venues built for the Games. Dates in the venue notes are from the Olympic calendar (schedule of 12 November 2025)."
+    places:
+      - {place: sofi-stadium, role: venue, note: "Swimming (22-30 July); opening ceremony with the Coliseum (14 July)"}
+      - {place: dodger-stadium, role: venue, note: "Baseball (13-19 July), as in 1984"}
+      - {place: crypto-com-arena, role: venue, note: "Artistic gymnastics (15-25 July), trampoline (21 July), boxing finals (27-30 July)"}
+      - {place: intuit-dome, role: venue, note: "Basketball (12-30 July)"}
+      - {place: rose-bowl-stadium, role: venue, note: "Football knockout matches and finals (semifinals from 24 July, medal matches 27-29 July); group stage in six other US cities from 10 July"}
+      - {place: dignity-health-sports-park, role: venue, note: "Field hockey (12-29 July), rugby sevens (12-18 July), archery (19-28 July), tennis (19-28 July)"}
+      - {place: velo-sports-center, role: venue, note: "Track cycling (25-30 July)"}
+      - {place: los-angeles-convention-center, role: venue, note: "Fencing (15-23 July), judo (15-22), table tennis (15-29), wrestling (24-30), taekwondo (26-29)"}
+      - {place: peacock-theater, role: venue, note: "Boxing preliminaries (from 15 July), weightlifting (25-29 July)"}
+      - {place: bmo-stadium, role: venue, note: "Flag football (15-22 July, its Olympic debut), lacrosse (24-29 July)"}
+      - {place: galen-center, role: venue, note: "Badminton (15-24 July), rhythmic gymnastics (27-29 July)"}
+      - {place: downtown-long-beach, role: venue, note: "Open-water swimming (17-18 July), coastal rowing (24-25 July), on the waterfront"}
+      - {place: long-beach-convention-and-entertainment-center, role: venue, note: "Water polo (12-23 July), handball in Long Beach Arena (12-28 July), target shooting (from 15 July), sport climbing (24-29 July), artistic swimming (25-29 July)"}
+      - {place: alamitos-beach-long-beach-california, role: venue, note: "Beach volleyball (15-29 July)"}
+      - {place: belmont-veterans-memorial-pier, role: venue, note: "Sailing: kiteboarding and windfoiling (sailing runs 16-28 July)"}
+      - {place: port-of-los-angeles, role: venue, note: "Sailing: dinghy, multihull and skiff (sailing runs 16-28 July)"}
+      - {place: long-beach-marine-stadium, role: venue, note: "Rowing (15-22 July), canoe sprint (25-29 July), on the 1932 rowing course"}
+      - {place: sepulveda-basin-recreation-area, role: venue, note: "Modern pentathlon (15-18 July), BMX (15-16 and 28-29 July), 3x3 basketball (16-22 July), skateboarding (18-20 and 25-27 July)"}
+      - {place: knight-riders-cricket-ground, role: venue, note: "T20 cricket: women 12-20 July, men 22-29 July"}
+      - {place: griffith-observatory, role: finish, note: "Road cycling: finish of the road races and time trials (19, 22 and 23 July)"}
+      - {place: los-angeles-zoo, role: start, note: "Road cycling: start of the time trials"}
+      - {place: venice-los-angeles, role: start, note: "Triathlon (15, 16 and 20 July); start of the road race and (as planned) the marathons"}
+      - {place: honda-center, role: venue, note: "Indoor volleyball (15-30 July)"}
+      - {place: industry-hills-mountain-bike-course, role: venue, note: "Mountain biking (17-18 July)"}
+      - {place: riviera-country-club, role: venue, note: "Golf (19-29 July)"}
+      - {place: rose-bowl-aquatics-center, role: venue, note: "Diving (16-22 and 25-28 July)"}
+      - {place: santa-anita-park, role: venue, note: "Equestrian: eventing 15-18, dressage 20-24, jumping 25-29 July (calendar; see discrepancy)"}
+      - {place: trestles-surfing, role: venue, note: "Surfing (15-18 July)"}
+      - {place: universal-studios-hollywood, role: venue, note: "Squash (15-24 July, its Olympic debut) on the Universal Studios Lot"}
+      - {place: devon-park-stadium, role: venue, note: "Softball (23-29 July)"}
+      - {place: boathouse-district, role: venue, note: "Canoe slalom (14-22 July) at Riversport OKC"}
+      - {place: university-of-california-los-angeles, role: village, note: "Main Olympic Village and training centre in UCLA student housing (about 14,500 beds), as in 1984"}
+    sources: [wp-2028-summer-olympics, wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-athletics-at-the-2028-summer-olympics,
+              wp-football-at-the-2028-summer-olympics, wp-baseball-at-the-2028-summer-olympics, wp-softball-at-the-2028-summer-olympics,
+              wp-basketball-at-the-2028-summer-olympics, wp-boxing-at-the-2028-summer-olympics, wp-cricket-at-the-2028-summer-olympics,
+              wp-diving-at-the-2028-summer-olympics, wp-equestrian-events-at-the-2028-summer-olympics, wp-field-hockey-at-the-2028-summer-olympics,
+              wp-flag-football-at-the-2028-summer-olympics, wp-sailing-at-the-2028-summer-olympics, wp-squash-at-the-2028-summer-olympics,
+              wp-surfing-at-the-2028-summer-olympics, wp-volleyball-at-the-2028-summer-olympics, wp-artistic-swimming-at-the-2028-summer-olympics]
+  - {key: 2028-summer-olympics-opening-ceremony, name: 2028 Summer Olympics opening ceremony, type: Ceremony, date: 2028-07-14, place: sofi-stadium, prominence: 4,
+     places: [{place: los-angeles-memorial-coliseum, role: ceremony, note: "Co-host of the opening ceremony"}],
+     note: "Scheduled for 14 July 2028, co-hosted by SoFi Stadium and the Los Angeles Memorial Coliseum (the dual-venue plan was confirmed by LA28 on 8 May 2025). Head of ceremonies Peter Rice; executive producer Ben Winston.",
+     sources: [wp-2028-summer-olympics, wp-venues-of-the-2028-summer-olympics-and-paralympics]}
+  - {key: 2028-summer-olympics-closing-ceremony, name: 2028 Summer Olympics closing ceremony, type: Ceremony, date: 2028-07-30, place: los-angeles-memorial-coliseum, prominence: 3,
+     note: "Scheduled for 30 July 2028 at the Coliseum (as of October 2026).",
+     sources: [wp-2028-summer-olympics, wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-los-angeles-memorial-coliseum]}
+  - key: 2028-summer-paralympics
+    name: 2028 Summer Paralympics
+    type: Paralympic Games
+    date: 2028-08-15
+    end_year: 2028
+    place: sofi-stadium
+    prominence: 4
+    note: "Scheduled for 15-27 August 2028: Los Angeles's first Paralympics and the first Summer Paralympics in the United States since Atlanta 1996; 560 medal events in 23 sports, with paraclimbing new. Opening ceremony at SoFi Stadium (the main site), closing ceremony at the Coliseum; mostly the Olympic venues (plan announced 3 June 2025). Venues listed are those confirmed in both the venues article and the venue's own article."
+    places:
+      - {place: los-angeles-memorial-coliseum, role: venue, note: "Para athletics; closing ceremony (27 August)"}
+      - {place: crypto-com-arena, role: venue, note: "Wheelchair basketball"}
+      - {place: los-angeles-convention-center, role: venue, note: "Wheelchair fencing, table tennis, taekwondo, judo, boccia"}
+      - {place: peacock-theater, role: venue, note: "Goalball, para powerlifting"}
+      - {place: galen-center, role: venue, note: "Badminton, wheelchair rugby"}
+      - {place: dignity-health-sports-park, role: venue, note: "Para archery"}
+      - {place: velo-sports-center, role: venue, note: "Para track cycling"}
+      - {place: long-beach-convention-and-entertainment-center, role: venue, note: "Para shooting, para swimming, paraclimbing, sitting volleyball (Long Beach Arena)"}
+      - {place: alamitos-beach-long-beach-california, role: venue, note: "Blind football"}
+      - {place: long-beach-marine-stadium, role: venue, note: "Para rowing, paracanoe"}
+      - {place: santa-anita-park, role: venue, note: "Para equestrian"}
+      - {place: los-angeles-zoo, role: start, note: "Para road cycling start and finish (22-26 August)"}
+    sources: [wp-2028-summer-paralympics, wp-venues-of-the-2028-summer-olympics-and-paralympics]
+
+discrepancies:
+  - key: 2028-olympics-closing-ceremony-venue
+    question: Where will the 2028 Olympic and Paralympic closing ceremonies be held?
+    about: [{event: 2028-summer-olympics-closing-ceremony}, {event: 2028-summer-paralympics}]
+    field: place
+    claims:
+      - {value: "Los Angeles Memorial Coliseum (Olympic and Paralympic closing ceremonies)", sources: [wp-2028-summer-olympics, wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-2028-summer-paralympics, wp-los-angeles-memorial-coliseum], note: "LA28's ceremonies plan of 8 May 2025"}
+      - {value: "SoFi Stadium hosts the opening and closing ceremonies of both Games, with the Coliseum also in the Olympic ceremonies", sources: [wp-sofi-stadium]}
+    note: "The record uses the Coliseum, which four articles and LA28's May 2025 announcement give."
+  - key: 2028-olympic-football-rose-bowl-matches
+    question: Which 2028 Olympic football matches will the Rose Bowl host?
+    about: [{event: 2028-summer-olympics}, {place: rose-bowl-stadium}]
+    claims:
+      - {value: "Preliminaries and finals", sources: [wp-venues-of-the-2028-summer-olympics-and-paralympics], note: "Its table; the same article says all preliminary matches were moved out of Los Angeles in April 2025"}
+      - {value: "All semifinals, bronze-medal and gold-medal matches", sources: [wp-football-at-the-2028-summer-olympics]}
+      - {value: "A women's quarterfinal (21 July), both semifinals and both gold-medal matches; no bronze match listed", sources: [wp-rose-bowl-stadium]}
+    note: "The Rose Bowl venue note says knockout matches and finals from the first semifinal on 24 July, which all agree on. Schedule as released 16 March 2026."
+  - key: 2028-olympic-mens-football-final-date
+    question: On what day is the 2028 Olympic men's football final?
+    about: [{event: 2028-summer-olympics}, {place: rose-bowl-stadium}]
+    field: date
+    claims:
+      - {value: "2028-07-28", sources: [wp-football-at-the-2028-summer-olympics, wp-2028-summer-olympics], note: "Football schedule table; the Olympic calendar has football gold medals on 28 and 29 July"}
+      - {value: "2028-07-29 (same day as the women's final)", sources: [wp-rose-bowl-stadium]}
+    note: "Only the Rose Bowl venue note touches it (medal matches 27-29 July either way)."
+  - key: 2028-olympic-equestrian-dates
+    question: When will the 2028 Olympic equestrian events be held?
+    about: [{event: 2028-summer-olympics}, {place: santa-anita-park}]
+    field: date
+    claims:
+      - {value: "15-29 July 2028 (eventing 15-18, dressage 20-24, jumping 25-29)", sources: [wp-2028-summer-olympics], note: "Olympic calendar, schedule of 12 November 2025"}
+      - {value: "27 July to 6 August 2028", sources: [wp-equestrian-events-at-the-2028-summer-olympics]}
+    note: "The Santa Anita venue note uses the Olympic calendar: the Games close on 30 July, so 6 August looks out of date."
+  - key: 2028-olympic-marathon-start
+    question: Where do the 2028 Olympic marathons start and finish?
+    about: [{event: 2028-summer-olympics}, {place: venice-los-angeles}]
+    field: place
+    claims:
+      - {value: "Start at Venice Beach (Boardwalk)", sources: [wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-athletics-at-the-2028-summer-olympics, wp-venice-los-angeles], note: "Venue plan update of 15 April 2025"}
+      - {value: "Start and finish not yet decided as of July 2026; to be finalised later in 2026", sources: [wp-venues-of-the-2028-summer-olympics-and-paralympics], note: "Citing LA28, 9 June 2025"}
+    note: "Venice Beach is linked for triathlon and the road-race start; its note gives the marathon start only as planned."
+  - key: 2028-olympic-modern-pentathlon-venue
+    question: Where will 2028 Olympic modern pentathlon be held?
+    about: [{event: 2028-summer-olympics}, {place: sepulveda-basin-recreation-area}, {place: velo-sports-center}]
+    field: place
+    claims:
+      - {value: "Sepulveda Basin Recreation Area (Valley Complex 2)", sources: [wp-venues-of-the-2028-summer-olympics-and-paralympics, wp-sepulveda-dam]}
+      - {value: "The fencing part at the Velo Sports Center, Carson", sources: [wp-velo-sports-center]}
+    note: "Both may be true (a separate ranking-round venue); the venue notes put modern pentathlon at Sepulveda Basin."
