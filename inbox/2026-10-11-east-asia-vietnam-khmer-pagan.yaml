@@ -1,0 +1,980 @@
+batch:
+  title: "Vietnam, the Khmer Empire and Pagan, 1009-1527: the Ly, Tran, Ho, Later Le and Mac emperors, three Khmer kings and Anawrahta"
+  requested: "Batch E of the East Asia build-out: 21 rulers and commanders of Dai Viet (Ly, Tran, Ho, Later Le, Mac), the Khmer Empire (Suryavarman I and II, Jayavarman VII) and Pagan (Anawrahta), with reigns, the Mongol invasions, Bach Dang 1288, the Lam Son uprising, places and discrepancies"
+  date: 2026-10-11
+
+# Notes for the reviewer (batch E of the East Asia build-out)
+# - Source: local copies of the English Wikipedia articles (wp4 directory); nothing fetched. All 23 files were checked by their first lines: every one resolved to the article that was asked for. Lam_Son_uprising (77 KB) was read selectively (lead, the Lam Son outbreak, Tot Dong - Chuc Dong, the end of the war, Chi Lang - Xuong Giang, the Dong Quan oath, aftermath). Everything else was read in full; the reference lists were skipped.
+# - Existing records only referenced: le-hoan (not linked: his daughter, Ly Thai To's wife, has no record), jayavarman-v, realms Dai Co Viet and Khmer Empire. Nothing existing is redefined.
+# - New realms: Dai Viet (Southeast Asia, Vietnam), Dai Ngu (Southeast Asia, Vietnam; the name the Ho article gives for the state from 1400), Pagan Kingdom (Southeast Asia, Myanmar). Diacritics are kept in names, titles and realms (as in "Dai Co Viet" already in the database, written there with them); keys are ASCII.
+# - Title wordings: "Emperor of Dai Co Viet" (Ly Thai To and Ly Thai Tong, to 3 November 1054: the Ly Thanh Tong article says he shortened the name from Dai Co Viet to Dai Viet on succeeding; the Ly Thai To article also calls the state Dai Co Viet; the Ly Thai Tong article itself says he 'ruled Dai Viet', see discrepancy), "Emperor of Dai Viet" (Ly Thanh Tong onward, Tran, Later Le, Mac, and Ly Chieu Hoang as a woman ruling in her own right, as the brief says), "Emperor of Dai Ngu" (Ho Quy Ly), "King of the Khmer", "King of Pagan".
+# - Retired emperors (Thai Thuong Hoang): Tran Thai Tong (1258-1277), Tran Thanh Tong (1279-1290), Tran Nhan Tong (1294 per his lead; he passed the throne on 3 March 1293, see discrepancy), Tran Anh Tong (1314-1320) and Ho Quy Ly (styled Emperor Emeritus from 1401) held that status and, in the articles' words, still shared or kept power. They are noted in the people's notes, not entered as title rows.
+# - Titles deliberately left out because the article gives no start date: Ly Cao Tong (the article says only 'enthroned at three' and 'ruled 35 years'; no year is stated, and the two figures do not agree with his 1173 birth), Tran Hung Dao (commander-in-chief 'Quoc cong tiet che' appointed in 1283 per the Nhan Tong article is an office, not entered; the article gives him no dated title of his own), Ho Quy Ly as chief minister (appointed March 1387, no end date), the rulers Ho Quy Ly installed (Tran Thuan Tong and Thieu De; not in this batch). Mac Dang Dung has one row, 1527-1529; the article says he resumed power when his son Doanh died 'in the summer' of the 1537 invasion narrative but gives no year for the resumption, so the second row is left out and the span to his death in 1541 is only in his note.
+# - Rulers outside the brief are not entered, so the realm strip has gaps: the Ly between Nhan Tong (d. 1128) and Cao Tong/Hue Tong (Ly Than Tong and Anh Tong), the Tran after Anh Tong (1314), and the Later Le between Thanh Tong (1497) and the Mac (1527). Cao Tong has no title row (see above), so 1176-1210 shows no Ly emperor.
+# - Left out because the article gives no date or place: Angkor Wat and Angkor Thom founding years (the articles say only that Suryavarman II presided over Angkor Wat, 'completed only after his death', and that Jayavarman VII built Angkor Thom and the Bayon, with Ta Prohm dedicated in 1186); so those places have built_by but no founded, and there is no 'construction of Angkor Wat' event. Hoa Lu has no founding year. Birthplaces without a place record (Co Phap for Ly Thai To, Dai Lai village for Ho Quy Ly, Co Trai for Mac Dang Dung) are in notes only. The Bayon and Ta Prohm have no own place record.
+# - Mongol invasions of Dai Viet: the brief names 1258, 1285 and 1287-88. The articles date them as follows and the events use the articles: first invasion autumn 1257 to December 1257 (Thai Tong and Thanh Tong articles) against 'in 1258' (Hung Dao article), recorded as a discrepancy and entered as 1257-1258; second invasion December 1284 (Thanh Tong, Nhan Tong) against January 1285 (Hung Dao article); third invasion March 1287 (Thanh Tong, Nhan Tong) or late 1287 (Bach Dang article, fleet left Qinzhou 17 December), ending 1288. The Ly-Song war is 1075-1076 in the Nhan Tong article (the brief says 1075-1077); the Song invasion began 'in the twelfth month of 1076', i.e. very likely January 1077, but the article gives no Gregorian date, so the event stays at 1075-1076 with a discrepancy.
+# - Lunar/Gregorian: Vietnamese articles mix lunar dates with Gregorian equivalents. Where an article gives a lunar date as a Gregorian-looking date (Bach Dang '8 March 1288 (in the lunar calendar)', Thanh Tong's death '25 May 1290 (lunar)') and another article gives a different Gregorian date (9 April 1288, 3 July 1290) both are recorded, never converted.
+# - Discrepancies recorded: Ly Thai To's birthplace; the succession of 1009 (peaceful against the An Nam chi luoc account); the state's name under Thai Tong; Thanh Tong's birth and death dates; Nhan Tong's birth and death dates; the Ly-Song war span; Cao Tong's birth and death dates; Hue Tong's death; Chieu Hoang's age at accession; the Tran founding date; the first and second Mongol invasion dates; Bach Dang's date; Thanh Tong's death; Nhan Tong's birth, death and retirement; Hung Dao's lifespan; Ho Quy Ly's usurpation year and death; Le Loi's birth and accession; Tot Dong's date; the fall of Xuong Giang; Le Thai Tong's death date; Le Thanh Tong's Laos campaign; Suryavarman I's accession and death; Suryavarman II's death; Jayavarman VII's sack of Angkor in 1177; Anawrahta's birth, empire and death.
+# - Doubts: Lam Son and Hoa Lu coordinates are general knowledge, to about 5 km (Lam Son is a commune, the point is its approximate centre). The visitable flags and visit_site names are general knowledge, not from the articles. Prominence is hand-set: 5 only for Tran Hung Dao, Le Loi, Suryavarman II and Bach Dang, as the brief asks; Lam Son uprising 4. The Pagan Kingdom is called the 'Pagan Empire' in the Anawrahta article; the realm name 'Pagan Kingdom' follows the brief. Anawrahta's accession is 16 December 1044 in the article, which also gives 11 May 1044 as his birth in one place; see discrepancy.
+# - Moments take a year only (checked): every moment below has an integer year or none. Full dates sit in title notes, events or discrepancies.
+# - Size: 21 people, 19 title rows, 3 realms, 8 places, 23 events, 36 discrepancies (110 rows), 10 links, 8 moments.
+
+sources:
+  - {key: wp-ly-thai-to,         title: "Ly Thai To (Wikipedia)",         url: "https://en.wikipedia.org/wiki/L%C3%BD_Th%C3%A1i_T%E1%BB%95"}
+  - {key: wp-ly-thai-tong,       title: "Ly Thai Tong (Wikipedia)",       url: "https://en.wikipedia.org/wiki/L%C3%BD_Th%C3%A1i_T%C3%B4ng"}
+  - {key: wp-ly-thanh-tong,      title: "Ly Thanh Tong (Wikipedia)",      url: "https://en.wikipedia.org/wiki/L%C3%BD_Th%C3%A1nh_T%C3%B4ng"}
+  - {key: wp-ly-nhan-tong,       title: "Ly Nhan Tong (Wikipedia)",       url: "https://en.wikipedia.org/wiki/L%C3%BD_Nh%C3%A2n_T%C3%B4ng"}
+  - {key: wp-ly-cao-tong,        title: "Ly Cao Tong (Wikipedia)",        url: "https://en.wikipedia.org/wiki/L%C3%BD_Cao_T%C3%B4ng"}
+  - {key: wp-ly-hue-tong,        title: "Ly Hue Tong (Wikipedia)",        url: "https://en.wikipedia.org/wiki/L%C3%BD_Hu%E1%BB%87_T%C3%B4ng"}
+  - {key: wp-ly-chieu-hoang,     title: "Ly Chieu Hoang (Wikipedia)",     url: "https://en.wikipedia.org/wiki/L%C3%BD_Chi%C3%AAu_Ho%C3%A0ng"}
+  - {key: wp-tran-thai-tong,     title: "Tran Thai Tong (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Th%C3%A1i_T%C3%B4ng"}
+  - {key: wp-tran-thanh-tong,    title: "Tran Thanh Tong (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Th%C3%A1nh_T%C3%B4ng"}
+  - {key: wp-tran-nhan-tong,     title: "Tran Nhan Tong (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Nh%C3%A2n_T%C3%B4ng"}
+  - {key: wp-tran-anh-tong,      title: "Tran Anh Tong (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_Anh_T%C3%B4ng"}
+  - {key: wp-tran-hung-dao,      title: "Tran Hung Dao (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_H%C6%B0ng_%C4%90%E1%BA%A1o"}
+  - {key: wp-ho-quy-ly,          title: "Ho Quy Ly (Wikipedia)",          url: "https://en.wikipedia.org/wiki/H%E1%BB%93_Qu%C3%BD_Ly"}
+  - {key: wp-le-loi,             title: "Le Loi (Wikipedia)",             url: "https://en.wikipedia.org/wiki/L%C3%AA_L%E1%BB%A3i"}
+  - {key: wp-le-thai-tong,       title: "Le Thai Tong (Wikipedia)",       url: "https://en.wikipedia.org/wiki/L%C3%AA_Th%C3%A1i_T%C3%B4ng"}
+  - {key: wp-le-thanh-tong,      title: "Le Thanh Tong (Wikipedia)",      url: "https://en.wikipedia.org/wiki/L%C3%AA_Th%C3%A1nh_T%C3%B4ng"}
+  - {key: wp-mac-dang-dung,      title: "Mac Dang Dung (Wikipedia)",      url: "https://en.wikipedia.org/wiki/M%E1%BA%A1c_%C4%90%C4%83ng_Dung"}
+  - {key: wp-suryavarman-i,      title: "Suryavarman I (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Suryavarman_I"}
+  - {key: wp-suryavarman-ii,     title: "Suryavarman II (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Suryavarman_II"}
+  - {key: wp-jayavarman-vii,     title: "Jayavarman VII (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Jayavarman_VII"}
+  - {key: wp-anawrahta,          title: "Anawrahta (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Anawrahta"}
+  - {key: wp-battle-of-bach-dang-1288, title: "Battle of Bach Dang (1288) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_B%E1%BA%A1ch_%C4%90%E1%BA%B1ng_%281288%29"}
+  - {key: wp-lam-son-uprising,   title: "Lam Son uprising (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Lam_S%C6%A1n_uprising"}
+
+realms:
+  - {name: Đại Việt, region: Southeast Asia, country: Vietnam, note: "The Vietnamese state from 1054 (renamed from Đại Cồ Việt by Lý Thánh Tông on his succession) under the Lý, Trần, and, restored in 1428, the Later Lê; also the Mạc from 1527. The Hồ dynasty called it Đại Ngu from 1400."}
+  - {name: Đại Ngu, region: Southeast Asia, country: Vietnam, note: "The name the Hồ Quý Ly article gives for the state under the Hồ dynasty from 1400; the Ming annexed it in 1407 as Jiaozhi and Lê Lợi restored Đại Việt in 1428."}
+  - {name: Pagan Kingdom, region: Southeast Asia, country: Myanmar, note: "The Pagan Empire of the article, founded by Anawrahta; the article dates the dynasty's fall to 1287."}
+
+people:
+  # ---- Ly dynasty
+  - key: ly-thai-to
+    name: Lý Thái Tổ
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Cồ Việt
+    born: 0974-03-08
+    died: 1028-03-31
+    prominence: 4
+    note: "Born Lý Công Uẩn; founding emperor of the Lý dynasty, 1009-1028. A palace commander under Lê Hoàn and Lê Long Đĩnh, raised by the monk Vạn Hạnh, he was proclaimed emperor two days after Lê Long Đĩnh's death (19 November 1009), on 21 November 1009. In 1010 he moved the capital from Hoa Lư to Đại La (renamed Thăng Long, modern Hanoi). The Song recognised him at once in 1010. He promoted Buddhism, reformed taxes (1013) and put down revolts. Buried at Thọ Lăng outside Thiên Đức Palace. Regnal title posthumously Thần Võ Hoàng Đế."
+    coverage: partly
+    coverage_note: "dates, accession, capital move, reign and burial from the English Wikipedia article; family, campaigns and religious works only summarised; no artworks"
+    sources: [wp-ly-thai-to]
+  - key: ly-thai-tong
+    name: Lý Thái Tông
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Cồ Việt
+    born: 1000-07-29
+    died: 1054-11-03
+    prominence: 3
+    note: "Born Lý Phật Mã at Hoa Lư; second emperor of the Lý dynasty, 1028-1054, called the most successful Vietnamese emperor since the tenth century. Put down an uprising by two brothers at his accession, issued the Minh Đạo laws (1042), captured Nùng Trí Cao and invaded Champa by sea in 1044, killing its king Jaya Simhavarman II. Ordered the One Pillar Pagoda built in 1049. A few months before his death he handed the governing to his son Lý Nhật Tôn (Thánh Tông), so Thánh Tông's article dates the succession to 3 November 1054, the day the lead gives for Thái Tông's death. Realm: Đại Cồ Việt, because the Thánh Tông article says the name was changed on Thánh Tông's succession; his own article says he 'ruled Đại Việt' (see discrepancy)."
+    coverage: partly
+    coverage_note: "dates, reign, Champa campaigns, laws and religious works from the English Wikipedia article; consorts and court only listed; no artworks"
+    sources: [wp-ly-thai-tong, wp-ly-thanh-tong]
+  - key: ly-thanh-tong
+    name: Lý Thánh Tông
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Việt
+    born: 1023-03-19
+    died: 1072-02-01
+    prominence: 3
+    note: "Born Lý Nhật Tôn; third emperor of the Lý dynasty, 1054-1072. On succeeding on 3 November 1054 he shortened the kingdom's name from Đại Cồ Việt to Đại Việt. Built the first Temple of Literature (Văn Miếu, 1070 in the body; 1072 in the lead), invaded Champa in 1069, burned Vijaya and captured its king Rudravarman III, who ceded three districts. Claimed imperial status, which the Chinese took as a challenge, a prelude to the Song-Viet war of the 1070s. Took Ỷ Lan as consort; their son was Lý Càn Đức (Nhân Tông). Birth and death dates differ inside the article (see discrepancies)."
+    coverage: partly
+    coverage_note: "dates, rename of the realm, Champa war, Temple of Literature and succession from the English Wikipedia article; the long building and omen chronicle, military and religious sections only summarised; no artworks"
+    sources: [wp-ly-thanh-tong]
+  - key: ly-nhan-tong
+    name: Lý Nhân Tông
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Việt
+    born: 1066-02-22
+    died: 1128-01-15
+    prominence: 3
+    note: "Born Lý Càn Đức; fourth emperor of the Lý dynasty, 1072-1128, the longest reign of any Vietnamese monarch (56 years in the lead, 55 in the legacy section). Came to the throne at seven, helped by his mother Ỷ Lan and the chancellor Lý Đạo Thành. Held the first Confucian imperial examination in 1072 and founded the Quốc tử giám (National Academy) in 1076. Under him Lý Thường Kiệt struck the Song first in 1075 (Sino-Vietnamese war 1075-1076); Champa was held in check, the last victory in 1104. Had no son and adopted Lý Dương Hoán (later Thần Tông) as heir in 1117. Died at Vĩnh Quang Palace."
+    coverage: partly
+    coverage_note: "dates, accession, examinations, the Song war and succession from the English Wikipedia article; family and poems only mentioned; no artworks"
+    sources: [wp-ly-nhan-tong]
+  - key: ly-cao-tong
+    name: Lý Cao Tông
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Việt
+    born: 1173-07-06
+    died: 1210-11-15
+    prominence: 2
+    note: "Born Lý Long Trát (Cán); seventh emperor of the Lý dynasty. Enthroned at three, helped by the regent Tô Hiến Thành (d. 1179); a pleasure-loving ruler whose building projects, famines and revolts began the dynasty's decline. In 1209 the general Quách Bốc seized the citadel and he fled to Tam Nông; Trần Lý and Tô Trung Từ retook it at the end of 1209. His son Sảm, who fled to Hải Ấp and married Trần Thị Dung there, succeeded as Huệ Tông. No title row: the article states no accession year (see header)."
+    coverage: partly
+    coverage_note: "dates, regency, decline of the reign and the 1209 revolt from the English Wikipedia article; no title row because the article gives no accession year; no artworks"
+    sources: [wp-ly-cao-tong]
+  - key: ly-hue-tong
+    name: Lý Huệ Tông
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Việt
+    born: 1194
+    died: 1226-09-03
+    prominence: 2
+    note: "Born Lý Sảm (July 1194, no day); eighth emperor of the Lý dynasty, 1211-1224. Mentally ill from 1224, he ceded the throne to his young daughter Lý Chiêu Hoàng and became a Buddhist monk; Trần Thủ Độ forced him to suicide in 1226. The article is a short stub."
+    coverage: partly
+    coverage_note: "dates, abdication in favour of his daughter and death from a short stub article and the Lý Chiêu Hoàng article; nothing else"
+    sources: [wp-ly-hue-tong, wp-ly-chieu-hoang]
+  - key: ly-chieu-hoang
+    name: Lý Chiêu Hoàng
+    type: Royalty
+    house: Lý dynasty
+    realm: Đại Việt
+    born: 1218
+    died: 1278
+    prominence: 3
+    note: "Born Lý Phật Kim (September of the lunar year 1218, no day); the ninth and last sovereign of the Lý dynasty and the only empress regnant in Vietnamese history. Her father ceded the throne to her at the age of six in October of the lunar year 1224; she ruled under Trần Thủ Độ and, in October or November 1225, was secretly married to the seven-year-old Trần Cảnh, to whom she ceded the throne; the Trần dynasty began on 31 December 1225. Demoted to Empress Chiêu Thánh in January 1226 and to princess in 1237; remarried to Lê Phụ Trần in 1258. Died at Cổ Pháp in March 1278 aged 61. Title: 'Emperor of Đại Việt' (same wording as the other sovereigns; the article says 'empress of Đại Việt')."
+    coverage: partly
+    coverage_note: "dates, reign, abdication, marriages and death from the English Wikipedia article; nothing else"
+    sources: [wp-ly-chieu-hoang]
+  # ---- Tran dynasty
+  - key: tran-thai-tong
+    name: Trần Thái Tông
+    type: Royalty
+    house: Trần dynasty
+    realm: Đại Việt
+    born: 1218-07-17
+    died: 1277-05-05
+    prominence: 3
+    note: "Born Trần Cảnh; first emperor of the Trần dynasty, reigning 1226-1258 (33 years, per the lead), then retired emperor for 19 years. Placed on the throne through his uncle Trần Thủ Độ after marrying the child empress Lý Chiêu Hoàng. Reigned through the first Mongol invasion (autumn 1257), when the Mongol general Uriyangkhadai occupied Thăng Long for nine days. Abdicated to his son Trần Hoảng (Thánh Tông) in 1258 and kept ruling as retired emperor. Author of the Buddhist work Khóa Hư Lục. In 1237 he took his brother Trần Liễu's pregnant wife Thuận Thiên as empress, provoking Liễu's revolt."
+    coverage: partly
+    coverage_note: "dates, accession, first Mongol invasion, abdication and family crisis from the English Wikipedia article; children and writings only listed; no artworks"
+    sources: [wp-tran-thai-tong, wp-tran-thanh-tong]
+  - key: tran-thanh-tong
+    name: Trần Thánh Tông
+    type: Royalty
+    house: Trần dynasty
+    realm: Đại Việt
+    born: 1240-10-12
+    died: 1290-07-03
+    prominence: 3
+    note: "Born Trần Hoảng; second emperor of the Trần dynasty, 1258-1278, then retired emperor (Thái Thượng Hoàng) from 1279 to his death, ruling with his son Nhân Tông. Considered one of the greatest Trần emperors; ordered the first Trần imperial examination in March 1266. With Nhân Tông he led the second and third resistance to the Mongols. Buried at Dụ Lăng. Death date differs between articles (see discrepancies)."
+    coverage: partly
+    coverage_note: "dates, reign, relations with Kublai and the second and third Mongol invasions from the English Wikipedia article; domestic administration only summarised; no artworks"
+    sources: [wp-tran-thanh-tong, wp-tran-nhan-tong]
+  - key: tran-nhan-tong
+    name: Trần Nhân Tông
+    type: Royalty
+    house: Trần dynasty
+    realm: Đại Việt
+    born: 1258-12-07
+    died: 1308-12-16
+    prominence: 3
+    note: "Born Trần Khâm; third emperor of the Trần dynasty, 1278-1293, then Emperor Emeritus (Thái Thượng Hoàng). With his father he led the victories over the Yuan in 1285 and 1288. Passed the throne to his son Trần Anh Tông on 3 March 1293, was ordained a Buddhist monk in 1295 and founded the Trúc Lâm school at Yên Tử. In 1306 he gave his daughter Huyền Trân to the Cham king Jaya Simhavarman III in return for two Cham provinces."
+    coverage: partly
+    coverage_note: "dates, the Mongol wars, abdication, retirement and the Huyền Trân marriage from the English Wikipedia article; family only listed; no artworks"
+    sources: [wp-tran-nhan-tong, wp-tran-thanh-tong]
+  - key: tran-anh-tong
+    name: Trần Anh Tông
+    type: Royalty
+    house: Trần dynasty
+    realm: Đại Việt
+    born: 1276-09-17
+    died: 1320-12-12
+    prominence: 2
+    note: "Born Trần Thuyên; fourth emperor of the Trần dynasty, 1293-1314, the first Trần emperor to rule without a Mongol attack. A long period of peace and prosperity; took two Cham prefectures in 1306 (the Huyền Trân marriage) and defeated and captured the Cham king Chế Chí in 1312. Passed the throne to Trần Minh Tông in 1314 and held the title Thái Thượng Hoàng for six years."
+    coverage: partly
+    coverage_note: "dates, reign, Champa dealings and retirement from the English Wikipedia article; family only listed; no artworks"
+    sources: [wp-tran-anh-tong]
+  - key: tran-hung-dao
+    name: Trần Hưng Đạo
+    type: Nobility
+    roles: [general]
+    house: Trần dynasty
+    realm: Đại Việt
+    born: 1228
+    died: 1300
+    prominence: 5
+    note: "Born Trần Quốc Tuấn, son of Prince Trần Liễu and nephew of Trần Thái Tông; Grand Prince Hưng Đạo (the title was bestowed after his death). Commander of the Đại Việt forces against the second (1284-1285) and third (1287-1288) Mongol invasions; in 1288 he planned the ambush on the Bạch Đằng River that destroyed the Yuan fleet. Died of natural causes in 1300, was cremated and his ashes were scattered under an oak near Thăng Long. Revered as Đức Thánh Trần. Age and birth year are given inconsistently in the article (see discrepancy). No title row: the article gives no dated office."
+    coverage: partly
+    coverage_note: "life dates, the three Mongol invasions, Bạch Đằng, death and cult from the English Wikipedia article; family and legacy places only summarised; no artworks"
+    sources: [wp-tran-hung-dao, wp-battle-of-bach-dang-1288]
+  # ---- Ho dynasty
+  - key: ho-quy-ly
+    name: Hồ Quý Ly
+    type: Royalty
+    house: Hồ dynasty
+    realm: Đại Ngu
+    born: 1336
+    prominence: 3
+    note: "Born Lê Quý Ly (adopted by Lê Huan); rose as a Trần court official and general in the Cham wars, was chief minister from March 1387 and in 1400 dethroned the last Trần emperor, renaming the kingdom from Đại Việt to Đại Ngu (the article: ruled 1400 to 1401 as founding emperor of the short-lived Hồ dynasty). Abdicated in 1401 to his second son Hồ Hán Thương and styled himself Emperor Emeritus. Introduced the first Vietnamese banknotes and a new capital Tây Đô in Thanh Hóa (the citadel is a UNESCO site). Captured by the Ming in 1407 and exiled to China; the lead gives his dates as 1336-1407? and the article says it is not clear when he died, so no death year is entered."
+    coverage: partly
+    coverage_note: "birth, rise, reforms, usurpation, reign and Ming capture from the English Wikipedia article; Cham wars and family only summarised; death not entered (uncertain); no artworks"
+    sources: [wp-ho-quy-ly]
+  # ---- Later Le dynasty
+  - key: le-loi
+    name: Lê Lợi
+    type: Royalty
+    house: Later Lê dynasty
+    realm: Đại Việt
+    born: 1385-09-10
+    died: 1433-10-05
+    prominence: 5
+    note: "Also Lê Thái Tổ and Bình Định vương; leader of the Lam Sơn uprising (1418-1427) against Ming rule and founder of the Later Lê dynasty. Took the throne of the restored Đại Việt in 1428 (15 April in his article, 29 April in the Lam Sơn article), chose the era name Thuận Thiên, and was recognised by the Ming as 'administrator of the affairs of the state of Annam' in 1431. Renamed Thăng Long Đông Kinh. Died on 5 October 1433, appointing Lê Sát regent for his second son Lê Thái Tông."
+    coverage: partly
+    coverage_note: "life dates, the uprising, accession and reign from the English Wikipedia articles (Lê Lợi in full; Lam Sơn uprising selectively); his generals and the legends only mentioned; no artworks"
+    sources: [wp-le-loi, wp-lam-son-uprising]
+  - key: le-thai-tong
+    name: Lê Thái Tông
+    type: Royalty
+    house: Later Lê dynasty
+    realm: Đại Việt
+    born: 1423-12-22
+    died: 1442-08-28
+    prominence: 2
+    note: "Born Lê Nguyên Long, second son of Lê Lợi; second emperor of the Later Lê dynasty, 1433-1442. Succeeded at about ten under the regent Lê Sát, whom he had executed after officially taking power in 1438. Led three campaigns against northwestern chiefs (1440-1441). Died suddenly after a visit to the Lychee Garden of Nguyễn Trãi in August 1442; Trãi was executed, and Lê Thánh Tông vindicated him in 1464."
+    coverage: partly
+    coverage_note: "dates, regency, campaigns and the 1442 death from the English Wikipedia article; consorts only listed; no artworks"
+    sources: [wp-le-thai-tong]
+  - key: le-thanh-tong
+    name: Lê Thánh Tông
+    type: Royalty
+    house: Later Lê dynasty
+    realm: Đại Việt
+    born: 1442-08-25
+    died: 1497-03-03
+    prominence: 4
+    note: "Born Lê Tư Thành (Lê Hạo); fifth and longest-reigning emperor of the Later Lê, 1460-1497. Came to power in the counter-coup of 1460 against his half-brother Lê Nghi Dân. Reformed the bureaucracy on the Chinese model with six ministries, a census in 1469 and 13 provinces (dao), issued the Hồng Đức Code in 1483, completed the Đại Việt sử ký toàn thư in 1479, and destroyed Champa as a power in 1471. Invaded Laos from 1479. His reign is called the prosperous reign of Hồng Đức."
+    coverage: partly
+    coverage_note: "dates, accession, reforms, laws, Champa and Laos campaigns from the English Wikipedia article; trade policy and the eunuch episodes only mentioned; no artworks"
+    sources: [wp-le-thanh-tong]
+  # ---- Mac dynasty
+  - key: mac-dang-dung
+    name: Mạc Đăng Dung
+    type: Royalty
+    house: Mạc dynasty
+    realm: Đại Việt
+    born: 1483-11-23
+    died: 1541-08-22
+    prominence: 3
+    note: "Also Mạc Thái Tổ, reign name Minh Đức; a fisherman's son who rose from bodyguard to commander under the Lê, forced Lê Chiêu Tông to abdicate in 1522, had him and Lê Cung Hoàng killed in 1527 and proclaimed the Mạc dynasty. Abdicated in 1529 to his son Mạc Đăng Doanh and lived as retired emperor; resumed power when Doanh died during the Ming threat of the late 1530s (the article gives no year). Obtained temporary Ming recognition in 1528; in 1540 he accepted humiliating Ming demands. The restored Lê (from 1533, under Nguyễn Kim and Trịnh Kiểm) held the south."
+    coverage: partly
+    coverage_note: "dates, the usurpation, abdication, Ming dealings and death from the English Wikipedia article; the years of the resumption of power not given; no artworks"
+    sources: [wp-mac-dang-dung]
+  # ---- Khmer Empire
+  - key: suryavarman-i
+    name: Suryavarman I
+    type: Royalty
+    realm: Khmer Empire
+    died: 1050
+    prominence: 3
+    note: "Posthumously Nirvanapada; king of the Khmer Empire from about 1002 to 1050. Usurped Udayadityavarman I, fought a nine-year war of succession against Jayavirahvarman and claimed the throne in 1010; had 4,000 officials swear an oath of allegiance in 1011 (six inscriptions). Expanded west to Lopburi and east into the Mekong basin; allied with the Chola emperor Rajendra Chola I from about 1012; built the West Baray and completed Phimeanakas and Ta Keo, and Preah Vihear. Mahayana Buddhist who tolerated Hinduism."
+    coverage: partly
+    coverage_note: "reign, accession, expansion, Chola links and works from the English Wikipedia article; no birth date is given; no artworks"
+    sources: [wp-suryavarman-i]
+  - key: suryavarman-ii
+    name: Suryavarman II
+    type: Royalty
+    realm: Khmer Empire
+    died: 1150
+    prominence: 5
+    note: "Posthumously Paramavishnuloka; ruler of the Khmer Empire 1113-1150 (enthroned in 1113, formal coronation 1119, both by the priest Divakarapandita). Builder of Angkor Wat, the largest Hindu temple in the world, dedicated to Vishnu; his tomb was placed there. Reunited the empire; his attacks on Đại Việt (1128, 1129, 1132, 1137) failed, but in 1145 he invaded Champa and sacked Vijaya. Sent missions to the Chola in 1114 and resumed relations with China in 1116. Died in 1150, possibly on campaign (see discrepancy)."
+    coverage: partly
+    coverage_note: "reign, coronations, wars, diplomacy and Angkor Wat from the English Wikipedia article; Angkor Wat's construction dates are not given in it; no artworks"
+    sources: [wp-suryavarman-ii]
+  - key: jayavarman-vii
+    name: Jayavarman VII
+    type: Royalty
+    realm: Khmer Empire
+    born: 1122
+    died: 1218
+    died_estimated: true
+    prominence: 4
+    note: "Posthumously Mahaparamasaugata; son of Dharanindravarman II. Led the Khmer army that drove the Chams out after their sack of the capital in 1177 and was crowned in 1181. The first Khmer king devoted to Buddhism; built the Bayon and Angkor Thom, Ta Prohm (dedicated to his mother in 1186) and Preah Khan, 102 hospitals and 121 rest houses. Conquered Champa in 1190-1191, making it a dependency for 30 years. Died around 1218; Jayavarman VIII later defaced his Buddhist works."
+    coverage: partly
+    coverage_note: "dates, the Cham war, coronation, building programme and succession from the English Wikipedia article; temple details and the list of Buddha images only summarised; no artworks"
+    sources: [wp-jayavarman-vii]
+  # ---- Pagan
+  - key: anawrahta
+    name: Anawrahta
+    type: Royalty
+    house: Pagan dynasty
+    realm: Pagan Kingdom
+    born: 1014-05-11
+    died: 1077-04-11
+    prominence: 4
+    note: "Born Min Saw; founder of the Pagan Empire (the article: 'father of the Burmese nation'). Rebelled at Mount Popa in 1044, killed his half-brother King Sokkate in single combat at Myinkaba on 11 August 1044 and took the throne on 16 December 1044. Converted to Theravada Buddhism in 1056 under Shin Arahan; conquered Thaton on 17 May 1057; brought the Irrawaddy valley, the Shan Hills and north Arakan under Pagan and checked the Khmer advance on the Tenasserim coast. Built weirs and canals that made Kyaukse the granary of Upper Burma, and began the Shwezigon Pagoda in 1059. Died on 11 April 1077 outside Pagan."
+    coverage: partly
+    coverage_note: "life dates, accession, conquests, reforms and death from the English Wikipedia article; the chronicle dating table and campaign details only summarised; no artworks"
+    sources: [wp-anawrahta]
+
+places:
+  - key: thang-long
+    name: Thăng Long (Hanoi)
+    historical_name: "Đại La; Thăng Long; Đông Kinh under Lê Lợi"
+    kind: city
+    region: Hanoi
+    country: Vietnam
+    lat: 21.034
+    lng: 105.840
+    visitable: true
+    visit_site: "Imperial Citadel of Thăng Long"
+    founded: 1010
+    built_by: "Lý Thái Tổ, who moved the capital here from Hoa Lư in 1010; the site was Đại La, the city the Tang general Gao Pian built in the 860s"
+    note: "Named Thăng Long ('ascending dragon') by Lý Thái Tổ in 1010; by 1010, 11 palaces were built. The capital of the Lý and Trần; sacked or abandoned in the Mongol invasions; Lê Lợi renamed it Đông Kinh; the Ming administrative centre in it was Đông Quan."
+    sources: [wp-ly-thai-to, wp-le-loi]
+  - key: hoa-lu
+    name: Hoa Lư
+    kind: city
+    region: Ninh Bình
+    country: Vietnam
+    lat: 20.28
+    lng: 105.91
+    visitable: true
+    visit_site: "Hoa Lư Ancient Capital"
+    note: "Capital of the Đinh and Anterior Lê dynasties, a natural fortress between mountains in the southeast of the Red River Delta; Lý Thái Tổ left it in 1010 as 'a narrow citadel in a low-lying, damp area'. Birthplace of Lý Thái Tông in 1000."
+    sources: [wp-ly-thai-to, wp-ly-thai-tong]
+  - key: lam-son
+    name: Lam Sơn
+    kind: village
+    region: Thanh Hóa
+    country: Vietnam
+    lat: 19.9
+    lng: 105.3
+    visitable: true
+    note: "The rural, mountainous home area of Lê Lợi in Thanh Hóa province, where he swore the Lũng Nhai oath in 1416 and raised the banner of revolt on 7 February 1418, calling himself Bình Định vương. The point is the approximate centre of the commune."
+    sources: [wp-le-loi, wp-lam-son-uprising]
+  - key: bach-dang-river
+    name: Bạch Đằng River
+    kind: battlefield
+    region: Quảng Ninh and Hải Phòng
+    country: Vietnam
+    lat: 20.88
+    lng: 106.78
+    visitable: true
+    note: "A distributary of the Red River running between Yên Hưng (Quảng Ninh) and Thủy Nguyên (Hải Phòng) to the sea. Site of the Yuan fleet's destruction in 1288 by iron-tipped stakes set under the tide, a tactic the article says Ngô Quyền used in the earlier battle of 938."
+    sources: [wp-battle-of-bach-dang-1288]
+  - key: angkor-wat
+    name: Angkor Wat
+    kind: temple
+    region: Siem Reap
+    country: Cambodia
+    lat: 13.4125
+    lng: 103.867
+    visitable: true
+    visit_site: "Angkor Archaeological Park"
+    built_by: "Suryavarman II"
+    note: "The largest Hindu temple in the world, dedicated to Vishnu and Shiva; five central towers evoke Mount Meru; over 1,860 apsaras and long bas-reliefs, one showing Suryavarman II. It faces west. The article says it appears to have been completed only after his death in 1150, and that his tomb was placed there. No founding year is given in the article."
+    sources: [wp-suryavarman-ii]
+  - key: angkor-thom
+    name: Angkor Thom
+    historical_name: Indrapattha
+    kind: city
+    region: Siem Reap
+    country: Cambodia
+    lat: 13.4412
+    lng: 103.859
+    visitable: true
+    visit_site: "Angkor Archaeological Park (Bayon)"
+    built_by: "Jayavarman VII"
+    note: "A new city centre ('Grand Angkor'), called Indrapattha in its day, built by Jayavarman VII around his temple-mountain the Bayon, whose outer walls carry reliefs of warfare, the naval battle on the Tonlé Sap and everyday life. The Suryavarman I article says that king's palace stood in the vicinity of Angkor Thom. No founding year is given."
+    sources: [wp-jayavarman-vii, wp-suryavarman-i]
+  - key: bagan
+    name: Bagan (Pagan)
+    kind: city
+    region: Mandalay Region
+    country: Myanmar
+    lat: 21.172
+    lng: 94.866
+    visitable: true
+    visit_site: "Bagan Archaeological Zone"
+    note: "Capital of the Pagan kingdom; Anawrahta killed Sokkate at Myinkaba nearby in 1044, brought back Mon artisans from Thaton in 1057 to build its monuments, and died on the outskirts in 1077. The article says the remains of its monuments rival Angkor Wat."
+    sources: [wp-anawrahta]
+  - key: shwezigon-pagoda
+    name: Shwezigon Pagoda
+    kind: pagoda
+    city: Nyaung-U
+    region: Mandalay Region
+    country: Myanmar
+    lat: 21.1756
+    lng: 94.9
+    visitable: true
+    founded: 1059
+    built_by: "Anawrahta (begun in 1059; unfinished at his death in 1077)"
+    note: "Anawrahta's chief monument and the first of the Pagan temples built by him."
+    sources: [wp-anawrahta]
+
+events:
+  - key: capital-moved-to-thang-long-1010
+    name: Ly Thai To moves the capital to Thang Long
+    type: Founding
+    year: 1010
+    place: thang-long
+    places:
+      - {place: hoa-lu, role: start, note: "The old capital of the Đinh and Anterior Lê dynasties, left behind"}
+    people:
+      - {person: ly-thai-to, role: founder}
+    prominence: 4
+    note: "Lý Thái Tổ issued the Edict on the Transfer of the Capital, judging Hoa Lư too narrow and low-lying, and chose Đại La, 'between Heaven and Earth where the coiling dragon and the crouching tiger lie'. When his boat docked a dragon reportedly rose above it and he renamed the place Thăng Long. The article dates the move to 1010 and says it began the more than 1,000 years of Hanoi's history as capital. The Song recognised him the same year."
+    sources: [wp-ly-thai-to]
+  - key: ly-song-war-1075
+    name: Ly-Song war
+    type: War
+    year: 1075
+    end_year: 1076
+    people:
+      - {person: ly-nhan-tong, role: emperor}
+    prominence: 3
+    note: "Lý Thường Kiệt and Tôn Đản struck first in 1075, attacking Lian and Qin and besieging Yongzhou (the siege lasted 40 days; over 58,000 killed in the city by the Vietnamese). The Song invaded in the twelfth month of 1076, were held on the Như Nguyệt River, then beat Lý Thường Kiệt at Phú Lương; Lý Nhân Tông proposed a cease-fire, accepted after the Song lost, per the article, 400,000 men. Lý Thường Kiệt's poem Nam quốc sơn hà is called Vietnam's first declaration of independence. The article labels the war 'Sino-Vietnamese War (1075-1076)'; no Gregorian date for the Song invasion is given (see discrepancy)."
+    sources: [wp-ly-nhan-tong]
+  - key: tran-dynasty-founded-1225
+    name: Foundation of the Tran dynasty
+    type: Founding
+    date: 1225-12-31
+    people:
+      - {person: tran-thai-tong, role: founder}
+      - {person: ly-chieu-hoang, role: abdicated}
+    prominence: 3
+    note: "Trần Thủ Độ arranged a secret marriage between Lý Chiêu Hoàng and Trần Cảnh in October or November 1225 and had her cede the throne to him; the Trần dynasty began 'on the first day of the twelfth lunar month, 1225 (31 December 1225)' per the Chiêu Hoàng article. Thái Tông's and other articles date his reign from 1226 (see discrepancy). The Lý lasted 216 years."
+    sources: [wp-ly-chieu-hoang, wp-tran-thai-tong]
+  - key: first-mongol-invasion-of-dai-viet-1257
+    name: First Mongol invasion of Dai Viet
+    type: War
+    year: 1257
+    end_year: 1258
+    people:
+      - {person: tran-thai-tong, role: defender}
+      - {person: tran-hung-dao, role: officer commanding frontier troops}
+    prominence: 3
+    note: "In autumn 1257 the Mongol general Uriyangkhadai demanded passage to attack the Song and, after three envoys were imprisoned in Thăng Long, invaded. The Vietnamese were routed at Nô Nguyên (Việt Trì) and at the Phù Lỗ bridge; the Trần evacuated the capital, the Mongols left after nine days, and peace was re-established in December 1257. Thái Tông agreed to send tribute every three years. The Hưng Đạo article dates the invasion 1258 (see discrepancy). The brief's 1258 is the usual date; the articles read here say 1257."
+    sources: [wp-tran-thai-tong, wp-tran-thanh-tong, wp-tran-hung-dao]
+  - key: second-mongol-invasion-of-dai-viet-1284
+    name: Second Mongol invasion of Dai Viet
+    type: War
+    year: 1284
+    end_year: 1285
+    people:
+      - {person: tran-thanh-tong, role: retired emperor, joint supreme commander}
+      - {person: tran-nhan-tong, role: emperor, joint supreme commander}
+      - {person: tran-hung-dao, role: commander-in-chief}
+    prominence: 4
+    note: "Toghan led the infantry from the north and Sogetu the navy through Champa from December 1284. After defections (Trần Ích Tắc, Trần Kiện) and the loss of Thăng Long, the Trần won at Hàm Tử (April 1285) and Chương Dương (10 May 1285), Sogetu was killed and the emperors returned to the capital on 6 June 1285 (lunar dates in one article). The Hưng Đạo article puts the start in January 1285 (see discrepancy)."
+    sources: [wp-tran-thanh-tong, wp-tran-nhan-tong, wp-tran-hung-dao]
+  - key: third-mongol-invasion-of-dai-viet-1287
+    name: Third Mongol invasion of Dai Viet
+    type: War
+    year: 1287
+    end_year: 1288
+    people:
+      - {person: tran-thanh-tong, role: retired emperor}
+      - {person: tran-nhan-tong, role: emperor}
+      - {person: tran-hung-dao, role: commander-in-chief}
+    prominence: 4
+    note: "Launched in March 1287 (the Bạch Đằng article says late 1287, the fleet sailing from Qinzhou on 17 December) under Toghan; Trần Khánh Dư destroyed the Yuan supply fleet at Vân Đồn, and Hưng Đạo's ambush on the Bạch Đằng River ended the war in 1288. Kublai exiled Toghan to Yangzhou for life."
+    sources: [wp-tran-thanh-tong, wp-tran-nhan-tong, wp-battle-of-bach-dang-1288]
+  - key: battle-of-bach-dang-1288
+    name: Battle of Bach Dang
+    type: Battle
+    date: 1288-04-09
+    place: bach-dang-river
+    people:
+      - {person: tran-hung-dao, role: victor}
+      - {person: tran-nhan-tong, role: emperor, present}
+      - {person: tran-thanh-tong, role: retired emperor, present}
+    prominence: 5
+    note: "Hưng Đạo lured the Yuan fleet under the admirals Omar and Fan Yi into the river on the high tide and trapped it on iron-tipped stakes as the tide fell; about 400 ships were taken or burned, Fan Yi was killed and Omar captured. The decisive naval battle of the third invasion, ending Kublai's plan to conquer Đại Việt and Champa. 9 April 1288 in the Bạch Đằng article; the Thánh Tông and Nhân Tông articles give 8 March 1288 as a lunar date (see discrepancy)."
+    sources: [wp-battle-of-bach-dang-1288, wp-tran-hung-dao]
+  - key: ho-usurpation-1400
+    name: Ho Quy Ly seizes the throne
+    type: Usurpation
+    year: 1400
+    people:
+      - {person: ho-quy-ly, role: usurper}
+    prominence: 3
+    note: "Hồ Quý Ly dethroned the last Trần emperor, declared himself emperor, renamed the kingdom Đại Ngu and executed 370 dissidents after a failed coup. The Lê Lợi article dates the deposition 1399 (see discrepancy). He abdicated to Hồ Hán Thương in 1401."
+    sources: [wp-ho-quy-ly]
+  - key: ming-conquest-of-dai-ngu-1406
+    name: Ming conquest of Dai Ngu
+    type: War
+    year: 1406
+    end_year: 1407
+    people:
+      - {person: ho-quy-ly, role: defeated}
+    prominence: 4
+    note: "The Ming invaded in 1406 under the pretext of restoring the Trần (215,000 troops under Zhang Fu and Mu Sheng in the Lê Lợi article), defeated Hồ Quý Ly's army, captured him in Thiên Cầm cave in 1407 and made the country the province of Jiaozhi."
+    sources: [wp-ho-quy-ly, wp-le-loi]
+  - key: lam-son-uprising-1418
+    name: Lam Son uprising
+    type: Rebellion
+    date: 1418-02-07
+    end_year: 1427
+    place: lam-son
+    places:
+      - {place: thang-long, role: siege, note: "Ming-held Đông Quan (modern Hanoi), besieged from late 1426 until the Đông Quan oath of 16 December 1427"}
+    people:
+      - {person: le-loi, role: leader}
+    prominence: 4
+    note: "Lê Lợi swore the Lũng Nhai oath with 18 others in early 1416, then on 7 February 1418 proclaimed himself Bình Định vương and rose at Lam Sơn. Defeated and truced in 1422-1424, he moved to Nghệ An in 1424 on Nguyễn Chích's plan, advanced north in 1426, won at Tốt Động - Chúc Động, besieged Đông Quan, destroyed the Ming relief armies at Chi Lăng - Xương Giang in 1427 and secured the Ming withdrawal (the Ming army began leaving on 29 December 1427). The Lê Lợi article gives the start as 'the day after Tết, February 1418'. Lê Lợi took the throne in April 1428."
+    sources: [wp-lam-son-uprising, wp-le-loi]
+  - key: battle-of-tot-dong-chuc-dong-1426
+    name: Battle of Tot Dong - Chuc Dong
+    type: Battle
+    date: 1426-11-07
+    people:
+      - {person: le-loi, role: commander of the Lam Sơn army}
+    prominence: 3
+    note: "Wang Tong's Ming army, split in two, was ambushed at Tốt Động and Chúc Động (south of Hanoi); Chen Qia was killed and Wang Tong badly wounded, his army broken. The Lê Lợi article puts it in early December 1426 and counts about 30,000 Chinese killed or captured by 3,000 rebels (see discrepancy). Lê Lợi himself was still in Thanh Hóa."
+    sources: [wp-lam-son-uprising, wp-le-loi]
+  - key: battle-of-chi-lang-xuong-giang-1427
+    name: Battle of Chi Lang - Xuong Giang
+    type: Battle
+    year: 1427
+    people:
+      - {person: le-loi, role: commander of the Lam Sơn army}
+    prominence: 3
+    note: "The Ming relief armies under Liu Sheng and Mu Sheng entered in late 1427. Liu Sheng was ambushed and killed at Chi Lăng; the citadel of Xương Giang (modern Bắc Giang) fell; Mu Sheng retreated. The end of the Ming effort. The date of Xương Giang's fall differs between articles (see discrepancy)."
+    sources: [wp-lam-son-uprising, wp-le-loi]
+  - key: dong-quan-oath-1427
+    name: Dong Quan oath
+    type: Treaty
+    date: 1427-12-16
+    people:
+      - {person: le-loi, role: negotiated the Ming withdrawal}
+    prominence: 2
+    note: "Wang Tong and his generals swore with the Lam Sơn commanders south of Đông Quan. Wang Tong's army began its journey home on 29 December 1427 and he followed on 3 January 1428. The Xuande Emperor accepted the withdrawal and enfeoffed the puppet Trần Cảo as King of Annam."
+    sources: [wp-lam-son-uprising]
+  - key: le-loi-takes-the-throne-1428
+    name: Le Loi takes the throne
+    type: Coronation
+    date: 1428-04-15
+    people:
+      - {person: le-loi, role: crowned}
+    prominence: 4
+    note: "Lê Lợi took the throne as emperor of the restored Đại Việt, era name Thuận Thiên, founding the Later Lê dynasty, which lasted nearly 400 years. 15 April 1428 in his article; 29 April 1428 in the Lam Sơn article (see discrepancy). Nguyễn Trãi wrote the Bình Ngô đại cáo, the proclamation of independence."
+    sources: [wp-le-loi, wp-lam-son-uprising]
+  - key: conquest-of-champa-1471
+    name: Le Thanh Tong destroys Champa
+    type: War
+    year: 1471
+    people:
+      - {person: le-thanh-tong, role: victor}
+    prominence: 3
+    note: "The article calls it the final destruction of Champa's ruling house in 1471, after a Cham army of 100,000 under Maha Sajan besieged the Vietnamese garrison at Huế in 1470. The balance of power between Cham and Vietnamese of more than 500 years ended; Thánh Tông settled Vietnamese in the conquered territories."
+    sources: [wp-le-thanh-tong]
+  - key: hong-duc-code-1483
+    name: Hong Duc Code
+    type: Law
+    year: 1483
+    people:
+      - {person: le-thanh-tong, role: issued}
+    prominence: 2
+    note: "The new code of Đại Việt (the Lê dynasty code), Chinese in basis but with Vietnamese features: women held a higher position, parental consent was not required for marriage and daughters had equal inheritance rights. Part of Lê Thánh Tông's reform of the state (six ministries, the 1469 census, 13 provinces). The woodblocks are in the National Library."
+    sources: [wp-le-thanh-tong]
+  - key: mac-dang-dung-proclaimed-emperor-1527
+    name: Mac Dang Dung proclaims the Mac dynasty
+    type: Usurpation
+    year: 1527
+    people:
+      - {person: mac-dang-dung, role: usurper}
+    prominence: 3
+    note: "After forcing Lê Chiêu Tông to abdicate in 1522 and capturing him in 1526, Mạc Đăng Dung had him and Lê Cung Hoàng killed in 1527 and proclaimed himself emperor, reign name Minh Đức. The Ming recognised him for a time from 1528; the Lê were restored in the south in 1533."
+    sources: [wp-mac-dang-dung]
+  - key: khmer-invasions-of-dai-viet-1128
+    name: Khmer invasions of Dai Viet under Suryavarman II
+    type: War
+    year: 1128
+    end_year: 1137
+    people:
+      - {person: suryavarman-ii, role: attacker}
+    prominence: 2
+    note: "In 1128 Suryavarman II is said to have led 20,000 soldiers against Đại Việt and been defeated; in 1129 a fleet of more than 700 vessels attacked its coast; combined Khmer and Cham forces attacked again in 1132, with a final attempt in 1137. All failed, per the article."
+    sources: [wp-suryavarman-ii]
+  - key: sack-of-vijaya-1145
+    name: Suryavarman II sacks Vijaya
+    type: War
+    year: 1145
+    people:
+      - {person: suryavarman-ii, role: victor}
+    prominence: 2
+    note: "Suryavarman II appears to have invaded Champa, defeated Jaya Indravarman III and sacked Vijaya with help from Kulothunga Chola II, and set his wife's brother Harideva on the Cham throne; Jaya Harivarman I soon retook the capital and killed Harideva. A final expedition in 1150 ended in disastrous withdrawal."
+    sources: [wp-suryavarman-ii]
+  - key: cham-sack-of-angkor-1177
+    name: Cham sack of Angkor (Battle of Tonle Sap)
+    type: Battle
+    year: 1177
+    people:
+      - {person: jayavarman-vii, role: led the Khmer army that later drove out the Cham (1177-1181)}
+    prominence: 4
+    note: "The Cham king Jaya Indravarman IV sailed a fleet up the Mekong, across Lake Tonlé Sap and up the Siem Reap River, pillaged the capital Yasodharapura and put King Tribhuvanadityavarman to death; the Chams held Cambodia for four years. Jayavarman VII's counter-campaign, including the naval battle shown on the Bayon and at Banteay Chmar, drove them out. Michael Vickery doubts both the date and the event (see discrepancy)."
+    sources: [wp-jayavarman-vii]
+  - key: jayavarman-vii-crowned-1181
+    name: Coronation of Jayavarman VII
+    type: Coronation
+    year: 1181
+    people:
+      - {person: jayavarman-vii, role: crowned}
+    prominence: 3
+    note: "After the Cham were driven out, Jayavarman found the capital in disorder, ended the quarrels of the factions and was crowned king in 1181. The article gives no place."
+    sources: [wp-jayavarman-vii]
+  - key: jayavarman-vii-conquest-of-champa-1190
+    name: Jayavarman VII conquers Champa
+    type: War
+    year: 1190
+    end_year: 1191
+    people:
+      - {person: jayavarman-vii, role: victor}
+    prominence: 3
+    note: "Helped by the refugee Cham prince Sri Vidyanandana, Jayavarman sacked and conquered Champa in revenge for 1177; it stayed a dependency of the Khmer Empire for 30 years."
+    sources: [wp-jayavarman-vii]
+  - key: conquest-of-thaton-1057
+    name: Anawrahta conquers Thaton
+    type: War
+    date: 1057-05-17
+    people:
+      - {person: anawrahta, role: victor}
+    places:
+      - {place: bagan, role: destination, note: "Over 30,000 captives, many of them artisans, were brought to Pagan on the traditional account"}
+    prominence: 3
+    note: "After a three-month siege (the army, led by the 'Four Paladins', invaded in early 1057) Thaton fell on 17 May 1057 (11th waxing of Nayon, 419 ME). Seen as the turning point in Burmese history; Michael Aung-Thwin argues that Thaton's cultural contribution is a post-Pagan legend."
+    sources: [wp-anawrahta]
+
+links:
+  - {parent: ly-thai-to, child: ly-thai-tong}
+  - {parent: ly-thai-tong, child: ly-thanh-tong}
+  - {parent: ly-thanh-tong, child: ly-nhan-tong}
+  - {parent: ly-hue-tong, child: ly-chieu-hoang}
+  - {spouse: ly-chieu-hoang, to: tran-thai-tong, year: 1225}
+  - {parent: tran-thai-tong, child: tran-thanh-tong}
+  - {parent: tran-thanh-tong, child: tran-nhan-tong}
+  - {parent: tran-nhan-tong, child: tran-anh-tong}
+  - {parent: le-loi, child: le-thai-tong}
+  - {parent: le-thai-tong, child: le-thanh-tong}
+
+moments:
+  - {person: ly-thai-tong, role: born, place: hoa-lu, year: 1000, sources: [wp-ly-thai-tong]}
+  - {person: ly-thai-to, role: worked, place: hoa-lu, sources: [wp-ly-thai-to]}
+  - {person: ly-thai-to, role: lived, place: thang-long, year: 1010, sources: [wp-ly-thai-to]}
+  - {person: le-loi, role: born, place: lam-son, year: 1385, sources: [wp-le-loi]}
+  - {person: suryavarman-ii, role: buried, place: angkor-wat, sources: [wp-suryavarman-ii]}
+  - {person: jayavarman-vii, role: worked, place: angkor-thom, sources: [wp-jayavarman-vii]}
+  - {person: anawrahta, role: died, place: bagan, year: 1077, sources: [wp-anawrahta]}
+  - {person: anawrahta, role: worked, place: shwezigon-pagoda, year: 1059, sources: [wp-anawrahta]}
+
+titles:
+  # Dai Co Viet and Dai Viet: Ly dynasty
+  - {person: ly-thai-to, title: Emperor of Đại Cồ Việt, realm: Đại Cồ Việt, from: 1009-11-21, to: 1028-03-31, note: "Proclaimed emperor two days after Lê Long Đĩnh died on 19 November 1009; reign 1009-1028 (18 years). Died 31 March 1028", sources: [wp-ly-thai-to]}
+  - {person: ly-thai-tong, title: Emperor of Đại Cồ Việt, realm: Đại Cồ Việt, from: 1028, to: 1054-11-03, note: "Ascended in 1028 (April 1028 in the Thánh Tông article; no day); reign 1028-1054. The realm name follows the Thánh Tông article, which says the name changed to Đại Việt on Thánh Tông's succession; his own article says 'ruled Đại Việt'. He handed the governing to his son a few months before he died on 3 November 1054", sources: [wp-ly-thai-tong, wp-ly-thanh-tong]}
+  - {person: ly-thanh-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1054-11-03, to: 1072-02-01, note: "Succeeded on 3 November 1054 and shortened the kingdom's name to Đại Việt. Died 1 February 1072 in the lead, 'January 1072' in the death section (see discrepancy)", sources: [wp-ly-thanh-tong]}
+  - {person: ly-nhan-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1072, to: 1128-01-15, note: "Succeeded in the first lunar month of 1072 at seven. Died 15 January 1128 (lead), or December 1127 (family section; see discrepancy)", sources: [wp-ly-nhan-tong]}
+  - {person: ly-hue-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1211, to: 1224, note: "Reign 1211-1224 per the lead; ceded the throne to his daughter in October of the lunar year 1224 and became a monk", sources: [wp-ly-hue-tong, wp-ly-chieu-hoang]}
+  - {person: ly-chieu-hoang, title: Emperor of Đại Việt, realm: Đại Việt, from: 1224, to: 1225-12-31, note: "Ruled 1224-1225 as empress regnant. Ceded the throne to her husband Trần Cảnh; the Trần dynasty began on 31 December 1225", sources: [wp-ly-chieu-hoang]}
+  # Tran dynasty
+  - {person: tran-thai-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1226, to: 1258-03-30, note: "Reign 1226-1258 in the lead (33 years); the Chiêu Hoàng article dates the Trần dynasty from 31 December 1225 (see discrepancy). Ceded the throne on the 24th day of the second lunar month (30 March) 1258 and became retired emperor, to 1277", sources: [wp-tran-thai-tong, wp-tran-thanh-tong]}
+  - {person: tran-thanh-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1258-03-30, to: 1278-11-08, note: "Enthroned on the 24th day of the second lunar month (30 March) 1258; ceded the throne on the 22nd day of the tenth lunar month (8 November) 1278 and was retired emperor (Thái Thượng Hoàng) 1279-1290, co-ruling with Nhân Tông", sources: [wp-tran-thanh-tong]}
+  - {person: tran-nhan-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1278-11-08, to: 1293-03-03, note: "Enthroned on 8 November 1278; passed the throne to Anh Tông on 3 March 1293 and was Emperor Emeritus until his death (1294 in the lead; see discrepancy)", sources: [wp-tran-nhan-tong]}
+  - {person: tran-anh-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1293-03-03, to: 1314, note: "Ceded the throne by his father on 3 March 1293 (the Nhân Tông article's date; the Anh Tông article says 1293) and ruled 1293-1314; then retired emperor to 1320", sources: [wp-tran-anh-tong, wp-tran-nhan-tong]}
+  # Ho dynasty
+  - {person: ho-quy-ly, title: Emperor of Đại Ngu, realm: Đại Ngu, from: 1400, to: 1401, note: "Founding emperor of the Hồ dynasty, 1400-1401; abdicated to his son Hồ Hán Thương and styled himself Emperor Emeritus. The Lê Lợi article dates the deposition of the Trần 1399", sources: [wp-ho-quy-ly]}
+  # Later Le
+  - {person: le-loi, title: Emperor of Đại Việt, realm: Đại Việt, from: 1428-04-15, to: 1433-10-05, note: "Took the throne on 15 April 1428 in his own article (29 April in the Lam Sơn article); died 5 October 1433", sources: [wp-le-loi, wp-lam-son-uprising]}
+  - {person: le-thai-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1433, to: 1442-08-28, note: "Second Later Lê emperor from 1433 (lead), at about ten under the regent Lê Sát; the article says he officially took the throne in 1438. Died 28 August 1442 in the lead (see discrepancy)", sources: [wp-le-thai-tong]}
+  - {person: le-thanh-tong, title: Emperor of Đại Việt, realm: Đại Việt, from: 1460, to: 1497-03-03, note: "Proclaimed emperor two days after the counter-coup that killed Lê Nghi Dân in 1460 (nine months after Nghi Dân's coup of 1459); reigned 1460-1497", sources: [wp-le-thanh-tong]}
+  # Mac
+  - {person: mac-dang-dung, title: Emperor of Đại Việt, realm: Đại Việt, from: 1527, to: 1529, note: "Proclaimed the Mạc dynasty in 1527 and abdicated in 1529 to his son Mạc Đăng Doanh; he resumed power on Doanh's death but the article gives no year, so no second row", sources: [wp-mac-dang-dung]}
+  # Khmer
+  - {person: suryavarman-i, title: King of the Khmer, realm: Khmer Empire, from: 1002, from_estimated: true, to: 1050, note: "King from about 1002 (usurping Udayadityavarman I) to 1050; the article also says he claimed the throne in 1010 after a nine-year war and that the epigraphic summary places his death in 1049 (see discrepancies)", sources: [wp-suryavarman-i]}
+  - {person: suryavarman-ii, title: King of the Khmer, realm: Khmer Empire, from: 1113, to: 1150, note: "Enthroned in 1113; formal coronation in 1119; ruled to his death in 1150", sources: [wp-suryavarman-ii]}
+  - {person: jayavarman-vii, title: King of the Khmer, realm: Khmer Empire, from: 1181, to: 1218, to_estimated: true, note: "Crowned in 1181; the article says he died 'around 1218' and speaks of a 37-year reign", sources: [wp-jayavarman-vii]}
+  # Pagan
+  - {person: anawrahta, title: King of Pagan, realm: Pagan Kingdom, from: 1044-12-16, to: 1077-04-11, note: "Ascended on 16 December 1044 after killing King Sokkate on 11 August 1044; died 11 April 1077", sources: [wp-anawrahta]}
+
+discrepancies:
+  - key: ly-thai-to-birthplace
+    question: Where was Lý Công Uẩn (Lý Thái Tổ) born?
+    about: [{person: ly-thai-to}]
+    field: place
+    claims:
+      - {value: "Cổ Pháp district, Đình Bảng village, Từ Sơn, Bắc Ninh (the standard account; the Vietnamese chronicles were written centuries after his death)", sources: [wp-ly-thai-to]}
+      - {value: "Jiaozhou (the Trần-era historian Lê Tắc in the An Nam chí lược); the article adds that someone claimed Fujian, which Lê Tắc calls incorrect", sources: [wp-ly-thai-to]}
+    note: "The record leaves the birthplace out of the place records; the note gives Cổ Pháp as the commonly given birthplace."
+  - key: ly-thai-to-succession-1009
+    question: Was Lý Công Uẩn's enthronement in 1009 peaceful?
+    about: [{person: ly-thai-to}]
+    field: date
+    claims:
+      - {value: "Peaceful: the court proclaimed him on 21 November 1009, two days after Lê Long Đĩnh died, 'without civil war' (basic annals); Ngô Thì Sĩ found no solid evidence for the rumour that he poisoned Long Đĩnh", sources: [wp-ly-thai-to]}
+      - {value: "Not peaceful: according to the An Nam chí lược, Long Đĩnh's brothers Lê Minh Đề and Lê Minh Xưởng launched a campaign for the throne in 1009 and were killed by Công Uẩn", sources: [wp-ly-thai-to]}
+    note: "The record follows the annals (accession 21 November 1009)."
+  - key: ly-thai-tong-state-name
+    question: Was the state called Đại Cồ Việt or Đại Việt during Lý Thái Tông's reign (1028-1054)?
+    about: [{person: ly-thai-tong}, {person: ly-thanh-tong}]
+    field: realm
+    claims:
+      - {value: "Đại Việt: he 'ruled Đại Việt from 1028 to 1054' (his lead)", sources: [wp-ly-thai-tong]}
+      - {value: "Đại Cồ Việt until 3 November 1054: Thánh Tông 'shortened the kingdom's name from Đại Cồ Việt to Đại Việt' on his succession; the Thái Tổ article speaks of Đại Cồ Việt under Thái Tổ", sources: [wp-ly-thanh-tong, wp-ly-thai-to]}
+    note: "Titles for Thái Tổ and Thái Tông use realm Đại Cồ Việt, the specific statement of the rename; later Lý emperors use Đại Việt."
+  - key: ly-thanh-tong-born
+    question: On what date was Lý Thánh Tông born?
+    about: [{person: ly-thanh-tong}]
+    field: born
+    claims:
+      - {value: "19 March 1023", sources: [wp-ly-thanh-tong]}
+      - {value: "30 March 1023, at Long Đức palace (the early-life section of the same article)", sources: [wp-ly-thanh-tong]}
+    note: "The record uses the lead's 19 March 1023."
+  - key: ly-thanh-tong-died
+    question: When did Lý Thánh Tông die?
+    about: [{person: ly-thanh-tong}, {person: ly-nhan-tong}]
+    field: died
+    claims:
+      - {value: "1 February 1072", sources: [wp-ly-thanh-tong]}
+      - {value: "January 1072 ('In January 1072 he suddenly died at the age of 49'); the Nhân Tông article says the throne passed 'in the first month of the lunar calendar in 1072'", sources: [wp-ly-thanh-tong, wp-ly-nhan-tong]}
+    note: "A lunar month that may straddle the Gregorian change. The record uses 1 February 1072."
+  - key: ly-nhan-tong-born
+    question: On what date was Lý Nhân Tông (Lý Càn Đức) born?
+    about: [{person: ly-nhan-tong}, {person: ly-thanh-tong}]
+    field: born
+    claims:
+      - {value: "22 February 1066 (his lead; 'the first month of the lunar calendar in 1066' in the early-life section)", sources: [wp-ly-nhan-tong]}
+      - {value: "25 January 1066 ('On 25th January 1066, prince Lý Càn Đức was born'; made crown prince a day later)", sources: [wp-ly-thanh-tong]}
+    note: "The record uses 22 February 1066 from his own article."
+  - key: ly-nhan-tong-died
+    question: When did Lý Nhân Tông die?
+    about: [{person: ly-nhan-tong}]
+    field: died
+    claims:
+      - {value: "15 January 1128", sources: [wp-ly-nhan-tong]}
+      - {value: "December 1127 ('In December 1127 after a 56-year reign, Lý Nhân Tông died at Vĩnh Quang Palace at the age of 61')", sources: [wp-ly-nhan-tong]}
+    note: "Probably a lunar December that falls in January 1128. The record uses 15 January 1128. The article also counts his reign as 56 and 55 years."
+  - key: ly-song-war-span
+    question: Over what years did the Lý-Song war run?
+    about: [{event: ly-song-war-1075}]
+    field: date
+    claims:
+      - {value: "1075-1076 ('Sino-Vietnamese War (1075-1076)')", sources: [wp-ly-nhan-tong]}
+      - {value: "The Song invasion began in the twelfth month of 1076 and was followed by a cease-fire, so the war ran past 1076 (probably into early 1077)", sources: [wp-ly-nhan-tong]}
+    note: "The brief gives 1075-1077; the article gives no Gregorian end date. The event is entered as 1075-1076."
+  - key: ly-cao-tong-born
+    question: When was Lý Cao Tông born?
+    about: [{person: ly-cao-tong}]
+    field: born
+    claims:
+      - {value: "6 July 1173", sources: [wp-ly-cao-tong]}
+      - {value: "25 May 1173 'according to the Eastern calendar', at Thăng Long palace", sources: [wp-ly-cao-tong]}
+    note: "The record uses the lead's 6 July 1173."
+  - key: ly-cao-tong-died
+    question: When did Lý Cao Tông die?
+    about: [{person: ly-cao-tong}]
+    field: died
+    claims:
+      - {value: "15 November 1210", sources: [wp-ly-cao-tong]}
+      - {value: "28 October 1210, at Thánh Thọ palace, aged 38", sources: [wp-ly-cao-tong]}
+    note: "The record uses the lead's 15 November 1210."
+  - key: ly-hue-tong-died
+    question: When did Lý Huệ Tông die?
+    about: [{person: ly-hue-tong}]
+    field: died
+    claims:
+      - {value: "3 September 1226", sources: [wp-ly-hue-tong]}
+      - {value: "He was made to commit suicide on 8 October of the lunar calendar 1226", sources: [wp-ly-chieu-hoang]}
+    note: "A lunar date and a Gregorian one that may not match. The record uses 3 September 1226."
+  - key: ly-chieu-hoang-age-at-accession
+    question: How old was Lý Chiêu Hoàng when she became empress in 1224?
+    about: [{person: ly-chieu-hoang}, {person: ly-hue-tong}]
+    field: born
+    claims:
+      - {value: "Six ('succeeding to the throne at the age of only six'; born September 1218)", sources: [wp-ly-chieu-hoang]}
+      - {value: "Seven ('his seven-year-old daughter')", sources: [wp-ly-hue-tong]}
+    note: "The record gives her birth as 1218 (her own article); the age is a matter of counting."
+  - key: tran-dynasty-founding-year
+    question: When did the Trần dynasty begin?
+    about: [{event: tran-dynasty-founded-1225}, {person: tran-thai-tong}, {person: ly-chieu-hoang}]
+    field: date
+    claims:
+      - {value: "31 December 1225 (the first day of the twelfth lunar month, 1225; Thái Tông's era name Kiến Trung is dated from 1225); the Hưng Đạo article says the Trần replaced the Lý in 1225", sources: [wp-ly-chieu-hoang, wp-tran-thai-tong, wp-tran-hung-dao]}
+      - {value: "1226: Thái Tông 'reigning over Đại Việt for 33 years (1226-58)'; the Trần Thái Tông article says Lý Chiêu Hoàng 'abdicated to make him the founder of the Trần dynasty in 1226'", sources: [wp-tran-thai-tong]}
+    note: "The event uses 31 December 1225; Thái Tông's title row starts 1226 as his lead says."
+  - key: first-mongol-invasion-of-dai-viet-year
+    question: In which year was the first Mongol invasion of Đại Việt?
+    about: [{event: first-mongol-invasion-of-dai-viet-1257}]
+    field: date
+    claims:
+      - {value: "1257: letters in the autumn of 1257, peace re-established in December 1257", sources: [wp-tran-thai-tong, wp-tran-thanh-tong]}
+      - {value: "1258 ('During the first Mongol invasion of Vietnam in 1258')", sources: [wp-tran-hung-dao]}
+    note: "The event runs 1257-1258. The Gregorian date of the lunar December 1257 probably falls in early 1258."
+  - key: second-mongol-invasion-start
+    question: When did the second Mongol invasion of Đại Việt begin?
+    about: [{event: second-mongol-invasion-of-dai-viet-1284}]
+    field: date
+    claims:
+      - {value: "December 1284", sources: [wp-tran-thanh-tong, wp-tran-nhan-tong]}
+      - {value: "January 1285 ('In January 1285, Prince Toghan led the Mongol invasion')", sources: [wp-tran-hung-dao]}
+    note: "The event starts in December 1284 (year 1284 entered)."
+  - key: bach-dang-1288-date
+    question: On what date was the Battle of Bạch Đằng?
+    about: [{event: battle-of-bach-dang-1288}]
+    field: date
+    claims:
+      - {value: "9 April 1288 ('In the early morning of 9 April'); 'April 1288' in the Hưng Đạo article", sources: [wp-battle-of-bach-dang-1288, wp-tran-hung-dao]}
+      - {value: "8 March 1288 'in the lunar calendar'", sources: [wp-tran-thanh-tong]}
+      - {value: "8 March 1288 (no calendar named)", sources: [wp-tran-nhan-tong]}
+    note: "A lunar date given in Gregorian form; the event uses 9 April 1288."
+  - key: tran-thanh-tong-died
+    question: When did Trần Thánh Tông die?
+    about: [{person: tran-thanh-tong}, {person: tran-nhan-tong}]
+    field: died
+    claims:
+      - {value: "3 July 1290 (the lead)", sources: [wp-tran-thanh-tong]}
+      - {value: "25 May 1290 'in the lunar calendar', at the age of 50", sources: [wp-tran-thanh-tong]}
+      - {value: "25 May 1290 (no calendar named), at the age of 50", sources: [wp-tran-nhan-tong]}
+    note: "The record uses the lead's 3 July 1290."
+  - key: tran-nhan-tong-born
+    question: When was Trần Nhân Tông born?
+    about: [{person: tran-nhan-tong}, {person: tran-thanh-tong}]
+    field: born
+    claims:
+      - {value: "7 December 1258", sources: [wp-tran-nhan-tong]}
+      - {value: "11 November 1258 'in the lunar calendar'", sources: [wp-tran-thanh-tong]}
+    note: "The record uses 7 December 1258."
+  - key: tran-nhan-tong-died
+    question: When did Trần Nhân Tông die?
+    about: [{person: tran-nhan-tong}, {person: tran-thanh-tong}]
+    field: died
+    claims:
+      - {value: "16 December 1308", sources: [wp-tran-nhan-tong]}
+      - {value: "3 November 1308 'in the lunar calendar' (he and his sister died on the same day)", sources: [wp-tran-thanh-tong]}
+    note: "The record uses 16 December 1308."
+  - key: tran-nhan-tong-retirement
+    question: When did Trần Nhân Tông become Emperor Emeritus?
+    about: [{person: tran-nhan-tong}, {person: tran-anh-tong}]
+    field: date
+    claims:
+      - {value: "3 March 1293, when he passed the throne to Trần Thuyên", sources: [wp-tran-nhan-tong]}
+      - {value: "1294 ('held the title Emperor Emeritus from 1294 to his death in 1308')", sources: [wp-tran-nhan-tong]}
+    note: "The title row ends 3 March 1293 and Anh Tông's begins that day."
+  - key: tran-hung-dao-lifespan
+    question: When was Trần Hưng Đạo born and how old was he at death?
+    about: [{person: tran-hung-dao}]
+    field: born
+    claims:
+      - {value: "Born 1228, died 1300 'at the age of 70' (the lead and Origins section)", sources: [wp-tran-hung-dao]}
+      - {value: "Died in 1300 'at the age of 73' (the Death section)", sources: [wp-tran-hung-dao]}
+      - {value: "Born 1213 (a link caption in the article, 'Tran Hung Dao (1213-1300)')", sources: [wp-tran-hung-dao]}
+    note: "The record uses 1228-1300, the lead and Origins section (age 72 by those years)."
+  - key: ho-quy-ly-usurpation-year
+    question: In which year did Hồ Quý Ly depose the Trần and declare himself ruler?
+    about: [{person: ho-quy-ly}, {event: ho-usurpation-1400}]
+    field: date
+    claims:
+      - {value: "1400", sources: [wp-ho-quy-ly]}
+      - {value: "1399", sources: [wp-le-loi]}
+    note: "The record uses 1400 from the Hồ Quý Ly article."
+  - key: ho-quy-ly-died
+    question: When did Hồ Quý Ly die?
+    about: [{person: ho-quy-ly}]
+    field: died
+    claims:
+      - {value: "1407? (the lead: 1336-1407?; captured and exiled in 1407, 'it is not clear when he died')", sources: [wp-ho-quy-ly]}
+      - {value: "c. 1408 ('Hồ Quý Ly (c. 1336 - 1408)')", sources: [wp-le-loi]}
+    note: "No death year is entered in the record."
+  - key: le-loi-born
+    question: On what date was Lê Lợi born?
+    about: [{person: le-loi}]
+    field: born
+    claims:
+      - {value: "10 September 1385", sources: [wp-le-loi]}
+      - {value: "The sixth day of August 1385, at Lam Giang village, Lam Sơn (the early-life section of the same article)", sources: [wp-le-loi]}
+    note: "The record uses the lead's 10 September 1385."
+  - key: le-loi-accession-date
+    question: On what date did Lê Lợi take the throne?
+    about: [{person: le-loi}, {event: le-loi-takes-the-throne-1428}]
+    field: date
+    claims:
+      - {value: "15 April 1428", sources: [wp-le-loi]}
+      - {value: "29 April 1428", sources: [wp-lam-son-uprising]}
+    note: "The record uses the Lê Lợi article's 15 April 1428."
+  - key: tot-dong-date
+    question: When was the battle of Tốt Động - Chúc Động?
+    about: [{event: battle-of-tot-dong-chuc-dong-1426}]
+    field: date
+    claims:
+      - {value: "7 November 1426 (the morning the Ming army attacked)", sources: [wp-lam-son-uprising]}
+      - {value: "Early December 1426", sources: [wp-le-loi]}
+    note: "The event uses 7 November 1426, a dated account in the longer article."
+  - key: xuong-giang-fall-date
+    question: When did the citadel of Xương Giang fall, and was it before the defeat of Liu Sheng?
+    about: [{event: battle-of-chi-lang-xuong-giang-1427}]
+    field: date
+    claims:
+      - {value: "28 September 1427, before the ambush at Chi Lăng, after the Lam Sơn command's assault", sources: [wp-lam-son-uprising]}
+      - {value: "October 1427, after a six-month siege; Liu Sheng's army was defeated at Chi Lăng in September", sources: [wp-le-loi]}
+    note: "The event is entered as 1427 only."
+  - key: le-thai-tong-died
+    question: When did Lê Thái Tông die?
+    about: [{person: le-thai-tong}]
+    field: died
+    claims:
+      - {value: "28 August 1442", sources: [wp-le-thai-tong]}
+      - {value: "Soon after his visit to Nguyễn Trãi's Lychee Garden on 4 August 1442: he 'quickly died' and the next morning Trãi was accused", sources: [wp-le-thai-tong]}
+    note: "The record uses 28 August 1442 from the lead; the second account implies early August."
+  - key: le-thanh-tong-laos-campaign
+    question: How long did Lê Thánh Tông's campaign against Laos last?
+    about: [{person: le-thanh-tong}]
+    field: date
+    claims:
+      - {value: "1479-1481 ('the invasion of Laos between 1479 and 1481')", sources: [wp-le-thanh-tong]}
+      - {value: "From fall 1479 until his forces withdrew by November 1484", sources: [wp-le-thanh-tong]}
+    note: "No event is entered for the Laos campaign."
+  - key: suryavarman-i-accession
+    question: When did Suryavarman I take the throne?
+    about: [{person: suryavarman-i}]
+    field: date
+    claims:
+      - {value: "About 1002: he usurped Udayadityavarman I 'in approximately 1002' and 'was king from 1002 to 1050'", sources: [wp-suryavarman-i]}
+      - {value: "1010: after a protracted war with Jayavirahvarman he 'claimed the throne in 1010' (the oath of 4,000 officials survives in six inscriptions of 1011, 'at the close of the nine-year war of succession')", sources: [wp-suryavarman-i]}
+    note: "The title row starts about 1002."
+  - key: suryavarman-i-died
+    question: When did Suryavarman I die?
+    about: [{person: suryavarman-i}]
+    field: died
+    claims:
+      - {value: "1050, with the posthumous title Nirvanapada", sources: [wp-suryavarman-i]}
+      - {value: "1049 in the epigraphic record summarised by U-tain Wongsathit and co-authors, with the posthumous name Paramanirvāṇapada", sources: [wp-suryavarman-i]}
+    note: "The record uses 1050."
+  - key: suryavarman-ii-death-place
+    question: Where and how did Suryavarman II die?
+    about: [{person: suryavarman-ii}]
+    field: place
+    claims:
+      - {value: "Possibly during a military campaign against Champa, after his troops were defeated by Vietnamese troops led by Tô Hiến Thành, in or before 1150", sources: [wp-suryavarman-ii]}
+      - {value: "Around 1150 in Angkor, because his records stop around that year", sources: [wp-suryavarman-ii]}
+    note: "No death place is entered. His tomb was placed in Angkor Wat."
+  - key: sack-of-angkor-1177
+    question: Did the Cham sack of Angkor happen in 1177?
+    about: [{event: cham-sack-of-angkor-1177}, {person: jayavarman-vii}]
+    field: date
+    claims:
+      - {value: "1177: the Cham king Jaya Indravarman IV sailed up the Mekong and the Tonlé Sap, pillaged Yasodharapura and killed Tribhuvanadityavarman; the Chams occupied Cambodia for four years", sources: [wp-jayavarman-vii]}
+      - {value: "Michael Vickery questions both the date and the event itself, doubting the reliability of the Chinese sources for the period", sources: [wp-jayavarman-vii]}
+    note: "The event uses 1177 as the article's narrative gives it."
+  - key: anawrahta-born
+    question: When was Anawrahta born?
+    about: [{person: anawrahta}]
+    field: born
+    claims:
+      - {value: "11 May 1014 (the lead)", sources: [wp-anawrahta]}
+      - {value: "11 May 1044 (the early-life section), the year of his rebellion; the article also says the four main Burmese chronicles give different dates and scholarship usually accepts those of the Zata", sources: [wp-anawrahta]}
+    note: "The record uses the lead's 1014-05-11. 1044 is also the year of his rebellion and accession, so it may be a slip, but the article does not say so."
+  - key: anawrahta-empire-extent
+    question: How large was Anawrahta's empire?
+    about: [{person: anawrahta}]
+    field: note
+    claims:
+      - {value: "Present-day Myanmar and northern Thailand: the Thai chronicles say he conquered the whole Menam valley, received tribute from the Khmer king, one adding that he sacked Angkor and another that he visited Java", sources: [wp-anawrahta]}
+      - {value: "A much smaller empire, the Irrawaddy valley and its nearer periphery (Harvey, Hall and other Western historians); Arakan and the Shan Hills were only nominally subject", sources: [wp-anawrahta]}
+    note: "Nothing from the Thai chronicles' claims is entered."
+  - key: anawrahta-death
+    question: How did Anawrahta die?
+    about: [{person: anawrahta}]
+    field: died
+    claims:
+      - {value: "Ambushed and killed by his enemies, who disposed of the body so it was never found", sources: [wp-anawrahta]}
+      - {value: "Gored to death by a nat (spirit) in the guise of a wild buffalo, after which demons took away his body", sources: [wp-anawrahta]}
+    note: "Both accounts give 11 April 1077 outside Pagan; the date is entered."
