@@ -1020,15 +1020,17 @@ async function diningNearby(pl, dl) {
     const headers = { apikey: c.key, "Content-Type": "application/json" };
     if (!c.key.startsWith("sb_")) headers.Authorization = `Bearer ${c.key}`;
     const r = await fetch(`${c.url}/rest/v1/rpc/nearby_dining`, { method: "POST", headers,
-      body: JSON.stringify({ lat: Number(pl.lat), lng: Number(pl.lng), radius_m: 800, max_results: 8 }) });
+      body: JSON.stringify({ lat: Number(pl.lat), lng: Number(pl.lng), radius_m: NEARBY_KM * 1000, max_results: 8 }) });
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    const rows = await r.json();
+    // The place itself (Musso & Frank, linked with `external: {system: dining}`) isn't "nearby" itself.
+    const self = new Set(S.db.externalFor("place", pl.key).filter(l => l.system === "dining").map(l => l.external_id));
+    const rows = (await r.json()).filter(x => !self.has(x.id));
     if (S.selected?.kind !== "place" || S.selected.id !== pl.id) return;   // another place was picked meanwhile
     const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
     dd.replaceChildren(...joinNodes(rows.map(x => {
       const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
       return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
-    }), "None found within 800 m"));
+    }), `No Metro Advisor picks within ${NEARBY_KM} km`));
   } catch (e) {
     dd.textContent = "Couldn't reach the dining database just now.";
   }
