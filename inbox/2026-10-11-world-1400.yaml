@@ -1,0 +1,845 @@
+batch:
+  title: "The world in 1400: rulers of the main states"
+  requested: "One ruler for each major state on the Year-view map at 1400 (snapshot-year batch of the build-out), with a few dated events of 1385-1415"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp6 directory; wp2 for Sigismund and Wenceslaus IV); nothing was fetched. Line 1-3 of every file was checked; all 29 plan lines had the right article, none is a disambiguation page. Headings that differ from the plan title: Vytautas is "Vytautas the Great" (key vytautas-the-great), Mircea_I_of_Wallachia is "Mircea the Elder" (key mircea-the-elder), Stephen_Ostoja is "Ostoja of Bosnia" (key ostoja-of-bosnia), Dawit_I_of_Ethiopia is "Dawit I" (key dawit-i-of-ethiopia), Nasir-ud-Din_Mahmud_Shah_Tughluq is "Mahmud Shah II" (key mahmud-shah-ii-of-delhi), Muhammad VII is wp6/Muhammad_VII_of_Granada.txt, Bunei of Chuzan is wp6/Bunei.txt (key bunei-of-chuzan), Ramracha is wp6/Ramaracha.txt whose heading is "Ramrachathirat" (key ramrachathirat), Margaret_I_of_Denmark and Stefan_Lazarevic keep their plan titles (keys margaret-i-of-denmark, stefan-lazarevic), Wladyslaw II Jagiello is key wladyslaw-ii-jagiello (the article calls him Jogaila first). Long articles (Margaret, Vytautas, Wladyslaw, Stefan Lazarevic, Dawit, Charles III) were read selectively: lead, rise, reign, death; Stefan Lazarevic's Hungarian alliance, Zeta and civil-war sections were not worked through, nor was Wladyslaw's later reign after 1411.
+# - New realms (7): Principality of Wallachia, Principality of Moldavia, Bosnia, Hafsid Sultanate, Aztec Empire, Ryukyu Kingdom, Ayutthaya Kingdom (all from the plan lines). Realms only referenced, defined in sibling batches: Aragon and Navarre (inbox/2026-10-11-world-1100.yaml), and Grand Duchy of Lithuania, Grand Duchy of Moscow, Serbia, Empire of Trebizond, Emirate of Granada, Marinid Sultanate, Golden Horde, Mamluk Sultanate and Ethiopian Empire (the 1300 draft, in review), so the 1100 and 1300 batches must be applied first. The 1300 draft also defines the place szekesfehervar, which this batch does not use.
+# - Title wording differs from the plan in several places, because the plan wording is not the rank the article gives (the rule from earlier batches). Mircea: the article calls him Voivode of Wallachia, so 'Voivode of Wallachia' (plan: Prince). Alexander the Good: Voivode of Moldavia (plan: Prince). Hafsid ruler: his article calls him a Hafsid Caliph of Ifriqiya, so 'Hafsid Caliph' (plan: Hafsid Sultan). Huitzilihuitl: the article calls him Tlatoani or king of Tenochtitlan (and Moctezuma I 'fifth Huey Tlatoani'), so 'Tlatoani of Tenochtitlan' (plan: Huey Tlatoani); realm Aztec Empire as in the plan, although the article says the Mexica were still tributaries of Azcapotzalco. Margaret: three rows with the wording 'Queen of Denmark / Norway / Sweden' (the plan said King of ...), the English convention for a woman ruling in her own right; her article's lead and titles section call her queen regnant, and say that in Denmark she was 'sovereign lady and lord and guardian' and 'Regent of Norway and Denmark' in 1388, and that she stopped using the double-gendered title in 1392/1396 while continuing as regent; the three rows start on 24 February 1389, the day the article gives for 'Queen of Denmark, Norway and Sweden' (see discrepancy). Vasily I: 'Grand Prince of Moscow', the plan wording and the article's 'Grand Prince of Vladimir and Moscow from 1389'; Daniel of Moscow in the 1300 draft is 'Prince of Moscow' because his article says he never became grand prince, so the realm now has two wordings, each following its article. Stefan Lazarevic: 'Prince of Serbia' 1389-1402 and 'Despot of Serbia' 1402-1427 (the plan said Ruler of Serbia; the 1300 draft's 'King of Serbia' does not fit him). Ostoja: 'King of Bosnia' as the article says. Jogaila: 'King of Poland' (plan) plus 'Grand Duke of Lithuania' 1377-1381 and 1382-1401 and 'Supreme Duke of Lithuania' 1401-1434 (the article's own wording); Vytautas: 'Regent of Lithuania' 1392-1401 (the article: regent for his cousin Jogaila) and 'Grand Duke of Lithuania' 1401-1430, so the Year view shows him at 1400.
+# - Title rows NOT entered (extra titles or no stated start): Martin of Aragon as Count of Barcelona (from 1396), King of Valencia, Sardinia and Corsica, and King of Sicily from 1409; Charles III as Count of Evreux; Gian Galeazzo's earlier lordships (Verona, Vicenza, Padua, Pavia); Mircea's lands (Dobruja and others); Wenceslaus IV as King of the Romans (already in the database). Ladislaus of Naples's claim to Hungary and Croatia is in the person's note only (his coronation at Zara on 5 August 1403 is in the note, no title row: the article says his rule never went beyond Dalmatia). Shadi Beg: 'late 1399 or early 1400' in the body against 1399 in the lead; the row uses the lead's year. Sigismund: the article states the start (crowned at Szekesfehervar on 31 March 1387) but never says when the Hungarian crown ended, so the row ends at his death on 9 December 1437 (an inference from the article: it records him as king until his death, and gives no loss of the throne). The end of Wenceslaus IV's Bohemian row is the lead's 'until his death in 1419' with the day from the same lead (16 August 1419); the start is 1378 (the article: 'on Charles' death in 1378 he inherited the Crown of Bohemia'; he had already been crowned on 15 June 1363 as a two-year-old, which is in the note). Faraj's row is one row 1399-1412 though the article says his brother Abd al-Aziz held the throne briefly from September to November 1405 (in the note). Abu Faris: no day or birth year in the article, so no born/died; his row 1394-1434 is the lead's 'reigned 1394-1434'.
+# - Dates given as year because the article gives no day or only a month: Margaret's birth (March 1353), Ostoja's death (September 1418), Mahmud Shah II's death (February 1413), Mircea's and Alexander's births ('c.' in the article), Martin of Aragon's accession (1396), Gian Galeazzo's dukedom (1395), Ladislaus's accession (1386), Mahmud Shah II's accession (the article gives the day his predecessor died, 8 March 1394, not the accession itself), Ramrachathirat's reign (1395, and 1409).
+# - Moment years are integers only (checked). Several people have no born/died place because the article gives none. Coordinates are general knowledge (2-3 decimals); Soborg Castle, Bistrita Monastery, Kreva, Cozia and Resava are approximate points.
+# - Discrepancies recorded below (10): the date of the battle of Rovine (Mircea's article 10 October 1394 against Stefan Lazarevic's 17 May 1395); when Margaret began to rule Denmark; Jogaila's birth (c. 1352 or c. 1362); Martin of Aragon's birthplace (Girona or Perpignan); George VII's reign (1393-1407 or 1395-1405); how George VII died; when Dawit I's reign began; when Dawit I's reign ended; Huitzilihuitl's reign (three codices); the fate of Ramrachathirat. Seen and not entered (a range inside one article, a calendar point, or not about a record here): the date of Sa'ad ad-Din of Ifat's death (Dawit's article: 1402/03, 1408/09 or 1415; a death of someone who is not a record here); the place of the battle of Asle (Aasle or Falan, Margaret's article, 24 February 1389); Martin's cause of death (plague, uremic coma or poison); Bayezid's 1394 campaign numbers; Bunei's fate (the article says only that he likely died at the hands of the rebels or fled); Jogaila's election day (2 February 1386), baptism (15 February) and coronation (4 March 1386; the row starts on the coronation day); whether Vytautas became Grand Duke in 1392 (the Treaty of Ostrow / Astrava) or 1401 (his own article: regent 1392-1401, formal grand duke 1401); Harihara II's end (the lead says he died on 31 August 1404).
+# - Events: 6 new events (Union of Krewo 1385, Kalmar Union 1397, Vorskla 1399, Grunwald 1410, Ceuta 1415, Rovine) and 3 link-only updates to existing events (battle-of-aljubarrota-1385 gets John I of Portugal, battle-of-nicopolis-1396 gets Mircea the Elder and Stefan Lazarevic, battle-of-ankara-1402 gets Stefan Lazarevic). Left out for size: the Union of Vilnius and Radom (1401, year only), Ladislaus's coronation at Zara (5 August 1403), the Aragon-Granada treaty of 4 May 1405, the sack of Delhi (Timur, 1398, year only), the Treaty of Salynas (12 October 1398) and the Union of Horodlo (2 October 1413). Kosovo 1389 is not linked: none of these articles puts a person here on the field (Stefan Lazarevic's article says his father died there). The brief named the Union of Krewo as 14 August 1385 (Kreva Castle), which is the Wladyslaw article's date. The existing event battle-of-aljubarrota-1385 has John I of Castile only; the Portuguese king is added as victor.
+# - Existing records reused, not redefined: places roskilde-cathedral, flensburg, lisbon, coimbra, naples, venice, barcelona, delhi, hampi, pamplona, belgrade; people timur, bayezid-i, sigismund-holy-roman-emperor, wenceslaus-iv-of-bohemia; events as above. The sources wp-sigismund-holy-roman-emperor and wp-wenceslaus-iv-of-bohemia are repeated with the same key and URL as in 2026-10-08-holy-roman-empire.yaml (a plain upsert). Obsidian: no links. Images: none.
+
+sources:
+  - {key: wp-emperor-go-komatsu,             title: "Emperor Go-Komatsu (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Emperor_Go-Komatsu"}
+  - {key: wp-wladyslaw-ii-jagiello,          title: "Wladyslaw II Jagiello (Wikipedia)",          url: "https://en.wikipedia.org/wiki/W%C5%82adys%C5%82aw_II_Jagie%C5%82%C5%82o"}
+  - {key: wp-vytautas-the-great,             title: "Vytautas the Great (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Vytautas_the_Great"}
+  - {key: wp-vasily-i-of-moscow,             title: "Vasily I of Moscow (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Vasily_I_of_Moscow"}
+  - {key: wp-margaret-i-of-denmark,          title: "Margaret I of Denmark (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Margaret_I_of_Denmark"}
+  - {key: wp-john-i-of-portugal,             title: "John I of Portugal (Wikipedia)",             url: "https://en.wikipedia.org/wiki/John_I_of_Portugal"}
+  - {key: wp-martin-of-aragon,               title: "Martin of Aragon (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Martin_of_Aragon"}
+  - {key: wp-charles-iii-of-navarre,         title: "Charles III of Navarre (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Charles_III_of_Navarre"}
+  - {key: wp-ladislaus-of-naples,            title: "Ladislaus of Naples (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Ladislaus_of_Naples"}
+  - {key: wp-michele-steno,                  title: "Michele Steno (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Michele_Steno"}
+  - {key: wp-gian-galeazzo-visconti,         title: "Gian Galeazzo Visconti (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Gian_Galeazzo_Visconti"}
+  - {key: wp-stefan-lazarevic,               title: "Stefan Lazarevic (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Stefan_Lazarevi%C4%87"}
+  - {key: wp-mircea-the-elder,               title: "Mircea the Elder (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Mircea_the_Elder"}
+  - {key: wp-alexander-the-good,             title: "Alexander the Good (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Alexander_the_Good"}
+  - {key: wp-ostoja-of-bosnia,               title: "Ostoja of Bosnia (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Ostoja_of_Bosnia"}
+  - {key: wp-manuel-iii-of-trebizond,        title: "Manuel III of Trebizond (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Manuel_III_of_Trebizond"}
+  - {key: wp-george-vii-of-georgia,          title: "George VII of Georgia (Wikipedia)",          url: "https://en.wikipedia.org/wiki/George_VII_of_Georgia"}
+  - {key: wp-dawit-i-of-ethiopia,            title: "Dawit I (Wikipedia)",                        url: "https://en.wikipedia.org/wiki/Dawit_I"}
+  - {key: wp-an-nasir-faraj,                 title: "An-Nasir Faraj (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/An-Nasir_Faraj"}
+  - {key: wp-shadi-beg,                      title: "Shadi Beg (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Shadi_Beg"}
+  - {key: wp-mahmud-shah-ii-of-delhi,        title: "Mahmud Shah II (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Mahmud_Shah_II"}
+  - {key: wp-harihara-ii,                    title: "Harihara II (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Harihara_II"}
+  - {key: wp-muhammad-vii-of-granada,        title: "Muhammad VII of Granada (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Muhammad_VII_of_Granada"}
+  - {key: wp-abu-faris-abd-al-aziz-ii,       title: "Abu Faris Abd al-Aziz II (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Abu_Faris_Abd_al-Aziz_II"}
+  - {key: wp-abu-said-uthman-iii,            title: "Abu Said Uthman III (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Abu_Said_Uthman_III"}
+  - {key: wp-huitzilihuitl,                  title: "Huitzilihuitl (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Huitzilihuitl"}
+  - {key: wp-bunei,                          title: "Bunei (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Bunei"}
+  - {key: wp-ramrachathirat,                 title: "Ramrachathirat (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Ramrachathirat"}
+  - {key: wp-sigismund-holy-roman-emperor,   title: "Sigismund, Holy Roman Emperor (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Sigismund%2C_Holy_Roman_Emperor"}
+  - {key: wp-wenceslaus-iv-of-bohemia,       title: "Wenceslaus IV of Bohemia (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Wenceslaus_IV_of_Bohemia"}
+
+realms:
+  - {name: Principality of Wallachia, region: Eastern Europe,              country: Romania, note: "Mircea the Elder's article calls him Voivode of Wallachia from 1386; the state reached its largest extent under him"}
+  - {name: Principality of Moldavia,  region: Eastern Europe,              country: Moldova, note: "Alexander the Good was its Voivode 1400-1432 (his article)"}
+  - {name: Bosnia,                    region: Eastern Europe,              country: Bosnia and Herzegovina, note: "Kingdom of the Kotromanic dynasty; Ostoja was king 1398-1404 and 1409-1418 (his article)"}
+  - {name: Hafsid Sultanate,          region: Middle East and North Africa, country: Tunisia, note: "Hafsid state of Ifriqiya; Abu Faris Abd al-Aziz II reigned 1394-1434 and completed its reunification (his article calls the ruler a Hafsid Caliph of Ifriqiya)"}
+  - {name: Aztec Empire,              region: Americas,                    country: Mexico, note: "Huitzilihuitl's article calls him the second Tlatoani of Tenochtitlan; the Mexica were then tributaries of Azcapotzalco, so the empire proper is later"}
+  - {name: Ryukyu Kingdom,            region: East Asia,                   country: Japan, note: "Bunei was king of Chuzan, one of the three Okinawan polities, 1398-1406 (his article)"}
+  - {name: Ayutthaya Kingdom,         region: Southeast Asia,              country: Thailand, note: "Ramrachathirat reigned from 1395 until the coup of Inracha in 1409 (his article)"}
+
+people:
+  - key: emperor-go-komatsu
+    name: Emperor Go-Komatsu
+    type: Royalty
+    realm: Japan
+    born: 1377-08-01
+    died: 1433-12-01
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "100th emperor of Japan, first son of Go-En'yu, the sixth and last Emperor of the Northern Court. Northern pretender from 24 May 1382 to 21 October 1392; when the Southern emperor Go-Kameyama handed over the regalia in 1392 he is counted as legitimate. Agreed with the shogunate to alternate the throne between the two courts, but abdicated on 5 October 1412 for his own son, Emperor Shoko. Father of Emperor Shoko; Ikkyu Sojun is listed among his sons in the article. Tomb at Fukakusa no kita no misasagi, Fushimi-ku, Kyoto."
+    sources: [wp-emperor-go-komatsu]
+  - key: wladyslaw-ii-jagiello
+    name: Wladyslaw II Jagiello (Jogaila)
+    type: Royalty
+    realm: Poland
+    house: Jagiellon
+    died: 1434-06-01
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Jogaila, Grand Duke of Lithuania from 1377 (1377-1381, 1382-1401), then Supreme Duke; elected King of Poland on 2 February 1386, baptised Wladyslaw at Wawel on 15 February, married the young queen Jadwiga and was crowned on 4 March 1386. Concluded the Union of Krewo on 14 August 1385; co-ruled with Jadwiga until her death in 1399; won the battle of Grunwald with Vytautas on 15 July 1410; confirmed the Union of Horodlo on 2 October 1413. Birth year uncertain (c. 1352 or c. 1362; see discrepancy). Died at Grodek in 1434; the article gives no burial place."
+    sources: [wp-wladyslaw-ii-jagiello]
+  - key: vytautas-the-great
+    name: Vytautas the Great
+    type: Royalty
+    realm: Grand Duchy of Lithuania
+    house: Gediminid
+    born: 1350
+    born_estimated: true
+    died: 1430-10-27
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Son of Kestutis, cousin of Jogaila. Imprisoned at Kreva in 1382 after his father's death, allied with and broke from the Teutonic Order several times, was regent for Jogaila 1392-1401 and then Grand Duke until his death (Union of Vilnius and Radom, 1401). Stretched Lithuania from the Baltic to the Black Sea, was crushed on the Vorskla in 1399, and commanded the Lithuanian forces at Grunwald in 1410. Married his daughter Sophia to Vasily I of Moscow in 1391. Planned a royal crown in 1429-1430, stopped at the Polish border. Died at Trakai Island Castle, buried in Vilnius Cathedral (the remains are lost)."
+    sources: [wp-vytautas-the-great]
+  - key: vasily-i-of-moscow
+    name: Vasily I of Moscow
+    type: Royalty
+    realm: Grand Duchy of Moscow
+    house: Rurikid
+    born: 1371-12-30
+    died: 1425-02-27
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Vasily I Dmitriyevich, eldest son of Dmitry Donskoy; Grand Prince of Vladimir and Moscow from 1389. Hostage at Tokhtamysh's court 1383-1386; took Nizhny Novgorod-Suzdal in 1393 and Murom; allied with Lithuania in 1392 and married Sophia, only daughter of Vytautas (war with Vytautas 1406-1408). Timur's raid of 1395 left the Golden Horde in anarchy and Moscow stopped paying tribute; Edigu burnt towns in 1408 but not Moscow; Vasily submitted to the Horde again in 1412. Married his daughter Anna to John VIII Palaiologos. Father of Vasily II."
+    sources: [wp-vasily-i-of-moscow]
+  - key: margaret-i-of-denmark
+    name: Margaret I of Denmark
+    type: Royalty
+    realm: Denmark
+    house: Estridsen
+    born: 1353
+    died: 1412-10-28
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Margrete Valdemarsdatter, born in March 1353 (the month is given, no day), youngest daughter of Valdemar IV. Married Haakon VI of Norway in 1363 (queen consort of Norway 1363-1380). Her article calls her queen regnant of Denmark, Norway and Sweden from the late 1380s; she ruled Denmark and Norway as regent for her son Olaf (died 1387), was chosen Regent of Norway and Denmark in 1388, won Sweden at the battle of Asle / Falan on 24 February 1389 and founded the Kalmar Union, with her great-nephew Erik of Pomerania crowned king of all three on 17 June 1397. Retook Gotland and most of Schleswig. Died on board ship in Flensburg harbour on the night of 28 October 1412; sarcophagus (1423) behind the high altar of Roskilde Cathedral."
+    sources: [wp-margaret-i-of-denmark]
+  - key: john-i-of-portugal
+    name: John I of Portugal
+    type: Royalty
+    realm: Portugal
+    house: Aviz
+    born: 1357-04-11
+    died: 1433-08-14
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "John of Aviz, natural son of Peter I, Master of the Order of Aviz from 1364. Declared king by the Cortes at Coimbra on 6 April 1385 after the 1383-1385 interregnum and defeated John I of Castile at Aljubarrota on 14 August 1385 with his constable Nuno Alvares Pereira. Married Philippa of Lancaster on 2 February 1387 at Porto, sealing the Anglo-Portuguese Alliance. Took Ceuta in 1415 (start of Portugal's overseas expansion); father of Edward, Peter and Henry the Navigator. Reigned 48 years."
+    sources: [wp-john-i-of-portugal]
+  - key: martin-of-aragon
+    name: Martin of Aragon
+    type: Royalty
+    realm: Aragon
+    house: Barcelona
+    born: 1356-07-29
+    died: 1410-05-31
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Martin the Humane, second son of Peter IV. King of Aragon, Valencia, Sardinia and Corsica and Count of Barcelona from 1396 (he succeeded his brother John I); King of Sicily as Martin II from 1409. Regent of Sicily from 1380, led an expedition there in 1392. Supported the Avignon pope Benedict XIII (rescued him in 1403). His son Martin the Younger won at Sanluri in 1409 and died soon after. Died on 31 May 1410 in the monastery of Valldonzella outside Barcelona with no heir; the interregnum ended with the Compromise of Caspe on 28 June 1412, which chose Ferdinand of Castile."
+    sources: [wp-martin-of-aragon]
+  - key: charles-iii-of-navarre
+    name: Charles III of Navarre
+    type: Royalty
+    realm: Navarre
+    house: Evreux
+    born: 1361-07-22
+    died: 1425-09-08
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Charles the Noble, born at Mantes, King of Navarre from 1 January 1387 and Count of Evreux 1387-1404 (exchanged for the Duchy of Nemours). Married Eleanor of Castile on 27 May 1375; crowned alone in 1390 after a seven-year estrangement; succeeded by his third daughter Blanche I. Mended relations with France, built a web of marriage alliances across Iberia, finished the Gothic cathedral of Pamplona and the royal palaces at Olite and Tafalla, and united the three boroughs of Pamplona in 1423. Died suddenly on 8 September 1425; buried in Pamplona Cathedral beside Eleanor."
+    sources: [wp-charles-iii-of-navarre]
+  - key: ladislaus-of-naples
+    name: Ladislaus of Naples
+    type: Royalty
+    realm: Naples
+    house: Anjou
+    born: 1377-02-15
+    died: 1414-08-06
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ladislao, born at Naples, son of Charles III of Naples; king at nine in 1386 under his mother's regency, recognised by Boniface IX in 1389. Won back Naples in 1399 from Louis II of Anjou, was crowned King of Hungary and Croatia at Zara on 5 August 1403 (an unsuccessful claim that never went beyond Dalmatia; he sold Dalmatia to Venice in 1409), and conquered much of the Papal States (Rome in 1408, 1413). Beaten in Tuscany in 1409; won against Louis II (1411-1412). The last male of the Angevin House. Died at Naples on 6 August 1414, buried in San Giovanni a Carbonara; succeeded by his sister Joanna II."
+    sources: [wp-ladislaus-of-naples]
+  - key: michele-steno
+    name: Michele Steno
+    type: Nobility
+    realm: Venice
+    house: Steno
+    born: 1331
+    died: 1413-12-26
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "63rd Doge of Venice from 1 December 1400, elected as a compromise after deadlocked votes. Born in Venice to a family of some wealth; as a young man he and others were nearly executed for scrawling inscriptions on Marino Faliero's throne. His reign saw the war on Padua (from 1400) and the growth of the Domini di Terraferma; Venice sided with Alexander V in 1408. Died on 26 December 1413 and was buried in the Basilica of Santi Giovanni e Paolo; succeeded by Tommaso Mocenigo. Johannes Ciconia's motet 'Venecia, mundi splendor' is dedicated to him."
+    sources: [wp-michele-steno]
+  - key: gian-galeazzo-visconti
+    name: Gian Galeazzo Visconti
+    type: Nobility
+    realm: Milan
+    house: Visconti
+    born: 1351-10-16
+    died: 1402-09-03
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "First Duke of Milan: seized Milan in 1385 from his uncle Bernabo, took Verona, Vicenza and Padua, controlled almost the whole Po Valley, and bought the ducal title from Wenceslaus, King of the Romans, in 1395 for 100,000 florins. Founding patron of the Certosa di Pavia and builder of the Visconti castle at Pavia; furthered the Duomo of Milan. Quarrelled with France over Genoa and his daughter Valentina; suspected of warning the Turks before Nicopolis (1396). Won at Casalecchio on 26-27 June 1402; fell ill at Melegnano (10 August) and died on 3 September 1402, after which his realm broke up among his children."
+    sources: [wp-gian-galeazzo-visconti]
+  - key: stefan-lazarevic
+    name: Stefan Lazarevic
+    type: Royalty
+    realm: Serbia
+    house: Lazarevic
+    born: 1377
+    born_estimated: true
+    died: 1427-07-19
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Stefan the Tall, son of Prince Lazar (killed at Kosovo, 15 June 1389), born at Krusevac; ruled with his mother Milica until he came of age in 1393 and was an Ottoman vassal, fighting for Bayezid I at Rovine, Nicopolis (his heavy cavalry broke Sigismund's line) and Ankara (he commanded the right wing). John VII Palaiologos made him Despot in August 1402; he beat Djuradj Brankovic at Tripolje and allied with Sigismund (1403-04), receiving Belgrade. Founder member of the Order of the Dragon; issued the Code of Mines (1412); writer of 'A Homage to Love'. Died on 19 July 1427 near Mt Kosmaj, buried at Resava; canonised in 1927."
+    sources: [wp-stefan-lazarevic]
+  - key: mircea-the-elder
+    name: Mircea the Elder
+    type: Royalty
+    realm: Principality of Wallachia
+    house: Basarab
+    born: 1355
+    born_estimated: true
+    died: 1418-01-31
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Mircea cel Batran, Voivode of Wallachia from 1386, son of Radu I and brother of Dan I; Wallachia reached its largest extent under him (Dobruja 1388, the Banate of Severin 1388/9). Allied with Wladyslaw II Jagiello (1389) and Sigismund; fought Bayezid I at Rovine (the article dates it 10 October 1394), took part in the crusade of Nicopolis (1396), helped place Musa on the Ottoman throne after Ankara, and regained Dobruja in 1404. Built the Cozia Monastery c. 1390. Ancestor of Vlad II Dracul and Vlad the Impaler. Paid the Ottomans 3,000 gold pieces a year near the end of his reign."
+    sources: [wp-mircea-the-elder]
+  - key: alexander-the-good
+    name: Alexander the Good
+    type: Royalty
+    realm: Principality of Moldavia
+    house: Musat
+    born: 1375
+    born_estimated: true
+    died: 1432-01-01
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Alexandru cel Bun, Voivode of Moldavia 1400-1432, son of Roman I, backed to the throne by Sigismund of Hungary. Created the Council of the Voivode and the Chancellery, gave trade privileges to Lviv (1408) and Krakow (1409), swore vassalage to Jogaila in 1402 (renewed 1404, 1407, 1411, 1415), fought the Teutonic Order at Grunwald (1410) and Marienburg (1422), and held Cetatea Alba against the first Ottoman incursion in 1420. Built the Bistrita Monastery, where he is buried. Died on 1 January 1432; the Treaty of Suceava (18 November 1431) ended his late war with Poland."
+    sources: [wp-alexander-the-good]
+  - key: ostoja-of-bosnia
+    name: Ostoja of Bosnia
+    type: Royalty
+    realm: Bosnia
+    house: Kotromanic
+    died: 1418
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Stephen Ostoja, most likely a son of Vladislaus and brother of Tvrtko I. Crowned king on 10 May 1398 by the forces of Hrvoje Vukcic, who deposed Queen Jelena Gruba; backed Ladislaus of Naples in 1403 and fought Dubrovnik; replaced in 1404 by his brother Tvrtko II for his pro-Hungarian views, fled to Hungary, and was restored by Sigismund in 1409, after which he accepted Hungarian suzerainty (visited Buda in 1412). Divorced Kujava in 1417 and married Hrvoje's widow Jelena Nelipcic. Died in September 1418 (month only); his son Stephen Ostojic was elected king."
+    sources: [wp-ostoja-of-bosnia]
+  - key: manuel-iii-of-trebizond
+    name: Manuel III of Trebizond
+    type: Royalty
+    realm: Empire of Trebizond
+    house: Komnenos
+    born: 1364-12-16
+    died: 1417-03-05
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Manuel III Megas Komnenos, heir from 1377, emperor of Trebizond from 20 March 1390. Avoided joining Timur's war but sent twenty galleys; Timur's victory over Bayezid at Ankara (1402) lifted the Ottoman threat for decades. Received the envoy Clavijo in April 1404; signed a golden bull for Venice in 1396; quarrelled with Genoa. Gave the Soumela Monastery a staurotheke in the year of his accession. Late in his reign his son Alexios IV revolted; Manuel died in March 1417 and Alexios succeeded him (rumoured to have hastened his death)."
+    sources: [wp-manuel-iii-of-trebizond]
+  - key: george-vii-of-georgia
+    name: George VII of Georgia
+    type: Royalty
+    realm: Georgia
+    house: Bagrationi
+    died: 1407
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Born in the 1360s, eldest son of Bagrat V, co-king from 1369 and sole king from his father's death in 1393 (alternatively from 1395 to 1405; see discrepancy). Ambushed Timur's force with his brother Constantine and freed Bagrat after the fall of Tbilisi (22 November 1386). Reannexed western Georgia in 1392 and 1401; fought Timur's seven more expeditions between 1387 and 1403, lost the battle on the Sagim River in 1400, and made peace in late 1401. After Timur's death in 1405 he retook Nakhchivan and Ganja. Died childless in 1407; his brother Constantine I succeeded him."
+    sources: [wp-george-vii-of-georgia]
+  - key: dawit-i-of-ethiopia
+    name: Dawit I of Ethiopia
+    type: Royalty
+    realm: Ethiopian Empire
+    house: Solomonic
+    died: 1413-10-06
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Throne name Qwestantinos, a younger son of Newaya Krestos, who took the throne from his brother Newaya Maryam, probably with the help of his sister Dil Sefa. Emperor from 1382 (see discrepancy), reign of 33 years; raided Upper Egypt c. 1380 to protect the Copts and was persuaded back by the Patriarch of Alexandria; sent gifts to the Mamluk sultan Barquq; fought Ifat in the east; sent an embassy to Venice that arrived by 23 June 1402 asking for artisans; brought a fragment of the True Cross; allowed the Ewostathian Sabbath in 1404. Killed by a kick from his horse on 6 October 1413 (the date other historians put at 1411-1412)."
+    sources: [wp-dawit-i-of-ethiopia]
+  - key: an-nasir-faraj
+    name: Al-Nasir Faraj
+    type: Royalty
+    realm: Mamluk Sultanate
+    house: Burji
+    born: 1386
+    died: 1412-05-23
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Faraj ibn Barquq, Circassian Burji sultan of the Mamluk Sultanate from 1399, at thirteen, on his father Barquq's sudden death. His reign saw Timur's sack of Aleppo and Damascus in 1400, rebellions, plague and famine that reduced the population to a third. Briefly replaced by his brother Abd al-Aziz in September-November 1405. Defeated by the emirs at Baalbek in his seventh and last conflict with them, he surrendered in Damascus and was stabbed to death in his prison cell on 23 May 1412; buried in the Bab al-Faradis cemetery. The emirs installed the caliph al-Musta'in as a stopgap."
+    sources: [wp-an-nasir-faraj]
+  - key: shadi-beg
+    name: Shadi Beg
+    type: Royalty
+    realm: Golden Horde
+    house: Jochid
+    died: 1409
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Khan of the Golden Horde from 1399 (the body: late 1399 or early 1400), son of Qutlu Beg and first cousin of Timur Qutluq; made khan by the beglerbeg Edigu, who really ruled. Edigu killed the former khan Tokhtamysh on the Tobol in 1406. Shadi Beg plotted against Edigu, was discovered in late 1407 and fled to Astrakhan and then to Shirvan, where the Shirwanshah Ibrahim recognised him as khan and struck coins in his name until 1409. Edigu's agents murdered him at Shamakhi in 1409."
+    sources: [wp-shadi-beg]
+  - key: mahmud-shah-ii-of-delhi
+    name: Nasir-ud-Din Mahmud Shah II
+    type: Royalty
+    realm: Delhi Sultanate
+    house: Tughlaq
+    died: 1413
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Last Tughlaq sultan of Delhi, son of Nasir ud din Muhammad Shah III; succeeded his brother Ala ud-din Sikandar Shah (died 8 March 1394). A war of succession with Nusrat Shah (who ruled from Firozabad) lasted from 1394 to 1397. Timur invaded in 1398, won a decisive battle near Delhi and massacred the city; the sultanate shrank as Gujarat, Bengal, Jaunpur and others became independent. Died in February 1413 (month only); Khizr Khan, first of the Sayyid dynasty, followed."
+    sources: [wp-mahmud-shah-ii-of-delhi]
+  - key: harihara-ii
+    name: Harihara II
+    type: Royalty
+    realm: Vijayanagara Empire
+    house: Sangama
+    died: 1404-08-31
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Emperor of Vijayanagara of the Sangama dynasty, son of Bukka Raya I, whom he succeeded in 1377. Fought the Reddis of Kondavidu, took Addanki, Srisailam and most of the land south of the Krishna, and after Mujahid Bahmani's death in 1378 extended to the northwest, taking ports such as Goa, Chaul and Dabhol. Gave Mysore to Yaduraya. Patron of the Kannada poet Madhura and of the Vedic works; a tank for Gomatteshvara and the Kumthu-Jinanatha temple were built under his general Iruguppa. Died on 31 August 1404; succeeded by his son Virupaksha Raya."
+    sources: [wp-harihara-ii]
+  - key: muhammad-vii-of-granada
+    name: Muhammad VII of Granada
+    type: Royalty
+    realm: Emirate of Granada
+    house: Nasrid
+    born: 1377
+    born_estimated: true
+    died: 1408-05-13
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Twelfth Nasrid ruler, son of Yusuf II, whom he succeeded on 3 October 1392 (16 Dhu al-Qidah 794 AH). Defeated the crusade of the Order of Alcantara (entered Granada on 26 April 1394). Signed a treaty of friendship with Martin I of Aragon on 4 May 1405, kept Charles III of Navarre as a quiet ally, and a truce with Castile in Madrid on 6 October 1406. After Henry III's death on 25 December 1406 he fought the regent Ferdinand (Zahara fell on 30 September 1407). Died on 13 May 1408; his older brother Yusuf III succeeded him."
+    sources: [wp-muhammad-vii-of-granada]
+  - key: abu-faris-abd-al-aziz-ii
+    name: Abu Faris Abd al-Aziz II
+    type: Royalty
+    realm: Hafsid Sultanate
+    house: Hafsid
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Hafsid Caliph of Ifriqiya, who reigned from 1394 to 1434, son of Abu al-Abbas Ahmad II. Strong, orthodox monarch who abolished uncanonical taxes and raised revenue by privateering against Christian shipping. Campaigned in Libya from 1404 (Nafusa Mountains, Derj, Ghadames, Matmata, Nefzaoua by 1410), took Algiers in 1413, fought Portuguese fleets from 1415, and in 1431 attacked Tlemcen. Completed the reunification of Ifriqiya, absorbing Bejaia, Constantine, Tripoli, Gafsa, Tozeur and Biskra. The article gives no birth or death date."
+    sources: [wp-abu-faris-abd-al-aziz-ii]
+  - key: abu-said-uthman-iii
+    name: Abu Said Uthman III
+    type: Royalty
+    realm: Marinid Sultanate
+    house: Marinid
+    born: 1383
+    died: 1420-10-21
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Marinid sultan from 19 March 1398, at sixteen, succeeding his brother Abu Amir Abdallah; the last effective Marinid. The garrison of Gibraltar declared for him in 1410, but Granada retook it in 1411. After the Portuguese seized Ceuta in 1415 he failed to retake it in 1419. A coup in Fez in 1420 killed him (he left a one-year-old son); his vizier Abu Zakariya Yahya al-Wattasi took power and founded the Wattasid dynasty."
+    sources: [wp-abu-said-uthman-iii]
+  - key: huitzilihuitl
+    name: Huitzilihuitl
+    type: Royalty
+    realm: Aztec Empire
+    died: 1417
+    died_estimated: true
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Hummingbird Feather, second tlatoani of Tenochtitlan, born in the 1370s (the article gives no year) and elected at 16 after his father Acamapichtli's death. The codices disagree on his reign (see discrepancy). Founded the Tlatocan council with four electors; married Ayauhcihuatl, daughter of Tezozomoc of Azcapotzalco, and so cut the tribute to a symbol; their son Chimalpopoca succeeded him, and his son by Miahuaxihuitl was Moctezuma I. Joined Tezozomoc's war on Texcoco from c. 1416. Died probably in 1417."
+    sources: [wp-huitzilihuitl]
+  - key: bunei-of-chuzan
+    name: Bunei of Chuzan
+    type: Royalty
+    realm: Ryukyu Kingdom
+    house: Satto
+    born: 1356
+    died: 1406
+    died_estimated: true
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Chuzan 1398-1406, second and last ruler of the Satto dynasty, who succeeded his father Satto. Built a headquarters for Chinese envoys and a trade centre at Naha; the royal annals (Rekidai Hoan) were first compiled in 1403; sent an embassy to Siam in 1409 (after his reign) and kept ties with Java and Sumatra. China, in upheaval after Zhu Di took Nanking, took eleven years to invest him, finally in 1406. Overthrown by Sho Hashi's rebellion within a year of that; his fate is not recorded (death c. 1406)."
+    sources: [wp-bunei]
+  - key: ramrachathirat
+    name: Ramrachathirat
+    type: Royalty
+    realm: Ayutthaya Kingdom
+    house: Uthong
+    born: 1356
+    born_estimated: true
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ram or Ramracha, king of Ayutthaya, son of Ramesuan, who succeeded his father in 1395 (1395/96 by the Luang Prasoet chronicle) and was deposed in 1409 (1409/10) by Inracha, ruler of Suphan Buri, of the Suphannaphum line. Sent his first envoy to China in 1397/98 and imposed a criminal law on Sukhothai (Inscription 38), which broke away in 1400. Possibly born in 1356/57 on the Dutch account that he was 21 at his accession. His fate is disputed (see discrepancy); no date or place of death."
+    sources: [wp-ramrachathirat]
+
+titles:
+  - {person: emperor-go-komatsu, title: Emperor of Japan, realm: Japan, from: 1392-10-21, to: 1412-10-05, note: "Counted as the legitimate emperor from 21 October 1392, when Go-Kameyama conveyed the regalia; Northern pretender from 24 May 1382 (his own court's reckoning). Abdicated 5 October 1412 for his son Shoko", sources: [wp-emperor-go-komatsu]}
+  - {person: wladyslaw-ii-jagiello, title: King of Poland, realm: Poland, from: 1386-03-04, to: 1434-06-01, note: "Elected 2 February 1386 at Lublin, baptised 15 February and married Jadwiga three days later, crowned 4 March 1386 by Archbishop Bodzanta of Gniezno; co-ruler with Jadwiga until 1399, then sole king; died 1434", sources: [wp-wladyslaw-ii-jagiello]}
+  - {person: wladyslaw-ii-jagiello, title: Grand Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1377, to: 1381, note: "Succeeded Algirdas in 1377; overthrown by Kestutis in 1381", sources: [wp-wladyslaw-ii-jagiello]}
+  - {person: wladyslaw-ii-jagiello, title: Grand Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1382, to: 1401, note: "Back in 1382 after the civil war with Kestutis; in 1401 Vytautas became Grand Duke and Jogaila Supreme Duke", sources: [wp-wladyslaw-ii-jagiello]}
+  - {person: wladyslaw-ii-jagiello, title: Supreme Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1401, to: 1434-06-01, note: "Overlord of Lithuania under the Union of Vilnius and Radom; the article's own wording ('Supreme Duke')", sources: [wp-wladyslaw-ii-jagiello]}
+  - {person: vytautas-the-great, title: Regent of Lithuania, realm: Grand Duchy of Lithuania, from: 1392, to: 1401, note: "The article: 'regent for his cousin Jogaila (1392-1401)'; he de facto held all the grand duke's power", sources: [wp-vytautas-the-great]}
+  - {person: vytautas-the-great, title: Grand Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1401, to: 1430-10-27, note: "Recognised as formal grand duke for life by the Union of Vilnius and Radom (1401), under Jogaila as Supreme Duke; died at Trakai", sources: [wp-vytautas-the-great]}
+  - {person: vasily-i-of-moscow, title: Grand Prince of Moscow, realm: Grand Duchy of Moscow, from: 1389, to: 1425-02-27, note: "The article: Grand Prince of Vladimir and Moscow from 1389, heir of Dmitry Donskoy (reigned 1359-1389)", sources: [wp-vasily-i-of-moscow]}
+  - {person: margaret-i-of-denmark, title: Queen of Denmark, realm: Denmark, from: 1389-02-24, to: 1412-10-28, note: "The article: 'From 24 February 1389 to 28 October 1412, she was Queen of Denmark, Norway and Sweden'; a queen regnant, though in Denmark she was 'sovereign lady and lord and guardian' and Regent of Norway and Denmark in 1388, and she ruled for her son Olaf from 1375 (see discrepancy)", sources: [wp-margaret-i-of-denmark]}
+  - {person: margaret-i-of-denmark, title: Queen of Norway, realm: Norway, from: 1389-02-24, to: 1412-10-28, note: "Ruled Norway for Olaf from 1380 and as regent after 1387; her great-nephew Erik of Pomerania was proclaimed king of Norway in 1389 (elected 1392) and she continued as regent beside him", sources: [wp-margaret-i-of-denmark]}
+  - {person: margaret-i-of-denmark, title: Queen of Sweden, realm: Sweden, from: 1389-02-24, to: 1412-10-28, note: "Elected 'Sovereign Lady and Ruler' by the Swedish nobles in March 1388 and won the kingdom at Asle / Falan on 24 February 1389; Erik of Pomerania was crowned king of all three realms at Kalmar on 17 June 1397", sources: [wp-margaret-i-of-denmark]}
+  - {person: john-i-of-portugal, title: King of Portugal, realm: Portugal, from: 1385-04-06, to: 1433-08-14, note: "Declared king by the Cortes at Coimbra on 6 April 1385; reign of 48 years", sources: [wp-john-i-of-portugal]}
+  - {person: martin-of-aragon, title: King of Aragon, realm: Aragon, from: 1396, to: 1410-05-31, note: "Succeeded his brother John I in 1396 (the article gives the year only; his wife acted for him until he arrived in 1397); no heir, interregnum until the Compromise of Caspe, 28 June 1412", sources: [wp-martin-of-aragon]}
+  - {person: charles-iii-of-navarre, title: King of Navarre, realm: Navarre, from: 1387-01-01, to: 1425-09-08, note: "Succeeded his father Charles II on 1 January 1387; crowned alone in 1390", sources: [wp-charles-iii-of-navarre]}
+  - {person: ladislaus-of-naples, title: King of Naples, realm: Naples, from: 1386, to: 1414-08-06, note: "King at nine in 1386 under his mother's regency; recognised by Boniface IX in 1389; regained the city of Naples in 1399", sources: [wp-ladislaus-of-naples]}
+  - {person: michele-steno, title: Doge of Venice, realm: Venice, from: 1400-12-01, to: 1413-12-26, sources: [wp-michele-steno]}
+  - {person: gian-galeazzo-visconti, title: Duke of Milan, realm: Milan, from: 1395, to: 1402-09-03, note: "Title bought from Wenceslaus, King of the Romans, in 1395 for 100,000 florins (year only in the article); lord of Milan since 1385", sources: [wp-gian-galeazzo-visconti]}
+  - {person: stefan-lazarevic, title: Prince of Serbia, realm: Serbia, from: 1389, to: 1402, note: "Prince after his father Lazar fell at Kosovo (15 June 1389); his mother Milica ruled for him until he came of age in 1393; an Ottoman vassal. The plan said 'Ruler of Serbia'; the article says prince (1389-1402) and despot (1402-1427)", sources: [wp-stefan-lazarevic]}
+  - {person: stefan-lazarevic, title: Despot of Serbia, realm: Serbia, from: 1402, to: 1427-07-19, note: "Byzantine title of despot awarded by John VII Palaiologos in August 1402 in Constantinople; died 19 July 1427", sources: [wp-stefan-lazarevic]}
+  - {person: mircea-the-elder, title: Voivode of Wallachia, realm: Principality of Wallachia, from: 1386, to: 1418-01-31, note: "Took the throne in 1386 after the death of his step-brother Dan I; the article's wording is Voivode (the plan said Prince)", sources: [wp-mircea-the-elder]}
+  - {person: alexander-the-good, title: Voivode of Moldavia, realm: Principality of Moldavia, from: 1400, to: 1432-01-01, note: "Succeeded Iuga; the article's wording is Voivode (the plan said Prince)", sources: [wp-alexander-the-good]}
+  - {person: ostoja-of-bosnia, title: King of Bosnia, realm: Bosnia, from: 1398-05-10, to: 1404, note: "Crowned on 10 May 1398 by the forces of Hrvoje Vukcic; replaced in 1404 by his brother Tvrtko II", sources: [wp-ostoja-of-bosnia]}
+  - {person: ostoja-of-bosnia, title: King of Bosnia, realm: Bosnia, from: 1409, to: 1418, note: "Restored in 1409 after Sigismund beat the Bosnian nobility in 1408; died in September 1418 (month only)", sources: [wp-ostoja-of-bosnia]}
+  - {person: manuel-iii-of-trebizond, title: Emperor of Trebizond, realm: Empire of Trebizond, from: 1390-03-20, to: 1417-03-05, sources: [wp-manuel-iii-of-trebizond]}
+  - {person: george-vii-of-georgia, title: King of Georgia, realm: Georgia, from: 1393, to: 1407, note: "From his father Bagrat V's death in 1393 to his death in 1407; the article adds 'alternatively, from 1395 to 1405' (see discrepancy)", sources: [wp-george-vii-of-georgia]}
+  - {person: dawit-i-of-ethiopia, title: Emperor of Ethiopia, realm: Ethiopian Empire, from: 1382, to: 1413-10-06, note: "The lead: emperor from 1382 until his death on 6 October 1413; the body: took the throne around 1379/80 and most historians end the reign in 1411-1412 (see discrepancies)", sources: [wp-dawit-i-of-ethiopia]}
+  - {person: an-nasir-faraj, title: Mamluk Sultan, realm: Mamluk Sultanate, from: 1399, to: 1412-05-23, note: "Sultan from his father Barquq's death in 1399, aged 13; briefly replaced by his brother Abd al-Aziz from September to November 1405; stabbed to death on 23 May 1412", sources: [wp-an-nasir-faraj]}
+  - {person: shadi-beg, title: Khan of the Golden Horde, realm: Golden Horde, from: 1399, to: 1407, note: "Made khan by Edigu after the death of Timur Qutluq (late 1399 or early 1400 in the body); fled in late 1407 after his plot against Edigu failed", sources: [wp-shadi-beg]}
+  - {person: mahmud-shah-ii-of-delhi, title: Sultan of Delhi, realm: Delhi Sultanate, from: 1394, to: 1413, note: "Succeeded his brother Ala ud-din Sikandar Shah, who died on 8 March 1394 (the article gives no accession day); died in February 1413 (month only)", sources: [wp-mahmud-shah-ii-of-delhi]}
+  - {person: harihara-ii, title: Vijayanagara Emperor, realm: Vijayanagara Empire, from: 1377, to: 1404-08-31, note: "Succeeded Bukka Raya I in 1377", sources: [wp-harihara-ii]}
+  - {person: muhammad-vii-of-granada, title: Emir of Granada, realm: Emirate of Granada, from: 1392-10-03, to: 1408-05-13, note: "Twelfth Nasrid ruler; the article calls him 'sultan' in places and the Emirate of Granada once", sources: [wp-muhammad-vii-of-granada]}
+  - {person: abu-faris-abd-al-aziz-ii, title: Hafsid Caliph, realm: Hafsid Sultanate, from: 1394, to: 1434, note: "The article: 'a Hafsid Caliph of Ifriqiya (reigned 1394-1434)'; the plan said Hafsid Sultan", sources: [wp-abu-faris-abd-al-aziz-ii]}
+  - {person: abu-said-uthman-iii, title: Marinid Sultan, realm: Marinid Sultanate, from: 1398-03-19, to: 1420-10-21, note: "Sultan at sixteen; assassinated in a coup at Fez in 1420", sources: [wp-abu-said-uthman-iii]}
+  - {person: huitzilihuitl, title: Tlatoani of Tenochtitlan, realm: Aztec Empire, from: 1396, from_estimated: true, to: 1417, to_estimated: true, note: "Codex Aubin: 1396-1417 (used here, as it shares its end with the Codex Chimalpopoca); Codex Chimalpahin: 1390-1415; Codex Chimalpopoca: 1403-1417 (see discrepancy). The Mexica were then tributaries of Azcapotzalco", sources: [wp-huitzilihuitl]}
+  - {person: bunei-of-chuzan, title: King of Chuzan, realm: Ryukyu Kingdom, from: 1398, to: 1406, note: "Inherited the throne on his father Satto's death; China invested him in 1406 and Sho Hashi's rebellion overthrew him within a year", sources: [wp-bunei]}
+  - {person: ramrachathirat, title: King of Ayutthaya, realm: Ayutthaya Kingdom, from: 1395, to: 1409, note: "Succeeded Ramesuan in 1395 (the lead; 1395/96 by the Luang Prasoet chronicle); deposed in 1409 (1409/10) by Inracha of Suphan Buri", sources: [wp-ramrachathirat]}
+  - {person: sigismund-holy-roman-emperor, title: King of Hungary, realm: Hungary, from: 1387-03-31, to: 1437-12-09, note: "Crowned at Szekesfehervar on 31 March 1387 after marrying Mary, Queen of Hungary (jure uxoris); the article never states an end, so the row ends at his death (see header)", sources: [wp-sigismund-holy-roman-emperor]}
+  - {person: wenceslaus-iv-of-bohemia, title: King of Bohemia, realm: Bohemia, from: 1378, to: 1419-08-16, note: "Inherited the crown on his father Charles IV's death in 1378; he had been crowned as a child on 15 June 1363; died 16 August 1419 at Nový Hrad near Prague", sources: [wp-wenceslaus-iv-of-bohemia]}
+
+places:
+  - key: kalmar
+    name: Kalmar
+    kind: city
+    region: Kalmar County
+    country: Sweden
+    lat: 56.665
+    lng: 16.357
+    visitable: true
+    note: "Where Margaret I had the three Councils of the Realm meet in June 1397, and where Erik of Pomerania was crowned (Margaret's article)."
+    sources: [wp-margaret-i-of-denmark]
+  - key: soborg-castle
+    name: Soborg Castle
+    kind: castle
+    region: Zealand
+    country: Denmark
+    lat: 56.05
+    lng: 12.28
+    note: "Born in its prison, where her father had confined her mother, Margaret I (March 1353). Approximate point (a ruin)."
+    sources: [wp-margaret-i-of-denmark]
+  - key: grunwald-battlefield
+    name: Grunwald battlefield
+    kind: battlefield
+    region: Warmia-Masuria
+    country: Poland
+    lat: 53.484
+    lng: 20.128
+    visitable: true
+    note: "Where Wladyslaw II and Vytautas beat the Teutonic Order on 15 July 1410."
+    sources: [wp-wladyslaw-ii-jagiello]
+  - key: kreva-castle
+    name: Kreva Castle
+    kind: castle
+    region: Grodno Region
+    country: Belarus
+    lat: 54.316
+    lng: 26.283
+    visitable: true
+    note: "Where Jogaila confirmed the Union of Krewo on 14 August 1385; Kestutis was found dead here in 1382. Approximate point."
+    sources: [wp-wladyslaw-ii-jagiello, wp-vytautas-the-great]
+  - key: vilnius-cathedral
+    name: Vilnius Cathedral
+    kind: cathedral
+    city: Vilnius
+    region: Vilnius County
+    country: Lithuania
+    lat: 54.686
+    lng: 25.288
+    visitable: true
+    note: "Burial place of Vytautas the Great (the knowledge of his remains has been lost)."
+    sources: [wp-vytautas-the-great]
+  - key: trakai-island-castle
+    name: Trakai Island Castle
+    kind: castle
+    city: Trakai
+    region: Vilnius County
+    country: Lithuania
+    lat: 54.653
+    lng: 24.934
+    visitable: true
+    note: "Where Vytautas the Great died in 1430."
+    sources: [wp-vytautas-the-great]
+  - key: krusevac
+    name: Krusevac
+    kind: city
+    region: Rasina District
+    country: Serbia
+    lat: 43.58
+    lng: 21.333
+    visitable: true
+    note: "Birthplace of Stefan Lazarevic (c. 1377)."
+    sources: [wp-stefan-lazarevic]
+  - key: resava-monastery
+    name: Resava Monastery (Manasija)
+    kind: monastery
+    city: Despotovac
+    region: Pomoravlje District
+    country: Serbia
+    lat: 44.073
+    lng: 21.465
+    visitable: true
+    note: "Where Stefan Lazarevic was buried. Approximate point; the article names it Resava."
+    sources: [wp-stefan-lazarevic]
+  - key: cozia-monastery
+    name: Cozia Monastery
+    kind: monastery
+    city: Calimanesti
+    region: Valcea County
+    country: Romania
+    lat: 45.24
+    lng: 24.33
+    visitable: true
+    founded: 1390
+    founded_estimated: true
+    built_by: Mircea the Elder
+    note: "Built by Mircea the Elder 'in ca. 1390' near Calimanesti (his article). Approximate point."
+    sources: [wp-mircea-the-elder]
+  - key: bistrita-monastery
+    name: Bistrita Monastery
+    kind: monastery
+    region: Neamt County
+    country: Romania
+    lat: 46.9
+    lng: 26.17
+    visitable: true
+    built_by: Alexander the Good
+    note: "Built by Alexander the Good, who is buried there. Approximate point."
+    sources: [wp-alexander-the-good]
+  - key: san-giovanni-a-carbonara
+    name: San Giovanni a Carbonara
+    kind: church
+    city: Naples
+    region: Campania
+    country: Italy
+    lat: 40.852
+    lng: 14.26
+    visitable: true
+    note: "Burial church of Ladislaus of Naples, with a monument over his tomb."
+    sources: [wp-ladislaus-of-naples]
+  - key: santi-giovanni-e-paolo
+    name: Basilica of Santi Giovanni e Paolo
+    kind: church
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.44
+    lng: 12.342
+    visitable: true
+    note: "Traditional burial place of the doges; Michele Steno was interred here (the article spells it Basilica di San Giovanni e Paolo)."
+    sources: [wp-michele-steno]
+  - key: certosa-di-pavia
+    name: Certosa di Pavia
+    kind: monastery
+    city: Pavia
+    region: Lombardy
+    country: Italy
+    lat: 45.256
+    lng: 9.141
+    visitable: true
+    built_by: Gian Galeazzo Visconti (founding patron)
+    note: "Gian Galeazzo Visconti was its founding patron (his article); the founding year is not given there."
+    sources: [wp-gian-galeazzo-visconti]
+  - key: melegnano-castle
+    name: Castle of Melegnano
+    kind: castle
+    city: Melegnano
+    region: Lombardy
+    country: Italy
+    lat: 45.357
+    lng: 9.322
+    visitable: true
+    note: "Where Gian Galeazzo Visconti died of a fever in 1402. Approximate point."
+    sources: [wp-gian-galeazzo-visconti]
+  - key: olite-royal-palace
+    name: Royal Palace of Olite
+    kind: palace
+    city: Olite
+    region: Navarre
+    country: Spain
+    lat: 42.481
+    lng: -1.6485
+    visitable: true
+    note: "One of the royal palaces whose building was finished at the instruction of Charles III of Navarre (with Tafalla, not entered)."
+    sources: [wp-charles-iii-of-navarre]
+  - key: mantes
+    name: Mantes
+    kind: city
+    region: Yvelines
+    country: France
+    lat: 48.99
+    lng: 1.717
+    visitable: true
+    note: "Birthplace of Charles III of Navarre (22 July 1361), in his father's northern French lands."
+    sources: [wp-charles-iii-of-navarre]
+  - key: ceuta
+    name: Ceuta
+    kind: city
+    region: Ceuta
+    country: Spain
+    lat: 35.889
+    lng: -5.32
+    visitable: true
+    note: "Taken by Portugal in 1415; Abu Said Uthman III failed to recover it in 1419."
+    sources: [wp-john-i-of-portugal, wp-abu-said-uthman-iii]
+  - key: fez
+    name: Fez
+    kind: city
+    region: Fes-Meknes
+    country: Morocco
+    lat: 34.033
+    lng: -5.0
+    visitable: true
+    note: "Marinid capital, where a coup killed Abu Said Uthman III in 1420."
+    sources: [wp-abu-said-uthman-iii]
+  - key: damascus
+    name: Damascus
+    kind: city
+    region: Damascus
+    country: Syria
+    lat: 33.51
+    lng: 36.29
+    visitable: true
+    note: "Where Al-Nasir Faraj surrendered in the citadel, was stabbed in his prison cell on 23 May 1412 and was buried in the Bab al-Faradis cemetery."
+    sources: [wp-an-nasir-faraj]
+  - key: shamakhi
+    name: Shamakhi
+    kind: city
+    region: Shamakhi District
+    country: Azerbaijan
+    lat: 40.63
+    lng: 48.64
+    visitable: true
+    note: "Where Edigu's agents murdered the former khan Shadi Beg in 1409."
+    sources: [wp-shadi-beg]
+  - key: tenochtitlan
+    name: Tenochtitlan
+    kind: city
+    region: Mexico City
+    country: Mexico
+    lat: 19.434
+    lng: -99.131
+    visitable: true
+    note: "Island city of the Mexica, where Huitzilihuitl was born and ruled; the site lies under Mexico City."
+    sources: [wp-huitzilihuitl]
+
+events:
+  - key: union-of-krewo-1385
+    name: Union of Krewo
+    type: Treaty
+    date: 1385-08-14
+    place: kreva-castle
+    people:
+      - {person: wladyslaw-ii-jagiello, role: signatory}
+      - {person: vytautas-the-great, role: participated}
+    prominence: 4
+    note: "At Kreva Castle Jogaila confirmed his promises: to adopt Christianity, to bring back lands taken from Poland and to join Lithuania and Russia to the Polish Crown (read by historians from a personal union to complete incorporation). It led to his marriage to Jadwiga and his coronation in 1386. Vytautas took part and was rebaptised a Catholic in 1386."
+    sources: [wp-wladyslaw-ii-jagiello, wp-vytautas-the-great]
+  - key: kalmar-union-1397
+    name: Kalmar Union
+    type: Treaty
+    date: 1397-06-17
+    place: kalmar
+    people:
+      - {person: margaret-i-of-denmark, role: founder}
+    prominence: 4
+    note: "Margaret summoned the three Councils of the Realm to Kalmar in June 1397, and on Trinity Sunday, 17 June, her great-nephew Erik of Pomerania was crowned king of Denmark, Norway and Sweden. The treaty of Kalmar, issued on 20 July (the article gives no year for the day), proposed 'everlasting union'; the Act of Union was never completed, but the union lasted in practice into the early 16th century (Denmark and Norway until 1814)."
+    sources: [wp-margaret-i-of-denmark]
+  - key: battle-of-the-vorskla-1399
+    name: Battle of the Vorskla River
+    type: Battle
+    year: 1399
+    people:
+      - {person: vytautas-the-great, role: defeated}
+    prominence: 3
+    note: "Vytautas's crusade against the Mongols, backed by Pope Boniface IX, ended in a crushing defeat: over twenty princes, including two brothers of Jogaila, were killed and Vytautas barely escaped. Smolensk and other territories revolted; Vytautas's eastern ambitions ended. The article gives the year only and no place."
+    sources: [wp-vytautas-the-great, wp-wladyslaw-ii-jagiello]
+  - key: battle-of-grunwald-1410
+    name: Battle of Grunwald
+    type: Battle
+    date: 1410-07-15
+    place: grunwald-battlefield
+    people:
+      - {person: wladyslaw-ii-jagiello, role: victor}
+      - {person: vytautas-the-great, role: victor}
+      - {person: alexander-the-good, role: victor}
+    prominence: 5
+    note: "Władysław II's army of about 20,000 mounted nobles, 15,000 armed commoners and 2,000 professional cavalry, joined by Vytautas's 11,000 light cavalry, destroyed the Teutonic Order's army (about 18,000 cavalry and 5,000 infantry); the Grand Master Ulrich von Jungingen and the Grand Marshal Friedrich von Wallenrode were killed. The siege of Marienburg (25 July to 19 September) failed; the Peace of Thorn followed in 1411. Alexander the Good's article credits him with a victory over the Teutonic Order here."
+    sources: [wp-wladyslaw-ii-jagiello, wp-vytautas-the-great, wp-alexander-the-good]
+  - key: conquest-of-ceuta-1415
+    name: Portuguese conquest of Ceuta
+    type: Siege
+    year: 1415
+    place: ceuta
+    people:
+      - {person: john-i-of-portugal, role: victor}
+      - {person: abu-said-uthman-iii, role: defeated}
+    prominence: 4
+    note: "John I seized Ceuta in 1415, the start of European overseas expansion; the Marinid sultan Abu Said Uthman III failed to retake it in 1419, when the garrison under Pedro de Menezes sallied against his camp. Pope Martin V's bull of 4 April 1418 confirmed to John the lands he might win from the Moors."
+    sources: [wp-john-i-of-portugal, wp-abu-said-uthman-iii]
+  - key: battle-of-rovine-1395
+    name: Battle of Rovine
+    type: Battle
+    date: 1395-05-17
+    people:
+      - {person: mircea-the-elder, role: victor}
+      - {person: stefan-lazarevic, role: fought for Bayezid}
+      - {person: bayezid-i, role: defeated}
+    prominence: 3
+    note: "Bayezid I crossed the Danube with about 40,000 men against Mircea's 10,000, who fought a guerrilla war and then met him in forested, swampy ground near present-day Pitesti; Wallachia won, though Mircea had to retreat to Hungary and the Turks installed Vlad the Usurper. Stefan Lazarevic led the largest Serbian heavy cavalry squadron on the Ottoman side; the Serbian nobles Marko and Konstantin Dejanovic were killed. The date is disputed between the two articles (see discrepancy)."
+    sources: [wp-mircea-the-elder, wp-stefan-lazarevic]
+  - key: battle-of-aljubarrota-1385
+    people:
+      - {person: john-i-of-portugal, role: victor}
+    sources: [wp-john-i-of-portugal]
+  - key: battle-of-nicopolis-1396
+    people:
+      - {person: mircea-the-elder, role: crusader}
+      - {person: stefan-lazarevic, role: fought for Bayezid (broke Sigismund's line)}
+    sources: [wp-mircea-the-elder, wp-stefan-lazarevic]
+  - key: battle-of-ankara-1402
+    people:
+      - {person: stefan-lazarevic, role: Ottoman vassal, commanded the right wing}
+    sources: [wp-stefan-lazarevic]
+
+moments:
+  - {person: margaret-i-of-denmark,      role: born,   place: soborg-castle, year: 1353}
+  - {person: margaret-i-of-denmark,      role: died,   place: flensburg, year: 1412}
+  - {person: margaret-i-of-denmark,      role: buried, place: roskilde-cathedral}
+  - {person: john-i-of-portugal,         role: born,   place: lisbon, year: 1357}
+  - {person: martin-of-aragon,           role: died,   place: barcelona, year: 1410}
+  - {person: charles-iii-of-navarre,     role: born,   place: mantes, year: 1361}
+  - {person: charles-iii-of-navarre,     role: buried, place: pamplona, year: 1425}
+  - {person: ladislaus-of-naples,        role: born,   place: naples, year: 1377}
+  - {person: ladislaus-of-naples,        role: died,   place: naples, year: 1414}
+  - {person: ladislaus-of-naples,        role: buried, place: san-giovanni-a-carbonara, year: 1414}
+  - {person: michele-steno,              role: born,   place: venice, year: 1331}
+  - {person: michele-steno,              role: buried, place: santi-giovanni-e-paolo, year: 1413}
+  - {person: gian-galeazzo-visconti,     role: died,   place: melegnano-castle, year: 1402}
+  - {person: stefan-lazarevic,           role: born,   place: krusevac, year: 1377}
+  - {person: stefan-lazarevic,           role: buried, place: resava-monastery, year: 1427}
+  - {person: alexander-the-good,         role: buried, place: bistrita-monastery, year: 1432}
+  - {person: vytautas-the-great,         role: died,   place: trakai-island-castle, year: 1430}
+  - {person: vytautas-the-great,         role: buried, place: vilnius-cathedral, year: 1430}
+  - {person: an-nasir-faraj,             role: died,   place: damascus, year: 1412}
+  - {person: an-nasir-faraj,             role: buried, place: damascus, year: 1412}
+  - {person: shadi-beg,                  role: died,   place: shamakhi, year: 1409}
+  - {person: abu-said-uthman-iii,        role: died,   place: fez, year: 1420}
+  - {person: huitzilihuitl,              role: born,   place: tenochtitlan}
+  - {person: harihara-ii,                role: lived,  place: hampi, year: 1377}
+
+links:
+  - {parent: bukka-raya-i, child: harihara-ii}
+
+discrepancies:
+  - key: rovine-battle-date
+    question: When was the battle of Rovine fought?
+    about: [{event: battle-of-rovine-1395}, {person: mircea-the-elder}, {person: stefan-lazarevic}]
+    field: date
+    claims:
+      - {value: "10 October 1394", sources: [wp-mircea-the-elder], note: "Mircea's article: the armies 'finally clashed' on 10 October 1394 after Bayezid crossed the Danube in 1394"}
+      - {value: "17 May 1395", sources: [wp-stefan-lazarevic], note: "Stefan Lazarevic's article: Bayezid gathered forces in autumn 1394 and 'the Battle of Rovine took place on 17 May 1395', near present-day Pitesti"}
+    note: "The event record uses 17 May 1395, the more detailed date, until a source settles it."
+  - key: margaret-start-of-rule
+    question: When, and in what capacity, did Margaret I begin to rule Denmark?
+    about: [{person: margaret-i-of-denmark}]
+    field: from
+    claims:
+      - {value: "1375", sources: [wp-margaret-i-of-denmark], note: "After her father's death in 1375 she had her infant son Olaf elected king and ruled in his name; she 'only styled herself Queen of Denmark in 1375'"}
+      - {value: "1388", sources: [wp-margaret-i-of-denmark], note: "Chosen Regent of Norway and Denmark in 1388, after Olaf's death in 1387"}
+      - {value: "24 February 1389", sources: [wp-margaret-i-of-denmark], note: "'From 24 February 1389 to 28 October 1412, she was Queen of Denmark, Norway and Sweden', the date of the decisive battle against Albert"}
+    note: "The title rows use 24 February 1389, the one date the article gives for the three crowns together."
+  - key: jogaila-birth
+    question: When was Jogaila born?
+    about: [{person: wladyslaw-ii-jagiello}]
+    field: born
+    claims:
+      - {value: "c. 1352", sources: [wp-wladyslaw-ii-jagiello], note: "What historians previously assumed"}
+      - {value: "c. 1362", sources: [wp-wladyslaw-ii-jagiello], note: "Recent research, supported by his mother acting as regent in his early reign"}
+    note: "No birth year is recorded; the lead gives 'c. 1352/1362'."
+  - key: martin-of-aragon-birthplace
+    question: Where was Martin of Aragon born?
+    about: [{person: martin-of-aragon}]
+    field: place
+    claims:
+      - {value: Girona, sources: [wp-martin-of-aragon]}
+      - {value: Perpignan, sources: [wp-martin-of-aragon], note: "Both then in the Principality of Catalonia; the article says 'in either Girona or Perpignan'"}
+    note: "No born place is recorded."
+  - key: george-vii-reign
+    question: When did George VII reign over Georgia?
+    about: [{person: george-vii-of-georgia}]
+    field: from
+    claims:
+      - {value: "1393 to 1407", sources: [wp-george-vii-of-georgia], note: "The lead's main statement; Bagrat V died in 1393"}
+      - {value: "1395 to 1405", sources: [wp-george-vii-of-georgia], note: "The lead: 'alternatively, from 1395 to 1405'"}
+    note: "The title row uses 1393-1407."
+  - key: george-vii-death
+    question: How did George VII die?
+    about: [{person: george-vii-of-georgia}]
+    field: died
+    claims:
+      - {value: "Killed in battle against Turkoman nomads", sources: [wp-george-vii-of-georgia], note: "Vakhushti of Kartli: apparently the Qara Qoyunlu"}
+      - {value: "Natural causes", sources: [wp-george-vii-of-georgia], note: "Some historians consider Vakhushti's account doubtful"}
+  - key: dawit-i-reign-start
+    question: When did Dawit I take the throne?
+    about: [{person: dawit-i-of-ethiopia}]
+    field: from
+    claims:
+      - {value: "1382", sources: [wp-dawit-i-of-ethiopia], note: "The lead: emperor from 1382"}
+      - {value: "c. 1379/80", sources: [wp-dawit-i-of-ethiopia], note: "The body, citing the History of the Patriarchs of the Egyptian Church; his brother Newaya Maryam held the throne from 1372"}
+    note: "The title row uses the lead's 1382."
+  - key: dawit-i-reign-end
+    question: When did Dawit I's reign end?
+    about: [{person: dawit-i-of-ethiopia}]
+    field: died
+    claims:
+      - {value: "6 October 1413", sources: [wp-dawit-i-of-ethiopia], note: "Killed by a kick from his horse"}
+      - {value: "1411-1412", sources: [wp-dawit-i-of-ethiopia], note: "'The overwhelming majority of historians' (Taddesse Tamrat, Hassen, Trimingham, Budge and others)"}
+    note: "The record holds the lead's 6 October 1413."
+  - key: huitzilihuitl-reign
+    question: When did Huitzilihuitl reign as tlatoani of Tenochtitlan?
+    about: [{person: huitzilihuitl}]
+    field: from
+    claims:
+      - {value: "1390 to 1415", sources: [wp-huitzilihuitl], note: "Codex Chimalpahin"}
+      - {value: "1396 to 1417", sources: [wp-huitzilihuitl], note: "Codex Aubin"}
+      - {value: "1403 to 1417", sources: [wp-huitzilihuitl], note: "Codex Chimalpopoca"}
+    note: "The title row uses the Codex Aubin's 1396-1417, marked estimated; two of the three codices end the reign in 1417 and the article says he died 'probably in 1417'."
+  - key: ramrachathirat-fate
+    question: What happened to Ramrachathirat after Inracha's coup?
+    about: [{person: ramrachathirat}]
+    field: died
+    claims:
+      - {value: "Banished to Patha Khu Cham", sources: [wp-ramrachathirat], note: "The Luang Prasoet chronicle and the Minor Wars Chronicle: Inracha did not want to kill a relative; Ram died there on an unknown date"}
+      - {value: "Executed by Inracha", sources: [wp-ramrachathirat], note: "The Dutch document of 1640 (which also says Ram reigned only three years), the Magadhi Chronicle and the Buddhist Councils Chronicle"}
+    note: "No death date or place is recorded."
