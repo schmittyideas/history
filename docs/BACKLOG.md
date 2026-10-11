@@ -131,6 +131,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ### Ready (ranked)
 
+#### [P2] Museums: read collections through official APIs for images, accession numbers and links back
+`type: task` · `area: data` · `status: ready` · `issue: #129`
+
+For museums marked open-api or open-data-download (Met, Art Institute of Chicago, Cleveland, V&A, SMK, Rijksmuseum, National Gallery of Art, MoMA, Tate, Minneapolis, Smithsonian; Harvard needs a key): match our artworks to their records and store accession number, object page and, where the licence is CC0, image links. For the 100 museums marked unknown: read the terms of use and look for an official API first; never scrape a site that forbids it. Replaces the image part of #62 for these museums.
+Source: Ty, 2026-10-10.
+
 #### [P3] Artists: remaining gaps (photographers, non-Western, below the 70-edition cut)
 `type: task` · `area: data` · `status: ready` · `issue: #126`
 
@@ -138,6 +144,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Museums table and the museum links on artworks
+`type: enhancement` · `area: data` · `status: done` · `issue: #128`
+
+A museums table (name, kind, address, city, country, coordinates, website, collection URL, plus data-access notes: open-api, open-data-download, website-only, no-access or unknown, with licence, notes and the date checked). Artworks can point to a museum, its accession number and the object's page on the museum's site. Seeded with 115 art museums from Wikidata, each checked for robots.txt; 14 have a verified open API or data download, one forbids crawling, the rest are unknown. 142 artworks linked to their museum. Done 2026-10-10.
+Source: Ty, 2026-10-10.
 
 #### [P2] Popularity tiers from Wikipedia sitelinks
 `type: enhancement` · `area: data` · `status: done` · `issue: #118`

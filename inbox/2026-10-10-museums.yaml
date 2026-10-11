@@ -1,0 +1,1997 @@
+# Notes for the reviewer
+# - Art museums and galleries picked by hand from the collections our artworks name, with name, location and website from Wikidata (each cited to its English Wikipedia article). City is the nearest major city to the coordinates, because Wikidata often gives a neighbourhood.
+# - data_access records what we may do with each museum's collection data. Checked 2026-10-10 by fetching each site's robots.txt and, for known open-data providers, by calling the live API or reading the GitHub licence. open-api / open-data-download: Met, Art Institute of Chicago, Cleveland, V&A, SMK, Rijksmuseum, National Gallery of Art, MoMA, Tate, Minneapolis, the Smithsonian museums, Harvard (needs a key). Everything else is `unknown`: robots.txt does not block it (or could not be read), but terms of use and any official API are not checked yet. One museum (Ateneum) forbids all crawling: `no-access`.
+# - Nothing was scraped. Where a site returns 403 or 429 to bots (Art Institute, Met, Prado), use only its official API.
+
+batch:
+  title: Museums and galleries, with notes on how their collections can be read
+  requested: A museums table (name, location, city, country, website) and a check of whether their sites can be read
+  date: '2026-10-10'
+sources:
+- key: wp-louvre
+  title: Louvre (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Louvre
+- key: wp-musee-d-orsay
+  title: Musée d'Orsay (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay
+- key: wp-musee-de-l-orangerie
+  title: Musée de l'Orangerie (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_de_l%27Orangerie
+- key: wp-centre-pompidou
+  title: Centre Pompidou (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Centre_Pompidou
+- key: wp-petit-palais
+  title: Petit Palais (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Petit_Palais
+- key: wp-musee-rodin
+  title: Musée Rodin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Rodin
+- key: wp-musee-picasso-paris
+  title: Musée Picasso Paris (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Picasso_Paris
+- key: wp-musee-marmottan-monet
+  title: Musée Marmottan Monet (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Marmottan_Monet
+- key: wp-musee-jacquemart-andre
+  title: Musée Jacquemart-André (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Jacquemart-Andr%C3%A9
+- key: wp-museum-of-fine-arts-of-lyon
+  title: Museum of Fine Arts of Lyon (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_of_Fine_Arts_of_Lyon
+- key: wp-unterlinden-museum
+  title: Unterlinden Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Unterlinden_Museum
+- key: wp-british-museum
+  title: British Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/British_Museum
+- key: wp-national-gallery
+  title: National Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Gallery
+- key: wp-tate-britain
+  title: Tate Britain (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Tate_Britain
+- key: wp-tate-modern
+  title: Tate Modern (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Tate_Modern
+- key: wp-national-portrait-gallery-london
+  title: National Portrait Gallery, London (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Portrait_Gallery,_London
+- key: wp-victoria-and-albert-museum
+  title: Victoria and Albert Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Victoria_and_Albert_Museum
+- key: wp-wallace-collection
+  title: Wallace Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Wallace_Collection
+- key: wp-courtauld-gallery
+  title: Courtauld Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Courtauld_Gallery
+- key: wp-ashmolean-museum
+  title: Ashmolean Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ashmolean_Museum
+- key: wp-fitzwilliam-museum
+  title: Fitzwilliam Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Fitzwilliam_Museum
+- key: wp-metropolitan-museum-of-art
+  title: Metropolitan Museum of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Metropolitan_Museum_of_Art
+- key: wp-museum-of-modern-art
+  title: Museum of Modern Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_of_Modern_Art
+- key: wp-solomon-r-guggenheim-museum
+  title: Solomon R. Guggenheim Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Solomon_R._Guggenheim_Museum
+- key: wp-whitney-museum-of-american-art
+  title: Whitney Museum of American Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Whitney_Museum_of_American_Art
+- key: wp-frick-collection
+  title: Frick Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Frick_Collection
+- key: wp-brooklyn-museum
+  title: Brooklyn Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Brooklyn_Museum
+- key: wp-national-gallery-of-art
+  title: National Gallery of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Gallery_of_Art
+- key: wp-smithsonian-american-art-museum
+  title: Smithsonian American Art Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Smithsonian_American_Art_Museum
+- key: wp-freer-gallery-of-art
+  title: Freer Gallery of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Freer_Gallery_of_Art
+- key: wp-hirshhorn-museum-and-sculpture-garden
+  title: Hirshhorn Museum and Sculpture Garden (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hirshhorn_Museum_and_Sculpture_Garden
+- key: wp-the-phillips-collection
+  title: The Phillips Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/The_Phillips_Collection
+- key: wp-art-institute-of-chicago
+  title: Art Institute of Chicago (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Art_Institute_of_Chicago
+- key: wp-philadelphia-museum-of-art
+  title: Philadelphia Museum of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Philadelphia_Museum_of_Art
+- key: wp-barnes-foundation
+  title: Barnes Foundation (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Barnes_Foundation
+- key: wp-museum-of-fine-arts-boston
+  title: Museum of Fine Arts, Boston (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_of_Fine_Arts,_Boston
+- key: wp-isabella-stewart-gardner-museum
+  title: Isabella Stewart Gardner Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Isabella_Stewart_Gardner_Museum
+- key: wp-cleveland-museum-of-art
+  title: Cleveland Museum of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Cleveland_Museum_of_Art
+- key: wp-detroit-institute-of-arts
+  title: Detroit Institute of Arts (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Detroit_Institute_of_Arts
+- key: wp-minneapolis-institute-of-art
+  title: Minneapolis Institute of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Minneapolis_Institute_of_Art
+- key: wp-j-paul-getty-museum
+  title: J. Paul Getty Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/J._Paul_Getty_Museum
+- key: wp-los-angeles-county-museum-of-art
+  title: Los Angeles County Museum of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Los_Angeles_County_Museum_of_Art
+- key: wp-norton-simon-museum
+  title: Norton Simon Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Norton_Simon_Museum
+- key: wp-san-francisco-museum-of-modern-art
+  title: San Francisco Museum of Modern Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/San_Francisco_Museum_of_Modern_Art
+- key: wp-kimbell-art-museum
+  title: Kimbell Art Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kimbell_Art_Museum
+- key: wp-menil-collection
+  title: Menil Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Menil_Collection
+- key: wp-museum-of-fine-arts-houston
+  title: Museum of Fine Arts, Houston (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_of_Fine_Arts,_Houston
+- key: wp-nelson-atkins-museum-of-art
+  title: Nelson-Atkins Museum of Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nelson-Atkins_Museum_of_Art
+- key: wp-saint-louis-art-museum
+  title: Saint Louis Art Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Saint_Louis_Art_Museum
+- key: wp-walters-art-museum
+  title: Walters Art Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Walters_Art_Museum
+- key: wp-yale-center-for-british-art
+  title: Yale Center for British Art (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Yale_Center_for_British_Art
+- key: wp-harvard-art-museums
+  title: Harvard Art Museums (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Harvard_Art_Museums
+- key: wp-rijksmuseum
+  title: Rijksmuseum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Rijksmuseum
+- key: wp-van-gogh-museum
+  title: Van Gogh Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Van_Gogh_Museum
+- key: wp-mauritshuis
+  title: Mauritshuis (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mauritshuis
+- key: wp-stedelijk-museum-amsterdam
+  title: Stedelijk Museum Amsterdam (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Stedelijk_Museum_Amsterdam
+- key: wp-kroller-muller-museum
+  title: Kröller-Müller Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kr%C3%B6ller-M%C3%BCller_Museum
+- key: wp-museum-boijmans-van-beuningen
+  title: Museum Boijmans Van Beuningen (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_Boijmans_Van_Beuningen
+- key: wp-museo-del-prado
+  title: Museo del Prado (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museo_del_Prado
+- key: wp-museo-nacional-centro-de-arte-reina-sofia
+  title: Museo Nacional Centro de Arte Reina Sofía (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museo_Nacional_Centro_de_Arte_Reina_Sof%C3%ADa
+- key: wp-thyssen-bornemisza-museum
+  title: Thyssen-Bornemisza Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Thyssen-Bornemisza_Museum
+- key: wp-guggenheim-museum-bilbao
+  title: Guggenheim Museum Bilbao (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Guggenheim_Museum_Bilbao
+- key: wp-museu-nacional-d-art-de-catalunya
+  title: Museu Nacional d'Art de Catalunya (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museu_Nacional_d%27Art_de_Catalunya
+- key: wp-uffizi
+  title: Uffizi (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Uffizi
+- key: wp-galleria-dell-accademia
+  title: Galleria dell'Accademia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Galleria_dell%27Accademia
+- key: wp-palazzo-pitti
+  title: Palazzo Pitti (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Palazzo_Pitti
+- key: wp-bargello
+  title: Bargello (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Bargello
+- key: wp-vatican-museums
+  title: Vatican Museums (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Vatican_Museums
+- key: wp-galleria-borghese
+  title: Galleria Borghese (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Galleria_Borghese
+- key: wp-pinacoteca-di-brera
+  title: Pinacoteca di Brera (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pinacoteca_di_Brera
+- key: wp-gallerie-dell-accademia
+  title: Gallerie dell'Accademia (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gallerie_dell%27Accademia
+- key: wp-peggy-guggenheim-collection
+  title: Peggy Guggenheim Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Peggy_Guggenheim_Collection
+- key: wp-museo-di-capodimonte
+  title: Museo di Capodimonte (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museo_di_Capodimonte
+- key: wp-kunsthistorisches-museum
+  title: Kunsthistorisches Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kunsthistorisches_Museum
+- key: wp-albertina
+  title: Albertina (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Albertina
+- key: wp-belvedere-vienna
+  title: Belvedere, Vienna (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Belvedere,_Vienna
+- key: wp-leopold-museum
+  title: Leopold Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Leopold_Museum
+- key: wp-alte-pinakothek
+  title: Alte Pinakothek (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alte_Pinakothek
+- key: wp-neue-pinakothek
+  title: Neue Pinakothek (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Neue_Pinakothek
+- key: wp-pinakothek-der-moderne
+  title: Pinakothek der Moderne (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pinakothek_der_Moderne
+- key: wp-gemaldegalerie-berlin
+  title: Gemäldegalerie, Berlin (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gem%C3%A4ldegalerie,_Berlin
+- key: wp-alte-nationalgalerie
+  title: Alte Nationalgalerie (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Alte_Nationalgalerie
+- key: wp-neue-nationalgalerie
+  title: Neue Nationalgalerie (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Neue_Nationalgalerie
+- key: wp-gemaldegalerie-alte-meister
+  title: Gemäldegalerie Alte Meister (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Gem%C3%A4ldegalerie_Alte_Meister
+- key: wp-stadel
+  title: Städel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/St%C3%A4del
+- key: wp-hamburger-kunsthalle
+  title: Hamburger Kunsthalle (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hamburger_Kunsthalle
+- key: wp-wallrafrichartz-museum
+  title: Wallraf–Richartz Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Wallraf%E2%80%93Richartz_Museum
+- key: wp-kunstmuseum-basel
+  title: Kunstmuseum Basel (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kunstmuseum_Basel
+- key: wp-kunsthaus-zurich
+  title: Kunsthaus Zürich (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kunsthaus_Z%C3%BCrich
+- key: wp-beyeler-foundation
+  title: Beyeler Foundation (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Beyeler_Foundation
+- key: wp-hermitage-museum
+  title: Hermitage Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hermitage_Museum
+- key: wp-pushkin-museum
+  title: Pushkin Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Pushkin_Museum
+- key: wp-tretyakov-gallery
+  title: Tretyakov Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Tretyakov_Gallery
+- key: wp-russian-museum
+  title: Russian Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Russian_Museum
+- key: wp-national-museum-in-warsaw
+  title: National Museum in Warsaw (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Museum_in_Warsaw
+- key: wp-hungarian-national-gallery
+  title: Hungarian National Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hungarian_National_Gallery
+- key: wp-national-gallery-of-denmark
+  title: National Gallery of Denmark (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Gallery_of_Denmark
+- key: wp-nationalmuseum
+  title: Nationalmuseum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Nationalmuseum
+- key: wp-ateneum
+  title: Ateneum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Ateneum
+- key: wp-skagens-museum
+  title: Skagens Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Skagens_Museum
+- key: wp-munch-museum
+  title: Munch Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Munch_Museum
+- key: wp-royal-museums-of-fine-arts-of-belgium
+  title: Royal Museums of Fine Arts of Belgium (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Royal_Museums_of_Fine_Arts_of_Belgium
+- key: wp-museum-of-fine-arts-ghent
+  title: Museum of Fine Arts, Ghent (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Museum_of_Fine_Arts,_Ghent
+- key: wp-royal-museum-of-fine-arts-antwerp
+  title: Royal Museum of Fine Arts Antwerp (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Royal_Museum_of_Fine_Arts_Antwerp
+- key: wp-groeningemuseum
+  title: Groeningemuseum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Groeningemuseum
+- key: wp-musee-conde
+  title: Musée Condé (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Cond%C3%A9
+- key: wp-musee-fabre
+  title: Musée Fabre (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Mus%C3%A9e_Fabre
+- key: wp-palace-of-versailles
+  title: Palace of Versailles (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Palace_of_Versailles
+- key: wp-hampton-court-palace
+  title: Hampton Court Palace (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Hampton_Court_Palace
+- key: wp-royal-collection
+  title: Royal Collection (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Royal_Collection
+- key: wp-dulwich-picture-gallery
+  title: Dulwich Picture Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Dulwich_Picture_Gallery
+- key: wp-scottish-national-gallery
+  title: Scottish National Gallery (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Scottish_National_Gallery
+- key: wp-national-gallery-of-ireland
+  title: National Gallery of Ireland (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Gallery_of_Ireland
+- key: wp-kelvingrove-art-gallery-and-museum
+  title: Kelvingrove Art Gallery and Museum (Wikipedia)
+  url: https://en.wikipedia.org/wiki/Kelvingrove_Art_Gallery_and_Museum
+- key: wp-national-museum-of-sculpture-valladolid
+  title: National Museum of Sculpture, Valladolid (Wikipedia)
+  url: https://en.wikipedia.org/wiki/National_Museum_of_Sculpture,_Valladolid
+museums:
+- key: louvre
+  name: Louvre Museum
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8611
+  lng: 2.3358
+  website: https://www.louvre.fr/
+  founded: 1793
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-louvre
+- key: musee-d-orsay
+  name: Musée d'Orsay
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.86
+  lng: 2.3265
+  website: https://www.musee-orsay.fr
+  founded: 1986
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/, *field_artwork_titles*,
+    *search_api*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-d-orsay
+- key: musee-de-l-orangerie
+  name: Musée de l'Orangerie
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8638
+  lng: 2.3225
+  website: https://www.musee-orangerie.fr
+  founded: 1852
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/, *field_artwork_titles*,
+    *search_api*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-de-l-orangerie
+- key: centre-pompidou
+  name: Centre Georges Pompidou
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8606
+  lng: 2.3522
+  website: https://centrepompidou.fr
+  founded: 1977
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-centre-pompidou
+- key: petit-palais
+  name: Petit Palais
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.866
+  lng: 2.3146
+  website: https://www.petitpalais.paris.fr/
+  founded: 1902
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-petit-palais
+- key: musee-rodin
+  name: Musée Rodin
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8554
+  lng: 2.3158
+  website: https://www.musee-rodin.fr
+  founded: 1916
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-rodin
+- key: musee-picasso-paris
+  name: Musée Picasso
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8597
+  lng: 2.3624
+  website: https://www.museepicassoparis.fr
+  founded: 1985
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-picasso-paris
+- key: musee-marmottan-monet
+  name: Musée Marmottan Monet
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8593
+  lng: 2.2674
+  website: https://www.marmottan.fr
+  founded: 1934
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-marmottan-monet
+- key: musee-jacquemart-andre
+  name: Musée Jacquemart-André
+  kind: art museum
+  city: Paris
+  country: France
+  lat: 48.8754
+  lng: 2.3105
+  website: https://www.musee-jacquemart-andre.com
+  founded: 1913
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: */search/, */search/node/help, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-jacquemart-andre
+- key: museum-of-fine-arts-of-lyon
+  name: Museum of Fine Arts of Lyon
+  kind: art museum
+  city: Lyon
+  country: France
+  lat: 45.7669
+  lng: 4.8336
+  website: https://www.mba-lyon.fr/
+  founded: 1801
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-of-fine-arts-of-lyon
+- key: unterlinden-museum
+  name: Unterlinden Museum
+  kind: art museum
+  city: Colmar
+  country: France
+  lat: 48.0798
+  lng: 7.3555
+  website: http://www.musee-unterlinden.com
+  founded: 1847
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-unterlinden-museum
+- key: british-museum
+  name: British Museum
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5194
+  lng: -0.1269
+  website: http://britishmuseum.org/
+  founded: 1753
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-british-museum
+- key: national-gallery
+  name: National Gallery
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5089
+  lng: -0.1283
+  website: https://www.nationalgallery.org.uk
+  founded: 1824
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-gallery
+- key: tate-britain
+  name: Tate Britain
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.4911
+  lng: -0.1275
+  website: https://www.tate.org.uk/visit/tate-britain
+  founded: 1897
+  data_access: open-data-download
+  data_api_url: https://github.com/tategallery/collection
+  data_licence: CC0-1.0 (GitHub licence)
+  data_notes: Tate collection metadata on GitHub (covers Tate Britain and Tate Modern); last updated 2021. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-tate-britain
+- key: tate-modern
+  name: Tate Modern
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5078
+  lng: -0.0994
+  website: https://www.tate.org.uk/visit/tate-modern
+  founded: 1992
+  data_access: open-data-download
+  data_api_url: https://github.com/tategallery/collection
+  data_licence: CC0-1.0 (GitHub licence)
+  data_notes: Tate collection metadata on GitHub (covers Tate Britain and Tate Modern); last updated 2021. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-tate-modern
+- key: national-portrait-gallery-london
+  name: National Portrait Gallery
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5094
+  lng: -0.1281
+  website: http://www.npg.org.uk/
+  founded: 1856
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-portrait-gallery-london
+- key: victoria-and-albert-museum
+  name: Victoria and Albert Museum
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.4969
+  lng: -0.1716
+  website: https://www.vam.ac.uk/
+  founded: 1852
+  data_access: open-api
+  data_api_url: https://api.vam.ac.uk/v2/objects/search
+  data_licence: not checked
+  data_notes: Live JSON API, no key; record includes accessionNumber and current location. Licence of data and images not checked. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-victoria-and-albert-museum
+- key: wallace-collection
+  name: Wallace Collection
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5175
+  lng: -0.153
+  website: https://www.wallacecollection.org/
+  founded: 1900
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-wallace-collection
+- key: courtauld-gallery
+  name: Courtauld Gallery
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.5116
+  lng: -0.1177
+  website: https://courtauld.ac.uk/gallery
+  founded: 1932
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-courtauld-gallery
+- key: ashmolean-museum
+  name: Ashmolean Museum
+  kind: art museum
+  city: Oxford
+  country: United Kingdom
+  lat: 51.7556
+  lng: -1.2606
+  website: https://www.ashmolean.org/
+  founded: 1683
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /?q=search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-ashmolean-museum
+- key: fitzwilliam-museum
+  name: Fitzwilliam Museum
+  kind: art museum
+  city: Cambridge
+  country: United Kingdom
+  lat: 52.2003
+  lng: 0.1194
+  website: http://www.fitzmuseum.cam.ac.uk/
+  founded: 1816
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-fitzwilliam-museum
+- key: metropolitan-museum-of-art
+  name: Metropolitan Museum of Art
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.7794
+  lng: -73.9633
+  website: https://www.metmuseum.org/
+  founded: 1870
+  data_access: open-api
+  data_api_url: https://collectionapi.metmuseum.org/public/collection/v1/
+  data_licence: CC0 for objects flagged isPublicDomain (Met Open Access)
+  collection_url_pattern: https://www.metmuseum.org/art/collection/search/{id}
+  data_notes: Live JSON API, no key; returned an object with objectURL and accessionNumber. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-metropolitan-museum-of-art
+- key: museum-of-modern-art
+  name: Museum of Modern Art
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.7614
+  lng: -73.9776
+  website: https://www.moma.org/
+  founded: 1929
+  data_access: open-data-download
+  data_api_url: https://github.com/MuseumofModernArt/collection
+  data_licence: CC0-1.0 (GitHub licence)
+  data_notes: Collection data on GitHub. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-of-modern-art
+- key: solomon-r-guggenheim-museum
+  name: Solomon R. Guggenheim Museum
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.7831
+  lng: -73.9589
+  website: https://www.guggenheim.org/
+  founded: 1937
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-solomon-r-guggenheim-museum
+- key: whitney-museum-of-american-art
+  name: Whitney Museum of American Art
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.7396
+  lng: -74.0089
+  website: https://whitney.org/
+  founded: 1931
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /artists?, /collection/works?, /search?.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-whitney-museum-of-american-art
+- key: frick-collection
+  name: The Frick Collection
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.7711
+  lng: -73.9672
+  website: https://www.frick.org
+  founded: 1935
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-frick-collection
+- key: brooklyn-museum
+  name: Brooklyn Museum
+  kind: art museum
+  city: New York City
+  country: United States
+  lat: 40.6712
+  lng: -73.9636
+  website: https://www.brooklynmuseum.org/
+  founded: 1897
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 429: Too Many Requests), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-brooklyn-museum
+- key: national-gallery-of-art
+  name: Q214867
+  kind: art museum
+  city: Washington, D.C.
+  country: United States
+  lat: 38.8914
+  lng: -77.02
+  website: https://www.nga.gov/
+  founded: 1937
+  data_access: open-data-download
+  data_api_url: https://github.com/NationalGalleryOfArt/opendata
+  data_licence: CC0-1.0 (GitHub licence)
+  data_notes: Open data programme on GitHub; updated daily. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-gallery-of-art
+- key: smithsonian-american-art-museum
+  name: Smithsonian American Art Museum
+  kind: art museum
+  city: Washington, D.C.
+  country: United States
+  lat: 38.8978
+  lng: -77.0233
+  website: http://americanart.si.edu/
+  founded: 1829
+  data_access: open-data-download
+  data_api_url: https://github.com/Smithsonian/OpenAccess
+  data_licence: CC0-1.0 (GitHub licence); individual records carry their own usage flag
+  data_notes: Smithsonian Open Access covers its museums; last updated 2021. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-smithsonian-american-art-museum
+- key: freer-gallery-of-art
+  name: Freer Gallery of Art
+  kind: art museum
+  city: Washington, D.C.
+  country: United States
+  lat: 38.8883
+  lng: -77.0275
+  website: https://asia.si.edu/
+  founded: 1923
+  data_access: open-data-download
+  data_api_url: https://github.com/Smithsonian/OpenAccess
+  data_licence: CC0-1.0 (GitHub licence); individual records carry their own usage flag
+  data_notes: Smithsonian Open Access covers its museums; last updated 2021. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-freer-gallery-of-art
+- key: hirshhorn-museum-and-sculpture-garden
+  name: Hirshhorn Museum and Sculpture Garden
+  kind: art museum
+  city: Washington, D.C.
+  country: United States
+  lat: 38.8882
+  lng: -77.023
+  website: http://hirshhorn.si.edu/
+  founded: 1974
+  data_access: open-data-download
+  data_api_url: https://github.com/Smithsonian/OpenAccess
+  data_licence: CC0-1.0 (GitHub licence); individual records carry their own usage flag
+  data_notes: Smithsonian Open Access covers its museums; last updated 2021. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-hirshhorn-museum-and-sculpture-garden
+- key: the-phillips-collection
+  name: The Phillips Collection
+  kind: art museum
+  city: Washington, D.C.
+  country: United States
+  lat: 38.9114
+  lng: -77.0468
+  website: https://www.phillipscollection.org/
+  founded: 1921
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-the-phillips-collection
+- key: art-institute-of-chicago
+  name: Art Institute of Chicago
+  kind: art museum
+  city: Chicago
+  country: United States
+  lat: 41.8794
+  lng: -87.6239
+  website: https://www.artic.edu
+  founded: 1879
+  data_access: open-api
+  data_api_url: https://api.artic.edu/api/v1/artworks
+  data_licence: CC0 for data; descriptions CC BY 4.0 (stated in the API response)
+  collection_url_pattern: https://www.artic.edu/artworks/{id}
+  data_notes: 'Live JSON API, no key. The website itself returns 403 to bots and robots.txt could not be read: use the API only. Checked 2026-10-10; terms of use not read in full.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-art-institute-of-chicago
+- key: philadelphia-museum-of-art
+  name: Philadelphia Museum of Art
+  kind: art museum
+  city: Philadelphia
+  country: United States
+  lat: 39.9658
+  lng: -75.1814
+  website: https://www.philamuseum.org/
+  founded: 1876
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-philadelphia-museum-of-art
+- key: barnes-foundation
+  name: Barnes Foundation
+  kind: art museum
+  city: Philadelphia
+  country: United States
+  lat: 39.9606
+  lng: -75.1728
+  website: https://www.barnesfoundation.org/
+  founded: 1922
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-barnes-foundation
+- key: museum-of-fine-arts-boston
+  name: Museum of Fine Arts Boston
+  kind: art museum
+  city: Boston
+  country: United States
+  lat: 42.3394
+  lng: -71.0942
+  website: http://www.mfa.org/
+  founded: 1870
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-of-fine-arts-boston
+- key: isabella-stewart-gardner-museum
+  name: Isabella Stewart Gardner Museum
+  kind: art museum
+  city: Cambridge, Massachusetts
+  country: United States
+  lat: 42.3382
+  lng: -71.0991
+  website: https://www.gardnermuseum.org/
+  founded: 1903
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-isabella-stewart-gardner-museum
+- key: cleveland-museum-of-art
+  name: Cleveland Museum of Art
+  kind: art museum
+  city: Cleveland
+  country: United States
+  lat: 41.5089
+  lng: -81.6117
+  website: https://www.clevelandart.org/
+  founded: 1913
+  data_access: open-api
+  data_api_url: https://openaccess-api.clevelandart.org/api/artworks/
+  data_licence: CC0 (share_license_status in the response)
+  collection_url_pattern: https://clevelandart.org/art/{accession}
+  data_notes: Live JSON API, no key. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-cleveland-museum-of-art
+- key: detroit-institute-of-arts
+  name: Detroit Institute of Arts
+  kind: art museum
+  city: Detroit
+  country: United States
+  lat: 42.3594
+  lng: -83.0647
+  website: http://www.dia.org/
+  founded: 1885
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-detroit-institute-of-arts
+- key: minneapolis-institute-of-art
+  name: Minneapolis Institute of Art
+  kind: art museum
+  city: Minneapolis
+  country: United States
+  lat: 44.9586
+  lng: -93.2742
+  website: http://www.artsmia.org/
+  founded: 1883
+  data_access: open-data-download
+  data_api_url: https://github.com/artsmia/collection-elasticsearch
+  data_licence: not stated on GitHub
+  data_notes: Collection search data on GitHub; no licence on the repository, so check the museum's terms before use. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-minneapolis-institute-of-art
+- key: j-paul-getty-museum
+  name: J. Paul Getty Museum
+  kind: art museum
+  city: Los Angeles
+  country: United States
+  lat: 34.0775
+  lng: -118.475
+  website: http://www.getty.edu/museum/
+  founded: 1974
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /research/collections/mirador/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-j-paul-getty-museum
+- key: los-angeles-county-museum-of-art
+  name: Los Angeles County Museum of Art
+  kind: art museum
+  city: Los Angeles
+  country: United States
+  lat: 34.0633
+  lng: -118.3592
+  website: http://www.lacma.org
+  founded: 1910
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /search?, /index.php/search/, /index.php/search?.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-los-angeles-county-museum-of-art
+- key: norton-simon-museum
+  name: Norton Simon Museum
+  kind: art museum
+  city: Pasadena
+  country: United States
+  lat: 34.1462
+  lng: -118.1592
+  website: https://www.nortonsimon.org/
+  founded: 1942
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 404: Not Found), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-norton-simon-museum
+- key: san-francisco-museum-of-modern-art
+  name: San Francisco Museum of Modern Art
+  kind: art museum
+  city: San Francisco
+  country: United States
+  lat: 37.7857
+  lng: -122.4011
+  website: https://www.sfmoma.org
+  founded: 1935
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-san-francisco-museum-of-modern-art
+- key: kimbell-art-museum
+  name: Kimbell Art Museum
+  kind: art museum
+  city: Fort Worth
+  country: United States
+  lat: 32.7486
+  lng: -97.365
+  website: https://kimbellart.org/
+  founded: 1972
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kimbell-art-museum
+- key: menil-collection
+  name: Menil Collection
+  kind: art museum
+  city: Houston
+  country: United States
+  lat: 29.7373
+  lng: -95.3985
+  website: https://www.menil.org/
+  founded: 1987
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-menil-collection
+- key: museum-of-fine-arts-houston
+  name: Museum of Fine Arts, Houston
+  kind: art museum
+  city: Houston
+  country: United States
+  lat: 29.7256
+  lng: -95.3905
+  website: http://www.mfah.org/
+  founded: 1900
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 403: Forbidden), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-of-fine-arts-houston
+- key: nelson-atkins-museum-of-art
+  name: The Nelson-Atkins Museum of Art
+  kind: art museum
+  city: Kansas City
+  country: United States
+  lat: 39.045
+  lng: -94.581
+  website: https://www.nelson-atkins.org/
+  founded: 1933
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 404: Not Found), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-nelson-atkins-museum-of-art
+- key: saint-louis-art-museum
+  name: Saint Louis Art Museum
+  kind: art museum
+  city: St. Louis
+  country: United States
+  lat: 38.6393
+  lng: -90.2945
+  website: https://www.slam.org/
+  founded: 1879
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-saint-louis-art-museum
+- key: walters-art-museum
+  name: Walters Art Museum
+  kind: art museum
+  city: Baltimore
+  country: United States
+  lat: 39.2964
+  lng: -76.6165
+  website: https://thewalters.org/
+  founded: 1934
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-walters-art-museum
+- key: yale-center-for-british-art
+  name: Yale Center for British Art
+  kind: art museum
+  city: New Haven
+  country: United States
+  lat: 41.3079
+  lng: -72.9309
+  website: http://britishart.yale.edu
+  founded: 1966
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-yale-center-for-british-art
+- key: harvard-art-museums
+  name: Harvard Art Museums
+  kind: art museum
+  city: Cambridge, Massachusetts
+  country: United States
+  lat: 42.3742
+  lng: -71.1147
+  website: http://www.harvardartmuseums.org
+  founded: 1895
+  data_access: open-api
+  data_api_url: https://api.harvardartmuseums.org/object
+  data_licence: not checked
+  data_notes: API exists but returns 401 without a key (a free key is available from the museum); not used yet. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-harvard-art-museums
+- key: rijksmuseum
+  name: Rijksmuseum
+  kind: art museum
+  city: Amsterdam
+  country: Netherlands
+  lat: 52.36
+  lng: 4.8853
+  website: https://www.rijksmuseum.nl/
+  founded: 1800
+  data_access: open-api
+  data_api_url: https://data.rijksmuseum.nl/
+  data_licence: not checked
+  data_notes: Linked Art records at https://id.rijksmuseum.nl/{id} are live. The older key-based search API now returns 410 Gone. Checked 2026-10-10; terms of use not read in full.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-rijksmuseum
+- key: van-gogh-museum
+  name: Van Gogh Museum
+  kind: art museum
+  city: Amsterdam
+  country: Netherlands
+  lat: 52.3583
+  lng: 4.8811
+  website: http://www.vangoghmuseum.nl/
+  founded: 1973
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-van-gogh-museum
+- key: mauritshuis
+  name: Mauritshuis
+  kind: art museum
+  city: The Hague
+  country: Netherlands
+  lat: 52.0804
+  lng: 4.3143
+  website: https://www.mauritshuis.nl
+  founded: 1822
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-mauritshuis
+- key: stedelijk-museum-amsterdam
+  name: Stedelijk Museum Amsterdam
+  kind: art museum
+  city: Amsterdam
+  country: Netherlands
+  lat: 52.3578
+  lng: 4.8797
+  website: https://www.stedelijk.nl/
+  founded: 1874
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-stedelijk-museum-amsterdam
+- key: kroller-muller-museum
+  name: Kröller-Müller Museum
+  kind: art museum
+  city: Otterlo
+  country: Netherlands
+  lat: 52.0958
+  lng: 5.8169
+  website: http://krollermuller.nl
+  founded: 1938
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kroller-muller-museum
+- key: museum-boijmans-van-beuningen
+  name: Museum Boijmans Van Beuningen
+  kind: art museum
+  city: Rotterdam
+  country: Netherlands
+  lat: 51.9142
+  lng: 4.4733
+  website: https://www.boijmans.nl/
+  founded: 1849
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-boijmans-van-beuningen
+- key: museo-del-prado
+  name: Museo del Prado
+  kind: art museum
+  city: Madrid
+  country: Spain
+  lat: 40.4139
+  lng: -3.6922
+  website: https://www.museodelprado.es/
+  founded: 1819
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museo-del-prado
+- key: museo-nacional-centro-de-arte-reina-sofia
+  name: Museo Nacional Centro de Arte Reina Sofía
+  kind: art museum
+  city: Madrid
+  country: Spain
+  lat: 40.4086
+  lng: -3.694
+  website: https://www.museoreinasofia.es/
+  founded: 1992
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museo-nacional-centro-de-arte-reina-sofia
+- key: thyssen-bornemisza-museum
+  name: Thyssen-Bornemisza Museum
+  kind: art museum
+  city: Madrid
+  country: Spain
+  lat: 40.416
+  lng: -3.6949
+  website: https://www.museothyssen.org/
+  founded: 1992
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-thyssen-bornemisza-museum
+- key: guggenheim-museum-bilbao
+  name: Guggenheim Museum Bilbao
+  kind: art museum
+  city: Bilbao
+  country: Spain
+  lat: 43.2688
+  lng: -2.9341
+  website: https://www.guggenheim-bilbao.eus/
+  founded: 1997
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-guggenheim-museum-bilbao
+- key: museu-nacional-d-art-de-catalunya
+  name: Museu Nacional d'Art de Catalunya
+  kind: art museum
+  city: Barcelona
+  country: Spain
+  lat: 41.3683
+  lng: 2.1533
+  website: https://www.museunacional.cat/ca
+  founded: 1934
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 403: Forbidden), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museu-nacional-d-art-de-catalunya
+- key: uffizi
+  name: Uffizi Gallery
+  kind: art museum
+  city: Florence
+  country: Italy
+  lat: 43.7683
+  lng: 11.2553
+  website: https://www.uffizi.it/
+  founded: 1560
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-uffizi
+- key: galleria-dell-accademia
+  name: Galleria dell'Accademia
+  kind: art museum
+  city: Florence
+  country: Italy
+  lat: 43.7769
+  lng: 11.2589
+  website: https://www.galleriaaccademiafirenze.it/
+  founded: 1784
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error timed out>), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-galleria-dell-accademia
+- key: palazzo-pitti
+  name: Palazzo Pitti
+  kind: art museum
+  city: Florence
+  country: Italy
+  lat: 43.7652
+  lng: 11.25
+  website: https://www.uffizi.it/palazzo-pitti
+  founded: 1458
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-palazzo-pitti
+- key: bargello
+  name: Bargello National Museum
+  kind: art museum
+  city: Florence
+  country: Italy
+  lat: 43.7704
+  lng: 11.258
+  website: https://bargellomusei.it./musei/museo-nazionale-del-bargello
+  founded: 1865
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error timed out>), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-bargello
+- key: vatican-museums
+  name: Vatican Museums
+  kind: art museum
+  city: Vatican City
+  country: Vatican City
+  lat: 41.9064
+  lng: 12.4544
+  website: http://www.museivaticani.va
+  founded: 1506
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-vatican-museums
+- key: galleria-borghese
+  name: Galleria Borghese
+  kind: art museum
+  city: Rome
+  country: Italy
+  lat: 41.9142
+  lng: 12.4921
+  website: https://galleriaborghese.cultura.gov.it/
+  founded: 1903
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error timed out>), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-galleria-borghese
+- key: pinacoteca-di-brera
+  name: Pinacoteca di Brera
+  kind: art museum
+  city: Milan
+  country: Italy
+  lat: 45.472
+  lng: 9.1878
+  website: https://pinacotecabrera.org/
+  founded: 1776
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-pinacoteca-di-brera
+- key: gallerie-dell-accademia
+  name: Gallerie dell'Accademia
+  kind: art museum
+  city: Venice
+  country: Italy
+  lat: 45.4311
+  lng: 12.3281
+  website: http://www.gallerieaccademia.it/
+  founded: 1750
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-gallerie-dell-accademia
+- key: peggy-guggenheim-collection
+  name: Peggy Guggenheim Collection
+  kind: art museum
+  city: Venice
+  country: Italy
+  lat: 45.4308
+  lng: 12.3315
+  website: https://www.guggenheim-venice.it/
+  founded: 1980
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-peggy-guggenheim-collection
+- key: museo-di-capodimonte
+  name: Museo di Capodimonte
+  kind: art museum
+  city: Naples
+  country: Italy
+  lat: 40.867
+  lng: 14.2503
+  website: https://capodimonte.cultura.gov.it/
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error timed out>), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museo-di-capodimonte
+- key: kunsthistorisches-museum
+  name: Kunsthistorisches Museum
+  kind: art museum
+  city: Vienna
+  country: Austria
+  lat: 48.2039
+  lng: 16.3616
+  website: https://www.khm.at/
+  founded: 1891
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] ce), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kunsthistorisches-museum
+- key: albertina
+  name: Albertina
+  kind: art museum
+  city: Vienna
+  country: Austria
+  lat: 48.2047
+  lng: 16.3683
+  website: http://www.albertina.at/
+  founded: 1776
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-albertina
+- key: belvedere-vienna
+  name: Belvedere
+  kind: art museum
+  city: Vienna
+  country: Austria
+  lat: 48.1934
+  lng: 16.3805
+  website: https://www.belvedere.at/
+  founded: 1714
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-belvedere-vienna
+- key: leopold-museum
+  name: Leopold Museum
+  kind: art museum
+  city: Vienna
+  country: Austria
+  lat: 48.2026
+  lng: 16.3591
+  website: https://www.leopoldmuseum.org/
+  founded: 2001
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 404: Not Found), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-leopold-museum
+- key: alte-pinakothek
+  name: Alte Pinakothek
+  kind: art museum
+  city: Munich
+  country: Germany
+  lat: 48.1483
+  lng: 11.57
+  website: https://www.pinakothek.de/besuch/alte-pinakothek
+  founded: 1836
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-alte-pinakothek
+- key: neue-pinakothek
+  name: Neue Pinakothek
+  kind: art museum
+  city: Munich
+  country: Germany
+  lat: 48.1499
+  lng: 11.5711
+  website: https://www.pinakothek.de/
+  founded: 1853
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-neue-pinakothek
+- key: pinakothek-der-moderne
+  name: Pinakothek der Moderne
+  kind: art museum
+  city: Munich
+  country: Germany
+  lat: 48.1472
+  lng: 11.5723
+  website: https://www.pinakothek-der-moderne.de/
+  founded: 2002
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-pinakothek-der-moderne
+- key: gemaldegalerie-berlin
+  name: Gemäldegalerie Berlin
+  kind: art museum
+  city: Berlin
+  country: Germany
+  lat: 52.5086
+  lng: 13.3647
+  website: http://www.smb.museum/gg
+  founded: 1830
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /en/search/*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-gemaldegalerie-berlin
+- key: alte-nationalgalerie
+  name: Alte Nationalgalerie
+  kind: art museum
+  city: Berlin
+  country: Germany
+  lat: 52.5208
+  lng: 13.3984
+  website: http://www.smb.museum/museen-und-einrichtungen/alte-nationalgalerie/home.html
+  founded: 1876
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /en/search/*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-alte-nationalgalerie
+- key: neue-nationalgalerie
+  name: Neue Nationalgalerie
+  kind: art museum
+  city: Berlin
+  country: Germany
+  lat: 52.5069
+  lng: 13.3678
+  website: https://www.smb.museum/en/museums-institutions/neue-nationalgalerie/home/
+  founded: 1968
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /en/search/*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-neue-nationalgalerie
+- key: gemaldegalerie-alte-meister
+  name: Gemäldegalerie Alte Meister
+  kind: art museum
+  city: Dresden
+  country: Germany
+  lat: 51.0534
+  lng: 13.7347
+  website: https://gemaeldegalerie.skd.museum/
+  founded: 1560
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-gemaldegalerie-alte-meister
+- key: stadel
+  name: Städel Museum
+  kind: art museum
+  city: Frankfurt
+  country: Germany
+  lat: 50.1032
+  lng: 8.6739
+  website: https://www.staedelmuseum.de/
+  founded: 1816
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-stadel
+- key: hamburger-kunsthalle
+  name: Hamburger Kunsthalle
+  kind: art museum
+  city: Hamburg
+  country: Germany
+  lat: 53.555
+  lng: 10.0031
+  website: https://www.hamburger-kunsthalle.de/
+  founded: 1868
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /search?, /index.php/search/, /index.php/search?.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-hamburger-kunsthalle
+- key: wallrafrichartz-museum
+  name: Wallraf–Richartz Museum
+  kind: art museum
+  city: Cologne
+  country: Germany
+  lat: 50.9375
+  lng: 6.9586
+  website: http://wallraf.museum
+  founded: 1824
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 404: Not Found), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-wallrafrichartz-museum
+- key: kunstmuseum-basel
+  name: Kunstmuseum Basel
+  kind: art museum
+  city: Basel
+  country: Switzerland
+  lat: 47.554
+  lng: 7.5942
+  website: https://kunstmuseumbasel.ch/
+  founded: 1661
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kunstmuseum-basel
+- key: kunsthaus-zurich
+  name: Kunsthaus Zürich
+  kind: art museum
+  city: Zurich
+  country: Switzerland
+  lat: 47.3703
+  lng: 8.5481
+  website: http://www.kunsthaus.ch/
+  founded: 1819
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kunsthaus-zurich
+- key: beyeler-foundation
+  name: Beyeler Foundation
+  kind: art museum
+  city: Riehen
+  country: Switzerland
+  lat: 47.5881
+  lng: 7.6511
+  website: https://www.fondationbeyeler.ch
+  founded: 1982
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-beyeler-foundation
+- key: hermitage-museum
+  name: Hermitage Museum
+  kind: art museum
+  city: St Petersburg
+  country: Russia
+  lat: 59.9406
+  lng: 30.3136
+  website: https://hermitagemuseum.org
+  founded: 1764
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] ce), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-hermitage-museum
+- key: pushkin-museum
+  name: Pushkin Museum of Fine Arts
+  kind: art museum
+  city: Moscow
+  country: Russia
+  lat: 55.747
+  lng: 37.606
+  website: https://pushkinmuseum.art/
+  founded: 1912
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /museum/structure/departments/numismatics/index.php.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-pushkin-museum
+- key: tretyakov-gallery
+  name: Tretyakov Gallery
+  kind: art museum
+  city: Moscow
+  country: Russia
+  lat: 55.7414
+  lng: 37.6209
+  website: https://www.tretyakovgallery.ru
+  founded: 1856
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /*/search/, /collection/*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-tretyakov-gallery
+- key: russian-museum
+  name: Russian Museum
+  kind: art museum
+  city: St Petersburg
+  country: Russia
+  lat: 59.9386
+  lng: 30.3322
+  website: http://en.rusmuseum.ru/
+  founded: 1895
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-russian-museum
+- key: national-museum-in-warsaw
+  name: National Museum in Warsaw
+  kind: art museum
+  city: Warsaw
+  country: Poland
+  lat: 52.2317
+  lng: 21.0247
+  website: https://www.mnw.art.pl/
+  founded: 1862
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-museum-in-warsaw
+- key: hungarian-national-gallery
+  name: Hungarian National Gallery
+  kind: art museum
+  city: Budapest
+  country: Hungary
+  lat: 47.4962
+  lng: 19.0398
+  website: http://www.mng.hu
+  founded: 1957
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-hungarian-national-gallery
+- key: national-gallery-of-denmark
+  name: Statens Museum for Kunst
+  kind: art museum
+  city: Copenhagen
+  country: Denmark
+  lat: 55.6889
+  lng: 12.5786
+  website: https://www.smk.dk
+  founded: 1896
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-gallery-of-denmark
+- key: nationalmuseum
+  name: Nationalmuseum
+  kind: art museum
+  city: Stockholm
+  country: Sweden
+  lat: 59.3286
+  lng: 18.0781
+  website: http://www.nationalmuseum.se
+  founded: 1792
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-nationalmuseum
+- key: ateneum
+  name: Ateneum
+  kind: art museum
+  city: Helsinki
+  country: Finland
+  lat: 60.1701
+  lng: 24.944
+  website: http://www.ateneum.fi/
+  founded: 1887
+  data_access: no-access
+  data_notes: robots.txt forbids all crawling. Checked 2026-10-10.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-ateneum
+- key: skagens-museum
+  name: Skagens Museum
+  kind: art museum
+  city: Skagen
+  country: Denmark
+  lat: 57.7246
+  lng: 10.5973
+  website: https://skagensmuseum.dk/
+  founded: 1908
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 404: Not Found), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-skagens-museum
+- key: munch-museum
+  name: Munch Museum
+  kind: art museum
+  city: Oslo
+  country: Norway
+  lat: 59.9057
+  lng: 10.7553
+  website: https://www.munch.no/
+  founded: 1963
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-munch-museum
+- key: royal-museums-of-fine-arts-of-belgium
+  name: Royal Museums of Fine Arts of Belgium
+  kind: art museum
+  city: Brussels
+  country: Belgium
+  lat: 50.8417
+  lng: 4.3582
+  website: http://www.fine-arts-museum.be
+  founded: 1801
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] ce), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-royal-museums-of-fine-arts-of-belgium
+- key: museum-of-fine-arts-ghent
+  name: Museum of Fine Arts Ghent (MSK)
+  kind: art museum
+  city: Ghent
+  country: Belgium
+  lat: 51.038
+  lng: 3.7242
+  website: https://www.mskgent.be/
+  founded: 1798
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-museum-of-fine-arts-ghent
+- key: royal-museum-of-fine-arts-antwerp
+  name: Royal Museum of Fine Arts Antwerp
+  kind: art museum
+  city: Antwerp
+  country: Belgium
+  lat: 51.2088
+  lng: 4.3943
+  website: https://www.kmska.be
+  founded: 1810
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-royal-museum-of-fine-arts-antwerp
+- key: groeningemuseum
+  name: Groeningemuseum
+  kind: art museum
+  city: Bruges
+  country: Belgium
+  lat: 51.2053
+  lng: 3.2267
+  website: https://www.museabrugge.be/bezoek-onze-musea/onze-musea-en-monumenten/groeningemuseum
+  founded: 1929
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /en/collections/browse?*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-groeningemuseum
+- key: musee-conde
+  name: Condé Museum
+  kind: art museum
+  city: Chantilly
+  country: France
+  lat: 49.1939
+  lng: 2.4853
+  website: http://musee-conde.fr/fr/accueil
+  founded: 1898
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-conde
+- key: musee-fabre
+  name: Musée Fabre
+  kind: art museum
+  city: Montpellier
+  country: France
+  lat: 43.6117
+  lng: 3.8802
+  website: https://www.museefabre.fr/
+  founded: 1825
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-musee-fabre
+- key: palace-of-versailles
+  name: Palace of Versailles
+  kind: art museum
+  city: Versailles
+  country: France
+  lat: 48.8047
+  lng: 2.1203
+  website: https://en.chateauversailles.fr/
+  founded: 1661
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-palace-of-versailles
+- key: hampton-court-palace
+  name: Hampton Court Palace
+  kind: art museum
+  city: East Molesey
+  country: United Kingdom
+  lat: 51.4034
+  lng: -0.3375
+  website: https://www.hrp.org.uk/hampton-court-palace/
+  founded: 1515
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search-results/?*.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-hampton-court-palace
+- key: royal-collection
+  name: Royal Collection
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.501
+  lng: -0.142
+  website: https://www.rct.uk/
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-royal-collection
+- key: dulwich-picture-gallery
+  name: Dulwich Picture Gallery
+  kind: art museum
+  city: London
+  country: United Kingdom
+  lat: 51.4461
+  lng: -0.0864
+  website: https://www.dulwichpicturegallery.org.uk/
+  founded: 1811
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-dulwich-picture-gallery
+- key: scottish-national-gallery
+  name: Scottish National Gallery
+  kind: art museum
+  city: Edinburgh
+  country: United Kingdom
+  lat: 55.9509
+  lng: -3.1957
+  website: https://www.nationalgalleries.org/visit/scottish-national-gallery
+  founded: 1859
+  data_access: unknown
+  data_notes: 'robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked. Disallowed paths mention: /search/, /index.php/search/.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-scottish-national-gallery
+- key: national-gallery-of-ireland
+  name: National Gallery of Ireland
+  kind: art museum
+  city: Dublin
+  country: Ireland
+  lat: 53.3409
+  lng: -6.2526
+  website: https://www.nationalgallery.ie
+  founded: 1854
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: HTTP Error 403: Forbidden), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-gallery-of-ireland
+- key: kelvingrove-art-gallery-and-museum
+  name: Kelvingrove Art Gallery and Museum
+  kind: art museum
+  city: Glasgow
+  country: United Kingdom
+  lat: 55.8686
+  lng: -4.2906
+  website: https://www.glasgowlife.org.uk/museums/kelvingrove-art-gallery-and-museum#museums
+  founded: 1901
+  data_access: unknown
+  data_notes: robots.txt reachable and does not block everything (checked 2026-10-10); terms of use and any open API not yet checked.
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-kelvingrove-art-gallery-and-museum
+- key: national-museum-of-sculpture-valladolid
+  name: National Museum of Sculpture
+  kind: art museum
+  city: Valladolid
+  country: Spain
+  lat: 41.6569
+  lng: -4.7236
+  website: https://www.cultura.gob.es/mnescultura/inicio.html
+  founded: 1842
+  data_access: unknown
+  data_notes: 'robots.txt could not be read (error: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] ce), checked 2026-10-10; terms of use and any open API not yet checked.'
+  data_checked_on: '2026-10-10'
+  sources:
+  - wp-national-museum-of-sculpture-valladolid

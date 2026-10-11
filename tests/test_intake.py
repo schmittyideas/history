@@ -19,7 +19,7 @@ class FakeDB:
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
                   "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": [],
-                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": []}
+                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -146,6 +146,28 @@ def test_person_coverage():
     bad = [("d.yaml", {"batch": {"title": "t"}, "people": [{"key": "c1", "coverage": "done"}, {"key": "c1", "coverage": "partly"}]})]
     plan = intake.plan_files(intake.World(db), bad)
     assert any("coverage must be one of" in e for e in plan.errors) and any("without a `coverage_note`" in w for w in plan.warnings)
+
+def test_museums():
+    db = FakeDB(snapshot())
+    docs = [("m.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+        "museums": [{"key": "louvre", "name": "Louvre", "kind": "art museum", "city": "Paris", "country": "France", "lat": 48.861, "lng": 2.336,
+                     "website": "https://www.louvre.fr", "founded": 1793, "data_access": "open-data-download", "data_licence": "Etalab", "data_checked_on": "2026-10-10",
+                     "sources": ["s"]}],
+        "people": [{"key": "pm", "name": "PM", "type": "Artist", "sources": ["s"]}],
+        "artworks": [{"key": "work", "name": "Work", "museum": "louvre", "accession": "INV 1", "museum_url": "https://collections.louvre.fr/x",
+                      "people": [{"person": "pm", "role": "creator"}], "sources": ["s"]}]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    intake.apply_files(world, docs, log=lambda m: None)
+    mu = db.t["museums"][0]; aw = db.t["artworks"][0]
+    assert (mu["modern_country"], mu["start_year"], mu["data_access"], mu["data_checked_on"]) == ("France", 1793, "open-data-download", "2026-10-10")
+    assert aw["museum_id"] == mu["id"] and aw["accession_number"] == "INV 1" and aw["museum_url"].endswith("/x")
+    assert any(l["record_type"] == "museum" and l["record_key"] == "louvre" for l in db.t["source_links"])
+    bad = [("b.yaml", {"batch": {"title": "t"}, "museums": [{"key": "x", "name": "X", "data_access": "scrape-it"}],
+                       "artworks": [{"key": "y", "name": "Y", "museum": "nowhere"}]})]
+    errs = intake.plan_files(intake.World(FakeDB(snapshot())), bad).errors
+    assert any("data_access must be one of" in e for e in errs) and any("unknown museum `nowhere`" in e for e in errs)
 
 def test_place_dates_and_builders():
     db = FakeDB(snapshot())
@@ -282,4 +304,4 @@ def test_discrepancies_are_stored_and_surfaced():
     assert any("run sql/005" in e for e in plan5.errors)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
