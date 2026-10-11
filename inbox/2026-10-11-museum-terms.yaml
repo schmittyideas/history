@@ -1,0 +1,555 @@
+# Notes for the reviewer
+# - First pass over the 100 museums marked `unknown`, by five research agents reading each museum's own policy, API and open-data pages (WebSearch/WebFetch, read-only; no collection pages were crawled). Date checked 2026-10-11.
+# - Be careful with the open-* entries: several agents could not fetch the museum's own page (403, 404, 429, certificate errors) and fell back on search summaries; each data_notes says which. Treat `website-only` as "an online collection exists; nothing found that allows automated use" and `unknown` as "could not be read yet", not as permission. Nothing here changes how the site works.
+# - A second pass is needed for the museums still `unknown`.
+
+batch:
+  title: What the museums' own pages say about reading their collections
+  requested: Determine whether the museums' collections can be read, and under what terms
+  date: '2026-10-11'
+museums:
+- key: louvre
+  data_access: website-only
+  collection_url: https://collections.louvre.fr/en/
+  data_licence: Text/data Etalab Open Licence; images of public-domain works free for museum, scientific, educational use only, other uses paid via Rmn-GP
+  data_notes: 'Terms page https://collections.louvre.fr/en/page/cgu read: text and data under Etalab Open Licence with credit; images restricted; ADAGP works barred from text and data mining; terms do not
+    mention an API or automated access. No API found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: musee-d-orsay
+  data_access: website-only
+  collection_url: https://www.musee-orsay.fr/en/collections
+  data_notes: No official API or open collection dataset found; only old small Etalab exports of exhibitions and music programming on data.gouv.fr. Museum FAQ says image publication needs authorisation
+    (Rmn-GP). Terms page not read directly. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: musee-de-l-orangerie
+  data_access: unknown
+  data_notes: Shares the Orsay establishment; no API or open-data page found and terms not read. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: centre-pompidou
+  data_access: unknown
+  collection_url: https://www.centrepompidou.fr/en/collection
+  data_notes: Search found no official collection API or open-data release; terms page not read. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: petit-palais
+  data_access: website-only
+  data_api_url: https://apicollections.parismusees.paris.fr
+  data_licence: CC0 for public-domain 2D works in the Paris Musees open content
+  collection_url: https://parismuseescollections.paris.fr/en
+  data_notes: Petit Palais belongs to the Paris Musees network, which publishes CC0 open content and an API (https://parismusees.paris.fr/en/actualite/open-content-150000-works-from-the-museum-collections-of-the-city-of-paris-freely).
+    That page does not list the museums, and API terms and key requirements were not read, so Petit Palais coverage is unconfirmed; worth a follow-up. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: musee-rodin
+  data_access: website-only
+  data_notes: No API or open data found. Rodin sites say images come from the museum photographic agency and text use needs prior authorisation. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: musee-picasso-paris
+  data_access: unknown
+  data_notes: A digital archive portal launched 2024; reuse terms and any API not found. Images are handled through Rmn-GP. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: musee-marmottan-monet
+  data_access: unknown
+  data_notes: No legal notice, reuse policy or API found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: musee-jacquemart-andre
+  data_access: unknown
+  data_notes: Not researched beyond a first pass; no API or open data found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: museum-of-fine-arts-of-lyon
+  data_access: website-only
+  data_notes: 'Image department sells high-definition images under general conditions (2012 PDF on mba-lyon.fr): single use, no resale. No open licence or API found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: unterlinden-museum
+  data_access: unknown
+  data_notes: Not researched beyond a first pass; no API or open data found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: british-museum
+  data_access: website-only
+  data_licence: Most images CC BY-NC-SA 4.0 (non-commercial); site text rights reserved
+  collection_url: https://www.britishmuseum.org/collection
+  data_notes: Copyright pages (https://www.britishmuseum.org/terms-use/copyright-and-permissions) describe CC BY-NC-SA 4.0 for most images. The 2011 SPARQL endpoint was not confirmed as still live, so no
+    API classified. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: national-gallery
+  data_access: website-only
+  data_licence: Structured data CC0; narrative text CC BY 4.0; images CC BY-NC-ND 4.0
+  collection_url: https://www.nationalgallery.org.uk/paintings
+  data_notes: Licences page https://www.nationalgallery.org.uk/documentation/ngacuk/licences read. Website terms forbid building a database from site material without written permission. No download location
+    for the CC0 data confirmed (a collection-data page is linked, not read). Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: national-portrait-gallery-london
+  data_access: website-only
+  collection_url: https://www.npg.org.uk/collections
+  data_notes: Terms allow non-commercial research and private study downloads only; other use needs a licence; text and data mining or AI use needs contacting the gallery. No API found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: wallace-collection
+  data_access: website-only
+  data_notes: Image downloads limited to private, personal, academic research or educational use; no API found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: courtauld-gallery
+  data_access: website-only
+  data_licence: Public-domain works CC BY-NC 4.0 on download
+  collection_url: https://gallerycollections.courtauld.ac.uk/
+  data_notes: 'Open access policy https://gallerycollections.courtauld.ac.uk/open-access-policy: downloads of out-of-copyright works under CC BY-NC 4.0 after accepting terms; commercial via Bridgeman. No
+    API found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: ashmolean-museum
+  data_access: website-only
+  data_notes: Collections Online exists; images licensed through the Ashmolean image library. No API or open data found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: fitzwilliam-museum
+  data_access: open-api
+  data_api_url: https://data.fitzmuseum.cam.ac.uk/api
+  data_licence: Structured metadata CC0; images CC BY-NC-SA 4.0 (page footer says CC BY-NC-ND, conflicting)
+  collection_url: https://data.fitzmuseum.cam.ac.uk/
+  data_notes: 'API docs read: JSON API needs a free account and bearer token, 60 requests/min. Bulk JSON/CSV in GitHub repo fitz-collection-raw-data. In-copyright 20th-century works generally excluded.
+    Image licence wording conflicts on the page. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: solomon-r-guggenheim-museum
+  data_access: website-only
+  collection_url: https://www.guggenheim.org/collection-online
+  data_notes: Online collection exists; no official API found and image terms not read (third party lists non-commercial use only). Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: whitney-museum-of-american-art
+  data_access: open-data-download
+  data_api_url: https://github.com/whitneymuseum/open-access
+  data_licence: CC0 for datasets; images not covered
+  collection_url: https://whitney.org/collection/works
+  data_notes: 'https://whitney.org/open-access read: nightly CSV of artist and artwork data under CC0 on GitHub. A REST API also exists (whitney.org/about/website/api) with non-commercial use terms. Images
+    not covered. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: frick-collection
+  data_access: website-only
+  collection_url: https://www.frick.org
+  data_notes: Frick copyright page (https://www.frick.org/copyright) limits the site to personal, educational, non-commercial use; reproduction needs an application. No API found for the museum collection
+    (Frick Art Reference Library digital collections is a separate site). checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: brooklyn-museum
+  data_access: open-api
+  data_api_url: https://www.brooklynmuseum.org/opencollection/api/docs/overview
+  data_licence: not verified; API terms bind users, image licence varies by object
+  collection_url: https://www.brooklynmuseum.org/opencollection
+  data_notes: Official Open Collection API v2 documented by the museum; a free personal API key is required (registration page) and use is bound by its terms (could not read full terms; site rate-limited
+    fetches). Check image rights per object. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: the-phillips-collection
+  data_access: website-only
+  collection_url: https://www.phillipscollection.org/
+  data_notes: Image licensing page (https://www.phillipscollection.org/image-licensing) says high-resolution images are provided for a fee by written request; no open access or API found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: philadelphia-museum-of-art
+  data_access: website-only
+  collection_url: https://www.philamuseum.org/
+  data_notes: Legal page (https://www.philamuseum.org/legal) says assume rights are held unless marked public domain; fair use and personal use allowed. No official API or open data found (philart.net is
+    unrelated). checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: barnes-foundation
+  data_access: website-only
+  collection_url: https://www.barnesfoundation.org/collection
+  data_notes: 'Open access page (https://www.barnesfoundation.org/collection/open-access-and-copyright): public domain works downloadable in high resolution for any use, credit requested. No API, bulk data
+    or automated-access statement found; asked to contact rights@barnesfoundation.org. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: museum-of-fine-arts-boston
+  data_access: website-only
+  collection_url: https://collections.mfa.org
+  data_notes: Collections site offers downloads of images believed public domain under the MFA Terms of Use (non-commercial, educational, fair use per secondary summary). No official API found. checked
+    2026-10-11
+  data_checked_on: '2026-10-11'
+- key: isabella-stewart-gardner-museum
+  data_access: website-only
+  data_licence: CC BY-NC-ND 4.0 for downloadable images
+  collection_url: https://www.gardnermuseum.org/
+  data_notes: 'Gardner terms (https://www.gardnermuseum.org/node/123): downloads free for educational, personal, non-commercial use under CC BY-NC-ND 4.0. No API found. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: detroit-institute-of-arts
+  data_access: unknown
+  collection_url: http://www.dia.org/
+  data_notes: Could not find or read a DIA open access, API or terms page; DIA directs image requests to Rights and Reproduction. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: j-paul-getty-museum
+  data_access: open-api
+  data_api_url: https://data.getty.edu/museum/collection/docs/
+  data_licence: Open Content images marked no copyright; metadata licence not verified (third party says CC0)
+  collection_url: https://www.getty.edu/art/collection/
+  data_notes: Getty Museum Collection API (REST and SPARQL, Linked Art, IIIF images) listed at https://data.getty.edu/ ; Open Content Program (https://www.getty.edu/projects/open-content-program/) makes
+    public-domain images available without restriction. Could not read docs pages in full, so key requirement and exact data licence unverified. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: los-angeles-county-museum-of-art
+  data_access: website-only
+  collection_url: https://collections.lacma.org/
+  data_notes: 'LACMA terms (https://www.lacma.org/about/contact-us/terms-use): images marked Public Domain High Resolution Image Available are free for use without restriction, credit requested; terms say
+    nothing on automated access or API. No API found. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: norton-simon-museum
+  data_access: website-only
+  collection_url: https://www.nortonsimon.org/
+  data_notes: Rights page (https://www.nortonsimon.org/art/rights-and-reproductions) requires a reproduction request and contract; no open access or API found. robots.txt 404. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: san-francisco-museum-of-modern-art
+  data_access: unknown
+  collection_url: https://www.sfmoma.org
+  data_notes: Could not verify any current official API or open data; an SFMOMA alpha API was described in 2015 but its status and terms were not confirmed. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: kimbell-art-museum
+  data_access: unknown
+  collection_url: https://kimbellart.org/
+  data_notes: Searches found no Kimbell terms, open access or API page. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: menil-collection
+  data_access: unknown
+  collection_url: https://www.menil.org/
+  data_notes: Site terms exist at https://menil.org/terms-conditions but image reuse section not read; no open access or API found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museum-of-fine-arts-houston
+  data_access: website-only
+  collection_url: http://www.mfah.org/
+  data_notes: 'Terms (https://mfah.org/terms): images posted under fair use, commercial use forbidden, non-commercial educational and personal use only. No API found. robots.txt returned 403 earlier. checked
+    2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: nelson-atkins-museum-of-art
+  data_access: website-only
+  collection_url: https://www.nelson-atkins.org/
+  data_notes: 'Terms (https://nelson-atkins.org/fpc/tos, digital publication terms): non-commercial, educational, personal or fair use only; commercial copying prohibited. No open access or API found. checked
+    2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: saint-louis-art-museum
+  data_access: website-only
+  collection_url: https://www.slam.org/
+  data_notes: Public domain and open access page (https://www.slam.org/public-domain-and-open-access/) offers downloads of public-domain assets subject to its Terms of Use; no licence name, API or automated-access
+    statement found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: walters-art-museum
+  data_access: open-api
+  data_api_url: https://api.thewalters.org/
+  data_licence: CC0
+  collection_url: https://art.thewalters.org/
+  data_notes: Museum's API site (https://api.thewalters.org/) states data and images are CC0, documented on GitHub (WaltersArtMuseum); announced 2015 (OpenGLAM). My fetch of the API site returned 403, so
+    key requirement and current terms not read directly. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: yale-center-for-british-art
+  data_access: open-api
+  data_api_url: https://harvester-bl.britishart.yale.edu/oaicatmuseum/
+  data_licence: 'YCBA Open Data terms (attribution ''Data Source: Yale Center for British Art''); public-domain images free to use'
+  collection_url: https://collections.britishart.yale.edu/
+  data_notes: 'Collections data sharing page (https://britishart.yale.edu/collections-data-sharing): LIDO XML via OAI-PMH, IIIF images. Terms (https://britishart.yale.edu/open-data-and-data-services-terms-use):
+    free reuse with attribution, identify client with User-Agent and contact, no excessive requests. No key. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: van-gogh-museum
+  data_access: website-only
+  collection_url: https://www.vangoghmuseum.nl/en/collection
+  data_notes: 'Image terms (https://www.vangoghmuseum.nl/en/about/organisation/terms-and-conditions/use-and-permissions-of-collection-images): free download for non-commercial use with credits. No official
+    API or open data found. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: mauritshuis
+  data_access: website-only
+  collection_url: https://www.mauritshuis.nl/en/our-collection/
+  data_notes: Search results quoting the museum say the whole collection can be downloaded in high resolution with a Mauritshuis credit line, and that it published public-domain images on Europeana. No
+    API or bulk data found; the museum site returned HTTP 403 to automated fetch, so the policy page itself was not read. Europeana may be an official route. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: stedelijk-museum-amsterdam
+  data_access: unknown
+  data_notes: No Stedelijk API, open data or image policy found in search; site not read directly. Copyright on modern works is likely still in force. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: kroller-muller-museum
+  data_access: website-only
+  collection_url: https://krollermuller.nl/en/
+  data_notes: Online collection search (10,000+ of about 20,000 works). Van Gogh Worldwide (RKD, Kroller-Muller, Van Gogh Museum) presents linked data but no API or licence was found. No reuse terms read.
+    checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museum-boijmans-van-beuningen
+  data_access: website-only
+  collection_url: https://www.boijmans.nl/en/collection/artists
+  data_notes: Online collection (over 56,000 objects online). No official API or open data dump found; Wikidata has a Boijmans artist ID. Terms page not read. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museo-del-prado
+  data_access: unknown
+  data_notes: Legal notice page returned HTTP 403 to automated fetch and searches found no Prado API or open data statement. Not confirmed either way. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museo-nacional-centro-de-arte-reina-sofia
+  data_access: website-only
+  collection_url: https://www.museoreinasofia.es/
+  data_notes: Online image viewer (DigitaldelReina) and a Spanish open-data case study mention high-resolution images, but no API or licence found; the open-online page gave 404. Many works are by 20th-century
+    artists still in copyright. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: thyssen-bornemisza-museum
+  data_access: website-only
+  collection_url: https://www.museothyssen.org/en
+  data_notes: Legal notice (https://www.museothyssen.org/en/legal-terms-and-data-protection/legal) says site is for personal use and bars reproduction or commercial use of images. No API or open data found.
+    Not for automated reuse. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: guggenheim-museum-bilbao
+  data_access: website-only
+  collection_url: https://www.guggenheim-bilbao.eus/en
+  data_notes: Legal information page (https://pro.guggenheim-bilbao.eus/en/legal-information) restricts reuse of images; no API or open data found. Images shared on Google Arts and Culture only. checked
+    2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museu-nacional-d-art-de-catalunya
+  data_access: website-only
+  collection_url: https://www.museunacional.cat/en
+  data_licence: CC BY-NC-SA (images, per legal notice, may be dated)
+  data_notes: robots.txt returned 403 earlier. Legal notice (https://canal.museunacional.cat/en/?p=1960) per search says images reusable under CC BY-NC-SA in full with credit; works under VEGAP copyright
+    excluded. No API or open data found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: uffizi
+  data_access: website-only
+  collection_url: https://www.uffizi.it/
+  data_notes: Online catalogue (metaFAD-based, with API services per the vendor) but no public API or open licence found. Museum says non-personal use of images needs authorisation and fee. Not for automated
+    reuse. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: galleria-dell-accademia
+  data_access: unknown
+  data_notes: robots.txt timed out earlier; no museum-specific terms or API found. Italian state museums fall under DM 161/2023 reproduction fees. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: palazzo-pitti
+  data_access: website-only
+  collection_url: https://www.uffizi.it/palazzo-pitti
+  data_notes: 'Part of the Uffizi Galleries (see uffizi): no open API or licence found; image reuse needs authorisation and fee. checked 2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: bargello
+  data_access: unknown
+  data_notes: robots.txt timed out earlier; no Bargello-specific terms or API found. Italian state museums fall under DM 161/2023 reproduction fees. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: vatican-museums
+  data_access: no-access
+  data_notes: Copyright page (https://www.museivaticani.va/content/museivaticani/en/copyright.html) per search prohibits reproduction even in part without permission; images licensed by the Images and Copyright
+    office. No API found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: galleria-borghese
+  data_access: unknown
+  data_notes: robots.txt timed out earlier; no Borghese-specific terms or API found. Italian state museums fall under DM 161/2023 reproduction fees. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: pinacoteca-di-brera
+  data_access: website-only
+  collection_url: https://pinacotecabrera.org/en/collezioni/
+  data_notes: Collection online (684 records) but no open licence or API found; image use is by paid concession (DM 21 March 2024 guidelines cited in its agreements). checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: gallerie-dell-accademia
+  data_access: website-only
+  collection_url: https://www.gallerieaccademia.it/
+  data_notes: 'Image-use page https://www.gallerieaccademia.it/en/use-images and tariff regulation: reproduction needs authorisation and fee, non-transferable, one purpose. No open data or API found. checked
+    2026-10-11'
+  data_checked_on: '2026-10-11'
+- key: peggy-guggenheim-collection
+  data_access: website-only
+  collection_url: https://www.guggenheim-venice.it/
+  data_notes: No API or own image policy read. Third-party listing says Guggenheim online collection allows non-commercial educational reuse (may refer to New York). Many works under artist copyright. checked
+    2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museo-di-capodimonte
+  data_access: unknown
+  data_notes: robots.txt timed out earlier; no Capodimonte-specific terms or API found. Italian state museums fall under DM 161/2023 reproduction fees. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: kunsthistorisches-museum
+  data_access: website-only
+  collection_url: https://www.khm.at/
+  data_notes: Online collection of 10,000+ objects per a news report; robots.txt failed on SSL earlier. No API or open licence found (search results mostly covered Wien Museum, a different institution).
+    checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: albertina
+  data_access: no-access
+  collection_url: https://sammlungenonline.albertina.at
+  data_notes: Imprint https://www.albertina.at/en/imprint says copying or mass-reproducing the site information is prohibited; no API or open-data page found. Some public-domain images (up to 1200 px) reported
+    via Europeana, not verified. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: belvedere-vienna
+  data_access: open-api
+  data_api_url: https://sammlung.belvedere.at/apis/iiif/presentation/v2/collection/module/objects?page=1
+  data_licence: CC0 for images of works whose copyright has expired
+  collection_url: https://sammlung.belvedere.at
+  collection_url_pattern: https://sammlung.belvedere.at/objects/{id}
+  data_notes: Open Content page https://sammlung.belvedere.at/opencontent/images says public-domain images are CC0; IIIF Presentation endpoint linked, no key stated, no automated-access terms or rate limits
+    stated; metadata licence only said to be 'Creative Commons' (unspecified). Copyrighted works need clearance. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: leopold-museum
+  data_access: no-access
+  collection_url: https://onlinecollection.leopoldmuseum.org
+  data_notes: 'Search summary of https://onlinecollection.leopoldmuseum.org/en/imprint: site content is copyrighted, reproduction prohibited, only private download of works by artists dead 70+ years. Imprint
+    page itself could not be read directly. No API or open data found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: alte-pinakothek
+  data_access: website-only
+  data_licence: CC BY-SA 4.0 for public-domain works (images and metadata)
+  collection_url: https://www.sammlung.pinakothek.de/en
+  data_notes: 'Usage page https://www.sammlung.pinakothek.de/en/usage: CC BY-SA 4.0 reference for public-domain works, credit ''Bayerische Staatsgemaldesammlungen''; copyrighted works images on request
+    only. No API or bulk download found; automated-access terms not stated. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: neue-pinakothek
+  data_access: website-only
+  data_licence: CC BY-SA 4.0 for public-domain works (images and metadata)
+  collection_url: https://www.sammlung.pinakothek.de/en
+  data_notes: 'Same Bayerische Staatsgemaldesammlungen online collection and terms as Alte Pinakothek: https://www.sammlung.pinakothek.de/en/usage. No API found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: pinakothek-der-moderne
+  data_access: website-only
+  data_licence: CC BY-SA 4.0 for public-domain works; most modern works still in copyright
+  collection_url: https://www.sammlung.pinakothek.de/en
+  data_notes: 'Same online collection and terms as Alte Pinakothek: https://www.sammlung.pinakothek.de/en/usage. Much modern art is under copyright and needs separate clearance. No API found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: gemaldegalerie-berlin
+  data_access: website-only
+  data_licence: Public Domain Mark by default; some objects CC BY-SA or CC BY-NC-ND
+  collection_url: https://recherche.smb.museum
+  data_notes: 'Usage notes https://www.smb.museum/open-science-open-access/nutzung/: public-domain status sought by default, licence varies per object. A 2022 press release announced a public API; its existence
+    was not verified and no API or download page found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: alte-nationalgalerie
+  data_access: website-only
+  data_licence: Public Domain Mark by default; some objects CC BY-SA or CC BY-NC-ND
+  collection_url: https://recherche.smb.museum
+  data_notes: 'Staatliche Museen zu Berlin terms https://www.smb.museum/open-science-open-access/nutzung/: licence varies per object. No API or bulk download verified. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: neue-nationalgalerie
+  data_access: website-only
+  data_licence: Public Domain Mark by default; many modern works still in copyright
+  collection_url: https://recherche.smb.museum
+  data_notes: 'Staatliche Museen zu Berlin terms https://www.smb.museum/open-science-open-access/nutzung/: licence varies per object; modern works often copyright-protected. No API verified. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: gemaldegalerie-alte-meister
+  data_access: website-only
+  collection_url: https://skd-online-collection.skd.museum
+  data_notes: SKD online collection exists (robotron Daphne); no API, open-data page or blanket licence found, rights vary per object (some Public Domain Mark). Terms page not read. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: stadel
+  data_access: open-data-download
+  data_licence: Images CC BY-SA 4.0 (public domain works); basic metadata CC0 1.0 via OAI interface
+  collection_url: https://sammlung.staedelmuseum.de/en
+  collection_url_pattern: https://sammlung.staedelmuseum.de/en/work/{slug}
+  data_notes: 'Museum newsroom https://newsroom.staedelmuseum.de/en/node/4045 and press coverage: 22,000+ works CC BY-SA 4.0, metadata via OAI interface under CC0. The OAI endpoint URL was not verified;
+    confirm before harvesting. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: hamburger-kunsthalle
+  data_access: unknown
+  data_notes: Site lists an Online collection, but no terms, API or open-data page could be found in two searches. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: wallrafrichartz-museum
+  data_access: unknown
+  data_notes: No terms, API or open-data page found for the museum or the Rheinisches Bildarchiv. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: kunstmuseum-basel
+  data_access: website-only
+  data_licence: Public domain images downloadable after accepting terms of use
+  collection_url: https://sammlung.kunstmuseumbasel.ch/en/
+  data_notes: Online collection (zetcom) offers public-domain image downloads through a terms-of-use step per search summary; terms page and any API not read or found. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: kunsthaus-zurich
+  data_access: website-only
+  collection_url: https://collection.kunsthaus.ch
+  collection_url_pattern: https://collection.kunsthaus.ch/de/collection/item/{id}
+  data_notes: 'Imprint https://www.kunsthaus.ch/en/impressum/: all rights reserved, no reproduction except private viewing. Image database limited to press use. No API or open data found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: beyeler-foundation
+  data_access: unknown
+  data_notes: No online collection database, API or terms for collection images found; only press-image terms (press use only, https://fondationbeyeler.ch/en/media/press-images). Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: hermitage-museum
+  data_access: unknown
+  data_notes: hermitagemuseum.org terms page could not be fetched (certificate error) and searches found no API or open-data page. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: pushkin-museum
+  data_access: open-data-download
+  data_api_url: https://pushkinmuseum.art/open_data/?lang=en
+  data_licence: Open data, no named licence; some images under the site terms of use
+  collection_url: https://pushkinmuseum.art
+  data_notes: Open data page lists JSON files (https://www.pushkinmuseum.art/json/masterpieces.json, collects.json) and Russian Ministry of Culture open data; says some images are governed by https://www.pushkinmuseum.art/usage_policy/index.php?lang=en,
+    where the museum owns image rights and reuse needs licensing. Only masterpiece-level data, not the full collection. Checked 2026-10-11.
+  data_checked_on: '2026-10-11'
+- key: tretyakov-gallery
+  data_access: website-only
+  collection_url: https://www.tretyakovgallery.ru
+  data_notes: 'Third-party summary (NTU open image collections): images for limited non-commercial personal use, copying needs permission. No open data found; official terms page not read. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: russian-museum
+  data_access: website-only
+  collection_url: https://rusmuseumvrm.ru
+  data_notes: 'Terms https://rusmuseumvrm.ru/terms/index.php?lang=en: image use requires an official letter to the Director General; nothing on automated access. No API or open data found. Checked 2026-10-11.'
+  data_checked_on: '2026-10-11'
+- key: national-museum-in-warsaw
+  data_access: website-only
+  data_api_url: https://cyfrowe.mnw.art.pl/
+  collection_url: https://cyfrowe.mnw.art.pl/
+  data_notes: Online collection cyfrowe.mnw.art.pl exists; a funding project page says an API was planned, but no API docs or terms page could be read. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: national-gallery-of-denmark
+  data_access: open-api
+  data_api_url: https://api.smk.dk/api/v1/docs
+  data_notes: SMK documents a free JSON API at api.smk.dk (Swagger docs at /api/v1/docs); records carry a public_domain flag and SMK says collection data and images are openly published to the extent copyright
+    allows (smk.dk/en/article/smk-api, blog.smk.dk). No key seen. Licence wording (CC0) is from a third party, not confirmed on SMK pages. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+  data_licence: public_domain flag per object (open.smk.dk); same museum as statens-museum-for-kunst (duplicate record, merge later)
+- key: nationalmuseum
+  data_access: website-only
+  data_licence: Public domain (images on Wikimedia Commons)
+  data_api_url: https://www.nationalmuseum.se/en/samlingarna/bilder/fria-bilder
+  data_notes: Online collection database exists; the museum's own free images page says about 6000 public-domain images are downloadable from Wikimedia Commons. No API or terms page for the database was
+    found. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: munch-museum
+  data_access: website-only
+  data_notes: 2018 press reports say 7,600 drawings were put online free to use; emunch.no pages show a copyright notice and no API or CC0 statement was found, reproduction terms page unreadable. checked
+    2026-10-11
+  data_checked_on: '2026-10-11'
+- key: museum-of-fine-arts-ghent
+  data_access: website-only
+  collection_url: https://www.mskgent.be/en/collection
+  data_notes: Image rights page (mskgent.be/en/collection/image-rights) allows publishing images at online resolution with credit; higher resolution via Art in Flanders. No API, open data or CC0 statement
+    and no mention of automated access. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: royal-collection
+  data_access: website-only
+  data_notes: rct.uk terms page returned HTTP 403 to automated fetch and no API was found; treat as no automated access. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: hungarian-national-gallery
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: skagens-museum
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: royal-museums-of-fine-arts-of-belgium
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: royal-museum-of-fine-arts-antwerp
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: groeningemuseum
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: musee-conde
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: musee-fabre
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: palace-of-versailles
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: hampton-court-palace
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: dulwich-picture-gallery
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: scottish-national-gallery
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: national-gallery-of-ireland
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: kelvingrove-art-gallery-and-museum
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
+- key: national-museum-of-sculpture-valladolid
+  data_access: unknown
+  data_notes: Official API, open data and terms pages not found or not read in this pass. checked 2026-10-11
+  data_checked_on: '2026-10-11'
