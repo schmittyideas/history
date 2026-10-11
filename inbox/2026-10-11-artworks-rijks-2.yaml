@@ -1,0 +1,1630 @@
+# Notes for the reviewer
+# - Paintings by our painters, read through the official Rijksmuseum API (https://data.rijksmuseum.nl/); nothing was scraped. Image links only where the museum marks the work public domain / CC0 (MoMA and Tate publish metadata only: no images, just the accession number and a link back). Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 82 new artworks (works already in the database were skipped: 2) (images are hotlinked from the museum's servers, CC0).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Rijksmuseum open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Rijksmuseum
+  date: '2026-10-11'
+sources:
+- key: rijksmuseum-data
+  title: Rijksmuseum Data Services (Linked Art, CC0)
+  url: https://data.rijksmuseum.nl/
+artworks:
+- key: double-portrait-of-mary-stuart-and-william-ii-anthony-van-dyck
+  name: Double Portrait of Mary Stuart and William II
+  kind: painting
+  made: 1641
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-102
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-102
+  image_url: https://iiif.micr.io/XELHe/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/XELHe/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-102
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: portrait-of-a-nobleman-possibly-adriaan-van-der--anthony-van-dyck
+  name: Portrait of a Nobleman, possibly Adriaan van der Borcht
+  kind: painting
+  made: 1634
+  made_end: 1635
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-101
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-101
+  image_url: https://iiif.micr.io/oyXrE/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/oyXrE/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-101
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: the-penitent-magdalen-anthony-van-dyck
+  name: The Penitent Magdalen
+  kind: painting
+  made: 1620
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-103
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-103
+  image_url: https://iiif.micr.io/cSqgo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/cSqgo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-103
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: judith-with-the-head-of-holofernes-sandro-botticelli
+  name: Judith with the Head of Holofernes
+  kind: painting
+  made: 1497
+  made_end: 1500
+  estimated: true
+  museum: rijksmuseum
+  accession: SK-A-3381
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3381
+  image_url: https://iiif.micr.io/GWDgd/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/GWDgd/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3381
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: sandro-botticelli
+    role: creator
+  prominence: 3
+- key: the-virgin-mary-presented-to-sts-joachim-and-ann-giovanni-battista-tiepolo
+  name: The Virgin Mary presented to Sts Joachim and Anna by God the Father
+  kind: painting
+  made: 1757
+  made_end: 1759
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3985
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3985
+  image_url: https://iiif.micr.io/kJorn/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/kJorn/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3985
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: giovanni-battista-tiepolo
+    role: creator
+  prominence: 3
+- key: allegorical-figure-of-a-woman-with-a-club-fortit-giovanni-battista-tiepolo
+  name: Allegorical Figure of a Woman with a Club (Fortitude?)
+  kind: painting
+  made: 1740
+  made_end: 1750
+  estimated: true
+  museum: rijksmuseum
+  accession: SK-A-3437
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3437
+  image_url: https://iiif.micr.io/QWrBo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/QWrBo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3437
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: giovanni-battista-tiepolo
+    role: creator
+  prominence: 3
+- key: allegorical-figure-of-a-woman-with-a-shield-or-a-giovanni-battista-tiepolo
+  name: Allegorical Figure of a Woman with a Shield or a Mirror (Prudence?)
+  kind: painting
+  made: 1740
+  made_end: 1750
+  estimated: true
+  museum: rijksmuseum
+  accession: SK-A-3438
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3438
+  image_url: https://iiif.micr.io/BqLmo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/BqLmo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3438
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: giovanni-battista-tiepolo
+    role: creator
+  prominence: 3
+- key: the-stone-bridge-rembrandt
+  name: The Stone Bridge
+  kind: painting
+  made: 1638
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-1935
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1935
+  image_url: https://iiif.micr.io/hodeb/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/hodeb/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1935
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: rembrandt
+    role: creator
+  prominence: 3
+- key: the-company-of-captain-frans-banninck-cocq-and-l-rembrandt
+  name: The company of Captain Frans Banninck Cocq and Lieutenant Willem van Ruytenburch, known as 'The nightwatch'
+  kind: painting
+  made: 1642
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-5
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-5
+  image_url: https://iiif.micr.io/PJEZO/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/PJEZO/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-5
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: rembrandt
+    role: creator
+  prominence: 3
+- key: the-syndics-the-sampling-officials-wardens-of-th-rembrandt
+  name: 'The syndics: the sampling officials (wardens) of the Amsterdam drapers'
+  kind: painting
+  made: 1662
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-6
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-6
+  image_url: https://iiif.micr.io/cWWQE/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/cWWQE/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-6
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: rembrandt
+    role: creator
+  prominence: 3
+- key: the-milkmaid-johannes-vermeer
+  name: The Milkmaid
+  kind: painting
+  made: 1660
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-2344
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2344
+  image_url: https://iiif.micr.io/QkOGy/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/QkOGy/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2344
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: johannes-vermeer
+    role: creator
+  prominence: 3
+- key: woman-in-blue-reading-a-letter-johannes-vermeer
+  name: Woman in Blue Reading a Letter
+  kind: painting
+  made: 1663
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-251
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-251
+  image_url: https://iiif.micr.io/RwfHG/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/RwfHG/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-251
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: johannes-vermeer
+    role: creator
+  prominence: 3
+- key: portrait-of-jan-van-de-poll-1597-1678-frans-hals
+  name: Portrait of Jan van de Poll (1597-1678)
+  kind: painting
+  made: 1637
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1246
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1246
+  image_url: https://iiif.micr.io/tMAzx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/tMAzx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1246
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: frans-hals
+    role: creator
+  prominence: 3
+- key: portrait-of-duijfje-van-gerwen-1618-1658-frans-hals
+  name: Portrait of Duijfje van Gerwen (1618-1658)
+  kind: painting
+  made: 1637
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1247
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1247
+  image_url: https://iiif.micr.io/OUbxD/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/OUbxD/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1247
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: frans-hals
+    role: creator
+  prominence: 3
+- key: marriage-portrait-of-isaac-abrahamsz-massa-1586--frans-hals
+  name: Marriage Portrait of Isaac Abrahamsz Massa (1586-1643) and Beatrix van der Laen (1592-1639), married in Haarlem on 25 April 1622
+  kind: painting
+  made: 1622
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-133
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-133
+  image_url: https://iiif.micr.io/kMSwz/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/kMSwz/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-133
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: frans-hals
+    role: creator
+  prominence: 3
+- key: children-teaching-a-cat-to-dance-known-as-the-da-jan-steen
+  name: Children teaching a cat to dance, known as 'The dancing lesson'
+  kind: painting
+  made: 1660
+  made_end: 1679
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-718
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-718
+  image_url: https://iiif.micr.io/zpbFV/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/zpbFV/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-718
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: the-quack-jan-steen
+  name: The quack
+  kind: painting
+  made: 1650
+  made_end: 1660
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-387
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-387
+  image_url: https://iiif.micr.io/agWzx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/agWzx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-387
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: woman-at-her-toilet-jan-steen
+  name: Woman at her Toilet
+  kind: painting
+  made: 1655
+  made_end: 1660
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-4052
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-4052
+  image_url: https://iiif.micr.io/QQSGo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/QQSGo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-4052
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: portrait-of-don-ramon-satue-y-allue-1765-1824-francisco-goya
+  name: Portrait of Don Ramón Satué y Allué (1765-1824)
+  kind: painting
+  made: 1823
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-2963
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2963
+  image_url: https://iiif.micr.io/GRbAZ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/GRbAZ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2963
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: francisco-goya
+    role: creator
+  prominence: 3
+- key: the-agony-in-the-garden-eugene-delacroix
+  name: The Agony in the Garden
+  kind: painting
+  made: 1851
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1871
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1871
+  image_url: https://iiif.micr.io/qYIuy/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/qYIuy/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1871
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: eugene-delacroix
+    role: creator
+  prominence: 3
+- key: farming-village-at-twilight-vincent-van-gogh
+  name: Farming Village at Twilight
+  kind: painting
+  made: 1884
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3307
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3307
+  image_url: https://iiif.micr.io/egrgo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/egrgo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3307
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: the-singel-near-the-lutheran-church-in-amsterdam-vincent-van-gogh
+  name: The Singel near the Lutheran Church in Amsterdam
+  kind: painting
+  made: 1885
+  museum: rijksmuseum
+  accession: SK-C-1843
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1843
+  image_url: https://iiif.micr.io/PMnLE/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/PMnLE/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1843
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: riverbank-with-trees-vincent-van-gogh
+  name: Riverbank with Trees
+  kind: painting
+  made: 1887
+  museum: rijksmuseum
+  accession: SK-C-1844
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1844
+  image_url: https://iiif.micr.io/uGHVm/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/uGHVm/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1844
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: la-corniche-near-monaco-claude-monet
+  name: La Corniche near Monaco
+  kind: painting
+  made: 1884
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1892
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1892
+  image_url: https://iiif.micr.io/VPrnZ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/VPrnZ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1892
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: ophelie-la-cape-bleue-sur-les-eaux-odilon-redon
+  name: Ophélie, la cape bleue sur les eaux
+  kind: painting
+  made: 1900
+  made_end: 1905
+  museum: rijksmuseum
+  accession: SK-A-4840
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-4840
+  image_url: https://iiif.micr.io/etdwk/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/etdwk/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-4840
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: portrait-of-a-m-l-bonger-van-der-linden-odilon-redon
+  name: Portrait of A.M.L. Bonger-van der Linden
+  kind: painting
+  made: 1905
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3265
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3265
+  image_url: https://iiif.micr.io/CHVLX/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/CHVLX/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3265
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: landscape-with-rocky-cliffs-and-a-waterfall-gustave-courbet
+  name: Landscape with Rocky Cliffs and a Waterfall
+  kind: painting
+  made: 1872
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1864
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1864
+  image_url: https://iiif.micr.io/WaLfS/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/WaLfS/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1864
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gustave-courbet
+    role: creator
+  prominence: 3
+- key: still-life-with-apples-gustave-courbet
+  name: Still Life with Apples
+  kind: painting
+  made: 1871
+  made_end: 1872
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1865
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1865
+  image_url: https://iiif.micr.io/OORyZ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/OORyZ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1865
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gustave-courbet
+    role: creator
+  prominence: 3
+- key: winter-landscape-gustave-courbet
+  name: Winter Landscape
+  kind: painting
+  made: 1850
+  made_end: 1877
+  museum: rijksmuseum
+  accession: SK-A-3295
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3295
+  image_url: https://iiif.micr.io/IhJqG/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/IhJqG/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3295
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gustave-courbet
+    role: creator
+  prominence: 3
+- key: girl-carrying-water-jean-francois-millet
+  name: Girl carrying Water
+  kind: painting
+  made: 1855
+  made_end: 1860
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-2707
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2707
+  image_url: https://iiif.micr.io/JnEqe/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/JnEqe/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2707
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jean-francois-millet
+    role: creator
+  prominence: 3
+- key: the-reading-honore-daumier
+  name: The Reading
+  kind: painting
+  made: 1857
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-2980
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2980
+  image_url: https://iiif.micr.io/QktzX/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/QktzX/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2980
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: honore-daumier
+    role: creator
+  prominence: 3
+- key: christ-and-his-disciples-honore-daumier
+  name: Christ and his Disciples
+  kind: painting
+  made: 1830
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1869
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1869
+  image_url: https://iiif.micr.io/FWoZx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/FWoZx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1869
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: honore-daumier
+    role: creator
+  prominence: 3
+- key: a-beach-at-ebb-tide-charles-francois-daubigny
+  name: A Beach at Ebb Tide
+  kind: painting
+  made: 1850
+  made_end: 1878
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-1867
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1867
+  image_url: https://iiif.micr.io/PuqrC/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/PuqrC/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1867
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: october-charles-francois-daubigny
+  name: October
+  kind: painting
+  made: 1850
+  made_end: 1878
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1868
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1868
+  image_url: https://iiif.micr.io/MuYeh/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/MuYeh/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1868
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: landscape-on-the-oise-charles-francois-daubigny
+  name: Landscape on the Oise
+  kind: painting
+  made: 1872
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-2288
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2288
+  image_url: https://iiif.micr.io/MfrJY/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/MfrJY/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2288
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: arrangement-in-yellow-and-gray-effie-deans-james-mcneill-whistler
+  name: '‘Arrangement in Yellow and Gray’: Effie Deans'
+  kind: painting
+  made: 1876
+  made_end: 1878
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1902
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1902
+  image_url: https://iiif.micr.io/pqdys/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/pqdys/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1902
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 3
+- key: burial-in-my-own-neighbourhood-maurice-denis
+  name: Burial in My Own Neighbourhood
+  kind: painting
+  made: 1894
+  estimated: true
+  museum: rijksmuseum
+  accession: SK-A-5108(R)
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-5108(R)
+  image_url: https://iiif.micr.io/DhMcd/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/DhMcd/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-5108(R)
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: maurice-denis
+    role: creator
+  prominence: 3
+- key: self-portrait-emile-bernard
+  name: Self-Portrait
+  kind: painting
+  made: 1897
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3263
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3263
+  image_url: https://iiif.micr.io/lXjDS/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/lXjDS/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3263
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: emile-bernard
+    role: creator
+  prominence: 3
+- key: still-life-with-fruit-henri-fantin-latour
+  name: Still Life with Fruit
+  kind: painting
+  made: 1880
+  made_end: 1890
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-2982
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2982
+  image_url: https://iiif.micr.io/tDDnJ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/tDDnJ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2982
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: reclining-nude-henri-fantin-latour
+  name: Reclining Nude
+  kind: painting
+  made: 1874
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-2892
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2892
+  image_url: https://iiif.micr.io/AUCgH/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/AUCgH/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2892
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: de-vierkante-man-karel-appel
+  name: De Vierkante Man
+  kind: painting
+  made: 1951
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-5002
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-5002
+  image_url: https://iiif.micr.io/YMarE/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/YMarE/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-5002
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: harbour-at-sunrise-claude-lorrain
+  name: Harbour at Sunrise
+  kind: painting
+  made: 1637
+  made_end: 1638
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-4977
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-4977
+  image_url: https://iiif.micr.io/yCEjP/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/yCEjP/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-4977
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 3
+- key: giuliano-francesco-giamberti-da-sangallo-piero-d-piero-di-cosimo
+  name: Giuliano & Francesco Giamberti da Sangallo Piero di Cosimo (1462–1522)
+  kind: painting
+  made: 1482
+  made_end: 1485
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-C-1368
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1368
+  image_url: https://iiif.micr.io/RXrQw/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/RXrQw/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1368
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 3
+- key: portraits-of-giuliano-and-francesco-giamberti-da-piero-di-cosimo
+  name: Portraits of Giuliano and Francesco Giamberti da Sangallo
+  kind: painting
+  made: 1482
+  made_end: 1485
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-C-1367
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1367
+  image_url: https://iiif.micr.io/DokhU/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/DokhU/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1367
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 3
+- key: view-of-haarlem-from-the-northwest-with-the-blea-jacob-van-ruisdael
+  name: View of Haarlem from the northwest, with the bleaching fields in the foreground
+  kind: painting
+  made: 1650
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-351
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-351
+  image_url: https://iiif.micr.io/dNkMA/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/dNkMA/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-351
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: the-windmill-at-wijk-bij-duurstede-jacob-van-ruisdael
+  name: The windmill at Wijk bij Duurstede
+  kind: painting
+  made: 1668
+  made_end: 1670
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-211
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-211
+  image_url: https://iiif.micr.io/XWEFp/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/XWEFp/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-211
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: mountainous-landscape-with-waterfall-jacob-van-ruisdael
+  name: Mountainous Landscape with Waterfall
+  kind: painting
+  made: 1650
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-348
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-348
+  image_url: https://iiif.micr.io/oCoVK/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/oCoVK/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-348
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: portrait-of-isabel-parreno-y-arce-marquise-of-ll-anton-raphael-mengs
+  name: Portrait of Isabel Parreño y Arce, Marquise of Llano
+  kind: painting
+  made: 1771
+  made_end: 1772
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3277
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3277
+  image_url: https://iiif.micr.io/cZbUV/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/cZbUV/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3277
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: the-adoration-of-the-magi-pieter-aertsen
+  name: The Adoration of the Magi
+  kind: painting
+  made: 1560
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-C-1458
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1458
+  image_url: https://iiif.micr.io/hsWLZ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/hsWLZ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1458
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-aertsen
+    role: creator
+  prominence: 3
+- key: the-egg-dance-pieter-aertsen
+  name: The Egg Dance
+  kind: painting
+  made: 1552
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-3
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3
+  image_url: https://iiif.micr.io/mReXJ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/mReXJ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-aertsen
+    role: creator
+  prominence: 3
+- key: wing-of-an-altarpiece-with-adoration-of-the-magi-pieter-aertsen
+  name: Wing of an Altarpiece with Adoration of the Magi, on the reverse is Presentation in the Temple
+  kind: painting
+  made: 1560
+  made_end: 1565
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-1909
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1909
+  image_url: https://iiif.micr.io/LRoUx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/LRoUx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1909
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-aertsen
+    role: creator
+  prominence: 3
+- key: the-vision-of-st-francis-of-assisi-ludovico-carracci
+  name: The Vision of St Francis of Assisi
+  kind: painting
+  made: 1583
+  made_end: 1585
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3992
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3992
+  image_url: https://iiif.micr.io/rXrek/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/rXrek/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3992
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: ludovico-carracci
+    role: creator
+  prominence: 3
+- key: ice-skating-in-a-village-hendrick-avercamp
+  name: Ice-Skating in a Village
+  kind: painting
+  made: 1610
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-1320
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1320
+  image_url: https://iiif.micr.io/NafaR/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/NafaR/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1320
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: hendrick-avercamp
+    role: creator
+  prominence: 3
+- key: winter-landscape-with-skaters-hendrick-avercamp
+  name: Winter Landscape with Skaters
+  kind: painting
+  made: 1608
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-1718
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1718
+  image_url: https://iiif.micr.io/aXnzA/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/aXnzA/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1718
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: hendrick-avercamp
+    role: creator
+  prominence: 3
+- key: enjoying-the-ice-hendrick-avercamp
+  name: Enjoying the Ice
+  kind: painting
+  made: 1610
+  made_end: 1620
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-3247
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3247
+  image_url: https://iiif.micr.io/WwEzP/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/WwEzP/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3247
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: hendrick-avercamp
+    role: creator
+  prominence: 3
+- key: merry-violinist-with-wineglass-gerard-van-honthorst
+  name: Merry Violinist with Wineglass
+  kind: painting
+  made: 1623
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-180
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-180
+  image_url: https://iiif.micr.io/LAWVX/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/LAWVX/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-180
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gerard-van-honthorst
+    role: creator
+  prominence: 3
+- key: shepherd-playing-the-flute-and-four-nymphs-gerard-van-honthorst
+  name: Shepherd Playing the Flute, and four Nymphs
+  kind: painting
+  made: 1632
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3270
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3270
+  image_url: https://iiif.micr.io/OmzpQ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/OmzpQ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3270
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gerard-van-honthorst
+    role: creator
+  prominence: 3
+- key: portrait-of-friedrich-wilhelm-1620-88-elector-of-gerard-van-honthorst
+  name: Portrait of Friedrich Wilhelm (1620-88), Elector of Brandenburg, and his Wife Louise Henriette (1627-67), Countess of Orange-Nassau
+  kind: painting
+  made: 1647
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-873
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-873
+  image_url: https://iiif.micr.io/tXaeY/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/tXaeY/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-873
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: gerard-van-honthorst
+    role: creator
+  prominence: 3
+- key: winter-jan-van-goyen
+  name: Winter
+  kind: painting
+  made: 1625
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-3946
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3946
+  image_url: https://iiif.micr.io/czGzQ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/czGzQ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3946
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: landscape-with-two-oaks-jan-van-goyen
+  name: Landscape with Two Oaks
+  kind: painting
+  made: 1641
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-123
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-123
+  image_url: https://iiif.micr.io/Hhojx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/Hhojx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-123
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: panoramic-view-of-a-wide-river-jan-van-goyen
+  name: Panoramic View of a Wide River
+  kind: painting
+  made: 1644
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-4044
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-4044
+  image_url: https://iiif.micr.io/UBvSk/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/UBvSk/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-4044
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: a-lute-player-known-as-the-serenade-judith-leyster
+  name: A Lute Player, known as ‘The Serenade’
+  kind: painting
+  made: 1629
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-2326
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-2326
+  image_url: https://iiif.micr.io/ZppYx/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/ZppYx/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-2326
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: judith-leyster
+    role: creator
+  prominence: 3
+- key: a-fool-holding-a-jug-known-as-the-jolly-drinker-judith-leyster
+  name: A Fool Holding a Jug, known as ‘The Jolly Drinker’
+  kind: painting
+  made: 1629
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1685
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1685
+  image_url: https://iiif.micr.io/NPdVj/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/NPdVj/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1685
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: judith-leyster
+    role: creator
+  prominence: 3
+- key: two-children-with-a-cat-judith-leyster
+  name: Two Children with a Cat
+  kind: painting
+  made: 1630
+  estimated: true
+  museum: rijksmuseum
+  accession: SK-C-1846
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-1846
+  image_url: https://iiif.micr.io/tRthh/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/tRthh/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-1846
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: judith-leyster
+    role: creator
+  prominence: 3
+- key: portrait-of-a-young-man-possibly-jacob-francken--aelbert-cuyp
+  name: Portrait of a Young Man, possibly Jacob Francken (1627-after 1656)
+  kind: painting
+  made: 1651
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-C-120
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-120
+  image_url: https://iiif.micr.io/aRoEK/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/aRoEK/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-120
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: river-landscape-near-nijmegen-with-riders-wateri-aelbert-cuyp
+  name: River Landscape near Nijmegen with Riders Watering their Horses
+  kind: painting
+  made: 1653
+  made_end: 1657
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-4118
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-4118
+  image_url: https://iiif.micr.io/uMHxo/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/uMHxo/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-4118
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: river-landscape-with-cows-aelbert-cuyp
+  name: River Landscape with Cows
+  kind: painting
+  made: 1645
+  made_end: 1650
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-3957
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3957
+  image_url: https://iiif.micr.io/yhFsB/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/yhFsB/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3957
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: three-women-and-a-man-in-the-courtyard-behind-a--pieter-de-hooch
+  name: Three Women and a Man in the Courtyard behind a House
+  kind: painting
+  made: 1663
+  made_end: 1665
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-150
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-150
+  image_url: https://iiif.micr.io/SOvaQ/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/SOvaQ/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-150
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: woman-with-a-child-in-a-pantry-pieter-de-hooch
+  name: Woman with a Child in a Pantry
+  kind: painting
+  made: 1656
+  made_end: 1660
+  estimated: true
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-182
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-182
+  image_url: https://iiif.micr.io/DSKRH/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/DSKRH/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-182
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: man-handing-a-letter-to-a-woman-in-the-entrance--pieter-de-hooch
+  name: Man Handing a Letter to a Woman in the Entrance Hall of a House
+  kind: painting
+  made: 1670
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-C-147
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-147
+  image_url: https://iiif.micr.io/YEDXA/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/YEDXA/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-147
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: regatta-on-the-grand-canal-near-the-rialto-bridg-francesco-guardi
+  name: Regatta on the Grand Canal, near the Rialto Bridge, Venice
+  kind: painting
+  made: 1780
+  made_end: 1793
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3251
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3251
+  image_url: https://iiif.micr.io/eRFkN/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/eRFkN/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3251
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: landscape-with-a-quay-and-ships-on-a-lake-francesco-guardi
+  name: Landscape with a Quay and Ships on a Lake
+  kind: painting
+  made: 1760
+  made_end: 1780
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3252
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3252
+  image_url: https://iiif.micr.io/okShD/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/okShD/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3252
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: lagoon-near-venice-francesco-guardi
+  name: Lagoon near Venice
+  kind: painting
+  made: 1740
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-3309
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3309
+  image_url: https://iiif.micr.io/RdJGO/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/RdJGO/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3309
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: portrait-of-sophia-frederika-mathilda-1818-77-pr-franz-xaver-winterhalter
+  name: Portrait of Sophia Frederika Mathilda (1818-77), Princess of Württemberg
+  kind: painting
+  made: 1863
+  made_end: 1873
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1702
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1702
+  image_url: https://iiif.micr.io/yGEBL/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/yGEBL/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1702
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: franz-xaver-winterhalter
+    role: creator
+  prominence: 3
+- key: lust-for-gold-thomas-couture
+  name: Lust for Gold
+  kind: painting
+  made: 1840
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-1866
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-1866
+  image_url: https://iiif.micr.io/Nzxev/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/Nzxev/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-1866
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: thomas-couture
+    role: creator
+  prominence: 3
+- key: poor-folk-drinking-in-a-tavern-adriaen-brouwer
+  name: Poor Folk Drinking in a Tavern
+  kind: painting
+  made: 1625
+  made_end: 1630
+  estimated: true
+  medium: oil on inlaid oak support
+  museum: rijksmuseum
+  accession: SK-A-64
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-64
+  image_url: https://iiif.micr.io/hWdVc/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/hWdVc/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-64
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: adriaen-brouwer
+    role: creator
+  prominence: 3
+- key: card-fight-outside-a-country-tavern-adriaen-brouwer
+  name: Card Fight outside a Country Tavern
+  kind: painting
+  made: 1628
+  made_end: 1630
+  estimated: true
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-A-65
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-65
+  image_url: https://iiif.micr.io/Hferv/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/Hferv/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-65
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: adriaen-brouwer
+    role: creator
+  prominence: 3
+- key: orpheus-charming-the-beasts-paulus-potter
+  name: Orpheus charming the beasts
+  kind: painting
+  made: 1650
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-317
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-317
+  image_url: https://iiif.micr.io/yovsf/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/yovsf/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-317
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: paulus-potter
+    role: creator
+  prominence: 3
+- key: cows-in-a-meadow-near-a-farm-paulus-potter
+  name: Cows in a meadow near a farm
+  kind: painting
+  made: 1653
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-711
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-711
+  image_url: https://iiif.micr.io/ynTUE/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/ynTUE/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-711
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: paulus-potter
+    role: creator
+  prominence: 3
+- key: a-spaniel-paulus-potter
+  name: A spaniel
+  kind: painting
+  made: 1653
+  medium: oil on panel
+  museum: rijksmuseum
+  accession: SK-C-279
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-C-279
+  image_url: https://iiif.micr.io/dyWQL/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/dyWQL/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-C-279
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: paulus-potter
+    role: creator
+  prominence: 3
+- key: willem-ferdinand-mogge-muilman-president-of-the--thomas-lawrence
+  name: Willem Ferdinand Mogge Muilman, President of the Bank of the Netherlands
+  kind: painting
+  made: 1800
+  medium: oil on canvas
+  museum: rijksmuseum
+  accession: SK-A-728
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-728
+  image_url: https://iiif.micr.io/Lnnef/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/Lnnef/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-728
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: madonna-with-lily-fra-angelico
+  name: Madonna with Lily
+  kind: painting
+  made: 1440
+  estimated: true
+  medium: tempera on panel
+  museum: rijksmuseum
+  accession: SK-A-3011
+  museum_url: https://www.rijksmuseum.nl/en/collection/SK-A-3011
+  image_url: https://iiif.micr.io/VkxAm/full/1600,/0/default.jpg
+  image_thumb: https://iiif.micr.io/VkxAm/full/400,/0/default.jpg
+  image_page: https://www.rijksmuseum.nl/en/collection/SK-A-3011
+  image_license: CC0
+  image_credit: Rijksmuseum, Open Access
+  sources:
+  - rijksmuseum-data
+  people:
+  - person: fra-angelico
+    role: creator
+  prominence: 3
