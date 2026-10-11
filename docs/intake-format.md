@@ -82,6 +82,26 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 | `people` | List of `{person: key, role: …}` (victor, defeated, crowned, died, …) |
 | `prominence`, `obsidian_link`, `note`, `sources` | As above |
 
+### `museums`
+Museums and galleries, so an artwork can say where it is and link back to the museum's own page for it.
+| Field | Meaning |
+|---|---|
+| `key`, `name` | Required for new museums ("louvre", "Louvre") |
+| `kind` | art museum, gallery, library, palace, church, … |
+| `address`, `city`, `region`, `country` | Where it is today |
+| `lat`, `lng` | Coordinates (decimal degrees) |
+| `website` | The museum's home page |
+| `founded` | Year it opened or was founded (BC negative) |
+| `collection_url` | The online collection or search page |
+| `collection_url_pattern` | How to build a link to one object, with `{id}` for the object's number |
+| `data_access` | What we may do with its collection data: `open-api`, `open-data-download`, `website-only`, `no-access` or `unknown` |
+| `data_api_url`, `data_licence` | The API or download page, and the licence of its data and images |
+| `data_notes`, `data_checked_on` | What was checked (robots.txt, terms of use) and when. Never read a site that forbids it; prefer an official open-data route |
+| `place` | Place key, if the museum is also a place on the map |
+| `obsidian_link`, `note`, `sources` | As above |
+
+An artwork points at a museum with `museum: <key>`, plus `accession` (the museum's own number) and `museum_url` (the object's page on its site).
+
 ### `artworks`
 Paintings, prints, miniatures, sculptures and other works as records of their own. An artwork links to who made it, who it shows, where it was made or hangs, which event it depicts, and which artwork it copies, so each can be found from any of them. Links only for images; nothing is copied.
 | Field | Meaning |
@@ -90,7 +110,8 @@ Paintings, prints, miniatures, sculptures and other works as records of their ow
 | `kind`, `medium` | painting, print, miniature, sculpture, drawing, film, …; a `film` with a year shows on the timeline beside the events and on each place it was `filmed` at, with its `creator` as director; "oil on canvas". Leave out what the source does not say |
 | `made`, `made_end` | Year (or span) it was made; years only (BC negative). `estimated: true` for "c." |
 | `after` | Key of the artwork this one copies or is based on (an engraving after a painting) |
-| `collection` | Where it is now ("Chatsworth House") |
+| `collection` | Where it is now, as text ("Chatsworth House"). Use `museum` below when the museum is a record |
+| `museum`, `accession`, `museum_url` | Museum key; the museum's own number for the object; the object's page on the museum's site |
 | `image_url`, `image_thumb`, `image_page`, `image_license`, `image_credit` | Links to the picture and a thumbnail; the Commons (or museum) page where author and licence can be checked; short licence name; credit line as the source gives it |
 | `people` | List of `{person: key, role: …}`. Roles: `creator`, `subject` (portrayed), `patron` (commissioned it), `after` (the artist of the original it copies), `engraver`, `owner` |
 | `places` | List of `{place: key, role: …}`. Roles: `made`, `depicts`, `held`, `made-for`, `displayed`, `filmed` (a film shot scenes there) |

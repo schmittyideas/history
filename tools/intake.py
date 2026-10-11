@@ -141,9 +141,14 @@ class Plan:
     open_discrepancies: list = field(default_factory=list)   # (record label, discrepancy) for records this batch touches
 
 
-SECTIONS = ["sources", "places", "realms", "people", "events", "artworks", "links", "moments", "titles", "discrepancies", "log"]
+SECTIONS = ["sources", "places", "realms", "people", "events", "museums", "artworks", "links", "moments", "titles", "discrepancies", "log"]
 REGIONS = ("Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
            "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania")  # matches sql/008's check
+DATA_ACCESS = ("open-api", "open-data-download", "website-only", "no-access", "unknown")
+MUSEUM_FIELDS = {"name": "name", "kind": "kind", "address": "address", "city": "city", "region": "region", "country": "modern_country",
+                 "lat": "lat", "lng": "lng", "website": "website", "collection_url": "collection_url",
+                 "collection_url_pattern": "collection_url_pattern", "data_access": "data_access", "data_api_url": "data_api_url",
+                 "data_licence": "data_licence", "data_notes": "data_notes", "place": "place_key", "obsidian_link": "obsidian_link", "note": "note"}
 COVERAGE = ("not-read", "partly", "complete")
 ABOUT_KINDS = ("person", "place", "event", "artwork")
 
@@ -160,7 +165,7 @@ PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "k
 EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
                 "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note", "visitable": "visitable_today",
                 "visit_site": "visit_site"}
-ARTWORK_FIELDS = {"name": "name", "kind": "kind", "medium": "medium", "estimated": "estimated", "collection": "collection",
+ARTWORK_FIELDS = {"accession": "accession_number", "museum_url": "museum_url", "name": "name", "kind": "kind", "medium": "medium", "estimated": "estimated", "collection": "collection",
                   "image_url": "image_url", "image_thumb": "image_thumb", "image_page": "image_page", "image_license": "image_license",
                   "image_credit": "image_credit", "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note"}
 ARTWORK_LINKS = (("people", "person", "artwork_people", "entity_id"),   # section key, item key, table, id column
@@ -195,6 +200,10 @@ class World:
         self.moments = db.select("person_places", "id,entity_id,place_id,role,year")
         self.event_people = db.select("event_people", "id,event_id,entity_id,role")
         try:
+            self.museums = {r["key"]: r for r in db.select("museums", "id,key,name")}
+        except RuntimeError:  # sql/014 not run yet
+            self.museums = None
+        try:
             self.artworks = {r["key"]: r for r in db.select("artworks", "id,key,name")}
             self.artwork_links = {t: db.select(t, "id,artwork_id," + col + ",role") for _, _, t, col in ARTWORK_LINKS}
         except RuntimeError:  # sql/011 not run yet
@@ -218,7 +227,7 @@ class World:
 
 def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
     p = Plan()
-    new = {"people": {}, "places": {}, "events": {}, "sources": {}, "artworks": {}}
+    new = {"people": {}, "places": {}, "events": {}, "sources": {}, "artworks": {}, "museums": {}}
 
     # First pass: collect every key the files define, so references across sections and files resolve.
     for _, d in docs:
@@ -232,9 +241,11 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             new["events"][x.get("key")] = x
         for x in as_list(d.get("artworks")):
             new["artworks"][x.get("key")] = x
+        for x in as_list(d.get("museums")):
+            new["museums"][x.get("key")] = x
 
     def known(kind, key):
-        table = {"person": "people", "place": "places", "event": "events", "source": "sources", "artwork": "artworks"}[kind]
+        table = {"person": "people", "place": "places", "event": "events", "source": "sources", "artwork": "artworks", "museum": "museums"}[kind]
         return key in (getattr(world, table) or {}) or key in new[table]
 
     def ref(kind, key, where):
@@ -341,6 +352,30 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 ref("person", pe.get("person"), f"event `{k}` people")
             check_sources(x, f"event `{k}`", require=k not in world.events)
 
+        if d.get("museums") and world.museums is None:
+            p.errors.append(f"{fname}: the database has no museums table yet: run sql/014_museums.sql first")
+        for x in as_list(d.get("museums")):
+            k = x.get("key")
+            if not k:
+                p.errors.append(f"{fname}: a museum is missing `key`"); continue
+            where = f"museum `{k}`"
+            if k in (world.museums or {}):
+                p.updates["museums"].append(k)
+            else:
+                if not x.get("name"):
+                    p.errors.append(f"{where}: new museums need `name`")
+                p.adds["museums"].append(k)
+                if x.get("lat") is None or x.get("lng") is None:
+                    p.warnings.append(f"{where}: no coordinates")
+            when(x, "founded", where); when(x, "data_checked_on", where)
+            if x.get("data_access") is not None and x["data_access"] not in DATA_ACCESS:
+                p.errors.append(f"{where}: data_access must be one of {', '.join(DATA_ACCESS)}")
+            if x.get("data_access") in ("open-api", "open-data-download") and not x.get("data_licence"):
+                p.warnings.append(f"{where}: open data without `data_licence`")
+            if x.get("place"):
+                ref("place", x["place"], where)
+            check_sources(x, where, require=k not in (world.museums or {}))
+
         if d.get("artworks") and world.artworks is None:
             p.errors.append(f"{fname}: the database has no artworks table yet: run sql/011_artworks.sql first")
         for x in as_list(d.get("artworks")):
@@ -360,6 +395,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             pr = x.get("prominence")
             if pr is not None and pr not in (1, 2, 3, 4, 5):
                 p.errors.append(f"{where}: prominence must be 1–5")
+            if x.get("museum"):
+                ref("museum", x["museum"], where)
             if x.get("after"):
                 if x["after"] == k:
                     p.errors.append(f"{where}: `after` points at itself")
@@ -516,7 +553,7 @@ def find_rel(world, a_key, b_key, rel_type):
 
 def render(plan: Plan, files) -> str:
     out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
-    labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events", "artworks": "Artworks",
+    labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events", "museums": "Museums", "artworks": "Artworks",
               "links": "Relationships", "moments": "Life moments", "titles": "Titles and reigns", "realms": "Realms", "discrepancies": "Discrepancies (sources disagree)",
               "log": "Learning log (private)"}
     total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
@@ -614,9 +651,19 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
                 if not any(r["event_id"] == ev["id"] and r["entity_id"] == pid for r in world.event_people):
                     world.event_people.append(db.insert("event_people", {"event_id": ev["id"], "entity_id": pid, "role": pe.get("role")}))
                     log(f"linked {pe['person']} to {x['key']}")
+    for _, d in docs:
+        for x in as_list(d.get("museums")):
+            row = map_fields(x, MUSEUM_FIELDS)
+            if "founded" in x:
+                row["start_year"] = parse_when(x["founded"])[0]
+            if "data_checked_on" in x:
+                row["data_checked_on"] = parse_when(x["data_checked_on"])[1] or f"{x['data_checked_on']}-01-01"
+            upsert_keyed("museums", world.museums, x["key"], row)
     for _, d in docs:  # artworks: rows first; "after" and the links need every artwork's id
         for x in as_list(d.get("artworks")):
             row = map_fields(x, ARTWORK_FIELDS)
+            if x.get("museum"):
+                row["museum_id"] = world.museums[x["museum"]]["id"]
             if "made" in x:
                 row["start_year"] = parse_when(x["made"])[0]
             if "made_end" in x:
@@ -685,7 +732,7 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
             upsert_keyed("titles", world.titles, k, row)
             link_sources("title", k, x.get("sources"))
     for _, d in docs:
-        for kind, sect in (("place", "places"), ("person", "people"), ("event", "events"), ("artwork", "artworks")):
+        for kind, sect in (("place", "places"), ("person", "people"), ("event", "events"), ("artwork", "artworks"), ("museum", "museums")):
             for x in as_list(d.get(sect)):
                 link_sources(kind, x["key"], x.get("sources"))
     for _, d in docs:
