@@ -1,0 +1,962 @@
+batch:
+  title: "East Asia A: the Song, Liao, Jin and Western Xia emperors, 1022-1279"
+  requested: "Renzong to Bing of Song, Xingzong to Tianzuo of Liao, Taizu to Aizong of Jin, Jingzong of Western Xia, Wang Anshi and Yelu Dashi, with the Jingkang incident, the Treaty of Shaoxing and the Battle of Yamen"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp4 directory); nothing fetched. Every file named in the brief was read in full and checked on its first lines: all are the right article. Several titles differ from the request: Emperor_Bing_of_Song is "Zhao Bing", Emperor_Gongzong_of_Song is "Emperor Gong of Song", and Emperor_Duzong/Lizong/Ningzong/Qinzong/Zhezong are "Emperor Duzong/Lizong/Ningzong/Qinzong/Zhezong" (source URLs below are the ones in the file headers). The wp4 folder also holds Genghis_Khan; it is not mine (batch B) and was not used.
+# - Existing records: emperor-zhenzong-of-song is used only as the parent in one link (Renzong). Realms Song dynasty and Liao dynasty are not redefined; titles reuse "Emperor of China" (Song dynasty) and "Emperor of the Liao" (Liao dynasty). Shengzong of Liao and Xiao Chuo are not touched.
+# - New realms: Jin dynasty ("Emperor of the Jin"), Western Xia ("Emperor of Western Xia") and Western Liao ("Gurkhan"; region Central Asia, country Kazakhstan because the article puts the first base on the Emil River and Zhetysu in eastern Kazakhstan; its empire also covered Xinjiang, Kyrgyzstan, Uzbekistan and Tajikistan).
+# - Song titles: every Song emperor is "Emperor of China", realm Song dynasty, as asked; Southern Song reigns say so in the note and `house` is "House of Zhao". Wang Anshi's title is "Chancellor of Song", realm Song dynasty, 1070-1076 (see discrepancy).
+# - Not entered (no article in this batch): Duanzong of Song (Zhao Shi, 1276-1278, he is only named in the Bing and Gong notes), Jin emperors Xuanzong and Wei Shao Wang (Wanyan Yongji, 1209-1213) between Zhangzong and Aizong, and the Western Xia emperors after Jingzong. So Year view shows no Jin ruler 1209-1224 and no Song ruler 1276-1278 from this batch. Yue Fei, Qin Hui, Han Shizhong, Zhang Shijie, Lu Xiufu, Wen Tianxiang, Sima Guang, Fan Zhongyan, Han Tuozhou, Jia Sidao, Shi Miyuan and the Mongol generals are named in notes only (no keys). Consorts, empresses dowager and the very long family lists are not entered.
+# - Yue Fei's execution has no date in the Gaozong article (it only says he was put to death before the Treaty of Shaoxing), so no event was entered for it. Linhuang Fu, the Liao Supreme Capital's other name, is in the brief but in none of the articles, so it is not in the place record. Bing's reign start (1278) has no day in the articles: the Bing article's "around 313 days" is not used to compute one. Neither the Song-Jin alliance nor the New Policies have a day in the articles (year only).
+# - Dates: where an article gives a month but no day, the year is used. Taizu of Jin's accession (January 1115) is year-only for that reason. Reign starts on the predecessor's death day are used where an article gives it (Gaozong to Xiaozong 24 July 1162; Daozong 1101 and so on are year-only because the article of the successor gives no day). Lunar dates that cross a Gregorian year (the brief's classic case) do not occur in these articles; all dates are used as written. Guangzong's death (17 September 1200) and Ningzong's death (17 September 1224) fall on the same day and month in their articles; both are entered as written, a possible copy error in one of them, not recorded as a discrepancy because no second source disagrees.
+# - Coordinates are from general knowledge (2-3 decimals); Wuguocheng, Shangjing (Jin), Caizhou, Balasaghun and Xingqing are approximate. The country of Balasaghun (Kyrgyzstan), "visitable" flags and visit_site names are general knowledge, except the Yamen museum zone and the Jin Dynasty History Museum, which the articles name.
+# - Beijing: the record is the modern city. The articles name it Nanjing or Yanjing under the Liao, Zhongdu under the Jin (from 1153) and Dadu under the Yuan; the later Ming capital is from the brief, not these articles.
+# - Overlaps: Huizong's title ends 18 January 1126 (his abdication date) and Qinzong's starts in 1126 (year only); Qinzong's ends 20 March 1127, when the Jin demoted him, and Gaozong's starts in 1127 (year only). Yelu Dashi's title starts 1132 (the year he was proclaimed Gurkhan); the article says he ruled as king 1124-1132, so the Year view will show no Western Liao ruler for 1124-1131 (see discrepancy). Wanyan Liang's start is 1150 (year only; the article gives no day).
+# - Discrepancies recorded below: Yingzong sending gifts before Renzong died; the Xia-Song peace (1043 or 1044); when Wang Anshi became chancellor; the date of the Jin-Song alliance; the date and place of the fall of the Liao Supreme Capital; when the Liao fell; the month of Taizu of Jin's death; who led the Jin attack of 1125; the Huizong and Qinzong deportation dates and destination; how Qinzong died; when Tianzuo died; the Western Liao founding (1124 or 1132); Yelu Dashi's birth; when Lin'an became the capital; who won the 1140-41 war; how Han Tuozhou died; the 1208 tribute; Duzong's birth year; how Duzong died; Gong's reign start; how Bing died; what happened to Aizong's remains. Seen and not entered as records: Zhezong's age at accession (8 in one place, 9 in another); Xiaozong's rule "about a year" after 1187 against his 1189 abdication (the text says two years); Xingzong's son Heluwo dated "1041 - 1010" (a typo in the article); the 1156 polo story (a Yuan novel) names the Jin ruler 'Prince of Hailing', who was Wanyan Liang, emperor 1150-1161 (noted in the Qinzong and Tianzuo discrepancies).
+# - Size: 27 people, 27 title rows, 3 realms, 10 places, 21 events, 22 discrepancies (110 rows), 11 links, 13 moments.
+
+sources:
+  - {key: wp-emperor-renzong-of-song,   title: "Emperor Renzong of Song (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Renzong_of_Song"}
+  - {key: wp-emperor-yingzong-of-song,  title: "Emperor Yingzong of Song (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Emperor_Yingzong_of_Song"}
+  - {key: wp-emperor-shenzong-of-song,  title: "Emperor Shenzong of Song (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Emperor_Shenzong_of_Song"}
+  - {key: wp-emperor-zhezong-of-song,   title: "Emperor Zhezong (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Emperor_Zhezong"}
+  - {key: wp-emperor-huizong-of-song,   title: "Emperor Huizong of Song (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Huizong_of_Song"}
+  - {key: wp-emperor-qinzong-of-song,   title: "Emperor Qinzong (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Emperor_Qinzong"}
+  - {key: wp-emperor-gaozong-of-song,   title: "Emperor Gaozong of Song (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Gaozong_of_Song"}
+  - {key: wp-emperor-xiaozong-of-song,  title: "Emperor Xiaozong of Song (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Emperor_Xiaozong_of_Song"}
+  - {key: wp-emperor-guangzong-of-song, title: "Emperor Guangzong of Song (Wikipedia)", url: "https://en.wikipedia.org/wiki/Emperor_Guangzong_of_Song"}
+  - {key: wp-emperor-ningzong-of-song,  title: "Emperor Ningzong (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Emperor_Ningzong"}
+  - {key: wp-emperor-lizong-of-song,    title: "Emperor Lizong (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Emperor_Lizong"}
+  - {key: wp-emperor-duzong-of-song,    title: "Emperor Duzong (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Emperor_Duzong"}
+  - {key: wp-emperor-gongzong-of-song,  title: "Emperor Gong of Song (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Emperor_Gong_of_Song"}
+  - {key: wp-emperor-bing-of-song,      title: "Zhao Bing (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Zhao_Bing"}
+  - {key: wp-wang-anshi,                title: "Wang Anshi (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Wang_Anshi"}
+  - {key: wp-emperor-xingzong-of-liao,  title: "Emperor Xingzong of Liao (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Emperor_Xingzong_of_Liao"}
+  - {key: wp-emperor-daozong-of-liao,   title: "Emperor Daozong of Liao (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Daozong_of_Liao"}
+  - {key: wp-emperor-tianzuo-of-liao,   title: "Emperor Tianzuo of Liao (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Tianzuo_of_Liao"}
+  - {key: wp-yelu-dashi,                title: "Yelü Dashi (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Yel%C3%BC_Dashi"}
+  - {key: wp-emperor-taizu-of-jin,      title: "Emperor Taizu of Jin (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Emperor_Taizu_of_Jin"}
+  - {key: wp-emperor-taizong-of-jin,    title: "Emperor Taizong of Jin (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Emperor_Taizong_of_Jin"}
+  - {key: wp-emperor-xizong-of-jin,     title: "Emperor Xizong of Jin (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Emperor_Xizong_of_Jin"}
+  - {key: wp-wanyan-liang,              title: "Wanyan Liang (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Wanyan_Liang"}
+  - {key: wp-emperor-shizong-of-jin,    title: "Emperor Shizong of Jin (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Emperor_Shizong_of_Jin"}
+  - {key: wp-emperor-zhangzong-of-jin,  title: "Emperor Zhangzong of Jin (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Emperor_Zhangzong_of_Jin"}
+  - {key: wp-emperor-aizong-of-jin,     title: "Emperor Aizong of Jin (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Emperor_Aizong_of_Jin"}
+  - {key: wp-emperor-jingzong-of-western-xia, title: "Emperor Jingzong of Western Xia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Emperor_Jingzong_of_Western_Xia"}
+  - {key: wp-battle-of-yamen,           title: "Battle of Yamen (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Battle_of_Yamen"}
+  - {key: wp-jingkang-incident,         title: "Jingkang incident (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Jingkang_incident"}
+
+realms:
+  - {name: Jin dynasty, region: East Asia, country: China, note: "Jurchen-led dynasty founded by Aguda in 1115"}
+  - {name: Western Xia, region: East Asia, country: China, note: "Tangut state founded by Li Yuanhao in 1038, capital Xingqing"}
+  - {name: Western Liao, region: Central Asia, country: Kazakhstan, note: "Also called Qara Khitai; founded by Yelu Dashi, whose empire covered most of Xinjiang, Kyrgyzstan, Uzbekistan, Tajikistan and southern Kazakhstan"}
+
+places:
+  - key: kaifeng
+    name: Kaifeng
+    historical_name: "Bianjing (Bianliang)"
+    kind: city
+    region: Henan
+    country: China
+    lat: 34.797
+    lng: 114.307
+    visitable: true
+    note: "Capital of the Northern Song. The Jin besieged it twice in 1126 and took it on 9 January 1127 (the Jingkang incident). Later the Jin capital (Aizong's article calls Bianjing the Jin capital) until the Mongols besieged it in 1232; the Song retook it with Luoyang in July 1234 (Lizong's article)."
+    sources: [wp-jingkang-incident, wp-emperor-zhezong-of-song, wp-emperor-aizong-of-jin, wp-emperor-lizong-of-song]
+  - key: hangzhou
+    name: Hangzhou
+    historical_name: "Lin'an"
+    kind: city
+    region: Zhejiang
+    country: China
+    lat: 30.250
+    lng: 120.170
+    visitable: true
+    note: "Capital of the Southern Song as Lin'an. Gaozong fled there in 1129 and declared it the (temporary) capital in 1133 or 1138 (see discrepancy); the Yuan general Bayan took it in early 1276 and Emperor Gong surrendered."
+    sources: [wp-emperor-gaozong-of-song, wp-emperor-gongzong-of-song, wp-emperor-bing-of-song]
+  - key: beijing
+    name: Beijing
+    historical_name: "Nanjing or Yanjing (Liao); Zhongdu (Jin, capital from 1153); Dadu (Yuan)"
+    kind: city
+    region: Beijing
+    country: China
+    lat: 39.904
+    lng: 116.407
+    visitable: true
+    note: "Modern city. The Liao Southern Capital (Tianzuo fled it in 1122; Yelu Chun's short-lived Northern Liao was set up there). Wanyan Liang moved the Jin court here from Shangjing in 1153. Taizu and Taizong of Jin were buried at Dafangshan outside Zhongdu. After the Song fell, Emperor Gong was taken to Dadu in 1276."
+    sources: [wp-wanyan-liang, wp-emperor-tianzuo-of-liao, wp-yelu-dashi, wp-emperor-taizu-of-jin, wp-emperor-taizong-of-jin, wp-emperor-gongzong-of-song]
+  - key: yamen-battlefield
+    name: Yamen
+    historical_name: "Yashan"
+    kind: battlefield
+    city: Jiangmen
+    region: Guangdong
+    country: China
+    lat: 22.230
+    lng: 113.050
+    visitable: true
+    visit_site: "Song-Yuan Yamen Sea Warfare Culture Tourist Zone"
+    note: "Bay in what is now the town of Yamen, Xinhui, where the Song fleet was destroyed on 19 March 1279. The museum complex named above lies just east of the battle site."
+    sources: [wp-battle-of-yamen, wp-emperor-bing-of-song]
+  - key: shangjing-liao
+    name: Shangjing (Liao Supreme Capital)
+    kind: city
+    region: Inner Mongolia
+    country: China
+    lat: 43.980
+    lng: 119.360
+    visitable: false
+    note: "The Liao Supreme Capital, taken by the Jin. The Jingkang article places it at present-day Bairin Left Banner, Inner Mongolia; the Dashi article calls it 'Chifeng' (see discrepancy). Coordinates are approximate and follow the Bairin Left Banner reading."
+    sources: [wp-jingkang-incident, wp-yelu-dashi, wp-emperor-tianzuo-of-liao]
+  - key: shangjing-jin
+    name: Shangjing (Jin Supreme Capital)
+    historical_name: "Huining Prefecture"
+    kind: city
+    city: Harbin
+    region: Heilongjiang
+    country: China
+    lat: 45.510
+    lng: 126.970
+    visitable: true
+    visit_site: "Jin Dynasty History Museum"
+    note: "Jin capital until Wanyan Liang moved the court to Yanjing in 1153 and destroyed its palaces in 1157. Near present-day Acheng District, Harbin. Huizong and Qinzong were brought here and made to honour the Jin ancestors in 1128. Coordinates approximate."
+    sources: [wp-wanyan-liang, wp-emperor-taizu-of-jin, wp-emperor-qinzong-of-song, wp-emperor-huizong-of-song]
+  - key: wuguocheng
+    name: Wuguocheng
+    kind: city
+    city: Yilan County
+    region: Heilongjiang
+    country: China
+    lat: 46.320
+    lng: 129.570
+    visitable: false
+    note: "Where the Jin resettled the captive former Song emperors Huizong and Qinzong in 1128. Huizong died here in 1135. Coordinates approximate."
+    sources: [wp-emperor-taizong-of-jin, wp-emperor-huizong-of-song]
+  - key: caizhou
+    name: Caizhou
+    kind: city
+    city: Runan County
+    region: Henan
+    country: China
+    lat: 33.000
+    lng: 114.360
+    visitable: false
+    note: "Last refuge of the Jin court. Allied Mongol and Song forces took it on 9 February 1234, the end of the Jin dynasty. Coordinates approximate."
+    sources: [wp-emperor-aizong-of-jin]
+  - key: balasaghun
+    name: Balasaghun
+    kind: city
+    region: Chuy
+    country: Kyrgyzstan
+    lat: 42.750
+    lng: 75.250
+    visitable: true
+    note: "Capital of Yelu Dashi's Western Liao after he deposed the Eastern Karakhanid ruler there in 1134. The article does not name the modern country or give a site; location and country are general knowledge and approximate."
+    sources: [wp-yelu-dashi]
+  - key: xingqing
+    name: Xingqing
+    kind: city
+    city: Yinchuan
+    region: Ningxia
+    country: China
+    lat: 38.470
+    lng: 106.270
+    visitable: true
+    note: "Capital of the Western Xia founded by Jingzong in 1038. The article says only that the Mongols ended the dynasty in Ningxia; the modern city is general knowledge."
+    sources: [wp-emperor-jingzong-of-western-xia]
+
+people:
+  # ---- Northern and Southern Song
+  - key: emperor-renzong-of-song
+    name: Emperor Renzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1010-05-30
+    died: 1063-04-30
+    prominence: 3
+    note: "Zhao Zhen, fourth Northern Song emperor and sixth son of Zhenzong. Came to the throne at 12 in 1022; his adoptive mother Empress Liu was regent and kept power until her death in 1033, past 1027 when he could have ruled. Longest-reigning Song emperor (about 41 years). Qingli Reforms c.1040-1045, the 1057 examinations that produced Su Shi, Su Zhe and Zeng Gong, and Bi Sheng's movable type c.1040. Refused to call Li Yuanhao emperor in 1038; peace came in 1043 or 1044. Took in Zhao Zongshi (Yingzong) as heir in 1055."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-renzong-of-song]
+  - key: emperor-yingzong-of-song
+    name: Emperor Yingzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1032-02-16
+    died: 1067-01-25
+    prominence: 2
+    note: "Zhao Shu (born Zhao Zongshi), fifth Song emperor, a 13th son of Zhao Yunrang and adopted heir of Renzong. Sickly after his coronation, so Empress Dowager Cao was regent until Han Qi removed the screen. The Great Rites style dispute over honouring his birth father. Ordered Sima Guang in 1065 to begin the Zizhi Tongjian. Died young; succeeded by his son Shenzong."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-yingzong-of-song]
+  - key: emperor-shenzong-of-song
+    name: Emperor Shenzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1048-05-25
+    died: 1085-04-01
+    prominence: 3
+    note: "Zhao Xu (born Zhao Zhongzhen), sixth Song emperor. Wanted conquest and fiscal reform; backed Wang Anshi's New Policies from 1069, then ran the Yuanfeng Reforms himself after Wang retired in 1076. Sima Guang published the Zizhi Tongjian in 1084. His 1082 defeat at Yongle City against Western Xia broke his spirit; he died aged 36."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-shenzong-of-song]
+  - key: emperor-zhezong-of-song
+    name: Emperor Zhezong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1077-01-04
+    died: 1100-02-23
+    prominence: 2
+    note: "Zhao Xu (born Zhao Yong), seventh Song emperor, sixth son of Shenzong. Came to the throne as a child with his grandmother Grand Empress Dowager Gao as regent, who halted the New Policies; after her death in 1093 he restored them (era name Shaosheng from 1094) and the court split into factions. Renewed war against Western Xia and took the Song to its greatest extent. Died in Kaifeng aged 23; his son had died before him, so his brother Huizong succeeded."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-zhezong-of-song]
+  - key: emperor-huizong-of-song
+    name: Emperor Huizong of Song
+    type: Royalty
+    roles: [painter, calligrapher, poet]
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1082-11-02
+    died: 1135-06-04
+    prominence: 4
+    note: "Zhao Ji, eighth Song emperor, 11th son of Shenzong. A major painter, calligrapher (the Slender Gold style), poet, musician and patron; his collection held more than 6,000 paintings. His court was dominated by Cai Jing and the 'Six Thieves', and the flower-and-stone fleet fed the Fang La uprising. Allied with the Jin against the Liao, then abdicated on 18 January 1126 to Qinzong. Taken captive with his son in the Jingkang incident, given the insulting title Duke Hunde, and died at Wuguocheng after nearly a decade in captivity."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts, court and his many works not entered; no artworks"
+    sources: [wp-emperor-huizong-of-song, wp-jingkang-incident]
+  - key: emperor-qinzong-of-song
+    name: Emperor Qinzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1100-05-23
+    died: 1156-06-14
+    prominence: 3
+    note: "Zhao Huan, ninth Song emperor and last of the Northern Song, eldest son of Huizong. Took the throne in 1126 as the Jin besieged Kaifeng, dismissed Li Gang, bought off the first siege, then angered the Jin by plotting with their Liao envoys. Captured with his father on the fall of Kaifeng (9 January 1127), demoted to commoner on 20 March 1127, and died in Jin captivity, where he lived two-thirds of his life."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-qinzong-of-song, wp-jingkang-incident]
+  - key: emperor-gaozong-of-song
+    name: Emperor Gaozong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1107-06-12
+    died: 1187-11-09
+    prominence: 4
+    note: "Zhao Gou, ninth son of Huizong and first emperor of the Southern Song (1127-1162). Outside Kaifeng when it fell, he was proclaimed emperor, fled from Yingtianfu to Yangzhou to Lin'an, lost his throne for about a month in a mutiny in 1129, and made Lin'an the capital. With Qin Hui he made the Treaty of Shaoxing in 1142 (the Song became a Jin tributary) and had Yue Fei put to death on a trumped-up charge, a deed that damaged his reputation. His only son died young; he adopted Xiaozong, abdicated on 24 July 1162 and ruled as Retired Emperor until his death."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-gaozong-of-song, wp-emperor-xiaozong-of-song]
+  - key: emperor-xiaozong-of-song
+    name: Emperor Xiaozong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1127-11-27
+    died: 1194-06-28
+    prominence: 3
+    note: "Zhao Shen, 11th Song emperor and second of the Southern Song; a seventh-generation descendant of Taizu adopted by Gaozong in 1160. Emperor from 24 July 1162 but only ruled in full after Gaozong died in 1187; made peace with the Jin in 1165, rehabilitated Yue Fei, steadied the paper currency and is seen as the best Southern Song ruler. Abdicated in 1189 to Guangzong and ruled as Retired Emperor until his death."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-xiaozong-of-song]
+  - key: emperor-guangzong-of-song
+    name: Emperor Guangzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1147-09-30
+    died: 1200-09-17
+    prominence: 2
+    note: "Zhao Dun, 12th Song emperor and third of the Southern Song, third son of Xiaozong. Ill and dominated by Empress Li Fengniang; avoided his father, did not visit him in his last illness or attend his funeral, and was forced out in 1194 in favour of his son Ningzong. Died in 1200."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-guangzong-of-song, wp-emperor-xiaozong-of-song]
+  - key: emperor-ningzong-of-song
+    name: Emperor Ningzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1168-11-19
+    died: 1224-09-17
+    prominence: 2
+    note: "Zhao Kuo, 13th Song emperor and fourth of the Southern Song. Weak-willed; the chancellor Han Tuozhou launched a failed war on the Jin on 14 June 1206 and was killed in 1207; peace followed on 2 November 1208 with a heavier tribute. Zhu Xi's Neo-Confucianism was banned 1198-1202. Patron of Liang Kai and Ma Yuan. All his children died young, so Lizong succeeded."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-ningzong-of-song]
+  - key: emperor-lizong-of-song
+    name: Emperor Lizong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1205-01-26
+    died: 1264-11-16
+    prominence: 2
+    note: "Zhao Yun, 14th Song emperor and fifth of the Southern Song; a distant descendant of Taizu found in obscurity in Shaoxing and put on the throne in 1224 by the chancellor Shi Miyuan. Delegated rule for most of his 40 years. Joined the Mongols against the Jin in 1234, then lost Luoyang and faced the Mongol conquest under Mongke from 1257. A skilled calligrapher. Died without sons; his adopted nephew Duzong succeeded."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-lizong-of-song]
+  - key: emperor-duzong-of-song
+    name: Emperor Duzong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1240-05-02
+    died: 1274-08-12
+    prominence: 2
+    note: "Zhao Qi, 15th Song emperor and sixth of the Southern Song, Lizong's nephew and adopted heir. The chancellor Jia Sidao ran the state while he indulged himself; Xiangyang fell to the Mongols in 1274. He died that year; reports differ on the cause. He left three young sons, two of whom became emperors."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-duzong-of-song]
+  - key: emperor-gongzong-of-song
+    name: Emperor Gong of Song
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1271-11-02
+    died: 1323
+    prominence: 2
+    note: "Zhao Xian, 16th Song emperor and seventh of the Southern Song, enthroned at about four. With Grand Empress Dowager Xie as regent he surrendered to the Yuan general Bayan at Lin'an in 1276. Kublai Khan made him Duke of Ying; he was sent to Tibet in 1288, became a monk and translator at Sakya, and per the Sakya records was ordered to kill himself at Hexi in 1323."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-gongzong-of-song]
+  - key: emperor-bing-of-song
+    name: Zhao Bing (Emperor Bing of Song)
+    type: Royalty
+    realm: Song dynasty
+    house: House of Zhao
+    born: 1272-02-12
+    died: 1279-03-19
+    prominence: 3
+    note: "Seventh son of Duzong, 18th and last Song emperor and ninth and last of the Southern Song. After Lin'an fell he escaped south, was enthroned in 1278 at Meiwei (Mui Wo, Lantau) under the era name Xiangxing, and moved to Yamen. When the Yuan won the naval Battle of Yamen on 19 March 1279, the minister Lu Xiufu carried the seven-year-old into the sea and both drowned, ending the Song dynasty. An older brother, Zhao Shi (Duanzong), reigned 1276-1278 and is not entered."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-bing-of-song, wp-battle-of-yamen]
+  - key: wang-anshi
+    name: Wang Anshi
+    type: Nobility
+    roles: [statesman, poet]
+    realm: Song dynasty
+    born: 1021-12-08
+    died: 1086-05-21
+    prominence: 4
+    note: "Chancellor under Shenzong and author of the New Policies, a set of state-led finance, trade, defence and education reforms (green sprouts loans, market exchange, baojia militia, equal tax law and others) that split the court into Reformers and the Conservatives led by Sima Guang. Passed the jinshi in 1042; sent Renzong a ten-thousand-character memorial in 1058. Resigned in 1076; the policies were abolished after Shenzong died in 1085 and revived under Zhezong and Huizong. Also a major poet and one of the Eight Great Prose Masters."
+    coverage: partly
+    coverage_note: "dates, the chancellorship and the New Policies from the English Wikipedia article; individual laws, poetry and writings not entered; no artworks"
+    sources: [wp-wang-anshi, wp-emperor-shenzong-of-song]
+
+  # ---- Liao and Western Liao
+  - key: emperor-xingzong-of-liao
+    name: Emperor Xingzong of Liao
+    type: Royalty
+    realm: Liao dynasty
+    house: Yelü
+    born: 1016-04-03
+    died: 1055-08-28
+    prominence: 2
+    note: "Yelü Zongzhen (Zhigu), seventh Liao emperor and eldest son of Shengzong. His mother Xiao Noujin dominated his reign and tried to replace him with his brother Zhongyuan, who told him; she was sent away from the palace. Failed against Western Xia (sandstorms) but pressed the Song into raising its indemnities. The article calls his reign the beginning of the end for the Liao: corruption, high taxes and a failing army. Succeeded by his son Daozong."
+    coverage: partly
+    coverage_note: "reign, life dates and a summary of the reign from the English Wikipedia article; consorts and court not entered; no artworks"
+    sources: [wp-emperor-xingzong-of-liao]
+  - key: emperor-daozong-of-liao
+    name: Emperor Daozong of Liao
+    type: Royalty
+    realm: Liao dynasty
+    house: Yelü
+    born: 1032-09-14
+    died: 1101-02-12
+    prominence: 3
+    note: "Yelü Hongji (Chala), eighth Liao emperor. Revived the dynastic name Great Liao in 1066, finished the Liao Tripitaka and built the Sakyamuni Pagoda (1056). Put down the 1063 rebellion of Zhongyuan after being wounded on a hunt. His minister Yelü Yixin framed Empress Xiao Guanyin (forced to suicide 1075) and the crown prince Yelü Jun (killed 1077); Yixin fell in 1080. His grandson Yanxi (Tianzuo) was raised as heir. Corruption and Jurchen unrest grew."
+    coverage: partly
+    coverage_note: "reign, life dates and main court events from the English Wikipedia article; consorts and ministers not entered; no artworks"
+    sources: [wp-emperor-daozong-of-liao]
+  - key: emperor-tianzuo-of-liao
+    name: Emperor Tianzuo of Liao
+    type: Royalty
+    realm: Liao dynasty
+    house: Yelü
+    born: 1075-06-05
+    died: 1128
+    prominence: 3
+    note: "Yelü Yanxi, ninth and last Liao emperor, grandson of Daozong. The Jurchen Jin, founded in 1115, took his Supreme Capital in 1120 and Central Capital in 1122; he fled the Southern Capital that year, then to Western Xia, and was captured by the Jin in 1125, the end of the Liao. His general Yelu Dashi left him in 1124 and founded the Western Liao. The year of his death is disputed (1128 in the History of Liao; 1156 in a novel)."
+    coverage: partly
+    coverage_note: "reign, life dates and the fall of the Liao from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-emperor-tianzuo-of-liao]
+  - key: yelu-dashi
+    name: Yelü Dashi
+    type: Royalty
+    realm: Western Liao
+    house: Yelü
+    died: 1143
+    prominence: 4
+    note: "Founder of the Western Liao (Qara Khitai), also known as Emperor Dezong. An eighth-generation descendant of Liao Taizu who passed the top exam in 1115, held posts at Taizhou and Xiangzhou, and left the failing Liao in 1124 for Kedun. From 1130 he led his followers west; in 1132 he was proclaimed Gurkhan, in 1134 he took Balasaghun, and in 1141 he beat the Seljuk sultan Sanjar at the Battle of Qatwan, making the Qara Khitai dominant in Central Asia and making Khwarazm and the Karakhanids vassals. His birth year is uncertain (1087 or 1094). The Prester John legend is linked to him."
+    coverage: partly
+    coverage_note: "dates, the westward move, Gurkhan title and Qatwan from the English Wikipedia article; his later administration and successors not entered; no artworks"
+    sources: [wp-yelu-dashi]
+
+  # ---- Jin
+  - key: emperor-taizu-of-jin
+    name: Emperor Taizu of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1068-08-01
+    died: 1123-09-19
+    prominence: 4
+    note: "Aguda (Wanyan Min), founder and first emperor of the Jin. Unified the Jurchen tribes, rebelled against the Liao in September 1114, declared himself emperor in January 1115 and took all five Liao capitals between 1119 and 1122. Allied with the Song against the Liao (the Alliance Conducted at Sea) and set up the Mingan-Mouke system and the Jurchen script. Died in 1123 (August or 19 September, see discrepancy); buried at Dafangshan outside Zhongdu. Temple name Taizu was given in 1145."
+    coverage: partly
+    coverage_note: "reign, life dates and the founding wars from the English Wikipedia article; consorts and sons not entered; no artworks"
+    sources: [wp-emperor-taizu-of-jin]
+  - key: emperor-taizong-of-jin
+    name: Emperor Taizong of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1075-11-25
+    died: 1135-02-09
+    prominence: 3
+    note: "Wuqimai (Wanyan Sheng), younger brother of Aguda and second Jin emperor. Ended the Liao by capturing Tianzuo in 1125, then attacked the Song from October 1125 and took Kaifeng in the Jingkang incident. In 1128 he gave Huizong and Qinzong insulting titles and resettled them at Wuguocheng. Named his grand-nephew Hela (Xizong) heir. Died in 1135 at Mingde Palace; his descendants were massacred by Wanyan Liang, and his remains were moved to Dafangshan."
+    coverage: partly
+    coverage_note: "reign, life dates and main events from the English Wikipedia article; sons not entered; no artworks"
+    sources: [wp-emperor-taizong-of-jin]
+  - key: emperor-xizong-of-jin
+    name: Emperor Xizong of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1119-02-28
+    died: 1150-01-09
+    prominence: 2
+    note: "Hela (Wanyan Dan), third Jin emperor and grandson of Aguda. Reformed the state on Han lines (Three Departments system) and abolished the bojilie succession custom; ended the Qi state of Liu Yu in 1137. The 1139 treaty with the Song was broken in 1140 and the Jin army was beaten in 1141. After his two sons died he turned to drink and killed indiscriminately (one victim was the Mongol chief Ambaghai); overthrown and murdered by Digunai (Wanyan Liang) on 9 January 1150."
+    coverage: partly
+    coverage_note: "reign, life dates and main events from the English Wikipedia article; consorts not entered; no artworks"
+    sources: [wp-emperor-xizong-of-jin]
+  - key: wanyan-liang
+    name: Wanyan Liang
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1122-02-24
+    died: 1161-12-15
+    prominence: 3
+    note: "Digunai, the Prince of Hailing, fourth Jin emperor. Seized the throne by murdering Xizong in 1150, killed Taizong's descendants, and moved the capital from Shangjing to Yanjing (Beijing) in 1153 as part of a policy of sinicisation. His 1161 invasion of the Southern Song failed at Tangdao and Caishi; his officers assassinated him on 15 December 1161 near the Yangtze. Demoted to prince in 1162 and to commoner in 1181 by Shizong."
+    coverage: partly
+    coverage_note: "reign, life dates and main events from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-wanyan-liang]
+  - key: emperor-shizong-of-jin
+    name: Emperor Shizong of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1123-03-29
+    died: 1189-01-20
+    prominence: 3
+    note: "Wulu (Wanyan Yong), fifth Jin emperor, grandson of Aguda. Rebelled against Digunai in 1161, became emperor on his death, abandoned the war on the Song and reversed sinicisation; promoted the Jurchen language (translations, a Jurchen jinshi from 1173). The longest and most stable Jin reign, called a 'miniature of Yao and Shun'."
+    coverage: partly
+    coverage_note: "reign, life dates and the policies from the English Wikipedia article; consorts and sons not entered; no artworks"
+    sources: [wp-emperor-shizong-of-jin]
+  - key: emperor-zhangzong-of-jin
+    name: Emperor Zhangzong of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1168-08-31
+    died: 1208-12-29
+    prominence: 2
+    note: "Madage (Wanyan Jing), sixth Jin emperor, grandson of Shizong. Built Taiye Lake in Beijing and Confucian temples; later favoured Concubine Li Shi'er and neglected government. The Tatars rebelled and joined the Mongols; the Song chancellor Han Tuozhou's 1206 invasion failed. All six sons died young, so his uncle Wanyan Yongji succeeded."
+    coverage: partly
+    coverage_note: "reign, life dates and main events from the English Wikipedia article; consorts not entered; no artworks"
+    sources: [wp-emperor-zhangzong-of-jin]
+  - key: emperor-aizong-of-jin
+    name: Emperor Aizong of Jin
+    type: Royalty
+    realm: Jin dynasty
+    house: Wanyan
+    born: 1198-09-25
+    died: 1234-02-09
+    prominence: 3
+    note: "Ningjiasu (Wanyan Shouxu), ninth and last Jin emperor, third son of Xuanzong. Ended the wars with the Song and Western Xia and reformed the state, but the Mongols conquered Western Xia in 1227 and crushed the Jin at Sanfengshan in 1232. He fled Kaifeng that year to Guide, then Caizhou. As the Mongols and the Song took Caizhou on 9 February 1234 he named Wanyan Chenglin his successor and hanged himself. Wanyan Chenglin died fighting; with that the dynasty ended."
+    coverage: partly
+    coverage_note: "reign, life dates and the fall of the Jin from the English Wikipedia article; consorts not entered; no artworks"
+    sources: [wp-emperor-aizong-of-jin]
+
+  # ---- Western Xia
+  - key: emperor-jingzong-of-western-xia
+    name: Emperor Jingzong of Western Xia
+    type: Royalty
+    realm: Western Xia
+    house: Weiming (Li)
+    born: 1003-06-07
+    died: 1048-01-19
+    prominence: 3
+    note: "Li Yuanhao (Weiming Yuanhao), founding emperor of the Western Xia. Became Tangut leader in 1032, dropped the Song surname Zhao for Weiming, ordered the Tangut script, attacked Huanqing in 1034, took the Hexi Corridor from the Uyghurs and in 1038 declared himself emperor with the capital at Xingqing. Won three costly victories over the Song; peace came in 1043 or 1044. Wounded by his son Ningling Ge in a plot with the minister Mozang Epang and died days later in 1048."
+    coverage: partly
+    coverage_note: "reign, life dates, the founding and campaigns from the English Wikipedia article; consorts and administration not entered; no artworks"
+    sources: [wp-emperor-jingzong-of-western-xia]
+
+events:
+  - key: qingli-reforms-1040
+    name: Qingli Reforms
+    type: Reform
+    year: 1040
+    end_year: 1045
+    estimated: true
+    people:
+      - {person: emperor-renzong-of-song, role: sponsor}
+    prominence: 3
+    note: "Reform attempt begun around 1040-1045, pressed by Fan Zhongyan, Fu Bi, Han Qi and Ouyang Xiu: farming, land reclamation, fewer sub-official units, local militias and lower military cost. Conservatives opposed it and it was dropped after Fan Zhongyan resigned. Seen as a precursor of later reforms."
+    sources: [wp-emperor-renzong-of-song]
+  - key: western-xia-founded-1038
+    name: Li Yuanhao proclaims the Western Xia
+    type: Founding
+    year: 1038
+    place: xingqing
+    people:
+      - {person: emperor-jingzong-of-western-xia, role: founder}
+      - {person: emperor-renzong-of-song, role: refused recognition}
+    prominence: 3
+    note: "The Tangut chief Li Yuanhao named himself emperor of Da Xia and demanded recognition as an equal. The Song court recognised him only as governor; Tangut acceptance of the Song emperor's seniority in exchange for annual gifts came in 1043 or 1044."
+    sources: [wp-emperor-jingzong-of-western-xia, wp-emperor-renzong-of-song]
+  - key: new-policies-1069
+    name: Wang Anshi's New Policies
+    type: Reform
+    year: 1069
+    end_year: 1085
+    people:
+      - {person: wang-anshi, role: reformer}
+      - {person: emperor-shenzong-of-song, role: sponsor}
+    prominence: 4
+    note: "Shenzong made Wang Anshi head of government in 1069 and backed his New Policies: green sprouts loans, labour recruitment, balanced delivery, market exchange, equal tax, baojia militia, general and troops, three colleges. Abolished after Shenzong died in 1085 (end year given for that); revived under Zhezong from 1093 and continued under Huizong. No day is given for the start."
+    sources: [wp-wang-anshi, wp-emperor-shenzong-of-song]
+  - key: battle-of-yongle-city-1082
+    name: Battle of Yongle City
+    type: Battle
+    year: 1082
+    people:
+      - {person: emperor-shenzong-of-song, role: defeated}
+    prominence: 2
+    note: "Song defeat in Shenzong's invasion of Western Xia. It broke Shenzong's spirit and strengthened Western Xia."
+    sources: [wp-emperor-shenzong-of-song]
+  - key: alliance-conducted-at-sea-1120
+    name: Alliance Conducted at Sea
+    type: Treaty
+    year: 1120
+    people:
+      - {person: emperor-huizong-of-song, role: party}
+      - {person: emperor-taizu-of-jin, role: party}
+    prominence: 3
+    note: "Jin-Song military alliance against the Liao: the Song would attack from the south and receive the Sixteen Prefectures. The date is disputed between articles (see discrepancy). The Song army then failed against the Liao and the Jin sold the Sixteen Prefectures at a price."
+    sources: [wp-jingkang-incident, wp-emperor-taizu-of-jin, wp-emperor-huizong-of-song]
+  - key: fall-of-liao-supreme-capital-1120
+    name: Jin capture of the Liao Supreme Capital
+    type: Battle
+    year: 1120
+    place: shangjing-liao
+    people:
+      - {person: emperor-taizu-of-jin, role: victor}
+      - {person: emperor-tianzuo-of-liao, role: defeated}
+    prominence: 3
+    note: "The Jin took the Liao Supreme Capital in 1120 (Tianzuo's article) or by 1122 (Dashi's article); Taizu's article says all five Liao capitals fell 1119-1122. Place and date are both disputed (see discrepancy)."
+    sources: [wp-emperor-tianzuo-of-liao, wp-yelu-dashi, wp-jingkang-incident, wp-emperor-taizu-of-jin]
+  - key: founding-of-jin-1115
+    name: Founding of the Jin dynasty
+    type: Founding
+    year: 1115
+    people:
+      - {person: emperor-taizu-of-jin, role: founder}
+    prominence: 4
+    note: "Aguda proclaimed himself emperor in January 1115 (no day given), taking the regnal name Shouguo, after rising against the Liao in September 1114."
+    sources: [wp-emperor-taizu-of-jin]
+  - key: fall-of-liao-1125
+    name: Fall of the Liao dynasty
+    type: Conquest
+    year: 1125
+    people:
+      - {person: emperor-tianzuo-of-liao, role: captured}
+      - {person: emperor-taizong-of-jin, role: victor}
+    prominence: 4
+    note: "The Jin general Wanyan Loushi captured Tianzuo, ending the Liao dynasty. (The Jingkang article's phrasing implies the Liao fell about 1120; see discrepancy.)"
+    sources: [wp-emperor-tianzuo-of-liao, wp-emperor-taizong-of-jin]
+  - key: western-liao-founded-1124
+    name: Yelu Dashi founds the Western Liao
+    type: Founding
+    year: 1124
+    people:
+      - {person: yelu-dashi, role: founder}
+    prominence: 3
+    note: "Dashi left Tianzuo in 1124 with Liao officials for the garrison town of Kedun and the Tianzuo and Dashi articles date the Western Liao to this move. He ruled as king 1124-1132, then as emperor and Gurkhan (see the 1132 event and discrepancy)."
+    sources: [wp-emperor-tianzuo-of-liao, wp-yelu-dashi]
+  - key: dashi-proclaimed-gurkhan-1132
+    name: Yelu Dashi proclaimed Gurkhan
+    type: Proclamation
+    year: 1132
+    people:
+      - {person: yelu-dashi, role: proclaimed}
+    prominence: 3
+    note: "His followers proclaimed him Gurkhan with the regnal name Tianyou. He took Balasaghun in 1134 and made it his capital."
+    sources: [wp-yelu-dashi]
+  - key: battle-of-qatwan-1141
+    name: Battle of Qatwan
+    type: Battle
+    year: 1141
+    people:
+      - {person: yelu-dashi, role: victor}
+    prominence: 4
+    note: "Decisive Qara Khitai victory over the Seljuk sultan Ahmad Sanjar; Sanjar escaped but his wife and warriors were captured. Seljuk power declined, and Khwarazm and the Karakhanids became vassals."
+    sources: [wp-yelu-dashi]
+  - key: jingkang-incident-1127
+    name: Jingkang incident (fall of Kaifeng)
+    type: Siege
+    date: 1127-01-09
+    place: kaifeng
+    people:
+      - {person: emperor-qinzong-of-song, role: captured}
+      - {person: emperor-huizong-of-song, role: captured}
+      - {person: emperor-taizong-of-jin, role: victor}
+      - {person: emperor-gaozong-of-song, role: escaped}
+    prominence: 5
+    note: "The Jin took Bianjing on 9 January 1127 after a second siege (the first, in early 1126, was ended by a ransom). They captured Qinzong, Huizong and over 14,000 people, looted the city, demoted the two emperors to commoners on 20 March 1127 and marched them north. The Northern Song ended; Zhao Gou, absent from the city, founded the Southern Song."
+    sources: [wp-jingkang-incident, wp-emperor-huizong-of-song, wp-emperor-qinzong-of-song]
+  - key: southern-song-founded-1127
+    name: Founding of the Southern Song
+    type: Founding
+    year: 1127
+    people:
+      - {person: emperor-gaozong-of-song, role: founder}
+    prominence: 4
+    note: "Zhao Gou was proclaimed Emperor Gaozong with the era name Jianyan at Jiankang (present-day Nanjing, not a place record here), then moved to Yingtianfu, Yangzhou and Lin'an. The articles give no day."
+    sources: [wp-emperor-gaozong-of-song, wp-jingkang-incident]
+  - key: mutiny-of-miao-and-liu-1129
+    name: Mutiny of Miao Fu and Liu Zhengyan
+    type: Mutiny
+    date: 1129-03-26
+    end_year: 1129
+    people:
+      - {person: emperor-gaozong-of-song, role: deposed}
+    prominence: 2
+    note: "Palace guards led by Miao Fu and Liu Zhengyan killed Wang Yuan and forced Gaozong to abdicate for his two-year-old son Zhao Fu. Han Shizhong defeated them on 20 April 1129 and Gaozong was restored."
+    sources: [wp-emperor-gaozong-of-song]
+  - key: treaty-of-shaoxing-1142
+    name: Treaty of Shaoxing
+    type: Treaty
+    date: 1142-10-11
+    people:
+      - {person: emperor-gaozong-of-song, role: signatory}
+      - {person: emperor-xizong-of-jin, role: counterparty}
+      - {person: emperor-qinzong-of-song, role: held captive}
+    prominence: 4
+    note: "Gaozong gave up all land north of the Huai River, accepted vassal status to the Jin and agreed to pay 250,000 taels of silver and 250,000 packs of silk a year. It ended Qinzong's chance of release; his mother and some of the imperial clan came back. Preceded by the dismissal of Han Shizhong and the death of Yue Fei (no date in the articles, so no separate event)."
+    sources: [wp-emperor-gaozong-of-song, wp-emperor-qinzong-of-song]
+  - key: jin-capital-moved-to-yanjing-1153
+    name: Jin capital moved to Yanjing
+    type: Capital move
+    year: 1153
+    place: beijing
+    people:
+      - {person: wanyan-liang, role: ruler}
+    prominence: 3
+    note: "Wanyan Liang moved the court from Shangjing (Harbin) to Yanjing, later called Zhongdu, and ordered Shangjing's palaces destroyed in 1157."
+    sources: [wp-wanyan-liang]
+  - key: battles-of-tangdao-and-caishi-1161
+    name: Battles of Tangdao and Caishi
+    type: Battle
+    year: 1161
+    people:
+      - {person: wanyan-liang, role: defeated}
+      - {person: emperor-gaozong-of-song, role: victor}
+    prominence: 3
+    note: "Wanyan Liang's fleet lost to the Song at Tangdao and Caishi on his attempt to conquer the Southern Song. His officers rebelled and he was assassinated on 15 December 1161."
+    sources: [wp-wanyan-liang, wp-emperor-gaozong-of-song]
+  - key: jin-song-war-1206
+    name: Jin-Song war of 1206-1208
+    type: War
+    date: 1206-06-14
+    end_year: 1208
+    people:
+      - {person: emperor-ningzong-of-song, role: Song ruler}
+      - {person: emperor-zhangzong-of-jin, role: Jin ruler}
+    prominence: 3
+    note: "Han Tuozhou declared war on the Jin on 14 June 1206 and the Song attack failed. Wu Xi, governor of Sichuan, defected in December 1206 and was killed on 29 March 1207. A peace treaty was signed on 2 November 1208: the Song reinstated and raised its tribute and handed over Han Tuozhou's head."
+    sources: [wp-emperor-ningzong-of-song, wp-emperor-zhangzong-of-jin]
+  - key: mongol-conquest-of-the-jin-1234
+    name: Fall of Caizhou and end of the Jin
+    type: Conquest
+    date: 1234-02-09
+    place: caizhou
+    people:
+      - {person: emperor-aizong-of-jin, role: died}
+    prominence: 4
+    note: "Allied Mongol and Song forces took Caizhou; Aizong hanged himself after naming Wanyan Chenglin heir, and Chenglin died in the fighting, ending the Jin dynasty. The Mongol Empire had crushed the Jin army at Sanfengshan in 1232."
+    sources: [wp-emperor-aizong-of-jin, wp-emperor-lizong-of-song]
+  - key: surrender-of-lin-an-1276
+    name: Surrender of Lin'an
+    type: Surrender
+    date: 1276-02-04
+    place: hangzhou
+    people:
+      - {person: emperor-gongzong-of-song, role: surrendered}
+    prominence: 4
+    note: "The Southern Song capital fell to the Yuan general Bayan, who arrived outside the city on 18 January 1276. The Gong article puts the child emperor's surrender to the Yuan camp 'later that year' and his departure north in March 1276; the Bing article gives the city's fall as 4 February 1276."
+    sources: [wp-emperor-bing-of-song, wp-emperor-gongzong-of-song]
+  - key: battle-of-yamen-1279
+    name: Battle of Yamen
+    type: Battle
+    date: 1279-03-19
+    place: yamen-battlefield
+    people:
+      - {person: emperor-bing-of-song, role: died}
+    prominence: 5
+    note: "Last stand of the Song. Zhang Shijie chained about 1,000 ships together in the bay; the Yuan under Zhang Hongfan cut off water and wood, then attacked on 19 March and destroyed the fleet. Lu Xiufu took the seven-year-old Emperor Bing into the sea, where both drowned; the Song dynasty ended."
+    sources: [wp-battle-of-yamen, wp-emperor-bing-of-song]
+
+links:
+  - {parent: emperor-zhenzong-of-song, child: emperor-renzong-of-song}
+  - {parent: emperor-yingzong-of-song, child: emperor-shenzong-of-song}
+  - {parent: emperor-shenzong-of-song, child: emperor-zhezong-of-song}
+  - {parent: emperor-shenzong-of-song, child: emperor-huizong-of-song}
+  - {parent: emperor-huizong-of-song, child: emperor-qinzong-of-song}
+  - {parent: emperor-huizong-of-song, child: emperor-gaozong-of-song}
+  - {parent: emperor-xiaozong-of-song, child: emperor-guangzong-of-song}
+  - {parent: emperor-guangzong-of-song, child: emperor-ningzong-of-song}
+  - {parent: emperor-duzong-of-song, child: emperor-gongzong-of-song}
+  - {parent: emperor-duzong-of-song, child: emperor-bing-of-song}
+  - {parent: emperor-xingzong-of-liao, child: emperor-daozong-of-liao}
+
+moments:
+  - {person: emperor-zhezong-of-song, role: died, place: kaifeng, year: 1100-02-23, sources: [wp-emperor-zhezong-of-song]}
+  - {person: wang-anshi, role: worked, place: kaifeng, year: 1060, sources: [wp-wang-anshi]}
+  - {person: emperor-huizong-of-song, role: lived, place: shangjing-jin, year: 1128, sources: [wp-emperor-huizong-of-song]}
+  - {person: emperor-qinzong-of-song, role: lived, place: shangjing-jin, year: 1128, sources: [wp-emperor-qinzong-of-song]}
+  - {person: emperor-huizong-of-song, role: died, place: wuguocheng, year: 1135-06-04, sources: [wp-emperor-huizong-of-song, wp-emperor-taizong-of-jin]}
+  - {person: emperor-taizu-of-jin, role: buried, place: beijing, sources: [wp-emperor-taizu-of-jin]}
+  - {person: emperor-taizong-of-jin, role: buried, place: beijing, sources: [wp-emperor-taizong-of-jin]}
+  - {person: wanyan-liang, role: lived, place: beijing, year: 1153, sources: [wp-wanyan-liang]}
+  - {person: emperor-aizong-of-jin, role: died, place: caizhou, year: 1234-02-09, sources: [wp-emperor-aizong-of-jin]}
+  - {person: emperor-gongzong-of-song, role: lived, place: beijing, year: 1276, sources: [wp-emperor-gongzong-of-song]}
+  - {person: emperor-bing-of-song, role: died, place: yamen-battlefield, year: 1279-03-19, sources: [wp-emperor-bing-of-song, wp-battle-of-yamen]}
+  - {person: yelu-dashi, role: lived, place: balasaghun, year: 1134, sources: [wp-yelu-dashi]}
+  - {person: emperor-jingzong-of-western-xia, role: lived, place: xingqing, year: 1038, sources: [wp-emperor-jingzong-of-western-xia]}
+
+titles:
+  # ---- Song
+  - {person: emperor-renzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1022, to: 1063-04-30, note: "Northern Song. Empress Liu was regent until her death in 1033", sources: [wp-emperor-renzong-of-song]}
+  - {person: emperor-yingzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1063, to: 1067-01-25, note: "Northern Song. Empress Dowager Cao served as regent while he was ill after his coronation", sources: [wp-emperor-yingzong-of-song]}
+  - {person: emperor-shenzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1067, to: 1085-04-01, note: "Northern Song", sources: [wp-emperor-shenzong-of-song]}
+  - {person: emperor-zhezong-of-song, title: Emperor of China, realm: Song dynasty, from: 1085, to: 1100-02-23, note: "Northern Song. Grand Empress Dowager Gao was regent until she died in 1093", sources: [wp-emperor-zhezong-of-song]}
+  - {person: emperor-huizong-of-song, title: Emperor of China, realm: Song dynasty, from: 1100, to: 1126-01-18, note: "Northern Song. Abdicated on 18 January 1126 to Qinzong and took the title Taishang Huang (Retired Emperor)", sources: [wp-emperor-huizong-of-song]}
+  - {person: emperor-qinzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1126, to: 1127-03-20, note: "Last Northern Song emperor. Kaifeng fell on 9 January 1127; the Jin demoted him to commoner on 20 March 1127", sources: [wp-emperor-qinzong-of-song, wp-jingkang-incident]}
+  - {person: emperor-gaozong-of-song, title: Emperor of China, realm: Song dynasty, from: 1127, to: 1162-07-24, note: "First Southern Song emperor. Lost the throne from 26 March to 20 April 1129 to a mutiny. Retired Emperor 1162-1187 with continued power", sources: [wp-emperor-gaozong-of-song, wp-emperor-xiaozong-of-song]}
+  - {person: emperor-xiaozong-of-song, title: Emperor of China, realm: Song dynasty, from: 1162-07-24, to: 1189, note: "Southern Song. Gaozong kept real power until his death in 1187. Abdicated in 1189 to Guangzong; ruled as Retired Emperor until 1194", sources: [wp-emperor-xiaozong-of-song]}
+  - {person: emperor-guangzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1189, to: 1194, note: "Southern Song. Forced to abdicate in 1194 for not attending Xiaozong's funeral", sources: [wp-emperor-guangzong-of-song]}
+  - {person: emperor-ningzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1194, to: 1224-09-17, note: "Southern Song", sources: [wp-emperor-ningzong-of-song]}
+  - {person: emperor-lizong-of-song, title: Emperor of China, realm: Song dynasty, from: 1224, to: 1264-11-16, note: "Southern Song. Put on the throne by Shi Miyuan and Empress Dowager Yang", sources: [wp-emperor-lizong-of-song]}
+  - {person: emperor-duzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1264, to: 1274-08-12, note: "Southern Song", sources: [wp-emperor-duzong-of-song]}
+  - {person: emperor-gongzong-of-song, title: Emperor of China, realm: Song dynasty, from: 1274, to: 1276, note: "Southern Song. Enthroned at about four; the Bing article dates his reign from 1275 (see discrepancy). Surrendered at Lin'an in 1276", sources: [wp-emperor-gongzong-of-song, wp-emperor-bing-of-song]}
+  - {person: emperor-bing-of-song, title: Emperor of China, realm: Song dynasty, from: 1278, to: 1279-03-19, note: "Last Southern Song emperor. Enthroned in 1278 at Meiwei after his brother Duanzong died (no day given); died at the Battle of Yamen", sources: [wp-emperor-bing-of-song, wp-battle-of-yamen]}
+  - {person: wang-anshi, title: Chancellor of Song, realm: Song dynasty, from: 1070, to: 1076, note: "Vice counsellor from 1069; made chancellor a year later per his article. Shenzong's article has him appointed chancellor in 1068 and removed in 1074, then recalled until his permanent retirement in 1076 (see discrepancy)", sources: [wp-wang-anshi, wp-emperor-shenzong-of-song]}
+  # ---- Liao
+  - {person: emperor-xingzong-of-liao, title: Emperor of the Liao, realm: Liao dynasty, from: 1031, to: 1055-08-28, note: "Succeeded Shengzong in 1031; his mother Xiao Noujin controlled the early reign", sources: [wp-emperor-xingzong-of-liao]}
+  - {person: emperor-daozong-of-liao, title: Emperor of the Liao, realm: Liao dynasty, from: 1055, to: 1101-02-12, note: "Succeeded Xingzong in 1055", sources: [wp-emperor-daozong-of-liao]}
+  - {person: emperor-tianzuo-of-liao, title: Emperor of the Liao, realm: Liao dynasty, from: 1101, to: 1125, note: "Last Liao emperor; fled in 1122 and was captured by the Jin in 1125", sources: [wp-emperor-tianzuo-of-liao]}
+  # ---- Western Liao
+  - {person: yelu-dashi, title: Gurkhan, realm: Western Liao, from: 1132, to: 1143, note: "Proclaimed Gurkhan in 1132. The article says he ruled as king from 1124 to 1132 and as emperor and Gurkhan 1132-1143; the king years are not entered under a second title (see discrepancy). Succeeded by his empress Xiao Tabuyan as regent", sources: [wp-yelu-dashi]}
+  # ---- Jin
+  - {person: emperor-taizu-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1115, to: 1123-09-19, note: "Proclaimed himself emperor in January 1115. Death date: 19 September 1123 in the lead, 'August 1123' in the text (see discrepancy)", sources: [wp-emperor-taizu-of-jin]}
+  - {person: emperor-taizong-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1123, to: 1135-02-09, note: "Succeeded his elder brother Aguda", sources: [wp-emperor-taizong-of-jin]}
+  - {person: emperor-xizong-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1135, to: 1150-01-09, note: "Murdered by Digunai in a coup on 9 January 1150", sources: [wp-emperor-xizong-of-jin]}
+  - {person: wanyan-liang, title: Emperor of the Jin, realm: Jin dynasty, from: 1150, to: 1161-12-15, note: "Seized the throne in the coup of 9 January 1150 (the article gives only the year for his accession). Assassinated 15 December 1161", sources: [wp-wanyan-liang, wp-emperor-xizong-of-jin]}
+  - {person: emperor-shizong-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1161, to: 1189-01-20, note: "Became emperor on Wanyan Liang's death. Era name Dading", sources: [wp-emperor-shizong-of-jin, wp-emperor-zhangzong-of-jin]}
+  - {person: emperor-zhangzong-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1189-01-20, to: 1208-12-29, note: "Succeeded his grandfather Shizong; his uncle Wanyan Yongji (not entered) followed", sources: [wp-emperor-zhangzong-of-jin]}
+  - {person: emperor-aizong-of-jin, title: Emperor of the Jin, realm: Jin dynasty, from: 1224, to: 1234-02-09, note: "Succeeded Xuanzong (not entered) in January 1224. Before his suicide at Caizhou he passed the throne to Wanyan Chenglin, who died the same day, ending the dynasty", sources: [wp-emperor-aizong-of-jin]}
+  # ---- Western Xia
+  - {person: emperor-jingzong-of-western-xia, title: Emperor of Western Xia, realm: Western Xia, from: 1038, to: 1048-01-19, note: "Declared himself emperor in 1038 with the capital at Xingqing; became Tangut leader in 1032", sources: [wp-emperor-jingzong-of-western-xia]}
+
+discrepancies:
+  - key: yingzong-gifts-before-renzong-death-1063
+    question: Was Yingzong already emperor on 7 April 1063, when Renzong died on 30 April 1063?
+    about: [{person: emperor-yingzong-of-song}, {person: emperor-renzong-of-song}]
+    field: date
+    claims:
+      - {value: "Renzong died on 30 April 1063; Yingzong reigned from 1063", sources: [wp-emperor-renzong-of-song, wp-emperor-yingzong-of-song]}
+      - {value: "On 7 April 1063 Yingzong sent gifts including Renzong's calligraphy to the Vietnamese king Ly Thanh Tong, as if already emperor", sources: [wp-emperor-yingzong-of-song]}
+    note: "The records use 30 April 1063 for Renzong's death and 1063 (year only) for Yingzong's accession. The 7 April date may be the day the gift was ordered or an error."
+  - key: xia-song-peace-1043-or-1044
+    question: When did Western Xia and the Song make peace?
+    about: [{event: western-xia-founded-1038}, {person: emperor-jingzong-of-western-xia}]
+    field: date
+    claims:
+      - {value: "1043: the Tangut state accepted the Song emperor's recognition in exchange for annual gifts", sources: [wp-emperor-renzong-of-song]}
+      - {value: "1044: treaty with nominal Tangut acknowledgment of Song sovereignty and Song tribute payments", sources: [wp-emperor-jingzong-of-western-xia]}
+    note: "Neither year is used in a record; both are in the event note."
+  - key: wang-anshi-chancellor-start
+    question: When did Wang Anshi become chancellor, and did he hold it without a break until 1076?
+    about: [{person: wang-anshi}, {event: new-policies-1069}]
+    field: from
+    claims:
+      - {value: "Vice counsellor in 1069, chancellor a year later (1070); resigned in 1076", sources: [wp-wang-anshi]}
+      - {value: "Appointed Chancellor in 1068; made head of government in 1069; removed as chief minister in 1074, recalled to replace Lu Huiqing, and retired for good in 1076", sources: [wp-emperor-shenzong-of-song]}
+    note: "The title row uses 1070 to 1076 (the Wang Anshi article). The 1074 removal and recall is not entered as two rows."
+  - key: jin-song-alliance-date
+    question: When was the Jin-Song Alliance Conducted at Sea made?
+    about: [{event: alliance-conducted-at-sea-1120}]
+    field: date
+    claims:
+      - {value: "1120", sources: [wp-jingkang-incident]}
+      - {value: "Formed over 1115-1123, after Song embassies from 1117; a treaty recognising each other as equals was signed a few months before Aguda's death in 1123", sources: [wp-emperor-taizu-of-jin]}
+      - {value: "The Song attacked the Liao from the south in 1122, which shows the alliance existed by then", sources: [wp-emperor-huizong-of-song]}
+    note: "The record uses 1120, the only article that gives a specific year for the agreement."
+  - key: liao-supreme-capital-fall-1120-or-1122
+    question: When and where did the Jin take the Liao Supreme Capital?
+    about: [{event: fall-of-liao-supreme-capital-1120}, {place: shangjing-liao}]
+    field: date
+    claims:
+      - {value: "Captured in 1120 (and the Central Capital in 1122)", sources: [wp-emperor-tianzuo-of-liao]}
+      - {value: "By 1122 the Jin had captured the 'supreme capital of Chifeng'", sources: [wp-yelu-dashi]}
+      - {value: "Shangjing at present-day Bairin Left Banner, Inner Mongolia, sacked; all five Liao capitals fell between 1119 and 1122", sources: [wp-jingkang-incident, wp-emperor-taizu-of-jin]}
+    note: "The record uses 1120 and the Bairin Left Banner location; the Chifeng reading would be a different place name."
+  - key: liao-fall-1125-or-1120
+    question: When did the Liao dynasty end?
+    about: [{person: emperor-tianzuo-of-liao}, {event: fall-of-liao-1125}]
+    field: date
+    claims:
+      - {value: "1125: Tianzuo was captured by the Jin", sources: [wp-emperor-tianzuo-of-liao, wp-emperor-taizong-of-jin, wp-emperor-taizu-of-jin]}
+      - {value: "About 1120: the Jingkang article says the Jin general defected in 1123, 'three years after the fall of the Liao' and says the Jin sacked the Liao capital and 'ended the Liao dynasty'", sources: [wp-jingkang-incident]}
+    note: "The record uses 1125, the year of Tianzuo's capture."
+  - key: taizu-of-jin-death-month
+    question: When did Aguda, Emperor Taizu of Jin, die?
+    about: [{person: emperor-taizu-of-jin}]
+    field: died
+    claims:
+      - {value: "19 September 1123", sources: [wp-emperor-taizu-of-jin]}
+      - {value: "August 1123, aged 56", sources: [wp-emperor-taizu-of-jin]}
+    note: "Both claims are in one article (the lead and the text); the record uses the lead's 19 September 1123."
+  - key: jin-attack-commanders-1125
+    question: Who led the Jin attack on the Song in 1125 and 1126?
+    about: [{event: jingkang-incident-1127}, {person: emperor-taizong-of-jin}]
+    field: people
+    claims:
+      - {value: "In October 1125 Taizong ordered his fifth brother Wanyan Gao to lead two armies on Bianjing; in August 1126 Wanyan Zongwang and Wanyan Zonghan besieged it again", sources: [wp-emperor-taizong-of-jin]}
+      - {value: "The northern army under Wanyan Zongwang and the western army under Wanyan Zonghan led both campaigns (second invasion September 1126)", sources: [wp-jingkang-incident]}
+      - {value: "Wolibu and Nianhan (the 'Western Vice-Marshal' and a second vice-marshal) led the 1126 forces", sources: [wp-emperor-huizong-of-song]}
+    note: "Names are not entered as people; the event record names Taizong only."
+  - key: huizong-qinzong-deportation-1127
+    question: When and where were Huizong and Qinzong deported from Kaifeng in 1127?
+    about: [{person: emperor-huizong-of-song}, {person: emperor-qinzong-of-song}]
+    field: date
+    claims:
+      - {value: "Huizong deported on 10 May 1127 to Heilongjiang; both made commoners on 20 March 1127; at Shangjing in 1128 (the Jin capital, present-day Harbin)", sources: [wp-emperor-huizong-of-song]}
+      - {value: "Both deported on 13 May 1127 to Huining Prefecture, the Jin capital", sources: [wp-emperor-qinzong-of-song]}
+      - {value: "Resettled at Wuguocheng (Yilan County, Heilongjiang) in 1128", sources: [wp-emperor-taizong-of-jin]}
+    note: "No deportation date is used in any record. The 20 March 1127 demotion is agreed by two articles and is used for Qinzong's title end."
+  - key: qinzong-death-manner
+    question: How did Qinzong die in 1156?
+    about: [{person: emperor-qinzong-of-song}]
+    field: died
+    claims:
+      - {value: "Died in 1156 aged 56 (14 June 1156), possibly of illness", sources: [wp-emperor-qinzong-of-song]}
+      - {value: "Trampled to death by horses in a polo match ordered by the Jin ruler (called 'Prince of Hailing'), a story the article calls largely fictitious because it comes from a Yuan novel", sources: [wp-emperor-qinzong-of-song, wp-emperor-tianzuo-of-liao]}
+      - {value: "In the same story Qinzong fell from his horse while Tianzuo was shot dead trying to flee", sources: [wp-jingkang-incident]}
+    note: "The records use 14 June 1156 for Qinzong's death and give no cause. The 'Prince of Hailing' in the story is Wanyan Liang, who was the Jin emperor in 1156."
+  - key: tianzuo-death-1128-or-1156
+    question: When did Tianzuo, the last Liao emperor, die?
+    about: [{person: emperor-tianzuo-of-liao}]
+    field: died
+    claims:
+      - {value: "1128 of illness, aged 53 (History of Liao)", sources: [wp-emperor-tianzuo-of-liao]}
+      - {value: "1156, shot by archers in a polo match, aged 81 (the Da Song Xuanhe Yishi novel, which the article calls largely fictitious)", sources: [wp-emperor-tianzuo-of-liao, wp-jingkang-incident]}
+    note: "The record uses 1128."
+  - key: western-liao-founding-1124-or-1132
+    question: When was the Western Liao founded?
+    about: [{person: yelu-dashi}, {event: western-liao-founded-1124}, {event: dashi-proclaimed-gurkhan-1132}]
+    field: date
+    claims:
+      - {value: "1124: Dashi established the Western Liao dynasty after leaving Tianzuo; he ruled as king 1124-1132", sources: [wp-emperor-tianzuo-of-liao, wp-yelu-dashi]}
+      - {value: "1132: proclaimed Gurkhan and emperor (regnal name Tianyou)", sources: [wp-yelu-dashi]}
+    note: "Both events are recorded. The title row starts in 1132 because only that is a title the article names; the king years would need a second title wording."
+  - key: yelu-dashi-birth-1087-or-1094
+    question: In what year was Yelu Dashi born?
+    about: [{person: yelu-dashi}]
+    field: born
+    claims:
+      - {value: "1087", sources: [wp-yelu-dashi]}
+      - {value: "1094", sources: [wp-yelu-dashi]}
+    note: "The article says his birth date is not clear and may be either year; the record has no birth year."
+  - key: lin-an-capital-1133-or-1138
+    question: When did Lin'an become the Southern Song capital?
+    about: [{place: hangzhou}, {person: emperor-gaozong-of-song}]
+    field: date
+    claims:
+      - {value: "1133: Gaozong declared Lin'an the dynasty's new temporary capital, replacing Kaifeng", sources: [wp-emperor-gaozong-of-song]}
+      - {value: "1138: Gaozong officially declared Lin'an the capital, though still labelled temporary", sources: [wp-emperor-gaozong-of-song]}
+    note: "Both claims are in one article. The place record mentions both years."
+  - key: jin-song-war-1140-1141-outcome
+    question: Who won the Jin-Song war of 1140-1141?
+    about: [{person: emperor-xizong-of-jin}, {person: wanyan-liang}]
+    field: date
+    claims:
+      - {value: "The Jin army under Wanyan Zongbi was defeated in 1141 by Yue Fei and Han Shizhong, and the Jin agreed to negotiate", sources: [wp-emperor-xizong-of-jin]}
+      - {value: "The Jin dynasty held a 'superior status' after its 1141 victory over the Song", sources: [wp-wanyan-liang]}
+    note: "The Treaty of Shaoxing (1142) set the Song as the inferior state; no record states a winner."
+  - key: han-tuozhou-death-1207
+    question: How and when did Han Tuozhou die?
+    about: [{event: jin-song-war-1206}, {person: emperor-ningzong-of-song}, {person: emperor-zhangzong-of-jin}]
+    field: died
+    claims:
+      - {value: "Beaten to death by the Imperial Palace Guards on 15 December 1207; heads of Han and Su Shidan were cut from their exhumed corpses and delivered to the Jin after the treaty of 2 November 1208", sources: [wp-emperor-ningzong-of-song]}
+      - {value: "The Song had to execute Han Tuozhou under the treaty and delivered the severed heads of Han Tuozhou and Su Shidan", sources: [wp-emperor-zhangzong-of-jin]}
+    note: "A death before the treaty (Ningzong) cannot also be an execution to meet its terms (Zhangzong). Han has no person record."
+  - key: jin-song-treaty-1208-tribute
+    question: What tribute did the 1208 treaty set?
+    about: [{event: jin-song-war-1206}]
+    field: terms
+    claims:
+      - {value: "Tribute reinstated and increased by 50,000 taels of silver and 50,000 packs of fabric", sources: [wp-emperor-ningzong-of-song]}
+      - {value: "An annual tribute of 50,000 taels of silver and 50,000 packs of fabric", sources: [wp-emperor-zhangzong-of-jin]}
+    note: "The two articles differ on whether 50,000 is the increase or the total."
+  - key: duzong-birth-1240-or-1224
+    question: In what year was Duzong born?
+    about: [{person: emperor-duzong-of-song}]
+    field: born
+    claims:
+      - {value: "2 May 1240 (lead)", sources: [wp-emperor-duzong-of-song]}
+      - {value: "'born in 1224' (early life section)", sources: [wp-emperor-duzong-of-song]}
+    note: "Both claims are in one article. The record uses 1240; he was adopted in 1253 and died aged 34 in 1274."
+  - key: duzong-death-cause
+    question: How did Duzong die?
+    about: [{person: emperor-duzong-of-song}]
+    field: died
+    claims:
+      - {value: "Overindulgence in wine", sources: [wp-emperor-duzong-of-song, wp-emperor-gongzong-of-song]}
+      - {value: "Sudden death from a Palace Doctor's severe negligence (Richard L. Davis and others)", sources: [wp-emperor-duzong-of-song]}
+    note: "No cause is in the record."
+  - key: gongzong-reign-start-1274-or-1275
+    question: When did Emperor Gong's reign begin, and when did Duanzong's?
+    about: [{person: emperor-gongzong-of-song}, {person: emperor-bing-of-song}]
+    field: from
+    claims:
+      - {value: "Gong enthroned at about four after Duzong died in 1274; abdicated in 1276; Duanzong enthroned 14 June 1276 at Fuzhou, died 1278", sources: [wp-emperor-gongzong-of-song, wp-emperor-duzong-of-song, wp-emperor-bing-of-song]}
+      - {value: "Gong reigned 1275-1276 and Duanzong 1276-1278 (in the Bing article's text)", sources: [wp-emperor-bing-of-song]}
+    note: "The record uses 1274 (Duzong's death date is 12 August 1274). Gong's article places the regency of Empress Dowager Xie and Quan in 1275."
+  - key: bing-death-manner-yamen
+    question: How and where did Emperor Bing die at Yamen?
+    about: [{person: emperor-bing-of-song}, {event: battle-of-yamen-1279}]
+    field: place
+    claims:
+      - {value: "Lu Xiufu leapt with the boy emperor from coastal clifftops where they had watched the battle", sources: [wp-emperor-bing-of-song]}
+      - {value: "Lu Xiufu carried him to a cliff and they threw themselves into the sea", sources: [wp-emperor-bing-of-song]}
+      - {value: "Lu Xiufu, with the emperor's boat at the centre of the chained fleet, jumped into the sea and both drowned", sources: [wp-battle-of-yamen]}
+    note: "The record gives the date (19 March 1279, agreed by both articles) and the place Yamen, no cause beyond drowning. The Bing article says the grave in Chiwan, Shenzhen is not authenticated; the Yamen article says the body was found near Shekou and the grave is not found."
+  - key: aizong-remains-fate
+    question: What happened to Aizong's body after the fall of Caizhou?
+    about: [{person: emperor-aizong-of-jin}]
+    field: died
+    claims:
+      - {value: "His remains were divided: the Mongol general Taghachar took his hands and the rest went to Lin'an, offered in the Song ancestral temple, then buried in a prison vault", sources: [wp-emperor-aizong-of-jin]}
+      - {value: "Cremated by his bodyguards and the ashes dumped in the river (Rashid al-Din)", sources: [wp-emperor-aizong-of-jin]}
+    note: "Both accounts are in one article. Not used in a record."
