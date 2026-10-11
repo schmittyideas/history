@@ -1,0 +1,796 @@
+batch:
+  title: "The world in 1200: rulers of the main states"
+  requested: "One ruler for each major state on the Year-view map at 1200 (snapshot-year batch of the build-out), with a few dated events of 1185-1215"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp6 directory, plus wp2 for Frederick II); nothing was fetched. Line 1-3 of every file was checked. Headings that differ from the plan title: Aimery_of_Jerusalem is "Aimery of Cyprus" (key aimery-of-cyprus, given both realms), Sverker_II_of_Sweden is "Sverker the Younger" (key sverker-ii-of-sweden), Cnut_VI_of_Denmark is "Canute VI of Denmark" (key cnut-vi-of-denmark), Al-Nasir_li-Din_Allah is "Al-Nasir" (key al-nasir-abbasid-caliph), Leszek_the_White is "Leszek I the White" (key leszek-the-white). Long articles (Tamar, Muhammad II of Khwarazm, Al-Nasir, Aimery, Sverre) were read selectively: lead, rise, reign, death; the long Khwarazm and Al-Nasir wars and the Mongol invasion were not worked through.
+# - Lalibela (Zagwe dynasty) is entered from wp6/Gebre_Mesqel_Lalibela.txt (heading "Gebre Meskel Lalibela"); the earlier file wp6/Lalibela.txt was the town article and is not used. The article gives no death date or place, so there is no death or burial moment; the born moment is at Roha, the town later renamed Lalibela, which is the place record below.
+# - New realms (8): Zagwe dynasty, Grand Duchy of Vladimir, Galicia-Volhynia, Kingdom of Cyprus, Armenian Kingdom of Cilicia, Ayyubid Sultanate, Almohad Caliphate, Khwarazmian Empire. Aragon, Navarre and Kingdom of Jerusalem are defined in the sibling batch inbox/2026-10-11-world-1100.yaml and only referenced here, so that batch must be applied first (the preview will otherwise warn that these realms have no region). The source wp-frederick-ii-holy-roman-emperor is repeated below with the same key and URL as in 2026-10-08-holy-roman-empire.yaml (a plain upsert).
+# - Title wordings: Tamar of Georgia is "King of Georgia", the plan's and the existing realm wording (the article says her title mepe means 'king' in Georgian and that she was styled king of kings); the person note says she was a woman ruling in her own right. Aimery gets two rows, "King of Cyprus" (Kingdom of Cyprus) and "King of Jerusalem". Peter II gets "King of Aragon" and "Count of Barcelona" (the existing wording for Barcelona); Emeric gets "King of Hungary" and "King of Croatia" (the existing wording for Croatia). Leo I: realm "Armenian Kingdom of Cilicia", wording "King of Armenia" as in the plan.
+# - Title rows NOT entered: Ottokar I as Duke of Bohemia (the article gives 1192 as a start but only "periodically" and "soon overthrown", no end); Leo I as lord of Armenian Cilicia 1187-1198 (other wording, not in the plan); Frederick II is not a new person (only the Sicily row below). Leszek the White is a person but the Year view will show no Polish duke of his at exactly 1200: his lead dates his rule 1194-1198, 1199, 1206-1210 and 1211-1227; the 1199 spell is in the first row's note only, and the gap 1200-1205 is real (Mieszko III the Old held Kraków until 13 March 1202, then Władysław III Spindleshanks; the article does not give a clear start year for Leszek's return, see discrepancy).
+# - Roman the Great: the title row starts 1199 (the body: he took the Galician throne in 1199 after Volodymyr Yaroslavych died, 'creating the Principality of Galicia-Volhynia'; the lead says 1198/99) and ends 1205 (year only, because the two dates the articles give for his death disagree, see discrepancy). He held Volhynia from 1170 and Galicia briefly in 1189.
+# - Sverker II: the title starts '1195 or 1196' in his lead; the row uses 1195 with from_estimated. Ends 1208 (his defeat at Lena, year only).
+# - Title ends given as a year because the article gives no day: Tsuchimikado 1210, Dandolo 1205 (May or June), Muhammad al-Nasir 1213, Ottokar I 1230, Muhammad II (December 1220 is a month only), Zhilugu 1211 (captured; he died in captivity in 1213 as 'Taishang Huang', not entered as a title). Al-Adil's end 31 August 1218 is the lead's day (the body says only August 1218). Emeric's death day, 30 November 1204, is the Illuminated Chronicle's as the article quotes it.
+# - Tsuchimikado's start is 1198 (year only): the article gives 18 February 1198 for Go-Toba's abdication and 'the 3rd month' for his accession, no day. Huanzong's start 1193 and end 1206 are years only.
+# - Overlaps / Year-view notes: Western Liao's last row from the 1100 era is Yelu Dashi's; Zhilugu's starts 1177 (year). Western Xia: Huanzong's reign 1193-1206 ends with the coup of his cousin Li Anquan (Xiangzong).
+# - Discrepancies recorded below (13): Roman the Great's death (19 June vs 14 October 1205); Tamar's birth and her death; Narapatisithu's birth; Sverre's birth; Enrico Dandolo's birth and his blindness; when Aimery became king of Cyprus; when Leo I was crowned; where the battle of Gestilren was fought; when Leszek came back to Kraków; the identity of Sancho VII's second wife. Seen and not entered (a range or a typo inside one article, or not about a record here): Leszek's birth 'c. 1184/1185' (entered as 1184 estimated); Emeric's invasion of Serbia 'in 1201 or 1202'; the date of the battle of Basian ('1202, 1203 or 1204', Tamar's article; no event entered); Sancho I and the authorship of the cantiga 'A Ribeirinha'; Al-Nasir's mother's death date (Dec 1202-Jan 1203 or Jan-Feb 1203).
+# - Events: 8 new events (Hattin 1187, Silves 1189, Zadar 1202, Zawichost 1205, Gestilren 1210, Leo I's coronation 1198, Golden Bull of Sicily 1212, Muret 1213) and 5 link-only updates to existing events (third-crusade-1189, fourth-crusade-1202, sack-of-constantinople-1204, battle-of-alarcos-1195, battle-of-las-navas-de-tolosa-1212). The existing alarcos note says only Alfonso VIII; Sancho VII is added as 'arrived late'. The Almohad caliph at Alarcos was Muhammad al-Nasir's father, so Muhammad is linked only to Las Navas. Genghis Khan's rise is not in this batch.
+# - Existing place reused, not redefined: coimbra (Sancho I's moments), plus rome, mainz, constantinople, hagia-sophia, bergen and gelati-monastery. Coordinates are general knowledge (2-3 decimals); Ashur-Ada, the Gawdawpalin and the Assumption Cathedral points are approximate. Moments take a year only (checked).
+# - Obsidian: no links. Images: none.
+
+sources:
+  - {key: wp-emperor-tsuchimikado,               title: "Emperor Tsuchimikado (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Emperor_Tsuchimikado"}
+  - {key: wp-emeric-of-hungary,                  title: "Emeric, King of Hungary (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Emeric%2C_King_of_Hungary"}
+  - {key: wp-leszek-the-white,                   title: "Leszek I the White (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Leszek_I_the_White"}
+  - {key: wp-ottokar-i-of-bohemia,               title: "Ottokar I of Bohemia (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Ottokar_I_of_Bohemia"}
+  - {key: wp-vsevolod-the-big-nest,              title: "Vsevolod the Big Nest (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Vsevolod_the_Big_Nest"}
+  - {key: wp-roman-the-great,                    title: "Roman the Great (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Roman_the_Great"}
+  - {key: wp-cnut-vi-of-denmark,                 title: "Canute VI of Denmark (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Canute_VI_of_Denmark"}
+  - {key: wp-sverre-of-norway,                   title: "Sverre of Norway (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Sverre_of_Norway"}
+  - {key: wp-sverker-ii-of-sweden,               title: "Sverker the Younger (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Sverker_the_Younger"}
+  - {key: wp-peter-ii-of-aragon,                 title: "Peter II of Aragon (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Peter_II_of_Aragon"}
+  - {key: wp-sancho-vii-of-navarre,              title: "Sancho VII of Navarre (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Sancho_VII_of_Navarre"}
+  - {key: wp-sancho-i-of-portugal,               title: "Sancho I of Portugal (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Sancho_I_of_Portugal"}
+  - {key: wp-enrico-dandolo,                     title: "Enrico Dandolo (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Enrico_Dandolo"}
+  - {key: wp-aimery-of-cyprus,                   title: "Aimery of Cyprus (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Aimery_of_Cyprus"}
+  - {key: wp-tamar-of-georgia,                   title: "Tamar of Georgia (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Tamar_of_Georgia"}
+  - {key: wp-leo-i-of-armenia,                   title: "Leo I, King of Armenia (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Leo_I%2C_King_of_Armenia"}
+  - {key: wp-al-adil-i,                          title: "Al-Adil I (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Al-Adil_I"}
+  - {key: wp-al-nasir-abbasid-caliph,            title: "Al-Nasir (Wikipedia)",                           url: "https://en.wikipedia.org/wiki/Al-Nasir"}
+  - {key: wp-muhammad-al-nasir,                  title: "Muhammad al-Nasir (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Muhammad_al-Nasir"}
+  - {key: wp-muhammad-ii-of-khwarazm,            title: "Muhammad II of Khwarazm (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Muhammad_II_of_Khwarazm"}
+  - {key: wp-yelu-zhilugu,                       title: "Yelü Zhilugu (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Yel%C3%BC_Zhilugu"}
+  - {key: wp-emperor-huanzong-of-western-xia,    title: "Emperor Huanzong of Western Xia (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Emperor_Huanzong_of_Western_Xia"}
+  - {key: wp-gebre-meskel-lalibela,              title: "Gebre Meskel Lalibela (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Gebre_Meskel_Lalibela"}
+  - {key: wp-narapatisithu,                      title: "Narapatisithu (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Narapatisithu"}
+  - {key: wp-frederick-ii-holy-roman-emperor,    title: "Frederick II, Holy Roman Emperor (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Frederick_II%2C_Holy_Roman_Emperor"}
+
+realms:
+  - {name: Zagwe dynasty,                region: Sub-Saharan Africa,         country: Ethiopia, note: "Ethiopian dynasty of the Lasta region; Lalibela was one of its kings (his article)"}
+  - {name: Grand Duchy of Vladimir,      region: Eastern Europe,             country: Russia, note: "Vladimir-Suzdal; Vsevolod the Big Nest's article calls him Grand Prince of Vladimir"}
+  - {name: Galicia-Volhynia,             region: Eastern Europe,             country: Ukraine, note: "Created by Roman the Great when he took Galicia in 1199 (his article)"}
+  - {name: Kingdom of Cyprus,            region: Middle East and North Africa, country: Cyprus, note: "Aimery of Lusignan was its first king, from 1196 (his article)"}
+  - {name: Armenian Kingdom of Cilicia, region: Middle East and North Africa, country: Turkey, note: "Armenian state in Cilicia; Leo I was its first crowned king"}
+  - {name: Ayyubid Sultanate,            region: Middle East and North Africa, country: Egypt, note: "Founded by Saladin; Al-Adil I ruled Egypt and Syria (his article)"}
+  - {name: Almohad Caliphate,            region: Middle East and North Africa, country: Morocco, note: "Ruled North Africa and Muslim Spain; Muhammad al-Nasir was its fourth caliph"}
+  - {name: Khwarazmian Empire,           region: Central Asia,               country: Uzbekistan, note: "Capital first Gurganj, moved to Samarkand in 1218 (Al-Nasir's article)"}
+
+people:
+  - key: emperor-tsuchimikado
+    name: Emperor Tsuchimikado
+    type: Royalty
+    realm: Japan
+    born: 1196-01-03
+    died: 1231-11-06
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "83rd emperor of Japan, firstborn son of Emperor Go-Toba, who abdicated on 18 February 1198 and went on to rule as cloistered emperor. Reign 1198-1210; the shogunate passed from Minamoto no Yoritomo (died 1199) to Yoriie (assassinated 1203) and Sanetomo. In 1210 Go-Toba had him abdicate for his younger brother Juntoku. He went into exile in Tosa and then Awa and died there at 35."
+    sources: [wp-emperor-tsuchimikado]
+  - key: emeric-of-hungary
+    name: Emeric of Hungary
+    type: Royalty
+    realm: Hungary
+    born: 1174
+    died: 1204-11-30
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Hungary and Croatia 1196-1204, eldest son of Bela III, crowned as a child on 16 May 1182. Spent his first four years on the throne fighting his brother Andrew, who forced him to make him duke of Croatia and Dalmatia; seized Andrew in 1203. Worked with the Pope against the Bosnian Church, made Serbia his vassal and first used the title King of Serbia (1202) and the Arpad stripes on a seal. Could not stop the Fourth Crusade and Venice seizing Zadar in 1202. Had his four-year-old son Ladislaus crowned on 26 August 1204; buried at Eger. His widow Constance of Aragon later married Frederick II."
+    sources: [wp-emeric-of-hungary]
+  - key: leszek-the-white
+    name: Leszek I the White
+    type: Royalty
+    realm: Poland
+    house: Piast
+    born: 1184
+    born_estimated: true
+    died: 1227-11-24
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Prince of Sandomierz and High Duke of Poland (Kraków) in 1194-1198, 1199, 1206-1210 and 1211-1227, eldest surviving son of Casimir II. A child at his father's death on 5 May 1194, he fought his uncle Mieszko III the Old (battle of Mozgawa, 13 September 1195) and later Władysław III Spindleshanks. Placed his lands under papal vassalage in 1207; excommunicated in 1210 (Mieszko Tanglefoot took Kraków and held it until his death in May 1211). Long wars over Galicia-Volhynia (beat and killed Roman the Great at Zawichost in 1205). Took the title dux Poloniae from 1218. Assassinated at Gąsawa on 24 November 1227, buried at Wawel. Born 'c. 1184/1185'."
+    sources: [wp-leszek-the-white]
+  - key: ottokar-i-of-bohemia
+    name: Ottokar I of Bohemia
+    type: Royalty
+    realm: Bohemia
+    house: Přemyslid
+    born: 1155
+    born_estimated: true
+    died: 1230
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Přemysl Otakar I, duke of Bohemia periodically from 1192 and the first hereditary king of Bohemia. Declared king in 1198 with the backing of Philip of Swabia and crowned at Mainz; later recognised by Otto IV and Innocent III, and in 1212 Frederick II granted the Golden Bull of Sicily that made the title hereditary for his heirs. Divorced Adelheid of Meissen in 1199 to marry Constance of Hungary. Father of Wenceslaus I and Saint Agnes of Bohemia. Reign saw German immigration and the growth of towns."
+    sources: [wp-ottokar-i-of-bohemia]
+  - key: vsevolod-the-big-nest
+    name: Vsevolod the Big Nest
+    type: Royalty
+    realm: Grand Duchy of Vladimir
+    house: Rurikid
+    born: 1154
+    died: 1212-04-12
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Vsevolod III Yuryevich, Grand Prince of Vladimir 1176-1212, tenth or eleventh son of Yuri Dolgoruky; spent his youth at the Byzantine court. Briefly set on the Kiev throne in 1173; succeeded his brother Mikhalko in Vladimir in 1176, broke the boyars, raided Volga Bulgaria and put his own princes on the throne of Novgorod. Punished Ryazan (1180, 1187, burned in 1207). Named 'Big Nest' for his fourteen children by Maria Shvarnovna. Divided his lands among his sons before he died; buried in the Assumption Cathedral, Vladimir; the war of succession followed in 1212-1216."
+    sources: [wp-vsevolod-the-big-nest]
+  - key: roman-the-great
+    name: Roman the Great
+    type: Royalty
+    realm: Galicia-Volhynia
+    house: Rurikid
+    born: 1152
+    born_estimated: true
+    died: 1205
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Roman Mstislavich, prince of Novgorod 1168-1170, Volhynia 1170-1205 and Galicia (1189; 1198/99-1205); founder of the Romanovichi branch of the Rurikids. Took Galicia in 1199 and united it with Volhynia; two successful campaigns against the Cumans (1201-1202, 1203-1204); captured Kiev and installed his brother-in-law. According to Dlugosz he sheltered the deposed Constantine Laskaris after 1204. Broke with Leszek the White and Konrad of Masovia and was killed at Zawichost in 1205; his young sons Daniel and Vasylko were driven out of Galicia. Birth given as c. 4 April 1152. Death date disputed (see discrepancy)."
+    sources: [wp-roman-the-great]
+  - key: cnut-vi-of-denmark
+    name: Canute VI of Denmark
+    type: Royalty
+    realm: Denmark
+    born: 1163
+    born_estimated: true
+    died: 1202-11-12
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Knud Valdemarsøn, eldest son of Valdemar I, crowned co-king at seven on 25 June 1170 (the first coronation in Danish history) and sole king from 1182. Put down a peasant revolt in Skåne at Dösjebro; refused Frederick Barbarossa's demand for homage, and Bishop Absalon beat the Pomeranian fleet; by 1185 Bogislaw I of Pomerania was his vassal and the kings of Denmark were 'King of the Wends' until 1972. Led a crusade against the Estonians in 1197. Died suddenly at 39, without children; succeeded by his brother Valdemar II."
+    sources: [wp-cnut-vi-of-denmark]
+  - key: sverre-of-norway
+    name: Sverre of Norway
+    type: Royalty
+    realm: Norway
+    born: 1151
+    born_estimated: true
+    died: 1202-03-09
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sverre Sigurdsson, raised in the Faroes and ordained a priest; claimed to be the son of King Sigurd Munn. Became leader of the Birkebeiner rebels in 1177, was proclaimed king in Trøndelag in June 1177, won at Kalvskinnet (19 June 1179) and Nordnes (31 May 1181), and became sole king after the battle of Fimreite on 15 June 1184, where Magnus Erlingsson drowned. Fought the Kuvlungs, the Isle Beards (battle of Florvåg, 3 April 1194) and the church-backed Baglers; excommunicated in 1194 and Norway under interdict from October 1198; won at Strindafjord on 18 June 1199. Died in Bergen on 9 March 1202 and was buried in Christ Church, Bergen (destroyed in 1591). Paternity and birth year are doubted (see discrepancy)."
+    sources: [wp-sverre-of-norway]
+  - key: sverker-ii-of-sweden
+    name: Sverker II of Sweden
+    type: Royalty
+    realm: Sweden
+    house: Sverker
+    died: 1210-07-17
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sverker the Younger or Sverker Karlsson, born before 1167, son of King Karl Sverkersson (murdered on Visingsö in 1167). Grew up in Denmark with his mother's Hvide clan; chosen king in 1195 or 1196 after Knut Eriksson, helped by Jarl Birger Brosa, whose daughter Ingegerd he married. Gave the oldest known ecclesiastical privilege in Sweden (1200). Beat Knut's sons at Älgarås in 1205 but lost the battle of Lena in 1208 to Erik Knutsson and fled to Denmark; killed at Gestilren in July 1210. Said to rest at Alvastra."
+    sources: [wp-sverker-ii-of-sweden]
+  - key: peter-ii-of-aragon
+    name: Peter II of Aragon
+    type: Royalty
+    realm: Aragon
+    born: 1178
+    died: 1213-09-12
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Peter the Catholic, King of Aragon and Count of Barcelona 1196-1213, born at Huesca, son of Alfonso II. Acknowledged papal supremacy and was crowned in Rome by Innocent III in 1205, the first king of Aragon crowned by a pope. Married Marie of Montpellier on 15 June 1204; their son was James the Conqueror. Fought at Las Navas de Tolosa in 1212, then crossed the Pyrenees to defend his vassal Raymond VI of Toulouse and was killed at the battle of Muret on 12 September 1213."
+    sources: [wp-peter-ii-of-aragon]
+  - key: sancho-vii-of-navarre
+    name: Sancho VII of Navarre
+    type: Royalty
+    realm: Navarre
+    house: Jiménez
+    born: 1157
+    born_estimated: true
+    died: 1234-04-07
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sancho the Strong, King of Navarre 1194-1234, last of the Jiménez dynasty and the first to use the chains of Navarre as his blazon. Brother of Berengaria, who married Richard I of England. Crowned at Pamplona on 15 August 1194. Arrived late at Alarcos (1195); lost Álava, Guipúzcoa and Biscay to Castile while campaigning in Africa (1198-1200). At Las Navas de Tolosa (1212) he is said to have broken through the guard around the caliph's tent. Withdrew to Tudela with an ulcerated leg, where his sister Blanche governed until 1229, and died there; succeeded by his nephew Theobald IV of Champagne. Buried first at San Nicolás, later moved to Roncesvalles."
+    sources: [wp-sancho-vii-of-navarre]
+  - key: sancho-i-of-portugal
+    name: Sancho I of Portugal
+    type: Royalty
+    realm: Portugal
+    born: 1154-11-11
+    died: 1211-03-26
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sancho the Populator, second king of Portugal, born Martinho at Coimbra on the feast of Saint Martin. Knighted in 1170; led the Triana Raid. Crowned at Coimbra on 9 December 1185, at 31. Took Silves in 1189 with passing crusaders and styled himself King of Portugal and Silves until the Almohads retook it in 1191 and everything south of the Tagus except Évora. Founded towns (Guarda, 1199) and wrote poetry. Married Dulce of Aragon; eight of eleven children grew up, including his successor Afonso II. Died at Coimbra aged 56."
+    sources: [wp-sancho-i-of-portugal]
+  - key: enrico-dandolo
+    name: Enrico Dandolo
+    type: Nobility
+    realm: Venice
+    house: Dandolo
+    born: 1107
+    born_estimated: true
+    died: 1205
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Doge of Venice from 1 June 1192 to May or June 1205, elected old and blind after the abdication of Orio Mastropiero. Reformed Venetian coinage in 1194 (the silver grosso). Made the 1202 contract with the Fourth Crusade, took the cross himself, steered the fleet to Zadar (fell 24 November 1202) and on to Constantinople (sacked 12 April 1204); declined the Latin imperial crown, took the title despot and 'lord of three-eighths of the Roman Empire'. Died in Constantinople and was buried in Hagia Sophia (a cenotaph marks the spot). Born c. 1107 on the account of Marino Sanudo; blindness and age are open (see discrepancies)."
+    sources: [wp-enrico-dandolo]
+  - key: aimery-of-cyprus
+    name: Aimery of Cyprus
+    type: Royalty
+    realm: Kingdom of Cyprus
+    house: Lusignan
+    died: 1205-04-01
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Aimery of Lusignan, born before 1155, younger brother of Guy of Lusignan; first king of Cyprus (from 1196) and king of Jerusalem (1198-1205) as husband of Queen Isabella I. Constable of Jerusalem by 1182; captured at Hattin (4 July 1187) and held until early 1188; supported Guy at the siege of Acre (1189). Elected lord of Cyprus after Guy's death in 1194; acknowledged Emperor Henry VI, and Conrad of Querfurt crowned him at Nicosia in September 1197. Crowned king of Jerusalem in January 1198 beside Isabella; made a truce with al-Adil (1 July 1198) and a six-year one in September 1204. Died at Acre on 1 April 1205 after eating white mullet, buried in Nicosia; Cyprus passed to his son Hugh I, Jerusalem to Maria of Montferrat."
+    sources: [wp-aimery-of-cyprus]
+  - key: tamar-of-georgia
+    name: Tamar of Georgia
+    type: Royalty
+    realm: Georgia
+    house: Bagrationi
+    born: 1160
+    born_estimated: true
+    died: 1213-01-18
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Tamar the Great, who reigned in her own right (styled mepe, 'king') 1184-1213 over the apex of the Georgian Golden Age. Crowned co-ruler by her father George III in 1178 and again at Gelati in 1184. Married Yury Bogolyubsky (1185-1187, divorced) and then the Alan prince David Soslan (1191). With generals Zakare and Ivane Mkhargrdzeli she pushed Georgia's frontier into Armenia and Azerbaijan: beat the Eldiguzids at Shamkor, Suleiman II of Rum at Basian, took Kars (1206). Helped set up the Empire of Trebizond in 1204. Poets including Shota Rustaveli, author of The Knight in the Panther's Skin, took her as their inspiration. Died near Tbilisi; burial place unknown. Birth and death years disputed (see discrepancies)."
+    sources: [wp-tamar-of-georgia]
+  - key: leo-i-of-armenia
+    name: Leo I of Armenia
+    type: Royalty
+    realm: Armenian Kingdom of Cilicia
+    born: 1150
+    died: 1219-05-02
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Leo the Magnificent, tenth lord of Armenian Cilicia from 1187 and its first crowned king, consecrated in Hagia Sophia at Tarsus on 6 January 1198 or 1199. Held off Aleppo and Damascus in 1187, helped the Third Crusade with supplies, guides and pack animals, enlarged his state to Isauria and made a treaty with the sultan of Iconium. Fought the Antiochene war of succession against Bohemond of Tripoli. Married Sibylle of Cyprus in 1210-1211; named a regent for his daughter Isabella before he died; buried at Agner."
+    sources: [wp-leo-i-of-armenia]
+  - key: al-adil-i
+    name: Al-Adil I
+    type: Royalty
+    realm: Ayyubid Sultanate
+    house: Ayyubid
+    born: 1145
+    died: 1218-08-31
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Saphadin to the Crusaders, younger brother of Saladin, born in June 1145 (possibly in Damascus). Governed Egypt for Saladin, Aleppo (1183-1186) and Egypt again during the Third Crusade. After Saladin's death in 1193 he beat Saladin's sons for the succession: proclaimed himself sultan on 17 February 1200 and by 1202 held all Ayyubid lands. Reformed currency and taxes, kept the peace with the Crusader states and refortified Damascus. Took Ahlat in 1207; in 1209 he led an army to support his nephew al-Awhad against the Georgians besieging Khlat, and a thirty-year truce with Georgia followed. Died on campaign in August 1218 as the Fifth Crusade landed at Damietta; succeeded by his son al-Kamil."
+    sources: [wp-al-adil-i, wp-tamar-of-georgia]
+  - key: al-nasir-abbasid-caliph
+    name: Al-Nasir
+    type: Royalty
+    realm: Abbasid Caliphate
+    house: Abbasid
+    born: 1158-08-06
+    died: 1225-10-05
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Al-Nasir li-Din Allah, Abbasid caliph in Baghdad from 28 March 1180 to 5 October 1225, son of al-Mustadi; called the last effective Abbasid caliph. Gained full control of Mesopotamia and broke Seljuk power by inciting Khwarazmshah Tekish against Toghrul III (defeated and killed in 1194). Reorganised the futuwwa brotherhoods (1182 initiation, 1207 reform). Befriended Sufis such as al-Suhrawardi. Refused Muhammad II of Khwarazm's claim and survived his march on Baghdad (1217-1218) when snow forced it back. Built the Bab al-Wastani gate and the Abbasid palace in Baghdad. Spent his last three years paralysed and nearly blind; succeeded by his son al-Zahir."
+    sources: [wp-al-nasir-abbasid-caliph]
+  - key: muhammad-al-nasir
+    name: Muhammad al-Nasir
+    type: Royalty
+    realm: Almohad Caliphate
+    house: Almohad
+    born: 1182
+    born_estimated: true
+    died: 1213
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Fourth Almohad caliph (Miramamolin to the Christians), proclaimed on 25 January 1199, the day his father Abu Yusuf Yaqub al-Mansur died. Beat the Banu Ghaniya in Ifriqiya and made Abd al-Wahid governor there, which began the Hafsid dynasty. Routed by the Christian coalition at Las Navas de Tolosa (1212); died the next year, succeeded by his young son Yusuf al-Mustansir. Matthew Paris' story that King John offered to convert to Islam and hold England of him is doubted by historians."
+    sources: [wp-muhammad-al-nasir]
+  - key: muhammad-ii-of-khwarazm
+    name: Muhammad II of Khwarazm
+    type: Royalty
+    realm: Khwarazmian Empire
+    died: 1220
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ala ad-Din Muhammad, Khwarazmshah from 3 August 1200 (his coronation; his father Tekish died on 3 July) to December 1220. Took Khorasan from the Ghurids with Qara Khitai help (Andkhud, 29 September 1204), absorbed Ghurid lands after Muizz al-Din's murder in 1206, and in 1210 took Samarkand from the Qara Khitai and beat them near Talas (Zhilugu's article). By 1217 he held land from the Jaxartes to the Gulf and styled himself shah; his march on Baghdad against al-Nasir failed in the snow. Moved the capital to Samarkand in 1218. The Mongols under Genghis Khan destroyed his realm from 1219; he fled and died in December 1220 on the island of Ashur-Ada in the Caspian. Highly criticised as incompetent. Birth year not in the article."
+    sources: [wp-muhammad-ii-of-khwarazm, wp-yelu-zhilugu, wp-al-nasir-abbasid-caliph]
+  - key: yelu-zhilugu
+    name: Yelü Zhilugu
+    type: Royalty
+    realm: Western Liao
+    house: Yelü
+    died: 1213
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Third emperor of Western Liao (Qara Khitai), Gurkhan 1177-1211, second son of Yelü Yilie; killed his elder brother to secure the throne. Allied with Khwarazm against the Ghurids (1198) and later fought Muhammad II; took in the Naiman prince Kuchlug in 1208 and married his daughter to him. In 1210 Muhammad took Samarkand and defeated him near Talas; in 1211 Kuchlug ambushed and captured him near Kashgar. Kept as 'Emperor Emeritus' (Taishang Huang) until his death in 1213, the end of Yelü rule. Birth year not in the article."
+    sources: [wp-yelu-zhilugu]
+  - key: emperor-huanzong-of-western-xia
+    name: Emperor Huanzong of Western Xia
+    type: Royalty
+    realm: Western Xia
+    house: Li
+    born: 1177
+    died: 1206
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Li Chunyou, sixth emperor of Western Xia, 1193-1206, son of Renzong. Court corruption deepened the dynasty's decline; renamed the capital Zhongxing (now Yinchuan) in 1205, the year of the first Mongol raids. His cousin Li Anquan (Emperor Xiangzong) overthrew him in a coup in 1206 and he died that year."
+    sources: [wp-emperor-huanzong-of-western-xia]
+  - key: lalibela-zagwe-king
+    name: Lalibela
+    type: Royalty
+    realm: Zagwe dynasty
+    house: Zagwe
+    born: 1162
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Gebre Meskel Lalibela, king of the Zagwe dynasty 1181-1221, son of Jan Seyum, governor of Bugna in Lasta, and the housemaid Kirwerna; born at Roha in 1162 (his hagiography Gadla Lalibela) and named for the bees said to have surrounded him. Exiled by his brother Kedus Harbe, he spent years in Jerusalem, then took the throne, perhaps by force, with Amhara allies (the proverb 'Amhara settled, Agaw exiled'). Credited as patron of the rock-hewn churches of Lalibela, a 'new Jerusalem' after Saladin took the old one in 1187. Chief queen Masqal Kibra; a tradition has him abdicate for 18 months to his nephew Na'akueto La'ab. Venerated as a saint on 19 June. Death date and place not in the article."
+    sources: [wp-gebre-meskel-lalibela]
+  - key: narapatisithu
+    name: Narapatisithu
+    type: Royalty
+    realm: Pagan Kingdom
+    born: 1138
+    died: 1211-08-18
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sithu II, king of Pagan 1174-1211, called the last important king of Pagan. Took the throne in 1174 (between 27 March and 10 August, most likely April or May) after having his brother Naratheinkha, who had taken his wife, assassinated. Founded the Royal Palace Guards, compiled the first Burmese customary law and built the Kyaukse weir and Mu canals. Pagan Burmese became the written language; his primate Shin Uttarajiva aligned the monks with the Mahavihara of Sri Lanka. Built the Gawdawpalin and Sulamani temples. Died on 18 August 1211. Birth year disputed (see discrepancy)."
+    sources: [wp-narapatisithu]
+
+titles:
+  - {person: lalibela-zagwe-king, title: Zagwe King, realm: Zagwe dynasty, from: 1181, to: 1221, note: "Reigned 1181-1221 (lead); a tradition has him abdicate for about 18 months for his nephew Na'akueto La'ab and then resume the throne", sources: [wp-gebre-meskel-lalibela]}
+  - {person: emperor-tsuchimikado, title: Emperor of Japan, realm: Japan, from: 1198, to: 1210, note: "Go-Toba abdicated on 18 February 1198; Tsuchimikado is said to have acceded in the 3rd month. Go-Toba persuaded him to abdicate in 1210 for his brother Juntoku (no day)", sources: [wp-emperor-tsuchimikado]}
+  - {person: emeric-of-hungary, title: King of Hungary, realm: Hungary, from: 1196-04-23, to: 1204-11-30, note: "Succeeded Bela III, who died on 23 April 1196; crowned as a child on 16 May 1182. Died 30 November 1204 per the Illuminated Chronicle", sources: [wp-emeric-of-hungary]}
+  - {person: emeric-of-hungary, title: King of Croatia, realm: Croatia, from: 1196-04-23, to: 1204-11-30, note: "King of Hungary and Croatia 1196-1204 (lead); his brother Andrew held Croatia and Dalmatia as an appanage from 1198 and again from 1200", sources: [wp-emeric-of-hungary]}
+  - {person: leszek-the-white, title: Duke of Poland, realm: Poland, from: 1194, to: 1198, note: "High Duke from 1194 (lead); his father Casimir II died on 5 May 1194 and his mother Helen was regent; Mieszko III regained Kraków in 1198. Held it again for a short time in 1199 (lead, not a separate row)", sources: [wp-leszek-the-white]}
+  - {person: leszek-the-white, title: Duke of Poland, realm: Poland, from: 1206, to: 1210, note: "Second spell, 1206-1210 (lead); the article cannot say how long Władysław III held Kraków after Mieszko III died on 13 March 1202 (see discrepancy). Excommunicated in 1210, when Mieszko Tanglefoot took Kraków", sources: [wp-leszek-the-white]}
+  - {person: leszek-the-white, title: Duke of Poland, realm: Poland, from: 1211, to: 1227-11-24, note: "Third spell, 1211-1227 (lead); took the title dux Poloniae from 1218; assassinated at Gąsawa on 24 November 1227", sources: [wp-leszek-the-white]}
+  - {person: ottokar-i-of-bohemia, title: King of Bohemia, realm: Bohemia, from: 1198, to: 1230, note: "Declared king in 1198 and crowned at Mainz with Philip of Swabia's backing; accepted as king by Otto IV (1203) and in 1212 made hereditary king by Frederick II's Golden Bull of Sicily. Died 1230 (no day)", sources: [wp-ottokar-i-of-bohemia]}
+  - {person: vsevolod-the-big-nest, title: Grand Prince of Vladimir, realm: Grand Duchy of Vladimir, from: 1176, to: 1212-04-12, note: "Succeeded his brother Mikhalko in 1176; died 12 April 1212", sources: [wp-vsevolod-the-big-nest]}
+  - {person: roman-the-great, title: Prince of Galicia-Volhynia, realm: Galicia-Volhynia, from: 1199, to: 1205, note: "Took the Galician throne in 1199 and united it with Volhynia, which he had held since 1170 (the lead says Galicia 1198/99-1205). Killed in 1205, exact date disputed (see discrepancy)", sources: [wp-roman-the-great]}
+  - {person: cnut-vi-of-denmark, title: King of Denmark, realm: Denmark, from: 1182, to: 1202-11-12, note: "Sole king from his father Valdemar I's death in 1182 (co-king since 1170); died suddenly on 12 November 1202", sources: [wp-cnut-vi-of-denmark]}
+  - {person: sverre-of-norway, title: King of Norway, realm: Norway, from: 1184, to: 1202-03-09, note: "Proclaimed king by the Birkebeiner in Trøndelag in June 1177; sole king after Fimreite (15 June 1184); died 9 March 1202", sources: [wp-sverre-of-norway]}
+  - {person: sverker-ii-of-sweden, title: King of Sweden, realm: Sweden, from: 1195, from_estimated: true, to: 1208, note: "King from '1195 or 1196' (lead) to his defeat at Lena in 1208 by Erik Knutsson; he returned with Danish help and was killed at Gestilren in July 1210", sources: [wp-sverker-ii-of-sweden]}
+  - {person: peter-ii-of-aragon, title: King of Aragon, realm: Aragon, from: 1196, to: 1213-09-12, note: "King of Aragon and Count of Barcelona from 1196 (lead); crowned by Innocent III in Rome in 1205; killed at Muret on 12 September 1213", sources: [wp-peter-ii-of-aragon]}
+  - {person: peter-ii-of-aragon, title: Count of Barcelona, realm: Barcelona, from: 1196, to: 1213-09-12, note: "Held with the crown of Aragon (lead)", sources: [wp-peter-ii-of-aragon]}
+  - {person: sancho-vii-of-navarre, title: King of Navarre, realm: Navarre, from: 1194, to: 1234-04-07, note: "Succeeded Sancho VI in 1194 and was crowned at Pamplona on 15 August; retired to Tudela and died there on 7 April 1234", sources: [wp-sancho-vii-of-navarre]}
+  - {person: sancho-i-of-portugal, title: King of Portugal, realm: Portugal, from: 1185-12-09, to: 1211-03-26, note: "Succeeded Afonso I in 1185 and was crowned at Coimbra on 9 December 1185 (the date used here); styled King of Silves 1189-1191; died 26 March 1211", sources: [wp-sancho-i-of-portugal]}
+  - {person: enrico-dandolo, title: Doge of Venice, realm: Venice, from: 1192-06-01, to: 1205, note: "Elected on 1 June 1192 after Orio Mastropiero abdicated; died in May or June 1205 in Constantinople", sources: [wp-enrico-dandolo]}
+  - {person: aimery-of-cyprus, title: King of Cyprus, realm: Kingdom of Cyprus, from: 1196, to: 1205-04-01, note: "First king of Cyprus 'from 1196' (lead; Celestine III styled him king in December 1196) after being elected lord in 1194; Conrad of Querfurt crowned him at Nicosia in September 1197 (see discrepancy). Died at Acre on 1 April 1205", sources: [wp-aimery-of-cyprus]}
+  - {person: aimery-of-cyprus, title: King of Jerusalem, realm: Kingdom of Jerusalem, from: 1198, to: 1205-04-01, note: "King as the husband of Queen Isabella I from 1198 (lead); crowned with her by Patriarch Aymar in January 1198 (no day). Isabella died soon after him and the kingdom passed to Maria of Montferrat", sources: [wp-aimery-of-cyprus]}
+  - {person: tamar-of-georgia, title: King of Georgia, realm: Georgia, from: 1184, to: 1213-01-18, note: "Co-ruler with her father George III from 1178; sole monarch from his death in 1184, when she was crowned a second time at Gelati. The wording 'King' follows the existing Georgia rows (her title was mepe). Death traditionally 18 January 1213 (see discrepancy)", sources: [wp-tamar-of-georgia]}
+  - {person: leo-i-of-armenia, title: King of Armenia, realm: Armenian Kingdom of Cilicia, from: 1198, from_estimated: true, to: 1219-05-02, note: "Lord of Armenian Cilicia from 1187; consecrated king in the Hagia Sophia at Tarsus on 6 January 1198 or 1199 (see discrepancy); died 2 May 1219", sources: [wp-leo-i-of-armenia]}
+  - {person: al-adil-i, title: Ayyubid Sultan, realm: Ayyubid Sultanate, from: 1200-02-17, to: 1218-08-31, note: "Proclaimed himself sultan on 17 February 1200 after beating his nephew al-Afdal; died on campaign, 31 August 1218 (lead; the body says August 1218)", sources: [wp-al-adil-i]}
+  - {person: al-nasir-abbasid-caliph, title: Abbasid Caliph, realm: Abbasid Caliphate, from: 1180-03-28, to: 1225-10-05, note: "Came to power on 28 March 1180 (successor of al-Mustadi); died 5 October 1225 (lead)", sources: [wp-al-nasir-abbasid-caliph]}
+  - {person: muhammad-al-nasir, title: Almohad Caliph, realm: Almohad Caliphate, from: 1199-01-25, to: 1213, note: "Proclaimed on the day his father Abu Yusuf Yaqub al-Mansur died, 25 January 1199; died 1213 (no day), the year after Las Navas de Tolosa", sources: [wp-muhammad-al-nasir]}
+  - {person: muhammad-ii-of-khwarazm, title: Khwarazmshah, realm: Khwarazmian Empire, from: 1200-08-03, to: 1220, note: "Succeeded Tekish (died 3 July 1200); coronation on 3 August 1200. Died in December 1220 (month only) on the island of Ashur-Ada", sources: [wp-muhammad-ii-of-khwarazm]}
+  - {person: yelu-zhilugu, title: Gurkhan, realm: Western Liao, from: 1177, to: 1211, note: "Third emperor of Western Liao, 1177-1211 (lead); captured by Kuchlug in 1211 and kept as Taishang Huang until he died in 1213", sources: [wp-yelu-zhilugu]}
+  - {person: emperor-huanzong-of-western-xia, title: Emperor of Western Xia, realm: Western Xia, from: 1193, to: 1206, note: "Reigned 1193-1206 (lead); overthrown by his cousin Li Anquan in 1206 and died that year", sources: [wp-emperor-huanzong-of-western-xia]}
+  - {person: narapatisithu, title: King of Pagan, realm: Pagan Kingdom, from: 1174, to: 1211-08-18, note: "Took the throne between 27 March and 10 August 1174 (most probably April or May) after his brother's assassination; died 18 August 1211", sources: [wp-narapatisithu]}
+  - {person: frederick-ii-holy-roman-emperor, title: King of Sicily, realm: Sicily, from: 1198, to: 1250-12-13, note: "'King of Sicily from 1198' (lead): crowned at three as co-ruler with his mother Constance, who was queen of Sicily in her own right. Other titles (King of Germany 1212, Emperor 1220) are in the Holy Roman Empire batch. Died 13 December 1250", sources: [wp-frederick-ii-holy-roman-emperor]}
+
+places:
+  - key: lalibela-rock-hewn-churches
+    name: Lalibela rock-hewn churches (Roha)
+    historical_name: Roha
+    kind: church
+    region: Amhara
+    country: Ethiopia
+    lat: 12.031
+    lng: 39.047
+    visitable: true
+    built_by: "credited to King Lalibela, who the Gadla Lalibela says carved the 11 monolithic churches with the help of angels; Bet Abba Libanos credited to his queen Masqal Kibra by Getachew Mekonnen"
+    note: "Town of Roha, renamed Lalibela in the king's honour, and his capital of 11 monolithic churches. Lalibela was born at Roha in 1162. No details of construction survive; the Portuguese embassy of 1520-6 was told it took 24 years. Coordinates general knowledge."
+    sources: [wp-gebre-meskel-lalibela]
+  - key: zadar
+    name: Zadar
+    historical_name: Zara
+    kind: city
+    region: Zadar County
+    country: Croatia
+    lat: 44.119
+    lng: 15.231
+    visitable: true
+    note: "Dalmatian city that had accepted Hungarian suzerainty since 1186; the Fourth Crusade took it for Venice on 24 November 1202 (Emeric's and Dandolo's articles). Venice had lost it in a rebellion in 1180 and had not regained it by 1193."
+    sources: [wp-emeric-of-hungary, wp-enrico-dandolo]
+  - key: nicosia
+    name: Nicosia
+    kind: city
+    country: Cyprus
+    lat: 35.185
+    lng: 33.382
+    visitable: true
+    note: "Capital of Aimery of Lusignan's Cyprus: the archbishopric of Nicosia was created in 1196, Conrad of Querfurt crowned him king here in September 1197, and he was buried in the Cathedral of Saint Sophia here after his death in 1205 (his article)."
+    sources: [wp-aimery-of-cyprus]
+  - key: acre
+    name: Acre
+    kind: city
+    region: Northern District
+    country: Israel
+    lat: 32.928
+    lng: 35.082
+    visitable: true
+    note: "Chief city of the remaining Kingdom of Jerusalem: Aimery spent most of his reign here, was imprisoned in its citadel in 1193 and died here on 1 April 1205; the Teutonic Knights were given the Gate of St Nicholas here in 1198 (his article)."
+    sources: [wp-aimery-of-cyprus]
+  - key: muret
+    name: Muret
+    kind: battlefield
+    region: Haute-Garonne
+    country: France
+    lat: 43.461
+    lng: 1.326
+    visitable: true
+    note: "Where Peter II of Aragon was killed on 12 September 1213 by Simon de Montfort's army. The article gives no more about the battlefield; point is the town."
+    sources: [wp-peter-ii-of-aragon]
+  - key: zawichost
+    name: Zawichost
+    kind: battlefield
+    region: Świętokrzyskie
+    country: Poland
+    lat: 50.805
+    lng: 21.848
+    visitable: true
+    note: "Site of the battle of 14 October 1205 in which Leszek the White and Konrad of Masovia beat Roman the Great (Leszek's article). Salomea, Leszek's daughter, later became a nun at Zawichost. Point is the town."
+    sources: [wp-leszek-the-white, wp-roman-the-great]
+  - key: silves
+    name: Silves
+    kind: city
+    region: Faro District
+    country: Portugal
+    lat: 37.189
+    lng: -8.440
+    visitable: true
+    note: "Administrative and commercial town of al-Andalus (about 20,000 people), taken by Sancho I in 1189 with crusaders; he fortified it and built a castle now a monument. Lost to the Almohads in 1191."
+    sources: [wp-sancho-i-of-portugal]
+  - key: assumption-cathedral-vladimir
+    name: Assumption Cathedral, Vladimir
+    kind: cathedral
+    city: Vladimir
+    region: Vladimir Oblast
+    country: Russia
+    lat: 56.129
+    lng: 40.409
+    visitable: true
+    note: "Where Vsevolod the Big Nest was buried after his death on 12 April 1212 (his article). Founding date and builder are not in that article. Point approximate."
+    sources: [wp-vsevolod-the-big-nest]
+  - key: tarsus
+    name: Tarsus
+    kind: city
+    region: Mersin Province
+    country: Turkey
+    lat: 36.918
+    lng: 34.895
+    visitable: true
+    note: "Traditional coronation place of the kings of Cilician Armenia: Leo I was crowned in the Hagia Sophia here on 6 January 1198 or 1199 (his article)."
+    sources: [wp-leo-i-of-armenia]
+  - key: wawel-cathedral
+    name: Wawel Cathedral
+    kind: cathedral
+    city: Kraków
+    region: Lesser Poland
+    country: Poland
+    lat: 50.054
+    lng: 19.936
+    visitable: true
+    note: "Where Leszek the White was buried, on or before 6 December 1227, after his body was brought to Kraków from Gąsawa."
+    sources: [wp-leszek-the-white]
+  - key: church-of-st-wenceslaus-radom
+    name: Church of St Wenceslaus, Radom
+    kind: church
+    city: Radom
+    region: Masovian Voivodeship
+    country: Poland
+    lat: 51.402
+    lng: 21.147
+    visitable: true
+    founded: 1216
+    built_by: "Leszek the White; endowed by his son Bolesław V the Chaste; enlarged and partly rebuilt in the Gothic style in 1440"
+    note: "Founded by Leszek in 1216 (his article). Point approximate."
+    sources: [wp-leszek-the-white]
+  - key: gawdawpalin-temple
+    name: Gawdawpalin Temple
+    kind: temple
+    city: Bagan
+    region: Mandalay Region
+    country: Myanmar
+    lat: 21.158
+    lng: 94.864
+    visitable: true
+    built_by: "Narapatisithu"
+    note: "One of the 'superb' temples of Pagan built by Narapatisithu (with the Sulamani); the article gives no date. Point approximate."
+    sources: [wp-narapatisithu]
+  - key: eger
+    name: Eger
+    kind: city
+    region: Heves County
+    country: Hungary
+    lat: 47.902
+    lng: 20.377
+    visitable: true
+    note: "Emeric of Hungary was buried in the cathedral of Eger (his article)."
+    sources: [wp-emeric-of-hungary]
+  - key: ashur-ada
+    name: Ashur-Ada
+    kind: island
+    region: Golestan Province
+    country: Iran
+    lat: 36.83
+    lng: 53.95
+    visitable: false
+    note: "Island in the Caspian Sea where Muhammad II of Khwarazm died in December 1220 while fleeing the Mongols (his article). Position approximate; the country is general knowledge."
+    sources: [wp-muhammad-ii-of-khwarazm]
+  - key: huesca
+    name: Huesca
+    kind: city
+    region: Aragon
+    country: Spain
+    lat: 42.140
+    lng: -0.408
+    visitable: true
+    note: "Birthplace of Peter II of Aragon (his article)."
+    sources: [wp-peter-ii-of-aragon]
+  - key: tudela
+    name: Tudela
+    kind: city
+    region: Navarre
+    country: Spain
+    lat: 42.062
+    lng: -1.605
+    visitable: true
+    note: "Usual residence of Sancho VI and Sancha, probable birthplace of Sancho VII; he retired to his castle here and died there on 7 April 1234. The Gothic bridge over the Ebro at Tudela is attributed to him (his article)."
+    sources: [wp-sancho-vii-of-navarre]
+  - key: pamplona
+    name: Pamplona
+    kind: city
+    region: Navarre
+    country: Spain
+    lat: 42.812
+    lng: -1.646
+    visitable: true
+    note: "Sancho VII was crowned here on 15 August 1194; he continued the new cathedral begun by his father."
+    sources: [wp-sancho-vii-of-navarre]
+
+events:
+  # --- link-only updates to existing events ---
+  - key: third-crusade-1189
+    people:
+      - {person: aimery-of-cyprus, role: Lusignan commander; captured at Hattin, then supported Guy at the siege of Acre}
+      - {person: leo-i-of-armenia, role: Armenian prince who supplied provisions, guides and pack animals}
+      - {person: al-adil-i, role: Ayyubid; administered Egypt for Saladin}
+    sources: [wp-aimery-of-cyprus, wp-leo-i-of-armenia, wp-al-adil-i]
+  - key: fourth-crusade-1202
+    people:
+      - {person: enrico-dandolo, role: doge who contracted the fleet, took the cross and led the Venetians}
+      - {person: emeric-of-hungary, role: king whose vassal city Zadar the crusaders took}
+    sources: [wp-enrico-dandolo, wp-emeric-of-hungary]
+  - key: sack-of-constantinople-1204
+    people:
+      - {person: enrico-dandolo, role: doge; refused the imperial crown, took the title despot}
+    sources: [wp-enrico-dandolo]
+  - key: battle-of-alarcos-1195
+    people:
+      - {person: sancho-vii-of-navarre, role: arrived late, souring relations with Castile}
+    sources: [wp-sancho-vii-of-navarre]
+  - key: battle-of-las-navas-de-tolosa-1212
+    people:
+      - {person: muhammad-al-nasir, role: Almohad caliph; defeated}
+      - {person: peter-ii-of-aragon, role: victor}
+      - {person: sancho-vii-of-navarre, role: victor; said to have broken the guard around the caliph's tent}
+    sources: [wp-muhammad-al-nasir, wp-peter-ii-of-aragon, wp-sancho-vii-of-navarre]
+  # --- new events ---
+  - key: battle-of-hattin-1187
+    name: Battle of Hattin
+    type: Battle
+    date: 1187-07-04
+    people:
+      - {person: aimery-of-cyprus, role: constable of Jerusalem; organised the army; captured}
+    prominence: 5
+    note: "Saladin's decisive victory over the army of the Kingdom of Jerusalem on 4 July 1187. Aimery, then constable, drew up the army in units and was captured with most commanders; the victory let Saladin take almost all of the Latin East, and only Tyre stayed Christian. Aimery and Guy were among ten men Saladin promised to free when Ascalon surrendered on 4 September, but he held them until early 1188. No place defined; Saladin is not yet a record."
+    sources: [wp-aimery-of-cyprus]
+  - key: capture-of-silves-1189
+    name: Sancho I takes Silves
+    type: Siege
+    year: 1189
+    place: silves
+    people:
+      - {person: sancho-i-of-portugal, role: victor}
+    prominence: 3
+    note: "With soldiers on their way to the Third Crusade, Sancho sacked Alvor and took Silves in 1189 (an eyewitness account survives in De itinere navali), then styled himself King of Portugal and Silves. The Almohad caliph Yaqub al-Mansur invaded in 1190 (failing at Tomar) and again in 1191, when Silves and all land south of the Tagus except Évora was lost."
+    sources: [wp-sancho-i-of-portugal]
+  - key: siege-of-zadar-1202
+    name: Crusaders take Zadar for Venice
+    type: Siege
+    date: 1202-11-24
+    place: zadar
+    people:
+      - {person: enrico-dandolo, role: doge; gave the Zarans an ultimatum}
+      - {person: emeric-of-hungary, role: king and suzerain of the city}
+    prominence: 3
+    note: "The Fourth Crusade, unable to pay Venice 85,000 marks, agreed to retake Zadar for the doge. Pope Innocent III forbade the attack, but the city fell on 24 November 1202 and was given to Venice; the Pope excommunicated the Venetians and the crusaders at Emeric's request, but Zadar stayed Venetian. Dandolo hid the excommunication from the Venetians so they would not leave the Crusade."
+    sources: [wp-enrico-dandolo, wp-emeric-of-hungary]
+  - key: battle-of-zawichost-1205
+    name: Battle of Zawichost
+    type: Battle
+    date: 1205-10-14
+    place: zawichost
+    people:
+      - {person: leszek-the-white, role: victor}
+      - {person: roman-the-great, role: defeated; killed}
+    prominence: 3
+    note: "Roman the Great broke his alliance with Leszek and Konrad of Masovia and invaded Poland (perhaps through the intrigues of Władysław III Spindleshanks); his force was attacked by Polish knights and he was killed. The date 14 October 1205 is from Leszek's article; Roman's own article gives a different death date (see discrepancy). His death began the War of the Galician Succession; the Galician throne passed to Vladimir III Igorevich."
+    sources: [wp-leszek-the-white, wp-roman-the-great]
+  - key: battle-of-gestilren-1210
+    name: Battle of Gestilren
+    type: Battle
+    date: 1210-07-17
+    people:
+      - {person: sverker-ii-of-sweden, role: defeated; killed}
+    prominence: 2
+    note: "Sverker, back from exile in Denmark with Danish support, was defeated and killed in July 1210, according to the sources by the Folkung party under his brother-in-law Folke Jarl, who also fell. The day 17 July is his death date in the lead. The battlefield is disputed (see discrepancy), so no place is defined."
+    sources: [wp-sverker-ii-of-sweden]
+  - key: coronation-of-leo-i-of-armenia-1198
+    name: Leo I crowned king of Armenian Cilicia
+    type: Coronation
+    year: 1198
+    estimated: true
+    place: tarsus
+    people:
+      - {person: leo-i-of-armenia, role: crowned}
+    prominence: 3
+    note: "Leo was crowned in the Hagia Sophia at Tarsus, the traditional place for the monarchs of Cilician Armenia, on 6 January 1198 (or 1199 - see discrepancy); he was the first king to be crowned."
+    sources: [wp-leo-i-of-armenia]
+  - key: golden-bull-of-sicily-1212
+    name: Golden Bull of Sicily
+    type: Charter
+    year: 1212
+    people:
+      - {person: frederick-ii-holy-roman-emperor, role: granted it}
+      - {person: ottokar-i-of-bohemia, role: received it}
+    prominence: 4
+    note: "Frederick II recognised Ottokar and his heirs as hereditary kings of Bohemia: the king was no longer appointed by the emperor, had to attend diets only near the Bohemian border, and was to be the leading elector and send 300 knights as a bodyguard for the emperor's journey to Rome. Day and place are not in the article."
+    sources: [wp-ottokar-i-of-bohemia]
+  - key: battle-of-muret-1213
+    name: Battle of Muret
+    type: Battle
+    date: 1213-09-12
+    place: muret
+    people:
+      - {person: peter-ii-of-aragon, role: defeated; killed}
+    prominence: 3
+    note: "Peter crossed the Pyrenees to defend Raymond VI of Toulouse against Simon de Montfort in the Albigensian Crusade; the Aragonese forces, disorganised, broke when the king fell after a last stand. His only son by Marie of Montpellier, the future James the Conqueror, succeeded him."
+    sources: [wp-peter-ii-of-aragon]
+
+links:
+  - {parent: emperor-go-toba, child: emperor-tsuchimikado}
+
+moments:
+  - {person: lalibela-zagwe-king, role: born, place: lalibela-rock-hewn-churches, year: 1162}
+  - {person: peter-ii-of-aragon, role: born, place: huesca, year: 1178}
+  - {person: peter-ii-of-aragon, role: crowned, place: rome, year: 1205}
+  - {person: peter-ii-of-aragon, role: died, place: muret, year: 1213}
+  - {person: sancho-i-of-portugal, role: crowned, place: coimbra, year: 1185}
+  - {person: sancho-i-of-portugal, role: died, place: coimbra, year: 1211}
+  - {person: sancho-vii-of-navarre, role: crowned, place: pamplona, year: 1194}
+  - {person: sancho-vii-of-navarre, role: died, place: tudela, year: 1234}
+  - {person: enrico-dandolo, role: died, place: constantinople, year: 1205}
+  - {person: enrico-dandolo, role: buried, place: hagia-sophia, year: 1205}
+  - {person: aimery-of-cyprus, role: crowned, place: nicosia, year: 1197}
+  - {person: aimery-of-cyprus, role: died, place: acre, year: 1205}
+  - {person: aimery-of-cyprus, role: buried, place: nicosia, year: 1205}
+  - {person: tamar-of-georgia, role: crowned, place: gelati-monastery, year: 1184}
+  - {person: vsevolod-the-big-nest, role: buried, place: assumption-cathedral-vladimir, year: 1212}
+  - {person: leszek-the-white, role: buried, place: wawel-cathedral, year: 1227}
+  - {person: emeric-of-hungary, role: buried, place: eger, year: 1204}
+  - {person: sverre-of-norway, role: buried, place: bergen, year: 1202}
+  - {person: ottokar-i-of-bohemia, role: crowned, place: mainz, year: 1198}
+  - {person: muhammad-ii-of-khwarazm, role: died, place: ashur-ada, year: 1220}
+
+discrepancies:
+  - key: roman-the-great-death-1205
+    question: When did Roman the Great die in 1205?
+    about: [{person: roman-the-great}, {event: battle-of-zawichost-1205}]
+    field: died
+    claims:
+      - {value: "19 June 1205 (c. 4 April 1152 - 19 June 1205)", sources: [wp-roman-the-great]}
+      - {value: "14 October 1205, at the battle of Zawichost where he was killed", sources: [wp-leszek-the-white]}
+    note: "Roman's own article gives the battle of Zawichost as the place of his death but no date for it. The records hold only the year 1205."
+  - key: tamar-birth
+    question: When was Tamar of Georgia born?
+    about: [{person: tamar-of-georgia}]
+    field: born
+    claims:
+      - {value: "c. 1160", sources: [wp-tamar-of-georgia]}
+      - {value: "c. 1166", sources: [wp-tamar-of-georgia]}
+    note: "The lead gives both; the record uses c. 1160."
+  - key: tamar-death
+    question: When did Tamar of Georgia die?
+    about: [{person: tamar-of-georgia}]
+    field: died
+    claims:
+      - {value: "18 January 1213 (the traditional scholarly opinion)", sources: [wp-tamar-of-georgia]}
+      - {value: "1207 or 1210 (several indications that she died earlier)", sources: [wp-tamar-of-georgia]}
+    note: "The record and the title row use 18 January 1213."
+  - key: narapatisithu-birth
+    question: When was Narapatisithu born?
+    about: [{person: narapatisithu}]
+    field: born
+    claims:
+      - {value: "1138 (the lead's dates 1138-1211; also 'age 73, in his 74th year' at death on 18 August 1211)", sources: [wp-narapatisithu]}
+      - {value: "8 October 1150 (the early-life section; the chronicles do not agree, and the article's table of their dates is not in the copy)", sources: [wp-narapatisithu]}
+    note: "The record uses 1138, which agrees with his age at death; a birth in 1150 would make him 60 or 61."
+  - key: sverre-birth
+    question: When was Sverre of Norway born?
+    about: [{person: sverre-of-norway}]
+    field: born
+    claims:
+      - {value: "1151 (the Sverris saga's account; lead gives c. 1145/1151)", sources: [wp-sverre-of-norway]}
+      - {value: "no later than c. 1145 (he seems to have been in his early thirties in 1176 by the age of his sons and nephews, and would have to be 30 to be a priest)", sources: [wp-sverre-of-norway]}
+    note: "The record uses 1151 (estimated), the saga's year. The article adds that the canon-law age argument has lost credence, since the age limit was routinely ignored in Scandinavia. The same doubt affects his claimed paternity (Sigurd Munn, born 1133)."
+  - key: enrico-dandolo-birth
+    question: When was Enrico Dandolo born?
+    about: [{person: enrico-dandolo}]
+    field: born
+    claims:
+      - {value: "c. 1107 (Marino Sanuto, writing three centuries later: he was eighty-five when he became doge in 1192)", sources: [wp-enrico-dandolo]}
+      - {value: "Some hypothesise he was only in his mid seventies in 1192, so born roughly 1115-1120 (derived from the article's wording)", sources: [wp-enrico-dandolo]}
+    note: "The record uses c. 1107, the commonly given year. No contemporary source gives his age, only 'very old'."
+  - key: enrico-dandolo-blindness
+    question: How did Enrico Dandolo lose his sight?
+    about: [{person: enrico-dandolo}]
+    field: note
+    claims:
+      - {value: "Blinded by the Byzantines during the 1171-1172 expedition: Manuel Comnenus 'ordered his eyes to be blinded with glass' (Chronicle of Novgorod)", sources: [wp-enrico-dandolo]}
+      - {value: "Cortical blindness from a severe blow to the back of the head, between 1174 and 1176 (Thomas F. Madden; his signature was legible in 1174 and sprawling in 1176; Villehardouin says his eyes looked normal)", sources: [wp-enrico-dandolo]}
+    note: "Not recorded as a field on the person; the note says only that he was blind."
+  - key: aimery-cyprus-kingship
+    question: When did Aimery become king of Cyprus?
+    about: [{person: aimery-of-cyprus}]
+    field: date
+    claims:
+      - {value: "1196 (the lead: 'first king of Cyprus from 1196'; Celestine III styled him king in December 1196, after Henry VI's envoys brought a sceptre in April or May 1196)", sources: [wp-aimery-of-cyprus]}
+      - {value: "September 1197, when Conrad of Querfurt, Henry VI's chancellor, crowned him at Nicosia and received his homage", sources: [wp-aimery-of-cyprus]}
+    note: "The title row uses 1196 (lead); the coronation moment uses 1197."
+  - key: leo-i-coronation-year
+    question: In which year was Leo I crowned king?
+    about: [{person: leo-i-of-armenia}, {event: coronation-of-leo-i-of-armenia-1198}]
+    field: date
+    claims:
+      - {value: "6 January 1198", sources: [wp-leo-i-of-armenia]}
+      - {value: "6 January 1199 (the lead says 'in 1198/9' and 'on 6 January 1199 or 1198')", sources: [wp-leo-i-of-armenia]}
+    note: "The article never settles it. The title row and event use 1198 and are marked estimated."
+  - key: gestilren-site
+    question: Where was the battle of Gestilren (1210) fought?
+    about: [{event: battle-of-gestilren-1210}, {person: sverker-ii-of-sweden}]
+    field: place
+    claims:
+      - {value: "In the parish of Varv in Västergötland (the usual view)", sources: [wp-sverker-ii-of-sweden]}
+      - {value: "Gästre in Uppland (suggested; Sandblom, 'Gestilren 1210. Striden stod i Uppland! I Gästre!')", sources: [wp-sverker-ii-of-sweden]}
+    note: "No place is recorded for the battle."
+  - key: leszek-return-to-krakow
+    question: When did Leszek the White regain Kraków after Mieszko III's death?
+    about: [{person: leszek-the-white}]
+    field: date
+    claims:
+      - {value: "Władysław III Spindleshanks' rule in Kraków ended a few months after Mieszko III died (13 March 1202), in autumn 1202", sources: [wp-leszek-the-white]}
+      - {value: "It lasted until 1206 or even 1210 (the version the article says seems more likely)", sources: [wp-leszek-the-white]}
+    note: "The lead dates Leszek's third spell as 1206-1210, which the title rows follow."
+  - key: sancho-vii-second-wife
+    question: Who was Sancho VII of Navarre's second wife?
+    about: [{person: sancho-vii-of-navarre}]
+    field: note
+    claims:
+      - {value: "Clemence, daughter of Emperor Frederick I", sources: [wp-sancho-vii-of-navarre]}
+      - {value: "A daughter of Yusuf II, an emir from Morocco", sources: [wp-sancho-vii-of-navarre]}
+    note: "No marriage link is recorded. The article says he had no known children by either wife, though Charles of Viana says a son by the second wife died at 15."
+  - key: lalibela-churches-builder
+    question: Who built the rock-hewn churches of Lalibela?
+    about: [{person: lalibela-zagwe-king}, {place: lalibela-rock-hewn-churches}]
+    field: note
+    claims:
+      - {value: "King Lalibela carved the churches out of stone with only the help of angels (the later Gadla Lalibela)", sources: [wp-gebre-meskel-lalibela]}
+      - {value: "Queen Masqal Kibra had one of them, Bet Abba Libanos, built as a memorial after his death (Getachew Mekonnen)", sources: [wp-gebre-meskel-lalibela]}
+    note: "The record credits the king as patron, as the article's lead does."
