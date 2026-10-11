@@ -1,0 +1,2065 @@
+# Notes for the reviewer
+# - Public-domain paintings by our painters, read through the official Cleveland Museum of Art API (https://openaccess-api.clevelandart.org/); nothing was scraped. Only works the museum marks as public domain / CC0 with an image. Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 104 new artworks (works already in the database were skipped: 105) (images are hotlinked from the museum's servers, CC0).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Cleveland Museum of Art open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Cleveland Museum of Art
+  date: '2026-10-11'
+sources:
+- key: cma-open-access
+  title: Cleveland Museum of Art Open Access API
+  url: https://openaccess-api.clevelandart.org/
+artworks:
+- key: a-boy-in-a-red-lined-cloak-jean-honore-fragonard
+  name: A Boy in a Red-Lined Cloak
+  kind: painting
+  made: 1780
+  made_end: 1789
+  medium: oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1942.49'
+  museum_url: https://clevelandart.org/art/1942.49
+  image_url: https://openaccess-cdn.clevelandart.org/1942.49/1942.49_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1942.49/1942.49_web.jpg
+  image_page: https://clevelandart.org/art/1942.49
+  image_license: CC0
+  image_credit: Gift of Grace Rainey Rogers in memory of her father, William J. Rainey; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-honore-fragonard
+    role: creator
+  prominence: 3
+- key: portrait-of-renoir-frederic-bazille
+  name: Portrait of Renoir
+  kind: painting
+  made: 1867
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2021.134'
+  museum_url: https://clevelandart.org/art/2021.134
+  image_url: https://openaccess-cdn.clevelandart.org/2021.134/2021.134_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2021.134/2021.134_web.jpg
+  image_page: https://clevelandart.org/art/2021.134
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: frederic-bazille
+    role: creator
+  prominence: 3
+- key: lion-on-the-watch-jean-leon-gerome
+  name: Lion on the Watch
+  kind: painting
+  made: 1880
+  made_end: 1890
+  estimated: true
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1945.25'
+  museum_url: https://clevelandart.org/art/1945.25
+  image_url: https://openaccess-cdn.clevelandart.org/1945.25/1945.25_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1945.25/1945.25_web.jpg
+  image_page: https://clevelandart.org/art/1945.25
+  image_license: CC0
+  image_credit: Gift of Mrs. F. W. Gehring in memory of her husband, F. W. Gehring; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: alpine-landscape-the-handegg-switzerland-jean-leon-gerome
+  name: 'Alpine Landscape: The Handegg, Switzerland'
+  kind: painting
+  made: 1850
+  made_end: 1859
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1980.262'
+  museum_url: https://clevelandart.org/art/1980.262
+  image_url: https://openaccess-cdn.clevelandart.org/1980.262/1980.262_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.262/1980.262_web.jpg
+  image_page: https://clevelandart.org/art/1980.262
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: leaving-the-oasis-jean-leon-gerome
+  name: Leaving the Oasis
+  kind: painting
+  made: 1880
+  made_end: 1889
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1977.126'
+  museum_url: https://clevelandart.org/art/1977.126
+  image_url: https://openaccess-cdn.clevelandart.org/1977.126/1977.126_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.126/1977.126_web.jpg
+  image_page: https://clevelandart.org/art/1977.126
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: ruin-by-the-sea-arnold-bocklin
+  name: Ruin by the Sea
+  kind: painting
+  made: 1881
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1979.57'
+  museum_url: https://clevelandart.org/art/1979.57
+  image_url: https://openaccess-cdn.clevelandart.org/1979.57/1979.57_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1979.57/1979.57_web.jpg
+  image_page: https://clevelandart.org/art/1979.57
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: arnold-bocklin
+    role: creator
+  prominence: 3
+- key: adoration-of-the-magi-guido-reni
+  name: Adoration of the Magi
+  kind: painting
+  made: 1642
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1969.132'
+  museum_url: https://clevelandart.org/art/1969.132
+  image_url: https://openaccess-cdn.clevelandart.org/1969.132/1969.132_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1969.132/1969.132_web.jpg
+  image_page: https://clevelandart.org/art/1969.132
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: guido-reni
+    role: creator
+  prominence: 3
+- key: martyrdom-of-saint-andrew-guido-reni
+  name: Martyrdom of Saint Andrew
+  kind: painting
+  made: 1600
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1916.784'
+  museum_url: https://clevelandart.org/art/1916.784
+  image_url: https://openaccess-cdn.clevelandart.org/1916.784/1916.784_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.784/1916.784_web.jpg
+  image_page: https://clevelandart.org/art/1916.784
+  image_license: CC0
+  image_credit: Holden Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: guido-reni
+    role: creator
+  prominence: 3
+- key: esther-ahasuerus-and-haman-jan-steen
+  name: Esther, Ahasuerus, and Haman
+  kind: painting
+  made: 1663
+  made_end: 1673
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1964.153'
+  museum_url: https://clevelandart.org/art/1964.153
+  image_url: https://openaccess-cdn.clevelandart.org/1964.153/1964.153_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.153/1964.153_web.jpg
+  image_page: https://clevelandart.org/art/1964.153
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: portrait-of-a-man-gustave-caillebotte
+  name: Portrait of a Man
+  kind: painting
+  made: 1880
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2009.157'
+  museum_url: https://clevelandart.org/art/2009.157
+  image_url: https://openaccess-cdn.clevelandart.org/2009.157/2009.157_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2009.157/2009.157_web.jpg
+  image_page: https://clevelandart.org/art/2009.157
+  image_license: CC0
+  image_credit: Bequest of Muriel Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: gustave-caillebotte
+    role: creator
+  prominence: 3
+- key: villas-at-trouville-gustave-caillebotte
+  name: Villas at Trouville
+  kind: painting
+  made: 1884
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2020.105'
+  museum_url: https://clevelandart.org/art/2020.105
+  image_url: https://openaccess-cdn.clevelandart.org/2020.105/2020.105_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.105/2020.105_web.jpg
+  image_page: https://clevelandart.org/art/2020.105
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: gustave-caillebotte
+    role: creator
+  prominence: 3
+- key: rest-on-the-flight-into-egypt-claude-lorrain
+  name: Rest on the Flight into Egypt
+  kind: painting
+  made: 1640
+  made_end: 1645
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1962.151'
+  museum_url: https://clevelandart.org/art/1962.151
+  image_url: https://openaccess-cdn.clevelandart.org/1962.151/1962.151_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1962.151/1962.151_web.jpg
+  image_page: https://clevelandart.org/art/1962.151
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 3
+- key: italian-landscape-claude-lorrain
+  name: Italian Landscape
+  kind: painting
+  made: 1625
+  made_end: 1635
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1946.73'
+  museum_url: https://clevelandart.org/art/1946.73
+  image_url: https://openaccess-cdn.clevelandart.org/1946.73/1946.73_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1946.73/1946.73_web.jpg
+  image_page: https://clevelandart.org/art/1946.73
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 3
+- key: the-beach-at-deauville-eugene-boudin
+  name: The Beach at Deauville
+  kind: painting
+  made: 1864
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1946.71'
+  museum_url: https://clevelandart.org/art/1946.71
+  image_url: https://openaccess-cdn.clevelandart.org/1946.71/1946.71_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1946.71/1946.71_web.jpg
+  image_page: https://clevelandart.org/art/1946.71
+  image_license: CC0
+  image_credit: Gift of Mrs. Homer H. Johnson; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: view-of-bordeaux-from-the-quai-des-chartrons-eugene-boudin
+  name: View of Bordeaux, from the Quai des Chartrons
+  kind: painting
+  made: 1874
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1986.73'
+  museum_url: https://clevelandart.org/art/1986.73
+  image_url: https://openaccess-cdn.clevelandart.org/1986.73/1986.73_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1986.73/1986.73_web.jpg
+  image_page: https://clevelandart.org/art/1986.73
+  image_license: CC0
+  image_credit: John L. Severance Fund and Gift of Mrs. Dudley S. Blossom Jr.; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: beach-scene-eugene-boudin
+  name: Beach Scene
+  kind: painting
+  made: 1865
+  made_end: 1867
+  estimated: true
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1917.63'
+  museum_url: https://clevelandart.org/art/1917.63
+  image_url: https://openaccess-cdn.clevelandart.org/1917.63/1917.63_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1917.63/1917.63_web.jpg
+  image_page: https://clevelandart.org/art/1917.63
+  image_license: CC0
+  image_credit: Gift of Mrs. D. Z. Norton; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: saint-peter-repentant-georges-de-la-tour
+  name: Saint Peter Repentant
+  kind: painting
+  made: 1645
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1951.454'
+  museum_url: https://clevelandart.org/art/1951.454
+  image_url: https://openaccess-cdn.clevelandart.org/1951.454/1951.454_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1951.454/1951.454_web.jpg
+  image_page: https://clevelandart.org/art/1951.454
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: georges-de-la-tour
+    role: creator
+  prominence: 3
+- key: mary-walker-waugh-william-holman-hunt
+  name: Mary Walker Waugh
+  kind: painting
+  made: 1868
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1984.41'
+  museum_url: https://clevelandart.org/art/1984.41
+  image_url: https://openaccess-cdn.clevelandart.org/1984.41/1984.41_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1984.41/1984.41_web.jpg
+  image_page: https://clevelandart.org/art/1984.41
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 3
+- key: the-biglin-brothers-turning-the-stake-thomas-eakins
+  name: The Biglin Brothers Turning the Stake
+  kind: painting
+  made: 1873
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1927.1984'
+  museum_url: https://clevelandart.org/art/1927.1984
+  image_url: https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1927.1984/1927.1984_web.jpg
+  image_page: https://clevelandart.org/art/1927.1984
+  image_license: CC0
+  image_credit: Hinman B. Hurlbut Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: virgin-and-child-with-angels-fra-filippo-lippi
+  name: Virgin and Child with Angels
+  kind: painting
+  made: 1455
+  made_end: 1465
+  estimated: true
+  medium: tempera and gold on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1916.802'
+  museum_url: https://clevelandart.org/art/1916.802
+  image_url: https://openaccess-cdn.clevelandart.org/1916.802/1916.802_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.802/1916.802_web.jpg
+  image_page: https://clevelandart.org/art/1916.802
+  image_license: CC0
+  image_credit: Holden Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+- key: pair-of-panels-from-a-triptych-the-archangel-mic-fra-filippo-lippi
+  name: 'Pair of Panels from a Triptych: The Archangel Michael and St. Anthony Abbot'
+  kind: painting
+  made: 1458
+  medium: tempera on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1964.150'
+  museum_url: https://clevelandart.org/art/1964.150
+  image_url: https://openaccess-cdn.clevelandart.org/1964.150/1964.150_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.150/1964.150_web.jpg
+  image_page: https://clevelandart.org/art/1964.150
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+- key: panel-from-a-triptych-the-archangel-michael-fra-filippo-lippi
+  name: 'Panel from a Triptych: The Archangel Michael'
+  kind: painting
+  made: 1458
+  medium: tempera on wood panel
+  museum: cleveland-museum-of-art
+  accession: 1964.150.1
+  museum_url: https://clevelandart.org/art/1964.150.1
+  image_url: https://openaccess-cdn.clevelandart.org/1964.150.1/1964.150.1_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.150.1/1964.150.1_web.jpg
+  image_page: https://clevelandart.org/art/1964.150.1
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: fra-filippo-lippi
+    role: creator
+  prominence: 3
+- key: virgin-and-child-hans-memling
+  name: Virgin and Child
+  kind: painting
+  made: 1470
+  made_end: 1480
+  estimated: true
+  medium: oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1934.29'
+  museum_url: https://clevelandart.org/art/1934.29
+  image_url: https://openaccess-cdn.clevelandart.org/1934.29/1934.29_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1934.29/1934.29_web.jpg
+  image_page: https://clevelandart.org/art/1934.29
+  image_license: CC0
+  image_credit: Delia E. Holden and L. E. Holden Funds; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 3
+- key: the-farm-at-the-entrance-of-the-wood-rosa-bonheur
+  name: The Farm at the Entrance of the Wood
+  kind: painting
+  made: 1860
+  made_end: 1880
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1978.73'
+  museum_url: https://clevelandart.org/art/1978.73
+  image_url: https://openaccess-cdn.clevelandart.org/1978.73/1978.73_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1978.73/1978.73_web.jpg
+  image_page: https://clevelandart.org/art/1978.73
+  image_license: CC0
+  image_credit: Gift of Mrs. John B. Dempsey; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: wild-boars-in-the-snow-rosa-bonheur
+  name: Wild Boars in the Snow
+  kind: painting
+  made: 1872
+  made_end: 1877
+  estimated: true
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1980.231'
+  museum_url: https://clevelandart.org/art/1980.231
+  image_url: https://openaccess-cdn.clevelandart.org/1980.231/1980.231_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.231/1980.231_web.jpg
+  image_page: https://clevelandart.org/art/1980.231
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: kitchen-utensils-with-leeks-fish-and-eggs-jean-simeon-chardin
+  name: Kitchen Utensils with Leeks, Fish, and Eggs
+  kind: painting
+  made: 1729
+  made_end: 1739
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1980.37'
+  museum_url: https://clevelandart.org/art/1980.37
+  image_url: https://openaccess-cdn.clevelandart.org/1980.37/1980.37_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.37/1980.37_web.jpg
+  image_page: https://clevelandart.org/art/1980.37
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+- key: still-life-with-herrings-jean-simeon-chardin
+  name: Still Life with Herrings
+  kind: painting
+  made: 1730
+  made_end: 1740
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1974.1'
+  museum_url: https://clevelandart.org/art/1974.1
+  image_url: https://openaccess-cdn.clevelandart.org/1974.1/1974.1_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1974.1/1974.1_web.jpg
+  image_page: https://clevelandart.org/art/1974.1
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+- key: glaucus-and-nydia-lawrence-alma-tadema
+  name: Glaucus and Nydia
+  kind: painting
+  made: 1867
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1977.128'
+  museum_url: https://clevelandart.org/art/1977.128
+  image_url: https://openaccess-cdn.clevelandart.org/1977.128/1977.128_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.128/1977.128_web.jpg
+  image_page: https://clevelandart.org/art/1977.128
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 3
+- key: the-garden-of-the-rousseau-family-james-ensor
+  name: The Garden of the Rousseau Family
+  kind: painting
+  made: 1885
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1950.582'
+  museum_url: https://clevelandart.org/art/1950.582
+  image_url: https://openaccess-cdn.clevelandart.org/1950.582/1950.582_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1950.582/1950.582_web.jpg
+  image_page: https://clevelandart.org/art/1950.582
+  image_license: CC0
+  image_credit: Gift of Leonard C. Hanna Jr.; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: james-ensor
+    role: creator
+  prominence: 3
+- key: blessing-of-a-yacht-on-the-belon-river-maurice-denis
+  name: Blessing of a Yacht on the Belon River
+  kind: painting
+  made: 1899
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2020.110'
+  museum_url: https://clevelandart.org/art/2020.110
+  image_url: https://openaccess-cdn.clevelandart.org/2020.110/2020.110_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.110/2020.110_web.jpg
+  image_page: https://clevelandart.org/art/2020.110
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: maurice-denis
+    role: creator
+  prominence: 3
+- key: drying-the-linen-or-moonrise-at-the-priory-maurice-denis
+  name: Drying the Linen, or Moonrise at the Priory
+  kind: painting
+  made: 1894
+  medium: oil on canvas glued to cardboard
+  museum: cleveland-museum-of-art
+  accession: '2020.109'
+  museum_url: https://clevelandart.org/art/2020.109
+  image_url: https://openaccess-cdn.clevelandart.org/2020.109/2020.109_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.109/2020.109_web.jpg
+  image_page: https://clevelandart.org/art/2020.109
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: maurice-denis
+    role: creator
+  prominence: 3
+- key: procession-or-pardon-at-perros-guirec-maurice-denis
+  name: Procession or Pardon at Perros-Guirec
+  kind: painting
+  made: 1891
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2020.108'
+  museum_url: https://clevelandart.org/art/2020.108
+  image_url: https://openaccess-cdn.clevelandart.org/2020.108/2020.108_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.108/2020.108_web.jpg
+  image_page: https://clevelandart.org/art/2020.108
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: maurice-denis
+    role: creator
+  prominence: 3
+- key: boy-drinking-annibale-carracci
+  name: Boy Drinking
+  kind: painting
+  made: 1578
+  made_end: 1589
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1994.4'
+  museum_url: https://clevelandart.org/art/1994.4
+  image_url: https://openaccess-cdn.clevelandart.org/1994.4/1994.4_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1994.4/1994.4_web.jpg
+  image_page: https://clevelandart.org/art/1994.4
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: annibale-carracci
+    role: creator
+  prominence: 3
+- key: portrait-of-infante-don-luis-de-borbon-anton-raphael-mengs
+  name: Portrait of Infante Don Luis de Borbon
+  kind: painting
+  made: 1771
+  made_end: 1781
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1966.14'
+  museum_url: https://clevelandart.org/art/1966.14
+  image_url: https://openaccess-cdn.clevelandart.org/1966.14/1966.14_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1966.14/1966.14_web.jpg
+  image_page: https://clevelandart.org/art/1966.14
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: self-portrait-with-hat-and-coat-lovis-corinth
+  name: Self-Portrait with Hat and Coat
+  kind: painting
+  made: 1915
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1979.14'
+  museum_url: https://clevelandart.org/art/1979.14
+  image_url: https://openaccess-cdn.clevelandart.org/1979.14/1979.14_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1979.14/1979.14_web.jpg
+  image_page: https://clevelandart.org/art/1979.14
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: lovis-corinth
+    role: creator
+  prominence: 3
+- key: villerville-seen-from-le-ratier-charles-francois-daubigny
+  name: Villerville Seen from Le Ratier
+  kind: painting
+  made: 1855
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1951.323'
+  museum_url: https://clevelandart.org/art/1951.323
+  image_url: https://openaccess-cdn.clevelandart.org/1951.323/1951.323_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1951.323/1951.323_web.jpg
+  image_page: https://clevelandart.org/art/1951.323
+  image_license: CC0
+  image_credit: Bequest of William G. Mather; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: sunset-on-the-river-oise-charles-francois-daubigny
+  name: Sunset on the River Oise
+  kind: painting
+  made: 1866
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1964.289'
+  museum_url: https://clevelandart.org/art/1964.289
+  image_url: https://openaccess-cdn.clevelandart.org/1964.289/1964.289_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.289/1964.289_web.jpg
+  image_page: https://clevelandart.org/art/1964.289
+  image_license: CC0
+  image_credit: Severance and Greta Millikin Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: the-hillsides-of-mery-sur-oise-opposite-auvers-charles-francois-daubigny
+  name: The Hillsides of Méry-sur-Oise, Opposite Auvers
+  kind: painting
+  made: 1873
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1916.1048'
+  museum_url: https://clevelandart.org/art/1916.1048
+  image_url: https://openaccess-cdn.clevelandart.org/1916.1048/1916.1048_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.1048/1916.1048_web.jpg
+  image_page: https://clevelandart.org/art/1916.1048
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. J. H. Wade; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: view-of-schroon-mountain-essex-county-new-york-a-thomas-cole
+  name: View of Schroon Mountain, Essex County, New York, After a Storm
+  kind: painting
+  made: 1838
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1917.1335'
+  museum_url: https://clevelandart.org/art/1917.1335
+  image_url: https://openaccess-cdn.clevelandart.org/1917.1335/1917.1335_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1917.1335/1917.1335_web.jpg
+  image_page: https://clevelandart.org/art/1917.1335
+  image_license: CC0
+  image_credit: Hinman B. Hurlbut Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 3
+- key: view-of-florence-thomas-cole
+  name: View of Florence
+  kind: painting
+  made: 1837
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1961.39'
+  museum_url: https://clevelandart.org/art/1961.39
+  image_url: https://openaccess-cdn.clevelandart.org/1961.39/1961.39_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1961.39/1961.39_web.jpg
+  image_page: https://clevelandart.org/art/1961.39
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 3
+- key: the-holy-family-with-saint-john-the-baptist-and--filippino-lippi
+  name: The Holy Family with Saint John the Baptist and Saint Margaret
+  kind: painting
+  made: 1488
+  made_end: 1493
+  estimated: true
+  medium: tempera and oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1932.227'
+  museum_url: https://clevelandart.org/art/1932.227
+  image_url: https://openaccess-cdn.clevelandart.org/1932.227/1932.227_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1932.227/1932.227_web.jpg
+  image_page: https://clevelandart.org/art/1932.227
+  image_license: CC0
+  image_credit: 'The Delia E. Holden Fund and a fund donated as a memorial to Mrs. Holden by her children: Guerdon S. Holden, Delia Holden White, Roberta Holden Bole, Emery Holden Greenough, Gertrude Holden
+    McGinley; Cleveland Museum of Art, Open Access'
+  sources:
+  - cma-open-access
+  people:
+  - person: filippino-lippi
+    role: creator
+  prominence: 3
+- key: the-circus-suzanne-valadon
+  name: The Circus
+  kind: painting
+  made: 1889
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1958.56'
+  museum_url: https://clevelandart.org/art/1958.56
+  image_url: https://openaccess-cdn.clevelandart.org/1958.56/1958.56_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1958.56/1958.56_web.jpg
+  image_page: https://clevelandart.org/art/1958.56
+  image_license: CC0
+  image_credit: Bequest of Leonard C. Hanna Jr.; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: suzanne-valadon
+    role: creator
+  prominence: 3
+- key: low-waterfall-in-a-wooded-landscape-with-a-dead--jacob-van-ruisdael
+  name: Low Waterfall in a Wooded Landscape with a Dead Beech Tree
+  kind: painting
+  made: 1660
+  made_end: 1670
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1967.63'
+  museum_url: https://clevelandart.org/art/1967.63
+  image_url: https://openaccess-cdn.clevelandart.org/1967.63/1967.63_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1967.63/1967.63_web.jpg
+  image_page: https://clevelandart.org/art/1967.63
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: landscape-with-a-windmill-jacob-van-ruisdael
+  name: Landscape with a Windmill
+  kind: painting
+  made: 1646
+  medium: oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1967.19'
+  museum_url: https://clevelandart.org/art/1967.19
+  image_url: https://openaccess-cdn.clevelandart.org/1967.19/1967.19_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1967.19/1967.19_web.jpg
+  image_page: https://clevelandart.org/art/1967.19
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: landscape-with-a-church-by-a-torrent-jacob-van-ruisdael
+  name: Landscape with a Church by a Torrent
+  kind: painting
+  made: 1665
+  made_end: 1675
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1962.256'
+  museum_url: https://clevelandart.org/art/1962.256
+  image_url: https://openaccess-cdn.clevelandart.org/1962.256/1962.256_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1962.256/1962.256_web.jpg
+  image_page: https://clevelandart.org/art/1962.256
+  image_license: CC0
+  image_credit: Bequest of Jane Taft Ingalls; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 3
+- key: leaving-the-forest-fontainebleau-setting-sun-theodore-rousseau
+  name: 'Leaving the Forest, Fontainebleau: Setting Sun'
+  kind: painting
+  made: 1851
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1983.70'
+  museum_url: https://clevelandart.org/art/1983.70
+  image_url: https://openaccess-cdn.clevelandart.org/1983.70/1983.70_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1983.70/1983.70_web.jpg
+  image_page: https://clevelandart.org/art/1983.70
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: the-oak-tree-theodore-rousseau
+  name: The Oak Tree
+  kind: painting
+  made: 1800
+  medium: oil on paper mounted on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1916.1052'
+  museum_url: https://clevelandart.org/art/1916.1052
+  image_url: https://openaccess-cdn.clevelandart.org/1916.1052/1916.1052_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.1052/1916.1052_web.jpg
+  image_page: https://clevelandart.org/art/1916.1052
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. J. H. Wade; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: marshlands-theodore-rousseau
+  name: Marshlands
+  kind: painting
+  made: 1830
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1964.290'
+  museum_url: https://clevelandart.org/art/1964.290
+  image_url: https://openaccess-cdn.clevelandart.org/1964.290/1964.290_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.290/1964.290_web.jpg
+  image_page: https://clevelandart.org/art/1964.290
+  image_license: CC0
+  image_credit: Severance and Greta Millikin Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: still-life-with-rayfish-chaim-soutine
+  name: Still Life with Rayfish
+  kind: painting
+  made: 1923
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1951.357'
+  museum_url: https://clevelandart.org/art/1951.357
+  image_url: https://openaccess-cdn.clevelandart.org/1951.357/1951.357_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1951.357/1951.357_web.jpg
+  image_page: https://clevelandart.org/art/1951.357
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: old-woman-chaim-soutine
+  name: Old Woman
+  kind: painting
+  made: 1923
+  made_end: 1924
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1988.94'
+  museum_url: https://clevelandart.org/art/1988.94
+  image_url: https://openaccess-cdn.clevelandart.org/1988.94/1988.94_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1988.94/1988.94_web.jpg
+  image_page: https://clevelandart.org/art/1988.94
+  image_license: CC0
+  image_credit: Gift of the Mildred Andrews Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: seaside-july-specimen-of-a-portrait-james-tissot
+  name: 'Seaside (July: Specimen of a Portrait)'
+  kind: painting
+  made: 1878
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1980.288'
+  museum_url: https://clevelandart.org/art/1980.288
+  image_url: https://openaccess-cdn.clevelandart.org/1980.288/1980.288_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.288/1980.288_web.jpg
+  image_page: https://clevelandart.org/art/1980.288
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: the-lovers-james-tissot
+  name: The Lovers
+  kind: painting
+  made: 1872
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2022.140'
+  museum_url: https://clevelandart.org/art/2022.140
+  image_url: https://openaccess-cdn.clevelandart.org/2022.140/2022.140_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2022.140/2022.140_web.jpg
+  image_page: https://clevelandart.org/art/2022.140
+  image_license: CC0
+  image_credit: Partial gift from Ralph and Terry Kovel and Family, and partial purchase from the John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: corn-fields-felix-vallotton
+  name: Corn Fields
+  kind: painting
+  made: 1900
+  medium: oil on board
+  museum: cleveland-museum-of-art
+  accession: '2020.115'
+  museum_url: https://clevelandart.org/art/2020.115
+  image_url: https://openaccess-cdn.clevelandart.org/2020.115/2020.115_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.115/2020.115_web.jpg
+  image_page: https://clevelandart.org/art/2020.115
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+- key: the-bistro-felix-vallotton
+  name: The Bistro
+  kind: painting
+  made: 1890
+  made_end: 1900
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2020.114'
+  museum_url: https://clevelandart.org/art/2020.114
+  image_url: https://openaccess-cdn.clevelandart.org/2020.114/2020.114_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.114/2020.114_web.jpg
+  image_page: https://clevelandart.org/art/2020.114
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+- key: marie-yolande-de-fitz-james-henri-fantin-latour
+  name: Marie-Yolande de Fitz-James
+  kind: painting
+  made: 1867
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1982.256'
+  museum_url: https://clevelandart.org/art/1982.256
+  image_url: https://openaccess-cdn.clevelandart.org/1982.256/1982.256_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1982.256/1982.256_web.jpg
+  image_page: https://clevelandart.org/art/1982.256
+  image_license: CC0
+  image_credit: Gift of Lewis C. Williams; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: tannhauser-henri-fantin-latour
+  name: Tannhäuser
+  kind: painting
+  made: 1886
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1916.1038'
+  museum_url: https://clevelandart.org/art/1916.1038
+  image_url: https://openaccess-cdn.clevelandart.org/1916.1038/1916.1038_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.1038/1916.1038_web.jpg
+  image_page: https://clevelandart.org/art/1916.1038
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. J. H. Wade; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: madame-lerolle-henri-fantin-latour
+  name: Madame Lerolle
+  kind: painting
+  made: 1882
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1969.54'
+  museum_url: https://clevelandart.org/art/1969.54
+  image_url: https://openaccess-cdn.clevelandart.org/1969.54/1969.54_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1969.54/1969.54_web.jpg
+  image_page: https://clevelandart.org/art/1969.54
+  image_license: CC0
+  image_credit: Purchase from the J. H. Wade Fund and the Fanny Tewksbury King Collection by exchange; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: rest-on-the-flight-into-egypt-guercino
+  name: Rest on the Flight into Egypt
+  kind: painting
+  made: 1624
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1967.123'
+  museum_url: https://clevelandart.org/art/1967.123
+  image_url: https://openaccess-cdn.clevelandart.org/1967.123/1967.123_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1967.123/1967.123_web.jpg
+  image_page: https://clevelandart.org/art/1967.123
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: guercino
+    role: creator
+  prominence: 3
+- key: piazza-san-marco-venice-bernardo-bellotto
+  name: Piazza San Marco, Venice
+  kind: painting
+  made: 1735
+  made_end: 1745
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1962.169'
+  museum_url: https://clevelandart.org/art/1962.169
+  image_url: https://openaccess-cdn.clevelandart.org/1962.169/1962.169_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1962.169/1962.169_web.jpg
+  image_page: https://clevelandart.org/art/1962.169
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  prominence: 3
+- key: aglaida-and-boniface-alexandre-cabanel
+  name: Aglaida and Boniface
+  kind: painting
+  made: 1852
+  made_end: 1862
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2007.275'
+  museum_url: https://clevelandart.org/art/2007.275
+  image_url: https://openaccess-cdn.clevelandart.org/2007.275/2007.275_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2007.275/2007.275_web.jpg
+  image_page: https://clevelandart.org/art/2007.275
+  image_license: CC0
+  image_credit: Bequest of Elizabeth Ludwig Fennell; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: alexandre-cabanel
+    role: creator
+  prominence: 3
+- key: portrait-of-a-man-possibly-girolamo-rosati-lorenzo-lotto
+  name: Portrait of a Man, Possibly Girolamo Rosati
+  kind: painting
+  made: 1533
+  made_end: 1534
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1950.250'
+  museum_url: https://clevelandart.org/art/1950.250
+  image_url: https://openaccess-cdn.clevelandart.org/1950.250/1950.250_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1950.250/1950.250_web.jpg
+  image_page: https://clevelandart.org/art/1950.250
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: lorenzo-lotto
+    role: creator
+  prominence: 3
+- key: scenes-of-witchcraft-evening-salvator-rosa
+  name: 'Scenes of Witchcraft: Evening'
+  kind: painting
+  made: 1640
+  made_end: 1654
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1977.37.3
+  museum_url: https://clevelandart.org/art/1977.37.3
+  image_url: https://openaccess-cdn.clevelandart.org/1977.37.3/1977.37.3_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.37.3/1977.37.3_web.jpg
+  image_page: https://clevelandart.org/art/1977.37.3
+  image_license: CC0
+  image_credit: Purchase from the J. H. Wade Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 3
+- key: scenes-of-witchcraft-night-salvator-rosa
+  name: 'Scenes of Witchcraft: Night'
+  kind: painting
+  made: 1640
+  made_end: 1654
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1977.37.4
+  museum_url: https://clevelandart.org/art/1977.37.4
+  image_url: https://openaccess-cdn.clevelandart.org/1977.37.4/1977.37.4_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.37.4/1977.37.4_web.jpg
+  image_page: https://clevelandart.org/art/1977.37.4
+  image_license: CC0
+  image_credit: Purchase from the J. H. Wade Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 3
+- key: scenes-of-witchcraft-morning-salvator-rosa
+  name: 'Scenes of Witchcraft: Morning'
+  kind: painting
+  made: 1640
+  made_end: 1654
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1977.37.1
+  museum_url: https://clevelandart.org/art/1977.37.1
+  image_url: https://openaccess-cdn.clevelandart.org/1977.37.1/1977.37.1_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.37.1/1977.37.1_web.jpg
+  image_page: https://clevelandart.org/art/1977.37.1
+  image_license: CC0
+  image_credit: Purchase from the J. H. Wade Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 3
+- key: david-oh-that-i-had-wings-like-a-dove-for-then-w-frederic-leighton
+  name: 'David: "Oh, that I had wings like a Dove! For then would I fly away, and be at rest." Psalm 55:6'
+  kind: painting
+  made: 1865
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1986.74'
+  museum_url: https://clevelandart.org/art/1986.74
+  image_url: https://openaccess-cdn.clevelandart.org/1986.74/1986.74_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1986.74/1986.74_web.jpg
+  image_page: https://clevelandart.org/art/1986.74
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: early-morning-after-a-storm-at-sea-winslow-homer
+  name: Early Morning After a Storm at Sea
+  kind: painting
+  made: 1900
+  made_end: 1903
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1924.195'
+  museum_url: https://clevelandart.org/art/1924.195
+  image_url: https://openaccess-cdn.clevelandart.org/1924.195/1924.195_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1924.195/1924.195_web.jpg
+  image_page: https://clevelandart.org/art/1924.195
+  image_license: CC0
+  image_credit: Gift of J. H. Wade; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: the-brierwood-pipe-winslow-homer
+  name: The Brierwood Pipe
+  kind: painting
+  made: 1864
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1944.524'
+  museum_url: https://clevelandart.org/art/1944.524
+  image_url: https://openaccess-cdn.clevelandart.org/1944.524/1944.524_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1944.524/1944.524_web.jpg
+  image_page: https://clevelandart.org/art/1944.524
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: white-mare-winslow-homer
+  name: White Mare
+  kind: painting
+  made: 1863
+  made_end: 1873
+  estimated: true
+  medium: oil on panel
+  museum: cleveland-museum-of-art
+  accession: '1958.33'
+  museum_url: https://clevelandart.org/art/1958.33
+  image_url: https://openaccess-cdn.clevelandart.org/1958.33/1958.33_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1958.33/1958.33_web.jpg
+  image_page: https://clevelandart.org/art/1958.33
+  image_license: CC0
+  image_credit: Bequest of Leonard C. Hanna Jr.; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: portrait-of-colonel-charles-heathcote-joseph-wright-of-derby
+  name: Portrait of Colonel Charles Heathcote
+  kind: painting
+  made: 1771
+  made_end: 1772
+  estimated: true
+  medium: Oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '2017.100'
+  museum_url: https://clevelandart.org/art/2017.100
+  image_url: https://openaccess-cdn.clevelandart.org/2017.100/2017.100_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2017.100/2017.100_web.jpg
+  image_page: https://clevelandart.org/art/2017.100
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+- key: the-mass-of-saint-gregory-hans-baldung
+  name: The Mass of Saint Gregory
+  kind: painting
+  made: 1511
+  medium: oil and tempera on wood
+  museum: cleveland-museum-of-art
+  accession: '1952.112'
+  museum_url: https://clevelandart.org/art/1952.112
+  image_url: https://openaccess-cdn.clevelandart.org/1952.112/1952.112_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1952.112/1952.112_web.jpg
+  image_page: https://clevelandart.org/art/1952.112
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: hans-baldung
+    role: creator
+  prominence: 3
+- key: the-betrayal-of-christ-jacob-jordaens
+  name: The Betrayal of Christ
+  kind: painting
+  made: 1655
+  made_end: 1659
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1970.32'
+  museum_url: https://clevelandart.org/art/1970.32
+  image_url: https://openaccess-cdn.clevelandart.org/1970.32/1970.32_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1970.32/1970.32_web.jpg
+  image_page: https://clevelandart.org/art/1970.32
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jacob-jordaens
+    role: creator
+  prominence: 3
+- key: twilight-in-the-wilderness-frederic-edwin-church
+  name: Twilight in the Wilderness
+  kind: painting
+  made: 1860
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1965.233'
+  museum_url: https://clevelandart.org/art/1965.233
+  image_url: https://openaccess-cdn.clevelandart.org/1965.233/1965.233_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1965.233/1965.233_web.jpg
+  image_page: https://clevelandart.org/art/1965.233
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 3
+- key: storm-in-the-mountains-frederic-edwin-church
+  name: Storm in the Mountains
+  kind: painting
+  made: 1847
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1969.52'
+  museum_url: https://clevelandart.org/art/1969.52
+  image_url: https://openaccess-cdn.clevelandart.org/1969.52/1969.52_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1969.52/1969.52_web.jpg
+  image_page: https://clevelandart.org/art/1969.52
+  image_license: CC0
+  image_credit: Gift of various donors by exchange and Purchase from the J. H. Wade Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 3
+- key: the-monastery-of-san-pedro-our-lady-of-the-snows-frederic-edwin-church
+  name: The Monastery of San Pedro (Our Lady of the Snows)
+  kind: painting
+  made: 1879
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1915.684'
+  museum_url: https://clevelandart.org/art/1915.684
+  image_url: https://openaccess-cdn.clevelandart.org/1915.684/1915.684_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1915.684/1915.684_web.jpg
+  image_page: https://clevelandart.org/art/1915.684
+  image_license: CC0
+  image_credit: Hinman B. Hurlbut Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 3
+- key: portrait-of-king-charles-ii-of-england-philippe-de-champaigne
+  name: Portrait of King Charles II of England
+  kind: painting
+  made: 1653
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1959.38'
+  museum_url: https://clevelandart.org/art/1959.38
+  image_url: https://openaccess-cdn.clevelandart.org/1959.38/1959.38_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1959.38/1959.38_web.jpg
+  image_page: https://clevelandart.org/art/1959.38
+  image_license: CC0
+  image_credit: The Elisabeth Severance Prentiss Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: philippe-de-champaigne
+    role: creator
+  prominence: 3
+- key: portrait-of-a-family-playing-music-pieter-de-hooch
+  name: Portrait of a Family Playing Music
+  kind: painting
+  made: 1663
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1951.355'
+  museum_url: https://clevelandart.org/art/1951.355
+  image_url: https://openaccess-cdn.clevelandart.org/1951.355/1951.355_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1951.355/1951.355_web.jpg
+  image_page: https://clevelandart.org/art/1951.355
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: pieter-de-hooch
+    role: creator
+  prominence: 3
+- key: mount-starr-king-yosemite-albert-bierstadt
+  name: Mount Starr King, Yosemite
+  kind: painting
+  made: 1866
+  medium: oil on canvas on panel-back stretcher
+  museum: cleveland-museum-of-art
+  accession: '1922.684'
+  museum_url: https://clevelandart.org/art/1922.684
+  image_url: https://openaccess-cdn.clevelandart.org/1922.684/1922.684_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1922.684/1922.684_web.jpg
+  image_page: https://clevelandart.org/art/1922.684
+  image_license: CC0
+  image_credit: Hinman B. Hurlbut Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: mount-vesuvius-at-midnight-albert-bierstadt
+  name: Mount Vesuvius at Midnight
+  kind: painting
+  made: 1868
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1949.541'
+  museum_url: https://clevelandart.org/art/1949.541
+  image_url: https://openaccess-cdn.clevelandart.org/1949.541/1949.541_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1949.541/1949.541_web.jpg
+  image_page: https://clevelandart.org/art/1949.541
+  image_license: CC0
+  image_credit: Gift of S. Livingstone Mather, Philip Richard Mather, Katherine Hoyt (Mather) Cross, Katherine Mather McLean and Constance Mather Bishop; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: fir-trees-and-storm-clouds-albert-bierstadt
+  name: Fir Trees and Storm Clouds
+  kind: painting
+  made: 1865
+  made_end: 1875
+  estimated: true
+  medium: oil on paper mounted on canvas
+  museum: cleveland-museum-of-art
+  accession: '1982.37'
+  museum_url: https://clevelandart.org/art/1982.37
+  image_url: https://openaccess-cdn.clevelandart.org/1982.37/1982.37_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1982.37/1982.37_web.jpg
+  image_page: https://clevelandart.org/art/1982.37
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 3
+- key: saint-mary-magdalen-simon-vouet
+  name: Saint Mary Magdalen
+  kind: painting
+  made: 1625
+  made_end: 1635
+  estimated: true
+  medium: oil on panel
+  museum: cleveland-museum-of-art
+  accession: '1988.108'
+  museum_url: https://clevelandart.org/art/1988.108
+  image_url: https://openaccess-cdn.clevelandart.org/1988.108/1988.108_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1988.108/1988.108_web.jpg
+  image_page: https://clevelandart.org/art/1988.108
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: simon-vouet
+    role: creator
+  prominence: 3
+- key: view-of-emmerich-jan-van-goyen
+  name: View of Emmerich
+  kind: painting
+  made: 1645
+  medium: oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1959.351'
+  museum_url: https://clevelandart.org/art/1959.351
+  image_url: https://openaccess-cdn.clevelandart.org/1959.351/1959.351_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1959.351/1959.351_web.jpg
+  image_page: https://clevelandart.org/art/1959.351
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: portrait-of-cardinal-guillaume-dubois-hyacinthe-rigaud
+  name: Portrait of Cardinal Guillaume Dubois
+  kind: painting
+  made: 1723
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1967.17'
+  museum_url: https://clevelandart.org/art/1967.17
+  image_url: https://openaccess-cdn.clevelandart.org/1967.17/1967.17_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1967.17/1967.17_web.jpg
+  image_page: https://clevelandart.org/art/1967.17
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: hyacinthe-rigaud
+    role: creator
+  prominence: 3
+- key: the-sacrifice-of-isaac-francesco-guardi
+  name: The Sacrifice of Isaac
+  kind: painting
+  made: 1750
+  made_end: 1759
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1952.235.1
+  museum_url: https://clevelandart.org/art/1952.235.1
+  image_url: https://openaccess-cdn.clevelandart.org/1952.235.1/1952.235.1_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1952.235.1/1952.235.1_web.jpg
+  image_page: https://clevelandart.org/art/1952.235.1
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: tobias-and-the-angel-francesco-guardi
+  name: Tobias and the Angel
+  kind: painting
+  made: 1750
+  made_end: 1759
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1952.235.2
+  museum_url: https://clevelandart.org/art/1952.235.2
+  image_url: https://openaccess-cdn.clevelandart.org/1952.235.2/1952.235.2_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1952.235.2/1952.235.2_web.jpg
+  image_page: https://clevelandart.org/art/1952.235.2
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: abraham-welcoming-the-three-angels-francesco-guardi
+  name: Abraham Welcoming the Three Angels
+  kind: painting
+  made: 1750
+  made_end: 1759
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: 1952.235.4
+  museum_url: https://clevelandart.org/art/1952.235.4
+  image_url: https://openaccess-cdn.clevelandart.org/1952.235.4/1952.235.4_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1952.235.4/1952.235.4_web.jpg
+  image_page: https://clevelandart.org/art/1952.235.4
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: sophie-guillemette-grand-duchess-of-baden-1801-1-franz-xaver-winterhalter
+  name: Sophie Guillemette, Grand Duchess of Baden (1801-1865)
+  kind: painting
+  made: 1831
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1979.43'
+  museum_url: https://clevelandart.org/art/1979.43
+  image_url: https://openaccess-cdn.clevelandart.org/1979.43/1979.43_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1979.43/1979.43_web.jpg
+  image_page: https://clevelandart.org/art/1979.43
+  image_license: CC0
+  image_credit: The Thomas L. Fawick Memorial Collection; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: franz-xaver-winterhalter
+    role: creator
+  prominence: 3
+- key: cordelia-parting-from-her-sisters-ford-madox-brown
+  name: Cordelia Parting from her Sisters
+  kind: painting
+  made: 1854
+  medium: pen and oil on paper on panel
+  museum: cleveland-museum-of-art
+  accession: '2013.261'
+  museum_url: https://clevelandart.org/art/2013.261
+  image_url: https://openaccess-cdn.clevelandart.org/2013.261/2013.261_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2013.261/2013.261_web.jpg
+  image_page: https://clevelandart.org/art/2013.261
+  image_license: CC0
+  image_credit: Gift in memory of Helen Borowitz; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: ford-madox-brown
+    role: creator
+  prominence: 3
+- key: under-the-trees-from-the-public-gardens-edouard-vuillard
+  name: Under the Trees (from "The Public Gardens")
+  kind: painting
+  made: 1894
+  medium: distemper on fabric
+  museum: cleveland-museum-of-art
+  accession: '1953.212'
+  museum_url: https://clevelandart.org/art/1953.212
+  image_url: https://openaccess-cdn.clevelandart.org/1953.212/1953.212_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1953.212/1953.212_web.jpg
+  image_page: https://clevelandart.org/art/1953.212
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: cafe-wepler-edouard-vuillard
+  name: Café Wepler
+  kind: painting
+  made: 1908
+  made_end: 1912
+  estimated: true
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1950.90'
+  museum_url: https://clevelandart.org/art/1950.90
+  image_url: https://openaccess-cdn.clevelandart.org/1950.90/1950.90_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1950.90/1950.90_web.jpg
+  image_page: https://clevelandart.org/art/1950.90
+  image_license: CC0
+  image_credit: Gift of the Hanna Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: woman-ironing-edouard-vuillard
+  name: Woman Ironing
+  kind: painting
+  made: 1892
+  medium: oil on board
+  museum: cleveland-museum-of-art
+  accession: '2020.119'
+  museum_url: https://clevelandart.org/art/2020.119
+  image_url: https://openaccess-cdn.clevelandart.org/2020.119/2020.119_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/2020.119/2020.119_web.jpg
+  image_page: https://clevelandart.org/art/2020.119
+  image_license: CC0
+  image_credit: Nancy F. and Joseph P. Keithley Collection Gift; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: travelers-in-hilly-countryside-aelbert-cuyp
+  name: Travelers in Hilly Countryside
+  kind: painting
+  made: 1645
+  made_end: 1655
+  estimated: true
+  medium: oil on wood
+  museum: cleveland-museum-of-art
+  accession: '1942.637'
+  museum_url: https://clevelandart.org/art/1942.637
+  image_url: https://openaccess-cdn.clevelandart.org/1942.637/1942.637_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1942.637/1942.637_web.jpg
+  image_page: https://clevelandart.org/art/1942.637
+  image_license: CC0
+  image_credit: Bequest of John L. Severance; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: offering-to-the-god-pan-paul-delaroche
+  name: Offering to the God Pan
+  kind: painting
+  made: 1855
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1980.256'
+  museum_url: https://clevelandart.org/art/1980.256
+  image_url: https://openaccess-cdn.clevelandart.org/1980.256/1980.256_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.256/1980.256_web.jpg
+  image_page: https://clevelandart.org/art/1980.256
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: paul-delaroche
+    role: creator
+  prominence: 3
+- key: pierrot-in-criminal-court-thomas-couture
+  name: Pierrot in Criminal Court
+  kind: painting
+  made: 1864
+  made_end: 1870
+  estimated: true
+  medium: oil on wood panel
+  museum: cleveland-museum-of-art
+  accession: '1980.250'
+  museum_url: https://clevelandart.org/art/1980.250
+  image_url: https://openaccess-cdn.clevelandart.org/1980.250/1980.250_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.250/1980.250_web.jpg
+  image_page: https://clevelandart.org/art/1980.250
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-couture
+    role: creator
+  prominence: 3
+- key: a-volunteer-of-1792-thomas-couture
+  name: A Volunteer of 1792
+  kind: painting
+  made: 1848
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1940.542'
+  museum_url: https://clevelandart.org/art/1940.542
+  image_url: https://openaccess-cdn.clevelandart.org/1940.542/1940.542_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1940.542/1940.542_web.jpg
+  image_page: https://clevelandart.org/art/1940.542
+  image_license: CC0
+  image_credit: Bequest of James Parmelee; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-couture
+    role: creator
+  prominence: 3
+- key: summer-pierre-puvis-de-chavannes
+  name: Summer
+  kind: painting
+  made: 1891
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1916.1056'
+  museum_url: https://clevelandart.org/art/1916.1056
+  image_url: https://openaccess-cdn.clevelandart.org/1916.1056/1916.1056_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.1056/1916.1056_web.jpg
+  image_page: https://clevelandart.org/art/1916.1056
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. J. H. Wade; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: lazarus-and-the-rich-man-jacopo-bassano
+  name: Lazarus and the Rich Man
+  kind: painting
+  made: 1545
+  made_end: 1555
+  estimated: true
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1939.68'
+  museum_url: https://clevelandart.org/art/1939.68
+  image_url: https://openaccess-cdn.clevelandart.org/1939.68/1939.68_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1939.68/1939.68_web.jpg
+  image_page: https://clevelandart.org/art/1939.68
+  image_license: CC0
+  image_credit: Delia E. Holden and L. E. Holden Funds; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: jacopo-bassano
+    role: creator
+  prominence: 3
+- key: portrait-of-catherine-grey-lady-manners-thomas-lawrence
+  name: Portrait of Catherine Grey, Lady Manners
+  kind: painting
+  made: 1794
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1961.220'
+  museum_url: https://clevelandart.org/art/1961.220
+  image_url: https://openaccess-cdn.clevelandart.org/1961.220/1961.220_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1961.220/1961.220_web.jpg
+  image_page: https://clevelandart.org/art/1961.220
+  image_license: CC0
+  image_credit: Bequest of John D. Rockefeller Jr.; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: portrait-of-charlotte-and-sarah-carteret-hardy-thomas-lawrence
+  name: Portrait of Charlotte and Sarah Carteret-Hardy
+  kind: painting
+  made: 1801
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1942.642'
+  museum_url: https://clevelandart.org/art/1942.642
+  image_url: https://openaccess-cdn.clevelandart.org/1942.642/1942.642_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1942.642/1942.642_web.jpg
+  image_page: https://clevelandart.org/art/1942.642
+  image_license: CC0
+  image_credit: Bequest of John L. Severance; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: portrait-of-benjamin-west-thomas-lawrence
+  name: Portrait of Benjamin West
+  kind: painting
+  made: 1818
+  made_end: 1830
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1916.2059'
+  museum_url: https://clevelandart.org/art/1916.2059
+  image_url: https://openaccess-cdn.clevelandart.org/1916.2059/1916.2059_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1916.2059/1916.2059_web.jpg
+  image_page: https://clevelandart.org/art/1916.2059
+  image_license: CC0
+  image_credit: Gift of the John Huntington Art and Polytechnic Trust; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: egyptian-family-sketch-for-the-battle-of-the-pyr-antoine-jean-gros
+  name: Egyptian Family (Sketch for "The Battle of the Pyramids")
+  kind: painting
+  made: 1830
+  made_end: 1840
+  estimated: true
+  medium: oil on linen
+  museum: cleveland-museum-of-art
+  accession: 1972.17.2
+  museum_url: https://clevelandart.org/art/1972.17.2
+  image_url: https://openaccess-cdn.clevelandart.org/1972.17.2/1972.17.2_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1972.17.2/1972.17.2_web.jpg
+  image_page: https://clevelandart.org/art/1972.17.2
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: antoine-jean-gros
+    role: creator
+  prominence: 3
+- key: portrait-of-count-jean-antoine-chaptal-antoine-jean-gros
+  name: Portrait of Count Jean-Antoine Chaptal
+  kind: painting
+  made: 1824
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1964.54'
+  museum_url: https://clevelandart.org/art/1964.54
+  image_url: https://openaccess-cdn.clevelandart.org/1964.54/1964.54_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1964.54/1964.54_web.jpg
+  image_page: https://clevelandart.org/art/1964.54
+  image_license: CC0
+  image_credit: Leonard C. Hanna Jr. Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: antoine-jean-gros
+    role: creator
+  prominence: 3
+- key: general-jean-baptiste-kleber-and-egyptian-family-antoine-jean-gros
+  name: General Jean-Baptiste Kléber and Egyptian Family (Sketches for "The Battle of the Pyramids")
+  kind: painting
+  made: 1830
+  made_end: 1840
+  estimated: true
+  medium: oil on linen
+  museum: cleveland-museum-of-art
+  accession: '1972.17'
+  museum_url: https://clevelandart.org/art/1972.17
+  image_url: https://openaccess-cdn.clevelandart.org/1972.17/1972.17_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1972.17/1972.17_web.jpg
+  image_page: https://clevelandart.org/art/1972.17
+  image_license: CC0
+  image_credit: John L. Severance Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: antoine-jean-gros
+    role: creator
+  prominence: 3
+- key: self-portrait-in-rome-horace-vernet
+  name: Self-Portrait in Rome
+  kind: painting
+  made: 1832
+  medium: oil on canvas
+  museum: cleveland-museum-of-art
+  accession: '1977.171'
+  museum_url: https://clevelandart.org/art/1977.171
+  image_url: https://openaccess-cdn.clevelandart.org/1977.171/1977.171_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1977.171/1977.171_web.jpg
+  image_page: https://clevelandart.org/art/1977.171
+  image_license: CC0
+  image_credit: Mr. and Mrs. William H. Marlatt Fund; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: horace-vernet
+    role: creator
+  prominence: 3
+- key: combat-of-a-greek-and-a-turk-horace-vernet
+  name: Combat of a Greek and a Turk
+  kind: painting
+  made: 1835
+  made_end: 1845
+  medium: oil on fabric
+  museum: cleveland-museum-of-art
+  accession: '1980.291'
+  museum_url: https://clevelandart.org/art/1980.291
+  image_url: https://openaccess-cdn.clevelandart.org/1980.291/1980.291_web.jpg
+  image_thumb: https://openaccess-cdn.clevelandart.org/1980.291/1980.291_web.jpg
+  image_page: https://clevelandart.org/art/1980.291
+  image_license: CC0
+  image_credit: Bequest of Noah L. Butkin; Cleveland Museum of Art, Open Access
+  sources:
+  - cma-open-access
+  people:
+  - person: horace-vernet
+    role: creator
+  prominence: 3

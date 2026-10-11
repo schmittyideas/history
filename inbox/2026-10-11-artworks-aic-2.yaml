@@ -1,0 +1,1703 @@
+# Notes for the reviewer
+# - Public-domain paintings by our painters, read through the official Art Institute of Chicago API (https://api.artic.edu/docs/); nothing was scraped. Only works the museum marks as public domain / CC0 with an image. Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 85 new artworks (works already in the database were skipped: 138) (images are hotlinked from the museum's servers, CC0).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Art Institute of Chicago open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Art Institute of Chicago
+  date: '2026-10-11'
+sources:
+- key: aic-api
+  title: Art Institute of Chicago API
+  url: https://api.artic.edu/docs/
+artworks:
+- key: portrait-of-a-man-in-costume-jean-honore-fragonard
+  name: Portrait of a Man in Costume
+  kind: painting
+  made: 1767
+  made_end: 1768
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1977.123'
+  museum_url: https://www.artic.edu/artworks/93900
+  image_url: https://www.artic.edu/iiif/2/9b1c3d61-5f9b-c7a2-a5ea-f48248836160/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/9b1c3d61-5f9b-c7a2-a5ea-f48248836160/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/93900
+  image_license: CC0
+  image_credit: Gift of Mary and Leigh Block in honor of John Maxon; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jean-honore-fragonard
+    role: creator
+  prominence: 4
+- key: self-portrait-frederic-bazille
+  name: Self-Portrait
+  kind: painting
+  made: 1865
+  made_end: 1866
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1962.336'
+  museum_url: https://www.artic.edu/artworks/110661
+  image_url: https://www.artic.edu/iiif/2/eb2cd58f-db63-0236-cebd-7ca8e63eda54/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/eb2cd58f-db63-0236-cebd-7ca8e63eda54/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/110661
+  image_license: CC0
+  image_credit: Purchased with funds provided by Mr. and Mrs. Frank H. Woods in memory of Mrs. Edward Harris Brewer; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: frederic-bazille
+    role: creator
+  prominence: 3
+- key: landscape-at-chailly-frederic-bazille
+  name: Landscape at Chailly
+  kind: painting
+  made: 1865
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1973.64'
+  museum_url: https://www.artic.edu/artworks/44017
+  image_url: https://www.artic.edu/iiif/2/c4648834-49dd-3589-6ac3-66d41fd574ef/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/c4648834-49dd-3589-6ac3-66d41fd574ef/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44017
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: frederic-bazille
+    role: creator
+  prominence: 3
+- key: chariot-race-jean-leon-gerome
+  name: Chariot Race
+  kind: painting
+  made: 1876
+  medium: Oil on cradled panel
+  museum: art-institute-of-chicago
+  accession: '1983.380'
+  museum_url: https://www.artic.edu/artworks/100350
+  image_url: https://www.artic.edu/iiif/2/e728fa6d-c643-2b68-133d-74770ded12ef/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/e728fa6d-c643-2b68-133d-74770ded12ef/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/100350
+  image_license: CC0
+  image_credit: George F. Harding Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: portrait-of-a-woman-jean-leon-gerome
+  name: Portrait of a Woman
+  kind: painting
+  made: 1851
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1964.338'
+  museum_url: https://www.artic.edu/artworks/20686
+  image_url: https://www.artic.edu/iiif/2/99c39143-a45c-5fa1-ddd3-0dae633fbb87/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/99c39143-a45c-5fa1-ddd3-0dae633fbb87/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/20686
+  image_license: CC0
+  image_credit: Purchased with funds provided by Silvain and Arma Wyler Foundation; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jean-leon-gerome
+    role: creator
+  prominence: 3
+- key: virgin-and-child-with-the-young-saint-john-the-b-antonio-da-correggio
+  name: Virgin and Child with the Young Saint John the Baptist
+  kind: painting
+  made: 1510
+  made_end: 1520
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1965.688'
+  museum_url: https://www.artic.edu/artworks/23972
+  image_url: https://www.artic.edu/iiif/2/d63b9402-c42b-cce3-aa63-6d213ad621cd/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/d63b9402-c42b-cce3-aa63-6d213ad621cd/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/23972
+  image_license: CC0
+  image_credit: Clyde M. Carr Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: antonio-da-correggio
+    role: creator
+  prominence: 4
+- key: in-the-sea-arnold-bocklin
+  name: In the Sea
+  kind: painting
+  made: 1883
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1990.443'
+  museum_url: https://www.artic.edu/artworks/110507
+  image_url: https://www.artic.edu/iiif/2/fa81bfb9-5a07-5e3c-33b4-4efde68981c8/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/fa81bfb9-5a07-5e3c-33b4-4efde68981c8/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/110507
+  image_license: CC0
+  image_credit: Joseph Winterbotham Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: arnold-bocklin
+    role: creator
+  prominence: 4
+- key: salome-with-the-head-of-saint-john-the-baptist-guido-reni
+  name: Salome with the Head of Saint John the Baptist
+  kind: painting
+  made: 1634
+  made_end: 1642
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1960.3'
+  museum_url: https://www.artic.edu/artworks/11434
+  image_url: https://www.artic.edu/iiif/2/8eccb189-92f3-353a-3337-c0778c2680d9/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8eccb189-92f3-353a-3337-c0778c2680d9/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/11434
+  image_license: CC0
+  image_credit: Louise B. and Frank H. Woods Purchase Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: guido-reni
+    role: creator
+  prominence: 4
+- key: still-life-with-a-green-flower-vase-paula-modersohn-becker
+  name: Still-Life with a Green Flower Vase
+  kind: painting
+  made: 1900
+  made_end: 1905
+  estimated: true
+  medium: Oil on brown wood pulp board, varnished
+  museum: art-institute-of-chicago
+  accession: '1962.317'
+  museum_url: https://www.artic.edu/artworks/14310
+  image_url: https://www.artic.edu/iiif/2/9678901a-7c1e-a9ed-aa9a-5b208fe9a80e/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/9678901a-7c1e-a9ed-aa9a-5b208fe9a80e/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/14310
+  image_license: CC0
+  image_credit: Worcester Sketch Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: paula-modersohn-becker
+    role: creator
+  prominence: 3
+- key: the-family-concert-jan-steen
+  name: The Family Concert
+  kind: painting
+  made: 1666
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1891.65'
+  museum_url: https://www.artic.edu/artworks/561
+  image_url: https://www.artic.edu/iiif/2/7f1ea423-7538-3bc7-3d4a-0766522ab62f/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/7f1ea423-7538-3bc7-3d4a-0766522ab62f/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/561
+  image_license: CC0
+  image_credit: Gift of Timothy B. Blackstone; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jan-steen
+    role: creator
+  prominence: 3
+- key: calf-s-head-and-ox-tongue-gustave-caillebotte
+  name: Calf's Head and Ox Tongue
+  kind: painting
+  made: 1877
+  made_end: 1887
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1999.561'
+  museum_url: https://www.artic.edu/artworks/154121
+  image_url: https://www.artic.edu/iiif/2/0274aa9e-95d1-2a8e-12e3-2b09d7749b4f/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0274aa9e-95d1-2a8e-12e3-2b09d7749b4f/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/154121
+  image_license: CC0
+  image_credit: Major Acquisitions Centennial Endowment; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: gustave-caillebotte
+    role: creator
+  prominence: 3
+- key: view-of-delphi-with-a-procession-claude-lorrain
+  name: View of Delphi with a Procession
+  kind: painting
+  made: 1673
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1941.1020'
+  museum_url: https://www.artic.edu/artworks/43145
+  image_url: https://www.artic.edu/iiif/2/2e7e28aa-a77b-c7f8-852b-708c1171f928/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/2e7e28aa-a77b-c7f8-852b-708c1171f928/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/43145
+  image_license: CC0
+  image_credit: Robert A. Waller Memorial Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: claude-lorrain
+    role: creator
+  prominence: 4
+- key: approaching-storm-eugene-boudin
+  name: Approaching Storm
+  kind: painting
+  made: 1864
+  medium: Oil on cradled panel
+  museum: art-institute-of-chicago
+  accession: '1938.1276'
+  museum_url: https://www.artic.edu/artworks/27764
+  image_url: https://www.artic.edu/iiif/2/04cb7292-b20b-b313-2c08-19e685b70e7e/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/04cb7292-b20b-b313-2c08-19e685b70e7e/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/27764
+  image_license: CC0
+  image_credit: Mr. and Mrs. Lewis Larned Coburn Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: la-touques-near-deauville-eugene-boudin
+  name: La Touques near Deauville
+  kind: painting
+  made: 1883
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1980.79'
+  museum_url: https://www.artic.edu/artworks/59823
+  image_url: https://www.artic.edu/iiif/2/8a55bdea-0087-deb5-01b2-def2d7ba27a8/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8a55bdea-0087-deb5-01b2-def2d7ba27a8/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/59823
+  image_license: CC0
+  image_credit: Gift of Frank H. and Louise B. Woods; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: washerwomen-at-the-edge-of-the-pond-eugene-boudin
+  name: Washerwomen at the Edge of the Pond
+  kind: painting
+  made: 1875
+  made_end: 1885
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1978.108'
+  museum_url: https://www.artic.edu/artworks/52180
+  image_url: https://www.artic.edu/iiif/2/30f72d2d-0771-981a-b5e7-5848513aeb42/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/30f72d2d-0771-981a-b5e7-5848513aeb42/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/52180
+  image_license: CC0
+  image_credit: Gift of William Hobson Green; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: eugene-boudin
+    role: creator
+  prominence: 3
+- key: hercules-and-the-lernaean-hydra-gustave-moreau
+  name: Hercules and the Lernaean Hydra
+  kind: painting
+  made: 1875
+  made_end: 1876
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1964.231'
+  museum_url: https://www.artic.edu/artworks/20579
+  image_url: https://www.artic.edu/iiif/2/2ae64c8a-266d-470a-a25a-c83127564636/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/2ae64c8a-266d-470a-a25a-c83127564636/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/20579
+  image_license: CC0
+  image_credit: Gift of Mrs. Eugene A. Davidson; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: gustave-moreau
+    role: creator
+  prominence: 4
+- key: the-shadow-of-death-william-holman-hunt
+  name: The Shadow of Death
+  kind: painting
+  made: 1873
+  made_end: 1874
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '2021.54'
+  museum_url: https://www.artic.edu/artworks/260424
+  image_url: https://www.artic.edu/iiif/2/8bf9b3a3-cb6f-3e13-f817-a3964dd5cb3c/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8bf9b3a3-cb6f-3e13-f817-a3964dd5cb3c/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/260424
+  image_license: CC0
+  image_credit: Joseph Winterbotham Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 3
+- key: mrs-potter-palmer-anders-zorn
+  name: Mrs. Potter Palmer
+  kind: painting
+  made: 1893
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1922.450'
+  museum_url: https://www.artic.edu/artworks/81576
+  image_url: https://www.artic.edu/iiif/2/6f3dc71a-683d-7ad6-e24a-a97c4877f30d/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/6f3dc71a-683d-7ad6-e24a-a97c4877f30d/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/81576
+  image_license: CC0
+  image_credit: Potter Palmer Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: anders-zorn
+    role: creator
+  prominence: 3
+- key: nude-girl-in-doorway-anders-zorn
+  name: Nude Girl in Doorway
+  kind: painting
+  made: 1895
+  made_end: 1905
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1945.176'
+  museum_url: https://www.artic.edu/artworks/53213
+  image_url: https://www.artic.edu/iiif/2/0f9304d9-e93d-7169-e1ab-48d3cc664dde/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0f9304d9-e93d-7169-e1ab-48d3cc664dde/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/53213
+  image_license: CC0
+  image_credit: Gift of Mrs. Chauncey McCormick and Mrs. Richard E. Danielson; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: anders-zorn
+    role: creator
+  prominence: 3
+- key: maria-sheldon-scammon-anders-zorn
+  name: Maria Sheldon Scammon
+  kind: painting
+  made: 1895
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1902.39'
+  museum_url: https://www.artic.edu/artworks/39652
+  image_url: https://www.artic.edu/iiif/2/8b49881c-2e3d-be54-bf70-c131d60c1c93/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8b49881c-2e3d-be54-bf70-c131d60c1c93/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/39652
+  image_license: CC0
+  image_credit: Bequest of Mrs. Jonathan Y. Scammon; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: anders-zorn
+    role: creator
+  prominence: 3
+- key: study-for-william-rush-carving-his-allegorical-f-thomas-eakins
+  name: Study for "William Rush Carving His Allegorical Figure of the Schuylkill River"
+  kind: painting
+  made: 1876
+  made_end: 1877
+  medium: Oil on canvas mounted on board
+  museum: art-institute-of-chicago
+  accession: '1968.91'
+  museum_url: https://www.artic.edu/artworks/28860
+  image_url: https://www.artic.edu/iiif/2/bb08408a-0650-380f-4f0f-c3f012d1113e/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/bb08408a-0650-380f-4f0f-c3f012d1113e/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/28860
+  image_license: CC0
+  image_credit: Bequest of Dr. John J. Ireland; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: portrait-of-mary-adeline-williams-thomas-eakins
+  name: Portrait of Mary Adeline Williams
+  kind: painting
+  made: 1899
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1939.548'
+  museum_url: https://www.artic.edu/artworks/31285
+  image_url: https://www.artic.edu/iiif/2/8cb9f5ea-c955-96fd-c2d6-c720b0dbf7d4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8cb9f5ea-c955-96fd-c2d6-c720b0dbf7d4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/31285
+  image_license: CC0
+  image_credit: Friends of American Art Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 4
+- key: riter-fitzgerald-thomas-eakins
+  name: Riter Fitzgerald
+  kind: painting
+  made: 1895
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1950.1511'
+  museum_url: https://www.artic.edu/artworks/72864
+  image_url: https://www.artic.edu/iiif/2/0ba00909-2927-68ce-5c4d-a7534d18c4f4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0ba00909-2927-68ce-5c4d-a7534d18c4f4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/72864
+  image_license: CC0
+  image_credit: Friends of American Art Collection; Goodman Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-eakins
+    role: creator
+  prominence: 3
+- key: ad-astra-akseli-gallen-kallela
+  name: Ad Astra
+  kind: painting
+  made: 1894
+  made_end: 1896
+  medium: Oil on canvas, in artist's painted and gilded wood shrine
+  museum: art-institute-of-chicago
+  accession: '2017.133'
+  museum_url: https://www.artic.edu/artworks/234877
+  image_url: https://www.artic.edu/iiif/2/585675bb-6b89-3c49-eb28-4bc4b2bbe500/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/585675bb-6b89-3c49-eb28-4bc4b2bbe500/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/234877
+  image_license: CC0
+  image_credit: The Lacy Armour Fund; Old Masters Society; European Painting General Sales Proceeds, Charles H. and Mary F. Worcester, Josephine and John Louis funds, through prior gift of Mrs. Gilbert
+    Chapman; European Painting Acquisition, Carol Rosenthal-Groeling, and Irving Lauf funds.; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: akseli-gallen-kallela
+    role: creator
+  prominence: 3
+- key: virgin-and-child-hans-memling
+  name: Virgin and Child
+  kind: painting
+  made: 1480
+  made_end: 1490
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1933.1050'
+  museum_url: https://www.artic.edu/artworks/16295
+  image_url: https://www.artic.edu/iiif/2/72083f93-6fe2-bfa8-b9a0-82e50c123015/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/72083f93-6fe2-bfa8-b9a0-82e50c123015/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/16295
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 3
+- key: portrait-of-a-donor-recto-saint-anthony-of-padua-hans-memling
+  name: Portrait of a Donor (recto); Saint Anthony of Padua (verso)
+  kind: painting
+  made: 1480
+  made_end: 1490
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1953.467'
+  museum_url: https://www.artic.edu/artworks/79777
+  image_url: https://www.artic.edu/iiif/2/0ce87c39-eb29-c888-95a8-e3394ed13c70/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0ce87c39-eb29-c888-95a8-e3394ed13c70/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/79777
+  image_license: CC0
+  image_credit: Gift of Arthur Sachs; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: hans-memling
+    role: creator
+  prominence: 3
+- key: cattle-at-rest-on-a-hillside-in-the-alps-rosa-bonheur
+  name: Cattle at Rest on a Hillside in the Alps
+  kind: painting
+  made: 1885
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1901.451'
+  museum_url: https://www.artic.edu/artworks/39542
+  image_url: https://www.artic.edu/iiif/2/efdd5540-5579-8761-fd1d-af318f65a0a6/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/efdd5540-5579-8761-fd1d-af318f65a0a6/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/39542
+  image_license: CC0
+  image_credit: A. A. Munger Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: study-for-the-horse-fair-rosa-bonheur
+  name: Study for The Horse Fair
+  kind: painting
+  made: 1845
+  made_end: 1855
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1977.3'
+  museum_url: https://www.artic.edu/artworks/93781
+  image_url: https://www.artic.edu/iiif/2/f5c621e6-755e-c2e7-e087-d0dae0ed9ea0/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/f5c621e6-755e-c2e7-e087-d0dae0ed9ea0/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/93781
+  image_license: CC0
+  image_credit: Gift of USY and T Industries, Inc.; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: rosa-bonheur
+    role: creator
+  prominence: 3
+- key: alessandro-de-medici-pontormo
+  name: Alessandro de' Medici
+  kind: painting
+  made: 1534
+  made_end: 1535
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1933.1002'
+  museum_url: https://www.artic.edu/artworks/110759
+  image_url: https://www.artic.edu/iiif/2/2b751a0e-a492-7fa9-749c-6667cdd1c928/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/2b751a0e-a492-7fa9-749c-6667cdd1c928/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/110759
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: pontormo
+    role: creator
+  prominence: 3
+- key: the-white-tablecloth-jean-simeon-chardin
+  name: The White Tablecloth
+  kind: painting
+  made: 1731
+  made_end: 1732
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1944.699'
+  museum_url: https://www.artic.edu/artworks/51577
+  image_url: https://www.artic.edu/iiif/2/7085f5ee-b5da-bd9f-e8f9-b692be466ea0/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/7085f5ee-b5da-bd9f-e8f9-b692be466ea0/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/51577
+  image_license: CC0
+  image_credit: Mr. and Mrs. Lewis Larned Coburn Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jean-simeon-chardin
+    role: creator
+  prominence: 3
+- key: portrait-of-cardinal-zelada-anton-raphael-mengs
+  name: Portrait of Cardinal Zelada
+  kind: painting
+  made: 1773
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1969.2'
+  museum_url: https://www.artic.edu/artworks/30899
+  image_url: https://www.artic.edu/iiif/2/e53b4972-30dc-5aed-1696-2b5778277d60/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/e53b4972-30dc-5aed-1696-2b5778277d60/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/30899
+  image_license: CC0
+  image_credit: Purchased with funds provided by Silvain and Arma Wyler Foundation; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: portrait-of-the-artist-s-father-ismael-mengs-anton-raphael-mengs
+  name: Portrait of the Artist's Father, Ismael Mengs
+  kind: painting
+  made: 1747
+  made_end: 1748
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1962.75'
+  museum_url: https://www.artic.edu/artworks/88372
+  image_url: https://www.artic.edu/iiif/2/707eaea7-b325-b93d-37c1-b79b1876384b/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/707eaea7-b325-b93d-37c1-b79b1876384b/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/88372
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Philip Pinsof; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: anton-raphael-mengs
+    role: creator
+  prominence: 3
+- key: the-marsh-charles-francois-daubigny
+  name: The Marsh
+  kind: painting
+  made: 1871
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1894.1044'
+  museum_url: https://www.artic.edu/artworks/880
+  image_url: https://www.artic.edu/iiif/2/0faa1fea-aaaa-83bf-8324-8b7f90266dd2/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0faa1fea-aaaa-83bf-8324-8b7f90266dd2/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/880
+  image_license: CC0
+  image_credit: Henry Field Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: house-of-mere-bazot-charles-francois-daubigny
+  name: House of Mère Bazot
+  kind: painting
+  made: 1874
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1922.405'
+  museum_url: https://www.artic.edu/artworks/81507
+  image_url: https://www.artic.edu/iiif/2/68e24e96-1f25-75cd-bb2c-232713f131a9/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/68e24e96-1f25-75cd-bb2c-232713f131a9/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/81507
+  image_license: CC0
+  image_credit: Potter Palmer Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: river-boat-charles-francois-daubigny
+  name: River Boat
+  kind: painting
+  made: 1855
+  made_end: 1865
+  estimated: true
+  medium: Oil on board
+  museum: art-institute-of-chicago
+  accession: '1968.89'
+  museum_url: https://www.artic.edu/artworks/28853
+  image_url: https://www.artic.edu/iiif/2/24f5a9ff-fe25-e1be-65f5-d65f2d509ad4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/24f5a9ff-fe25-e1be-65f5-d65f2d509ad4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/28853
+  image_license: CC0
+  image_credit: Bequest of Dr. John J. Ireland; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: charles-francois-daubigny
+    role: creator
+  prominence: 3
+- key: distant-view-of-niagara-falls-thomas-cole
+  name: Distant View of Niagara Falls
+  kind: painting
+  made: 1830
+  medium: Oil on wood panel
+  museum: art-institute-of-chicago
+  accession: '1946.396'
+  museum_url: https://www.artic.edu/artworks/90048
+  image_url: https://www.artic.edu/iiif/2/18092196-50ae-3ff1-9205-1b3110e966c3/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/18092196-50ae-3ff1-9205-1b3110e966c3/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/90048
+  image_license: CC0
+  image_credit: Friends of American Art Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 4
+- key: new-england-scenery-thomas-cole
+  name: New England Scenery
+  kind: painting
+  made: 1839
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1900.558'
+  museum_url: https://www.artic.edu/artworks/57163
+  image_url: https://www.artic.edu/iiif/2/99e276fd-f076-f396-b5c1-b22c3ce62b45/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/99e276fd-f076-f396-b5c1-b22c3ce62b45/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/57163
+  image_license: CC0
+  image_credit: Nickerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-cole
+    role: creator
+  prominence: 3
+- key: landscape-with-the-ruins-of-the-castle-of-egmond-jacob-van-ruisdael
+  name: Landscape with the Ruins of the Castle of Egmond
+  kind: painting
+  made: 1650
+  made_end: 1655
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1947.475'
+  museum_url: https://www.artic.edu/artworks/60755
+  image_url: https://www.artic.edu/iiif/2/12086520-2e48-cc75-df86-916bb801e61f/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/12086520-2e48-cc75-df86-916bb801e61f/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/60755
+  image_license: CC0
+  image_credit: Potter Palmer Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacob-van-ruisdael
+    role: creator
+  prominence: 4
+- key: landscape-theodore-rousseau
+  name: Landscape
+  kind: painting
+  made: 1845
+  made_end: 1855
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1894.1065'
+  museum_url: https://www.artic.edu/artworks/893
+  image_url: https://www.artic.edu/iiif/2/3527f037-a9b2-9253-1a92-dcd281b54340/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/3527f037-a9b2-9253-1a92-dcd281b54340/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/893
+  image_license: CC0
+  image_credit: Henry Field Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: springtime-theodore-rousseau
+  name: Springtime
+  kind: painting
+  made: 1855
+  made_end: 1865
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1894.1066'
+  museum_url: https://www.artic.edu/artworks/894
+  image_url: https://www.artic.edu/iiif/2/f5731565-80bd-6d4c-8790-d0c252d92bd4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/f5731565-80bd-6d4c-8790-d0c252d92bd4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/894
+  image_license: CC0
+  image_credit: Henry Field Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: view-of-saleve-near-geneva-theodore-rousseau
+  name: View of Saleve, near Geneva
+  kind: painting
+  made: 1834
+  medium: Oil on paper, mounted to canvas
+  museum: art-institute-of-chicago
+  accession: '2008.399'
+  museum_url: https://www.artic.edu/artworks/193926
+  image_url: https://www.artic.edu/iiif/2/b7e9650f-fe31-1206-ec54-8b2f019b8621/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/b7e9650f-fe31-1206-ec54-8b2f019b8621/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/193926
+  image_license: CC0
+  image_credit: Through prior gift of Henry Morgen, Ann G. Morgen, Meyer Wasser, and Ruth G. Wasser; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: theodore-rousseau
+    role: creator
+  prominence: 3
+- key: day-truth-ferdinand-hodler
+  name: Day (Truth)
+  kind: painting
+  made: 1896
+  made_end: 1898
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '2003.119'
+  museum_url: https://www.artic.edu/artworks/181460
+  image_url: https://www.artic.edu/iiif/2/ba6ef7ee-677c-0bcd-8150-ef7487f17a36/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ba6ef7ee-677c-0bcd-8150-ef7487f17a36/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/181460
+  image_license: CC0
+  image_credit: Gift of Joseph Winterbotham Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: ferdinand-hodler
+    role: creator
+  prominence: 3
+- key: james-vibert-sculptor-ferdinand-hodler
+  name: James Vibert, Sculptor
+  kind: painting
+  made: 1907
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1926.212'
+  museum_url: https://www.artic.edu/artworks/27962
+  image_url: https://www.artic.edu/iiif/2/caf7fb08-39ef-7bd8-b81a-181ee31cc324/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/caf7fb08-39ef-7bd8-b81a-181ee31cc324/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/27962
+  image_license: CC0
+  image_credit: Helen Birch Bartlett Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: ferdinand-hodler
+    role: creator
+  prominence: 3
+- key: the-red-room-etretat-felix-vallotton
+  name: The Red Room, Etretat
+  kind: painting
+  made: 1899
+  medium: Oil on artist's board
+  museum: art-institute-of-chicago
+  accession: '1977.606'
+  museum_url: https://www.artic.edu/artworks/94241
+  image_url: https://www.artic.edu/iiif/2/e4df4d4a-4cfb-5be8-3728-0d0bf1b44751/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/e4df4d4a-4cfb-5be8-3728-0d0bf1b44751/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/94241
+  image_license: CC0
+  image_credit: Bequest of Mrs. Clive Runnells; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+- key: edouard-manet-henri-fantin-latour
+  name: Édouard Manet
+  kind: painting
+  made: 1867
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1905.207'
+  museum_url: https://www.artic.edu/artworks/87467
+  image_url: https://www.artic.edu/iiif/2/dd4f9115-150c-2f1a-0f37-50899553d6b4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/dd4f9115-150c-2f1a-0f37-50899553d6b4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/87467
+  image_license: CC0
+  image_credit: Stickney Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: still-life-corner-of-a-table-henri-fantin-latour
+  name: 'Still Life: Corner of a Table'
+  kind: painting
+  made: 1873
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1951.226'
+  museum_url: https://www.artic.edu/artworks/75507
+  image_url: https://www.artic.edu/iiif/2/85d05bad-1205-6de5-e75c-ec9113a626ab/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/85d05bad-1205-6de5-e75c-ec9113a626ab/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/75507
+  image_license: CC0
+  image_credit: Ada Turnbull Hertle Endowment; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: still-life-with-flowers-henri-fantin-latour
+  name: Still Life with Flowers
+  kind: painting
+  made: 1881
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1988.260'
+  museum_url: https://www.artic.edu/artworks/72180
+  image_url: https://www.artic.edu/iiif/2/94245750-c169-eb03-673e-cd03f718f885/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/94245750-c169-eb03-673e-cd03f718f885/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/72180
+  image_license: CC0
+  image_credit: Gift of Mary and Leigh Block; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: rocks-at-the-lighthouse-biarritz-joaquin-sorolla
+  name: Rocks at the Lighthouse, Biarritz
+  kind: painting
+  made: 1906
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1986.1404'
+  museum_url: https://www.artic.edu/artworks/66144
+  image_url: https://www.artic.edu/iiif/2/0558d3c0-dd86-7d26-2e55-126c1470ca41/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0558d3c0-dd86-7d26-2e55-126c1470ca41/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/66144
+  image_license: CC0
+  image_credit: Bequest of Maribel G. Blum; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: joaquin-sorolla
+    role: creator
+  prominence: 3
+- key: bouquet-of-flowers-in-an-earthenware-vase-jan-brueghel-the-elder
+  name: Bouquet of Flowers in an Earthenware Vase
+  kind: painting
+  made: 1605
+  made_end: 1615
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1948.570'
+  museum_url: https://www.artic.edu/artworks/64029
+  image_url: https://www.artic.edu/iiif/2/599e0546-ed58-0224-a623-39a8e3b51ef8/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/599e0546-ed58-0224-a623-39a8e3b51ef8/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/64029
+  image_license: CC0
+  image_credit: Gift of Arthur Keating; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jan-brueghel-the-elder
+    role: creator
+  prominence: 3
+- key: the-entombment-guercino
+  name: The Entombment
+  kind: painting
+  made: 1656
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1956.128'
+  museum_url: https://www.artic.edu/artworks/86323
+  image_url: https://www.artic.edu/iiif/2/b30b708a-be47-c3cc-f3af-2a6798b7b088/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/b30b708a-be47-c3cc-f3af-2a6798b7b088/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/86323
+  image_license: CC0
+  image_credit: Wilson L. Mead Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: guercino
+    role: creator
+  prominence: 3
+- key: view-of-pirna-with-the-fortress-of-sonnenstein-bernardo-bellotto
+  name: View of Pirna with the Fortress of Sonnenstein
+  kind: painting
+  made: 1755
+  made_end: 1765
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1961.44'
+  museum_url: https://www.artic.edu/artworks/12895
+  image_url: https://www.artic.edu/iiif/2/ddd364dd-f791-ed27-4297-ea47fde36f12/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ddd364dd-f791-ed27-4297-ea47fde36f12/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/12895
+  image_license: CC0
+  image_credit: Clyde M. Carr Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: bernardo-bellotto
+    role: creator
+  prominence: 3
+- key: milton-dictating-to-his-daughter-henry-fuseli
+  name: Milton Dictating to His Daughter
+  kind: painting
+  made: 1793
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1973.303'
+  museum_url: https://www.artic.edu/artworks/44739
+  image_url: https://www.artic.edu/iiif/2/6006b9e7-567a-4fb8-34e2-a120886690fe/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/6006b9e7-567a-4fb8-34e2-a120886690fe/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44739
+  image_license: CC0
+  image_credit: Preston O. Morton Memorial Purchase Fund for Older Paintings; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: two-heads-of-damned-souls-from-dante-s-inferno-r-henry-fuseli
+  name: Two Heads of Damned Souls from Dante's "Inferno" (recto and verso)
+  kind: painting
+  made: 1770
+  made_end: 1778
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1992.1531'
+  museum_url: https://www.artic.edu/artworks/116101
+  image_url: https://www.artic.edu/iiif/2/e1e16ea4-4f55-e222-7f36-561eab6c68bd/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/e1e16ea4-4f55-e222-7f36-561eab6c68bd/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/116101
+  image_license: CC0
+  image_credit: The Leonora Hall Gurley Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: sketch-for-oath-on-the-rutli-recto-female-figure-henry-fuseli
+  name: Sketch for "Oath on the Rütli" (recto), Female Figure (verso)
+  kind: painting
+  made: 1779
+  made_end: 1790
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1980.170'
+  museum_url: https://www.artic.edu/artworks/59989
+  image_url: https://www.artic.edu/iiif/2/2838cff5-9ea3-0101-3f34-193d49416101/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/2838cff5-9ea3-0101-3f34-193d49416101/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/59989
+  image_license: CC0
+  image_credit: Anonymous gift; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: virgin-and-child-with-the-young-saint-john-the-b-piero-di-cosimo
+  name: Virgin and Child with the Young Saint John the Baptist, Saint Cecilia, and Angels
+  kind: painting
+  made: 1500
+  made_end: 1510
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '2007.77'
+  museum_url: https://www.artic.edu/artworks/188974
+  image_url: https://www.artic.edu/iiif/2/16d830b7-d681-6c88-379b-9585c655b6b7/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/16d830b7-d681-6c88-379b-9585c655b6b7/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/188974
+  image_license: CC0
+  image_credit: Lacy Armour Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: piero-di-cosimo
+    role: creator
+  prominence: 3
+- key: polycrates-crucifixion-salvator-rosa
+  name: Polycrates' Crucifixion
+  kind: painting
+  made: 1664
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1942.292'
+  museum_url: https://www.artic.edu/artworks/44829
+  image_url: https://www.artic.edu/iiif/2/118eacd7-3e92-a96d-7b0e-160eb0c0bf20/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/118eacd7-3e92-a96d-7b0e-160eb0c0bf20/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44829
+  image_license: CC0
+  image_credit: Wentworth Greene Field Memorial Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 3
+- key: polycrates-and-the-fisherman-salvator-rosa
+  name: Polycrates and the Fisherman
+  kind: painting
+  made: 1664
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1942.291'
+  museum_url: https://www.artic.edu/artworks/44826
+  image_url: https://www.artic.edu/iiif/2/26ec4ba5-0571-aded-9bbb-601973682b07/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/26ec4ba5-0571-aded-9bbb-601973682b07/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44826
+  image_license: CC0
+  image_credit: Wentworth Greene Field Memorial Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: salvator-rosa
+    role: creator
+  prominence: 3
+- key: the-herring-net-winslow-homer
+  name: The Herring Net
+  kind: painting
+  made: 1885
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1937.1039'
+  museum_url: https://www.artic.edu/artworks/25865
+  image_url: https://www.artic.edu/iiif/2/5dca7347-c6dc-24dd-d073-d705b9cdc575/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/5dca7347-c6dc-24dd-d073-d705b9cdc575/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/25865
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 4
+- key: croquet-scene-winslow-homer
+  name: Croquet Scene
+  kind: painting
+  made: 1866
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1942.35'
+  museum_url: https://www.artic.edu/artworks/44018
+  image_url: https://www.artic.edu/iiif/2/f7b2db45-f393-653c-07ef-84319b0cdb92/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/f7b2db45-f393-653c-07ef-84319b0cdb92/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44018
+  image_license: CC0
+  image_credit: Friends of American Art Collection; Goodman Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 4
+- key: mount-washington-winslow-homer
+  name: Mount Washington
+  kind: painting
+  made: 1869
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1951.313'
+  museum_url: https://www.artic.edu/artworks/75957
+  image_url: https://www.artic.edu/iiif/2/ad02b33a-4aac-03cc-88e4-7db2cc03b854/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ad02b33a-4aac-03cc-88e4-7db2cc03b854/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/75957
+  image_license: CC0
+  image_credit: Gift of Mrs. Richard E. Danielson and Mrs. Chauncey McCormick; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: winslow-homer
+    role: creator
+  prominence: 3
+- key: the-gulf-of-salerno-joseph-wright-of-derby
+  name: The Gulf of Salerno
+  kind: painting
+  made: 1783
+  made_end: 1785
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '2003.46'
+  museum_url: https://www.artic.edu/artworks/180711
+  image_url: https://www.artic.edu/iiif/2/67b46720-1589-0d13-3597-f03c7b618094/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/67b46720-1589-0d13-3597-f03c7b618094/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/180711
+  image_license: CC0
+  image_credit: L.L. and A.S. Coburn, Josephine and John I. Louis, Jr., and Alexander A. McKay Endowments; through prior acquisition of the Charles H. and Mary F.S. Worcester Endowment; Art Institute of
+    Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+- key: the-temptation-of-the-magdalene-jacob-jordaens
+  name: The Temptation of the Magdalene
+  kind: painting
+  made: 1611
+  made_end: 1622
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1991.111'
+  museum_url: https://www.artic.edu/artworks/111613
+  image_url: https://www.artic.edu/iiif/2/f3ca80bd-48a0-8922-989f-6ba3c308d8cc/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/f3ca80bd-48a0-8922-989f-6ba3c308d8cc/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/111613
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Collection; anonymous gift in honor of Kate and Morris Kaplan; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacob-jordaens
+    role: creator
+  prominence: 3
+- key: head-of-an-apostle-jacob-jordaens
+  name: Head of an Apostle
+  kind: painting
+  made: 1593
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1968.307'
+  museum_url: https://www.artic.edu/artworks/29403
+  image_url: https://www.artic.edu/iiif/2/da911441-2b80-1b9f-e471-2359ffa51301/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/da911441-2b80-1b9f-e471-2359ffa51301/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/29403
+  image_license: CC0
+  image_credit: Gift of Dr. and Mrs. Francis Straus in honor of Michael Straus; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacob-jordaens
+    role: creator
+  prominence: 3
+- key: view-of-cotopaxi-frederic-edwin-church
+  name: View of Cotopaxi
+  kind: painting
+  made: 1857
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1919.753'
+  museum_url: https://www.artic.edu/artworks/76571
+  image_url: https://www.artic.edu/iiif/2/33fc29fc-097b-576b-c9e6-c3352d9d3f15/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/33fc29fc-097b-576b-c9e6-c3352d9d3f15/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/76571
+  image_license: CC0
+  image_credit: Gift of Jennette Hamlin in memory of Mr. and Mrs. Louis Dana Webster; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: frederic-edwin-church
+    role: creator
+  prominence: 4
+- key: mountain-brook-albert-bierstadt
+  name: Mountain Brook
+  kind: painting
+  made: 1863
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1997.365'
+  museum_url: https://www.artic.edu/artworks/146701
+  image_url: https://www.artic.edu/iiif/2/d55b0cfc-0716-d6cd-3b38-5742903ce046/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/d55b0cfc-0716-d6cd-3b38-5742903ce046/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/146701
+  image_license: CC0
+  image_credit: Purchased with funds provided by Mrs. Herbert A. Vance; fund of an anonymous donor; Wesley M. Dixon Jr. Fund and Endowment; Henry Horner Straus and Mr. and Mrs. Frederick G. Wacker Jr. endowment
+    funds; through prior acquisitions of various donors, including Samuel P. Avery Endowment, Mrs. George A. Carpenter, Frederick S. Colburn, Mr. and Mrs. Stanley Feinberg, Field Museum of Natural History,
+    Mr. and Mrs. Frank Harding, International Minerals and Chemicals Corp., Mr. and Mrs. Ralph Loeff, Mrs. Frank C. Miller, Mahlan D. Moulds, Mrs. Clive Runnells, Mr. and Mrs. Stanley Stone, and the Charles
+    H. and Mary F.S. Worcester Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: albert-bierstadt
+    role: creator
+  prominence: 4
+- key: christ-on-the-cross-with-mary-magdalene-simon-vouet
+  name: Christ on the Cross with Mary Magdalene
+  kind: painting
+  made: 1640
+  made_end: 1650
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1978.423'
+  museum_url: https://www.artic.edu/artworks/53061
+  image_url: https://www.artic.edu/iiif/2/8f22ca73-94f1-a426-6656-8ab825657c25/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/8f22ca73-94f1-a426-6656-8ab825657c25/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/53061
+  image_license: CC0
+  image_credit: Purchased with funds provided by the Harold T. Martin Trust; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: simon-vouet
+    role: creator
+  prominence: 3
+- key: fishing-boats-off-an-estuary-jan-van-goyen
+  name: Fishing Boats off an Estuary
+  kind: painting
+  made: 1633
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1933.1078'
+  museum_url: https://www.artic.edu/artworks/16370
+  image_url: https://www.artic.edu/iiif/2/fc76abe6-5252-a690-dd1c-6e2480c0ffbb/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/fc76abe6-5252-a690-dd1c-6e2480c0ffbb/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/16370
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jan-van-goyen
+    role: creator
+  prominence: 3
+- key: the-grand-canal-venice-francesco-guardi
+  name: The Grand Canal, Venice
+  kind: painting
+  made: 1755
+  made_end: 1765
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1951.21'
+  museum_url: https://www.artic.edu/artworks/111074
+  image_url: https://www.artic.edu/iiif/2/f23f8a3b-66b8-9061-811c-c65dd0a32ebd/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/f23f8a3b-66b8-9061-811c-c65dd0a32ebd/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/111074
+  image_license: CC0
+  image_credit: Wirt D. Walker Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: the-garden-of-palazzo-contarini-dal-zaffo-francesco-guardi
+  name: The Garden of Palazzo Contarini dal Zaffo
+  kind: painting
+  made: 1775
+  made_end: 1785
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1991.112'
+  museum_url: https://www.artic.edu/artworks/111610
+  image_url: https://www.artic.edu/iiif/2/b553d1fe-da1f-dd9e-ff0f-c36fc22aac0e/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/b553d1fe-da1f-dd9e-ff0f-c36fc22aac0e/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/111610
+  image_license: CC0
+  image_credit: Gift of Marion and Max Ascoli Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 4
+- key: ruined-archway-francesco-guardi
+  name: Ruined Archway
+  kind: painting
+  made: 1775
+  made_end: 1793
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1933.1080'
+  museum_url: https://www.artic.edu/artworks/16376
+  image_url: https://www.artic.edu/iiif/2/5070bb97-208f-6aa5-777b-e58d8e0c8802/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/5070bb97-208f-6aa5-777b-e58d8e0c8802/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/16376
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: francesco-guardi
+    role: creator
+  prominence: 3
+- key: landscape-window-overlooking-the-woods-edouard-vuillard
+  name: 'Landscape: Window Overlooking the Woods'
+  kind: painting
+  made: 1899
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1981.77'
+  museum_url: https://www.artic.edu/artworks/109926
+  image_url: https://www.artic.edu/iiif/2/a1dc6109-6e0c-7801-ebe8-8c95fec2c4e4/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/a1dc6109-6e0c-7801-ebe8-8c95fec2c4e4/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/109926
+  image_license: CC0
+  image_credit: L.L. and A.S. Coburn Fund, Martha E. Leverone, Charles Norton Owen funds, and purchased with funds provided by an anonymous donor; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 4
+- key: a-view-of-vianen-with-a-herdsman-and-cattle-by-a-aelbert-cuyp
+  name: A View of Vianen with a Herdsman and Cattle by a River
+  kind: painting
+  made: 1638
+  made_end: 1650
+  estimated: true
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '2003.169'
+  museum_url: https://www.artic.edu/artworks/181702
+  image_url: https://www.artic.edu/iiif/2/571dac0d-3f2e-3463-814a-e56951bbe722/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/571dac0d-3f2e-3463-814a-e56951bbe722/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/181702
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Fund; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: aelbert-cuyp
+    role: creator
+  prominence: 3
+- key: the-bird-catcher-thomas-couture
+  name: The Bird Catcher
+  kind: painting
+  made: 1852
+  made_end: 1862
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1942.49'
+  museum_url: https://www.artic.edu/artworks/44063
+  image_url: https://www.artic.edu/iiif/2/0fa92b0d-fc6d-529c-8afa-bba21f3e1fae/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0fa92b0d-fc6d-529c-8afa-bba21f3e1fae/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/44063
+  image_license: CC0
+  image_credit: Mr. and Mrs. Lewis Larned Coburn Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-couture
+    role: creator
+  prominence: 3
+- key: rest-on-the-flight-into-egypt-recto-madonna-of-t-federico-barocci
+  name: Rest on the Flight into Egypt (recto); Madonna of the Rosary (verso)
+  kind: painting
+  made: 1700
+  medium: Oil paint (recto) and pen and black ink with off-set blue oil paint (verso) on tan laid paper
+  museum: art-institute-of-chicago
+  accession: 1993.248.237
+  museum_url: https://www.artic.edu/artworks/115025
+  image_url: https://www.artic.edu/iiif/2/0efeac3d-0605-ca9e-ecad-8a8218290245/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0efeac3d-0605-ca9e-ecad-8a8218290245/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/115025
+  image_license: CC0
+  image_credit: The Leonora Hall Gurley Memorial Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: federico-barocci
+    role: creator
+  prominence: 3
+- key: two-cows-and-a-young-bull-beside-a-fence-in-a-me-paulus-potter
+  name: Two Cows and a Young Bull beside a Fence in a Meadow
+  kind: painting
+  made: 1647
+  medium: Oil on panel
+  museum: art-institute-of-chicago
+  accession: '1997.336'
+  museum_url: https://www.artic.edu/artworks/146953
+  image_url: https://www.artic.edu/iiif/2/5de78980-17d7-8fb5-83de-7b2ae4e997f2/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/5de78980-17d7-8fb5-83de-7b2ae4e997f2/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/146953
+  image_license: CC0
+  image_credit: In loving memory of Harold T. Martin from Eloise W. Martin, wife, and Joyce Martin Brown, daughter; Charles H. and Mary F. S. Worcester Collection; Lacy Armour Endowment; through prior gift
+    of Frank H. and Louise B. Woods; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: paulus-potter
+    role: creator
+  prominence: 4
+- key: the-sacred-grove-beloved-of-the-arts-and-the-mus-pierre-puvis-de-chavannes
+  name: The Sacred Grove, Beloved of the Arts and the Muses
+  kind: painting
+  made: 1884
+  made_end: 1889
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1922.445'
+  museum_url: https://www.artic.edu/artworks/81566
+  image_url: https://www.artic.edu/iiif/2/94bfb508-31cc-7c9f-63a9-5478c826129a/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/94bfb508-31cc-7c9f-63a9-5478c826129a/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/81566
+  image_license: CC0
+  image_credit: Potter Palmer Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: the-fisherman-s-family-pierre-puvis-de-chavannes
+  name: The Fisherman's Family
+  kind: painting
+  made: 1887
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1915.227'
+  museum_url: https://www.artic.edu/artworks/71191
+  image_url: https://www.artic.edu/iiif/2/ce26526c-dcc1-8967-05f8-bf74fa8d7eb8/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ce26526c-dcc1-8967-05f8-bf74fa8d7eb8/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/71191
+  image_license: CC0
+  image_credit: Mr. and Mrs. Martin A. Ryerson Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: in-the-heather-pierre-puvis-de-chavannes
+  name: In the Heather
+  kind: painting
+  made: 1896
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1968.304'
+  museum_url: https://www.artic.edu/artworks/29395
+  image_url: https://www.artic.edu/iiif/2/33883e44-383d-3da8-6464-e4053e0e5613/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/33883e44-383d-3da8-6464-e4053e0e5613/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/29395
+  image_license: CC0
+  image_credit: Bequest of Katharine Dexter McCormick; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: pierre-puvis-de-chavannes
+    role: creator
+  prominence: 3
+- key: diana-and-actaeon-jacopo-bassano
+  name: Diana and Actaeon
+  kind: painting
+  made: 1580
+  made_end: 1590
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1939.2239'
+  museum_url: https://www.artic.edu/artworks/110782
+  image_url: https://www.artic.edu/iiif/2/7ee5e05c-9dfa-ef87-2dd9-2696da7dbc74/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/7ee5e05c-9dfa-ef87-2dd9-2696da7dbc74/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/110782
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacopo-bassano
+    role: creator
+  prominence: 3
+- key: virgin-and-child-with-the-young-saint-john-the-b-jacopo-bassano
+  name: Virgin and Child with the Young Saint John the Baptist
+  kind: painting
+  made: 1560
+  made_end: 1565
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1968.320'
+  museum_url: https://www.artic.edu/artworks/109323
+  image_url: https://www.artic.edu/iiif/2/5c9cfee1-4287-1494-dcf6-4a967c734a44/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/5c9cfee1-4287-1494-dcf6-4a967c734a44/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/109323
+  image_license: CC0
+  image_credit: Wilson L. Mead Fund Income; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacopo-bassano
+    role: creator
+  prominence: 3
+- key: annunciation-to-the-shepherds-jacopo-bassano
+  name: Annunciation to the Shepherds
+  kind: painting
+  made: 1705
+  made_end: 1715
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1935.297'
+  museum_url: https://www.artic.edu/artworks/109220
+  image_url: https://www.artic.edu/iiif/2/ec272cba-5f5c-dcc1-00e3-00dfdb042a52/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ec272cba-5f5c-dcc1-00e3-00dfdb042a52/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/109220
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: jacopo-bassano
+    role: creator
+  prominence: 3
+- key: isabella-wolff-thomas-lawrence
+  name: Isabella Wolff
+  kind: painting
+  made: 1803
+  made_end: 1815
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1922.4461'
+  museum_url: https://www.artic.edu/artworks/4773
+  image_url: https://www.artic.edu/iiif/2/0052fc88-353e-db97-8741-b6b5ec6fb354/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/0052fc88-353e-db97-8741-b6b5ec6fb354/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/4773
+  image_license: CC0
+  image_credit: Mr. and Mrs. W. W. Kimball Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 4
+- key: anna-maria-dashwood-later-marchioness-of-ely-thomas-lawrence
+  name: Anna Maria Dashwood, later Marchioness of Ely
+  kind: painting
+  made: 1800
+  made_end: 1810
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1951.199'
+  museum_url: https://www.artic.edu/artworks/75374
+  image_url: https://www.artic.edu/iiif/2/998550bc-1f55-c835-dc2f-50cafa9f9e71/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/998550bc-1f55-c835-dc2f-50cafa9f9e71/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/75374
+  image_license: CC0
+  image_credit: Gift of Alice H. Brown; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: portrait-of-the-honorable-george-canning-m-p-thomas-lawrence
+  name: Portrait of the Honorable George Canning, M.P.
+  kind: painting
+  made: 1817
+  made_end: 1827
+  estimated: true
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1974.389'
+  museum_url: https://www.artic.edu/artworks/47588
+  image_url: https://www.artic.edu/iiif/2/ff77b16c-b8d7-00fe-abc5-d8290f7b26eb/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/ff77b16c-b8d7-00fe-abc5-d8290f7b26eb/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/47588
+  image_license: CC0
+  image_credit: Gift of Mr. and Mrs. Denison B. Hull; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: portrait-of-the-maistre-sisters-antoine-jean-gros
+  name: Portrait of the Maistre Sisters
+  kind: painting
+  made: 1796
+  medium: Oil on canvas
+  museum: art-institute-of-chicago
+  accession: '1990.110'
+  museum_url: https://www.artic.edu/artworks/76212
+  image_url: https://www.artic.edu/iiif/2/b325af1e-bfb6-7125-ba57-cf32e1838d29/full/843,/0/default.jpg
+  image_thumb: https://www.artic.edu/iiif/2/b325af1e-bfb6-7125-ba57-cf32e1838d29/full/400,/0/default.jpg
+  image_page: https://www.artic.edu/artworks/76212
+  image_license: CC0
+  image_credit: Charles H. and Mary F. S. Worcester Collection; Art Institute of Chicago, Open Access
+  sources:
+  - aic-api
+  people:
+  - person: antoine-jean-gros
+    role: creator
+  prominence: 3
