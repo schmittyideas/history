@@ -70,8 +70,8 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => getAll(t).catch(() => []);
-      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places] = await Promise.all(
-        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places"].map(optional));
+      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links] = await Promise.all(
+        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links"].map(optional));
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -137,7 +137,9 @@ function indexData(raw) {
     sourcesFor: (type, key) => {
       const byId = Object.fromEntries((raw.sources || []).map(s => [s.id, s]));
       return (raw.source_links || []).filter(l => l.record_type === type && l.record_key === key).map(l => byId[l.source_id]).filter(Boolean);
-    } };
+    },
+    // Where a record has an entry in another database (sql/015): the entertainment database for a film, and so on.
+    externalFor: (type, key) => (raw.external_links || []).filter(l => l.record_type === type && l.record_key === key) };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -875,6 +877,7 @@ function select(id) {
     ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(isOffice(p) ? "Held an office" : "Held a title", p), isOffice(p) ? " Offices" : " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
       title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
       text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
+    ...externalRow("person", p.key),
     ["Sources", sourceLinks(db.sourcesFor("person", p.key))],
     ["Obsidian note", obsidianLink(p.obsidian_link)],
   ];
@@ -899,6 +902,7 @@ function selectEvent(id) {
      ["Directed by", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person)), "Unknown")],
      ["Filmed at", joinNodes(e.placeIds.map(pid => db.placeById[pid]).filter(Boolean).map(pl => placeLink(pl)), "None linked")],
      ...(e.note ? [["Note", e.note]] : []),
+     ...externalRow("artwork", e.key),
      ["Sources", sourceLinks(db.sourcesFor("artwork", e.key))]]
       .forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
     box.append(h("div", { class: "kind", style: "color:var(--madder)", text: "Film" }), h("h2", { text: e.name }), dl);
@@ -911,6 +915,7 @@ function selectEvent(id) {
    ["Where", place ? placeLink(place, place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
    ["People", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")],
    ["Visit today", e.visitable_today ? (e.visit_site || "Yes") : "No"],
+   ...externalRow("event", e.key),
    ["Sources", sourceLinks(db.sourcesFor("event", e.key))],
    ["Obsidian note", obsidianLink(e.obsidian_link)]]
     .forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
@@ -939,7 +944,9 @@ function selectPlace(id) {
     ["Events here", joinNodes(events.map(e => eventLink(e, e.start_year != null ? ` (${fmtYear(e.start_year)})` : "")), "None linked")],
     ...(films.length ? [["Films shot here", joinNodes(films.map(e => eventLink(e, ` (${fmtYear(e.start_year)})`)))]] : []),
     ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
+    ...nearbyRows(pl),
     ...(pl.note ? [["Note", pl.note]] : []),
+    ...externalRow("place", pl.key),
     ["Sources", sourceLinks(db.sourcesFor("place", pl.key))],
     ["Obsidian note", obsidianLink(pl.obsidian_link)],
   ];
@@ -971,6 +978,43 @@ function wikiFor(p) {
 function wikiLink(p) {
   const s = wikiFor(p);
   return s ? h("a", { class: "wiki", href: s.url, target: "_blank", rel: "noopener", title: s.title, "aria-label": `${p.name} on Wikipedia`, text: "Wikipedia ↗" }) : null;
+}
+
+// Links out to a record's entries in other databases, as one panel row ("Elsewhere"), or no row when there are none.
+const SYSTEM_LABEL = { entertainment: "Entertainment database", imdb: "IMDb", tmdb: "TMDB", wikidata: "Wikidata", restaurants: "Restaurants and bars" };
+function externalRow(type, key) {
+  const links = S.db.externalFor(type, key);
+  if (!links.length) return [];
+  return [["Elsewhere", joinNodes(links.map(l => {
+    const label = l.label || (SYSTEM_LABEL[l.system] || cap(l.system)) + (l.external_id && !l.url ? `: ${l.external_id}` : "");
+    return l.url ? h("a", { class: "ext", href: l.url, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
+  }))]];
+}
+
+// Places within walking distance of a place (straight-line km), nearest first, and the important things
+// that happened at them: so a venue panel shows what else is around it.
+const NEARBY_KM = 1.5;
+function kmBetween(a, b) {
+  const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLng / 2) ** 2;
+  return 6371 * 2 * Math.asin(Math.sqrt(x));
+}
+function nearbyRows(pl) {
+  if (pl.lat == null || pl.lng == null) return [];
+  const db = S.db;
+  // Areas (a city, a district, an island) have a centre point, not a spot, so they don't count as "nearby".
+  const AREA = /^(city|town|village|hamlet|township|borough|district|neighbourhood|county|region|island|strait|country)$/i;
+  const near = db.places.filter(o => o.id !== pl.id && o.lat != null && o.lng != null && !AREA.test(o.kind || ""))
+    .map(o => ({ o, km: kmBetween(pl, o) })).filter(x => x.km <= NEARBY_KM).sort((a, b) => a.km - b.km);
+  if (!near.length) return [];
+  const fmtKm = km => km < 1 ? `${Math.round(km * 10) * 100} m` : `${km.toFixed(1)} km`;
+  const big = near.flatMap(x => db.eventsAt(x.o.id).filter(e => (e.prominence ?? 3) >= 4 && !e.film).map(e => ({ e, pl: x.o })))
+    .filter((v, i, a) => a.findIndex(w => w.e.id === v.e.id) === i)
+    .sort((a, b) => (b.e.prominence ?? 3) - (a.e.prominence ?? 3) || byYear(a.e.start_year, b.e.start_year)).slice(0, 6);
+  return [
+    ["Nearby", joinNodes(near.slice(0, 8).map(x => placeLink(x.o, ` (${fmtKm(x.km)})`)))],
+    ...(big.length ? [["Big events nearby", joinNodes(big.map(x => eventLink(x.e, ` (${fmtYear(x.e.start_year)}, ${x.pl.name})`)))]] : []),
+  ];
 }
 
 function sourceLinks(sources) {

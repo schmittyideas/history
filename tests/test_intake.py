@@ -19,7 +19,7 @@ class FakeDB:
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
                   "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": [],
-                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": []}
+                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": [], "external_links": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -303,5 +303,28 @@ def test_discrepancies_are_stored_and_surfaced():
     plan5 = intake.plan_files(intake.World(db), first)
     assert any("run sql/005" in e for e in plan5.errors)
 
+def test_external_links():
+    db = FakeDB(snapshot()); world = intake.World(db)
+    doc = {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+           "artworks": [{"key": "die-hard-1988", "name": "Die Hard", "kind": "film", "sources": ["s"],
+                         "external": [{"system": "entertainment", "id": "tt0095016", "url": "https://example.org/tt0095016"}]}]}
+    plan = intake.plan_files(world, [("a.yaml", doc)])
+    assert not plan.errors, plan.errors
+    assert plan.adds["external"] == ["artwork die-hard-1988 → entertainment"]
+    intake.apply_files(world, [("a.yaml", doc)], log=lambda m: None)
+    rows = db.t["external_links"]
+    assert len(rows) == 1 and rows[0]["record_type"] == "artwork" and rows[0]["external_id"] == "tt0095016"
+    # Re-sending updates the one link instead of adding a second.
+    doc["artworks"][0]["external"][0]["url"] = "https://example.org/new"
+    world = intake.World(db)
+    plan = intake.plan_files(world, [("a.yaml", doc)])
+    assert plan.updates["external"] == ["artwork die-hard-1988 → entertainment"]
+    intake.apply_files(world, [("a.yaml", doc)], log=lambda m: None)
+    assert len(db.t["external_links"]) == 1 and db.t["external_links"][0]["url"] == "https://example.org/new"
+    bad = {"batch": {"title": "t"}, "places": [{"key": "p", "name": "P", "lat": 1, "lng": 1,
+           "external": [{"system": "restaurants"}, {"id": "x"}, {"system": "a", "id": "1"}, {"system": "a", "id": "2"}]}]}
+    errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
+    assert sum("needs `system` and an `id` or `url`" in e for e in errs) == 2 and any("`a` listed twice" in e for e in errs)
+
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); print("\nALL TESTS PASSED")

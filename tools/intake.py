@@ -134,14 +134,15 @@ def as_list(v):
 
 @dataclass
 class Plan:
-    adds: dict = field(default_factory=lambda: {k: [] for k in SECTIONS})
-    updates: dict = field(default_factory=lambda: {k: [] for k in SECTIONS})
+    adds: dict = field(default_factory=lambda: {k: [] for k in PLAN_GROUPS})
+    updates: dict = field(default_factory=lambda: {k: [] for k in PLAN_GROUPS})
     errors: list = field(default_factory=list)
     warnings: list = field(default_factory=list)
     open_discrepancies: list = field(default_factory=list)   # (record label, discrepancy) for records this batch touches
 
 
 SECTIONS = ["sources", "places", "realms", "people", "events", "museums", "artworks", "links", "moments", "titles", "discrepancies", "log"]
+PLAN_GROUPS = SECTIONS + ["external"]   # the preview also lists external links, which live on records, not in a section
 REGIONS = ("Western Europe", "Northern Europe", "Eastern Europe", "Middle East and North Africa", "Sub-Saharan Africa",
            "Central Asia", "South Asia", "East Asia", "Southeast Asia", "Americas", "Oceania")  # matches sql/008's check
 DATA_ACCESS = ("open-api", "open-data-download", "website-only", "no-access", "unknown")
@@ -151,6 +152,7 @@ MUSEUM_FIELDS = {"name": "name", "kind": "kind", "address": "address", "city": "
                  "data_licence": "data_licence", "data_notes": "data_notes", "place": "place_key", "obsidian_link": "obsidian_link", "note": "note"}
 COVERAGE = ("not-read", "partly", "complete")
 ABOUT_KINDS = ("person", "place", "event", "artwork")
+EXTERNAL_KINDS = (("person", "people"), ("place", "places"), ("event", "events"), ("artwork", "artworks"), ("museum", "museums"))
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
                  "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note",
@@ -221,6 +223,10 @@ class World:
             self.realms = {r["key"]: r for r in db.select("realms", "id,key,name,region")}
         except RuntimeError:  # sql/008 not run yet
             self.realms = None
+        try:
+            self.external = db.select("external_links", "id,record_type,record_key,system,external_id,url,label,note")
+        except RuntimeError:  # sql/015 not run yet
+            self.external = None
 
 
 # --------------------------------------------------------------------------- planning
@@ -413,6 +419,25 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.warnings.append(f"{where}: image without `image_license` and `image_page` (where the licence and author can be checked)")
             check_sources(x, where, require=k not in (world.artworks or {}))
 
+        # `external`: links from a record to its entry in another database (the entertainment database, later
+        # restaurants and bars). Each needs a `system` and an `id` or a `url`; one link per record and system.
+        for kind, sect in EXTERNAL_KINDS:
+            for x in as_list(d.get(sect)):
+                ext = as_list(x.get("external"))
+                if ext and world.external is None:
+                    p.errors.append(f"{kind} `{x.get('key')}`: `external` needs the external_links table (sql/015)")
+                    continue
+                systems = [e.get("system") for e in ext if isinstance(e, dict)]
+                for e in ext:
+                    if not isinstance(e, dict) or not e.get("system") or not (e.get("id") or e.get("url")):
+                        p.errors.append(f"{kind} `{x.get('key')}` external: every entry needs `system` and an `id` or `url`")
+                for sname in {sn for sn in systems if systems.count(sn) > 1}:
+                    p.errors.append(f"{kind} `{x.get('key')}` external: `{sname}` listed twice (one link per system)")
+                for e in ext:
+                    if isinstance(e, dict) and e.get("system"):
+                        have = any(r["record_type"] == kind and r["record_key"] == x.get("key") and r["system"] == e["system"] for r in world.external or [])
+                        (p.updates if have else p.adds)["external"].append(f"{kind} {x.get('key')} → {e['system']}")
+
         for x in as_list(d.get("links")):
             kind = next((kk for kk in LINK_KINDS if kk in x), None)
             if not kind:
@@ -555,7 +580,7 @@ def render(plan: Plan, files) -> str:
     out = ["## Intake preview", "", "Files: " + ", ".join(f"`{f}`" for f in files), ""]
     labels = {"sources": "Sources", "places": "Places", "people": "People", "events": "Events", "museums": "Museums", "artworks": "Artworks",
               "links": "Relationships", "moments": "Life moments", "titles": "Titles and reigns", "realms": "Realms", "discrepancies": "Discrepancies (sources disagree)",
-              "log": "Learning log (private)"}
+              "log": "Learning log (private)", "external": "Links to other databases"}
     total_add = sum(len(v) for v in plan.adds.values()); total_upd = sum(len(v) for v in plan.updates.values())
     out.append(f"**{total_add} to add, {total_upd} to update.** Nothing is deleted.")
     out.append("")
@@ -574,7 +599,7 @@ def render(plan: Plan, files) -> str:
             if disc.get("note"):
                 out.append(f"  - Note: {disc['note']}")
         out.append("")
-    for s in SECTIONS:
+    for s in PLAN_GROUPS:
         a, u = plan.adds[s], plan.updates[s]
         if not a and not u:
             continue
@@ -735,6 +760,17 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
         for kind, sect in (("place", "places"), ("person", "people"), ("event", "events"), ("artwork", "artworks"), ("museum", "museums")):
             for x in as_list(d.get(sect)):
                 link_sources(kind, x["key"], x.get("sources"))
+    for _, d in docs:
+        for kind, sect in EXTERNAL_KINDS:
+            for x in as_list(d.get(sect)):
+                for e in as_list(x.get("external")):
+                    row = {"external_id": e.get("id"), "url": e.get("url"), "label": e.get("label"), "note": e.get("note")}
+                    have = next((r for r in world.external if r["record_type"] == kind and r["record_key"] == x["key"] and r["system"] == e["system"]), None)
+                    if have:
+                        db.update("external_links", {"id": have["id"]}, row)
+                    else:
+                        world.external.append(db.insert("external_links", {"record_type": kind, "record_key": x["key"], "system": e["system"], **row}))
+                        log(f"linked {kind} {x['key']} to {e['system']}")
     for _, d in docs:
         for x in as_list(d.get("discrepancies")):
             row = {"question": x["question"], "about": as_list(x.get("about")), "field": x.get("field"),
