@@ -1,0 +1,752 @@
+batch:
+  title: "The world in 1300: rulers of the main states"
+  requested: "One ruler for each major state on the Year-view map at 1300 (snapshot-year batch of the build-out), with a few dated events of 1285-1315"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp6 directory; wp2 for Philip IV of France); nothing was fetched. Line 1-3 of every file was checked; all 29 plan articles were present and were the right article, none is a disambiguation page. Headings that differ from the plan title: Haakon_V_of_Norway is "Haakon V" (key haakon-v-of-norway), Stefan_Milutin is "Stefan Milutin" (Stefan Uros II Milutin, key stefan-milutin-of-serbia), Theodore_Svetoslav is "Theodore Svetoslav of Bulgaria" (key theodore-svetoslav-of-bulgaria), David_VIII_of_Georgia is "David VIII" (key david-viii-of-georgia), Ram_Khamhaeng is "Ramkhamhaeng" (key ramkhamhaeng), Kertarajasa_Jayawardhana is "Raden Wijaya" (key raden-wijaya; regnal name Kertarajasa Jayawardhana), Birger,_King_of_Sweden is "Birger, King of Sweden" (key birger-of-sweden), and the Pandya king's file is wp6/Maravarman_Kulasekara_Pandyan_I.txt (key maravarman-kulasekara-pandyan-i). Long articles (Ghazan, Al-Nasir Muhammad, Muhammad II of Granada, Denis, Charles II of Naples) were read selectively: lead, rise, reign, wars with the neighbours named here, death; their family sections and long detail were not worked through.
+# - New realms (14): Grand Duchy of Lithuania, Grand Duchy of Moscow, Serbia, Empire of Trebizond, Emirate of Granada, Marinid Sultanate, Ilkhanate, Golden Horde, Chagatai Khanate, Mamluk Sultanate, Pandya dynasty, Ethiopian Empire, Sukhothai Kingdom, Majapahit. Aragon and Navarre come from inbox/2026-10-11-world-1100.yaml and Armenian Kingdom of Cilicia from inbox/2026-10-11-world-1200.yaml (referenced, never redefined), so those two batches must be applied first. Bulgaria, Georgia, Khmer Empire, Sicily, Naples, Barcelona, Venice, Bohemia, Poland and the other Western realms already exist. The place acre is defined in the 1200 batch and only referenced here; anagni, budapest, lisbon, naples, barcelona, palermo, oslo, cairo, venice and moscow already exist in earlier batches (moscow and others from the painters batches).
+# - Title wording differs from the plan in two places, because the plan wording is not the person's actual rank: Stefan Milutin is "King of Serbia" (the plan said "Ruler of Serbia"; his article calls him King of Serbia 1282-1321), and Daniel of Moscow is "Prince of Moscow" (the plan said "Grand Prince of Moscow"; his article says he never became grand prince of Vladimir and calls him Prince of Moscow, forefather of the Moscow princes). Realm for both is as in the plan. Alexios II is "Emperor of Trebizond", Hethum II "King of Armenia" (realm Armenian Kingdom of Cilicia, as in the 1200 batch), David VIII "King of Georgia" (the article says mepe, king), Muhammad II "Emir of Granada" and al-Nasir Muhammad "Mamluk Sultan", all as in the plan.
+# - Title rows NOT entered (extra titles or no stated start): James II of Aragon as King of Sicily (his article dates it 1285 in the lead and 1286 in the body) and King of Majorca 1291-1295 and Sardinia; Wenceslaus II as Duke of Cracow (1291); Andrew III as King of Croatia (lead only says Hungary and Croatia 1290-1301); Haakon V as Duke of Norway (from 1273); Charles II as Count of Provence, Prince of Achaea and the like; Frederick III as regent of Sicily 1291-1295; Ramkhamhaeng's elder brother Ban Mueang and Muhammad II's relatives. Toqta's death and Vytenis's death are only "c." in their articles, so those title ends are marked estimated; Indravarman III's end 1308 is the lead's range and the article gives no death date or place, so he has no died field. Nothing in the plan had to be dropped.
+# - Dates given as year because the article gives no day or only a month: Abu Yaqub Yusuf (accession March 1286), Al-Nasir Muhammad's first reign (installed December 1293), the Serrata del Maggior Consiglio (February 1297), the Treaty of Caltabellotta (August 1302), Haakon V (1299), Denis (1279), Pietro Gradenigo (1289), Birger (1290). Charles II's title starts 1285 (his father's death on 7 January 1285; he was a prisoner and his realms were run by regents until 1288; Nicholas IV crowned him at Rieti on Whit Sunday 1289, a day the article does not number), so the row uses the lead's year.
+# - Moment years are integers only (checked). Several people have no born/died place because the article gives none (Birger, Ghazan, Toqta, Duwa, Pietro Gradenigo's grave on Murano, Go-Fushimi's tomb in Fushimi-ku).
+# - Discrepancies recorded below (12): James II's birth, James II's death day, Wenceslaus II's Polish kingship (1296 or 1300), Frederick III's coronation (1295 or 1296), the date of the Treaty of Anagni (10 or 12 June 1295), when Toqta beat Nogai (1296, 1299 or 1300), Theodore Svetoslav's accession (1299 or 1300), Vytenis's death (c. 1315 or c. 1316), David VIII's accession (1292 or 1293), Maravarman Kulasekara's death (1308 or 1310), Ramkhamhaeng's death (1298 or shortly before 1318), Raden Wijaya's accession (1292 or 1293). Seen and not entered (a range inside one article, a calendar point, or not about a record here): Alexios II's birth "Sept./Dec. 1282" (entered as 1282), Muhammad II's birth "1235 or 1236" (entered 1235, estimated), the Marinid siege of Tarifa "1293 (or 1294)" (Abu Yaqub's article) against "1294" (Muhammad II's article), the Wadi al-Khazandar day "23 or 24 December 1299", Hethum's alleged visit to Jerusalem in 1300 (the article says historians disagree and it is not entered), the Marj al-Saffar fighting (Hethum's article: 21 April 1303; Al-Nasir's: arrived 20 April, three days of fighting; Ghazan's: April 1303), Al-Nasir's mother and the Muhammad II poisoning allegation, Ramkhamhaeng's ceramics and alphabet claims.
+# - Events: 11 new events (Fall of Acre 1291, Treaty of Anagni 1295, Ghazan's conversion 1295, Treaty of Alcanices 1297, Serrata del Maggior Consiglio 1297, Wadi al-Khazandar 1299, Toqta beats Nogai 1300, Treaty of Caltabellotta 1302, Marj al-Saffar 1303, founding of Majapahit 1293, coronation of Andrew III 1290) and 1 link-only update to an existing event (sicilian-vespers-1282, in inbox/2026-10-08-france-capetians-valois.yaml). The Aragonese Crusade (aragonese-crusade-1285) and the Battle of the Golden Spurs (battle-of-the-golden-spurs-1302) were looked at and not linked: none of the 29 articles names a person here as taking part in them. Bapheus is in the Ottoman batch. The Fall of Acre has no people linked: its leader, the Mamluk sultan al-Ashraf Khalil, is not a record here and Hethum II and Gradenigo are only mentioned in connection with it.
+# - ADD title rows for existing persons: philip-iv-of-france gets "King of Navarre" 1284-1305 (his wp2 article's lead: "King of Navarre and Count of Champagne as Philip I from 1284 to 1305"; the marriage with Joan I of Navarre was on 16 August 1284). The source wp-philip-iv-of-france is repeated below with the same key and URL as in 2026-10-08-france-capetians-valois.yaml (a plain upsert). Wenceslaus II also gets a Poland row (King of Poland from 1300, see discrepancy).
+# - Coordinates are general knowledge (2-3 decimals); Danilov Monastery, Odivelas, Caltabellotta and Anazarbus are approximate points. Alhambra is a new key (no earlier batch defines it). Obsidian: no links. Images: none.
+
+sources:
+  - {key: wp-emperor-go-fushimi,             title: "Emperor Go-Fushimi (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Emperor_Go-Fushimi"}
+  - {key: wp-andrew-iii-of-hungary,          title: "Andrew III of Hungary (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Andrew_III_of_Hungary"}
+  - {key: wp-wenceslaus-ii-of-bohemia,       title: "Wenceslaus II of Bohemia (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Wenceslaus_II_of_Bohemia"}
+  - {key: wp-eric-vi-of-denmark,             title: "Eric VI of Denmark (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Eric_VI_of_Denmark"}
+  - {key: wp-haakon-v-of-norway,             title: "Haakon V (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Haakon_V"}
+  - {key: wp-birger-of-sweden,               title: "Birger, King of Sweden (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Birger%2C_King_of_Sweden"}
+  - {key: wp-james-ii-of-aragon,             title: "James II of Aragon (Wikipedia)",             url: "https://en.wikipedia.org/wiki/James_II_of_Aragon"}
+  - {key: wp-denis-of-portugal,              title: "Denis of Portugal (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Denis_of_Portugal"}
+  - {key: wp-charles-ii-of-naples,           title: "Charles II of Naples (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Charles_II_of_Naples"}
+  - {key: wp-frederick-iii-of-sicily,        title: "Frederick III of Sicily (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Frederick_III_of_Sicily"}
+  - {key: wp-pietro-gradenigo,               title: "Pietro Gradenigo (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Pietro_Gradenigo"}
+  - {key: wp-vytenis,                        title: "Vytenis (Wikipedia)",                        url: "https://en.wikipedia.org/wiki/Vytenis"}
+  - {key: wp-daniel-of-moscow,               title: "Daniel of Moscow (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Daniel_of_Moscow"}
+  - {key: wp-stefan-milutin-of-serbia,       title: "Stefan Milutin (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Stefan_Milutin"}
+  - {key: wp-theodore-svetoslav-of-bulgaria, title: "Theodore Svetoslav of Bulgaria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodore_Svetoslav_of_Bulgaria"}
+  - {key: wp-alexios-ii-of-trebizond,        title: "Alexios II of Trebizond (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Alexios_II_of_Trebizond"}
+  - {key: wp-muhammad-ii-of-granada,         title: "Muhammad II of Granada (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Muhammad_II_of_Granada"}
+  - {key: wp-abu-yaqub-yusuf-an-nasr,        title: "Abu Yaqub Yusuf an-Nasr (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Abu_Yaqub_Yusuf_an-Nasr"}
+  - {key: wp-ghazan,                         title: "Ghazan (Wikipedia)",                         url: "https://en.wikipedia.org/wiki/Ghazan"}
+  - {key: wp-toqta,                          title: "Toqta (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Toqta"}
+  - {key: wp-duwa,                           title: "Duwa (Wikipedia)",                           url: "https://en.wikipedia.org/wiki/Duwa"}
+  - {key: wp-al-nasir-muhammad,              title: "Al-Nasir Muhammad (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Al-Nasir_Muhammad"}
+  - {key: wp-maravarman-kulasekara-pandyan-i, title: "Maravarman Kulasekara Pandyan I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Maravarman_Kulasekara_Pandyan_I"}
+  - {key: wp-wedem-arad,                     title: "Wedem Arad (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Wedem_Arad"}
+  - {key: wp-hethum-ii,                      title: "Hethum II (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Hethum_II"}
+  - {key: wp-david-viii-of-georgia,          title: "David VIII (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/David_VIII"}
+  - {key: wp-indravarman-iii,                title: "Indravarman III (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Indravarman_III"}
+  - {key: wp-ramkhamhaeng,                   title: "Ramkhamhaeng (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Ramkhamhaeng"}
+  - {key: wp-raden-wijaya,                   title: "Raden Wijaya (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Raden_Wijaya"}
+  - {key: wp-philip-iv-of-france,            title: "Philip IV of France (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Philip_IV_of_France"}
+
+realms:
+  - {name: Grand Duchy of Lithuania, region: Eastern Europe,              country: Lithuania, note: "Vytenis's article calls him Grand Duke of Lithuania, c. 1295 to c. 1316"}
+  - {name: Grand Duchy of Moscow,    region: Eastern Europe,              country: Russia,    note: "Daniel of Moscow, youngest son of Alexander Nevsky, is the forefather of the Moscow princes (his article)"}
+  - {name: Serbia,                   region: Eastern Europe,              country: Serbia,    note: "Kingdom of the Nemanjic dynasty; Skopje was Milutin's capital"}
+  - {name: Empire of Trebizond,      region: Middle East and North Africa, country: Turkey,    note: "Greek empire on the Black Sea coast, ruled by the Megas Komnenos line"}
+  - {name: Emirate of Granada,       region: Western Europe,              country: Spain,     note: "Nasrid emirate in Al-Andalus; Muhammad II was the second Nasrid ruler"}
+  - {name: Marinid Sultanate,        region: Middle East and North Africa, country: Morocco,   note: "Berber dynasty of Morocco; its Marinid rulers are called sultans in Abu Yaqub's article"}
+  - {name: Ilkhanate,                region: Middle East and North Africa, country: Iran,      note: "Mongol state based in modern-day Iran; Ghazan was its seventh ruler"}
+  - {name: Golden Horde,             region: Eastern Europe,              country: Russia,    note: "Mongol khanate of the western steppe; capital Sarai"}
+  - {name: Chagatai Khanate,         region: Central Asia,                country: Uzbekistan, note: "Mongol khanate in Central Asia; Duwa was its longest-reigning khan"}
+  - {name: Mamluk Sultanate,         region: Middle East and North Africa, country: Egypt,     note: "Sultanate of Egypt and Syria; al-Nasir Muhammad belonged to the Bahri dynasty"}
+  - {name: Pandya dynasty,           region: South Asia,                  country: India,     note: "Second Pandyan empire in the Tamil country, at its height under Kulasekara Pandyan I"}
+  - {name: Ethiopian Empire,         region: Sub-Saharan Africa,          country: Ethiopia,   note: "Solomonic dynasty; Wedem Arad was its emperor 1299-1314"}
+  - {name: Sukhothai Kingdom,        region: Southeast Asia,              country: Thailand,  note: "Kingdom of the Phra Ruang dynasty; Ramkhamhaeng was its third king"}
+  - {name: Majapahit,                region: Southeast Asia,              country: Indonesia, note: "Javanese empire founded by Raden Wijaya in 1293"}
+
+people:
+  - key: emperor-go-fushimi
+    name: Emperor Go-Fushimi
+    type: Royalty
+    realm: Japan
+    born: 1288-04-05
+    died: 1336-05-17
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "93rd emperor of Japan, eldest son of Emperor Fushimi (Jimyoin line), named crown prince in 1289. Fushimi abdicated on 30 August 1298 and Go-Fushimi acceded on 17 November 1298, when the era name changed to Shoan. On 1 November 1299 the Chan master Yishan Yining arrived in Kamakura as the last Mongol envoy. Abdicated on 2 March 1301 'due to rally of the Daikakuji Line'; his younger brother became Emperor Hanazono in 1308. He acted as cloistered emperor 1313-1318, wrote a plea to the Kamo Shrine to win the throne for his son, and Koogon, the first northern-court emperor, followed 33 years after his abdication. Enshrined at Fukakusa no kita no misasagi, Fushimi-ku, Kyoto."
+    sources: [wp-emperor-go-fushimi]
+  - key: andrew-iii-of-hungary
+    name: Andrew III of Hungary
+    type: Royalty
+    realm: Hungary
+    house: Arpad
+    born: 1265
+    born_estimated: true
+    died: 1301-01-14
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Andrew the Venetian, King of Hungary and Croatia 1290-1301, last male of the House of Arpad. Grew up in Venice, came to Hungary in 1278 and 1290, was held by Albert of Austria in Vienna, and escaped after Ladislaus IV's murder on 10 July 1290; crowned by Archbishop Lodomer at Szekesfehervar on 23 July 1290 after issuing the first coronation diploma by a Hungarian king. Made peace with Albert at Hainburg on 26 August 1291; faced the pretender Charles Martel (son of Mary of Hungary and Charles II of Naples), constant revolts by the Koszegis and the Csaks, and in 1300 Charles Robert's landing at Split. Died in Buda Castle on 14 January 1301, buried in the Franciscan church in Buda; the Arpad dynasty ended with him."
+    sources: [wp-andrew-iii-of-hungary]
+  - key: wenceslaus-ii-of-bohemia
+    name: Wenceslaus II of Bohemia
+    type: Royalty
+    realm: Bohemia
+    house: Premyslid
+    born: 1271-09-27
+    died: 1305-06-21
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Bohemia 1278-1305, Duke of Cracow from 1291 and King of Poland, only surviving son of Ottokar II (killed at Marchfeld, 26 August 1278). Governed by Otto V of Brandenburg and then by his stepfather Zavis of Falkenstein until he had Zavis beheaded in 1290. Married Judith of Habsburg on 24 January 1285 and Elisabeth Richeza of Poland in 1303. Silver found at Kutna Hora in 1298 made him a royal monopoly and the Prague groschen; issued the mining code Ius regale montanorum in 1300; founded Plzen in 1295. Accepted the crown of Hungary for his son (crowned Wenceslaus III at Szekesfehervar on 27 August 1301), took son and crown back to Bohemia in 1304. Died of probable tuberculosis."
+    sources: [wp-wenceslaus-ii-of-bohemia]
+  - key: eric-vi-of-denmark
+    name: Eric VI of Denmark
+    type: Royalty
+    realm: Denmark
+    born: 1274
+    died: 1319-11-13
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eric Menved, King of Denmark 1286-1319. Became king at 12 when his father Eric V was murdered on 22 November 1286; his mother ruled for him until 1294. The murder trial at Nyborg (1287) exiled Marsk Stig Andersen Hvide, who raided Denmark from Norway. Imprisoned Archbishop Jens Grand in 1294, and Denmark lay under papal interdict for years until he humbled himself in 1302. Married Ingeborg of Sweden in June 1296, sister of Birger. Fought in Germany and Sweden, loved tournaments, and left the kingdom bankrupt and mortgaged (Funen in 1317, Skane); peasants rose against him in 1313. Succeeded by his brother Christopher II."
+    sources: [wp-eric-vi-of-denmark]
+  - key: haakon-v-of-norway
+    name: Haakon V of Norway
+    type: Royalty
+    realm: Norway
+    born: 1270-04-10
+    died: 1319-05-08
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Haakon Magnusson, King of Norway 1299-1319, younger son of Magnus IV, Duke of Norway from 1273 and successor to his brother Eric II. Last king of the House of Sverre in the male line. Strengthened royal power against the magnates, raised Akershus and Bohus fortresses and let Oslo take over from Bergen as the capital; made peace with Denmark in 1309. Married Euphemia of Rugen in early 1299; his daughter Ingeborg married Duke Eric of Sweden in 1312, and her son Magnus Eriksson succeeded him. Buried in St Mary's church, Oslo; remains thought to be his and Euphemia's were reburied at Akershus."
+    sources: [wp-haakon-v-of-norway]
+  - key: birger-of-sweden
+    name: Birger of Sweden
+    type: Royalty
+    realm: Sweden
+    born: 1280
+    born_estimated: true
+    died: 1321
+    died_estimated: true
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Birger Magnusson, King of Sweden 1290-1318, son of Magnus Ladulas; crowned at Soderkoping in 1302 after marrying Martha of Denmark. His regent Torkel Knutsson led the 1293 crusade that won part of western Karelia. His brothers Dukes Erik and Valdemar seized him at the Hatuna games in 1306, released him in 1308 under humiliating terms; in 1317 Birger captured them at the Nyköping Banquet and they died in captivity, and he was deposed and fled to Denmark in 1318. His son Magnus was executed in 1320. Died in Denmark 'after 31 May 1321'."
+    sources: [wp-birger-of-sweden]
+  - key: james-ii-of-aragon
+    name: James II of Aragon
+    type: Royalty
+    realm: Aragon
+    born: 1267-04-10
+    died: 1327
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "James the Just, born at Valencia, second son of Peter III of Aragon and Constance II of Sicily. King of Sicily as James I from 1285/86, then King of Aragon and Valencia and Count of Barcelona from 1291 on his brother Alfonso III's death, and King of Majorca 1291-1295. By the Treaty of Anagni (1295) he gave Sicily up to the papacy, but the Sicilians crowned his brother Frederick III; Boniface VIII invested him with Sardinia and Corsica (which he conquered only in 1324) and named him papal standard-bearer in 1296. Took Murcia in 1296 (held it to 1304); the Treaty of Argilers (1298) made the king of Majorca his vassal. Married Blanche of Anjou, daughter of Charles II of Naples, in 1295. Wrote an Occitan dansa. Birth and death days are given in several forms (see discrepancies)."
+    sources: [wp-james-ii-of-aragon]
+  - key: denis-of-portugal
+    name: Denis of Portugal
+    type: Royalty
+    realm: Portugal
+    born: 1261-10-09
+    died: 1325-01-07
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Denis the Farmer King and the Poet King, born in Lisbon, King of Portugal 1279-1325. Made Portuguese the language of law and state (1290), founded the first university in Portugal (Estudo Geral, signed at Leiria on 3 March 1290; charter 15 February 1309), approved the Bolsa de Comercio on 10 May 1293, planted the Pinhal de Leiria, made the first commercial agreement with England (1308) and created the Order of Christ (1319). The Treaty of Alcanices with Castile (1297) fixed the present border. Married Elizabeth of Aragon (later a saint) in 1282; fought his heir Afonso in the civil war of 1322-1324. Wrote 137 surviving troubadour songs. Died at Santarem, buried at the Monastery of Saint Denis, Odivelas."
+    sources: [wp-denis-of-portugal]
+  - key: charles-ii-of-naples
+    name: Charles II of Naples
+    type: Royalty
+    realm: Naples
+    born: 1254
+    died: 1309-05-05
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Charles the Lame, son of Charles I of Anjou. Regent of the mainland Regno from 1283 after the Sicilian Vespers (30 March 1282), captured by Roger of Lauria's fleet off Naples on 5 June 1284 and held at Cefalu; his father died on 7 January 1285. Released under the Treaty of Canfranc (October 1288) after Edward I of England's mediation; crowned king by Nicholas IV at Rieti on Whit Sunday 1289. Treaties of Senlis (19 May 1290) and Brignoles (19 February 1291); Treaty of Anagni (1295); gave up Sicily by the Treaty of Caltabellotta (1302). Also Count of Provence and Forcalquier, Prince of Achaea 1285-1289, claimant of Jerusalem and Hungary (for his wife Mary and son Charles Martel). Father of fourteen children including Robert the Wise, who succeeded him. Died in Naples."
+    sources: [wp-charles-ii-of-naples]
+  - key: frederick-iii-of-sicily
+    name: Frederick III of Sicily
+    type: Royalty
+    realm: Sicily
+    born: 1272-12-13
+    died: 1337-06-25
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Third son of Peter III of Aragon, born in Barcelona; regent of Sicily 1291-1295 for his brother James II, then king, a rare medieval monarch who used a regnal number. Refused the Treaty of Anagni, and was crowned by the nobles at Palermo (1295 or 1296, see discrepancy). Won the war against the Angevins (Falconara 1299, Philip of Taranto taken prisoner) and was recognised king of Trinacria for life by the Treaty of Caltabellotta (August 1302), marrying Eleanor of Anjou in 1303. Reformed the administration (Constitutiones regales). Renewed war in 1313 as an ally of Henry VII; excommunicated and the island under interdict from 1321. Died at Paterno, succeeded by his son Peter II."
+    sources: [wp-frederick-iii-of-sicily]
+  - key: pietro-gradenigo
+    name: Pietro Gradenigo
+    type: Nobility
+    realm: Venice
+    born: 1251
+    died: 1311-08-13
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "49th Doge of Venice, 1289-1311, elected while podesta of Capodistria. Venice lost Acre to the Mamluks in 1291; the war with Genoa from 1294 (Curzola, 1298) ended in peace in 1299. Responsible for the Serrata del Maggior Consiglio of February 1297, which closed the Great Council to the descendants of earlier members. The war with the Papacy over Ferrara (1308) brought excommunication of Venice on 27 March 1309 and Bajamonte Tiepolo's failed coup on 15 June 1310, which led to the Council of Ten. Died on 13 August 1311; under interdict he was buried in an unmarked grave on Murano."
+    sources: [wp-pietro-gradenigo]
+  - key: vytenis
+    name: Vytenis
+    type: Royalty
+    realm: Grand Duchy of Lithuania
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Grand Duke of Lithuania from c. 1295 to c. 1315/1316, the first Gediminid to hold the throne for long. First mentioned in 1292 at the Battle of Trojanow. Backed Boleslaus II of Masovia in Poland's succession disputes and took Pinsk and Turov in Ruthenia. Allied with Riga in 1297 and beat the Livonian Order at Turaida, killing the Land Master Bruno; eleven raids into Prussia in 1298-1313; annexed Polatsk c. 1307. His reign saw some 20 Teutonic raids into Samogitia, the loss of Dynaburg (1313) and the founding of the Metropolitanate of Lithuania c. 1316. Last seen at the siege of Christmemel in September 1315; died without a heir and his brother Gediminas succeeded. Birth date not given."
+    sources: [wp-vytenis]
+  - key: daniel-of-moscow
+    name: Daniel of Moscow
+    type: Royalty
+    realm: Grand Duchy of Moscow
+    born: 1261
+    died: 1303-03-05
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Daniil Aleksandrovich, youngest son of Alexander Nevsky, born at Vladimir in late 1261; forefather of all princes of Moscow. Received Moscow as the least valuable inheritance and ruled under his uncle Yaroslav of Tver as regent until 1271; independent only from 1282. Founded the first Moscow monasteries (Danilov, Epiphany) and the first stone church in the Kremlin. In the struggles for Vladimir he allied with Mikhail of Tver and Ivan of Pereslavl against Andrey of Gorodets (1296, 1298), took Kolomna from the prince of Ryazan in 1301 and inherited Pereslavl-Zalessky in 1302. Never became grand prince of Vladimir. Became a monk and was buried at the Danilov Monastery; canonised locally in 1791."
+    sources: [wp-daniel-of-moscow]
+  - key: stefan-milutin-of-serbia
+    name: Stefan Uros II Milutin
+    type: Royalty
+    realm: Serbia
+    house: Nemanjic
+    born: 1253
+    born_estimated: true
+    died: 1321-10-29
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "The Holy King, King of Serbia 1282-1321, youngest son of Stefan Uros I; took the throne when his brother Dragutin abdicated in 1282, aged about 29. Conquered northern Macedonia and Skopje (his capital), northern Albania and Durres (1284; Durres again in 1296); peace with Byzantium in 1299 left him the lands as the dowry of Simonis, daughter of Andronikos II. Founded Novo Brdo, the silver-mining centre that made Serbia rich. Feuded with Dragutin until 1316, rebelled against by his son Stefan Decanski in 1314 (who returned in 1321 and succeeded him). Founded or rebuilt many churches and monasteries, among them Our Lady of Ljevis in Prizren and Banjska. Mentioned in Dante's Divine Comedy for copying Venetian coins. Remains now rest at St Nedelya Church, Sofia."
+    sources: [wp-stefan-milutin-of-serbia]
+  - key: theodore-svetoslav-of-bulgaria
+    name: Theodore Svetoslav of Bulgaria
+    type: Royalty
+    realm: Bulgaria
+    died: 1322
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Tsar of Bulgaria 1300-1322, son of George Terter I, raised as a hostage in Nicaea and then exiled among the Golden Horde (his sister married Chaka, son of Nogai). Came back in 1298 or 1299 with Chaka, then plotted against him and had him strangled in 1300, sending the head to Toqta, who withdrew his army. Beat the pretenders backed by Andronikos II (about 1301-1302), took the Thracian fortresses of Mesembria, Anchialos, Sozopolis and Agathopolis in 1304, and after the Byzantine defeat at Skafida made peace in 1307, marrying Theodora Palaiologina, daughter of Michael IX. Executed Patriarch Joachim III. Died in early 1322, succeeded by George Terter II. Birth date unknown."
+    sources: [wp-theodore-svetoslav-of-bulgaria]
+  - key: alexios-ii-of-trebizond
+    name: Alexios II of Trebizond
+    type: Royalty
+    realm: Empire of Trebizond
+    house: Komnenos
+    born: 1282
+    died: 1330-05-03
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Alexios II Megas Komnenos, Emperor of Trebizond 1297-1330, who took the throne at 14 and under whom the empire reached its peak of prosperity. Married Djiadjak Jaqeli, daughter of the Georgian atabeg Beka I, about 1300 against his uncle Andronikos II's wishes. Beat a Turkoman invasion in 1301 or 1302 and fortified Kerasous; fought the Genoese in 1306 (peace treaties 1314 and 1316) and gave Venice trading privileges in 1319; built the harbour sea walls in 1324. Patron of the astronomer Gregory Chioniades. Died of bubonic plague on 3 May 1330; his son Andronikos III succeeded."
+    sources: [wp-alexios-ii-of-trebizond]
+  - key: muhammad-ii-of-granada
+    name: Muhammad II of Granada
+    type: Royalty
+    realm: Emirate of Granada
+    house: Nasrid
+    born: 1235
+    born_estimated: true
+    died: 1302-04-08
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Muhammad al-Faqih, second Nasrid ruler of Granada, born in 633 AH (1235 or 1236). Took the throne on the death of his father Muhammad I on 22 January 1273 and held it for 29 years. Balanced Castile and the Marinids, beat the Banu Ashqilula, regained Malaga in 1279, helped Sancho IV take Tarifa in October 1292 only to be cheated of it, and turned back to the Marinids (Tangier, 24 October 1293). In 1295 handed Algeciras and Ronda back; exploited Castile's minority (Iznalloz, 1295); allied with James II of Aragon (Zaragoza, 1301). Organised the Nasrid state: royal protocol, chancery, the Volunteers of the Faith and the fortress chain on the frontier; expanded the Alhambra; made a trade treaty with Genoa on 18 April 1279. Died on 8 April 1302 (8 Shaban 701 AH), succeeded by Muhammad III."
+    sources: [wp-muhammad-ii-of-granada]
+  - key: abu-yaqub-yusuf-an-nasr
+    name: Abu Yaqub Yusuf an-Nasr
+    type: Royalty
+    realm: Marinid Sultanate
+    died: 1307-05-13
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Marinid sultan of Morocco, son of Abu Yusuf Yaqub whom he succeeded in March 1286. Ceded his Spanish holdings to Granada save Algeciras, Tarifa and Ronda, lost Tarifa to Sancho IV in October 1292 and failed to retake it (1293 or 1294); handed Algeciras and Ronda to Granada in 1295. Spent his last twelve years besieging Tlemcen from May 1299, from the siege city al-Mahalla al-Mansura, with nothing to show for it. Assassinated in the camp by a eunuch over a harem affair in May 1307 (the lead gives 13 May); his son or grandson Abu Thabit Amir succeeded and lifted the siege. Birth date not given."
+    sources: [wp-abu-yaqub-yusuf-an-nasr]
+  - key: ghazan
+    name: Ghazan
+    type: Royalty
+    realm: Ilkhanate
+    born: 1271-11-05
+    died: 1304-05-11
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Mahmud Ghazan, seventh Ilkhan 1295-1304, son of Arghun, great-grandson of Hulegu, born at Abaskun on 5 November 1271 and raised an Eastern Christian. Converted to Sunni Islam on 16 June 1295 to win the support of Nawruz against Baydu, whom he had executed at Tabriz on 4 October 1295, marking a turning point for the Mongol religion in West Asia. Reformed currency and taxation. Invaded Syria in October 1299 and beat the Mamluks at Wadi al-Khazandar (23 or 24 December 1299, with Hethum II) and took Damascus; his army lost at Marj al-Saffar in April 1303, the last major Mongol invasion of Syria. Unsuccessful diplomacy with Europe and the Pope. Named his brother Oljaitu heir and died on 11 May 1304 near Qazvin."
+    sources: [wp-ghazan]
+  - key: toqta
+    name: Toqta
+    type: Royalty
+    realm: Golden Horde
+    died: 1312
+    died_estimated: true
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Tokhta, khan of the Golden Horde 1291-1312, son of Mengu-Timur and great-grandson of Batu. Put on the throne by Nogai, whom he challenged in 1297 and beat in 1299 or 1300 (see discrepancy). Sent his brother Tudan with Andrey of Gorodets against Dmitry of Pereslavl in 1293, which devastated fourteen Russian towns. Received the head of Nogai's son Chaka from Theodore Svetoslav of Bulgaria. Quarrelled with the Ilkhan Ghazan over Azerbaijan and Arran; accepted the nominal overlordship of the Yuan emperor Temur in 1304; besieged the Genoese at Caffa in 1307-1308. Married Maria Palaiologina, daughter of Andronikos II, in 1297. The last non-Muslim khan of the Horde; died in 1312 while preparing a campaign against Rus'. Birth date not given."
+    sources: [wp-toqta]
+  - key: duwa
+    name: Duwa
+    type: Royalty
+    realm: Chagatai Khanate
+    died: 1307
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Khan of the Chagatai Khanate 1282-1307, second son of Baraq and its longest-reigning khan. Appointed by Kaidu in 1282; invaded the Ilkhanate through Khurasan and Mazandaran in 1295; fought the Yuan garrisons (1298) and was wounded in 1301. After Kaidu died, put Kaidu's son Chapar on the throne (1303) and helped bring about the general peace of the Mongol states about 1304, ending the Kaidu-Kublai war. Then turned on Chapar with Yuan help (1305-1306), forced his surrender and deposed him in 1307. Accepted the nominal supremacy of the Yuan emperor; succeeded by his son Konchek. Birth date not given."
+    sources: [wp-duwa]
+  - key: al-nasir-muhammad
+    name: Al-Nasir Muhammad
+    type: Royalty
+    realm: Mamluk Sultanate
+    house: Bahri
+    born: 1285
+    died: 1341
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ninth Mamluk sultan of the Bahri dynasty, son of Qalawun, born in the Citadel at Cairo. Reigned three times: 1293-1294 (a child installed after al-Ashraf Khalil's assassination in December 1293, ruled by the regent Kitbugha), 1299-1309 (recalled from Karak, ruled by the emirs Salar and Baibars al-Jashnakir) and 1310-1341. His army lost to Ghazan at Wadi al-Khazandar in 1299, but he and the emirs defeated Qutlugh-Shah's Mongols at Marj al-Saffar in April 1303. Raided Cilician Armenia in 1301 and 1304 and took Arwad in 1302. After the emirs forced him out in 1309 he went to Karak and returned when Baibars lost the people's support; he had Baibars executed. Built 89 mosques, 73 schools and five hospitals and left Egypt at its greatest extent. Died in 1341 aged 58."
+    sources: [wp-al-nasir-muhammad]
+  - key: maravarman-kulasekara-pandyan-i
+    name: Maravarman Kulasekara Pandyan I
+    type: Royalty
+    realm: Pandya dynasty
+    died: 1308
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Pandyan emperor who acceded in 1268 after his father Jatavarman Sundara Pandyan I and shared rule with other Pandya princes; Marco Polo called him the eldest of five brother kings. In 1279 he defeated Rajendra III of the Cholas and Ramanatha of the Hoysalas, ending Chola rule; also took Kollam from Venad. His minister's expedition to Sri Lanka in the late 1270s took the Buddha's tooth relic from Yapahuwa. Ruled the Pandya country at the peak of the second Pandyan empire, about four decades of peace and prosperity according to Marco Polo and Wassaf. Built the Masilamaninathar temple at Tharangambadi and the wall of the Nellaiappar temple at Tirunelveli. His death set off the Pandyan Civil War (1308-1323). Birth date not given; death year in dispute (see discrepancy)."
+    sources: [wp-maravarman-kulasekara-pandyan-i]
+  - key: wedem-arad
+    name: Wedem Arad
+    type: Royalty
+    realm: Ethiopian Empire
+    house: Solomonic
+    died: 1314
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Emperor of Ethiopia 1299-1314, brother of Yagbe'u Seyon, who seized power from his nephews. His only recorded military act was to defeat the jihad of Sheikh Abu-Abdallah in his first year by persuading his followers to defect. In 1306 sent an embassy of 30 envoys to seek an alliance with the king of the Spaniards; they reached Rome and Avignon and were interviewed at Genoa by Giovanni da Carignano, which gave the first text linking Prester John with Ethiopia. Tegulet may have become the capital in his reign. Birth date not given."
+    sources: [wp-wedem-arad]
+  - key: hethum-ii
+    name: Hethum II
+    type: Royalty
+    realm: Armenian Kingdom of Cilicia
+    house: Hethumid
+    born: 1266
+    died: 1307-11-17
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of the Armenian Kingdom of Cilicia in three spells (1289-1293, 1295-1296, 1299-1303) while Armenia was a vassal of the Mongols, son of Leo II. Lost Hromgla and ceded Marash, Behesni and Tel Hamdoun to the Mamluks (1292). Twice abdicated to take Franciscan vows while staying the power behind the throne as Grand Baron; blinded by cauterisation in 1296-1298 when his brother Sempad usurped the throne. With Ghazan's Mongols beat the Mamluks at Wadi al-Khazandar (December 1299), but they lost at Homs (30 March 1303) and Marj al-Saffar (21 April 1303), after which he handed the crown to his nephew Leo III and acted as regent. Murdered with about 40 nobles and Leo at a banquet by the Mongol general Bilarghu on 17 November 1307 at Anazarbus."
+    sources: [wp-hethum-ii]
+  - key: david-viii-of-georgia
+    name: David VIII of Georgia
+    type: Royalty
+    realm: Georgia
+    house: Bagrationi
+    born: 1273
+    died: 1311
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eldest son of Demetrius II, king (mepe) of Georgia from 1292 or 1293 under Mongol rule; set up by the Ilkhan Gaykhatu and ruling only the eastern part (the west was held by the Imeretian Bagrationi branch). Refused Ghazan's summons to Tabriz in 1295, beat a Mongol force at Tsikare and was declared deposed in 1299 for his brother George V, then Vakhtang III (1302); recognised as joint sovereign after a truce and given Alastani in Javakheti. Friendly with the Egyptian Mamluks. Coins in his name survive from 1297 and 1310. Succeeded by his son George VI in 1311."
+    sources: [wp-david-viii-of-georgia]
+  - key: indravarman-iii
+    name: Indravarman III
+    type: Royalty
+    realm: Khmer Empire
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Srindravarman, ruler of the Khmer Empire 1295-1308, who took power after the abdication of his father-in-law Jayavarman VIII by taking the sacred sword with the help of Jayavarman's eldest daughter, whom he married, and had himself crowned by the royal hotar Vidyesavid. A Theravada Buddhist, he made it the state religion. In August 1296 the Chinese diplomat Zhou Daguan arrived at Angkor, found the land devastated by a recent war with the people the Chinese called Xian, and stayed until July 1297, writing the most important source on Angkor. Birth and death dates are not given."
+    sources: [wp-indravarman-iii]
+  - key: ramkhamhaeng
+    name: Ramkhamhaeng
+    type: Royalty
+    realm: Sukhothai Kingdom
+    house: Phra Ruang
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Pho Khun Ramkhamhaeng the Great, third king of the Phra Ruang dynasty and of Sukhothai, ruling from 1279 during its most prosperous era. Son of Pho Khun Si Inthrathit; his elder brother Ban Mueang reigned before him. Credited with the Thai alphabet (the stele of 1292 is in the Bangkok National Museum, a Memory of the World inscription) and with firmly establishing Theravada Buddhism; sent embassies to Yuan China from 1282 to 1323; his campaign left Cambodia 'utterly devastated'. The extent of his kingdom is claimed to reach Lampang, Phrae, Nan, Phitsanulok, Vientiane and Nakhon Si Thammarat, though the mandala model had no hard borders. Death date disputed (see discrepancy). Birth date not given."
+    sources: [wp-ramkhamhaeng]
+  - key: raden-wijaya
+    name: Raden Wijaya
+    type: Royalty
+    realm: Majapahit
+    prominence: 4
+    died: 1309
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Kertarajasa Jayawardhana, Javanese prince and founder of the Majapahit Empire. After Jayakatwang of Kediri killed Kertanagara of Singhasari in 1292, he fled to Madura with Arya Wiraraja, used the Mongol punitive force that landed at Tuban in November 1292 to destroy Kediri in 1293, then turned on the Mongols and drove them off Java. Took the title Kertarajasa Jayawardhana. Put down the rebellions of Ranggalawe (1295) and Lembu Sora (1301). Married Kertanagara's four daughters, including Gayatri Rajapatni, and Dara Petak; his son Jayanegara succeeded him. Died in 1309 (Nagarakretagama) and was buried at Simping Temple as 'Harihara'. Birth date not given; ancestry given in several versions."
+    sources: [wp-raden-wijaya]
+
+titles:
+  - {person: emperor-go-fushimi, title: Emperor of Japan, realm: Japan, from: 1298-11-17, to: 1301-03-02, note: "Fushimi abdicated on 30 August 1298 and Go-Fushimi acceded on 17 November 1298 (the lead gives the reign as 1298-1301); abdicated on 2 March 1301", sources: [wp-emperor-go-fushimi]}
+  - {person: andrew-iii-of-hungary, title: King of Hungary, realm: Hungary, from: 1290-07-23, to: 1301-01-14, note: "Elected after Ladislaus IV was murdered on 10 July 1290 and crowned at Szekesfehervar by Archbishop Lodomer on 23 July 1290; died on 14 January 1301", sources: [wp-andrew-iii-of-hungary]}
+  - {person: wenceslaus-ii-of-bohemia, title: King of Bohemia, realm: Bohemia, from: 1278, to: 1305-06-21, note: "King from 1278 (lead; his father Ottokar II fell at Marchfeld on 26 August 1278 when Wenceslaus was six); ruled independently only from 1290. Died 21 June 1305", sources: [wp-wenceslaus-ii-of-bohemia]}
+  - {person: wenceslaus-ii-of-bohemia, title: King of Poland, realm: Poland, from: 1300, to: 1305-06-21, note: "Overlord of Poland after Przemysl II died in 1296 and 'in 1300 had himself crowned its king' (body); the lead dates his Polish kingship 1296-1305 (see discrepancy). Duke of Cracow from 1291", sources: [wp-wenceslaus-ii-of-bohemia]}
+  - {person: eric-vi-of-denmark, title: King of Denmark, realm: Denmark, from: 1286-11-22, to: 1319-11-13, note: "Became king at 12 when his father was murdered on 22 November 1286; his mother governed until 1294. Died 13 November 1319", sources: [wp-eric-vi-of-denmark]}
+  - {person: haakon-v-of-norway, title: King of Norway, realm: Norway, from: 1299, to: 1319-05-08, note: "King 1299-1319 (lead; succeeded his brother Eric II, no day given); died 8 May 1319", sources: [wp-haakon-v-of-norway]}
+  - {person: birger-of-sweden, title: King of Sweden, realm: Sweden, from: 1290, to: 1318, note: "King from 1290 (his father Magnus Ladulas died when Birger was ten; crowned at Soderkoping in 1302) until deposed in 1318; Torkel Knutsson was his guardian", sources: [wp-birger-of-sweden]}
+  - {person: james-ii-of-aragon, title: King of Aragon, realm: Aragon, from: 1291, to: 1327, note: "King of Aragon and Valencia and Count of Barcelona 1291-1327 (lead), succeeding his brother Alfonso III; the death day is given as 2, 3 or 5 November 1327 (see discrepancy), so only the year is entered", sources: [wp-james-ii-of-aragon]}
+  - {person: james-ii-of-aragon, title: Count of Barcelona, realm: Barcelona, from: 1291, to: 1327, note: "Held with the crown of Aragon (lead)", sources: [wp-james-ii-of-aragon]}
+  - {person: denis-of-portugal, title: King of Portugal, realm: Portugal, from: 1279, to: 1325-01-07, note: "Succeeded his father Afonso III in 1279; died at Santarem on 7 January 1325", sources: [wp-denis-of-portugal]}
+  - {person: charles-ii-of-naples, title: King of Naples, realm: Naples, from: 1285, to: 1309-05-05, note: "Lead: King of Naples 1285-1309. His father Charles I died on 7 January 1285 while Charles was a prisoner; regents governed until his release in 1288, and Nicholas IV crowned him at Rieti on Whit Sunday 1289. Died in Naples, 5 May 1309 (lead)", sources: [wp-charles-ii-of-naples]}
+  - {person: frederick-iii-of-sicily, title: King of Sicily, realm: Sicily, from: 1295, to: 1337-06-25, note: "Regent of Sicily 1291-1295 and king from 1295 (lead); the coronation is dated 12 December 1295 in the Charles II article and 1296 in his own (see discrepancy). Recognised king of Trinacria for life at Caltabellotta in 1302. Died 25 June 1337 at Paterno", sources: [wp-frederick-iii-of-sicily, wp-charles-ii-of-naples]}
+  - {person: pietro-gradenigo, title: Doge of Venice, realm: Venice, from: 1289, to: 1311-08-13, note: "49th doge, reigning from 1289 until his death on 13 August 1311 (no day for the election)", sources: [wp-pietro-gradenigo]}
+  - {person: vytenis, title: Grand Duke of Lithuania, realm: Grand Duchy of Lithuania, from: 1295, from_estimated: true, to: 1315, to_estimated: true, note: "Grand duke 'from c. 1295 to c. 1316' (lead); the body has him die ca. 1315, last seen in September 1315 (see discrepancy). The row uses 1315", sources: [wp-vytenis]}
+  - {person: daniel-of-moscow, title: Prince of Moscow, realm: Grand Duchy of Moscow, from: 1282, from_estimated: true, to: 1303-03-05, note: "Received Moscow as his father Alexander Nevsky's patrimony in 1263 and reigned under his uncle Yaroslav of Tver as regent; 'does not appear to have become an independent ruler until 1282', the year used here. Never grand prince of Vladimir. Died 5 March 1303", sources: [wp-daniel-of-moscow]}
+  - {person: stefan-milutin-of-serbia, title: King of Serbia, realm: Serbia, from: 1282, to: 1321-10-29, note: "King after Dragutin abdicated in 1282; died 29 October 1321. The plan's wording was 'Ruler of Serbia'; the article calls him King of Serbia", sources: [wp-stefan-milutin-of-serbia]}
+  - {person: theodore-svetoslav-of-bulgaria, title: Tsar of Bulgaria, realm: Bulgaria, from: 1300, to: 1322, note: "Emperor 1300-1322 (lead) after having Chaka strangled in 1300; a more recent reading puts his accession in 1299 (see discrepancy). Died in early 1322 (no day)", sources: [wp-theodore-svetoslav-of-bulgaria]}
+  - {person: alexios-ii-of-trebizond, title: Emperor of Trebizond, realm: Empire of Trebizond, from: 1297, to: 1330-05-03, note: "Came to the throne at 14 on his father John II's death; died 3 May 1330 of bubonic plague", sources: [wp-alexios-ii-of-trebizond]}
+  - {person: muhammad-ii-of-granada, title: Emir of Granada, realm: Emirate of Granada, from: 1273-01-22, to: 1302-04-08, note: "Took the throne when his father Muhammad I died after a fall from a horse on 22 January 1273; died 8 April 1302 (8 Shaban 701 AH). Nasrid ruler", sources: [wp-muhammad-ii-of-granada]}
+  - {person: abu-yaqub-yusuf-an-nasr, title: Marinid Sultan, realm: Marinid Sultanate, from: 1286, to: 1307-05-13, note: "Succeeded his father Abu Yusuf Yaqub in March 1286 (month only); assassinated in the siege camp at Tlemcen, 13 May 1307 per the lead (the body says May 1307)", sources: [wp-abu-yaqub-yusuf-an-nasr]}
+  - {person: ghazan, title: Ilkhan, realm: Ilkhanate, from: 1295, to: 1304-05-11, note: "Seventh ruler of the Ilkhanate 1295-1304 (lead); declared his victory over Baydu, who was executed on 4 October 1295, and entered Tabriz. Died 11 May 1304 near Qazvin", sources: [wp-ghazan]}
+  - {person: toqta, title: Khan of the Golden Horde, realm: Golden Horde, from: 1291, to: 1312, to_estimated: true, note: "Khan 1291-1312 (lead); became khan in 1291 after Nogai ousted Talabuga. Died 'c. 1312' during preparations for a campaign against Rus'", sources: [wp-toqta]}
+  - {person: duwa, title: Khan of the Chagatai Khanate, realm: Chagatai Khanate, from: 1282, to: 1307, note: "Appointed head of the Chagatai Khanate by Kaidu in 1282; died in 1307 (lead, no day), succeeded by his son Konchek", sources: [wp-duwa]}
+  - {person: al-nasir-muhammad, title: Mamluk Sultan, realm: Mamluk Sultanate, from: 1293, to: 1294, note: "First reign: installed aged 8-9 after al-Ashraf Khalil's assassination in December 1293 (month only), with Kitbugha as regent; overthrown by Kitbugha and al-Shuja'i (lead gives 1293-1294)", sources: [wp-al-nasir-muhammad]}
+  - {person: al-nasir-muhammad, title: Mamluk Sultan, realm: Mamluk Sultanate, from: 1299, to: 1309, note: "Second reign: recalled from Karak after Lajin was murdered in 1299; ruled nominally under Salar and Baibars al-Jashnakir; left for Karak in 1309 and Baibars took the throne", sources: [wp-al-nasir-muhammad]}
+  - {person: al-nasir-muhammad, title: Mamluk Sultan, realm: Mamluk Sultanate, from: 1310, to: 1341, note: "Third reign: returned after Baibars's ten months and 24 days, executed him and ruled until his death in 1341 (lead)", sources: [wp-al-nasir-muhammad]}
+  - {person: maravarman-kulasekara-pandyan-i, title: Pandya King, realm: Pandya dynasty, from: 1268, to: 1308, note: "Acceded in 1268 and ruled to 1308 (lead: 1268-1308, though Sailendra Sen says 1310; Wassaf and Amir Khusrau have him killed by Sundara Pandyan III in 1310). Shared rule with other Pandya princes (see discrepancy)", sources: [wp-maravarman-kulasekara-pandyan-i]}
+  - {person: wedem-arad, title: Emperor of Ethiopia, realm: Ethiopian Empire, from: 1299, to: 1314, note: "Emperor 1299-1314 (lead); died 1314", sources: [wp-wedem-arad]}
+  - {person: hethum-ii, title: King of Armenia, realm: Armenian Kingdom of Cilicia, from: 1289, to: 1293, note: "First reign: took the throne in his early 20s when his father Leo II died in 1289; abdicated for his brother Thoros III in 1293 and joined the Franciscans at Mamistra", sources: [wp-hethum-ii]}
+  - {person: hethum-ii, title: King of Armenia, realm: Armenian Kingdom of Cilicia, from: 1295, to: 1296, note: "Second reign: Thoros asked him to resume the throne in 1295 to renew the Mongol alliance; returned from the Mongol court in 1296; his brother Sempad usurped the throne while he was in Constantinople and he was captured and blinded", sources: [wp-hethum-ii]}
+  - {person: hethum-ii, title: King of Armenia, realm: Armenian Kingdom of Cilicia, from: 1299, to: 1303, note: "Third reign: ousted Constantine in 1299, fought with Ghazan, and resigned the crown to his nephew Leo III after the defeat at Marj al-Saffar (1303), remaining regent", sources: [wp-hethum-ii]}
+  - {person: david-viii-of-georgia, title: King of Georgia, realm: Georgia, from: 1292, to: 1311, note: "King from 1292 until his death in 1311 (lead; the body says Gaykhatu appointed him in 1293 - see discrepancy). Ruled only eastern Georgia; Ghazan declared him deposed in 1299 and gave the throne to George V and then Vakhtang III (1302), after which David was joint sovereign. Succeeded by George VI", sources: [wp-david-viii-of-georgia]}
+  - {person: indravarman-iii, title: King of the Khmer, realm: Khmer Empire, from: 1295, to: 1308, note: "Ruler of the Khmer Empire 1295-1308 (lead), after his father-in-law Jayavarman VIII abdicated", sources: [wp-indravarman-iii]}
+  - {person: ramkhamhaeng, title: King of Sukhothai, realm: Sukhothai Kingdom, from: 1279, to: 1298, note: "Reigned from 1279 (lead; Tri Amattayakun also suggests 1279) to 1298 per the History of Yuan; Coedes thinks his death 'more probable' shortly before 1318 (see discrepancy)", sources: [wp-ramkhamhaeng]}
+  - {person: raden-wijaya, title: King of Majapahit, realm: Majapahit, from: 1293, to: 1309, note: "The section 'Reign (1293-1309)' dates the founding of Majapahit to 1293, after Kediri fell and the Mongols fled; the lead gives 1292-1309 (see discrepancy). Died 1309 (Nagarakretagama)", sources: [wp-raden-wijaya]}
+  - {person: philip-iv-of-france, title: King of Navarre, realm: Navarre, from: 1284, to: 1305, note: "Lead of his article: 'by virtue of his marriage with Joan I of Navarre, he was also King of Navarre and Count of Champagne as Philip I from 1284 to 1305'; they married on 16 August 1284 and Joan died in 1305 (no day). Navarre stayed in personal union with France for 44 years from 1284", sources: [wp-philip-iv-of-france]}
+
+places:
+  - key: szekesfehervar
+    name: Szekesfehervar
+    kind: city
+    region: Fejer County
+    country: Hungary
+    lat: 47.188
+    lng: 18.411
+    visitable: true
+    note: "Coronation city of the kings of Hungary: Andrew III was crowned here on 23 July 1290 and Wenceslaus III on 27 August 1301 (the articles on Andrew III and Wenceslaus II)."
+    sources: [wp-andrew-iii-of-hungary, wp-wenceslaus-ii-of-bohemia]
+  - key: santarem
+    name: Santarem
+    kind: city
+    region: Santarem District
+    country: Portugal
+    lat: 39.236
+    lng: -8.685
+    visitable: true
+    note: "Where Denis of Portugal died on 7 January 1325 (his article)."
+    sources: [wp-denis-of-portugal]
+  - key: odivelas-monastery
+    name: Monastery of Saint Denis, Odivelas
+    kind: monastery
+    city: Odivelas
+    region: Lisbon District
+    country: Portugal
+    lat: 38.793
+    lng: -9.183
+    visitable: true
+    note: "Where Denis of Portugal was buried; his tomb was opened in 1938 and again in 2016 (his article). Founding date and builder are not in the article. Point approximate."
+    sources: [wp-denis-of-portugal]
+  - key: caltabellotta
+    name: Caltabellotta
+    kind: town
+    region: Sicily
+    country: Italy
+    lat: 37.585
+    lng: 13.220
+    visitable: true
+    note: "Where the peace of August 1302 that ended the War of the Sicilian Vespers was signed (the articles on Frederick III and Charles II). Point is the town, approximate."
+    sources: [wp-frederick-iii-of-sicily, wp-charles-ii-of-naples]
+  - key: danilov-monastery
+    name: Danilov Monastery
+    kind: monastery
+    city: Moscow
+    region: Moscow
+    country: Russia
+    lat: 55.709
+    lng: 37.628
+    visitable: true
+    founded: 1282
+    founded_estimated: true
+    built_by: "credited to Daniel of Moscow (first wooden church no later than 1282)"
+    note: "Daniel was buried in the monastery cemetery (he chose it from humility); in 1330 the monastery moved into the Kremlin and his grave was lost; relics were found on 30 August 1652 and placed in a tomb at the Danilov Monastery (his article). Point approximate."
+    sources: [wp-daniel-of-moscow]
+  - key: alhambra
+    name: Alhambra
+    kind: palace
+    city: Granada
+    region: Andalusia
+    country: Spain
+    lat: 37.177
+    lng: -3.588
+    visitable: true
+    built_by: "Muhammad I (fortress complex); expanded by Muhammad II with a precinct wall, residences and bathhouses"
+    note: "Muhammad II expanded the Alhambra palace and fortress complex and turned it into a royal residence zone, though the chronology of its early Nasrid parts is not always clear (his article)."
+    sources: [wp-muhammad-ii-of-granada]
+  - key: tlemcen
+    name: Tlemcen
+    kind: city
+    region: Tlemcen Province
+    country: Algeria
+    lat: 34.878
+    lng: -1.315
+    visitable: true
+    note: "Capital of the Abdalwadid sultanate, besieged by the Marinids from May 1299; Abu Yaqub Yusuf was killed in his siege camp (al-Mahalla al-Mansura) in May 1307. Point is the city."
+    sources: [wp-abu-yaqub-yusuf-an-nasr]
+  - key: anazarbus
+    name: Anazarbus
+    historical_name: Caesarea in Cilicia
+    kind: city
+    region: Adana Province
+    country: Turkey
+    lat: 37.258
+    lng: 35.903
+    visitable: true
+    note: "Royal stronghold of Armenian Cilicia, below whose walls the Mongol general Bilarghu had Hethum II and about 40 nobles killed on 17 November 1307 (Hethum's article). Point approximate."
+    sources: [wp-hethum-ii]
+
+events:
+  # --- link-only update to an existing event ---
+  - key: sicilian-vespers-1282
+    people:
+      - {person: charles-ii-of-naples, role: son of the deposed Charles I; regent of the mainland, captured in 1284}
+      - {person: james-ii-of-aragon, role: son of Peter III; succeeded him as king of Sicily in 1285}
+      - {person: frederick-iii-of-sicily, role: son of Peter III; served in the war, later king}
+    sources: [wp-charles-ii-of-naples, wp-james-ii-of-aragon, wp-frederick-iii-of-sicily]
+  # --- new events ---
+  - key: coronation-of-andrew-iii-1290
+    name: Coronation of Andrew III of Hungary
+    type: Coronation
+    date: 1290-07-23
+    place: szekesfehervar
+    people:
+      - {person: andrew-iii-of-hungary, role: crowned}
+    prominence: 2
+    note: "Archbishop Lodomer crowned Andrew king after Ladislaus IV was murdered by Cuman assassins on 10 July 1290. The lords and prelates swore loyalty only after Andrew issued a charter promising peace and respect for the nobles' and clergy's privileges, the first coronation diploma of a Hungarian king."
+    sources: [wp-andrew-iii-of-hungary]
+  - key: fall-of-acre-1291
+    name: Fall of Acre
+    type: Siege
+    year: 1291
+    place: acre
+    prominence: 4
+    note: "The Mamluks under Sultan al-Ashraf Khalil took Acre, the last Crusader stronghold on the mainland, conquering what remained of the Kingdom of Jerusalem in the summer of 1291. Venice, under Doge Gradenigo, suffered a serious blow; the Armenian king Hethum II lost Hromgla soon after and ceded Marash, Behesni and Tel Hamdoun; Khalil brought a gate of the Church of Saint Andrew from Acre to Cairo. Day not given in these articles."
+    sources: [wp-pietro-gradenigo, wp-hethum-ii, wp-al-nasir-muhammad]
+  - key: founding-of-majapahit-1293
+    name: Founding of Majapahit
+    type: Founding
+    year: 1293
+    people:
+      - {person: raden-wijaya, role: founder; crowned as Kertarajasa Jayawardhana}
+    prominence: 4
+    note: "Raden Wijaya used the Mongol force that landed at Tuban in November 1292 to destroy Jayakatwang's Kediri kingdom in 1293, then attacked the Mongol army, weakened by disease and the climate, and drove it from Java. He established the Majapahit kingdom and took the title Kertarajasa Jayawardhana. The place of the capital and the exact day are not in the article."
+    sources: [wp-raden-wijaya]
+  - key: treaty-of-anagni-1295
+    name: Treaty of Anagni
+    type: Treaty
+    year: 1295
+    place: anagni
+    people:
+      - {person: james-ii-of-aragon, role: gave up Sicily to the papacy}
+      - {person: charles-ii-of-naples, role: Sicily to be held by the Angevins}
+      - {person: frederick-iii-of-sicily, role: regent whom the Sicilians would not give up}
+    prominence: 3
+    note: "Under Boniface VIII, James agreed to cede Sicily to the Church (to be held by the Angevins) in exchange for being left in peace in his other lands and for Sardinia and Corsica; he also returned the Balearic Islands to his uncle James II of Majorca. The Sicilians refused to be handed over again to the French they had expelled in 1282 and chose Frederick. The day is given as 10 June 1295 in one article and 12 June in another (see discrepancy)."
+    sources: [wp-james-ii-of-aragon, wp-frederick-iii-of-sicily, wp-charles-ii-of-naples]
+  - key: ghazan-converts-to-islam-1295
+    name: Ghazan converts to Islam
+    type: Conversion
+    date: 1295-06-16
+    people:
+      - {person: ghazan, role: converted}
+    prominence: 4
+    note: "Ghazan converted to Sunni Islam on 16 June 1295 at the hands of Ibrahim ibn Muhammad ibn al-Mu'ayyid al-Juwayni, as a condition for the military support of the emir Nawruz against Baydu. He then took the throne after Baydu's execution on 4 October 1295, and the conversion marked a turning point for the dominant religion of the Mongols in West Asia. No place is given."
+    sources: [wp-ghazan]
+  - key: treaty-of-alcanices-1297
+    name: Treaty of Alcanices
+    type: Treaty
+    year: 1297
+    people:
+      - {person: denis-of-portugal, role: signed it for Portugal}
+    prominence: 3
+    note: "After the war with Castile of 1295 (in which Denis gave up Serpa and Moura), the treaty with Castile fixed the present borders between the two Iberian countries, confirmed Portugal's possession of the Algarve and set up an alliance of friendship and mutual defence, bringing 40 years of peace. Day and place are not in the article."
+    sources: [wp-denis-of-portugal]
+  - key: serrata-del-maggior-consiglio-1297
+    name: Serrata del Maggior Consiglio
+    type: Political
+    year: 1297
+    place: venice
+    people:
+      - {person: pietro-gradenigo, role: doge responsible for the law}
+    prominence: 4
+    note: "A law of February 1297 (no day given) closed the Great Council of Venice to the descendants of those who had sat in it between 1293 and 1297, creating an oligarchic system that disenfranchised most citizens and provoked some unrest."
+    sources: [wp-pietro-gradenigo]
+  - key: battle-of-wadi-al-khazandar-1299
+    name: Battle of Wadi al-Khazandar
+    type: Battle
+    year: 1299
+    people:
+      - {person: ghazan, role: victor}
+      - {person: hethum-ii, role: Armenian ally of the Mongols}
+      - {person: al-nasir-muhammad, role: defeated}
+    prominence: 3
+    note: "Ghazan's Mongols, joined at Aleppo by Hethum II's Armenians with some Templars and Hospitallers, beat the Egyptian army (about 20,000 men against 12,000, with a few hundred to a thousand Mamluk dead) on 23 or 24 December 1299; Damascus surrendered between 30 December 1299 and 6 January 1300, though its citadel held. The Mongols retreated in February; the Mamluks retook Syria. The battle is also called the Battle of Homs. The battlefield near Homs is not located in the articles."
+    sources: [wp-ghazan, wp-hethum-ii, wp-al-nasir-muhammad]
+  - key: toqta-defeats-nogai-1300
+    name: Toqta defeats Nogai
+    type: Battle
+    year: 1300
+    people:
+      - {person: toqta, role: victor}
+    prominence: 3
+    note: "After a civil war with the kingmaker Nogai that began in 1297, Toqta defeated him at the battle of the Kagamlyk River, south-southwest of Poltava, and united the lands from the Volga to the Don under his authority. The year is 1299 or 1300 depending on the passage (see discrepancy); Nogai's son Chaka fled to Bulgaria, where he was later killed by Theodore Svetoslav."
+    sources: [wp-toqta, wp-ghazan, wp-stefan-milutin-of-serbia]
+  - key: treaty-of-caltabellotta-1302
+    name: Treaty of Caltabellotta
+    type: Treaty
+    year: 1302
+    place: caltabellotta
+    people:
+      - {person: frederick-iii-of-sicily, role: recognised as king of Trinacria for his lifetime}
+      - {person: charles-ii-of-naples, role: gave up all rights to Sicily}
+    prominence: 3
+    note: "Signed in August 1302 (no day given), ending the War of the Sicilian Vespers: Frederick was recognised king of Trinacria (the name Sicily not to be used) for life and was to marry Eleanor of Anjou, Charles II's daughter; the island was to revert to the Angevins at his death. Boniface VIII ratified it in May 1303 with changes, including a tribute from Frederick. The marriage took place in 1303."
+    sources: [wp-frederick-iii-of-sicily, wp-charles-ii-of-naples]
+  - key: battle-of-marj-al-saffar-1303
+    name: Battle of Marj al-Saffar
+    type: Battle
+    date: 1303-04-21
+    people:
+      - {person: al-nasir-muhammad, role: victor}
+      - {person: ghazan, role: defeated (his army under Qutlugh-Shah)}
+      - {person: hethum-ii, role: defeated, fighting with the Mongols}
+    prominence: 4
+    note: "A Mongol army of about 50,000 under Ghazan's deputy Qutlugh-Shah, with Hethum II's Armenians, was beaten by the Mamluk sultan al-Nasir Muhammad south of Damascus (Hethum's article gives the Battle of Shaqhab at Marj al-Saffar on 21 April 1303; Al-Nasir's article has him arrive in Syria on 20 April, with fighting over three days). It was the last major Mongol invasion of Syria; Ghazan died a year later. The battlefield is not located by a place record."
+    sources: [wp-hethum-ii, wp-ghazan, wp-al-nasir-muhammad]
+
+moments:
+  - {person: andrew-iii-of-hungary, role: crowned, place: szekesfehervar, year: 1290}
+  - {person: andrew-iii-of-hungary, role: died, place: budapest, year: 1301}
+  - {person: andrew-iii-of-hungary, role: buried, place: budapest, year: 1301}
+  - {person: haakon-v-of-norway, role: buried, place: oslo, year: 1319}
+  - {person: james-ii-of-aragon, role: crowned, place: palermo, year: 1286}
+  - {person: denis-of-portugal, role: born, place: lisbon, year: 1261}
+  - {person: denis-of-portugal, role: died, place: santarem, year: 1325}
+  - {person: denis-of-portugal, role: buried, place: odivelas-monastery, year: 1325}
+  - {person: charles-ii-of-naples, role: died, place: naples, year: 1309}
+  - {person: frederick-iii-of-sicily, role: born, place: barcelona, year: 1272}
+  - {person: daniel-of-moscow, role: buried, place: danilov-monastery, year: 1303}
+  - {person: muhammad-ii-of-granada, role: lived, place: alhambra}
+  - {person: abu-yaqub-yusuf-an-nasr, role: died, place: tlemcen, year: 1307}
+  - {person: al-nasir-muhammad, role: born, place: cairo, year: 1285}
+  - {person: hethum-ii, role: died, place: anazarbus, year: 1307}
+
+discrepancies:
+  - key: james-ii-of-aragon-birth
+    question: When was James II of Aragon born?
+    about: [{person: james-ii-of-aragon}]
+    field: born
+    claims:
+      - {value: "10 April 1267", sources: [wp-james-ii-of-aragon]}
+      - {value: "c. 1264", sources: [wp-james-ii-of-aragon]}
+    note: "The lead gives '10 April 1267 or c. 1264'. The record uses 10 April 1267, the first and the only dated value."
+  - key: james-ii-of-aragon-death
+    question: On which day of November 1327 did James II of Aragon die?
+    about: [{person: james-ii-of-aragon}]
+    field: died
+    claims:
+      - {value: "2 November 1327", sources: [wp-james-ii-of-aragon]}
+      - {value: "3 November 1327", sources: [wp-james-ii-of-aragon]}
+      - {value: "5 November 1327", sources: [wp-james-ii-of-aragon]}
+    note: "The lead gives '2 or 5 or 3 November 1327'. The record and the title row hold the year only."
+  - key: wenceslaus-ii-polish-kingship
+    question: From when was Wenceslaus II King of Poland?
+    about: [{person: wenceslaus-ii-of-bohemia}]
+    field: date
+    claims:
+      - {value: "1296 (the lead: 'King of Poland (1296-1305)'; after Przemysl II died in 1296 Wenceslaus 'became overlord of Poland')", sources: [wp-wenceslaus-ii-of-bohemia]}
+      - {value: "1300 (the body: he 'had himself crowned its king' in 1300)", sources: [wp-wenceslaus-ii-of-bohemia]}
+    note: "The title row uses 1300, the coronation, as the plan asks. Przemysl II had himself been crowned king in 1295."
+  - key: frederick-iii-sicily-coronation
+    question: When was Frederick III crowned king of Sicily?
+    about: [{person: frederick-iii-of-sicily}]
+    field: date
+    claims:
+      - {value: "12 December 1295 (Charles II's article: Frederick 'was crowned king of Sicily on 12 December 1295'; his own lead has him king from 1295)", sources: [wp-charles-ii-of-naples, wp-frederick-iii-of-sicily]}
+      - {value: "1296, 'crowned king by the nobles at Palermo' (his own biography)", sources: [wp-frederick-iii-of-sicily]}
+    note: "The title row starts 1295, the lead's year; no coronation moment is entered."
+  - key: treaty-of-anagni-1295-date
+    question: On which day of June 1295 was the Treaty of Anagni concluded?
+    about: [{event: treaty-of-anagni-1295}]
+    field: date
+    claims:
+      - {value: "10 June 1295", sources: [wp-frederick-iii-of-sicily]}
+      - {value: "12 June 1295 (Boniface VIII 'confirmed the compromise between James and Charles in Anagni')", sources: [wp-charles-ii-of-naples]}
+    note: "The two dates may be the signing and the papal confirmation; neither article says so. The event holds the year only."
+  - key: toqta-defeat-of-nogai
+    question: When did Toqta defeat Nogai?
+    about: [{person: toqta}, {event: toqta-defeats-nogai-1300}]
+    field: date
+    claims:
+      - {value: "1299 ('In 1299, Tokhta finally defeated Nogai'; Stefan Milutin's article also gives Nogai's death as 1299)", sources: [wp-toqta, wp-stefan-milutin-of-serbia]}
+      - {value: "1300 (battle of the Kagamlyk River, 'in 1300')", sources: [wp-toqta]}
+      - {value: "1296 (Ghazan's article: Nogai was murdered and his wife Chubei fled to Ghazan in 1296)", sources: [wp-ghazan]}
+    note: "The event uses 1300, the year of the battle named in Toqta's article. Milutin's article also hedges ('until 1296 or Nogai Khan's death in 1299')."
+  - key: theodore-svetoslav-accession
+    question: When did Theodore Svetoslav become tsar of Bulgaria?
+    about: [{person: theodore-svetoslav-of-bulgaria}]
+    field: date
+    claims:
+      - {value: "1300, after he had Chaka strangled (the lead and the main account)", sources: [wp-theodore-svetoslav-of-bulgaria]}
+      - {value: "1299, with Chaka only a de facto suzerain (a 'more recent interpretation')", sources: [wp-theodore-svetoslav-of-bulgaria]}
+    note: "The title row uses 1300, the lead's year."
+  - key: vytenis-death
+    question: When did Vytenis die?
+    about: [{person: vytenis}]
+    field: died
+    claims:
+      - {value: "c. 1316 (the lead: Grand Duke 'from c. 1295 to c. 1316')", sources: [wp-vytenis]}
+      - {value: "ca. 1315 (the body; last mentioned in September 1315 at Christmemel)", sources: [wp-vytenis]}
+    note: "The record has no died field; the title row ends 1315, estimated, the body's year."
+  - key: david-viii-accession
+    question: When did David VIII become king of Georgia?
+    about: [{person: david-viii-of-georgia}]
+    field: date
+    claims:
+      - {value: "1292 (the lead: king 'from 1292 until his death in 1311')", sources: [wp-david-viii-of-georgia]}
+      - {value: "1293 (the body: appointed by Gaykhatu 'as reward for his military service during the Rumelian uprising in 1293')", sources: [wp-david-viii-of-georgia]}
+    note: "The title row uses 1292, the lead's year."
+  - key: maravarman-kulasekara-death
+    question: When did Maravarman Kulasekara Pandyan I die?
+    about: [{person: maravarman-kulasekara-pandyan-i}]
+    field: died
+    claims:
+      - {value: "1308 (the article: 'ruled ... between 1268-1308' and 'died in 1308 CE')", sources: [wp-maravarman-kulasekara-pandyan-i]}
+      - {value: "1310 (historian Sailendra Sen; also the Muslim chroniclers Wassaf and Amir Khusrau, who say he was killed by his son Sundara Pandyan III in 1310)", sources: [wp-maravarman-kulasekara-pandyan-i]}
+    note: "The record and the title row use 1308."
+  - key: ramkhamhaeng-death
+    question: When did Ramkhamhaeng die?
+    about: [{person: ramkhamhaeng}]
+    field: died
+    claims:
+      - {value: "1298, succeeded by his son Loe Thai (the History of Yuan; also the lead's reign dates 1279-1298)", sources: [wp-ramkhamhaeng]}
+      - {value: "'shortly before 1318' (George Coedes: 'more probable')", sources: [wp-ramkhamhaeng]}
+    note: "The record has no died field; the title row ends 1298, the lead's year. The article also gives legends of his death (rapids at Sawankhalok; slain by a Malay warrior princess)."
+  - key: raden-wijaya-accession
+    question: When did Raden Wijaya's reign begin?
+    about: [{person: raden-wijaya}, {event: founding-of-majapahit-1293}]
+    field: date
+    claims:
+      - {value: "1292 (the lead: 'His reign lasted from 1292 to his death in 1309')", sources: [wp-raden-wijaya]}
+      - {value: "1293 (the section 'Reign (1293-1309)'; Kediri fell and the Mongols were driven off in 1293)", sources: [wp-raden-wijaya]}
+    note: "The title row and the founding event use 1293. Kertanagara was killed in 1292 and the Mongol force landed in November 1292."
