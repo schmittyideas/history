@@ -85,6 +85,17 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - **Assign shared places per batch in the brief** (Kaifeng, Hangzhou and Beijing to the Song batch; the Mongol invasions of Japan to the Japan batch; those of Korea to the Korea batch) and merge in that order, so later previews can reference earlier keys. There were no collisions.
 - Wikipedia titles for Chinese, Japanese and Vietnamese rulers are irregular (a redirect to "Emperor Yingzong of Ming", "Zhao Bing" for Emperor Bing); check the first line of every downloaded file. Do not `pkill -f` a pattern that appears in your own command line: it kills the shell.
 
+## Calibration: item 5 (Ottoman sultans and the Seljuks of Rum), 2026-10-11
+
+- Added **22 people**, 23 title rows, 12 places, 17 new events (plus 4 link-only updates), 25 discrepancies and 3 realms, in 1 data PR (#163), one agent.
+- Tokens: the research agent used **about 0.32M** (measured). The main session's share is not measured; roughly 0.1M. So about **0.4M tokens, or about 19,000 per person**: a little higher per person than items 2-4, because the Ottoman articles are long and the batch is one small agent run.
+- The preview was clean first time (the moment-year check from #146 and the rules in the brief held).
+
+## Lessons from item 5
+
+- A realm that other batches already touch (Timur, Manzikert, Ankara, 1453) is mostly **link-only updates**: add the people to the existing event key rather than defining a new event.
+- Tell the agent to check existing keys in the sibling batch files before using one (the Byzantine emperors, Pius V, Philip II, Sigismund all resolved).
+
 ## Lessons from item 1
 
 - **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.

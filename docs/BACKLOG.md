@@ -98,11 +98,11 @@ Source: Ty, 2026-10-09 (item 3 session).
 Rulers and dates left out of item 4: the last Song, Jin and Western Xia rulers, the Hōjō regents Tokiyori and Takatoki (no start year in their articles), most Japanese emperors, Goryeo kings between Gongmin and Joseon, the Trần and Lý emperors outside the list, Tibet, Ryukyu and Champa. Full list in the issue.
 Source: Ty, 2026-10-11 (item 4 session).
 
-#### [P2] Build-out: Ottoman sultans and the Seljuks of Rum, 1077–1600
-`type: task` · `area: data` · `status: ready` · `issue: #133`
+#### [P3] Fill the gaps left in the Ottoman and Seljuk batch
+`type: task` · `area: data` · `status: ready` · `issue: #164`
 
-The Ottoman Empire and the Seljuk Sultanate of Rum are not in the database. About 20 people: the Seljuk sultans of Rum, the Ottoman sultans from Osman I to Murad III, and Kosovo, Nicopolis, Ankara, Varna, the fall of Constantinople, Mohács and Lepanto. Queue item 5, after East Asia and before the century build.
-Source: Ty, 2026-10-11.
+Left out of item 5: the interregnum princes' reign dates, the later Sultans of Rum and the Anatolian beyliks, Ottomans after 1595, viziers and powerful women, the opponents named only in notes (Ismail I, Hunyadi, Skanderbeg and others), and unlocated battle sites. Full list in the issue.
+Source: Ty, 2026-10-11 (item 5 session).
 
 #### [P2] Build-out: the world, century by century (1100–1500) with maps
 `type: task` · `area: data` · `status: ready` · `issue: #34`
@@ -144,6 +144,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Build-out: Ottoman sultans and the Seljuks of Rum, 1077–1600
+`type: task` · `area: data` · `status: done` · `issue: #133`
+
+22 rulers with 23 title rows, 12 places, 17 new events (plus link-only updates to 4 existing ones: Manzikert, Ankara, Myriokephalon and the fall of Constantinople), 25 discrepancies and 3 realms, checked against their English Wikipedia articles, in PR #163: the Sultans of Rum from Suleiman ibn Qutulmish to Kaykhusraw II, Alp Arslan and Malik-Shah I of the Great Seljuk Empire, and the Ottoman sultans from Osman I to Murad III, with Kosovo, Nicopolis, Varna, Chaldiran, Mohács, Vienna 1529 and Lepanto. Everyone is `coverage: partly`. Done 2026-10-11. Left for later: the gaps item above.
+Source: Ty, 2026-10-11.
 
 #### [P2] Build-out: East Asian dynasties, 1000–1600
 `type: task` · `area: data` · `status: done` · `issue: #33`
