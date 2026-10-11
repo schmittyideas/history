@@ -1,0 +1,16 @@
+batch:
+  title: Notes from using the Met, Art Institute and Cleveland APIs
+  requested: "Record what changed or was learned while reading the open APIs"
+  date: 2026-10-11
+
+museums:
+  - key: metropolitan-museum-of-art
+    data_api_url: https://collectionapi.metmuseum.org/public/collection/v1.1/
+    data_notes: "Live JSON API, no key. The v1 /search endpoint was retired on 2026-10-01 (410 Gone); use /public/collection/v1.1/search (paginated). Object records at /public/collection/v1/objects/{id} still work. Used 2026-10-11 to add public-domain paintings with image links. Terms of use not read in full."
+    data_checked_on: 2026-10-11
+  - key: art-institute-of-chicago
+    data_notes: "Live JSON API, no key; search at /api/v1/artworks/search. Images via its IIIF server (documented). The website itself returns 403 to bots and robots.txt could not be read: use the API only. Used 2026-10-11 to add public-domain paintings. Terms of use not read in full."
+    data_checked_on: 2026-10-11
+  - key: cleveland-museum-of-art
+    data_notes: "Live JSON API, no key; filters cc0=1 and has_image=1 work. Used 2026-10-11 to add CC0 paintings. Terms of use not read in full."
+    data_checked_on: 2026-10-11
