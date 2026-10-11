@@ -1,0 +1,987 @@
+batch:
+  title: "Korea, 1009-1608: Goryeo kings, the Ch'oe military ruler, Joseon kings, the Mongol invasions and the Imjin War"
+  requested: "Eleven kings of Goryeo (Hyeonjong to Gongmin), Ch'oe Ch'unghon, nine kings of Joseon (Taejo to Seonjo), Admiral Yi Sun-sin, with reigns, the Mongol invasions of Korea, the Imjin War, key places and discrepancies"
+  date: 2026-10-11
+
+# Notes for the reviewer (batch D of the East Asia build-out)
+# - Source: local copies of the English Wikipedia articles (wp4 directory); nothing fetched. All 24 files were checked: every one resolved to the article that was asked for (first lines read). Short stubs (Munjong, Sukjong, Uijong, Myeongjong, Gojong, Chungseon, Hyeonjong) are used only for what they say. Sejong the Great (62k), Yi Sun-sin, Choe Chung-heon and the Mongol invasions were read in full; Imjin_War (120k) was read for the lead, background, the landing and first advance, the naval campaigns of 1592, both Jinju sieges, the second invasion, Hideyoshi's death, Noryang and the aftermath (the army, Ming, firearms and legacy sections were skipped).
+# - Existing records only referenced, not redefined: realm Goryeo, mokjong-of-goryeo (named in Hyeonjong's note, no link). toyotomi-hideyoshi is defined in batch C (inbox ea-c-japan, applied before this one) and is referenced as the invader in the Imjin War event. No other batch's place or person key is used.
+# - New realm: Joseon (East Asia, South Korea). Title wordings: "King of Goryeo" (realm Goryeo) and "King of Joseon" (realm Joseon); Ch'oe Ch'unghon "Military ruler of Goryeo" (realm Goryeo).
+# - Title rows left out because the article states no start date: none for Joseon or Goryeo kings except as noted. Uijong's start (1146) and Myeongjong's (1170) are taken from the Injong and Uijong articles (Hyeon succeeded at Injong's death in April 1146; the 1170 coup put his brother on the throne) and cited to both. Reign ends are the stated abdication/deposition year, or the death date where the article gives no separate reign end (Hyeonjong, Sukjong, Yejong, Injong, Sejong, Jungjong, Seonjo; Sejo and Yeonsangun use the year only). Month without day: Yeonsangun's deposition (September 1506) and Jungjong's accession (September 1506) are entered as the year 1506 with the month in the note.
+# - Ch'oe Ch'unghon: "Military ruler of Goryeo" has no formal office date in the article. It is dated from 9 April 1196 (the day he beheaded Yi Uimin and seized power) to his death on 29 October 1219; the article also says he announced his retirement in favour of his son Ch'oe U without a year, so the end is the death. Named offices (Chancellor 1205, etc.) are not entered as rows.
+# - Lunar dates not converted. Sejong's article gives many dates as lunar "day, month of year" (his accession 10th day, 8th month 1418; Hangul shown to the court in the 12th month of 1443, which in the Gregorian calendar may fall in January 1444; Hunminjeongeum published in the 9th month of 1446; Taejong's death 10th day, 5th month 1422). The accession is entered as the year 1418; the Hangul event is entered 1443 to 1446 as years. Death dates in leads (Sejong 8 April 1450, Taejong 8 June 1422) are used as given. The Seongjong end (1494 or 29 January 1495) and the Chungseon/Chungnyeol hand-over (1307 or 1308) are discrepancies.
+# - Khitan wars: the brief expected 1010-11 and 1018 (Gwiju). The Hyeonjong article gives 1010 for the first and 1019 for the second (Battle of Kwiju), so 1010 and 1019 are used and Kwiju is not given as a place. Not in the articles: Gwiju is not defined.
+# - Left out, because the article gives no date or place: Gyeongbokgung's founding year and builder (the brief said Taejo, 1395, but none of the articles read states it; only Sejong's 1421 move and 1427 residence and the 1592 burning are in them, so no founded/built_by); Jeongjong's, Sejo's and Jungjong's places of death; Taejo's coronation place; Hyeonjong's flight to Naju (named, no place record); the fifth to ninth Mongol invasions as separate events (kept in the series note; the first, third and the 1259 peace are events); the second siege of Jinju (20-27 July 1593, in the first siege's note); Sukjong's Namgyeong (Southern Capital, no year); Yeonsangun's mother Queen Yun and Choe U, Choe Hang and other minor figures (no person records). Consorts and children are not entered except as parent/child links between kings.
+# - Existing notes about the Imjin War: batch C's Hideyoshi note names it. This batch defines imjin-war-1592 (start date 23 May 1592, the article's date for the landing at Busan; end_year 1598), prominence 5, with Hansan Island 1592, the fall of Hanseong 1592, the first siege of Jinju 1592, Okpo 1592, Chilcheollyang 1597, Myeongnyang 1597 and Noryang 1598 as separate events.
+# - Moments take a year only (checked): every moment below has an integer year or none. Full dates sit in title notes, events or discrepancies.
+# - Coordinates come from general knowledge (2-3 decimals); visitable flags and visit_site names are general knowledge, not from the articles. No place has a founded year (none is in the articles).
+# - Prominence: Sejong and Yi Sun-sin 5, the Imjin War, the founding of Joseon and the creation of Hangul 5 (as the brief says); other kings are hand-set 2 to 4. Cultural-figure rules do not apply (no Artist/Writer types in this batch), so no sitelinks.
+# - Discrepancies recorded (19): Sukjong's accession (abdication or coup), Sukjong's death route, Myeongjong's reign length, the Tripitaka's completion year, the Ganghwa move date, when the Mongol wars ended (1259 or 1270), when they began (1231 or 1238), Chungnyeol's Mongol marriage (1269 or 1271, who proposed), Chungseon's second accession (1307 or 1308), Queen Yun's elevation (1474 or 1476), Queen Yun's death, Seongjong's reign end, Seonjo's age at accession, the Japanese landing date, the fall of Hanseong, the date of Okpo (June or July 1592), the size of Yi's fleet at Hansan, Myeongnyang Japanese losses, who the Koreans fought at Sangju. Seen and not entered as records: Taejo's "475 years" of Goryeo against "400-year-old" (rounding); the Hyeonjong-era Tripitaka (6,000 volumes) against Gojong's (81,000 blocks), which are two different carvings; Ganuidae's founding year (1434 or 1438) and the Ui-bang-yu-chwi's (1445 or 1447), both within Sejong's article and not tied to a record here.
+# - Size: 22 people, 23 title rows, 1 realm, 11 places, 31 events, 19 discrepancies (107 rows), 13 links, 17 moments.
+
+sources:
+  - {key: wp-hyeonjong-of-goryeo,   title: "Hyeonjong of Goryeo (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Hyeonjong_of_Goryeo"}
+  - {key: wp-munjong-of-goryeo,     title: "Munjong of Goryeo (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Munjong_of_Goryeo"}
+  - {key: wp-sukjong-of-goryeo,     title: "Sukjong of Goryeo (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Sukjong_of_Goryeo"}
+  - {key: wp-yejong-of-goryeo,      title: "Yejong of Goryeo (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Yejong_of_Goryeo"}
+  - {key: wp-injong-of-goryeo,      title: "Injong of Goryeo (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Injong_of_Goryeo"}
+  - {key: wp-uijong-of-goryeo,      title: "Uijong of Goryeo (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Uijong_of_Goryeo"}
+  - {key: wp-myeongjong-of-goryeo,  title: "Myeongjong of Goryeo (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Myeongjong_of_Goryeo"}
+  - {key: wp-gojong-of-goryeo,      title: "Gojong of Goryeo (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Gojong_of_Goryeo"}
+  - {key: wp-chungnyeol-of-goryeo,  title: "Chungnyeol of Goryeo (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Chungnyeol_of_Goryeo"}
+  - {key: wp-chungseon-of-goryeo,   title: "Chungseon of Goryeo (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Chungseon_of_Goryeo"}
+  - {key: wp-gongmin-of-goryeo,     title: "Gongmin of Goryeo (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Gongmin_of_Goryeo"}
+  - {key: wp-choe-chung-heon,       title: "Ch'oe Ch'unghon (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Ch%27oe_Ch%27ungh%C5%8Fn"}
+  - {key: wp-taejo-of-joseon,       title: "Taejo of Joseon (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Taejo_of_Joseon"}
+  - {key: wp-jeongjong-of-joseon,   title: "Jeongjong of Joseon (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Jeongjong_of_Joseon"}
+  - {key: wp-taejong-of-joseon,     title: "Taejong of Joseon (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Taejong_of_Joseon"}
+  - {key: wp-sejong-the-great,      title: "Sejong the Great (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Sejong_the_Great"}
+  - {key: wp-sejo-of-joseon,        title: "Sejo of Joseon (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Sejo_of_Joseon"}
+  - {key: wp-seongjong-of-joseon,   title: "Seongjong of Joseon (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Seongjong_of_Joseon"}
+  - {key: wp-yeonsangun-of-joseon,  title: "Yeonsangun of Joseon (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Yeonsangun_of_Joseon"}
+  - {key: wp-jungjong-of-joseon,    title: "Jungjong of Joseon (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Jungjong_of_Joseon"}
+  - {key: wp-seonjo-of-joseon,      title: "Seonjo of Joseon (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Seonjo_of_Joseon"}
+  - {key: wp-yi-sun-sin,            title: "Yi Sun-sin (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Yi_Sun-sin"}
+  - {key: wp-mongol-invasions-of-korea, title: "Mongol invasions of Korea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_invasions_of_Korea"}
+  - {key: wp-imjin-war,             title: "Imjin War (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Imjin_War"}
+
+realms:
+  - {name: Joseon, region: East Asia, country: South Korea}
+
+people:
+  # ---- Kings of Goryeo
+  - key: hyeonjong-of-goryeo
+    name: Hyeonjong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 992-08-01
+    died: 1031-06-17
+    prominence: 4
+    note: "8th ruler of Goryeo, personal name Wang Sun, a grandson of Taejo. Forced to become a monk, then installed in 1009 by the military inspector Kang Cho, who overthrew Mokjong. The Khitan attacked in 1010 (the court moved south to Naju) and again in 1019, when the Battle of Kwiju ended their attempts. Ordered the Tripitaka Koreana compiled. The article calls him among the greatest leaders in Korean history."
+    coverage: partly
+    coverage_note: "reign, the two Khitan wars and the Tripitaka from a short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-hyeonjong-of-goryeo]
+  - key: munjong-of-goryeo
+    name: Munjong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1019-12-29
+    died: 1083-09-02
+    prominence: 3
+    note: "11th king, personal name Wang Hwi, reigned 1046 to 1083. Central government gained complete authority over local lords and civilian leadership was stressed over the military. Pushed the border north to the Yalu and Tumen and built forts. His fourth son Uicheon founded the Cheontae school of Buddhism. Short article; only what it says is used."
+    coverage: partly
+    coverage_note: "reign and life dates from a very short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-munjong-of-goryeo]
+  - key: sukjong-of-goryeo
+    name: Sukjong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1054-09-02
+    died: 1105-11-10
+    prominence: 2
+    note: "15th king, personal name Wang Ong. Came to the throne in 1095 after his young nephew Heonjong gave up the throne (the Yejong article calls it a coup). Issued Goryeo's first brass coins in 1102, built the Southern Capital (Namgyeong, present-day Seoul), and met a Jurchen invasion in 1104 with the Byeolmuban army raised by Yun Kwan. Died in 1105 on a journey to or from Pyongyang (see discrepancy)."
+    coverage: partly
+    coverage_note: "reign and life dates from a short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-sukjong-of-goryeo, wp-yejong-of-goryeo]
+  - key: yejong-of-goryeo
+    name: Yejong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1079-02-11
+    died: 1122-05-15
+    prominence: 3
+    note: "16th king, personal name Wang U, eldest son of Sukjong; crown prince in 1100, king in 1105. Ended the Jurchen war of 1107-1109 by handing back nine forts, promoted education (Cheongyeongak and Bomungak 1116, Yanghyeongo 1119) and Taoism (the Bogwongung temple, begun 1110), received Song musical instruments in 1114 and 1116 (the start of aak), refused to help Liao in 1115. Buried in Gaeseong at Yureung."
+    coverage: partly
+    coverage_note: "reign, Jurchen war, diplomacy, education and burial from the English Wikipedia article; consorts and children only as the parent link to Injong; no artworks"
+    sources: [wp-yejong-of-goryeo]
+  - key: injong-of-goryeo
+    name: Injong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1109-10-29
+    died: 1146-04-10
+    prominence: 3
+    note: "17th king, personal name Wang Hae, aged about twelve when he came to the throne in 1122 through his maternal grandfather Yi Cha-gyom, who dominated until his fall in 1126. Faced the 1126 coup in which the palace burned, submitted to the Jin (invested 1142), and put down Myo Cheong's rebellion at the Western Capital in 1135-1136 with Kim Pusik. Ordered the Samguk sagi in 1142."
+    coverage: partly
+    coverage_note: "reign, the Yi Cha-gyom years, Myo Cheong's rebellion and the Samguk sagi from the English Wikipedia article; family and later years only partly entered; no artworks"
+    sources: [wp-injong-of-goryeo]
+  - key: uijong-of-goryeo
+    name: Uijong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1127-05-23
+    died: 1173-11-07
+    prominence: 2
+    note: "18th king, personal name Wang Hyon. Favoured civil officials and humiliated the military; in the autumn of 1170 Chong Chung-bu, Yi Ui-bang and Yi Ko led a coup, murdered civil officials and put his younger brother on the throne. After an attempt to restore him failed he was drowned in a pond in 1173. No title row: the article gives no start of reign (taken from the Injong article, see titles)."
+    coverage: partly
+    coverage_note: "life dates and the 1170 coup from a very short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-uijong-of-goryeo]
+  - key: myeongjong-of-goryeo
+    name: Myeongjong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1131-11-08
+    died: 1202-12-03
+    prominence: 2
+    note: "19th king, personal name Wang Ho, third son of Injong, placed on the throne by the generals who deposed his brother. A puppet during the military regime; he played the generals against each other. Ch'oe Ch'unghon confined him at Changrak Palace in September 1197 and put his brother Sinjong on the throne; he died in 1202."
+    coverage: partly
+    coverage_note: "reign, puppet role and deposition from the English Wikipedia articles on Myeongjong and Ch'oe Ch'unghon; consorts and children not entered; no artworks"
+    sources: [wp-myeongjong-of-goryeo, wp-choe-chung-heon]
+  - key: gojong-of-goryeo
+    name: Gojong of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1192
+    died: 1259
+    prominence: 3
+    note: "23rd king, personal name Wang Cheol, reigned 1213 to 1259. Real power lay with the Ch'oe military family. The Khitan invaded in 1216 and were beaten; he moved the capital from Songdo to Ganghwa Island in 1232 to resist the Mongols, and resisted nearly thirty years until the peace of 1259. The carving of the Tripitaka Koreana (81,000 blocks) was completed in 1251, the article says. Short article; birth and death years only."
+    coverage: partly
+    coverage_note: "reign, Ganghwa move and Tripitaka from a short English Wikipedia article; family not entered; no artworks"
+    sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea]
+  - key: chungnyeol-of-goryeo
+    name: Chungnyeol of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1236-04-03
+    died: 1308-07-30
+    prominence: 3
+    note: "25th king, personal name Wang Ko, son of Wonjong, king from 1274. Married a daughter of Kublai Khan, the start of more than 80 years of Mongol marriages; the first Goryeo king whose name carries the title wang rather than jo or jong. Ordered to help the Yuan invasions of Japan (1274, 1281): Goryeo built the fleets, with Kim Pang-gyong as general. Met Kadaan's invasion of 1290-1291 with indifference. Gave up the throne to Chungseon in 1298, was back after eight months, and lost it again in 1307; died at Shinhyo Temple in July 1308."
+    coverage: partly
+    coverage_note: "reign, Yuan vassalage, the Japan expeditions and the hand-over to his son from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-chungnyeol-of-goryeo]
+  - key: chungseon-of-goryeo
+    name: Chungseon of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1275-10-20
+    died: 1325-06-23
+    prominence: 2
+    note: "26th king, born Wang Won (later Wang Chang), Mongolian name Ijir Bukhqa; the first Goryeo king with Mongol ancestry (his mother was a daughter of Kublai Khan). King briefly in 1298 and again 1308 to 1313; preferred Dadu to Gaegyeong, held the title Prince of Shenyang, and backed Khayishan (Kulug Khan) in 1307 and Ayurbarwada in 1311. Retired in favour of his son Wang Do in 1313, was briefly exiled to Tibet after 1320 and died at Khanbaliq."
+    coverage: partly
+    coverage_note: "reigns, Mongol court role and exile from a short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-chungseon-of-goryeo, wp-chungnyeol-of-goryeo]
+  - key: gongmin-of-goryeo
+    name: Gongmin of Goryeo
+    type: Royalty
+    house: House of Wang
+    realm: Goryeo
+    born: 1330-05-23
+    died: 1374-10-27
+    prominence: 3
+    note: "31st king, Mongolian name Bayan Temur, king from 1351. Raised at the Yuan court; as Yuan fell he purged pro-Mongol aristocrats, retook Ssangseong and Dongnyeong (1356, with Yi Cha-chun and Yi Songgye, the future Taejo), fought the Wokou and the Red Turbans (who held Kaesong briefly in 1361), and turned to Ming. After his queen Noguk died in 1365 he gave power to the monk Sin Ton (executed 1371). Murdered in his palace at Songdo on the 21st day of the 9th lunar month of 1374; the Goryeosa account may be coloured against him. A noted painter."
+    coverage: partly
+    coverage_note: "reign, reforms, Red Turban war, death and his painting from the English Wikipedia article; consorts and his individual works not entered; no artworks"
+    sources: [wp-gongmin-of-goryeo]
+  - key: choe-chung-heon
+    name: Ch'oe Ch'unghon
+    type: Nobility
+    house: Ubong Ch'oe clan
+    realm: Goryeo
+    born: 1149
+    died: 1219-10-29
+    prominence: 4
+    note: "Military ruler of Goryeo. On 9 April 1196 he and his brothers beheaded the previous strongman Yi Uimin and seized power; presented the ten-point Bongsa Sipjo reform. Deposed Myeongjong in 1197 and replaced four kings (Sinjong 1197, Huijong 1204, Gangjong 1211, Gojong 1213). Built a dual administration with private bodies (the Kyojong Togam from 1209) and a private guard (the Tobang). Killed his brother Ch'oe Ch'ungsu in the succession struggle of about 1200. Handed the regime to his son Ch'oe U; the Ch'oe family ruled for over 60 years. Died in 1219 (the article says at 71, which does not match 1149)."
+    coverage: partly
+    coverage_note: "rise, the kings he replaced, the regime and succession from the English Wikipedia article; the many offices and honours, the family and the 1209-1219 institutions only summarised; no artworks"
+    sources: [wp-choe-chung-heon]
+  # ---- Kings of Joseon
+  - key: taejo-of-joseon
+    name: Taejo of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1335-11-04
+    died: 1408-06-27
+    prominence: 4
+    note: "Yi Songgye, founder and first king of Joseon. Born in Ssangseong Prefecture; a general who beat the Red Turbans, Naghachu and the Japanese pirates. In 1388 he turned the army back at Wihwa Island, took the capital and in 1392 ended Goryeo and became king; named the dynasty Joseon in 1393 and made Hanseong (Seoul) the capital in 1394. Abdicated in 1398 after the First Strife of the Princes and kept away from his son Taejong; died at Changdeokgung in 1408 and is buried at Geonwolleung."
+    coverage: partly
+    coverage_note: "rise, founding, capital, abdication and death from the English Wikipedia article; family only as parent links; no artworks"
+    sources: [wp-taejo-of-joseon]
+  - key: jeongjong-of-joseon
+    name: Jeongjong of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1357-07-26
+    died: 1419-10-24
+    prominence: 2
+    note: "Second king of Joseon, personal name Yi Bang-gwa, second son of Taejo. Became king in 1398 after the First Strife of the Princes, moved the government back to Gaegyeong that year, and, knowing he was a figurehead for his brother Yi Bang-won, abdicated to him in 1400 after the Second Strife. Buried at Hurung in Kaesong."
+    coverage: partly
+    coverage_note: "reign, the two Strifes and burial from a short English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-jeongjong-of-joseon, wp-taejong-of-joseon]
+  - key: taejong-of-joseon
+    name: Taejong of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1367-06-21
+    died: 1422-06-08
+    prominence: 3
+    note: "Third king of Joseon, Yi Pangwon, fifth son of Taejo. Helped found Joseon (he had Chong Mongju killed), launched the First Strife of the Princes in 1398 and put down the Second in 1400, then took the throne. Ended private armies, centralised power, favoured Confucianism over Buddhism, introduced identity tags (hopae), ordered 100,000 pieces of metal type in 1403 and started the Oei invasion of Tsushima in 1419. Abdicated to Sejong in 1418 but ruled until his death in 1422. Buried at Heolleung in Seoul."
+    coverage: partly
+    coverage_note: "rise, reign, reforms, abdication and burial from the English Wikipedia article; consorts and children only as parent links; no artworks"
+    sources: [wp-taejong-of-joseon]
+  - key: sejong-the-great
+    name: Sejong the Great
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1397-05-15
+    died: 1450-04-08
+    prominence: 5
+    note: "Fourth king of Joseon (1418-1450), born Yi To at Hanyang, third son of Taejong. Crowned at Geunjeongjeon in Gyeongbokgung after the elder Yangnyong was deposed; Taejong kept real power until 1422. Reestablished the Hall of Worthies (1420), oversaw advances in astronomy, calendars, medicine, movable type (kabin type 1434), agriculture and music, and sent campaigns against the Jurchens (1433, 1437) that set the northern border. Hangul was shown to the court in 1443 and published as the Hunminjeongeum in 1446. Died at 52 and is buried at Yeongneung (moved to Yeoju in 1469)."
+    coverage: partly
+    coverage_note: "reign, Hangul, science and technology, the Oei invasion and death from the English Wikipedia article (a very long article; domestic policy, religion, foreign-relations detail and family list only summarised); no artworks"
+    sources: [wp-sejong-the-great]
+  - key: sejo-of-joseon
+    name: Sejo of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1417-11-11
+    died: 1468-10-02
+    prominence: 3
+    note: "Seventh king of Joseon, Yi Yu (Grand Prince Suyang), second son of Sejong. Killed Kim Chongso in a coup in 1453, forced his nephew Danjong to abdicate in 1455 and later had him poisoned. Strengthened the throne, attacked the Jurchens (1460, 1467), revised land law and compiled the Kyongguk Taejon (State Code). Tomb at Gwangneung, Namyangju."
+    coverage: partly
+    coverage_note: "coup, reign and legal work from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-sejo-of-joseon]
+  - key: seongjong-of-joseon
+    name: Seongjong of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1457-08-28
+    died: 1495-01-29
+    prominence: 3
+    note: "Ninth king of Joseon, Yi Hyeol, grandson of Sejo, chosen over an older brother at about twelve; his grandmother and mother ruled until he governed himself in 1476. The Grand Code for State Administration took effect in 1474; he enlarged the Hongmungwan, brought in Confucian scholars, and campaigned against the Jurchens in 1491. He promoted Lady Yun to queen; her later fate drove his son Yeonsangun to tyranny. Buried at Seonneung in Seoul."
+    coverage: partly
+    coverage_note: "reign, laws, Jurchen campaign and the Yun affair from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-seongjong-of-joseon]
+  - key: yeonsangun-of-joseon
+    name: Yeonsangun of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1476-12-02
+    died: 1506-11-30
+    prominence: 3
+    note: "Tenth king of Joseon, Yi Yung, called a tyrant; he has no temple name. Came to the throne in 1495, launched the First (1498) and Second (1504) Literati Purges after learning of his mother's death, took over Sungkyunkwan as a pleasure ground, and banned Hangul after the satirical letters of July 1504. Deposed in a coup in September 1506 and exiled to Ganghwa Island, where he died about two months later."
+    coverage: partly
+    coverage_note: "reign, the purges, the Hangul ban and dethronement from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-yeonsangun-of-joseon]
+  - key: jungjong-of-joseon
+    name: Jungjong of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1488-04-25
+    died: 1544-12-09
+    prominence: 2
+    note: "11th king of Joseon, Yi Yeok, Seongjong's eighth surviving son, put on the throne in September 1506 by the coup that deposed Yeonsangun. Reopened Sungkyunkwan, backed Cho Kwangjo's reforms, then in January 1520 had him executed in the Third Literati Purge. Afterwards the court was torn by factions of the king's wives and in-laws. Died 9 December 1544."
+    coverage: partly
+    coverage_note: "reign, Cho Kwangjo's reforms and fall, and death from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-jungjong-of-joseon]
+  - key: seonjo-of-joseon
+    name: Seonjo of Joseon
+    type: Royalty
+    house: House of Yi
+    realm: Joseon
+    born: 1552-12-06
+    died: 1608-03-16
+    prominence: 3
+    note: "14th king of Joseon, Yi Yeon, a grandson of Jungjong, crowned in 1567. Early reforms and promotion of Sarim scholars, then the East-West faction split; sent two envoys to Japan who disagreed, and was unprepared for the Imjin War: fled Hanseong in 1592 to Pyongyang and then Uiju, asked Ming for help, wrote the first public Hangul document, and later made Deoksugung a palace. Had Yi Sun-sin arrested in 1597. Died in 1608."
+    coverage: partly
+    coverage_note: "reign, factions and the Imjin War years from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-seonjo-of-joseon]
+  # ---- Admiral
+  - key: yi-sun-sin
+    name: Yi Sun-sin
+    type: Nobility
+    roles: [admiral]
+    house: Deoksu Yi clan
+    realm: Joseon
+    born: 1545-04-28
+    died: 1598-12-16
+    prominence: 5
+    note: "Joseon admiral, born in Hanseong. Passed the military examination in 1576, fought the Jurchens, and in 1591 took command of the Left Jeolla naval district at Yeosu, where he built up the fleet and the geobukseon (turtle ship). Won at least 23 naval battles in the Imjin War without defeat: Okpo and Sacheon (1592), Hansan Island (14 August 1592), then, after being dismissed and tortured in 1597 and reinstated, Myeongnyang (1597) with 13 ships. Shot in the Battle of Noryang on 16 December 1598 and died; buried at Asan. His war diary is a UNESCO Memory of the World item."
+    coverage: partly
+    coverage_note: "career, the main battles, dismissal, death and legacy summary from the English Wikipedia article; the individual 1592 skirmishes, family and cultural depictions only summarised; no artworks"
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+
+titles:
+  # Kings of Goryeo
+  - {person: hyeonjong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1009, to: 1031-06-17, note: "Installed in 1009 by Kang Cho, who overthrew Mokjong. The article gives no separate end of reign; the end date is his death", sources: [wp-hyeonjong-of-goryeo]}
+  - {person: munjong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1046, to: 1083-09-02, note: "Reigned from 1046 until his death in 1083 per the article", sources: [wp-munjong-of-goryeo]}
+  - {person: sukjong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1095, to: 1105-11-10, note: "Rose to the throne in 1095 on the abdication of his nephew Heonjong (the Yejong article calls it a coup; see discrepancy); the end is his death, which Yejong's article places at his accession in 1105", sources: [wp-sukjong-of-goryeo, wp-yejong-of-goryeo]}
+  - {person: yejong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1105, to: 1122-05-15, note: "Became king in 1105 when Sukjong died; end is his death on 15 May 1122", sources: [wp-yejong-of-goryeo]}
+  - {person: injong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1122, to: 1146-04-10, note: "Succeeded Yejong in 1122 at about twelve; end is his death on 10 April 1146", sources: [wp-injong-of-goryeo, wp-yejong-of-goryeo]}
+  - {person: uijong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1146, to: 1170, note: "Prince Hyeon succeeded on Injong's death in April 1146 (Injong article; the Uijong article gives no start). Deposed in the coup of autumn 1170 by Chong Chung-bu, Yi Ui-bang and Yi Ko", sources: [wp-uijong-of-goryeo, wp-injong-of-goryeo]}
+  - {person: myeongjong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1170, to: 1197, note: "Put on the throne by the 1170 coup against his brother Uijong (Uijong article); confined by Ch'oe Ch'unghon at Changrak Palace in September 1197 (Ch'oe article). The Myeongjong article says 27 years on the throne, the Ch'oe article 28 (see discrepancy)", sources: [wp-myeongjong-of-goryeo, wp-uijong-of-goryeo, wp-choe-chung-heon]}
+  - {person: gojong-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1213, to: 1259, note: "Ruled 1213 to 1259 per the article's lead; real power lay with the Ch'oe family", sources: [wp-gojong-of-goryeo]}
+  - {person: chungnyeol-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1274, to: 1298, note: "Became king after Wonjong's death in 1274; gave up the throne to Chungseon in 1298", sources: [wp-chungnyeol-of-goryeo]}
+  - {person: chungseon-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1298, to: 1298, note: "First, brief reign; he returned the throne to his father shortly afterwards", sources: [wp-chungseon-of-goryeo]}
+  - {person: chungnyeol-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1298, to: 1307, note: "Reinstated after eight months. The Chungnyeol article says Chungseon was crowned in 1307 and the father was detained at a temple in Dadu; the Chungseon article gives his second reign as 1308 to 1313, and the Chungnyeol lead has 1274 to 1308 (see discrepancy)", sources: [wp-chungnyeol-of-goryeo, wp-chungseon-of-goryeo]}
+  - {person: chungseon-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1308, to: 1313, note: "Second reign, 1308 to 1313 per the article; he retired in favour of his son Wang Do. He spent as much time as possible in China", sources: [wp-chungseon-of-goryeo]}
+  - {person: gongmin-of-goryeo, title: King of Goryeo, realm: Goryeo, from: 1351, to: 1374-10-27, note: "Ruled 1351 to 1374 per the article's lead; murdered on the night of the 21st day of the 9th lunar month (lead date 27 October 1374)", sources: [wp-gongmin-of-goryeo]}
+  - {person: choe-chung-heon, title: Military ruler of Goryeo, realm: Goryeo, from: 1196-04-09, to: 1219-10-29, note: "No formal office: he seized power on 9 April 1196 by beheading Yi Uimin and ruled through puppet kings until his death on 29 October 1219; the article says he announced his retirement in favour of his son Ch'oe U without giving a year", sources: [wp-choe-chung-heon]}
+  # Kings of Joseon
+  - {person: taejo-of-joseon, title: King of Joseon, realm: Joseon, from: 1392, to: 1398, note: "Forced Gongyang to abdicate and enthroned himself in 1392, ending Goryeo; renamed the dynasty Joseon in 1393. Abdicated in 1398 after the First Strife of the Princes", sources: [wp-taejo-of-joseon]}
+  - {person: jeongjong-of-joseon, title: King of Joseon, realm: Joseon, from: 1398, to: 1400, note: "Named successor and crowned in 1398; abdicated in 1400 to Yi Pang-won (Taejong) after the Second Strife of the Princes", sources: [wp-jeongjong-of-joseon, wp-taejo-of-joseon]}
+  - {person: taejong-of-joseon, title: King of Joseon, realm: Joseon, from: 1400, to: 1418, note: "Took the throne in 1400 and abdicated to Sejong in 1418; he kept real power as king emeritus until his death in 1422", sources: [wp-taejong-of-joseon, wp-sejong-the-great]}
+  - {person: sejong-the-great, title: King of Joseon, realm: Joseon, from: 1418, to: 1450-04-08, note: "Ascended in 1418 (the article gives the 10th day, 8th month, a lunar date, not converted) at Geunjeongjeon in Gyeongbokgung; reigned to his death (lead: 8 April 1450, the 17th day, 2nd month)", sources: [wp-sejong-the-great]}
+  - {person: sejo-of-joseon, title: King of Joseon, realm: Joseon, from: 1455, to: 1468, note: "Forced Danjong to abdicate in 1455; the article says only that he died in 1468 (lead date 2 October 1468), so the end is the year", sources: [wp-sejo-of-joseon]}
+  - {person: seongjong-of-joseon, title: King of Joseon, realm: Joseon, from: 1469, to: 1495-01-29, note: "Reign 1469 to 1494 per the Sejong article's 'r. 1469-1494'; the Seongjong article gives his death as 29 January 1495 (see discrepancy). Start is from that Sejong note, as the Seongjong article gives no year", sources: [wp-seongjong-of-joseon, wp-sejong-the-great]}
+  - {person: yeonsangun-of-joseon, title: King of Joseon, realm: Joseon, from: 1495, to: 1506, note: "Succeeded in 1495; deposed in a coup in September 1506 (month without day, so the year only) and demoted to Prince Yeonsan", sources: [wp-yeonsangun-of-joseon]}
+  - {person: jungjong-of-joseon, title: King of Joseon, realm: Joseon, from: 1506, to: 1544-12-09, note: "Made king in September 1506 on the day Yeonsangun was deposed (month without day, so the year only); reigned until his death on 9 December 1544", sources: [wp-jungjong-of-joseon]}
+  - {person: seonjo-of-joseon, title: King of Joseon, realm: Joseon, from: 1567, to: 1608-03-16, note: "Crowned in 1567 (the lead says at 14, the text at 16; see discrepancy); died in 1608 (lead date 16 March 1608)", sources: [wp-seonjo-of-joseon]}
+
+places:
+  - key: gaegyeong
+    name: Gaegyeong (Kaesong)
+    historical_name: "Gaegyeong, also Songdo"
+    kind: city
+    region: Kaesong
+    country: North Korea
+    lat: 37.970
+    lng: 126.554
+    visitable: false
+    note: "Capital of Goryeo (the Eastern Capital in Injong's reign; the article calls it Gaegyeong, present-day Kaesong, and Gojong's article calls the pre-1232 capital Songdo). Besieged by the Mongols in December 1231; held by the Red Turbans briefly in 1361 and recaptured by Ch'oe Yong, Yi Songgye and others; Gongmin was murdered in the palace at Songdo in 1374. Jeongjong moved the Joseon government back here in 1398; Yejong is buried at Yureung in Gaeseong and Jeongjong at Hurung, Panmun Ward, Kaesong."
+    sources: [wp-injong-of-goryeo, wp-gongmin-of-goryeo, wp-gojong-of-goryeo, wp-jeongjong-of-joseon, wp-yejong-of-goryeo, wp-mongol-invasions-of-korea]
+  - key: hanyang-seoul
+    name: Hanyang (Seoul)
+    historical_name: "Hanyang, Hanseong"
+    kind: city
+    region: Seoul
+    country: South Korea
+    lat: 37.566
+    lng: 126.978
+    visitable: true
+    visit_site: "Gyeongbokgung, Changdeokgung and the old city quarter"
+    note: "Taejo made Hanseong (present-day Seoul) the new capital of Joseon in 1394. Sejong was born at Chunsubang in Hanyang in 1397, Yi Sun-sin in Geoncheon-dong and Seonjo there too. Taejong is buried at Heolleung and Seongjong at Seonneung (south of Seoul). Sukjong built a Southern Capital (Namgyeong) on the site of present-day Seoul. The Japanese entered it on 10 June 1592 after Seonjo had fled."
+    sources: [wp-taejo-of-joseon, wp-sejong-the-great, wp-yi-sun-sin, wp-seonjo-of-joseon, wp-sukjong-of-goryeo, wp-imjin-war]
+  - key: ganghwa-island
+    name: Ganghwa Island
+    kind: island
+    city: Incheon
+    region: Incheon
+    country: South Korea
+    lat: 37.700
+    lng: 126.400
+    visitable: true
+    visit_site: "Ganghwa History Museum and the Goryeo-era earthworks"
+    note: "Gojong moved the capital of Goryeo here from Songdo in 1232 to resist the Mongols and built strong defences; the Mongols never tried to take it. The Ch'oe rulers governed from it. Earlier, Ch'oe Ch'unghon sent the crown prince here when he deposed Myeongjong (1197) and exiled Huijong here (1211); Yeonsangun was exiled here in 1506 and died. Gojong's tomb is near Incheon."
+    sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea, wp-choe-chung-heon, wp-yeonsangun-of-joseon]
+  - key: gyeongbokgung
+    name: Gyeongbokgung
+    kind: palace
+    city: Seoul
+    region: Seoul
+    country: South Korea
+    lat: 37.580
+    lng: 126.977
+    visitable: true
+    visit_site: "Gyeongbokgung Palace, Seoul"
+    note: "Sejong was crowned in its hall Geunjeongjeon in 1418, made it his main palace in 1421 and moved out of Changdeokgung into it by 1427; he renovated and expanded it, and it kept much the same form for about a hundred years. He died there in 1450. Burned in 1592 during the Imjin War. The articles do not give the year it was built or its builder."
+    sources: [wp-sejong-the-great, wp-seonjo-of-joseon, wp-imjin-war]
+  - key: changdeokgung
+    name: Changdeokgung
+    kind: palace
+    city: Seoul
+    region: Seoul
+    country: South Korea
+    lat: 37.579
+    lng: 126.991
+    visitable: true
+    visit_site: "Changdeokgung Palace, Seoul"
+    note: "Taejo died here on 27 June 1408. Sejong treated it as the secondary palace and moved out of it into Gyeongbokgung by 1427. Burned in the Imjin War."
+    sources: [wp-taejo-of-joseon, wp-sejong-the-great, wp-imjin-war]
+  - key: pyongyang
+    name: Pyongyang
+    historical_name: "Seogyeong, the Western Capital"
+    kind: city
+    region: Pyongyang
+    country: North Korea
+    lat: 39.039
+    lng: 125.762
+    visitable: false
+    note: "Goryeo's Western Capital (Seogyeong). Injong built the Great Flowering Palace (Taehwa-gung) here in 1129-1132 on Myo Cheong's advice and Myo Cheong rebelled here in 1135; it fell in early 1136. Seonjo fled to Pyongyang in 1592 and then to Uiju; the Japanese took it and Ming forces retook it."
+    sources: [wp-injong-of-goryeo, wp-sukjong-of-goryeo, wp-seonjo-of-joseon, wp-imjin-war]
+  - key: busan-fortress
+    name: Busan (Busanjin fortress)
+    historical_name: "Fort Busan"
+    kind: fortress
+    city: Busan
+    region: Busan
+    country: South Korea
+    lat: 35.123
+    lng: 129.047
+    visitable: true
+    note: "Where the Japanese First Division under Konishi Yukinaga landed on the evening of 23 May 1592 (the Seonjo article says 13 April), began the Imjin War, and took the fort; the commander Chong Pal was killed. Dadaejin fell next morning and Dongnae on the 25th."
+    sources: [wp-imjin-war, wp-seonjo-of-joseon]
+  - key: hansando-battle-site
+    name: Hansan Island and Gyeonnaeryang Strait
+    kind: battlefield
+    city: Tongyeong
+    region: South Gyeongsang
+    country: South Korea
+    lat: 34.790
+    lng: 128.470
+    visitable: true
+    visit_site: "Hansando and the Tongyeong naval memorials"
+    note: "Site of the naval Battle of Hansan Island on 14 August 1592 in the Gyeonnaeryang strait, where Yi Sun-sin's crane-wing formation destroyed or captured 59 Japanese ships. Yi's base for the rest of 1592."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: jinju-fortress
+    name: Jinju Fortress
+    kind: fortress
+    city: Jinju
+    region: South Gyeongsang
+    country: South Korea
+    lat: 35.189
+    lng: 128.082
+    visitable: true
+    visit_site: "Jinjuseong Fortress"
+    note: "Stronghold guarding Gyeongsang and the road to Jeolla. In November 1592 Kim Simin's garrison of 3,000 held it against Hosokawa Tadaoki. It fell in the second siege of 20-27 July 1593, when almost all the defenders were killed."
+    sources: [wp-imjin-war]
+  - key: myeongnyang-strait
+    name: Myeongnyang Strait
+    kind: strait
+    region: South Jeolla
+    country: South Korea
+    lat: 34.575
+    lng: 126.310
+    visitable: true
+    visit_site: "Uldolmok / Myeongnyang Strait"
+    note: "Narrow channel with strong tidal currents where Yi Sun-sin's 13 ships beat a Japanese fleet of about 133 warships plus support vessels in October 1597."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: noryang-strait
+    name: Noryang Strait
+    kind: strait
+    region: South Gyeongsang
+    country: South Korea
+    lat: 34.930
+    lng: 127.870
+    visitable: true
+    visit_site: "Noryang Strait memorials"
+    note: "Strait between Namhae and the mainland where the last big battle of the Imjin War was fought on 16 December 1598 and where Yi Sun-sin was shot and died."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+
+events:
+  # Goryeo
+  - key: khitan-invasion-of-goryeo-1010
+    name: Khitan invasion of Goryeo
+    type: War
+    year: 1010
+    prominence: 3
+    people:
+      - {person: hyeonjong-of-goryeo, role: defender}
+    note: "The Khitan attacked Goryeo in 1010, using the deposition of Mokjong as a casus belli. Hyeonjong fled the capital and moved the court south to Naju; Kang Cho was defeated and captured; Goryeo repulsed the Khitan in the end."
+    sources: [wp-hyeonjong-of-goryeo]
+  - key: battle-of-kwiju-1019
+    name: Battle of Kwiju
+    type: Battle
+    year: 1019
+    prominence: 3
+    people:
+      - {person: hyeonjong-of-goryeo, role: victor}
+    note: "When Goryeo kept refusing to submit or return the northern territories the Khitan attacked again in 1019; generals including Kang Kam-ch'an inflicted heavy losses at Kwiju. The Khitan withdrew and never invaded again."
+    sources: [wp-hyeonjong-of-goryeo]
+  - key: goryeo-jurchen-war-1107
+    name: Goryeo-Jurchen war and the nine forts
+    type: War
+    year: 1107
+    end_year: 1109
+    prominence: 2
+    people:
+      - {person: yejong-of-goryeo, role: king}
+    note: "After Jurchen raids in October 1107 an army of 170,000 under Yun Kwan took the Hamhung plains and by April 1108 built nine forts; trapped and surrounded, Goryeo handed them back in May 1109 and agreed to pay tribute."
+    sources: [wp-yejong-of-goryeo]
+  - key: myo-cheong-rebellion-1135
+    name: Myo Cheong's rebellion
+    type: Rebellion
+    year: 1135
+    end_year: 1136
+    place: pyongyang
+    prominence: 3
+    people:
+      - {person: injong-of-goryeo, role: king}
+    note: "Myo Cheong, a monk and geomancer who had urged moving the capital to the Western Capital and declaring an empire against the Jin, rebelled in 1135 and proclaimed a state called Taewi at Pyongyang. Kim Pusik led the campaign; Myo Cheong was killed by his own army and Pyongyang fell to government forces in early 1136."
+    sources: [wp-injong-of-goryeo]
+  - key: military-coup-of-1170
+    name: Coup of the generals against Uijong
+    type: Coup
+    year: 1170
+    prominence: 4
+    people:
+      - {person: uijong-of-goryeo, role: deposed}
+      - {person: myeongjong-of-goryeo, role: installed}
+    note: "In the autumn of 1170 the warriors Chong Chung-bu, Yi Ui-bang and Yi Ko murdered civil officials, deposed Uijong and enthroned his younger brother, beginning the military regime that lasted about a century."
+    sources: [wp-uijong-of-goryeo, wp-myeongjong-of-goryeo]
+  - key: choe-chung-heon-coup-1196
+    name: Ch'oe Ch'unghon seizes power
+    type: Coup
+    date: 1196-04-09
+    prominence: 3
+    places:
+      - {place: gaegyeong, role: capital, note: "Ch'oe returned to Gaegyeong after the killing and massacred or exiled Yi Uimin's followers"}
+    people:
+      - {person: choe-chung-heon, role: leader}
+      - {person: myeongjong-of-goryeo, role: king}
+    note: "On 9 April 1196 Ch'oe and his brothers beheaded Yi Uimin at his Mount Mita estate in Hapcheon while the king was at a temple procession, then seized power. In September 1197 he confined Myeongjong at Changrak Palace and installed Sinjong."
+    sources: [wp-choe-chung-heon]
+  - key: tripitaka-koreana-carving-1237
+    name: Carving of the Tripitaka Koreana
+    type: Cultural
+    year: 1237
+    end_year: 1251
+    prominence: 3
+    people:
+      - {person: gojong-of-goryeo, role: patron}
+    note: "Gojong ordered a set of printing blocks for the Buddhist canon during the Mongol wars; the Mongol invasions article says work began in 1237 and the Goryeo Daejanggyeong was finished in 1248, the Gojong article says the carving of some 81,000 blocks was completed in 1251 (see discrepancy). The originals were later destroyed by the Mongols; the surviving Tripitaka is a replica."
+    sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea]
+  - key: mongol-invasions-of-korea-1231
+    name: Mongol invasions of Korea
+    type: War
+    year: 1231
+    end_year: 1259
+    place: ganghwa-island
+    prominence: 4
+    places:
+      - {place: gaegyeong, role: besieged, note: "Surrounded by the Mongols in December 1231"}
+    people:
+      - {person: gojong-of-goryeo, role: king}
+    note: "A series of campaigns by the Mongol Empire against Goryeo, nine in the article's count, from 1231; Goryeo moved its capital to Ganghwa Island in 1232, fought with mobile units and mountain fortresses (the Sambyeolcho), and agreed to peace in spring 1259, becoming a vassal of the Yuan. The article's lead gives 1231 to 1270 (see discrepancy). The Khitan invasion of 1216-1219 came before. Much of Goryeo was devastated and the first Tripitaka Koreana was destroyed."
+    sources: [wp-mongol-invasions-of-korea, wp-gojong-of-goryeo]
+  - key: first-mongol-invasion-of-korea-1231
+    name: First Mongol invasion of Korea
+    type: War
+    date: 1231-08-26
+    prominence: 3
+    places:
+      - {place: gaegyeong, role: besieged, note: "Mongol forces surrounded Kaesong in late December 1231 and Goryeo submitted"}
+    people:
+      - {person: gojong-of-goryeo, role: king}
+    note: "On 26 August 1231 a Mongol force under Saritai crossed the Yalu and took Hamsin-chin (Uiju). Goryeo's Three Armies were beaten at Anju; Kaesong was surrounded in late December and Goryeo submitted, though fighting continued at Kuju and elsewhere into 1232."
+    sources: [wp-mongol-invasions-of-korea]
+  - key: court-moved-to-ganghwa-1232
+    name: Goryeo court moves to Ganghwa Island
+    type: Political
+    year: 1232
+    place: ganghwa-island
+    prominence: 4
+    people:
+      - {person: gojong-of-goryeo, role: king}
+    note: "Ch'oe U proposed moving the capital to Ganghwa in the spring of 1232 (Mongol invasions article; the dissenter Kim Sech'ung was executed); Gojong's article dates the move to August 1232. The island was heavily defended and the Mongols never attempted to take it. Ch'oe U and his successors stayed there for the rest of their lives, and the court was not moved back to the mainland until after the 1259 peace."
+    sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea]
+  - key: third-mongol-invasion-of-korea-1235
+    name: Third Mongol invasion of Korea
+    type: War
+    year: 1235
+    end_year: 1239
+    place: ganghwa-island
+    prominence: 2
+    people:
+      - {person: gojong-of-goryeo, role: king}
+    note: "July 1235 to April 1239. After the kurultai of 1235 Mongol forces reached as far south as Cheongju; Goryeo avoided large armies and used decentralised Sambyeolcho units. Negotiations opened in the winter of 1238 and the Mongols withdrew."
+    sources: [wp-mongol-invasions-of-korea]
+  - key: goryeo-mongol-peace-1259
+    name: Peace between Goryeo and the Mongols
+    type: Treaty
+    year: 1259
+    prominence: 3
+    people:
+      - {person: gojong-of-goryeo, role: king}
+    note: "In spring 1259 a peace agreement was concluded after the ninth invasion: the crown prince (the future Wonjong) was to go to the Mongol court as a hostage and the capital to move back from Ganghwa to Gaegyeong, though that did not happen for many years. The Gojong article dates the end of the conflict to 1259; the Mongol article's lead says the campaigns ended with a treaty in 1270."
+    sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea]
+  - key: sambyeolcho-rebellion-1270
+    name: Sambyeolcho Rebellion
+    type: Rebellion
+    year: 1270
+    end_year: 1273
+    prominence: 2
+    note: "After the peace of 1270 some of the military officials of the former Ch'oe regime, with the Sambyeolcho private army, rose against Goryeo and the Mongols and held out on islands off the southern coast, setting up a rival state, until a Mongol-Goryeo army defeated them."
+    sources: [wp-mongol-invasions-of-korea, wp-choe-chung-heon]
+  - key: red-turban-invasions-of-goryeo-1359
+    name: Red Turban invasions of Goryeo
+    type: War
+    year: 1359
+    end_year: 1361
+    place: gaegyeong
+    prominence: 3
+    people:
+      - {person: gongmin-of-goryeo, role: king}
+      - {person: taejo-of-joseon, role: general}
+    note: "The Red Turbans invaded Goryeo twice in Gongmin's reign, in 1359 and 1361. In 1361 they took Kaesong for a short time; Ch'oe Yong, Yi Songgye (the future Taejo, with 3,000 men), Chong Se-un and Yi Pang-sil recaptured it and few of the Red Turbans escaped."
+    sources: [wp-gongmin-of-goryeo, wp-taejo-of-joseon]
+  - key: wihwado-retreat-1388
+    name: Wihwado Retreat
+    type: Coup
+    year: 1388
+    prominence: 4
+    people:
+      - {person: taejo-of-joseon, role: leader}
+    note: "Sent by Ch'oe Yong to invade the Liaodong Peninsula against Ming, Yi Songgye halted at Wihwa Island on the Amnok River and turned the army back on Gaegyeong, defeated Ch'oe, deposed King U and put his young son on the throne, then Gongyang. This opened the way to the founding of Joseon."
+    sources: [wp-taejo-of-joseon]
+  # Joseon
+  - key: joseon-founded-1392
+    name: Founding of Joseon
+    type: Political
+    year: 1392
+    prominence: 5
+    people:
+      - {person: taejo-of-joseon, role: founder}
+    note: "Yi Songgye forced King Gongyang to abdicate in 1392 and enthroned himself, ending Goryeo's rule after 475 years (the article's count; Goryeo was founded by Wang Kon in 918). He renamed the dynasty Joseon in 1393. The scholar Chong Mongju was killed on Seonjuk Bridge in 1392, and Ming repeatedly refused to accept Taejo as lawful ruler."
+    sources: [wp-taejo-of-joseon, wp-imjin-war]
+  - key: capital-moved-to-hanyang-1394
+    name: Joseon capital moved to Hanseong
+    type: Political
+    year: 1394
+    place: hanyang-seoul
+    prominence: 4
+    people:
+      - {person: taejo-of-joseon, role: king}
+    note: "In 1394 the new capital was established at Hanseong (present-day Seoul). Jeongjong moved the government back to Gaegyeong in 1398; it returned to Hanseong afterwards."
+    sources: [wp-taejo-of-joseon, wp-jeongjong-of-joseon]
+  - key: first-strife-of-the-princes-1398
+    name: First Strife of the Princes
+    type: Coup
+    year: 1398
+    prominence: 3
+    people:
+      - {person: taejong-of-joseon, role: instigator}
+      - {person: taejo-of-joseon, role: abdicated}
+      - {person: jeongjong-of-joseon, role: succeeded}
+    note: "When Chong To-jon planned to kill him, Yi Pang-won (the future Taejong) raided the palace in 1398, killing Chong and the two sons of Queen Sindeok, including the crown prince. Taejo abdicated in favour of Jeongjong. In early 1400 Yi Pang-gan's rising (Second Strife) was put down and Jeongjong abdicated to Taejong."
+    sources: [wp-taejo-of-joseon, wp-taejong-of-joseon, wp-jeongjong-of-joseon]
+  - key: oei-invasion-of-tsushima-1419
+    name: Oei Invasion of Tsushima
+    type: War
+    year: 1419
+    prominence: 3
+    people:
+      - {person: taejong-of-joseon, role: initiator}
+      - {person: sejong-the-great, role: king}
+    note: "After raids from Tsushima in 1418 (famine and the death of Sō Sadashige), Joseon sent 227 ships and about 17,000 soldiers under Yi Chongmu against Tsushima in 1419; the lord of Tsushima surrendered after 15 days. This was followed by decades of peace and trade."
+    sources: [wp-sejong-the-great, wp-taejong-of-joseon]
+  - key: hangul-created-1443
+    name: Creation of Hangul
+    type: Cultural
+    year: 1443
+    end_year: 1446
+    prominence: 5
+    people:
+      - {person: sejong-the-great, role: creator}
+    note: "The Korean alphabet, shown to the court in the 12th month of 1443 (lunar, not converted; the article says it was probably mostly complete) and published with the Hunminjeongeum and its commentary in the 9th month of 1446. Scholars led by Ch'oe Malli objected in 1444; the Onmunchong was set up to work on it. The article says it is debated how far Sejong wrote it himself. Officially adopted by the government in 1894."
+    sources: [wp-sejong-the-great]
+  - key: first-literati-purge-1498
+    name: First Literati Purge (Muo Sahwa)
+    type: Purge
+    year: 1498
+    prominence: 3
+    people:
+      - {person: yeonsangun-of-joseon, role: king}
+    note: "In 1498 followers of Kim Chong-jik were accused of treason after Kim Il-son put a passage critical of Sejo's coup in the royal records. Many Sarim officials were executed and Kim Chong-jik's remains were mutilated."
+    sources: [wp-yeonsangun-of-joseon]
+  - key: second-literati-purge-1504
+    name: Second Literati Purge (Gapja Sahwa)
+    type: Purge
+    year: 1504
+    prominence: 3
+    people:
+      - {person: yeonsangun-of-joseon, role: king}
+    note: "In 1504, after Im Sa-hong told Yeonsangun how his mother had died, the king had many officials who had supported her execution put to death and the grave of Han Myongho opened. On 19 July 1504 he also banned Hangul after satirical letters were found; the ban ended in early August."
+    sources: [wp-yeonsangun-of-joseon]
+  - key: third-literati-purge-1519
+    name: Third Literati Purge (Gimyo Sahwa)
+    type: Purge
+    year: 1519
+    end_year: 1520
+    prominence: 3
+    people:
+      - {person: jungjong-of-joseon, role: king}
+    note: "In late 1519 conservative officials framed Cho Kwangjo with the 'Chu Ch'o Wi Wang' mulberry-leaf trick; in January 1520 he was executed and his reforms dropped. The year range reflects the late-1519 plot and the January 1520 execution. A fourth purge (Ulsa) followed after Jungjong's death."
+    sources: [wp-jungjong-of-joseon, wp-seonjo-of-joseon]
+  # Imjin War
+  - key: imjin-war-1592
+    name: Imjin War (Japanese invasions of Korea)
+    type: War
+    date: 1592-05-23
+    end_year: 1598
+    place: busan-fortress
+    prominence: 5
+    places:
+      - {place: hanyang-seoul, role: captured, note: "Taken on 10 June 1592"}
+      - {place: pyongyang, role: captured, note: "Taken by the Japanese in 1592, retaken with Ming help"}
+      - {place: hansando-battle-site, role: naval battle, note: "14 August 1592"}
+      - {place: jinju-fortress, role: siege, note: "1592 and 1593"}
+      - {place: myeongnyang-strait, role: naval battle, note: "October 1597"}
+      - {place: noryang-strait, role: naval battle, note: "16 December 1598"}
+    people:
+      - {person: toyotomi-hideyoshi, role: invader}
+      - {person: seonjo-of-joseon, role: king}
+      - {person: yi-sun-sin, role: admiral}
+    note: "Two Japanese invasions of Korea: the Imjin War of 1592-1593, a truce in 1596, and the Chongyu War of 1597-1598. Launched by Toyotomi Hideyoshi to conquer Korea and, through it, China; the Japanese overran much of the country, but Ming reinforcements, Yi Sun-sin's navy and Korean militias forced them back to the south. Hideyoshi's death in 1598 and the Battle of Noryang ended the war; Ming ordered the withdrawal in late October and the last ships sailed on 24 December. Korea suffered the most: arable land fell to 66 percent of its prewar total, and Gyeongbokgung, Changdeokgung and Changgyeonggung burned."
+    sources: [wp-imjin-war, wp-seonjo-of-joseon, wp-yi-sun-sin]
+  - key: fall-of-hanseong-1592
+    name: Japanese capture of Hanseong
+    type: Siege
+    date: 1592-06-10
+    place: hanyang-seoul
+    prominence: 3
+    people:
+      - {person: seonjo-of-joseon, role: fled}
+    note: "Konishi Yukinaga's First Division reached Hanseong on 10 June 1592 (Imjin article) and found the gates locked and the city undefended, the king having fled the day before. The Yi Sun-sin article says the Japanese reached Seoul in nineteen days, on 2 May 1592 (see discrepancy). Parts of the city had already been looted and burned."
+    sources: [wp-imjin-war, wp-seonjo-of-joseon]
+  - key: battle-of-okpo-1592
+    name: Battle of Okpo
+    type: Naval battle
+    year: 1592
+    prominence: 3
+    people:
+      - {person: yi-sun-sin, role: victor}
+    note: "Yi Sun-sin's first victory: with Yi Okki and Won Kyun he destroyed Japanese ships at Okpo and Jeokjinpo without losing one of his own. The Yi article puts it in mid-June 1592, the Imjin article around 21 to 23 July 1592 (see discrepancy), so only the year is entered."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: battle-of-hansan-island-1592
+    name: Battle of Hansan Island
+    type: Naval battle
+    date: 1592-08-14
+    place: hansando-battle-site
+    prominence: 4
+    people:
+      - {person: yi-sun-sin, role: victor}
+    note: "Yi Sun-sin lured 63 of 82 Japanese ships out of the narrow Gyeonnaeryang strait and surrounded them in the 'crane wing' formation: 59 Japanese ships destroyed or captured, no Korean ship lost. The fleet had located the enemy on 13 August and spotted them the next morning. Hideyoshi ordered all naval operations stopped."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: first-siege-of-jinju-1592
+    name: First Siege of Jinju
+    type: Siege
+    date: 1592-11-12
+    place: jinju-fortress
+    prominence: 3
+    note: "Hosokawa Tadaoki attacked Jinju for three days; Kim Simin's garrison of 3,000 held. A relief force under Kwak Chaeu arrived on 11 November and on 12 November the final assault was driven off (Kim was killed by a bullet); Hosokawa broke off. The Japanese were stopped from entering Jeolla Province. The second siege (20-27 July 1593, Ukita Hideie with 90,000 men) ended in the fall of Jinju and the slaughter of its defenders."
+    sources: [wp-imjin-war]
+  - key: battle-of-chilcheollyang-1597
+    name: Battle of Chilcheollyang
+    type: Naval battle
+    date: 1597-08-28
+    prominence: 3
+    people:
+      - {person: yi-sun-sin, role: absent, dismissed beforehand}
+    note: "With Yi Sun-sin dismissed, Won Kyun took the whole Joseon fleet (over 100 ships) to attack near Busan and was destroyed by a Japanese ambush; Won was killed. Only 13 ships under Pae Sol (Bae Seol), held back, survived. It was Japan's only decisive naval victory of the war. The date, 28 August 1597, is from the Yi Sun-sin article."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: battle-of-myeongnyang-1597
+    name: Battle of Myeongnyang
+    type: Naval battle
+    date: 1597-10-26
+    place: myeongnyang-strait
+    prominence: 4
+    people:
+      - {person: yi-sun-sin, role: victor}
+    note: "Reinstated after Chilcheollyang, Yi Sun-sin with 13 ships and about 200 men met a Japanese fleet of about 133 warships (333 ships with supply vessels) in the narrow strait and lost no ship. Yi article: October 1597, about 31 Japanese ships destroyed or damaged; Imjin article: 26 October, about 30 destroyed and 30 more damaged (see discrepancy)."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+  - key: battle-of-noryang-1598
+    name: Battle of Noryang
+    type: Naval battle
+    date: 1598-12-16
+    place: noryang-strait
+    prominence: 4
+    people:
+      - {person: yi-sun-sin, role: killed}
+    note: "The last and largest battle of the war: the Ming-Joseon fleet attacked the Japanese fleet under Shimazu Yoshihiro in the early hours of 16 December 1598. Yi Sun-sin was hit by a bullet during the pursuit and died, asking that his death be kept quiet. Konishi Yukinaga slipped away to Busan; the Japanese left Korea from 21 December."
+    sources: [wp-yi-sun-sin, wp-imjin-war]
+
+links:
+  - {parent: hyeonjong-of-goryeo, child: munjong-of-goryeo}
+  - {parent: munjong-of-goryeo, child: sukjong-of-goryeo}
+  - {parent: sukjong-of-goryeo, child: yejong-of-goryeo}
+  - {parent: yejong-of-goryeo, child: injong-of-goryeo}
+  - {parent: injong-of-goryeo, child: uijong-of-goryeo}
+  - {parent: injong-of-goryeo, child: myeongjong-of-goryeo}
+  - {parent: chungnyeol-of-goryeo, child: chungseon-of-goryeo}
+  - {parent: taejo-of-joseon, child: jeongjong-of-joseon}
+  - {parent: taejo-of-joseon, child: taejong-of-joseon}
+  - {parent: taejong-of-joseon, child: sejong-the-great}
+  - {parent: sejong-the-great, child: sejo-of-joseon}
+  - {parent: seongjong-of-joseon, child: yeonsangun-of-joseon}
+  - {parent: seongjong-of-joseon, child: jungjong-of-joseon}
+
+moments:
+  - {person: sejong-the-great, role: born, place: hanyang-seoul, year: 1397}
+  - {person: sejong-the-great, role: crowned, place: gyeongbokgung, year: 1418}
+  - {person: sejong-the-great, role: died, place: gyeongbokgung, year: 1450}
+  - {person: yi-sun-sin, role: born, place: hanyang-seoul, year: 1545}
+  - {person: yi-sun-sin, role: died, place: noryang-strait, year: 1598}
+  - {person: seonjo-of-joseon, role: born, place: hanyang-seoul, year: 1552}
+  - {person: seonjo-of-joseon, role: lived, place: pyongyang, year: 1592}
+  - {person: taejo-of-joseon, role: worked, place: hanyang-seoul, year: 1394}
+  - {person: taejo-of-joseon, role: died, place: changdeokgung, year: 1408}
+  - {person: jeongjong-of-joseon, role: worked, place: gaegyeong, year: 1398}
+  - {person: jeongjong-of-joseon, role: buried, place: gaegyeong, year: 1419}
+  - {person: taejong-of-joseon, role: buried, place: hanyang-seoul, year: 1422}
+  - {person: yejong-of-goryeo, role: buried, place: gaegyeong, year: 1122}
+  - {person: gongmin-of-goryeo, role: died, place: gaegyeong, year: 1374}
+  - {person: gojong-of-goryeo, role: lived, place: ganghwa-island, year: 1232}
+  - {person: yeonsangun-of-joseon, role: died, place: ganghwa-island, year: 1506}
+  - {person: choe-chung-heon, role: worked, place: gaegyeong, year: 1196}
+
+discrepancies:
+  - key: sukjong-1095-accession
+    question: Did Sukjong come to the throne in 1095 on his nephew's abdication, or by a coup?
+    about: [{person: sukjong-of-goryeo}]
+    field: other
+    claims:
+      - {value: "He rose to the throne in 1095 upon the abdication of his young nephew, King Heonjong", sources: [wp-sukjong-of-goryeo]}
+      - {value: "He took the throne in 1095 after a coup (coup d'etat) against the eleven-year-old King Heonjong", sources: [wp-yejong-of-goryeo]}
+    note: "The record says he took the throne in 1095 and describes both versions in the person note."
+  - key: sukjong-1105-death-journey
+    question: Was Sukjong travelling to Pyongyang when he died in 1105, or returning from it?
+    about: [{person: sukjong-of-goryeo}, {place: pyongyang}]
+    field: place
+    claims:
+      - {value: "He died while on the way to the western capital, Pyongyang", sources: [wp-sukjong-of-goryeo]}
+      - {value: "He died returning from Jangnak Palace in Seogyeong (the Western Capital)", sources: [wp-yejong-of-goryeo]}
+    note: "No place is recorded for his death."
+  - key: myeongjong-reign-length
+    question: Did Myeongjong reign 27 or 28 years?
+    about: [{person: myeongjong-of-goryeo}]
+    field: date
+    claims:
+      - {value: "Twenty-seven years on the throne before exile by Ch'oe Ch'unghon", sources: [wp-myeongjong-of-goryeo]}
+      - {value: "On the throne for 28 years when deposed in 1197 (also 'nearly 30 years')", sources: [wp-choe-chung-heon]}
+    note: "The record uses 1170 to 1197 (27 years), which fits the Uijong and Ch'oe articles' dates."
+  - key: tripitaka-koreana-completion
+    question: When was the carving of the Goryeo Tripitaka completed?
+    about: [{event: tripitaka-koreana-carving-1237}, {person: gojong-of-goryeo}]
+    field: date
+    claims:
+      - {value: "Completed in 1251 (some 81,000 wooden blocks)", sources: [wp-gojong-of-goryeo]}
+      - {value: "Work began in 1237 and the Goryeo Daejanggyeong was completed in 1248", sources: [wp-mongol-invasions-of-korea]}
+    note: "The record spans 1237 to 1251 (the later date) and keeps both."
+  - key: ganghwa-move-1232-date
+    question: When did the Goryeo court move to Ganghwa Island in 1232?
+    about: [{event: court-moved-to-ganghwa-1232}, {person: gojong-of-goryeo}]
+    field: date
+    claims:
+      - {value: "August 1232: Gojong moved the capital from Songdo to Ganghwa", sources: [wp-gojong-of-goryeo]}
+      - {value: "Proposed in the spring of 1232; the royal family relocated and by the summer of 1232 the transfer was complete", sources: [wp-mongol-invasions-of-korea]}
+    note: "Entered with the year only."
+  - key: mongol-wars-end-1259-1270
+    question: When did the Mongol wars on Goryeo end?
+    about: [{event: mongol-invasions-of-korea-1231}, {event: goryeo-mongol-peace-1259}]
+    field: date
+    claims:
+      - {value: "1259: a peace agreement in the spring of 1259; Gojong's resistance of nearly thirty years ended then", sources: [wp-gojong-of-goryeo, wp-mongol-invasions-of-korea]}
+      - {value: "1270: the campaigns between 1231 and 1270 ended with a peace treaty making Goryeo a Yuan vassal", sources: [wp-mongol-invasions-of-korea]}
+    note: "The series event runs to 1259; 1270 is the year the Sambyeolcho Rebellion began."
+  - key: mongol-wars-start-1231-1238
+    question: When did the Mongol invasions of Korea begin?
+    about: [{event: mongol-invasions-of-korea-1231}, {person: gongmin-of-goryeo}]
+    field: date
+    claims:
+      - {value: "1231 (first invasion, 26 August 1231)", sources: [wp-mongol-invasions-of-korea]}
+      - {value: "1238, the 'forty year long Mongol invasion of Korea of 1238'", sources: [wp-gongmin-of-goryeo]}
+    note: "The record uses 1231."
+  - key: chungnyeol-mongol-marriage
+    question: When, and by whom, was the marriage of Chungnyeol to a daughter of Kublai Khan proposed?
+    about: [{person: chungnyeol-of-goryeo}, {person: chungseon-of-goryeo}]
+    field: date
+    claims:
+      - {value: "1271: Chungnyeol, then crown prince, proposed the marriage to Kublai Khan", sources: [wp-chungnyeol-of-goryeo]}
+      - {value: "1269: his father Wonjong requested the marriage of his son to a daughter of the Khan", sources: [wp-chungseon-of-goryeo]}
+    note: "Neither is entered as a record."
+  - key: chungseon-second-accession
+    question: Was Chungseon crowned for the second time in 1307 or 1308?
+    about: [{person: chungseon-of-goryeo}, {person: chungnyeol-of-goryeo}]
+    field: date
+    claims:
+      - {value: "1307: the Crown Prince was crowned as Chungseon while Chungnyeol was detained in Dadu", sources: [wp-chungnyeol-of-goryeo]}
+      - {value: "1308: after his father's death he returned to the throne; reigned 1308 to 1313", sources: [wp-chungseon-of-goryeo]}
+    note: "Chungnyeol's second reign ends 1307 and Chungseon's starts 1308 in the title rows; Chungnyeol's lead also says his reign ran to 1308."
+  - key: queen-yun-elevation
+    question: When did Lady Yun become Seongjong's queen?
+    about: [{person: seongjong-of-joseon}, {person: yeonsangun-of-joseon}]
+    field: date
+    claims:
+      - {value: "After the first wife died in 1474, he decided to promote the concubine Lady Yun to queen", sources: [wp-seongjong-of-joseon]}
+      - {value: "Lady Yun was formally married in 1476, with Yeonsangun born several months later", sources: [wp-yeonsangun-of-joseon]}
+    note: "Neither is entered as a record; Yeonsangun's birth is 2 December 1476."
+  - key: queen-yun-death
+    question: How did the deposed Queen Yun die?
+    about: [{person: seongjong-of-joseon}, {person: yeonsangun-of-joseon}]
+    field: other
+    claims:
+      - {value: "She was executed after attempts to poison other concubines and harm the king", sources: [wp-seongjong-of-joseon]}
+      - {value: "She was exiled, then ordered to commit suicide by drinking poison; she died in 1482", sources: [wp-yeonsangun-of-joseon]}
+    note: "No record of her is made."
+  - key: seongjong-reign-end
+    question: Did Seongjong's reign end in 1494 or 1495?
+    about: [{person: seongjong-of-joseon}]
+    field: died
+    claims:
+      - {value: "1494: reign given as 1469 to 1494", sources: [wp-sejong-the-great]}
+      - {value: "He died on 29 January 1495", sources: [wp-seongjong-of-joseon]}
+    note: "The record uses 29 January 1495; the Sejong article's year probably follows the Korean calendar year, but that is not stated."
+  - key: seonjo-accession-age
+    question: Was Seonjo 14 or 16 when he was crowned?
+    about: [{person: seonjo-of-joseon}]
+    field: other
+    claims:
+      - {value: "He ascended the throne at the age of 14, upon the death of King Myeongjong", sources: [wp-seonjo-of-joseon]}
+      - {value: "He was crowned king in 1567 at the age of 16", sources: [wp-seonjo-of-joseon]}
+    note: "Born December 1552, so he was 14 by Western count in 1567; the record uses 1567."
+  - key: imjin-landing-date
+    question: When did the Japanese land at Busan in 1592?
+    about: [{event: imjin-war-1592}, {place: busan-fortress}]
+    field: date
+    claims:
+      - {value: "23 May 1592, the First Division under Konishi Yukinaga (7,000 men)", sources: [wp-imjin-war]}
+      - {value: "13 April 1592, 700 ships with 18,700 troops under Konishi Yukinaga", sources: [wp-seonjo-of-joseon]}
+    note: "The record uses 23 May 1592. 13 April is probably a Korean lunar-calendar date, but the article does not say so."
+  - key: hanseong-fall-date
+    question: When did the Japanese reach Hanseong in 1592?
+    about: [{event: fall-of-hanseong-1592}, {person: yi-sun-sin}]
+    field: date
+    claims:
+      - {value: "10 June 1592, after the First Division raced the Second Division upriver", sources: [wp-imjin-war]}
+      - {value: "2 May 1592, 'just nineteen days' after the landing", sources: [wp-yi-sun-sin]}
+    note: "The record uses 10 June 1592; the articles do not say how the two dates were calendar-converted."
+  - key: okpo-date
+    question: When was the Battle of Okpo?
+    about: [{event: battle-of-okpo-1592}, {person: yi-sun-sin}]
+    field: date
+    claims:
+      - {value: "13 to 16 June 1592: the fleet set sail on 13 June and met Won Kyun on 15 June", sources: [wp-yi-sun-sin]}
+      - {value: "21 to 23 July 1592: the fleet set sail on 21 July (although the same article dates Sacheon, three weeks after Okpo, to 8 July)", sources: [wp-imjin-war]}
+    note: "Only the year is entered. The Imjin article is inconsistent with itself."
+  - key: hansan-fleet-size
+    question: How many ships did Yi Sun-sin command at Hansan Island?
+    about: [{event: battle-of-hansan-island-1592}, {person: yi-sun-sin}]
+    field: other
+    claims:
+      - {value: "70 ships under Yi Sun-sin and Yi Okki", sources: [wp-yi-sun-sin]}
+      - {value: "53 ships", sources: [wp-imjin-war]}
+    note: "Not entered as a record value."
+  - key: myeongnyang-japanese-losses
+    question: How many Japanese ships were lost at Myeongnyang?
+    about: [{event: battle-of-myeongnyang-1597}, {person: yi-sun-sin}]
+    field: other
+    claims:
+      - {value: "About 31 of the 333 ships that entered the strait were destroyed or damaged", sources: [wp-yi-sun-sin]}
+      - {value: "About 30 combat ships destroyed and about 30 more damaged, of about 133 warships", sources: [wp-imjin-war]}
+    note: "Both give 13 Joseon ships and no Joseon ship lost."
+  - key: sangju-1592-opponent
+    question: Whom did the Korean general Yi Il fight at Sangju in 1592?
+    about: [{event: imjin-war-1592}, {person: seonjo-of-joseon}]
+    field: other
+    claims:
+      - {value: "Katō Kiyomasa", sources: [wp-seonjo-of-joseon]}
+      - {value: "Konishi Yukinaga's First Division, on 4 June 1592", sources: [wp-imjin-war]}
+    note: "Not entered as a record."
