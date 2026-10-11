@@ -71,6 +71,20 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - When two batches run in parallel, split places by region in the brief and check for overlapping keys before the previews (there were none).
 - Dates the article does not give (a reign length only) are not turned into years: the person is kept, the title row is left out.
 
+## Calibration: item 4 (East Asian dynasties), 2026-10-11
+
+- Added **120 people** (Song/Liao/Jin 27, Mongols/Yuan/Ming 21, Japan 29, Korea 22, Vietnam/Khmer/Pagan 21), 122 title rows, 52 places, 113 events, 103 discrepancies and 13 realms, in 5 data PRs (#141/#142, #144, #148, #149, #150), one agent each.
+- Tokens: the five research agents used **about 1.41M** (measured). The main session's share is not measured; roughly 0.4M. So about **1.8M tokens, or about 15,000 per person**, close to items 2 and 3. Credit used: not readable from here.
+- Batches ran 130-195 preview rows. One apply failed (see below); the rest were clean.
+
+## Lessons from item 4
+
+- **A life moment's `year` is an integer.** Batch A's first send put full dates in four "died" moments; the preview accepted them and the apply failed partway (the apply is not transactional). Fixed forward in #142 by re-sending the file with years; the preview now rejects it (#146). The brief for later agents now says it up front.
+- Re-sending a partly applied file is safe (records are keyed) and the preview then shows what is left to add and what is already there.
+- **Do not turn a derived age or general knowledge into a title start.** Agents proposed start years the articles did not state (Hōjō Tokiyori and Takatoki); those title rows were left out and listed as gaps. A discrepancy needs two different claims; an explanation of a lunar-year crossing is not one.
+- **Assign shared places per batch in the brief** (Kaifeng, Hangzhou and Beijing to the Song batch; the Mongol invasions of Japan to the Japan batch; those of Korea to the Korea batch) and merge in that order, so later previews can reference earlier keys. There were no collisions.
+- Wikipedia titles for Chinese, Japanese and Vietnamese rulers are irregular (a redirect to "Emperor Yingzong of Ming", "Zhao Bing" for Emperor Bing); check the first line of every downloaded file. Do not `pkill -f` a pattern that appears in your own command line: it kills the shell.
+
 ## Lessons from item 1
 
 - **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.
