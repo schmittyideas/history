@@ -3,5 +3,6 @@
 window.HISTORY_CONFIG = {
   supabaseUrl: "https://alhvzdvabugmkeqmvmiz.supabase.co",
   publishableKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFsaHZ6ZHZhYnVnbWtlcW12bWl6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTExNDUzODAsImV4cCI6MjEwNjcyMTM4MH0.TPv8179lDYIXsyQeKll8k9HkJdRlmInxkLErqHrBarA",
-  obsidianVault: "Personal"    // vault name used for "Open in Obsidian" links
+  obsidianVault: "Personal",
+  dining: { url: "https://xswnqyiyexprfxrnyyqr.supabase.co", key: "sb_publishable_8_kKW4lKLJgmiTnA1vlgaQ_C9fif97l" }
 };
