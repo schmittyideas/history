@@ -465,7 +465,9 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             ok = ref("person", x.get("person"), "moment") & ref("place", x.get("place"), "moment")
             if not x.get("role"):
                 p.errors.append(f"moment {x}: needs `role`")
-            when(x, "year", f"moment {x.get('person')} {x.get('role')}")
+            _, full = when(x, "year", f"moment {x.get('person')} {x.get('role')}")
+            if full:
+                p.errors.append(f"moment {x.get('person')} {x.get('role')} `year`: a life moment takes a year only (the column is an integer), not the date `{full}`: use `{full[:4].lstrip('0') or full[:4]}`")
             if ok:
                 label = f"{x.get('person')} {x.get('role')} at {x.get('place')} ({x.get('year', '?')})"
                 pe, pl = world.people.get(x["person"]), world.places.get(x["place"])
