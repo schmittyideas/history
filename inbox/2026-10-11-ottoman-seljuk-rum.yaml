@@ -1,0 +1,941 @@
+batch:
+  title: "The Seljuks of Rum and the Ottoman sultans, 1063-1595"
+  requested: "Suleiman ibn Qutalmish to Kaykhusraw II (Sultanate of Rum), Alp Arslan and Malik-Shah I (Great Seljuk Empire), and the Ottoman sultans from Osman I to Murad III, with their battles, capitals and discrepancies"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp5 directory); nothing was fetched. Line 1-3 of all 34 files were checked: each is the right article. The long ones (Alp Arslan, Malik-Shah I, Osman I, Mehmed II, Suleiman, Fall of Constantinople, Ottoman Empire, Selim I, Mohacs, Lepanto, Kosovo) were read selectively (lead, rise, reign overview, battles, death and succession), not every section; family sections were used only for parent links. Facts not in the articles are left out.
+# - New realms: Sultanate of Rum, Great Seljuk Empire, Ottoman Empire. Titles: 'Sultan of Rum', 'Sultan of the Great Seljuk Empire', 'Ottoman Sultan' (one wording per realm). Osman I and Orhan were bey / emir (Osman's article: he never carried the title Sultan; Orhan is called second sultan in his lead); both stay 'Ottoman Sultan' with that said in the note. Murad I: his article lists Bey, Emir, Ghazi, Khan, Padishah and 'Sultan of sultans' among the titles in Ottoman sources and Tsar in Bulgarian and Serbian sources. Bayezid I adopted Sultan-i Rum (his article).
+# - Title rows NOT entered because the article states no start date (or no clear reign): Suleiman Celebi and Musa Celebi (Ottoman Interregnum). The article says Suleiman 'ruled' Thrace from Edirne after 1403 and was strangled on 17 February 1411, and that Musa was then ruler of Thrace until Chamurli (5 July 1413), but gives no accession date for either, and says their coins style them 'Emir Suleyman b. Bayezid' and 'Musa b. Bayezid' (only Mehmed minted coins as Sultan). Both are entered as people with events and notes. Isa Celebi and Mustafa Celebi are not entered as people.
+# - Also left out: the Rum sultans between Kilij Arslan I and Kilij Arslan II (Mesud I and others), Suleiman II (died 1204), Kilij Arslan III, Kaykaus I, the joint rule after 1246 and the last sultans (no article downloaded); Tughril and the Great Seljuk sultans after Malik-Shah I; Mehmed II's, Selim's and Suleiman's viziers, generals and the Safavid, Mamluk, Hungarian and Holy League leaders (Ismail I, Tuman bay II, Louis II, John Hunyadi, Wladyslaw III, Lazar, Milos Obilic, John of Austria, Venier, Ali Pasha, Niklas Salm, Baiju and others have no keys here; they are named in event notes). Consorts, sons and daughters are not entered except the direct line of succession as parent links.
+# - Places NOT defined: bapheus-site (the article calls the site unidentified, perhaps east of Nicomedia) and myriokephalon-site (location debated; the existing Myriokephalon event already has no place). The Chamurli field (modern Samokov, Bulgaria), Pelekanon (Maltepe), Szigetvar (Suleiman died there; his heart and organs were buried at Turbek outside it), Amasya, Trabzon, Manisa, Merv (Alp Arslan's burial), Isfahan (Malik-Shah's burial), Havsa (Bayezid II's death), Aksaray and Kayseri have no place records; they are in notes. Topkapi Palace has no founding year: Mehmed II's article says only that he built it (and Selim II's article, oddly, has him born in it in 1524).
+# - Existing records only linked: events battle-of-manzikert-1071 (alp-arslan victor), battle-of-ankara-1402 (bayezid-i defeated, timur victor; timur was not on it), fall-of-constantinople-1453 (mehmed-ii victor), battle-of-myriokephalon-1176 (kilij-arslan-ii victor). Places constantinople, nicaea, vienna, belgrade, hagia-sophia. People timur, manuel-i-komnenos, andronikos-iii-palaiologos, alexios-i-komnenos, sigismund-holy-roman-emperor, pius-v, philip-ii-of-spain. Not redefined. The Pelekanon day (10 or 15 June 1329) is already a discrepancy (pelekanon-june-1329, Byzantium batch); the new Pelekanon event cites it instead of repeating it.
+# - Discrepancies recorded below: Alp Arslan's birth; the founding of the Rum sultanate; Suleiman ibn Qutalmish's death; Kilij Arslan II's birth year; where Kaykhusraw I died (Antioch on the Meander or Alasehir); where Kose Dag lies; Osman's birth, accession (c.1281 or c.1299) and death (1320, 1323/4, 1326, 1327); the date of Bapheus (1299, 1301 or 1302); Orhan's accession; how Bursa fell; the day Murad I died at Kosovo and the day of the battle (15, 16 or 28 June 1389); who killed Murad I and when; the day of Ankara (20 or 28 July 1402); how Bayezid I died; Murad II's mother; who recalled Murad II in 1444; the length of the siege of Constantinople; Bayezid II's birth year; Selim I's mother, his entry into Tabriz, the executions before Chaldiran and his death; Selim II's accession against the secrecy of Suleiman's death. Seen and not entered as discrepancies: the Hijri / Gregorian pairs inside single articles; Rovine (10 October 1394 or 17 May 1395, Bayezid I article; no event entered); Suleiman's age at death (71 in one line, 72 in another); Mustafa Celebi's death ('1402 or 1422?'); the cage of Bayezid I (a legend; in his death discrepancy).
+# - Dates: a full date only where the article gives the day; month-only dates are the year (Mehmed II's reigns 'August 1444' and 'February 1451', Murad II's birth 'June 1404', Orhan's death 'March 1362'). Osman I's reign is c.1281 to c.1324 (both estimated; the article gives 1281 'around' and 1323/4). Bayezid II's birth is 3 December 1447/1448: the year 1447 is used, estimated. Suleiman's birth is 'probably 6 November 1494': the full date is used and the note says so. Alp Arslan's birth uses 20 January 1029, the date the article says the literature generally accepts.
+# - Moments take a year only (checked): every moment has an integer year or none. Births and burials with uncertain dates have no year.
+# - Coordinates are from general knowledge (2-3 decimals), approximate for all battlefields (Kose Dag, Varna, Mohacs, Chaldiran, Lepanto, Kosovo, Nicopolis); Mohacs (beside Satorhely, article) and Chaldiran (near Gal Ashaqi, article) follow the villages the articles name. Visitable flags and visit_site are general knowledge.
+# - Size: 22 people, 23 title rows, 3 realms, 12 places, 21 events (4 of them link-only), 25 discrepancies (126 rows), 18 links, 24 moments.
+
+sources:
+  - {key: wp-suleiman-ibn-qutulmish,   title: "Suleiman ibn Qutalmish (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Suleiman_ibn_Qutalmish"}
+  - {key: wp-kilij-arslan-i,           title: "Kilij Arslan I (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Kilij_Arslan_I"}
+  - {key: wp-kilij-arslan-ii,          title: "Kilij Arslan II (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Kilij_Arslan_II"}
+  - {key: wp-kaykhusraw-i,             title: "Kaykhusraw I (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Kaykhusraw_I"}
+  - {key: wp-kayqubad-i,               title: "Kayqubad I (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Kayqubad_I"}
+  - {key: wp-kaykhusraw-ii,            title: "Kaykhusraw II (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Kaykhusraw_II"}
+  - {key: wp-alp-arslan,               title: "Alp Arslan (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Alp_Arslan"}
+  - {key: wp-malik-shah-i,             title: "Malik-Shah I (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Malik-Shah_I"}
+  - {key: wp-osman-i,                  title: "Osman I (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Osman_I"}
+  - {key: wp-orhan,                    title: "Orhan (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Orhan"}
+  - {key: wp-murad-i,                  title: "Murad I (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Murad_I"}
+  - {key: wp-bayezid-i,                title: "Bayezid I (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Bayezid_I"}
+  - {key: wp-mehmed-i,                 title: "Mehmed I (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Mehmed_I"}
+  - {key: wp-murad-ii,                 title: "Murad II (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Murad_II"}
+  - {key: wp-mehmed-ii,                title: "Mehmed II (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Mehmed_II"}
+  - {key: wp-bayezid-ii,               title: "Bayezid II (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Bayezid_II"}
+  - {key: wp-selim-i,                  title: "Selim I (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Selim_I"}
+  - {key: wp-suleiman-the-magnificent, title: "Suleiman the Magnificent (Wikipedia)", url: "https://en.wikipedia.org/wiki/Suleiman_the_Magnificent"}
+  - {key: wp-selim-ii,                 title: "Selim II (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Selim_II"}
+  - {key: wp-murad-iii,                title: "Murad III (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Murad_III"}
+  - {key: wp-ottoman-interregnum,      title: "Ottoman Interregnum (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Ottoman_Interregnum"}
+  - {key: wp-sultanate-of-rum,         title: "Sultanate of Rum (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Sultanate_of_Rum"}
+  - {key: wp-ottoman-empire,           title: "Ottoman Empire (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Ottoman_Empire"}
+  - {key: wp-fall-of-constantinople,   title: "Fall of Constantinople (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Fall_of_Constantinople"}
+  - {key: wp-battle-of-myriokephalon,  title: "Battle of Myriokephalon (Wikipedia)",  url: "https://en.wikipedia.org/wiki/Battle_of_Myriokephalon"}
+  - {key: wp-battle-of-kose-dag,       title: "Battle of Kose Dag (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Battle_of_K%C3%B6se_Da%C4%9F"}
+  - {key: wp-battle-of-bapheus,        title: "Battle of Bapheus (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Battle_of_Bapheus"}
+  - {key: wp-battle-of-kosovo,         title: "Battle of Kosovo (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Battle_of_Kosovo"}
+  - {key: wp-battle-of-nicopolis,      title: "Battle of Nicopolis (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Battle_of_Nicopolis"}
+  - {key: wp-battle-of-varna,          title: "Battle of Varna (Wikipedia)",          url: "https://en.wikipedia.org/wiki/Battle_of_Varna"}
+  - {key: wp-battle-of-chaldiran,      title: "Battle of Chaldiran (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Battle_of_Chaldiran"}
+  - {key: wp-battle-of-mohacs,         title: "Battle of Mohacs (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Battle_of_Moh%C3%A1cs"}
+  - {key: wp-siege-of-vienna-1529,     title: "Siege of Vienna (1529) (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Siege_of_Vienna_%281529%29"}
+  - {key: wp-battle-of-lepanto,        title: "Battle of Lepanto (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Battle_of_Lepanto"}
+
+realms:
+  - {name: Sultanate of Rum,      region: Middle East and North Africa, country: Turkey, note: "Seljuk state in Anatolia, seceded from the Great Seljuk Empire under Suleiman ibn Qutalmish in 1077; capital first Nicaea, then Konya; ended as a Mongol vassal (last sultan murdered 1308)"}
+  - {name: Great Seljuk Empire,   region: Middle East and North Africa, country: Iran, note: "Seljuk Empire of Alp Arslan and Malik-Shah I; seat in Persia (Isfahan, Merv); Rum seceded from it in 1077"}
+  - {name: Ottoman Empire,        region: Middle East and North Africa, country: Turkey, note: "From a beylik founded in north-western Anatolia (c.1281 or c.1299, see discrepancies); capitals Bursa, Edirne, then Constantinople from 1453"}
+
+people:
+  # --- Sultanate of Rum ---
+  - key: suleiman-ibn-qutulmish
+    name: Suleiman ibn Qutalmish
+    type: Royalty
+    realm: Sultanate of Rum
+    died: 1086
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Son of Qutalmish, Alp Arslan's rival; fled into the Taurus after 1064. Founded an independent Seljuk state in Anatolia (Sultan of Rum from 1077), took Nicaea and Antioch, backed Nikephoros Botaneiates in 1078, and was killed at Ain Salm near Aleppo in 1086 fighting Tutush. His son Kilij Arslan I re-established the sultanate. Birth not in the article."
+    sources: [wp-suleiman-ibn-qutulmish, wp-sultanate-of-rum]
+  - key: kilij-arslan-i
+    name: Kilij Arslan I
+    type: Royalty
+    realm: Sultanate of Rum
+    born: 1079
+    died: 1107
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Held hostage at Isfahan by Malik-Shah I, freed in 1092 and set up his capital at Nicaea. Destroyed the People's Crusade at Civetot (1096), lost Nicaea to the First Crusade (May 1097) and was beaten at Dorylaeum (1 July 1097), then defeated three crusader armies in 1101 and moved his capital to Konya. Drowned in the Khabur in 1107 fleeing Jawali near Mosul. His grave was found at Silvan in January 2021."
+    sources: [wp-kilij-arslan-i, wp-sultanate-of-rum]
+  - key: kilij-arslan-ii
+    name: Kilij Arslan II
+    type: Royalty
+    realm: Sultanate of Rum
+    born: 1113
+    died: 1192
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sultan of Rum 1156-1192. Beat Manuel I Komnenos at Myriokephalon (17 September 1176). Divided the sultanate among his eleven sons in 1186; died in August 1192 during the siege of Aksaray and is buried in the Alaeddin Mosque at Konya. The article's birth year 1113 and 'aged 77' do not agree (see discrepancy)."
+    sources: [wp-kilij-arslan-ii, wp-sultanate-of-rum]
+  - key: kaykhusraw-i
+    name: Kaykhusraw I
+    type: Royalty
+    realm: Sultanate of Rum
+    died: 1211
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Youngest (eleventh) son of Kilij Arslan II. Sultan 1192-1196, lost to his brother Suleiman II and lived in Constantinople 1197-1203; seized Konya in 1205 and reigned again until 1211. Took Antalya in 1207. Killed in battle in 1211 (place disputed) and buried in the family tomb at Konya. Birth unknown."
+    sources: [wp-kaykhusraw-i, wp-sultanate-of-rum]
+  - key: kayqubad-i
+    name: Kayqubad I
+    type: Royalty
+    realm: Sultanate of Rum
+    born: 1192
+    born_estimated: true
+    died: 1237-05-31
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Kayqubad the Great, sultan 1220-1237, the height of Seljuk power in Anatolia: took Alanya, beat the Ayyubids (1234) and Jalal al-Din Mangburni (Yassicimen, 1230). Built the walls of Konya, finished the Seljuk Palace there and built Kubadabad, Alanya Castle and Kayqubadiyya near Kayseri. Poisoned at a feast at Kayseri on 31 May 1237."
+    sources: [wp-kayqubad-i, wp-sultanate-of-rum]
+  - key: kaykhusraw-ii
+    name: Kaykhusraw II
+    type: Royalty
+    realm: Sultanate of Rum
+    died: 1246
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sultan 1237-1246. Put down the Baba Ishak revolt (c.1240-1243) and was routed by the Mongols under Baiju at Kose Dag (26 June 1243); the vizier saved the throne at the price of vassalage and tribute. Married Gurju Khatun (Tamar of Georgia), whose lion-and-sun coins he struck. Birth not in the article. Died 1246."
+    sources: [wp-kaykhusraw-ii, wp-sultanate-of-rum]
+  # --- Great Seljuk Empire ---
+  - key: alp-arslan
+    name: Alp Arslan
+    type: Royalty
+    realm: Great Seljuk Empire
+    born: 1029-01-20
+    died: 1072-11-24
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Second sultan of the Seljuk Empire, 1063-1072; his vizier was Nizam al-Mulk. Beat and captured the Byzantine emperor Romanos IV Diogenes at Manzikert on 26 August 1071 and released him for a ransom treaty. Stabbed by Yusuf al-Kharezmi at Barzem Castle during the 1072 Turkestan expedition; died four days later and was buried at Merv, naming his son Malik-Shah I as successor. Birth date disputed (see discrepancy)."
+    sources: [wp-alp-arslan]
+  - key: malik-shah-i
+    name: Malik-Shah I
+    type: Royalty
+    realm: Great Seljuk Empire
+    born: 1055-08-16
+    died: 1092-11-19
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Third sultan of the Seljuk Empire, 1072-1092, at its height under the vizier Nizam al-Mulk. Beat his uncle Qavurt at Kerj Abu Dulaf (1073). Died hunting on 19 November 1092, most likely poisoned (by the caliph or Nizam al-Mulk's supporters, says the article); buried in a madrasa at Isfahan. The empire then fell into chaos."
+    sources: [wp-malik-shah-i]
+  # --- Ottoman sultans ---
+  - key: osman-i
+    name: Osman I
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1255
+    born_estimated: true
+    died: 1324
+    died_estimated: true
+    prominence: 5
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Founder of the Ottoman dynasty, bey of a small Turkoman principality at Sogut in Bithynia. Styled bey / emir; he never carried the title Sultan. Beat the Byzantines at Bapheus (27 July, 1299 or 1302) and began the long siege of Bursa, which fell to his son Orhan. Almost nothing is known from his own time. Birth (13 February 1258 or 1254/5) and death (1320, 1323/4, 21 August 1326 or 1327) are disputed; the record uses c.1255 and c.1324. Reburied at Bursa."
+    sources: [wp-osman-i, wp-ottoman-empire, wp-orhan]
+  - key: orhan
+    name: Orhan
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    died: 1362
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Second ruler of the Ottomans (bey / emir; the article calls him second sultan). Born at Sogut, son of Osman I and Malhun Hatun. Took Bursa, Nicaea (1331), Nicomedia (1337) and Karesi (1345); beat Andronikos III at Pelekanon (1329). Married Theodora, daughter of John VI Kantakouzenos, in 1346. His son Suleyman Pasha took Gallipoli (after the earthquake) and died in 1357. Died at Bursa in March 1362 and is buried in the Gumuslu Kumbet. The article gives no birth date."
+    sources: [wp-orhan]
+  - key: murad-i
+    name: Murad I
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1326-06-29
+    died: 1389-06-15
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Hudavendigar. Son of Orhan and Nilufer Hatun. Took Adrianople (Edirne) in the 1360s and made it his capital, brought most of the Balkans under Ottoman rule, and split the empire into Anatolia and Rumelia. Killed at the Battle of Kosovo (15 June 1389); his organs are buried at Meshed-i Hudavendigar on the battlefield and the rest of him at Bursa. Died on the only occasion an Ottoman sultan was killed in battle."
+    sources: [wp-murad-i, wp-battle-of-kosovo]
+  - key: bayezid-i
+    name: Bayezid I
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1360
+    born_estimated: true
+    died: 1403-03-08
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "The Thunderbolt. Sultan 1389-1402, took the title Sultan-i Rum. Beat the crusaders at Nicopolis (1396) and besieged Constantinople from 1394; conquered most of Anatolia. Defeated and captured by Timur at Ankara (20 July 1402) and died in captivity on 8 March 1403, which began the Ottoman Interregnum. The cage legend is not in contemporary accounts; the cause of death is disputed."
+    sources: [wp-bayezid-i, wp-ottoman-interregnum]
+  - key: mehmed-i
+    name: Mehmed I
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1386
+    born_estimated: true
+    died: 1421-05-26
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Mehmed Celebi, the Restorer, born in 1386 or 1387. Won the Ottoman Interregnum and the Battle of Chamurli (5 July 1413), crowned himself at Edirne and reunited the state; crushed Sheikh Bedreddin's revolt (1416-1420). Died on 26 May 1421; buried at Bursa beside the Green Mosque he built."
+    sources: [wp-mehmed-i, wp-ottoman-interregnum]
+  - key: murad-ii
+    name: Murad II
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1404
+    died: 1451-02-03
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Born June 1404. Sultan twice (1421-1444 and 1446-1451). Girded with the Sword of Osman at Bursa in 1421; put down the pretender Mustafa; annexed Serbia (1439); abdicated in 1444 for his son Mehmed II and was recalled to win the Battle of Varna (10 November 1444); returned for good in 1446 after the Edirne rebellion."
+    sources: [wp-murad-ii, wp-battle-of-varna]
+  - key: mehmed-ii
+    name: Mehmed II
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1432-03-30
+    died: 1481-05-03
+    prominence: 5
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Mehmed the Conqueror, born at Edirne. Sultan twice, August 1444 to September 1446 (aged 12) and February 1451 to May 1481. Took Constantinople on 29 May 1453, made it the capital, built Rumelihisari, the Fatih Mosque and Topkapi Palace, and took Serbia, the Morea, Trebizond, Bosnia and Albania. Claimed the title caesar of Rome. Died on 3 May 1481 on campaign (the article says a source suspects poison); buried near the Fatih Mosque."
+    sources: [wp-mehmed-ii, wp-fall-of-constantinople]
+  - key: bayezid-ii
+    name: Bayezid II
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1447
+    born_estimated: true
+    died: 1512-05-26
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Bayezid the Just, born 3 December 1447/1448 at Demotika, governor of Amasya for 27 years. Sultan 1481-1512; beat his brother Cem Sultan, took in the Jews expelled from Spain (1492) and ended the Morea wars in 1501. After the 1509 earthquake and a succession fight between Selim and Ahmed, Selim forced his abdication on 25 April 1512; Bayezid died at Havsa a month later, on his way to Dimetoka, and was buried beside the Bayezid Mosque in Istanbul."
+    sources: [wp-bayezid-ii]
+  - key: selim-i
+    name: Selim I
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1470-10-10
+    died: 1520-09-22
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Selim the Grim, born at Amasya. Beat his brothers (Ahmed and Korkut were put to death), the Safavids at Chaldiran (23 August 1514) and the Mamluks at Marj Dabiq (24 August 1516) and Ridaniya (22 January 1517), which gave the Ottomans Syria, Egypt and the holy cities. The Ottoman empire grew by 70 per cent in his reign. Died 22 September 1520, buried at the Yavuz Selim Mosque in Istanbul (cause disputed)."
+    sources: [wp-selim-i, wp-battle-of-chaldiran]
+  - key: suleiman-the-magnificent
+    name: Suleiman the Magnificent
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1494-11-06
+    died: 1566-09-06
+    prominence: 5
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Suleiman I, sultan 1520-1566, the longest Ottoman reign and the peak of Ottoman power. Born at Trabzon, 'probably on 6 November 1494'. Took Belgrade (1521) and Rhodes (1522), broke Hungary at Mohacs (29 August 1526), failed before Vienna (1529). Married Hurrem in 1534. Died in his tent before Szigetvar on 6 September 1566; his death was kept secret; his body was buried in Istanbul and his heart and organs at Turbek outside Szigetvar."
+    sources: [wp-suleiman-the-magnificent, wp-battle-of-mohacs, wp-siege-of-vienna-1529]
+  - key: selim-ii
+    name: Selim II
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1524-05-28
+    died: 1574-12-15
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Selim the Blond (or the Drunkard), born in Topkapi Palace, son of Suleiman and Hurrem. Sultan 1566-1574 under the grand vizier Sokollu Mehmed Pasha. Took Cyprus (1571) but lost the fleet at Lepanto (7 October 1571); took Tunis back in 1574. Built the Selimiye Mosque at Edirne (1569-1575, Sinan). Died on 15 December 1574 after a fall while drunk; buried at the Hagia Sophia."
+    sources: [wp-selim-ii, wp-battle-of-lepanto]
+  - key: murad-iii
+    name: Murad III
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1546-07-04
+    died: 1595-01-16
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Born at Manisa; sultan 1574-1595. Had his five younger brothers strangled on accession. Long wars with the Habsburgs and the Safavids (Treaty of Constantinople 1590), inflation from New World silver, a pact with Elizabeth I. Never went on campaign and in his last years did not leave Topkapi Palace, where he died; buried beside the Hagia Sophia."
+    sources: [wp-murad-iii]
+  - key: suleiman-celebi
+    name: Suleiman Celebi
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    born: 1377
+    died: 1411-02-17
+    prominence: 1
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eldest surviving son of Bayezid I (Emir of Rumelia), who ruled Thrace, Macedonia and northern Greece from Edirne in the Interregnum and took Bursa in March 1404. Allied with Manuel II. His army defected to his brother Musa at Edirne in 1411 and he was strangled on 17 February 1411. No title row: the article gives no accession date and his coins style him Emir. (Not the 'Suleiman II' of Western tradition for Suleiman the Magnificent.)"
+    sources: [wp-ottoman-interregnum, wp-bayezid-i]
+  - key: musa-celebi
+    name: Musa Celebi
+    type: Royalty
+    realm: Ottoman Empire
+    house: Osman
+    died: 1413
+    prominence: 1
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Son of Bayezid I, captured at Ankara and freed by Timur. Sent by Mehmed into Thrace in 1410 to attack Suleiman; became ruler in Thrace after Suleiman's death in 1411 and besieged Constantinople. Beaten by Mehmed at Chamurli (5 July 1413), caught and strangled. No title row: the article gives no accession date and his coins style him only 'Musa b. Bayezid'."
+    sources: [wp-ottoman-interregnum, wp-bayezid-i]
+
+titles:
+  # --- Sultanate of Rum ---
+  - {person: suleiman-ibn-qutulmish, title: Sultan of Rum, realm: Sultanate of Rum, from: 1077, to: 1086, note: "Ruled as Seljuk Sultan of Rum from 1077 until his death at Ain Salm in 1086; the founding date is disputed (see discrepancy), and no single record shows him minting coins or having the khutba read in his own name. Nominally still subject to Malik-Shah I.", sources: [wp-suleiman-ibn-qutulmish, wp-sultanate-of-rum]}
+  - {person: kilij-arslan-i, title: Sultan of Rum, realm: Sultanate of Rum, from: 1092, to: 1107, note: "Reign 1092 to his death in 1107 (drowned in the Khabur). Capital at Nicaea, then Konya after 1101.", sources: [wp-kilij-arslan-i]}
+  - {person: kilij-arslan-ii, title: Sultan of Rum, realm: Sultanate of Rum, from: 1156, to: 1192, note: "Reign 1156 until his death in August 1192 at the siege of Aksaray; he divided the sultanate among his sons in 1186.", sources: [wp-kilij-arslan-ii]}
+  - {person: kaykhusraw-i, title: Sultan of Rum, realm: Sultanate of Rum, from: 1192, to: 1196, note: "First reign. Lost to his brother Suleiman II in 1196 and went into exile at Constantinople (1197-1203).", sources: [wp-kaykhusraw-i]}
+  - {person: kaykhusraw-i, title: Sultan of Rum, realm: Sultanate of Rum, from: 1205, to: 1211, note: "Second reign, after he forced his way into Konya; ended with his death in battle in 1211.", sources: [wp-kaykhusraw-i, wp-sultanate-of-rum]}
+  - {person: kayqubad-i, title: Sultan of Rum, realm: Sultanate of Rum, from: 1220, to: 1237-05-31, note: "Succeeded his brother Kaykaus on his death in 1219/1220; died by poison at Kayseri on 31 May 1237.", sources: [wp-kayqubad-i]}
+  - {person: kaykhusraw-ii, title: Sultan of Rum, realm: Sultanate of Rum, from: 1237, to: 1246, note: "Seized the throne on Kayqubad's death in 1237; died in 1246 as a Mongol vassal.", sources: [wp-kaykhusraw-ii]}
+  # --- Great Seljuk Empire ---
+  - {person: alp-arslan, title: Sultan of the Great Seljuk Empire, realm: Great Seljuk Empire, from: 1063, to: 1072-11-24, note: "Reigned from 1063 (Tughril's death) until his death four days after being stabbed, 24 November 1072.", sources: [wp-alp-arslan]}
+  - {person: malik-shah-i, title: Sultan of the Great Seljuk Empire, realm: Great Seljuk Empire, from: 1072, to: 1092-11-19, note: "Declared sultan after his father's death in 1072; his uncle Qavurt contested it and lost at Kerj Abu Dulaf (1073). Died 19 November 1092.", sources: [wp-malik-shah-i]}
+  # --- Ottoman Empire ---
+  - {person: osman-i, title: Ottoman Sultan, realm: Ottoman Empire, from: 1281, from_estimated: true, to: 1324, to_estimated: true, note: "Styled bey / emir; never carried the title Sultan. Succeeded Ertugrul 'around 1281' (his article); death date disputed (1320, 1323/4, 1326, 1327).", sources: [wp-osman-i, wp-orhan]}
+  - {person: orhan, title: Ottoman Sultan, realm: Ottoman Empire, from: 1324, from_estimated: true, to: 1362, note: "Styled bey / emir. The lead gives 1323/4 to 1362; the article's '36 years' would start in 1326 (see discrepancy). Died March 1362.", sources: [wp-orhan]}
+  - {person: murad-i, title: Ottoman Sultan, realm: Ottoman Empire, from: 1362, to: 1389-06-15, note: "Ottoman sources give him the titles Bey, Emir, Ghazi, Khan, Padishah and Sultan of sultans; Bulgarian and Serbian sources call him Tsar. Died at Kosovo (the day is disputed).", sources: [wp-murad-i]}
+  - {person: bayezid-i, title: Ottoman Sultan, realm: Ottoman Empire, from: 1389, to: 1402, note: "Took the title Sultan-i Rum. Reign ends with his defeat and capture at Ankara (20 July 1402); he died in captivity on 8 March 1403.", sources: [wp-bayezid-i]}
+  - {person: mehmed-i, title: Ottoman Sultan, realm: Ottoman Empire, from: 1413, to: 1421-05-26, note: "Sole sultan after his victory at Chamurli (5 July 1413). During the Interregnum (1402-1413) he held Anatolia, and only he minted coins as Sultan.", sources: [wp-mehmed-i, wp-ottoman-interregnum]}
+  - {person: murad-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1421, to: 1444, note: "First reign; abdicated for Mehmed II in 1444 (July/August).", sources: [wp-murad-ii]}
+  - {person: murad-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1446, to: 1451-02-03, note: "Second reign, after the 1446 rebellion at Edirne; died 3 February 1451.", sources: [wp-murad-ii]}
+  - {person: mehmed-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1444, to: 1446, note: "First reign, August 1444 to September 1446, aged 12; the grand vizier Candarli Halil Pasha clashed with his supporters and recalled Murad II.", sources: [wp-mehmed-ii]}
+  - {person: mehmed-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1451, to: 1481-05-03, note: "Second reign, from February 1451 (after Murad II's death) to 3 May 1481. Took Constantinople in 1453.", sources: [wp-mehmed-ii]}
+  - {person: bayezid-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1481, to: 1512-04-25, note: "Reigned 1481 until Selim forced his abdication on 25 April 1512.", sources: [wp-bayezid-ii]}
+  - {person: selim-i, title: Ottoman Sultan, realm: Ottoman Empire, from: 1512, to: 1520-09-22, note: "Took the throne by forcing Bayezid II to abdicate (25 April 1512); died 22 September 1520.", sources: [wp-selim-i, wp-bayezid-ii]}
+  - {person: suleiman-the-magnificent, title: Ottoman Sultan, realm: Ottoman Empire, from: 1520-09-30, to: 1566-09-06, note: "Succeeded Selim I on 30 September 1520; died before Szigetvar on 6 September 1566.", sources: [wp-suleiman-the-magnificent]}
+  - {person: selim-ii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1566-09-29, to: 1574-12-15, note: "Ascended on 29 September 1566 (his article); see the discrepancy on how long Suleiman's death was kept secret.", sources: [wp-selim-ii]}
+  - {person: murad-iii, title: Ottoman Sultan, realm: Ottoman Empire, from: 1574, to: 1595-01-16, note: "Succeeded Selim II on his death in December 1574 (no day given); died 16 January 1595.", sources: [wp-murad-iii]}
+
+places:
+  - key: konya
+    name: Konya
+    historical_name: Iconium
+    kind: city
+    region: Konya Province
+    country: Turkey
+    lat: 37.874
+    lng: 32.493
+    visitable: true
+    visit_site: "Alaeddin Mosque and the Seljuk citadel area"
+    note: "Capital of the Sultanate of Rum (Nicaea first; Konya after Kilij Arslan I's 1101 victories). Kayqubad I built the city walls and finished the Seljuk Palace. Kilij Arslan II was buried in the Alaeddin Mosque and Kaykhusraw I in the family tomb here (the Rum article gives the Alaeddin Mosque's building from c.1116-1156). The Mongols did not take it in 1243."
+    sources: [wp-sultanate-of-rum, wp-kayqubad-i, wp-kilij-arslan-ii, wp-kilij-arslan-i]
+  - key: sogut
+    name: Sogut
+    kind: town
+    city: Sogut
+    region: Bilecik Province
+    country: Turkey
+    lat: 40.02
+    lng: 30.18
+    visitable: true
+    note: "Town in north-western Anatolia on the Byzantine frontier, given to Ertugrul under the Seljuks of Rum; his son Osman I's beylik started here, and both Osman and Orhan were born here (Osman's article, Orhan's article). Osman was buried here for a time before his body was moved to Bursa. Point approximate."
+    sources: [wp-osman-i, wp-orhan]
+  - key: bursa
+    name: Bursa
+    historical_name: Prusa
+    kind: city
+    region: Bursa Province
+    country: Turkey
+    lat: 40.188
+    lng: 29.061
+    visitable: true
+    visit_site: "Osman and Orhan tombs, Green Mosque and Mehmed I mausoleum, Ulu Cami"
+    note: "First Ottoman capital: Orhan entered it on 6 April 1326 after a siege of six to nine years begun by Osman, who was reburied here. Orhan (Gumuslu Kumbet), Murad I (a tomb at the complex built in his name) and Mehmed I (mausoleum by the Green Mosque he built) are buried here; Bayezid I built the Ulu Cami after Nicopolis. Murad II was girded with the Sword of Osman here in 1421."
+    sources: [wp-osman-i, wp-orhan, wp-murad-i, wp-mehmed-i, wp-bayezid-i, wp-murad-ii]
+  - key: edirne
+    name: Edirne
+    historical_name: Adrianople
+    kind: city
+    region: Edirne Province
+    country: Turkey
+    lat: 41.675
+    lng: 26.556
+    visitable: true
+    visit_site: "Selimiye Mosque"
+    note: "Taken by Murad I in the 1360s and made the Ottoman capital until Constantinople in 1453. Mehmed II was born here (1432); Mehmed I was crowned here (1413) and made it the most important of the dual capitals; the 1446 rebellion that recalled Murad II began here. Selim II preferred it and had the Selimiye Mosque built, 1569-1575, by Sinan."
+    sources: [wp-murad-i, wp-mehmed-i, wp-mehmed-ii, wp-murad-ii, wp-selim-ii]
+  - key: topkapi-palace
+    name: Topkapi Palace
+    kind: palace
+    city: Istanbul
+    region: Istanbul Province
+    country: Turkey
+    lat: 41.0115
+    lng: 28.9834
+    visitable: true
+    visit_site: "Topkapi Palace Museum"
+    built_by: "Mehmed II (the article lists it among his buildings)"
+    note: "Mehmed II's palace in Constantinople; the article gives no year. Selim II was born here in 1524 and Murad III died here in 1595, and spent his last years inside it."
+    sources: [wp-mehmed-ii, wp-selim-ii, wp-murad-iii]
+  - key: kosovo-polje-battlefield
+    name: Kosovo Polje
+    kind: battlefield
+    region: Pristina District
+    country: Kosovo
+    lat: 42.68
+    lng: 21.12
+    visitable: true
+    visit_site: "Gazimestan memorial"
+    note: "Kosovo field about 5 km north-west of Pristina, where Murad I's army fought Prince Lazar's coalition on 15 June 1389. Murad's internal organs are buried at Meshed-i Hudavendigar on a corner of the field. Point approximate."
+    sources: [wp-battle-of-kosovo, wp-murad-i]
+  - key: nicopolis-battlefield
+    name: Nicopolis (Nikopol)
+    kind: battlefield
+    region: Pleven Province
+    country: Bulgaria
+    lat: 43.70
+    lng: 24.90
+    visitable: true
+    note: "Danubian fortress of Nicopolis, where Bayezid I routed the crusader army on 25 September 1396. The battlefield itself is only approximately placed at the town."
+    sources: [wp-battle-of-nicopolis]
+  - key: varna-battlefield
+    name: Varna battlefield
+    kind: battlefield
+    region: Varna Province
+    country: Bulgaria
+    lat: 43.23
+    lng: 27.87
+    visitable: true
+    note: "Ground between Lake Varna and the Franga plateau near Varna, where Murad II beat the crusaders on 10 November 1444. Point approximate."
+    sources: [wp-battle-of-varna]
+  - key: chaldiran-battlefield
+    name: Chaldiran battlefield
+    kind: battlefield
+    region: West Azerbaijan Province
+    country: Iran
+    lat: 39.08
+    lng: 44.34
+    visitable: true
+    note: "Near Gal Ashaqi, about 6 km west of Siah Cheshmeh and south of Maku, where Selim I beat Shah Ismail I on 23 August 1514. A brick dome and a statue of Seyid Sadraddin were built there in 2003. Point approximate."
+    sources: [wp-battle-of-chaldiran]
+  - key: mohacs-battlefield
+    name: Mohacs battlefield
+    kind: battlefield
+    region: Baranya County
+    country: Hungary
+    lat: 45.92
+    lng: 18.65
+    visitable: true
+    visit_site: "Mohacs National Historical Memorial Site"
+    note: "Waterlogged plain beside the village of Satorhely near Mohacs, where Suleiman beat Louis II on 29 August 1526. The battlefield became a national historical memorial site in 1976. Point approximate."
+    sources: [wp-battle-of-mohacs]
+  - key: lepanto-battle-site
+    name: Lepanto battle site (Gulf of Patras)
+    kind: sea battle site
+    region: Western Greece
+    country: Greece
+    lat: 38.30
+    lng: 21.10
+    visitable: false
+    note: "Waters of the Gulf of Patras off Lepanto (Naupactus), where the Holy League beat the Ottoman fleet on 7 October 1571. Point approximate."
+    sources: [wp-battle-of-lepanto]
+  - key: kose-dag-battlefield
+    name: Kose Dag battlefield
+    kind: battlefield
+    region: Gumushane Province
+    country: Turkey
+    lat: 40.20
+    lng: 39.60
+    visitable: false
+    note: "Mountain pass in eastern Anatolia where the Mongols beat Kaykhusraw II on 26 June 1243. The articles disagree on where it is (between Erzincan and Gumushane, or between Sivas and Erzincan); point approximate."
+    sources: [wp-battle-of-kose-dag, wp-kaykhusraw-ii, wp-sultanate-of-rum]
+
+events:
+  # --- link-only updates to existing events ---
+  - key: battle-of-manzikert-1071
+    people:
+      - {person: alp-arslan, role: victor}
+    sources: [wp-alp-arslan]
+  - key: battle-of-ankara-1402
+    people:
+      - {person: bayezid-i, role: defeated}
+      - {person: timur, role: victor}
+    sources: [wp-bayezid-i]
+  - key: fall-of-constantinople-1453
+    people:
+      - {person: mehmed-ii, role: victor}
+    sources: [wp-mehmed-ii, wp-fall-of-constantinople]
+  - key: battle-of-myriokephalon-1176
+    people:
+      - {person: kilij-arslan-ii, role: victor}
+    sources: [wp-kilij-arslan-ii, wp-battle-of-myriokephalon]
+  # --- new events ---
+  - key: battle-of-kose-dag-1243
+    name: Battle of Kose Dag
+    type: Battle
+    date: 1243-06-26
+    place: kose-dag-battlefield
+    people:
+      - {person: kaykhusraw-ii, role: defeated}
+    prominence: 3
+    note: "Kaykhusraw II's 80,000-strong army (with Armenian, Nicaean, Trebizond and Ayyubid allies) attacked the Mongols under Baiju at the pass and was beaten after a feigned retreat; the sultan fled to Tokat and Ankara. Rum became a Mongol vassal with a heavy annual tribute and never recovered."
+    sources: [wp-battle-of-kose-dag, wp-kaykhusraw-ii]
+  - key: battle-of-bapheus-1302
+    name: Battle of Bapheus
+    type: Battle
+    date: 1302-07-27
+    people:
+      - {person: osman-i, role: victor}
+    prominence: 3
+    note: "Osman's 5,000 light cavalry broke George Mouzalon's 2,000 Byzantines (half of them Alan mercenaries, who did not fight) on the plain of Bapheus between Nicomedia and Nicaea; the Byzantines lost the Bithynian countryside. The first major Ottoman victory. Year disputed: 1302 (von Hammer, and the body of both articles) or 1299 (the Bapheus lead, Gibbon, a 2017 study); see discrepancy. No place: the site is unidentified."
+    sources: [wp-battle-of-bapheus, wp-osman-i]
+  - key: capture-of-bursa-1326
+    name: Capture of Bursa
+    type: Siege
+    date: 1326-04-06
+    place: bursa
+    people:
+      - {person: orhan, role: victor}
+      - {person: osman-i, role: father of the conqueror}
+    prominence: 3
+    note: "Orhan entered Bursa on 6 April 1326 after a blockade of six to nine years begun by his father Osman (who had gout and could no longer campaign). Its people recognised Ottoman rule and paid jizya. Only Osman's article dates it; Orhan's article says the Byzantine commander was persuaded to defect. Bursa became the first Ottoman capital."
+    sources: [wp-osman-i, wp-orhan]
+  - key: battle-of-pelekanon-1329
+    name: Battle of Pelekanon
+    type: Battle
+    year: 1329
+    people:
+      - {person: orhan, role: victor}
+      - {person: andronikos-iii-palaiologos, role: defeated}
+    prominence: 3
+    note: "Andronikos III's mercenary relief force for Nicaea was routed by Orhan's disciplined troops near Nicomedia (modern Maltepe). Orhan's first major battle; Andronikos never fought a field battle against the Ottomans again. The day (10 or 15 June) is already a discrepancy (pelekanon-june-1329); no place defined."
+    sources: [wp-orhan]
+  - key: orhan-takes-nicaea-1331
+    name: Orhan takes Nicaea
+    type: Siege
+    year: 1331
+    place: nicaea
+    people:
+      - {person: orhan, role: victor}
+    prominence: 3
+    note: "Nicaea surrendered to Orhan in 1331 after a three-year siege; Orhan took Nicomedia in 1337 and gave it to his eldest son Suleyman Pasha."
+    sources: [wp-orhan]
+  - key: first-crusade-at-nicaea-1097
+    name: First Crusade at Nicaea
+    type: Siege
+    date: 1097-05-21
+    place: nicaea
+    people:
+      - {person: kilij-arslan-i, role: defeated}
+      - {person: alexios-i-komnenos, role: beneficiary}
+    prominence: 3
+    note: "Kilij Arslan I was fighting the Danishmends when the crusaders besieged his capital in May 1097; he hurried back, was beaten on 21 May, and the city surrendered to the Byzantines. His wife and children were captured (and later returned without ransom). He was beaten again at Dorylaeum on 1 July."
+    sources: [wp-kilij-arslan-i]
+  - key: battle-of-kosovo-1389
+    name: Battle of Kosovo
+    type: Battle
+    date: 1389-06-15
+    place: kosovo-polje-battlefield
+    people:
+      - {person: murad-i, role: killed}
+      - {person: bayezid-i, role: victor}
+    prominence: 5
+    note: "Murad I's army (27,000-30,000, per the leading estimate) met Prince Lazar's Serb, Bosnian and allied army of 15,000-20,000. Both armies were wrecked and both leaders died; Bayezid, who led the right wing, took command and had his brother Yakub strangled. Serbia became a vassal. Murad is said to have been stabbed by Milos Obilic. The day (15 or 28 June) and who killed Murad are disputed (see discrepancies)."
+    sources: [wp-battle-of-kosovo, wp-murad-i, wp-bayezid-i]
+  - key: battle-of-nicopolis-1396
+    name: Battle of Nicopolis
+    type: Battle
+    date: 1396-09-25
+    place: nicopolis-battlefield
+    people:
+      - {person: bayezid-i, role: victor}
+      - {person: sigismund-holy-roman-emperor, role: defeated}
+    prominence: 4
+    note: "Bayezid I routed the Crusader army (French, Hungarian, Hospitaller and others, assisted by the Venetian fleet) led by King Sigismund of Hungary; John of Nevers (the Fearless) and the Marshal Jean Le Maingre were among the French. The last great crusade of the Middle Ages; Bayezid built the Ulu Cami at Bursa to mark it. Numbers on both sides are heavily contested."
+    sources: [wp-battle-of-nicopolis, wp-bayezid-i]
+  - key: battle-of-camurlu-1413
+    name: Battle of Chamurli
+    type: Battle
+    date: 1413-07-05
+    people:
+      - {person: mehmed-i, role: victor}
+      - {person: musa-celebi, role: defeated}
+    prominence: 3
+    note: "On the plain of Chamurli (modern Samokov, Bulgaria; no place defined) Mehmed Celebi, with the Serbian despot Stefan Lazarevic, beat his brother Musa. Musa killed Hassan, the aga of Mehmed's Janissaries, who tried to turn his troops, and was wounded; he fled, was caught and strangled. Mehmed became sole sultan, ending the Interregnum."
+    sources: [wp-ottoman-interregnum, wp-mehmed-i]
+  - key: battle-of-varna-1444
+    name: Battle of Varna
+    type: Battle
+    date: 1444-11-10
+    place: varna-battlefield
+    people:
+      - {person: murad-ii, role: victor}
+      - {person: mehmed-ii, role: nominal sultan}
+    prominence: 4
+    note: "Murad II, recalled from retirement, beat the crusaders under Wladyslaw III of Poland and Hungary, John Hunyadi and Mircea II of Wallachia (about 20,000 against an Ottoman army of 40,000 to 60,000). Wladyslaw was killed in a charge. The last battle of the Crusade of Varna; the 12-year-old Mehmed II was still nominally sultan."
+    sources: [wp-battle-of-varna, wp-murad-ii, wp-mehmed-ii]
+  - key: battle-of-chaldiran-1514
+    name: Battle of Chaldiran
+    type: Battle
+    date: 1514-08-23
+    place: chaldiran-battlefield
+    people:
+      - {person: selim-i, role: victor}
+    prominence: 4
+    note: "Selim I's 60,000-100,000 men with heavy artillery and Janissary muskets beat Shah Ismail I's cavalry army of 40,000-80,000, who had no artillery. Ismail was wounded and almost captured, and his wives were taken; he withdrew from campaigning. The Ottomans took Eastern Anatolia and Upper Mesopotamia and briefly Tabriz (5 or 7 September). The start of 41 years of war that ended with the Peace of Amasya (1555)."
+    sources: [wp-battle-of-chaldiran, wp-selim-i]
+  - key: battle-of-marj-dabiq-1516
+    name: Battle of Marj Dabiq
+    type: Battle
+    date: 1516-08-24
+    people:
+      - {person: selim-i, role: victor}
+    prominence: 3
+    note: "Selim I beat the Mamluk sultan al-Ghawri north of Aleppo after the right wing's commanders were killed and Khair Bey's left wing withdrew; al-Ghawri died on the field. Selim entered Aleppo and Damascus (mid-October). No place defined."
+    sources: [wp-selim-i]
+  - key: battle-of-ridaniya-1517
+    name: Battle of Ridaniya
+    type: Battle
+    date: 1517-01-22
+    people:
+      - {person: selim-i, role: victor}
+    prominence: 3
+    note: "Selim I routed the Mamluk sultan Tuman bay II at the entrenchment outside Cairo (Tuman killed Sinan Pasha, thinking him Selim) and entered Cairo; Tuman was caught on 26 March and executed on 13 April 1517. The end of the Mamluk Sultanate. No place defined."
+    sources: [wp-selim-i]
+  - key: siege-of-belgrade-1521
+    name: Siege of Belgrade
+    type: Siege
+    year: 1521
+    place: belgrade
+    people:
+      - {person: suleiman-the-magnificent, role: victor}
+    prominence: 3
+    note: "Suleiman encircled Belgrade on 28 August 1521 with 250,000 men and over 100 ships (the article's figures) and bombarded it from an island in the Danube; it fell the same year (no day given) and became the seat of the Pashalik of Belgrade, the second largest Ottoman town in Europe. Mehmed II had failed to take it."
+    sources: [wp-suleiman-the-magnificent]
+  - key: battle-of-mohacs-1526
+    name: Battle of Mohacs
+    type: Battle
+    date: 1526-08-29
+    place: mohacs-battlefield
+    people:
+      - {person: suleiman-the-magnificent, role: victor}
+    prominence: 5
+    note: "Suleiman and his grand vizier Ibrahim Pasha encircled and destroyed the Hungarian royal army of 25,000-30,000. King Louis II drowned in the marsh by the Csele stream; over 1,000 nobles, seven bishops and 28 barons died. The end of the Jagiellonian dynasty in Hungary and Bohemia and the partition of Hungary between the Ottomans, the Habsburgs and Transylvania."
+    sources: [wp-battle-of-mohacs, wp-suleiman-the-magnificent]
+  - key: siege-of-vienna-1529
+    name: Siege of Vienna
+    type: Siege
+    date: 1529-09-27
+    end_year: 1529
+    place: vienna
+    people:
+      - {person: suleiman-the-magnificent, role: besieger}
+    prominence: 4
+    note: "Suleiman's army of 75,000-100,000 or more (the article's modern estimate) besieged Vienna from 27 September to 15 October 1529 against up to 21,000 defenders under Niklas Graf Salm. Rain had cost him his heavy guns on the march; he withdrew in snow after the walls held. His first defeat; the start of 150 years of Habsburg-Ottoman hostility. He had retaken Buda for John Zapolya on 8 September."
+    sources: [wp-siege-of-vienna-1529, wp-suleiman-the-magnificent]
+  - key: battle-of-lepanto-1571
+    name: Battle of Lepanto
+    type: Battle
+    date: 1571-10-07
+    place: lepanto-battle-site
+    people:
+      - {person: selim-ii, role: defeated}
+      - {person: pius-v, role: organiser of the Holy League}
+      - {person: philip-ii-of-spain, role: Holy League}
+    prominence: 5
+    note: "The Holy League fleet (Venice, Spain, the Papal States, Genoa and others; 206 galleys and six galleasses under John of Austria, with Marcantonio Colonna and Sebastiano Venier) destroyed the Ottoman fleet of Ali Pasha in the Gulf of Patras, the largest naval battle in Western history since antiquity. The sultan Selim II was not present. The Ottomans rebuilt the fleet within a year but lost skilled crews."
+    sources: [wp-battle-of-lepanto, wp-selim-ii]
+
+links:
+  - {parent: suleiman-ibn-qutulmish, child: kilij-arslan-i}
+  - {parent: kilij-arslan-ii, child: kaykhusraw-i}
+  - {parent: kaykhusraw-i, child: kayqubad-i}
+  - {parent: kayqubad-i, child: kaykhusraw-ii}
+  - {parent: alp-arslan, child: malik-shah-i}
+  - {parent: osman-i, child: orhan}
+  - {parent: orhan, child: murad-i}
+  - {parent: murad-i, child: bayezid-i}
+  - {parent: bayezid-i, child: mehmed-i}
+  - {parent: bayezid-i, child: suleiman-celebi}
+  - {parent: bayezid-i, child: musa-celebi}
+  - {parent: mehmed-i, child: murad-ii}
+  - {parent: murad-ii, child: mehmed-ii}
+  - {parent: mehmed-ii, child: bayezid-ii}
+  - {parent: bayezid-ii, child: selim-i}
+  - {parent: selim-i, child: suleiman-the-magnificent}
+  - {parent: suleiman-the-magnificent, child: selim-ii}
+  - {parent: selim-ii, child: murad-iii}
+
+moments:
+  - {person: suleiman-ibn-qutulmish, role: lived, place: nicaea}
+  - {person: kilij-arslan-i, role: lived, place: nicaea, year: 1092}
+  - {person: kilij-arslan-i, role: lived, place: konya, year: 1101}
+  - {person: kilij-arslan-ii, role: buried, place: konya, year: 1192}
+  - {person: kaykhusraw-i, role: buried, place: konya, year: 1211}
+  - {person: osman-i, role: born, place: sogut}
+  - {person: osman-i, role: buried, place: bursa}
+  - {person: orhan, role: born, place: sogut}
+  - {person: orhan, role: died, place: bursa, year: 1362}
+  - {person: orhan, role: buried, place: bursa, year: 1362}
+  - {person: murad-i, role: died, place: kosovo-polje-battlefield, year: 1389}
+  - {person: murad-i, role: buried, place: bursa, year: 1389}
+  - {person: mehmed-i, role: crowned, place: edirne, year: 1413}
+  - {person: mehmed-i, role: buried, place: bursa, year: 1421}
+  - {person: murad-ii, role: crowned, place: bursa, year: 1421}
+  - {person: mehmed-ii, role: born, place: edirne, year: 1432}
+  - {person: mehmed-ii, role: buried, place: constantinople, year: 1481}
+  - {person: bayezid-ii, role: buried, place: constantinople, year: 1512}
+  - {person: selim-i, role: buried, place: constantinople, year: 1520}
+  - {person: suleiman-the-magnificent, role: buried, place: constantinople, year: 1566}
+  - {person: selim-ii, role: born, place: topkapi-palace, year: 1524}
+  - {person: selim-ii, role: buried, place: hagia-sophia, year: 1574}
+  - {person: murad-iii, role: died, place: topkapi-palace, year: 1595}
+  - {person: murad-iii, role: buried, place: hagia-sophia, year: 1595}
+
+discrepancies:
+  - key: alp-arslan-birth
+    question: When was Alp Arslan born?
+    about: [{person: alp-arslan}]
+    field: born
+    claims:
+      - {value: "10 January 1030", sources: [wp-alp-arslan], note: "Zahir al-Din Nishapuri, al-Husaini al-Yazidi, Mirkhvand, Khvandamir and Hasan-i Yazdi"}
+      - {value: "1032-1033", sources: [wp-alp-arslan], note: "Bundari, Ibn Khallikan, Ibn al-Adim and Ibn al-Athir (main account)"}
+      - {value: "20 January 1029", sources: [wp-alp-arslan], note: "Ibn al-Athir's alternative; the article says the literature generally accepts it because 1032-33 does not fit the known facts of his life"}
+    note: "The record uses 20 January 1029."
+  - key: rum-sultanate-founding
+    question: When did Suleiman ibn Qutalmish found the Sultanate of Rum?
+    about: [{person: suleiman-ibn-qutulmish}]
+    field: date
+    claims:
+      - {value: "1075", sources: [wp-suleiman-ibn-qutulmish], note: "He captured Nicaea in 1075 (al-Azimi), and some historians date the state to then"}
+      - {value: "1077", sources: [wp-suleiman-ibn-qutulmish, wp-sultanate-of-rum], note: "Both articles' leads: seceded from the Seljuk Empire in 1077 (ruled 1077-1086)"}
+      - {value: "1078-1081", sources: [wp-suleiman-ibn-qutulmish], note: "Other historians: founding between 1078 and 1081; Nicaea won 1075-1081 and the sultanate set up 'around two years later' (Rum article)"}
+      - {value: "1084", sources: [wp-sultanate-of-rum], note: "Officially recognised as a vassal by Malik-Shah I in 1084"}
+    note: "The title row starts in 1077, the year both leads give."
+  - key: suleiman-ibn-qutulmish-death
+    question: How did Suleiman ibn Qutalmish die at Ain Salm in 1086?
+    about: [{person: suleiman-ibn-qutulmish}]
+    field: died
+    claims:
+      - {value: "Killed in battle when his forces fled before Tutush's army under Artuk Bey", sources: [wp-suleiman-ibn-qutulmish]}
+      - {value: "Died at Ain Salm 'either fighting his enemies or by suicide'", sources: [wp-sultanate-of-rum]}
+    note: "Both give 1086 and Ain Salm."
+  - key: kilij-arslan-ii-birth-year
+    question: In what year was Kilij Arslan II born?
+    about: [{person: kilij-arslan-ii}]
+    field: born
+    claims:
+      - {value: "1113", sources: [wp-kilij-arslan-ii], note: "'Born in 1113'"}
+      - {value: "about 1115 (aged 77 at his death in August 1192)", sources: [wp-kilij-arslan-ii], note: "The same article's death line gives his age"}
+    note: "The record uses 1113, the stated birth year."
+  - key: kaykhusraw-i-death-place
+    question: In which battle did Kaykhusraw I die in 1211?
+    about: [{person: kaykhusraw-i}]
+    field: place
+    claims:
+      - {value: "The Battle of Antioch on the Meander, 1211", sources: [wp-kaykhusraw-i]}
+      - {value: "He died 'following the battle of Alasehir' in 1211", sources: [wp-kayqubad-i]}
+    note: "Both give 1211. No place is recorded."
+  - key: kose-dag-location
+    question: Where is the pass of Kose Dag, where the Mongols beat Kaykhusraw II?
+    about: [{event: battle-of-kose-dag-1243}, {place: kose-dag-battlefield}]
+    field: place
+    claims:
+      - {value: "Between Erzincan and Gumushane", sources: [wp-kaykhusraw-ii]}
+      - {value: "A mountain between Sivas and Erzincan", sources: [wp-sultanate-of-rum]}
+    note: "The Kose Dag article says only 'in eastern Anatolia'. The point on the map is approximate; the date, 26 June 1243, agrees in the articles that give it."
+  - key: osman-birth
+    question: When was Osman I born?
+    about: [{person: osman-i}]
+    field: born
+    claims:
+      - {value: "13 February 1258", sources: [wp-osman-i], note: "'Some sources', the day the Mongols took Baghdad"}
+      - {value: "1254/5", sources: [wp-osman-i], note: "Kemalpasazade, the sixteenth-century Ottoman historian; the article thinks it 'most likely' around the middle of the century"}
+    note: "The record uses c.1255, estimated. Born at Sogut, per the few sources."
+  - key: osman-accession-and-state-founding
+    question: When did Osman become leader, and when was the Ottoman beylik founded?
+    about: [{person: osman-i}]
+    field: date
+    claims:
+      - {value: "Around 1281, on his father Ertugrul's death", sources: [wp-osman-i, wp-battle-of-bapheus]}
+      - {value: "The beylik was founded c.1299", sources: [wp-ottoman-empire]}
+    note: "The title row starts c.1281. Some historians add that Osman had to fight relatives for the leadership (Osman article)."
+  - key: osman-death
+    question: When did Osman I die?
+    about: [{person: osman-i}]
+    field: died
+    claims:
+      - {value: "1323/4", sources: [wp-osman-i, wp-ottoman-empire, wp-orhan], note: "Osman's lead; Orhan's article says 1323 or 1324"}
+      - {value: "21 August 1326, at about 70, after hearing of the fall of Bursa", sources: [wp-osman-i], note: "'It is said'; other sources say he died just before Bursa fell"}
+      - {value: "1320", sources: [wp-osman-i], note: "Rouhi Celebi"}
+      - {value: "1327", sources: [wp-osman-i], note: "Uruc adiloglu"}
+    note: "The record uses c.1324. Necdet Sakaoglu notes no document mentions Osman after 1320 and documents confirm Orhan's accession in 1324 (Osman article)."
+  - key: battle-of-bapheus-date
+    question: In what year was the Battle of Bapheus fought?
+    about: [{event: battle-of-bapheus-1302}]
+    field: date
+    claims:
+      - {value: "27 July 1299", sources: [wp-battle-of-bapheus], note: "The article's lead, Gibbon (following Poussines) and a 2017 reassessment of Pachymeres, matching the severe winter of 1298-99"}
+      - {value: "27 July 1301", sources: [wp-battle-of-bapheus], note: "von Hammer-Purgstall's first proposal"}
+      - {value: "27 July 1302", sources: [wp-battle-of-bapheus, wp-osman-i], note: "von Hammer's later date, accepted by many scholars; the body of the Bapheus article and Osman's article"}
+    note: "The record uses 27 July 1302, the date accepted by many scholars and given by the body of the article, against its own lead."
+  - key: orhan-accession
+    question: When did Orhan become ruler?
+    about: [{person: orhan}]
+    field: date
+    claims:
+      - {value: "1323/4", sources: [wp-orhan], note: "The lead: sultan from 1323/4 to 1362"}
+      - {value: "1324", sources: [wp-osman-i], note: "Documents confirm his accession in 1324 (Sakaoglu)"}
+      - {value: "1326", sources: [wp-orhan], note: "The article says he died in 1362 'after a reign of thirty-six years'"}
+    note: "The title row starts in 1324, estimated."
+  - key: bursa-fall
+    question: How did Bursa fall to the Ottomans?
+    about: [{event: capture-of-bursa-1326}, {place: bursa}]
+    field: date
+    claims:
+      - {value: "After a six to nine year blockade the Byzantine emperor ordered the governor to evacuate; Orhan entered on 6 April 1326", sources: [wp-osman-i]}
+      - {value: "Orhan captured Bursa by persuading its Byzantine commander to defect, after taking Mudanya in 1321", sources: [wp-orhan]}
+    note: "Only Osman's article gives a day. Osman may have died just before, or heard the news on his deathbed."
+  - key: murad-i-death-date-1389
+    question: On what day did the Battle of Kosovo take place and Murad I die?
+    about: [{person: murad-i}, {event: battle-of-kosovo-1389}]
+    field: died
+    claims:
+      - {value: "15 June 1389, during the battle", sources: [wp-battle-of-kosovo, wp-murad-i, wp-bayezid-i]}
+      - {value: "16 June 1389, immediately after the battle", sources: [wp-bayezid-i]}
+      - {value: "28 June 1389 (St Vitus day)", sources: [wp-battle-of-kosovo], note: "The Florentine senate's letter to Tvrtko (20 October 1389); the article says Vidovdan is observed by the Julian calendar, equal to 28 June Gregorian today"}
+    note: "The record uses 15 June 1389."
+  - key: murad-i-killer-and-timing
+    question: Who killed Murad I at Kosovo, and when in the battle?
+    about: [{person: murad-i}, {event: battle-of-kosovo-1389}]
+    field: died
+    claims:
+      - {value: "Milos Obilic stabbed him in the first hours, pretending to defect", sources: [wp-murad-i, wp-battle-of-kosovo]}
+      - {value: "Killed by a sword wound by one of twelve Serbian lords who cut through the line, unnamed (Obilic 'allegedly')", sources: [wp-murad-i, wp-battle-of-kosovo], note: "The Florentine letter of 20 October 1389"}
+      - {value: "Assassinated while inspecting the battlefield after the battle ended", sources: [wp-murad-i], note: "Most Ottoman chroniclers, including Cantemir"}
+      - {value: "Killed by Lazar himself", sources: [wp-battle-of-kosovo], note: "Mignanelli, 1416"}
+    note: "Contemporary sources record only that the sultan and Lazar died; the stories were written down decades later."
+  - key: ankara-1402-date
+    question: On what day was the Battle of Ankara fought?
+    about: [{event: battle-of-ankara-1402}]
+    field: date
+    claims:
+      - {value: "20 July 1402", sources: [wp-bayezid-i, wp-mehmed-i]}
+      - {value: "28 July 1402", sources: [wp-ottoman-interregnum]}
+    note: "Existing event (year only). The record keeps the year; not edited here."
+  - key: bayezid-i-death
+    question: How did Bayezid I die in Timur's captivity in 1403?
+    about: [{person: bayezid-i}]
+    field: died
+    claims:
+      - {value: "Suicide, by striking his head on the bars or taking poison", sources: [wp-bayezid-i], note: "Ottoman historians Lutfi Pasha and Ashik Pasha-Zade"}
+      - {value: "Suicide with poison from his ring, on seeing his wife serve wine at a feast", sources: [wp-bayezid-i], note: "Constantine of Ostrovica; ibn Arabshah says his heart was broken"}
+      - {value: "Poisoned on Timur's order", sources: [wp-bayezid-i], note: "Considered unlikely: Timur's own doctors cared for him"}
+      - {value: "Treated with respect and mourned by Timur", sources: [wp-bayezid-i], note: "Sharafaddin Yazdi's Zafar-nama, a court source; no cell or humiliation in contemporary accounts"}
+    note: "The record gives only the date, 8 March 1403. The cage is a later legend (Neshri, Pius II)."
+  - key: murad-ii-mother
+    question: Who was Murad II's mother?
+    about: [{person: murad-ii}]
+    field: born
+    claims:
+      - {value: "An unnamed concubine", sources: [wp-murad-ii], note: "Sukrullah, fifteenth century"}
+      - {value: "Sahzade Hatun, daughter of Divitdar Ahmed Pasha", sources: [wp-murad-ii], note: "Huseyin Husameddin Yasar, early twentieth century"}
+      - {value: "Emine Hatun of the Dulkadirids", sources: [wp-murad-ii, wp-mehmed-i], note: "The most widely accepted view"}
+    note: "No consort is entered."
+  - key: murad-ii-recall-1444
+    question: Who brought Murad II back to lead the army in 1444?
+    about: [{person: murad-ii}, {event: battle-of-varna-1444}]
+    field: date
+    claims:
+      - {value: "Mehmed II asked his father to lead the armies, writing 'If I am the sultan, I order you to come'", sources: [wp-mehmed-ii], note: "Seventeenth-century chronicles"}
+      - {value: "The grand vizier Candarli Halil Pasha recalled Murad against Mehmed's wishes", sources: [wp-mehmed-ii, wp-murad-ii, wp-battle-of-varna], note: "Halil Inalcik: Mehmed did not ask his father"}
+    note: "Both agree Murad commanded at Varna on 10 November 1444."
+  - key: siege-of-constantinople-length
+    question: How long did the siege of Constantinople last?
+    about: [{event: fall-of-constantinople-1453}]
+    field: date
+    claims:
+      - {value: "A 53-day siege that began on 6 April and ended 29 May 1453", sources: [wp-fall-of-constantinople]}
+      - {value: "A 57-day siege; it began 'in early April'", sources: [wp-mehmed-ii]}
+    note: "Existing event; both give the fall on 29 May 1453."
+  - key: bayezid-ii-birth-year
+    question: In which year was Bayezid II born?
+    about: [{person: bayezid-ii}]
+    field: born
+    claims:
+      - {value: "3 December 1447", sources: [wp-bayezid-ii]}
+      - {value: "3 December 1448", sources: [wp-bayezid-ii]}
+    note: "The article writes '3 December 1447/1448'. The record uses 1447, estimated."
+  - key: selim-i-mother
+    question: Was Selim I's mother a Dulkadirid princess or a concubine?
+    about: [{person: selim-i}, {person: bayezid-ii}]
+    field: born
+    claims:
+      - {value: "Ayse Gulbahar Hatun, daughter of Alaueddevle Bozkurt Bey, the eleventh ruler of the Dulkadirids", sources: [wp-selim-i, wp-bayezid-ii], note: "'The most widely accepted view'"}
+      - {value: "A concubine", sources: [wp-selim-i, wp-bayezid-ii]}
+    note: "No consort is entered."
+  - key: tabriz-entry-1514
+    question: On what day did Selim I enter Tabriz after Chaldiran?
+    about: [{event: battle-of-chaldiran-1514}, {person: selim-i}]
+    field: date
+    claims:
+      - {value: "5 September 1514, in triumph", sources: [wp-selim-i]}
+      - {value: "7 September 1514, captured, pillaged and evacuated", sources: [wp-selim-i, wp-battle-of-chaldiran]}
+    note: "Both claims are in Selim I's article."
+  - key: chaldiran-executions
+    question: How many were executed before Chaldiran, and who?
+    about: [{event: battle-of-chaldiran-1514}, {person: selim-i}]
+    field: date
+    claims:
+      - {value: "50,000 Alevis massacred on the march east", sources: [wp-selim-i]}
+      - {value: "Some 40,000 Qizilbash executed in Anatolia before the campaign", sources: [wp-battle-of-chaldiran]}
+    note: "Selim I's article also says a register of Shiites aged 7 to 70 was made in central Anatolian cities and 'all' found were beheaded."
+  - key: selim-i-death-cause
+    question: What killed Selim I in 1520?
+    about: [{person: selim-i}]
+    field: died
+    claims:
+      - {value: "A mistreated carbuncle", sources: [wp-selim-i], note: "The official cause"}
+      - {value: "Cancer", sources: [wp-selim-i], note: "Some historians"}
+      - {value: "Poison given by his physician", sources: [wp-selim-i], note: "Some historians"}
+      - {value: "Plague", sources: [wp-selim-i], note: "Others note a plague epidemic and sources implying he had it"}
+    note: "All agree on 22 September 1520."
+  - key: selim-ii-accession-1566
+    question: When did Selim II take the throne, and how long was Suleiman's death kept secret?
+    about: [{person: selim-ii}, {person: suleiman-the-magnificent}]
+    field: date
+    claims:
+      - {value: "Ascended on 29 September 1566 (23 days after Suleiman's death on 6 September); the vizier kept the death secret until Selim arrived at the army in Belgrade", sources: [wp-selim-ii]}
+      - {value: "Suleiman's death was kept secret for 48 days", sources: [wp-suleiman-the-magnificent]}
+    note: "The title row uses 29 September 1566."
