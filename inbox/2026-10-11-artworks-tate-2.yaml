@@ -1,0 +1,3419 @@
+# Notes for the reviewer
+# - Paintings by our painters, read through the official Tate API (https://github.com/tategallery/collection); nothing was scraped. Image links only where the museum marks the work public domain / CC0 (MoMA and Tate publish metadata only: no images, just the accession number and a link back). Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 237 new artworks (and works already in the database were updated with the accession number and link: 6).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Tate open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Tate
+  date: '2026-10-11'
+sources:
+- key: tate-open-data
+  title: Tate collection metadata (CC0)
+  url: https://github.com/tategallery/collection
+artworks:
+- key: the-holy-family-with-the-infant-st-john-joshua-reynolds
+  name: The Holy Family with the Infant St John
+  kind: painting
+  made: 1788
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: A00837
+  museum_url: https://www.tate.org.uk/art/artworks/reynolds-the-holy-family-with-the-infant-st-john-a00837
+  sources:
+  - tate-open-data
+  people:
+  - person: joshua-reynolds
+    role: creator
+  prominence: 3
+- key: abstract-painting-809-3-gerhard-richter
+  name: Abstract Painting (809-3)
+  kind: painting
+  made: 1994
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: AR00027
+  museum_url: https://www.tate.org.uk/art/artworks/richter-abstract-painting-809-3-ar00027
+  sources:
+  - tate-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: abstract-painting-skin-887-3-gerhard-richter
+  name: Abstract Painting (Skin) (887-3)
+  kind: painting
+  made: 2004
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: AR00028
+  museum_url: https://www.tate.org.uk/art/artworks/richter-abstract-painting-skin-887-3-ar00028
+  sources:
+  - tate-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: abstract-painting-silicate-880-4-gerhard-richter
+  name: Abstract Painting (Silicate) (880-4)
+  kind: painting
+  made: 2002
+  medium: Oil paint on aluminium
+  collection: Tate
+  accession: AR00029
+  museum_url: https://www.tate.org.uk/art/artworks/richter-abstract-painting-silicate-880-4-ar00029
+  sources:
+  - tate-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: folkdance-melancholia-georg-baselitz
+  name: Folkdance Melancholia
+  kind: painting
+  made: 1989
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: AR00031
+  museum_url: https://www.tate.org.uk/art/artworks/baselitz-folkdance-melancholia-ar00031
+  sources:
+  - tate-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: where-is-the-yellow-milkjug-mrs-bird-georg-baselitz
+  name: Where is the Yellow Milkjug, Mrs Bird?
+  kind: painting
+  made: 1989
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: AR00032
+  museum_url: https://www.tate.org.uk/art/artworks/baselitz-where-is-the-yellow-milkjug-mrs-bird-ar00032
+  sources:
+  - tate-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: urd-werdande-skuld-the-norns-anselm-kiefer
+  name: Urd Werdande Skuld (The Norns)
+  kind: painting
+  made: 1983
+  medium: Oil paint, shellac, emulsion and fibre on canvas
+  collection: Tate
+  accession: AR00036
+  museum_url: https://www.tate.org.uk/art/artworks/kiefer-urd-werdande-skuld-the-norns-ar00036
+  sources:
+  - tate-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: man-under-a-pyramid-anselm-kiefer
+  name: Man under a Pyramid
+  kind: painting
+  made: 1996
+  medium: Emulsion, acrylic paint, shellac and ash on 2 canvases
+  collection: Tate
+  accession: AR00037
+  museum_url: https://www.tate.org.uk/art/artworks/kiefer-man-under-a-pyramid-ar00037
+  sources:
+  - tate-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: man-ray-andy-warhol
+  name: Man Ray
+  kind: painting
+  made: 1974
+  medium: Acrylic paint and silkscreen on 2 canvases
+  collection: Tate
+  accession: AR00039
+  museum_url: https://www.tate.org.uk/art/artworks/warhol-man-ray-ar00039
+  sources:
+  - tate-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: gilbert-and-george-andy-warhol
+  name: Gilbert and George
+  kind: painting
+  made: 1975
+  medium: Acrylic paint and silkscreen on 2 canvases
+  collection: Tate
+  accession: AR00040
+  museum_url: https://www.tate.org.uk/art/artworks/warhol-gilbert-and-george-ar00040
+  sources:
+  - tate-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: cette-obscure-clarte-qui-tombe-des-etoiles-anselm-kiefer
+  name: Cette obscure clarté qui tombe des étoiles
+  kind: painting
+  made: 1999
+  medium: Acrylic paint, oil paint, shellac, earth, sand, wood, paper and glass on 2 canvases, lead, iron, books and other materia
+  collection: Tate
+  accession: AR00041
+  museum_url: https://www.tate.org.uk/art/artworks/kiefer-cette-obscure-clarte-qui-tombe-des-etoiles-ar00041
+  sources:
+  - tate-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: alexandre-iolas-andy-warhol
+  name: Alexandre Iolas
+  kind: painting
+  made: 1972
+  medium: Acrylic paint and silkscreen on 2 canvases
+  collection: Tate
+  accession: AR00230
+  museum_url: https://www.tate.org.uk/art/artworks/warhol-alexandre-iolas-ar00230
+  sources:
+  - tate-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: three-ladies-adorning-a-term-of-hymen-joshua-reynolds
+  name: Three Ladies Adorning a Term of Hymen
+  kind: painting
+  made: 1773
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00079
+  museum_url: https://www.tate.org.uk/art/artworks/reynolds-three-ladies-adorning-a-term-of-hymen-n00079
+  sources:
+  - tate-open-data
+  people:
+  - person: joshua-reynolds
+    role: creator
+  prominence: 3
+- key: a-mans-head-joshua-reynolds
+  name: A Man’s Head
+  kind: painting
+  made: 1771
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00106
+  museum_url: https://www.tate.org.uk/art/artworks/reynolds-a-mans-head-n00106
+  sources:
+  - tate-open-data
+  people:
+  - person: joshua-reynolds
+    role: creator
+  prominence: 3
+- key: the-painter-and-his-pug-william-hogarth
+  name: The Painter and his Pug
+  kind: painting
+  made: 1745
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00112
+  museum_url: https://www.tate.org.uk/art/artworks/hogarth-the-painter-and-his-pug-n00112
+  sources:
+  - tate-open-data
+  people:
+  - person: william-hogarth
+    role: creator
+  prominence: 3
+- key: miss-laura-dorothea-ross-mrs-francis-robertson-thomas-lawrence
+  name: Miss Laura Dorothea Ross (Mrs Francis Robertson)
+  kind: painting
+  made: 1798
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00136
+  museum_url: https://www.tate.org.uk/art/artworks/lawrence-miss-laura-dorothea-ross-mrs-francis-robertson-n00136
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: john-philip-kemble-as-hamlet-thomas-lawrence
+  name: John Philip Kemble as Hamlet
+  kind: painting
+  made: 1801
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00142
+  museum_url: https://www.tate.org.uk/art/artworks/lawrence-john-philip-kemble-as-hamlet-n00142
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: benjamin-west-p-r-a-replica-thomas-lawrence
+  name: Benjamin West, P.R.A. (replica)
+  kind: painting
+  made: 1821
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00144
+  museum_url: https://www.tate.org.uk/art/artworks/lawrence-benjamin-west-pra-replica-n00144
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-lawrence
+    role: creator
+  prominence: 3
+- key: john-smith-the-engraver-godfrey-kneller
+  name: John Smith the Engraver
+  kind: painting
+  made: 1696
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00273
+  museum_url: https://www.tate.org.uk/art/artworks/kneller-john-smith-the-engraver-n00273
+  sources:
+  - tate-open-data
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: musidora-thomas-gainsborough
+  name: Musidora
+  kind: painting
+  made: 1780
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00308
+  museum_url: https://www.tate.org.uk/art/artworks/gainsborough-musidora-n00308
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-gainsborough
+    role: creator
+  prominence: 3
+- key: boy-driving-cows-near-a-pool-thomas-gainsborough
+  name: Boy Driving Cows near a Pool
+  kind: painting
+  made: 1786
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00309
+  museum_url: https://www.tate.org.uk/art/artworks/gainsborough-boy-driving-cows-near-a-pool-n00309
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-gainsborough
+    role: creator
+  prominence: 3
+- key: sunset-carthorses-drinking-at-a-stream-thomas-gainsborough
+  name: 'Sunset: Carthorses Drinking at a Stream'
+  kind: painting
+  made: 1760
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00310
+  museum_url: https://www.tate.org.uk/art/artworks/gainsborough-sunset-carthorses-drinking-at-a-stream-n00310
+  sources:
+  - tate-open-data
+  people:
+  - person: thomas-gainsborough
+    role: creator
+  prominence: 3
+- key: the-valley-farm-john-constable
+  name: The Valley Farm
+  kind: painting
+  made: 1835
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N00327
+  museum_url: https://www.tate.org.uk/art/artworks/constable-the-valley-farm-n00327
+  sources:
+  - tate-open-data
+  people:
+  - person: john-constable
+    role: creator
+  prominence: 3
+- key: sigismunda-mourning-over-the-heart-of-guiscardo-william-hogarth
+  name: Sigismunda Mourning over the Heart of Guiscardo
+  kind: painting
+  made: 1759
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01046
+  museum_url: https://www.tate.org.uk/art/artworks/hogarth-sigismunda-mourning-over-the-heart-of-guiscardo-n01046
+  sources:
+  - tate-open-data
+  people:
+  - person: william-hogarth
+    role: creator
+  prominence: 3
+- key: the-spiritual-form-of-pitt-guiding-behemoth-william-blake
+  name: The Spiritual Form of Pitt Guiding Behemoth
+  kind: painting
+  made: 1805
+  medium: Tempera and gold on canvas
+  collection: Tate
+  accession: N01110
+  museum_url: https://www.tate.org.uk/art/artworks/blake-the-spiritual-form-of-pitt-guiding-behemoth-n01110
+  sources:
+  - tate-open-data
+  people:
+  - person: william-blake
+    role: creator
+  prominence: 3
+- key: the-strode-family-william-hogarth
+  name: The Strode Family
+  kind: painting
+  made: 1738
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01153
+  museum_url: https://www.tate.org.uk/art/artworks/hogarth-the-strode-family-n01153
+  sources:
+  - tate-open-data
+  people:
+  - person: william-hogarth
+    role: creator
+  prominence: 3
+- key: the-body-of-christ-borne-to-the-tomb-william-blake
+  name: The Body of Christ Borne to the Tomb
+  kind: painting
+  made: 1799
+  estimated: true
+  medium: Tempera on canvas mounted onto cardboard
+  collection: Tate
+  accession: N01164
+  museum_url: https://www.tate.org.uk/art/artworks/blake-the-body-of-christ-borne-to-the-tomb-n01164
+  sources:
+  - tate-open-data
+  people:
+  - person: william-blake
+    role: creator
+  prominence: 3
+- key: ecce-ancilla-domini-the-annunciation-dante-gabriel-rossetti
+  name: Ecce Ancilla Domini! (The Annunciation)
+  kind: painting
+  made: 1849
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01210
+  museum_url: https://www.tate.org.uk/art/artworks/rossetti-ecce-ancilla-domini-the-annunciation-n01210
+  sources:
+  - tate-open-data
+  people:
+  - person: dante-gabriel-rossetti
+    role: creator
+  prominence: 3
+- key: titania-and-bottom-henry-fuseli
+  name: Titania and Bottom
+  kind: painting
+  made: 1790
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01228
+  museum_url: https://www.tate.org.uk/art/artworks/fuseli-titania-and-bottom-n01228
+  sources:
+  - tate-open-data
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: east-bergholt-house-john-constable
+  name: East Bergholt House
+  kind: painting
+  made: 1809
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01235
+  museum_url: https://www.tate.org.uk/art/artworks/constable-east-bergholt-house-n01235
+  sources:
+  - tate-open-data
+  people:
+  - person: john-constable
+    role: creator
+  prominence: 3
+- key: hampstead-heath-with-the-house-called-the-salt-b-john-constable
+  name: Hampstead Heath, with the House Called ‘The Salt Box’
+  kind: painting
+  made: 1819
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01236
+  museum_url: https://www.tate.org.uk/art/artworks/constable-hampstead-heath-with-the-house-called-the-salt-box-n01236
+  sources:
+  - tate-open-data
+  people:
+  - person: john-constable
+    role: creator
+  prominence: 3
+- key: beata-beatrix-dante-gabriel-rossetti
+  collection: Tate
+  accession: N01279
+  museum_url: https://www.tate.org.uk/art/artworks/rossetti-beata-beatrix-n01279
+  sources:
+  - tate-open-data
+- key: jesus-washing-peters-feet-ford-madox-brown
+  name: Jesus Washing Peter’s Feet
+  kind: painting
+  made: 1852
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01394
+  museum_url: https://www.tate.org.uk/art/artworks/brown-jesus-washing-peters-feet-n01394
+  sources:
+  - tate-open-data
+  people:
+  - person: ford-madox-brown
+    role: creator
+  prominence: 3
+- key: the-yeoman-of-the-guard-john-everett-millais
+  name: The Yeoman of the Guard
+  kind: painting
+  made: 1876
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01494
+  museum_url: https://www.tate.org.uk/art/artworks/millais-the-yeoman-of-the-guard-n01494
+  sources:
+  - tate-open-data
+  people:
+  - person: john-everett-millais
+    role: creator
+  prominence: 3
+- key: equestrian-portrait-begun-by-sir-edwin-landseer-john-everett-millais
+  name: Equestrian Portrait (begun by Sir Edwin Landseer)
+  kind: painting
+  made: 1882
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01503
+  museum_url: https://www.tate.org.uk/art/artworks/millais-equestrian-portrait-begun-by-sir-edwin-landseer-n01503
+  sources:
+  - tate-open-data
+  people:
+  - person: john-everett-millais
+    role: creator
+  prominence: 3
+- key: ophelia-millais
+  collection: Tate
+  accession: N01506
+  museum_url: https://www.tate.org.uk/art/artworks/millais-ophelia-n01506
+  sources:
+  - tate-open-data
+- key: and-the-sea-gave-up-the-dead-which-were-in-it-frederic-leighton
+  name: And the Sea Gave Up the Dead Which Were in It
+  kind: painting
+  made: 1892
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01511
+  museum_url: https://www.tate.org.uk/art/artworks/leighton-and-the-sea-gave-up-the-dead-which-were-in-it-n01511
+  sources:
+  - tate-open-data
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: a-silent-greeting-lawrence-alma-tadema
+  name: A Silent Greeting
+  kind: painting
+  made: 1889
+  medium: Oil paint on wood
+  collection: Tate
+  accession: N01523
+  museum_url: https://www.tate.org.uk/art/artworks/alma-tadema-a-silent-greeting-n01523
+  sources:
+  - tate-open-data
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 3
+- key: consulting-the-oracle-john-william-waterhouse
+  name: Consulting the Oracle
+  kind: painting
+  made: 1884
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01541
+  museum_url: https://www.tate.org.uk/art/artworks/waterhouse-consulting-the-oracle-n01541
+  sources:
+  - tate-open-data
+  people:
+  - person: john-william-waterhouse
+    role: creator
+  prominence: 3
+- key: saint-eulalia-john-william-waterhouse
+  name: Saint Eulalia
+  kind: painting
+  made: 1885
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01542
+  museum_url: https://www.tate.org.uk/art/artworks/waterhouse-saint-eulalia-n01542
+  sources:
+  - tate-open-data
+  people:
+  - person: john-william-waterhouse
+    role: creator
+  prominence: 3
+- key: the-lady-of-shalott-john-william-waterhouse
+  name: The Lady of Shalott
+  kind: painting
+  made: 1888
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01543
+  museum_url: https://www.tate.org.uk/art/artworks/waterhouse-the-lady-of-shalott-n01543
+  sources:
+  - tate-open-data
+  people:
+  - person: john-william-waterhouse
+    role: creator
+  prominence: 3
+- key: the-bath-of-psyche-frederic-leighton
+  name: The Bath of Psyche
+  kind: painting
+  made: 1890
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01574
+  museum_url: https://www.tate.org.uk/art/artworks/leighton-the-bath-of-psyche-n01574
+  sources:
+  - tate-open-data
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: catspaws-off-the-land-henry-moore
+  name: Catspaws off the Land
+  kind: painting
+  made: 1885
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01604
+  museum_url: https://www.tate.org.uk/art/artworks/moore-catspaws-off-the-land-n01604
+  sources:
+  - tate-open-data
+  people:
+  - person: henry-moore
+    role: creator
+  prominence: 3
+- key: carnation-lily-lily-rose
+  collection: Tate
+  accession: N01615
+  museum_url: https://www.tate.org.uk/art/artworks/sargent-carnation-lily-lily-rose-n01615
+  sources:
+  - tate-open-data
+- key: king-cophetua-and-the-beggar-maid
+  collection: Tate
+  accession: N01771
+  museum_url: https://www.tate.org.uk/art/artworks/burne-jones-king-cophetua-and-the-beggar-maid-n01771
+  sources:
+  - tate-open-data
+- key: study-for-the-discovery-of-juliet-apparently-lif-frederic-leighton
+  name: Study for ‘The Discovery of Juliet Apparently Lifeless’
+  kind: painting
+  made: 1858
+  estimated: true
+  medium: Oil paint on wood
+  collection: Tate
+  accession: N01806
+  museum_url: https://www.tate.org.uk/art/artworks/leighton-study-for-the-discovery-of-juliet-apparently-lifeless-n01806
+  sources:
+  - tate-open-data
+  people:
+  - person: frederic-leighton
+    role: creator
+  prominence: 3
+- key: mr-and-mrs-edwin-edwards-henri-fantin-latour
+  name: Mr and Mrs Edwin Edwards
+  kind: painting
+  made: 1875
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01952
+  museum_url: https://www.tate.org.uk/art/artworks/fantin-latour-mr-and-mrs-edwin-edwards-n01952
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: nocturne-blue-and-gold-old-battersea-bridge-james-mcneill-whistler
+  name: 'Nocturne: Blue and Gold - Old Battersea Bridge'
+  kind: painting
+  made: 1872
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N01959
+  museum_url: https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-battersea-bridge-n01959
+  sources:
+  - tate-open-data
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 3
+- key: ellen-terry-as-lady-macbeth-john-singer-sargent
+  name: Ellen Terry as Lady Macbeth
+  kind: painting
+  made: 1889
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02053
+  museum_url: https://www.tate.org.uk/art/artworks/sargent-ellen-terry-as-lady-macbeth-n02053
+  sources:
+  - tate-open-data
+  people:
+  - person: john-singer-sargent
+    role: creator
+  prominence: 3
+- key: chaucer-at-the-court-of-edward-iii-ford-madox-brown
+  name: Chaucer at the Court of Edward III
+  kind: painting
+  made: 1856
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02063
+  museum_url: https://www.tate.org.uk/art/artworks/brown-chaucer-at-the-court-of-edward-iii-n02063
+  sources:
+  - tate-open-data
+  people:
+  - person: ford-madox-brown
+    role: creator
+  prominence: 3
+- key: the-ship-william-holman-hunt
+  name: The Ship
+  kind: painting
+  made: 1875
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02120
+  museum_url: https://www.tate.org.uk/art/artworks/hunt-the-ship-n02120
+  sources:
+  - tate-open-data
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 3
+- key: roses-henri-fantin-latour
+  name: Roses
+  kind: painting
+  made: 1864
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02133
+  museum_url: https://www.tate.org.uk/art/artworks/fantin-latour-roses-n02133
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: a-plate-of-apples-henri-fantin-latour
+  name: A Plate of Apples
+  kind: painting
+  made: 1861
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02134
+  museum_url: https://www.tate.org.uk/art/artworks/fantin-latour-a-plate-of-apples-n02134
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-fantin-latour
+    role: creator
+  prominence: 3
+- key: sancta-lilias-dante-gabriel-rossetti
+  name: Sancta Lilias
+  kind: painting
+  made: 1874
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N02440
+  museum_url: https://www.tate.org.uk/art/artworks/rossetti-sancta-lilias-n02440
+  sources:
+  - tate-open-data
+  people:
+  - person: dante-gabriel-rossetti
+    role: creator
+  prominence: 3
+- key: a-favourite-custom-lawrence-alma-tadema
+  name: A Favourite Custom
+  kind: painting
+  made: 1909
+  medium: Oil on wood
+  collection: Tate
+  accession: N02675
+  museum_url: https://www.tate.org.uk/art/artworks/alma-tadema-a-favourite-custom-n02675
+  sources:
+  - tate-open-data
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 3
+- key: the-spiritual-form-of-nelson-guiding-leviathan-william-blake
+  name: The Spiritual Form of Nelson Guiding Leviathan
+  kind: painting
+  made: 1805
+  estimated: true
+  medium: Tempera on canvas
+  collection: Tate
+  accession: N03006
+  museum_url: https://www.tate.org.uk/art/artworks/blake-the-spiritual-form-of-nelson-guiding-leviathan-n03006
+  sources:
+  - tate-open-data
+  people:
+  - person: william-blake
+    role: creator
+  prominence: 3
+- key: professor-ingram-bywater-john-singer-sargent
+  name: Professor Ingram Bywater
+  kind: painting
+  made: 1901
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03012
+  museum_url: https://www.tate.org.uk/art/artworks/sargent-professor-ingram-bywater-n03012
+  sources:
+  - tate-open-data
+  people:
+  - person: john-singer-sargent
+    role: creator
+  prominence: 3
+- key: lear-and-cordelia-ford-madox-brown
+  name: Lear and Cordelia
+  kind: painting
+  made: 1849
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03065
+  museum_url: https://www.tate.org.uk/art/artworks/brown-lear-and-cordelia-n03065
+  sources:
+  - tate-open-data
+  people:
+  - person: ford-madox-brown
+    role: creator
+  prominence: 3
+- key: sisyphus-edward-burne-jones
+  name: Sisyphus
+  kind: painting
+  made: 1870
+  estimated: true
+  medium: Tempera on paper
+  collection: Tate
+  accession: N03141
+  museum_url: https://www.tate.org.uk/art/artworks/burne-jones-sisyphus-n03141
+  sources:
+  - tate-open-data
+  people:
+  - person: edward-burne-jones
+    role: creator
+  prominence: 3
+- key: tantalus-edward-burne-jones
+  name: Tantalus
+  kind: painting
+  made: 1870
+  estimated: true
+  medium: Tempera on paper
+  collection: Tate
+  accession: N03142
+  museum_url: https://www.tate.org.uk/art/artworks/burne-jones-tantalus-n03142
+  sources:
+  - tate-open-data
+  people:
+  - person: edward-burne-jones
+    role: creator
+  prominence: 3
+- key: carlo-pellegrini-edgar-degas
+  name: Carlo Pellegrini
+  kind: painting
+  made: 1876
+  estimated: true
+  medium: Oil paint on paper mounted on board
+  collection: Tate
+  accession: N03157
+  museum_url: https://www.tate.org.uk/art/artworks/degas-carlo-pellegrini-n03157
+  sources:
+  - tate-open-data
+  people:
+  - person: edgar-degas
+    role: creator
+  prominence: 3
+- key: john-hunt-william-holman-hunt
+  name: John Hunt
+  kind: painting
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03160
+  museum_url: https://www.tate.org.uk/art/artworks/hunt-john-hunt-n03160
+  sources:
+  - tate-open-data
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 3
+- key: john-key-william-holman-hunt
+  name: John Key
+  kind: painting
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03161
+  museum_url: https://www.tate.org.uk/art/artworks/hunt-john-key-n03161
+  sources:
+  - tate-open-data
+  people:
+  - person: william-holman-hunt
+    role: creator
+  prominence: 3
+- key: tahitians-paul-gauguin
+  name: Tahitians
+  kind: painting
+  made: 1891
+  estimated: true
+  medium: Oil paint, crayon and charcoal on paper
+  collection: Tate
+  accession: N03167
+  museum_url: https://www.tate.org.uk/art/artworks/gauguin-tahitians-n03167
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: the-first-marquess-of-tweeddale-godfrey-kneller
+  name: The First Marquess of Tweeddale
+  kind: painting
+  made: 1695
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03272
+  museum_url: https://www.tate.org.uk/art/artworks/kneller-the-first-marquess-of-tweeddale-n03272
+  sources:
+  - tate-open-data
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: woman-with-a-cat-edouard-manet
+  name: Woman with a Cat
+  kind: painting
+  made: 1880
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03295
+  museum_url: https://www.tate.org.uk/art/artworks/manet-woman-with-a-cat-n03295
+  sources:
+  - tate-open-data
+  people:
+  - person: edouard-manet
+    role: creator
+  prominence: 3
+- key: head-of-a-woman-edgar-degas
+  name: Head of a Woman
+  kind: painting
+  made: 1874
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03390
+  museum_url: https://www.tate.org.uk/art/artworks/degas-head-of-a-woman-n03390
+  sources:
+  - tate-open-data
+  people:
+  - person: edgar-degas
+    role: creator
+  prominence: 3
+- key: symphony-in-white-no-2-the-little-white-girl-james-mcneill-whistler
+  name: 'Symphony in White, No. 2: The Little White Girl'
+  kind: painting
+  made: 1864
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03418
+  museum_url: https://www.tate.org.uk/art/artworks/whistler-symphony-in-white-no-2-the-little-white-girl-n03418
+  sources:
+  - tate-open-data
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 3
+- key: nocturne-black-and-gold-the-fire-wheel-james-mcneill-whistler
+  name: 'Nocturne: Black and Gold - The Fire Wheel'
+  kind: painting
+  made: 1875
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03419
+  museum_url: https://www.tate.org.uk/art/artworks/whistler-nocturne-black-and-gold-the-fire-wheel-n03419
+  sources:
+  - tate-open-data
+  people:
+  - person: james-mcneill-whistler
+    role: creator
+  prominence: 3
+- key: faa-iheihe-paul-gauguin
+  name: Faa Iheihe
+  kind: painting
+  made: 1898
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03470
+  museum_url: https://www.tate.org.uk/art/artworks/gauguin-faa-iheihe-n03470
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: a-foregone-conclusion-lawrence-alma-tadema
+  name: A Foregone Conclusion
+  kind: painting
+  made: 1885
+  medium: Oil paint on wood
+  collection: Tate
+  accession: N03513
+  museum_url: https://www.tate.org.uk/art/artworks/alma-tadema-a-foregone-conclusion-n03513
+  sources:
+  - tate-open-data
+  people:
+  - person: lawrence-alma-tadema
+    role: creator
+  prominence: 3
+- key: caprice-verso-masked-woman-with-a-white-mouse-aubrey-beardsley
+  name: 'Caprice. Verso: Masked Woman with a White Mouse'
+  kind: painting
+  made: 1894
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N03815
+  museum_url: https://www.tate.org.uk/art/artworks/beardsley-caprice-verso-masked-woman-with-a-white-mouse-n03815
+  sources:
+  - tate-open-data
+  people:
+  - person: aubrey-beardsley
+    role: creator
+  prominence: 3
+- key: sir-brooke-boothby-joseph-wright-of-derby
+  name: Sir Brooke Boothby
+  kind: painting
+  made: 1781
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04132
+  museum_url: https://www.tate.org.uk/art/artworks/wright-sir-brooke-boothby-n04132
+  sources:
+  - tate-open-data
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+- key: the-table-pierre-bonnard
+  name: The Table
+  kind: painting
+  made: 1925
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04134
+  museum_url: https://www.tate.org.uk/art/artworks/bonnard-the-table-n04134
+  sources:
+  - tate-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: la-place-du-tertre-maurice-utrillo
+  name: La Place du Tertre
+  kind: painting
+  made: 1910
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04139
+  museum_url: https://www.tate.org.uk/art/artworks/utrillo-la-place-du-tertre-n04139
+  sources:
+  - tate-open-data
+  people:
+  - person: maurice-utrillo
+    role: creator
+  prominence: 3
+- key: glass-and-plate-of-apples-georges-braque
+  name: Glass and Plate of Apples
+  kind: painting
+  made: 1925
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04166
+  museum_url: https://www.tate.org.uk/art/artworks/braque-glass-and-plate-of-apples-n04166
+  sources:
+  - tate-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: poplars-on-the-epte-claude-monet
+  name: Poplars on the Epte
+  kind: painting
+  made: 1891
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04183
+  museum_url: https://www.tate.org.uk/art/artworks/monet-poplars-on-the-epte-n04183
+  sources:
+  - tate-open-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: woman-seated-on-a-bench-claude-monet
+  name: Woman Seated on a Bench
+  kind: painting
+  made: 1874
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04184
+  museum_url: https://www.tate.org.uk/art/artworks/monet-woman-seated-on-a-bench-n04184
+  sources:
+  - tate-open-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: clothes-on-the-grass-georges-seurat
+  name: Clothes on the Grass
+  kind: painting
+  made: 1883
+  medium: Oil paint on wood
+  collection: Tate
+  accession: N04203
+  museum_url: https://www.tate.org.uk/art/artworks/seurat-clothes-on-the-grass-n04203
+  sources:
+  - tate-open-data
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 3
+- key: road-at-st-paul-var-felix-vallotton
+  name: Road at St Paul (Var)
+  kind: painting
+  made: 1922
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04232
+  museum_url: https://www.tate.org.uk/art/artworks/vallotton-road-at-st-paul-var-n04232
+  sources:
+  - tate-open-data
+  people:
+  - person: felix-vallotton
+    role: creator
+  prominence: 3
+- key: the-bridge-at-sevres-alfred-sisley
+  name: The Bridge at Sèvres
+  kind: painting
+  made: 1877
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04249
+  museum_url: https://www.tate.org.uk/art/artworks/sisley-the-bridge-at-sevres-n04249
+  sources:
+  - tate-open-data
+  people:
+  - person: alfred-sisley
+    role: creator
+  prominence: 3
+- key: portrait-james-tissot
+  name: Portrait
+  kind: painting
+  made: 1876
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04271
+  museum_url: https://www.tate.org.uk/art/artworks/tissot-portrait-n04271
+  sources:
+  - tate-open-data
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: holyday-james-tissot
+  name: Holyday
+  kind: painting
+  made: 1876
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04413
+  museum_url: https://www.tate.org.uk/art/artworks/tissot-holyday-n04413
+  sources:
+  - tate-open-data
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: guitar-and-jug-georges-braque
+  name: Guitar and Jug
+  kind: painting
+  made: 1927
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04416
+  museum_url: https://www.tate.org.uk/art/artworks/braque-guitar-and-jug-n04416
+  sources:
+  - tate-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: girl-in-an-interior-edouard-vuillard
+  name: Girl in an Interior
+  kind: painting
+  made: 1910
+  estimated: true
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04436
+  museum_url: https://www.tate.org.uk/art/artworks/vuillard-girl-in-an-interior-n04436
+  sources:
+  - tate-open-data
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: the-window-pierre-bonnard
+  name: The Window
+  kind: painting
+  made: 1925
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04494
+  museum_url: https://www.tate.org.uk/art/artworks/bonnard-the-window-n04494
+  sources:
+  - tate-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: the-bath-pierre-bonnard
+  name: The Bath
+  kind: painting
+  made: 1925
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04495
+  museum_url: https://www.tate.org.uk/art/artworks/bonnard-the-bath-n04495
+  sources:
+  - tate-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: memorial-service-for-emperor-frederick-at-kosen-max-liebermann
+  name: Memorial Service for Emperor Frederick at Kösen
+  kind: painting
+  made: 1888
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04591
+  museum_url: https://www.tate.org.uk/art/artworks/liebermann-memorial-service-for-emperor-frederick-at-kosen-n04591
+  sources:
+  - tate-open-data
+  people:
+  - person: max-liebermann
+    role: creator
+  prominence: 3
+- key: self-portrait-camille-pissarro
+  name: Self-Portrait
+  kind: painting
+  made: 1903
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04592
+  museum_url: https://www.tate.org.uk/art/artworks/pissarro-self-portrait-n04592
+  sources:
+  - tate-open-data
+  people:
+  - person: camille-pissarro
+    role: creator
+  prominence: 3
+- key: landscape-house-on-the-left-edouard-vuillard
+  name: Landscape - House on the Left
+  kind: painting
+  made: 1900
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04612
+  museum_url: https://www.tate.org.uk/art/artworks/vuillard-landscape-house-on-the-left-n04612
+  sources:
+  - tate-open-data
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: flowers-pablo-picasso
+  name: Flowers
+  kind: painting
+  made: 1901
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04683
+  museum_url: https://www.tate.org.uk/art/artworks/picasso-flowers-n04683
+  sources:
+  - tate-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: a-wool-carder-camille-pissarro
+  name: A Wool-Carder
+  kind: painting
+  made: 1880
+  medium: Oil paint on cement
+  collection: Tate
+  accession: N04709
+  museum_url: https://www.tate.org.uk/art/artworks/pissarro-a-wool-carder-n04709
+  sources:
+  - tate-open-data
+  people:
+  - person: camille-pissarro
+    role: creator
+  prominence: 3
+- key: farms-near-auvers-vincent-van-gogh
+  name: Farms near Auvers
+  kind: painting
+  made: 1890
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04713
+  museum_url: https://www.tate.org.uk/art/artworks/gogh-farms-near-auvers-n04713
+  sources:
+  - tate-open-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: trivaux-pond-henri-matisse
+  name: Trivaux Pond
+  kind: painting
+  made: 1916
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04717
+  museum_url: https://www.tate.org.uk/art/artworks/matisse-trivaux-pond-n04717
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: nude-study-in-blue-henri-matisse
+  name: Nude Study in Blue
+  kind: painting
+  made: 1899
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04718
+  museum_url: https://www.tate.org.uk/art/artworks/matisse-nude-study-in-blue-n04718
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: seated-woman-in-a-chemise-pablo-picasso
+  name: Seated Woman in a Chemise
+  kind: painting
+  made: 1923
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04719
+  museum_url: https://www.tate.org.uk/art/artworks/picasso-seated-woman-in-a-chemise-n04719
+  sources:
+  - tate-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: girl-in-a-chemise-pablo-picasso
+  name: Girl in a Chemise
+  kind: painting
+  made: 1905
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04720
+  museum_url: https://www.tate.org.uk/art/artworks/picasso-girl-in-a-chemise-n04720
+  sources:
+  - tate-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: bather-georges-braque
+  name: Bather
+  kind: painting
+  made: 1925
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04722
+  museum_url: https://www.tate.org.uk/art/artworks/braque-bather-n04722
+  sources:
+  - tate-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: portrait-of-a-girl-amedeo-modigliani
+  name: Portrait of a Girl
+  kind: painting
+  made: 1917
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04723
+  museum_url: https://www.tate.org.uk/art/artworks/modigliani-portrait-of-a-girl-n04723
+  sources:
+  - tate-open-data
+  people:
+  - person: amedeo-modigliani
+    role: creator
+  prominence: 3
+- key: the-gardener-vallier-paul-cezanne
+  name: The Gardener Vallier
+  kind: painting
+  made: 1906
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04724
+  museum_url: https://www.tate.org.uk/art/artworks/cezanne-the-gardener-vallier-n04724
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: still-life-with-water-jug-paul-cezanne
+  name: Still Life with Water Jug
+  kind: painting
+  made: 1892
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04725
+  museum_url: https://www.tate.org.uk/art/artworks/cezanne-still-life-with-water-jug-n04725
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: portraits-marie-laurencin-cecilia-de-madrazo-and-marie-laurencin
+  name: Portraits (Marie Laurencin, Cecilia de Madrazo and the Dog Coco)
+  kind: painting
+  made: 1915
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04726
+  museum_url: https://www.tate.org.uk/art/artworks/laurencin-portraits-marie-laurencin-cecilia-de-madrazo-and-the-dog-coco-n04726
+  sources:
+  - tate-open-data
+  people:
+  - person: marie-laurencin
+    role: creator
+  prominence: 3
+- key: bouquet-of-flowers-henri-rousseau
+  name: Bouquet of Flowers
+  kind: painting
+  made: 1909
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04727
+  museum_url: https://www.tate.org.uk/art/artworks/rousseau-bouquet-of-flowers-n04727
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-rousseau
+    role: creator
+  prominence: 3
+- key: self-portrait-max-liebermann
+  name: Self-Portrait
+  kind: painting
+  made: 1934
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04779
+  museum_url: https://www.tate.org.uk/art/artworks/liebermann-self-portrait-n04779
+  sources:
+  - tate-open-data
+  people:
+  - person: max-liebermann
+    role: creator
+  prominence: 3
+- key: la-porte-saint-martin-maurice-utrillo
+  name: La Porte Saint Martin
+  kind: painting
+  made: 1910
+  estimated: true
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04780
+  museum_url: https://www.tate.org.uk/art/artworks/utrillo-la-porte-saint-martin-n04780
+  sources:
+  - tate-open-data
+  people:
+  - person: maurice-utrillo
+    role: creator
+  prominence: 3
+- key: landscape-near-barbizon-andre-derain
+  name: Landscape near Barbizon
+  kind: painting
+  made: 1922
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04784
+  museum_url: https://www.tate.org.uk/art/artworks/derain-landscape-near-barbizon-n04784
+  sources:
+  - tate-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: the-temptation-of-st-anthony-after-gustave-flaub-lovis-corinth
+  name: The Temptation of St Anthony after Gustave Flaubert
+  kind: painting
+  made: 1908
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04831
+  museum_url: https://www.tate.org.uk/art/artworks/corinth-the-temptation-of-st-anthony-after-gustave-flaubert-n04831
+  sources:
+  - tate-open-data
+  people:
+  - person: lovis-corinth
+    role: creator
+  prominence: 3
+- key: the-small-meadows-in-spring-alfred-sisley
+  name: The Small Meadows in Spring
+  kind: painting
+  made: 1880
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04843
+  museum_url: https://www.tate.org.uk/art/artworks/sisley-the-small-meadows-in-spring-n04843
+  sources:
+  - tate-open-data
+  people:
+  - person: alfred-sisley
+    role: creator
+  prominence: 3
+- key: effect-of-light-james-ensor
+  name: Effect of Light
+  kind: painting
+  made: 1935
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04846
+  museum_url: https://www.tate.org.uk/art/artworks/ensor-effect-of-light-n04846
+  sources:
+  - tate-open-data
+  people:
+  - person: james-ensor
+    role: creator
+  prominence: 3
+- key: the-gallery-of-hms-calcutta-portsmouth-james-tissot
+  name: The Gallery of HMS Calcutta (Portsmouth)
+  kind: painting
+  made: 1876
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04847
+  museum_url: https://www.tate.org.uk/art/artworks/tissot-the-gallery-of-hms-calcutta-portsmouth-n04847
+  sources:
+  - tate-open-data
+  people:
+  - person: james-tissot
+    role: creator
+  prominence: 3
+- key: reading-woman-with-parasol-henri-matisse
+  name: Reading Woman with Parasol
+  kind: painting
+  made: 1921
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04924
+  museum_url: https://www.tate.org.uk/art/artworks/matisse-reading-woman-with-parasol-n04924
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: church-at-st-hilaire-maurice-utrillo
+  name: Church at St Hilaire
+  kind: painting
+  made: 1911
+  estimated: true
+  medium: Oil paint on board
+  collection: Tate
+  accession: N04943
+  museum_url: https://www.tate.org.uk/art/artworks/utrillo-church-at-st-hilaire-n04943
+  sources:
+  - tate-open-data
+  people:
+  - person: maurice-utrillo
+    role: creator
+  prominence: 3
+- key: cossacks-wassily-kandinsky
+  name: Cossacks
+  kind: painting
+  made: 1910
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N04948
+  museum_url: https://www.tate.org.uk/art/artworks/kandinsky-cossacks-n04948
+  sources:
+  - tate-open-data
+  people:
+  - person: wassily-kandinsky
+    role: creator
+  prominence: 3
+- key: the-sick-child-edvard-munch
+  name: The Sick Child
+  kind: painting
+  made: 1907
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05035
+  museum_url: https://www.tate.org.uk/art/artworks/munch-the-sick-child-n05035
+  sources:
+  - tate-open-data
+  people:
+  - person: edvard-munch
+    role: creator
+  prominence: 3
+- key: the-two-friends-henri-de-toulouse-lautrec
+  name: The Two Friends
+  kind: painting
+  made: 1894
+  medium: Oil paint on board
+  collection: Tate
+  accession: N05142
+  museum_url: https://www.tate.org.uk/art/artworks/toulouse-lautrec-the-two-friends-n05142
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-de-toulouse-lautrec
+    role: creator
+  prominence: 3
+- key: the-path-to-the-old-ferry-at-by-alfred-sisley
+  name: The Path to the Old Ferry at By
+  kind: painting
+  made: 1880
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05144
+  museum_url: https://www.tate.org.uk/art/artworks/sisley-the-path-to-the-old-ferry-at-by-n05144
+  sources:
+  - tate-open-data
+  people:
+  - person: alfred-sisley
+    role: creator
+  prominence: 3
+- key: the-little-peasant-amedeo-modigliani
+  name: The Little Peasant
+  kind: painting
+  made: 1918
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05269
+  museum_url: https://www.tate.org.uk/art/artworks/modigliani-the-little-peasant-n05269
+  sources:
+  - tate-open-data
+  people:
+  - person: amedeo-modigliani
+    role: creator
+  prominence: 3
+- key: the-entire-city-max-ernst
+  name: The Entire City
+  kind: painting
+  made: 1934
+  medium: Oil paint on paper on canvas
+  collection: Tate
+  accession: N05289
+  museum_url: https://www.tate.org.uk/art/artworks/ernst-the-entire-city-n05289
+  sources:
+  - tate-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: percival-delivering-belisane-from-the-enchantmen-henry-fuseli
+  name: Percival Delivering Belisane from the Enchantment of Urma
+  kind: painting
+  made: 1783
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05304
+  museum_url: https://www.tate.org.uk/art/artworks/fuseli-percival-delivering-belisane-from-the-enchantment-of-urma-n05304
+  sources:
+  - tate-open-data
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: the-poet-reclining-marc-chagall
+  name: The Poet Reclining
+  kind: painting
+  made: 1915
+  medium: Oil paint on cardboard
+  collection: Tate
+  accession: N05390
+  museum_url: https://www.tate.org.uk/art/artworks/chagall-the-poet-reclining-n05390
+  sources:
+  - tate-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: portrait-of-felix-pissarro-camille-pissarro
+  name: Portrait of Felix Pissarro
+  kind: painting
+  made: 1881
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05574
+  museum_url: https://www.tate.org.uk/art/artworks/pissarro-portrait-of-felix-pissarro-n05574
+  sources:
+  - tate-open-data
+  people:
+  - person: camille-pissarro
+    role: creator
+  prominence: 3
+- key: comedy-paul-klee
+  name: Comedy
+  kind: painting
+  made: 1921
+  medium: Watercolour and oil paint on paper
+  collection: Tate
+  accession: N05657
+  museum_url: https://www.tate.org.uk/art/artworks/klee-comedy-n05657
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-klee
+    role: creator
+  prominence: 3
+- key: theyre-biting-paul-klee
+  name: They’re Biting
+  kind: painting
+  made: 1920
+  medium: Watercolour and oil paint on paper
+  collection: Tate
+  accession: N05658
+  museum_url: https://www.tate.org.uk/art/artworks/klee-theyre-biting-n05658
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-klee
+    role: creator
+  prominence: 3
+- key: the-cat-transformed-into-a-woman-marc-chagall
+  name: The Cat Transformed into a Woman
+  kind: painting
+  made: 1928
+  estimated: true
+  medium: Etching, drypoint and oil paint on paper
+  collection: Tate
+  accession: N05759
+  museum_url: https://www.tate.org.uk/art/artworks/chagall-the-cat-transformed-into-a-woman-n05759
+  sources:
+  - tate-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: still-life-giorgio-morandi
+  name: Still Life
+  kind: painting
+  made: 1946
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05782
+  museum_url: https://www.tate.org.uk/art/artworks/morandi-still-life-n05782
+  sources:
+  - tate-open-data
+  people:
+  - person: giorgio-morandi
+    role: creator
+  prominence: 3
+- key: bouquet-with-flying-lovers-marc-chagall
+  name: Bouquet with Flying Lovers
+  kind: painting
+  made: 1934
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05804
+  museum_url: https://www.tate.org.uk/art/artworks/chagall-bouquet-with-flying-lovers-n05804
+  sources:
+  - tate-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: a-moonlight-with-a-lighthouse-coast-of-tuscany-joseph-wright-of-derby
+  name: A Moonlight with a Lighthouse, Coast of Tuscany
+  kind: painting
+  made: 1789
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05882
+  museum_url: https://www.tate.org.uk/art/artworks/wright-a-moonlight-with-a-lighthouse-coast-of-tuscany-n05882
+  sources:
+  - tate-open-data
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+- key: leaves-and-shell-fernand-leger
+  name: Leaves and Shell
+  kind: painting
+  made: 1927
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05907
+  museum_url: https://www.tate.org.uk/art/artworks/leger-leaves-and-shell-n05907
+  sources:
+  - tate-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: interior-alberto-giacometti
+  name: Interior
+  kind: painting
+  made: 1949
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05908
+  museum_url: https://www.tate.org.uk/art/artworks/giacometti-interior-n05908
+  sources:
+  - tate-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: seated-man-alberto-giacometti
+  name: Seated Man
+  kind: painting
+  made: 1949
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05909
+  museum_url: https://www.tate.org.uk/art/artworks/giacometti-seated-man-n05909
+  sources:
+  - tate-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: violin-and-fruit-dish-juan-gris
+  name: Violin and Fruit-Dish
+  kind: painting
+  made: 1924
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05935
+  museum_url: https://www.tate.org.uk/art/artworks/gris-violin-and-fruit-dish-n05935
+  sources:
+  - tate-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: deauville-drying-the-sails-raoul-dufy
+  name: Deauville, Drying the Sails
+  kind: painting
+  made: 1933
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05943
+  museum_url: https://www.tate.org.uk/art/artworks/dufy-deauville-drying-the-sails-n05943
+  sources:
+  - tate-open-data
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+- key: woman-with-a-bag-karl-schmidt-rottluff
+  name: Woman with a Bag
+  kind: painting
+  made: 1915
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05953
+  museum_url: https://www.tate.org.uk/art/artworks/schmidt-rottluff-woman-with-a-bag-n05953
+  sources:
+  - tate-open-data
+  people:
+  - person: karl-schmidt-rottluff
+    role: creator
+  prominence: 3
+- key: the-painters-family-giorgio-de-chirico
+  name: The Painter’s Family
+  kind: painting
+  made: 1926
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05976
+  museum_url: https://www.tate.org.uk/art/artworks/de-chirico-the-painters-family-n05976
+  sources:
+  - tate-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: keys-composition-fernand-leger
+  name: Keys (Composition)
+  kind: painting
+  made: 1928
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05990
+  museum_url: https://www.tate.org.uk/art/artworks/leger-keys-composition-n05990
+  sources:
+  - tate-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: playing-card-and-pipe-fernand-leger
+  name: Playing Card and Pipe
+  kind: painting
+  made: 1928
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N05991
+  museum_url: https://www.tate.org.uk/art/artworks/leger-playing-card-and-pipe-n05991
+  sources:
+  - tate-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: women-and-bird-in-the-moonlight-joan-miro
+  name: Women and Bird in the Moonlight
+  kind: painting
+  made: 1949
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06007
+  museum_url: https://www.tate.org.uk/art/artworks/miro-women-and-bird-in-the-moonlight-n06007
+  sources:
+  - tate-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: the-pool-of-london-andre-derain
+  name: The Pool of London
+  kind: painting
+  made: 1906
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06030
+  museum_url: https://www.tate.org.uk/art/artworks/derain-the-pool-of-london-n06030
+  sources:
+  - tate-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: girl-with-a-white-dog-lucian-freud
+  name: Girl with a White Dog
+  kind: painting
+  made: 1950
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06039
+  museum_url: https://www.tate.org.uk/art/artworks/freud-girl-with-a-white-dog-n06039
+  sources:
+  - tate-open-data
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+- key: francis-bacon-lucian-freud
+  name: Francis Bacon
+  kind: painting
+  made: 1952
+  medium: Oil paint on metal
+  collection: Tate
+  accession: N06040
+  museum_url: https://www.tate.org.uk/art/artworks/freud-francis-bacon-n06040
+  sources:
+  - tate-open-data
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+- key: le-bec-du-hoc-grandcamp-georges-seurat
+  name: Le Bec du Hoc, Grandcamp
+  kind: painting
+  made: 1885
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06067
+  museum_url: https://www.tate.org.uk/art/artworks/seurat-le-bec-du-hoc-grandcamp-n06067
+  sources:
+  - tate-open-data
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 3
+- key: the-seine-at-port-villez-claude-monet
+  name: The Seine at Port-Villez
+  kind: painting
+  made: 1894
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06182
+  museum_url: https://www.tate.org.uk/art/artworks/monet-the-seine-at-port-villez-n06182
+  sources:
+  - tate-open-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: the-corridor-maria-helena-vieira-da-silva
+  name: The Corridor
+  kind: painting
+  made: 1950
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06189
+  museum_url: https://www.tate.org.uk/art/artworks/vieira-da-silva-the-corridor-n06189
+  sources:
+  - tate-open-data
+  people:
+  - person: maria-helena-vieira-da-silva
+    role: creator
+  prominence: 3
+- key: elijah-and-the-angel-godfrey-kneller
+  name: Elijah and the Angel
+  kind: painting
+  made: 1672
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06222
+  museum_url: https://www.tate.org.uk/art/artworks/kneller-elijah-and-the-angel-n06222
+  sources:
+  - tate-open-data
+  people:
+  - person: godfrey-kneller
+    role: creator
+  prominence: 3
+- key: bull-iii-le-corbusier
+  name: Bull III
+  kind: painting
+  made: 1953
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06224
+  museum_url: https://www.tate.org.uk/art/artworks/le-corbusier-bull-iii-n06224
+  sources:
+  - tate-open-data
+  people:
+  - person: le-corbusier
+    role: creator
+  prominence: 3
+- key: dr-rosa-schapire-karl-schmidt-rottluff
+  name: Dr Rosa Schapire
+  kind: painting
+  made: 1919
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06248
+  museum_url: https://www.tate.org.uk/art/artworks/schmidt-rottluff-dr-rosa-schapire-n06248
+  sources:
+  - tate-open-data
+  people:
+  - person: karl-schmidt-rottluff
+    role: creator
+  prominence: 3
+- key: two-women-karl-schmidt-rottluff
+  name: Two Women
+  kind: painting
+  made: 1912
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: N06249
+  museum_url: https://www.tate.org.uk/art/artworks/schmidt-rottluff-two-women-n06249
+  sources:
+  - tate-open-data
+  people:
+  - person: karl-schmidt-rottluff
+    role: creator
+  prominence: 3
+- key: entablature-iv-roy-lichtenstein
+  name: Entablature IV
+  kind: painting
+  made: 1976
+  medium: Screenprint and foil on paper
+  collection: Tate
+  accession: P78374
+  museum_url: https://www.tate.org.uk/art/artworks/lichtenstein-entablature-iv-p78374
+  sources:
+  - tate-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: entablature-v-roy-lichtenstein
+  name: Entablature V
+  kind: painting
+  made: 1976
+  medium: Screenprint, lithograph and silver foil on paper
+  collection: Tate
+  accession: P78375
+  museum_url: https://www.tate.org.uk/art/artworks/lichtenstein-entablature-v-p78375
+  sources:
+  - tate-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: entablature-viii-roy-lichtenstein
+  name: Entablature VIII
+  kind: painting
+  made: 1976
+  medium: Screenprint and gold foil on paper
+  collection: Tate
+  accession: P78378
+  museum_url: https://www.tate.org.uk/art/artworks/lichtenstein-entablature-viii-p78378
+  sources:
+  - tate-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: sleeping-venus-paul-delvaux
+  name: Sleeping Venus
+  kind: painting
+  made: 1944
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00134
+  museum_url: https://www.tate.org.uk/art/artworks/delvaux-sleeping-venus-t00134
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-delvaux
+    role: creator
+  prominence: 3
+- key: henri-matisse-andre-derain
+  name: Henri Matisse
+  kind: painting
+  made: 1905
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00165
+  museum_url: https://www.tate.org.uk/art/artworks/derain-henri-matisse-t00165
+  sources:
+  - tate-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: amorous-dance-karel-appel
+  name: Amorous Dance
+  kind: painting
+  made: 1955
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00212
+  museum_url: https://www.tate.org.uk/art/artworks/appel-amorous-dance-t00212
+  sources:
+  - tate-open-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: paris-maria-helena-vieira-da-silva
+  name: Paris
+  kind: painting
+  made: 1951
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00245
+  museum_url: https://www.tate.org.uk/art/artworks/vieira-da-silva-paris-t00245
+  sources:
+  - tate-open-data
+  people:
+  - person: maria-helena-vieira-da-silva
+    role: creator
+  prominence: 3
+- key: two-figures-alberto-giacometti
+  name: Two Figures
+  kind: painting
+  made: 1947
+  medium: Oil paint on paper
+  collection: Tate
+  accession: T00258
+  museum_url: https://www.tate.org.uk/art/artworks/giacometti-two-figures-t00258
+  sources:
+  - tate-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: two-figures-with-folded-arms-barbara-hepworth
+  name: Two Figures with Folded Arms
+  kind: painting
+  made: 1947
+  medium: Oil paint and graphite on hardboard on plywood panel
+  collection: Tate
+  accession: T00269
+  museum_url: https://www.tate.org.uk/art/artworks/hepworth-two-figures-with-folded-arms-t00269
+  sources:
+  - tate-open-data
+  people:
+  - person: barbara-hepworth
+    role: creator
+  prominence: 3
+- key: light-red-over-black-mark-rothko
+  name: Light Red Over Black
+  kind: painting
+  made: 1957
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00275
+  museum_url: https://www.tate.org.uk/art/artworks/rothko-light-red-over-black-t00275
+  sources:
+  - tate-open-data
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+- key: the-road-up-the-hill-chaim-soutine
+  name: The Road up the Hill
+  kind: painting
+  made: 1924
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00315
+  museum_url: https://www.tate.org.uk/art/artworks/soutine-the-road-up-the-hill-t00315
+  sources:
+  - tate-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: pisces-man-ray
+  name: Pisces
+  kind: painting
+  made: 1938
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00324
+  museum_url: https://www.tate.org.uk/art/artworks/man-ray-pisces-t00324
+  sources:
+  - tate-open-data
+  people:
+  - person: man-ray
+    role: creator
+  prominence: 3
+- key: men-shall-know-nothing-of-this-max-ernst
+  name: Men Shall Know Nothing of This
+  kind: painting
+  made: 1923
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00336
+  museum_url: https://www.tate.org.uk/art/artworks/ernst-men-shall-know-nothing-of-this-t00336
+  sources:
+  - tate-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: man-with-a-thistle-self-portrait-lucian-freud
+  name: Man with a Thistle (Self-Portrait)
+  kind: painting
+  made: 1946
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00422
+  museum_url: https://www.tate.org.uk/art/artworks/freud-man-with-a-thistle-self-portrait-t00422
+  sources:
+  - tate-open-data
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+- key: k-vii-laszlo-moholy-nagy
+  name: K VII
+  kind: painting
+  made: 1922
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00432
+  museum_url: https://www.tate.org.uk/art/artworks/moholy-nagy-k-vii-t00432
+  sources:
+  - tate-open-data
+  people:
+  - person: laszlo-moholy-nagy
+    role: creator
+  prominence: 3
+- key: yellow-islands-jackson-pollock
+  name: Yellow Islands
+  kind: painting
+  made: 1952
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00436
+  museum_url: https://www.tate.org.uk/art/artworks/pollock-yellow-islands-t00436
+  sources:
+  - tate-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: 0-through-9-jasper-johns
+  name: 0 through 9
+  kind: painting
+  made: 1961
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00454
+  museum_url: https://www.tate.org.uk/art/artworks/johns-0-through-9-t00454
+  sources:
+  - tate-open-data
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 3
+- key: emile-bernard-henri-de-toulouse-lautrec
+  name: Emile Bernard
+  kind: painting
+  made: 1885
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00465
+  museum_url: https://www.tate.org.uk/art/artworks/toulouse-lautrec-emile-bernard-t00465
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-de-toulouse-lautrec
+    role: creator
+  prominence: 3
+- key: grey-and-green-painting
+  collection: Tate
+  accession: T00471
+  museum_url: https://www.tate.org.uk/art/artworks/tapies-grey-and-green-painting-t00471
+  sources:
+  - tate-open-data
+- key: forest-and-dove-max-ernst
+  name: Forest and Dove
+  kind: painting
+  made: 1927
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00548
+  museum_url: https://www.tate.org.uk/art/artworks/ernst-forest-and-dove-t00548
+  sources:
+  - tate-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: the-first-marriage-a-marriage-of-styles-i-david-hockney
+  name: The First Marriage (A Marriage of Styles I)
+  kind: painting
+  made: 1962
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00596
+  museum_url: https://www.tate.org.uk/art/artworks/hockney-the-first-marriage-a-marriage-of-styles-i-t00596
+  sources:
+  - tate-open-data
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 3
+- key: professor-richard-cassirer-max-liebermann
+  name: Professor Richard Cassirer
+  kind: painting
+  made: 1918
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00632
+  museum_url: https://www.tate.org.uk/art/artworks/liebermann-professor-richard-cassirer-t00632
+  sources:
+  - tate-open-data
+  people:
+  - person: max-liebermann
+    role: creator
+  prominence: 3
+- key: composition-with-yellow-blue-and-red-piet-mondrian
+  name: Composition with Yellow, Blue and Red
+  kind: painting
+  made: 1937
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00648
+  museum_url: https://www.tate.org.uk/art/artworks/mondrian-composition-with-yellow-blue-and-red-t00648
+  sources:
+  - tate-open-data
+  people:
+  - person: piet-mondrian
+    role: creator
+  prominence: 3
+- key: study-of-an-old-man-ilya-repin
+  name: Study of an Old Man
+  kind: painting
+  made: 1878
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00651
+  museum_url: https://www.tate.org.uk/art/artworks/repin-study-of-an-old-man-t00651
+  sources:
+  - tate-open-data
+  people:
+  - person: ilya-repin
+    role: creator
+  prominence: 3
+- key: the-invisibles-yves-tanguy
+  name: The Invisibles
+  kind: painting
+  made: 1951
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00657
+  museum_url: https://www.tate.org.uk/art/artworks/tanguy-the-invisibles-t00657
+  sources:
+  - tate-open-data
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+- key: man-with-a-newspaper-rene-magritte
+  name: Man with a Newspaper
+  kind: painting
+  made: 1928
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00680
+  museum_url: https://www.tate.org.uk/art/artworks/magritte-man-with-a-newspaper-t00680
+  sources:
+  - tate-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: landscape-at-ceret-chaim-soutine
+  name: Landscape at Céret
+  kind: painting
+  made: 1920
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00692
+  museum_url: https://www.tate.org.uk/art/artworks/soutine-landscape-at-ceret-t00692
+  sources:
+  - tate-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: forms-west-penwith-barbara-hepworth
+  name: Forms (West Penwith)
+  kind: painting
+  made: 1958
+  medium: Oil paint and graphite on hardboard
+  collection: Tate
+  accession: T00700
+  museum_url: https://www.tate.org.uk/art/artworks/hepworth-forms-west-penwith-t00700
+  sources:
+  - tate-open-data
+  people:
+  - person: barbara-hepworth
+    role: creator
+  prominence: 3
+- key: perigord-barbara-hepworth
+  name: Perigord
+  kind: painting
+  made: 1958
+  medium: Oil paint, ink and graphite on board
+  collection: Tate
+  accession: T00701
+  museum_url: https://www.tate.org.uk/art/artworks/hepworth-perigord-t00701
+  sources:
+  - tate-open-data
+  people:
+  - person: barbara-hepworth
+    role: creator
+  prominence: 3
+- key: lady-macbeth-seizing-the-daggers-henry-fuseli
+  name: Lady Macbeth Seizing the Daggers
+  kind: painting
+  made: 1812
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00733
+  museum_url: https://www.tate.org.uk/art/artworks/fuseli-lady-macbeth-seizing-the-daggers-t00733
+  sources:
+  - tate-open-data
+  people:
+  - person: henry-fuseli
+    role: creator
+  prominence: 3
+- key: thomas-staniforth-of-darnall-co-york-joseph-wright-of-derby
+  name: Thomas Staniforth of Darnall, Co. York
+  kind: painting
+  made: 1769
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00794
+  museum_url: https://www.tate.org.uk/art/artworks/wright-thomas-staniforth-of-darnall-co-york-t00794
+  sources:
+  - tate-open-data
+  people:
+  - person: joseph-wright-of-derby
+    role: creator
+  prominence: 3
+- key: spinning-round-jean-dubuffet
+  name: Spinning Round
+  kind: painting
+  made: 1961
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00801
+  museum_url: https://www.tate.org.uk/art/artworks/dubuffet-spinning-round-t00801
+  sources:
+  - tate-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: the-sea-b-emil-nolde
+  name: The Sea B
+  kind: painting
+  made: 1930
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00865
+  museum_url: https://www.tate.org.uk/art/artworks/nolde-the-sea-b-t00865
+  sources:
+  - tate-open-data
+  people:
+  - person: emil-nolde
+    role: creator
+  prominence: 3
+- key: the-busy-life-jean-dubuffet
+  name: The Busy Life
+  kind: painting
+  made: 1953
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00867
+  museum_url: https://www.tate.org.uk/art/artworks/dubuffet-the-busy-life-t00867
+  sources:
+  - tate-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: the-exemplary-life-of-the-soil-texturology-lxiii-jean-dubuffet
+  name: The Exemplary Life of the Soil (Texturology LXIII)
+  kind: painting
+  made: 1958
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00868
+  museum_url: https://www.tate.org.uk/art/artworks/dubuffet-the-exemplary-life-of-the-soil-texturology-lxiii-t00868
+  sources:
+  - tate-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: harvest-le-pouldu-paul-gauguin
+  name: 'Harvest: Le Pouldu'
+  kind: painting
+  made: 1890
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00895
+  museum_url: https://www.tate.org.uk/art/artworks/gauguin-harvest-le-pouldu-t00895
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: no-vi-composition-no-ii-piet-mondrian
+  name: No. VI / Composition No.II
+  kind: painting
+  made: 1920
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00915
+  museum_url: https://www.tate.org.uk/art/artworks/mondrian-no-vi-composition-noii-t00915
+  sources:
+  - tate-open-data
+  people:
+  - person: piet-mondrian
+    role: creator
+  prominence: 3
+- key: grey-ochre-antoni-tapies
+  name: Grey Ochre
+  kind: painting
+  made: 1958
+  medium: Oil paint, epoxy resin and marble dust on canvas
+  collection: Tate
+  accession: T00927
+  museum_url: https://www.tate.org.uk/art/artworks/tapies-grey-ochre-t00927
+  sources:
+  - tate-open-data
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+- key: portrait-of-a-lady-angelica-kauffman
+  name: Portrait of a Lady
+  kind: painting
+  made: 1775
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T00928
+  museum_url: https://www.tate.org.uk/art/artworks/kauffman-portrait-of-a-lady-t00928
+  sources:
+  - tate-open-data
+  people:
+  - person: angelica-kauffman
+    role: creator
+  prominence: 3
+- key: black-on-maroon-mark-rothko
+  name: Black on Maroon
+  kind: painting
+  made: 1958
+  medium: Oil paint, acrylic paint, glue tempera and pigment on canvas
+  collection: Tate
+  accession: T01031
+  museum_url: https://www.tate.org.uk/art/artworks/rothko-black-on-maroon-t01031
+  sources:
+  - tate-open-data
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+- key: the-avenue-at-the-jas-de-bouffan-paul-cezanne
+  name: The Avenue at the Jas de Bouffan
+  kind: painting
+  made: 1874
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01074
+  museum_url: https://www.tate.org.uk/art/artworks/cezanne-the-avenue-at-the-jas-de-bouffan-t01074
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: forgotten-horizon-salvador-dali
+  name: Forgotten Horizon
+  kind: painting
+  made: 1936
+  medium: Oil paint on mahogany
+  collection: Tate
+  accession: T01078
+  museum_url: https://www.tate.org.uk/art/artworks/dali-forgotten-horizon-t01078
+  sources:
+  - tate-open-data
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 3
+- key: girl-on-a-divan-berthe-morisot
+  name: Girl on a Divan
+  kind: painting
+  made: 1885
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01079
+  museum_url: https://www.tate.org.uk/art/artworks/morisot-girl-on-a-divan-t01079
+  sources:
+  - tate-open-data
+  people:
+  - person: berthe-morisot
+    role: creator
+  prominence: 3
+- key: the-visit-willem-de-kooning
+  name: The Visit
+  kind: painting
+  made: 1966
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01108
+  museum_url: https://www.tate.org.uk/art/artworks/kooning-the-visit-t01108
+  sources:
+  - tate-open-data
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 3
+- key: the-reckless-sleeper-rene-magritte
+  name: The Reckless Sleeper
+  kind: painting
+  made: 1928
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01122
+  museum_url: https://www.tate.org.uk/art/artworks/magritte-the-reckless-sleeper-t01122
+  sources:
+  - tate-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: almanac-robert-rauschenberg
+  name: Almanac
+  kind: painting
+  made: 1962
+  medium: Oil paint, acrylic paint and screenprint on canvas
+  collection: Tate
+  accession: T01135
+  museum_url: https://www.tate.org.uk/art/artworks/rauschenberg-almanac-t01135
+  sources:
+  - tate-open-data
+  people:
+  - person: robert-rauschenberg
+    role: creator
+  prominence: 3
+- key: women-singing-ii-willem-de-kooning
+  name: Women Singing II
+  kind: painting
+  made: 1966
+  medium: Oil paint on paper on canvas
+  collection: Tate
+  accession: T01178
+  museum_url: https://www.tate.org.uk/art/artworks/kooning-women-singing-ii-t01178
+  sources:
+  - tate-open-data
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 3
+- key: abstract-speed-the-car-has-passed-giacomo-balla
+  name: Abstract Speed - The Car has Passed
+  kind: painting
+  made: 1913
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01222
+  museum_url: https://www.tate.org.uk/art/artworks/balla-abstract-speed-the-car-has-passed-t01222
+  sources:
+  - tate-open-data
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 3
+- key: landscape-near-martigues-maurice-de-vlaminck
+  name: Landscape near Martigues
+  kind: painting
+  made: 1913
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01254
+  museum_url: https://www.tate.org.uk/art/artworks/vlaminck-landscape-near-martigues-t01254
+  sources:
+  - tate-open-data
+  people:
+  - person: maurice-de-vlaminck
+    role: creator
+  prominence: 3
+- key: mr-and-mrs-clark-and-percy
+  collection: Tate
+  accession: T01269
+  museum_url: https://www.tate.org.uk/art/artworks/hockney-mr-and-mrs-clark-and-percy-t01269
+  sources:
+  - tate-open-data
+- key: painting-joan-miro
+  name: Painting
+  kind: painting
+  made: 1927
+  medium: Tempera and oil paint on canvas
+  collection: Tate
+  accession: T01318
+  museum_url: https://www.tate.org.uk/art/artworks/miro-painting-t01318
+  sources:
+  - tate-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: waterfall-arshile-gorky
+  name: Waterfall
+  kind: painting
+  made: 1943
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01319
+  museum_url: https://www.tate.org.uk/art/artworks/gorky-waterfall-t01319
+  sources:
+  - tate-open-data
+  people:
+  - person: arshile-gorky
+    role: creator
+  prominence: 3
+- key: autumnal-cannibalism-salvador-dali
+  name: Autumnal Cannibalism
+  kind: painting
+  made: 1936
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01978
+  museum_url: https://www.tate.org.uk/art/artworks/dali-autumnal-cannibalism-t01978
+  sources:
+  - tate-open-data
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 3
+- key: mountain-lake-salvador-dali
+  name: Mountain Lake
+  kind: painting
+  made: 1938
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T01979
+  museum_url: https://www.tate.org.uk/art/artworks/dali-mountain-lake-t01979
+  sources:
+  - tate-open-data
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 3
+- key: suicide-george-grosz
+  name: Suicide
+  kind: painting
+  made: 1916
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02053
+  museum_url: https://www.tate.org.uk/art/artworks/grosz-suicide-t02053
+  sources:
+  - tate-open-data
+  people:
+  - person: george-grosz
+    role: creator
+  prominence: 3
+- key: cagnes-landscape-with-tree-chaim-soutine
+  name: Cagnes Landscape with Tree
+  kind: painting
+  made: 1925
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02132
+  museum_url: https://www.tate.org.uk/art/artworks/soutine-cagnes-landscape-with-tree-t02132
+  sources:
+  - tate-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: the-baou-de-saint-jeannet-raoul-dufy
+  name: The Baou de Saint-Jeannet
+  kind: painting
+  made: 1923
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02133
+  museum_url: https://www.tate.org.uk/art/artworks/dufy-the-baou-de-saint-jeannet-t02133
+  sources:
+  - tate-open-data
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+- key: a-lady-of-the-spencer-family-anthony-van-dyck
+  name: A Lady of the Spencer Family
+  kind: painting
+  made: 1633
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02139
+  museum_url: https://www.tate.org.uk/art/artworks/van-dyck-a-lady-of-the-spencer-family-t02139
+  sources:
+  - tate-open-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: the-tree-a-piet-mondrian
+  name: The Tree A
+  kind: painting
+  made: 1913
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02211
+  museum_url: https://www.tate.org.uk/art/artworks/mondrian-the-tree-a-t02211
+  sources:
+  - tate-open-data
+  people:
+  - person: piet-mondrian
+    role: creator
+  prominence: 3
+- key: the-melancholy-of-departure-giorgio-de-chirico
+  name: The Melancholy of Departure
+  kind: painting
+  made: 1916
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02309
+  museum_url: https://www.tate.org.uk/art/artworks/de-chirico-the-melancholy-of-departure-t02309
+  sources:
+  - tate-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: dynamic-suprematism-kazimir-malevich
+  name: Dynamic Suprematism
+  kind: painting
+  made: 1915
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02319
+  museum_url: https://www.tate.org.uk/art/artworks/malevich-dynamic-suprematism-t02319
+  sources:
+  - tate-open-data
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 3
+- key: swinging-wassily-kandinsky
+  name: Swinging
+  kind: painting
+  made: 1925
+  medium: Oil paint on board
+  collection: Tate
+  accession: T02344
+  museum_url: https://www.tate.org.uk/art/artworks/kandinsky-swinging-t02344
+  sources:
+  - tate-open-data
+  people:
+  - person: wassily-kandinsky
+    role: creator
+  prominence: 3
+- key: prunier-max-beckmann
+  name: Prunier
+  kind: painting
+  made: 1944
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T02395
+  museum_url: https://www.tate.org.uk/art/artworks/beckmann-prunier-t02395
+  sources:
+  - tate-open-data
+  people:
+  - person: max-beckmann
+    role: creator
+  prominence: 3
+- key: bathers-at-moritzburg-ernst-ludwig-kirchner
+  name: Bathers at Moritzburg
+  kind: painting
+  made: 1909
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03067
+  museum_url: https://www.tate.org.uk/art/artworks/kirchner-bathers-at-moritzburg-t03067
+  sources:
+  - tate-open-data
+  people:
+  - person: ernst-ludwig-kirchner
+    role: creator
+  prominence: 3
+- key: man-in-shower-in-beverly-hills-david-hockney
+  name: Man in Shower in Beverly Hills
+  kind: painting
+  made: 1964
+  medium: Acrylic paint on canvas
+  collection: Tate
+  accession: T03074
+  museum_url: https://www.tate.org.uk/art/artworks/hockney-man-in-shower-in-beverly-hills-t03074
+  sources:
+  - tate-open-data
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 3
+- key: dancers-on-a-plane-jasper-johns
+  name: Dancers on a Plane
+  kind: painting
+  made: 1980
+  medium: Oil paint and acrylic paint on canvas and bronze frame
+  collection: Tate
+  accession: T03242
+  museum_url: https://www.tate.org.uk/art/artworks/johns-dancers-on-a-plane-t03242
+  sources:
+  - tate-open-data
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 3
+- key: coffee-mill-marcel-duchamp
+  name: Coffee Mill
+  kind: painting
+  made: 1911
+  medium: Oil paint and graphite on board
+  collection: Tate
+  accession: T03253
+  museum_url: https://www.tate.org.uk/art/artworks/duchamp-coffee-mill-t03253
+  sources:
+  - tate-open-data
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 3
+- key: the-future-of-statues-rene-magritte
+  name: The Future of Statues
+  kind: painting
+  made: 1937
+  medium: Oil paint on plaster
+  collection: Tate
+  accession: T03258
+  museum_url: https://www.tate.org.uk/art/artworks/magritte-the-future-of-statues-t03258
+  sources:
+  - tate-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: carnival-max-beckmann
+  name: Carnival
+  kind: painting
+  made: 1920
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03294
+  museum_url: https://www.tate.org.uk/art/artworks/beckmann-carnival-t03294
+  sources:
+  - tate-open-data
+  people:
+  - person: max-beckmann
+    role: creator
+  prominence: 3
+- key: naked-man-with-knife-jackson-pollock
+  name: Naked Man with Knife
+  kind: painting
+  made: 1938
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03327
+  museum_url: https://www.tate.org.uk/art/artworks/pollock-naked-man-with-knife-t03327
+  sources:
+  - tate-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: leda-paul-delvaux
+  name: Leda
+  kind: painting
+  made: 1948
+  medium: Oil paint on board
+  collection: Tate
+  accession: T03361
+  museum_url: https://www.tate.org.uk/art/artworks/delvaux-leda-t03361
+  sources:
+  - tate-open-data
+  people:
+  - person: paul-delvaux
+    role: creator
+  prominence: 3
+- key: counter-composition-vi-theo-van-doesburg
+  name: Counter-Composition VI
+  kind: painting
+  made: 1925
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03374
+  museum_url: https://www.tate.org.uk/art/artworks/doesburg-counter-composition-vi-t03374
+  sources:
+  - tate-open-data
+  people:
+  - person: theo-van-doesburg
+    role: creator
+  prominence: 3
+- key: rebel-georg-baselitz
+  name: Rebel
+  kind: painting
+  made: 1965
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03442
+  museum_url: https://www.tate.org.uk/art/artworks/baselitz-rebel-t03442
+  sources:
+  - tate-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: the-wheatfield-raoul-dufy
+  name: The Wheatfield
+  kind: painting
+  made: 1929
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03564
+  museum_url: https://www.tate.org.uk/art/artworks/dufy-the-wheatfield-t03564
+  sources:
+  - tate-open-data
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+- key: madame-zborowska-amedeo-modigliani
+  name: Madame Zborowska
+  kind: painting
+  made: 1918
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03569
+  museum_url: https://www.tate.org.uk/art/artworks/modigliani-madame-zborowska-t03569
+  sources:
+  - tate-open-data
+  people:
+  - person: amedeo-modigliani
+    role: creator
+  prominence: 3
+- key: side-saddle-henri-de-toulouse-lautrec
+  name: Side-saddle
+  kind: painting
+  made: 1899
+  medium: Oil paint and gouache on board
+  collection: Tate
+  accession: T03575
+  museum_url: https://www.tate.org.uk/art/artworks/toulouse-lautrec-side-saddle-t03575
+  sources:
+  - tate-open-data
+  people:
+  - person: henri-de-toulouse-lautrec
+    role: creator
+  prominence: 3
+- key: a-star-caresses-the-breast-of-a-negress-painting-joan-miro
+  name: A Star Caresses the Breast of a Negress (Painting Poem)
+  kind: painting
+  made: 1938
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03690
+  museum_url: https://www.tate.org.uk/art/artworks/miro-a-star-caresses-the-breast-of-a-negress-painting-poem-t03690
+  sources:
+  - tate-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: the-fig-leaf-francis-picabia
+  name: The Fig-Leaf
+  kind: painting
+  made: 1922
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T03845
+  museum_url: https://www.tate.org.uk/art/artworks/picabia-the-fig-leaf-t03845
+  sources:
+  - tate-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: summertime-number-9a-jackson-pollock
+  name: 'Summertime: Number 9A'
+  kind: painting
+  made: 1948
+  medium: Oil paint, enamel paint and commercial paint on canvas
+  collection: Tate
+  accession: T03977
+  museum_url: https://www.tate.org.uk/art/artworks/pollock-summertime-number-9a-t03977
+  sources:
+  - tate-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: the-uncertainty-of-the-poet-giorgio-de-chirico
+  name: The Uncertainty of the Poet
+  kind: painting
+  made: 1913
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T04109
+  museum_url: https://www.tate.org.uk/art/artworks/de-chirico-the-uncertainty-of-the-poet-t04109
+  sources:
+  - tate-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: people-birds-and-sun-karel-appel
+  name: People, Birds and Sun
+  kind: painting
+  made: 1954
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T04163
+  museum_url: https://www.tate.org.uk/art/artworks/appel-people-birds-and-sun-t04163
+  sources:
+  - tate-open-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: hip-hip-hoorah-karel-appel
+  name: Hip, Hip, Hoorah!
+  kind: painting
+  made: 1949
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T05077
+  museum_url: https://www.tate.org.uk/art/artworks/appel-hip-hip-hoorah-t05077
+  sources:
+  - tate-open-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: moustaches-jean-arp
+  name: Moustaches
+  kind: painting
+  made: 1925
+  estimated: true
+  medium: Oil paint on board
+  collection: Tate
+  accession: T05504
+  museum_url: https://www.tate.org.uk/art/artworks/arp-moustaches-t05504
+  sources:
+  - tate-open-data
+  people:
+  - person: jean-arp
+    role: creator
+  prominence: 3
+- key: profile-of-a-woman-with-a-vase-of-flowers-odilon-redon
+  name: Profile of a Woman with a Vase of Flowers
+  kind: painting
+  made: 1895
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T05524
+  museum_url: https://www.tate.org.uk/art/artworks/redon-profile-of-a-woman-with-a-vase-of-flowers-t05524
+  sources:
+  - tate-open-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: portrait-of-a-doctor-francis-picabia
+  name: Portrait of a Doctor
+  kind: painting
+  made: 1935
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T05804
+  museum_url: https://www.tate.org.uk/art/artworks/picabia-portrait-of-a-doctor-t05804
+  sources:
+  - tate-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: magdalen-with-pearls-in-her-hair-lovis-corinth
+  name: Magdalen with Pearls in her Hair
+  kind: painting
+  made: 1919
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T05866
+  museum_url: https://www.tate.org.uk/art/artworks/corinth-magdalen-with-pearls-in-her-hair-t05866
+  sources:
+  - tate-open-data
+  people:
+  - person: lovis-corinth
+    role: creator
+  prominence: 3
+- key: the-fan-marie-laurencin
+  name: The Fan
+  kind: painting
+  made: 1919
+  estimated: true
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T06805
+  museum_url: https://www.tate.org.uk/art/artworks/laurencin-the-fan-t06805
+  sources:
+  - tate-open-data
+  people:
+  - person: marie-laurencin
+    role: creator
+  prominence: 3
+- key: bottle-of-rum-and-newspaper-juan-gris
+  name: Bottle of Rum and Newspaper
+  kind: painting
+  made: 1913
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T06808
+  museum_url: https://www.tate.org.uk/art/artworks/gris-bottle-of-rum-and-newspaper-t06808
+  sources:
+  - tate-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: overlooking-the-bay-juan-gris
+  name: Overlooking the Bay
+  kind: painting
+  made: 1921
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T06810
+  museum_url: https://www.tate.org.uk/art/artworks/gris-overlooking-the-bay-t06810
+  sources:
+  - tate-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: azure-day-yves-tanguy
+  name: Azure Day
+  kind: painting
+  made: 1937
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T07080
+  museum_url: https://www.tate.org.uk/art/artworks/tanguy-azure-day-t07080
+  sources:
+  - tate-open-data
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+- key: the-handsome-pork-butcher-francis-picabia
+  name: The Handsome Pork-Butcher
+  kind: painting
+  made: 1924
+  estimated: true
+  medium: Oil paint, 4 plastic combs and bone comb on canvas
+  collection: Tate
+  accession: T07108
+  museum_url: https://www.tate.org.uk/art/artworks/picabia-the-handsome-pork-butcher-t07108
+  sources:
+  - tate-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: portrait-of-sir-william-killigrew-anthony-van-dyck
+  name: Portrait of Sir William Killigrew
+  kind: painting
+  made: 1638
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T07896
+  museum_url: https://www.tate.org.uk/art/artworks/van-dyck-portrait-of-sir-william-killigrew-t07896
+  sources:
+  - tate-open-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: portrait-of-mary-hill-lady-killigrew-anthony-van-dyck
+  name: Portrait of Mary Hill, Lady Killigrew
+  kind: painting
+  made: 1638
+  medium: Oil paint on canvas
+  collection: Tate
+  accession: T07956
+  museum_url: https://www.tate.org.uk/art/artworks/van-dyck-portrait-of-mary-hill-lady-killigrew-t07956
+  sources:
+  - tate-open-data
+  people:
+  - person: anthony-van-dyck
+    role: creator
+  prominence: 3
+- key: untitled-triptych-sigmar-polke
+  name: Untitled (Triptych)
+  kind: painting
+  made: 2002
+  medium: Polyester resin and acrylic paint on fabric
+  collection: Tate
+  accession: T11855
+  museum_url: https://www.tate.org.uk/art/artworks/polke-untitled-triptych-t11855
+  sources:
+  - tate-open-data
+  people:
+  - person: sigmar-polke
+    role: creator
+  prominence: 3
+- key: untitled-square-2-sigmar-polke
+  name: Untitled (Square 2)
+  kind: painting
+  made: 2003
+  medium: Gold paint, oil paint and acrylic paint on canvas
+  collection: Tate
+  accession: T11856
+  museum_url: https://www.tate.org.uk/art/artworks/polke-untitled-square-2-t11856
+  sources:
+  - tate-open-data
+  people:
+  - person: sigmar-polke
+    role: creator
+  prominence: 3
+- key: the-apotheosis-of-james-i-and-other-studies-mult-peter-paul-rubens
+  name: 'The Apotheosis of James I and Other Studies: Multiple Sketch for the Banqueting House Ceiling, Whitehall'
+  kind: painting
+  made: 1628
+  estimated: true
+  medium: Oil paint on oak
+  collection: Tate
+  accession: T12919
+  museum_url: https://www.tate.org.uk/art/artworks/rubens-the-apotheosis-of-james-i-and-other-studies-multiple-sketch-for-the-banqueting-t12919
+  sources:
+  - tate-open-data
+  people:
+  - person: peter-paul-rubens
+    role: creator
+  prominence: 3

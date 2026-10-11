@@ -1,0 +1,2877 @@
+# Notes for the reviewer
+# - Paintings by our painters, read through the official Museum of Modern Art API (https://github.com/MuseumofModernArt/collection); nothing was scraped. Image links only where the museum marks the work public domain / CC0 (MoMA and Tate publish metadata only: no images, just the accession number and a link back). Second wave: painters with 40 or more Wikipedia editions. Up to 3 per painter, matched on the painter's full name in the museum's artist field.
+# - 201 new artworks (and works already in the database were updated with the accession number and link: 5).
+# - Dates are the museum's own begin/end years; `estimated` where its date text says ca./c./probably.
+
+batch:
+  title: Paintings from the Museum of Modern Art open collection
+  requested: Add images, accession numbers and links back for our painters' works in the Museum of Modern Art
+  date: '2026-10-11'
+sources:
+- key: moma-open-data
+  title: MoMA collection data (CC0)
+  url: https://github.com/MuseumofModernArt/collection
+artworks:
+- key: rope-and-people-i-joan-miro
+  name: Rope and People, I
+  kind: painting
+  made: 1935
+  medium: Oil on cardboard mounted on wood, with coil of rope
+  museum: museum-of-modern-art
+  accession: '71.1936'
+  museum_url: https://www.moma.org/collection/works/33621
+  sources:
+  - moma-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: fire-in-the-evening-paul-klee
+  name: Fire in the Evening
+  kind: painting
+  made: 1929
+  medium: Oil on cardboard
+  museum: museum-of-modern-art
+  accession: '153.1970'
+  museum_url: https://www.moma.org/collection/works/34854
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-klee
+    role: creator
+  prominence: 3
+- key: portrait-of-an-equilibrist-paul-klee
+  name: Portrait of an Equilibrist
+  kind: painting
+  made: 1927
+  medium: Oil and collage on cardboard over wood with painted plaster border
+  museum: museum-of-modern-art
+  accession: '195.1966'
+  museum_url: https://www.moma.org/collection/works/35209
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-klee
+    role: creator
+  prominence: 3
+- key: guitar-pablo-picasso
+  name: Guitar
+  kind: painting
+  made: 1919
+  medium: Oil, charcoal and pinned paper on canvas
+  museum: museum-of-modern-art
+  accession: '384.1955'
+  museum_url: https://www.moma.org/collection/works/36613
+  sources:
+  - moma-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: m-amenez-y-francis-picabia
+  name: '"M''Amenez-y"'
+  kind: painting
+  made: 1919
+  medium: Oil and enamel paint on cardboard
+  museum: museum-of-modern-art
+  accession: '1309.1968'
+  museum_url: https://www.moma.org/collection/works/38561
+  sources:
+  - moma-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: the-bather-paul-cezanne
+  name: The Bather
+  kind: painting
+  made: 1885
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '1.1934'
+  museum_url: https://www.moma.org/collection/works/78296
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: composition-in-white-black-and-red-piet-mondrian
+  name: Composition in White, Black, and Red
+  kind: painting
+  made: 1936
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '2.1937'
+  museum_url: https://www.moma.org/collection/works/78310
+  sources:
+  - moma-open-data
+  people:
+  - person: piet-mondrian
+    role: creator
+  prominence: 3
+- key: girl-before-a-mirror-pablo-picasso
+  name: Girl before a Mirror
+  kind: painting
+  made: 1932
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '2.1938'
+  museum_url: https://www.moma.org/collection/works/78311
+  sources:
+  - moma-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: woman-with-a-mandolin-georges-braque
+  name: Woman with a Mandolin
+  kind: painting
+  made: 1937
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '2.1948'
+  museum_url: https://www.moma.org/collection/works/78315
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: portrait-of-meijer-de-haan-paul-gauguin
+  name: Portrait of Meijer de Haan
+  kind: painting
+  made: 1889
+  medium: Oil on wood
+  museum: museum-of-modern-art
+  accession: '2.1958'
+  museum_url: https://www.moma.org/collection/works/78323
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: house-by-the-railroad-edward-hopper
+  name: House by the Railroad
+  kind: painting
+  made: 1925
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '3.1930'
+  museum_url: https://www.moma.org/collection/works/78330
+  sources:
+  - moma-open-data
+  people:
+  - person: edward-hopper
+    role: creator
+  prominence: 3
+- key: dr-mayer-hermann-otto-dix
+  name: Dr. Mayer-Hermann
+  kind: painting
+  made: 1926
+  medium: Oil, tempera, and metal leaf on wood
+  museum: museum-of-modern-art
+  accession: '3.1932'
+  museum_url: https://www.moma.org/collection/works/78331
+  sources:
+  - moma-open-data
+  people:
+  - person: otto-dix
+    role: creator
+  prominence: 3
+- key: i-see-again-in-memory-my-dear-udnie-francis-picabia
+  name: I See Again in Memory My Dear Udnie
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '4.1954'
+  museum_url: https://www.moma.org/collection/works/78348
+  sources:
+  - moma-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: departure-max-beckmann
+  name: Departure
+  kind: painting
+  made: 1932
+  medium: Oil on canvas, three panels
+  museum: museum-of-modern-art
+  accession: 6.1942.a-c
+  museum_url: https://www.moma.org/collection/works/78367
+  sources:
+  - moma-open-data
+  people:
+  - person: max-beckmann
+    role: creator
+  prominence: 3
+- key: l-estaque-andre-derain
+  name: L'Estaque
+  kind: painting
+  made: 1906
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '6.1951'
+  museum_url: https://www.moma.org/collection/works/78371
+  sources:
+  - moma-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: shimmering-substance-jackson-pollock
+  name: Shimmering Substance
+  kind: painting
+  made: 1946
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '6.1968'
+  museum_url: https://www.moma.org/collection/works/78376
+  sources:
+  - moma-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: still-life-henri-matisse
+  name: Still Life
+  kind: painting
+  made: 1899
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '7.1949'
+  museum_url: https://www.moma.org/collection/works/78380
+  sources:
+  - moma-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: street-light-giacomo-balla
+  name: Street Light
+  kind: painting
+  made: 1910
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '7.1954'
+  museum_url: https://www.moma.org/collection/works/78382
+  sources:
+  - moma-open-data
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 3
+- key: one-number-31-1950-jackson-pollock
+  name: 'One: Number 31, 1950'
+  kind: painting
+  made: 1950
+  medium: Oil and enamel paint on canvas
+  museum: museum-of-modern-art
+  accession: '7.1968'
+  museum_url: https://www.moma.org/collection/works/78386
+  sources:
+  - moma-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: soda-georges-braque
+  name: Soda
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '8.1942'
+  museum_url: https://www.moma.org/collection/works/78387
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: the-red-studio-henri-matisse
+  name: The Red Studio
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '8.1949'
+  museum_url: https://www.moma.org/collection/works/78389
+  sources:
+  - moma-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: target-with-four-faces-jasper-johns
+  name: Target with Four Faces
+  kind: painting
+  made: 1955
+  medium: Encaustic on newspaper and cloth over canvas surmounted by four tinted-plaster faces in wood box with hinged front
+  museum: museum-of-modern-art
+  accession: '8.1958'
+  museum_url: https://www.moma.org/collection/works/78393
+  sources:
+  - moma-open-data
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 3
+- key: green-target-jasper-johns
+  name: Green Target
+  kind: painting
+  made: 1955
+  medium: Encaustic on newspaper and cloth over canvas
+  museum: museum-of-modern-art
+  accession: '9.1958'
+  museum_url: https://www.moma.org/collection/works/78401
+  sources:
+  - moma-open-data
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 3
+- key: the-park-gustav-klimt
+  name: The Park
+  kind: painting
+  made: 1910
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '10.1957'
+  museum_url: https://www.moma.org/collection/works/78411
+  sources:
+  - moma-open-data
+  people:
+  - person: gustav-klimt
+    role: creator
+  prominence: 3
+- key: white-numbers-jasper-johns
+  name: White Numbers
+  kind: painting
+  made: 1957
+  medium: Encaustic on canvas
+  museum: museum-of-modern-art
+  accession: '10.1958'
+  museum_url: https://www.moma.org/collection/works/78412
+  sources:
+  - moma-open-data
+  people:
+  - person: jasper-johns
+    role: creator
+  prominence: 3
+- key: still-life-i-joan-miro
+  name: Still Life I
+  kind: painting
+  made: 1922
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '11.1939'
+  museum_url: https://www.moma.org/collection/works/78417
+  sources:
+  - moma-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: exit-the-ballets-russes-fernand-leger
+  name: Exit the Ballets Russes
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '11.1958'
+  museum_url: https://www.moma.org/collection/works/78420
+  sources:
+  - moma-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: still-life-ii-joan-miro
+  name: Still Life II
+  kind: painting
+  made: 1922
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '12.1939'
+  museum_url: https://www.moma.org/collection/works/78421
+  sources:
+  - moma-open-data
+  people:
+  - person: joan-miro
+    role: creator
+  prominence: 3
+- key: napoleon-in-the-wilderness-max-ernst
+  name: Napoleon in the Wilderness
+  kind: painting
+  made: 1941
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '12.1942'
+  museum_url: https://www.moma.org/collection/works/78423
+  sources:
+  - moma-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: street-dresden-ernst-ludwig-kirchner
+  name: Street, Dresden
+  kind: painting
+  made: 1908
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '12.1951'
+  museum_url: https://www.moma.org/collection/works/78426
+  sources:
+  - moma-open-data
+  people:
+  - person: ernst-ludwig-kirchner
+    role: creator
+  prominence: 3
+- key: pierrot-pablo-picasso
+  name: Pierrot
+  kind: painting
+  made: 1918
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '12.1952'
+  museum_url: https://www.moma.org/collection/works/78427
+  sources:
+  - moma-open-data
+  people:
+  - person: pablo-picasso
+    role: creator
+  prominence: 3
+- key: woman-with-a-daffodil-lucian-freud
+  name: Woman with a Daffodil
+  kind: painting
+  made: 1945
+  medium: Oil on board on canvas
+  museum: museum-of-modern-art
+  accession: '12.1953'
+  museum_url: https://www.moma.org/collection/works/78428
+  sources:
+  - moma-open-data
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+- key: reclining-nude-amedeo-modigliani
+  name: Reclining Nude
+  kind: painting
+  made: 1919
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '13.1950'
+  museum_url: https://www.moma.org/collection/works/78432
+  sources:
+  - moma-open-data
+  people:
+  - person: amedeo-modigliani
+    role: creator
+  prominence: 3
+- key: vocal-fabric-of-the-singer-rosa-silber-paul-klee
+  name: Vocal Fabric of the Singer Rosa Silber
+  kind: painting
+  made: 1922
+  medium: Watercolor and ink on plastered fabric mounted on board, with watercolor and ink borders
+  museum: museum-of-modern-art
+  accession: '13.1955'
+  museum_url: https://www.moma.org/collection/works/78434
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-klee
+    role: creator
+  prominence: 3
+- key: gray-relief-on-black-antoni-tapies
+  name: Gray Relief on Black
+  kind: painting
+  made: 1959
+  medium: Latex paint with marble dust on canvas
+  museum: museum-of-modern-art
+  accession: '13.1961'
+  museum_url: https://www.moma.org/collection/works/78435
+  sources:
+  - moma-open-data
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+- key: composition-in-oval-with-color-planes-1-piet-mondrian
+  name: Composition in Oval with Color Planes 1
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '14.1950'
+  museum_url: https://www.moma.org/collection/works/78441
+  sources:
+  - moma-open-data
+  people:
+  - person: piet-mondrian
+    role: creator
+  prominence: 3
+- key: the-artist-s-mother-alberto-giacometti
+  name: The Artist's Mother
+  kind: painting
+  made: 1950
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '15.1953'
+  museum_url: https://www.moma.org/collection/works/78448
+  sources:
+  - moma-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: pines-and-rocks-fontainebleau-paul-cezanne
+  name: Pines and Rocks (Fontainebleau?)
+  kind: painting
+  made: 1897
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '16.1934'
+  museum_url: https://www.moma.org/collection/works/78454
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: the-empire-of-light-ii-rene-magritte
+  name: The Empire of Light, II
+  kind: painting
+  made: 1950
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '16.1951'
+  museum_url: https://www.moma.org/collection/works/78456
+  sources:
+  - moma-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: lady-in-a-park-august-macke
+  name: Lady in a Park
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '16.1956'
+  museum_url: https://www.moma.org/collection/works/78459
+  sources:
+  - moma-open-data
+  people:
+  - person: august-macke
+    role: creator
+  prominence: 3
+- key: bather-henri-matisse
+  name: Bather
+  kind: painting
+  made: 1909
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '17.1936'
+  museum_url: https://www.moma.org/collection/works/78464
+  sources:
+  - moma-open-data
+  people:
+  - person: henri-matisse
+    role: creator
+  prominence: 3
+- key: still-life-with-ginger-jar-sugar-bowl-and-orange-paul-cezanne
+  name: Still Life with Ginger Jar, Sugar Bowl, and Oranges
+  kind: painting
+  made: 1902
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '18.1934'
+  museum_url: https://www.moma.org/collection/works/78469
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-cezanne
+    role: creator
+  prominence: 3
+- key: z-ii-laszlo-moholy-nagy
+  name: Z II
+  kind: painting
+  made: 1925
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '18.1956'
+  museum_url: https://www.moma.org/collection/works/78472
+  sources:
+  - moma-open-data
+  people:
+  - person: laszlo-moholy-nagy
+    role: creator
+  prominence: 3
+- key: two-russians-emil-nolde
+  name: Two Russians
+  kind: painting
+  made: 1915
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '19.1954'
+  museum_url: https://www.moma.org/collection/works/78478
+  sources:
+  - moma-open-data
+  people:
+  - person: emil-nolde
+    role: creator
+  prominence: 3
+- key: no-16-red-brown-and-black-mark-rothko
+  name: No. 16 (Red, Brown, and Black)
+  kind: painting
+  made: 1958
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '21.1959'
+  museum_url: https://www.moma.org/collection/works/78485
+  sources:
+  - moma-open-data
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+- key: family-picture-max-beckmann
+  name: Family Picture
+  kind: painting
+  made: 1920
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '26.1935'
+  museum_url: https://www.moma.org/collection/works/78507
+  sources:
+  - moma-open-data
+  people:
+  - person: max-beckmann
+    role: creator
+  prominence: 3
+- key: space-antoni-tapies
+  name: Space
+  kind: painting
+  made: 1956
+  medium: Latex paint with marble dust on canvas
+  museum: museum-of-modern-art
+  accession: '27.1959'
+  museum_url: https://www.moma.org/collection/works/78522
+  sources:
+  - moma-open-data
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+- key: dance-maria-helena-vieira-da-silva
+  name: Dance
+  kind: painting
+  made: 1938
+  medium: Oil and wax on canvas
+  museum: museum-of-modern-art
+  accession: '29.1954'
+  museum_url: https://www.moma.org/collection/works/78562
+  sources:
+  - moma-open-data
+  people:
+  - person: maria-helena-vieira-da-silva
+    role: creator
+  prominence: 3
+- key: the-rope-dancer-accompanies-herself-with-her-sha-man-ray
+  name: The Rope Dancer Accompanies Herself with Her Shadows
+  kind: painting
+  made: 1916
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '33.1954'
+  museum_url: https://www.moma.org/collection/works/78580
+  sources:
+  - moma-open-data
+  people:
+  - person: man-ray
+    role: creator
+  prominence: 3
+- key: no-10-mark-rothko
+  name: No. 10
+  kind: painting
+  made: 1950
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '38.1952'
+  museum_url: https://www.moma.org/collection/works/78594
+  sources:
+  - moma-open-data
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+- key: still-life-with-three-puppies-paul-gauguin
+  name: Still Life with Three Puppies
+  kind: painting
+  made: 1888
+  medium: Oil on wood
+  museum: museum-of-modern-art
+  accession: '48.1952'
+  museum_url: https://www.moma.org/collection/works/78616
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: the-poet-max-herrmann-neisse-george-grosz
+  name: The Poet Max Herrmann-Neisse
+  kind: painting
+  made: 1927
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '49.1952'
+  museum_url: https://www.moma.org/collection/works/78619
+  sources:
+  - moma-open-data
+  people:
+  - person: george-grosz
+    role: creator
+  prominence: 3
+- key: mural-painting-fernand-leger
+  name: Mural Painting
+  kind: painting
+  made: 1924
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '49.1965'
+  museum_url: https://www.moma.org/collection/works/78620
+  sources:
+  - moma-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: the-moon-and-the-earth-paul-gauguin
+  name: The Moon and the Earth
+  kind: painting
+  made: 1893
+  medium: Oil on burlap
+  museum: museum-of-modern-art
+  accession: '50.1934'
+  museum_url: https://www.moma.org/collection/works/78621
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-gauguin
+    role: creator
+  prominence: 3
+- key: the-14th-of-july-at-le-havre-raoul-dufy
+  name: The 14th of July at Le Havre
+  kind: painting
+  made: 1907
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '60.1995'
+  museum_url: https://www.moma.org/collection/works/78640
+  sources:
+  - moma-open-data
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+- key: beard-of-uncertain-returns-jean-dubuffet
+  name: Beard of Uncertain Returns
+  kind: painting
+  made: 1959
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '63.1961'
+  museum_url: https://www.moma.org/collection/works/78646
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: states-of-mind-i-the-farewells-umberto-boccioni
+  name: 'States of Mind I: The Farewells'
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '64.1979'
+  museum_url: https://www.moma.org/collection/works/78648
+  sources:
+  - moma-open-data
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 3
+- key: child-with-doll-otto-dix
+  name: Child with Doll
+  kind: painting
+  made: 1928
+  medium: Oil and tempera on canvas mounted on wood
+  museum: museum-of-modern-art
+  accession: '65.1935'
+  museum_url: https://www.moma.org/collection/works/78650
+  sources:
+  - moma-open-data
+  people:
+  - person: otto-dix
+    role: creator
+  prominence: 3
+- key: states-of-mind-ii-those-who-go-umberto-boccioni
+  name: 'States of Mind II: Those Who Go'
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '65.1979'
+  museum_url: https://www.moma.org/collection/works/78653
+  sources:
+  - moma-open-data
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 3
+- key: lake-george-coat-and-red-georgia-o-keeffe
+  name: Lake George, Coat and Red
+  kind: painting
+  made: 1919
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '65.1995'
+  museum_url: https://www.moma.org/collection/works/78656
+  sources:
+  - moma-open-data
+  people:
+  - person: georgia-o-keeffe
+    role: creator
+  prominence: 3
+- key: states-of-mind-iii-those-who-stay-umberto-boccioni
+  name: 'States of Mind III: Those Who Stay'
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '66.1979'
+  museum_url: https://www.moma.org/collection/works/78660
+  sources:
+  - moma-open-data
+  people:
+  - person: umberto-boccioni
+    role: creator
+  prominence: 3
+- key: still-life-georg-baselitz
+  name: Still Life
+  kind: painting
+  made: 1976
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '66.1991'
+  museum_url: https://www.moma.org/collection/works/78662
+  sources:
+  - moma-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: the-promenade-pierre-bonnard
+  name: The Promenade
+  kind: painting
+  made: 1894
+  medium: Distemper on canvas with carved wood frame, four panels
+  museum: museum-of-modern-art
+  accession: 67.1991.a-d
+  museum_url: https://www.moma.org/collection/works/78664
+  sources:
+  - moma-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: the-large-trees-georges-braque
+  name: The Large Trees
+  kind: painting
+  made: 1906
+  medium: Oil on canvas mounted on board
+  museum: museum-of-modern-art
+  accession: '68.1991'
+  museum_url: https://www.moma.org/collection/works/78668
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-braque
+    role: creator
+  prominence: 3
+- key: abstraction-blue-georgia-o-keeffe
+  name: Abstraction Blue
+  kind: painting
+  made: 1927
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '71.1979'
+  museum_url: https://www.moma.org/collection/works/78677
+  sources:
+  - moma-open-data
+  people:
+  - person: georgia-o-keeffe
+    role: creator
+  prominence: 3
+- key: broadway-boogie-woogie
+  museum: museum-of-modern-art
+  accession: '73.1943'
+  museum_url: https://www.moma.org/collection/works/78682
+  sources:
+  - moma-open-data
+- key: two-heads-jean-arp
+  name: Two Heads
+  kind: painting
+  made: 1927
+  medium: Oil and cord on canvas
+  museum: museum-of-modern-art
+  accession: '74.1936'
+  museum_url: https://www.moma.org/collection/works/78687
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-arp
+    role: creator
+  prominence: 3
+- key: rider-untitled-vii-willem-de-kooning
+  name: Rider (Untitled VII)
+  kind: painting
+  made: 1985
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '76.1991'
+  museum_url: https://www.moma.org/collection/works/78698
+  sources:
+  - moma-open-data
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 3
+- key: number-1a-1948-jackson-pollock
+  name: Number 1A, 1948
+  kind: painting
+  made: 1948
+  medium: Oil and enamel paint on canvas
+  museum: museum-of-modern-art
+  accession: '77.1950'
+  museum_url: https://www.moma.org/collection/works/78699
+  sources:
+  - moma-open-data
+  people:
+  - person: jackson-pollock
+    role: creator
+  prominence: 3
+- key: mama-papa-is-wounded
+  museum: museum-of-modern-art
+  accession: '78.1936'
+  museum_url: https://www.moma.org/collection/works/78701
+  sources:
+  - moma-open-data
+- key: bed-robert-rauschenberg
+  name: Bed
+  kind: painting
+  made: 1955
+  medium: Oil and pencil on pillow, quilt, and sheet on wood supports
+  museum: museum-of-modern-art
+  accession: '79.1989'
+  museum_url: https://www.moma.org/collection/works/78712
+  sources:
+  - moma-open-data
+  people:
+  - person: robert-rauschenberg
+    role: creator
+  prominence: 3
+- key: autumn-landscape-maurice-de-vlaminck
+  name: Autumn Landscape
+  kind: painting
+  made: 1905
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '80.1958'
+  museum_url: https://www.moma.org/collection/works/78715
+  sources:
+  - moma-open-data
+  people:
+  - person: maurice-de-vlaminck
+    role: creator
+  prominence: 3
+- key: still-life-juan-gris
+  name: Still Life
+  kind: painting
+  made: 1917
+  medium: Oil over bronze paint on plywood
+  museum: museum-of-modern-art
+  accession: '83.1958'
+  museum_url: https://www.moma.org/collection/works/78726
+  sources:
+  - moma-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: landscape-47-natalia-goncharova
+  name: Landscape, 47
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '84.1936'
+  museum_url: https://www.moma.org/collection/works/78727
+  sources:
+  - moma-open-data
+  people:
+  - person: natalia-goncharova
+    role: creator
+  prominence: 3
+- key: the-sea-marine-max-ernst
+  name: The Sea (Marine)
+  kind: painting
+  made: 1928
+  medium: Oil on plaster on burlap
+  museum: museum-of-modern-art
+  accession: '85.1936'
+  museum_url: https://www.moma.org/collection/works/78730
+  sources:
+  - moma-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: opus-217-against-the-enamel-of-a-background-rhyt-paul-signac
+  name: Opus 217. Against the Enamel of a Background Rhythmic with Beats and Angles, Tones, and Tints, Portrait of M. Félix Fénéon in 1890
+  kind: painting
+  made: 1890
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '85.1991'
+  museum_url: https://www.moma.org/collection/works/78734
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-signac
+    role: creator
+  prominence: 3
+- key: the-anxious-journey-giorgio-de-chirico
+  name: The Anxious Journey
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '86.1950'
+  museum_url: https://www.moma.org/collection/works/78736
+  sources:
+  - moma-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: anna-zborowska-amedeo-modigliani
+  name: Anna Zborowska
+  kind: painting
+  made: 1917
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '87.1934'
+  museum_url: https://www.moma.org/collection/works/78737
+  sources:
+  - moma-open-data
+  people:
+  - person: amedeo-modigliani
+    role: creator
+  prominence: 3
+- key: the-nostalgia-of-the-infinite-giorgio-de-chirico
+  name: The Nostalgia of the Infinite
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '87.1936'
+  museum_url: https://www.moma.org/collection/works/78738
+  sources:
+  - moma-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: lita-curtain-star-lita-hornick-andy-warhol
+  name: Lita Curtain Star [Lita Hornick]
+  kind: painting
+  made: 1968
+  medium: Synthetic polymer paint and silkscreen ink on eight canvases
+  museum: museum-of-modern-art
+  accession: 87.1991.a-h
+  museum_url: https://www.moma.org/collection/works/78739
+  sources:
+  - moma-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: agony-arshile-gorky
+  name: Agony
+  kind: painting
+  made: 1947
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '88.1950'
+  museum_url: https://www.moma.org/collection/works/78740
+  sources:
+  - moma-open-data
+  people:
+  - person: arshile-gorky
+    role: creator
+  prominence: 3
+- key: em-2-telephone-picture-laszlo-moholy-nagy
+  name: EM 2 (Telephone Picture)
+  kind: painting
+  made: 1923
+  medium: Porcelain enamel on steel
+  museum: museum-of-modern-art
+  accession: '91.1971'
+  museum_url: https://www.moma.org/collection/works/78747
+  sources:
+  - moma-open-data
+  people:
+  - person: laszlo-moholy-nagy
+    role: creator
+  prominence: 3
+- key: em-3-telephone-picture-laszlo-moholy-nagy
+  name: EM 3 (Telephone Picture)
+  kind: painting
+  made: 1923
+  medium: Porcelain enamel on steel
+  museum: museum-of-modern-art
+  accession: '92.1971'
+  museum_url: https://www.moma.org/collection/works/78749
+  sources:
+  - moma-open-data
+  people:
+  - person: laszlo-moholy-nagy
+    role: creator
+  prominence: 3
+- key: dead-fowl-chaim-soutine
+  name: Dead Fowl
+  kind: painting
+  made: 1924
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '93.1958'
+  museum_url: https://www.moma.org/collection/works/78750
+  sources:
+  - moma-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: fishing-boats-collioure-andre-derain
+  name: Fishing Boats, Collioure
+  kind: painting
+  made: 1905
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '100.1958'
+  museum_url: https://www.moma.org/collection/works/78773
+  sources:
+  - moma-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: dinnertime-edouard-vuillard
+  name: Dinnertime
+  kind: painting
+  made: 1889
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '101.1961'
+  museum_url: https://www.moma.org/collection/works/78780
+  sources:
+  - moma-open-data
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: childbirth-jean-dubuffet
+  name: Childbirth
+  kind: painting
+  made: 1944
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '101.1982'
+  museum_url: https://www.moma.org/collection/works/78782
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: contrast-of-forms-fernand-leger
+  name: Contrast of Forms
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '103.1958'
+  museum_url: https://www.moma.org/collection/works/78788
+  sources:
+  - moma-open-data
+  people:
+  - person: fernand-leger
+    role: creator
+  prominence: 3
+- key: pirate-untitled-ii-willem-de-kooning
+  name: Pirate (Untitled II)
+  kind: painting
+  made: 1981
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '107.1982'
+  museum_url: https://www.moma.org/collection/works/78810
+  sources:
+  - moma-open-data
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 3
+- key: mao-sigmar-polke
+  name: Mao
+  kind: painting
+  made: 1972
+  medium: Synthetic polymer paint on patterned fabric mounted on felt with a wood dowel rod
+  museum: museum-of-modern-art
+  accession: 109.1982.a-b
+  museum_url: https://www.moma.org/collection/works/78821
+  sources:
+  - moma-open-data
+  people:
+  - person: sigmar-polke
+    role: creator
+  prominence: 3
+- key: tragic-space-karel-appel
+  name: Tragic Space
+  kind: painting
+  made: 1959
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '110.1975'
+  museum_url: https://www.moma.org/collection/works/78827
+  sources:
+  - moma-open-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: the-evil-genius-of-a-king-giorgio-de-chirico
+  name: The Evil Genius of a King
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '112.1936'
+  museum_url: https://www.moma.org/collection/works/78834
+  sources:
+  - moma-open-data
+  people:
+  - person: giorgio-de-chirico
+    role: creator
+  prominence: 3
+- key: iron-bridges-at-asnieres-emile-bernard
+  name: Iron Bridges at Asnières
+  kind: painting
+  made: 1887
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '113.1962'
+  museum_url: https://www.moma.org/collection/works/78843
+  sources:
+  - moma-open-data
+  people:
+  - person: emile-bernard
+    role: creator
+  prominence: 3
+- key: joe-bousquet-in-bed-jean-dubuffet
+  name: Joë Bousquet in Bed
+  kind: painting
+  made: 1947
+  medium: Oil emulsion in water on canvas
+  museum: museum-of-modern-art
+  accession: '114.1961'
+  museum_url: https://www.moma.org/collection/works/78851
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-dubuffet
+    role: creator
+  prominence: 3
+- key: the-world-is-a-story-mundus-est-fabula-max-ernst
+  name: The World Is a Story (Mundus est Fabula)
+  kind: painting
+  made: 1959
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '116.1961'
+  museum_url: https://www.moma.org/collection/works/78858
+  sources:
+  - moma-open-data
+  people:
+  - person: max-ernst
+    role: creator
+  prominence: 3
+- key: the-world-cow-franz-marc
+  name: The World Cow
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '118.1988'
+  museum_url: https://www.moma.org/collection/works/78879
+  sources:
+  - moma-open-data
+  people:
+  - person: franz-marc
+    role: creator
+  prominence: 3
+- key: untitled-asheville-citizen-robert-rauschenberg
+  name: Untitled (Asheville Citizen)
+  kind: painting
+  made: 1952
+  estimated: true
+  medium: Oil, bitumen, and newspaper on canvas, two panels
+  museum: museum-of-modern-art
+  accession: '123.1999'
+  museum_url: https://www.moma.org/collection/works/78902
+  sources:
+  - moma-open-data
+  people:
+  - person: robert-rauschenberg
+    role: creator
+  prominence: 3
+- key: port-en-bessin-entrance-to-the-harbor-georges-seurat
+  name: Port-en-Bessin, Entrance to the Harbor
+  kind: painting
+  made: 1888
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '126.1934'
+  museum_url: https://www.moma.org/collection/works/78912
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 3
+- key: poplars-andre-derain
+  name: Poplars
+  kind: painting
+  made: 1900
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '128.1947'
+  museum_url: https://www.moma.org/collection/works/78917
+  sources:
+  - moma-open-data
+  people:
+  - person: andre-derain
+    role: creator
+  prominence: 3
+- key: before-and-after-andy-warhol
+  name: Before and After
+  kind: painting
+  made: 1961
+  medium: Casein and pencil on canvas
+  museum: museum-of-modern-art
+  accession: '128.1995'
+  museum_url: https://www.moma.org/collection/works/78921
+  sources:
+  - moma-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: still-life-with-flowers-juan-gris
+  name: Still Life with Flowers
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '131.1947'
+  museum_url: https://www.moma.org/collection/works/78930
+  sources:
+  - moma-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: grapes-juan-gris
+  name: Grapes
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '132.1947'
+  museum_url: https://www.moma.org/collection/works/78933
+  sources:
+  - moma-open-data
+  people:
+  - person: juan-gris
+    role: creator
+  prominence: 3
+- key: the-false-mirror-rene-magritte
+  name: The False Mirror
+  kind: painting
+  made: 1929
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '133.1936'
+  museum_url: https://www.moma.org/collection/works/78938
+  sources:
+  - moma-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: rhythm-of-a-russian-dance-theo-van-doesburg
+  name: Rhythm of a Russian Dance
+  kind: painting
+  made: 1918
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '135.1946'
+  museum_url: https://www.moma.org/collection/works/78948
+  sources:
+  - moma-open-data
+  people:
+  - person: theo-van-doesburg
+    role: creator
+  prominence: 3
+- key: kerby-after-hogarth-useful-knowledge-david-hockney
+  name: Kerby (After Hogarth) Useful Knowledge
+  kind: painting
+  made: 1975
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '139.1977'
+  museum_url: https://www.moma.org/collection/works/78962
+  sources:
+  - moma-open-data
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 3
+- key: interior-mother-and-sister-of-the-artist-edouard-vuillard
+  name: Interior, Mother and Sister of the Artist
+  kind: painting
+  made: 1893
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '141.1934'
+  museum_url: https://www.moma.org/collection/works/78968
+  sources:
+  - moma-open-data
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: farmhouse-window-and-door-georgia-o-keeffe
+  name: Farmhouse Window and Door
+  kind: painting
+  made: 1929
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '144.1945'
+  museum_url: https://www.moma.org/collection/works/78978
+  sources:
+  - moma-open-data
+  people:
+  - person: georgia-o-keeffe
+    role: creator
+  prominence: 3
+- key: i-and-the-village-marc-chagall
+  name: I and the Village
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '146.1945'
+  museum_url: https://www.moma.org/collection/works/78984
+  sources:
+  - moma-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: landscape-marcel-duchamp
+  name: Landscape
+  kind: painting
+  made: 1911
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '148.1953'
+  museum_url: https://www.moma.org/collection/works/78988
+  sources:
+  - moma-open-data
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 3
+- key: houses-at-night-karl-schmidt-rottluff
+  name: Houses at Night
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '156.1957'
+  museum_url: https://www.moma.org/collection/works/79009
+  sources:
+  - moma-open-data
+  people:
+  - person: karl-schmidt-rottluff
+    role: creator
+  prominence: 3
+- key: pharisees-karl-schmidt-rottluff
+  name: Pharisees
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '160.1955'
+  museum_url: https://www.moma.org/collection/works/79016
+  sources:
+  - moma-open-data
+  people:
+  - person: karl-schmidt-rottluff
+    role: creator
+  prominence: 3
+- key: persistence-of-memory
+  museum: museum-of-modern-art
+  accession: '162.1934'
+  museum_url: https://www.moma.org/collection/works/79018
+  sources:
+  - moma-open-data
+- key: interior-with-mobile-roy-lichtenstein
+  name: Interior with Mobile
+  kind: painting
+  made: 1992
+  medium: Oil and magna on canvas
+  museum: museum-of-modern-art
+  accession: '165.1992'
+  museum_url: https://www.moma.org/collection/works/79031
+  sources:
+  - moma-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: october-18-1977-gerhard-richter
+  name: October 18, 1977
+  kind: painting
+  made: 1988
+  medium: Oil on canvas, fifteen panels
+  museum: museum-of-modern-art
+  accession: 169.1995.a-o
+  museum_url: https://www.moma.org/collection/works/79037
+  sources:
+  - moma-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: proun-19d-el-lissitzky
+  name: Proun 19D
+  kind: painting
+  made: 1920
+  medium: Gesso, oil, varnish, crayon, colored papers, sandpaper, graph paper, cardboard, metallic paint, and metal foil on plywoo
+  museum: museum-of-modern-art
+  accession: '172.1953'
+  museum_url: https://www.moma.org/collection/works/79040
+  sources:
+  - moma-open-data
+  people:
+  - person: el-lissitzky
+    role: creator
+  prominence: 3
+- key: the-passage-from-virgin-to-bride-marcel-duchamp
+  name: The Passage from Virgin to Bride
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '174.1945'
+  museum_url: https://www.moma.org/collection/works/79044
+  sources:
+  - moma-open-data
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 3
+- key: ride-to-the-vistula-anselm-kiefer
+  name: Ride to the Vistula
+  kind: painting
+  made: 1980
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '184.1996'
+  museum_url: https://www.moma.org/collection/works/79068
+  sources:
+  - moma-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: the-last-supper-andy-warhol
+  name: The Last Supper
+  kind: painting
+  made: 1986
+  medium: Silkscreen ink and acrylic on canvas
+  museum: museum-of-modern-art
+  accession: '186.1994'
+  museum_url: https://www.moma.org/collection/works/79072
+  sources:
+  - moma-open-data
+  people:
+  - person: andy-warhol
+    role: creator
+  prominence: 3
+- key: modjesko-soprano-singer-kees-van-dongen
+  name: Modjesko, Soprano Singer
+  kind: painting
+  made: 1908
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '192.1955'
+  museum_url: https://www.moma.org/collection/works/79095
+  sources:
+  - moma-open-data
+  people:
+  - person: kees-van-dongen
+    role: creator
+  prominence: 3
+- key: portrait-of-joseph-roulin-vincent-van-gogh
+  name: Portrait of Joseph Roulin
+  kind: painting
+  made: 1889
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '196.1989'
+  museum_url: https://www.moma.org/collection/works/79105
+  sources:
+  - moma-open-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: untitled-sigmar-polke
+  name: Untitled
+  kind: painting
+  made: 1971
+  medium: Watercolor, gouache, and synthetic polymer paint on paper mounted on canvas
+  museum: museum-of-modern-art
+  accession: '196.1996'
+  museum_url: https://www.moma.org/collection/works/79106
+  sources:
+  - moma-open-data
+  people:
+  - person: sigmar-polke
+    role: creator
+  prominence: 3
+- key: factum-ii-robert-rauschenberg
+  name: Factum II
+  kind: painting
+  made: 1957
+  medium: Oil, ink, pencil, crayon, paper, fabric, newspaper, printed reproductions, and painted paper on canvas
+  museum: museum-of-modern-art
+  accession: '206.1999'
+  museum_url: https://www.moma.org/collection/works/79141
+  sources:
+  - moma-open-data
+  people:
+  - person: robert-rauschenberg
+    role: creator
+  prominence: 3
+- key: the-red-sea-anselm-kiefer
+  name: The Red Sea
+  kind: painting
+  made: 1984
+  medium: Oil, lead, woodcut, photograph, and shellac on canvas
+  museum: museum-of-modern-art
+  accession: '211.1985'
+  museum_url: https://www.moma.org/collection/works/79158
+  sources:
+  - moma-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: apache-man-on-horseback-odilon-redon
+  name: Apache (Man on Horseback)
+  kind: painting
+  made: 1875
+  estimated: true
+  medium: Oil over traces of black chalk on tan cardstock mounted on canvas
+  museum: museum-of-modern-art
+  accession: '217.2000'
+  museum_url: https://www.moma.org/collection/works/79173
+  sources:
+  - moma-open-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: apache-man-on-horseback-ii-odilon-redon
+  name: Apache (Man on Horseback II)
+  kind: painting
+  made: 1875
+  estimated: true
+  medium: Oil on tan wove paper mounted on tan board
+  museum: museum-of-modern-art
+  accession: '218.2000'
+  museum_url: https://www.moma.org/collection/works/79175
+  sources:
+  - moma-open-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: apparition-odilon-redon
+  name: Apparition
+  kind: painting
+  made: 1905
+  estimated: true
+  medium: Oil on wood panel with wood cradle at top and bottom
+  museum: museum-of-modern-art
+  accession: '219.2000'
+  museum_url: https://www.moma.org/collection/works/79176
+  sources:
+  - moma-open-data
+  people:
+  - person: odilon-redon
+    role: creator
+  prominence: 3
+- key: extinction-of-useless-lights-yves-tanguy
+  name: Extinction of Useless Lights
+  kind: painting
+  made: 1927
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '220.1936'
+  museum_url: https://www.moma.org/collection/works/79178
+  sources:
+  - moma-open-data
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+- key: composition-viii-the-cow-theo-van-doesburg
+  name: Composition VIII (The Cow)
+  kind: painting
+  made: 1918
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '225.1948'
+  museum_url: https://www.moma.org/collection/works/79189
+  sources:
+  - moma-open-data
+  people:
+  - person: theo-van-doesburg
+    role: creator
+  prominence: 3
+- key: untitled-portrait-of-henry-de-montherlant-gerhard-richter
+  name: Untitled (Portrait of Henry de Montherlant)
+  kind: painting
+  made: 1971
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '232.1991'
+  museum_url: https://www.moma.org/collection/works/79215
+  sources:
+  - moma-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: summation-arshile-gorky
+  name: Summation
+  kind: painting
+  made: 1947
+  medium: Pencil, pastel, and charcoal on buff paper mounted on board
+  museum: museum-of-modern-art
+  accession: '234.1969'
+  museum_url: https://www.moma.org/collection/works/79222
+  sources:
+  - moma-open-data
+  people:
+  - person: arshile-gorky
+    role: creator
+  prominence: 3
+- key: painting-willem-de-kooning
+  name: Painting
+  kind: painting
+  made: 1948
+  medium: Enamel and oil on canvas
+  museum: museum-of-modern-art
+  accession: '238.1948'
+  museum_url: https://www.moma.org/collection/works/79242
+  sources:
+  - moma-open-data
+  people:
+  - person: willem-de-kooning
+    role: creator
+  prominence: 3
+- key: the-japanese-footbridge-claude-monet
+  name: The Japanese Footbridge
+  kind: painting
+  made: 1920
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '242.1956'
+  museum_url: https://www.moma.org/collection/works/79254
+  sources:
+  - moma-open-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: the-menaced-assassin-rene-magritte
+  name: The Menaced Assassin
+  kind: painting
+  made: 1927
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '247.1966'
+  museum_url: https://www.moma.org/collection/works/79267
+  sources:
+  - moma-open-data
+  people:
+  - person: rene-magritte
+    role: creator
+  prominence: 3
+- key: suprematist-composition-airplane-flying-kazimir-malevich
+  name: 'Suprematist Composition: Airplane Flying'
+  kind: painting
+  made: 1915
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '248.1935'
+  museum_url: https://www.moma.org/collection/works/79269
+  sources:
+  - moma-open-data
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 3
+- key: night-windows-edward-hopper
+  name: Night Windows
+  kind: painting
+  made: 1928
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '248.1940'
+  museum_url: https://www.moma.org/collection/works/79270
+  sources:
+  - moma-open-data
+  people:
+  - person: edward-hopper
+    role: creator
+  prominence: 3
+- key: the-dream-henri-rousseau
+  name: The Dream
+  kind: painting
+  made: 1910
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '252.1954'
+  museum_url: https://www.moma.org/collection/works/79277
+  sources:
+  - moma-open-data
+  people:
+  - person: henri-rousseau
+    role: creator
+  prominence: 3
+- key: the-nun-otto-dix
+  name: The Nun
+  kind: painting
+  made: 1914
+  medium: Oil on cardboard
+  museum: museum-of-modern-art
+  accession: '253.1988'
+  museum_url: https://www.moma.org/collection/works/79284
+  sources:
+  - moma-open-data
+  people:
+  - person: otto-dix
+    role: creator
+  prominence: 3
+- key: self-portrait-with-a-cigarette-max-beckmann
+  name: Self-Portrait with a Cigarette
+  kind: painting
+  made: 1923
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '255.1956'
+  museum_url: https://www.moma.org/collection/works/79289
+  sources:
+  - moma-open-data
+  people:
+  - person: max-beckmann
+    role: creator
+  prominence: 3
+- key: portrait-of-annette-alberto-giacometti
+  name: Portrait of Annette
+  kind: painting
+  made: 1949
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '256.1983'
+  museum_url: https://www.moma.org/collection/works/79297
+  sources:
+  - moma-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: uprising-lyonel-feininger
+  name: Uprising
+  kind: painting
+  made: 1910
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '257.1964'
+  museum_url: https://www.moma.org/collection/works/79302
+  sources:
+  - moma-open-data
+  people:
+  - person: lyonel-feininger
+    role: creator
+  prominence: 3
+- key: standing-figure-alberto-giacometti
+  name: Standing Figure
+  kind: painting
+  made: 1949
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '257.1983'
+  museum_url: https://www.moma.org/collection/works/79303
+  sources:
+  - moma-open-data
+  people:
+  - person: alberto-giacometti
+    role: creator
+  prominence: 3
+- key: viaduct-lyonel-feininger
+  name: Viaduct
+  kind: painting
+  made: 1920
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '259.1944'
+  museum_url: https://www.moma.org/collection/works/79305
+  sources:
+  - moma-open-data
+  people:
+  - person: lyonel-feininger
+    role: creator
+  prominence: 3
+- key: manhattan-i-lyonel-feininger
+  name: Manhattan, I
+  kind: painting
+  made: 1940
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '259.1964'
+  museum_url: https://www.moma.org/collection/works/79307
+  sources:
+  - moma-open-data
+  people:
+  - person: lyonel-feininger
+    role: creator
+  prominence: 3
+- key: still-life-le-corbusier
+  name: Still Life
+  kind: painting
+  made: 1920
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '261.1937'
+  museum_url: https://www.moma.org/collection/works/79312
+  sources:
+  - moma-open-data
+  people:
+  - person: le-corbusier
+    role: creator
+  prominence: 3
+- key: basket-of-fruit-in-a-cupboard-pierre-bonnard
+  name: Basket of Fruit in a Cupboard
+  kind: painting
+  made: 1944
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '263.1984'
+  museum_url: https://www.moma.org/collection/works/79325
+  sources:
+  - moma-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: evening-honfleur-georges-seurat
+  name: Evening, Honfleur
+  kind: painting
+  made: 1886
+  medium: Oil on canvas, with painted wood frame
+  museum: museum-of-modern-art
+  accession: '266.1957'
+  museum_url: https://www.moma.org/collection/works/79333
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 3
+- key: window-at-nice-raoul-dufy
+  name: Window at Nice
+  kind: painting
+  made: 1929
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '267.1954'
+  museum_url: https://www.moma.org/collection/works/79335
+  sources:
+  - moma-open-data
+  people:
+  - person: raoul-dufy
+    role: creator
+  prominence: 3
+- key: speeding-automobile-giacomo-balla
+  name: Speeding Automobile
+  kind: painting
+  made: 1912
+  medium: Oil on wood
+  museum: museum-of-modern-art
+  accession: '271.1949'
+  museum_url: https://www.moma.org/collection/works/79343
+  sources:
+  - moma-open-data
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 3
+- key: swifts-paths-of-movement-dynamic-sequences-giacomo-balla
+  name: 'Swifts: Paths of Movement + Dynamic Sequences'
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '272.1949'
+  museum_url: https://www.moma.org/collection/works/79347
+  sources:
+  - moma-open-data
+  people:
+  - person: giacomo-balla
+    role: creator
+  prominence: 3
+- key: street-berlin-ernst-ludwig-kirchner
+  name: Street, Berlin
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '274.1939'
+  museum_url: https://www.moma.org/collection/works/79354
+  sources:
+  - moma-open-data
+  people:
+  - person: ernst-ludwig-kirchner
+    role: creator
+  prominence: 3
+- key: birthday-marc-chagall
+  name: Birthday
+  kind: painting
+  made: 1915
+  medium: Oil on cardboard
+  museum: museum-of-modern-art
+  accession: '275.1949'
+  museum_url: https://www.moma.org/collection/works/79360
+  sources:
+  - moma-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: portrait-of-maria-lani-chaim-soutine
+  name: Portrait of Maria Lani
+  kind: painting
+  made: 1929
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '275.1954'
+  museum_url: https://www.moma.org/collection/works/79361
+  sources:
+  - moma-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: calvary-marc-chagall
+  name: Calvary
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '276.1949'
+  museum_url: https://www.moma.org/collection/works/79365
+  sources:
+  - moma-open-data
+  people:
+  - person: marc-chagall
+    role: creator
+  prominence: 3
+- key: grandcamp-evening-georges-seurat
+  name: Grandcamp, Evening
+  kind: painting
+  made: 1885
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '285.1983'
+  museum_url: https://www.moma.org/collection/works/79409
+  sources:
+  - moma-open-data
+  people:
+  - person: georges-seurat
+    role: creator
+  prominence: 3
+- key: still-life-giorgio-morandi
+  name: Still Life
+  kind: painting
+  made: 1916
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '286.1949'
+  museum_url: https://www.moma.org/collection/works/79411
+  sources:
+  - moma-open-data
+  people:
+  - person: giorgio-morandi
+    role: creator
+  prominence: 3
+- key: entablature-roy-lichtenstein
+  name: Entablature
+  kind: painting
+  made: 1976
+  medium: Oil and magna on canvas
+  museum: museum-of-modern-art
+  accession: '291.1976'
+  museum_url: https://www.moma.org/collection/works/79431
+  sources:
+  - moma-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: la-rue-des-abbesses-maurice-utrillo
+  name: La Rue des Abbesses
+  kind: painting
+  made: 1910
+  medium: Oil on board
+  museum: museum-of-modern-art
+  accession: '293.1983'
+  museum_url: https://www.moma.org/collection/works/79440
+  sources:
+  - moma-open-data
+  people:
+  - person: maurice-utrillo
+    role: creator
+  prominence: 3
+- key: embroidery-edouard-vuillard
+  name: Embroidery
+  kind: painting
+  made: 1895
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '294.1983'
+  museum_url: https://www.moma.org/collection/works/79443
+  sources:
+  - moma-open-data
+  people:
+  - person: edouard-vuillard
+    role: creator
+  prominence: 3
+- key: portrait-of-gala-salvador-dali
+  name: Portrait of Gala
+  kind: painting
+  made: 1935
+  medium: Oil on wood
+  museum: museum-of-modern-art
+  accession: '298.1937'
+  museum_url: https://www.moma.org/collection/works/79448
+  sources:
+  - moma-open-data
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 3
+- key: a-d-anselm-kiefer
+  name: A.D.
+  kind: painting
+  made: 1989
+  medium: Chalk and entrails on treated lead
+  museum: museum-of-modern-art
+  accession: '306.1992'
+  museum_url: https://www.moma.org/collection/works/79466
+  sources:
+  - moma-open-data
+  people:
+  - person: anselm-kiefer
+    role: creator
+  prominence: 3
+- key: garden-in-sochi-arshile-gorky
+  name: Garden in Sochi
+  kind: painting
+  made: 1941
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '335.1942'
+  museum_url: https://www.moma.org/collection/works/79474
+  sources:
+  - moma-open-data
+  people:
+  - person: arshile-gorky
+    role: creator
+  prominence: 3
+- key: rue-de-la-sante-yves-tanguy
+  name: Rue de la Santé
+  kind: painting
+  made: 1925
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '338.1963'
+  museum_url: https://www.moma.org/collection/works/79483
+  sources:
+  - moma-open-data
+  people:
+  - person: yves-tanguy
+    role: creator
+  prominence: 3
+- key: christ-and-the-children-emil-nolde
+  name: Christ and the Children
+  kind: painting
+  made: 1910
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '341.1955'
+  museum_url: https://www.moma.org/collection/works/79494
+  sources:
+  - moma-open-data
+  people:
+  - person: emil-nolde
+    role: creator
+  prominence: 3
+- key: meadowland-gerhard-richter
+  name: Meadowland
+  kind: painting
+  made: 1985
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '350.1985'
+  museum_url: https://www.moma.org/collection/works/79515
+  sources:
+  - moma-open-data
+  people:
+  - person: gerhard-richter
+    role: creator
+  prominence: 3
+- key: artist-s-studio-the-dance-roy-lichtenstein
+  name: Artist's Studio "The Dance"
+  kind: painting
+  made: 1974
+  medium: Oil and magna on canvas
+  museum: museum-of-modern-art
+  accession: '362.1990'
+  museum_url: https://www.moma.org/collection/works/79538
+  sources:
+  - moma-open-data
+  people:
+  - person: roy-lichtenstein
+    role: creator
+  prominence: 3
+- key: no-37-no-19-slate-blue-and-brown-on-plum-mark-rothko
+  name: No. 37/No. 19 (Slate Blue and Brown on Plum)
+  kind: painting
+  made: 1958
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '389.1961'
+  museum_url: https://www.moma.org/collection/works/79596
+  sources:
+  - moma-open-data
+  people:
+  - person: mark-rothko
+    role: creator
+  prominence: 3
+- key: network-of-stoppages-marcel-duchamp
+  name: Network of Stoppages
+  kind: painting
+  made: 1914
+  medium: Oil and pencil on canvas
+  museum: museum-of-modern-art
+  accession: '390.1970'
+  museum_url: https://www.moma.org/collection/works/79600
+  sources:
+  - moma-open-data
+  people:
+  - person: marcel-duchamp
+    role: creator
+  prominence: 3
+- key: dining-room-overlooking-the-garden-the-breakfast-pierre-bonnard
+  name: Dining Room Overlooking the Garden (The Breakfast Room)
+  kind: painting
+  made: 1930
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '392.1941'
+  museum_url: https://www.moma.org/collection/works/79604
+  sources:
+  - moma-open-data
+  people:
+  - person: pierre-bonnard
+    role: creator
+  prominence: 3
+- key: new-york-movie-edward-hopper
+  name: New York Movie
+  kind: painting
+  made: 1939
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '396.1941'
+  museum_url: https://www.moma.org/collection/works/79616
+  sources:
+  - moma-open-data
+  people:
+  - person: edward-hopper
+    role: creator
+  prominence: 3
+- key: portrait-of-gerti-schiele-egon-schiele
+  name: Portrait of Gerti Schiele
+  kind: painting
+  made: 1909
+  medium: Oil, silver, gold-bronze paint, and pencil on canvas
+  museum: museum-of-modern-art
+  accession: '451.1982'
+  museum_url: https://www.moma.org/collection/works/79721
+  sources:
+  - moma-open-data
+  people:
+  - person: egon-schiele
+    role: creator
+  prominence: 3
+- key: self-portrait-with-palette-lovis-corinth
+  name: Self-Portrait with Palette
+  kind: painting
+  made: 1924
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '320.1950'
+  museum_url: https://www.moma.org/collection/works/79741
+  sources:
+  - moma-open-data
+  people:
+  - person: lovis-corinth
+    role: creator
+  prominence: 3
+- key: child-with-birds-karel-appel
+  name: Child with Birds
+  kind: painting
+  made: 1950
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '327.1955'
+  museum_url: https://www.moma.org/collection/works/79756
+  sources:
+  - moma-open-data
+  people:
+  - person: karel-appel
+    role: creator
+  prominence: 3
+- key: hope-ii-gustav-klimt
+  name: Hope, II
+  kind: painting
+  made: 1907
+  medium: Oil, gold, and platinum on canvas
+  museum: museum-of-modern-art
+  accession: '468.1978'
+  museum_url: https://www.moma.org/collection/works/79792
+  sources:
+  - moma-open-data
+  people:
+  - person: gustav-klimt
+    role: creator
+  prominence: 3
+- key: the-starry-night-vincent-van-gogh
+  name: The Starry Night
+  kind: painting
+  made: 1889
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '472.1941'
+  museum_url: https://www.moma.org/collection/works/79802
+  sources:
+  - moma-open-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: phases-of-the-moon-paul-delvaux
+  name: Phases of the Moon
+  kind: painting
+  made: 1939
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '504.1951'
+  museum_url: https://www.moma.org/collection/works/79848
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-delvaux
+    role: creator
+  prominence: 3
+- key: masks-confronting-death-james-ensor
+  name: Masks Confronting Death
+  kind: painting
+  made: 1888
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '505.1951'
+  museum_url: https://www.moma.org/collection/works/79855
+  sources:
+  - moma-open-data
+  people:
+  - person: james-ensor
+    role: creator
+  prominence: 3
+- key: the-city-maria-helena-vieira-da-silva
+  name: The City
+  kind: painting
+  made: 1950
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '508.1965'
+  museum_url: https://www.moma.org/collection/works/79873
+  sources:
+  - moma-open-data
+  people:
+  - person: maria-helena-vieira-da-silva
+    role: creator
+  prominence: 3
+- key: agapanthus-claude-monet
+  name: Agapanthus
+  kind: painting
+  made: 1914
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '527.1992'
+  museum_url: https://www.moma.org/collection/works/79922
+  sources:
+  - moma-open-data
+  people:
+  - person: claude-monet
+    role: creator
+  prominence: 3
+- key: portrait-of-a-woman-lucian-freud
+  name: Portrait of a Woman
+  kind: painting
+  made: 1949
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '546.1954'
+  museum_url: https://www.moma.org/collection/works/79954
+  sources:
+  - moma-open-data
+  people:
+  - person: lucian-freud
+    role: creator
+  prominence: 3
+- key: self-portrait-with-a-model-george-grosz
+  name: Self-Portrait with a Model
+  kind: painting
+  made: 1928
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '548.1954'
+  museum_url: https://www.moma.org/collection/works/79955
+  sources:
+  - moma-open-data
+  people:
+  - person: george-grosz
+    role: creator
+  prominence: 3
+- key: blue-and-violet-flowers-emil-nolde
+  name: Blue and Violet Flowers
+  kind: painting
+  made: 1916
+  medium: Oil on burlap
+  museum: museum-of-modern-art
+  accession: '555.1956'
+  museum_url: https://www.moma.org/collection/works/79958
+  sources:
+  - moma-open-data
+  people:
+  - person: emil-nolde
+    role: creator
+  prominence: 3
+- key: the-old-mill-chaim-soutine
+  name: The Old Mill
+  kind: painting
+  made: 1922
+  estimated: true
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '557.1954'
+  museum_url: https://www.moma.org/collection/works/79960
+  sources:
+  - moma-open-data
+  people:
+  - person: chaim-soutine
+    role: creator
+  prominence: 3
+- key: man-at-a-window-jean-arp
+  name: Man at a Window
+  kind: painting
+  made: 1930
+  medium: Oil and cord on canvas
+  museum: museum-of-modern-art
+  accession: '575.1967'
+  museum_url: https://www.moma.org/collection/works/79995
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-arp
+    role: creator
+  prominence: 3
+- key: portrait-of-mme-zamaron-suzanne-valadon
+  name: Portrait of Mme Zamaron
+  kind: painting
+  made: 1922
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '581.1964'
+  museum_url: https://www.moma.org/collection/works/80011
+  sources:
+  - moma-open-data
+  people:
+  - person: suzanne-valadon
+    role: creator
+  prominence: 3
+- key: the-olive-trees-vincent-van-gogh
+  name: The Olive Trees
+  kind: painting
+  made: 1889
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '581.1998'
+  museum_url: https://www.moma.org/collection/works/80013
+  sources:
+  - moma-open-data
+  people:
+  - person: vincent-van-gogh
+    role: creator
+  prominence: 3
+- key: illumined-pleasures-salvador-dali
+  name: Illumined Pleasures
+  kind: painting
+  made: 1929
+  medium: Oil and collage on board
+  museum: museum-of-modern-art
+  accession: '584.1967'
+  museum_url: https://www.moma.org/collection/works/80021
+  sources:
+  - moma-open-data
+  people:
+  - person: salvador-dali
+    role: creator
+  prominence: 3
+- key: setting-sun-sardine-fishing-adagio-opus-221-from-paul-signac
+  name: Setting Sun. Sardine Fishing. Adagio. Opus 221 from the series The Sea, The Boats, Concarneau
+  kind: painting
+  made: 1891
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '585.1998'
+  museum_url: https://www.moma.org/collection/works/80023
+  sources:
+  - moma-open-data
+  people:
+  - person: paul-signac
+    role: creator
+  prominence: 3
+- key: simultaneous-counter-composition-theo-van-doesburg
+  name: Simultaneous Counter-Composition
+  kind: painting
+  made: 1929
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '588.1967'
+  museum_url: https://www.moma.org/collection/works/80028
+  sources:
+  - moma-open-data
+  people:
+  - person: theo-van-doesburg
+    role: creator
+  prominence: 3
+- key: the-sleeping-gypsy
+  museum: museum-of-modern-art
+  accession: '646.1939'
+  museum_url: https://www.moma.org/collection/works/80172
+  sources:
+  - moma-open-data
+- key: water-lilies-claude-monet
+  museum: museum-of-modern-art
+  accession: 666.1959.a-c
+  museum_url: https://www.moma.org/collection/works/80220
+  sources:
+  - moma-open-data
+- key: conversation-ii-francis-picabia
+  name: Conversation II
+  kind: painting
+  made: 1922
+  estimated: true
+  medium: Watercolor on board
+  museum: museum-of-modern-art
+  accession: '687.1990'
+  museum_url: https://www.moma.org/collection/works/80255
+  sources:
+  - moma-open-data
+  people:
+  - person: francis-picabia
+    role: creator
+  prominence: 3
+- key: i-antoni-tapies
+  name: '"I"'
+  kind: painting
+  made: 1961
+  medium: Latex paint with marble dust on canvas
+  museum: museum-of-modern-art
+  accession: '691.1990'
+  museum_url: https://www.moma.org/collection/works/80267
+  sources:
+  - moma-open-data
+  people:
+  - person: antoni-tapies
+    role: creator
+  prominence: 3
+- key: explosion-george-grosz
+  name: Explosion
+  kind: painting
+  made: 1917
+  medium: Oil on board
+  museum: museum-of-modern-art
+  accession: '780.1963'
+  museum_url: https://www.moma.org/collection/works/80347
+  sources:
+  - moma-open-data
+  people:
+  - person: george-grosz
+    role: creator
+  prominence: 3
+- key: reservist-of-the-first-division-kazimir-malevich
+  name: Reservist of the First Division
+  kind: painting
+  made: 1914
+  medium: Oil on canvas with collage of printed paper, postage stamp, and thermometer
+  museum: museum-of-modern-art
+  accession: '814.1935'
+  museum_url: https://www.moma.org/collection/works/80380
+  sources:
+  - moma-open-data
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 3
+- key: woman-with-pails-dynamic-arrangement-kazimir-malevich
+  name: 'Woman with Pails: Dynamic Arrangement'
+  kind: painting
+  made: 1912
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '815.1935'
+  museum_url: https://www.moma.org/collection/works/80381
+  sources:
+  - moma-open-data
+  people:
+  - person: kazimir-malevich
+    role: creator
+  prominence: 3
+- key: rayonism-blue-green-forest-natalia-goncharova
+  name: Rayonism, Blue-Green Forest
+  kind: painting
+  made: 1913
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '1012.1983'
+  museum_url: https://www.moma.org/collection/works/80480
+  sources:
+  - moma-open-data
+  people:
+  - person: natalia-goncharova
+    role: creator
+  prominence: 3
+- key: composition-el-lissitzky
+  name: Composition
+  kind: painting
+  made: 1922
+  medium: Oil and tempera on wood
+  museum: museum-of-modern-art
+  accession: '1039.1983'
+  museum_url: https://www.moma.org/collection/works/80502
+  sources:
+  - moma-open-data
+  people:
+  - person: el-lissitzky
+    role: creator
+  prominence: 3
+- key: woodmen-georg-baselitz
+  name: Woodmen
+  kind: painting
+  made: 1967
+  medium: Charcoal and synthetic resin on canvas
+  museum: museum-of-modern-art
+  accession: '1261.1999'
+  museum_url: https://www.moma.org/collection/works/80629
+  sources:
+  - moma-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: the-storm-edvard-munch
+  name: The Storm
+  kind: painting
+  made: 1893
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '1351.1974'
+  museum_url: https://www.moma.org/collection/works/80644
+  sources:
+  - moma-open-data
+  people:
+  - person: edvard-munch
+    role: creator
+  prominence: 3
+- key: tribulations-of-saint-anthony-james-ensor
+  name: Tribulations of Saint Anthony
+  kind: painting
+  made: 1887
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '1642.1940'
+  museum_url: https://www.moma.org/collection/works/80683
+  sources:
+  - moma-open-data
+  people:
+  - person: james-ensor
+    role: creator
+  prominence: 3
+- key: leaves-and-navels-jean-arp
+  name: Leaves and Navels
+  kind: painting
+  made: 1929
+  medium: Oil and cord on canvas
+  museum: museum-of-modern-art
+  accession: '1647.1940'
+  museum_url: https://www.moma.org/collection/works/80686
+  sources:
+  - moma-open-data
+  people:
+  - person: jean-arp
+    role: creator
+  prominence: 3
+- key: five-times-titmouse-georg-baselitz
+  name: Five Times Titmouse
+  kind: painting
+  made: 1988
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '93.2002'
+  museum_url: https://www.moma.org/collection/works/84176
+  sources:
+  - moma-open-data
+  people:
+  - person: georg-baselitz
+    role: creator
+  prominence: 3
+- key: seated-woman-being-served-tea-by-standing-compan-david-hockney
+  name: Seated Woman Being Served Tea by Standing Companion
+  kind: painting
+  made: 1963
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '639.2005'
+  museum_url: https://www.moma.org/collection/works/99391
+  sources:
+  - moma-open-data
+  people:
+  - person: david-hockney
+    role: creator
+  prominence: 3
+- key: self-portrait-with-two-flowers-in-her-raised-lef-paula-modersohn-becker
+  name: Self-Portrait with Two Flowers in Her Raised Left Hand
+  kind: painting
+  made: 1907
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '570.2017'
+  museum_url: https://www.moma.org/collection/works/216210
+  sources:
+  - moma-open-data
+  people:
+  - person: paula-modersohn-becker
+    role: creator
+  prominence: 3
+- key: green-tea-leonora-carrington
+  name: Green Tea
+  kind: painting
+  made: 1942
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '145.2019'
+  museum_url: https://www.moma.org/collection/works/297568
+  sources:
+  - moma-open-data
+  people:
+  - person: leonora-carrington
+    role: creator
+  prominence: 3
+- key: and-then-we-saw-the-daughter-of-the-minotaur-leonora-carrington
+  name: And Then We Saw the Daughter of the Minotaur
+  kind: painting
+  made: 1953
+  medium: Oil on canvas
+  museum: museum-of-modern-art
+  accession: '146.2019'
+  museum_url: https://www.moma.org/collection/works/393384
+  sources:
+  - moma-open-data
+  people:
+  - person: leonora-carrington
+    role: creator
+  prominence: 3
