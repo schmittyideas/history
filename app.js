@@ -70,8 +70,8 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => getAll(t).catch(() => []);
-      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links, raw.event_places] = await Promise.all(
-        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links", "event_places"].map(optional));
+      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links, raw.event_places, raw.museums] = await Promise.all(
+        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links", "event_places", "museums"].map(optional));
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -139,6 +139,14 @@ function indexData(raw) {
     worksBy: id => {
       const byId = Object.fromEntries((raw.artworks || []).map(w => [w.id, w]));
       return (raw.artwork_people || []).filter(x => x.entity_id === id && x.role === "creator").map(x => byId[x.artwork_id]).filter(Boolean);
+    },
+    // Paintings and other works with a picture, for the person panel: a person's own works (creator) and works that show them (subject),
+    // best first. Pictures are links to a museum's open collection (see sql/011, sql/014), never copied.
+    museumById: Object.fromEntries((raw.museums || []).map(m => [m.id, m])),
+    picturedWorks: (id, role) => {
+      const byWork = Object.fromEntries((raw.artworks || []).map(w => [w.id, w]));
+      return (raw.artwork_people || []).filter(x => x.entity_id === id && x.role === role).map(x => byWork[x.artwork_id])
+        .filter(w => w && w.kind !== "film" && w.image_thumb).sort((a, b) => (b.prominence ?? 3) - (a.prominence ?? 3) || byYear(a.start_year, b.start_year));
     },
     // Where a record's facts come from (usually its Wikipedia article): record type + key -> sources.
     sourcesFor: (type, key) => {
@@ -892,10 +900,41 @@ function select(id) {
   rows.forEach(([k, v]) => dl.append(h("dt", {}, k), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
   box.append(
     h("div", { class: "kind", style: `color:${colorFor(p)}`, text: (p.type || "Person") + (db.marriedIn.has(id) ? " · married in" : "") }),
-    h("h2", { text: p.name }), dl,
+    h("h2", { text: p.name }), ...(personPicture(p) || []), dl,
+    ...workGallery(db.picturedWorks(id, "creator"), "Works in open museum collections", db),
+    ...workGallery(db.picturedWorks(id, "subject"), "Shown in", db),
     h("button", { type: "button", class: "btn ghost", onclick: () => run(p.name, { pushTrail: true }), text: `Show ${p.name}'s family` })
   );
   drawMap();
+}
+
+// Pictures are links to Wikimedia Commons or a museum's open collection, never copies; each carries its credit and a link back.
+// A picture that fails to load is dropped so the panel never shows a broken image.
+function picture(src, alt, className) {
+  const img = h("img", { src, alt, loading: "lazy", decoding: "async", referrerpolicy: "no-referrer", class: className || "" });
+  img.addEventListener("error", () => { (img.closest("figure") || img).remove(); });
+  return img;
+}
+function personPicture(p) {
+  if (!p.image_thumb) return null;
+  const credit = ["Wikimedia Commons", p.image_license].filter(Boolean).join(", ");
+  return [h("figure", { class: "portrait" }, picture(p.image_thumb, `Picture from the Wikipedia article on ${p.name}`),
+    h("figcaption", {}, p.image_page ? h("a", { class: "ext", href: p.image_page, target: "_blank", rel: "noopener", text: credit }) : credit))];
+}
+function workGallery(works, heading, db) {
+  if (!works.length) return [];
+  const shown = works.slice(0, 12);
+  const grid = h("div", { class: "works" }, ...shown.map(w => {
+    const m = db.museumById[w.museum_id], href = w.museum_url || w.image_page;
+    const cap = [w.name, fmtYear(w.start_year)].filter(Boolean).join(", ");
+    const fig = h("figure", {}, picture(w.image_thumb, w.name),
+      h("figcaption", {}, cap, m ? h("span", { class: "where", text: m.name }) : ""));
+    if (w.image_credit) fig.title = w.image_credit;
+    return href ? h("a", { href, target: "_blank", rel: "noopener", class: "work", title: `${w.name}${m ? ` at ${m.name}` : ""} (opens the museum's page)` }, fig) : fig;
+  }));
+  return [h("h3", { class: "works-h", text: heading }), grid,
+    ...(works.length > shown.length ? [h("p", { class: "hint", text: `${works.length - shown.length} more recorded.` })] : []),
+    h("p", { class: "hint", text: "Pictures load from the museums' open collections (CC0 or public domain); each links to the museum's own page." })];
 }
 
 function selectEvent(id) {

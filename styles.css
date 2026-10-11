@@ -283,3 +283,17 @@ dd { margin: 0; font-variant-numeric: tabular-nums; min-width: 0; }
 .wiki { font-family: var(--mono); font-size: 11px; color: var(--woad); margin-left: 6px; text-decoration: none; white-space: nowrap; }
 .wiki:hover { text-decoration: underline; }
 .wiki:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+
+/* Pictures on the person panel: the portrait (Wikimedia Commons) and works from museums' open collections */
+aside.detail .portrait { margin: 0; display: grid; gap: 4px; justify-items: start; }
+aside.detail .portrait img { display: block; width: 100%; max-width: 180px; height: auto; border-radius: 3px; border: 1px solid var(--rule); background: var(--linen); }
+aside.detail figcaption { font-size: 11px; color: var(--muted); line-height: 1.3; }
+aside.detail figcaption a { color: var(--muted); }
+.works-h { font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 0; }
+.works { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px 8px; }
+.works figure { margin: 0; display: grid; gap: 3px; align-content: start; }
+.works img { display: block; width: 100%; height: 92px; object-fit: cover; border-radius: 3px; border: 1px solid var(--rule); background: var(--linen); }
+.works a.work { color: inherit; text-decoration: none; border-radius: 3px; }
+.works a.work:hover figcaption, .works a.work:focus-visible figcaption { color: var(--ink); text-decoration: underline; }
+.works a.work:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
+.works .where { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .02em; }
