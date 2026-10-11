@@ -96,6 +96,28 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 - A realm that other batches already touch (Timur, Manzikert, Ankara, 1453) is mostly **link-only updates**: add the people to the existing event key rather than defining a new event.
 - Tell the agent to check existing keys in the sibling batch files before using one (the Byzantine emperors, Pius V, Philip II, Sigismund all resolved).
 
+## Calibration: item 6 (the world century by century, with maps), 2026-10-11
+
+- Added **133 people**, 159 title rows, 74 places, 49 events (38 new, 11 link-only), 51 discrepancies and 42 realms, in 5 data PRs (#169, #170, #175, #176, #177), one agent each, plus the maps PR (#168): four border snapshots and the realm-to-map-name mapping. No site code changed.
+- Tokens: the five research agents used **about 1.38M** (measured). The main session's share is not measured; roughly 0.4-0.5M. So about **1.8M tokens, or about 13,500 per person**, lower than items 2-4 because each ruler needed only their reign, a few events and few places. Credit used: not readable from here.
+- Batches ran 110-170 preview rows. The maps PR was checked in the real Year view at 375px in both themes.
+- To list realms with rulers near a snapshot year but none at it (the gaps), run this against the History database:
+  `with y(year) as (values (1100),(1200),(1300),(1400),(1500)), r as (select distinct realm from titles where start_year<1600) select y.year, string_agg(r.realm, ', ' order by r.realm) from y cross join r where not exists (select 1 from titles t where t.realm=r.realm and t.start_year<=y.year and coalesce(t.end_year,2100)>=y.year) and exists (select 1 from titles t where t.realm=r.realm and t.start_year<=y.year+60 and coalesce(t.end_year,2100)>=y.year-60) group by y.year order by y.year;`
+
+## Lessons from item 6
+
+- **Plan the rulers first.** Item 6 had no list of people: each snapshot year got a ruler plan (Wikipedia title, realm, title wording) written from what the maps draw and what the database lacked, and the agents verified every reign against the article. Check the plan's titles against the downloads before launching: about one in ten needed an alternate title (Kulothunga-style spellings, "Aimery of Cyprus", "Hans, King of Denmark").
+- **Maps:** process new snapshots with the same recipe (round to 3 decimals, drop repeats, keep four properties; drop shapes left with fewer than four points) and check every mapped name exists on some snapshot. The source's labels are not ours (its 1200 Egypt is "Fatimid Caliphate"): map the realm that really ruled to the label the map uses.
+- **Title wording follows the person's real rank** (Count of Sicily, Voivode of Wallachia, Prince of Moscow), not the plan; a realm may carry several wordings (Poland, Moscow).
+- **A life moment needs a place.** Two batches (1400, 1500) each had one "born" moment with a year and no place; the preview caught both. Tell agents: no place in the article, no moment.
+- **`xargs` treats an apostrophe as a quote** (Al-Musta'li, Na'od): feed titles with `xargs -d '\n'`. A download list that dies silently leaves the next agent waiting.
+- **The apply queue is shared.** The 1200 apply took 44 minutes because other sessions' large painting batches were ahead of it; preview dependent batches only after the previous apply is `completed`, and check the run list before assuming a hang.
+- Agents tend to propose estimated starts for rulers whose articles give none (Narasimha Raya II, Huayna Capac, Vitale Michiel I, Henry of Portugal): the rule held, the person is kept and the title left out, and the gap is listed.
+
+## The queue is finished
+
+Items 1 to 6 are done (English monarchs, Europe's big thrones, Indian rulers, East Asian dynasties, the Ottoman sultans and the Seljuks of Rum, the world century by century). What remains is the gaps items on the board (#72, #80, #151, #164, #178).
+
 ## Lessons from item 1
 
 - **Wikipedia:** research agents' WebFetch could not reach `en.wikipedia.org`, even with network access set to Full (curl could). Download the articles first with `curl` from the main session, saved as plain text, then have the agents read the local copies. Use the MediaWiki API (`action=query&prop=extracts&explaintext=1`) with a descriptive `User-Agent`; it rate-limits (HTTP 429), so fetch one article at a time with pauses and retries. Redirected titles can land on a disambiguation page ("Victoria" is one; "Queen Victoria" is the article). Check the file isn't an error before launching agents.
