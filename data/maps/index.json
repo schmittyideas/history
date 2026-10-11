@@ -4,17 +4,24 @@
   "license": "GPL-3.0",
   "years": {
     "1000": "world_1000.geojson",
-    "1100": "world_1100.geojson"
+    "1100": "world_1100.geojson",
+    "1200": "world_1200.geojson",
+    "1300": "world_1300.geojson",
+    "1400": "world_1400.geojson",
+    "1500": "world_1500.geojson"
   },
   "realms": {
     "England": [
-      "England"
+      "England",
+      "English territory",
+      "Angevin Empire"
     ],
     "Scotland": [
       "Scotland"
     ],
     "France": [
-      "Kingdom of France"
+      "Kingdom of France",
+      "France"
     ],
     "Holy Roman Empire": [
       "Holy Roman Empire"
@@ -26,7 +33,8 @@
       "Venice"
     ],
     "León": [
-      "León"
+      "León",
+      "Castilla"
     ],
     "Pamplona": [
       "Navarre"
@@ -36,25 +44,32 @@
     ],
     "Denmark": [
       "Denmark-Norway",
-      "Denmark"
+      "Denmark",
+      "Kalmar Union"
     ],
     "Norway": [
       "Denmark-Norway",
-      "Norway"
+      "Norway",
+      "Kalmar Union"
     ],
     "Sweden": [
-      "Sweden"
+      "Sweden",
+      "Kalmar Union"
     ],
     "Poland": [
-      "Poland"
+      "Poland",
+      "Poland-Lithuania"
     ],
     "Hungary": [
       "Magyars",
-      "Hungary"
+      "Hungary",
+      "Kingdom of Hungary",
+      "Imperial Hungary"
     ],
     "Kievan Rus'": [
       "Kyivan Rus",
-      "Kievan Rus"
+      "Kievan Rus",
+      "Principality of Kyiv"
     ],
     "Byzantine Empire": [
       "Byzantine Empire"
@@ -63,7 +78,8 @@
       "Croatia"
     ],
     "Georgia": [
-      "Kingdom of Georgia"
+      "Kingdom of Georgia",
+      "Georgia"
     ],
     "Abkhazia": [
       "Kingdom of Georgia"
@@ -102,7 +118,9 @@
       "Nan Chao"
     ],
     "Japan": [
-      "Imperial Japan (Fujiwara)"
+      "Imperial Japan (Fujiwara)",
+      "Shogun Japan (Kamakura)",
+      "Japan"
     ],
     "Goryeo": [
       "Korea"
@@ -112,7 +130,232 @@
       "Đại Việt"
     ],
     "Khmer Empire": [
-      "Khmer Empire"
+      "Khmer Empire",
+      "Cambodia"
+    ],
+    "Normandy": [
+      "Angevin Empire"
+    ],
+    "Aquitaine": [
+      "Angevin Empire"
+    ],
+    "Anjou": [
+      "Angevin Empire"
+    ],
+    "Castile": [
+      "Castile",
+      "Castille",
+      "Castilla"
+    ],
+    "Portugal": [
+      "Portugal"
+    ],
+    "Navarre": [
+      "Navarre"
+    ],
+    "Sicily": [
+      "Sicily",
+      "Emirate of Sicily"
+    ],
+    "Naples": [
+      "Sicily"
+    ],
+    "Grand Duchy of Lithuania": [
+      "Lithuania",
+      "Poland-Lithuania"
+    ],
+    "Grand Duchy of Vladimir": [
+      "Principality of Vladimir-Suzdal"
+    ],
+    "Galicia-Volhynia": [
+      "Principality of Galicia-Volhynia"
+    ],
+    "Grand Duchy of Moscow": [
+      "Grand Duchy of Moscow"
+    ],
+    "Serbia": [
+      "Serbia",
+      "Raška"
+    ],
+    "Bulgaria": [
+      "Bulgar Khanate"
+    ],
+    "Bosnia": [
+      "Bosnia"
+    ],
+    "Principality of Wallachia": [
+      "Principality of Wallachia"
+    ],
+    "Principality of Moldavia": [
+      "Moldova"
+    ],
+    "Empire of Trebizond": [
+      "Trebizond"
+    ],
+    "Ottoman Empire": [
+      "Ottoman Empire"
+    ],
+    "Sultanate of Rum": [
+      "Seljuk Empire",
+      "Seljuk Caliphate"
+    ],
+    "Great Seljuk Empire": [
+      "Seljuk Empire"
+    ],
+    "Mamluk Sultanate": [
+      "Mamluke Sultanate"
+    ],
+    "Ayyubid Sultanate": [
+      "Fatimid Caliphate"
+    ],
+    "Almoravid dynasty": [
+      "Almoravid dynasty"
+    ],
+    "Almohad Caliphate": [
+      "Almohad Caliphate"
+    ],
+    "Marinid Sultanate": [
+      "Morocco"
+    ],
+    "Hafsid Sultanate": [
+      "Hafsid Caliphate"
+    ],
+    "Emirate of Granada": [
+      "Granada"
+    ],
+    "Wattasid Sultanate": [
+      "Wattasid Caliphate"
+    ],
+    "Ilkhanate": [
+      "Ilkhanate"
+    ],
+    "Golden Horde": [
+      "Khanate of the Golden Horde",
+      "Golden Horde",
+      "Blue Horde",
+      "White Horde"
+    ],
+    "Chagatai Khanate": [
+      "Chagatai Khanate"
+    ],
+    "Khwarazmian Empire": [
+      "Khwarazmian dynasty"
+    ],
+    "Western Liao": [
+      "Kara Khitai Khaganate"
+    ],
+    "Ghurid Sultanate": [
+      "Ghaznavid Emirate"
+    ],
+    "Timurid Empire": [
+      "Timurid Empire",
+      "Timurid Emirates"
+    ],
+    "Crimean Khanate": [
+      "Crimean Khanate"
+    ],
+    "Mongol Empire": [
+      "Mongol Empire",
+      "Mongols"
+    ],
+    "Yuan dynasty": [
+      "Great Khanate"
+    ],
+    "Ming dynasty": [
+      "Ming Chinese Empire"
+    ],
+    "Western Xia": [
+      "Xixia"
+    ],
+    "Kamakura shogunate": [
+      "Shogun Japan (Kamakura)"
+    ],
+    "Ashikaga shogunate": [
+      "Shogun Japan (Kamakura)",
+      "Japan"
+    ],
+    "Joseon": [
+      "Korea"
+    ],
+    "Ryukyu Kingdom": [
+      "Chūzan"
+    ],
+    "Đại Việt": [
+      "Annam"
+    ],
+    "Đại Ngu": [
+      "Đại Việt"
+    ],
+    "Pagan Kingdom": [
+      "Kingdom of Pagan",
+      "Bagan",
+      "Pagan"
+    ],
+    "Sukhothai Kingdom": [
+      "Sukhothai",
+      "Kingdom of Sukhotai"
+    ],
+    "Ayutthaya Kingdom": [
+      "Ayutthaya"
+    ],
+    "Malacca Sultanate": [
+      "Malacca"
+    ],
+    "Champa": [
+      "Champa",
+      "Champa City States"
+    ],
+    "Hanthawaddy Kingdom": [
+      "Pegu"
+    ],
+    "Ava Kingdom": [
+      "Burmese kingdoms"
+    ],
+    "Pandya dynasty": [
+      "Pandya state"
+    ],
+    "Delhi Sultanate": [
+      "Sultanate of Delhi"
+    ],
+    "Vijayanagara Empire": [
+      "Vijayanagara"
+    ],
+    "Bahmani Sultanate": [
+      "Bahmani Kingdom"
+    ],
+    "Bengal Sultanate": [
+      "Bengal"
+    ],
+    "Mewar": [
+      "Rajastan"
+    ],
+    "Majapahit": [
+      "Kediri"
+    ],
+    "Ethiopian Empire": [
+      "Ethiopia"
+    ],
+    "Mali Empire": [
+      "Mali"
+    ],
+    "Songhai Empire": [
+      "Songhai"
+    ],
+    "Kingdom of Kongo": [
+      "Congo"
+    ],
+    "Kingdom of Benin": [
+      "Benin"
+    ],
+    "Aztec Empire": [
+      "Aztec Empire"
+    ],
+    "Inca Empire": [
+      "Inca Empire"
+    ],
+    "Kanem-Bornu": [
+      "Kanem-Bornu",
+      "Kanem"
     ]
   },
   "points": {
@@ -163,6 +406,206 @@
     "Zirid Ifriqiya": [
       10.096,
       35.678
+    ],
+    "Aragon": [
+      -0.877,
+      41.649
+    ],
+    "Naples": [
+      14.268,
+      40.852
+    ],
+    "Kingdom of Jerusalem": [
+      35.217,
+      31.768
+    ],
+    "Armenian Kingdom of Cilicia": [
+      35.8,
+      37.45
+    ],
+    "Ayyubid Sultanate": [
+      31.236,
+      30.044
+    ],
+    "Zagwe dynasty": [
+      39.047,
+      12.031
+    ],
+    "Majapahit": [
+      112.39,
+      -7.55
+    ],
+    "Hanthawaddy Kingdom": [
+      96.48,
+      17.34
+    ],
+    "Ava Kingdom": [
+      95.98,
+      21.82
+    ],
+    "Ryukyu Kingdom": [
+      127.68,
+      26.21
+    ],
+    "Malacca Sultanate": [
+      102.25,
+      2.19
+    ],
+    "Bengal Sultanate": [
+      88.19,
+      24.87
+    ],
+    "Mewar": [
+      74.64,
+      24.88
+    ],
+    "Safavid Iran": [
+      46.29,
+      38.08
+    ],
+    "Jin dynasty": [
+      116.39,
+      39.9
+    ],
+    "Pandya dynasty": [
+      78.12,
+      9.92
+    ],
+    "Kakatiya dynasty": [
+      79.59,
+      17.98
+    ],
+    "Hoysala Empire": [
+      76.02,
+      13.19
+    ],
+    "Delhi Sultanate": [
+      77.21,
+      28.61
+    ],
+    "Principality of Moldavia": [
+      26.1,
+      47.2
+    ],
+    "Principality of Wallachia": [
+      25.45,
+      44.93
+    ],
+    "Golden Horde": [
+      48.0,
+      48.5
+    ],
+    "Ilkhanate": [
+      46.29,
+      38.08
+    ],
+    "Chagatai Khanate": [
+      81.2,
+      43.9
+    ],
+    "Aztec Empire": [
+      -99.13,
+      19.43
+    ],
+    "Inca Empire": [
+      -71.97,
+      -13.52
+    ],
+    "Kingdom of Kongo": [
+      14.25,
+      -6.27
+    ],
+    "Kingdom of Benin": [
+      5.62,
+      6.34
+    ],
+    "Songhai Empire": [
+      0.04,
+      16.27
+    ],
+    "Mali Empire": [
+      -9.2,
+      11.4
+    ],
+    "Ethiopian Empire": [
+      39.5,
+      9.7
+    ],
+    "Grand Duchy of Moscow": [
+      37.62,
+      55.75
+    ],
+    "Grand Duchy of Vladimir": [
+      40.41,
+      56.13
+    ],
+    "Galicia-Volhynia": [
+      24.03,
+      49.84
+    ],
+    "Grand Duchy of Lithuania": [
+      25.28,
+      54.69
+    ],
+    "Serbia": [
+      21.9,
+      43.3
+    ],
+    "Bosnia": [
+      18.4,
+      43.86
+    ],
+    "Empire of Trebizond": [
+      39.72,
+      41.0
+    ],
+    "Khwarazmian Empire": [
+      60.6,
+      41.55
+    ],
+    "Sukhothai Kingdom": [
+      99.7,
+      17.0
+    ],
+    "Ayutthaya Kingdom": [
+      100.56,
+      14.35
+    ],
+    "Champa": [
+      108.9,
+      15.8
+    ],
+    "Kamakura shogunate": [
+      139.55,
+      35.32
+    ],
+    "Ashikaga shogunate": [
+      135.77,
+      35.01
+    ],
+    "Ming dynasty": [
+      116.4,
+      39.9
+    ],
+    "Yuan dynasty": [
+      116.4,
+      39.9
+    ],
+    "Western Xia": [
+      106.2,
+      38.5
+    ],
+    "Joseon": [
+      126.98,
+      37.57
+    ],
+    "Sultanate of Rum": [
+      32.49,
+      37.87
+    ],
+    "Mamluk Sultanate": [
+      31.24,
+      30.04
     ]
   }
 }
