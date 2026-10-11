@@ -78,7 +78,8 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 | `key`, `name`, `type` | Required for new events (type: Battle, Coronation, Shipwreck, Treaty, Crusade, …) |
 | `date` or `year` | Start; add `end_year` for long events |
 | `estimated` | `true` if the date is approximate |
-| `place` | Place key |
+| `place` | Place key: the main place |
+| `places` | Every other place it happened at: list of `{place: key, role: …, note: …}`. Roles: `venue`, `ceremony`, `village`, `start`, `finish`, … The note says what happened there ("Swimming; Paralympic swimming"). The map shows them all when the event is selected |
 | `people` | List of `{person: key, role: …}` (victor, defeated, crowned, died, …) |
 | `prominence`, `obsidian_link`, `note`, `sources` | As above |
 
