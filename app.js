@@ -967,6 +967,32 @@ function selectPlace(id) {
   box.append(h("div", { class: "kind", style: "color:var(--ink)", text: cap(pl.kind) || "Place" }), h("h2", { text: pl.name }), dl,
     h("p", { class: "hint", text: "Everything that happened here is listed in date order under the map." }));
   drawMap();
+  diningNearby(pl, dl);
+}
+
+// "Eat and drink nearby": asked live of the dining database (RouteWeaver's public nearby_dining API), never
+// stored here. Only when config.js names it (HISTORY_CONFIG.dining = { url, key }) and the place has coordinates.
+async function diningNearby(pl, dl) {
+  const c = (window.HISTORY_CONFIG || {}).dining;
+  if (!c?.url || !c?.key || pl.lat == null || pl.lng == null) return;
+  const dd = h("dd", { text: "Looking…" });
+  dl.append(h("dt", { text: "Eat and drink nearby" }), dd);
+  try {
+    const headers = { apikey: c.key, "Content-Type": "application/json" };
+    if (!c.key.startsWith("sb_")) headers.Authorization = `Bearer ${c.key}`;
+    const r = await fetch(`${c.url}/rest/v1/rpc/nearby_dining`, { method: "POST", headers,
+      body: JSON.stringify({ lat: Number(pl.lat), lng: Number(pl.lng), radius_m: 800, max_results: 8 }) });
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    const rows = await r.json();
+    if (S.selected?.kind !== "place" || S.selected.id !== pl.id) return;   // another place was picked meanwhile
+    const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
+    dd.replaceChildren(...joinNodes(rows.map(x => {
+      const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
+      return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
+    }), "None found within 800 m"));
+  } catch (e) {
+    dd.textContent = "Couldn't reach the dining database just now.";
+  }
 }
 // A place stays selected across views only while something in the view connects to it.
 function placeInView(id) {
