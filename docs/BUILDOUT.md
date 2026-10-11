@@ -13,7 +13,7 @@ Ty has more important work that needs his weekly Claude usage. The cloud credits
 
 ## The queue, in order
 
-Do them in this order. Each is a GitHub issue on Project 1. Within each, go in order of importance (oldest and most central first), so stopping early still leaves something useful. Up to about 60–80 records per batch (one intake file and one PR per batch).
+Do them in this order. Each is a GitHub issue on Project 1. Within each, go in order of importance (oldest and most central first), so stopping early still leaves something useful. Up to about 150 preview rows per batch (raised from 60–80 on 2026-10-11) (one intake file and one PR per batch).
 
 | # | Build-out | Issue | Rough size | Notes |
 |---|---|---|---|---|
@@ -49,7 +49,7 @@ When #15 is merged: note the tokens used and, if readable, how much the weekly %
 
 - Added **182 people** (France 22, Holy Roman Empire 24, Castile and León 21, Scotland 24, Byzantium 31, Papacy 60), 221 title rows and 66 discrepancies, in 7 data PRs (#57, #58, #59, #60, #66, #68, #70) plus a coverage backfill (#71). The 6 realms took one agent each (Papacy two).
 - Tokens: the 7 research agents used **about 2.45M** (measured). The main session's share is not measured; roughly 0.4-0.5M. So about **2.9M tokens, or about 16,000 per person** (item 1 was nearer 10,000), because every ruler also has places, moments and events. Credit used: not readable from here; Ty to read the billing page.
-- Batches ran 160-200 preview rows (the guide says 60-80). They were still clean, so one PR per realm was kept; splitting would have made the second half depend on places from the first.
+- Batches ran 160-200 preview rows (the guide then said 60-80; it is now about 150). They were still clean, so one PR per realm was kept; splitting would have made the second half depend on places from the first.
 - Pace: about 1 article per 15-60 seconds is what Wikipedia allowed; downloads, not research, set the pace.
 
 ## Lessons from item 2
