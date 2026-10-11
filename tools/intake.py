@@ -224,6 +224,10 @@ class World:
         except RuntimeError:  # sql/008 not run yet
             self.realms = None
         try:
+            self.event_places = db.select("event_places", "id,event_id,place_id,role,note")
+        except RuntimeError:  # sql/016 not run yet
+            self.event_places = None
+        try:
             self.external = db.select("external_links", "id,record_type,record_key,system,external_id,url,label,note")
         except RuntimeError:  # sql/015 not run yet
             self.external = None
@@ -354,6 +358,13 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 when(x, f, f"event `{k}`")
             if x.get("place"):
                 ref("place", x["place"], f"event `{k}`")
+            # `places`: every other place the event happened at (the venues of an Olympics), each with a role.
+            if x.get("places") and world.event_places is None:
+                p.errors.append(f"event `{k}`: `places` needs the event_places table (sql/016)")
+            for ep_ in as_list(x.get("places")):
+                if not isinstance(ep_, dict) or not ep_.get("role"):
+                    p.errors.append(f"event `{k}` places: every entry needs `place` and `role`"); continue
+                ref("place", ep_.get("place"), f"event `{k}` places")
             for pe in as_list(x.get("people")):
                 ref("person", pe.get("person"), f"event `{k}` people")
             check_sources(x, f"event `{k}`", require=k not in world.events)
@@ -676,6 +687,15 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
                 if not any(r["event_id"] == ev["id"] and r["entity_id"] == pid for r in world.event_people):
                     world.event_people.append(db.insert("event_people", {"event_id": ev["id"], "entity_id": pid, "role": pe.get("role")}))
                     log(f"linked {pe['person']} to {x['key']}")
+            for ep_ in as_list(x.get("places")):
+                plid = world.places[ep_["place"]]["id"]
+                have = next((r for r in world.event_places if r["event_id"] == ev["id"] and r["place_id"] == plid and r["role"] == ep_["role"]), None)
+                if have:
+                    if ep_.get("note") is not None:
+                        db.update("event_places", {"id": have["id"]}, {"note": ep_["note"]})
+                else:
+                    world.event_places.append(db.insert("event_places", {"event_id": ev["id"], "place_id": plid, "role": ep_["role"], "note": ep_.get("note")}))
+                    log(f"linked {ep_['place']} to {x['key']} as {ep_['role']}")
     for _, d in docs:
         for x in as_list(d.get("museums")):
             row = map_fields(x, MUSEUM_FIELDS)

@@ -19,7 +19,7 @@ class FakeDB:
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
                   "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": [],
-                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": [], "external_links": []}
+                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": [], "external_links": [], "event_places": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -326,5 +326,22 @@ def test_external_links():
     errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
     assert sum("needs `system` and an `id` or `url`" in e for e in errs) == 2 and any("`a` listed twice" in e for e in errs)
 
+def test_event_places():
+    db = FakeDB(snapshot()); world = intake.World(db)
+    doc = {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+           "places": [{"key": "pool", "name": "Pool", "lat": 1, "lng": 1, "sources": ["s"]}],
+           "events": [{"key": "games", "name": "Games", "type": "sport", "year": 2028, "place": "battle-abbey", "sources": ["s"],
+                       "places": [{"place": "pool", "role": "venue", "note": "Swimming"}, {"place": "westminster-abbey", "role": "ceremony"}]}]}
+    plan = intake.plan_files(world, [("a.yaml", doc)])
+    assert not plan.errors, plan.errors
+    intake.apply_files(world, [("a.yaml", doc)], log=lambda m: None)
+    rows = db.t["event_places"]
+    assert len(rows) == 2 and {r["role"] for r in rows} == {"venue", "ceremony"} and any(r["note"] == "Swimming" for r in rows)
+    intake.apply_files(intake.World(db), [("a.yaml", doc)], log=lambda m: None)   # again: no duplicates
+    assert len(db.t["event_places"]) == 2
+    bad = {"batch": {"title": "t"}, "events": [{"key": "g2", "name": "G", "type": "x", "year": 1, "places": [{"place": "nowhere", "role": "venue"}, {"place": "pool"}]}]}
+    errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
+    assert any("unknown place `nowhere`" in e for e in errs) and any("needs `place` and `role`" in e for e in errs)
+
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); print("\nALL TESTS PASSED")

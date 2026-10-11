@@ -70,8 +70,8 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => getAll(t).catch(() => []);
-      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links] = await Promise.all(
-        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links"].map(optional));
+      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links, raw.event_places] = await Promise.all(
+        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links", "event_places"].map(optional));
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -93,6 +93,13 @@ function indexData(raw) {
   const filmIds = new Set(films.map(f => f.id));
   const directors = (raw.artwork_people || []).filter(x => x.role === "creator" && filmIds.has("f" + x.artwork_id))
     .map(x => ({ event_id: "f" + x.artwork_id, entity_id: x.entity_id, role: "director" }));
+  // An event's other places (sql/016: the venues of an Olympics), each with a role and a note; placeIds lists them all.
+  const venuesOf = {};
+  (raw.event_places || []).forEach(x => (venuesOf[x.event_id] ||= []).push(x));
+  (raw.events || []).forEach(e => {
+    e.venues = venuesOf[e.id] || [];
+    if (e.venues.length) e.placeIds = [...new Set([e.place_id, ...e.venues.map(v => v.place_id)].filter(v => v != null))];
+  });
   const people = raw.entities || [], rels = raw.relationships || [], events = [...(raw.events || []), ...films];
   const ep = [...(raw.event_people || []), ...directors], places = raw.places || [], pp = raw.person_places || [], titles = raw.titles || [];
   const byId = Object.fromEntries(people.map(p => [p.id, p]));
@@ -913,6 +920,7 @@ function selectEvent(id) {
   [["Date", fmtDate(e.start_date) || fmtYear(e.start_year) || "Unknown"],
    ...(e.end_year != null && e.end_year !== e.start_year ? [["Ended", fmtYear(e.end_year)]] : []),
    ["Where", place ? placeLink(place, place.historical_name ? ` (then ${place.historical_name})` : "") : (e.location || "Unknown")],
+   ...(e.venues?.length ? [[`Venues (${e.venues.length})`, joinNodes(e.venues.map(v => db.placeById[v.place_id]).map((pl, i) => pl && placeLink(pl, ` (${e.venues[i].note || e.venues[i].role})`)).filter(Boolean))]] : []),
    ["People", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")],
    ["Visit today", e.visitable_today ? (e.visit_site || "Yes") : "No"],
    ...externalRow("event", e.key),
@@ -941,7 +949,11 @@ function selectPlace(id) {
     ...(pl.built_by ? [["Built by", linkNames(pl.built_by)]] : []),
     ...(pl.architect ? [["Architect", linkNames(pl.architect)]] : []),
     ["Visit today", pl.visitable_today ? (pl.visit_site || "Yes") : "No"],
-    ["Events here", joinNodes(events.map(e => eventLink(e, e.start_year != null ? ` (${fmtYear(e.start_year)})` : "")), "None linked")],
+    // At a venue, say what the event held here ("2028 Summer Olympics (2028: Swimming)").
+    ["Events here", joinNodes(events.map(e => {
+      const v = (e.venues || []).filter(x => x.place_id === id).map(x => x.note || x.role).join("; ");
+      return eventLink(e, e.start_year != null || v ? ` (${[fmtYear(e.start_year), v].filter(Boolean).join(": ")})` : "");
+    }), "None linked")],
     ...(films.length ? [["Films shot here", joinNodes(films.map(e => eventLink(e, ` (${fmtYear(e.start_year)})`)))]] : []),
     ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
     ...nearbyRows(pl),
@@ -1059,7 +1071,8 @@ function stopsForPerson(id) {
 function stopsForEvent(id) {
   const e = S.db.eventById[id];
   const at = (e?.placeIds || [e?.place_id]).map(pid => S.db.placeById[pid]).filter(Boolean);
-  return at.map(place => ({ year: e.start_year, date: e.start_date, what: e.name, place, rank: 2 }));
+  const what = place => { const v = (e.venues || []).filter(x => x.place_id === place.id).map(x => x.note || x.role); return v.length ? `${e.name}: ${v.join("; ")}` : e.name; };
+  return at.map(place => ({ year: e.start_year, date: e.start_date, what: what(place), place, rank: 2 }));
 }
 // One place's history: its events and the life moments recorded there, with links in place of plain text.
 function stopsForPlace(id) {
