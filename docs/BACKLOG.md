@@ -138,9 +138,9 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 ### Ready (ranked)
 
 #### [P2] Museums: read collections through official APIs for images, accession numbers and links back
-`type: task` · `area: data` · `status: ready` · `issue: #129`
+`type: task` · `area: data` · `status: in progress` · `issue: #129`
 
-For museums marked open-api or open-data-download (Met, Art Institute of Chicago, Cleveland, V&A, SMK, Rijksmuseum, National Gallery of Art, MoMA, Tate, Minneapolis, Smithsonian; Harvard needs a key): match our artworks to their records and store accession number, object page and, where the licence is CC0, image links. For the 100 museums marked unknown: read the terms of use and look for an official API first; never scrape a site that forbids it. Replaces the image part of #62 for these museums.
+Done 2026-10-11 for the Met, Art Institute of Chicago and Cleveland: 378 public-domain paintings by our painters added with accession number, object page and CC0 image links (the Met's v1 search was retired on 2026-10-01; v1.1 is used). Still to do: National Gallery of Art, MoMA, Tate, Minneapolis and the Smithsonian museums (open data downloads on GitHub), Rijksmuseum (Linked Art), V&A and SMK (APIs), Harvard (needs a key). For the 100 museums marked unknown: read the terms of use and look for an official API first; never scrape a site that forbids it. Replaces the image part of #62 for these museums.
 Source: Ty, 2026-10-10.
 
 #### [P3] Artists: remaining gaps (photographers, non-Western, below the 70-edition cut)
