@@ -1072,7 +1072,7 @@ function externalRow(type, key) {
 
 // Places within walking distance of a place (straight-line km), nearest first, and the important things
 // that happened at them: so a venue panel shows what else is around it.
-const NEARBY_KM = 1.5;
+const NEARBY_KM = 5;
 function kmBetween(a, b) {
   const r = Math.PI / 180, dLat = (b.lat - a.lat) * r, dLng = (b.lng - a.lng) * r;
   const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * r) * Math.cos(b.lat * r) * Math.sin(dLng / 2) ** 2;
