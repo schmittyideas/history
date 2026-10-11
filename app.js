@@ -1027,6 +1027,7 @@ async function diningNearby(pl, dl) {
     const rows = (await r.json()).filter(x => !self.has(x.id));
     if (S.selected?.kind !== "place" || S.selected.id !== pl.id) return;   // another place was picked meanwhile
     const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
+    diningPins(rows);
     dd.replaceChildren(...joinNodes(rows.map(x => {
       const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
       return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
@@ -1188,6 +1189,25 @@ function drawStreetMap(host, routes, numbered, placeMode, fit) {
   const view = fit?.length ? fit : bounds;
   if (new Set(view.map(String)).size === 1) streetMap.setView(view[0], 15);
   else streetMap.fitBounds(view, { padding: [24, 24], maxZoom: 16 });
+}
+
+// The dining picks also go on the street map, as small square pins under the place's own, so the map shows
+// where to eat around it. Only when the street map is showing (a place is selected).
+let diningLayer = null;
+function diningPins(rows) {
+  if (!streetMap) return;
+  diningLayer = L.layerGroup().addTo(streetMap);
+  rows.forEach(x => {
+    if (x.latitude == null || x.longitude == null) return;
+    const icon = L.divIcon({ className: "street-pin-wrap", iconSize: null, html: '<span class="dining-pin" aria-hidden="true"></span>' });
+    const m = L.marker([x.latitude, x.longitude], { icon, keyboard: true, title: x.name, alt: x.name, zIndexOffset: -100 }).addTo(diningLayer);
+    m.bindTooltip(`${x.name}${x.type ? ` · ${x.type}` : ""}`, { direction: "top", offset: [0, -6] });
+    if (x.website) m.on("click", () => window.open(x.website, "_blank", "noopener"));
+  });
+  // Widen the view so the picks are in it too (they reach out to the search radius).
+  const all = [...rows.filter(x => x.latitude != null).map(x => [x.latitude, x.longitude]),
+               ...Object.values(streetMap._layers).filter(l => l.getLatLng && !diningLayer.hasLayer(l)).map(l => l.getLatLng())];
+  if (all.length > 1) streetMap.fitBounds(all, { padding: [24, 24], maxZoom: 16 });
 }
 
 function drawMap() {
