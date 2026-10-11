@@ -1,0 +1,603 @@
+batch:
+  title: "The world in 1100: rulers of the main states"
+  requested: "One ruler for each major state on the Year-view map at 1100 (snapshot-year batch of the build-out), with a few dated events of 1085-1115"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp6 directory); nothing was fetched. Line 1-3 of all 23 files were checked and each is the right article. The Barkiyaruq file is headed "Berkyaruq" (same person, key barkiyaruq); David IV's file is headed "David IV" (David the Builder, key david-iv-of-georgia). The long ones (Bolesław III, Coloman, David IV, Baldwin I, Magnus Barefoot, Roger I, Kyansittha) were read selectively (lead, accession, reign overview, death, family for parent links), not every section. Vitale Michiel I: the stub only (files Vitale_I_Michiel and Vitale_Michiel are the same text).
+# - Rulers who did not rule in 1100 itself: none missing, but Bořivoj II of Bohemia took the throne on 25 December 1100 (his article), so he was the duke only at the very end of the snapshot year; Sviatopolk II, Inge, Magnus and the others all reigned through 1100. Roger I of Sicily's countship and Peter I's kingdoms are handled in the title rows.
+# - New realms: Almoravid dynasty ("Almoravid Emir"), Aragon ("King of Aragon"), Navarre ("King of Navarre"), Kingdom of Jerusalem ("King of Jerusalem"). The Peter I article calls his second realm "Pamplona" (an existing realm in the database); the plan asks for Navarre, so the row uses Navarre and the note says so.
+# - Title rows NOT entered (the article states no start date): Vitale Michiel I as Doge of Venice (the stub gives only his death in spring 1102 and the 1099 and 1100 fleets; no accession year) and Henry, Count of Portugal (the article says only that he appears in documents from 1096 and that he and Raymond were granted their counties "several years" before 1103; no date for the countship). Both are entered as people with notes. Also not entered: Baldwin I as Count of Edessa (10 March 1098 to 1100, realm not in the plan).
+# - Roger I of Sicily and Henry: the plan wording "King of Sicily" is used for Roger even though the article calls him Grand Count of Sicily from 1071 and says the kingdom began in 1130; the title note says "styled Count" and names the real style. Henry has no title row, so the wording does not arise.
+# - Title dates: Coloman's reign starts "1095" (the lead: king from 1095, crowned in early 1096, no day) and his King of Croatia row starts 1097 (the lead: king of Croatia from 1097; crowned at Biograd in 1102; see discrepancy). Al-Musta'li's reign starts 1094 (al-Mustansir died 29 December 1094; al-Afdal proclaimed him that day, per the article) and ends 1101 (death on 11 or 12 December 1101). Inge the Elder: "enthroned shortly before 1080" and "may have died around 1110" (lead c. 1105-1110): both ends estimated, and the three years of Blot-Sweyn in the early 1080s are in the note. Jayavarman VI: "from about 1080 to 1107"; start estimated. Yusuf ibn Tashfin: "reigned c. 1061 - 1106"; start estimated, end 1106 (no day). Kyansittha: proclaimed 21 April 1084; ends 1112 (estimated; the article says 1112 or 1113). Bolesław III: duke of Lesser Poland, Silesia and Sandomierz from 1102 (father died 4 June 1102) and of all Poland from 1107 (lead); one row from 1102.
+# - Left out for lack of a clear dated source: the death of Yusuf ibn Tashfin as an event (the article gives only the end of his reign in 1106, no death day or place), and any death year on his person record. Eric I's article gives 10 July 1103 in the lead only. Duan Zhengchun, Jayavarman VI and Mas'ud III have very short articles: no births, places or events beyond those entered. Consorts, children and courts are not entered; links are only the direct lines to people already in the database (Shirakawa, Malik-Shah I, Anawrahta).
+# - Existing records only linked: event battle-of-sagrajas-1086 (Yusuf ibn Tashfin as victor; the date 23 October 1086 agrees with his article), places jerusalem and tbilisi. Not redefined. No existing event for the capture of Jerusalem, so a new one is defined.
+# - Discrepancies recorded below (8): Bolesław III's birth; Kyansittha's birth and his death year; Al-Musta'li's birth; Coloman's return to Hungary in 1095 and how he got Croatia; when David IV became sole king; when Roger I completed the conquest of Sicily. Seen and not entered: Peter I born 1068 or 1069 (the article's own arithmetic, from "aged 35"); Barkiyaruq born 1079 or 1080 (stated as a range); Magnus Barefoot's second Irish campaign 1101 or 1102 (an uncertainty inside one article); the Pacta conventa's authenticity (inside the Coloman discrepancy); who ruled Angkor until 1113 (Jayavarman VI's article says only "may have").
+# - Dates: a full date only where the article gives the day. Moments take a year only (checked: every moment has an integer year). Hijri/Julian forms are not used; where an article gives a month without a day (Eric's "July 1103" in the body, Bořivoj II's "May 1107", "December 1117") the lead's day is used when there is one, otherwise the year.
+# - Coordinates are from general knowledge (2-3 decimals). Vreta Abbey, the Ghazni palace, Mileto and Phimai are approximate points.
+# - Size: 23 people, 24 title rows, 4 realms, 10 places, 5 events (1 link-only), 8 discrepancies, 3 links, 9 moments.
+
+sources:
+  - {key: wp-emperor-horikawa,                    title: "Emperor Horikawa (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Emperor_Horikawa"}
+  - {key: wp-coloman-king-of-hungary,             title: "Coloman, King of Hungary (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Coloman%2C_King_of_Hungary"}
+  - {key: wp-boleslaw-iii-wrymouth,               title: "Bolesław III Wrymouth (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Boles%C5%82aw_III_Wrymouth"}
+  - {key: wp-borivoj-ii-duke-of-bohemia,          title: "Bořivoj II, Duke of Bohemia (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Bo%C5%99ivoj_II%2C_Duke_of_Bohemia"}
+  - {key: wp-sviatopolk-ii-of-kiev,               title: "Sviatopolk II of Kiev (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Sviatopolk_II_of_Kiev"}
+  - {key: wp-eric-i-of-denmark,                   title: "Eric I of Denmark (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Eric_I_of_Denmark"}
+  - {key: wp-magnus-barefoot,                     title: "Magnus Barefoot (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Magnus_Barefoot"}
+  - {key: wp-inge-the-elder,                      title: "Inge the Elder (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Inge_the_Elder"}
+  - {key: wp-david-iv-of-georgia,                 title: "David IV of Georgia (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/David_IV"}
+  - {key: wp-al-mustali,                          title: "Al-Musta'li (Wikipedia)",                         url: "https://en.wikipedia.org/wiki/Al-Musta%27li"}
+  - {key: wp-al-mustazhir,                        title: "Al-Mustazhir (Wikipedia)",                        url: "https://en.wikipedia.org/wiki/Al-Mustazhir"}
+  - {key: wp-barkiyaruq,                          title: "Berkyaruq (Wikipedia)",                           url: "https://en.wikipedia.org/wiki/Berkyaruq"}
+  - {key: wp-masud-iii-of-ghazni,                 title: "Mas'ud III of Ghazni (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Mas%27ud_III_of_Ghazni"}
+  - {key: wp-yusuf-ibn-tashfin,                   title: "Yusuf ibn Tashfin (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Yusuf_ibn_Tashfin"}
+  - {key: wp-peter-i-of-aragon,                   title: "Peter I of Aragon and Pamplona (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Peter_I_of_Aragon_and_Pamplona"}
+  - {key: wp-henry-count-of-portugal,             title: "Henry, Count of Portugal (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Henry%2C_Count_of_Portugal"}
+  - {key: wp-roger-i-of-sicily,                   title: "Roger I of Sicily (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Roger_I_of_Sicily"}
+  - {key: wp-baldwin-i-of-jerusalem,              title: "Baldwin I of Jerusalem (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Baldwin_I_of_Jerusalem"}
+  - {key: wp-vitale-michiel-i,                    title: "Vitale I Michiel (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Vitale_I_Michiel"}
+  - {key: wp-jayavarman-vi,                       title: "Jayavarman VI (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Jayavarman_VI"}
+  - {key: wp-kyansittha,                          title: "Kyansittha (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Kyansittha"}
+  - {key: wp-emperor-chongzong-of-western-xia,    title: "Emperor Chongzong of Western Xia (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Emperor_Chongzong_of_Western_Xia"}
+  - {key: wp-duan-zhengchun,                      title: "Duan Zhengchun (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Duan_Zhengchun"}
+
+realms:
+  - {name: Almoravid dynasty,  region: Middle East and North Africa, country: Morocco, note: "Sanhaja Berber empire founded in the Sahara; capital Marrakesh; held Muslim Spain from Yusuf ibn Tashfin's time (Yusuf's article)"}
+  - {name: Aragon,             region: Western Europe, country: Spain}
+  - {name: Navarre,            region: Western Europe, country: Spain, note: "The Peter I article calls this kingdom Pamplona; the plan asks for Navarre"}
+  - {name: Kingdom of Jerusalem, region: Middle East and North Africa, country: Israel, note: "Crusader state; Baldwin I was the first crowned king"}
+
+people:
+  - key: emperor-horikawa
+    name: Emperor Horikawa
+    type: Royalty
+    realm: Japan
+    born: 1079-08-08
+    died: 1107-08-09
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "73rd emperor of Japan, son of Emperor Shirakawa. Acceded at eight on his father's abdication, 3 January 1087, with the kampaku Fujiwara Morozane as regent; his reign was overshadowed by Shirakawa's cloistered rule. Devoted to scholarship, poetry and music. His son Munehito (later Emperor Toba) was raised by Shirakawa after the empress-consort's death in 1103. Died at 28."
+    sources: [wp-emperor-horikawa]
+  - key: coloman-of-hungary
+    name: Coloman the Learned
+    type: Royalty
+    realm: Hungary
+    house: Árpád
+    born: 1070
+    born_estimated: true
+    died: 1116-02-03
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Könyves Kálmán, King of Hungary from 1095 and of Croatia from 1097. Bred for the Church (bishop of Eger or Várad), he returned from Poland when his uncle Ladislaus I died in July 1095 and was crowned in early 1096. Let the main First Crusade army through in 1096 but destroyed the unruly bands, invaded Croatia in 1097 (Petar Snačić died at Gvozd Mountain), was crowned king of Croatia in 1102 and took Dalmatia in 1105. Revised Stephen I's laws around 1100 and gave up appointing prelates in 1106. Had his brother Álmos and nephew Béla blinded between 1113 and 1115. Buried at Székesfehérvár."
+    sources: [wp-coloman-king-of-hungary]
+  - key: boleslaw-iii-wrymouth
+    name: Bolesław III Wrymouth
+    type: Royalty
+    realm: Poland
+    house: Piast
+    born: 1086-08-20
+    died: 1138-10-28
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Duke of Lesser Poland, Silesia and Sandomierz from 1102 and of all Poland from 1107, after driving out his half-brother Zbigniew (whom he later had blinded). Allied with Hungary and Kiev (married Sviatopolk II's daughter Zbyslava in 1103), beat Henry V's invasion of 1109 (the battle of Hundsfeld is doubted by historians) and conquered Pomerania in the 1110s-1120s. His will of 1138 divided Poland among his sons. Died probably at Sochaczew; the tradition of burial at Płock dates only from the 15th century. Birth date disputed (see discrepancy)."
+    sources: [wp-boleslaw-iii-wrymouth]
+  - key: borivoj-ii-of-bohemia
+    name: Bořivoj II of Bohemia
+    type: Royalty
+    realm: Bohemia
+    house: Přemyslid
+    born: 1064
+    born_estimated: true
+    died: 1124-02-02
+    prominence: 1
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Duke of Bohemia from 25 December 1100 to May 1107 and again from December 1117 to 16 August 1120, younger half-brother of Bretislaus II. Fought Ulrich of Brno, backed Zbigniew against Bolesław III in 1102, was driven out in 1107 by his brother Vladislaus and his cousin Svatopluk, and later ruled jointly with Vladislaus. Died in exile in Hungary."
+    sources: [wp-borivoj-ii-duke-of-bohemia]
+  - key: sviatopolk-ii-of-kiev
+    name: Sviatopolk II of Kiev
+    type: Royalty
+    realm: Kievan Rus'
+    house: Rurikid
+    born: 1050-11-08
+    died: 1113-04-16
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Michael in baptism, son of Iziaslav, prince of Novgorod 1078-88 and of Turov, Grand Prince of Kiev 1093-1113. An unpopular prince, in constant rivalry with Vladimir Monomakh. Beaten by the Cumans on the Stugna in 1093, saw Kiev's suburbs sacked in 1096, won with Vladimir at the Salnytsia in 1111. Father-in-law of Bolesław III Wrymouth. Nestor compiled the Primary Chronicle in his reign."
+    sources: [wp-sviatopolk-ii-of-kiev]
+  - key: eric-i-of-denmark
+    name: Eric I of Denmark
+    type: Royalty
+    realm: Denmark
+    house: Estridsen
+    born: 1056
+    born_estimated: true
+    died: 1103-07-10
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Eric Evergood, born at Slangerup, son of Sweyn II. Elected king at several landsting assemblies in 1095 after his brother Olaf I Hunger, and ended the famines. Won the canonisation of his brother Canute IV and an archbishopric at Lund (first archbishop Asser). In 1101 brokered peace between Norway and Sweden. Set out on pilgrimage to the Holy Land and died at Paphos on Cyprus in July 1103, the first king to go after Jerusalem fell; the queen had him buried there."
+    sources: [wp-eric-i-of-denmark]
+  - key: magnus-barefoot
+    name: Magnus Barefoot
+    type: Royalty
+    realm: Norway
+    house: Fairhair
+    born: 1073
+    died: 1103-08-24
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Magnus III Olafsson, King of Norway from 1093, co-ruling with his cousin Haakon Magnusson until 1095. Campaigned round the Irish Sea in 1098-99 (Orkney, the Hebrides, Mann, Anglesey) and again from 1101 or 1102, allied with Muirchertach Ua Briain and was killed in an ambush by the Ulaid on 24 August 1103, the last Norwegian king to fall in battle abroad. Made peace with Sweden in 1101 by marrying Inge the Elder's daughter Margaret, with Dalsland as her dowry; buried near the Church of St Patrick in Down."
+    sources: [wp-magnus-barefoot]
+  - key: inge-the-elder
+    name: Inge the Elder
+    type: Royalty
+    realm: Sweden
+    house: Stenkil
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Sweden, 'rex gautorum' in one chronicle, son of Stenkil. A devout Christian and the first Swedish king to found an abbey (Vreta, c.1100, with Queen Helena). Driven out for a time by Blot-Sweyn in the early 1080s (three years in the sagas), he came back, burned him in his house and reigned until his death. Beat Magnus Barefoot at Fuxarne; the peace of 1101 gave Magnus his daughter Margaret. Birth not in the article; death between c.1105 and c.1110 (not entered). Probably buried at Vreta."
+    sources: [wp-inge-the-elder]
+  - key: david-iv-of-georgia
+    name: David IV of Georgia
+    type: Royalty
+    realm: Georgia
+    house: Bagrationi
+    born: 1073
+    born_estimated: true
+    died: 1125-01-24
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "David the Builder, born at Kutaisi, only son of George II. The 5th king of Georgia, from 1089: reformed the army, brought the lands of the Caucasus under his rule, won the Battle of Didgori (12 August 1121) over the Seljuks, took Tbilisi in February 1122 and made it his capital, and Dmanisi in March 1124. Founded the Gelati monastery and academy; canonised by the Georgian Orthodox Church. Died in Tbilisi on 24 January 1125, buried by tradition at Gelati. Date he became sole king is disputed (see discrepancy)."
+    sources: [wp-david-iv-of-georgia]
+  - key: al-mustali
+    name: Al-Musta'li
+    type: Royalty
+    realm: Fatimid Caliphate
+    house: Fatimid
+    born: 1074
+    died: 1101
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ninth Fatimid caliph, 19th imam of Musta'li Ismailism, made caliph in December 1094 by his brother-in-law the vizier al-Afdal, who ruled in his name. His brother Nizar's revolt at Alexandria and its failure split the Isma'ilis into Nizari and Musta'li branches. Under him the Fatimids lost Jerusalem to the First Crusade (15 July 1099) and al-Afdal's army was beaten at Ascalon (12 August 1099). Died 11 or 12 December 1101 (poison rumoured); his five-year-old son al-Amir succeeded. Born 15 or 16 September 1074, or perhaps 1075 (see discrepancy)."
+    sources: [wp-al-mustali]
+  - key: al-mustazhir
+    name: Al-Mustazhir
+    type: Royalty
+    realm: Abbasid Caliphate
+    house: Abbasid
+    born: 1078
+    died: 1118-08-06
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Abbasid caliph in Baghdad, 1094-1118, succeeding his father al-Muqtadi (died 3 February 1094) at sixteen. Politically irrelevant under the Seljuk sultans; ignored the appeals of Aleppo against the Crusaders until 1111 and backed the efforts of Mawdud of Mosul. Father of the future caliphs al-Mustarshid and al-Muqtafi. Succeeded by al-Mustarshid."
+    sources: [wp-al-mustazhir]
+  - key: barkiyaruq
+    name: Barkiyaruq
+    type: Royalty
+    realm: Great Seljuk Empire
+    house: Seljuk
+    born: 1079
+    born_estimated: true
+    died: 1105
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Berkyaruq, eldest son of Malik-Shah I, fifth Seljuk sultan 1094-1105, born at Isfahan in 1079 or 1080. Crowned at Ray at thirteen with the support of the Nizamiyya and defeated his rivals (his uncle Tutush was killed on 25 February 1095); then lost most of his authority to civil war with his half-brother Muhammad I Tapar (1098/9-1104), which he ended by dividing the empire. Died of tuberculosis near Borujerd in 1105, aged 25. The empire fragmented in his reign; he did nothing about the First Crusade."
+    sources: [wp-barkiyaruq]
+  - key: masud-iii-of-ghazni
+    name: Mas'ud III of Ghazni
+    type: Royalty
+    realm: Ghaznavid Empire
+    house: Ghaznavid
+    born: 1061
+    died: 1115
+    prominence: 1
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Ghaznavid sultan 1099-1115, son of Ibrahim, born at Ghazni. Married the Seljuk princess Mahd-i Iraq Jauhar Khatun in 1082-83; kept friendly relations with the eastern Seljuks and struck coins in the name of the caliph al-Mustazhir. Built a palace (1112) and one of the two Minarets of Ghazni. After his death three sons ruled in turn: Shir-Zad, Malik Arslan and Bahram Shah (1117-1157)."
+    sources: [wp-masud-iii-of-ghazni]
+  - key: yusuf-ibn-tashfin
+    name: Yusuf ibn Tashfin
+    type: Royalty
+    realm: Almoravid dynasty
+    house: Almoravid
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Sanhaja Berber leader of the Almoravids, who took the title Amir al-Muslimin in 1061 as the Abbasid caliph's servant. Took Fez (1075), Tangier and Oujda (1079), Tlemcen (1080), Ceuta (1083) and completed Marrakesh as his capital. Called to Spain by al-Mu'tamid of Seville, he won the Battle of az-Zallaqah (Sagrajas) on 23 October 1086, then returned in 1090 and annexed the taifas; his lieutenant took Valencia in 1102 after El Cid's death. Married Zaynab an-Nafzawiyyah; his son Ali ibn Yusuf succeeded. Reign c.1061 to 1106; no birth or death date in the article."
+    sources: [wp-yusuf-ibn-tashfin]
+  - key: peter-i-of-aragon
+    name: Peter I of Aragon
+    type: Royalty
+    realm: Aragon
+    house: Jiménez
+    born: 1068
+    born_estimated: true
+    died: 1104
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Aragon and Pamplona (Navarre) from 1094, eldest son of Sancho Ramírez. Subking of Sobrarbe and Ribagorza from 1085, he won the Battle of Alcoraz (1095) and took Huesca on 27 November 1095, which became his capital after his second marriage in 1097; allied with El Cid and beat the Almoravids at Bairén (1096); took Barbastro in 1100 and besieged Zaragoza in 1101. A vassal of the Pope, with whom he kept close ties. Died in the Val d'Aran and buried at San Juan de la Peña; succeeded by his half-brother Alfonso the Battler. Born c.1068 (the article's 'aged 35' puts it in 1068 or 1069)."
+    sources: [wp-peter-i-of-aragon]
+  - key: henry-count-of-portugal
+    name: Henry, Count of Portugal
+    type: Nobility
+    realm: Portugal
+    house: Burgundy
+    born: 1066
+    born_estimated: true
+    died: 1112-05-22
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Henry of Burgundy, born at Dijon, youngest son of Henry and a grandson of Robert I, Duke of Burgundy. Came to Iberia to help Alfonso VI and is documented there from 1096. Married Teresa of León, the king's illegitimate daughter, around 1095; their son Afonso Henriques became Count of Portugal in 1112 and King in 1139. Styled Count of Portugal; the article gives no date for the grant (no title row). Died on 22 May 1112 of wounds from the siege of Astorga; buried at Braga Cathedral."
+    sources: [wp-henry-count-of-portugal]
+  - key: roger-i-of-sicily
+    name: Roger I of Sicily
+    type: Nobility
+    realm: Sicily
+    house: Hauteville
+    born: 1031
+    born_estimated: true
+    died: 1101-06-22
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Grand Count Roger, the Norman youngest son of Tancred de Hauteville, born in Normandy. With his brother Robert Guiscard he invaded Sicily in 1061, won at Cerami (1063) and Misilmeri (1068), was invested with part of the island in 1071 and took Palermo on 10 January 1072. Took Syracuse in 1086, Agrigento in 1087 and Butera in 1090, and Malta in 1091. Won the papal apostolic legateship of Sicily in 1098; his daughter Felicia married Coloman of Hungary. Died at Mileto on 22 June 1101; his son Simon, then Roger II, succeeded under Adelaide's regency. Count, not king: the kingdom dates from 1130."
+    sources: [wp-roger-i-of-sicily]
+  - key: baldwin-i-of-jerusalem
+    name: Baldwin I of Jerusalem
+    type: Royalty
+    realm: Kingdom of Jerusalem
+    house: Boulogne
+    died: 1118-04-02
+    prominence: 4
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Youngest son of Count Eustace II of Boulogne (born in the 1060s). A leader of the First Crusade, he seized Edessa on 10 March 1098 and founded the first crusader state, then took the crown of Jerusalem on his brother Godfrey's death (18 July 1100). Crowned at Bethlehem on Christmas Day 1100 by Patriarch Daimbert. Took Arsuf and Caesarea (1101), Acre (1104), Beirut (1110) and Sidon (1111) with Genoese and Venetian help, beat the Egyptians at the third battle of Ramla (1105) and helped take Tripoli (1109). Died in March-April 1118 on a campaign against Egypt; buried beside Godfrey in the Calvary chapel of the Holy Sepulchre."
+    sources: [wp-baldwin-i-of-jerusalem]
+  - key: vitale-michiel-i
+    name: Vitale I Michiel
+    type: Nobility
+    realm: Venice
+    died: 1102
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "33rd traditional (31st historic) Doge of Venice, of one of the 'twelve apostolic' families, married to Felicia Cornaro. Slow to back the First Crusade, he sent 207 ships in July 1099 under his son Vitale Giovanni and Bishop Enrico Contarini; in return Venice won a tax-free quarter in every conquered city. Died in the spring of 1102 and was buried at St Mark's Basilica. The stub gives no accession date (no title row)."
+    sources: [wp-vitale-michiel-i]
+  - key: jayavarman-vi
+    name: Jayavarman VI
+    type: Royalty
+    realm: Khmer Empire
+    house: Mahidharapura
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of the Khmer Empire from about 1080 to 1107; probably a vassal prince from the Phimai area, a usurper who founded the Mahidharapura dynasty and fought supporters of the line of Harshavarman III. Credited with building the Phimai temple. Succeeded by his elder brother Dharanindravarman I; posthumous name Paramakaivalyapada. No birth or death date in the article."
+    sources: [wp-jayavarman-vi]
+  - key: kyansittha
+    name: Kyansittha
+    type: Royalty
+    realm: Pagan Kingdom
+    house: Pagan
+    born: 1030-07-21
+    died: 1112
+    died_estimated: true
+    prominence: 3
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "King of Pagan from 1084 (proclaimed 21 April 1084; the coronation may have been in 1086), one of the greatest Burmese kings, son of Anawrahta. As Anawrahta's general he led the conquests, was twice exiled in the 1070s-1080s for his affair with Queen Manisanda, and took the throne after putting down the Mon rebellion that killed Saw Lu. A peaceful reign: completed the Shwezigon Pagoda and built the Ananda Temple; the Myazedi inscription of 1112 is the earliest settled Burmese script. Birth (1030 or 1041) and death (1112 or 1113) disagree between chronicles."
+    sources: [wp-kyansittha]
+  - key: emperor-chongzong-of-western-xia
+    name: Emperor Chongzong of Western Xia
+    type: Royalty
+    realm: Western Xia
+    house: Li
+    born: 1084
+    died: 1139
+    prominence: 2
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Li Qianshun, fourth emperor of Western Xia, who came to the throne at three in 1086 when his father Li Bingchang died. Ruled under the regency of Empress Dowager Zhaojian until a Liao envoy poisoned her in 1099. Further sinified the state, broke the power of some Tangut clans and set up a Confucian administration. Suffered Liao and Northern Song incursions and defeats from 1114. Reign 1086-1139."
+    sources: [wp-emperor-chongzong-of-western-xia]
+  - key: duan-zhengchun
+    name: Duan Zhengchun
+    type: Royalty
+    realm: Dali Kingdom
+    house: Duan
+    prominence: 1
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    note: "Emperor Zhongzong of Dali, 15th king of Dali and first ruler of the Later Dali Kingdom, younger brother of Duan Zhengming. Gao Shengtai forced Zhengming to become a monk in 1094 and crowned himself; when Gao died in 1096 his will returned the throne to the Duan family. Reigned 1096-1108, then abdicated to become a monk; succeeded by his son Duan Yu. No birth or death date in the article."
+    sources: [wp-duan-zhengchun]
+
+titles:
+  - {person: emperor-horikawa, title: Emperor of Japan, realm: Japan, from: 1087-01-03, to: 1107-08-09, note: "Acceded on his father Shirakawa's abdication on 3 January 1087; died 9 August 1107", sources: [wp-emperor-horikawa]}
+  - {person: coloman-of-hungary, title: King of Hungary, realm: Hungary, from: 1095, to: 1116-02-03, note: "King from 1095 (lead); returned to Hungary at the death of Ladislaus I in July 1095 and was crowned in early 1096 at Székesfehérvár (no day). Died 3 February 1116", sources: [wp-coloman-king-of-hungary]}
+  - {person: coloman-of-hungary, title: King of Croatia, realm: Croatia, from: 1097, to: 1116-02-03, note: "King of Croatia from 1097 (lead) after the invasion of that year; crowned at Biograd na Moru in 1102. How he came by the crown is disputed (see discrepancy)", sources: [wp-coloman-king-of-hungary]}
+  - {person: boleslaw-iii-wrymouth, title: Duke of Poland, realm: Poland, from: 1102, to: 1138-10-28, note: "Ruled the southern half (Lesser Poland, Silesia, Sandomierz) from his father's death in 1102 and all of Poland from 1107; died 28 October 1138", sources: [wp-boleslaw-iii-wrymouth]}
+  - {person: borivoj-ii-of-bohemia, title: Duke of Bohemia, realm: Bohemia, from: 1100-12-25, to: 1107, note: "First reign, 25 December 1100 to May 1107 (month only)", sources: [wp-borivoj-ii-duke-of-bohemia]}
+  - {person: borivoj-ii-of-bohemia, title: Duke of Bohemia, realm: Bohemia, from: 1117, to: 1120-08-16, note: "Second reign, from December 1117 (month only), jointly with his brother Vladislaus; self-exile in Hungary after 16 August 1120", sources: [wp-borivoj-ii-duke-of-bohemia]}
+  - {person: sviatopolk-ii-of-kiev, title: Grand Prince of Kiev, realm: Kievan Rus', from: 1093, to: 1113-04-16, note: "Succeeded Vsevolod in 1093; died 16 April 1113", sources: [wp-sviatopolk-ii-of-kiev]}
+  - {person: eric-i-of-denmark, title: King of Denmark, realm: Denmark, from: 1095, to: 1103-07-10, note: "Elected at several landsting assemblies in 1095 after Olaf I Hunger; died at Paphos on 10 July 1103", sources: [wp-eric-i-of-denmark]}
+  - {person: magnus-barefoot, title: King of Norway, realm: Norway, from: 1093, to: 1103-08-24, note: "Proclaimed in south-eastern Norway after his father Olaf Kyrre's death in September 1093; contested by his cousin Haakon Magnusson until 1095; killed 24 August 1103", sources: [wp-magnus-barefoot]}
+  - {person: inge-the-elder, title: King of Sweden, realm: Sweden, from: 1080, from_estimated: true, to: 1110, to_estimated: true, note: "Enthroned under unknown circumstances shortly before 1080; driven out by Blot-Sweyn for about three years in the early 1080s (sagas) and restored. Death between c.1105 and c.1110, 'around 1110' by the article's reasoning", sources: [wp-inge-the-elder]}
+  - {person: david-iv-of-georgia, title: King of Georgia, realm: Georgia, from: 1089, to: 1125-01-24, note: "King from 1089 (the article's date for the transfer of power); his father George II kept the title until about 1112 (see discrepancy). Died 24 January 1125", sources: [wp-david-iv-of-georgia]}
+  - {person: al-mustali, title: Fatimid Caliph, realm: Fatimid Caliphate, from: 1094, to: 1101, note: "Placed on the throne by al-Afdal after al-Mustansir's death on 29 December 1094; died 11 or 12 December 1101", sources: [wp-al-mustali]}
+  - {person: al-mustazhir, title: Abbasid Caliph, realm: Abbasid Caliphate, from: 1094-02-03, to: 1118-08-06, note: "Succeeded his father al-Muqtadi, who died on 3 February 1094; died 6 August 1118", sources: [wp-al-mustazhir]}
+  - {person: barkiyaruq, title: Sultan of the Great Seljuk Empire, realm: Great Seljuk Empire, from: 1094, to: 1105, note: "The article dates his reign 1094-1105; he was crowned at Ray at thirteen after Malik-Shah I's death in November 1092 and fought for the throne in between", sources: [wp-barkiyaruq]}
+  - {person: masud-iii-of-ghazni, title: Sultan, realm: Ghaznavid Empire, from: 1099, to: 1115, note: "Reign of 16 years (1099-1115)", sources: [wp-masud-iii-of-ghazni]}
+  - {person: yusuf-ibn-tashfin, title: Almoravid Emir, realm: Almoravid dynasty, from: 1061, from_estimated: true, to: 1106, note: "Reigned c.1061 to 1106 (lead); took the title Amir al-Muslimin in 1061. Styled amir, not caliph, as servant of the Abbasid caliph", sources: [wp-yusuf-ibn-tashfin]}
+  - {person: peter-i-of-aragon, title: King of Aragon, realm: Aragon, from: 1094, to: 1104, note: "Succeeded his father Sancho Ramírez, who died besieging Huesca in 1094; died in the Val d'Aran in 1104 (no day)", sources: [wp-peter-i-of-aragon]}
+  - {person: peter-i-of-aragon, title: King of Navarre, realm: Navarre, from: 1094, to: 1104, note: "The article calls the realm Pamplona; he held it with Aragon from 1094", sources: [wp-peter-i-of-aragon]}
+  - {person: roger-i-of-sicily, title: Count of Sicily, realm: Sicily, from: 1071, to: 1101-06-22, note: "Grand Count of Sicily from 1071; the Kingdom of Sicily dates from 1130 (his son Roger II was its first king); the article says he held the whole island by 1090 or 1091 (see discrepancy). Died at Mileto on 22 June 1101", sources: [wp-roger-i-of-sicily]}
+  - {person: baldwin-i-of-jerusalem, title: King of Jerusalem, realm: Kingdom of Jerusalem, from: 1100-12-25, to: 1118-04-02, note: "Crowned at the Church of the Nativity, Bethlehem, on Christmas Day 1100 by Daimbert; died 2 April 1118. Before that Count of Edessa, 1098-1100 (not entered)", sources: [wp-baldwin-i-of-jerusalem]}
+  - {person: jayavarman-vi, title: King of the Khmer, realm: Khmer Empire, from: 1080, from_estimated: true, to: 1107, note: "'From about 1080 to 1107' (lead); the article suggests the legitimate line may have reigned at Angkor until 1113", sources: [wp-jayavarman-vi]}
+  - {person: kyansittha, title: King of Pagan, realm: Pagan Kingdom, from: 1084-04-21, to: 1112, to_estimated: true, note: "Proclaimed king on 21 April 1084 (coronation perhaps 1086); died in 1112 or 1113 after a long illness", sources: [wp-kyansittha]}
+  - {person: emperor-chongzong-of-western-xia, title: Emperor of Western Xia, realm: Western Xia, from: 1086, to: 1139, note: "Came to the throne at three; under the regency of the Empress Dowager Zhaojian until 1099", sources: [wp-emperor-chongzong-of-western-xia]}
+  - {person: duan-zhengchun, title: King of Dali, realm: Dali Kingdom, from: 1096, to: 1108, note: "Reigned 1096-1108; abdicated to become a monk. First ruler of the Later Dali Kingdom", sources: [wp-duan-zhengchun]}
+
+places:
+  - key: church-of-the-nativity
+    name: Church of the Nativity
+    city: Bethlehem
+    kind: church
+    region: Bethlehem Governorate
+    country: Palestine
+    lat: 31.704
+    lng: 35.207
+    visitable: true
+    note: "Baldwin I was anointed and crowned king of Jerusalem here by Patriarch Daimbert on Christmas Day 1100 (his article); the article gives no founding date."
+    sources: [wp-baldwin-i-of-jerusalem]
+  - key: paphos
+    name: Paphos
+    kind: city
+    country: Cyprus
+    lat: 34.776
+    lng: 32.424
+    visitable: true
+    note: "Where Eric I of Denmark died on his pilgrimage to the Holy Land in July 1103; his queen Boedil had him buried there."
+    sources: [wp-eric-i-of-denmark]
+  - key: mileto
+    name: Mileto (Abbey of the Holy Trinity)
+    historical_name: Mileto
+    kind: abbey
+    region: Calabria
+    country: Italy
+    lat: 38.61
+    lng: 16.07
+    visitable: true
+    visit_site: "Mileto Antica archaeological park"
+    note: "Roger I's court in Calabria, where he died on 22 June 1101 and was buried at the Benedictine Abbey of the Holy Trinity; the abbey was destroyed in the earthquake of 1783 and its ruins lie in the Mileto Antica park. Point approximate."
+    sources: [wp-roger-i-of-sicily]
+  - key: gelati-monastery
+    name: Gelati Monastery
+    kind: monastery
+    city: Kutaisi
+    region: Imereti
+    country: Georgia
+    lat: 42.298
+    lng: 42.766
+    visitable: true
+    visit_site: "Gelati Monastery"
+    built_by: "David IV"
+    note: "Monastery and academy built by David IV, 'a second Jerusalem of all the East for learning'. A tombstone at its entrance is traditionally David's, as he asked, but the article says there is no clear and reliable evidence that he lies there; the belief was established by the mid-19th century. The article gives no founding year."
+    sources: [wp-david-iv-of-georgia]
+  - key: braga-cathedral
+    name: Braga Cathedral
+    city: Braga
+    kind: cathedral
+    region: Braga District
+    country: Portugal
+    lat: 41.550
+    lng: -8.427
+    visitable: true
+    visit_site: "Braga Cathedral"
+    note: "Henry, Count of Portugal, had promoted its building and was buried in a chapel here after he died in 1112, as he had ordered."
+    sources: [wp-henry-count-of-portugal]
+  - key: san-juan-de-la-pena
+    name: Monastery of San Juan de la Peña
+    city: Santa Cruz de la Serós
+    kind: monastery
+    region: Huesca
+    country: Spain
+    lat: 42.511
+    lng: -0.674
+    visitable: true
+    visit_site: "Monastery of San Juan de la Peña"
+    note: "Peter I of Aragon was buried here beside his children, who were interred on 18 August 1104. In August 2026 his bones and those of Ramiro I and Sancho Ramírez were moved out for safekeeping as wildfires approached (the article)."
+    sources: [wp-peter-i-of-aragon]
+  - key: palace-of-masud-iii-ghazni
+    name: Palace of Sultan Mas'ud III
+    kind: palace
+    city: Ghazni
+    region: Ghazni Province
+    country: Afghanistan
+    lat: 33.55
+    lng: 68.42
+    visitable: true
+    founded: 1112
+    built_by: "Mas'ud III"
+    note: "Palace in Ghazni built in 1112 (his article); the article also says he built one of the two Minarets of Ghazni. Point approximate."
+    sources: [wp-masud-iii-of-ghazni]
+  - key: phimai-temple
+    name: Phimai temple
+    kind: temple
+    city: Phimai
+    region: Nakhon Ratchasima Province
+    country: Thailand
+    lat: 15.221
+    lng: 102.495
+    visitable: true
+    built_by: "generally credited to Jayavarman VI"
+    note: "The article gives Jayavarman VI general credit for building it; no date. He came from the Phimai area."
+    sources: [wp-jayavarman-vi]
+  - key: vreta-abbey
+    name: Vreta Abbey
+    kind: abbey
+    city: Linköping
+    region: Östergötland
+    country: Sweden
+    lat: 58.47
+    lng: 15.53
+    visitable: true
+    founded: 1100
+    founded_estimated: true
+    built_by: "Inge the Elder and Queen Helena, on the orders of Pope Paschal II"
+    note: "Benedictine abbey founded around 1100 near Linköping, with Sweden's first nunnery. Remains found in a part of the abbey church built by Inge's son Ragnvald are most likely Inge's. Point approximate."
+    sources: [wp-inge-the-elder]
+  - key: marrakesh
+    name: Marrakesh
+    kind: city
+    country: Morocco
+    lat: 31.63
+    lng: -8.008
+    visitable: true
+    founded: 1070
+    built_by: "Abu Bakr ibn Umar (site chosen and work begun 1070); completed by Yusuf ibn Tashfin"
+    note: "Almoravid capital, co-founded by Yusuf ibn Tashfin, who completed it and made it his capital in place of Aghmat."
+    sources: [wp-yusuf-ibn-tashfin]
+
+events:
+  # --- link-only update to an existing event ---
+  - key: battle-of-sagrajas-1086
+    people:
+      - {person: yusuf-ibn-tashfin, role: victor}
+    sources: [wp-yusuf-ibn-tashfin]
+  # --- new events ---
+  - key: coloman-conquest-of-croatia-1097
+    name: Coloman invades Croatia
+    type: Conquest
+    year: 1097
+    people:
+      - {person: coloman-of-hungary, role: victor}
+    prominence: 4
+    note: "Coloman invaded Croatia in 1097 and beat its last native king Petar Snačić, who died fighting at Gvozd Mountain; the Hungarians reached the Adriatic and took Biograd na Moru. He was crowned king of Croatia there in 1102, and from then Hungarian kings were also kings of Croatia. No place defined. His 1098 agreement with Venice (Conventio Amicitiae) divided the coast between them."
+    sources: [wp-coloman-king-of-hungary]
+  - key: capture-of-jerusalem-1099
+    name: Crusaders capture Jerusalem
+    type: Siege
+    date: 1099-07-15
+    place: jerusalem
+    people:
+      - {person: al-mustali, role: Fatimid caliph; lost the city}
+    prominence: 5
+    note: "The main army of the First Crusade took Jerusalem after a siege on 15 July 1099; a week later Godfrey of Bouillon was elected ruler but would not be crowned king. The Fatimid army under al-Afdal was beaten at Ascalon on 12 August 1099. Al-Afdal had himself recovered the city from the Artuqids in 1098."
+    sources: [wp-al-mustali, wp-baldwin-i-of-jerusalem]
+  - key: coronation-of-baldwin-i-1100
+    name: Baldwin I crowned King of Jerusalem
+    type: Coronation
+    date: 1100-12-25
+    place: church-of-the-nativity
+    people:
+      - {person: baldwin-i-of-jerusalem, role: crowned}
+    prominence: 4
+    note: "Patriarch Daimbert anointed and crowned Baldwin in the Church of the Nativity at Bethlehem on Christmas Day; Baldwin had left Edessa on 2 October. He took the crown that Godfrey of Bouillon had refused; thereafter he was usually styled king, the only crowned monarch in the Latin East."
+    sources: [wp-baldwin-i-of-jerusalem]
+  - key: peace-of-kungahalla-1101
+    name: Peace of Kungahälla
+    type: Treaty
+    year: 1101
+    people:
+      - {person: magnus-barefoot, role: married the Swedish king's daughter}
+      - {person: inge-the-elder, role: party}
+      - {person: eric-i-of-denmark, role: mediator}
+    prominence: 2
+    note: "Peace between Norway and Sweden, brokered by Eric I of Denmark after Magnus's two invasions of Dalsland and Västergötland failed. Inge gave his daughter Margaret to Magnus with Dalsland as her dowry. The meeting place, Kungahälla, is named in Inge's article only. No place defined."
+    sources: [wp-inge-the-elder, wp-magnus-barefoot]
+
+links:
+  - {parent: emperor-shirakawa, child: emperor-horikawa}
+  - {parent: malik-shah-i, child: barkiyaruq}
+  - {parent: anawrahta, child: kyansittha}
+
+moments:
+  - {person: baldwin-i-of-jerusalem, role: crowned, place: church-of-the-nativity, year: 1100}
+  - {person: eric-i-of-denmark, role: died, place: paphos, year: 1103}
+  - {person: eric-i-of-denmark, role: buried, place: paphos, year: 1103}
+  - {person: roger-i-of-sicily, role: died, place: mileto, year: 1101}
+  - {person: roger-i-of-sicily, role: buried, place: mileto, year: 1101}
+  - {person: david-iv-of-georgia, role: died, place: tbilisi, year: 1125}
+  - {person: henry-count-of-portugal, role: buried, place: braga-cathedral, year: 1112}
+  - {person: peter-i-of-aragon, role: buried, place: san-juan-de-la-pena, year: 1104}
+  - {person: masud-iii-of-ghazni, role: born, place: ghazni, year: 1061}
+
+discrepancies:
+  - key: boleslaw-iii-birth
+    question: When was Bolesław III Wrymouth born?
+    about: [{person: boleslaw-iii-wrymouth}]
+    field: born
+    claims:
+      - {value: "20 August 1086 (Gallus's day of King Stephen; Balzer, Maleczyński, Jasiński; the view now widely accepted)", sources: [wp-boleslaw-iii-wrymouth]}
+      - {value: "26 December 1085 (Bielowski, Szafrański; Cosmas of Prague's year)", sources: [wp-boleslaw-iii-wrymouth]}
+      - {value: "2 September 1085 or 1086 (Plezia)", sources: [wp-boleslaw-iii-wrymouth]}
+    note: "The record uses 20 August 1086, which the article says is most widely recognised. The dispute is tied to the death date of his mother Judith (24/25 December 1085 or 24 December 1086)."
+  - key: kyansittha-birth
+    question: When was Kyansittha born?
+    about: [{person: kyansittha}]
+    field: born
+    claims:
+      - {value: "21 July 1030 (Zata chronicle, the most accurate for the dates of the best-known Pagan kings)", sources: [wp-kyansittha]}
+      - {value: "About 1041 (if the age at death in Hmannan is right; Yazawin Thit and Hmannan put him a year younger than Saw Lu)", sources: [wp-kyansittha]}
+    note: "The record uses 21 July 1030 (Zata); the article says Maha Yazawin makes him about four years older than Saw Lu."
+  - key: kyansittha-death
+    question: In which year did Kyansittha die?
+    about: [{person: kyansittha}]
+    field: died
+    claims:
+      - {value: "1112", sources: [wp-kyansittha]}
+      - {value: "1113", sources: [wp-kyansittha]}
+    note: "The article says 'either 1112 or 1113', aged 82 or 83. The record uses 1112 (estimated)."
+  - key: al-mustali-birth
+    question: When was al-Musta'li born?
+    about: [{person: al-mustali}]
+    field: born
+    claims:
+      - {value: "15 or 16 September 1074 (20 Muharram 467 AH)", sources: [wp-al-mustali]}
+      - {value: "2 or 4 September 1075 (18 or 20 Muharram 468 AH)", sources: [wp-al-mustali]}
+    note: "The record holds the year 1074, the first and fuller date in the article. Later sources confused him with an older brother of the same name born in 1060."
+  - key: coloman-return-1095
+    question: On what day did Coloman return to Hungary after his uncle Ladislaus I died?
+    about: [{person: coloman-of-hungary}]
+    field: date
+    claims:
+      - {value: "About 19 July 1095 (the lead)", sources: [wp-coloman-king-of-hungary]}
+      - {value: "About 29 July 1095 (the body of the article)", sources: [wp-coloman-king-of-hungary]}
+    note: "Both dates are in the same article. Only the year is used in the title row."
+  - key: coloman-croatian-crown
+    question: How did Coloman become king of Croatia?
+    about: [{person: coloman-of-hungary}, {event: coloman-conquest-of-croatia-1097}]
+    field: date
+    claims:
+      - {value: "By conquest after 1097 (Thomas the Archdeacon, 13th century)", sources: [wp-coloman-king-of-hungary]}
+      - {value: "Crowned in 1102 only after a treaty with twelve leading Croatian nobles (the late 14th-century Pacta conventa, whose authenticity is debated)", sources: [wp-coloman-king-of-hungary]}
+    note: "The article says Pál Engel holds that even a forged Pacta conventa agrees with reality in several respects. The record shows the 1097 conquest and the 1102 coronation."
+  - key: david-iv-sole-kingship
+    question: When did David IV become sole king of Georgia?
+    about: [{person: david-iv-of-georgia}]
+    field: date
+    claims:
+      - {value: "1089, by a 'palace revolution' (Asatiani) or George II's abdication under pressure; a chronicler says David was crowned by his father", sources: [wp-david-iv-of-georgia]}
+      - {value: "Co-rule with George II until at least 1112, George keeping the royal title until his death (Toumanoff; surviving documents show George alive to about 1112)", sources: [wp-david-iv-of-georgia]}
+      - {value: "Only on his father's death (the 18th-century tradition of Vakhushti of Kartli and Brosset)", sources: [wp-david-iv-of-georgia]}
+    note: "The record uses 1089, and the article says real power had passed to David by then, a 1085 document already calling him 'king and sebastos'."
+  - key: roger-i-conquest-of-sicily-complete
+    question: When did Roger I finish conquering Sicily?
+    about: [{person: roger-i-of-sicily}]
+    field: date
+    claims:
+      - {value: "By 1090 (the lead)", sources: [wp-roger-i-of-sicily]}
+      - {value: "1091, when Noto surrendered and 'Roger controlled the whole island' (the body; Butera fell in 1090)", sources: [wp-roger-i-of-sicily]}
+    note: "Both in the same article. No event is defined for the end of the conquest."
