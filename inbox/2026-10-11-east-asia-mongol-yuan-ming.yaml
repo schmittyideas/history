@@ -1,0 +1,722 @@
+batch:
+  title: "The Mongol Empire, the Yuan dynasty and the Ming dynasty, 1206-1620"
+  requested: "Twenty-one rulers and the admiral Zheng He, from Genghis Khan to the Wanli Emperor, with reigns, key events, places and discrepancies"
+  date: 2026-10-11
+
+# Notes for the reviewer
+# - Source: local copies of the English Wikipedia articles (wp4 directory); nothing fetched. Facts are taken only from those articles; coordinates come from general knowledge (2-3 decimals). The first line of every file was checked. All 23 requested files are present and on the right article. The Zhengtong article is the file Zhengtong_Emperor.txt (its first line is "Emperor Yingzong of Ming"; there is no file called Emperor_Yingzong_of_Ming.txt). Its source URL is the one in that file's header.
+# - Existing records: none of these people exist. beijing, yamen-battlefield are defined by batch A and only referenced here (Dadu/Khanbaliq/Zhongdu, the Ming capital after 1420, and the last battle of the Song). Mongol_invasions_of_Japan was read for context only: the events mongol-invasions-of-japan-1274 and -1281 are batch C's and are not defined or linked here. Kublai's part in them is not entered as a link; it is the subject of his own article only.
+# - New realms defined here: Mongol Empire (Central Asia, Mongolia), Yuan dynasty (East Asia, China), Ming dynasty (East Asia, China). Title wordings: "Great Khan", "Emperor of the Yuan", "Emperor of the Ming". Person keys are ASCII (temur-khan, kulug-khan, toghon-temur, ogedei-khan, mongke-khan).
+# - Two title rows each for Kublai Khan (Great Khan from 5 May 1260 and Emperor of the Yuan from 1271) and for Emperor Yingzong of Ming (Emperor of the Ming 1435-1449 as Zhengtong and 1457-1464 as Tianshun). Temur Khan and Kulug Khan are called nominal Great Khans (sixth and seventh) in their articles, but the articles say the title was only nominal after the empire divided; they get one row, Emperor of the Yuan. Genghis Khan's Great Khan row runs from the 1206 kurultai to 1227. The Mongol khans of the Golden Horde, Ilkhanate and Chagatai Khanate are not entered.
+# - Dates the articles do not give, so the title rows use the year only: Zhengtong's accession (the article says only that Xuande died on 31 January 1435), the Chenghua accession (Yingzong died 23 February 1464; the article gives no enthronement day), the Longqing accession (twelve days after 23 January 1567; no date), Toghon Temur's accession (1333, after a six-month delay) and his departure from Dadu (1368; the Red Turban article puts the fall of Khanbaliq on 14 September 1368, but the Toghon Temur article gives only the year).
+# - Genghis Khan: born c.1162 (estimated; see discrepancy) and died 1227 (18 or 25 August; the day is not entered). Ogedei Khan born c.1186. Zheng He: died 1433 (estimated; see discrepancy). The birth place of Genghis (Delun Boldog, disputed between two places) and his burial place (Burkhan Khaldun) have no place records; neither has Mongke's death at Diaoyu, the Yongle Emperor's death at Yumuchuan, or the Toghon Temur death at Yingchang.
+# - Places defined (all are given a role in an article): karakorum, shangdu, nanjing, forbidden-city, ming-tombs, tumu-fortress. Hongwu's Xiao Mausoleum and Zheng He's cenotaph are in the notes of nanjing; the other Ming tombs are mentioned in the ming-tombs note. The Tumu coordinates are approximate (the article names the post station, not a modern site). The Beijing/Dadu/Khanbaliq/Zhongdu/Beiping naming is in the events, not redefined.
+# - Left out: consorts and most children; the Mongol conquests of Khwarazm, Rus', Persia, Syria and Korea (Korea is batch D's); the Mongol invasions of Vietnam, Burma, Java; the Yongle campaigns in Mongolia and Dai Viet (no clear single date); the Imjin War (batch D's); Zhengde's and Wanli's campaigns (Ningxia, the Three Great Campaigns); Wanli's restoration of the Jianwen era in 1595; Altan Khan's 1550 raid; the Great Rites Controversy. Hongxi's plan to move the capital back to Nanjing (16 April 1425) is not an event. The Hongxi, Xuande and Chenghua tombs have no place records.
+# - Discrepancies recorded below: Genghis Khan's birth year (1155, 1162, 1167) and day of death; Kublai's proclamation as Great Khan (15 April or 5 May 1260, both in his article); the end of the Song (1276 or 1279) and 1271 against 1279 as the date of the Yuan; Mongke's accession and death; the date Shangdu fell (1369 or 1370); the Jianwen Emperor's fate; the Jingtai Emperor's birth day (21 or 11 September 1428) and accession day (17 or 23 September 1449); Zheng He's death year (1433 or 1435); the Karakorum building dates. Seen and not entered as records: the Yongle article says the Beijing capital "from 1421" and the Beijing authorities "principal capital on 28 October 1420" (both used in the event note, not a conflict); the Zhengde/Jiajing/Chenghua articles all agree on the dates used here.
+# - Lunar/Gregorian: none of these articles puts a death in a lunar month that crosses into the next Gregorian year. All dates are as the articles write them.
+# - Size: 21 people, 22 title rows, 3 realms, 6 places, 17 events, 11 discrepancies, 11 links, 17 moments (about 108 rows plus sources).
+
+sources:
+  - {key: wp-genghis-khan,               title: "Genghis Khan (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Genghis_Khan"}
+  - {key: wp-ogedei-khan,                title: "Ögedei Khan (Wikipedia)",                url: "https://en.wikipedia.org/wiki/%C3%96gedei_Khan"}
+  - {key: wp-mongke-khan,                title: "Möngke Khan (Wikipedia)",                url: "https://en.wikipedia.org/wiki/M%C3%B6ngke_Khan"}
+  - {key: wp-kublai-khan,                title: "Kublai Khan (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Kublai_Khan"}
+  - {key: wp-temur-khan,                 title: "Temür Khan (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Tem%C3%BCr_Khan"}
+  - {key: wp-kulug-khan,                 title: "Külüg Khan (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/K%C3%BCl%C3%BCg_Khan"}
+  - {key: wp-toghon-temur,               title: "Toghon Temür (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Toghon_Tem%C3%BCr"}
+  - {key: wp-hongwu-emperor,             title: "Hongwu Emperor (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Hongwu_Emperor"}
+  - {key: wp-jianwen-emperor,            title: "Jianwen Emperor (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Jianwen_Emperor"}
+  - {key: wp-yongle-emperor,             title: "Yongle Emperor (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Yongle_Emperor"}
+  - {key: wp-hongxi-emperor,             title: "Hongxi Emperor (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Hongxi_Emperor"}
+  - {key: wp-xuande-emperor,             title: "Xuande Emperor (Wikipedia)",             url: "https://en.wikipedia.org/wiki/Xuande_Emperor"}
+  - {key: wp-emperor-yingzong-of-ming,   title: "Emperor Yingzong of Ming (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Emperor_Yingzong_of_Ming"}
+  - {key: wp-jingtai-emperor,            title: "Jingtai Emperor (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Jingtai_Emperor"}
+  - {key: wp-chenghua-emperor,           title: "Chenghua Emperor (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Chenghua_Emperor"}
+  - {key: wp-hongzhi-emperor,            title: "Hongzhi Emperor (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Hongzhi_Emperor"}
+  - {key: wp-zhengde-emperor,            title: "Zhengde Emperor (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Zhengde_Emperor"}
+  - {key: wp-jiajing-emperor,            title: "Jiajing Emperor (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Jiajing_Emperor"}
+  - {key: wp-longqing-emperor,           title: "Longqing Emperor (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Longqing_Emperor"}
+  - {key: wp-wanli-emperor,              title: "Wanli Emperor (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Wanli_Emperor"}
+  - {key: wp-zheng-he,                   title: "Zheng He (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Zheng_He"}
+  - {key: wp-tumu-crisis,                title: "Tumu Crisis (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Tumu_Crisis"}
+  - {key: wp-red-turban-rebellions,      title: "Red Turban Rebellions (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Red_Turban_Rebellions"}
+
+realms:
+  - {name: Mongol Empire, region: Central Asia, country: Mongolia}
+  - {name: Yuan dynasty, region: East Asia, country: China}
+  - {name: Ming dynasty, region: East Asia, country: China}
+
+people:
+  # ---- Mongol Empire
+  - key: genghis-khan
+    name: Genghis Khan
+    type: Royalty
+    house: Borjigin
+    realm: Mongol Empire
+    born: 1162
+    born_estimated: true
+    died: 1227
+    prominence: 5
+    note: "Born Temujin, founder and first khan of the Mongol Empire. United the Mongol tribes, took the title Genghis Khan at the 1206 kurultai, raided Western Xia (1209), invaded the Jin dynasty (1211, taking Zhongdu in 1215) and broke Khwarazm (from 1219). Died in 1227 while subduing the rebellious Western Xia (18 or 25 August); buried near Burkhan Khaldun. Succeeded by his third son Ogedei after a two-year regency by Tolui. The birth year is disputed (1155, 1162, 1167)."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-genghis-khan]
+  - key: ogedei-khan
+    name: Ögedei Khan
+    type: Royalty
+    house: Borjigin
+    realm: Mongol Empire
+    born: 1186
+    born_estimated: true
+    died: 1241-12-11
+    prominence: 4
+    note: "Third son of Genghis Khan and second khan of the Mongol Empire. Elected at the kurultai on the Kherlen on 13 September 1229. Completed the conquest of the Jin dynasty (fall of Caizhou, February 1234), began the invasions of Korea (1231) and sent Batu and Subutai into Europe. Founded Karakorum (building 1235-1238) and the Yam post system. Died at dawn on 11 December 1241 after a drinking bout; succeeded by Guyuk after a five-year regency by his widow Toregene."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-ogedei-khan]
+  - key: mongke-khan
+    name: Möngke Khan
+    type: Royalty
+    house: Borjigin
+    realm: Mongol Empire
+    born: 1209-01-11
+    died: 1259-08-11
+    prominence: 4
+    note: "Eldest son of Tolui and fourth Khagan, first of the Toluid line; ruled from 1 July 1251. Purged the Ogedeid and Chagataid families, held a census of the whole empire (1252-1259), and sent Hulagu west (Baghdad fell in 1258) and Kublai against Dali (1253). Died in 1259 at the siege of Diaoyucheng; the cause is disputed. His death led to the Toluid Civil War between Kublai and Ariq Boke."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-mongke-khan]
+
+  # ---- Yuan dynasty
+  - key: kublai-khan
+    name: Kublai Khan
+    type: Royalty
+    house: Borjigin
+    realm: Yuan dynasty
+    born: 1215-09-23
+    died: 1294-02-18
+    prominence: 5
+    note: "Second son of Tolui; Great Khan from 1260 and founder and first emperor of the Yuan dynasty (temple name Shizu). Won the Toluid Civil War against Ariq Boke (1260-1264), proclaimed the dynastic name Great Yuan in 1271, built the capital Dadu (Khanbaliq, modern Beijing) with Shangdu as the summer capital, and completed the conquest of the Song in 1279. Ordered invasions of Japan, Vietnam, Burma and Java. Died 18 February 1294; his body was taken to the Khans' burial place in Mongolia."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-kublai-khan]
+  - key: temur-khan
+    name: Temür Khan
+    type: Royalty
+    house: Borjigin
+    realm: Yuan dynasty
+    born: 1265-10-15
+    died: 1307-02-10
+    prominence: 2
+    note: "Born Temur, Oljeyitu Khan, second emperor of the Yuan (temple name Chengzong), grandson of Kublai through the crown prince Zhenjin. Declared emperor at a Shangdu kurultai in 1294 after winning a contest on Genghis Khan's sayings against his brother Gammala. Called off the invasions of Burma, Dai Viet and Japan. About 1304 the western khanates acknowledged him as nominal suzerain. Died in Khanbaliq on 10 February 1307 without a male heir."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-temur-khan]
+  - key: kulug-khan
+    name: Külüg Khan
+    type: Royalty
+    house: Borjigin
+    realm: Yuan dynasty
+    born: 1281-08-04
+    died: 1311-01-27
+    prominence: 2
+    note: "Born Khayishan, regnal name Kulug (warrior or fine horse) Khan, third emperor of the Yuan (temple name Wuzong). Commanded the western front against Kaidu, who died of a wound after clashing with him in 1301. Enthroned at Shangdu on 21 June 1307. Died suddenly on 27 January 1311 after a reign of under four years."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-kulug-khan]
+  - key: toghon-temur
+    name: Toghon Temür
+    type: Royalty
+    house: Borjigin
+    realm: Yuan dynasty
+    born: 1320-05-25
+    died: 1370-05-23
+    prominence: 3
+    note: "Last emperor of the Yuan (temple name Huizong, posthumous name Shun by the Ming) and first of the Northern Yuan. Acceded in 1333, ruled under the ministers El Temur and Bayan until 1340, and lost control as the Red Turban Rebellion of 1351 spread. Abandoned Khanbaliq to the Ming in 1368 and withdrew to Shangdu, then Yingchang, where he died on 23 May 1370. Patron of Tibetan Buddhism."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-toghon-temur, wp-red-turban-rebellions]
+
+  # ---- Ming dynasty
+  - key: hongwu-emperor
+    name: Hongwu Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1328-10-21
+    died: 1398-06-24
+    prominence: 5
+    note: "Zhu Yuanzhang, founder of the Ming. Born a peasant in Zhongli village, Haozhou (present-day Fengyang, Anhui); orphaned by plague in 1344. Joined the Red Turbans in 1352, took Nanjing in 1356, beat Chen Youliang (1363) and Zhang Shicheng, proclaimed the Ming on 23 January 1368 and drove the Yuan from Dadu that year. Ruled thirty years from Nanjing; died 24 June 1398 and was buried in the Xiao Mausoleum east of Nanjing."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-hongwu-emperor, wp-red-turban-rebellions]
+  - key: jianwen-emperor
+    name: Jianwen Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1377-12-05
+    died: 1402-07-13
+    prominence: 3
+    note: "Zhu Yunwen, grandson of the Hongwu Emperor and second Ming emperor (30 June 1398 to 1402). His effort to reduce the princes provoked his uncle Zhu Di's rebellion (the Jingnan campaign, 1399-1402). Nanjing opened its gates on 13 July 1402 and the palace burned; three bodies were announced as his, but rumours said he escaped as a monk. His era was erased by the Yongle Emperor and restored by the Wanli Emperor in 1595."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-jianwen-emperor]
+  - key: yongle-emperor
+    name: Yongle Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1360-05-02
+    died: 1424-08-12
+    prominence: 5
+    note: "Zhu Di, fourth son of the Hongwu Emperor, Prince of Yan at Beiping. Rebelled in 1399, entered Nanjing on 13 July 1402 and was enthroned on 17 July. Made Beijing the principal capital (declared 28 October 1420), built the Forbidden City, rebuilt the Grand Canal, commissioned the Yongle Encyclopedia and sent Zheng He's fleets to the Indian Ocean. Led five campaigns into Mongolia; died on 12 August 1424 at Yumuchuan on the last. Buried in Chang Mausoleum, the first of the Ming tombs."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-yongle-emperor]
+  - key: hongxi-emperor
+    name: Hongxi Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1378-08-16
+    died: 1425-05-29
+    prominence: 2
+    note: "Zhu Gaochi, eldest son of the Yongle Emperor and fourth Ming emperor. Became emperor on 7 September 1424, ended Zheng He's voyages and reformed taxes, and decided in April 1425 to return the capital to Nanjing. Died suddenly in Beijing on 29 May 1425, reportedly of a heart attack, after under a year."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-hongxi-emperor]
+  - key: xuande-emperor
+    name: Xuande Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1399-03-16
+    died: 1435-01-31
+    prominence: 3
+    note: "Zhu Zhanji, fifth Ming emperor, enthroned 27 June 1425. Cancelled the move of the capital to Nanjing, put down his uncle Zhu Gaoxu's revolt in person, accepted Le Loi's offer in 1427 and so gave up Dai Viet, and allowed Zheng He's seventh voyage (1431-1433). His reign is remembered as a golden age. Died in the Palace of Heavenly Purity in the Forbidden City on 31 January 1435."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-xuande-emperor]
+  - key: emperor-yingzong-of-ming
+    name: Emperor Yingzong of Ming
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1427-11-29
+    died: 1464-02-23
+    prominence: 3
+    note: "Zhu Qizhen, sixth and eighth Ming emperor. Reigned as the Zhengtong Emperor from 1435 (aged eight) to 1449, and as the Tianshun Emperor from 1457 to 1464. Led the army against Esen Taishi at the Tumu Fortress and was captured on 1 September 1449; released in September 1450, held in the Southern Palace of the Forbidden City by his brother the Jingtai Emperor, and restored by a palace coup on 11 February 1457. Died 23 February 1464."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article (two reigns entered as two title rows); consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-yingzong-of-ming, wp-tumu-crisis]
+  - key: jingtai-emperor
+    name: Jingtai Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1428-09-21
+    died: 1457-03-14
+    prominence: 2
+    note: "Zhu Qiyu, younger half-brother of Emperor Yingzong and seventh Ming emperor. Put in charge of Beijing in 1449, enthroned after the Tumu defeat, and held the capital with the minister Yu Qian. Fell ill in early 1457 and was deposed in the coup of 11 February; died on 14 March 1457, possibly murdered. Buried outside the imperial mausoleums at Yuchuanshan. The article gives his birth as 21 September 1428 in the lead and 11 September in the text."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-jingtai-emperor, wp-tumu-crisis]
+  - key: chenghua-emperor
+    name: Chenghua Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1447-12-09
+    died: 1487-09-09
+    prominence: 2
+    note: "Zhu Jianshen, eldest son of Emperor Yingzong and ninth Ming emperor (1464-1487). Heir at two, demoted by Jingtai and reinstated in 1457. Dominated by his consort Wan Zhen'er and by eunuchs such as Wang Zhi. Attacked the Jurchens in 1465 and 1479. Died 9 September 1487; buried in Mao Mausoleum."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-chenghua-emperor]
+  - key: hongzhi-emperor
+    name: Hongzhi Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1470-07-30
+    died: 1505-06-08
+    prominence: 3
+    note: "Zhu Youcheng, tenth Ming emperor (enthroned 17 September 1487). Confucian and hardworking, he cut taxes and spending and kept only one consort, Empress Zhang. Fell ill on 1 June 1505 and died on 8 June."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-hongzhi-emperor]
+  - key: zhengde-emperor
+    name: Zhengde Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1491-11-14
+    died: 1521-04-20
+    prominence: 3
+    note: "Zhu Houzhao, eleventh Ming emperor (enthroned 19 June 1505). Disliked the Confucian bureaucracy and relied on eunuchs; Liu Jin ran the government from 1506 to 1510. Spent 1517 at Datong, beating a Mongol raid under Dayan Khan, and 1519-1520 in the south. Fell into water while drunk, fell ill and died on 20 April 1521 in the Leopard Quarter without an heir."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-zhengde-emperor]
+  - key: jiajing-emperor
+    name: Jiajing Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1507-09-16
+    died: 1567-01-23
+    prominence: 3
+    note: "Zhu Houcong, cousin of the Zhengde Emperor and twelfth Ming emperor (enthroned 27 May 1521). Won the Great Rites Controversy (1521-1524), later withdrew to the West Park and pursued immortality with Taoist priests. His reign saw Altan Khan's raids from the north and the rise and suppression of coastal smuggler and pirate groups. Died around midday on 23 January 1567 in the Forbidden City; buried in Yong Mausoleum."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-jiajing-emperor]
+  - key: longqing-emperor
+    name: Longqing Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1537-03-04
+    died: 1572-07-05
+    prominence: 2
+    note: "Zhu Zaiji, thirteenth Ming emperor. Became emperor twelve days after the Jiajing Emperor's death on 23 January 1567, reinstated exiled officials, lifted the sea ban and made peace with Altan Khan. Died 5 July 1572 aged 35; buried in Zhao Mausoleum."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-longqing-emperor]
+  - key: wanli-emperor
+    name: Wanli Emperor
+    type: Royalty
+    house: Zhu
+    realm: Ming dynasty
+    born: 1563-09-04
+    died: 1620-08-18
+    prominence: 4
+    note: "Zhu Yijun, fourteenth Ming emperor and the longest-reigning (19 July 1572 to 18 August 1620, 48 years). Enthroned at nine; Zhang Juzheng governed until his death on 9 July 1582. Later withdrew from court, quarrelled with officials over the succession and opened silver mines in 1596 to refill a treasury drained by the rebuilding of the Forbidden City after the April 1596 fire. Died 18 August 1620; buried in the Ding Mausoleum at the Ming tombs."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and places from the English Wikipedia article; consorts and court mostly not entered; the Imjin War and the late Wanli wars are not entered"
+    sources: [wp-wanli-emperor]
+  - key: zheng-he
+    name: Zheng He
+    type: Nobility
+    roles: [admiral, diplomat, eunuch]
+    house: Zhu
+    realm: Ming dynasty
+    born: 1371
+    died: 1433
+    died_estimated: true
+    prominence: 4
+    note: "Born Ma He to a Muslim family in Kunyang, Yunnan; castrated after the Ming conquest of Yunnan, he served the Prince of Yan and helped in the Jingnan campaign. Renamed Zheng by the Yongle Emperor, made Grand Director of the Directorate of Palace Servants and commanded seven treasure voyages across the Indian Ocean (1405-1433). Defender of Nanjing from 1425. Died during or soon after the last voyage (1433) or in 1435 (see the discrepancy); buried at sea, with a cenotaph on Cattle Head Hill, Nanjing. The article gives no dated office, so no title row."
+    coverage: partly
+    coverage_note: "dates, voyages and main places from the English Wikipedia article; individual voyages, ports and ships not entered; no artworks"
+    sources: [wp-zheng-he]
+
+links:
+  - {parent: genghis-khan, child: ogedei-khan}
+  - {parent: hongwu-emperor, child: yongle-emperor}
+  - {parent: yongle-emperor, child: hongxi-emperor}
+  - {parent: hongxi-emperor, child: xuande-emperor}
+  - {parent: xuande-emperor, child: emperor-yingzong-of-ming}
+  - {parent: xuande-emperor, child: jingtai-emperor}
+  - {parent: emperor-yingzong-of-ming, child: chenghua-emperor}
+  - {parent: chenghua-emperor, child: hongzhi-emperor}
+  - {parent: hongzhi-emperor, child: zhengde-emperor}
+  - {parent: jiajing-emperor, child: longqing-emperor}
+  - {parent: longqing-emperor, child: wanli-emperor}
+
+moments:
+  - {person: kublai-khan, role: crowned, place: shangdu, year: 1260}
+  - {person: kulug-khan, role: crowned, place: shangdu, year: 1307}
+  - {person: temur-khan, role: died, place: beijing, year: 1307}
+  - {person: hongwu-emperor, role: buried, place: nanjing, year: 1398}
+  - {person: yongle-emperor, role: buried, place: ming-tombs, year: 1424}
+  - {person: hongxi-emperor, role: died, place: beijing, year: 1425}
+  - {person: xuande-emperor, role: died, place: forbidden-city, year: 1435}
+  - {person: emperor-yingzong-of-ming, role: lived, place: forbidden-city, year: 1450}
+  - {person: jiajing-emperor, role: died, place: forbidden-city, year: 1567}
+  - {person: jiajing-emperor, role: buried, place: ming-tombs}
+  - {person: longqing-emperor, role: buried, place: ming-tombs, year: 1572}
+  - {person: wanli-emperor, role: buried, place: ming-tombs, year: 1620}
+  - {person: zheng-he, role: worked, place: nanjing, year: 1425}
+  - {person: ogedei-khan, role: worked, place: karakorum, year: 1235}
+  - {person: mongke-khan, role: worked, place: karakorum, year: 1254}
+  - {person: hongwu-emperor, role: worked, place: nanjing, year: 1356}
+  - {person: yongle-emperor, role: worked, place: forbidden-city, year: 1420}
+
+titles:
+  # Mongol Empire and Yuan
+  - {person: genghis-khan, title: Great Khan, realm: Mongol Empire, from: 1206, to: 1227, note: "Adopted the title Genghis Khan at the kurultai at the source of the Onon River in 1206. Died in 1227 (18 or 25 August; see the discrepancy). Tolui held the regency until Ogedei was elected in 1229", sources: [wp-genghis-khan]}
+  - {person: ogedei-khan, title: Great Khan, realm: Mongol Empire, from: 1229-09-13, to: 1241-12-11, note: "Proclaimed Khan at the Kurultai of the Kherlen's Khodoo Aral on 13 September 1229, after ritually declining three times. Died at dawn on 11 December 1241", sources: [wp-ogedei-khan]}
+  - {person: mongke-khan, title: Great Khan, realm: Mongol Empire, from: 1251-07-01, to: 1259-08-11, note: "The lead gives the reign as 1 July 1251 to 11 August 1259; the text says he sent envoys to Goryeo announcing his coronation in October 1251 (see the discrepancy)", sources: [wp-mongke-khan]}
+  - {person: kublai-khan, title: Great Khan, realm: Mongol Empire, from: 1260-05-05, to: 1294-02-18, note: "Proclaimed Khagan at his residence in Shangdu on 5 May 1260 (the article's Capital section); the kurultai that proclaimed him is dated 15 April 1260 earlier in the same article (see the discrepancy). Rival Ariq Boke, elected at Karakorum, surrendered at Xanadu on 21 August 1264. Real power was limited to the Yuan lands. Died 18 February 1294", sources: [wp-kublai-khan]}
+  - {person: kublai-khan, title: Emperor of the Yuan, realm: Yuan dynasty, from: 1271, to: 1294-02-18, note: "The article says he proclaimed the dynastic name Great Yuan in 1271 (no day) and the capital Dadu the following year. The Song was finished in 1279 (see the discrepancy). Died 18 February 1294", sources: [wp-kublai-khan]}
+  - {person: temur-khan, title: Emperor of the Yuan, realm: Yuan dynasty, from: 1294-05-10, to: 1307-02-10, note: "Lead: ruled 10 May 1294 to 10 February 1307. Called the sixth Great Khan of the Mongol Empire in the article, but only nominally, so no Great Khan row", sources: [wp-temur-khan]}
+  - {person: kulug-khan, title: Emperor of the Yuan, realm: Yuan dynasty, from: 1307-06-21, to: 1311-01-27, note: "Enthroned at a kurultai in Shangdu on 21 June 1307. Called the seventh Great Khan of the Mongol Empire in the article, but only nominally, so no Great Khan row. Died suddenly on 27 January 1311", sources: [wp-kulug-khan]}
+  - {person: toghon-temur, title: Emperor of the Yuan, realm: Yuan dynasty, from: 1333, to: 1368, note: "Acceded in 1333 after El Temur delayed the enthronement six months (no day given). The Yuan in China ended when the Ming took Khanbaliq in September 1368 and he withdrew to Shangdu; the remnant court is the Northern Yuan, which he ruled until his death on 23 May 1370", sources: [wp-toghon-temur, wp-red-turban-rebellions]}
+  # Ming
+  - {person: hongwu-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1368-01-23, to: 1398-06-24, note: "Proclaimed himself emperor and named the dynasty Great Ming on 23 January 1368; the first year of the Hongwu era. Died 24 June 1398", sources: [wp-hongwu-emperor]}
+  - {person: jianwen-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1398-06-30, to: 1402-07-13, note: "Ascended on 30 June 1398. Nanjing opened its gates on 13 July 1402; his fate after the palace fire is disputed (see the discrepancy). The Yongle Emperor erased his era; the Wanli Emperor restored it in 1595", sources: [wp-jianwen-emperor]}
+  - {person: yongle-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1402-07-17, to: 1424-08-12, note: "Enthroned 17 July 1402, four days after entering Nanjing. Died 12 August 1424 at Yumuchuan", sources: [wp-yongle-emperor, wp-jianwen-emperor]}
+  - {person: hongxi-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1424-09-07, to: 1425-05-29, note: "Became emperor on 7 September 1424, 26 days after his father's death. Died 29 May 1425", sources: [wp-hongxi-emperor]}
+  - {person: xuande-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1425-06-27, to: 1435-01-31, note: "Ascended the throne in Beijing on 27 June 1425. Died 31 January 1435", sources: [wp-xuande-emperor]}
+  - {person: emperor-yingzong-of-ming, title: Emperor of the Ming, realm: Ming dynasty, from: 1435, to: 1449-09-17, key: emperor-yingzong-of-ming--zhengtong, note: "First reign, as the Zhengtong Emperor. The article gives no accession day (Xuande died 31 January 1435); aged eight. Captured at Tumu on 1 September 1449; the Jingtai Emperor was enthroned on 17 September and made him Emperor Emeritus (see the Jingtai accession discrepancy)", sources: [wp-emperor-yingzong-of-ming, wp-tumu-crisis]}
+  - {person: jingtai-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1449-09-17, to: 1457-02-11, note: "Enthroned on 17 (or 23) September 1449 after Empress Dowager Sun made him administrator on 4 September. Deposed in the coup of 11 February 1457; died 14 March 1457", sources: [wp-jingtai-emperor, wp-tumu-crisis]}
+  - {person: emperor-yingzong-of-ming, title: Emperor of the Ming, realm: Ming dynasty, from: 1457-02-11, to: 1464-02-23, key: emperor-yingzong-of-ming--tianshun, note: "Second reign, as the Tianshun Emperor, from the night coup of 11 February 1457 (the seizure of the gate). Died 23 February 1464", sources: [wp-emperor-yingzong-of-ming]}
+  - {person: chenghua-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1464, to: 1487-09-09, note: "The article gives no enthronement day (Yingzong died 23 February 1464, and a council was appointed the next day). Died 9 September 1487", sources: [wp-chenghua-emperor]}
+  - {person: hongzhi-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1487-09-17, to: 1505-06-08, note: "Ascended 17 September 1487, eight days after his father's death. Died 8 June 1505", sources: [wp-hongzhi-emperor]}
+  - {person: zhengde-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1505-06-19, to: 1521-04-20, note: "Ascended on 19 June 1505, eleven days after his father's death. Died 20 April 1521 without an heir", sources: [wp-zhengde-emperor]}
+  - {person: jiajing-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1521-05-27, to: 1567-01-23, note: "Ceremonially ascended in Beijing on 27 May 1521 after forcing the court to welcome him as emperor, not heir. Died 23 January 1567", sources: [wp-jiajing-emperor]}
+  - {person: longqing-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1567, to: 1572-07-05, note: "The article says he became emperor twelve days after the Jiajing Emperor's death on 23 January 1567 and gives no date. Died 5 July 1572", sources: [wp-longqing-emperor]}
+  - {person: wanli-emperor, title: Emperor of the Ming, realm: Ming dynasty, from: 1572-07-19, to: 1620-08-18, note: "Succeeded two weeks after his father's death, on 19 July 1572, aged nine. Longest reign of the Ming (48 years). Died 18 August 1620", sources: [wp-wanli-emperor]}
+
+places:
+  - key: karakorum
+    name: Karakorum
+    kind: city
+    region: Övörkhangai
+    country: Mongolia
+    lat: 47.198
+    lng: 102.846
+    visitable: true
+    founded: 1235
+    built_by: "Ogedei Khan; decorated by Mongke Khan"
+    note: "Capital of the Mongol Empire. The Ogedei article dates the completion of the city to 1235 and also says palaces were built from 1235 to 1238 (see the discrepancy). Mongke decorated it with Chinese, European and Persian architecture; William of Rubruck visited in 1253. The war between Kublai and Ariq Boke destroyed it. Kublai's move to Khanbaliq provoked an uprising there; the Northern Yuan court withdrew to it in 1370."
+    sources: [wp-ogedei-khan, wp-mongke-khan, wp-kublai-khan, wp-toghon-temur]
+  - key: shangdu
+    name: Shangdu (Xanadu)
+    historical_name: Shangdu, "Upper Capital", also called Xanadu
+    kind: city
+    region: Inner Mongolia
+    country: China
+    lat: 42.358
+    lng: 116.179
+    visitable: true
+    note: "Kublai Khan's summer capital, near what is today Dolon Nor. Kublai was proclaimed Khagan here on 5 May 1260; Ariq Boke surrendered to him at Xanadu on 21 August 1264. Temur Khan's kurultai (1294) and Kulug Khan's enthronement (21 June 1307) were held here. Toghon Temur retreated here from Dadu in 1368. The Ming took it in 1369 or 1370 (see the discrepancy)."
+    sources: [wp-kublai-khan, wp-temur-khan, wp-kulug-khan, wp-toghon-temur, wp-red-turban-rebellions]
+  - key: nanjing
+    name: Nanjing
+    historical_name: Yingtian
+    kind: city
+    region: Jiangsu
+    country: China
+    lat: 32.06
+    lng: 118.797
+    visitable: true
+    visit_site: "Xiaoling Mausoleum of the Ming (Hongwu Emperor's tomb) and Zheng He's tomb on Cattle Head Hill"
+    note: "Zhu Yuanzhang took the city on 10 April 1356, renamed it Yingtian and made it his capital; the first Ming capital, with 26 km of walls. The Hongwu Emperor was buried in the Xiao Mausoleum on the south side of Purple Mountain, east of the city. Zhu Di's army entered on 13 July 1402, ending the Jianwen Emperor's reign. Zheng He's treasure fleet was built and prepared here (a foreign-language institute and the Treasure Shipyard), and he held the post of Defender of Nanjing from 1425. Beijing replaced it as the principal capital in 1420."
+    sources: [wp-hongwu-emperor, wp-red-turban-rebellions, wp-jianwen-emperor, wp-yongle-emperor, wp-zheng-he]
+  - key: forbidden-city
+    name: Forbidden City
+    kind: palace
+    city: Beijing
+    region: Beijing
+    country: China
+    lat: 39.916
+    lng: 116.397
+    visitable: true
+    visit_site: "Palace Museum"
+    founded: 1420
+    built_by: "Yongle Emperor"
+    architect: "Cai Xin, Nguyen An, Kuai Xiang and Lu Xiang (chief architects and engineers, per the Yongle article)"
+    note: "Built for the new capital between 1407 and 1420; most palaces were done by the end of 1417 and the city was ready for the government in 1420. Three audience halls burned in 1421 and again in 1557 (rebuilt by 1562); more palaces burned in April 1596. The Xuande Emperor died in the Palace of Heavenly Purity (1435). The Southern Palace in the southeast corner held the former Emperor Yingzong from 1450 to 1457. The Jiajing Emperor died here in 1567."
+    sources: [wp-yongle-emperor, wp-xuande-emperor, wp-emperor-yingzong-of-ming, wp-jiajing-emperor, wp-wanli-emperor]
+  - key: ming-tombs
+    name: Ming tombs
+    kind: tomb complex
+    city: Beijing
+    region: Beijing
+    country: China
+    lat: 40.296
+    lng: 116.241
+    visitable: true
+    visit_site: "Ming Dynasty Tombs (Changling and Dingling are open)"
+    note: "The imperial burial ground north of Beijing at the foot of Tianshou Mountain, where thirteen of the sixteen Ming emperors lie. Chang Mausoleum (the Yongle Emperor, the first of the tombs), Yong Mausoleum (Jiajing), Zhao Mausoleum (Longqing) and Ding Mausoleum (Wanli, built 1584-1590 and excavated 1956-1957) are named in the articles."
+    sources: [wp-yongle-emperor, wp-jiajing-emperor, wp-longqing-emperor, wp-wanli-emperor]
+  - key: tumu-fortress
+    name: Tumu Fortress
+    historical_name: Tumu post station
+    kind: battlefield
+    region: Hebei
+    country: China
+    lat: 40.33
+    lng: 115.65
+    note: "Site of the Ming camp on 31 August 1449 and of the battle on 1 September in which the Oirat Mongols under Esen Taishi defeated the Ming army and captured Emperor Yingzong. The article names the post station, not a modern site; the point is approximate (near Huailai, Hebei)."
+    sources: [wp-tumu-crisis, wp-emperor-yingzong-of-ming]
+
+events:
+  - key: proclamation-of-genghis-khan-1206
+    name: Kurultai proclaiming Genghis Khan
+    type: Proclamation
+    year: 1206
+    people:
+      - {person: genghis-khan, role: proclaimed}
+    prominence: 5
+    note: "After defeating the Naiman and executing Jamukha, Temujin held a large kurultai at the source of the Onon River and formally adopted the title Genghis Khan; the keshig was enlarged to 10,000 men and the tribal structure reorganised."
+    sources: [wp-genghis-khan]
+  - key: fall-of-zhongdu-1215
+    name: Mongol capture of Zhongdu
+    type: Siege
+    date: 1215-05-31
+    place: beijing
+    people:
+      - {person: genghis-khan, role: victor}
+    prominence: 4
+    note: "Genghis Khan invaded the Jin dynasty in May 1211. The Jin moved their court south to Kaifeng; the inhabitants of the Jin capital Zhongdu surrendered on 31 May 1215 but the city was sacked. Zhongdu is the later Dadu and Beijing."
+    sources: [wp-genghis-khan]
+  - key: mongol-conquest-of-western-xia-1227
+    name: Mongol conquest of Western Xia
+    type: Campaign
+    year: 1227
+    people:
+      - {person: genghis-khan, role: commander}
+    prominence: 4
+    note: "Genghis raided Western Xia in 1209 and the Xia agreed to terms in 1210. He returned in 1226 when the Xia stopped supporting the Mongols, fell from his horse while hunting in the winter of 1226-1227, and died on 18 or 25 August 1227 during the siege of Zhongxing. The city fell the following month and was put to the sword. The month and year (September 1227) are not given as a day. No place defined."
+    sources: [wp-genghis-khan]
+  - key: mongol-conquest-of-jin-1234
+    name: End of the Jin dynasty
+    type: Campaign
+    year: 1234
+    people:
+      - {person: ogedei-khan, role: commander}
+    prominence: 3
+    note: "After taking several cities, the Mongols, with the belated help of the Song, destroyed the Jin with the fall of Caizhou in February 1234 (no day given)."
+    sources: [wp-ogedei-khan]
+  - key: toluid-civil-war-1260
+    name: Toluid Civil War
+    type: Civil war
+    year: 1260
+    end_year: 1264
+    place: shangdu
+    people:
+      - {person: kublai-khan, role: victor}
+    prominence: 3
+    note: "Fought after Mongke's death in 1259 between Kublai and his younger brother Ariq Boke, who held a rival kurultai at Karakorum. Ariq Boke surrendered at Xanadu on 21 August 1264. It began the division of the Mongol Empire."
+    sources: [wp-kublai-khan, wp-mongke-khan]
+  - key: kublai-proclaimed-great-khan-1260
+    name: Kublai Khan proclaimed Great Khan
+    type: Proclamation
+    date: 1260-05-05
+    place: shangdu
+    people:
+      - {person: kublai-khan, role: proclaimed}
+    prominence: 4
+    note: "The Capital section says he was proclaimed Khagan at his residence in Shangdu on 5 May 1260; the earlier narrative says the kurultai he summoned proclaimed him on 15 April 1260 (see the discrepancy). Few of Genghis Khan's descendants attended, and Ariq Boke had already been elected at Karakorum."
+    sources: [wp-kublai-khan]
+  - key: founding-of-yuan-dynasty-1271
+    name: Kublai proclaims the Yuan dynasty
+    type: Founding
+    year: 1271
+    places:
+      - {place: beijing, role: capital, note: "Dadu (Khanbaliq) proclaimed the capital in 1272"}
+    people:
+      - {person: kublai-khan, role: founder}
+    prominence: 4
+    note: "In the eighth year of Zhiyuan (1271) Kublai renamed the Mongol regime in China Dai Yuan and claimed succession from earlier Chinese dynasties; the capital Dadu followed in 1272 and Shangdu was the summer capital. The Yuan ruled all of China proper only after 1279."
+    sources: [wp-kublai-khan]
+  - key: fall-of-southern-song-1279
+    name: Yuan conquest of the Southern Song
+    type: Conquest
+    year: 1279
+    place: yamen-battlefield
+    people:
+      - {person: kublai-khan, role: victor}
+    prominence: 4
+    note: "The Song imperial family surrendered in 1276; three years later Yuan marines crushed the last Song loyalists at Yamen, where the child emperor Zhao Bing drowned, ending the Song dynasty and making Kublai the first non-Han emperor of all China proper."
+    sources: [wp-kublai-khan]
+  - key: red-turban-rebellions-1351
+    name: Red Turban Rebellions
+    type: Rebellion
+    year: 1351
+    end_year: 1368
+    people:
+      - {person: hongwu-emperor, role: rebel leader}
+      - {person: toghon-temur, role: opponent}
+    prominence: 4
+    note: "Uprisings against the Yuan from 1351 to 1368, following floods, famine, epidemics and the Yuan court's inability to keep order; religious sects waiting for Maitreya joined the movement. Zhu Yuanzhang joined in 1352, took Nanjing in 1356 and defeated Chen Youliang, Zhang Shicheng and Fang Guozhen. Ming armies entered Dadu in September 1368."
+    sources: [wp-red-turban-rebellions, wp-hongwu-emperor, wp-toghon-temur]
+  - key: founding-of-ming-dynasty-1368
+    name: Founding of the Ming dynasty
+    type: Founding
+    date: 1368-01-23
+    people:
+      - {person: hongwu-emperor, role: founder}
+    prominence: 5
+    note: "Zhu Yuanzhang proclaimed himself emperor on 23 January 1368, renamed his state Great Ming and made 1368 the first year of the Hongwu era. The article does not name the place."
+    sources: [wp-hongwu-emperor]
+  - key: fall-of-dadu-1368
+    name: Ming capture of Dadu
+    type: Siege
+    date: 1368-09-14
+    place: beijing
+    people:
+      - {person: hongwu-emperor, role: victor}
+      - {person: toghon-temur, role: defeated}
+    prominence: 4
+    note: "Ming general Xu Da took Tongzhou on 10 September 1368 and Khanbaliq fell on 14 September (Red Turban article); Toghon Temur fled to Shangdu, ending the Yuan in China. The Hongwu article says only that the army reached Dadu in early September. The city was renamed Beiping."
+    sources: [wp-red-turban-rebellions, wp-hongwu-emperor, wp-toghon-temur]
+  - key: jingnan-campaign-1399
+    name: Jingnan campaign
+    type: Civil war
+    year: 1399
+    end_year: 1402
+    place: nanjing
+    people:
+      - {person: yongle-emperor, role: victor}
+      - {person: jianwen-emperor, role: defeated}
+      - {person: zheng-he, role: participant}
+    prominence: 4
+    note: "Zhu Di, Prince of Yan, rebelled against his nephew the Jianwen Emperor in 1399 after the court moved to reduce the princes. After three years the rebels crossed the Yangtze and Nanjing opened its gates on 13 July 1402; the palace burned. Zhu Di was enthroned on 17 July."
+    sources: [wp-jianwen-emperor, wp-yongle-emperor, wp-zheng-he]
+  - key: zheng-he-treasure-voyages-1405
+    name: Zheng He's treasure voyages
+    type: Voyage
+    year: 1405
+    end_year: 1433
+    place: nanjing
+    people:
+      - {person: zheng-he, role: commander}
+      - {person: yongle-emperor, role: patron}
+      - {person: xuande-emperor, role: patron}
+    prominence: 4
+    note: "Seven voyages through the Indian Ocean under the Yongle and Xuande emperors, the first departing on 11 July 1405 and the last in 1431-1433; the fleets reached Southeast Asia, India, the Persian Gulf, Arabia and East Africa. The Hongxi Emperor ended them on his enthronement (7 September 1424) and the Xuande Emperor allowed the seventh."
+    sources: [wp-zheng-he, wp-yongle-emperor, wp-hongxi-emperor, wp-xuande-emperor]
+  - key: ming-capital-moved-to-beijing-1420
+    name: Ming capital moved to Beijing
+    type: Political
+    date: 1420-10-28
+    place: beijing
+    places:
+      - {place: forbidden-city, role: palace, note: "New imperial palace, ready for the government in 1420"}
+    people:
+      - {person: yongle-emperor, role: ordered}
+    prominence: 4
+    note: "On 28 October 1420 the Yongle Emperor declared Beijing the principal capital, and by February 1421 the ministries had moved; the Beijing authorities governed the empire from 1421. Beijing, called Beiping until 1403, had been a second capital since February 1403."
+    sources: [wp-yongle-emperor]
+  - key: tumu-crisis-1449
+    name: Tumu Crisis
+    type: Battle
+    date: 1449-09-01
+    place: tumu-fortress
+    people:
+      - {person: emperor-yingzong-of-ming, role: captured}
+      - {person: jingtai-emperor, role: succeeded}
+    prominence: 4
+    note: "Esen Taishi's Oirat Mongols invaded in July 1449; the Zhengtong Emperor, led by the eunuch Wang Zhen, took the army out on 4 August, retreated from Datong and was caught at Tumu. The Mongols attacked on the morning of 1 September; Wang Zhen died and the Emperor was captured (taken to Esen's camp on 3 September). Yu Qian held Beijing and the Jingtai Emperor was enthroned on 17 (or 23) September. Esen released Yingzong in September 1450."
+    sources: [wp-tumu-crisis, wp-emperor-yingzong-of-ming, wp-jingtai-emperor]
+  - key: restoration-of-emperor-yingzong-1457
+    name: Seizure of the Gate (restoration of Emperor Yingzong)
+    type: Coup
+    date: 1457-02-11
+    place: forbidden-city
+    people:
+      - {person: emperor-yingzong-of-ming, role: restored}
+      - {person: jingtai-emperor, role: deposed}
+    prominence: 3
+    note: "On the night of 11 February 1457, while the Jingtai Emperor was ill, the generals Shi Heng and Zhang Yue, the eunuch Cao Jixiang and the strategist Xu Youzhen brought the former emperor from the Southern Palace to the throne room; the second reign is the Tianshun era."
+    sources: [wp-emperor-yingzong-of-ming, wp-jingtai-emperor]
+  - key: wokou-raids-jiajing-era-1520
+    name: Smuggler and pirate raids on the south-east coast (Jiajing era)
+    type: Raid
+    year: 1520
+    estimated: true
+    end_year: 1565
+    people:
+      - {person: jiajing-emperor, role: ruler}
+    prominence: 2
+    note: "Piracy and smuggling grew along the coast from Zhejiang to Guangdong from the 1520s, with bases on islands such as Shuangyu near Ningbo; raids peaked in the late 1540s and 1550s and reached the suburbs of Hangzhou and Jiaxing. Hu Zongxian, Yu Dayou and Qi Jiguang broke up the groups in the latter half of the 1550s; Fujian was clear by 1563 and Guangdong and Guangxi by the mid-1560s. Both dates are approximate readings of 'the 1520s' and 'the mid-1560s'. The Jiajing Emperor kept the sea ban; it was lifted after his death."
+    sources: [wp-jiajing-emperor]
+
+discrepancies:
+  - key: genghis-khan-birth-year
+    question: In which year was Genghis Khan (Temujin) born?
+    about: [{person: genghis-khan}]
+    field: born
+    claims:
+      - {value: "1155", sources: [wp-genghis-khan], note: "Supported by Zhao Hong and Rashid al-Din; fits the Year of the Pig; implies he had no children until past thirty"}
+      - {value: "1162", sources: [wp-genghis-khan], note: "History of Yuan and the Shengwu; accepted by most historians"}
+      - {value: "1167", sources: [wp-genghis-khan], note: "Paul Pelliot, from a text by the Yuan artist Yang Weizhen; also fits the Year of the Pig"}
+    note: "The record uses 1162, marked estimated."
+  - key: genghis-khan-death-day
+    question: On which day in August 1227 did Genghis Khan die?
+    about: [{person: genghis-khan}, {event: mongol-conquest-of-western-xia-1227}]
+    field: died
+    claims:
+      - {value: "18 August 1227", sources: [wp-genghis-khan]}
+      - {value: "25 August 1227", sources: [wp-genghis-khan]}
+    note: "Only the year (1227) is entered. His death was kept secret and Zhongxing fell the following month."
+  - key: mongke-accession-and-death
+    question: When did Mongke become Great Khan, and how and when did he die?
+    about: [{person: mongke-khan}]
+    field: date
+    claims:
+      - {value: "Reign from 1 July 1251 (lead)", sources: [wp-mongke-khan]}
+      - {value: "Coronation announced to Goryeo in October 1251", sources: [wp-mongke-khan], note: "The envoys' announcement may follow a separate coronation kurultai"}
+      - {value: "Died 11 August 1259 of dysentery or cholera at Diaoyu", sources: [wp-mongke-khan], note: "Persian accounts from Rashid al-Din; the History of Yuan mentions an epidemic but not this"}
+      - {value: "Killed in the assault on Diaoyu by a crossbow arrow or a stone projectile", sources: [wp-mongke-khan], note: "A Song poem and Bar Hebraeus; History of Yuan names a stone from a siege engine"}
+      - {value: "Drowned when a war ship sank", sources: [wp-mongke-khan], note: "Hayton of Corycus, whose account the article says may confuse the later invasions of Japan"}
+    note: "The record uses 1 July 1251 and 11 August 1259 (the Persian date, the only day given)."
+  - key: kublai-great-khan-proclamation-1260
+    question: On what date was Kublai proclaimed Great Khan?
+    about: [{person: kublai-khan}, {event: kublai-proclaimed-great-khan-1260}, {place: shangdu}]
+    field: date
+    claims:
+      - {value: "15 April 1260, by the kurultai Kublai summoned", sources: [wp-kublai-khan]}
+      - {value: "5 May 1260, proclaimed Khagan at his residence in Shangdu", sources: [wp-kublai-khan]}
+    note: "Both dates are in the same article. The record uses 5 May because it names the place."
+  - key: kublai-yuan-end-of-song
+    question: When did the Yuan become the ruler of China, and when did the Song end?
+    about: [{person: kublai-khan}, {event: founding-of-yuan-dynasty-1271}, {event: fall-of-southern-song-1279}]
+    field: date
+    claims:
+      - {value: "1271: Kublai proclaims the dynastic name Great Yuan", sources: [wp-kublai-khan, wp-genghis-khan]}
+      - {value: "1276: the Song imperial family surrenders to the Yuan", sources: [wp-kublai-khan]}
+      - {value: "1279: the Yuan conquest of the Song is complete (Yamen)", sources: [wp-kublai-khan, wp-yongle-emperor, wp-hongwu-emperor]}
+    note: "Not a conflict of fact: 1271 is the founding of the dynasty and 1279 the completion of the conquest. Kublai's Yuan title starts in 1271; the Song end event is dated 1279."
+  - key: shangdu-ming-capture
+    question: When did the Ming capture Shangdu?
+    about: [{place: shangdu}, {person: toghon-temur}]
+    field: date
+    claims:
+      - {value: "20 July 1369, taken by Chang Yuchun", sources: [wp-red-turban-rebellions]}
+      - {value: "1369", sources: [wp-toghon-temur]}
+      - {value: "1370, Li Wenzhong's forces advanced to Shangdu and forced Toghon Temur north to Yingchang", sources: [wp-hongwu-emperor]}
+    note: "Entered only in the place note."
+  - key: jianwen-emperor-fate
+    question: Did the Jianwen Emperor die in the palace fire of 1402?
+    about: [{person: jianwen-emperor}]
+    field: died
+    claims:
+      - {value: "Died 13 July 1402 in the burning palace; three bodies announced as his, his wife's and his eldest son's", sources: [wp-jianwen-emperor, wp-yongle-emperor]}
+      - {value: "Survived and lived as a Buddhist monk", sources: [wp-jianwen-emperor], note: "Folk legend spread by non-state historians from the Jiajing era"}
+    note: "The record uses 13 July 1402, the date Nanjing fell."
+  - key: jingtai-emperor-birth-day
+    question: On which day in September 1428 was the Jingtai Emperor born?
+    about: [{person: jingtai-emperor}]
+    field: born
+    claims:
+      - {value: "21 September 1428", sources: [wp-jingtai-emperor], note: "Lead"}
+      - {value: "11 September 1428", sources: [wp-jingtai-emperor], note: "Early life section"}
+    note: "The record uses 21 September, the lead."
+  - key: jingtai-emperor-accession-day
+    question: On which day in September 1449 was the Jingtai Emperor enthroned?
+    about: [{person: jingtai-emperor}, {event: tumu-crisis-1449}]
+    field: date
+    claims:
+      - {value: "17 September 1449", sources: [wp-tumu-crisis, wp-emperor-yingzong-of-ming]}
+      - {value: "23 September 1449", sources: [wp-tumu-crisis], note: "Given as '17 (or 23)' in the Tumu Crisis article"}
+    note: "The records use 17 September."
+  - key: zheng-he-death-year
+    question: When and where did Zheng He die?
+    about: [{person: zheng-he}]
+    field: died
+    claims:
+      - {value: "1433, during or soon after the seventh voyage, probably at Calicut; buried at sea", sources: [wp-zheng-he]}
+      - {value: "1435, still defender of Nanjing", sources: [wp-zheng-he]}
+    note: "The record uses 1433, marked estimated. The Nanjing tomb is a cenotaph."
+  - key: karakorum-building-dates
+    question: When was Karakorum built?
+    about: [{place: karakorum}, {person: ogedei-khan}]
+    field: founded
+    claims:
+      - {value: "Construction of the city finished in 1235", sources: [wp-ogedei-khan]}
+      - {value: "Palaces and pavilions built from 1235 to 1238", sources: [wp-ogedei-khan]}
+      - {value: "Founded in the 1230s", sources: [wp-ogedei-khan], note: "Lead"}
+    note: "The place uses 1235."
