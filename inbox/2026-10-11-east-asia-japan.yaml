@@ -1,0 +1,1078 @@
+batch:
+  title: "Japan, 1011-1616: emperors, regents and shoguns from Go-Sanjo to Tokugawa Ieyasu"
+  requested: "Twenty-nine rulers and power-holders of Japan (emperors, Fujiwara regent, Taira no Kiyomori, Kamakura, Ashikaga and Tokugawa shoguns, the Hojo regents, Nobunaga and Hideyoshi), with reigns, key wars, places and discrepancies"
+  date: 2026-10-11
+
+# Notes for the reviewer (batch C of the East Asia build-out)
+# - Source: local copies of the English Wikipedia articles (wp4 directory); nothing fetched. All 35 files checked: every one resolved to the article that was asked for (first lines read). Oda_Nobunaga, Toyotomi_Hideyoshi and Tokugawa_Ieyasu are long; I read the lead, early life, the rise/unification sections, the death sections and the shogunate sections, not every section (family, culture and popular-culture parts were skipped). Hojo_Yasutoki is a stub and only what it says is used.
+# - Existing records only referenced, not redefined: emperor-ichijo (not used), fujiwara-no-michinaga (parent link to Yorimichi), realm Japan, place heian-kyo (Kyoto).
+# - New realms: Kamakura shogunate, Ashikaga shogunate, Tokugawa shogunate (East Asia, Japan).
+# - Title wordings: "Emperor of Japan" (realm Japan; every emperor, including Go-Daigo's whole span), "Regent (Sessho)" and "Regent (Kampaku)" (Yorimichi has both, Hideyoshi Kampaku), "Chancellor (Daijo-daijin)" (Kiyomori, Yoshimitsu, Hideyoshi), "Minister of the Right (Udaijin)" (Nobunaga), "Shogun" (the three shogunate realms), "Shikken (regent)" (Kamakura shogunate; the six Hojo).
+# - Retired-emperor (insei / cloistered) period, kept to notes: Shirakawa (abdicated 3 Jan 1087, took the title Daijo-tenno and ruled indirectly from Shirakawa-in until 1129), Toba (cloistered ruler from 1129 to 1156) and Go-Shirakawa (de jure reign 1155-1158, cloistered from 1158 to 1192) held power as retired emperors; Go-Toba was cloistered 1198-1221 with more limited power. These stretches are not entered as titles.
+# - Left out, because the article gives no date or place: Tokimasa's post as Protector of Kyoto 1185-1186 (given only in his lead, no place entered); Yoshimitsu's Ming title "King of Japan" 1404 (a foreign title, in his note only); Nobunaga's birthplace (the article says Nagoya Castle was the old view and Shobata Castle the newer one, so no place record); Hideyoshi's and Ieyasu's deaths (Fushimi Castle, no place record; Ieyasu's death place is not in the article read); Odawara Castle, Hosshoji, Honno-ji and Tsurugaoka Hachimangu (no place records, to keep the batch small). The Imjin War (Hideyoshi's Korean campaigns, 1592-1598) is defined by batch D; here it is only named in Hideyoshi's note. Kublai Khan (batch B) is named in the Mongol-invasion notes but not linked.
+# - No placeholder dates: Hojo Tokiyori and Hojo Takatoki have NO shikken title row, because their articles do not state when they became shikken (an estimate would come from general knowledge or a derived age). Both stay as people with their events; the title rows are listed as a gap in the backlog.
+# - Dates given by the articles as Gregorian equivalents of lunar dates are used as given. Lunar-year crossings are flagged in discrepancies rather than converted: Go-Sanjo's abdication (Enkyu 4, 8th day of the 12th month = 18 January 1073) and Shirakawa's accession. Shirakawa's abdication "26th day of the 11th month, Otoku 3" is given in the article as 3 January 1087.
+# - Moments take a year only (checked): every moment below has an integer year or none. Full dates sit in title notes, events or discrepancies.
+# - Coordinates come from general knowledge (2-3 decimals); visitable flags and visit_site names are general knowledge, not from the articles. Place founding years only where an article gives them (Osaka Castle 1583, Azuchi Castle 1576, Ginkaku-ji 1482, Edo Castle 1457); Kinkaku-ji and Byodo-in have no year in the articles.
+# - Discrepancies recorded: Kamakura shogunate founding (1185 or 1192) and when Yoritomo became shogun; Dan-no-ura date; Soga revenge date; Yoriie's death date; Sanetomo's death date; Ashikaga shogunate founding (1336 or 1338); Yoshinori's appointment year; Yoshimasa's appointment year; Odawara year (1590 or 1588); Kiyomori's Daijo-daijin tenure; Nobunaga's Udaijin tenure; Ieyasu's burial (Kunozan or Nikko); Mongol 1274 timeline (6 November diary entry against 19-20 November landing); Heiji rising year; Go-Sanjo's abdication year (era count against Gregorian); Ogimachi's accession (1557 or ceremonies 1560). Seen and not entered as records: Shirakawa's cloistered years (the same article says 43, 41 and, by its dates, 42 years); Go-Daigo reign span is one row with the interruptions in the note; Yoshimitsu's retirement 1394 (ceded the shogunate) against 1395 (left all public offices); Go-Sanjo's reign year (6th year in one article, 5th in another) is not entered.
+# - Size: 29 people, 33 title rows, 3 realms, 17 places, 21 events, 16 discrepancies (119 rows), 13 links, 29 moments.
+
+sources:
+  - {key: wp-emperor-go-sanjo,        title: "Emperor Go-Sanjo (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Emperor_Go-Sanj%C5%8D"}
+  - {key: wp-emperor-shirakawa,       title: "Emperor Shirakawa (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Emperor_Shirakawa"}
+  - {key: wp-emperor-toba,            title: "Emperor Toba (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Emperor_Toba"}
+  - {key: wp-emperor-go-shirakawa,    title: "Emperor Go-Shirakawa (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Emperor_Go-Shirakawa"}
+  - {key: wp-emperor-go-toba,         title: "Emperor Go-Toba (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Emperor_Go-Toba"}
+  - {key: wp-emperor-go-daigo,        title: "Emperor Go-Daigo (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Emperor_Go-Daigo"}
+  - {key: wp-emperor-ogimachi,        title: "Emperor Ogimachi (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Emperor_%C5%8Cgimachi"}
+  - {key: wp-emperor-go-yozei,        title: "Emperor Go-Yozei (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Emperor_Go-Y%C5%8Dzei"}
+  - {key: wp-fujiwara-no-yorimichi,   title: "Fujiwara no Yorimichi (Wikipedia)",   url: "https://en.wikipedia.org/wiki/Fujiwara_no_Yorimichi"}
+  - {key: wp-taira-no-kiyomori,       title: "Taira no Kiyomori (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Taira_no_Kiyomori"}
+  - {key: wp-minamoto-no-yoritomo,    title: "Minamoto no Yoritomo (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoritomo"}
+  - {key: wp-minamoto-no-yoriie,      title: "Minamoto no Yoriie (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Minamoto_no_Yoriie"}
+  - {key: wp-minamoto-no-sanetomo,    title: "Minamoto no Sanetomo (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Minamoto_no_Sanetomo"}
+  - {key: wp-hojo-tokimasa,           title: "Hojo Tokimasa (Wikipedia)",           url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimasa"}
+  - {key: wp-hojo-yoshitoki,          title: "Hojo Yoshitoki (Wikipedia)",          url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Yoshitoki"}
+  - {key: wp-hojo-yasutoki,           title: "Hojo Yasutoki (Wikipedia)",           url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Yasutoki"}
+  - {key: wp-hojo-tokiyori,           title: "Hojo Tokiyori (Wikipedia)",           url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokiyori"}
+  - {key: wp-hojo-tokimune,           title: "Hojo Tokimune (Wikipedia)",           url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Tokimune"}
+  - {key: wp-hojo-takatoki,           title: "Hojo Takatoki (Wikipedia)",           url: "https://en.wikipedia.org/wiki/H%C5%8Dj%C5%8D_Takatoki"}
+  - {key: wp-ashikaga-takauji,        title: "Ashikaga Takauji (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Ashikaga_Takauji"}
+  - {key: wp-ashikaga-yoshiakira,     title: "Ashikaga Yoshiakira (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshiakira"}
+  - {key: wp-ashikaga-yoshimitsu,     title: "Ashikaga Yoshimitsu (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshimitsu"}
+  - {key: wp-ashikaga-yoshimochi,     title: "Ashikaga Yoshimochi (Wikipedia)",     url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshimochi"}
+  - {key: wp-ashikaga-yoshinori,      title: "Ashikaga Yoshinori (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshinori"}
+  - {key: wp-ashikaga-yoshimasa,      title: "Ashikaga Yoshimasa (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshimasa"}
+  - {key: wp-ashikaga-yoshiaki,       title: "Ashikaga Yoshiaki (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Ashikaga_Yoshiaki"}
+  - {key: wp-oda-nobunaga,            title: "Oda Nobunaga (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Oda_Nobunaga"}
+  - {key: wp-toyotomi-hideyoshi,      title: "Toyotomi Hideyoshi (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Toyotomi_Hideyoshi"}
+  - {key: wp-tokugawa-ieyasu,         title: "Tokugawa Ieyasu (Wikipedia)",         url: "https://en.wikipedia.org/wiki/Tokugawa_Ieyasu"}
+  - {key: wp-genpei-war,              title: "Genpei War (Wikipedia)",              url: "https://en.wikipedia.org/wiki/Genpei_War"}
+  - {key: wp-battle-of-dan-no-ura,    title: "Battle of Dan-no-ura (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Battle_of_Dan-no-ura"}
+  - {key: wp-onin-war,                title: "Onin War (Wikipedia)",                url: "https://en.wikipedia.org/wiki/%C5%8Cnin_War"}
+  - {key: wp-battle-of-sekigahara,    title: "Battle of Sekigahara (Wikipedia)",    url: "https://en.wikipedia.org/wiki/Battle_of_Sekigahara"}
+  - {key: wp-kenmu-restoration,       title: "Kenmu Restoration (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Kenmu_Restoration"}
+  - {key: wp-mongol-invasions-of-japan, title: "Mongol invasions of Japan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_invasions_of_Japan"}
+
+realms:
+  - {name: Kamakura shogunate, region: East Asia, country: Japan}
+  - {name: Ashikaga shogunate, region: East Asia, country: Japan}
+  - {name: Tokugawa shogunate, region: East Asia, country: Japan}
+
+people:
+  # ---- Emperors
+  - key: emperor-go-sanjo
+    name: Emperor Go-Sanjo
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1034-09-03
+    died: 1073-06-15
+    prominence: 3
+    note: "71st emperor, reigned 1068-1073. First emperor in 170 years whose mother was not of Fujiwara descent in the male line, so he owed the Fujiwara no loyalty and ruled personally; the article says his reign broke the Fujiwara grip on power. Issued the Enkyu Shoen Regulation Decree (1069) to certify manor records. Abdicated to his son Shirakawa on 18 January 1073, became a monk on 11 May 1073 and died on 15 June 1073. Buried among the Seven Imperial Tombs at Ryoan-ji, Kyoto."
+    coverage: partly
+    coverage_note: "reign, life dates, main acts and burial from the English Wikipedia article; consorts and court mostly not entered; no artworks"
+    sources: [wp-emperor-go-sanjo]
+  - key: emperor-shirakawa
+    name: Emperor Shirakawa
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1053-07-07
+    died: 1129-07-24
+    prominence: 3
+    note: "72nd emperor, reigned 1073-1087. The first emperor to retire (abdicated 3 January 1087, took the title Daijo-tenno) while continuing to exert power over his successors from the Shirakawa-in: cloistered (insei) rule, which he exercised until his death in 1129 through the reigns of Horikawa, Toba and Sutoku. Became a monk in 1096 (Dharma name Yukan). Had Hossho-ji built at Shirakawa in 1077. The article gives his cloistered years three ways: 43, 41 and, by its own dates, 1087-1129 (42)."
+    coverage: partly
+    coverage_note: "reign, life dates, retirement and cloistered rule from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-shirakawa]
+  - key: emperor-toba
+    name: Emperor Toba
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1103-02-24
+    died: 1156-07-20
+    prominence: 2
+    note: "74th emperor, reigned 1107-1123. Raised by his grandfather the retired Shirakawa, who held the real power; Shirakawa forced him to abdicate on 25 February 1123 in favour of his son Sutoku. After Shirakawa's death in 1129 Toba ruled as cloistered emperor through three reigns (Sutoku, Konoe, Go-Shirakawa) until his own death on 20 July 1156, shortly before the Hogen Rebellion."
+    coverage: partly
+    coverage_note: "reign, life dates and cloistered rule from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-toba]
+  - key: emperor-go-shirakawa
+    name: Emperor Go-Shirakawa
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1127-10-18
+    died: 1192-04-26
+    prominence: 3
+    note: "77th emperor. De jure reign 1155-1158, but cloistered emperor from 1158 until his death, outmaneuvering rivals through five reigns. Won the Hogen Rebellion (1156) with Taira no Kiyomori and Minamoto no Yoshitomo; fell out with Kiyomori and was confined; supported the Minamoto in the Genpei War and allowed Yoritomo to form a shogunate. Yoritomo called him 'the biggest tengu of Japan'. The article calls him de facto the last true emperor before the Meiji Restoration. Buried at Hoju-ji no Misasagi, Kyoto."
+    coverage: partly
+    coverage_note: "reign, life dates, main events and burial from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-go-shirakawa]
+  - key: emperor-go-toba
+    name: Emperor Go-Toba
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1180-08-06
+    died: 1239-03-28
+    prominence: 3
+    note: "82nd emperor, reigned 1183-1198; took the throne at three while the Taira held the regalia (the first accession in history without the transfer of the sacred treasures). Abdicated in 1198 and ruled as cloistered emperor 1198-1221 with more limited power than earlier cloistered emperors. Staged the Jokyu War against the Kamakura shogunate in 1221, lost, and was exiled to the Oki Islands, where he died and was buried. A poet, swordsmith and patron: ordered the Shin Kokinshu waka anthology."
+    coverage: partly
+    coverage_note: "reign, life dates, the Jokyu War, exile and cultural role from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-go-toba]
+  - key: emperor-go-daigo
+    name: Emperor Go-Daigo
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1288-11-26
+    died: 1339-09-19
+    prominence: 4
+    note: "96th emperor. Overthrew the Kamakura shogunate in 1333 and began the Kenmu Restoration, the last time the emperor held real power until 1868. After the Genko incident of 1331 the shogunate enthroned Kogon and exiled him to Oki (1332); he escaped in 1333. Ashikaga Takauji turned on him and in 1336 installed Komyo (Northern Court); Go-Daigo fled the capital in January 1337, set up the Southern Court at Yoshino and abdicated there on 18 September 1339, dying the next day. Mausoleum at Nara."
+    coverage: partly
+    coverage_note: "reign, exile, restoration, Southern Court and burial from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-go-daigo, wp-kenmu-restoration]
+  - key: emperor-ogimachi
+    name: Emperor Ogimachi
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1517-06-18
+    died: 1593-02-06
+    prominence: 3
+    note: "106th emperor, 17 November 1557 to 17 December 1586, through the Sengoku period into the Azuchi-Momoyama period. The court was impoverished; his enthronement ceremonies in 1560 were paid for by Mori Motonari and others. Oda Nobunaga's entry into Kyoto reversed the court's decline, though around 1573 Nobunaga demanded his abdication and he refused. Hideyoshi and the court entered a mutually beneficial relationship. Abdicated to his grandson Go-Yozei and retired to the Sento Palace; died 6 February 1593."
+    coverage: partly
+    coverage_note: "reign, life dates and relations with Nobunaga and Hideyoshi from the English Wikipedia article; consorts and children mostly not entered; no artworks"
+    sources: [wp-emperor-ogimachi]
+  - key: emperor-go-yozei
+    name: Emperor Go-Yozei
+    type: Royalty
+    house: Imperial House of Japan
+    realm: Japan
+    born: 1571-12-31
+    died: 1617-09-25
+    prominence: 3
+    note: "107th emperor, 1586 to his abdication on 9 May 1611, across the Azuchi-Momoyama and early Edo periods. Gave Hideyoshi the rank of Taiko and made him Daijo-daijin; appointed Tokugawa Ieyasu shogun on 24 March 1603. Visited Hideyoshi's mansion in 1588, the first public appearance of an emperor since 1521. Abdicated to his third son Go-Mizunoo and lived six years at the Sento Imperial Palace. Published the Kobun Kokyo and part of the Nihon Shoki in movable type."
+    coverage: partly
+    coverage_note: "reign, life dates and relations with Hideyoshi and Ieyasu from the English Wikipedia article; consorts and 35+ children not entered; no artworks"
+    sources: [wp-emperor-go-yozei]
+  # ---- Regent and chancellor of the late Heian court
+  - key: fujiwara-no-yorimichi
+    name: Fujiwara no Yorimichi
+    type: Nobility
+    house: Fujiwara
+    realm: Japan
+    born: 992
+    died: 1074
+    prominence: 3
+    note: "Son of Fujiwara no Michinaga. Sessho (regent for a child emperor) from 1017, then Kampaku from 1020 until 1068, under several emperors. Founder of the Phoenix Hall (Byodo-in) at Uji. Ordained a monk in 1072 (Dharma name Rengekaku, later Jakukaku)."
+    coverage: partly
+    coverage_note: "regencies, life dates and Byodo-in from the English Wikipedia article (a short article); marriages and children not entered; no artworks"
+    sources: [wp-fujiwara-no-yorimichi]
+  - key: taira-no-kiyomori
+    name: Taira no Kiyomori
+    type: Nobility
+    house: Taira
+    realm: Japan
+    born: 1118
+    died: 1181-03-20
+    prominence: 4
+    note: "Warrior leader of the late Heian period. With Minamoto no Yoshitomo put down the Hogen Rebellion (1156), then defeated him in the Heiji Rebellion (1160) and spared Yoritomo and his brothers, which later ruined the Taira. In 1167 the first courtier of a warrior family to be made Daijo-daijin, the de facto ruler of Japan. His grandson Antoku became emperor in 1180; the Genpei War began that year, and Kiyomori died of illness in 1181, leaving his son Munemori to preside over the Taira downfall (1185)."
+    coverage: partly
+    coverage_note: "career, titles and the road to the Genpei War from the English Wikipedia article; family and culture sections not entered; no artworks"
+    sources: [wp-taira-no-kiyomori]
+  # ---- Kamakura shoguns
+  - key: minamoto-no-yoritomo
+    name: Minamoto no Yoritomo
+    type: Royalty
+    house: Minamoto
+    realm: Kamakura shogunate
+    born: 1147-05-09
+    died: 1199-02-09
+    prominence: 5
+    note: "Founder and first shogun of the Kamakura shogunate. Born at Atsuta (Owari), exiled to Izu after the Heiji Rebellion, married Hojo Masako, raised the Minamoto against the Taira from Kamakura in 1180 and won the Genpei War (Dan-no-ura, 1185). Became Sei-i Taishogun in 1192 after Go-Shirakawa's death and ruled until 1199, setting up a military government at Kamakura while Kyoto remained the seat of ceremony. Destroyed the northern Fujiwara at Hiraizumi in 1189. Took Buddhist vows and died in 1199."
+    coverage: partly
+    coverage_note: "life dates, Genpei War, shogunate and death from the English Wikipedia article; consorts and children only as links; no artworks"
+    sources: [wp-minamoto-no-yoritomo, wp-genpei-war]
+  - key: minamoto-no-yoriie
+    name: Minamoto no Yoriie
+    type: Royalty
+    house: Minamoto
+    realm: Kamakura shogunate
+    born: 1182-09-11
+    died: 1204-08-14
+    prominence: 2
+    note: "Second shogun, Yoritomo's eldest son. Succeeded as head of the clan in 1199, limited by a Council of Thirteen; appointed Sei-i Taishogun on 22 July 1202. After falling ill in 1203 he was caught in the Hiki-Hojo struggle: Hojo Tokimasa had Hiki Yoshikazu killed on 2 September 1203, Yoriie was stripped of power on 7 September and was assassinated at Shuzenji in 1204. The article gives 14 August 1204 in its lead and 'July 1204' in the text."
+    coverage: partly
+    coverage_note: "reign, deposition and death from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-minamoto-no-yoriie]
+  - key: minamoto-no-sanetomo
+    name: Minamoto no Sanetomo
+    type: Royalty
+    house: Minamoto
+    realm: Kamakura shogunate
+    born: 1192-09-12
+    died: 1219-02-13
+    prominence: 3
+    note: "Third shogun (1203-1219), Yoritomo's second son and the last head of the Minamoto clan. A figurehead for the Hojo, he wrote waka (over 700 poems between 17 and 22, tutored by Fujiwara no Teika; Kinkai Wakashu) and became Udaijin in 1218. Assassinated on the steps of Tsurugaoka Hachimangu in Kamakura on the evening of 13 February 1219 by his nephew Kugyo, which ended the Minamoto line."
+    coverage: partly
+    coverage_note: "reign, poetry and assassination from the English Wikipedia article; no artworks"
+    sources: [wp-minamoto-no-sanetomo]
+  # ---- Hojo regents
+  - key: hojo-tokimasa
+    name: Hojo Tokimasa
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1138
+    died: 1215-02-06
+    prominence: 3
+    note: "First shikken (regent) of the Kamakura shogunate, 1203-1205, and head of the Hojo clan of Izu. Yoritomo's father-in-law. Had Hiki Yoshikazu killed in 1203, put Sanetomo in place of Yoriie, then lost his children's trust after Hatakeyama Shigetada's execution; forced by Yoshitoki and Masako in 1205 to become a monk and retire. Died in 1215 at about 78."
+    coverage: partly
+    coverage_note: "regency, life dates and the Hiki incident from the English Wikipedia article; family only as links; no artworks"
+    sources: [wp-hojo-tokimasa]
+  - key: hojo-yoshitoki
+    name: Hojo Yoshitoki
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1163
+    died: 1224-07-01
+    prominence: 3
+    note: "Second Hojo shikken, 1205-1224, Tokimasa's second son. Chose Kujo Yoritsune as shogun after Sanetomo's murder (1219) and put down Go-Toba's Jokyu War (1221), which his son Yasutoki carried to Kyoto. Died suddenly of illness in 1224 aged 61."
+    coverage: partly
+    coverage_note: "regency, life dates and Jokyu War from the English Wikipedia article; family only as links; no artworks"
+    sources: [wp-hojo-yoshitoki]
+  - key: hojo-yasutoki
+    name: Hojo Yasutoki
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1183
+    died: 1242-07-14
+    prominence: 3
+    note: "Third Hojo shikken (from 1224), eldest son of Yoshitoki. Led the shogunate forces in the Jokyu War of 1221 and set up the Rokuhara Tandai in Kyoto. Created the Hyojo council (1225) and issued the Goseibai Shikimoku legal code (1232). Became a monk and died in 1242. The English article is a short stub; only what it says is used."
+    coverage: partly
+    coverage_note: "regency, Jokyu War and legal reforms from a very short English Wikipedia article; no artworks"
+    sources: [wp-hojo-yasutoki]
+  - key: hojo-tokiyori
+    name: Hojo Tokiyori
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1227-06-29
+    died: 1263-12-24
+    prominence: 3
+    note: "Fifth Hojo shikken, succeeded his brother Tsunetoki. Crushed a coup by the former shogun Kujo Yoritsune, destroyed the Miura clan at the Battle of Hochi, replaced Shogun Kujo Yoritsugu with Prince Munetaka (1252) and set up the Hikitsuke High Court (1249). Became a monk in 1256, handing the post to Hojo Nagatoki, but kept real power: the start of the tokuso dictatorship. Invited Lanxi Daolong to build Kencho-ji."
+    coverage: partly
+    coverage_note: "regency, reforms and life dates from the English Wikipedia article; family only as a link; no artworks"
+    sources: [wp-hojo-tokiyori]
+  - key: hojo-tokimune
+    name: Hojo Tokimune
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1251-06-05
+    died: 1284-04-20
+    prominence: 4
+    note: "Eighth Hojo shikken, 1268-1284, de facto ruler of Japan. Rejected Kublai Khan's demands, beheaded Mongol envoys (1275 at Kamakura, 1279 at Hakata) and led the defence in the Mongol invasions of 1274 and 1281. A Zen follower who built Engaku-ji as a memorial to the samurai who died fighting the Mongols; took the tonsure on the day he died."
+    coverage: partly
+    coverage_note: "regency, Mongol defiance and Zen role from the English Wikipedia article; no artworks"
+    sources: [wp-hojo-tokimune]
+  - key: hojo-takatoki
+    name: Hojo Takatoki
+    type: Nobility
+    house: Hojo
+    realm: Kamakura shogunate
+    born: 1304-01-09
+    died: 1333-07-04
+    prominence: 3
+    note: "Last Tokuso and ruling shikken of the Kamakura shogunate. Became regent at eight, fell ill in 1326, retired as a monk but kept influence; the same year the shogunate asked Go-Daigo to abdicate, a step Sansom calls a 'fatal blunder'. Trusted Ashikaga Takauji, who turned the army on Kamakura. Killed himself with his family at Toshoji when Nitta Yoshisada burned Kamakura in 1333."
+    coverage: partly
+    coverage_note: "regency, fall of Kamakura and death from the English Wikipedia article; no artworks"
+    sources: [wp-hojo-takatoki]
+  # ---- Ashikaga shoguns
+  - key: ashikaga-takauji
+    name: Ashikaga Takauji
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1305-08-18
+    died: 1358-06-07
+    prominence: 4
+    note: "Founder and first shogun of the Ashikaga shogunate (Muromachi period). A Kamakura general sent to Kyoto in 1333, he went over to Go-Daigo and took Kyoto, then turned on the emperor: took Kamakura in 1335 and claimed Sei-i Taishogun without court permission, defeated Nitta Yoshisada, was driven to Kyushu, and won the Battle of Minatogawa (1336), killing Kusunoki Masashige. Installed Emperor Komyo of the Northern Court, starting the Nanbokucho period; appointed shogun in 1338. Called one of Japan's Three Great Villains."
+    coverage: partly
+    coverage_note: "life dates, rise, wars and shogunate from the English Wikipedia article; consorts and children only as a link; no artworks"
+    sources: [wp-ashikaga-takauji]
+  - key: ashikaga-yoshiakira
+    name: Ashikaga Yoshiakira
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1330-07-04
+    died: 1367-12-28
+    prominence: 2
+    note: "Second Ashikaga shogun, 1358-1367, Takauji's son. Held as a hostage in Kamakura as a child. Retook Kyoto from Southern Court occupations in the 1350s (1352, 1353, 1355), fled and regained the city in 1362, and saw Prince Kaneyoshi take Kyushu in 1365. Fell ill in 1367 and ceded his position to his son Yoshimitsu, who became shogun in 1368."
+    coverage: partly
+    coverage_note: "reign and life dates from the English Wikipedia article; consorts not entered; no artworks"
+    sources: [wp-ashikaga-yoshiakira]
+  - key: ashikaga-yoshimitsu
+    name: Ashikaga Yoshimitsu
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1358-09-25
+    died: 1408-05-31
+    prominence: 4
+    note: "Third Ashikaga shogun, 1368-1394, appointed at ten. Ended the Northern and Southern Courts schism in 1392, became Daijo-daijin in 1394, retired in 1395 to his Kitayama-dono villa (the Golden Pavilion) and was recognised as 'King of Japan' by the Ming (Yongle Emperor, 1404). Built the Muromachi palace (1378) that gave the shogunate its alternative name; patron of the Noh actor Zeami. Died suddenly in 1408, after planning to become Daijo-tenno."
+    coverage: partly
+    coverage_note: "reign, reunification, Ming relations, Kinkaku and patronage from the English Wikipedia article; consorts and children only as links; no artworks"
+    sources: [wp-ashikaga-yoshimitsu]
+  - key: ashikaga-yoshimochi
+    name: Ashikaga Yoshimochi
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1386-03-12
+    died: 1428-02-03
+    prominence: 2
+    note: "Fourth Ashikaga shogun, 1394-1423 and again 1425-1428, Yoshimitsu's son. Held real power only after his father died in 1408. Broke off relations with Ming China in 1411; faced the Uesugi rising in the Kanto (1416) and a Korean attack on Tsushima (1419). Ceded authority to his son Yoshikazu in 1423, took it back when Yoshikazu died in 1425, and died in 1428 without naming a successor."
+    coverage: partly
+    coverage_note: "reign and life dates from the English Wikipedia article; no artworks"
+    sources: [wp-ashikaga-yoshimochi]
+  - key: ashikaga-yoshinori
+    name: Ashikaga Yoshinori
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1394-07-12
+    died: 1441-07-12
+    prominence: 2
+    note: "Sixth Ashikaga shogun, 1429-1441, Yoshimitsu's son, a monk until chosen by lot at Iwashimizu Hachiman Shrine. Put down the Eikyo rebellion of Ashikaga Mochiuji (1438-39), restored trade with Ming China (1432). Assassinated in 1441 by Akamatsu Noriyasu at a Noh performance (Kakitsu Incident); the shogunate then declined."
+    coverage: partly
+    coverage_note: "reign, foreign relations and assassination from the English Wikipedia article; consorts not entered; no artworks"
+    sources: [wp-ashikaga-yoshinori]
+  - key: ashikaga-yoshimasa
+    name: Ashikaga Yoshimasa
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1436-01-20
+    died: 1490-01-27
+    prominence: 3
+    note: "Eighth Ashikaga shogun, 1443-1473, Yoshinori's son; shogun at about seven after his brother's death in 1443. His succession dispute with his brother Yoshimi, after the birth of his son Yoshihisa (1465), led to the Onin War (1467-1477) and the Sengoku period. Patron of the Higashiyama culture (tea ceremony, Noh, ink painting); began the Silver Pavilion in 1482. Retired in 1473; reassumed power when Yoshihisa died; died 27 January 1490."
+    coverage: partly
+    coverage_note: "reign, the Onin War, Higashiyama culture and heirs from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-ashikaga-yoshimasa, wp-onin-war]
+  - key: ashikaga-yoshiaki
+    name: Ashikaga Yoshiaki
+    type: Royalty
+    house: Ashikaga
+    realm: Ashikaga shogunate
+    born: 1537-12-05
+    died: 1597-10-19
+    prominence: 3
+    note: "15th and last Ashikaga shogun, 1568-1573. A monk at Kofuku-ji until his brother Yoshiteru was killed, he won Oda Nobunaga's support; Nobunaga entered Kyoto in 1568 and installed him as a puppet shogun. Later raised a revolt, was driven out of Kyoto on 27 August 1573 and became a monk, though he never formally gave up the title. Led anti-Oda forces from Tomo from 1576 (the 'Tomo Shogunate') and still resisted Hideyoshi in 1590. Died in 1597."
+    coverage: partly
+    coverage_note: "reign, revolt and exile from the English Wikipedia article; consorts and children not entered; no artworks"
+    sources: [wp-ashikaga-yoshiaki, wp-oda-nobunaga]
+  # ---- The three unifiers
+  - key: oda-nobunaga
+    name: Oda Nobunaga
+    type: Nobility
+    house: Oda
+    realm: Japan
+    born: 1534-06-23
+    died: 1582-06-21
+    prominence: 5
+    note: "First of the three 'Great Unifiers'. Won the Battle of Okehazama (1560) against Imagawa Yoshimoto, took Mino (Gifu, 1567), entered Kyoto on 9 November 1568 and installed Ashikaga Yoshiaki, whom he expelled on 27 August 1573, ending the Ashikaga shogunate in effect. Destroyed the Azai and Asakura (1573), burned Mount Hiei (1571), beat the Takeda at Nagashino (1575), took Ishiyama Hongan-ji (1580) and built Azuchi Castle (1576-1579). Killed himself at Honno-ji in Kyoto on 21 June 1582, ambushed by Akechi Mitsuhide. Never became shogun."
+    coverage: partly
+    coverage_note: "life dates, rise, main campaigns and death from the English Wikipedia article (a very long article; culture, family and popular-culture sections not read); no artworks"
+    sources: [wp-oda-nobunaga]
+  - key: toyotomi-hideyoshi
+    name: Toyotomi Hideyoshi
+    type: Nobility
+    house: Toyotomi
+    realm: Japan
+    born: 1537-03-17
+    died: 1598-09-18
+    prominence: 5
+    note: "Second 'Great Unifier', born a peasant at Nakamura in Owari. Nobunaga's general, then his successor: beat Akechi Mitsuhide at Yamazaki (2 July 1582), began Osaka Castle (1583), became Kampaku (1585) and Daijo-daijin, and took the name Toyotomi in 1586. Conquered Shikoku (1585) and Kyushu (1587), finished the unification with the Siege of Odawara (1590) and the Kunohe rebellion (1591). Resigned as Kampaku in January 1592 to be Taiko and launched the Korean campaigns (the Imjin War, defined in batch D) in 1592. Died at Fushimi Castle on 18 September 1598."
+    coverage: partly
+    coverage_note: "life dates, rise, campaigns, offices and death from the English Wikipedia article (family list and analysis not read); no artworks"
+    sources: [wp-toyotomi-hideyoshi]
+  - key: tokugawa-ieyasu
+    name: Tokugawa Ieyasu
+    type: Royalty
+    house: Tokugawa
+    realm: Tokugawa shogunate
+    born: 1543-01-31
+    died: 1616-06-01
+    prominence: 5
+    note: "Third 'Great Unifier' and founder and first shogun of the Tokugawa shogunate. Born Matsudaira Takechiyo at Okazaki Castle, a hostage under the Imagawa, then Nobunaga's ally. Moved by Hideyoshi to the Kanto (1590-91) and chose Edo as his seat. Won the Battle of Sekigahara (21 October 1600), was appointed shogun by Go-Yozei on 24 March 1603, retired in 1605 in favour of Hidetada but ruled as Ogosho from Sunpu, destroyed the Toyotomi at Osaka (1614-1615) and died on 1 June 1616. Deified as Tosho Daigongen."
+    coverage: partly
+    coverage_note: "life dates, rise, Kanto, Sekigahara, shogunate, Osaka and death from the English Wikipedia article (a very long article; early campaigns, family and culture read only selectively); no artworks"
+    sources: [wp-tokugawa-ieyasu]
+
+titles:
+  # Emperors of Japan
+  - {person: emperor-go-sanjo, title: Emperor of Japan, realm: Japan, from: 1068, to: 1073-01-18, note: "Accession followed Go-Reizei's death on 22 May 1068; the article's lead dates the reign 1068-1073. Abdicated 18 January 1073 (the article's Gregorian equivalent of Enkyu 4, 8th day of the 12th month; see discrepancy)", sources: [wp-emperor-go-sanjo]}
+  - {person: emperor-shirakawa, title: Emperor of Japan, realm: Japan, from: 1073, to: 1087-01-03, note: "Acceded shortly after Go-Sanjo's abdication on 18 January 1073. Abdicated 3 January 1087 (Otoku 3, 26th day of the 11th month); then ruled as cloistered emperor (insei) until 1129 from the Shirakawa-in", sources: [wp-emperor-shirakawa]}
+  - {person: emperor-toba, title: Emperor of Japan, realm: Japan, from: 1107, to: 1123-02-25, note: "Acceded shortly after his father Horikawa's death on 9 August 1107. Forced by the retired Shirakawa to abdicate on 25 February 1123 (Hoan 4, 28th day of the 1st month). Cloistered emperor 1129-1156", sources: [wp-emperor-toba]}
+  - {person: emperor-go-shirakawa, title: Emperor of Japan, realm: Japan, from: 1155, to: 1158, note: "De jure reign 1155-1158, enthroned late in 1155 after Konoe died on 22 August 1155; abdicated in 1158 to his son Nijo and ruled as cloistered emperor through five reigns until 1192", sources: [wp-emperor-go-shirakawa]}
+  - {person: emperor-go-toba, title: Emperor of Japan, realm: Japan, from: 1183, to: 1198, note: "Acceded shortly after 8 September 1183, when Antoku fled the capital with the regalia; abdicated in 1198 to Tsuchimikado. Cloistered emperor 1198-1221", sources: [wp-emperor-go-toba]}
+  - {person: emperor-go-daigo, title: Emperor of Japan, realm: Japan, from: 1318, to: 1339-09-18, note: "Acceded shortly after Hanazono's abdication on 29 March 1318. One row for the whole span: displaced by Kogon and exiled to Oki in 1332, back on the throne in 1333 (Kenmu Restoration), displaced again in 1336 when Takauji installed Komyo, and head of the Southern Court at Yoshino from January 1337. Abdicated at Yoshino on 18 September 1339 to Go-Murakami", sources: [wp-emperor-go-daigo, wp-kenmu-restoration]}
+  - {person: emperor-ogimachi, title: Emperor of Japan, realm: Japan, from: 1557-11-17, to: 1586-12-17, note: "Dates as given in the article's lead; his enthronement ceremonies were held in 1560 (see discrepancy)", sources: [wp-emperor-ogimachi]}
+  - {person: emperor-go-yozei, title: Emperor of Japan, realm: Japan, from: 1586, to: 1611-05-09, note: "Named Crown Prince on 5 November 1586 and took the reins within a month from his grandfather Ogimachi (Tensho 14, 7th day of the 11th month); abdicated 9 May 1611 to his son Go-Mizunoo", sources: [wp-emperor-go-yozei, wp-emperor-ogimachi]}
+  # Regent and chancellors of the court
+  - {person: fujiwara-no-yorimichi, title: Regent (Sessho), realm: Japan, from: 1017, to: 1020, note: "Succeeded his father Michinaga as Sessho in 1017; the article gives Kampaku from 1020, so the end year is taken from that", sources: [wp-fujiwara-no-yorimichi]}
+  - {person: fujiwara-no-yorimichi, title: Regent (Kampaku), realm: Japan, from: 1020, to: 1068, note: "Kampaku from 1020 until 1068; his younger brother Norimichi became kampaku under Go-Sanjo", sources: [wp-fujiwara-no-yorimichi, wp-emperor-go-sanjo]}
+  - {person: taira-no-kiyomori, title: Chancellor (Daijo-daijin), realm: Japan, from: 1167, to: 1181-03-20, note: "Appointed Daijo-daijin in 1167 (Junior First Rank on 11 February 1167), the first courtier of a warrior family. The end date is the article's lead ('from 1167 until his death'), but its text says he soon relinquished the post as was the norm; see discrepancy", sources: [wp-taira-no-kiyomori]}
+  - {person: ashikaga-yoshimitsu, title: Chancellor (Daijo-daijin), realm: Japan, from: 1394, to: 1395, note: "Grand Chancellor of State in 1394, the highest-ranking member of the court; the article says he retired from it and all public offices in 1395", sources: [wp-ashikaga-yoshimitsu]}
+  - {person: oda-nobunaga, title: Minister of the Right (Udaijin), realm: Japan, from: 1576, to: 1579, note: "Made Udaijin in 1576 and resigned the post (and Ukone no daisho) in 1579; the court's list for Ogimachi's reign gives 1577-1578 (see discrepancy). Never took the shogun title", sources: [wp-oda-nobunaga, wp-emperor-ogimachi]}
+  - {person: toyotomi-hideyoshi, title: Regent (Kampaku), realm: Japan, from: 1585, to: 1592, note: "Kampaku from 1585 (first commoner to hold it, after adoption by Konoe Sakihisa); resigned in January 1592 to become Taiko, passing it to his nephew Hidetsugu", sources: [wp-toyotomi-hideyoshi, wp-emperor-ogimachi]}
+  - {person: toyotomi-hideyoshi, title: Chancellor (Daijo-daijin), realm: Japan, from: 1586, to: 1598-09-18, note: "Dates as in the court lists of Ogimachi's and Go-Yozei's articles (1586-1598); the Hideyoshi article says only 'later'. Held until his death", sources: [wp-emperor-ogimachi, wp-emperor-go-yozei, wp-toyotomi-hideyoshi]}
+  # Kamakura shogunate
+  - {person: minamoto-no-yoritomo, title: Shogun, realm: Kamakura shogunate, from: 1192, to: 1199-02-09, note: "Sei-i Taishogun after Go-Shirakawa's death in 1192 (the article's lead: ruling from 1192 until 1199); other articles say he was invested some months after the retired emperor died, and that the shogunate was founded in 1185 (see discrepancy). Died 9 February 1199, two days after being ordained", sources: [wp-minamoto-no-yoritomo, wp-emperor-go-shirakawa]}
+  - {person: minamoto-no-yoriie, title: Shogun, realm: Kamakura shogunate, from: 1202-07-22, to: 1203-09-07, note: "Formally invested as Sei-i Taishogun on 22 July 1202; stripped of power on 7 September 1203 and confined", sources: [wp-minamoto-no-yoriie]}
+  - {person: minamoto-no-sanetomo, title: Shogun, realm: Kamakura shogunate, from: 1203, to: 1219-02-13, note: "Appointed in 1203 after Yoriie's fall; assassinated on 13 February 1219 (12 February in the Yoritomo article)", sources: [wp-minamoto-no-sanetomo]}
+  - {person: hojo-tokimasa, title: Shikken (regent), realm: Kamakura shogunate, from: 1203, to: 1205, note: "First Hojo shikken, from 1203 until his forced abdication in 1205", sources: [wp-hojo-tokimasa]}
+  - {person: hojo-yoshitoki, title: Shikken (regent), realm: Kamakura shogunate, from: 1205, to: 1224-07-01, note: "From his father's abdication in 1205 until his death on 1 July 1224", sources: [wp-hojo-yoshitoki]}
+  - {person: hojo-yasutoki, title: Shikken (regent), realm: Kamakura shogunate, from: 1224, to: 1242, note: "Third shikken after Yoshitoki and Masako died; the end year is his death (14 July 1242), as the article does not date his retirement. His grandson Tsunetoki succeeded", sources: [wp-hojo-yasutoki]}
+  # Tokiyori: no shikken title row. His start year is not stated in the article (it would come from general knowledge or a derived age), so the title is left out; the person and his events stay. Listed as a gap.
+  - {person: hojo-tokimune, title: Shikken (regent), realm: Kamakura shogunate, from: 1268, to: 1284-04-20, note: "Eighth shikken, reigned 1268-84 per the article's lead, from age 18 until his death", sources: [wp-hojo-tokimune]}
+  # Takatoki: no shikken title row. His start year is not stated in the article (it would come from general knowledge or a derived age), so the title is left out; the person and his events stay. Listed as a gap.
+  # Ashikaga shogunate
+  - {person: ashikaga-takauji, title: Shogun, realm: Ashikaga shogunate, from: 1338, to: 1358-06-07, note: "Appointed shogun in 1338 per the article (other articles say the shogunate was founded in 1336; he had claimed the title without court consent in 1335). Died 7 June 1358", sources: [wp-ashikaga-takauji, wp-kenmu-restoration]}
+  - {person: ashikaga-yoshiakira, title: Shogun, realm: Ashikaga shogunate, from: 1358, to: 1367-12-28, note: "Succeeded his father in 1358; died 28 December 1367 after ceding his position to his son", sources: [wp-ashikaga-yoshiakira]}
+  - {person: ashikaga-yoshimitsu, title: Shogun, realm: Ashikaga shogunate, from: 1368, to: 1394, note: "Appointed at ten in 1368; ceded the office to Yoshimochi in 1394 but kept authority until his death in 1408 (the Yoshimitsu article also says he retired from all offices in 1395)", sources: [wp-ashikaga-yoshimitsu]}
+  - {person: ashikaga-yoshimochi, title: Shogun, realm: Ashikaga shogunate, from: 1394, to: 1423, note: "First reign; confirmed as Sei-i Taishogun in 1394, exercising real power only after 1408. Ceded authority to his son Yoshikazu in 1423", sources: [wp-ashikaga-yoshimochi]}
+  - {person: ashikaga-yoshimochi, title: Shogun, realm: Ashikaga shogunate, from: 1425, to: 1428-02-03, note: "Second reign after the fifth shogun Yoshikazu died in 1425; died 3 February 1428", sources: [wp-ashikaga-yoshimochi]}
+  - {person: ashikaga-yoshinori, title: Shogun, realm: Ashikaga shogunate, from: 1429, to: 1441, note: "Reigned 1429-1441 per the lead (the text also says he became shogun on the day Yoshimochi died in 1428; see discrepancy). Assassinated in 1441 in the Kakitsu Incident", sources: [wp-ashikaga-yoshinori]}
+  - {person: ashikaga-yoshimasa, title: Shogun, realm: Ashikaga shogunate, from: 1443, to: 1473, note: "Reigned 1443-1473 per the lead, although the text says he was appointed shogun in 1449 (see discrepancy). Retired in 1473 to his son Yoshihisa; reassumed power after Yoshihisa's death until 1489", sources: [wp-ashikaga-yoshimasa]}
+  - {person: ashikaga-yoshiaki, title: Shogun, realm: Ashikaga shogunate, from: 1568, to: 1573-08-27, note: "Installed by Nobunaga on his entry into Kyoto on 9 November 1568. Driven out of Kyoto on 27 August 1573 (the article's date for the end of the Ashikaga power); he never formally relinquished the title", sources: [wp-ashikaga-yoshiaki, wp-oda-nobunaga]}
+  # Tokugawa shogunate
+  - {person: tokugawa-ieyasu, title: Shogun, realm: Tokugawa shogunate, from: 1603-03-24, to: 1605, note: "Received the title from Emperor Go-Yozei on 24 March 1603; resigned in 1605 in favour of his son Hidetada but remained the effective ruler as retired shogun (Ogosho) until his death on 1 June 1616", sources: [wp-tokugawa-ieyasu, wp-emperor-go-yozei]}
+
+places:
+  - key: kamakura
+    name: Kamakura
+    kind: city
+    region: Kanagawa
+    country: Japan
+    lat: 35.319
+    lng: 139.547
+    visitable: true
+    visit_site: "Tsurugaoka Hachimangu and the Great Buddha"
+    note: "Yoritomo's base from 1180 and the seat of the Kamakura shogunate (the article says he 'set up a capital in Kamakura'); home of the Hojo regents. Sanetomo was killed on the steps of Tsurugaoka Hachimangu in 1219; besieged by Nitta Yoshisada and burned in 1333, when Hojo Takatoki and his clan died at Toshoji. Takauji took it in 1335 and built a mansion at Okura on the site of Yoritomo's residence."
+    sources: [wp-minamoto-no-yoritomo, wp-minamoto-no-sanetomo, wp-hojo-takatoki, wp-ashikaga-takauji, wp-kenmu-restoration]
+  - key: nara
+    name: Nara
+    kind: city
+    region: Nara
+    country: Japan
+    lat: 34.685
+    lng: 135.805
+    visitable: true
+    note: "Besieged by the Taira and its temples burned in 1180 during the Genpei War; Taira no Shigehira was executed there after the war. Go-Daigo's mausoleum (Tō-no-o no misasagi) is at Nara."
+    sources: [wp-genpei-war, wp-hojo-tokimasa, wp-emperor-go-daigo]
+  - key: osaka-castle
+    name: Osaka Castle
+    kind: castle
+    city: Osaka
+    region: Osaka
+    country: Japan
+    lat: 34.687
+    lng: 135.526
+    visitable: true
+    visit_site: "Osaka Castle Park and keep museum"
+    founded: 1583
+    built_by: "Toyotomi Hideyoshi, on the site of the Ishiyama Hongan-ji; main enclosure finished 1585, second enclosure 1588"
+    note: "Begun by Hideyoshi in 1583 where Nobunaga had burned the Ishiyama Hongan-ji; the last stronghold of the Toyotomi. Mori Terumoto held it for the Western Army in 1600. Tokugawa forces besieged it in the Winter and Summer sieges of 1614-1615, when Hideyori and Yodo-dono died."
+    sources: [wp-toyotomi-hideyoshi, wp-oda-nobunaga, wp-tokugawa-ieyasu]
+  - key: azuchi-castle
+    name: Azuchi Castle
+    kind: castle
+    city: Omihachiman
+    region: Shiga
+    country: Japan
+    lat: 35.159
+    lng: 136.138
+    visitable: true
+    visit_site: "Azuchi Castle ruins (Mount Azuchi)"
+    founded: 1576
+    built_by: "Oda Nobunaga; built 1576 to 1579 on Mount Azuchi, on the eastern shore of Lake Biwa"
+    note: "Nobunaga's castle, close enough to Kyoto to watch its approaches and placed between his main rivals; it gives the Azuchi-Momoyama period its name. The article says the Azuchi Screens, showing the castle and town, were given to Pope Gregory XIII."
+    sources: [wp-oda-nobunaga]
+  - key: sekigahara-battlefield
+    name: Sekigahara battlefield
+    kind: battlefield
+    city: Sekigahara
+    region: Gifu
+    country: Japan
+    lat: 35.366
+    lng: 136.466
+    visitable: true
+    visit_site: "Sekigahara Battlefield Memorial Museum"
+    note: "Site of the Battle of Sekigahara, 21 October 1600, where Tokugawa Ieyasu's Eastern Army defeated Ishida Mitsunari's Western Army."
+    sources: [wp-battle-of-sekigahara]
+  - key: edo
+    name: Edo (Edo Castle, now Tokyo)
+    kind: castle town
+    city: Tokyo
+    region: Tokyo
+    country: Japan
+    lat: 35.685
+    lng: 139.753
+    visitable: true
+    visit_site: "Tokyo Imperial Palace East Gardens (site of Edo Castle)"
+    founded: 1457
+    built_by: "Ota Dokan built Edo Castle in 1457 (Onin War chronology); Tokugawa Ieyasu made it his seat from 1590-91 and supervised its great rebuilding, begun in 1606"
+    note: "A small, underdeveloped town when Hideyoshi moved Ieyasu to the Kanto; under Ieyasu it became the centre of political power and de facto capital while Kyoto stayed the de jure capital. The central donjon burned in the Meireki fire of 1657; the Imperial Palace now stands on the site."
+    sources: [wp-tokugawa-ieyasu, wp-onin-war, wp-emperor-go-yozei]
+  - key: dan-no-ura
+    name: Dan-no-ura
+    kind: battlefield
+    city: Shimonoseki
+    region: Yamaguchi
+    country: Japan
+    lat: 33.960
+    lng: 130.952
+    visitable: true
+    visit_site: "Akama Shrine and the Dan-no-ura Kanmon Straits shore, Shimonoseki"
+    note: "Site of the naval Battle of Dan-no-ura in the Kanmon Straits between Honshu and Kyushu (1185), where the Taira fleet was destroyed and the boy Emperor Antoku died."
+    sources: [wp-battle-of-dan-no-ura, wp-genpei-war]
+  - key: kinkaku-ji
+    name: Kinkaku-ji (Rokuon-ji)
+    kind: temple
+    city: Kyoto
+    region: Kyoto
+    country: Japan
+    lat: 35.039
+    lng: 135.729
+    visitable: true
+    visit_site: "Kinkaku-ji, the Golden Pavilion"
+    built_by: "Ashikaga Yoshimitsu, as his Kitayama-dono retirement villa after 1395"
+    note: "Yoshimitsu's retirement villa, which boasted a pavilion two-thirds covered in gold leaf; after his death in 1408 it became the temple Rokuon-ji, popularly Kinkaku-ji. He received Ming and Joseon envoys there. The article gives no founding year."
+    sources: [wp-ashikaga-yoshimitsu]
+  - key: ginkaku-ji
+    name: Ginkaku-ji (Jisho-ji)
+    kind: temple
+    city: Kyoto
+    region: Kyoto
+    country: Japan
+    lat: 35.027
+    lng: 135.798
+    visitable: true
+    visit_site: "Ginkaku-ji, the Silver Pavilion"
+    founded: 1482
+    built_by: "Ashikaga Yoshimasa; planned from 1460 as his retirement villa, construction of the Silver Pavilion commenced 21 February 1482"
+    note: "Yoshimasa's Higashiyama-dono estate, which became the temple Jisho-ji after his death; he died there on 27 January 1490. He planned it while Kyoto burned in the Onin War."
+    sources: [wp-ashikaga-yoshimasa, wp-onin-war]
+  - key: byodo-in
+    name: Byodo-in (Phoenix Hall), Uji
+    kind: temple
+    city: Uji
+    region: Kyoto
+    country: Japan
+    lat: 34.889
+    lng: 135.807
+    visitable: true
+    visit_site: "Byodo-in Phoenix Hall"
+    built_by: "Fujiwara no Yorimichi (founder of the Phoenix Hall)"
+    note: "In 1180 Minamoto no Yorimasa killed himself inside the Byodo-in after the first Battle of Uji, which opened the Genpei War. The article gives no year for Yorimichi's founding."
+    sources: [wp-fujiwara-no-yorimichi, wp-genpei-war]
+  - key: hakata-bay
+    name: Hakata Bay
+    kind: bay
+    city: Fukuoka
+    region: Fukuoka
+    country: Japan
+    lat: 33.680
+    lng: 130.330
+    visitable: true
+    visit_site: "Genko Borui defensive wall remains, Fukuoka"
+    note: "Where the Yuan fleets landed in 1274 (Battle of Bun'ei, 19-20 November) and attacked in 1281 against a defensive wall (Battle of Koan); Hojo Tokimune had a second group of Mongol envoys beheaded at Hakata in 1279."
+    sources: [wp-mongol-invasions-of-japan, wp-hojo-tokimune]
+  - key: oki-islands
+    name: Oki Islands
+    kind: island group
+    region: Shimane
+    country: Japan
+    lat: 36.250
+    lng: 133.300
+    visitable: true
+    note: "Place of exile of Go-Toba after the Jokyu War of 1221 (he died and was buried there) and of Go-Daigo after the Genko incident (1332)."
+    sources: [wp-emperor-go-toba, wp-emperor-go-daigo]
+  - key: yoshino
+    name: Yoshino
+    kind: mountain town
+    region: Nara
+    country: Japan
+    lat: 34.355
+    lng: 135.858
+    visitable: true
+    note: "Seat of the Southern Court, set up by Go-Daigo in the mountains of Yoshino in January 1337; he abdicated there on 18 September 1339."
+    sources: [wp-emperor-go-daigo]
+  - key: atsuta
+    name: Atsuta (Nagoya)
+    kind: district
+    city: Nagoya
+    region: Aichi
+    country: Japan
+    lat: 35.128
+    lng: 136.908
+    visitable: true
+    visit_site: "Atsuta Shrine; Seigan-ji (site of the Minamoto villa)"
+    note: "Yoritomo was born at the family villa on the western side of Atsuta Shrine, where Seigan-ji now stands."
+    sources: [wp-minamoto-no-yoritomo]
+  - key: shuzenji
+    name: Shuzenji
+    kind: temple town
+    city: Izu
+    region: Shizuoka
+    country: Japan
+    lat: 34.972
+    lng: 138.933
+    visitable: true
+    visit_site: "Shuzenji temple and onsen town"
+    note: "Where the deposed shogun Minamoto no Yoriie was confined in Izu Province and assassinated by Hojo agents in 1204."
+    sources: [wp-minamoto-no-yoriie]
+  - key: okazaki-castle
+    name: Okazaki Castle
+    kind: castle
+    city: Okazaki
+    region: Aichi
+    country: Japan
+    lat: 34.957
+    lng: 137.159
+    visitable: true
+    visit_site: "Okazaki Castle and park"
+    note: "Seat of the Matsudaira daimyo of Mikawa and birthplace of Tokugawa Ieyasu (31 January 1543); Ieyasu took it back in 1560 after Okehazama."
+    sources: [wp-tokugawa-ieyasu, wp-emperor-ogimachi]
+  - key: nakamura-nagoya
+    name: Nakamura (Nagoya)
+    kind: district
+    city: Nagoya
+    region: Aichi
+    country: Japan
+    lat: 35.171
+    lng: 136.861
+    visitable: true
+    visit_site: "Toyokuni Shrine, Nakamura Park"
+    note: "Birthplace of Toyotomi Hideyoshi in Owari Province, to an ashigaru father (present-day Nakamura Ward, Nagoya)."
+    sources: [wp-toyotomi-hideyoshi]
+
+events:
+  - key: hogen-rebellion-1156
+    name: Hogen Rebellion
+    type: Rebellion
+    year: 1156
+    place: heian-kyo
+    people:
+      - {person: emperor-go-shirakawa, role: victor}
+      - {person: taira-no-kiyomori, role: victor}
+      - {person: emperor-toba, role: died shortly before (20 July 1156)}
+    prominence: 3
+    note: "After Toba died on 20 July 1156 (Hogen 1, 2nd day of the 7th month), Fujiwara no Yorinaga mustered warriors for the claim of Sutoku's line; Go-Shirakawa, backed by Taira no Kiyomori and Minamoto no Yoshitomo, defeated them. The article cites Sansom: because the military clans decided the outcome, it was a turning point toward samurai control of politics. No day is given for the fighting."
+    sources: [wp-emperor-go-shirakawa, wp-taira-no-kiyomori, wp-emperor-toba]
+  - key: heiji-rebellion-1160
+    name: Heiji Rebellion
+    type: Rebellion
+    year: 1160
+    place: heian-kyo
+    people:
+      - {person: taira-no-kiyomori, role: victor}
+      - {person: minamoto-no-yoritomo, role: defeated (spared and exiled)}
+    prominence: 2
+    note: "Yoshitomo's Minamoto seized the retired and the reigning emperor while Kiyomori was away (December 1159 in the Yoritomo article), but Kiyomori returned and defeated them at Rokuhara. Yoshitomo was killed; Kiyomori spared and exiled Yoritomo and his brothers, which later ended the Taira. The Kiyomori and Go-Shirakawa articles date it 1160; see discrepancy."
+    sources: [wp-taira-no-kiyomori, wp-minamoto-no-yoritomo]
+  - key: genpei-war-1180
+    name: Genpei War
+    type: War
+    year: 1180
+    end_year: 1185
+    place: byodo-in
+    places:
+      - {place: nara, role: siege, note: "Taira burned the city's temples in 1180"}
+      - {place: dan-no-ura, role: finish, note: "Decisive naval battle, 1185"}
+    people:
+      - {person: taira-no-kiyomori, role: Taira leader (died 1181)}
+      - {person: minamoto-no-yoritomo, role: Minamoto leader, victor}
+      - {person: emperor-go-shirakawa, role: cloistered emperor, backed the Minamoto}
+      - {person: hojo-tokimasa, role: Minamoto ally}
+    prominence: 4
+    note: "National civil war between the Taira and Minamoto clans, 1180-1185, started by Prince Mochihito and Minamoto no Yorimasa's call to arms and the first Battle of Uji. Yoritomo lost at Ishibashiyama (1180), Kiyomori died in 1181, Yoshinaka entered Kyoto in 1183 and Yoshitsune beat the Taira at Ichi-no-Tani (1184), Yashima and Dan-no-ura (1185). The article notes the Battle of Oshu (1189) as the last battle of the period."
+    sources: [wp-genpei-war]
+  - key: battle-of-dan-no-ura-1185
+    name: Battle of Dan-no-ura
+    type: Battle
+    date: 1185-04-25
+    place: dan-no-ura
+    people:
+      - {person: minamoto-no-yoritomo, role: Minamoto leader, victor}
+    prominence: 4
+    note: "Decisive naval battle of the Genpei War in the Kanmon Straits: Minamoto no Yoshitsune's fleet beat the Taira; the morning tide favoured the Taira and the afternoon tide the Minamoto, and Taguchi Shigeyoshi's defection decided it. The boy Emperor Antoku and Kiyomori's widow Taira no Tokiko died. The date is 25 April 1185, or 24 March 1185 on the Shimonoseki city page (see discrepancy)."
+    sources: [wp-battle-of-dan-no-ura, wp-genpei-war]
+  - key: kamakura-shogunate-founded-1192
+    name: Founding of the Kamakura shogunate
+    type: Founding
+    year: 1192
+    place: kamakura
+    people:
+      - {person: minamoto-no-yoritomo, role: founder, first shogun}
+      - {person: emperor-go-shirakawa, role: granted the right before his death in 1192}
+    prominence: 4
+    note: "The first shogunate (bakufu) in Japan, with real power at Kamakura and Kyoto reduced to ceremony. The date used is 1192, when Yoritomo became Sei-i Taishogun; some articles place the founding in 1185, after Dan-no-ura, when Go-Shirakawa granted him the power to appoint stewards and constables (see discrepancy). It lasted until 1333."
+    sources: [wp-minamoto-no-yoritomo, wp-genpei-war, wp-emperor-go-shirakawa]
+  - key: jokyu-war-1221
+    name: Jokyu War
+    type: War
+    year: 1221
+    place: heian-kyo
+    places:
+      - {place: oki-islands, role: exile, note: "Go-Toba exiled here"}
+    people:
+      - {person: emperor-go-toba, role: instigator, defeated}
+      - {person: hojo-yoshitoki, role: shikken, victor}
+      - {person: hojo-yasutoki, role: commander, took Kyoto}
+    prominence: 3
+    note: "Go-Toba, disillusioned with the Hojo, declared Yoshitoki an outlaw and tried to overthrow the Kamakura shogunate. Most samurai, especially in the Kanto, backed the shogunate; Yasutoki took Kyoto and set up the Rokuhara Tandai. Go-Toba was exiled to Oki and the throne passed to Go-Horikawa. The article gives no day or month."
+    sources: [wp-emperor-go-toba, wp-hojo-yoshitoki, wp-hojo-yasutoki]
+  - key: mongol-invasions-of-japan-1274
+    name: First Mongol invasion of Japan
+    type: Invasion
+    date: 1274-11-04
+    end_year: 1274
+    place: hakata-bay
+    people:
+      - {person: hojo-tokimune, role: shikken, led the defence}
+    prominence: 5
+    note: "The Yuan fleet of Kublai Khan sailed from Hoppo on 2 November 1274, landed on Tsushima on 4 November, took Iki on 13 November and landed in Hakata Bay on 19 November. The Battle of Bun'ei on 20 November was won by the Mongols with bombs and massed tactics, but they withdrew to their ships; most had gone by morning, with a storm reported. Of about 30,000, 13,500 did not return. Date given is the first landing, on Tsushima. Kublai Khan is not linked here (batch B)."
+    sources: [wp-mongol-invasions-of-japan, wp-hojo-tokimune]
+  - key: mongol-invasions-of-japan-1281
+    name: Second Mongol invasion of Japan
+    type: Invasion
+    date: 1281-06-09
+    end_year: 1281
+    place: hakata-bay
+    people:
+      - {person: hojo-tokimune, role: shikken, led the defence}
+    prominence: 5
+    note: "Two fleets, a combined 142,000 men by the Yuan history (modern historians think it far smaller). The Eastern Route army attacked Tsushima on 9 June and Iki on 14 June, but could not get past the Hakata wall; a Japanese night-raiding defence (Battle of Koan) followed. On 15 August a great typhoon, the 'kamikaze', destroyed the fleet at anchor. Date given is the Tsushima landing."
+    sources: [wp-mongol-invasions-of-japan, wp-hojo-tokimune]
+  - key: kamakura-shogunate-ended-1333
+    name: Fall of Kamakura and end of the Kamakura shogunate
+    type: Siege
+    year: 1333
+    place: kamakura
+    people:
+      - {person: hojo-takatoki, role: last shikken, died}
+      - {person: emperor-go-daigo, role: restored to power}
+      - {person: ashikaga-takauji, role: defected, took Kyoto}
+    prominence: 4
+    note: "Takauji, sent to put down Go-Daigo, switched sides and captured the Rokuhara Tandai; Nitta Yoshisada besieged and burned Kamakura, and Takatoki and his family killed themselves at Toshoji (4 July 1333 in Takatoki's article). This ended Hojo power and the shogunate."
+    sources: [wp-emperor-go-daigo, wp-hojo-takatoki, wp-kenmu-restoration]
+  - key: kenmu-restoration-1333
+    name: Kenmu Restoration
+    type: Political
+    year: 1333
+    end_year: 1336
+    place: heian-kyo
+    people:
+      - {person: emperor-go-daigo, role: restored emperor}
+      - {person: ashikaga-takauji, role: overthrew it}
+    prominence: 3
+    note: "Go-Daigo's three-year imperial rule, 1333-1336, the last time the emperor held significant power until 1868. It failed over land rights and the neglect of the samurai; Takauji entered Kyoto on 25 February 1336 and the restoration ended (the Go-Daigo article places the final collapse as Minatogawa in 1336 and his flight in January 1337)."
+    sources: [wp-kenmu-restoration, wp-emperor-go-daigo]
+  - key: ashikaga-shogunate-founded-1338
+    name: Founding of the Ashikaga (Muromachi) shogunate
+    type: Founding
+    year: 1338
+    place: heian-kyo
+    people:
+      - {person: ashikaga-takauji, role: founder, first shogun}
+    prominence: 3
+    note: "Takauji installed the Northern Court emperor Komyo after Minatogawa (1336) and enacted the Kenmu Law Code; the Takauji article dates his appointment as shogun and the start of the Muromachi period to 1338, while the Kenmu Restoration article says he founded the shogunate in 1336 (see discrepancy)."
+    sources: [wp-ashikaga-takauji, wp-kenmu-restoration, wp-emperor-go-daigo]
+  - key: nanboku-cho-reunification-1392
+    name: Reunification of the Northern and Southern Courts
+    type: Treaty
+    year: 1392
+    place: heian-kyo
+    people:
+      - {person: ashikaga-yoshimitsu, role: negotiator}
+    prominence: 3
+    note: "Yoshimitsu persuaded Go-Kameyama of the Southern Court to hand the Imperial Regalia to Emperor Go-Komatsu of the Northern Court, ending the schism that had lasted for over half a century. Go-Kameyama and Go-Komatsu are not in the database."
+    sources: [wp-ashikaga-yoshimitsu]
+  - key: onin-war-1467
+    name: Onin War
+    type: War
+    year: 1467
+    end_year: 1477
+    place: heian-kyo
+    people:
+      - {person: ashikaga-yoshimasa, role: shogun whose succession triggered it}
+    prominence: 4
+    note: "Civil war, 1467-1477, between Hosokawa Katsumoto's Eastern Army and Yamana Sozen's Western Army over the shogun's succession (Yoshimi against Yoshihisa) and the Hatakeyama and Shiba successions. Most of Kyoto was destroyed; Katsumoto and Sozen both died in 1473 and the Ouchi left Kyoto on 17 December 1477. It started the Sengoku period."
+    sources: [wp-onin-war, wp-ashikaga-yoshimasa]
+  - key: battle-of-okehazama-1560
+    name: Battle of Okehazama
+    type: Battle
+    year: 1560
+    people:
+      - {person: oda-nobunaga, role: victor}
+    prominence: 3
+    note: "In June 1560 Nobunaga, with 2,000-3,000 men, surprised Imagawa Yoshimoto's much larger army after a storm and Yoshimoto was killed; Nobunaga's prestige soared. Tokugawa Ieyasu (then Matsudaira Motoyasu) took Okazaki Castle in the same year. No day or place is given for the battlefield."
+    sources: [wp-oda-nobunaga, wp-emperor-ogimachi]
+  - key: oda-nobunaga-enters-kyoto-1568
+    name: Nobunaga enters Kyoto and installs Ashikaga Yoshiaki
+    type: Political
+    date: 1568-11-09
+    place: heian-kyo
+    people:
+      - {person: oda-nobunaga, role: conqueror}
+      - {person: ashikaga-yoshiaki, role: installed as shogun}
+    prominence: 3
+    note: "Nobunaga drove the Miyoshi out of Kyoto and installed Yoshiaki as the 15th shogun; he refused Yoshiaki's offered posts. It marks the start of the Azuchi-Momoyama period and the revival of the court's fortunes."
+    sources: [wp-oda-nobunaga, wp-ashikaga-yoshiaki]
+  - key: ashikaga-shogunate-ended-1573
+    name: Yoshiaki driven out of Kyoto
+    type: Political
+    date: 1573-08-27
+    place: heian-kyo
+    people:
+      - {person: oda-nobunaga, role: expelled him}
+      - {person: ashikaga-yoshiaki, role: expelled}
+    prominence: 3
+    note: "After Yoshiaki's revolt, Nobunaga drove him out of Kyoto on 27 August 1573, which most historians take as the end of the Ashikaga shogunate (Yoshiaki kept his title and acted from Tomo from 1576)."
+    sources: [wp-oda-nobunaga, wp-ashikaga-yoshiaki]
+  - key: honno-ji-incident-1582
+    name: Honno-ji Incident
+    type: Assassination
+    date: 1582-06-21
+    place: heian-kyo
+    people:
+      - {person: oda-nobunaga, role: killed himself}
+      - {person: toyotomi-hideyoshi, role: avenged him at Yamazaki on 2 July 1582}
+    prominence: 4
+    note: "Akechi Mitsuhide surrounded the Honno-ji temple in Kyoto at dawn, where Nobunaga was holding a tea ceremony with only a few pages; Nobunaga killed himself, and his heir Nobutada also died at Nijo. Mitsuhide's rule lasted a few days ('Mikka Tenka') until Hideyoshi defeated him."
+    sources: [wp-oda-nobunaga, wp-toyotomi-hideyoshi]
+  - key: siege-of-odawara-1590
+    name: Siege of Odawara and the unification of Japan
+    type: Siege
+    year: 1590
+    people:
+      - {person: toyotomi-hideyoshi, role: commander, unifier}
+      - {person: tokugawa-ieyasu, role: participant}
+    prominence: 4
+    note: "Hideyoshi's campaign against the Later Hojo, whose Odawara stronghold surrendered with almost no fighting (Ii Naomasa's night raid aside); Hojo Ujimasa and Ujiteru were forced to die. The Kunohe rebellion (March-September 1591) was the last battle of the unification. Hideyoshi then moved Ieyasu to the Kanto. The Go-Yozei article dates the siege 1588 (see discrepancy). The Odawara Castle itself is not entered as a place."
+    sources: [wp-toyotomi-hideyoshi, wp-tokugawa-ieyasu, wp-emperor-go-yozei]
+  - key: battle-of-sekigahara-1600
+    name: Battle of Sekigahara
+    type: Battle
+    date: 1600-10-21
+    place: sekigahara-battlefield
+    people:
+      - {person: tokugawa-ieyasu, role: victor, Eastern Army}
+    prominence: 5
+    note: "On 21 October 1600 (Keicho 5, 15th day of the 9th month) Ieyasu's Eastern Army (about 75,000) defeated Ishida Mitsunari's Western Army (about 120,000), after Kobayakawa Hideaki and others defected. Regarded as the most important battle in Japanese history and the beginning of the Tokugawa shogunate."
+    sources: [wp-battle-of-sekigahara, wp-tokugawa-ieyasu]
+  - key: tokugawa-shogunate-founded-1603
+    name: Founding of the Tokugawa shogunate
+    type: Founding
+    date: 1603-03-24
+    place: edo
+    people:
+      - {person: tokugawa-ieyasu, role: founder, first shogun}
+      - {person: emperor-go-yozei, role: appointed him}
+    prominence: 4
+    note: "Ieyasu was made Sei-i Taishogun, Minister of the Right and head of the Minamoto clan by Go-Yozei on 24 March 1603, and the shogunate ruled until 1868. He resigned the post in 1605 to his son Hidetada, making it hereditary, and built Edo Castle as the centre of government."
+    sources: [wp-tokugawa-ieyasu, wp-emperor-go-yozei]
+  - key: siege-of-osaka-1614
+    name: Sieges of Osaka
+    type: Siege
+    year: 1614
+    end_year: 1615
+    place: osaka-castle
+    people:
+      - {person: tokugawa-ieyasu, role: besieger, victor}
+    prominence: 3
+    note: "Winter (1614) and Summer (1615) sieges of Osaka Castle by Ieyasu and the shogun Hidetada; after the winter truce the Tokugawa filled in the outer moats. In late 1615 the castle fell and Toyotomi Hideyori and his mother Yodo-dono died, ending the Toyotomi clan."
+    sources: [wp-tokugawa-ieyasu, wp-toyotomi-hideyoshi]
+
+links:
+  - {parent: fujiwara-no-michinaga, child: fujiwara-no-yorimichi}
+  - {parent: emperor-go-sanjo, child: emperor-shirakawa}
+  - {parent: emperor-toba, child: emperor-go-shirakawa}
+  - {parent: minamoto-no-yoritomo, child: minamoto-no-yoriie}
+  - {parent: minamoto-no-yoritomo, child: minamoto-no-sanetomo}
+  - {parent: hojo-tokimasa, child: hojo-yoshitoki}
+  - {parent: hojo-yoshitoki, child: hojo-yasutoki}
+  - {parent: hojo-tokiyori, child: hojo-tokimune}
+  - {parent: ashikaga-takauji, child: ashikaga-yoshiakira}
+  - {parent: ashikaga-yoshiakira, child: ashikaga-yoshimitsu}
+  - {parent: ashikaga-yoshimitsu, child: ashikaga-yoshimochi}
+  - {parent: ashikaga-yoshimitsu, child: ashikaga-yoshinori}
+  - {parent: ashikaga-yoshinori, child: ashikaga-yoshimasa}
+
+moments:
+  # Born
+  - {person: minamoto-no-yoritomo, role: born, place: atsuta, year: 1147, sources: [wp-minamoto-no-yoritomo]}
+  - {person: minamoto-no-yoriie, role: born, place: kamakura, year: 1182, sources: [wp-minamoto-no-yoriie]}
+  - {person: taira-no-kiyomori, role: born, place: heian-kyo, year: 1118, sources: [wp-taira-no-kiyomori]}
+  - {person: tokugawa-ieyasu, role: born, place: okazaki-castle, year: 1543, sources: [wp-tokugawa-ieyasu]}
+  - {person: toyotomi-hideyoshi, role: born, place: nakamura-nagoya, year: 1537, sources: [wp-toyotomi-hideyoshi]}
+  # Lived and worked
+  - {person: minamoto-no-yoritomo, role: worked, place: kamakura, year: 1180, sources: [wp-minamoto-no-yoritomo]}
+  - {person: ashikaga-takauji, role: lived, place: kamakura, year: 1335, sources: [wp-ashikaga-takauji, wp-kenmu-restoration]}
+  - {person: ashikaga-yoshimitsu, role: lived, place: kinkaku-ji, year: 1395, sources: [wp-ashikaga-yoshimitsu]}
+  - {person: tokugawa-ieyasu, role: lived, place: edo, year: 1591, sources: [wp-tokugawa-ieyasu]}
+  - {person: toyotomi-hideyoshi, role: built, place: osaka-castle, year: 1583, sources: [wp-toyotomi-hideyoshi]}
+  - {person: oda-nobunaga, role: built, place: azuchi-castle, year: 1576, sources: [wp-oda-nobunaga]}
+  - {person: fujiwara-no-yorimichi, role: founded, place: byodo-in, sources: [wp-fujiwara-no-yorimichi]}
+  - {person: emperor-go-toba, role: exiled, place: oki-islands, year: 1221, sources: [wp-emperor-go-toba]}
+  - {person: emperor-go-daigo, role: exiled, place: oki-islands, year: 1332, sources: [wp-emperor-go-daigo]}
+  # Died
+  - {person: minamoto-no-yoriie, role: died, place: shuzenji, year: 1204, sources: [wp-minamoto-no-yoriie]}
+  - {person: minamoto-no-sanetomo, role: died, place: kamakura, year: 1219, sources: [wp-minamoto-no-sanetomo]}
+  - {person: hojo-takatoki, role: died, place: kamakura, year: 1333, sources: [wp-hojo-takatoki, wp-emperor-go-daigo]}
+  - {person: emperor-go-toba, role: died, place: oki-islands, year: 1239, sources: [wp-emperor-go-toba]}
+  - {person: emperor-go-daigo, role: died, place: yoshino, year: 1339, sources: [wp-emperor-go-daigo]}
+  - {person: oda-nobunaga, role: died, place: heian-kyo, year: 1582, sources: [wp-oda-nobunaga]}
+  - {person: ashikaga-yoshimasa, role: died, place: ginkaku-ji, year: 1490, sources: [wp-ashikaga-yoshimasa]}
+  # Buried
+  - {person: emperor-go-toba, role: buried, place: oki-islands, year: 1239, sources: [wp-emperor-go-toba]}
+  - {person: emperor-go-daigo, role: buried, place: nara, year: 1339, sources: [wp-emperor-go-daigo]}
+  - {person: emperor-go-sanjo, role: buried, place: heian-kyo, year: 1073, sources: [wp-emperor-go-sanjo]}
+  - {person: emperor-go-shirakawa, role: buried, place: heian-kyo, year: 1192, sources: [wp-emperor-go-shirakawa]}
+  - {person: emperor-ogimachi, role: buried, place: heian-kyo, year: 1593, sources: [wp-emperor-ogimachi]}
+  - {person: emperor-go-yozei, role: buried, place: heian-kyo, year: 1617, sources: [wp-emperor-go-yozei]}
+  - {person: ashikaga-yoshiakira, role: buried, place: heian-kyo, year: 1367, sources: [wp-ashikaga-yoshiakira]}
+  - {person: ashikaga-takauji, role: buried, place: heian-kyo, year: 1358, sources: [wp-ashikaga-yoshiakira]}
+
+discrepancies:
+  - key: kamakura-shogunate-founding-date
+    question: When was the Kamakura shogunate founded, and when did Yoritomo become shogun?
+    about: [{event: kamakura-shogunate-founded-1192}, {person: minamoto-no-yoritomo}, {person: emperor-go-shirakawa}]
+    field: date
+    claims:
+      - {value: "1185: after Dan-no-ura Yoritomo 'established the first shogunate at Kamakura'; in December 1185 Go-Shirakawa granted the power to appoint stewards and constables", sources: [wp-minamoto-no-yoritomo, wp-genpei-war, wp-hojo-yoshitoki]}
+      - {value: "1192: Yoritomo became Sei-i Taishogun in spring 1192 after Go-Shirakawa's death (some versions say Go-Shirakawa granted it shortly before dying)", sources: [wp-minamoto-no-yoritomo, wp-genpei-war, wp-hojo-tokimasa]}
+      - {value: "Invested several months after the retired emperor's death in 1192", sources: [wp-emperor-go-shirakawa]}
+    note: "The record uses 1192, the year of the shogun title, given in most articles. 1185 is when real military government began."
+  - key: dan-no-ura-date
+    question: On what date was the Battle of Dan-no-ura?
+    about: [{event: battle-of-dan-no-ura-1185}]
+    field: date
+    claims:
+      - {value: "25 April 1185", sources: [wp-battle-of-dan-no-ura]}
+      - {value: "24 March 1185 (the Shimonoseki city page)", sources: [wp-battle-of-dan-no-ura]}
+    note: "The record uses 25 April 1185, the article's first date; the month may differ because of the lunar-to-Gregorian conversion."
+  - key: soga-revenge-1193-date
+    question: On what date was the Revenge of the Soga Brothers at the Fuji hunt in 1193?
+    about: [{person: minamoto-no-yoritomo}, {person: hojo-tokimasa}]
+    field: date
+    claims:
+      - {value: "28 May 1193", sources: [wp-minamoto-no-yoritomo]}
+      - {value: "28 June 1193", sources: [wp-hojo-tokimasa]}
+    note: "Not entered as an event. Both articles agree on 28 and 1193; only the month differs."
+  - key: yoriie-death-date
+    question: When was Minamoto no Yoriie killed?
+    about: [{person: minamoto-no-yoriie}]
+    field: died
+    claims:
+      - {value: "14 August 1204", sources: [wp-minamoto-no-yoriie]}
+      - {value: "July 1204", sources: [wp-minamoto-no-yoriie]}
+      - {value: "1204, on Tokimasa's orders", sources: [wp-hojo-yoshitoki, wp-hojo-tokimasa]}
+    note: "Both dates are in the same article (lead and text). The record uses 14 August 1204, the lead's date. Accounts also differ on the method of the killing."
+  - key: sanetomo-death-date
+    question: On what day was Minamoto no Sanetomo assassinated?
+    about: [{person: minamoto-no-sanetomo}]
+    field: died
+    claims:
+      - {value: "13 February 1219 (Jokyu 1, 27th day of the 1st month)", sources: [wp-minamoto-no-sanetomo]}
+      - {value: "12 February 1219", sources: [wp-minamoto-no-yoritomo]}
+    note: "The record uses 13 February 1219, from Sanetomo's own article, which gives the evening of the 27th day."
+  - key: ashikaga-shogunate-founding-year
+    question: In what year was the Ashikaga (Muromachi) shogunate founded?
+    about: [{event: ashikaga-shogunate-founded-1338}, {person: ashikaga-takauji}]
+    field: date
+    claims:
+      - {value: "1338: Takauji appointed shogun; his rule began 1338", sources: [wp-ashikaga-takauji]}
+      - {value: "1336: Takauji became shogun and founded the Ashikaga Shogunate (and enacted the Kenmu Law Code)", sources: [wp-kenmu-restoration, wp-emperor-go-daigo]}
+      - {value: "1335: Takauji claimed the title of Sei-i Taishogun and allotted land without court permission", sources: [wp-ashikaga-takauji]}
+    note: "The record uses 1338, the formal appointment per the Takauji article."
+  - key: yoshinori-appointment-year
+    question: When did Ashikaga Yoshinori become shogun?
+    about: [{person: ashikaga-yoshinori}]
+    field: date
+    claims:
+      - {value: "1428: Sei-i Taishogun on the day Yoshimochi died (3 February 1428)", sources: [wp-ashikaga-yoshinori, wp-ashikaga-yoshimochi]}
+      - {value: "1429: appointed shogun; reigned 1429-1441", sources: [wp-ashikaga-yoshinori]}
+    note: "The record uses 1429, the lead's reign dates."
+  - key: yoshimasa-appointment-year
+    question: When did Ashikaga Yoshimasa become shogun?
+    about: [{person: ashikaga-yoshimasa}]
+    field: date
+    claims:
+      - {value: "1443: the young Yoshinari (later Yoshimasa) was elevated immediately after Yoshikatsu died on 16 August 1443; reigned 1443-1473", sources: [wp-ashikaga-yoshimasa]}
+      - {value: "1449: 'Yoshimasa was appointed shogun'", sources: [wp-ashikaga-yoshimasa]}
+    note: "Both are in the same article. The record uses 1443, the lead's reign start; 1449 is the formal appointment."
+  - key: odawara-campaign-year
+    question: In what year did Hideyoshi besiege Odawara?
+    about: [{event: siege-of-odawara-1590}]
+    field: date
+    claims:
+      - {value: "1590", sources: [wp-toyotomi-hideyoshi, wp-tokugawa-ieyasu, wp-oda-nobunaga]}
+      - {value: "1588 (Tensho 18, 7th month)", sources: [wp-emperor-go-yozei]}
+    note: "The record uses 1590. The Go-Yozei article's era year Tensho 18 is 1590 in the Gregorian count, so '1588' there is probably a slip."
+  - key: kiyomori-daijo-daijin-tenure
+    question: How long did Taira no Kiyomori hold the post of Daijo-daijin?
+    about: [{person: taira-no-kiyomori}]
+    field: date
+    claims:
+      - {value: "From 1167 until his death in 1181 (the lead: Daijo-daijin and de facto ruler from 1167 until his death)", sources: [wp-taira-no-kiyomori]}
+      - {value: "Appointed in 1167 but 'soon relinquished the position', as was the norm", sources: [wp-taira-no-kiyomori]}
+    note: "The title row ends on 20 March 1181 following the lead; the real end of the formal post is not dated in the article."
+  - key: nobunaga-udaijin-tenure
+    question: When did Oda Nobunaga hold the post of Udaijin (Minister of the Right)?
+    about: [{person: oda-nobunaga}]
+    field: date
+    claims:
+      - {value: "1576 to 1579", sources: [wp-oda-nobunaga]}
+      - {value: "1577 to 1578", sources: [wp-emperor-ogimachi]}
+    note: "The record uses the Nobunaga article (1576, resigned 1579)."
+  - key: ieyasu-burial-place
+    question: Where is Tokugawa Ieyasu buried?
+    about: [{person: tokugawa-ieyasu}]
+    field: place
+    claims:
+      - {value: "Kunozan Toshogu (Kunozan), where his remains were buried first", sources: [wp-tokugawa-ieyasu]}
+      - {value: "Nikko Toshogu, where many believe the remains were reburied after the first anniversary", sources: [wp-tokugawa-ieyasu]}
+    note: "Neither shrine has opened the graves. No burial moment is entered."
+  - key: mongol-1274-timeline
+    question: How does the November 1274 timeline of the first Mongol invasion fit together?
+    about: [{event: mongol-invasions-of-japan-1274}]
+    field: date
+    claims:
+      - {value: "Landing in Hakata Bay on 19 November 1274, Battle of Bun'ei on 20 November", sources: [wp-mongol-invasions-of-japan]}
+      - {value: "A courtier's diary entry for 6 November 1274 records a reverse wind blowing back the fleet", sources: [wp-mongol-invasions-of-japan]}
+    note: "Both are in the same article. The record uses the 19-20 November landing and battle; the article itself says it is not certain whether the storm struck at Hakata Bay or on the way back to Korea."
+  - key: heiji-rebellion-year
+    question: In what year was the Heiji Rebellion?
+    about: [{event: heiji-rebellion-1160}]
+    field: date
+    claims:
+      - {value: "1160", sources: [wp-taira-no-kiyomori, wp-emperor-go-shirakawa]}
+      - {value: "December 1159: the Minamoto attacked Sanjo Palace while Kiyomori was away", sources: [wp-minamoto-no-yoritomo]}
+    note: "The record uses 1160, the conventional date of the rebellion as two articles give it. Yoshitomo's death is dated 11 February 1160 in the Yoritomo article."
+  - key: ogimachi-accession-date
+    question: When did Emperor Ogimachi accede and when was he enthroned?
+    about: [{person: emperor-ogimachi}]
+    field: date
+    claims:
+      - {value: "Reign from 17 November 1557 (the lead), on the death of Go-Nara", sources: [wp-emperor-ogimachi]}
+      - {value: "Proclaimed emperor and ceremonies of coronation in the 1st month of Eiroku 3 (1560), paid for by Mori Motonari and others", sources: [wp-emperor-ogimachi]}
+    note: "The record starts the reign on 17 November 1557; the enthronement ceremonies were delayed to 1560 by the court's poverty."
