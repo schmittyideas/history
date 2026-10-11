@@ -1019,8 +1019,9 @@ function nearbyRows(pl) {
   const near = db.places.filter(o => o.id !== pl.id && o.lat != null && o.lng != null && !AREA.test(o.kind || ""))
     .map(o => ({ o, km: kmBetween(pl, o) })).filter(x => x.km <= NEARBY_KM).sort((a, b) => a.km - b.km);
   if (!near.length) return [];
-  const fmtKm = km => km < 1 ? `${Math.round(km * 10) * 100} m` : `${km.toFixed(1)} km`;
-  const big = near.flatMap(x => db.eventsAt(x.o.id).filter(e => (e.prominence ?? 3) >= 4 && !e.film).map(e => ({ e, pl: x.o })))
+  const fmtKm = km => km < .95 ? `${Math.round(km * 10) * 100} m` : `${km.toFixed(1)} km`;
+  const here = new Set(db.eventsAt(pl.id).map(e => e.id));   // already listed under "Events here"
+  const big = near.flatMap(x => db.eventsAt(x.o.id).filter(e => (e.prominence ?? 3) >= 4 && !e.film && !here.has(e.id)).map(e => ({ e, pl: x.o })))
     .filter((v, i, a) => a.findIndex(w => w.e.id === v.e.id) === i)
     .sort((a, b) => (b.e.prominence ?? 3) - (a.e.prominence ?? 3) || byYear(a.e.start_year, b.e.start_year)).slice(0, 6);
   return [
