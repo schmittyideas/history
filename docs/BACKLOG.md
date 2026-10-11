@@ -104,10 +104,16 @@ Source: Ty, 2026-10-09 (item 3 session).
 Song, Liao, Jin, Yuan, Ming; Japan's emperors, shoguns and Hōjō regents; Goryeo and Joseon; Đại Việt. Queue item 4.
 Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
+#### [P2] Build-out: Ottoman sultans and the Seljuks of Rum, 1077–1600
+`type: task` · `area: data` · `status: ready` · `issue: #133`
+
+The Ottoman Empire and the Seljuk Sultanate of Rum are not in the database. About 20 people: the Seljuk sultans of Rum, the Ottoman sultans from Osman I to Murad III, and Kosovo, Nicopolis, Ankara, Varna, the fall of Constantinople, Mohács and Lepanto. Queue item 5, after East Asia and before the century build.
+Source: Ty, 2026-10-11.
+
 #### [P2] Build-out: the world, century by century (1100–1500) with maps
 `type: task` · `area: data` · `status: ready` · `issue: #34`
 
-The world-in-1000 build repeated for 1100–1500, plus border snapshots in `data/maps/`. Queue item 5.
+The world-in-1000 build repeated for 1100–1500, plus border snapshots in `data/maps/`. Queue item 6 (after the Ottoman item, which it needs).
 Source: Ty, 2026-10-07 (cloud credits build-out, "do it all").
 
 
