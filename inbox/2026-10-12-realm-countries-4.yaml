@@ -1,0 +1,372 @@
+# Realm years and countries, batch 4: 30 existing realms in Southeast Asia,
+# Africa and Western Europe get the years they existed and every modern
+# country they covered, from each realm's English Wikipedia infobox
+# ("Today part of") or, where the infobox has no such list, from what the
+# article's text clearly states. Fetched 2026-10-12.
+#
+# Discrepancies inside an article are noted in comments below rather than as
+# `discrepancies` entries: those can only be about people, places, events and
+# artworks, not realms.
+
+batch:
+  title: "Realm years and countries, batch 4"
+  requested: "Ty: realms with start and end dates, mapped to today's countries"
+  date: 2026-10-12
+
+sources:
+  - {key: wp-ava-kingdom, title: "Ava Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Ava_Kingdom}
+  - {key: wp-ayutthaya-kingdom, title: "Ayutthaya Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Ayutthaya_Kingdom}
+  - {key: wp-hanthawaddy-kingdom, title: "Hanthawaddy kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Hanthawaddy_kingdom}
+  - {key: wp-khmer-empire, title: "Khmer Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Khmer_Empire}
+  - {key: wp-majapahit, title: "Majapahit (Wikipedia)", url: https://en.wikipedia.org/wiki/Majapahit}
+  - {key: wp-malacca-sultanate, title: "Malacca Sultanate (Wikipedia)", url: https://en.wikipedia.org/wiki/Malacca_Sultanate}
+  - {key: wp-pagan-kingdom, title: "Pagan Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Pagan_Kingdom}
+  - {key: wp-sukhothai-kingdom, title: "Sukhothai Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Sukhothai_Kingdom}
+  - {key: wp-dai-viet, title: "Đại Việt (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C4%90%E1%BA%A1i_Vi%E1%BB%87t"}
+  - {key: wp-ho-dynasty, title: "Hồ dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/H%E1%BB%93_dynasty"}
+  - {key: wp-ethiopian-empire, title: "Ethiopian Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Ethiopian_Empire}
+  - {key: wp-kingdom-of-benin, title: "Kingdom of Benin (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Benin}
+  - {key: wp-kingdom-of-kongo, title: "Kingdom of Kongo (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Kongo}
+  - {key: wp-songhai-empire, title: "Songhai Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Songhai_Empire}
+  - {key: wp-zagwe-dynasty, title: "Zagwe dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Zagwe_dynasty}
+  - {key: wp-county-of-anjou, title: "County of Anjou (Wikipedia)", url: https://en.wikipedia.org/wiki/County_of_Anjou}
+  - {key: wp-duchy-of-aquitaine, title: "Duchy of Aquitaine (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Aquitaine}
+  - {key: wp-kingdom-of-aragon, title: "Kingdom of Aragon (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Aragon}
+  - {key: wp-archduchy-of-austria, title: "Archduchy of Austria (Wikipedia)", url: https://en.wikipedia.org/wiki/Archduchy_of_Austria}
+  - {key: wp-county-of-barcelona, title: "County of Barcelona (Wikipedia)", url: https://en.wikipedia.org/wiki/County_of_Barcelona}
+  - {key: wp-kingdom-of-bavaria, title: "Kingdom of Bavaria (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Bavaria}
+  - {key: wp-county-of-blois, title: "County of Blois (Wikipedia)", url: https://en.wikipedia.org/wiki/County_of_Blois}
+  - {key: wp-umayyad-state-of-cordoba, title: "Umayyad state of Córdoba (Wikipedia)", url: "https://en.wikipedia.org/wiki/Umayyad_state_of_C%C3%B3rdoba"}
+  - {key: wp-kingdom-of-castile, title: "Kingdom of Castile (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Castile}
+  - {key: wp-commonwealth-of-england, title: "Commonwealth of England (Wikipedia)", url: https://en.wikipedia.org/wiki/Commonwealth_of_England}
+  - {key: wp-emirate-of-granada, title: "Emirate of Granada (Wikipedia)", url: https://en.wikipedia.org/wiki/Emirate_of_Granada}
+  - {key: wp-kingdom-of-england, title: "Kingdom of England (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_England}
+  - {key: wp-duchy-of-ferrara, title: "Duchy of Ferrara (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Ferrara}
+  - {key: wp-republic-of-florence, title: "Republic of Florence (Wikipedia)", url: https://en.wikipedia.org/wiki/Republic_of_Florence}
+
+realms:
+  # ---------------------------------------------------------------- Southeast Asia
+  - name: Ava Kingdom
+    from: 1365
+    to: 1555
+    countries:
+      - {country: Myanmar, note: Upper Burma}
+    sources: [wp-ava-kingdom]
+
+  # The infobox (date_start 4 March 1351) and life span agree: 1351-1767.
+  # China is in the infobox's "today" list; kept as given.
+  - name: Ayutthaya Kingdom
+    from: 1351
+    to: 1767
+    countries:
+      - {country: Thailand}
+      - {country: Myanmar}
+      - {country: Malaysia}
+      - {country: Cambodia}
+      - {country: China}
+      - {country: Laos}
+      - {country: Vietnam}
+    sources: [wp-ayutthaya-kingdom]
+
+  - name: Hanthawaddy Kingdom
+    from: 1287
+    to: 1552
+    countries:
+      - {country: Myanmar, note: Lower Burma}
+      - {country: Thailand}
+    sources: [wp-hanthawaddy-kingdom]
+
+  - name: Khmer Empire
+    from: 802
+    to: 1431
+    countries:
+      - {country: Cambodia}
+      - {country: Laos}
+      - {country: Thailand}
+      - {country: Vietnam}
+      - {country: Myanmar}
+      - {country: China}
+    sources: [wp-khmer-empire]
+
+  - name: Majapahit
+    from: 1293
+    to: 1527
+    countries:
+      - {country: Indonesia}
+      - {country: Singapore}
+      - {country: Malaysia}
+      - {country: Brunei}
+      - {country: Thailand}
+      - {country: Timor-Leste}
+      - {country: Philippines}
+    sources: [wp-majapahit]
+
+  # Infobox life span: "c. 1400–1511/1528". The lead gives c. 1400 as the
+  # conventional founding year (earlier dates proposed) and the fall of the
+  # capital to Portugal in 1511; 1511 is used as the end, 1528 being the
+  # exiled court's later years.
+  - name: Malacca Sultanate
+    from: 1400
+    from_estimated: true
+    to: 1511
+    countries:
+      - {country: Malaysia}
+      - {country: Indonesia, note: "Riau Islands and part of central eastern Sumatra"}
+      - {country: Singapore}
+      - {country: Thailand}
+    sources: [wp-malacca-sultanate]
+
+  # The infobox gives 849 (traditional founding) to 1297 (Myinsaing takeover);
+  # the lead says the Mongol invasions "toppled the four-century-old kingdom
+  # in 1287". The infobox years are used. Our titles (from 1044) are the
+  # empire Anawrahta founded in the 1050s-60s, the same article.
+  # No "today" list: the lead says Pagan unified the regions of modern
+  # Myanmar, with influence into the upper Malay Peninsula; only Myanmar is
+  # listed because the article doesn't say which other lands it ruled.
+  - name: Pagan Kingdom
+    from: 849
+    to: 1297
+    countries:
+      - {country: Myanmar}
+    sources: [wp-pagan-kingdom]
+
+  # Infobox: date_start 1238, date_end 1584 ("Annexed to Ayutthaya"), life
+  # span "1238–1438/1584". The lead says Sukhothai "remained a separate polity
+  # until 1438, when it passed under Ayutthaya", so 1438 is used. The lead
+  # also notes the reading of 1238 is disputed; it is the traditional date.
+  - name: Sukhothai Kingdom
+    from: 1238
+    to: 1438
+    countries:
+      - {country: Thailand}
+      - {country: Laos}
+      - {country: Malaysia}
+      - {country: Myanmar}
+    sources: [wp-sukhothai-kingdom]
+
+  # Đại Cồ Việt redirects to the Đại Việt article (state 968–1804). Its
+  # infobox dates Đại Việt as the state name from 1054 (Lý Thánh Tông), so
+  # Đại Cồ Việt is 968–1054. The article's "today" list (Vietnam, China,
+  # Laos, Cambodia) covers the later, larger state; only Vietnam is listed
+  # here, since the article doesn't give the 10th-century extent.
+  - name: Đại Cồ Việt
+    from: 968
+    to: 1054
+    countries:
+      - {country: Vietnam}
+    sources: [wp-dai-viet]
+
+  # Đại Ngu redirects to Hồ dynasty: 1400–1407 (conquered by the Ming).
+  # No "today" list; Vietnam only.
+  - name: Đại Ngu
+    from: 1400
+    to: 1407
+    countries:
+      - {country: Vietnam}
+    sources: [wp-ho-dynasty]
+
+  # The article's life span is 968–1407 and 1428–1804; the name Đại Việt was
+  # adopted in 1054 (before that Đại Cồ Việt), with Đại Ngu 1400–1407 and
+  # Ming rule 1407–1427 in between.
+  - name: Đại Việt
+    from: 1054
+    to: 1804
+    countries:
+      - {country: Vietnam}
+      - {country: China}
+      - {country: Laos}
+      - {country: Cambodia}
+    sources: [wp-dai-viet]
+
+  # ---------------------------------------------------------------- Africa
+  # The Solomonic empire, 1270–1974, matches our titles (1299–1507).
+  - name: Ethiopian Empire
+    from: 1270
+    to: 1974
+    countries:
+      - {country: Ethiopia}
+      - {country: Eritrea}
+    sources: [wp-ethiopian-empire]
+
+  # Infobox: 1180 (Oba monarchy replaces the Ogiso) to 1897 (British
+  # conquest). The lead says it grew out of Igodomigodo "around the 11th
+  # century"; the infobox year is used.
+  - name: Kingdom of Benin
+    from: 1180
+    to: 1897
+    countries:
+      - {country: Nigeria}
+    sources: [wp-kingdom-of-benin]
+
+  # Infobox 1390–1914; the lead says "c. 1390". Gabon is not in the "today"
+  # list, but the lead places the kingdom in "southern Gabon" too.
+  - name: Kingdom of Kongo
+    from: 1390
+    from_estimated: true
+    to: 1914
+    countries:
+      - {country: Angola, note: northern Angola}
+      - {country: Democratic Republic of the Congo, note: western DR Congo}
+      - {country: Republic of the Congo}
+      - {country: Gabon, note: southern Gabon}
+    sources: [wp-kingdom-of-kongo]
+
+  # Infobox year_start "c. 1430s", life span "c. 1430s–1591", but year_end
+  # 1599 (with a "Saadian invasion" event dated 1599). The article text says
+  # the empire collapsed after the Battle of Tondibi in 1591, so 1591 is used.
+  # No "today" list: the text says at its zenith it extended over Mali,
+  # Niger, Nigeria, Mauritania, Senegal, "most other Guinean Coast countries"
+  # and Algeria. The vague Guinean Coast clause is left out.
+  - name: Songhai Empire
+    from: 1430
+    from_estimated: true
+    to: 1591
+    countries:
+      - {country: Mali}
+      - {country: Niger}
+      - {country: Nigeria}
+      - {country: Mauritania}
+      - {country: Senegal}
+      - {country: Algeria}
+    sources: [wp-songhai-empire]
+
+  # "approximately 1137 to 1270"; 1270 is the battle that ended it.
+  - name: Zagwe dynasty
+    from: 1137
+    from_estimated: true
+    to: 1270
+    countries:
+      - {country: Ethiopia, note: northern Ethiopia}
+      - {country: Eritrea}
+    sources: [wp-zagwe-dynasty]
+
+  # ---------------------------------------------------------------- Western Europe
+  # The county, 861–1360 (raised to a duchy).
+  - name: Anjou
+    from: 861
+    to: 1360
+    countries:
+      - {country: France, note: Anjou}
+    sources: [wp-county-of-anjou]
+
+  - name: Aquitaine
+    from: 507
+    to: 1453
+    countries:
+      - {country: France, note: "southwestern and central France"}
+    sources: [wp-duchy-of-aquitaine]
+
+  # The kingdom (1035–1707), not the Crown of Aragon: our titles are "King of
+  # Aragon" and the kingdom's article covers them.
+  - name: Aragon
+    from: 1035
+    to: 1707
+    countries:
+      - {country: Spain, note: Aragon}
+    sources: [wp-kingdom-of-aragon]
+
+  # Infobox 1453–1918, life span "1453–1804, 1867–1918". No "today" list;
+  # Austria only.
+  - name: Austria
+    from: 1453
+    to: 1918
+    countries:
+      - {country: Austria}
+    sources: [wp-archduchy-of-austria]
+
+  # The county 801–1162, when it entered a personal union with Aragon; "the
+  # history of the county is subsumed within that of the Crown of Aragon"
+  # thereafter. Our "Count of Barcelona" titles run on to 1327 under the
+  # count-kings of Aragon; the realm's years follow the article.
+  - name: Barcelona
+    from: 801
+    to: 1162
+    countries:
+      - {country: Spain, note: Catalonia}
+      - {country: France}
+    sources: [wp-county-of-barcelona]
+
+  - name: Bavaria
+    from: 1806
+    to: 1918
+    countries:
+      - {country: Germany}
+    sources: [wp-kingdom-of-bavaria]
+
+  # Infobox "c. 500" to 1660; no "today" list, the lead places it in France.
+  - name: Blois
+    from: 500
+    from_estimated: true
+    to: 1660
+    countries:
+      - {country: France, note: around Blois}
+    sources: [wp-county-of-blois]
+
+  # "Caliphate of Córdoba" redirects to "Umayyad state of Córdoba" (emirate
+  # 756, caliphate from 929, to 1031). The caliphate's years are used.
+  # "Gibraltar (UK)" in the "today" list becomes United Kingdom.
+  - name: Caliphate of Córdoba
+    from: 929
+    to: 1031
+    countries:
+      - {country: Spain}
+      - {country: Portugal}
+      - {country: Morocco, note: "parts of North Africa"}
+      - {country: United Kingdom, note: Gibraltar}
+    sources: [wp-umayyad-state-of-cordoba]
+
+  # The Kingdom of Castile article: 1065–1833, an independent kingdom to 1230,
+  # then a realm of the Crown of Castile (1230–1715) and of Spain (1715–1833).
+  # Kept as one realm. Our titles start in 1029, with Ferdinand I as count
+  # (the county is covered by the same article's lead); the article dates the
+  # kingdom from 1065.
+  - name: Castile
+    from: 1065
+    to: 1833
+    countries:
+      - {country: Spain}
+    sources: [wp-kingdom-of-castile]
+
+  # 1649–1660. Enlarged in 1653 as the Commonwealth of England, Scotland and
+  # Ireland (the article's lead), so Ireland is listed from 1653.
+  - name: Commonwealth of England
+    from: 1649
+    to: 1660
+    countries:
+      - {country: United Kingdom}
+      - {country: Ireland, from: 1653}
+    sources: [wp-commonwealth-of-england]
+
+  - name: Emirate of Granada
+    from: 1232
+    to: 1492
+    countries:
+      - {country: Spain, note: "provinces of Granada, Almería and Málaga"}
+      - {country: United Kingdom, note: Gibraltar}
+      - {country: Morocco}
+    sources: [wp-emirate-of-granada]
+
+  # 927 (Æthelstan) to 1707 (union with Scotland). "Today": United Kingdom
+  # (England, Wales, partly Lothian and the Scottish Borders). Calais, its
+  # last continental possession, was lost in 1558 (the article).
+  - name: England
+    from: 927
+    to: 1707
+    countries:
+      - {country: United Kingdom, note: "England and Wales; partly Lothian and the Scottish Borders"}
+      - {country: France, to: 1558, note: Calais}
+    sources: [wp-kingdom-of-england]
+
+  - name: Ferrara
+    from: 1471
+    to: 1597
+    countries:
+      - {country: Italy, note: "around Ferrara, south of the lower Po"}
+    sources: [wp-duchy-of-ferrara]
+
+  - name: Florence
+    from: 1115
+    to: 1569
+    countries:
+      - {country: Italy, note: Tuscany}
+    sources: [wp-republic-of-florence]
