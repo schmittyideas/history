@@ -27,12 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P3] Place card: realm by location after 1599
-`type: enhancement` · `area: site` · `status: ready` · `issue: #203`
-
-The Place card names the realm a place was in by its point on the border maps, which cover 1000–1599. Later years fall back to the realms covering its modern country ("Realms in Turkey, 1453"). Adding border snapshots for 1650–1900 (see Maps in CLAUDE.md) would make every year exact.
-Source: 2026-10-12.
-
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
 
@@ -149,6 +143,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P3] Border maps to 1900: Place card exact after 1599
+`type: enhancement` · `area: site` · `status: done` · `issue: #203`
+
+Nine more border snapshots (1600, 1650, 1700, 1715, 1783, 1800, 1815, 1880, 1900) from the same historical-basemaps commit, with 34 realms mapped to their names, so the Place card names a place's realm by its point for every year to 1999. Where one map name stands for several realms, the card keeps those that existed that year and had a ruler then. Done 2026-10-12 (PR #207).
+Source: 2026-10-12.
 
 #### [P2] Realms: fill thin country lists
 `type: task` · `area: data` · `status: done` · `issue: #202`
