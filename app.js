@@ -1897,11 +1897,23 @@ const realmCountries = realm => {
   return [...new Set((info?.countries?.length ? info.countries.map(c => c.country) : [S.db.countryOf[realm]]).map(normCountry).filter(Boolean))];
 };
 // The realms a place was part of in a year: those covering its country then that existed (or had a ruler) that year.
+// "Near" a place: within 50 km, so a city's events and people count but the rest of a big country doesn't.
+const NEAR_PLACE_KM = 50;
+const hasPoint = p => p && p.lat != null && p.lng != null;
+const kmApart = (a, b) => kmBetween({ lat: Number(a.lat), lng: Number(a.lng) }, { lat: Number(b.lat), lng: Number(b.lng) });
+const placeNear = (o, pl) => hasPoint(o) && hasPoint(pl) && kmApart(o, pl) <= NEAR_PLACE_KM;
+const eventNear = (e, pl) => (e.placeIds || [e.place_id]).some(id => placeNear(S.db.placeById[id], pl));
+// A realm that is a city (Los Angeles, whose mayors are its rulers) belongs to places near that city, not to its
+// whole country: New York in 1932 isn't ruled by the Mayor of Los Angeles.
+let cityRealms = null;
+const cityOfRealm = r => (cityRealms ??= Object.fromEntries(S.db.realmNames.map(n => [n,
+  S.db.places.find(p => p.name === n && /^(city|town)$/i.test(p.kind || "") && hasPoint(p)) || null])))[r];
+const realmFits = (r, pl) => !cityOfRealm(r) || placeNear(cityOfRealm(r), pl);
 function realmsAt(pl, y) {
   const db = S.db, C = placeCountry(pl);
   if (!C || y == null) return [];
   return db.realmNames.filter(r => {
-    if (!realmIn(r, C, y)) return false;
+    if (!realmIn(r, C, y) || !realmFits(r, pl)) return false;
     const info = db.realmInfo[r] || {};
     if (info.start != null || info.end != null) return overlaps(info.start ?? -1e9, info.end, y, y);
     return db.titles.some(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y));
@@ -2009,9 +2021,11 @@ function pickEvent(set, kind) {
   // An event from the year itself always comes first: the person's or the place's, then the country's, then anywhere.
   // Only when the year has none does a nearby year's event stand in (the person's, the place's, the country's).
   const sameYear = e => e && near(e) === 0 ? e : null;
+  const here = set.place != null ? db.placeById[set.place] : null;
+  const nearHere = hasPoint(here) ? thatYear.find(e => eventNear(e, here)) : null;
   const first = kind === "place" ? [atPlace, ofPerson] : [ofPerson, atPlace];
   const order = kind === "year" ? [inYear, anywhere, ofPerson, atPlace]
-    : [...first.map(sameYear), inYear, anywhere, ...first, nearInCountry];
+    : [...first.map(sameYear), nearHere, inYear, anywhere, ...first, nearInCountry];
   return order.find(Boolean)?.id ?? null;
 }
 
@@ -2136,6 +2150,7 @@ function fillAt(kind, id, y) {
   if (X.place == null && X.event != null) X.place = db.eventById[X.event]?.place_id ?? null;
 }
 function runExplore(text) {
+  if (!S.db) { $("x-msg").textContent = "Still loading the history; try again in a moment."; return; }
   const r = exploreSearch(text), msg = $("x-msg"), db = S.db;
   msg.replaceChildren();
   if (r.error) { msg.textContent = r.error; return; }
@@ -2300,7 +2315,20 @@ function yearCard() {
   const personChip = p => h("span", { class: "xchip" }, xPerson(p), ageIn(p, y) != null ? h("span", { class: "yrs", text: ` ${ageIn(p, y)}` }) : null);
   const out = [head];
   if (C) {
-    const home = realmsAll.filter(r => realmIn(r, C, y)), away = realmsAll.filter(r => !realmIn(r, C, y));
+    const here = db.placeById[X.place], herePl = here && placeCountry(here) === C ? here : null;
+    const home = realmsAll.filter(r => realmIn(r, C, y) && realmFits(r, herePl)), away = realmsAll.filter(r => !home.includes(r));
+    // Near the Place card's place first: that year's events within 50 km, works made there, people recorded there.
+    if (hasPoint(here)) {
+      const nearEv = evs.filter(e => eventNear(e, here)).sort(evOrder);
+      const nearWorks = works.filter(w => (I.placesOf.get(w.id) || []).some(x => x.role !== "held" && x.role !== "displayed" && placeNear(x.place, here))).sort(workFame);
+      const nearPeople = alive.filter(p => db.pp.some(m => m.entity_id === p.id && m.year != null && Math.abs(m.year - y) <= 3 && placeNear(db.placeById[m.place_id], here))
+        || db.eventsOf(p.id).some(x => x.event.start_year != null && Math.abs(x.event.start_year - y) <= 3 && eventNear(x.event, here)));
+      out.push(h("div", { class: "xband near" }, h("h3", { class: "xband-h", text: `Near ${here.name}` }),
+        nearEv.length || nearWorks.length || nearPeople.length ? null : h("p", { class: "hint", text: `Nothing recorded within ${NEAR_PLACE_KM} km in ${fmtYear(y)} yet.` }),
+        nearEv.length ? xSec("What happened", xList("year", nearEv, 5, evRow)) : null,
+        nearWorks.length ? xSec("Works made", xList("year", nearWorks, 4, workRow)) : null,
+        nearPeople.length ? xSec("Who was there", xChips("year", nearPeople, 8, personChip)) : null));
+    }
     const hereEv = evs.filter(e => inCountryEvent(e, C)).sort(evOrder);
     const hereWorks = works.filter(w => workCountry(w) === C).sort(workFame);
     const makers = alive.filter(p => MAKER_TYPES.includes(p.type) && I.inCountryAt(p.id, C, y));
@@ -2342,8 +2370,13 @@ function eventCard() {
   // Only when the year itself has no event at all (an event clicked from another year is just that).
   const inYr = o => o.start_year != null && overlaps(o.start_year, o.end_year ?? o.start_year, X.year, X.year);
   const off = X.year != null && e.start_year != null && !inYr(e) && !db.events.some(o => !o.film && inYr(o));
+  // From the right year but far from the Place card's place, when nothing that year happened near it.
+  const here = db.placeById[X.place];
+  const away = !off && X.year != null && inYr(e) && hasPoint(here) && !eventNear(e, here) && !db.events.some(o => !o.film && inYr(o) && eventNear(o, here));
+  const where = [...eventCountries(e)][0];
   return [
     off ? h("p", { class: "hint xoff", text: `Nothing recorded for ${fmtYear(X.year)}; the nearest is from ${fmtYear(e.start_year)}.` }) : null,
+    away ? h("p", { class: "hint xoff", text: `Nothing recorded near ${here.name} in ${fmtYear(X.year)}; this is elsewhere${where === placeCountry(here) ? ` in ${where}` : ""}.` }) : null,
     h("h2", { text: e.name }),
     h("div", { class: "xsub" }, [e.type, null].filter(Boolean).join(""), e.type ? " · " : "",
       e.start_year != null ? xYear(e.start_year, (e.estimated ? "c. " : "") + when) : "date unknown",
@@ -2681,6 +2714,7 @@ function workCard() {
 // "Near me": the browser's location (asked each time, never stored or sent anywhere) opens the nearest place.
 function nearMe() {
   const msg = $("x-msg");
+  if (!S.db) { msg.textContent = "Still loading the history; try again in a moment."; return; }
   if (!navigator.geolocation) { msg.textContent = "This browser can't share its location."; return; }
   msg.textContent = "Finding where you are…";
   navigator.geolocation.getCurrentPosition(pos => {
