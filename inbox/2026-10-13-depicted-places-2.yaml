@@ -1,0 +1,458 @@
+batch:
+  title: "Places shown in landscapes and city views, part 2"
+  requested: "Ty: link the places in painting titles, starting with landscapes and city views"
+  date: 2026-10-13
+
+# Drafted by tools/depicts.py from Wikidata (P195 + P217 match, P136 landscape/city-view genre, P180 depicts with P625),
+# then checked by hand: each new place against its English Wikipedia article (or, where there is none, its Wikidata item).
+#
+# Dropped: Seine (x2: Soleil couchant à Ivry, On the Seine near Mantes), River Thames, Aven, Oise, Spaarne, Lek,
+# because they are rivers; Amsterdam–Rhine Canal, because it is a waterway and was dug in the 20th century, long after
+# Ruisdael's c. 1670 painting; Alpilles (x2: The Olive Trees, The Starry Night), Catskill Mountains, Sierra Nevada,
+# because they are mountain ranges; Siberia, Arctic, Italian Riviera, Oslofjord, Forest of Fontainebleau and Eggedal
+# (a valley and parish), because they are regions or large areas, not one spot; crucifixion of Jesus (x2: Calvary,
+# Crucifixion with Saint Mary Magdalene), because it is not a place; Mount Sinai (The Adoration of the Golden Calf),
+# because Poussin paints the biblical mountain from imagination and which real mountain it was is disputed;
+# Gazzada (Q30026024), because it is the main village of Gazzada Schianno, which the painting is already linked to.
+# Fixed: the draft linked Ivry-sur-Seine to ivry-cemetery (a name-match slip); the town is now a place of its own.
+# The Olive Trees has no link left, so it is left out.
+# niagara-falls and nieuwe-kerk-delft are also in part 1; they are repeated here so this file stands alone
+# (re-sending a key updates it, never duplicates it).
+
+sources:
+  - {key: wd-q93732407, title: "Bois d'Amour, Pont-Aven (Wikidata Q93732407)", url: "https://www.wikidata.org/wiki/Q93732407"}
+  - {key: wp-mount-vesuvius, title: "Mount Vesuvius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mount_Vesuvius"}
+  - {key: wp-ivry-sur-seine, title: "Ivry-sur-Seine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ivry-sur-Seine"}
+  - {key: wd-q2928952, title: "Butte-Pinson (Wikidata Q2928952)", url: "https://www.wikidata.org/wiki/Q2928952"}
+  - {key: wp-chateau-of-mariemont, title: "Château of Mariemont (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ch%C3%A2teau_of_Mariemont"}
+  - {key: wp-saint-anna-s-church-itterbeek, title: "Saint Anna's Church, Itterbeek (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saint_Anna's_Church,_Itterbeek"}
+  - {key: wp-grandcamp-maisy, title: "Grandcamp-Maisy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grandcamp-Maisy"}
+  - {key: wp-port-en-bessin-huppain, title: "Port-en-Bessin-Huppain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Port-en-Bessin-Huppain"}
+  - {key: wp-saint-remy-de-provence, title: "Saint-Rémy-de-Provence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saint-Rémy-de-Provence"}
+  - {key: wp-nieuwe-kerk-delft, title: "Nieuwe Kerk (Delft) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nieuwe_Kerk_(Delft)"}
+  - {key: wp-view-of-delft, title: "View of Delft (Wikipedia)", url: "https://en.wikipedia.org/wiki/View_of_Delft"}
+  - {key: wp-place-du-tertre, title: "Place du Tertre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Place_du_Tertre"}
+  - {key: wp-lake-keitele, title: "Lake Keitele (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lake_Keitele"}
+  - {key: wp-maidenhead-railway-bridge, title: "Maidenhead Railway Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Maidenhead_Railway_Bridge"}
+  - {key: wp-flatford-mill, title: "Flatford Mill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Flatford_Mill"}
+  - {key: wp-willy-lott-s-cottage, title: "Willy Lott's Cottage (Wikipedia)", url: "https://en.wikipedia.org/wiki/Willy_Lott's_Cottage"}
+  - {key: wp-mount-corcoran, title: "Mount Corcoran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mount_Corcoran"}
+  - {key: wp-niagara-falls, title: "Niagara Falls (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niagara_Falls"}
+  - {key: wp-pierrefitte-sur-seine, title: "Pierrefitte-sur-Seine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pierrefitte-sur-Seine"}
+  - {key: wp-st-mark-s-basilica, title: "St Mark's Basilica (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Mark's_Basilica"}
+  - {key: wp-piazza-san-marco, title: "Piazza San Marco (Wikipedia)", url: "https://en.wikipedia.org/wiki/Piazza_San_Marco"}
+  - {key: wp-wivenhoe-park, title: "Wivenhoe Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wivenhoe_Park"}
+  - {key: wp-colchester, title: "Colchester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Colchester"}
+  - {key: wp-bentheim-castle, title: "Bentheim Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bentheim_Castle"}
+  - {key: wp-alexandria, title: "Alexandria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alexandria"}
+  - {key: wp-gazzada-schianno, title: "Gazzada Schianno (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gazzada_Schianno"}
+  - {key: wd-q28040433, title: "Pine of Bertaud (Wikidata Q28040433)", url: "https://www.wikidata.org/wiki/Q28040433"}
+  - {key: wd-q53477141, title: "Haarlemmermeer (Wikidata Q53477141)", url: "https://www.wikidata.org/wiki/Q53477141"}
+  - {key: wp-haarlemmermeer, title: "Haarlemmermeer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Haarlemmermeer"}
+  - {key: wd-q50348747, title: "Binnen korenmolen (Wikidata Q50348747)", url: "https://www.wikidata.org/wiki/Q50348747"}
+  - {key: wp-windmill-at-wijk-bij-duurstede, title: "Windmill at Wijk bij Duurstede (Wikipedia)", url: "https://en.wikipedia.org/wiki/Windmill_at_Wijk_bij_Duurstede"}
+  - {key: wd-q22990992, title: "Calvaire de Nizon (Wikidata Q22990992)", url: "https://www.wikidata.org/wiki/Q22990992"}
+  - {key: wp-salisbury-cathedral, title: "Salisbury Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Salisbury_Cathedral"}
+
+places:
+  - key: bois-d-amour-pont-aven
+    name: "Bois d'Amour"
+    kind: wood
+    city: Pont-Aven
+    country: France
+    lat: 47.8607
+    lng: -3.7598
+    sources: [wd-q93732407]   # Wikidata Q93732407
+  - key: mount-vesuvius
+    name: "Mount Vesuvius"
+    kind: volcano
+    region: Campania
+    country: Italy
+    lat: 40.8214
+    lng: 14.4261
+    note: "Somma–stratovolcano on the Gulf of Naples, about 9 km east of Naples; its eruption of AD 79 destroyed Pompeii and Herculaneum."
+    sources: [wp-mount-vesuvius]   # Wikidata Q524
+  - key: ivry-sur-seine
+    name: "Ivry-sur-Seine"
+    kind: town
+    region: Val-de-Marne
+    country: France
+    lat: 48.8078
+    lng: 2.3747
+    sources: [wp-ivry-sur-seine]   # Wikidata Q193877
+  - key: butte-pinson
+    name: "Butte-Pinson"
+    kind: hill
+    country: France
+    lat: 48.9742
+    lng: 2.3583
+    sources: [wd-q2928952]   # Wikidata Q2928952
+  - key: domaine-de-mariemont
+    name: "Domaine de Mariemont"
+    kind: park
+    city: Morlanwelz
+    region: Hainaut
+    country: Belgium
+    lat: 50.4678
+    lng: 4.2406
+    visitable: true
+    note: "Park of the Château of Mariemont, residence and hunting lodge of the governors of the Habsburg Netherlands, begun for Mary of Hungary and destroyed in 1794; the park and the Musée royal de Mariemont are open to visitors."
+    sources: [wp-chateau-of-mariemont]   # Wikidata Q2448543
+  - key: sint-anna-church-sint-anna-pede
+    name: "Saint Anna's Church, Sint-Anna-Pede"
+    historical_name: "Sint-Annakerk"
+    kind: church
+    city: Dilbeek
+    region: Flemish Brabant
+    country: Belgium
+    lat: 50.8313
+    lng: 4.2336
+    founded: 1250
+    founded_estimated: true
+    visitable: true
+    note: "Roman Catholic church in Sint-Anna-Pede, shown in Bruegel's The Blind Leading the Blind."
+    sources: [wp-saint-anna-s-church-itterbeek]   # Wikidata Q1976135
+  - key: grandcamp-maisy
+    name: "Grandcamp-Maisy"
+    kind: town
+    region: Calvados
+    country: France
+    lat: 49.3875
+    lng: -1.0411
+    sources: [wp-grandcamp-maisy]   # Wikidata Q381174
+  - key: port-en-bessin-huppain
+    name: "Port-en-Bessin-Huppain"
+    kind: town
+    region: Calvados
+    country: France
+    lat: 49.3442
+    lng: -0.7553
+    sources: [wp-port-en-bessin-huppain]   # Wikidata Q987304
+  - key: saint-remy-de-provence
+    name: "Saint-Rémy-de-Provence"
+    kind: town
+    region: Bouches-du-Rhône
+    country: France
+    lat: 43.79
+    lng: 4.8325
+    sources: [wp-saint-remy-de-provence]   # Wikidata Q221507
+  - key: nieuwe-kerk-delft
+    name: "Nieuwe Kerk, Delft"
+    kind: church
+    city: Delft
+    region: South Holland
+    country: Netherlands
+    lat: 52.0123
+    lng: 4.3609
+    visitable: true
+    note: "Protestant church on the Markt; burial place of William the Silent (1584) and the House of Orange-Nassau."
+    sources: [wp-nieuwe-kerk-delft, wp-view-of-delft]   # Wikidata Q678611
+  - key: place-du-tertre
+    name: "Place du Tertre"
+    kind: square
+    city: Paris
+    region: Île-de-France
+    country: France
+    lat: 48.8867
+    lng: 2.3408
+    visitable: true
+    sources: [wp-place-du-tertre]   # Wikidata Q526595
+  - key: lake-keitele
+    name: "Lake Keitele"
+    kind: lake
+    region: Central Finland
+    country: Finland
+    lat: 62.9333
+    lng: 26.0333
+    sources: [wp-lake-keitele]   # Wikidata Q890537
+  - key: maidenhead-railway-bridge
+    name: "Maidenhead Railway Bridge"
+    kind: bridge
+    city: Maidenhead
+    region: Berkshire
+    country: England
+    lat: 51.5211
+    lng: -0.7017
+    founded: 1838
+    architect: Isambard Kingdom Brunel
+    note: "Brick arches carrying the Great Western Main Line over the Thames, completed 1838 and opened 1 July 1839."
+    sources: [wp-maidenhead-railway-bridge]   # Wikidata Q737735
+  - key: flatford-mill
+    name: "Flatford Mill"
+    kind: watermill
+    city: East Bergholt
+    region: Suffolk
+    country: England
+    lat: 51.9589
+    lng: 1.0217
+    founded: 1733
+    note: "Grade I listed watermill on the River Stour, owned by John Constable's father; The Hay Wain was painted from in front of it."
+    sources: [wp-flatford-mill]   # Wikidata Q5457890
+  - key: willy-lotts-cottage
+    name: "Willy Lott's Cottage"
+    kind: house
+    city: East Bergholt
+    region: Suffolk
+    country: England
+    lat: 51.9583
+    lng: 1.0219
+    note: "Grade I listed house at Flatford, owned by the National Trust, which appears in The Hay Wain."
+    sources: [wp-willy-lott-s-cottage]   # Wikidata Q8022575
+  - key: mount-corcoran
+    name: "Mount Corcoran"
+    kind: mountain
+    region: California
+    country: United States
+    lat: 36.5386
+    lng: -118.2505
+    sources: [wp-mount-corcoran]   # Wikidata Q49052363
+  - key: niagara-falls
+    name: "Niagara Falls"
+    kind: waterfall
+    region: Ontario
+    country: Canada
+    lat: 43.0799
+    lng: -79.0747
+    visitable: true
+    note: "Three waterfalls on the border between Ontario (Canada) and New York (United States); the Horseshoe Falls straddle it, the American and Bridal Veil Falls are in the United States."
+    sources: [wp-niagara-falls]   # Wikidata Q34221
+  - key: pierrefitte-sur-seine
+    name: "Pierrefitte-sur-Seine"
+    kind: town
+    region: Seine-Saint-Denis
+    country: France
+    lat: 48.9656
+    lng: 2.3614
+    note: "A former commune, part of Saint-Denis since January 2025."
+    sources: [wp-pierrefitte-sur-seine]   # Wikidata Q253939
+  - key: st-marks-basilica
+    name: "St Mark's Basilica"
+    kind: basilica
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.4344
+    lng: 12.3397
+    visitable: true
+    note: "Cathedral of the Patriarch of Venice since 1807, formerly the Doge's chapel, at the east end of Piazza San Marco."
+    sources: [wp-st-mark-s-basilica]   # Wikidata Q172988
+  - key: piazza-san-marco
+    name: "Piazza San Marco"
+    kind: square
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.4339
+    lng: 12.3381
+    visitable: true
+    sources: [wp-piazza-san-marco]   # Wikidata Q217527
+  - key: wivenhoe-park
+    name: "Wivenhoe Park"
+    kind: park
+    city: Colchester
+    region: Essex
+    country: England
+    lat: 51.8782
+    lng: 0.9517
+    visitable: true
+    note: "Landscaped park, home of the University of Essex's Colchester campus since the 1960s; painted by John Constable in 1816."
+    sources: [wp-wivenhoe-park]   # Wikidata Q8028681
+  - key: colchester
+    name: "Colchester"
+    kind: city
+    region: Essex
+    country: England
+    lat: 51.8917
+    lng: 0.903
+    sources: [wp-colchester]   # Wikidata Q184163
+  - key: bentheim-castle
+    name: "Bentheim Castle"
+    historical_name: "Burg Bentheim"
+    kind: castle
+    city: Bad Bentheim
+    region: Lower Saxony
+    country: Germany
+    lat: 52.3025
+    lng: 7.1563
+    note: "Early medieval hill castle, first mentioned in the 11th century."
+    sources: [wp-bentheim-castle]   # Wikidata Q877031
+  - key: alexandria
+    name: "Alexandria"
+    kind: city
+    country: Egypt
+    lat: 31.1975
+    lng: 29.8925
+    founded: -331
+    built_by: "Alexander the Great"
+    sources: [wp-alexandria]   # Wikidata Q87
+  - key: gazzada-schianno
+    name: "Gazzada Schianno"
+    kind: village
+    region: Lombardy
+    country: Italy
+    lat: 45.781
+    lng: 8.8322
+    note: "Comune near Varese formed by two villages, Gazzada and Schianno."
+    sources: [wp-gazzada-schianno]   # Wikidata Q40786
+  - key: pine-of-bertaud
+    name: "Pine of Bertaud"
+    historical_name: "Pin de Bertaud"
+    kind: tree
+    city: Gassin
+    country: France
+    lat: 43.2614
+    lng: 6.594
+    sources: [wd-q28040433]   # Wikidata Q28040433
+  - key: haarlemmermeer
+    name: "Haarlemmermeer"
+    kind: lake
+    region: North Holland
+    country: Netherlands
+    lat: 52.3205
+    lng: 4.6964
+    ended: 1852
+    visitable: false
+    note: "Former lake of over 170 km², pumped dry from 1848 and dry by 1 July 1852; now a polder and municipality."
+    sources: [wd-q53477141, wp-haarlemmermeer]   # Wikidata Q53477141
+  - key: binnen-korenmolen
+    name: "Binnen korenmolen"
+    kind: windmill
+    city: Wijk bij Duurstede
+    region: Utrecht
+    country: Netherlands
+    lat: 51.9699
+    lng: 5.3471
+    ended: 1817
+    visitable: false
+    note: "Ruisdael's windmill; it no longer stands, though its foundations can still be seen. Another mill nearby, Rijn en Lek, is often mistaken for it."
+    sources: [wd-q50348747, wp-windmill-at-wijk-bij-duurstede]   # Wikidata Q50348747
+  - key: calvaire-de-nizon
+    name: "Calvaire de Nizon"
+    kind: calvary
+    city: Pont-Aven
+    country: France
+    lat: 47.8637
+    lng: -3.7679
+    sources: [wd-q22990992]   # Wikidata Q22990992
+  - key: salisbury-cathedral
+    name: "Salisbury Cathedral"
+    kind: cathedral
+    city: Salisbury
+    region: Wiltshire
+    country: England
+    lat: 51.0647
+    lng: -1.7975
+    founded: 1220
+    visitable: true
+    note: "Early English Gothic cathedral built 1220–1258; its spire, completed by 1330, is the tallest in England."
+    sources: [wp-salisbury-cathedral]   # Wikidata Q390150
+
+artworks:
+  - key: le-talisman-l-aven-au-bois-d-amour-paul-serusier   # Le Talisman, l'Aven au Bois d'Amour — Wikidata Q3227509 (landscape)
+    places:
+      - {place: bois-d-amour-pont-aven, role: depicts}   # P180 Q93732407 Q93732407 (Bois d'Amour, Pont-Aven)
+  - key: napoli-harbour-oswald-achenbach   # Napoli harbour — Wikidata Q17493084 (landscape)
+    places:
+      - {place: mount-vesuvius, role: depicts}   # P180 Q524 Mount Vesuvius
+      - {place: naples, role: depicts}   # P180 Q2634 Naples
+  - key: soleil-couchant-a-ivry-armand-guillaumin   # Soleil couchant à Ivry — Wikidata Q14734192 (landscape)
+    places:
+      - {place: ivry-sur-seine, role: depicts}   # P180 Q193877 Ivry-sur-Seine
+  - key: the-red-roofs-cote-saint-denis-at-pontoise-winte-camille-pissarro   # The Red Roofs, Côte Saint-Denis at Pontoise, Winter Effect — Wikidata Q2843906 (landscape)
+    places:
+      - {place: pontoise, role: depicts}   # P180 Q201352 Pontoise
+  - key: vue-de-toits-gustave-caillebotte   # Vue de toits — Wikidata Q1857132 (cityscape)
+    places:
+      - {place: paris, role: depicts}   # P180 Q90 Paris
+  - key: butte-pinson-maurice-utrillo   # Butte Pinson — Wikidata Q137697498 (landscape)
+    places:
+      - {place: butte-pinson, role: depicts}   # P180 Q2928952 Butte-Pinson
+  - key: excursion-in-the-countryside-of-infanta-isabel-c-jan-brueghel-the-elder   # Excursion in the Countryside of Infanta Isabel Clara Eugenia — Wikidata Q60022105 (landscape)
+    places:
+      - {place: domaine-de-mariemont, role: depicts}   # P180 Q2448543 domaine de Mariemont
+  - key: the-blind-leading-the-blind-pieter-bruegel-the-elder   # The Blind Leading the Blind — Wikidata Q1192570 (architectural painting)
+    places:
+      - {place: sint-anna-church-sint-anna-pede, role: depicts}   # P180 Q1976135 Sint-Anna Church
+  - key: grandcamp-evening-georges-seurat   # Grandcamp, Evening — Wikidata Q3775512 (landscape)
+    places:
+      - {place: grandcamp-maisy, role: depicts}   # P180 Q381174 Grandcamp-Maisy
+  - key: new-york-francis-picabia   # New York — Wikidata Q62021123 (cityscape)
+    places:
+      - {place: new-york-city, role: depicts}   # P180 Q60 New York City
+  - key: port-en-bessin-entrance-to-the-harbor-georges-seurat   # Port-en-Bessin, Entrance to the Harbor — Wikidata Q3818974 (landscape)
+    places:
+      - {place: port-en-bessin-huppain, role: depicts}   # P180 Q987304 Port-en-Bessin-Huppain
+  - key: the-starry-night-vincent-van-gogh   # The Starry Night — Wikidata Q45585 (landscape)
+    places:
+      - {place: saint-remy-de-provence, role: depicts}   # P180 Q221507 Saint-Rémy-de-Provence
+  - key: a-view-of-delft-carel-fabritius   # A View of Delft — Wikidata Q18162507 (cityscape)
+    places:
+      - {place: nieuwe-kerk-delft, role: depicts}   # P180 Q678611 Nieuwe Kerk Delft
+  - key: la-place-du-tertre-maurice-utrillo   # La Place du Tertre — Wikidata Q28537549 (cityscape)
+    places:
+      - {place: place-du-tertre, role: depicts}   # P180 Q526595 place du Tertre
+  - key: lake-keitele-akseli-gallen-kallela   # Lake Keitele — Wikidata Q11870764 (landscape)
+    places:
+      - {place: lake-keitele, role: depicts}   # P180 Q890537 Lake Keitele
+  - key: rain-steam-and-speed-the-great-western-railway-j-m-w-turner   # Rain, Steam and Speed – The Great Western Railway — Wikidata Q2339059 (landscape)
+    places:
+      - {place: maidenhead-railway-bridge, role: depicts}   # P180 Q737735 Maidenhead Railway Bridge
+  - key: the-hay-wain   # The Hay Wain — Wikidata Q2366825 (landscape)
+    places:
+      - {place: flatford-mill, role: depicts}   # P180 Q5457890 Flatford Mill
+      - {place: willy-lotts-cottage, role: depicts}   # P180 Q8022575 Willy Lott's Cottage
+  - key: mount-corcoran-albert-bierstadt   # Mount Corcoran — Wikidata Q20188820 (landscape)
+    places:
+      - {place: mount-corcoran, role: depicts}   # P180 Q49052363 Mount Corcoran
+  - key: niagara-frederic-edwin-church   # Niagara — Wikidata Q16680559 (landscape)
+    places:
+      - {place: niagara-falls, role: depicts}   # P180 Q34221 Niagara Falls
+  - key: row-of-houses-at-pierrefitte-maurice-utrillo   # Row of Houses at Pierrefitte — Wikidata Q20190971 (landscape)
+    places:
+      - {place: pierrefitte-sur-seine, role: depicts}   # P180 Q253939 Pierrefitte-sur-Seine
+  - key: the-church-of-souain-felix-vallotton   # The Church of Souain — Wikidata Q20192100 (landscape)
+    places:
+      - {place: souain-perthes-les-hurlus, role: depicts}   # P180 Q544505 Souain-Perthes-lès-Hurlus
+  - key: the-square-of-saint-mark-s-venice-canaletto   # The Square of Saint Mark's, Venice — Wikidata Q19660464 (cityscape)
+    places:
+      - {place: st-marks-basilica, role: depicts}   # P180 Q172988 St Mark's Basilica
+      - {place: piazza-san-marco, role: depicts}   # P180 Q217527 Piazza San Marco
+  - key: view-of-dordrecht-from-the-north-jan-van-goyen   # View of Dordrecht from the North — Wikidata Q46624908 (landscape)
+    places:
+      - {place: dordrecht, role: depicts}   # P180 Q26421 Dordrecht
+  - key: wivenhoe-park-essex-john-constable   # Wivenhoe Park, Essex — Wikidata Q18589150 (landscape)
+    places:
+      - {place: wivenhoe-park, role: depicts}   # P180 Q8028681 Wivenhoe Park
+      - {place: colchester, role: depicts}   # P180 Q184163 Colchester
+  - key: castle-bentheim-jacob-van-ruisdael   # Castle Bentheim — Wikidata Q3793357 (landscape)
+    places:
+      - {place: bentheim-castle, role: depicts}   # P180 Q877031 Burg Bentheim
+  - key: saint-mark-preaching-in-alexandria-giovanni-bellini   # Saint Mark Preaching in Alexandria — Wikidata Q3910087 (architectural painting)
+    places:
+      - {place: alexandria, role: depicts}   # P180 Q87 Alexandria
+  - key: view-of-gazzada-near-varese-bernardo-bellotto   # View of Gazzada near Varese — Wikidata Q19681664 (landscape)
+    places:
+      - {place: gazzada-schianno, role: depicts}   # P180 Q40786 Gazzada Schianno
+  - key: the-pine-tree-at-saint-tropez-paul-signac   # The Pine Tree at Saint Tropez — Wikidata Q77027493 (landscape)
+    places:
+      - {place: pine-of-bertaud, role: depicts}   # P180 Q28040433 Pine of Bertaud
+  - key: panoramic-view-of-a-wide-river-jan-van-goyen   # Panoramic View of a Wide River — Wikidata Q17336016 (landscape)
+    places:
+      - {place: haarlemmermeer, role: depicts}   # P180 Q53477141 Haarlemmermeer
+      - {place: haarlem, role: depicts}   # P180 Q9920 Haarlem
+  - key: the-singel-near-the-lutheran-church-in-amsterdam-vincent-van-gogh   # The Singel near the Lutheran Church in Amsterdam — Wikidata Q17780730 (cityscape)
+    places:
+      - {place: amsterdam, role: depicts}   # P180 Q727 Amsterdam
+  - key: the-windmill-at-wijk-bij-duurstede-jacob-van-ruisdael   # The windmill at Wijk bij Duurstede — Wikidata Q2881603 (landscape)
+    places:
+      - {place: binnen-korenmolen, role: depicts}   # P180 Q50348747 Binnen korenmolen
+      - {place: wijk-bij-duurstede, role: depicts}   # P180 Q10053 Wijk bij Duurstede
+  - key: the-green-christ-paul-gauguin   # The Green Christ — Wikidata Q2504917 (architectural painting)
+    places:
+      - {place: calvaire-de-nizon, role: depicts}   # P180 Q22990992 Calvaire de Nizon
+  - key: houses-on-the-river-the-old-town-egon-schiele   # Houses on the River (The Old Town) — Wikidata Q21712898 (cityscape)
+    places:
+      - {place: cesky-krumlov, role: depicts}   # P180 Q188082 Český Krumlov
+  - key: salisbury-cathedral-from-the-bishop-s-grounds-john-constable   # Salisbury Cathedral from the Bishop's Grounds — Wikidata Q398973 (landscape)
+    places:
+      - {place: salisbury-cathedral, role: depicts}   # P180 Q390150 Salisbury Cathedral
