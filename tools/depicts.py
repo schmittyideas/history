@@ -4,6 +4,8 @@
     export SUPABASE_URL=https://alhvzdvabugmkeqmvmiz.supabase.co SUPABASE_SECRET_KEY=<anon key from config.js>
     python tools/depicts.py --out depicts/            # every museum
     python tools/depicts.py --out depicts/ --museum tate-britain --museum national-gallery
+    python tools/depicts.py --out depicts/ --titles  # suggestions from titles, for paintings Wikidata
+                                                     # files as landscapes but says nothing about what they show
 
 Read-only: it reads the database with the anon key and Wikidata's public query service, and writes
   <out>/candidates.json   every match, with the evidence
@@ -21,7 +23,10 @@ How it matches, so every link has a source:
   (or the Wikidata item when there is none).
 - The links cite nothing new: each artwork already cites the Wikidata source it was imported from, and the
   depicts claim comes from the same item. The draft says which item, in a comment per artwork.
-Nothing is matched on title words alone: "The Judgement of Paris" isn't Paris.
+Nothing is matched on title words alone: "The Judgement of Paris" isn't Paris. The --titles mode only suggests:
+it takes landscape and city-view paintings with no P180, pulls the place-like phrases from their titles
+("Hampstead Heath, Looking Toward Harrow" -> "Hampstead Heath", "Harrow"), looks each up on Wikidata, keeps
+those with coordinates, and writes <out>/titles.md for someone to check against the museum's own description.
 """
 import argparse
 import json
@@ -156,22 +161,121 @@ SELECT ?item ?inv ?genre ?dep ?depLabel ?coord ?article WHERE {{
 
 
 def our_place(ours, r):
-    """One of our places: the same name within NEAR_KM; else one name inside the other within 2 km ("Florence
-    Cathedral" and "Florence Cathedral (Santa Maria del Fiore)"); else anything within 300 m with a shared word."""
+    """One of our places: the same name within NEAR_KM; else ours is the longer form of the name within 2 km
+    ("Florence Cathedral" and our "Florence Cathedral (Santa Maria del Fiore)"); never the other way round, so
+    "Nieuwe Kerk Delft" isn't Delft and "Ivry-sur-Seine" isn't Ivry Cemetery; and a shared word alone never
+    matches ("Ponte Vecchio" isn't Palazzo Vecchio)."""
     here, label = (r["lat"], r["lng"]), fold(r["label"])
-    near = [(km(here, (float(p["lat"]), float(p["lng"]))), p) for p in ours]
+    near = sorted(((km(here, (float(p["lat"]), float(p["lng"]))), p) for p in ours), key=lambda x: x[0])
     names = lambda p: [n for n in (fold(p["name"]), fold(p["historical_name"])) if n]
-    for d, p in sorted(near, key=lambda x: x[0]):
+    for d, p in near:
         if d <= NEAR_KM and label in names(p):
             return p
-    for d, p in sorted(near, key=lambda x: x[0]):
-        if d <= 2 and any(label in n or n in label for n in names(p)):
-            return p
-    words = {w for w in label.split() if len(w) > 3}
-    for d, p in sorted(near, key=lambda x: x[0]):
-        if d <= 0.3 and any(words & set(n.split()) for n in names(p)):
+    for d, p in near:
+        if d > 2:
+            break
+        if any(n.startswith(label + " ") for n in names(p)):
             return p
     return None
+
+
+def museum_genre_paintings(http, qid):
+    """Landscape and city-view paintings in a museum that say nothing about what they show (no P180)."""
+    genres = " ".join(f"wd:{g}" for g in GENRES)
+    q = f"""
+SELECT ?item ?inv ?genre WHERE {{
+  ?item wdt:P195 wd:{qid}; wdt:P217 ?inv; wdt:P136 ?genre.
+  VALUES ?genre {{ {genres} }}
+  FILTER NOT EXISTS {{ ?item wdt:P180 ?any. }}
+}}"""
+    return [{"item": b["item"]["value"].rsplit("/", 1)[1], "inv": b["inv"]["value"], "genre": GENRES.get(b["genre"]["value"].rsplit("/", 1)[1])}
+            for b in http.sparql(q)]
+
+
+# Words that open or join a place in a title, and words that never name one on their own.
+JOINERS = r"looking|toward|towards|from|near|above|below|beside|across|over|at|in|on|of|with|and|by|seen|view|views|after|the|a|an|le|la|les|de|du|des|der|die|das|van|von|bei|aan"
+NOT_PLACES = {"view", "landscape", "evening", "morning", "sunset", "sunrise", "storm", "winter", "summer", "autumn", "spring",
+              "river", "sea", "coast", "beach", "harbour", "harbor", "mill", "road", "bridge", "church", "castle", "village",
+              "farm", "cottage", "trees", "wood", "forest", "lake", "study", "sketch", "moonlight", "snow", "boats", "ships",
+              "looking", "villas", "houses", "street", "garden", "park", "ruins", "night", "dawn", "dusk", "fog", "mist"}
+
+
+def title_phrases(title):
+    """Capitalised phrases in a title that might name a place: 'Hampstead Heath, Looking Toward Harrow'."""
+    out = []
+    text = re.sub(r"[,;:()\[\]]", "|", " " + title + " ")
+    text = re.sub(rf"(?<=\s)(?:{JOINERS})(?=\s)", "|", text, flags=re.I)
+    for part in text.split("|"):
+        part = part.strip(" .'\"‘’“”")
+        words = part.split()
+        if not words or len(part) < 4 or not words[0][0].isupper() or part.lower() in NOT_PLACES:
+            continue
+        if all(w.lower() in NOT_PLACES for w in words):
+            continue
+        out.append(part)
+    return list(dict.fromkeys(out))
+
+
+def lookup_place(http, phrase, cache):
+    """The first Wikidata item for a phrase that has coordinates, and its English article."""
+    if phrase in cache:
+        return cache[phrase]
+    hits = http.get(WIKIDATA_API, {"action": "wbsearchentities", "format": "json", "language": "en", "type": "item", "limit": 5, "search": phrase}).get("search", [])
+    found = None
+    if hits:
+        data = http.get(WIKIDATA_API, {"action": "wbgetentities", "format": "json", "ids": "|".join(h["id"] for h in hits),
+                                       "props": "claims|sitelinks|labels|descriptions", "sitefilter": "enwiki", "languages": "en"})
+        for h in hits:
+            e = data["entities"].get(h["id"], {})
+            c = e.get("claims", {}).get("P625")
+            if not c:
+                continue
+            v = c[0]["mainsnak"].get("datavalue", {}).get("value")
+            if not v:
+                continue
+            found = {"qid": h["id"], "label": e.get("labels", {}).get("en", {}).get("value", phrase), "desc": e.get("descriptions", {}).get("en", {}).get("value", ""),
+                     "lat": round(v["latitude"], 4), "lng": round(v["longitude"], 4), "article": e.get("sitelinks", {}).get("enwiki", {}).get("title")}
+            break
+    cache[phrase] = found
+    time.sleep(.4)
+    return found
+
+
+def titles_mode(http, args, artworks, museums, qids, ours, have):
+    by_museum_inv = {(a["museum_id"], norm_inv(a["accession_number"])): a for a in artworks if a["museum_id"] and a["accession_number"]}
+    depicted = {h["artwork_id"] for h in have if h["role"] == "depicts"}
+    cache, rows = {}, []
+    for m in museums:
+        q = qids.get(m["key"])
+        if not q:
+            continue
+        try:
+            paintings = museum_genre_paintings(http, q)
+        except Exception as e:
+            print(f"  {m['key']}: {e}", file=sys.stderr); continue
+        n = 0
+        for p in paintings:
+            a = by_museum_inv.get((m["id"], norm_inv(p["inv"])))
+            if not a or a["id"] in depicted:
+                continue
+            for phrase in title_phrases(a["name"]):
+                hit = lookup_place(http, phrase, cache)
+                if not hit:
+                    continue
+                ourp = our_place(ours, {"label": hit["label"], "lat": hit["lat"], "lng": hit["lng"]})
+                rows.append({"artwork": a["key"], "title": a["name"], "museum": m["key"], "item": p["item"], "genre": p["genre"], "phrase": phrase, **hit,
+                             "place": ourp["key"] if ourp else None})
+                n += 1
+        print(f"  {m['key']}: {len(paintings)} landscapes without P180 on Wikidata, {n} title suggestions", file=sys.stderr)
+        time.sleep(2)
+    json.dump(rows, open(os.path.join(args.out, "titles.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    with open(os.path.join(args.out, "titles.md"), "w", encoding="utf-8") as out:
+        out.write(f"# Title suggestions: {len(rows)} (check each against the museum's description before linking)\n\n")
+        for r in sorted(rows, key=lambda r: (r["museum"], r["title"])):
+            where = f"existing `{r['place']}`" if r["place"] else f"new: {r['label']} ({r['desc']}), {r['lat']}, {r['lng']}"
+            out.write(f"- {r['title']} ({r['museum']}, [{r['item']}](https://www.wikidata.org/wiki/{r['item']})): \"{r['phrase']}\" -> {where}"
+                      + (f" [wiki](https://en.wikipedia.org/wiki/{r['article'].replace(' ', '_')})" if r["article"] else "") + "\n")
+    print(f"{len(rows)} title suggestions in {args.out}/titles.md", file=sys.stderr)
 
 
 def main(argv=None):
@@ -179,6 +283,7 @@ def main(argv=None):
     ap.add_argument("--out", default="depicts")
     ap.add_argument("--museum", action="append", help="museum key (default: every museum)")
     ap.add_argument("--rows", type=int, default=150, help="rows per draft intake file")
+    ap.add_argument("--titles", action="store_true", help="suggest places from titles of landscapes Wikidata says nothing about")
     args = ap.parse_args(argv)
     os.makedirs(args.out, exist_ok=True)
     http = Http()
@@ -194,6 +299,9 @@ def main(argv=None):
         museums = [m for m in museums if m["key"] in args.museum]
     qids = museum_qids(http, museums, mlinks, sources)
     print(f"{len(qids)} of {len(museums)} museums have a Wikidata item", file=sys.stderr)
+
+    if args.titles:
+        return titles_mode(http, args, artworks, museums, qids, [p for p in places if p["lat"] is not None and p["lng"] is not None], have)
 
     by_museum_inv = {}
     for a in artworks:
