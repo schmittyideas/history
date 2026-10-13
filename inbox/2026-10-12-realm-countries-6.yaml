@@ -1,0 +1,458 @@
+# Realm years and countries, batch 6 (#202): the thin country lists left by
+# batches 1-5. These realms' own Wikipedia articles have no "Today part of"
+# list, so their countries come from what the articles' text states and from
+# the "Today part of" lists of their provinces' and successor states' own
+# articles, each cited. Only lands the realm ruled are listed; vassals and
+# tributaries are left out unless a note says otherwise. Fetched 2026-10-12.
+#
+# Also: years for Japan, Ireland and Pamplona, which had none, and batch 4's
+# six date conflicts (Pagan, Sukhothai, Songhai, Malacca, Benin, Austria),
+# written there only as comments, now recorded as realm discrepancies.
+
+batch:
+  title: "Realm years and countries, batch 6"
+  requested: "Ty: fill the thin realm country lists (#202)"
+  date: 2026-10-12
+
+sources:
+  - {key: wp-high-king-of-ireland, title: "High King of Ireland (Wikipedia)", url: https://en.wikipedia.org/wiki/High_King_of_Ireland}
+  - {key: wp-lordship-of-ireland, title: "Lordship of Ireland (Wikipedia)", url: https://en.wikipedia.org/wiki/Lordship_of_Ireland}
+  - {key: wp-mael-sechnaill-mac-maele-ruanaid, title: "Máel Sechnaill mac Máele Ruanaid (Wikipedia)", url: "https://en.wikipedia.org/wiki/M%C3%A1el_Sechnaill_mac_M%C3%A1ele_Ruanaid"}
+  - {key: wp-sancho-vi-of-navarre, title: "Sancho VI of Navarre (Wikipedia)", url: https://en.wikipedia.org/wiki/Sancho_VI_of_Navarre}
+  - {key: wp-taiho-code, title: "Taihō Code (Wikipedia)", url: "https://en.wikipedia.org/wiki/Taih%C5%8D_Code"}
+  - {key: wp-white-horde, title: "White Horde (Wikipedia)", url: https://en.wikipedia.org/wiki/White_Horde}
+  - {key: wp-isaccea, title: "Isaccea (Wikipedia)", url: https://en.wikipedia.org/wiki/Isaccea}
+  - {key: wp-old-orhei, title: "Old Orhei (Wikipedia)", url: https://en.wikipedia.org/wiki/Old_Orhei}
+  - {key: wp-khwarazm, title: "Khwarazm (Wikipedia)", url: https://en.wikipedia.org/wiki/Khwarazm}
+  - {key: wp-sufi-dynasty, title: "Sufi dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Sufi_dynasty}
+  - {key: wp-chernihiv, title: "Chernihiv (Wikipedia)", url: https://en.wikipedia.org/wiki/Chernihiv}
+  - {key: wp-novhorod-siverskyi, title: "Novhorod-Siverskyi (Wikipedia)", url: https://en.wikipedia.org/wiki/Novhorod-Siverskyi}
+  - {key: wp-gomel, title: "Gomel (Wikipedia)", url: https://en.wikipedia.org/wiki/Gomel}
+  - {key: wp-transoxiana, title: "Transoxiana (Wikipedia)", url: https://en.wikipedia.org/wiki/Transoxiana}
+  - {key: wp-moghulistan, title: "Moghulistan (Wikipedia)", url: https://en.wikipedia.org/wiki/Moghulistan}
+  - {key: wp-qara-khitai, title: "Qara Khitai (Wikipedia)", url: https://en.wikipedia.org/wiki/Qara_Khitai}
+  - {key: wp-ruthenian-voivodeship, title: "Ruthenian Voivodeship (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ruthenian_Voivodeship"}
+  - {key: wp-podolian-voivodeship, title: "Podolian Voivodeship (Wikipedia)", url: "https://en.wikipedia.org/wiki/Podolian_Voivodeship"}
+  - {key: wp-crown-of-the-kingdom-of-poland, title: "Crown of the Kingdom of Poland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crown_of_the_Kingdom_of_Poland"}
+  - {key: wp-kiev-voivodeship, title: "Kiev Voivodeship (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kiev_Voivodeship"}
+  - {key: wp-bratslav-voivodeship, title: "Bratslav Voivodeship (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bratslav_Voivodeship"}
+  - {key: wp-duchy-of-livonia, title: "Duchy of Livonia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Duchy_of_Livonia"}
+  - {key: wp-inflanty-voivodeship, title: "Inflanty Voivodeship (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inflanty_Voivodeship"}
+  - {key: wp-spis, title: "Spiš (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spi%C5%A1"}
+  - {key: wp-boleslaw-i-the-brave, title: "Bolesław I the Brave (Wikipedia)", url: "https://en.wikipedia.org/wiki/Boles%C5%82aw_I_the_Brave"}
+  - {key: wp-kingdom-of-norway-872-1397, title: "Kingdom of Norway (872–1397) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Norway_(872%E2%80%931397)"}
+  - {key: wp-list-of-possessions-of-norway, title: "List of possessions of Norway (Wikipedia)", url: "https://en.wikipedia.org/wiki/List_of_possessions_of_Norway"}
+  - {key: wp-orkney, title: "Orkney (Wikipedia)", url: "https://en.wikipedia.org/wiki/Orkney"}
+  - {key: wp-shetland, title: "Shetland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Shetland"}
+  - {key: wp-chola-conquest-of-the-anuradhapura-kingdom, title: "Chola conquest of the Anuradhapura Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chola_conquest_of_the_Anuradhapura_Kingdom"}
+  - {key: wp-rajaraja-i, title: "Rajaraja I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rajaraja_I"}
+  - {key: wp-illyrian-provinces, title: "Illyrian Provinces (Wikipedia)", url: "https://en.wikipedia.org/wiki/Illyrian_Provinces"}
+  - {key: wp-forets, title: "Forêts (Wikipedia)", url: "https://en.wikipedia.org/wiki/For%C3%AAts"}
+  - {key: wp-meuse-inferieure, title: "Meuse-Inférieure (Wikipedia)", url: "https://en.wikipedia.org/wiki/Meuse-Inf%C3%A9rieure"}
+  - {key: wp-zuyderzee, title: "Zuyderzée (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zuyderz%C3%A9e"}
+  - {key: wp-roer, title: "Roer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Roer"}
+  - {key: wp-bouches-de-l-elbe, title: "Bouches-de-l'Elbe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bouches-de-l'Elbe"}
+  - {key: wp-po-department, title: "Pô (Wikipedia)", url: "https://en.wikipedia.org/wiki/P%C3%B4"}
+  - {key: wp-rome-department, title: "Rome (department) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rome_(department)"}
+  - {key: wp-leman, title: "Léman (Wikipedia)", url: "https://en.wikipedia.org/wiki/L%C3%A9man"}
+  - {key: wp-simplon, title: "Simplon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Simplon"}
+  - {key: wp-monaco, title: "Monaco (Wikipedia)", url: "https://en.wikipedia.org/wiki/Monaco"}
+  - {key: wp-french-rule-in-the-ionian-islands, title: "French rule in the Ionian Islands (1807–1814) (Wikipedia)", url: "https://en.wikipedia.org/wiki/French_rule_in_the_Ionian_Islands_(1807%E2%80%931814)"}
+  - {key: wp-ottoman-greece, title: "Ottoman Greece (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Greece"}
+  - {key: wp-ottoman-crete, title: "Ottoman Crete (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Crete"}
+  - {key: wp-ottoman-bulgaria, title: "Ottoman Bulgaria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Bulgaria"}
+  - {key: wp-sanjak-of-smederevo, title: "Sanjak of Smederevo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sanjak_of_Smederevo"}
+  - {key: wp-kosovo-vilayet, title: "Kosovo vilayet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kosovo_vilayet"}
+  - {key: wp-bosnia-eyalet, title: "Bosnia Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bosnia_Eyalet"}
+  - {key: wp-scutari-vilayet, title: "Scutari vilayet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Scutari_vilayet"}
+  - {key: wp-salonica-vilayet, title: "Salonica vilayet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Salonica_vilayet"}
+  - {key: wp-ottoman-albania, title: "Ottoman Albania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Albania"}
+  - {key: wp-kefe-eyalet, title: "Kefe Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kefe_Eyalet"}
+  - {key: wp-podolia-eyalet, title: "Podolia Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Podolia_Eyalet"}
+  - {key: wp-budjak, title: "Budjak (Wikipedia)", url: "https://en.wikipedia.org/wiki/Budjak"}
+  - {key: wp-temesvar-eyalet, title: "Temeşvar Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Teme%C5%9Fvar_Eyalet"}
+  - {key: wp-danube-vilayet, title: "Danube vilayet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Danube_vilayet"}
+  - {key: wp-ottoman-hungary, title: "Ottoman Hungary (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Hungary"}
+  - {key: wp-budin-eyalet, title: "Budin Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Budin_Eyalet"}
+  - {key: wp-childir-eyalet, title: "Childir Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Childir_Eyalet"}
+  - {key: wp-damascus-eyalet, title: "Damascus Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Damascus_Eyalet"}
+  - {key: wp-sidon-eyalet, title: "Sidon Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sidon_Eyalet"}
+  - {key: wp-ottoman-syria, title: "Ottoman Syria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Syria"}
+  - {key: wp-ottoman-egypt, title: "Ottoman Egypt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Egypt"}
+  - {key: wp-hejaz-vilayet, title: "Hejaz Vilayet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hejaz_Vilayet"}
+  - {key: wp-lahsa-eyalet, title: "Lahsa Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lahsa_Eyalet"}
+  - {key: wp-yemen-eyalet, title: "Yemen Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Yemen_Eyalet"}
+  - {key: wp-ottoman-iraq, title: "Ottoman Iraq (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Iraq"}
+  - {key: wp-ottoman-cyprus, title: "Ottoman Cyprus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Cyprus"}
+  - {key: wp-habesh-eyalet, title: "Habesh Eyalet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Habesh_Eyalet"}
+  - {key: wp-regency-of-algiers, title: "Regency of Algiers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Regency_of_Algiers"}
+  - {key: wp-ottoman-tunisia, title: "Ottoman Tunisia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Tunisia"}
+  - {key: wp-ottoman-tripolitania, title: "Ottoman Tripolitania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ottoman_Tripolitania"}
+  - {key: wp-khorasan, title: "Khorasan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Khorasan"}
+  - {key: wp-tahirid-dynasty, title: "Tahirid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tahirid_dynasty"}
+  - {key: wp-bilad-al-sham, title: "Bilad al-Sham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bilad_al-Sham"}
+  - {key: wp-tulunids, title: "Tulunids (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tulunids"}
+  - {key: wp-ziyadid-dynasty, title: "Ziyadid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ziyadid_dynasty"}
+  - {key: wp-aghlabid-dynasty, title: "Aghlabid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Aghlabid_dynasty"}
+  - {key: wp-sind-caliphal-province, title: "Sind (caliphal province) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sind_(caliphal_province)"}
+  - {key: wp-arminiya, title: "Arminiya (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arminiya"}
+  - {key: wp-arran-caucasus, title: "Arran (Caucasus) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arran_(Caucasus)"}
+  - {key: wp-emirate-of-tbilisi, title: "Emirate of Tbilisi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Emirate_of_Tbilisi"}
+  - {key: wp-idrisid-dynasty, title: "Idrisid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Idrisid_dynasty"}
+
+realms:
+  # ---------------------------------------------------------------- Years
+  # Our Ireland titles run from the High Kings (Máel Sechnaill II, Brian
+  # Boru) through the Lords of Ireland to the Kings of Ireland. The High King
+  # article names Máel Sechnaill I as the first historical High King (king of
+  # Tara from 846); the Kingdom of Ireland ended on 31 December 1800. The
+  # High Kingship lapsed in the 12th century, before the Lordship (1177-1542)
+  # and the Kingdom (1542-1800); the note says so.
+  - name: Ireland
+    from: 846
+    to: 1800
+    note: "High Kings from Máel Sechnaill I (846) to the 12th century, then the Lordship of Ireland (1177-1542) and the Kingdom of Ireland (1542-1800)"
+    sources: [wp-high-king-of-ireland, wp-mael-sechnaill-mac-maele-ruanaid, wp-lordship-of-ireland, wp-kingdom-of-ireland]
+
+  # The Kingdom of Navarre was "originally the Kingdom of Pamplona", founded
+  # 824 (traditional). Sancho VI (king 1150-1194) "was the first monarch to
+  # officially drop the title of King of Pamplona"; no year is given for the
+  # change, so Pamplona ends at his accession, marked approximate.
+  - name: Pamplona
+    from: 824
+    from_estimated: true
+    to: 1150
+    to_estimated: true
+    note: "The Kingdom of Navarre's earlier name; Sancho VI (1150-1194) was the first king to drop the title King of Pamplona"
+    sources: [wp-kingdom-of-navarre, wp-sancho-vi-of-navarre]
+
+  # The Japan article's infobox gives no founding year, and Emperor Jimmu's
+  # 660 BC is legend. The Taihō Code (enacted 703, per its article) created
+  # the ritsuryō state, "a system of Chinese-style centralized government",
+  # and the name Nihon was adopted in the early 8th century; 703 is used as
+  # the start of Japan as a state. Our Japan titles begin in 986. No end.
+  - name: Japan
+    from: 703
+    note: "From the Taihō Code (703), which created the centralised ritsuryō state; earlier Yamato kingship not counted"
+    sources: [wp-japan, wp-taiho-code]
+
+  # ---------------------------------------------------------------- Steppe and Russia
+  # The Golden Horde article's lead: "from the Urals to the Danube". Crimea
+  # until the Crimean Khanate (1449); Kiev and Podolia until the Battle of
+  # Blue Waters (1363). The left wing (White Horde) had its later capital at
+  # Sighnaq in Kazakhstan. Saqchi (Isaccea, Romania) "came under the Mongol
+  # rule" in 1284. Old Orhei in Moldova was the Horde fort Shehr al-Jedid in
+  # the 14th century. Northern Khwarazm (Urgench) was the Horde's until the
+  # Sufi dynasty broke away around 1360; Khwarazm's "today" list is
+  # Uzbekistan and Turkmenistan. Left out: Bulgaria (tributary, not ruled),
+  # and Tabriz, held only in 1356-1357 and 1386-1387.
+  - name: Golden Horde
+    countries:
+      - {country: Ukraine, note: "Crimea until 1449; Kiev and Podolia until 1363"}
+      - {country: Kazakhstan, note: "the left wing (White Horde), capital Sighnaq"}
+      - {country: Romania, from: 1284, note: "Northern Dobruja, at Saqchi (Isaccea)"}
+      - {country: Moldova, note: "the Bessarabian steppe; the 14th-century fort at Old Orhei"}
+      - {country: Uzbekistan, to: 1360, note: "northern Khwarazm"}
+      - {country: Turkmenistan, to: 1360, note: "northern Khwarazm, with Urgench"}
+    sources: [wp-golden-horde, wp-white-horde, wp-isaccea, wp-old-orhei, wp-khwarazm, wp-sufi-dynasty]
+
+  # Moscow took the Chernihiv-Siverian lands (now northern Ukraine) after the
+  # Battle of Vedrosha in 1503. Gomel (Belarus) passed to Moscow under
+  # Semyon (who held it to 1505) and was retaken by Lithuania in 1535; the
+  # Gomel article doesn't date the transfer, so 1500 is approximate. The
+  # Chernihiv article also names a Muscovite spell in 1408-1420 that no other
+  # article confirms; it is left out.
+  - name: Grand Duchy of Moscow
+    countries:
+      - {country: Ukraine, from: 1503, note: "the Chernihiv-Siverian lands"}
+      - {country: Belarus, from: 1500, to: 1535, note: "Gomel and its region, from about 1500"}
+    sources: [wp-grand-principality-of-moscow, wp-chernihiv, wp-novhorod-siverskyi, wp-gomel]
+
+  # The article: Chagatai inherited "Issyk-Kul, Ili River, Chu River, Talas
+  # River, Transoxania, and the Tarim Basin", with capitals at Almaliq
+  # (Xinjiang) and Qarshi (Uzbekistan). Transoxiana is today eastern
+  # Uzbekistan, western Tajikistan and parts of Kyrgyzstan and Kazakhstan;
+  # the successor Moghulistan's "today" list is China, Kazakhstan,
+  # Kyrgyzstan and Uzbekistan. Turkmenistan and Afghanistan are left out:
+  # no article places Chagatai rule there before 1347.
+  - name: Chagatai Khanate
+    countries:
+      - {country: China, note: "Xinjiang: the Ili valley and the Tarim Basin"}
+      - {country: Kyrgyzstan, note: "Issyk-Kul, the Chu and Talas valleys"}
+      - {country: Kazakhstan, note: "Semirechye and the south"}
+      - {country: Tajikistan, note: "western Tajikistan, in Transoxiana"}
+    sources: [wp-chagatai-khanate, wp-transoxiana, wp-moghulistan, wp-qara-khitai]
+
+  # ---------------------------------------------------------------- Europe
+  # Poland: the Crown's lands from its provinces' articles. Under Bolesław I
+  # and Mieszko II it held Lusatia and Meissen (1002-1031, with breaks),
+  # Bohemia (1003-1004), Moravia and Upper Hungary (to about 1031) and the
+  # Cherven towns (1018-1031). Red Ruthenia was Crown land from 1349 (the
+  # Belz Voivodeship article dates the seizure 1340), western Podolia from
+  # 1394, and Volhynia, Kiev and Bratslav from the Union of Lublin (1569) to
+  # 1793-95. The Kiev Voivodeship reached into Belarus and Bratslav into
+  # northern Transnistria (their infoboxes' "today" lists). Livonia
+  # (1569-1629) and then Inflanty (to 1772) were ruled jointly with
+  # Lithuania. Sixteen Spiš towns were pledged to Poland 1412-1772. Left out:
+  # Smolensk (Lithuanian, not the Crown) and fiefs (Ducal Prussia, Courland).
+  - name: Poland
+    countries:
+      - {country: Ukraine, from: 1018, note: "the Cherven towns 1018-1031; Red Ruthenia from 1349, Podolia from 1394, Volhynia, Kiev and Bratslav 1569-1793"}
+      - {country: Belarus, from: 1569, to: 1793, note: "the northern edge of the Kiev Voivodeship"}
+      - {country: Moldova, from: 1569, to: 1793, note: "northern Transnistria, in the Bratslav Voivodeship"}
+      - {country: Latvia, from: 1569, to: 1772, note: "Livonia, then Inflanty (Latgale), ruled jointly with Lithuania"}
+      - {country: Estonia, from: 1569, to: 1629, note: "southern Estonia, in the Duchy of Livonia, ruled jointly with Lithuania"}
+      - {country: Slovakia, note: "Upper Hungary to about 1031; sixteen Spiš towns pledged to Poland 1412-1772"}
+      - {country: Germany, from: 1002, to: 1031, note: "Lusatia and Meissen, with breaks"}
+      - {country: Czech Republic, from: 1003, to: 1031, note: "Bohemia 1003-1004; Moravia to about 1031"}
+    sources: [wp-kingdom-of-poland, wp-boleslaw-i-the-brave, wp-ruthenian-voivodeship, wp-podolian-voivodeship, wp-crown-of-the-kingdom-of-poland, wp-kiev-voivodeship, wp-bratslav-voivodeship, wp-duchy-of-livonia, wp-inflanty-voivodeship, wp-spis]
+
+  # Norway: the Kingdom of Norway (872-1397) article's "today" field points
+  # to the List of possessions of Norway. Orkney from 875 and Shetland until
+  # they were pledged to Scotland in 1468-69; the Hebrides and Mann until
+  # the Treaty of Perth (1266); Iceland 1262-1814; the Faroes (c. 1035) and
+  # Greenland (1261) to 1814; Jämtland and Härjedalen to 1645, Bohuslän to
+  # 1658. Left out: Anglesey (1098-1099), and lands Norway only claimed or
+  # held nominal suzerainty over (Dublin, Northumbria, Erik the Red's Land).
+  # See the discrepancies for the end years.
+  - name: Norway
+    countries:
+      - {country: United Kingdom, from: 875, to: 1469, note: "Orkney and Shetland to 1468-69; the Hebrides, Caithness and Sutherland to 1266"}
+      - {country: Isle of Man, to: 1266, note: "the Kingdom of Mann and the Isles"}
+      - {country: Iceland, from: 1262, to: 1814}
+      - {country: Denmark, from: 1035, to: 1814, note: "the Faroe Islands (c. 1035) and Greenland (1261)"}
+      - {country: Sweden, to: 1658, note: "Jämtland and Härjedalen to 1645, Bohuslän to 1658"}
+    sources: [wp-norway, wp-kingdom-of-norway-872-1397, wp-list-of-possessions-of-norway, wp-orkney, wp-shetland]
+
+  # French Empire: the First Empire's annexed departments (most annexed
+  # under the Republic, so held from 1804) to 1814, from each department's
+  # article and its infobox "today" list; the Illyrian Provinces 1809-1814;
+  # the Ionian Islands 1807-1814. Monaco was occupied, not annexed. Left
+  # out: client states (the Kingdom of Italy, Holland before 1810,
+  # Westphalia, the Confederation of the Rhine, Naples, Joseph's Spain) and
+  # Catalonia, whose 1812 annexation "was never officially validated".
+  # Second Empire: its infobox lists France and Algeria; the text adds
+  # Cochinchina (from 1861-1863) and a protectorate over Cambodia (1863).
+  - name: French Empire
+    countries:
+      - {country: Belgium, to: 1814}
+      - {country: Luxembourg, to: 1814, note: "the Forêts department"}
+      - {country: Netherlands, to: 1814, note: "Dutch Limburg; the whole country 1810-1814"}
+      - {country: Germany, to: 1814, note: "the left bank of the Rhine; the north-west, with Hamburg, 1810-1814"}
+      - {country: Italy, to: 1814, note: "Piedmont, then Liguria (1805), Parma and Tuscany (1808), Rome (1809); Gorizia and Trieste 1809-1814"}
+      - {country: Switzerland, to: 1814, note: "Geneva and the Jura; Valais 1810-1813"}
+      - {country: Monaco, to: 1814, note: "occupied, not formally annexed"}
+      - {country: Slovenia, from: 1809, to: 1814, note: "the Illyrian Provinces"}
+      - {country: Croatia, from: 1809, to: 1814, note: "the Illyrian Provinces"}
+      - {country: Montenegro, from: 1809, to: 1814, note: "Kotor, in the Illyrian Provinces"}
+      - {country: Austria, from: 1809, to: 1814, note: "Villach and East Tyrol, in the Illyrian Provinces"}
+      - {country: Greece, from: 1807, to: 1814, note: "the Ionian Islands; from 1809-10 only Corfu, Paxoi and Parga"}
+      - {country: Vietnam, from: 1862, note: "Cochinchina"}
+      - {country: Cambodia, from: 1863, note: "a protectorate"}
+    sources: [wp-first-french-empire, wp-second-french-empire, wp-illyrian-provinces, wp-forets, wp-meuse-inferieure, wp-zuyderzee, wp-roer, wp-bouches-de-l-elbe, wp-po-department, wp-rome-department, wp-leman, wp-simplon, wp-monaco, wp-french-rule-in-the-ionian-islands]
+
+  # ---------------------------------------------------------------- South Asia
+  # Chola: northern Sri Lanka from 993 (Rajarata), more in 1017, until 1070.
+  # The Maldives were conquered under Rajaraja I (985-1014); no end year is
+  # given. The 1025 raid on Srivijaya (Indonesia, Malaysia) is left out: the
+  # article says the Cholas "did not establish lasting control", though it
+  # also says control "lasted for several decades" in one place.
+  - name: Chola Empire
+    countries:
+      - {country: Sri Lanka, from: 993, to: 1070, note: "Rajarata from 993, parts of Ruhuna from 1017"}
+      - {country: Maldives, note: "conquered under Rajaraja I (985-1014)"}
+    sources: [wp-chola-empire, wp-chola-conquest-of-the-anuradhapura-kingdom, wp-rajaraja-i]
+
+  # ---------------------------------------------------------------- Middle East
+  # Ottoman Empire: lands it ruled directly, from its provinces' articles and
+  # their infobox "today" lists. Vassals and tributaries are left out
+  # (Wallachia, Moldavia, the Crimean Khanate), as are lists no text backs:
+  # Iran (only the Baghdad Eyalet's list), Oman (only Ottoman Arabia's),
+  # Bahrain and Qatar (the Lahsa Eyalet's infobox and lead disagree; Kuwait
+  # is in both), and Djibouti and Somalia (the Habesh Eyalet's far coast).
+  # Egypt and the Barbary regencies were autonomous for long stretches; the
+  # notes say so. Date conflicts are recorded below.
+  - name: Ottoman Empire
+    countries:
+      - {country: Greece, from: 1371, to: 1913, note: "the Peloponnese to 1821-29; Crete 1669-1898; the north and the islands to 1912-13"}
+      - {country: Bulgaria, from: 1396, to: 1878, note: "autonomous from 1878, independent 1908"}
+      - {country: Serbia, from: 1459, to: 1913, note: "the Sanjak of Smederevo to 1817; the south to 1913"}
+      - {country: Bosnia and Herzegovina, from: 1463, to: 1878, note: "occupied by Austria-Hungary in 1878, annexed 1908"}
+      - {country: Albania, from: 1479, to: 1912}
+      - {country: Montenegro, to: 1913, note: "parts, in the Bosnia, Scutari and Kosovo provinces"}
+      - {country: North Macedonia, to: 1913}
+      - {country: Kosovo, to: 1913}
+      - {country: Ukraine, from: 1475, to: 1812, note: "the southern Crimean coast (Kefe) to 1774; Podolia 1672-1699; the Budjak to 1812"}
+      - {country: Moldova, from: 1484, to: 1812, note: "the southern Budjak"}
+      - {country: Romania, from: 1552, to: 1878, note: "the Banat 1552-1716 and Dobruja to 1878"}
+      - {country: Hungary, from: 1541, to: 1699}
+      - {country: Croatia, from: 1541, to: 1699, note: "Slavonia"}
+      - {country: Slovakia, from: 1541, to: 1699, note: "a southern strip"}
+      - {country: Georgia, from: 1578, to: 1845, note: "the south-west, in the Childir Eyalet"}
+      - {country: Syria, from: 1516, to: 1918}
+      - {country: Lebanon, from: 1516, to: 1918}
+      - {country: Israel, from: 1516, to: 1918}
+      - {country: Palestine, from: 1516, to: 1918}
+      - {country: Jordan, from: 1516, to: 1918}
+      - {country: Egypt, from: 1517, to: 1914, note: "formally a province to 1914; effectively independent from 1805, British-controlled from 1882"}
+      - {country: Saudi Arabia, from: 1517, to: 1916, note: "the Hejaz and the Red Sea coast; al-Ahsa 1560-1670"}
+      - {country: Kuwait, from: 1560, to: 1670, note: "in the Lahsa Eyalet"}
+      - {country: Yemen, from: 1517, to: 1918, note: "to about 1636, then again from 1849"}
+      - {country: Iraq, from: 1534, to: 1918, note: "lost to the Safavids 1623-1638"}
+      - {country: Cyprus, from: 1571, to: 1878, note: "British-administered 1878-1914"}
+      - {country: Sudan, from: 1557, to: 1872, note: "the Red Sea coast at Suakin (Habesh Eyalet)"}
+      - {country: Eritrea, from: 1557, to: 1872, note: "the Red Sea coast (Habesh Eyalet)"}
+      - {country: Algeria, from: 1516, to: 1830, note: "the semi-autonomous Regency of Algiers"}
+      - {country: Tunisia, from: 1574, to: 1881, note: "semi-autonomous"}
+      - {country: Libya, from: 1551, to: 1912, note: "Tripolitania"}
+    sources: [wp-ottoman-empire, wp-ottoman-greece, wp-ottoman-crete, wp-ottoman-bulgaria, wp-sanjak-of-smederevo, wp-kosovo-vilayet, wp-bosnia-eyalet, wp-scutari-vilayet, wp-salonica-vilayet, wp-ottoman-albania, wp-kefe-eyalet, wp-podolia-eyalet, wp-budjak, wp-temesvar-eyalet, wp-danube-vilayet, wp-ottoman-hungary, wp-budin-eyalet, wp-childir-eyalet, wp-damascus-eyalet, wp-sidon-eyalet, wp-ottoman-syria, wp-ottoman-egypt, wp-hejaz-vilayet, wp-lahsa-eyalet, wp-yemen-eyalet, wp-ottoman-iraq, wp-ottoman-cyprus, wp-habesh-eyalet, wp-regency-of-algiers, wp-ottoman-tunisia, wp-ottoman-tripolitania]
+
+  # Abbasid Caliphate: direct rule in its first century or two, from its
+  # provinces' and successors' articles. Khorasan (Iran, Afghanistan,
+  # Turkmenistan) went to the autonomous Tahirids from 821 and was lost by
+  # 873; Transoxiana to the Samanids from 819. Syria and Egypt were under
+  # the autonomous Tulunids 868-905 and lost to the Ikhshidids from 935;
+  # Ifriqiya was ruled by the Aghlabids, vassals in all but name, from 800
+  # until the Fatimids took it in 909. Sind was a province to about 854;
+  # Arminiya (Armenia, Jurzan, Arran) to 884, Arran and Georgia to 861.
+  # Iraq itself was ruled by the Buyids from 945 and the Seljuks from 1055;
+  # the caliphs in Cairo after 1261 held no land. Never Abbasid: al-Andalus
+  # (Spain, Portugal) and Morocco. Turkey (the Cilician frontier) is left
+  # out: only the Tulunids' list names it.
+  - name: Abbasid Caliphate
+    countries:
+      - {country: Iran, to: 945, note: "the west; Khorasan only to 821-873"}
+      - {country: Afghanistan, to: 873, note: "western and northern Afghanistan, in Khorasan"}
+      - {country: Turkmenistan, to: 873, note: "the east, in Khorasan"}
+      - {country: Uzbekistan, to: 900, note: "Transoxiana, under Samanid governors from 819"}
+      - {country: Tajikistan, to: 900, note: "Transoxiana, under Samanid governors from 819"}
+      - {country: Syria, to: 935, note: "the Tulunids held it from 878 to 905"}
+      - {country: Lebanon, to: 935}
+      - {country: Israel, to: 935}
+      - {country: Palestine, to: 935}
+      - {country: Jordan, to: 935}
+      - {country: Egypt, to: 935, note: "under the autonomous Tulunids 868-905"}
+      - {country: Saudi Arabia, note: "the Hejaz"}
+      - {country: Yemen, to: 847, note: "San'a governed by an Abbasid governor to 847"}
+      - {country: Tunisia, to: 909, note: "Ifriqiya; ruled by the Aghlabids, as vassals, from 800"}
+      - {country: Algeria, to: 909, note: "the east, under the Aghlabids from 800"}
+      - {country: Libya, to: 909, note: "Tripolitania, under the Aghlabids from 800"}
+      - {country: Pakistan, to: 854, note: "the province of Sind"}
+      - {country: India, to: 854, note: "the edge of the province of Sind"}
+      - {country: Armenia, to: 884, note: "Arminiya"}
+      - {country: Azerbaijan, to: 861, note: "Arran"}
+      - {country: Georgia, to: 861, note: "Jurzan; the Emirate of Tbilisi"}
+    sources: [wp-abbasid-caliphate, wp-khorasan, wp-tahirid-dynasty, wp-transoxiana, wp-bilad-al-sham, wp-tulunids, wp-ziyadid-dynasty, wp-aghlabid-dynasty, wp-sind-caliphal-province, wp-arminiya, wp-arran-caucasus, wp-emirate-of-tbilisi, wp-idrisid-dynasty]
+
+discrepancies:
+  # Batch 4's date conflicts, from the same articles it cited.
+  - key: pagan-kingdom-end
+    question: When did the Pagan Kingdom end?
+    about: [{realm: pagan-kingdom}]
+    field: to
+    claims:
+      - {value: "1297", sources: [wp-pagan-kingdom], note: "Infobox: ended with the Myinsaing takeover"}
+      - {value: "1287", sources: [wp-pagan-kingdom], note: "Lead: the Mongol invasions toppled the kingdom in 1287"}
+    note: "The realm uses the infobox's 1297."
+
+  - key: sukhothai-kingdom-end
+    question: When did the Sukhothai Kingdom end?
+    about: [{realm: sukhothai-kingdom}]
+    field: to
+    claims:
+      - {value: "1438", sources: [wp-sukhothai-kingdom], note: "Lead: a separate polity until 1438, when it passed under Ayutthaya"}
+      - {value: "1584", sources: [wp-sukhothai-kingdom], note: "Infobox date_end: annexed to Ayutthaya (life span 1238-1438/1584)"}
+    note: "The realm uses 1438, when it stopped being a separate polity."
+
+  - key: songhai-empire-end
+    question: When did the Songhai Empire end?
+    about: [{realm: songhai-empire}]
+    field: to
+    claims:
+      - {value: "1591", sources: [wp-songhai-empire], note: "Infobox life span and text: collapsed after the Battle of Tondibi, 1591"}
+      - {value: "1599", sources: [wp-songhai-empire], note: "Infobox year_end, with a 'Saadian invasion' event dated 1599"}
+    note: "The realm uses 1591."
+
+  - key: malacca-sultanate-end
+    question: When did the Malacca Sultanate end?
+    about: [{realm: malacca-sultanate}]
+    field: to
+    claims:
+      - {value: "1511", sources: [wp-malacca-sultanate], note: "Lead: the capital fell to Portugal in 1511"}
+      - {value: "1528", sources: [wp-malacca-sultanate], note: "Infobox life span c. 1400-1511/1528: the exiled court's later years"}
+    note: "The realm uses 1511."
+
+  - key: kingdom-of-benin-start
+    question: When did the Kingdom of Benin begin?
+    about: [{realm: kingdom-of-benin}]
+    field: from
+    claims:
+      - {value: "1180", sources: [wp-kingdom-of-benin], note: "Infobox: the Oba monarchy replaces the Ogiso"}
+      - {value: "11th century", sources: [wp-kingdom-of-benin], note: "Lead: grew out of Igodomigodo around the 11th century"}
+    note: "The realm uses the infobox's 1180."
+
+  - key: austria-archduchy-years
+    question: Did the Archduchy of Austria last from 1453 to 1918 without a break?
+    about: [{realm: austria}]
+    field: to
+    claims:
+      - {value: "1453-1918", sources: [wp-archduchy-of-austria], note: "Infobox year_start and year_end"}
+      - {value: "1453-1804, 1867-1918", sources: [wp-archduchy-of-austria], note: "Infobox life span, with a gap for the Austrian Empire years"}
+    note: "The realm uses 1453-1918, so Austrian titles between 1804 and 1867 still fall inside it."
+
+  - key: norway-orkney-shetland-end
+    question: When did Orkney and Shetland stop being Norwegian?
+    about: [{realm: norway}]
+    field: countries
+    claims:
+      - {value: "1468-1469", sources: [wp-orkney, wp-shetland], note: "Orkney and Shetland pledged to Scotland"}
+      - {value: "1470", sources: [wp-list-of-possessions-of-norway], note: "End of the crown dependency"}
+      - {value: "1472", sources: [wp-orkney, wp-shetland], note: "Absorbed into the Kingdom of Scotland"}
+    note: "Norway's United Kingdom row ends in 1469, when the pledge was complete."
+
+  - key: norway-atlantic-isles-end
+    question: When did Iceland, the Faroes and Greenland pass from Norway to Denmark?
+    about: [{realm: norway}]
+    field: countries
+    claims:
+      - {value: "1814", sources: [wp-list-of-possessions-of-norway], note: "Crown dependencies to 1814"}
+      - {value: "1536-1537", sources: [wp-list-of-possessions-of-norway], note: "The list says 1536/37 rather than 1814 is 'somewhat disputed'"}
+    note: "Norway's Iceland and Denmark rows end in 1814."
+
+  - key: ottoman-iraq-conquest
+    question: When did the Ottomans take Baghdad, and retake Iraq from the Safavids?
+    about: [{realm: ottoman-empire}]
+    field: countries
+    claims:
+      - {value: "1534; 1638", sources: [wp-ottoman-iraq], note: "Süleyman I's conquest in 1534; Safavid rule 1623-1638"}
+      - {value: "1535; 1639", sources: [wp-ottoman-empire], note: "Baghdad taken in 1535, Iraq recaptured in 1639"}
+    note: "The Iraq row starts in 1534."
+
+  - key: ottoman-algeria-start
+    question: When did Algeria come under the Ottomans?
+    about: [{realm: ottoman-empire}]
+    field: countries
+    claims:
+      - {value: "1516", sources: [wp-regency-of-algiers], note: "The Regency of Algiers' start"}
+      - {value: "1517", sources: [wp-ottoman-empire], note: "Algeria and Egypt added in 1517"}
+    note: "The Algeria row starts in 1516."
+
+  - key: ottoman-crete-years
+    question: When did Crete become Ottoman, and when did Ottoman rule end?
+    about: [{realm: ottoman-empire}]
+    field: countries
+    claims:
+      - {value: "1646", sources: [wp-ottoman-crete], note: "The eyalet was declared in 1646"}
+      - {value: "1667", sources: [wp-ottoman-crete], note: "Infobox start"}
+      - {value: "1669", sources: [wp-ottoman-crete, wp-ottoman-empire], note: "Candia fell; the conquest was complete"}
+      - {value: "1898 or 1913", sources: [wp-ottoman-crete], note: "Ottoman troops left in 1898 (the Cretan State); the infobox runs to 1913"}
+    note: "The Greece row's note uses 1669-1898."
+
+  - key: abbasid-sind-end
+    question: When did Sind stop being an Abbasid province?
+    about: [{realm: abbasid-caliphate}]
+    field: countries
+    claims:
+      - {value: "854", sources: [wp-sind-caliphal-province], note: "Lead: to around 854"}
+      - {value: "861", sources: [wp-sind-caliphal-province], note: "Infobox end"}
+    note: "The Pakistan and India rows end in 854."
