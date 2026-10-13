@@ -1,0 +1,207 @@
+batch:
+  title: "Places shown in landscapes and city views, from titles"
+  requested: "Ty: link the places in painting titles, starting with Constable's Hampstead paintings"
+  date: 2026-10-13
+
+# Suggestions from tools/depicts.py (place names matched in titles of landscapes and city views), each checked by hand
+# against the museum's page (or the painting's Wikidata item where the museum page could not be read) and the place's
+# English Wikipedia article. 113 suggestions: 14 kept (on 13 paintings), 99 dropped.
+#
+# Kept (place fixed where the suggestion picked the wrong one): Auvers -> existing auvers-sur-oise (not Auvers, Manche);
+# Chailly -> Chailly-en-Bière; Gulf of Salerno -> the gulf itself (new), not the city; Port-Marly -> existing le-port-marly;
+# Handegg -> Handeck; Marseilles -> existing marseille; Asnières -> Asnières-sur-Seine; Pontoise -> existing pontoise;
+# Piazza di Montecitorio (new); Pool of London -> existing london; Rialto Bridge -> existing rialto-bridge and Venice ->
+# existing venice (not Venice, Los Angeles); Collioure -> existing collioure; Lake Thun (new).
+#
+# Dropped:
+# - False matches on religious, genre or ordinary words: Adam (x4), Shepherds (x2), Panoramic, Saint Anthony (x2),
+#   Padua and Antioch (saints' epithets), Sawmill, Gulf (Gulf Province), Seine/Piles/Sand, Magdalene, Archangel Michael,
+#   Rest (x2), St. Matthew, Saint Matthew, The Brook, Crucifixion, Holy Family (x4), Saint John (x3), Baptist (x4), Mass,
+#   Virgin (x4), Fall (x2), Last Supper (x4), St Elizabeth, Port, Cana, Villa R, Christus Consolator, Heath, Lighthouse,
+#   Town, Common, Footbridge, Saint George, Côte, Saint Joseph, Pool, Grotte, Merchants, Saint Andrew, Saint Placidus,
+#   Saint Simon (x2), Saint Thomas, Assumption, Coronation, Saint Lawrence, Mary/Elizabeth/John, Two Oaks, Quay,
+#   St Francis and Assisi (a saint's name), Guild/Joiners, Vase, Tenderness, Workday (x2), Paradise, Rain, Oak Forest,
+#   Saint Florian, Stone Bridge (a Rembrandt landscape, not the bridge in Tartu), Banks Fee (a portrait's sitter).
+# - Rivers, ranges, regions and countries (not a spot): Seine, Loue, River Jordan, Tuscany, Switzerland, Sweden,
+#   Grand Canal (a waterway, like a river; the Guardi links to the Rialto Bridge and Venice instead).
+# - Sawmill, Outskirts of Paris (Rousseau) and Landscape near Antwerp (Braque): the titles place the scene outside the
+#   city, at a spot they do not name, so linking the city would claim more than the title does.
+# - La Grotte de la Loue (Courbet): the grotto at the source of the Loue has no Wikipedia article (only Wikidata
+#   Q120312331), and the NGA page refuses automated reads, so the subject could not be confirmed.
+# - The Vladimirka (Levitan): the Vladimir road is a long highway, not a spot (and the suggestion was a cathedral in Kyiv).
+# - Lake Thun and Stockhorn mountains: Stockhorn is named as the chain (Stockhornkette), so only Lake Thun is linked.
+# - Passing Mother's Grave: the suggestion was the painting itself.
+#
+# Branch Hill Pond has no article of its own ("Branch Hill Pond" redirects to "Branch Hill, Hampstead", a street, with no
+# coordinates), so the two Branch Hill Pond paintings link to Hampstead Heath.
+# Cleveland dates "Hampstead Heath, Looking Toward Harrow" c. 1821 (the database has 1816); this batch leaves the date alone.
+
+sources:
+  - {key: wp-hampstead-heath, title: "Hampstead Heath (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hampstead_Heath"}
+  - {key: wp-harrow-on-the-hill, title: "Harrow on the Hill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harrow_on_the_Hill"}
+  - {key: wp-chailly-en-biere, title: "Chailly-en-Bière (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chailly-en-Bière"}
+  - {key: wp-gulf-of-salerno, title: "Gulf of Salerno (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gulf_of_Salerno"}
+  - {key: wp-handeck, title: "Handeck (Wikipedia)", url: "https://en.wikipedia.org/wiki/Handeck"}
+  - {key: wp-asnieres-sur-seine, title: "Asnières-sur-Seine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Asnières-sur-Seine"}
+  - {key: wp-piazza-di-monte-citorio, title: "Piazza di Monte Citorio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Piazza_di_Monte_Citorio"}
+  - {key: wp-lake-thun, title: "Lake Thun (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lake_Thun"}
+
+places:
+  - key: hampstead-heath   # Wikidata Q1570958
+    name: "Hampstead Heath"
+    kind: park
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5603
+    lng: -0.1608
+    visitable: true
+    note: "Ancient heath of 320 hectares on a sandy ridge from Hampstead to Highgate, one of the highest points in London; a public open space with ponds and woodland. Constable painted it often in the 1820s."
+    sources: [wp-hampstead-heath]
+
+  - key: harrow-on-the-hill   # Wikidata Q608406
+    name: "Harrow on the Hill"
+    kind: village
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5655
+    lng: -0.3327
+    note: "Historic village on Harrow Hill (124 m) in north-west London, built around the 11th-century St Mary's Church; the hill and spire seen from Hampstead Heath."
+    sources: [wp-harrow-on-the-hill]
+
+  - key: chailly-en-biere   # Wikidata Q1168042
+    name: "Chailly-en-Bière"
+    kind: village
+    region: Seine-et-Marne
+    country: France
+    lat: 48.4681
+    lng: 2.6078
+    note: "Commune on the edge of the Forest of Fontainebleau, where Monet and Bazille painted together in 1865."
+    sources: [wp-chailly-en-biere]
+
+  - key: gulf-of-salerno   # Wikidata Q828574
+    name: "Gulf of Salerno"
+    kind: gulf
+    region: Campania
+    country: Italy
+    lat: 40.5167
+    lng: 14.7
+    note: "Gulf of the Tyrrhenian Sea facing the province of Salerno; the Amalfi Coast forms its northern shore."
+    sources: [wp-gulf-of-salerno]
+
+  - key: handeck   # Wikidata Q5647358; the article gives no coordinates, so these are Wikidata's (to the nearest minute)
+    name: "Handeck"
+    kind: village
+    region: Bern
+    country: Switzerland
+    lat: 46.6167
+    lng: 8.3
+    note: "Also spelled Handegg. Village on the Grimsel Pass road in the municipality of Guttannen, near the Gelmersee, with a hotel and a bridge."
+    sources: [wp-handeck]
+
+  - key: asnieres-sur-seine   # Wikidata Q191415
+    name: "Asnières-sur-Seine"
+    kind: town
+    region: Hauts-de-Seine
+    country: France
+    lat: 48.9108
+    lng: 2.2889
+    note: "Commune on the left bank of the Seine, eight kilometres north-west of the centre of Paris."
+    sources: [wp-asnieres-sur-seine]
+
+  - key: piazza-di-monte-citorio   # Wikidata Q2579746
+    name: "Piazza di Monte Citorio"
+    kind: square
+    city: Rome
+    region: Lazio
+    country: Italy
+    lat: 41.9008
+    lng: 12.4786
+    visitable: true
+    note: "Piazza in Rome named after the Monte Citorio, one of the city's minor hills; it holds the Obelisk of Montecitorio and the Palazzo Montecitorio."
+    sources: [wp-piazza-di-monte-citorio]
+
+  - key: lake-thun   # Wikidata Q14426
+    name: "Lake Thun"
+    kind: lake
+    region: Bern
+    country: Switzerland
+    lat: 46.6833
+    lng: 7.7167
+    note: "Alpine lake in the Bernese Oberland, named after the town of Thun on its northern shore."
+    sources: [wp-lake-thun]
+
+artworks:
+  # Ty's example: Constable's Hampstead paintings
+  - key: hampstead-heath-looking-toward-harrow-john-constable   # Cleveland 1916.1027: title "Hampstead Heath, Looking Toward Harrow"
+    places:
+      - {place: hampstead-heath, role: depicts}
+      - {place: harrow-on-the-hill, role: depicts}   # Harrow Hill and its spire, seen from the heath
+
+  - key: branch-hill-pond-hampstead-john-constable   # Cleveland 1972.48: "Branch Hill Pond, Hampstead", painted from Constable's Hampstead base
+    places:
+      - {place: hampstead-heath, role: depicts}   # Branch Hill Pond, on the heath (no place of its own)
+      - {place: hampstead, role: depicts}
+
+  - key: hampstead-heath-with-the-house-called-the-salt-b-john-constable   # Tate N01236: "Hampstead Heath, with the House Called 'The Salt Box'"
+    places:
+      - {place: hampstead-heath, role: depicts}
+
+  - key: vue-de-hampstead-heath-effet-d-orage-john-constable   # Joconde 000PE021197 (Louvre RF 189): the pond at Branch Hill, Hampstead Heath
+    places:
+      - {place: hampstead-heath, role: depicts}
+
+  # From the title suggestions
+  - key: auvers-panoramic-view-paul-cezanne   # AIC 14556: rooftops of Auvers, painted during Cézanne's stay there with Pissarro
+    places:
+      - {place: auvers-sur-oise, role: depicts}
+
+  - key: landscape-at-chailly-frederic-bazille   # AIC 44017: "Landscape at Chailly", 1865 (Bazille worked at Chailly-en-Bière with Monet that year)
+    places:
+      - {place: chailly-en-biere, role: depicts}
+
+  - key: the-gulf-of-salerno-joseph-wright-of-derby   # AIC 180711: seascape, "The Gulf of Salerno"
+    places:
+      - {place: gulf-of-salerno, role: depicts}
+
+  - key: the-seine-at-port-marly-piles-of-sand-alfred-sisley   # AIC 16633: sand dredging on the Seine at Port-Marly, 1875
+    places:
+      - {place: le-port-marly, role: depicts}
+
+  - key: alpine-landscape-the-handegg-switzerland-jean-leon-gerome   # Cleveland 1980.262: a mountain peak near Handegg
+    places:
+      - {place: handeck, role: depicts}
+
+  - key: port-de-marseilles-paul-signac   # Wikidata Q5826311 (cityscape, Hermitage)
+    places:
+      - {place: marseille, role: depicts}
+
+  - key: iron-bridges-at-asnieres-emile-bernard   # Wikidata Q19883420 (cityscape, MoMA; the MoMA page refuses automated reads)
+    places:
+      - {place: asnieres-sur-seine, role: depicts}
+
+  - key: the-cote-des-bufs-pontoise-camille-pissarro   # Wikidata Q7728560 (landscape, National Gallery): the Côte des Bœufs at L'Hermitage, Pontoise
+    places:
+      - {place: pontoise, role: depicts}
+
+  - key: the-lottery-in-piazza-di-montecitorio-giovanni-paolo-panini   # Wikidata Q26519958 (cityscape, National Gallery)
+    places:
+      - {place: piazza-di-monte-citorio, role: depicts}
+
+  - key: the-pool-of-london-andre-derain   # Tate N06030: "The Pool of London", 1906; the Pool is a stretch of the Thames, so London is linked
+    places:
+      - {place: london, role: depicts}
+
+  - key: grand-canal-with-the-rialto-bridge-venice-francesco-guardi   # Wikidata Q20178939 (landscape, NGA; the NGA page refuses automated reads)
+    places:
+      - {place: rialto-bridge, role: depicts}
+      - {place: venice, role: depicts}
+
+  - key: mountains-at-collioure   # Wikidata Q6925696 (landscape, NGA); painted at Collioure in 1905
+    places:
+      - {place: collioure, role: depicts}
+
+  - key: lake-thun-and-stockhorn-mountains-ferdinand-hodler   # Wikidata Q131627681 (landscape, Wallraf-Richartz, "Thunersee mit Stockhornkette")
+    places:
+      - {place: lake-thun, role: depicts}
