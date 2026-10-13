@@ -2006,10 +2006,12 @@ function pickEvent(set, kind) {
   const inYear = thatYear.find(e => !X.country || inCountryEvent(e, X.country)), anywhere = thatYear[0];
   // Nothing that year in the country: its nearest big event within ten years.
   const nearInCountry = y != null && X.country ? best(db.events.filter(e => e.start_year != null && near(e) <= 10 && inCountryEvent(e, X.country))) : null;
-  // A year search starts on that year's biggest event, a place search on the place's, a person or work search on the
-  // person's; failing those, the country's nearest, then the year's biggest anywhere, so the card is never left empty.
-  const order = kind === "year" ? [inYear, anywhere, ofPerson, atPlace] : kind === "place" ? [atPlace, ofPerson, inYear, nearInCountry, anywhere]
-    : [ofPerson, atPlace, inYear, nearInCountry, anywhere];
+  // An event from the year itself always comes first: the person's or the place's, then the country's, then anywhere.
+  // Only when the year has none does a nearby year's event stand in (the person's, the place's, the country's).
+  const sameYear = e => e && near(e) === 0 ? e : null;
+  const first = kind === "place" ? [atPlace, ofPerson] : [ofPerson, atPlace];
+  const order = kind === "year" ? [inYear, anywhere, ofPerson, atPlace]
+    : [...first.map(sameYear), inYear, anywhere, ...first, nearInCountry];
   return order.find(Boolean)?.id ?? null;
 }
 
@@ -2041,7 +2043,7 @@ function exploreSearch(text) {
     if (f.from != null) { year = f.from; t = (t.slice(0, m.index) + " " + t.slice(m.index + m[0].length)).replace(/\s+/g, " ").trim(); }
   }
   if (!t) return year != null ? { best: { kind: "year", id: year }, year } : { error: "Type a name, a place, a work or a year." };
-  const q = fold(t);
+  const q = fold(t.replace(/[,;:!?()"]+/g, " "));
   const score = name => {
     const n = fold(name);
     return !n ? 0 : n === q ? 3 : n.startsWith(q) ? 2 : (" " + n).includes(" " + q) ? 1 : n.includes(q) ? .5 : 0;
@@ -2053,7 +2055,10 @@ function exploreSearch(text) {
     ...db.places.map(pl => ({ kind: "place", id: pl.id, name: pl.name, names: [pl.name, pl.historical_name].filter(Boolean), f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length })),
     ...db.events.filter(e => !e.film).map(e => ({ kind: "event", id: e.id, name: e.name, names: [e.name], f: (e.prominence ?? 3) * 20 })),
   ];
-  let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s);
+  // A city, region or country whose name starts with the words beats a painting or event named after it.
+  const AREA_KIND = /^(city|town|village|borough|district|county|region|state|province|country|island)$/i;
+  let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s)
+    .map(r => r.kind === "place" && r.s >= 2 && AREA_KIND.test(db.placeById[r.id]?.kind || "") ? { ...r, s: r.s + 1.5 } : r);
   // Words in any order, with endings ignored: "william wallace executed" finds "Execution of William Wallace".
   if (!hits.length) {
     const stem = w => w.slice(0, Math.max(4, Math.min(w.length, 6) - 1));
@@ -2075,7 +2080,9 @@ function exploreSearch(text) {
     }).filter(r => r.s);
     fuzzy = hits.length > 0;
   }
-  hits.sort((a, b) => b.s - a.s || b.f - a.f);
+  // Equal matches: a person, then a place, then an event, then a work ("New York" is the city, not "New York Movie").
+  const KIND_RANK = { person: 0, place: 1, event: 2, work: 3 };
+  hits.sort((a, b) => b.s - a.s || KIND_RANK[a.kind] - KIND_RANK[b.kind] || b.f - a.f);
   if (country && !(hits[0]?.s === 3 && hits[0].kind !== "place")) {
     // "Italy": pick the country, and open its busiest place.
     const pl = db.places.filter(p => placeCountry(p) === country).sort((a, b) => db.eventsAt(b.id).length - db.eventsAt(a.id).length)[0];
@@ -2214,6 +2221,7 @@ let xMap = null, xNoteTimer = null;
 function renderExplore(changed = []) {
   const box = $("x-cards");
   if (xMap) { xMap.remove(); xMap = null; }
+  if (thenMap) { thenMap.remove(); thenMap = null; }
   box.replaceChildren(...CARDS.map(kind => {
     const full = X.open === kind;
     const body = { year: yearCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
@@ -2331,7 +2339,11 @@ function eventCard() {
     && ((o.place_id != null && o.place_id === e.place_id) || db.peopleInEvent(o.id).some(x => ids.has(x.person.id))))
     .sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
   const venues = (e.venues || []).map(v => ({ v, pl: db.placeById[v.place_id] })).filter(x => x.pl);
+  // Only when the year itself has no event at all (an event clicked from another year is just that).
+  const inYr = o => o.start_year != null && overlaps(o.start_year, o.end_year ?? o.start_year, X.year, X.year);
+  const off = X.year != null && e.start_year != null && !inYr(e) && !db.events.some(o => !o.film && inYr(o));
   return [
+    off ? h("p", { class: "hint xoff", text: `Nothing recorded for ${fmtYear(X.year)}; the nearest is from ${fmtYear(e.start_year)}.` }) : null,
     h("h2", { text: e.name }),
     h("div", { class: "xsub" }, [e.type, null].filter(Boolean).join(""), e.type ? " · " : "",
       e.start_year != null ? xYear(e.start_year, (e.estimated ? "c. " : "") + when) : "date unknown",
@@ -2498,7 +2510,21 @@ function placeMap() {
   if (!layers.length) { host.replaceChildren(h("p", { class: "hint", text: pl ? `No map position recorded for ${pl.name}.` : "" })); host.classList.add("empty"); return; }
   const box = h("div", { class: "street-map" });
   const legend = h("div", { class: "xlegend" });
-  host.replaceChildren(box, legend);
+  // Then / Today: the same spot on OpenHistoricalMap as it was in the Year card's year (streets and buildings that
+  // volunteers have mapped with dates), or today's OpenStreetMap.
+  const thenBox = h("div", { class: "street-map then-map", hidden: "" });
+  const thenNote = h("p", { class: "hint map-credit", hidden: "" });
+  const canThen = pl && pt(pl) && X.year != null;
+  const seg = canThen ? h("div", { class: "seg xthen", role: "group", "aria-label": "Map shows" },
+    h("button", { type: "button", "aria-pressed": !X.mapThen, onclick: () => { X.mapThen = false; showThen(false); }, text: "Today" }),
+    h("button", { type: "button", "aria-pressed": !!X.mapThen, onclick: () => { X.mapThen = true; showThen(true); }, text: `Then (${fmtYear(X.year)})` })) : null;
+  host.replaceChildren(...[seg, box, thenBox, thenNote, legend].filter(Boolean));
+  const showThen = on => {
+    seg?.querySelectorAll("button").forEach((b, i) => b.setAttribute("aria-pressed", i ? on : !on));
+    box.hidden = on; legend.hidden = on; thenBox.hidden = !on; thenNote.hidden = !on;
+    if (on) drawThenMap(thenBox, thenNote, pl, X.year);
+    else xMap?.invalidateSize();
+  };
   xMap = L.map(box, { scrollWheelZoom: X.open === "place", zoomControl: true, attributionControl: true });
   xMap.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
   L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
@@ -2519,6 +2545,7 @@ function placeMap() {
   });
   // Start on the place and its neighbourhood; the other layers are a tap away in the legend.
   fitTo(layers[0].places.slice(0, layers[0].key === "here" ? 6 : undefined));
+  if (canThen && X.mapThen) showThen(true);
   if (pl && diningOn(pl)) {
     const map = xMap;
     fetchDining(pl).then(rows => {
@@ -2527,6 +2554,40 @@ function placeMap() {
       if (xMap === map) diningPins(rows, map, false);
     }).catch(() => { const out = $("x-dining"); if (out) out.textContent = "Couldn't reach the dining database just now."; });
   }
+}
+
+// OpenHistoricalMap (public domain, CC0) needs MapLibre GL and OHM's date filter; both load only when "Then" is first
+// picked. The map shows what was there in that year, as far as volunteers have mapped it, so coverage varies.
+const loadScript = src => new Promise((ok, fail) => { const t = h("script", { src }); t.onload = ok; t.onerror = fail; document.head.append(t); });
+let maplibreReady = null, thenMap = null;
+function loadMaplibre() {
+  return maplibreReady ??= (async () => {
+    document.head.append(h("link", { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css" }));
+    await loadScript("https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js");
+    await loadScript("https://cdn.jsdelivr.net/npm/@openhistoricalmap/maplibre-gl-dates@1.3.0/index.js");
+  })().catch(e => { maplibreReady = null; throw e; });
+}
+async function drawThenMap(box, note, pl, y) {
+  note.textContent = "Loading the historical map…";
+  try { await loadMaplibre(); } catch (e) { note.textContent = "Couldn't load the historical map just now."; return; }
+  if (!box.isConnected) return;
+  if (thenMap) { thenMap.remove(); thenMap = null; }
+  box.replaceChildren();
+  const map = thenMap = new maplibregl.Map({ container: box, style: "https://www.openhistoricalmap.org/map-styles/main/main.json",
+    // Opens on the whole world in that year (OHM draws the period's borders at low zoom), centred on the place;
+    // zooming in reaches its streets.
+    center: [Number(pl.lng), Number(pl.lat)], zoom: 1.6, attributionControl: false, cooperativeGestures: X.open !== "place" });
+  map.addControl(new maplibregl.AttributionControl({ compact: false,
+    customAttribution: '<a href="https://www.openhistoricalmap.org/copyright" target="_blank" rel="noopener">OpenHistoricalMap</a> contributors' }));
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+  new maplibregl.Marker({ color: getComputedStyle(document.documentElement).getPropertyValue("--madder").trim() || undefined })
+    .setLngLat([Number(pl.lng), Number(pl.lat)]).addTo(map);
+  // The date filter needs the year as an ISO date; BC years are negative ("-0384").
+  const iso = (y < 0 ? "-" : "") + String(Math.abs(y)).padStart(4, "0");
+  map.once("styledata", () => { try { map.filterByDate(iso); } catch (e) { console.warn("OHM date filter:", e); } });
+  note.replaceChildren(`${pl.name} as mapped for ${fmtYear(y)} on `,
+    h("a", { class: "ext", href: `https://www.openhistoricalmap.org/#map=15/${Number(pl.lat).toFixed(4)}/${Number(pl.lng).toFixed(4)}&date=${iso}`, target: "_blank", rel: "noopener", text: "OpenHistoricalMap ↗" }),
+    ". Zoom in for its streets; volunteers map the past street by street, so some places and years are still blank.");
 }
 
 /* --- Person card */
