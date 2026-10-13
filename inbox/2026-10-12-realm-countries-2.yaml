@@ -1,0 +1,551 @@
+batch: {title: "Realm years and countries, batch 2", requested: "Ty: realms with start and end dates, mapped to today's countries", date: 2026-10-12}
+
+# Years come from each article's infobox (year_start / year_end / life_span); countries from its
+# "Today part of" list. Where an article has no such list, the countries are the ones its text
+# clearly names, and a comment says so. Where the infobox and the article's own text disagree on
+# a start or end year, the record holds the infobox value (unless noted) and a discrepancy below
+# records both sides. All articles read 2026-10-12.
+
+sources:
+  - {key: wp-golden-horde,                  title: "Golden Horde (Wikipedia)",                       url: "https://en.wikipedia.org/wiki/Golden_Horde"}
+  - {key: wp-grand-duchy-of-lithuania,      title: "Grand Duchy of Lithuania (Wikipedia)",           url: "https://en.wikipedia.org/wiki/Grand_Duchy_of_Lithuania"}
+  - {key: wp-grand-principality-of-moscow,  title: "Grand Principality of Moscow (Wikipedia)",       url: "https://en.wikipedia.org/wiki/Grand_Principality_of_Moscow"}
+  - {key: wp-vladimir-suzdal,               title: "Vladimir-Suzdal (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Vladimir-Suzdal"}
+  - {key: wp-kingdom-of-hungary,            title: "Kingdom of Hungary (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Kingdom_of_Hungary"}
+  - {key: wp-kievan-rus,                    title: "Kievan Rus' (Wikipedia)",                        url: "https://en.wikipedia.org/wiki/Kievan_Rus%27"}
+  - {key: wp-kingdom-of-poland,             title: "Kingdom of Poland (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Kingdom_of_Poland"}
+  - {key: wp-civitas-schinesghe,            title: "Civitas Schinesghe (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Civitas_Schinesghe"}
+  - {key: wp-moldavia,                      title: "Moldavia (Wikipedia)",                           url: "https://en.wikipedia.org/wiki/Moldavia"}
+  - {key: wp-wallachia,                     title: "Wallachia (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Wallachia"}
+  - {key: wp-russian-empire,                title: "Russian Empire (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Russian_Empire"}
+  - {key: wp-kingdom-of-serbia-1217-1346,   title: "Kingdom of Serbia (1217–1346) (Wikipedia)",      url: "https://en.wikipedia.org/wiki/Kingdom_of_Serbia_(1217%E2%80%931346)"}
+  - {key: wp-serbian-empire,                title: "Serbian Empire (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Serbian_Empire"}
+  - {key: wp-serbian-despotate,             title: "Serbian Despotate (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Serbian_Despotate"}
+  - {key: wp-tsardom-of-russia,             title: "Tsardom of Russia (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Tsardom_of_Russia"}
+  - {key: wp-abbasid-caliphate,             title: "Abbasid Caliphate (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Abbasid_Caliphate"}
+  - {key: wp-kingdom-of-abkhazia,           title: "Kingdom of Abkhazia (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Kingdom_of_Abkhazia"}
+  - {key: wp-almohad-caliphate,             title: "Almohad Caliphate (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Almohad_Caliphate"}
+  - {key: wp-almoravid-dynasty,             title: "Almoravid dynasty (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Almoravid_dynasty"}
+  - {key: wp-bagratid-armenia,              title: "Bagratid Armenia (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Bagratid_Armenia"}
+  - {key: wp-armenian-kingdom-of-cilicia,   title: "Armenian Kingdom of Cilicia (Wikipedia)",        url: "https://en.wikipedia.org/wiki/Armenian_Kingdom_of_Cilicia"}
+  - {key: wp-ayyubid-dynasty,               title: "Ayyubid dynasty (Wikipedia)",                    url: "https://en.wikipedia.org/wiki/Ayyubid_dynasty"}
+  - {key: wp-buyid-dynasty,                 title: "Buyid dynasty (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Buyid_dynasty"}
+  - {key: wp-empire-of-trebizond,           title: "Empire of Trebizond (Wikipedia)",                url: "https://en.wikipedia.org/wiki/Empire_of_Trebizond"}
+  - {key: wp-fatimid-caliphate,             title: "Fatimid Caliphate (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Fatimid_Caliphate"}
+  - {key: wp-kingdom-of-georgia,            title: "Kingdom of Georgia (Wikipedia)",                 url: "https://en.wikipedia.org/wiki/Kingdom_of_Georgia"}
+  - {key: wp-seljuk-empire,                 title: "Seljuk Empire (Wikipedia)",                      url: "https://en.wikipedia.org/wiki/Seljuk_Empire"}
+  - {key: wp-hafsid-dynasty,                title: "Hafsid dynasty (Wikipedia)",                     url: "https://en.wikipedia.org/wiki/Hafsid_dynasty"}
+  - {key: wp-kingdom-of-the-iberians,       title: "Kingdom of the Iberians (Wikipedia)",            url: "https://en.wikipedia.org/wiki/Kingdom_of_the_Iberians"}
+  - {key: wp-ilkhanate,                     title: "Ilkhanate (Wikipedia)",                          url: "https://en.wikipedia.org/wiki/Ilkhanate"}
+  - {key: wp-kingdom-of-cyprus,             title: "Kingdom of Cyprus (Wikipedia)",                  url: "https://en.wikipedia.org/wiki/Kingdom_of_Cyprus"}
+  - {key: wp-kingdom-of-jerusalem,          title: "Kingdom of Jerusalem (Wikipedia)",               url: "https://en.wikipedia.org/wiki/Kingdom_of_Jerusalem"}
+  - {key: wp-mamluk-sultanate,              title: "Mamluk Sultanate (Wikipedia)",                   url: "https://en.wikipedia.org/wiki/Mamluk_Sultanate"}
+
+realms:
+  # ---------------- Eastern Europe ----------------
+
+  # Infobox: c. 1225 to 1502. No "Today part of" list; the article describes regions (Urals to the
+  # Danube, Black Sea to Caspian, Siberia, Central Asia) rather than modern countries. Listed only the
+  # two it clearly places inside the Horde: Russia (the "Tatar yoke" over Moscow) and Crimea.
+  # Kazakhstan, Moldova and others are left out until a source names them.
+  - name: Golden Horde
+    from: 1225
+    from_estimated: true
+    to: 1502
+    countries:
+      - {country: Russia}
+      - {country: Ukraine, note: Crimea and the southern steppe}
+    sources: [wp-golden-horde]
+
+  # Infobox life_span c. 1236–1795 (year_start "1180s", consolidation began: see discrepancy).
+  # No "Today part of" list; the lead names the modern countries.
+  - name: Grand Duchy of Lithuania
+    from: 1236
+    from_estimated: true
+    to: 1795
+    countries:
+      - {country: Lithuania}
+      - {country: Belarus}
+      - {country: Ukraine, note: most of Ukraine}
+      - {country: Latvia, note: part}
+      - {country: Poland, note: part}
+      - {country: Moldova, note: part}
+      - {country: Russia, note: part}
+    sources: [wp-grand-duchy-of-lithuania]
+
+  # Article: Grand Principality of Moscow, 1263–1547 (life_span gives 1478 as an alternative end: see
+  # discrepancy). No "Today part of" list; the article calls it a Russian monarchy.
+  - name: Grand Duchy of Moscow
+    from: 1263
+    to: 1547
+    countries:
+      - {country: Russia}
+    sources: [wp-grand-principality-of-moscow]
+
+  # Article: Vladimir-Suzdal (the Grand Principality of Vladimir; Principality of Suzdal before 1157).
+  - name: Grand Duchy of Vladimir
+    from: 1125
+    to: 1389
+    countries:
+      - {country: Russia}
+    sources: [wp-vladimir-suzdal]
+
+  # Kingdom of Hungary, 1000–1946 (life_span says 1000–1918: see discrepancy). Our titles start in 997,
+  # when Stephen I was still Grand Prince (the Grand Principality of Hungary, a separate article).
+  # The infobox "Today part of" lists only Hungary, but the lead names every other modern country the
+  # kingdom covered until the Treaty of Trianon (1920), so those are listed too, ending in 1920.
+  - name: Hungary
+    from: 1000
+    to: 1946
+    countries:
+      - {country: Hungary}
+      - {country: Slovakia, to: 1920}
+      - {country: Romania, to: 1920, note: Transylvania and other parts}
+      - {country: Ukraine, to: 1920, note: Carpathian Ruthenia}
+      - {country: Serbia, to: 1920, note: Vojvodina}
+      - {country: Austria, to: 1920, note: Burgenland}
+      - {country: Croatia, to: 1920, note: "Međimurje; the Kingdom of Croatia was in personal union with Hungary from 1102"}
+      - {country: Slovenia, to: 1920, note: Prekmurje}
+      - {country: Poland, to: 1920, note: a few villages}
+    sources: [wp-kingdom-of-hungary]
+
+  # Infobox c. 880–1240 (Siege of Kiev). The "today" field is empty; the article names Belarus,
+  # Russia and Ukraine as the modern nations on its land.
+  - name: Kievan Rus'
+    from: 880
+    from_estimated: true
+    to: 1240
+    countries:
+      - {country: Ukraine}
+      - {country: Russia}
+      - {country: Belarus}
+    sources: [wp-kievan-rus]
+
+  # "Kingdom of Poland (1025–1385)" now redirects to "Kingdom of Poland", 1025–1795. Our titles start
+  # in 992 with Bolesław I as duke, so the start is taken from its predecessor, Civitas Schinesghe
+  # (c. 960–1025), which the realm "Poland" also covers. Neither article has a "Today part of" list
+  # or names other modern countries, so only Poland is listed.
+  - name: Poland
+    from: 960
+    from_estimated: true
+    to: 1795
+    countries:
+      - {country: Poland}
+    sources: [wp-civitas-schinesghe, wp-kingdom-of-poland]
+
+  # Moldavia, 1346–1862 (lead says it existed to 1859: see discrepancy). "Today part of": Moldova,
+  # Romania, Ukraine. Notes from the lead; the eastern half (Bessarabia) was ceded to Russia in 1812.
+  - name: Principality of Moldavia
+    from: 1346
+    to: 1862
+    countries:
+      - {country: Moldova, to: 1812, note: eastern half (Bessarabia)}
+      - {country: Romania, note: western half}
+      - {country: Ukraine, note: northern (Bukovina) and southeastern (Budjak) parts}
+    sources: [wp-moldavia]
+
+  # Wallachia, 1330–1862 by the infobox life_span (its date_end and lead give 1859: see discrepancy).
+  - name: Principality of Wallachia
+    from: 1330
+    to: 1862
+    countries:
+      - {country: Romania}
+    sources: [wp-wallachia]
+
+  # 1721–1917. No "Today part of" list; countries from the article's own summary ("Prior to 1917 the
+  # Russian Empire included ...") and its text on Finland (1809), Bessarabia (1812) and Alaska
+  # (1799–1867). Russian Turkestan is given as five countries, which the article calls "the Central
+  # Asian states of Russian Turkestan" without naming them.
+  - name: Russian Empire
+    from: 1721
+    to: 1917
+    countries:
+      - {country: Russia}
+      - {country: Ukraine, note: most of Ukraine}
+      - {country: Belarus}
+      - {country: Moldova, from: 1812, note: Bessarabia}
+      - {country: Finland, from: 1809, note: Grand Duchy of Finland}
+      - {country: Estonia}
+      - {country: Latvia}
+      - {country: Lithuania, note: from the Partitions of Poland}
+      - {country: Poland, note: a significant part (Congress Poland)}
+      - {country: Armenia}
+      - {country: Azerbaijan}
+      - {country: Georgia}
+      - {country: Kazakhstan, note: Russian Turkestan}
+      - {country: Kyrgyzstan, note: Russian Turkestan}
+      - {country: Tajikistan, note: Russian Turkestan}
+      - {country: Turkmenistan, note: Russian Turkestan}
+      - {country: Uzbekistan, note: Russian Turkestan}
+      - {country: Turkey, note: "Ardahan, Artvin, Iğdır, Kars and northeastern Erzurum"}
+      - {country: United States, from: 1799, to: 1867, note: Alaska}
+    sources: [wp-russian-empire]
+
+  # The realm "Serbia" holds kings (Milutin, 1282), emperors (Dušan, Uroš) and despots (Stefan
+  # Lazarević, to 1427), so it is the medieval Serbian state as a whole: the Kingdom (1217–1346), the
+  # Empire (1346–1371) and the Despotate (1402–1459), one article each. (Moravian Serbia, 1371–1402,
+  # between them has no source here.) Countries are the union of their "Today part of" lists, plus the
+  # Empire's lead (Bosnia and Herzegovina, Kosovo, North Macedonia, Albania, "half of modern Greece";
+  # the Greek lands were never recovered after 1371).
+  - name: Serbia
+    from: 1217
+    to: 1459
+    countries:
+      - {country: Serbia}
+      - {country: Montenegro}
+      - {country: Kosovo}
+      - {country: Bosnia and Herzegovina, note: part}
+      - {country: Croatia, note: part}
+      - {country: North Macedonia}
+      - {country: Albania, note: part}
+      - {country: Greece, from: 1346, to: 1371, note: about half of modern Greece}
+    sources: [wp-kingdom-of-serbia-1217-1346, wp-serbian-empire, wp-serbian-despotate]
+
+  # 1547–1721. The "today" field is empty; the article names Russia and the Wild Fields
+  # ("modern day Eastern Ukraine and South-Western Russia").
+  - name: Tsardom of Russia
+    from: 1547
+    to: 1721
+    countries:
+      - {country: Russia}
+      - {country: Ukraine, note: eastern Ukraine}
+    sources: [wp-tsardom-of-russia]
+
+  # ---------------- Middle East and North Africa ----------------
+
+  # Infobox 750–1258 and 1261–1517 (the later caliphs in Cairo were ceremonial under the Mamluks): see
+  # discrepancy. No "Today part of" list, and the article names no modern countries for the caliphate
+  # as a whole (only Iraq as its base), so only Iraq is listed.
+  - name: Abbasid Caliphate
+    from: 750
+    to: 1517
+    countries:
+      - {country: Iraq}
+    sources: [wp-abbasid-caliphate]
+
+  - name: Abkhazia
+    from: 778
+    to: 1008
+    countries:
+      - {country: Georgia}
+      - {country: Russia}
+      - {country: Turkey}
+    sources: [wp-kingdom-of-abkhazia]
+
+  # Infobox 1121–1269 (lead: 1130–1269: see discrepancy). The "today" field is empty; countries from the
+  # article's text (Maghreb, Tunis and Tripoli taken, al-Andalus in Spain and Portugal).
+  - name: Almohad Caliphate
+    from: 1121
+    to: 1269
+    countries:
+      - {country: Morocco}
+      - {country: Algeria}
+      - {country: Tunisia}
+      - {country: Libya, note: Tripoli and the coast}
+      - {country: Spain, note: al-Andalus}
+      - {country: Portugal, note: al-Andalus}
+    sources: [wp-almohad-caliphate]
+
+  # Infobox "1050s"–1147. No "Today part of" list; the article names Morocco, Western Sahara and
+  # Mauritania, Tlemcen in Algeria, and al-Andalus (Spain and Portugal). Western Sahara is a disputed
+  # territory rather than a sovereign state, kept because the article names it.
+  - name: Almoravid dynasty
+    from: 1050
+    from_estimated: true
+    to: 1147
+    countries:
+      - {country: Morocco}
+      - {country: Mauritania}
+      - {country: Western Sahara}
+      - {country: Algeria, note: western Algeria (Tlemcen)}
+      - {country: Spain, note: al-Andalus}
+      - {country: Portugal, note: al-Andalus}
+    sources: [wp-almoravid-dynasty]
+
+  # Bagratid Armenia, infobox "880s"–1045 (lead: "early 880s"; Ashot I recognised as king in 884 or 885).
+  # No "Today part of" list. Its capitals Kars and Ani are now in Turkey (the article mentions the
+  # Turkish restoration of Ani's walls), so Turkey is listed for that part.
+  - name: Armenia
+    from: 880
+    from_estimated: true
+    to: 1045
+    countries:
+      - {country: Armenia}
+      - {country: Turkey, note: Kars and Ani}
+    sources: [wp-bagratid-armenia]
+
+  # The infobox runs 1080–1375 but its own footnote says the kingdom was established in 1198, on a
+  # principality founded in 1080. This realm is the kingdom (our titles start in 1198), so 1198: see
+  # discrepancy.
+  - name: Armenian Kingdom of Cilicia
+    from: 1198
+    to: 1375
+    countries:
+      - {country: Turkey}
+      - {country: Syria}
+      - {country: Cyprus}
+    sources: [wp-armenian-kingdom-of-cilicia]
+
+  # Article: Ayyubid dynasty ("also known as the Ayyubid Sultanate"), 1171–1260; its footnote says
+  # Egypt was lost to the Mamluks in 1250 and the Levant held to 1260. No "Today part of" list;
+  # countries from the lead (Egypt, Syria, Hejaz, Yemen, northern Nubia, Tripolitania, Upper
+  # Mesopotamia, the Crusader lands that fell after Hattin) and the text (Ifriqiya, the West Bank).
+  - name: Ayyubid Sultanate
+    from: 1171
+    to: 1260
+    countries:
+      - {country: Egypt, to: 1250}
+      - {country: Syria}
+      - {country: Lebanon}
+      - {country: Israel}
+      - {country: Palestine}
+      - {country: Jordan}
+      - {country: Saudi Arabia, note: Hejaz}
+      - {country: Yemen}
+      - {country: Sudan, note: northern Nubia}
+      - {country: Libya, note: Tripolitania}
+      - {country: Tunisia, note: Ifriqiya (taken 1185–1186)}
+      - {country: Iraq, note: Upper Mesopotamia}
+      - {country: Turkey, note: Upper Mesopotamia}
+    sources: [wp-ayyubid-dynasty]
+
+  # Article: Buyid dynasty, 934–1062. No "Today part of" list; the lead names central and southern Iran
+  # and Iraq, and the text Oman (conquered 967).
+  - name: Buyid Emirate
+    from: 934
+    to: 1062
+    countries:
+      - {country: Iran, note: central and southern Iran}
+      - {country: Iraq}
+      - {country: Oman, from: 967}
+    sources: [wp-buyid-dynasty]
+
+  - name: Empire of Trebizond
+    from: 1204
+    to: 1461
+    countries:
+      - {country: Turkey}
+      - {country: Georgia}
+      - {country: Russia}
+      - {country: Ukraine}
+    sources: [wp-empire-of-trebizond]
+
+  # 909–1171. No "Today part of" list; countries from the article's text: Tunisia (its first capitals),
+  # northeastern Algeria, northern Morocco (briefly), Egypt, Sicily, the Levant including Transjordan,
+  # the Hejaz and Tihamah, Yemen, and Multan in Pakistan at its furthest reach. Libya, between Tunisia
+  # and Egypt, is not named by the article, so it is left out.
+  - name: Fatimid Caliphate
+    from: 909
+    to: 1171
+    countries:
+      - {country: Egypt}
+      - {country: Tunisia}
+      - {country: Algeria, note: northeastern Algeria}
+      - {country: Morocco, note: northern Morocco, briefly}
+      - {country: Italy, note: Sicily}
+      - {country: Syria}
+      - {country: Lebanon}
+      - {country: Israel}
+      - {country: Palestine}
+      - {country: Jordan, note: Transjordan}
+      - {country: Saudi Arabia, note: Hejaz and Tihamah}
+      - {country: Yemen}
+      - {country: Pakistan, note: Multan}
+    sources: [wp-fatimid-caliphate]
+
+  # Kingdom of Georgia, c. 1008 to 1490 de jure (1463 de facto: see discrepancy). No "Today part of"
+  # list; the lead says it stretched at its largest "from present-day Southern Russia to Northern Iran,
+  # and westwards into Anatolia".
+  - name: Georgia
+    from: 1008
+    from_estimated: true
+    to: 1490
+    countries:
+      - {country: Georgia}
+      - {country: Russia, note: southern Russia, at its largest}
+      - {country: Turkey, note: northeastern Anatolia, at its largest}
+      - {country: Iran, note: northern Iran, at its largest}
+    sources: [wp-kingdom-of-georgia]
+
+  # Seljuk Empire ("or the Great Seljuk Empire"), infobox 1037–1194 (the lead runs to 1308, counting the
+  # Anatolian Seljuks: see discrepancy). No "Today part of" list; countries from the text.
+  - name: Great Seljuk Empire
+    from: 1037
+    to: 1194
+    countries:
+      - {country: Iran}
+      - {country: Iraq}
+      - {country: Turkey, note: Anatolia}
+      - {country: Syria}
+      - {country: Afghanistan, note: part}
+      - {country: Turkmenistan, note: Merv and Khorasan}
+    sources: [wp-seljuk-empire]
+
+  # Article: Hafsid dynasty.
+  - name: Hafsid Sultanate
+    from: 1229
+    to: 1574
+    countries:
+      - {country: Tunisia}
+      - {country: Algeria}
+      - {country: Libya}
+    sources: [wp-hafsid-dynasty]
+
+  # Kingdom of the Iberians (Tao-Klarjeti), "circa 888" to 1008, when it merged into the Kingdom of Georgia.
+  - name: Iberia
+    from: 888
+    from_estimated: true
+    to: 1008
+    countries:
+      - {country: Georgia}
+      - {country: Turkey}
+    sources: [wp-kingdom-of-the-iberians]
+
+  # Infobox life_span 1256–1335 (an administrative region of the Mongol Empire until 1259). The "today"
+  # field is empty; the lead names the core (Iran, Azerbaijan, Turkey) and the parts held at its greatest.
+  - name: Ilkhanate
+    from: 1256
+    to: 1335
+    countries:
+      - {country: Iran}
+      - {country: Azerbaijan}
+      - {country: Turkey}
+      - {country: Iraq, note: part}
+      - {country: Syria, note: part}
+      - {country: Armenia, note: part}
+      - {country: Georgia, note: part}
+      - {country: Afghanistan, note: part}
+      - {country: Turkmenistan, note: part}
+      - {country: Pakistan, note: part}
+      - {country: Tajikistan, note: part}
+      - {country: Russia, note: Dagestan}
+    sources: [wp-ilkhanate]
+
+  - name: Kingdom of Cyprus
+    from: 1192
+    to: 1489
+    countries:
+      - {country: Cyprus}
+      - {country: Turkey, note: Mersin Province}
+    sources: [wp-kingdom-of-cyprus]
+
+  # 1099–1291; Jerusalem itself was lost in 1187 and the kingdom re-established at Acre in 1192.
+  - name: Kingdom of Jerusalem
+    from: 1099
+    to: 1291
+    countries:
+      - {country: Israel}
+      - {country: Palestine}
+      - {country: Lebanon}
+      - {country: Jordan}
+      - {country: Egypt}
+    sources: [wp-kingdom-of-jerusalem]
+
+  # 1250–1517. No "Today part of" list; the lead names Egypt, the Levant, the Hejaz, and conquests in
+  # Makuria (Nubia), Cyrenaica and southern Anatolia.
+  - name: Mamluk Sultanate
+    from: 1250
+    to: 1517
+    countries:
+      - {country: Egypt}
+      - {country: Syria}
+      - {country: Lebanon}
+      - {country: Israel}
+      - {country: Palestine}
+      - {country: Jordan}
+      - {country: Saudi Arabia, note: Hejaz}
+      - {country: Sudan, note: Nubia}
+      - {country: Libya, note: Cyrenaica}
+      - {country: Turkey, note: southern Anatolia}
+    sources: [wp-mamluk-sultanate]
+
+discrepancies:
+  - key: grand-duchy-of-lithuania-start
+    question: When did the Grand Duchy of Lithuania begin?
+    about: [{realm: grand-duchy-of-lithuania}]
+    field: from
+    claims:
+      - {value: "c. 1236", sources: [wp-grand-duchy-of-lithuania], note: "Infobox life_span (c. 1236–1795)"}
+      - {value: "1180s", sources: [wp-grand-duchy-of-lithuania], note: "Infobox year_start, labelled \"Consolidation began\""}
+    note: The realm uses c. 1236.
+
+  - key: grand-duchy-of-moscow-end
+    question: When did the Grand Principality of Moscow end?
+    about: [{realm: grand-duchy-of-moscow}]
+    field: to
+    claims:
+      - {value: 1547, sources: [wp-grand-principality-of-moscow], note: Infobox year_end; elevated to tsardom}
+      - {value: 1478, sources: [wp-grand-principality-of-moscow], note: "Life_span footnote: some historians date the change to a centralised Russian state to Ivan III's reign, particularly the annexation of Novgorod in 1478"}
+    note: The realm uses 1547.
+
+  - key: kingdom-of-hungary-end
+    question: When did the Kingdom of Hungary end?
+    about: [{realm: hungary}]
+    field: to
+    claims:
+      - {value: 1946, sources: [wp-kingdom-of-hungary], note: Infobox year_end and lead; monarchy formally abolished 1 February 1946 after the 1920–46 Regency}
+      - {value: 1918, sources: [wp-kingdom-of-hungary], note: Infobox life_span (1000–1918); the last king was deposed in 1918}
+    note: The realm uses 1946.
+
+  - key: principality-of-moldavia-end
+    question: When did the Principality of Moldavia end?
+    about: [{realm: principality-of-moldavia}]
+    field: to
+    claims:
+      - {value: 1862, sources: [wp-moldavia], note: Infobox year_end; the text says the United Principalities were formally created in 1862, officially ending Moldavia}
+      - {value: 1859, sources: [wp-moldavia], note: "Lead: existed to 1859, when it united with Wallachia"}
+    note: The realm uses 1862.
+
+  - key: principality-of-wallachia-end
+    question: When did the Principality of Wallachia end?
+    about: [{realm: principality-of-wallachia}]
+    field: to
+    claims:
+      - {value: 1862, sources: [wp-wallachia, wp-moldavia], note: Wallachia infobox life_span (1330–1862); the Moldavia article dates the formal union to 1862}
+      - {value: 1859, sources: [wp-wallachia], note: Wallachia infobox date_end (5 February 1859) and lead (united with Moldavia in 1859)}
+    note: The realm uses 1862, matching Moldavia.
+
+  - key: abbasid-caliphate-end
+    question: When did the Abbasid Caliphate end?
+    about: [{realm: abbasid-caliphate}]
+    field: to
+    claims:
+      - {value: 1517, sources: [wp-abbasid-caliphate], note: Infobox year_end; Ottoman conquest of Cairo, ending the ceremonial Cairo caliphate (1261–1517)}
+      - {value: 1258, sources: [wp-abbasid-caliphate], note: "Lead: ruled as caliphs from Iraq until 1258 (fall of Baghdad)"}
+    note: The realm uses 1517.
+
+  - key: almohad-caliphate-start
+    question: When did the Almohad Caliphate begin?
+    about: [{realm: almohad-caliphate}]
+    field: from
+    claims:
+      - {value: 1121, sources: [wp-almohad-caliphate], note: Infobox year_start; Ibn Tumart recognised as Mahdi around 1121}
+      - {value: 1130, sources: [wp-almohad-caliphate], note: "Lead: ruled from 1130 to 1269; Abd al-Mu'min founded the caliphate on succeeding in 1130"}
+    note: The realm uses 1121.
+
+  - key: armenian-kingdom-of-cilicia-start
+    question: When did the Armenian Kingdom of Cilicia begin?
+    about: [{realm: armenian-kingdom-of-cilicia}]
+    field: from
+    claims:
+      - {value: 1198, sources: [wp-armenian-kingdom-of-cilicia], note: Infobox footnote and status line; kingdom established 1198}
+      - {value: 1080, sources: [wp-armenian-kingdom-of-cilicia], note: Infobox year_start; Ruben I founds the Armenian principality in Cilicia}
+    note: The realm uses 1198, since it is the kingdom.
+
+  - key: kingdom-of-georgia-end
+    question: When did the Kingdom of Georgia end?
+    about: [{realm: georgia}]
+    field: to
+    claims:
+      - {value: 1490, sources: [wp-kingdom-of-georgia], note: Infobox de jure end and life_span; a royal council recognised the fragmentation in 1490}
+      - {value: 1463, sources: [wp-kingdom-of-georgia], note: Infobox de facto end}
+    note: The realm uses 1490.
+
+  - key: great-seljuk-empire-end
+    question: When did the Great Seljuk Empire end?
+    about: [{realm: great-seljuk-empire}]
+    field: to
+    claims:
+      - {value: 1194, sources: [wp-seljuk-empire], note: Infobox year_end; Battle of Ray, supplanted by the Khwarazmian Empire}
+      - {value: 1308, sources: [wp-seljuk-empire], note: "Lead: covered 1037–1308, though Seljuk rule beyond Anatolia ended in 1194"}
+    note: The realm uses 1194.
