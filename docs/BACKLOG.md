@@ -122,15 +122,15 @@ Source: Empress Matilda's note in `inbox/2026-10-05-white-ship.yaml` ("not yet a
 Who survived the wreck (the butcher Berold is the usual answer). Visiting Barfleur on a Normandy trip belongs in a learning-log entry rather than here.
 Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
-### Icebox
-
----
-
 #### [P3] Data: duplicate places for New York City
 `type: task` · `area: data` · `status: ready` · `issue: #211`
 
 `new-york-city` and `new-york` are both "New York City" (kind city). Pick one as the main record, move the other's links to it in an intake batch, and leave a note on the other; look for other duplicate cities at the same time.
 Source: Explore search for "New York, 1932", 2026-10-13.
+
+### Icebox
+
+---
 
 ## Tooling
 
