@@ -27,6 +27,18 @@ Rules:
 
 ### Ready (ranked)
 
+#### [P2] Realms: fill thin country lists
+`type: task` · `area: data` · `status: ready` · `issue: #202`
+
+The realm batches (#194, #198–#201) took countries from each realm's Wikipedia infobox "Today part of" list; about a third of the articles have none, so those realms list only what the text names. Thinnest: the Ottoman Empire (Turkey only), Abbasid Caliphate, Golden Horde, Grand Duchy of Moscow, Poland, Chola, Norway, the First French Empire's annexations. Also: record batch 4's six date conflicts (Pagan, Sukhothai, Songhai, Malacca, Benin, Austria) as realm discrepancies (now possible, #195); Japan, Ireland and Pamplona have no years.
+Source: realm batches, 2026-10-12.
+
+#### [P3] Place card: realm by location after 1599
+`type: enhancement` · `area: site` · `status: ready` · `issue: #203`
+
+The Place card names the realm a place was in by its point on the border maps, which cover 1000–1599. Later years fall back to the realms covering its modern country ("Realms in Turkey, 1453"). Adding border snapshots for 1650–1900 (see Maps in CLAUDE.md) would make every year exact.
+Source: 2026-10-12.
+
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
 
@@ -143,6 +155,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P1] Realms in time and museums on the map
+`type: task` · `area: data` · `status: done` · `issue: —`
+
+Realms got the years they existed and every modern country they covered (`sql/017`, `realm_countries`; #192), filled for 146 of 149 realms from their Wikipedia articles, with 31 date discrepancies recorded (#194, #198–#201). The Place card says which realm a place was in for the Year card's year, by its point on the border maps for 1000–1599. Every museum but the Royal Collection now has a place: 16 reuse existing buildings, 98 are new (#196, #197), so a painting's Work and Place cards show where it hangs. Search reads a year and a name together and forgives spelling slips (#191). Done 2026-10-12.
+Source: Ty, 2026-10-12.
 
 #### [P1] Explore page: four linked cards (Year, Place, Person, Work)
 `type: enhancement` · `area: site` · `status: done` · `issue: #185, #186, #187, #188`
