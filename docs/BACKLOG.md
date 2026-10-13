@@ -150,6 +150,12 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P2] US Presidents
+`type: task` · `area: data` · `status: done` · `issue: —`
+
+All 45 presidents (47 terms: Cleveland and Trump twice), Washington to Trump, as type Government with the title "President of the United States" in the new realm United States (from 1776), each with birth, death and burial places, 71 inaugurations, the four assassinations and Nixon's resignation, portraits where Commons marks them public domain (not Franklin D. Roosevelt's, CC BY), and 4 date or place discrepancies (#215, #216, #217). Coverage `partly`: policies, cabinets, vice presidents and families beyond the Adamses and Bushes are not yet in. The Explore page now counts presidents as heads of state (#218). Done 2026-10-13.
+Source: Ty, 2026-10-13.
+
 #### [P3] Border maps to 1900: Place card exact after 1599
 `type: enhancement` · `area: site` · `status: done` · `issue: #203`
 
