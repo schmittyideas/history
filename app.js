@@ -505,6 +505,8 @@ const colorFor = p => (CATS.find(c => c.test(p)) || { color: "var(--muted)" }).c
 
 // Crowns: who held a title, and which one to name. Sovereign titles outrank dukes, counts and offices.
 const SOVEREIGN = /\b(king|queen|emperor|empress|caliph|sultan|tsar|pope|high king|grand prince|doge|khan|lady of the english)\b/i;
+// Who heads a realm for the Explore page (its ruler fallback and "part of" line): sovereigns, and elected heads of state.
+const HEAD_OF_STATE = t => SOVEREIGN.test(t) || /^president of /i.test(t);
 // 0 = sovereign, 1 = co-ruler of one (Byzantine co-emperor, co-king), 2 = everything else (dukes, regents, offices).
 const titleRank = t => /\bco-/i.test(t) ? 1 : SOVEREIGN.test(t) ? 0 : 2;
 // The title to show under a name: one held in the view's years if it asks for some, else the highest held in life.
@@ -1994,17 +1996,31 @@ function fill(kind, id) {
     set.person = p?.id ?? null; set.work = w?.id ?? null;
     set.year = ev?.start_year ?? (w && workYear(w)) ?? db.placeById[id].start_year ?? null;
   } else if (kind === "year") {
-    const C = X.country, y = id;
-    const ws = db.artworks.filter(w => w.start_year != null && overlaps(w.start_year, w.end_year ?? w.start_year, y, y) && I.creatorOf.has(w.id))
-      .filter(w => !C || workCountry(w) === C)
-      .sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]));
-    const ev = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!C || inCountryEvent(e, C)) && db.placeById[e.place_id]).sort(evOrder)[0];
-    const p = db.people.filter(p => aliveIn(p, y) && (!C || I.inCountryAt(p.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+    const y = id;
+    // The chosen country first; when it has nothing that year, the whole world (a country left from an earlier
+    // search shouldn't empty the cards).
+    const pick = C => {
+      const ws = db.artworks.filter(w => w.start_year != null && overlaps(w.start_year, w.end_year ?? w.start_year, y, y) && I.creatorOf.has(w.id))
+        .filter(w => !C || workCountry(w) === C)
+        .sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]));
+      const ev = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!C || inCountryEvent(e, C)) && db.placeById[e.place_id]).sort(evOrder)[0];
+      const p = db.people.filter(p => aliveIn(p, y) && (!C || I.inCountryAt(p.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+      return { ws, ev, p };
+    };
+    let { ws, ev, p } = pick(X.country || null);
+    if (X.country && !ws.length && !ev && !p) ({ ws, ev, p } = pick(null));
     set.work = ws[0]?.id ?? null;
     set.person = ws[0] ? I.creatorOf.get(ws[0].id) : p?.id ?? null;
-    set.place = ev ? ev.place_id : ws[0] ? workPlace(ws[0])?.id ?? null : null;
+    // Where the work was made, or its artist's main place: not the museum that holds it now.
+    const made = ws[0] && (I.placesOf.get(ws[0].id) || []).find(x => x.role !== "held" && x.role !== "displayed")?.place;
+    set.place = ev ? ev.place_id : ws[0] ? (made ?? mainPlaceOf(I.creatorOf.get(ws[0].id)) ?? workPlace(ws[0]))?.id ?? null : null;
   }
   if (kind !== "event") set.event = pickEvent(set, kind);
+  // A year search: a big event (4-5 stars) brings its main person, as clicking it would ("1963" gives Kennedy).
+  if (kind === "year" && set.event != null) {
+    const e = db.eventById[set.event], p = (e.prominence ?? 3) >= 4 ? mainPersonOf(e) : null;
+    if (p) { set.person = p.id; set.place = e.place_id ?? set.place; }
+  }
   if (set.place == null && set.event != null) set.place = db.eventById[set.event]?.place_id ?? null;   // no place yet: the event's
   Object.assign(X, set);
 }
@@ -2135,7 +2151,7 @@ function fillAt(kind, id, y) {
     db.eventsAt(id).forEach(e => e.start_year != null && near(e.start_year, y) <= 15 &&
       db.peopleInEvent(e.id).forEach(x => add(x.person, (e.prominence ?? 3) * 10 - near(e.start_year, y))));
     const best = [...score.entries()].sort((a, b) => b[1] - a[1])[0];
-    const ruler = realmsAt(db.placeById[id], y).flatMap(r => db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && SOVEREIGN.test(t.title)))
+    const ruler = realmsAt(db.placeById[id], y).flatMap(r => db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && HEAD_OF_STATE(t.title)))
       .map(t => db.byId[t.entity_id]).filter(Boolean).sort((a, b) => fame(b) - fame(a))[0];
     const p = (best && db.byId[best[0]]) || ruler
       || db.people.filter(o => adult(o) && (!C || I.inCountryAt(o.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
@@ -2484,7 +2500,7 @@ async function placeBorderMap() {
 function partOf(pl) {
   const db = S.db, y = X.year;
   if (y == null) return null;
-  const sovereign = t => SOVEREIGN.test(t.title) ? 0 : 1;
+  const sovereign = t => HEAD_OF_STATE(t.title) ? 0 : 1;
   const realmNode = r => {
     const ts = db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && db.byId[t.entity_id]).sort((a, b) => sovereign(a) - sovereign(b));
     const note = (db.realmInfo[r]?.countries || []).find(c => normCountry(c.country) === placeCountry(pl))?.note;
