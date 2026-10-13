@@ -2454,7 +2454,9 @@ function placeCard() {
     h("div", { class: "xborder", id: "x-border", hidden: "" }),
     xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
     films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(e.name, xYear(e.start_year)))) : null,
-    xSec("Works made or held here", xList("place", works, 4, x => row2([xWork(x.work), ` (${x.role})`], workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
+    xSec("Shown in", xList("place", works.filter(x => x.role === "depicts"), 4, x => row2([xWork(x.work), I.creatorOf.has(x.work.id) ? ` · ${db.byId[I.creatorOf.get(x.work.id)]?.name}` : ""],
+      workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
+    xSec("Works made or held here", xList("place", works.filter(x => x.role !== "depicts"), 4, x => row2([xWork(x.work), ` (${x.role})`], workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
     xSec("Who was here", xChips("place", peopleAt(pl.id).sort((a, b) => fame(b) - fame(a)), 8, p => h("span", { class: "xchip" }, xPerson(p)))),
     xSec(`Nearby (within ${NEARBY_KM} km)`, xList("place", near, 5, x => row2(xPlace(x.o), fmtKm(x.km)))),
     dining,
@@ -2712,6 +2714,29 @@ function lifeStrip(p, works, evs, titles) {
     h("span", { class: "hint", text: "Marks: works (filled) and events (hollow)" }), h("span", { text: fmtYear(b) })));
 }
 
+// A painting's title with the places it shows as links: "Hampstead Heath, Looking Toward Harrow". A place's name is
+// found in the title ignoring case and accents, its full name first, then the part before a comma or bracket
+// ("Florence Cathedral (Santa Maria del Fiore)" → "Florence Cathedral").
+function titleWithPlaces(w, places) {
+  // Fold accents one character at a time, so positions in `low` stay those in the title.
+  const t = w.name, low = Array.from(t, c => (c.normalize("NFD")[0] || c).toLowerCase().slice(0, c.length).padEnd(c.length, " ")).join("");
+  const hits = [];
+  places.forEach(pl => {
+    const tries = [pl.name, pl.name.split(/[,(]/)[0].trim(), pl.historical_name].filter(n => n && n.length > 2);
+    for (const n of tries) {
+      const k = n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      const m = new RegExp(`(^|[^\\p{L}])(${k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(?![\\p{L}])`, "u").exec(low);
+      if (m) { const at = m.index + m[1].length; if (!hits.some(x => at < x.end && at + k.length > x.at)) hits.push({ at, end: at + k.length, pl }); break; }
+    }
+  });
+  if (!hits.length) return [t];
+  hits.sort((a, b) => a.at - b.at);
+  const out = []; let i = 0;
+  hits.forEach(x => { out.push(t.slice(i, x.at), xBtn(t.slice(x.at, x.end), `${x.pl.name} in the Place card`, () => xGo("place", x.pl.id))); i = x.end; });
+  out.push(t.slice(i));
+  return out.filter(x => x !== "");
+}
+
 /* --- Work card */
 function workCard() {
   const db = S.db, I = exploreIndex(), w = I.workById[X.work];
@@ -2730,7 +2755,7 @@ function workCard() {
   return [
     w.image_thumb ? h("figure", { class: "xpic" }, picture(w.image_thumb, w.name),
       h("figcaption", {}, w.image_page ? h("a", { class: "ext", href: w.image_page, target: "_blank", rel: "noopener", text: credit || "Wikimedia Commons" }) : credit)) : null,
-    h("h2", { text: w.name }),
+    h("h2", {}, ...titleWithPlaces(w, places.filter(x => x.role === "depicts").map(x => x.place))),
     h("div", { class: "xsub" }, creator ? xPerson(creator) : "Unknown maker", workSpan(w) ? [" · ", xYear(workYear(w), workSpan(w))] : " · undated",
       [w.kind, w.medium].filter(Boolean).length ? ` · ${[w.kind, w.medium].filter(Boolean).join(", ")}` : ""),
     seq.length > 1 && i >= 0 ? h("div", { class: "xseq" },
@@ -2738,7 +2763,7 @@ function workCard() {
       h("div", { class: "xseq-row" }, h("span", {}, prev ? ["← ", xWork(prev), h("span", { class: "yrs", text: ` ${workSpan(prev)}` })] : h("span", { class: "hint", text: "first" })),
         h("span", { class: "right" }, next ? [xWork(next), h("span", { class: "yrs", text: ` ${workSpan(next)}` }), " →"] : h("span", { class: "hint", text: "last" })))) :
       w.start_year == null && creator ? h("p", { class: "hint", text: "No date recorded, so it can't be placed in the artist's sequence yet." }) : null,
-    xSec("Where", places.length ? xList("work", places, 4, x => row2(xPlace(x.place), x.role)) : null,
+    xSec("Where", places.length ? xList("work", places, 4, x => row2(xPlace(x.place), x.role === "depicts" ? "shown" : x.role)) : null,
       m ? h("p", {}, "Now: ", m.museum_url || w.museum_url || m.website ? h("a", { class: "ext", href: w.museum_url || m.website, target: "_blank", rel: "noopener", text: m.name + " ↗" }) : m.name,
         m.city ? `, ${m.city}` : "", w.accession_number ? h("span", { class: "yrs", text: ` · ${w.accession_number}` }) : null) : null),
     subjects.length ? xSec("Shows", xChips("work", subjects, 6, o => h("span", { class: "xchip" }, xPerson(o)))) : null,
