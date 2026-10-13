@@ -1,0 +1,31 @@
+batch:
+  title: "Places shown in landscapes and city views, part 3"
+  requested: "Ty: link the places in painting titles, starting with landscapes and city views"
+  date: 2026-10-13
+
+# Drafted by tools/depicts.py from Wikidata (P195 + P217 match, P136 landscape/city-view genre, P180 depicts with P625),
+# then checked by hand against the place's English Wikipedia article.
+#
+# Dropped: Hanging Gardens of Babylon (Belshazzar's Feast), because John Martin paints a legendary garden from
+# imagination, and whether or where it existed is unknown.
+# Seventh Avenue is a long street; the Wikipedia article gives no coordinates, so the pin is Wikidata's (Midtown).
+
+sources:
+  - {key: wp-seventh-avenue-manhattan, title: "Seventh Avenue (Manhattan) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Seventh_Avenue_(Manhattan)"}
+
+places:
+  - key: seventh-avenue
+    name: "Seventh Avenue"
+    kind: street
+    city: New York City
+    region: New York
+    country: United States
+    lat: 40.7652
+    lng: -73.9803
+    note: "Thoroughfare on Manhattan's West Side, from the West Village north through Midtown and, beyond Central Park, Harlem."
+    sources: [wp-seventh-avenue-manhattan]   # Wikidata Q109926
+
+artworks:
+  - key: early-sunday-morning-edward-hopper   # Early Sunday Morning — Wikidata Q3547037 (cityscape)
+    places:
+      - {place: seventh-avenue, role: depicts}   # P180 Q109926 Seventh Avenue
