@@ -1,0 +1,436 @@
+batch: {title: "Realm years and countries, batch 3", requested: "Ty: realms with start and end dates, mapped to today's countries", date: 2026-10-12}
+
+# Years come from each article's infobox (year_start / year_end or life_span) and
+# countries from its "Today part of" line, read through the Wikipedia API on 2026-10-12.
+# Where an article has no "today" list, countries come from what its lead states
+# plainly, and a comment says so. Region and main country are unchanged for every realm.
+
+sources:
+  # wp-ottoman-empire, wp-sultanate-of-rum and wp-delhi-sultanate already exist and are re-used.
+  - {key: wp-marinid-dynasty, title: "Marinid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marinid_dynasty"}
+  - {key: wp-safavid-iran, title: "Safavid Iran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Safavid_Iran"}
+  - {key: wp-kingdom-of-the-iberians, title: "Kingdom of the Iberians (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_the_Iberians"}
+  - {key: wp-zirid-dynasty, title: "Zirid dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zirid_dynasty"}
+  - {key: wp-danish-realm, title: "Danish Realm (Wikipedia)", url: "https://en.wikipedia.org/wiki/Danish_Realm"}
+  - {key: wp-denmark, title: "Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Denmark"}
+  - {key: wp-norway, title: "Norway (Wikipedia)", url: "https://en.wikipedia.org/wiki/Norway"}
+  - {key: wp-sweden, title: "Sweden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sweden"}
+  - {key: wp-bahmani-kingdom, title: "Bahmani Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bahmani_Kingdom"}
+  - {key: wp-bengal-sultanate, title: "Bengal Sultanate (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bengal_Sultanate"}
+  - {key: wp-british-raj, title: "British Raj (Wikipedia)", url: "https://en.wikipedia.org/wiki/British_Raj"}
+  - {key: wp-chahamanas-of-shakambhari, title: "Chahamanas of Shakambhari (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chahamanas_of_Shakambhari"}
+  - {key: wp-chaulukya-dynasty, title: "Chaulukya dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chaulukya_dynasty"}
+  - {key: wp-chola-empire, title: "Chola Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chola_Empire"}
+  - {key: wp-eastern-ganga-dynasty, title: "Eastern Ganga dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eastern_Ganga_dynasty"}
+  - {key: wp-gajapati-empire, title: "Gajapati Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gajapati_Empire"}
+  - {key: wp-gujarat-sultanate, title: "Gujarat Sultanate (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gujarat_Sultanate"}
+  - {key: wp-hoysala-kingdom, title: "Hoysala Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hoysala_Kingdom"}
+  - {key: wp-kakatiya-dynasty, title: "Kakatiya dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kakatiya_dynasty"}
+  - {key: wp-kingdom-of-mewar, title: "Kingdom of Mewar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Mewar"}
+  - {key: wp-mughal-empire, title: "Mughal Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mughal_Empire"}
+  - {key: wp-pala-empire, title: "Pala Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pala_Empire"}
+  - {key: wp-pandya-dynasty, title: "Pandya dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pandya_dynasty"}
+  - {key: wp-paramara-dynasty, title: "Paramara dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paramara_dynasty"}
+  - {key: wp-sena-dynasty, title: "Sena dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sena_dynasty"}
+  - {key: wp-sur-empire, title: "Sur Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sur_Empire"}
+  - {key: wp-vijayanagara-empire, title: "Vijayanagara Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Vijayanagara_Empire"}
+  - {key: wp-western-chalukya-empire, title: "Western Chalukya Empire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Western_Chalukya_Empire"}
+
+realms:
+  # --- Middle East and North Africa ---
+  # "Marinid Sultanate" redirects to "Marinid dynasty". No "today" list: the lead says it
+  # ruled chiefly Morocco, at times parts of Algeria and Tunisia, and southern Spain around
+  # Gibraltar until the Castilians took Algeciras in 1344.
+  - name: Marinid Sultanate
+    from: 1244
+    to: 1465
+    countries:
+      - {country: Morocco}
+      - {country: Algeria, note: "parts, at various times"}
+      - {country: Tunisia, note: "parts, briefly in the mid-14th century"}
+      - {country: Spain, to: 1344, note: "around Gibraltar"}
+    sources: [wp-marinid-dynasty]
+
+  # The infobox deliberately has no "today part of" list, and the lead names only Turkey
+  # among today's countries (it otherwise says Southeastern Europe, West Asia, North Africa).
+  # So only Turkey for now; the other countries need a source that names them.
+  # End: 1922 (life_span and lead: the sultanate was abolished) vs 1923 (year_end,
+  # Republic of Turkey): see discrepancy ottoman-empire-end.
+  - name: Ottoman Empire
+    from: 1299
+    from_estimated: true
+    to: 1922
+    countries:
+      - {country: Turkey}
+    sources: [wp-ottoman-empire]
+
+  # No "today" list; countries from the lead's "at their height" sentence.
+  # End: 1736 (infobox) vs 1722 (lead, fall of Isfahan): see discrepancy safavid-iran-end.
+  - name: Safavid Iran
+    from: 1501
+    to: 1736
+    countries:
+      - {country: Iran}
+      - {country: Azerbaijan}
+      - {country: Armenia}
+      - {country: Georgia, note: "eastern Georgia"}
+      - {country: Russia, note: "parts of the North Caucasus"}
+      - {country: Iraq}
+      - {country: Turkey, note: parts}
+      - {country: Syria, note: parts}
+      - {country: Pakistan, note: parts}
+      - {country: Afghanistan, note: parts}
+      - {country: Turkmenistan, note: parts}
+      - {country: Uzbekistan, note: parts}
+    sources: [wp-safavid-iran]
+
+  - name: Sultanate of Rum
+    from: 1077
+    to: 1308
+    countries:
+      - {country: Turkey}
+      - {country: Ukraine, note: "Sudak in Crimea, once occupied"}
+    sources: [wp-sultanate-of-rum]
+
+  # "Tao-Klarjeti" is a set index; its kingdom is "Kingdom of the Iberians" (Bagratid
+  # Iberia, c. 888-1008), whose Bagratid princes held Tao. It matches our Tao titles
+  # (David III Kuropalates, 966-1000). Region kept as is; the state lay in today's
+  # north-eastern Turkey and south-western Georgia.
+  - name: Tao
+    from: 888
+    from_estimated: true
+    to: 1008
+    countries:
+      - {country: Turkey}
+      - {country: Georgia}
+    sources: [wp-kingdom-of-the-iberians]
+
+  # Zirid dynasty article (972-1148). No "today" list; countries from the lead: central
+  # Maghreb (Algeria) 972-1014, Ifriqiya 972-1148, Tripolitania after 978, Fez and much of
+  # Morocco briefly after 980. The Zirid Taifa of Granada was a breakaway branch, so Spain
+  # is left out.
+  - name: Zirid Ifriqiya
+    from: 972
+    to: 1148
+    countries:
+      - {country: Tunisia}
+      - {country: Algeria, to: 1014, note: "central Maghreb"}
+      - {country: Libya, from: 978, note: "Tripolitania"}
+      - {country: Morocco, from: 980, note: "Fez and much of Morocco, briefly"}
+    sources: [wp-zirid-dynasty]
+
+  # --- Northern Europe (all three kingdoms still exist, so no `to`) ---
+  # "Kingdom of Denmark" redirects to "Danish Realm", whose infobox gives unification c. 965.
+  # The Denmark article says the unified kingdom emerged in the 8th century: see discrepancy
+  # denmark-start. Greenland and the Faroe Islands are part of the Danish Realm, not sovereign
+  # states. Germany: the Denmark article says Denmark lost Schleswig-Holstein in the Second
+  # Schleswig War (1864). Iceland: it declared independence in 1944. Scania and other
+  # land ceded to Sweden in the 17th century is not named by either lead, so it is left out.
+  - name: Denmark
+    from: 965
+    from_estimated: true
+    countries:
+      - {country: Denmark}
+      - {country: Germany, to: 1864, note: "Schleswig-Holstein"}
+      - {country: Iceland, to: 1944}
+    sources: [wp-danish-realm, wp-denmark]
+
+  # Norway infobox: state established 872; the lead says it "has existed continuously for
+  # over a millennium". Its lost medieval possessions are not listed (the Kingdom of Norway
+  # (872-1397) article only points to "Greater Norway"), so only Norway.
+  - name: Norway
+    from: 872
+    countries:
+      - {country: Norway}
+    sources: [wp-norway]
+
+  # Sweden infobox: "A unified Swedish kingdom established: by the late 10th century".
+  # No exact year is given, so 975 stands for "late 10th century", marked estimated.
+  # Finland: "The eastern half of Sweden, present-day Finland, was lost to Imperial Russia
+  # in 1809." The Swedish Empire's other conquests are not named, so they are left out.
+  - name: Sweden
+    from: 975
+    from_estimated: true
+    countries:
+      - {country: Sweden}
+      - {country: Finland, to: 1809}
+    sources: [wp-sweden]
+
+  # --- South Asia ---
+  # "Bahmani Sultanate" redirects to "Bahmani Kingdom": 1347 to its formal dissolution in 1527.
+  - name: Bahmani Sultanate
+    from: 1347
+    to: 1527
+    countries:
+      - {country: India, note: "Deccan"}
+    sources: [wp-bahmani-kingdom]
+
+  # life_span 1352-1539 and 1554-1576 (a Sur interregnum between).
+  - name: Bengal Sultanate
+    from: 1352
+    to: 1576
+    countries:
+      - {country: Bangladesh}
+      - {country: India, note: "West Bengal, with vassals in Bihar, Odisha, Assam and Tripura"}
+      - {country: Myanmar, note: "Arakan, as a vassal"}
+      - {country: Nepal}
+    sources: [wp-bengal-sultanate]
+
+  # British Raj, 1858-1947 (our Emperor of India titles run 1876-1948). No "today" list;
+  # the lead says it was partitioned into India and Pakistan (later also Bangladesh), that
+  # Burma was part of it until 1937 (Upper Burma from 1886), and Aden until 1937.
+  - name: British India
+    from: 1858
+    to: 1947
+    countries:
+      - {country: India}
+      - {country: Pakistan}
+      - {country: Bangladesh}
+      - {country: Myanmar, to: 1937, note: "Lower Burma from 1858, Upper Burma from 1886"}
+      - {country: Yemen, to: 1937, note: "Aden"}
+    sources: [wp-british-raj]
+
+  # Chahamanas of Shakambhari. End: 1192 (infobox, Second Battle of Tarain) vs 1194 (lead:
+  # Hariraja's revolt ended in 1194): see discrepancy chahamana-dynasty-end.
+  - name: Chahamana dynasty
+    from: 551
+    to: 1192
+    countries:
+      - {country: India, note: "Rajasthan"}
+    sources: [wp-chahamanas-of-shakambhari]
+
+  - name: Chaulukya dynasty
+    from: 940
+    from_estimated: true
+    to: 1244
+    to_estimated: true
+    countries:
+      - {country: India, note: "Gujarat and Rajasthan"}
+    sources: [wp-chaulukya-dynasty]
+
+  # Chola Empire article (848-1279) has no "today" list; its lead says southern India with
+  # overseas dominions and spheres of influence in Southeast Asia, without naming countries.
+  # So India only for now.
+  - name: Chola Empire
+    from: 848
+    to: 1279
+    countries:
+      - {country: India, note: "southern India"}
+    sources: [wp-chola-empire]
+
+  - name: Delhi Sultanate
+    from: 1206
+    to: 1526
+    countries:
+      - {country: India}
+      - {country: Pakistan}
+      - {country: Bangladesh}
+      - {country: Nepal, note: "parts of southern Nepal"}
+    sources: [wp-delhi-sultanate]
+
+  # Eastern Ganga dynasty: infobox year_start 493, year_end 1947, but its life_span splits
+  # that into Kalinga (493-1077), Trikalinga (1077-1436) and the Khemundi zamindars
+  # (1436-1947), and the lead says the dynasty's rule ended under Bhanudeva IV (c. 1414-34).
+  # The record ends at 1436: see discrepancy eastern-ganga-dynasty-end.
+  - name: Eastern Ganga dynasty
+    from: 493
+    to: 1436
+    countries:
+      - {country: India, note: "Odisha and northern Andhra Pradesh"}
+    sources: [wp-eastern-ganga-dynasty]
+
+  # "Gajapati Kingdom" redirects to "Gajapati Empire": c. 1434 to 1541.
+  - name: Gajapati Kingdom
+    from: 1434
+    from_estimated: true
+    to: 1541
+    countries:
+      - {country: India, note: "Odisha"}
+    sources: [wp-gajapati-empire]
+
+  - name: Gujarat Sultanate
+    from: 1394
+    to: 1573
+    countries:
+      - {country: India, note: "Gujarat"}
+    sources: [wp-gujarat-sultanate]
+
+  # "Hoysala Empire" redirects to "Hoysala Kingdom". Start: 950 (infobox) vs "the 11th
+  # century" (lead): see discrepancy hoysala-empire-start. The infobox "today" is blank;
+  # the lead says Karnataka and parts of Tamil Nadu and Telangana.
+  - name: Hoysala Empire
+    from: 950
+    to: 1346
+    countries:
+      - {country: India, note: "Karnataka, parts of Tamil Nadu and Telangana"}
+    sources: [wp-hoysala-kingdom]
+
+  - name: Kakatiya dynasty
+    from: 1163
+    to: 1323
+    countries:
+      - {country: India, note: "Telangana and Andhra Pradesh"}
+    sources: [wp-kakatiya-dynasty]
+
+  # Kingdom of Mewar, 566-1949. Its infobox "today" lists India and Pakistan; the lead gives
+  # no detail on Pakistan, so it is listed without a note.
+  - name: Mewar
+    from: 566
+    to: 1949
+    countries:
+      - {country: India, note: "Rajasthan"}
+      - {country: Pakistan}
+    sources: [wp-kingdom-of-mewar]
+
+  - name: Mughal Empire
+    from: 1526
+    to: 1857
+    countries:
+      - {country: India}
+      - {country: Pakistan}
+      - {country: Bangladesh}
+      - {country: Afghanistan, note: "northern Afghanistan"}
+    sources: [wp-mughal-empire]
+
+  - name: Pala Empire
+    from: 750
+    to: 1161
+    countries:
+      - {country: India, note: "Bengal and Bihar"}
+      - {country: Bangladesh}
+      - {country: Nepal}
+      - {country: Pakistan}
+    sources: [wp-pala-empire]
+
+  # One article covers the whole dynasty, "roughly 400 BCE to 1618 CE"; our titles are the
+  # Later Pandyas (1268-1308). Sri Lanka: the lead says the Pandyas ruled northern Sri Lanka
+  # through vassals in the 13th century.
+  - name: Pandya dynasty
+    from: -400
+    from_estimated: true
+    to: 1618
+    countries:
+      - {country: India, note: "southern India (Madurai)"}
+      - {country: Sri Lanka, note: "northern Sri Lanka"}
+    sources: [wp-pandya-dynasty]
+
+  - name: Paramara dynasty
+    from: 948
+    to: 1305
+    countries:
+      - {country: India, note: "Malwa"}
+    sources: [wp-paramara-dynasty]
+
+  # Sena dynasty, 1070-1230. Infobox "today" is blank; the lead says it ruled from Bengal,
+  # including the Bengal Delta, and expanded to Odisha.
+  - name: Sena dynasty
+    from: 1070
+    to: 1230
+    countries:
+      - {country: India, note: "Bengal and Odisha"}
+      - {country: Bangladesh}
+    sources: [wp-sena-dynasty]
+
+  # Sur Empire. Infobox 1538-1555; the lead says "between 1538/1540 and 1556": see
+  # discrepancies sur-empire-start and sur-empire-end. No "today" list; the lead says it ran
+  # from eastern Balochistan to Rakhine, with mint cities as far east as Fathabad (Bangladesh).
+  - name: Sur Empire
+    from: 1538
+    to: 1555
+    countries:
+      - {country: India, note: "northern India"}
+      - {country: Pakistan}
+      - {country: Bangladesh}
+      - {country: Myanmar, note: "Rakhine"}
+    sources: [wp-sur-empire]
+
+  # Vijayanagara, 1336-1646 (its power broke at Talikota in 1565, where our titles end).
+  - name: Vijayanagara Empire
+    from: 1336
+    to: 1646
+    countries:
+      - {country: India, note: "southern India"}
+    sources: [wp-vijayanagara-empire]
+
+  # Start: 957 (infobox) vs 973 (lead: Tailapa II overthrew the Rashtrakutas): see
+  # discrepancy western-chalukya-empire-start.
+  - name: Western Chalukya Empire
+    from: 957
+    to: 1184
+    countries:
+      - {country: India, note: "western Deccan"}
+    sources: [wp-western-chalukya-empire]
+
+discrepancies:
+  - key: ottoman-empire-end
+    question: When did the Ottoman Empire end?
+    about: [{realm: ottoman-empire}]
+    field: to
+    claims:
+      - {value: "1922", sources: [wp-ottoman-empire], note: "infobox life_span and lead: the sultanate was abolished in 1922"}
+      - {value: "1923", sources: [wp-ottoman-empire], note: "infobox year_end: Republic of Turkey established, 29 October 1923"}
+    note: The realm uses 1922, the end of the sultanate.
+  - key: safavid-iran-end
+    question: When did Safavid Iran end?
+    about: [{realm: safavid-iran}]
+    field: to
+    claims:
+      - {value: "1736", sources: [wp-safavid-iran], note: "infobox and lead: ruled from 1501 to 1736"}
+      - {value: "1722", sources: [wp-safavid-iran], note: "lead: others place the end in 1722, when Isfahan fell to the Afghans"}
+    note: The realm uses 1736, the infobox year.
+  - key: denmark-start
+    question: When did the unified Kingdom of Denmark begin?
+    about: [{realm: denmark}]
+    field: from
+    claims:
+      - {value: "c. 965", sources: [wp-danish-realm], note: "infobox: unification c. 965"}
+      - {value: "8th century", sources: [wp-denmark], note: "lead and infobox: the unified kingdom emerged (consolidation) c. 8th century"}
+    note: The realm uses 965 (estimated), the only year given.
+  - key: chahamana-dynasty-end
+    question: When did the Chahamanas of Shakambhari end?
+    about: [{realm: chahamana-dynasty}]
+    field: to
+    claims:
+      - {value: "1192", sources: [wp-chahamanas-of-shakambhari], note: "infobox year_end: Second Battle of Tarain; the lead says Chahamana power effectively ended then"}
+      - {value: "1194", sources: [wp-chahamanas-of-shakambhari], note: "lead and infobox status: Hariraja rebelled against the Ghurids and was defeated in 1194, ending the dynasty"}
+    note: The realm uses 1192, the infobox year.
+  - key: eastern-ganga-dynasty-end
+    question: When did the Eastern Ganga dynasty's rule end?
+    about: [{realm: eastern-ganga-dynasty}]
+    field: to
+    claims:
+      - {value: "1436", sources: [wp-eastern-ganga-dynasty], note: "infobox life_span: Trikalinga phase 1077-1436; lead: rule ended under Bhanudeva IV (c. 1414-34)"}
+      - {value: "1947", sources: [wp-eastern-ganga-dynasty], note: "infobox year_end, counting the Khemundi Gangas (1436-1947), zamindars until zamindari was abolished"}
+    note: The realm uses 1436, when the Gajapatis took over and the Gangas stopped ruling a kingdom.
+  - key: hoysala-empire-start
+    question: When did the Hoysala kingdom begin?
+    about: [{realm: hoysala-empire}]
+    field: from
+    claims:
+      - {value: "950", sources: [wp-hoysala-kingdom], note: "infobox year_start and first ruler 950-960"}
+      - {value: "11th century", sources: [wp-hoysala-kingdom], note: "lead: ruled between the 11th and 14th centuries"}
+    note: The realm uses 950, the infobox year.
+  - key: sur-empire-start
+    question: When did the Sur Empire begin?
+    about: [{realm: sur-empire}]
+    field: from
+    claims:
+      - {value: "1538", sources: [wp-sur-empire], note: "infobox year_start: siege of Gauda, 6 April 1538"}
+      - {value: "1540", sources: [wp-sur-empire], note: "lead: between 1538/1540 and 1556; first ruler 1538/1540-1545"}
+    note: The realm uses 1538, the infobox year.
+  - key: sur-empire-end
+    question: When did the Sur Empire end?
+    about: [{realm: sur-empire}]
+    field: to
+    claims:
+      - {value: "1555", sources: [wp-sur-empire], note: "infobox year_end: Battle of Sirhind, 22 June 1555"}
+      - {value: "1556", sources: [wp-sur-empire], note: "lead: between 1538/1540 and 1556; last ruler 1555-1556"}
+    note: The realm uses 1555, the infobox year.
+  - key: western-chalukya-empire-start
+    question: When did the Western Chalukya Empire begin?
+    about: [{realm: western-chalukya-empire}]
+    field: from
+    claims:
+      - {value: "957", sources: [wp-western-chalukya-empire], note: "infobox year_start; first ruler 957-997"}
+      - {value: "973", sources: [wp-western-chalukya-empire], note: "lead: in 973 Tailapa II defeated his Rashtrakuta overlords"}
+    note: The realm uses 957, the infobox year.
