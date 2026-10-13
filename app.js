@@ -1993,6 +1993,7 @@ function fill(kind, id) {
     set.place = ev ? ev.place_id : ws[0] ? workPlace(ws[0])?.id ?? null : null;
   }
   if (kind !== "event") set.event = pickEvent(set, kind);
+  if (set.place == null && set.event != null) set.place = db.eventById[set.event]?.place_id ?? null;   // no place yet: the event's
   Object.assign(X, set);
 }
 // The event that goes with the other cards: the person's biggest event nearest the year, else the place's, else the year's.
@@ -2001,9 +2002,15 @@ function pickEvent(set, kind) {
   const best = es => es.filter(e => !e.film).sort((a, b) => near(a) - near(b) || evOrder(a, b))[0];
   const ofPerson = set.person != null ? best(db.eventsOf(set.person).map(x => x.event).filter(e => near(e) <= 10)) : null;
   const atPlace = set.place != null ? best(db.eventsAt(set.place).filter(e => near(e) <= 10)) : null;
-  const inYear = y != null ? db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!X.country || inCountryEvent(e, X.country))).sort(evOrder)[0] : null;
-  // A year search starts on that year's biggest event; a person or place search on theirs.
-  return (kind === "year" ? inYear || ofPerson || atPlace : ofPerson || atPlace || inYear)?.id ?? null;
+  const thatYear = y != null ? db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y)).sort(evOrder) : [];
+  const inYear = thatYear.find(e => !X.country || inCountryEvent(e, X.country)), anywhere = thatYear[0];
+  // Nothing that year in the country: its nearest big event within ten years.
+  const nearInCountry = y != null && X.country ? best(db.events.filter(e => e.start_year != null && near(e) <= 10 && inCountryEvent(e, X.country))) : null;
+  // A year search starts on that year's biggest event, a place search on the place's, a person or work search on the
+  // person's; failing those, the country's nearest, then the year's biggest anywhere, so the card is never left empty.
+  const order = kind === "year" ? [inYear, anywhere, ofPerson, atPlace] : kind === "place" ? [atPlace, ofPerson, inYear, nearInCountry, anywhere]
+    : [ofPerson, atPlace, inYear, nearInCountry, anywhere];
+  return order.find(Boolean)?.id ?? null;
 }
 
 /* --- search */
@@ -2077,13 +2084,21 @@ function exploreSearch(text) {
   if (!hits.length) return { error: `Nothing called "${t}" yet. Try a person, a painting, a place or a year.` };
   return { best: hits[0], year, fuzzy, typed: t, also: hits.slice(1, 7) };
 }
-// Fill the cards from a record and a year together: the record keeps its card, the year its own, and the other two
-// are chosen for that record at that time.
+// Fill the cards from a record and a year together: the record keeps its card, the year its own, and every other
+// card is chosen for that record at that time (the Event card too).
 function fillAt(kind, id, y) {
   const db = S.db, I = exploreIndex(), near = (a, b) => Math.abs(a - b);
   fill(kind, id);
   X.year = y;
-  if (kind === "person") {
+  const workNear = pid => (I.worksBy.get(pid) || []).filter(w => w.start_year != null).sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0];
+  const placeNear = pid => stopsForPerson(pid).filter(s => s.year != null).sort((a, b) => near(a.year, y) - near(b.year, y))[0]?.place;
+  if (kind === "work" || kind === "event") {
+    // The work or event stays; its person's work and whereabouts closest to the year fill the rest.
+    if (X.person != null) {
+      if (kind === "event") { const w = workNear(X.person); if (w) X.work = w.id; }
+      if (kind === "work") { const pl = placeNear(X.person); if (pl && !workPlace(I.workById[id])) X.place = pl.id; }
+    }
+  } else if (kind === "person") {
     const ws = (I.worksBy.get(id) || []).filter(w => w.start_year != null);
     const w = ws.sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0];
     if (w) X.work = w.id;
@@ -2110,6 +2125,8 @@ function fillAt(kind, id, y) {
       || (p && (I.worksBy.get(p.id) || []).filter(w => w.start_year != null).sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0]);
     X.work = w?.id ?? null;
   }
+  if (kind !== "event") X.event = pickEvent(X, kind);
+  if (X.place == null && X.event != null) X.place = db.eventById[X.event]?.place_id ?? null;
 }
 function runExplore(text) {
   const r = exploreSearch(text), msg = $("x-msg"), db = S.db;
@@ -2117,10 +2134,13 @@ function runExplore(text) {
   if (r.error) { msg.textContent = r.error; return; }
   if (r.country) setCountry(r.country, false);
   if (r.best) {
-    if (r.year != null && r.best.kind !== "year") fillAt(r.best.kind, r.best.id, r.year); else fill(r.best.kind, r.best.id);
-    // A place sets the country, so the Year card starts there.
-    const pc = r.best.kind === "place" && placeCountry(db.placeById[r.best.id]);
+    // What was searched sets the country first, so the Year and Event cards start there: a place's country, a
+    // person's home, where a work was made, where an event happened.
+    const I = exploreIndex(), b = r.best;
+    const pc = b.kind === "place" ? placeCountry(db.placeById[b.id]) : b.kind === "person" ? I.homeOf(b.id)
+      : b.kind === "work" ? workCountry(I.workById[b.id]) : b.kind === "event" ? [...eventCountries(db.eventById[b.id])][0] : null;
     if (pc && I_hasCountry(pc)) setCountry(pc, false);
+    if (r.year != null && r.best.kind !== "year") fillAt(r.best.kind, r.best.id, r.year); else fill(r.best.kind, r.best.id);
   }
   if (r.fuzzy) msg.append(`Showing ${r.best.name} (nothing is called "${r.typed}"). `);
   // A person searched with a year outside their life: say how far off it is.
