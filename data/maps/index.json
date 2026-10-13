@@ -8,13 +8,23 @@
     "1200": "world_1200.geojson",
     "1300": "world_1300.geojson",
     "1400": "world_1400.geojson",
-    "1500": "world_1500.geojson"
+    "1500": "world_1500.geojson",
+    "1600": "world_1600.geojson",
+    "1650": "world_1650.geojson",
+    "1700": "world_1700.geojson",
+    "1715": "world_1715.geojson",
+    "1783": "world_1783.geojson",
+    "1800": "world_1800.geojson",
+    "1815": "world_1815.geojson",
+    "1880": "world_1880.geojson",
+    "1900": "world_1900.geojson"
   },
   "realms": {
     "England": [
       "England",
       "English territory",
-      "Angevin Empire"
+      "Angevin Empire",
+      "England and Ireland"
     ],
     "Scotland": [
       "Scotland"
@@ -30,7 +40,8 @@
       "Papal States"
     ],
     "Venice": [
-      "Venice"
+      "Venice",
+      "Venetia"
     ],
     "León": [
       "León",
@@ -50,21 +61,25 @@
     "Norway": [
       "Denmark-Norway",
       "Norway",
-      "Kalmar Union"
+      "Kalmar Union",
+      "Sweden–Norway"
     ],
     "Sweden": [
       "Sweden",
-      "Kalmar Union"
+      "Kalmar Union",
+      "Sweden–Norway"
     ],
     "Poland": [
       "Poland",
-      "Poland-Lithuania"
+      "Poland-Lithuania",
+      "Polish–Lithuanian Commonwealth"
     ],
     "Hungary": [
       "Magyars",
       "Hungary",
       "Kingdom of Hungary",
-      "Imperial Hungary"
+      "Imperial Hungary",
+      "Austria Hungary"
     ],
     "Kievan Rus'": [
       "Kyivan Rus",
@@ -120,7 +135,9 @@
     "Japan": [
       "Imperial Japan (Fujiwara)",
       "Shogun Japan (Kamakura)",
-      "Japan"
+      "Japan",
+      "Japan (Warring States)",
+      "Imperial Japan"
     ],
     "Goryeo": [
       "Korea"
@@ -155,14 +172,18 @@
     ],
     "Sicily": [
       "Sicily",
-      "Emirate of Sicily"
+      "Emirate of Sicily",
+      "Kingdom of the Two Sicilies"
     ],
     "Naples": [
-      "Sicily"
+      "Sicily",
+      "Naples",
+      "Kingdom of the Two Sicilies"
     ],
     "Grand Duchy of Lithuania": [
       "Lithuania",
-      "Poland-Lithuania"
+      "Poland-Lithuania",
+      "Polish–Lithuanian Commonwealth"
     ],
     "Grand Duchy of Vladimir": [
       "Principality of Vladimir-Suzdal"
@@ -356,6 +377,92 @@
     "Kanem-Bornu": [
       "Kanem-Bornu",
       "Kanem"
+    ],
+    "Commonwealth of England": [
+      "England and Ireland",
+      "England"
+    ],
+    "Ireland": [
+      "Kingdom of Ireland"
+    ],
+    "Great Britain": [
+      "United Kingdom"
+    ],
+    "United Kingdom": [
+      "United Kingdom",
+      "United Kingdom of Great Britain and Ireland"
+    ],
+    "British India": [
+      "British Raj"
+    ],
+    "Austria": [
+      "Austrian Empire",
+      "Habsburg Austria",
+      "Austria",
+      "Austria Hungary"
+    ],
+    "Bavaria": [
+      "Bavaria"
+    ],
+    "Prussia": [
+      "Prussia",
+      "Brandenburg"
+    ],
+    "Hanover": [
+      "Hanover"
+    ],
+    "Saxony": [
+      "Saxony"
+    ],
+    "French Empire": [
+      "France"
+    ],
+    "Spain": [
+      "Spain",
+      "Spanish Habsburg"
+    ],
+    "Habsburg Netherlands": [
+      "Habsburg Netherlands",
+      "Austrian Netherlands"
+    ],
+    "Spanish Netherlands": [
+      "Habsburg Netherlands"
+    ],
+    "Tsardom of Russia": [
+      "Tsardom of Muscovy"
+    ],
+    "Russian Empire": [
+      "Russian Empire"
+    ],
+    "Florence": [
+      "Florence"
+    ],
+    "Tuscany": [
+      "Tuscany",
+      "Florence"
+    ],
+    "Milan": [
+      "Milan",
+      "Milano (Austria)"
+    ],
+    "Parma": [
+      "Parma"
+    ],
+    "Savoy": [
+      "Savoy",
+      "Savoy-Piedmont",
+      "Sardinia-Piedmont",
+      "Kingdom of Sardinia"
+    ],
+    "Mughal Empire": [
+      "Mughal Empire"
+    ],
+    "Safavid Iran": [
+      "Safavid Empire"
+    ],
+    "Tokugawa shogunate": [
+      "Tokugawa shogunate",
+      "Japan"
     ]
   },
   "points": {

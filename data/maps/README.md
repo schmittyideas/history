@@ -14,4 +14,5 @@ World borders for snapshot years, shown at the top of the site's Year view.
 
 **Files:**
 - `world_1000.geojson`, `world_1100.geojson`, `world_1200.geojson`, `world_1300.geojson`, `world_1400.geojson`, `world_1500.geojson`: one snapshot each (1200 to 1500 added 2026-10-11, produced the same way from the same commit). The Year view uses the latest snapshot at or before the year asked for, up to 99 years back.
+- `world_1600.geojson`, `world_1650.geojson`, `world_1700.geojson`, `world_1715.geojson`, `world_1783.geojson`, `world_1800.geojson`, `world_1815.geojson`, `world_1880.geojson`, `world_1900.geojson`: added 2026-10-12, produced the same way from the same commit (the same processing rebuilds `world_1500.geojson` byte for byte). The source's own snapshot years are kept, so maps change at the Peace of Westphalia, Utrecht, the Congress of Vienna and so on. With 1900 the maps cover 1000 to 1999.
 - `index.json`: which years exist, and which map names belong to which realm in the database (`realms.name` → `NAME` in the map). A realm can match several names (Denmark is "Denmark-Norway" in 1000 and "Denmark" in 1100).

@@ -1606,7 +1606,8 @@ function makersSection(a, b, single, label, country) {
 // clickable; data/maps/index.json says which map names belong to which realm.
 
 const MAPS = { index: null, geo: {} };
-const mapIndex = () => MAPS.index ??= fetch("data/maps/index.json").then(r => r.ok ? r.json() : null).catch(() => null);
+// The index changes when snapshots are added, so it is revalidated each visit; snapshot files never change.
+const mapIndex = () => MAPS.index ??= fetch("data/maps/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).catch(() => null);
 const mapGeo = file => MAPS.geo[file] ??= fetch("data/maps/" + file).then(r => r.json()).then(rewind);
 
 // d3 reads a polygon ring's direction to tell inside from outside; rings drawn the other way would
@@ -2365,8 +2366,12 @@ async function mapRealmsAt(pl, y) {
   if (snap == null) return null;
   const geo = await mapGeo(idx.years[snap]), pt = [Number(pl.lng), Number(pl.lat)];
   const hits = geo.features.filter(f => d3.geoContains(f, pt)).map(f => f.properties || {});
-  const realms = [...new Set(hits.flatMap(pr => Object.entries(idx.realms).filter(([, ns]) => ns.includes(pr.NAME) || ns.includes(pr.SUBJECTO)).map(([r]) => r)))];
-  return { snap, realms, names: [...new Set(hits.map(pr => pr.NAME).filter(Boolean))] };
+  // One map name can stand for several of our realms ("United Kingdom" for Great Britain, then the United Kingdom):
+  // keep those that existed in the year, and of those, the ones with a ruler then if any have one.
+  const db = S.db, alive = r => { const i = db.realmInfo[r] || {}; return i.start == null && i.end == null || overlaps(i.start ?? -1e9, i.end, y, y); };
+  const all = [...new Set(hits.flatMap(pr => Object.entries(idx.realms).filter(([, ns]) => ns.includes(pr.NAME) || ns.includes(pr.SUBJECTO)).map(([r]) => r)))].filter(alive);
+  const ruled = all.filter(r => db.titles.some(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y)));
+  return { snap, realms: ruled.length ? ruled : all, names: [...new Set(hits.map(pr => pr.NAME).filter(Boolean))] };
 }
 function partOf(pl) {
   const db = S.db, y = X.year;
