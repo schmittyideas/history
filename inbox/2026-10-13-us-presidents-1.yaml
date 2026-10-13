@@ -1,0 +1,1083 @@
+# US Presidents, batch 1 of 3: George Washington to James Buchanan (presidents 1-15).
+# VERIFIED against English Wikipedia articles read on 2026-10-13 with tools/wiki.py (revision IDs below) and the
+# Wikipedia/Wikidata/Commons APIs:
+#  - Each president's own article (lead, infobox, early life, presidency and death sections) for life dates, places
+#    and term dates. Revisions: Washington 1379814106, J. Adams 1379689199, Jefferson 1379854500, Madison 1379665696,
+#    Monroe 1379665734, J. Q. Adams 1379665486, Jackson 1379665658, Van Buren 1380008751, W. H. Harrison 1379664756,
+#    Tyler 1379766213, Polk 1379665175, Taylor 1379665325, Fillmore 1379664625, Pierce 1379665164, Buchanan 1379664429.
+#  - Each inauguration's own article ("First inauguration of George Washington" etc.) for its date and place.
+#  - Each new place's own article for its coordinates (the article's {{coord}}), kind and founding year.
+#  - Wikidata sitelinks (Wikipedia language editions only), read 2026-10-13.
+#  - Portraits: each article's lead image; every one is marked "Public domain" on its Wikimedia Commons file page.
+# Conventions (shared with batches 2 and 3): type Government; title "President of the United States", realm
+# "United States"; one inauguration event per term, keyed inauguration-of-<person> (second terms -<year>).
+# Prominence (hand-set): 5 for Washington alone (first president; set the precedents of the office); 4 for
+# two-term or otherwise consequential presidents (J. Adams, Jefferson, Madison, Monroe, Jackson, Polk: Polk for
+# the Mexican War and the doubling of US territory); 3 for short, one-term or minor presidencies (J. Q. Adams,
+# Van Buren, W. H. Harrison, Tyler, Taylor, Fillmore, Pierce, Buchanan). Inaugurations 3, Washington's first 5.
+# Notes:
+#  - Calendar: Washington (Old Style 11 February 1731), J. Adams (O.S. 19 October 1735), Jefferson (O.S. 2 April
+#    1743) and Madison (O.S. 5 March 1750) were born under the Julian calendar; the dates here are the New Style
+#    dates their articles lead with. Not recorded as discrepancies: the articles give both and agree.
+#  - Term dates are the infobox dates. Taylor's term began on Sunday 4 March 1849; he was sworn in on 5 March.
+#    Tyler's presidency began on Harrison's death on 4 April 1841; he took the oath on 6 April.
+#  - Monroe's first inauguration was outdoors in front of the Old Brick Capitol (where the Supreme Court building
+#    now stands) and Tyler's was in the lobby of Brown's Indian Queen Hotel; neither building is a place record,
+#    so both events are placed in Washington, D.C. with a note.
+#  - Burials: only the final resting place is recorded, with the year the body was laid there where the article
+#    gives it (Monroe was moved from New York City Marble Cemetery to Hollywood Cemetery in 1858; Polk from Polk Place
+#    to the Tennessee State Capitol grounds in 1893; Taylor from the Congressional Cemetery vault to the family plot,
+#    now Zachary Taylor National Cemetery, in 1850; Harrison from the Congressional Cemetery to North Bend in 1841).
+#    J. Q. Adams's re-interment in the United First Parish Church crypt has no exact year in his article (after
+#    Louisa Adams's death in 1852), so that moment has no year. Temporary resting places are left out.
+#  - Andrew Jackson died at the Hermitage (the Hermitage article; his infobox says Nashville, where it is).
+#  - Shared places added here: white-house, united-states-capitol, federal-hall. arlington-national-cemetery is not
+#    used in this batch (no president from 1 to 15 is buried there).
+#  - Family: only John Adams -> John Quincy Adams falls inside this batch.
+batch:
+  title: "US Presidents, batch 1: George Washington–James Buchanan"
+  requested: "Ty: build out US Presidents"
+  date: 2026-10-13
+
+sources:
+  - {key: wp-united-states, title: "United States (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States"}
+  - {key: wp-george-washington, title: "George Washington (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_Washington"}
+  - {key: wp-john-adams, title: "John Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Adams"}
+  - {key: wp-thomas-jefferson, title: "Thomas Jefferson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Thomas_Jefferson"}
+  - {key: wp-james-madison, title: "James Madison (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Madison"}
+  - {key: wp-james-monroe, title: "James Monroe (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Monroe"}
+  - {key: wp-john-quincy-adams, title: "John Quincy Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Quincy_Adams"}
+  - {key: wp-andrew-jackson, title: "Andrew Jackson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andrew_Jackson"}
+  - {key: wp-martin-van-buren, title: "Martin Van Buren (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martin_Van_Buren"}
+  - {key: wp-william-henry-harrison, title: "William Henry Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Henry_Harrison"}
+  - {key: wp-john-tyler, title: "John Tyler (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Tyler"}
+  - {key: wp-james-k-polk, title: "James K. Polk (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_K._Polk"}
+  - {key: wp-zachary-taylor, title: "Zachary Taylor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zachary_Taylor"}
+  - {key: wp-millard-fillmore, title: "Millard Fillmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Millard_Fillmore"}
+  - {key: wp-franklin-pierce, title: "Franklin Pierce (Wikipedia)", url: "https://en.wikipedia.org/wiki/Franklin_Pierce"}
+  - {key: wp-james-buchanan, title: "James Buchanan (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Buchanan"}
+  # inaugurations
+  - {key: wp-first-inauguration-of-george-washington, title: "First inauguration of George Washington (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_inauguration_of_George_Washington"}
+  - {key: wp-second-inauguration-of-george-washington, title: "Second inauguration of George Washington (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_inauguration_of_George_Washington"}
+  - {key: wp-inauguration-of-john-adams, title: "Inauguration of John Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_John_Adams"}
+  - {key: wp-first-inauguration-of-thomas-jefferson, title: "First inauguration of Thomas Jefferson (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_inauguration_of_Thomas_Jefferson"}
+  - {key: wp-second-inauguration-of-thomas-jefferson, title: "Second inauguration of Thomas Jefferson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_inauguration_of_Thomas_Jefferson"}
+  - {key: wp-first-inauguration-of-james-madison, title: "First inauguration of James Madison (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_inauguration_of_James_Madison"}
+  - {key: wp-second-inauguration-of-james-madison, title: "Second inauguration of James Madison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_inauguration_of_James_Madison"}
+  - {key: wp-first-inauguration-of-james-monroe, title: "First inauguration of James Monroe (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_inauguration_of_James_Monroe"}
+  - {key: wp-second-inauguration-of-james-monroe, title: "Second inauguration of James Monroe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_inauguration_of_James_Monroe"}
+  - {key: wp-inauguration-of-john-quincy-adams, title: "Inauguration of John Quincy Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_John_Quincy_Adams"}
+  - {key: wp-first-inauguration-of-andrew-jackson, title: "First inauguration of Andrew Jackson (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_inauguration_of_Andrew_Jackson"}
+  - {key: wp-second-inauguration-of-andrew-jackson, title: "Second inauguration of Andrew Jackson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_inauguration_of_Andrew_Jackson"}
+  - {key: wp-inauguration-of-martin-van-buren, title: "Inauguration of Martin Van Buren (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_Martin_Van_Buren"}
+  - {key: wp-inauguration-of-william-henry-harrison, title: "Inauguration of William Henry Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_William_Henry_Harrison"}
+  - {key: wp-inauguration-of-john-tyler, title: "Inauguration of John Tyler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_John_Tyler"}
+  - {key: wp-inauguration-of-james-k-polk, title: "Inauguration of James K. Polk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_James_K._Polk"}
+  - {key: wp-inauguration-of-zachary-taylor, title: "Inauguration of Zachary Taylor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_Zachary_Taylor"}
+  - {key: wp-inauguration-of-millard-fillmore, title: "Inauguration of Millard Fillmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_Millard_Fillmore"}
+  - {key: wp-inauguration-of-franklin-pierce, title: "Inauguration of Franklin Pierce (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_Franklin_Pierce"}
+  - {key: wp-inauguration-of-james-buchanan, title: "Inauguration of James Buchanan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inauguration_of_James_Buchanan"}
+  # places
+  - {key: wp-white-house, title: "White House (Wikipedia)", url: "https://en.wikipedia.org/wiki/White_House"}
+  - {key: wp-united-states-capitol, title: "United States Capitol (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States_Capitol"}
+  - {key: wp-federal-hall, title: "Federal Hall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Federal_Hall"}
+  - {key: wp-george-washington-birthplace-national-monument, title: "George Washington Birthplace National Monument (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_Washington_Birthplace_National_Monument"}
+  - {key: wp-mount-vernon, title: "Mount Vernon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mount_Vernon"}
+  - {key: wp-quincy-massachusetts, title: "Quincy, Massachusetts (Wikipedia)", url: "https://en.wikipedia.org/wiki/Quincy,_Massachusetts"}
+  - {key: wp-peacefield, title: "Peacefield (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peacefield"}
+  - {key: wp-united-first-parish-church, title: "United First Parish Church (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_First_Parish_Church"}
+  - {key: wp-shadwell-virginia, title: "Shadwell, Virginia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Shadwell,_Virginia"}
+  - {key: wp-monticello, title: "Monticello (Wikipedia)", url: "https://en.wikipedia.org/wiki/Monticello"}
+  - {key: wp-belle-grove-port-conway, title: "Belle Grove (Port Conway, Virginia) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Belle_Grove_(Port_Conway,_Virginia)"}
+  - {key: wp-montpelier-virginia, title: "Montpelier (Orange, Virginia) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Montpelier_(Orange,_Virginia)"}
+  - {key: wp-monroe-hall-virginia, title: "Monroe Hall, Virginia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Monroe_Hall,_Virginia"}
+  - {key: wp-hollywood-cemetery-richmond, title: "Hollywood Cemetery (Richmond, Virginia) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hollywood_Cemetery_(Richmond,_Virginia)"}
+  - {key: wp-waxhaws, title: "Waxhaws (Wikipedia)", url: "https://en.wikipedia.org/wiki/Waxhaws"}
+  - {key: wp-the-hermitage, title: "The Hermitage (Nashville, Tennessee) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Hermitage_(Nashville,_Tennessee)"}
+  - {key: wp-kinderhook-new-york, title: "Kinderhook, New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kinderhook,_New_York"}
+  - {key: wp-martin-van-buren-national-historic-site, title: "Martin Van Buren National Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martin_Van_Buren_National_Historic_Site"}
+  - {key: wp-reformed-dutch-church-kinderhook, title: "Reformed Dutch Church (Kinderhook, New York) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Reformed_Dutch_Church_(Kinderhook,_New_York)"}
+  - {key: wp-berkeley-plantation, title: "Berkeley Plantation (Wikipedia)", url: "https://en.wikipedia.org/wiki/Berkeley_Plantation"}
+  - {key: wp-william-henry-harrison-tomb, title: "William Henry Harrison Tomb State Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Henry_Harrison_Tomb_State_Memorial"}
+  - {key: wp-greenway-plantation, title: "Greenway Plantation (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greenway_Plantation"}
+  - {key: wp-exchange-hotel-richmond, title: "Exchange Hotel (Richmond, Virginia) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Exchange_Hotel_(Richmond,_Virginia)"}
+  - {key: wp-pineville-north-carolina, title: "Pineville, North Carolina (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pineville,_North_Carolina"}
+  - {key: wp-polk-place, title: "Polk Place (Wikipedia)", url: "https://en.wikipedia.org/wiki/Polk_Place"}
+  - {key: wp-tennessee-state-capitol, title: "Tennessee State Capitol (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tennessee_State_Capitol"}
+  - {key: wp-barboursville-virginia, title: "Barboursville, Virginia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Barboursville,_Virginia"}
+  - {key: wp-zachary-taylor-national-cemetery, title: "Zachary Taylor National Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zachary_Taylor_National_Cemetery"}
+  - {key: wp-moravia-new-york, title: "Moravia, New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Moravia,_New_York"}
+  - {key: wp-buffalo-new-york, title: "Buffalo, New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Buffalo,_New_York"}
+  - {key: wp-forest-lawn-cemetery-buffalo, title: "Forest Lawn Cemetery (Buffalo, New York) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Forest_Lawn_Cemetery_(Buffalo,_New_York)"}
+  - {key: wp-hillsborough-new-hampshire, title: "Hillsborough, New Hampshire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hillsborough,_New_Hampshire"}
+  - {key: wp-concord-new-hampshire, title: "Concord, New Hampshire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Concord,_New_Hampshire"}
+  - {key: wp-old-north-cemetery-concord, title: "Old North Cemetery (Concord, New Hampshire) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Old_North_Cemetery_(Concord,_New_Hampshire)"}
+  - {key: wp-cove-gap-pennsylvania, title: "Cove Gap, Pennsylvania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cove_Gap,_Pennsylvania"}
+  - {key: wp-wheatland, title: "Wheatland (James Buchanan House) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wheatland_(James_Buchanan_House)"}
+  - {key: wp-woodward-hill-cemetery, title: "Woodward Hill Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Woodward_Hill_Cemetery"}
+
+realms:
+  - name: United States
+    region: Americas
+    country: United States
+    from: 1776
+    countries:
+      - {country: United States}
+    note: "From the Declaration of Independence, adopted by the Second Continental Congress on July 4, 1776."
+    sources: [wp-united-states]
+
+places:
+  # shared with batches 2 and 3
+  - key: white-house
+    name: White House
+    kind: presidential residence
+    city: Washington, D.C.
+    region: District of Columbia
+    country: United States
+    lat: 38.8978
+    lng: -77.0364
+    founded: 1792
+    architect: James Hoban
+    visitable: true
+    note: "The president's official residence and workplace, at 1600 Pennsylvania Avenue NW. Its cornerstone was laid on October 13, 1792; every president since John Adams (1800) has lived there."
+    sources: [wp-white-house]
+  - key: united-states-capitol
+    name: United States Capitol
+    kind: capitol
+    city: Washington, D.C.
+    region: District of Columbia
+    country: United States
+    lat: 38.8897
+    lng: -77.0089
+    founded: 1793
+    visitable: true
+    note: "Seat of the United States Congress, on Capitol Hill. Washington laid the cornerstone on September 18, 1793; the first sections were finished in 1800. Most inaugurations from 1801 on were held here, inside or on the East Portico; the West Front has been used since 1981."
+    sources: [wp-united-states-capitol]
+  - key: federal-hall
+    name: Federal Hall
+    kind: capitol
+    city: New York City
+    region: New York
+    country: United States
+    lat: 40.7072
+    lng: -74.0103
+    founded: 1703
+    visitable: true
+    visit_site: "Federal Hall National Memorial (the 1842 New York Custom House on the site), run by the National Park Service"
+    note: "The first capitol of the United States under the Constitution, on Wall Street, where the First Congress met and Washington was first inaugurated (April 30, 1789). The old hall stood from 1703 until it was demolished in 1812; the building on the site today was completed in 1842."
+    sources: [wp-federal-hall]
+  # Washington
+  - key: george-washington-birthplace
+    name: George Washington Birthplace National Monument
+    historical_name: Popes Creek
+    kind: historic site
+    region: Virginia
+    country: United States
+    lat: 38.1856
+    lng: -76.9164
+    visitable: true
+    note: "At the confluence of Popes Creek and the Potomac River in Westmoreland County, where George Washington was born on February 22, 1732."
+    sources: [wp-george-washington-birthplace-national-monument]
+  - key: mount-vernon
+    name: Mount Vernon
+    kind: plantation house
+    region: Virginia
+    country: United States
+    lat: 38.708
+    lng: -77.0861
+    visitable: true
+    note: "George and Martha Washington's estate on the Potomac in Fairfax County, about 15 miles (25 km) south of Washington, D.C. Washington died here and is buried in the family vault."
+    sources: [wp-mount-vernon]
+  # Adamses
+  - key: quincy-massachusetts
+    name: Quincy
+    historical_name: Braintree
+    kind: city
+    region: Massachusetts
+    country: United States
+    lat: 42.25
+    lng: -71.0
+    note: "City in Norfolk County, south of Boston. John Adams and John Quincy Adams were born in the part of Braintree that is now Quincy."
+    sources: [wp-quincy-massachusetts, wp-john-adams]
+  - key: peacefield
+    name: Peacefield
+    kind: house
+    city: Quincy
+    region: Massachusetts
+    country: United States
+    lat: 42.2561
+    lng: -71.0109
+    founded: 1731
+    visitable: true
+    visit_site: "Adams National Historical Park"
+    note: "Also called Old House: home of John and Abigail Adams and later of John Quincy and Louisa Adams. John Adams died here on July 4, 1826."
+    sources: [wp-peacefield, wp-john-adams]
+  - key: united-first-parish-church
+    name: United First Parish Church
+    kind: church
+    city: Quincy
+    region: Massachusetts
+    country: United States
+    lat: 42.2511
+    lng: -71.0031
+    founded: 1828
+    architect: Alexander Parris
+    visitable: true
+    note: "The \"Church of the Presidents\": the 1828 building (congregation from 1639) holds the crypt of John and Abigail Adams and John Quincy and Louisa Adams."
+    sources: [wp-united-first-parish-church]
+  # Jefferson
+  - key: shadwell-virginia
+    name: Shadwell
+    historical_name: Shadwell Plantation
+    kind: area
+    region: Virginia
+    country: United States
+    lat: 38.0124
+    lng: -78.4178
+    note: "By the Rivanna River near Charlottesville, Albemarle County: the site of the Shadwell Plantation where Thomas Jefferson was born, marked by a Virginia historical marker."
+    sources: [wp-shadwell-virginia, wp-thomas-jefferson]
+  - key: monticello
+    name: Monticello
+    kind: plantation house
+    city: Charlottesville
+    region: Virginia
+    country: United States
+    lat: 38.0103
+    lng: -78.4523
+    built_by: Thomas Jefferson
+    visitable: true
+    note: "Thomas Jefferson's home and plantation, which he designed himself, just outside Charlottesville. He died here and is buried here."
+    sources: [wp-monticello]
+  # Madison
+  - key: belle-grove-port-conway
+    name: Belle Grove (Port Conway)
+    kind: plantation
+    region: Virginia
+    country: United States
+    lat: 38.1793
+    lng: -77.1885
+    visitable: true
+    note: "Plantation at Port Conway, King George County, where James Madison was born on March 16, 1751, in an earlier house that no longer stands; the present house was built in 1790."
+    sources: [wp-belle-grove-port-conway, wp-james-madison]
+  - key: montpelier-virginia
+    name: Montpelier
+    kind: plantation house
+    region: Virginia
+    country: United States
+    lat: 38.2197
+    lng: -78.1694
+    founded: 1764
+    founded_estimated: true
+    visitable: true
+    note: "James and Dolley Madison's plantation in Orange County, Virginia. Madison died here in 1836 and is buried in the family cemetery."
+    sources: [wp-montpelier-virginia, wp-james-madison]
+  # Monroe
+  - key: monroe-hall-virginia
+    name: Monroe Hall
+    kind: area
+    region: Virginia
+    country: United States
+    lat: 38.2397
+    lng: -76.9922
+    note: "Unincorporated community in Westmoreland County; James Monroe's birthplace site there is marked with an obelisk, a historical marker and a bronze plaque."
+    sources: [wp-monroe-hall-virginia, wp-james-monroe]
+  - key: hollywood-cemetery-richmond
+    name: Hollywood Cemetery
+    kind: cemetery
+    city: Richmond
+    region: Virginia
+    country: United States
+    lat: 37.5358
+    lng: -77.4569
+    founded: 1847
+    architect: John Notman
+    visitable: true
+    note: "Rural cemetery overlooking the James River, burial place of Presidents James Monroe (re-interred here in 1858) and John Tyler."
+    sources: [wp-hollywood-cemetery-richmond]
+  # Jackson
+  - key: waxhaws
+    name: The Waxhaws
+    kind: area
+    region: South Carolina
+    country: United States
+    lat: 34.7833
+    lng: -80.85
+    note: "A loosely defined area on the border of North and South Carolina, its core in Lancaster County, South Carolina, where Andrew Jackson was born. Which side of the border is disputed (see discrepancies)."
+    sources: [wp-waxhaws, wp-andrew-jackson]
+  - key: the-hermitage
+    name: The Hermitage
+    kind: plantation house
+    city: Nashville
+    region: Tennessee
+    country: United States
+    lat: 36.215
+    lng: -86.613
+    visitable: true
+    note: "Andrew Jackson's plantation, 10 miles (16 km) east of downtown Nashville, owned by him from 1804 until his death there in 1845; he is buried here beside his wife Rachel."
+    sources: [wp-the-hermitage, wp-andrew-jackson]
+  # Van Buren
+  - key: kinderhook-new-york
+    name: Kinderhook
+    kind: town
+    region: New York
+    country: United States
+    lat: 42.4128
+    lng: -73.6814
+    note: "Town in Columbia County, New York, where Martin Van Buren was born and to which he retired."
+    sources: [wp-kinderhook-new-york]
+  - key: lindenwald
+    name: Lindenwald
+    kind: house
+    city: Kinderhook
+    region: New York
+    country: United States
+    lat: 42.3697
+    lng: -73.7042
+    founded: 1797
+    visitable: true
+    visit_site: "Martin Van Buren National Historic Site (National Park Service)"
+    note: "Martin Van Buren's estate a mile south of Kinderhook village, bought in 1839; his home from 1841 until his death there in 1862."
+    sources: [wp-martin-van-buren-national-historic-site, wp-martin-van-buren]
+  - key: kinderhook-reformed-church-cemetery
+    name: Kinderhook Reformed Church Cemetery
+    kind: cemetery
+    city: Kinderhook
+    region: New York
+    country: United States
+    lat: 42.3933
+    lng: -73.7006
+    visitable: true
+    note: "Cemetery of the Kinderhook Reformed Dutch Church (organised 1712), where Martin Van Buren is buried. The church article places the cemetery a mile north-west of the church; the coordinates are the article's and may be the church's."
+    sources: [wp-reformed-dutch-church-kinderhook, wp-martin-van-buren]
+  # W. H. Harrison
+  - key: berkeley-plantation
+    name: Berkeley Plantation
+    kind: plantation
+    region: Virginia
+    country: United States
+    lat: 37.3217
+    lng: -77.1817
+    visitable: true
+    note: "Harrison family plantation on the James River in Charles City County; birthplace of William Henry Harrison (1773)."
+    sources: [wp-berkeley-plantation]
+  - key: william-henry-harrison-tomb
+    name: William Henry Harrison Tomb State Memorial
+    kind: tomb
+    city: North Bend
+    region: Ohio
+    country: United States
+    lat: 39.1517
+    lng: -84.7522
+    founded: 1841
+    visitable: true
+    note: "Tomb on Mount Nebo in North Bend, Ohio, where Harrison was buried on July 7, 1841, with his wife Anna and son John Scott Harrison."
+    sources: [wp-william-henry-harrison-tomb, wp-william-henry-harrison]
+  # Tyler
+  - key: greenway-plantation
+    name: Greenway Plantation
+    kind: plantation house
+    region: Virginia
+    country: United States
+    lat: 37.3542
+    lng: -77.1017
+    visitable: false
+    note: "Colonial plantation house just west of Charles City Courthouse, Charles City County; John Tyler's birthplace. A private home."
+    sources: [wp-greenway-plantation, wp-john-tyler]
+  - key: exchange-hotel-richmond
+    name: Exchange Hotel (and Ballard House)
+    kind: hotel
+    city: Richmond
+    region: Virginia
+    country: United States
+    lat: 37.5358
+    lng: -77.4311
+    founded: 1841
+    ended: 1901
+    note: "Gothic revival hotel completed in 1841, joined by a footbridge to the Ballard House across the street (1855); John Tyler died here in 1862. Closed in 1896 and demolished 1900-1901."
+    sources: [wp-exchange-hotel-richmond]
+  # Polk
+  - key: pineville-north-carolina
+    name: Pineville
+    kind: town
+    region: North Carolina
+    country: United States
+    lat: 35.0864
+    lng: -80.8914
+    note: "Town in Mecklenburg County, in the Waxhaws region; James K. Polk was born in a log cabin here."
+    sources: [wp-pineville-north-carolina, wp-james-k-polk]
+  - key: polk-place
+    name: Polk Place
+    kind: house
+    city: Nashville
+    region: Tennessee
+    country: United States
+    lat: 36.1631
+    lng: -86.7838
+    ended: 1901
+    note: "James and Sarah Polk's home on Vine Street, built for Felix Grundy (1815-1820) and bought by Polk in 1847; he died here in 1849. Demolished in 1901."
+    sources: [wp-polk-place, wp-james-k-polk]
+  - key: tennessee-state-capitol
+    name: Tennessee State Capitol
+    kind: capitol
+    city: Nashville
+    region: Tennessee
+    country: United States
+    lat: 36.1658
+    lng: -86.7842
+    founded: 1845
+    architect: William Strickland
+    visitable: true
+    note: "Seat of Tennessee's government, built 1845-1859. James and Sarah Polk were re-interred in a tomb on its grounds in 1893."
+    sources: [wp-tennessee-state-capitol, wp-james-k-polk]
+  # Taylor
+  - key: barboursville-virginia
+    name: Barboursville
+    kind: area
+    region: Virginia
+    country: United States
+    lat: 38.1708
+    lng: -78.2817
+    note: "Community in Orange County, Virginia, the birthplace of Zachary Taylor."
+    sources: [wp-barboursville-virginia, wp-zachary-taylor]
+  - key: zachary-taylor-national-cemetery
+    name: Zachary Taylor National Cemetery
+    kind: cemetery
+    city: Louisville
+    region: Kentucky
+    country: United States
+    lat: 38.2781
+    lng: -85.6436
+    visitable: true
+    note: "National cemetery on the old Taylor family plantation (Springfield) in Louisville, where Zachary Taylor and his wife Margaret are buried; in the Taylor mausoleum since 1926."
+    sources: [wp-zachary-taylor-national-cemetery, wp-zachary-taylor]
+  # Fillmore
+  - key: moravia-new-york
+    name: Moravia
+    kind: town
+    region: New York
+    country: United States
+    lat: 42.7133
+    lng: -76.4217
+    note: "Town in Cayuga County in the Finger Lakes region; Millard Fillmore was born in a log cabin in what is now Moravia."
+    sources: [wp-moravia-new-york, wp-millard-fillmore]
+  - key: buffalo-new-york
+    name: Buffalo
+    kind: city
+    region: New York
+    country: United States
+    lat: 42.8864
+    lng: -78.8781
+    note: "City on Lake Erie at the head of the Niagara River, Erie County; Millard Fillmore's home after his presidency."
+    sources: [wp-buffalo-new-york]
+  - key: forest-lawn-cemetery-buffalo
+    name: Forest Lawn Cemetery (Buffalo)
+    kind: cemetery
+    city: Buffalo
+    region: New York
+    country: United States
+    lat: 42.9308
+    lng: -78.8608
+    founded: 1849
+    visitable: true
+    note: "Rural cemetery at 1411 Delaware Avenue, founded by Charles E. Clarke; burial place of Millard and Abigail Fillmore."
+    sources: [wp-forest-lawn-cemetery-buffalo]
+  # Pierce
+  - key: hillsborough-new-hampshire
+    name: Hillsborough
+    kind: town
+    region: New Hampshire
+    country: United States
+    lat: 43.1489
+    lng: -71.9422
+    note: "Town in Hillsborough County; Franklin Pierce was born in a log cabin here."
+    sources: [wp-hillsborough-new-hampshire, wp-franklin-pierce]
+  - key: concord-new-hampshire
+    name: Concord
+    kind: city
+    region: New Hampshire
+    country: United States
+    lat: 43.2067
+    lng: -71.538
+    note: "Capital of New Hampshire; Franklin Pierce died here in 1869."
+    sources: [wp-concord-new-hampshire]
+  - key: old-north-cemetery-concord
+    name: Old North Cemetery
+    kind: cemetery
+    city: Concord
+    region: New Hampshire
+    country: United States
+    lat: 43.2144
+    lng: -71.545
+    founded: 1730
+    visitable: true
+    note: "Concord's oldest cemetery, on North State Street; Franklin Pierce lies here beside his wife Jane and two of their sons."
+    sources: [wp-old-north-cemetery-concord]
+  # Buchanan
+  - key: cove-gap-pennsylvania
+    name: Cove Gap
+    kind: area
+    region: Pennsylvania
+    country: United States
+    lat: 39.8658
+    lng: -77.9425
+    note: "Community in Peters Township, Franklin County, near Buchanan's Birthplace State Park; James Buchanan was born in a log cabin at the Stony Batter farm near here."
+    sources: [wp-cove-gap-pennsylvania, wp-james-buchanan]
+  - key: wheatland
+    name: Wheatland
+    kind: house
+    city: Lancaster
+    region: Pennsylvania
+    country: United States
+    lat: 40.0431
+    lng: -76.3307
+    founded: 1828
+    visitable: true
+    note: "Federal-style house in Lancaster Township, outside Lancaster, built in 1828; James Buchanan's home, where he died in 1868."
+    sources: [wp-wheatland, wp-james-buchanan]
+  - key: woodward-hill-cemetery
+    name: Woodward Hill Cemetery
+    kind: cemetery
+    city: Lancaster
+    region: Pennsylvania
+    country: United States
+    lat: 40.0261
+    lng: -76.3017
+    founded: 1849
+    visitable: true
+    note: "Rural cemetery in Lancaster, begun by Trinity Lutheran Church in 1849; James Buchanan is buried here."
+    sources: [wp-woodward-hill-cemetery, wp-james-buchanan]
+
+people:
+  - key: george-washington
+    name: George Washington
+    type: Government
+    roles: [president, military officer, surveyor, planter]
+    born: 1732-02-22
+    died: 1799-12-14
+    prominence: 5
+    sitelinks: 218
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg/500px-Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "First president of the United States (1789-1797) and commander of the Continental Army. Born February 22, 1732 (New Style; February 11, 1731, Old Style)."
+    sources: [wp-george-washington]
+  - key: john-adams
+    name: John Adams
+    type: Government
+    roles: [president, lawyer, educator]
+    born: 1735-10-30
+    died: 1826-07-04
+    prominence: 4
+    sitelinks: 154
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/75/John_Adams_Portrait.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/John_Adams_Portrait.jpg/500px-John_Adams_Portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:John_Adams_Portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Second president (1797-1801). Born October 30, 1735 (New Style; October 19, Old Style); died on July 4, 1826, the 50th anniversary of the Declaration of Independence, the same day as Jefferson."
+    sources: [wp-john-adams]
+  - key: thomas-jefferson
+    name: Thomas Jefferson
+    type: Government
+    roles: [president, lawyer]
+    born: 1743-04-13
+    died: 1826-07-04
+    prominence: 4
+    sitelinks: 166
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg/500px-Official_Presidential_portrait_of_Thomas_Jefferson_%28by_Rembrandt_Peale%2C_1800%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Official_Presidential_portrait_of_Thomas_Jefferson_(by_Rembrandt_Peale,_1800).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Third president (1801-1809) and author of the Declaration of Independence. Born April 13, 1743 (April 2, Old Style)."
+    sources: [wp-thomas-jefferson]
+  - key: james-madison
+    name: James Madison
+    type: Government
+    roles: [president]
+    born: 1751-03-16
+    died: 1836-06-28
+    prominence: 4
+    sitelinks: 145
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/1d/James_Madison.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/James_Madison.jpg/500px-James_Madison.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:James_Madison.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Fourth president (1809-1817). Born March 16, 1751 (March 5, 1750, Old Style)."
+    sources: [wp-james-madison]
+  - key: james-monroe
+    name: James Monroe
+    type: Government
+    roles: [president, lawyer]
+    born: 1758-04-28
+    died: 1831-07-04
+    prominence: 4
+    sitelinks: 142
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5e/James_Monroe_White_House_portrait_1819_%28cropped%29%282%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/James_Monroe_White_House_portrait_1819_%28cropped%29%282%29.jpg/500px-James_Monroe_White_House_portrait_1819_%28cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:James_Monroe_White_House_portrait_1819_(cropped)(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Fifth president (1817-1825). Died in New York City on July 4, 1831; first buried in the New York City Marble Cemetery, re-interred in Richmond in 1858."
+    sources: [wp-james-monroe]
+  - key: john-quincy-adams
+    name: John Quincy Adams
+    type: Government
+    roles: [president, lawyer, professor]
+    born: 1767-07-11
+    died: 1848-02-23
+    prominence: 3
+    sitelinks: 140
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3a/JQA_Photo_Crop_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/JQA_Photo_Crop_%28cropped%29.jpg/500px-JQA_Photo_Crop_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:JQA_Photo_Crop_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Sixth president (1825-1829), son of John Adams. Collapsed in the House chamber and died two days later in the Speaker's Room of the Capitol, February 23, 1848."
+    sources: [wp-john-quincy-adams]
+  - key: andrew-jackson
+    name: Andrew Jackson
+    type: Government
+    roles: [president, lawyer, general]
+    born: 1767-03-15
+    died: 1845-06-08
+    prominence: 4
+    sitelinks: 141
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2a/Andrew_jackson_head_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Andrew_jackson_head_%28cropped%29.jpg/500px-Andrew_jackson_head_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Andrew_jackson_head_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Seventh president (1829-1837)."
+    sources: [wp-andrew-jackson]
+  - key: martin-van-buren
+    name: Martin Van Buren
+    type: Government
+    roles: [president, lawyer]
+    born: 1782-12-05
+    died: 1862-07-24
+    prominence: 3
+    sitelinks: 135
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/72/Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg/500px-Martin_Van_Buren_by_Mathew_Brady_c1855-58-%284%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Martin_Van_Buren_by_Mathew_Brady_c1855-58-(4).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Eighth president (1837-1841)."
+    sources: [wp-martin-van-buren]
+  - key: william-henry-harrison
+    name: William Henry Harrison
+    type: Government
+    roles: [president, soldier]
+    born: 1773-02-09
+    died: 1841-04-04
+    prominence: 3
+    sitelinks: 132
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2c/William_Henry_Harrison_crop.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/William_Henry_Harrison_crop.jpg/500px-William_Henry_Harrison_crop.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:William_Henry_Harrison_crop.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Ninth president (March 4 - April 4, 1841): died 31 days into his term, the first president to die in office."
+    sources: [wp-william-henry-harrison]
+  - key: john-tyler
+    name: John Tyler
+    type: Government
+    roles: [president, lawyer]
+    born: 1790-03-29
+    died: 1862-01-18
+    prominence: 3
+    sitelinks: 133
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/fb/Tyler%2C_John%2C_by_Healy_%281842%2C_NPG_2019_13%29_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tyler%2C_John%2C_by_Healy_%281842%2C_NPG_2019_13%29_%28cropped%29.jpg/500px-Tyler%2C_John%2C_by_Healy_%281842%2C_NPG_2019_13%29_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Tyler,_John,_by_Healy_(1842,_NPG_2019_13)_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Tenth president (1841-1845), the first vice president to succeed on a president's death (the Tyler Precedent)."
+    sources: [wp-john-tyler]
+  - key: james-k-polk
+    name: James K. Polk
+    type: Government
+    roles: [president, lawyer, planter]
+    born: 1795-11-02
+    died: 1849-06-15
+    prominence: 4
+    sitelinks: 133
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f3/James_K._Polk_restored_%283x4_cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/James_K._Polk_restored_%283x4_cropped%29.jpg/500px-James_K._Polk_restored_%283x4_cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:James_K._Polk_restored_(3x4_cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Eleventh president (1845-1849). Died at Polk Place three months after leaving office; buried at Nashville City Cemetery, moved to Polk Place in 1850 and to the Tennessee State Capitol grounds in 1893."
+    sources: [wp-james-k-polk]
+  - key: zachary-taylor
+    name: Zachary Taylor
+    type: Government
+    roles: [president, military officer]
+    born: 1784-11-24
+    died: 1850-07-09
+    prominence: 3
+    sitelinks: 132
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29_%282%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29_%282%29.jpg/500px-Zachary_Taylor_restored_and_cropped_%283.5x4.5_cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Zachary_Taylor_restored_and_cropped_(3.5x4.5_cropped)_(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Twelfth president (1849-1850); died in office at the White House."
+    sources: [wp-zachary-taylor]
+  - key: millard-fillmore
+    name: Millard Fillmore
+    type: Government
+    roles: [president, lawyer]
+    born: 1800-01-07
+    died: 1874-03-08
+    prominence: 3
+    sitelinks: 130
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/33/Millard_Fillmore_Better_Crop_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Millard_Fillmore_Better_Crop_%28cropped%29.jpg/500px-Millard_Fillmore_Better_Crop_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Millard_Fillmore_Better_Crop_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Thirteenth president (1850-1853), succeeding on Zachary Taylor's death."
+    sources: [wp-millard-fillmore]
+  - key: franklin-pierce
+    name: Franklin Pierce
+    type: Government
+    roles: [president, lawyer]
+    born: 1804-11-23
+    died: 1869-10-08
+    prominence: 3
+    sitelinks: 129
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg/500px-Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_%28cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Mathew_Brady_-_Franklin_Pierce_-_alternate_crop_(cropped)(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Fourteenth president (1853-1857)."
+    sources: [wp-franklin-pierce]
+  - key: james-buchanan
+    name: James Buchanan
+    type: Government
+    roles: [president, lawyer]
+    born: 1791-04-23
+    died: 1868-06-01
+    prominence: 3
+    sitelinks: 133
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/21/James_Buchanan_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/James_Buchanan_%28cropped%29.jpg/500px-James_Buchanan_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:James_Buchanan_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "Fifteenth president (1857-1861)."
+    sources: [wp-james-buchanan]
+
+titles:
+  - {person: george-washington, title: President of the United States, realm: United States, from: 1789-04-30, to: 1797-03-04, sources: [wp-george-washington],
+     note: "The first presidential term formally began on March 4, 1789; Washington was inaugurated on April 30 (see discrepancies)."}
+  - {person: john-adams, title: President of the United States, realm: United States, from: 1797-03-04, to: 1801-03-04, sources: [wp-john-adams]}
+  - {person: thomas-jefferson, title: President of the United States, realm: United States, from: 1801-03-04, to: 1809-03-04, sources: [wp-thomas-jefferson]}
+  - {person: james-madison, title: President of the United States, realm: United States, from: 1809-03-04, to: 1817-03-04, sources: [wp-james-madison]}
+  - {person: james-monroe, title: President of the United States, realm: United States, from: 1817-03-04, to: 1825-03-04, sources: [wp-james-monroe]}
+  - {person: john-quincy-adams, title: President of the United States, realm: United States, from: 1825-03-04, to: 1829-03-04, sources: [wp-john-quincy-adams]}
+  - {person: andrew-jackson, title: President of the United States, realm: United States, from: 1829-03-04, to: 1837-03-04, sources: [wp-andrew-jackson]}
+  - {person: martin-van-buren, title: President of the United States, realm: United States, from: 1837-03-04, to: 1841-03-04, sources: [wp-martin-van-buren]}
+  - {person: william-henry-harrison, title: President of the United States, realm: United States, from: 1841-03-04, to: 1841-04-04, sources: [wp-william-henry-harrison], note: "Died in office."}
+  - {person: john-tyler, title: President of the United States, realm: United States, from: 1841-04-04, to: 1845-03-04, sources: [wp-john-tyler, wp-inauguration-of-john-tyler],
+     note: "Succeeded on Harrison's death on April 4, 1841; took the oath on April 6."}
+  - {person: james-k-polk, title: President of the United States, realm: United States, from: 1845-03-04, to: 1849-03-04, sources: [wp-james-k-polk]}
+  - {person: zachary-taylor, title: President of the United States, realm: United States, from: 1849-03-04, to: 1850-07-09, sources: [wp-zachary-taylor],
+     note: "His term began on Sunday, March 4, 1849; he was sworn in the next day. Died in office."}
+  - {person: millard-fillmore, title: President of the United States, realm: United States, from: 1850-07-09, to: 1853-03-04, sources: [wp-millard-fillmore],
+     note: "Succeeded on Taylor's death on July 9, 1850; took the oath on July 10."}
+  - {person: franklin-pierce, title: President of the United States, realm: United States, from: 1853-03-04, to: 1857-03-04, sources: [wp-franklin-pierce]}
+  - {person: james-buchanan, title: President of the United States, realm: United States, from: 1857-03-04, to: 1861-03-04, sources: [wp-james-buchanan]}
+
+events:
+  - key: inauguration-of-george-washington
+    name: Inauguration of George Washington
+    type: Inauguration
+    date: 1789-04-30
+    place: federal-hall
+    people: [{person: george-washington, role: inaugurated}]
+    prominence: 5
+    note: "The first presidential inauguration: Robert Livingston, Chancellor of New York, administered the oath on the balcony of Federal Hall, New York City, then the capital."
+    sources: [wp-first-inauguration-of-george-washington, wp-george-washington]
+  - key: inauguration-of-george-washington-1793
+    name: Second inauguration of George Washington
+    type: Inauguration
+    date: 1793-03-04
+    place: philadelphia
+    people: [{person: george-washington, role: inaugurated}]
+    prominence: 3
+    note: "In the Senate Chamber of Congress Hall, Philadelphia; oath by Associate Justice William Cushing."
+    sources: [wp-second-inauguration-of-george-washington, wp-george-washington]
+  - key: inauguration-of-john-adams
+    name: Inauguration of John Adams
+    type: Inauguration
+    date: 1797-03-04
+    place: philadelphia
+    people: [{person: john-adams, role: inaugurated}]
+    prominence: 3
+    note: "In the House of Representatives Chamber of Congress Hall, Philadelphia; the first oath given by a Chief Justice (Oliver Ellsworth)."
+    sources: [wp-inauguration-of-john-adams]
+  - key: inauguration-of-thomas-jefferson
+    name: Inauguration of Thomas Jefferson
+    type: Inauguration
+    date: 1801-03-04
+    place: united-states-capitol
+    people: [{person: thomas-jefferson, role: inaugurated}]
+    prominence: 3
+    note: "The first inauguration in Washington, D.C., in the Senate chamber of the new Capitol; oath by Chief Justice John Marshall."
+    sources: [wp-first-inauguration-of-thomas-jefferson, wp-thomas-jefferson]
+  - key: inauguration-of-thomas-jefferson-1805
+    name: Second inauguration of Thomas Jefferson
+    type: Inauguration
+    date: 1805-03-04
+    place: united-states-capitol
+    people: [{person: thomas-jefferson, role: inaugurated}]
+    prominence: 3
+    note: "In the Senate Chamber of the Capitol."
+    sources: [wp-second-inauguration-of-thomas-jefferson]
+  - key: inauguration-of-james-madison
+    name: Inauguration of James Madison
+    type: Inauguration
+    date: 1809-03-04
+    place: united-states-capitol
+    people: [{person: james-madison, role: inaugurated}]
+    prominence: 3
+    note: "In the House chamber of the Capitol; followed by the first official inaugural ball, at Long's Hotel."
+    sources: [wp-first-inauguration-of-james-madison, wp-james-madison]
+  - key: inauguration-of-james-madison-1813
+    name: Second inauguration of James Madison
+    type: Inauguration
+    date: 1813-03-04
+    place: united-states-capitol
+    people: [{person: james-madison, role: inaugurated}]
+    prominence: 3
+    sources: [wp-second-inauguration-of-james-madison]
+  - key: inauguration-of-james-monroe
+    name: Inauguration of James Monroe
+    type: Inauguration
+    date: 1817-03-04
+    place: washington-dc
+    people: [{person: james-monroe, role: inaugurated}]
+    prominence: 3
+    note: "The first held outdoors, on a platform in front of the Old Brick Capitol (the temporary Capitol after the British burned the Capitol in 1814), where the Supreme Court building now stands."
+    sources: [wp-first-inauguration-of-james-monroe, wp-james-monroe]
+  - key: inauguration-of-james-monroe-1821
+    name: Second inauguration of James Monroe
+    type: Inauguration
+    date: 1821-03-05
+    place: united-states-capitol
+    people: [{person: james-monroe, role: inaugurated}]
+    prominence: 3
+    note: "In the House chamber of the Capitol; moved to Monday, March 5, because March 4, 1821, was a Sunday."
+    sources: [wp-second-inauguration-of-james-monroe]
+  - key: inauguration-of-john-quincy-adams
+    name: Inauguration of John Quincy Adams
+    type: Inauguration
+    date: 1825-03-04
+    place: united-states-capitol
+    people: [{person: john-quincy-adams, role: inaugurated}]
+    prominence: 3
+    note: "In the House chamber of the Capitol; Adams swore on a book of law rather than a Bible."
+    sources: [wp-inauguration-of-john-quincy-adams, wp-john-quincy-adams]
+  - key: inauguration-of-andrew-jackson
+    name: Inauguration of Andrew Jackson
+    type: Inauguration
+    date: 1829-03-04
+    place: united-states-capitol
+    people: [{person: andrew-jackson, role: inaugurated}]
+    prominence: 3
+    note: "The first held on the East Portico of the Capitol; the crowd later overran the White House reception."
+    sources: [wp-first-inauguration-of-andrew-jackson, wp-andrew-jackson]
+  - key: inauguration-of-andrew-jackson-1833
+    name: Second inauguration of Andrew Jackson
+    type: Inauguration
+    date: 1833-03-04
+    place: united-states-capitol
+    people: [{person: andrew-jackson, role: inaugurated}]
+    prominence: 3
+    note: "In the House Chamber of the Capitol, because of Jackson's poor health; the last of John Marshall's nine presidential oaths."
+    sources: [wp-second-inauguration-of-andrew-jackson]
+  - key: inauguration-of-martin-van-buren
+    name: Inauguration of Martin Van Buren
+    type: Inauguration
+    date: 1837-03-04
+    place: united-states-capitol
+    people: [{person: martin-van-buren, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol; the first time the outgoing and incoming presidents rode to the Capitol together."
+    sources: [wp-inauguration-of-martin-van-buren, wp-martin-van-buren]
+  - key: inauguration-of-william-henry-harrison
+    name: Inauguration of William Henry Harrison
+    type: Inauguration
+    date: 1841-03-04
+    place: united-states-capitol
+    people: [{person: william-henry-harrison, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol, on a cold, wet day; Harrison died a month later."
+    sources: [wp-inauguration-of-william-henry-harrison, wp-william-henry-harrison]
+  - key: inauguration-of-john-tyler
+    name: Inauguration of John Tyler
+    type: Inauguration
+    date: 1841-04-06
+    place: washington-dc
+    people: [{person: john-tyler, role: inaugurated}]
+    prominence: 3
+    note: "The first extraordinary (unscheduled) inauguration, on a president's death: Chief Judge William Cranch gave the oath in the lobby of Brown's Indian Queen Hotel, Washington."
+    sources: [wp-inauguration-of-john-tyler, wp-william-henry-harrison]
+  - key: inauguration-of-james-k-polk
+    name: Inauguration of James K. Polk
+    type: Inauguration
+    date: 1845-03-04
+    place: united-states-capitol
+    people: [{person: james-k-polk, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol; the first inauguration reported by telegraph."
+    sources: [wp-inauguration-of-james-k-polk, wp-james-k-polk]
+  - key: inauguration-of-zachary-taylor
+    name: Inauguration of Zachary Taylor
+    type: Inauguration
+    date: 1849-03-05
+    place: united-states-capitol
+    people: [{person: zachary-taylor, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol, on Monday, March 5, because March 4 was a Sunday."
+    sources: [wp-inauguration-of-zachary-taylor, wp-zachary-taylor]
+  - key: inauguration-of-millard-fillmore
+    name: Inauguration of Millard Fillmore
+    type: Inauguration
+    date: 1850-07-10
+    place: united-states-capitol
+    people: [{person: millard-fillmore, role: inaugurated}]
+    prominence: 3
+    note: "In the House chamber of the Capitol, the day after Taylor's death; oath by William Cranch, as for Tyler."
+    sources: [wp-inauguration-of-millard-fillmore, wp-millard-fillmore]
+  - key: inauguration-of-franklin-pierce
+    name: Inauguration of Franklin Pierce
+    type: Inauguration
+    date: 1853-03-04
+    place: united-states-capitol
+    people: [{person: franklin-pierce, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol; Pierce affirmed the oath rather than swearing it, and gave his address from memory."
+    sources: [wp-inauguration-of-franklin-pierce]
+  - key: inauguration-of-james-buchanan
+    name: Inauguration of James Buchanan
+    type: Inauguration
+    date: 1857-03-04
+    place: united-states-capitol
+    people: [{person: james-buchanan, role: inaugurated}]
+    prominence: 3
+    note: "On the East Portico of the Capitol; oath by Chief Justice Roger B. Taney, two days before the Dred Scott decision."
+    sources: [wp-inauguration-of-james-buchanan, wp-james-buchanan]
+
+links:
+  - {parent: john-adams, child: john-quincy-adams, sources: [wp-john-quincy-adams]}
+
+moments:
+  - {person: george-washington, role: born, place: george-washington-birthplace, year: 1732}
+  - {person: george-washington, role: died, place: mount-vernon, year: 1799}
+  - {person: george-washington, role: buried, place: mount-vernon, year: 1799}
+  - {person: john-adams, role: born, place: quincy-massachusetts, year: 1735}
+  - {person: john-adams, role: died, place: peacefield, year: 1826}
+  - {person: john-adams, role: buried, place: united-first-parish-church, year: 1826}
+  - {person: thomas-jefferson, role: born, place: shadwell-virginia, year: 1743}
+  - {person: thomas-jefferson, role: died, place: monticello, year: 1826}
+  - {person: thomas-jefferson, role: buried, place: monticello, year: 1826}
+  - {person: james-madison, role: born, place: belle-grove-port-conway, year: 1751}
+  - {person: james-madison, role: died, place: montpelier-virginia, year: 1836}
+  - {person: james-madison, role: buried, place: montpelier-virginia, year: 1836}
+  - {person: james-monroe, role: born, place: monroe-hall-virginia, year: 1758}
+  - {person: james-monroe, role: died, place: new-york-city, year: 1831}
+  - {person: james-monroe, role: buried, place: hollywood-cemetery-richmond, year: 1858}
+  - {person: john-quincy-adams, role: born, place: quincy-massachusetts, year: 1767}
+  - {person: john-quincy-adams, role: died, place: united-states-capitol, year: 1848}
+  - {person: john-quincy-adams, role: buried, place: united-first-parish-church}
+  - {person: andrew-jackson, role: born, place: waxhaws, year: 1767}
+  - {person: andrew-jackson, role: died, place: the-hermitage, year: 1845}
+  - {person: andrew-jackson, role: buried, place: the-hermitage, year: 1845}
+  - {person: martin-van-buren, role: born, place: kinderhook-new-york, year: 1782}
+  - {person: martin-van-buren, role: died, place: lindenwald, year: 1862}
+  - {person: martin-van-buren, role: buried, place: kinderhook-reformed-church-cemetery, year: 1862}
+  - {person: william-henry-harrison, role: born, place: berkeley-plantation, year: 1773}
+  - {person: william-henry-harrison, role: died, place: white-house, year: 1841}
+  - {person: william-henry-harrison, role: buried, place: william-henry-harrison-tomb, year: 1841}
+  - {person: john-tyler, role: born, place: greenway-plantation, year: 1790}
+  - {person: john-tyler, role: died, place: exchange-hotel-richmond, year: 1862}
+  - {person: john-tyler, role: buried, place: hollywood-cemetery-richmond, year: 1862}
+  - {person: james-k-polk, role: born, place: pineville-north-carolina, year: 1795}
+  - {person: james-k-polk, role: died, place: polk-place, year: 1849}
+  - {person: james-k-polk, role: buried, place: tennessee-state-capitol, year: 1893}
+  - {person: zachary-taylor, role: born, place: barboursville-virginia, year: 1784}
+  - {person: zachary-taylor, role: died, place: white-house, year: 1850}
+  - {person: zachary-taylor, role: buried, place: zachary-taylor-national-cemetery, year: 1850}
+  - {person: millard-fillmore, role: born, place: moravia-new-york, year: 1800}
+  - {person: millard-fillmore, role: died, place: buffalo-new-york, year: 1874}
+  - {person: millard-fillmore, role: buried, place: forest-lawn-cemetery-buffalo, year: 1874}
+  - {person: franklin-pierce, role: born, place: hillsborough-new-hampshire, year: 1804}
+  - {person: franklin-pierce, role: died, place: concord-new-hampshire, year: 1869}
+  - {person: franklin-pierce, role: buried, place: old-north-cemetery-concord, year: 1869}
+  - {person: james-buchanan, role: born, place: cove-gap-pennsylvania, year: 1791}
+  - {person: james-buchanan, role: died, place: wheatland, year: 1868}
+  - {person: james-buchanan, role: buried, place: woodward-hill-cemetery, year: 1868}
+
+discrepancies:
+  - key: andrew-jackson-birthplace
+    question: Was Andrew Jackson born in South Carolina or North Carolina?
+    about: [{person: andrew-jackson}, {place: waxhaws}]
+    field: place
+    claims:
+      - {value: "The Crawford plantation, Lancaster County, South Carolina", sources: [wp-andrew-jackson], note: "Jackson's own later statement"}
+      - {value: "Another uncle's home in North Carolina", sources: [wp-andrew-jackson], note: "Second-hand evidence the article mentions"}
+    note: "The record uses the Waxhaws, the border region the article and infobox name, without choosing a side."
+  - key: george-washington-first-term-start
+    question: Did Washington's presidency begin on March 4 or April 30, 1789?
+    about: [{person: george-washington}, {event: inauguration-of-george-washington}]
+    field: from
+    claims:
+      - {value: "1789-04-30", sources: [wp-george-washington], note: "Infobox term start: the day he took the oath"}
+      - {value: "1789-03-04", sources: [wp-first-inauguration-of-george-washington], note: "The first presidential term started on March 4, 1789, the date set for the new government to begin; the inauguration came nearly two months later"}
+    note: "The title row uses April 30, 1789, the date his own article gives."
+  - key: john-tyler-death-place
+    question: Did John Tyler die at the Exchange Hotel or the Ballard House in Richmond?
+    about: [{person: john-tyler}, {place: exchange-hotel-richmond}]
+    field: place
+    claims:
+      - {value: "Exchange Hotel", sources: [wp-john-tyler, wp-exchange-hotel-richmond], note: "Tyler's article text and the hotel's article"}
+      - {value: "Ballard House", sources: [wp-john-tyler], note: "Tyler's infobox (death place)"}
+    note: "The two hotels faced each other and were joined by a footbridge under one owner; the record uses one place, the Exchange Hotel (and Ballard House)."
