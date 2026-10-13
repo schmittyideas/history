@@ -151,7 +151,7 @@ MUSEUM_FIELDS = {"name": "name", "kind": "kind", "address": "address", "city": "
                  "collection_url_pattern": "collection_url_pattern", "data_access": "data_access", "data_api_url": "data_api_url",
                  "data_licence": "data_licence", "data_notes": "data_notes", "place": "place_key", "obsidian_link": "obsidian_link", "note": "note"}
 COVERAGE = ("not-read", "partly", "complete")
-ABOUT_KINDS = ("person", "place", "event", "artwork")
+ABOUT_KINDS = ("person", "place", "event", "artwork", "realm")
 EXTERNAL_KINDS = (("person", "people"), ("place", "places"), ("event", "events"), ("artwork", "artworks"), ("museum", "museums"))
 
 PEOPLE_FIELDS = {"name": "name", "type": "type", "roles": "roles", "house": "house", "realm": "realm",
@@ -241,7 +241,7 @@ class World:
 
 def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
     p = Plan()
-    new = {"people": {}, "places": {}, "events": {}, "sources": {}, "artworks": {}, "museums": {}}
+    new = {"people": {}, "places": {}, "events": {}, "sources": {}, "artworks": {}, "museums": {}, "realms": {}}
 
     # First pass: collect every key the files define, so references across sections and files resolve.
     for _, d in docs:
@@ -257,9 +257,11 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             new["artworks"][x.get("key")] = x
         for x in as_list(d.get("museums")):
             new["museums"][x.get("key")] = x
+        for x in as_list(d.get("realms")):
+            new["realms"][realm_key(x)] = x
 
     def known(kind, key):
-        table = {"person": "people", "place": "places", "event": "events", "source": "sources", "artwork": "artworks", "museum": "museums"}[kind]
+        table = {"person": "people", "place": "places", "event": "events", "source": "sources", "artwork": "artworks", "museum": "museums", "realm": "realms"}[kind]
         return key in (getattr(world, table) or {}) or key in new[table]
 
     def ref(kind, key, where):
@@ -559,7 +561,7 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 if kind:
                     ref(kind, a[kind], f"discrepancy `{k}`")
                 else:
-                    p.errors.append(f"discrepancy `{k}`: `about` entries look like {{person: key}}, {{place: key}} or {{event: key}}")
+                    p.errors.append(f"discrepancy `{k}`: `about` entries look like {{person: key}}, {{place: key}}, {{event: key}}, {{artwork: key}} or {{realm: key}}")
             if len(as_list(x.get("claims"))) < 2:
                 p.warnings.append(f"discrepancy `{k}`: fewer than two claims")
             for c in as_list(x.get("claims")):
@@ -599,6 +601,7 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
         for x in as_list(d.get("moments")):
             touched |= {("person", x.get("person")), ("place", x.get("place"))}
         touched |= {("artwork", x.get("key")) for x in as_list(d.get("artworks")) if x.get("key") in (world.artworks or {})}
+        touched |= {("realm", realm_key(x)) for x in as_list(d.get("realms")) if realm_key(x) in (world.realms or {})}
     in_batch = {x.get("key") for _, d in docs for x in as_list(d.get("discrepancies"))}
     for disc in (world.discrepancies or {}).values():
         if disc.get("status") != "open" or disc["key"] in in_batch:
