@@ -27,30 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P1] Explore page: four linked cards (Year, Place, Person, Work)
-`type: enhancement` · `area: site` · `status: in-progress` · `issue: #185`
-
-A new front page: one search box and four cards (Year, Place, Person, Work), two by two on a wide screen, stacked on a phone. A search fills all four with its best match; a click on a link changes only the matching card. Each card expands to fill the screen and shrinks back to its spot. The address records the cards, so a view can be shared. A country picker sets which country the Year card shows first. Timeline and Year views stay for the full picture.
-Source: Ty, 2026-10-12.
-
-#### [P1] Year card: your country first, then the world
-`type: enhancement` · `area: site` · `status: ready` · `issue: #186`
-
-Previous and next year; In <country> first (rulers, events, works, artists active there); Elsewhere in the world by region; Influential people alive. Expanded, it shows the border map. A person's country comes from their realms and recorded places, so no schema change to start.
-Source: Ty, 2026-10-12.
-
-#### [P1] Place card: map, nearby and Near me
-`type: enhancement` · `area: site` · `status: ready` · `issue: #187`
-
-Street map at the top of the Place card, with pins for the other cards (the person's route, the work's places, the year's events). What happened here, who was here, works, Nearby, Eat and drink. Near me uses the browser's location (never stored). Expanded, the map takes most of the screen.
-Source: Ty, 2026-10-12.
-
-#### [P1] Person and Work cards: works in date order
-`type: enhancement` · `area: site` · `status: ready` · `issue: #188`
-
-Person: life strip with works and events in date order, places, contemporaries. Work: picture, artist and date, previous and next in the artist's sequence, where made and where now, what else happened while it was made.
-Source: Ty, 2026-10-12.
-
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
 
@@ -167,6 +143,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P1] Explore page: four linked cards (Year, Place, Person, Work)
+`type: enhancement` · `area: site` · `status: done` · `issue: #185, #186, #187, #188`
+
+The new front page: one search (a person, place, work or year) fills four linked cards; a link in a card changes only the card it matches; any card expands to fill the screen (Esc or Back shrinks it); the address records the cards. A country picker puts that country first in the Year card (In <country>, then Elsewhere in the world, then Influential people alive). The Place card's street map shows the place and nearby spots, the person's places, the work's places and the year's events; Near me opens the nearest place. Person: life strip, works in order, titles, places, family, contemporaries. Work: picture, its place in the artist's sequence, where it is, what happened while it was made. Done 2026-10-12. A person's country is worked out from their birthplace, titles and places (no `country` field yet). Left for later: many artworks have no date or place, so they can't be ordered or mapped; dating them is data work.
+Source: Ty, 2026-10-12.
 
 #### [P2] Los Angeles: mayors, Hollywood, film locations and the 2028 Olympics
 `type: task` · `area: data` · `status: done` · `issue: #182`

@@ -154,7 +154,10 @@ function indexData(raw) {
       return (raw.source_links || []).filter(l => l.record_type === type && l.record_key === key).map(l => byId[l.source_id]).filter(Boolean);
     },
     // Where a record has an entry in another database (sql/015): the entertainment database for a film, and so on.
-    externalFor: (type, key) => (raw.external_links || []).filter(l => l.record_type === type && l.record_key === key) };
+    externalFor: (type, key) => (raw.external_links || []).filter(l => l.record_type === type && l.record_key === key),
+    // Raw artwork tables for the Explore page's Work card (films are events, above).
+    artworks: (raw.artworks || []).filter(w => w.kind !== "film"), artworkPeople: raw.artwork_people || [],
+    artworkPlaces: raw.artwork_places || [], museums: raw.museums || [] };
 }
 
 /* ------------------------------------------------------------------ request parsing */
@@ -1011,12 +1014,12 @@ function selectPlace(id) {
 
 // "Eat and drink nearby": asked live of the dining database (RouteWeaver's public nearby_dining API), never
 // stored here. Only when config.js names it (HISTORY_CONFIG.dining = { url, key }) and the place has coordinates.
-async function diningNearby(pl, dl) {
-  const c = (window.HISTORY_CONFIG || {}).dining;
-  if (!c?.url || !c?.key || pl.lat == null || pl.lng == null) return;
-  const dd = h("dd", { text: "Looking…" });
-  dl.append(h("dt", { text: "Eat and drink nearby" }), dd);
-  try {
+const diningOn = pl => { const c = (window.HISTORY_CONFIG || {}).dining; return !!(c?.url && c?.key && pl.lat != null && pl.lng != null); };
+// One request per place per visit: the Explore page redraws its Place card often.
+const diningCache = {};
+function fetchDining(pl) {
+  return diningCache[pl.id] ??= (async () => {
+    const c = window.HISTORY_CONFIG.dining;
     const headers = { apikey: c.key, "Content-Type": "application/json" };
     if (!c.key.startsWith("sb_")) headers.Authorization = `Bearer ${c.key}`;
     const ask = () => fetch(`${c.url}/rest/v1/rpc/nearby_dining`, { method: "POST", headers,
@@ -1027,14 +1030,23 @@ async function diningNearby(pl, dl) {
     if (!r.ok) throw new Error(`HTTP ${r.status}`);
     // The place itself (Musso & Frank, linked with `external: {system: dining}`) isn't "nearby" itself.
     const self = new Set(S.db.externalFor("place", pl.key).filter(l => l.system === "dining").map(l => l.external_id));
-    const rows = (await r.json()).filter(x => !self.has(x.id));
+    return (await r.json()).filter(x => !self.has(x.id));
+  })().catch(e => { delete diningCache[pl.id]; throw e; });
+}
+const diningLabel = x => {
+  const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
+  const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
+  return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
+};
+async function diningNearby(pl, dl) {
+  if (!diningOn(pl)) return;
+  const dd = h("dd", { text: "Looking…" });
+  dl.append(h("dt", { text: "Eat and drink nearby" }), dd);
+  try {
+    const rows = await fetchDining(pl);
     if (S.selected?.kind !== "place" || S.selected.id !== pl.id) return;   // another place was picked meanwhile
-    const m = d => d < 950 ? `${Math.round(d / 10) * 10} m` : `${(d / 1000).toFixed(1)} km`;
     try { diningPins(rows); } catch (e) { console.warn("dining pins:", e); }   // the list still shows if the map can't
-    dd.replaceChildren(...joinNodes(rows.map(x => {
-      const label = `${x.name}${x.type ? ` · ${x.type}` : ""}${x.price_level ? ` · ${"$".repeat(x.price_level)}` : ""} (${m(x.distance_m)})`;
-      return x.website ? h("a", { class: "ext", href: x.website, target: "_blank", rel: "noopener", text: label + " ↗" }) : label;
-    }), `No Metro Advisor picks within ${NEARBY_KM} km`));
+    dd.replaceChildren(...joinNodes(rows.map(diningLabel), `No Metro Advisor picks within ${NEARBY_KM} km`));
   } catch (e) {
     dd.textContent = "Couldn't reach the dining database just now.";
   }
@@ -1196,10 +1208,9 @@ function drawStreetMap(host, routes, numbered, placeMode, fit) {
 
 // The dining picks also go on the street map, as small square pins under the place's own, so the map shows
 // where to eat around it. Only when the street map is showing (a place is selected).
-let diningLayer = null;
-function diningPins(rows) {
-  if (!streetMap) return;
-  diningLayer = L.layerGroup().addTo(streetMap);
+function diningPins(rows, map = streetMap, refit = true) {
+  if (!map) return;
+  const diningLayer = L.layerGroup().addTo(map);
   rows.forEach(x => {
     if (x.latitude == null || x.longitude == null) return;
     const icon = L.divIcon({ className: "street-pin-wrap", iconSize: null, html: '<span class="dining-pin" aria-hidden="true"></span>' });
@@ -1209,8 +1220,8 @@ function diningPins(rows) {
   });
   // Widen the view so the picks are in it too (they reach out to the search radius).
   const all = [...rows.filter(x => x.latitude != null).map(x => [x.latitude, x.longitude]),
-               ...Object.values(streetMap._layers).filter(l => l.getLatLng && !diningLayer.hasLayer(l)).map(l => l.getLatLng())];
-  if (all.length > 1) streetMap.fitBounds(all, { padding: [24, 24], maxZoom: 16 });
+               ...Object.values(map._layers).filter(l => l.getLatLng && !diningLayer.hasLayer(l)).map(l => l.getLatLng())];
+  if (refit && all.length > 1) map.fitBounds(all, { padding: [24, 24], maxZoom: 16 });
 }
 
 function drawMap() {
@@ -1341,17 +1352,22 @@ const yEvent = e => h("button", { type: "button", class: "plink", title: `Show $
 const yPlace = pl => h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: toTimeline(() => selectPlace(pl.id)), text: pl.name });
 
 function showView(v) {
+  $("timeline-view").style.cssText = "";
+  $("explore-view").hidden = v !== "explore";
   $("timeline-view").hidden = v !== "timeline";
   $("year-view").hidden = v !== "year";
-  $("view-timeline").setAttribute("aria-pressed", v === "timeline");
-  $("view-year").setAttribute("aria-pressed", v === "year");
+  ["explore", "timeline", "year"].forEach(k => $("view-" + k).setAttribute("aria-pressed", v === k));
+  // Leaving the Explore page puts an expanded card back.
+  if (v !== "explore" && X.open) { X.open = null; X.pushed = false; document.body.classList.remove("x-full"); }
   S.viewMode = v;
   if (v === "timeline") {
-    try { history.replaceState(null, "", S.query ? "?q=" + encodeURIComponent(S.query) : location.pathname); } catch (e) {}
+    try { history.replaceState(null, "", S.query ? "?q=" + encodeURIComponent(S.query) : "?view=timeline"); } catch (e) {}
     renderOverview(); updateOverviewWindow();
-  } else {
+  } else if (v === "year") {
     syncYearUrl();
     $("year-from").focus({ preventScroll: true });
+  } else {
+    renderExplore([]);
   }
 }
 
@@ -1609,7 +1625,7 @@ function jumpToRealm(realm) {
   card.classList.remove("flash"); void card.offsetWidth; card.classList.add("flash");
 }
 
-function yearMap(a, b, realmsInView) {
+function yearMap(a, b, realmsInView, onRealm = focusRealm) {
   const sec = h("section", { class: "year-sec map-sec", hidden: "" });
   (async () => {
     const idx = await mapIndex();
@@ -1664,7 +1680,7 @@ function yearMap(a, b, realmsInView) {
         el("title", {}, p).textContent = (pr.NAME || "Unnamed") + (realms ? `: ${realms.join(", ")}. Click for its rulers.` : "");
         if (realms) {
           p.setAttribute("tabindex", 0); p.setAttribute("role", "button");
-          const go = () => focusRealm(realms[0]);
+          const go = () => onRealm(realms[0]);
           p.addEventListener("click", go);
           p.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
           const name = realms.length === 1 ? realms[0] : pr.NAME, area = path.area(f);
@@ -1694,8 +1710,8 @@ function yearMap(a, b, realmsInView) {
         labelFor["pin:" + realm] = { name: realm, realms: [realm], area: 300, xy, point: true };
         const c = el("circle", { cx: xy[0], cy: xy[1], class: "hm-pin", tabindex: 0, role: "button", "aria-label": `${realm}: show its rulers` }, pg);
         el("title", {}, c).textContent = `${realm}. Click for its rulers.`;
-        c.addEventListener("click", () => focusRealm(realm));
-        c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); focusRealm(realm); } });
+        c.addEventListener("click", () => onRealm(realm));
+        c.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); onRealm(realm); } });
         pins.push(c);
         bx0 = Math.min(bx0, xy[0]); by0 = Math.min(by0, xy[1]); bx1 = Math.max(bx1, xy[0]); by1 = Math.max(by1, xy[1]);
       });
@@ -1780,6 +1796,568 @@ function reignStrip(holders, a, b) {
   return svg;
 }
 
+/* ------------------------------------------------------------------ explore: four linked cards */
+// The front page: one search box and four cards (Year, Place, Person, Work). A search fills all four with its best
+// match and what goes with it; a link in any card changes only the card it matches. Each card expands to fill the
+// screen and shrinks back to its spot. The address records the cards (by key), so a view can be shared.
+// The Show and Fame buttons belong to the timeline and Year views; the cards show everyone.
+
+const X = { year: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
+const CARDS = ["year", "place", "person", "work"];
+const CARD_LABEL = { year: "Year", place: "Place", person: "Person", work: "Work" };
+// One name per modern country: places say England, Scotland or Wales; realms say United Kingdom.
+const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom" };
+const normCountry = c => c ? COUNTRY_ALIAS[c] || c : null;
+// How well known someone is: Wikipedia language editions (sitelinks), else their star rating.
+const fame = p => p.sitelinks ?? (p.prominence ?? 3) * 15;
+const nextYear = y => y === -1 ? 1 : y + 1, prevYear = y => y === 1 ? -1 : y - 1;
+const aliveIn = (p, a, b = a) => (p.birth_year != null || p.death_year != null)
+  && overlaps(p.birth_year ?? p.death_year - 60, p.death_year ?? p.birth_year + 60, a, b);
+const ageIn = (p, y) => p.birth_year != null && y >= p.birth_year ? yearsBetween(p.birth_year, y) : null;
+const workYear = w => w.end_year ?? w.start_year;
+const workSpan = w => w.start_year == null ? null : (w.estimated ? "c. " : "") + (w.end_year != null && w.end_year !== w.start_year ? fmtSpan(w.start_year, w.end_year) : fmtYear(w.start_year));
+
+// Lookups the cards need, built once.
+let XI = null;
+function exploreIndex() {
+  if (XI) return XI;
+  const db = S.db;
+  const workById = Object.fromEntries(db.artworks.map(w => [w.id, w]));
+  const placeByKey = Object.fromEntries(db.places.map(p => [p.key, p]));
+  const worksBy = new Map(), creatorOf = new Map(), subjectsOf = new Map(), placesOf = new Map(), worksAt = new Map();
+  const push = (m, k, v) => { if (!m.has(k)) m.set(k, []); m.get(k).push(v); };
+  db.artworkPeople.forEach(x => {
+    const w = workById[x.artwork_id];
+    if (!w || !db.byId[x.entity_id]) return;
+    if (x.role === "creator") { push(worksBy, x.entity_id, w); if (!creatorOf.has(w.id)) creatorOf.set(w.id, x.entity_id); }
+    if (x.role === "subject") push(subjectsOf, w.id, x.entity_id);
+  });
+  const workOrder = (a, b) => byYear(a.start_year, b.start_year) || byYear(a.end_year, b.end_year) || a.name.localeCompare(b.name);
+  worksBy.forEach(ws => ws.sort(workOrder));
+  // Where a work is: the places it's linked to (made, held, displayed), then its museum's place.
+  const ROLE_RANK = { made: 0, "made-for": 1, displayed: 2, held: 3, depicts: 4 };
+  db.artworkPlaces.forEach(x => {
+    const w = workById[x.artwork_id], pl = db.placeById[x.place_id];
+    if (!w || !pl) return;
+    push(placesOf, w.id, { place: pl, role: x.role });
+    push(worksAt, pl.id, { work: w, role: x.role });
+  });
+  placesOf.forEach(xs => xs.sort((a, b) => (ROLE_RANK[a.role] ?? 9) - (ROLE_RANK[b.role] ?? 9)));
+  const museumById = db.museumById;
+  db.artworks.forEach(w => {
+    const m = museumById[w.museum_id], pl = m?.place_key && placeByKey[m.place_key];
+    if (pl && !(placesOf.get(w.id) || []).some(x => x.place.id === pl.id)) { push(placesOf, w.id, { place: pl, role: "held" }); push(worksAt, pl.id, { work: w, role: "held" }); }
+  });
+  // A person's modern countries: their titles' realms, their recorded places and their works' places.
+  const countries = new Map();
+  const countriesOf = id => {
+    if (countries.has(id)) return countries.get(id);
+    const c = new Set([
+      ...db.titlesOf(id).map(t => normCountry(db.countryOf[t.realm])),
+      ...db.placesOfPerson(id).map(pl => normCountry(pl.modern_country)),
+      ...(worksBy.get(id) || []).flatMap(w => (placesOf.get(w.id) || []).filter(x => x.role !== "held").map(x => normCountry(x.place.modern_country))),
+    ].filter(Boolean));
+    countries.set(id, c);
+    return c;
+  };
+  // A person's home country: where they were born, else the realm of their first title, else where they turn up most.
+  const homes = new Map();
+  const homeOf = id => {
+    if (homes.has(id)) return homes.get(id);
+    const born = db.pp.find(x => x.entity_id === id && x.role === "born"), t = db.titlesOf(id)[0];
+    let c = normCountry(db.placeById[born?.place_id]?.modern_country) || (t && normCountry(db.countryOf[t.realm]));
+    if (!c) { const n = {}; db.placesOfPerson(id).forEach(pl => { const k = normCountry(pl.modern_country); if (k) n[k] = (n[k] || 0) + 1; }); c = Object.keys(n).sort((a, b) => n[b] - n[a])[0] || null; }
+    homes.set(id, c);
+    return c;
+  };
+  // In a country in a given year: at home, or recorded there (a life moment, an event, a title) within a few years of it.
+  const inCountryAt = (id, C, y) => homeOf(id) === C
+    || db.pp.some(x => x.entity_id === id && x.year != null && Math.abs(x.year - y) <= 3 && normCountry(db.placeById[x.place_id]?.modern_country) === C)
+    || db.eventsOf(id).some(x => Math.abs((x.event.start_year ?? -1e9) - y) <= 3 && normCountry(db.placeById[x.event.place_id]?.modern_country) === C)
+    || db.titlesOf(id).some(t => overlaps(t.start_year, t.end_year, y, y) && normCountry(db.countryOf[t.realm]) === C);
+  // Every country a record names, for the picker: most-used first is less useful than A-Z for finding one.
+  const countryList = [...new Set([...Object.values(db.countryOf), ...db.places.map(p => p.modern_country)].map(normCountry).filter(Boolean))].sort();
+  return XI = { workById, placeByKey, worksBy, creatorOf, subjectsOf, placesOf, worksAt, countriesOf, homeOf, inCountryAt, countryList };
+}
+const workPlace = w => (exploreIndex().placesOf.get(w.id) || [])[0]?.place || null;
+const workCountry = w => {
+  const I = exploreIndex(), made = (I.placesOf.get(w.id) || []).find(x => x.role !== "held" && x.role !== "displayed");
+  return normCountry(made?.place.modern_country) || (I.creatorOf.has(w.id) ? I.homeOf(I.creatorOf.get(w.id)) : null);
+};
+const placeCountry = pl => normCountry(pl?.modern_country);
+const eventCountries = e => new Set([...(e.placeIds || [e.place_id])].map(id => placeCountry(S.db.placeById[id])).filter(Boolean));
+const inCountryEvent = (e, C) => {
+  const cs = eventCountries(e);
+  if (cs.size) return cs.has(C);
+  // No place recorded: an event belongs to the country of a ruler who took part in it.
+  return S.db.peopleInEvent(e.id).some(x => S.db.titlesOf(x.person.id).some(t => normCountry(S.db.countryOf[t.realm]) === C));
+};
+const evOrder = (x, y) => (y.prominence ?? 3) - (x.prominence ?? 3) || byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || "");
+
+/* --- links: each changes the card it matches */
+const xBtn = (text, title, go) => h("button", { type: "button", class: "plink", title, onclick: go, text });
+const xYear = (y, text) => y == null ? null : xBtn(text ?? fmtYear(y), `${fmtYear(y)} in the Year card`, () => xGo("year", y));
+const xPerson = (p, extra = "") => xBtn(p.name + extra, `${p.name} in the Person card`, () => xGo("person", p.id));
+const xPlace = (pl, extra = "") => xBtn(pl.name + extra, `${pl.name} in the Place card`, () => xGo("place", pl.id));
+const xWork = (w, extra = "") => xBtn(w.name + extra, `${w.name} in the Work card`, () => xGo("work", w.id));
+// Events have no card of their own: an event opens its year.
+const xEvent = e => e.start_year == null ? e.name : xBtn(e.name, `${fmtYear(e.start_year)} in the Year card`, () => xGo("year", e.start_year));
+
+// What goes with a record, for filling the other cards after a search.
+function bestWorkOf(id) {
+  const ws = exploreIndex().worksBy.get(id) || [];
+  // Star rating first, then the works the database knows most about (linked to places or people), then ones with a picture.
+  const links = w => (exploreIndex().placesOf.get(w.id) || []).length + (exploreIndex().subjectsOf.get(w.id) || []).length;
+  return ws.slice().sort((a, b) => (b.prominence ?? 3) - (a.prominence ?? 3) || links(b) - links(a) || !!b.image_thumb - !!a.image_thumb
+    || (a.start_year == null) - (b.start_year == null))[0] || null;
+}
+function mainPlaceOf(id) {
+  const db = S.db, n = new Map();
+  stopsForPerson(id).forEach(s => n.set(s.place.id, (n.get(s.place.id) || 0) + (s.what === "Born" ? 0.5 : 1)));
+  const best = [...n.entries()].sort((a, b) => b[1] - a[1])[0];
+  return best ? db.placeById[best[0]] : null;
+}
+function peopleAt(id) {
+  const db = S.db;
+  return [...new Map([...db.momentsAt(id).map(m => m.person), ...db.eventsAt(id).flatMap(e => db.peopleInEvent(e.id).map(x => x.person)),
+    ...(exploreIndex().worksAt.get(id) || []).map(x => db.byId[exploreIndex().creatorOf.get(x.work.id)]).filter(Boolean)]
+    .map(p => [p.id, p])).values()];
+}
+function fill(kind, id) {
+  const db = S.db, I = exploreIndex();
+  const set = { year: X.year, place: X.place, person: X.person, work: X.work };
+  set[kind] = id;
+  if (kind === "person") {
+    const p = db.byId[id], w = bestWorkOf(id), t = db.titlesOf(id)[0];
+    set.work = w?.id ?? null;
+    set.year = (w && workYear(w)) ?? t?.start_year ?? (p.birth_year != null ? Math.min(p.birth_year + 35, p.death_year ?? Infinity) : p.death_year);
+    set.place = (w && workPlace(w)?.id) ?? mainPlaceOf(id)?.id ?? null;
+  } else if (kind === "work") {
+    const w = I.workById[id];
+    set.person = I.creatorOf.get(id) ?? null; set.year = workYear(w) ?? null;
+    set.place = workPlace(w)?.id ?? (set.person != null ? mainPlaceOf(set.person)?.id : null) ?? null;
+  } else if (kind === "place") {
+    const ev = db.eventsAt(id).filter(e => !e.film).sort(evOrder)[0];
+    const p = peopleAt(id).sort((a, b) => fame(b) - fame(a))[0];
+    const w = (I.worksAt.get(id) || []).map(x => x.work).sort((a, b) => !!b.image_thumb - !!a.image_thumb)[0] || (p && bestWorkOf(p.id));
+    set.person = p?.id ?? null; set.work = w?.id ?? null;
+    set.year = ev?.start_year ?? (w && workYear(w)) ?? db.placeById[id].start_year ?? null;
+  } else if (kind === "year") {
+    const C = X.country, y = id;
+    const ws = db.artworks.filter(w => w.start_year != null && overlaps(w.start_year, w.end_year ?? w.start_year, y, y) && I.creatorOf.has(w.id))
+      .filter(w => !C || workCountry(w) === C)
+      .sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]));
+    const ev = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!C || inCountryEvent(e, C)) && db.placeById[e.place_id]).sort(evOrder)[0];
+    const p = db.people.filter(p => aliveIn(p, y) && (!C || I.inCountryAt(p.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+    set.work = ws[0]?.id ?? null;
+    set.person = ws[0] ? I.creatorOf.get(ws[0].id) : p?.id ?? null;
+    set.place = ev ? ev.place_id : ws[0] ? workPlace(ws[0])?.id ?? null : null;
+  }
+  Object.assign(X, set);
+}
+
+/* --- search */
+function exploreSearch(text) {
+  const t = text.trim(), db = S.db, I = exploreIndex();
+  if (!t) return { error: "Type a name, a place, a work or a year." };
+  // A year on its own: "1504", "384 BC", "AD 14".
+  if (/^(ad\s*)?\d{1,4}(\s*(bc|bce|ad|ce))?$/i.test(t)) { const f = parseQuery(t, S.db); if (f.from != null) return { best: { kind: "year", id: f.from } }; }
+  const q = t.toLowerCase().replace(/[’']/g, "'");
+  const score = name => {
+    const n = (name || "").toLowerCase().replace(/[’']/g, "'");
+    return !n ? 0 : n === q ? 3 : n.startsWith(q) ? 2 : (" " + n).includes(" " + q) ? 1 : n.includes(q) ? .5 : 0;
+  };
+  const country = I.countryList.find(c => c.toLowerCase() === q || Object.keys(COUNTRY_ALIAS).some(a => a.toLowerCase() === q && COUNTRY_ALIAS[a] === c));
+  const hits = [];
+  db.people.forEach(p => { const s = score(p.name); if (s) hits.push({ kind: "person", id: p.id, name: p.name, s, f: fame(p) }); });
+  db.artworks.forEach(w => { const s = score(w.name); if (s && I.creatorOf.has(w.id)) hits.push({ kind: "work", id: w.id, name: w.name, s, f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) }); });
+  db.places.forEach(pl => { const s = Math.max(score(pl.name), score(pl.historical_name) * .9); if (s) hits.push({ kind: "place", id: pl.id, name: pl.name, s, f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length }); });
+  hits.sort((a, b) => b.s - a.s || b.f - a.f);
+  if (country && !(hits[0]?.s === 3 && hits[0].kind !== "place")) {
+    // "Italy": pick the country, and open its busiest place.
+    const pl = db.places.filter(p => placeCountry(p) === country).sort((a, b) => db.eventsAt(b.id).length - db.eventsAt(a.id).length)[0];
+    return { country, best: pl ? { kind: "place", id: pl.id } : null, also: hits.slice(0, 6) };
+  }
+  if (!hits.length) return { error: `Nothing called "${t}" yet. Try a person, a painting, a place or a year.` };
+  return { best: hits[0], also: hits.slice(1, 7) };
+}
+function runExplore(text) {
+  const r = exploreSearch(text), msg = $("x-msg");
+  msg.replaceChildren();
+  if (r.error) { msg.textContent = r.error; return; }
+  if (r.country) setCountry(r.country, false);
+  if (r.best) fill(r.best.kind, r.best.id);
+  const short = t => t.length > 40 ? t.slice(0, 38).trimEnd() + "…" : t;
+  if (r.also?.length) msg.append("Also: ", ...joinNodes(r.also.slice(0, 5).map(x => h("span", {}, xBtn(short(x.name), `Show ${x.name}`, () => { fill(x.kind, x.id); msg.replaceChildren(); renderExplore(CARDS); }),
+    h("span", { class: "yrs", text: ` ${x.kind}` })))));
+  renderExplore(CARDS);
+}
+
+/* --- changing cards */
+function xGo(kind, id) {
+  X[kind] = id;
+  renderExplore([kind]);
+}
+function setCountry(c, render = true) {
+  X.country = c || ""; store.set("country", X.country);
+  $("x-country").value = X.country;
+  if (render) renderExplore(["year"]);
+}
+function syncExploreUrl() {
+  if (S.viewMode !== "explore") return;
+  const db = S.db, p = new URLSearchParams();
+  if (X.year != null) p.set("y", yearQuery(X.year));
+  if (X.place != null) p.set("place", db.placeById[X.place]?.key);
+  if (X.person != null) p.set("person", db.byId[X.person]?.key);
+  if (X.work != null) p.set("work", exploreIndex().workById[X.work]?.key);
+  if (X.open) p.set("open", X.open);
+  const qs = p.toString();
+  try { history.replaceState(history.state, "", qs ? "?" + qs : location.pathname); } catch (e) {}
+}
+function readExploreUrl(params) {
+  const db = S.db, I = exploreIndex();
+  if (params.get("y")) { const f = parseQuery(params.get("y"), db); if (f.from != null) X.year = f.from; }
+  const byKey = (list, k) => k ? list.find(r => r.key === k)?.id ?? null : null;
+  X.place = byKey(db.places, params.get("place"));
+  X.person = byKey(db.people, params.get("person"));
+  X.work = params.get("work") ? Object.values(I.workById).find(w => w.key === params.get("work"))?.id ?? null : null;
+  return CARDS.includes(params.get("open")) ? params.get("open") : null;
+}
+function expandCard(kind) {
+  if (!X.open) { try { history.pushState({ xopen: kind }, ""); X.pushed = true; } catch (e) {} }
+  X.open = kind;
+  renderExplore([]);
+  window.scrollTo(0, 0);
+}
+function shrinkCard(fromHistory = false) {
+  const was = X.open;
+  if (!was) return;
+  X.open = null;
+  if (X.pushed && !fromHistory) { X.pushed = false; history.back(); }   // the popstate that follows finds nothing open
+  X.pushed = false;
+  renderExplore([]);
+  $("x-" + was)?.scrollIntoView({ block: "start" });
+}
+
+let xMap = null, xNoteTimer = null;
+function renderExplore(changed = []) {
+  const box = $("x-cards");
+  if (xMap) { xMap.remove(); xMap = null; }
+  box.replaceChildren(...CARDS.map(kind => {
+    const full = X.open === kind;
+    const body = { year: yearCard, place: placeCard, person: personCard, work: workCard }[kind]();
+    return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
+      h("div", { class: "xhead" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
+        h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
+          title: full ? "Back to the four cards (Esc)" : `Fill the screen with the ${CARD_LABEL[kind]} card`, text: full ? "Shrink ✕" : "Expand ⤢" })),
+      ...body);
+  }));
+  document.body.classList.toggle("x-full", !!X.open);
+  if (S.viewMode === "explore") {
+    placeMap();
+    syncExploreUrl();
+  }
+  // A card that changed lights up. Behind an expanded card, a note says what changed and opens it.
+  changed.forEach(kind => {
+    const c = $("x-" + kind);
+    if (!c || c.hidden) return;
+    c.classList.remove("hit"); void c.offsetWidth; c.classList.add("hit");
+  });
+  const behind = changed.filter(k => X.open && k !== X.open);
+  if (behind.length) {
+    const k = behind[0], card = $("x-" + X.open);
+    const what = { year: () => fmtYear(X.year), place: () => S.db.placeById[X.place]?.name, person: () => S.db.byId[X.person]?.name, work: () => exploreIndex().workById[X.work]?.name }[k]();
+    card.append(h("div", { class: "xnote", role: "status" }, `${CARD_LABEL[k]}: ${what ?? "cleared"} `,
+      h("button", { type: "button", class: "btn", onclick: () => { X.open = k; renderExplore([]); window.scrollTo(0, 0); }, text: "Open" })));
+  } else if (!X.open && changed.length === 1) {
+    // On a phone the cards are stacked: bring the one that changed into view.
+    const c = $("x-" + changed[0]), r = c.getBoundingClientRect();
+    if (r.top < 0 || r.top > innerHeight * .6) c.scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+}
+
+// A list that shows a few rows on the small card and everything when the card is expanded.
+function xList(kind, items, n, row, empty) {
+  if (!items.length) return empty ? h("p", { class: "hint", text: empty }) : null;
+  const full = X.open === kind, shown = full ? items : items.slice(0, n);
+  return [h("ul", { class: "xrows" }, ...shown.map(row)),
+    shown.length < items.length ? h("button", { type: "button", class: "plink xmore", onclick: () => expandCard(kind), text: `${items.length - shown.length} more…` }) : null];
+}
+const xChips = (kind, people, n, label) => {
+  if (!people.length) return null;
+  const full = X.open === kind, shown = full ? people : people.slice(0, n);
+  return h("div", { class: "xchips" }, ...shown.map(label),
+    shown.length < people.length ? h("button", { type: "button", class: "plink xmore", onclick: () => expandCard(kind), text: `${people.length - shown.length} more…` }) : null);
+};
+const xSec = (title, ...kids) => { const k = kids.flat().filter(Boolean); return k.length ? h("div", { class: "xsec" }, h("h3", { text: title }), ...k) : null; };
+const row2 = (left, right) => h("li", {}, h("span", {}, ...[left].flat()), h("span", { class: "yrs" }, ...[right].flat().filter(x => x != null)));
+
+/* --- Year card */
+function yearCard() {
+  const y = X.year, db = S.db, I = exploreIndex(), C = X.country || null, full = X.open === "year";
+  if (y == null) return [h("p", { class: "hint", text: "Search a year (1504, 1066, 384 BC), or click one in another card." })];
+  const head = h("div", { class: "xyear" }, xYear(prevYear(y), `← ${fmtYear(prevYear(y))}`), h("h2", { text: fmtYear(y) }), xYear(nextYear(y), `${fmtYear(nextYear(y))} →`));
+  const titles = db.titles.filter(t => overlaps(t.start_year, t.end_year, y, y) && db.byId[t.entity_id]);
+  const realmCountry = r => normCountry(db.countryOf[r]);
+  const rulersRows = realms => realms.map(r => {
+    const ts = titles.filter(t => t.realm === r).sort((a, b) => byYear(a.start_year, b.start_year));
+    return h("li", {}, h("span", {}, h("b", { text: r }), " ", ...joinNodes(ts.map(t => xPerson(db.byId[t.entity_id], t.disputed ? " (disputed)" : "")))),
+      h("span", { class: "yrs" }, C && realmCountry(r) !== C ? xBtn(realmCountry(r) || "", `Put ${realmCountry(r)} first`, () => setCountry(realmCountry(r))) : null));
+  });
+  const realmsAll = [...new Set(titles.map(t => t.realm))].sort();
+  const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, y, y));
+  const works = db.artworks.filter(w => w.start_year != null && overlaps(w.start_year, w.end_year ?? w.start_year, y, y) && I.creatorOf.has(w.id));
+  const evRow = e => row2([xEvent(e), db.placeById[e.place_id] ? [" · ", xPlace(db.placeById[e.place_id])] : null], e.start_date ? fmtDate(e.start_date).replace(/ -?\d+$/, "") : null);
+  const workRow = w => row2([xWork(w), " · ", xPerson(db.byId[I.creatorOf.get(w.id)])], workYear(w) === y ? "finished" : "in progress");
+  const byFame = (a, b) => fame(b) - fame(a);
+  const workFame = (a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]);
+  const regionOf = r => db.regionOf[r] || "Other";
+  const regionRows = realms => REGIONS.flatMap(g => {
+    const rs = realms.filter(r => regionOf(r) === g);
+    return rs.length ? [h("li", { class: "xregion", text: g }), ...rulersRows(rs)] : [];
+  });
+  const alive = db.people.filter(p => aliveIn(p, y)).sort(byFame);
+  const personChip = p => h("span", { class: "xchip" }, xPerson(p), ageIn(p, y) != null ? h("span", { class: "yrs", text: ` ${ageIn(p, y)}` }) : null);
+  const out = [head];
+  if (C) {
+    const home = realmsAll.filter(r => realmCountry(r) === C), away = realmsAll.filter(r => realmCountry(r) !== C);
+    const hereEv = evs.filter(e => inCountryEvent(e, C)).sort(evOrder);
+    const hereWorks = works.filter(w => workCountry(w) === C).sort(workFame);
+    const makers = alive.filter(p => MAKER_TYPES.includes(p.type) && I.inCountryAt(p.id, C, y));
+    out.push(h("div", { class: "xband" }, h("h3", { class: "xband-h", text: `In ${C}` }),
+      xSec("Who ruled", xList("year", home, 6, r => rulersRows([r])[0], `No ruler in ${C} recorded for ${fmtYear(y)}.`)),
+      xSec("What happened", xList("year", hereEv, 6, evRow, "No events recorded here this year.")),
+      xSec("Works made", xList("year", hereWorks, 4, workRow)),
+      xSec("Artists, writers and thinkers at work", xChips("year", makers, 8, personChip))));
+    const awayEv = evs.filter(e => !inCountryEvent(e, C) && (e.prominence ?? 3) >= 4).sort(evOrder);
+    out.push(xSec("Elsewhere in the world",
+      xList("year", awayEv, 3, evRow),
+      full ? h("ul", { class: "xrows" }, ...regionRows(away)) : xList("year", away, 5, r => rulersRows([r])[0])));
+  } else {
+    out.push(xSec("Who ruled", full ? h("ul", { class: "xrows" }, ...regionRows(realmsAll)) : xList("year", realmsAll, 6, r => rulersRows([r])[0], `No rulers recorded for ${fmtYear(y)}.`)),
+      xSec("What happened", xList("year", evs.sort(evOrder), 6, evRow, "No events recorded this year.")),
+      xSec("Works made", xList("year", works.sort(workFame), 4, workRow)),
+      h("p", { class: "hint", text: "Pick a country above to see it first." }));
+  }
+  out.push(xSec("Influential people alive", xChips("year", alive, 10, personChip)));
+  if (full) out.push(yearMap(y, y, realmsAll, r => setCountry(realmCountry(r))));
+  out.push(h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: () => openYear(y, y), text: "Open the Year view" }), " · ",
+    h("button", { type: "button", class: "plink", onclick: toTimeline(() => run(rangeQuery(y - 10, y + 10), { pushTrail: true })), text: "See it on the timeline" })));
+  return out;
+}
+
+/* --- Place card (the map is drawn after the card is in the page) */
+function placeCard() {
+  const db = S.db, I = exploreIndex(), pl = db.placeById[X.place];
+  if (!pl) return [h("p", { class: "hint", text: "Search a place (Florence, Westminster Abbey), tap Near me, or click one in another card." }), h("div", { class: "xmap", id: "x-map" })];
+  const where = [...new Set([pl.city, pl.region, pl.modern_country].filter(Boolean))].filter(v => v !== pl.name).join(", ");
+  const here = db.eventsAt(pl.id).sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
+  const events = here.filter(e => !e.film), films = here.filter(e => e.film);
+  const moments = db.momentsAt(pl.id).sort((a, b) => byYear(a.year, b.year));
+  const happened = [...events.map(e => ({ y: e.start_year, node: [xEvent(e)] })),
+    ...moments.map(m => ({ y: m.year, node: [xPerson(m.person), ` ${m.role}`] }))].sort((a, b) => byYear(a.y, b.y));
+  const works = I.worksAt.get(pl.id) || [];
+  const near = nearbyList(pl);
+  const fmtKm = km => km < .95 ? `${Math.round(km * 10) * 100} m` : `${km.toFixed(1)} km`;
+  const dining = diningOn(pl) ? h("div", { class: "xsec" }, h("h3", { text: "Eat and drink nearby" }), h("p", { class: "hint", id: "x-dining", text: "Looking…" })) : null;
+  return [
+    h("h2", { text: pl.name }),
+    h("div", { class: "xsub", text: [cap(pl.kind), where, pl.historical_name ? `then ${pl.historical_name}` : null].filter(Boolean).join(" · ") }),
+    h("div", { class: "xmap", id: "x-map" }),
+    xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
+    films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(e.name, xYear(e.start_year)))) : null,
+    xSec("Works made or held here", xList("place", works, 4, x => row2([xWork(x.work), ` (${x.role})`], workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
+    xSec("Who was here", xChips("place", peopleAt(pl.id).sort((a, b) => fame(b) - fame(a)), 8, p => h("span", { class: "xchip" }, xPerson(p)))),
+    xSec(`Nearby (within ${NEARBY_KM} km)`, xList("place", near, 5, x => row2(xPlace(x.o), fmtKm(x.km)))),
+    dining,
+    pl.note ? h("p", { class: "xnote-text", text: pl.note }) : null,
+    h("div", { class: "xfoot" }, "Sources: ", ...sourceLinks(db.sourcesFor("place", pl.key))),
+  ];
+}
+// Spots within walking distance (areas such as cities are left out: they have a centre, not a spot).
+function nearbyList(pl) {
+  if (pl.lat == null || pl.lng == null) return [];
+  const AREA = /^(city|town|village|hamlet|township|borough|district|neighbourhood|county|region|island|strait|country)$/i;
+  return S.db.places.filter(o => o.id !== pl.id && o.lat != null && o.lng != null && !AREA.test(o.kind || ""))
+    .map(o => ({ o, km: kmBetween(pl, o) })).filter(x => x.km <= NEARBY_KM).sort((a, b) => a.km - b.km);
+}
+// The Place card's street map ties the cards together: the place and the spots around it, the person's places,
+// where the work was made and is now, and the year's events in the chosen country. A pin opens its place.
+function placeMap() {
+  const host = $("x-map");
+  if (!host || !window.L) return;
+  const db = S.db, I = exploreIndex(), pl = db.placeById[X.place];
+  const css = getComputedStyle(document.documentElement), color = v => css.getPropertyValue(v).trim();
+  const layers = [];
+  const pt = p => p && p.lat != null && p.lng != null ? [Number(p.lat), Number(p.lng)] : null;
+  if (pl && pt(pl)) layers.push({ key: "here", label: "Here and nearby", color: "--ink", places: [pl, ...nearbyList(pl).slice(0, 12).map(x => x.o)] });
+  const person = db.byId[X.person];
+  if (person) {
+    const ps = [...new Map(stopsForPerson(person.id).map(s => [s.place.id, s.place])).values()].filter(pt);
+    if (ps.length) layers.push({ key: "person", label: `${person.name}'s places`, color: "--woad", places: ps, route: true });
+  }
+  const w = I.workById[X.work];
+  if (w) { const ps = (I.placesOf.get(w.id) || []).map(x => x.place).filter(pt); if (ps.length) layers.push({ key: "work", label: w.name, color: "--madder", places: ps }); }
+  if (X.year != null) {
+    const ps = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, X.year, X.year) && (!X.country || inCountryEvent(e, X.country)))
+      .map(e => db.placeById[e.place_id]).filter(pt);
+    if (ps.length) layers.push({ key: "year", label: `Events in ${fmtYear(X.year)}`, color: "--ochre", places: [...new Map(ps.map(p => [p.id, p])).values()] });
+  }
+  if (!layers.length) { host.replaceChildren(h("p", { class: "hint", text: pl ? `No map position recorded for ${pl.name}.` : "" })); host.classList.add("empty"); return; }
+  const box = h("div", { class: "street-map" });
+  const legend = h("div", { class: "xlegend" });
+  host.replaceChildren(box, legend);
+  xMap = L.map(box, { scrollWheelZoom: X.open === "place", zoomControl: true, attributionControl: true });
+  xMap.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(xMap);
+  const fitTo = ps => { const ll = ps.map(pt); if (new Set(ll.map(String)).size === 1) xMap.setView(ll[0], 15); else xMap.fitBounds(ll, { padding: [24, 24], maxZoom: 16 }); };
+  layers.slice().reverse().forEach(layer => {
+    if (layer.route && layer.places.length > 1) L.polyline(layer.places.map(pt), { color: color(layer.color), weight: 2, opacity: .6, dashArray: "4 4" }).addTo(xMap);
+    layer.places.forEach((p, i) => {
+      const main = layer.key === "here" && i === 0;
+      const icon = L.divIcon({ className: "street-pin-wrap", iconSize: null,
+        html: `<span class="street-pin${main ? "" : " small"}" style="background:var(${layer.color})"></span>` });
+      const m = L.marker(pt(p), { icon, keyboard: true, title: p.name, alt: p.name, zIndexOffset: main ? 1000 : 0 }).addTo(xMap);
+      m.bindTooltip(p.name, { direction: "top", offset: [0, -8] });
+      m.on("click", () => xGo("place", p.id));
+    });
+    legend.prepend(h("button", { type: "button", class: "xleg", title: `Fit the map to: ${layer.label}`, onclick: () => fitTo(layer.places) },
+      h("i", { class: "sw", style: `background:var(${layer.color})` }), `${layer.label}${layer.places.length > 1 ? ` (${layer.places.length})` : ""}`));
+  });
+  // Start on the place and its neighbourhood; the other layers are a tap away in the legend.
+  fitTo(layers[0].places.slice(0, layers[0].key === "here" ? 6 : undefined));
+  if (pl && diningOn(pl)) {
+    const map = xMap;
+    fetchDining(pl).then(rows => {
+      const out = $("x-dining");
+      if (out) out.replaceChildren(...joinNodes(rows.map(diningLabel), `No Metro Advisor picks within ${NEARBY_KM} km`));
+      if (xMap === map) diningPins(rows, map, false);
+    }).catch(() => { const out = $("x-dining"); if (out) out.textContent = "Couldn't reach the dining database just now."; });
+  }
+}
+
+/* --- Person card */
+function personCard() {
+  const db = S.db, I = exploreIndex(), p = db.byId[X.person];
+  if (!p) return [h("p", { class: "hint", text: "Search a person (Michelangelo, Henry VIII), or click one in another card." })];
+  const works = I.worksBy.get(p.id) || [], dated = works.filter(w => w.start_year != null), undated = works.filter(w => w.start_year == null);
+  const evs = db.eventsOf(p.id).filter(x => !x.event.film).sort((a, b) => byYear(a.event.start_year, b.event.start_year));
+  const titles = db.titlesOf(p.id);
+  const roles = (p.roles || []).slice(0, 3).join(", ");
+  const countries = [...I.countriesOf(p.id)];
+  // Contemporaries: both alive, and grown up, for at least 15 years together.
+  const life = o => [o.birth_year ?? o.death_year - 60, o.death_year ?? o.birth_year + 60];
+  const together = o => { const [a1, b1] = life(p), [a2, b2] = life(o); return Math.min(b1, b2) - Math.max(a1 + 15, a2 + 15); };
+  const contemporaries = p.birth_year != null || p.death_year != null
+    ? db.people.filter(o => o.id !== p.id && (o.birth_year != null || o.death_year != null) && together(o) >= 15).sort((a, b) => fame(b) - fame(a)) : [];
+  const family = [...db.parentsOf(p.id).map(x => [x, "parent"]), ...db.spousesOf(p.id).map(s => [s.person, "spouse"]), ...db.childrenOf(p.id).map(x => [x, "child"])];
+  const wiki = wikiFor(p);
+  return [
+    h("div", { class: "xperson" }, ...(personPicture(p) || []),
+      h("div", {}, h("h2", { text: p.name }),
+        h("div", { class: "xsub" }, xYear(p.birth_year, (p.birth_estimated ? "c. " : "") + (fmtYear(p.birth_year) ?? "?")), "–", xYear(p.death_year, fmtYear(p.death_year) ?? "?"),
+          ` · ${p.type || "Person"}${roles ? " · " + roles : ""}`),
+        countries.length ? h("div", { class: "xsub" }, ...joinNodes(countries.map(c => xBtn(c, `Put ${c} first in the Year card`, () => setCountry(c))))) : null,
+        wiki ? h("a", { class: "ext", href: wiki.url, target: "_blank", rel: "noopener", text: "Wikipedia ↗" }) : null)),
+    lifeStrip(p, dated, evs, titles),
+    xSec(`Works in order${works.length ? ` (${works.length})` : ""}`, xList("person", [...dated, ...undated], 6,
+      w => row2([xWork(w), w.kind ? ` (${w.kind})` : ""], workSpan(w) ? xYear(w.start_year, workSpan(w)) : "undated"))),
+    titles.length ? xSec("Titles", xList("person", titles, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null,
+    evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
+    xSec("Places", xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
+      s => h("span", { class: "xchip" }, xPlace(s.place), s.what && s.what.length < 14 ? h("span", { class: "yrs", text: ` ${s.what.toLowerCase()}` }) : null))),
+    family.length ? xSec("Family", xChips("person", family, 6, ([o, r]) => h("span", { class: "xchip" }, xPerson(o), h("span", { class: "yrs", text: ` ${r}` })))) : null,
+    xSec("Contemporaries", xChips("person", contemporaries, 8, o => h("span", { class: "xchip" }, xPerson(o)))),
+    h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: toTimeline(() => reveal(p.id)), text: "See them on the timeline" })),
+  ];
+}
+// A life as a bar: works and events as marks in date order, years held as a gold band.
+function lifeStrip(p, works, evs, titles) {
+  const a = p.birth_year, b = p.death_year;
+  if (a == null || b == null || b <= a) return null;
+  const x = y => `${Math.max(0, Math.min(100, (y - a) / (b - a) * 100))}%`;
+  const strip = h("div", { class: "xstrip", role: "group", "aria-label": `${p.name}'s life, ${fmtSpan(a, b)}` });
+  titles.forEach(t => strip.append(h("span", { class: "xreign", style: `left:${x(t.start_year ?? a)};width:calc(${x(t.end_year ?? b)} - ${x(t.start_year ?? a)})`, title: `${t.title}, ${reignSpan(t)}` })));
+  evs.forEach(({ event: e }) => e.start_year != null && strip.append(h("button", { type: "button", class: "xmark ev", style: `left:${x(e.start_year)}`,
+    title: `${fmtYear(e.start_year)}: ${e.name}`, "aria-label": `${fmtYear(e.start_year)}: ${e.name}`, onclick: () => xGo("year", e.start_year) })));
+  works.forEach(w => strip.append(h("button", { type: "button", class: "xmark" + (w.id === X.work ? " on" : ""), style: `left:${x(w.start_year)}`,
+    title: `${workSpan(w)}: ${w.name}`, "aria-label": `${workSpan(w)}: ${w.name}`, onclick: () => xGo("work", w.id) })));
+  if (X.year != null && X.year >= a && X.year <= b) strip.append(h("span", { class: "xnow", style: `left:${x(X.year)}`, title: `${fmtYear(X.year)}, the Year card's year` }));
+  return h("div", { class: "xstripwrap" }, strip, h("div", { class: "xstrip-axis" }, h("span", { text: fmtYear(a) }),
+    h("span", { class: "hint", text: "Marks: works (filled) and events (hollow)" }), h("span", { text: fmtYear(b) })));
+}
+
+/* --- Work card */
+function workCard() {
+  const db = S.db, I = exploreIndex(), w = I.workById[X.work];
+  if (!w) return [h("p", { class: "hint", text: "Search a painting or building (Mona Lisa, David), or click one in another card." })];
+  const creator = db.byId[I.creatorOf.get(w.id)];
+  const seq = creator ? (I.worksBy.get(creator.id) || []).filter(o => o.start_year != null) : [];
+  const i = seq.findIndex(o => o.id === w.id), prev = i > 0 ? seq[i - 1] : null, next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
+  const m = db.museumById[w.museum_id], places = I.placesOf.get(w.id) || [];
+  const subjects = (I.subjectsOf.get(w.id) || []).map(id => db.byId[id]).filter(Boolean);
+  const after = w.derived_from_id && I.workById[w.derived_from_id];
+  const C = workCountry(w);
+  const during = w.start_year == null ? [] : db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, w.start_year, w.end_year ?? w.start_year))
+    .sort((x, y) => (C ? inCountryEvent(y, C) - inCountryEvent(x, C) : 0) || evOrder(x, y));
+  const credit = [w.image_credit, w.image_license].filter(Boolean).join(" · ");
+  const age = creator && w.start_year != null ? ageIn(creator, w.start_year) : null;
+  return [
+    w.image_thumb ? h("figure", { class: "xpic" }, picture(w.image_thumb, w.name),
+      h("figcaption", {}, w.image_page ? h("a", { class: "ext", href: w.image_page, target: "_blank", rel: "noopener", text: credit || "Wikimedia Commons" }) : credit)) : null,
+    h("h2", { text: w.name }),
+    h("div", { class: "xsub" }, creator ? xPerson(creator) : "Unknown maker", workSpan(w) ? [" · ", xYear(workYear(w), workSpan(w))] : " · undated",
+      [w.kind, w.medium].filter(Boolean).length ? ` · ${[w.kind, w.medium].filter(Boolean).join(", ")}` : ""),
+    seq.length > 1 && i >= 0 ? h("div", { class: "xseq" },
+      h("div", { class: "xseq-h", text: `In ${creator.name}'s work: ${i + 1} of ${seq.length} dated${age != null ? `, begun at ${age}` : ""}` }),
+      h("div", { class: "xseq-row" }, h("span", {}, prev ? ["← ", xWork(prev), h("span", { class: "yrs", text: ` ${workSpan(prev)}` })] : h("span", { class: "hint", text: "first" })),
+        h("span", { class: "right" }, next ? [xWork(next), h("span", { class: "yrs", text: ` ${workSpan(next)}` }), " →"] : h("span", { class: "hint", text: "last" })))) :
+      w.start_year == null && creator ? h("p", { class: "hint", text: "No date recorded, so it can't be placed in the artist's sequence yet." }) : null,
+    xSec("Where", places.length ? xList("work", places, 4, x => row2(xPlace(x.place), x.role)) : null,
+      m ? h("p", {}, "Now: ", m.museum_url || w.museum_url || m.website ? h("a", { class: "ext", href: w.museum_url || m.website, target: "_blank", rel: "noopener", text: m.name + " ↗" }) : m.name,
+        m.city ? `, ${m.city}` : "", w.accession_number ? h("span", { class: "yrs", text: ` · ${w.accession_number}` }) : null) : null),
+    subjects.length ? xSec("Shows", xChips("work", subjects, 6, o => h("span", { class: "xchip" }, xPerson(o)))) : null,
+    after ? xSec("A copy of", h("p", {}, xWork(after))) : null,
+    during.length ? xSec(`While it was made${C && during.some(e => inCountryEvent(e, C)) ? ` (${C} first)` : ""}`, xList("work", during, 4, e => row2([xEvent(e), db.placeById[e.place_id] ? [" · ", xPlace(db.placeById[e.place_id])] : null], fmtYear(e.start_year)))) : null,
+    w.note ? h("p", { class: "xnote-text", text: w.note }) : null,
+    h("div", { class: "xfoot" }, "Sources: ", ...sourceLinks(db.sourcesFor("artwork", w.key))),
+  ];
+}
+
+// "Near me": the browser's location (asked each time, never stored or sent anywhere) opens the nearest place.
+function nearMe() {
+  const msg = $("x-msg");
+  if (!navigator.geolocation) { msg.textContent = "This browser can't share its location."; return; }
+  msg.textContent = "Finding where you are…";
+  navigator.geolocation.getCurrentPosition(pos => {
+    const at = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+    const near = S.db.places.filter(p => p.lat != null && p.lng != null).map(p => ({ p, km: kmBetween(at, { lat: Number(p.lat), lng: Number(p.lng) }) }))
+      .sort((a, b) => a.km - b.km)[0];
+    if (!near) { msg.textContent = "No places with a map position yet."; return; }
+    msg.textContent = near.km > 50 ? `The nearest place recorded is ${near.p.name}, ${Math.round(near.km)} km away.` : "";
+    setCountry(placeCountry(near.p) || "", false);
+    fill("place", near.p.id);
+    renderExplore(CARDS);
+  }, () => { msg.textContent = "Couldn't get your location. Your browser may have blocked it."; }, { timeout: 10000, maximumAge: 60000 });
+}
+
+function wireExplore() {
+  $("x-form").addEventListener("submit", e => { e.preventDefault(); runExplore($("x-q").value); });
+  $("x-q").addEventListener("input", () => { $("x-msg").textContent = ""; });
+  $("x-near").addEventListener("click", nearMe);
+  $("x-country").addEventListener("change", e => setCountry(e.target.value));
+  document.querySelectorAll("#x-examples button").forEach(b => b.addEventListener("click", () => { $("x-q").value = b.dataset.x; runExplore(b.dataset.x); }));
+  addEventListener("keydown", e => { if (e.key === "Escape" && X.open && S.viewMode === "explore") shrinkCard(); });
+  addEventListener("popstate", () => { if (X.open) { X.pushed = false; shrinkCard(true); } });
+}
+function fillCountryPicker() {
+  const sel = $("x-country");
+  sel.replaceChildren(h("option", { value: "", text: "All countries" }), ...exploreIndex().countryList.map(c => h("option", { value: c, text: c })));
+  if (X.country && !exploreIndex().countryList.includes(X.country)) X.country = "";
+  sel.value = X.country;
+}
+
 /* ------------------------------------------------------------------ wiring */
 
 function setGroup(g) {
@@ -1841,6 +2419,7 @@ function wire() {
   $("layer-events").addEventListener("change", e => { S.layers.events = e.target.checked; store.set("events", S.layers.events); render(); updateOverviewWindow(); });
   $("zoom-in").addEventListener("click", () => setZoom(S.zoom + 1));
   $("zoom-out").addEventListener("click", () => setZoom(S.zoom - 1));
+  $("view-explore").addEventListener("click", () => showView("explore"));
   $("view-timeline").addEventListener("click", () => showView("timeline"));
   $("view-year").addEventListener("click", () => { showView("year"); renderYear(); });
   $("year-form").addEventListener("submit", e => {
@@ -1854,6 +2433,7 @@ function wire() {
     $("year-from").value = b.dataset.from; $("year-to").value = b.dataset.to || "";
     $("year-form").requestSubmit();
   }));
+  wireExplore();
   $("map-selected").addEventListener("click", () => setMapMode("selected"));
   $("map-everyone").addEventListener("click", () => setMapMode("everyone"));
 
@@ -1885,6 +2465,16 @@ function wire() {
 
 async function init() {
   wire();
+  // The Explore page is the front page: show it while the data loads. The timeline still draws first (it measures
+  // itself), so it waits off-screen at full width until showView brings it back or hides it.
+  let early = new URLSearchParams();
+  try { early = new URLSearchParams(location.search); } catch (e) {}
+  if (!early.has("q") && !["timeline", "year"].includes(early.get("view"))) {
+    $("explore-view").hidden = false;
+    ["view-explore", "view-timeline"].forEach((k, i) => $(k).setAttribute("aria-pressed", !i));
+    const tl = $("timeline-view");
+    tl.style.cssText = `position:absolute;left:-99999px;top:0;width:${tl.parentElement.clientWidth - 32}px`;
+  }
   const { source, raw, error } = await loadData();
   S.db = indexData(raw); S.source = source;
   const src = $("source");
@@ -1894,15 +2484,21 @@ async function init() {
   if (error) src.title = `Live data unavailable: ${error}`;
   let params = new URLSearchParams();
   try { params = new URLSearchParams(location.search); } catch (e) {}
-  // The timeline is always drawn first (while visible, so it can measure itself); ?view=year then switches over.
+  // The timeline is always drawn first (while visible, so it can measure itself); then the page switches to the
+  // view the address asks for: ?view=year, a timeline request (?q= or ?view=timeline), or else the Explore page.
   S.viewMode = "timeline";
   renderCats();
   run(params.get("q") || "");
+  fillCountryPicker();
   if (params.get("view") === "year") {
     $("year-from").value = params.get("y") || ""; $("year-to").value = params.get("to") || "";
     Y.realm = params.get("realm") || null;
     showView("year");
     if ($("year-from").value) $("year-form").requestSubmit(); else renderYear();
+  } else if (!params.has("q") && params.get("view") !== "timeline") {
+    const open = readExploreUrl(params);
+    showView("explore");
+    if (open) expandCard(open);
   }
 }
 

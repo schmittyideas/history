@@ -311,3 +311,75 @@ aside.detail figcaption a { color: var(--muted); }
 .works a.work:hover figcaption, .works a.work:focus-visible figcaption { color: var(--ink); text-decoration: underline; }
 .works a.work:focus-visible { outline: 2px solid var(--ochre); outline-offset: 2px; }
 .works .where { display: block; font-family: var(--mono); font-size: 10px; letter-spacing: .02em; }
+
+/* Explore: one search, four linked cards (Year, Place, Person, Work); a card can fill the screen */
+.xsearch { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.xsearch input[type="search"] { flex: 1 1 260px; }
+.xcountry { display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.xcountry select { font: inherit; font-family: var(--body); font-size: 15px; letter-spacing: 0; text-transform: none; padding: 8px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--linen); color: var(--ink); max-width: 60vw; }
+.xcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 14px; align-items: start; }
+@media (min-width: 900px) { .xcards { grid-template-columns: 1fr 1fr; } }
+.xcard { background: var(--panel); border: 1px solid var(--rule); border-radius: 8px; padding: 12px 14px 14px; min-width: 0; display: grid; gap: 8px; align-content: start; scroll-margin-top: 8px; }
+.xcard.hit { animation: card-flash 1.6s ease-out; }
+.xcard.full { position: fixed; inset: 0; z-index: 1000; border: 0; border-radius: 0; overflow: auto; overscroll-behavior: contain;
+  padding: 14px max(16px, calc((100vw - 980px) / 2)) 96px; }
+body.x-full { overflow: hidden; }
+.xhead { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.xkind { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.xexp { border: 1px solid var(--rule); background: transparent; color: var(--ink); border-radius: 999px; font-size: 12px; padding: 3px 10px; cursor: pointer; }
+.xexp:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+.xcard h2 { font-family: var(--display); font-weight: 400; font-size: 26px; margin: 0; line-height: 1.1; overflow-wrap: anywhere; }
+.xcard.full h2 { font-size: 34px; }
+.xsub { color: var(--muted); font-size: 13.5px; }
+.xsec { display: grid; gap: 3px; min-width: 0; }
+.xsec h3 { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 6px 0 2px; font-weight: 500; }
+.xband { border-left: 3px solid var(--gold); padding-left: 10px; display: grid; gap: 4px; }
+.xband-h { font-family: var(--display); font-weight: 400; font-size: 19px; margin: 0; }
+.xrows { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: 14px; min-width: 0; }
+.xrows li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: baseline; }
+.xrows li > span:first-child { overflow-wrap: anywhere; }
+.xrows .yrs, .xchip .yrs, .xseq .yrs { font-family: var(--mono); font-size: 11.5px; color: var(--muted); white-space: nowrap; }
+.xrows li.xregion { display: block; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+.xchips { display: flex; flex-wrap: wrap; gap: 4px 6px; font-size: 14px; }
+.xchip { background: var(--linen); border: 1px solid var(--rule); border-radius: 999px; padding: 1px 9px; }
+.xmore { font-size: 13px; justify-self: start; }
+.xyear { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.xyear h2 { font-variant-numeric: tabular-nums; }
+.xyear .plink { font-family: var(--mono); font-size: 13px; }
+.xfoot { font-size: 13px; color: var(--muted); padding-top: 4px; }
+.xnote-text { font-size: 13.5px; margin: 0; color: var(--ink); }
+.xmap .street-map { height: 220px; }
+.xcard.full .xmap .street-map { height: 60vh; }
+.xmap.empty { display: none; }
+.xmap .street-map svg { width: auto; height: auto; background: none; }
+.street-pin.small { width: 11px; height: 11px; margin: -6px 0 0 -6px; }
+.xlegend { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 6px; }
+.xleg { border: 0; background: transparent; padding: 0; color: var(--ink); font-size: 12.5px; cursor: pointer; display: inline-flex; align-items: center; gap: 5px; }
+.xleg:hover { text-decoration: underline; }
+.xleg .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.xperson { display: flex; gap: 12px; align-items: flex-start; }
+.xperson .portrait { margin: 0; display: grid; gap: 3px; flex: 0 0 88px; }
+.xperson .portrait img { width: 88px; height: auto; border-radius: 3px; border: 1px solid var(--rule); background: var(--linen); display: block; }
+.xcard figcaption { font-size: 10.5px; color: var(--muted); line-height: 1.3; overflow-wrap: anywhere; }
+.xcard figcaption a { color: var(--muted); }
+.xpic { margin: 0; display: grid; gap: 4px; }
+.xpic img { width: 100%; max-height: 260px; object-fit: contain; background: var(--linen); border-radius: 3px; border: 1px solid var(--rule); display: block; }
+.xcard.full .xpic img { max-height: 70vh; }
+.xstripwrap { display: grid; gap: 2px; margin-top: 4px; }
+.xstrip { position: relative; height: 22px; background: var(--lane); border-radius: 3px; }
+.xreign { position: absolute; top: 0; bottom: 0; background: color-mix(in srgb, var(--gold) 35%, transparent); }
+.xmark { position: absolute; top: 4px; width: 8px; height: 14px; margin-left: -4px; padding: 0; border: 1.5px solid var(--ochre); background: var(--ochre); border-radius: 2px; cursor: pointer; }
+.xmark.ev { background: var(--panel); border-color: var(--madder); }
+.xmark.on { background: var(--woad); border-color: var(--woad); }
+.xmark:focus-visible { outline: 2px solid var(--woad); outline-offset: 1px; }
+.xnow { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--woad); pointer-events: none; }
+.xstrip-axis { display: flex; justify-content: space-between; gap: 8px; font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.xstrip-axis .hint { font-family: var(--body); font-size: 11px; text-align: center; }
+.xseq { background: var(--linen); border: 1px solid var(--rule); border-radius: 6px; padding: 8px 10px; display: grid; gap: 4px; font-size: 14px; }
+.xseq-h { font-size: 12.5px; color: var(--muted); }
+.xseq-row { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.xseq-row .right { text-align: right; margin-left: auto; }
+.xnote { position: sticky; bottom: 0; margin: 8px -4px 0; padding: 10px 12px; background: var(--ink); color: var(--panel); border-radius: 6px; display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; }
+.xnote .btn { background: var(--panel); color: var(--ink); border-color: var(--panel); padding: 5px 12px; }
+.xcard .map-sec { margin-top: 8px; }
+#x-msg .yrs { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
