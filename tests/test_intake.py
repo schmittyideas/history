@@ -256,6 +256,13 @@ def test_realm_countries():
     assert not intake.plan_files(world2, docs2).errors
     intake.apply_files(world2, docs2, log=lambda m: None)
     assert len(db.t["realm_countries"]) == 3 and [c for c in db.t["realm_countries"] if c["modern_country"] == "Italy"][0]["end_year"] == 1268
+    # A discrepancy can be about a realm (an article whose infobox and lead give different years).
+    disc = [("d.yaml", {"batch": {"title": "t"}, "discrepancies": [{"key": "hre-start", "question": "When did the Holy Roman Empire begin?",
+             "about": [{"realm": "holy-roman-empire"}], "field": "from", "claims": [{"value": 800, "sources": ["wp-hre"]}, {"value": 962, "sources": ["wp-hre"]}]}]})]
+    dp = intake.plan_files(intake.World(db), disc)
+    assert not dp.errors, dp.errors
+    unknown = intake.plan_files(intake.World(db), [("d2.yaml", {"batch": {"title": "t"}, "discrepancies": [{"key": "x", "question": "?", "about": [{"realm": "atlantis"}], "claims": [{"value": 1}, {"value": 2}]}]})])
+    assert any("unknown realm `atlantis`" in e for e in unknown.errors), unknown.errors
     bad = intake.plan_files(intake.World(db), [("b.yaml", {"batch": {"title": "t"}, "realms": [
         {"name": "Mu", "region": "Oceania", "from": 900, "to": 800, "country": "Fiji", "countries": [{"country": "Tonga"}, {"country": "Tonga"}, {"note": "x"}, {"country": "Samoa", "from": 700}]}]})])
     text = " ".join(bad.errors + bad.warnings)

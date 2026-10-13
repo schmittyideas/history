@@ -206,7 +206,7 @@ Where sources disagree. Record both sides rather than silently picking one, so a
 | Field | Meaning |
 |---|---|
 | `key`, `question` | Required. The question is what's disputed |
-| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}`, `{artwork: …}` |
+| `about` | Records it concerns: list of `{person: …}`, `{place: …}`, `{event: …}`, `{artwork: …}`, `{realm: …}` (a realm's key) |
 | `field` | Which field, if one: `born`, `died`, `date`, `place`, … |
 | `claims` | What each side says: list of `{value, sources, note}` |
 | `note` | Context while it's open, e.g. which value the record uses for now |
