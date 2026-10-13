@@ -1,0 +1,421 @@
+# Realm years and countries, batch 5: 29 existing realms in Western Europe
+# (France, the British Isles, the Empire, Iberia and the Italian states) get
+# the years they existed and every modern country they covered, from each
+# realm's English Wikipedia infobox ("Today part of") or, where the infobox
+# has no such list, from what the article's text clearly states. Fetched
+# 2026-10-12. Names, regions and main countries are unchanged.
+#
+# Where one realm name covers successive states (a county then a kingdom, a
+# marquisate then a duchy), it gets the span of both and cites both articles,
+# because our titles run across the change. Date conflicts inside an article
+# are recorded as `discrepancies` at the end.
+
+batch:
+  title: "Realm years and countries, batch 5"
+  requested: "Ty: realms with start and end dates, mapped to today's countries"
+  date: 2026-10-12
+
+sources:
+  - {key: wp-kingdom-of-france, title: "Kingdom of France (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_France}
+  - {key: wp-first-french-empire, title: "First French Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/First_French_Empire}
+  - {key: wp-second-french-empire, title: "Second French Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Second_French_Empire}
+  - {key: wp-kingdom-of-great-britain, title: "Kingdom of Great Britain (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Great_Britain}
+  - {key: wp-habsburg-netherlands, title: "Habsburg Netherlands (Wikipedia)", url: https://en.wikipedia.org/wiki/Habsburg_Netherlands}
+  - {key: wp-electorate-of-hanover, title: "Electorate of Hanover (Wikipedia)", url: https://en.wikipedia.org/wiki/Electorate_of_Hanover}
+  - {key: wp-kingdom-of-hanover, title: "Kingdom of Hanover (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Hanover}
+  - {key: wp-holy-roman-empire, title: "Holy Roman Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Holy_Roman_Empire}
+  - {key: wp-kingdom-of-ireland, title: "Kingdom of Ireland (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Ireland}
+  - {key: wp-kingdom-of-leon, title: "Kingdom of León (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Le%C3%B3n"}
+  - {key: wp-marquisate-of-mantua, title: "Marquisate of Mantua (Wikipedia)", url: https://en.wikipedia.org/wiki/Marquisate_of_Mantua}
+  - {key: wp-duchy-of-mantua, title: "Duchy of Mantua (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Mantua}
+  - {key: wp-duchy-of-milan, title: "Duchy of Milan (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Milan}
+  - {key: wp-march-of-montferrat, title: "March of Montferrat (Wikipedia)", url: https://en.wikipedia.org/wiki/March_of_Montferrat}
+  - {key: wp-duchy-of-montferrat, title: "Duchy of Montferrat (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Montferrat}
+  - {key: wp-kingdom-of-naples, title: "Kingdom of Naples (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Naples}
+  - {key: wp-kingdom-of-navarre, title: "Kingdom of Navarre (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Navarre}
+  - {key: wp-duchy-of-normandy, title: "Duchy of Normandy (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Normandy}
+  - {key: wp-papal-states, title: "Papal States (Wikipedia)", url: https://en.wikipedia.org/wiki/Papal_States}
+  - {key: wp-duchy-of-parma-and-piacenza, title: "Duchy of Parma and Piacenza (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Parma_and_Piacenza}
+  - {key: wp-kingdom-of-portugal, title: "Kingdom of Portugal (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Portugal}
+  - {key: wp-kingdom-of-prussia, title: "Kingdom of Prussia (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Prussia}
+  - {key: wp-duchy-of-savoy, title: "Duchy of Savoy (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Savoy}
+  - {key: wp-electorate-of-saxony, title: "Electorate of Saxony (Wikipedia)", url: https://en.wikipedia.org/wiki/Electorate_of_Saxony}
+  - {key: wp-kingdom-of-scotland, title: "Kingdom of Scotland (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Scotland}
+  - {key: wp-county-of-sicily, title: "County of Sicily (Wikipedia)", url: https://en.wikipedia.org/wiki/County_of_Sicily}
+  - {key: wp-kingdom-of-sicily, title: "Kingdom of Sicily (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Sicily}
+  - {key: wp-spain, title: "Spain (Wikipedia)", url: https://en.wikipedia.org/wiki/Spain}
+  - {key: wp-habsburg-spain, title: "Habsburg Spain (Wikipedia)", url: https://en.wikipedia.org/wiki/Habsburg_Spain}
+  - {key: wp-spanish-netherlands, title: "Spanish Netherlands (Wikipedia)", url: https://en.wikipedia.org/wiki/Spanish_Netherlands}
+  - {key: wp-grand-duchy-of-tuscany, title: "Grand Duchy of Tuscany (Wikipedia)", url: https://en.wikipedia.org/wiki/Grand_Duchy_of_Tuscany}
+  - {key: wp-united-kingdom-of-great-britain-and-ireland, title: "United Kingdom of Great Britain and Ireland (Wikipedia)", url: https://en.wikipedia.org/wiki/United_Kingdom_of_Great_Britain_and_Ireland}
+  - {key: wp-duchy-of-urbino, title: "Duchy of Urbino (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Urbino}
+  - {key: wp-republic-of-venice, title: "Republic of Venice (Wikipedia)", url: https://en.wikipedia.org/wiki/Republic_of_Venice}
+
+realms:
+  # ---------------------------------------------------------------- France
+  # Infobox: 987 (Capetians) to 1830, life span 987-1792, 1814-1815,
+  # 1815-1830. The lead runs it "to 1848 during its dissolution", which also
+  # covers our King of the French (1830-1848); see the discrepancy below.
+  # Our later France titles (First Consul, President) fall outside the
+  # kingdom's years.
+  - name: France
+    from: 987
+    to: 1848
+    note: "West Francia; its kings were Kings of the Franks. A kingdom 987-1792, restored 1814-1815 and 1815-1830; the lead runs it to 1848 (the July Monarchy)"
+    countries:
+      - {country: France}
+    sources: [wp-kingdom-of-france]
+
+  # Two empires with a gap: the First (1804-1814, and the Hundred Days of
+  # 1815) and the Second (1852-1870). The First French Empire article has no
+  # "Today part of" list, so the lands it annexed (the Low Countries, parts
+  # of Germany and Italy, the Illyrian Provinces) are left out for now.
+  # Algeria comes from the Second Empire's list.
+  - name: French Empire
+    from: 1804
+    to: 1870
+    note: "Two empires: the First (1804-1814, and March-July 1815) and the Second (1852-1870)"
+    countries:
+      - {country: France}
+      - {country: Algeria, from: 1852, note: "French Algeria, under the Second Empire"}
+    sources: [wp-first-french-empire, wp-second-french-empire]
+
+  - name: Normandy
+    # Infobox: 911 (Treaty of Saint-Clair-sur-Epte) to 1290; the lead says
+    # Philip II seized it in 1204 (see the discrepancy below). The infobox
+    # also lists Guernsey and Jersey, Crown Dependencies rather than
+    # sovereign states, so they are left out.
+    from: 911
+    to: 1290
+    countries:
+      - {country: France, note: Normandy}
+    sources: [wp-duchy-of-normandy]
+
+  # ---------------------------------------------------------------- British Isles
+  - name: Great Britain
+    from: 1707
+    to: 1800
+    countries:
+      - {country: United Kingdom}
+    sources: [wp-kingdom-of-great-britain]
+
+  # Still exists (the infobox note says it continued as the same state after
+  # 1922), so no `to`.
+  - name: United Kingdom
+    from: 1801
+    countries:
+      - {country: United Kingdom}
+      - {country: Ireland, to: 1922, note: "All of Ireland until the Irish Free State left in 1922"}
+    sources: [wp-united-kingdom-of-great-britain-and-ireland]
+
+  # Infobox: "9th century (traditionally 843)"; life span 843-1707, with the
+  # Commonwealth 1654-1660. The infobox's today list also names parts of
+  # Northumberland and Cumbria, which are in the United Kingdom anyway.
+  - name: Scotland
+    from: 843
+    from_estimated: true
+    to: 1707
+    countries:
+      - {country: United Kingdom, note: "Scotland, and at times parts of Northumberland and Cumbria"}
+    sources: [wp-kingdom-of-scotland]
+
+  # Our Ireland titles are High Kings (980-1022), a Lord of Ireland (1177)
+  # and a Queen of Ireland, so no one state's years fit: the Kingdom of
+  # Ireland (1542-1800) would put the High Kings before it began, and Gaelic
+  # Ireland has no clear start or end. Years are left out; the countries are
+  # the Kingdom of Ireland's "today" list, which is the whole island.
+  - name: Ireland
+    countries:
+      - {country: Ireland}
+      - {country: United Kingdom, note: Northern Ireland}
+    sources: [wp-kingdom-of-ireland]
+
+  # ---------------------------------------------------------------- Empire and Low Countries
+  # Infobox life span "800/962", date_start 2 February 962; the lead says it
+  # began "in either 800 or 962". See the discrepancy below.
+  - name: Holy Roman Empire
+    from: 962
+    to: 1806
+    countries:
+      - {country: Germany}
+      - {country: France}
+      - {country: Belgium}
+      - {country: Netherlands}
+      - {country: Italy, note: northern Italy}
+      - {country: Luxembourg}
+      - {country: Switzerland}
+      - {country: Liechtenstein}
+      - {country: Austria}
+      - {country: Czech Republic}
+      - {country: Slovenia}
+      - {country: Poland}
+    sources: [wp-holy-roman-empire]
+
+  # Electorate (Brunswick-Lüneburg) 1692-1814, then Kingdom 1814-1866. The
+  # Kingdom's infobox also lists the Netherlands, flagged {{dubious}} there
+  # with no citation, so it is left out.
+  - name: Hanover
+    from: 1692
+    to: 1866
+    countries:
+      - {country: Germany}
+    sources: [wp-electorate-of-hanover, wp-kingdom-of-hanover]
+
+  # Infobox 1482-1797 with an empty "today" list. The lead says Habsburg
+  # rule ended for the Northern Netherlands in 1581 (the Dutch Republic) and
+  # for the Southern Netherlands in 1797. It doesn't name Luxembourg or
+  # France, so they are left out here (the Spanish Netherlands lists them).
+  - name: Habsburg Netherlands
+    from: 1482
+    to: 1797
+    countries:
+      - {country: Belgium}
+      - {country: Netherlands, to: 1581, note: "the northern provinces, until the Dutch Republic broke away"}
+    sources: [wp-habsburg-netherlands]
+
+  - name: Spanish Netherlands
+    from: 1556
+    to: 1714
+    countries:
+      - {country: Belgium}
+      - {country: Netherlands, to: 1581, note: "the north, until the Dutch Republic broke away"}
+      - {country: Luxembourg}
+      - {country: France, note: parts of northern France}
+      - {country: Germany, note: parts of western Germany}
+    sources: [wp-spanish-netherlands]
+
+  # Infobox "today" list: Germany, Poland, Russia, Denmark, Lithuania, Czech
+  # Republic, Belgium, the Netherlands (not Switzerland).
+  - name: Prussia
+    from: 1701
+    to: 1918
+    countries:
+      - {country: Germany}
+      - {country: Poland}
+      - {country: Russia}
+      - {country: Denmark}
+      - {country: Lithuania}
+      - {country: Czech Republic}
+      - {country: Belgium}
+      - {country: Netherlands}
+    sources: [wp-kingdom-of-prussia]
+
+  - name: Saxony
+    from: 1356
+    to: 1806
+    countries:
+      - {country: Germany}
+      - {country: Poland}
+    sources: [wp-electorate-of-saxony]
+
+  # ---------------------------------------------------------------- Iberia
+  # Infobox 910-1833 (the 1833 territorial division of Spain); our kings run
+  # 999-1504.
+  - name: León
+    from: 910
+    to: 1833
+    countries:
+      - {country: Spain}
+      - {country: Portugal}
+    sources: [wp-kingdom-of-leon]
+
+  # "Kingdom of Pamplona" redirects to Kingdom of Navarre: one kingdom,
+  # "originally the Kingdom of Pamplona", founded in an event "traditionally
+  # dated to 824". The article gives no year for the change of name, so
+  # Pamplona gets no end year and Navarre carries the kingdom's full span.
+  # Countries as for Navarre, both sides of the western Pyrenees.
+  - name: Pamplona
+    countries:
+      - {country: Spain}
+      - {country: France, note: Lower Navarre}
+    sources: [wp-kingdom-of-navarre]
+
+  # The southern part was conquered in 1512 and kept as a separate kingdom
+  # under Castile until 1841; the northern part (Lower Navarre) was merged
+  # into the Kingdom of France in 1620.
+  - name: Navarre
+    from: 824
+    from_estimated: true
+    to: 1841
+    countries:
+      - {country: Spain, note: "Navarre, the Basque Country and La Rioja at its greatest extent"}
+      - {country: France, to: 1620, note: Lower Navarre}
+    sources: [wp-kingdom-of-navarre]
+
+  # Infobox 1139-1910; no "today" list. The kingdom itself was in the
+  # western Iberian Peninsula; its colonies were the Portuguese Empire, a
+  # separate record.
+  - name: Portugal
+    from: 1139
+    to: 1910
+    countries:
+      - {country: Portugal}
+    sources: [wp-kingdom-of-portugal]
+
+  # Still exists. The Spain article's formation line gives the dynastic
+  # union of 1479 and a sole sovereign from 1516 (Habsburg Spain begins
+  # 1516); our King of Spain titles start in 1516. See the discrepancy below.
+  - name: Spain
+    from: 1516
+    countries:
+      - {country: Spain}
+    sources: [wp-spain, wp-habsburg-spain]
+
+  # ---------------------------------------------------------------- Italy
+  # Papal States, 756-1870 (interregna 1798-1799, 1809-1814, 1849-1850).
+  # The infobox lists France (Avignon) and Vatican City as well as Italy.
+  - name: Papacy
+    from: 756
+    to: 1870
+    note: "The Papal States, with interregna 1798-1799, 1809-1814 and 1849-1850"
+    countries:
+      - {country: Italy}
+      - {country: France}
+      - {country: Vatican City}
+    sources: [wp-papal-states]
+
+  # Traditional founding 697; first contemporaneously recorded doge 726
+  # (infobox footnote). See the discrepancy below. No "today" list: the
+  # countries come from the lead. It also names "several cities and ports in
+  # the eastern Mediterranean" without saying where, so Turkey is left out.
+  - name: Venice
+    from: 697
+    to: 1797
+    countries:
+      - {country: Italy, note: northeastern Italy}
+      - {country: Slovenia, note: part of Istria}
+      - {country: Croatia, note: Istria and Dalmatia}
+      - {country: Montenegro, note: the coast}
+      - {country: Albania, note: the coast}
+      - {country: Greece, note: "Crete, the Peloponnese, Ionian and Aegean islands"}
+      - {country: Cyprus}
+    sources: [wp-republic-of-venice]
+
+  # County of Sicily 1071-1130, then Kingdom of Sicily 1130-1816; our titles
+  # start with a Count of Sicily (1071). Both infoboxes list Italy and Malta.
+  - name: Sicily
+    from: 1071
+    to: 1816
+    note: "County of Sicily 1071-1130, then Kingdom of Sicily"
+    countries:
+      - {country: Italy}
+      - {country: Malta}
+    sources: [wp-county-of-sicily, wp-kingdom-of-sicily]
+
+  # Life span 1282-1806 and 1815-1816 (French rule between); merged into the
+  # Two Sicilies in 1816.
+  - name: Naples
+    from: 1282
+    to: 1816
+    countries:
+      - {country: Italy, note: southern Italy}
+    sources: [wp-kingdom-of-naples]
+
+  # Life span 1395-1447 and 1450-1796 (the Ambrosian Republic between).
+  - name: Milan
+    from: 1395
+    to: 1796
+    countries:
+      - {country: Italy}
+      - {country: Switzerland}
+    sources: [wp-duchy-of-milan]
+
+  # Marquisate 1433-1530, then Duchy 1530-1797; our titles run 1490-1612.
+  - name: Mantua
+    from: 1433
+    to: 1797
+    note: "Marquisate of Mantua 1433-1530, then Duchy of Mantua"
+    countries:
+      - {country: Italy}
+    sources: [wp-marquisate-of-mantua, wp-duchy-of-mantua]
+
+  # March 967-1574, then Duchy 1574-1708 (annexed by Savoy); our titles run
+  # 1536-1612, across the change. Neither infobox has a "today" list; the
+  # Duchy's lead puts it in southern Piedmont.
+  - name: Montferrat
+    from: 967
+    to: 1708
+    note: "March of Montferrat 967-1574, then Duchy of Montferrat"
+    countries:
+      - {country: Italy, note: southern Piedmont}
+    sources: [wp-march-of-montferrat, wp-duchy-of-montferrat]
+
+  # Life span 1545-1802 (1808) and 1814-1859.
+  - name: Parma
+    from: 1545
+    to: 1859
+    countries:
+      - {country: Italy}
+    sources: [wp-duchy-of-parma-and-piacenza]
+
+  # Life span 1416-1792 and 1814-1847.
+  - name: Savoy
+    from: 1416
+    to: 1847
+    countries:
+      - {country: Italy}
+      - {country: France}
+      - {country: Switzerland}
+    sources: [wp-duchy-of-savoy]
+
+  # Life span 1569-1801 and 1814-1860.
+  - name: Tuscany
+    from: 1569
+    to: 1860
+    countries:
+      - {country: Italy}
+    sources: [wp-grand-duchy-of-tuscany]
+
+  # Infobox 1443-1631; its "today" list is Italy only (no San Marino).
+  - name: Urbino
+    from: 1443
+    to: 1631
+    countries:
+      - {country: Italy}
+    sources: [wp-duchy-of-urbino]
+
+discrepancies:
+  - key: france-kingdom-end
+    question: When did the Kingdom of France end?
+    about: [{realm: france}]
+    field: to
+    claims:
+      - {value: "1830", sources: [wp-kingdom-of-france], note: "Infobox: ended with the July Revolution, 2 August 1830"}
+      - {value: "1848", sources: [wp-kingdom-of-france], note: "Lead: a European power from the High Middle Ages to 1848, during its dissolution (the July Monarchy, 1830-1848)"}
+    note: "The realm uses 1848 so our King of the French (1830-1848) falls inside it."
+
+  - key: normandy-duchy-end
+    question: When did the Duchy of Normandy end?
+    about: [{realm: normandy}]
+    field: to
+    claims:
+      - {value: "1290", sources: [wp-duchy-of-normandy], note: "Infobox: split into Guernsey and Jersey"}
+      - {value: "1204", sources: [wp-duchy-of-normandy], note: "Lead: Philip II seized it in 1204; the English claim to the mainland was ceded in 1259"}
+    note: "The realm uses the infobox's 1290."
+
+  - key: holy-roman-empire-start
+    question: When did the Holy Roman Empire begin?
+    about: [{realm: holy-roman-empire}]
+    field: from
+    claims:
+      - {value: "800", sources: [wp-holy-roman-empire], note: "Charlemagne crowned emperor, 25 December 800"}
+      - {value: "962", sources: [wp-holy-roman-empire], note: "Otto I crowned emperor, 2 February 962 (the infobox's start date)"}
+    note: "The realm uses 962, the infobox's date_start; the lead says 'either 800 or 962'."
+
+  - key: venice-republic-start
+    question: When was the Republic of Venice founded?
+    about: [{realm: venice}]
+    field: from
+    claims:
+      - {value: "697", sources: [wp-republic-of-venice], note: "Traditional date, with Paolo Lucio Anafesto as first doge (infobox and lead)"}
+      - {value: "726", sources: [wp-republic-of-venice], note: "Installation of Orso Ipato, the first contemporaneously recorded doge (infobox footnote)"}
+    note: "The realm uses the traditional 697."
+
+  - key: spain-start
+    question: When did Spain begin as one monarchy?
+    about: [{realm: spain}]
+    field: from
+    claims:
+      - {value: "1479", sources: [wp-spain], note: "Dynastic union of Castile and Aragon, 20 January 1479"}
+      - {value: "1516", sources: [wp-spain, wp-habsburg-spain], note: "Sole sovereign (Charles I), 14 March 1516"}
+    note: "The realm uses 1516, when our King of Spain titles begin."
