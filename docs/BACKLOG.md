@@ -1,6 +1,6 @@
 # History Timeline backlog
 
-Last updated 2026-10-11 · Board: [GitHub Project](https://github.com/users/schmittyideas/projects/1)
+Last updated 2026-10-12 · Board: [GitHub Project](https://github.com/users/schmittyideas/projects/1)
 
 One list of bugs, tasks and ideas for the site, the data and the tooling.
 
@@ -26,6 +26,30 @@ Rules:
 ## Site
 
 ### Ready (ranked)
+
+#### [P1] Explore page: four linked cards (Year, Place, Person, Work)
+`type: enhancement` · `area: site` · `status: in-progress` · `issue: #185`
+
+A new front page: one search box and four cards (Year, Place, Person, Work), two by two on a wide screen, stacked on a phone. A search fills all four with its best match; a click on a link changes only the matching card. Each card expands to fill the screen and shrinks back to its spot. The address records the cards, so a view can be shared. A country picker sets which country the Year card shows first. Timeline and Year views stay for the full picture.
+Source: Ty, 2026-10-12.
+
+#### [P1] Year card: your country first, then the world
+`type: enhancement` · `area: site` · `status: ready` · `issue: #186`
+
+Previous and next year; In <country> first (rulers, events, works, artists active there); Elsewhere in the world by region; Influential people alive. Expanded, it shows the border map. A person's country comes from their realms and recorded places, so no schema change to start.
+Source: Ty, 2026-10-12.
+
+#### [P1] Place card: map, nearby and Near me
+`type: enhancement` · `area: site` · `status: ready` · `issue: #187`
+
+Street map at the top of the Place card, with pins for the other cards (the person's route, the work's places, the year's events). What happened here, who was here, works, Nearby, Eat and drink. Near me uses the browser's location (never stored). Expanded, the map takes most of the screen.
+Source: Ty, 2026-10-12.
+
+#### [P1] Person and Work cards: works in date order
+`type: enhancement` · `area: site` · `status: ready` · `issue: #188`
+
+Person: life strip with works and events in date order, places, contemporaries. Work: picture, artist and date, previous and next in the artist's sequence, where made and where now, what else happened while it was made.
+Source: Ty, 2026-10-12.
 
 #### [P2] Navigation: breadcrumb of 5 with browser Back, and Center on a person
 `type: task` · `area: site` · `status: ready` · `issue: #23`
