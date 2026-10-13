@@ -1,0 +1,344 @@
+# Museums on the map, batch 1: every museum in this half of the list gets a place,
+# so an artwork's Work card and the Place card can show where it hangs.
+#
+# Eight museums reuse a place that already is the museum or its building (Louvre Palace,
+# Hotel Biron, Centre Pompidou, Palais des Beaux-Arts de Lyon, the Met, Getty Center, LACMA,
+# Kroller-Muller Museum). The rest get a new place keyed like the museum.
+#
+# Facts and coordinates are from each museum's English Wikipedia article (the source the
+# museum already cites). Every article's coordinates are within 200 m of the museum record,
+# so no museum lat/lng changes. A place's `founded` is the year the building opened as this
+# museum, or, for a much older building, the year the building was finished (the note says
+# which). Where the museum record's founding year differs from the article's infobox, a
+# discrepancy records both (museums can't be named in `about`, so it names the place).
+# built_by / architect are filled only where the article's infobox names them.
+
+batch:
+  title: Museums on the map, batch 1
+  requested: "Ty: link museums to places"
+  date: 2026-10-12
+
+places:
+  # --- Paris ---
+  - {key: musee-d-orsay, name: "Musée d'Orsay", kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.86, lng: 2.3265, visitable: true, founded: 1900, sources: [wp-musee-d-orsay],
+     note: "The former Gare d'Orsay, a Beaux-Arts railway station built 1898–1900 for the Exposition Universelle; a museum since 1986."}
+  - {key: musee-de-l-orangerie, name: "Musée de l'Orangerie", kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.8638, lng: 2.3225, visitable: true, founded: 1852, sources: [wp-musee-de-l-orangerie],
+     note: "Built for Napoleon III in 1852 to winter the Tuileries citrus trees; inaugurated as the Musée Claude Monet in 1927, home of his Water Lilies."}
+  - {key: petit-palais, name: Petit Palais, kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.866, lng: 2.3145, visitable: true, founded: 1900, architect: Charles Girault, sources: [wp-petit-palais],
+     note: "Built 1897–1900 for the Exposition Universelle; the City of Paris Museum of Fine Arts since 1902."}
+  - {key: musee-picasso-paris, name: Musée Picasso, kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.8597, lng: 2.3624, visitable: true, founded: 1659, sources: [wp-musee-picasso-paris],
+     note: "The Hôtel Salé in the Marais, a mansion built 1656–1659 for the tax farmer Pierre Aubert; now the museum of Picasso's work."}
+  - {key: musee-marmottan-monet, name: Musée Marmottan Monet, kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.8593, lng: 2.2673, visitable: true, founded: 1934, sources: [wp-musee-marmottan-monet],
+     note: "A former hunting lodge on the edge of the Bois de Boulogne, given by Paul Marmottan to the Académie des Beaux-Arts in 1932 and opened as a museum in 1934."}
+  - {key: musee-jacquemart-andre, name: Musée Jacquemart-André, kind: museum, city: Paris, region: Ile-de-France, country: France,
+     lat: 48.8754, lng: 2.3105, visitable: true, founded: 1875, sources: [wp-musee-jacquemart-andre],
+     note: "Mansion built 1869–1875 by Henri Parent for Édouard André; bequeathed by Nélie Jacquemart and opened as a museum in 1913."}
+  # --- elsewhere in France ---
+  - {key: unterlinden-museum, name: Unterlinden Museum, kind: museum, city: Colmar, region: Alsace, country: France,
+     lat: 48.0797, lng: 7.3556, visitable: true, founded: 1853, sources: [wp-unterlinden-museum],
+     note: "In a 13th-century Dominican convent and a 1906 former public baths; opened to the public in 1853. Home of the Isenheim Altarpiece."}
+  # --- England ---
+  - {key: british-museum, name: British Museum, kind: museum, city: London, region: Greater London, country: England,
+     lat: 51.5194, lng: -0.1269, visitable: true, founded: 1759, sources: [wp-british-museum],
+     note: "Founded 1753; opened to the public in 1759 in Montagu House, on the site of Robert Smirke's present building on Great Russell Street."}
+  - {key: national-gallery, name: National Gallery, kind: gallery, city: London, region: Greater London, country: England,
+     lat: 51.5089, lng: -0.1283, visitable: true, founded: 1838, sources: [wp-national-gallery],
+     note: "Founded 1824; William Wilkins's building on Trafalgar Square was begun in 1832 and opened in 1838."}
+  - {key: tate-britain, name: Tate Britain, kind: gallery, city: London, region: Greater London, country: England,
+     lat: 51.4911, lng: -0.1275, visitable: true, founded: 1897, sources: [wp-tate-britain],
+     note: "Opened on Millbank on 21 July 1897 as the National Gallery of British Art."}
+  - {key: tate-modern, name: Tate Modern, kind: gallery, city: London, region: Greater London, country: England,
+     lat: 51.5078, lng: -0.0994, visitable: true, founded: 1963, sources: [wp-tate-modern],
+     note: "The former Bankside Power Station by Giles Gilbert Scott, built 1947–1963; converted by Herzog & de Meuron and opened as Tate Modern on 11 May 2000."}
+  - {key: national-portrait-gallery-london, name: National Portrait Gallery, kind: gallery, city: London, region: Greater London, country: England,
+     lat: 51.5094, lng: -0.1281, visitable: true, founded: 1896, sources: [wp-national-portrait-gallery-london],
+     note: "Founded 1856; in its St Martin's Place building, designed by Ewan Christian, since 4 April 1896."}
+  - {key: victoria-and-albert-museum, name: Victoria and Albert Museum, kind: museum, city: London, region: Greater London, country: England,
+     lat: 51.4967, lng: -0.1719, visitable: true, founded: 1857,
+     architect: "Francis Fowke; Henry Young Darracott Scott; J. W. Wild; Aston Webb; Amanda Levete", sources: [wp-victoria-and-albert-museum],
+     note: "Founded 1852; moved to South Kensington and opened by Queen Victoria on 20 June 1857 as the South Kensington Museum."}
+  - {key: wallace-collection, name: Wallace Collection, kind: museum, city: London, region: Greater London, country: England,
+     lat: 51.5175, lng: -0.153, visitable: true, founded: 1776, sources: [wp-wallace-collection],
+     note: "Hertford House on Manchester Square, built in 1776 for the 4th Duke of Manchester; opened as a museum on 22 June 1900."}
+  - {key: courtauld-gallery, name: Courtauld Gallery, kind: gallery, city: London, region: Greater London, country: England,
+     lat: 51.5118, lng: -0.1175, visitable: true, founded: 1989, sources: [wp-courtauld-gallery],
+     note: "In the Strand block of Somerset House, rooms Sir William Chambers designed for the learned societies; the gallery (founded 1932) has been here since 1989."}
+  - {key: ashmolean-museum, name: Ashmolean Museum, kind: museum, city: Oxford, region: Oxfordshire, country: England,
+     lat: 51.7554, lng: -1.26, visitable: true, founded: 1845, sources: [wp-ashmolean-museum],
+     note: "The museum opened on 24 May 1683; its present Beaumont Street building was built 1841–1845."}
+  - {key: fitzwilliam-museum, name: Fitzwilliam Museum, kind: museum, city: Cambridge, region: Cambridgeshire, country: England,
+     lat: 52.2003, lng: 0.1194, visitable: true, founded: 1848, sources: [wp-fitzwilliam-museum],
+     note: "Founded 1816 by Viscount FitzWilliam's bequest; George Basevi's Founder's Building, built 1837–1843, opened in 1848."}
+  # --- New York ---
+  - {key: museum-of-modern-art, name: Museum of Modern Art, kind: museum, city: New York City, region: New York, country: United States,
+     lat: 40.7617, lng: -73.9775, visitable: true, founded: 1939, sources: [wp-museum-of-modern-art],
+     note: "Founded 1929; on West 53rd Street in Midtown Manhattan since 1939."}
+  - {key: solomon-r-guggenheim-museum, name: Solomon R. Guggenheim Museum, kind: museum, city: New York City, region: New York, country: United States,
+     lat: 40.7831, lng: -73.9589, visitable: true, founded: 1959, architect: Frank Lloyd Wright, sources: [wp-solomon-r-guggenheim-museum],
+     note: "Frank Lloyd Wright's spiral building on Fifth Avenue, built 1956–1959; the museum began in 1939 as the Museum of Non-Objective Painting."}
+  - {key: whitney-museum-of-american-art, name: Whitney Museum of American Art, kind: museum, city: New York City, region: New York, country: United States,
+     lat: 40.7396, lng: -74.0089, visitable: true, founded: 2015, architect: Renzo Piano, sources: [wp-whitney-museum-of-american-art],
+     note: "Renzo Piano's building at 99 Gansevoort Street, by the High Line, opened 1 May 2015; the museum was founded in 1930."}
+  - {key: frick-collection, name: The Frick Collection, kind: museum, city: New York City, region: New York, country: United States,
+     lat: 40.7711, lng: -73.9672, visitable: true, founded: 1914, sources: [wp-frick-collection],
+     note: "Henry Clay Frick's house at 1 East 70th Street, designed by Thomas Hastings and completed in 1914; opened as a museum on 16 December 1935."}
+  - {key: brooklyn-museum, name: Brooklyn Museum, kind: museum, city: New York City, region: New York, country: United States,
+     lat: 40.6713, lng: -73.9638, visitable: true, founded: 1897, architect: "McKim, Mead & White", sources: [wp-brooklyn-museum],
+     note: "Beaux-Arts building on Eastern Parkway, Brooklyn, completed in 1897; the institution began in 1823 as the Brooklyn Apprentices' Library."}
+  # --- Washington, D.C. ---
+  - {key: national-gallery-of-art, name: National Gallery of Art, kind: museum, city: "Washington, D.C.", region: District of Columbia, country: United States,
+     lat: 38.8914, lng: -77.02, visitable: true, founded: 1941, sources: [wp-national-gallery-of-art],
+     note: "On the National Mall: John Russell Pope's West Building (1941) and I. M. Pei's East Building (1978); established by Congress in 1937."}
+  - {key: smithsonian-american-art-museum, name: Smithsonian American Art Museum, kind: museum, city: "Washington, D.C.", region: District of Columbia, country: United States,
+     lat: 38.8978, lng: -77.0233, visitable: true, founded: 1968, sources: [wp-smithsonian-american-art-museum],
+     note: "In the Old Patent Office Building, shared with the National Portrait Gallery; the museum opened there on 6 May 1968."}
+  - {key: freer-gallery-of-art, name: Freer Gallery of Art, kind: gallery, city: "Washington, D.C.", region: District of Columbia, country: United States,
+     lat: 38.8883, lng: -77.0275, visitable: true, founded: 1923, architect: Charles A. Platt, sources: [wp-freer-gallery-of-art],
+     note: "Italian Renaissance-style building on Independence Avenue; opened to the public on 9 May 1923."}
+  - {key: hirshhorn-museum-and-sculpture-garden, name: Hirshhorn Museum and Sculpture Garden, kind: museum, city: "Washington, D.C.", region: District of Columbia, country: United States,
+     lat: 38.8882, lng: -77.023, visitable: true, founded: 1974, sources: [wp-hirshhorn-museum-and-sculpture-garden],
+     note: "Gordon Bunshaft's building and sculpture garden on the National Mall, inaugurated in 1974."}
+  - {key: the-phillips-collection, name: The Phillips Collection, kind: museum, city: "Washington, D.C.", region: District of Columbia, country: United States,
+     lat: 38.9114, lng: -77.0468, visitable: true, founded: 1921, sources: [wp-the-phillips-collection],
+     note: "Opened in 1921 by Duncan and Marjorie Phillips as the Phillips Memorial Gallery, in Dupont Circle."}
+  # --- other US cities ---
+  - {key: art-institute-of-chicago, name: Art Institute of Chicago, kind: museum, city: Chicago, region: Illinois, country: United States,
+     lat: 41.8794, lng: -87.6239, visitable: true, founded: 1893, sources: [wp-art-institute-of-chicago],
+     note: "Founded 1879; its Michigan Avenue building, by Shepley, Rutan and Coolidge, was built for the 1893 World's Columbian Exposition and taken over that year."}
+  - {key: philadelphia-museum-of-art, name: Philadelphia Museum of Art, kind: museum, city: Philadelphia, region: Pennsylvania, country: United States,
+     lat: 39.966, lng: -75.181, visitable: true, founded: 1928,
+     architect: "Horace Trumbauer; Zantzinger, Borie and Medary; Howell Lewis Shay; Julian Abele", sources: [wp-philadelphia-museum-of-art],
+     note: "Founded 1876; its main building on Fairmount, at the head of the Benjamin Franklin Parkway, was completed in 1928."}
+  - {key: barnes-foundation, name: Barnes Foundation, kind: museum, city: Philadelphia, region: Pennsylvania, country: United States,
+     lat: 39.9605, lng: -75.1727, visitable: true, founded: 2012, sources: [wp-barnes-foundation],
+     note: "Founded 1922 in Merion; the collection moved to this building on the Benjamin Franklin Parkway, opened 19 May 2012."}
+  - {key: museum-of-fine-arts-boston, name: "Museum of Fine Arts, Boston", kind: museum, city: Boston, region: Massachusetts, country: United States,
+     lat: 42.3394, lng: -71.0942, visitable: true, founded: 1909, architect: Guy Lowell, sources: [wp-museum-of-fine-arts-boston],
+     note: "Founded 1870 in Copley Square; moved to this Huntington Avenue building in 1909."}
+  - {key: isabella-stewart-gardner-museum, name: Isabella Stewart Gardner Museum, kind: museum, city: Boston, region: Massachusetts, country: United States,
+     lat: 42.3386, lng: -71.0989, visitable: true, founded: 1903, architect: Willard T. Sears, sources: [wp-isabella-stewart-gardner-museum],
+     note: "Built 1896–1903 for Isabella Stewart Gardner's collection; opened on 1 January 1903."}
+  - {key: cleveland-museum-of-art, name: Cleveland Museum of Art, kind: museum, city: Cleveland, region: Ohio, country: United States,
+     lat: 41.5089, lng: -81.6117, visitable: true, founded: 1916, sources: [wp-cleveland-museum-of-art],
+     note: "Founded 1913; its neoclassical building on East Boulevard opened on 6 June 1916."}
+  - {key: detroit-institute-of-arts, name: Detroit Institute of Arts, kind: museum, city: Detroit, region: Michigan, country: United States,
+     lat: 42.3594, lng: -83.0647, visitable: true, founded: 1927, architect: Paul Philippe Cret, sources: [wp-detroit-institute-of-arts],
+     note: "Founded 1885; its Woodward Avenue building was built in 1927."}
+  - {key: minneapolis-institute-of-art, name: Minneapolis Institute of Art, kind: museum, city: Minneapolis, region: Minnesota, country: United States,
+     lat: 44.9586, lng: -93.2742, visitable: true, founded: 1915, sources: [wp-minneapolis-institute-of-art],
+     note: "Founded 1883; its McKim, Mead and White building opened in 1915."}
+  - {key: norton-simon-museum, name: Norton Simon Museum, kind: museum, city: Pasadena, region: California, country: United States,
+     lat: 34.1462, lng: -118.1591, visitable: true, founded: 1975, architect: Ladd & Kelsey, sources: [wp-norton-simon-museum],
+     note: "Built in 1969 for the Pasadena Art Museum by Thornton Ladd and John Kelsey; the Norton Simon Museum since 1975."}
+  - {key: san-francisco-museum-of-modern-art, name: San Francisco Museum of Modern Art, kind: museum, city: San Francisco, region: California, country: United States,
+     lat: 37.7857, lng: -122.4011, visitable: true, founded: 1995, architect: "Mario Botta (1995); Snøhetta (2016)", sources: [wp-san-francisco-museum-of-modern-art],
+     note: "Founded 1935; in Mario Botta's building at 151 Third Street since January 1995, enlarged by Snøhetta in 2016."}
+  - {key: kimbell-art-museum, name: Kimbell Art Museum, kind: museum, city: Fort Worth, region: Texas, country: United States,
+     lat: 32.7486, lng: -97.365, visitable: true, founded: 1972, sources: [wp-kimbell-art-museum],
+     note: "Louis Kahn's building, opened in October 1972."}
+  - {key: menil-collection, name: Menil Collection, kind: museum, city: Houston, region: Texas, country: United States,
+     lat: 29.7372, lng: -95.3986, visitable: true, founded: 1987, sources: [wp-menil-collection],
+     note: "Renzo Piano's building for John and Dominique de Menil's collection, opened to the public in June 1987."}
+  - {key: museum-of-fine-arts-houston, name: "Museum of Fine Arts, Houston", kind: museum, city: Houston, region: Texas, country: United States,
+     lat: 29.7256, lng: -95.3905, visitable: true, founded: 1924, sources: [wp-museum-of-fine-arts-houston],
+     note: "Founded 1900; its first building, William Ward Watkin's neo-classical Caroline Wiess Law Building, opened in 1924."}
+  - {key: nelson-atkins-museum-of-art, name: Nelson-Atkins Museum of Art, kind: museum, city: Kansas City, region: Missouri, country: United States,
+     lat: 39.0453, lng: -94.5808, visitable: true, founded: 1933, sources: [wp-nelson-atkins-museum-of-art],
+     note: "Ground broken July 1930; the museum opened on 11 December 1933."}
+  - {key: saint-louis-art-museum, name: Saint Louis Art Museum, kind: museum, city: St. Louis, region: Missouri, country: United States,
+     lat: 38.6394, lng: -90.2944, visitable: true, founded: 1904, sources: [wp-saint-louis-art-museum],
+     note: "Cass Gilbert's Palace of Fine Arts in Forest Park, built for the 1904 Louisiana Purchase Exposition; the museum (founded 1879) moved in after the fair."}
+  - {key: walters-art-museum, name: Walters Art Museum, kind: museum, city: Baltimore, region: Maryland, country: United States,
+     lat: 39.2964, lng: -76.6165, visitable: true, founded: 1909, sources: [wp-walters-art-museum],
+     note: "Henry Walters's gallery in Mount Vernon, designed by William Adams Delano and built 1904–1909; opened as a public museum in 1934."}
+  - {key: yale-center-for-british-art, name: Yale Center for British Art, kind: museum, city: New Haven, region: Connecticut, country: United States,
+     lat: 41.3079, lng: -72.9309, visitable: true, founded: 1977, architect: Louis Kahn, sources: [wp-yale-center-for-british-art],
+     note: "Founded with Paul Mellon's gift in 1966; Louis Kahn's building was finished after his death in 1974 and opened on 15 April 1977."}
+  - {key: harvard-art-museums, name: Harvard Art Museums, kind: museum, city: "Cambridge, Massachusetts", region: Massachusetts, country: United States,
+     lat: 42.3742, lng: -71.1147, visitable: true, founded: 2014, architect: Renzo Piano, sources: [wp-harvard-art-museums],
+     note: "32 Quincy Street: the Fogg's 1920s building, renovated and enlarged by Renzo Piano to house all three museums, reopened in November 2014."}
+  # --- Netherlands ---
+  - {key: rijksmuseum, name: Rijksmuseum, kind: museum, city: Amsterdam, region: North Holland, country: Netherlands,
+     lat: 52.36, lng: 4.8853, visitable: true, founded: 1885, sources: [wp-rijksmuseum],
+     note: "Pierre Cuypers's main building, opened 1885; the museum was founded in The Hague in 1798 and moved to Amsterdam in 1808."}
+  - {key: van-gogh-museum, name: Van Gogh Museum, kind: museum, city: Amsterdam, region: North Holland, country: Netherlands,
+     lat: 52.3583, lng: 4.8811, visitable: true, founded: 1973, sources: [wp-van-gogh-museum],
+     note: "Gerrit Rietveld's building on Museumplein, opened 2 June 1973, with a wing by Kisho Kurokawa added in 1999."}
+  - {key: mauritshuis, name: Mauritshuis, kind: museum, city: The Hague, region: South Holland, country: Netherlands,
+     lat: 52.0804, lng: 4.3143, visitable: true, founded: 1641, sources: [wp-mauritshuis],
+     note: "Built 1636–1641 for John Maurice of Nassau by Jacob van Campen and Pieter Post; opened to the public as a museum in 1822."}
+  - {key: stedelijk-museum-amsterdam, name: Stedelijk Museum Amsterdam, kind: museum, city: Amsterdam, region: North Holland, country: Netherlands,
+     lat: 52.3581, lng: 4.8797, visitable: true, founded: 1895, sources: [wp-stedelijk-museum-amsterdam],
+     note: "Adriaan Willem Weissman's building on Museumplein, opened 14 September 1895; the new wing is by Benthem Crouwel."}
+
+museums:
+  # Existing places that are the museum or its building
+  - {key: louvre, place: louvre-palace}
+  - {key: centre-pompidou, place: centre-pompidou}
+  - {key: musee-rodin, place: hotel-biron-paris}
+  - {key: museum-of-fine-arts-of-lyon, place: palais-des-beaux-arts-de-lyon}
+  - {key: metropolitan-museum-of-art, place: metropolitan-museum-of-art}
+  # The Getty Museum has two sites; the museum record's coordinates are the Getty Center's.
+  - {key: j-paul-getty-museum, place: getty-center}
+  - {key: los-angeles-county-museum-of-art, place: lacma}
+  - {key: kroller-muller-museum, place: kroller-muller-museum}
+  # New places above
+  - {key: musee-d-orsay, place: musee-d-orsay}
+  - {key: musee-de-l-orangerie, place: musee-de-l-orangerie}
+  - {key: petit-palais, place: petit-palais}
+  - {key: musee-picasso-paris, place: musee-picasso-paris}
+  - {key: musee-marmottan-monet, place: musee-marmottan-monet}
+  - {key: musee-jacquemart-andre, place: musee-jacquemart-andre}
+  - {key: unterlinden-museum, place: unterlinden-museum}
+  - {key: british-museum, place: british-museum}
+  - {key: national-gallery, place: national-gallery}
+  - {key: tate-britain, place: tate-britain}
+  - {key: tate-modern, place: tate-modern}
+  - {key: national-portrait-gallery-london, place: national-portrait-gallery-london}
+  - {key: victoria-and-albert-museum, place: victoria-and-albert-museum}
+  - {key: wallace-collection, place: wallace-collection}
+  - {key: courtauld-gallery, place: courtauld-gallery}
+  - {key: ashmolean-museum, place: ashmolean-museum}
+  - {key: fitzwilliam-museum, place: fitzwilliam-museum}
+  - {key: museum-of-modern-art, place: museum-of-modern-art}
+  - {key: solomon-r-guggenheim-museum, place: solomon-r-guggenheim-museum}
+  - {key: whitney-museum-of-american-art, place: whitney-museum-of-american-art}
+  - {key: frick-collection, place: frick-collection}
+  - {key: brooklyn-museum, place: brooklyn-museum}
+  - {key: national-gallery-of-art, place: national-gallery-of-art}
+  - {key: smithsonian-american-art-museum, place: smithsonian-american-art-museum}
+  - {key: freer-gallery-of-art, place: freer-gallery-of-art}
+  - {key: hirshhorn-museum-and-sculpture-garden, place: hirshhorn-museum-and-sculpture-garden}
+  - {key: the-phillips-collection, place: the-phillips-collection}
+  - {key: art-institute-of-chicago, place: art-institute-of-chicago}
+  - {key: philadelphia-museum-of-art, place: philadelphia-museum-of-art}
+  - {key: barnes-foundation, place: barnes-foundation}
+  - {key: museum-of-fine-arts-boston, place: museum-of-fine-arts-boston}
+  # The museum record had city "Cambridge, Massachusetts"; the article puts it at 25 Evans Way, Boston.
+  - {key: isabella-stewart-gardner-museum, place: isabella-stewart-gardner-museum, city: Boston}
+  - {key: cleveland-museum-of-art, place: cleveland-museum-of-art}
+  - {key: detroit-institute-of-arts, place: detroit-institute-of-arts}
+  - {key: minneapolis-institute-of-art, place: minneapolis-institute-of-art}
+  - {key: norton-simon-museum, place: norton-simon-museum}
+  - {key: san-francisco-museum-of-modern-art, place: san-francisco-museum-of-modern-art}
+  - {key: kimbell-art-museum, place: kimbell-art-museum}
+  - {key: menil-collection, place: menil-collection}
+  - {key: museum-of-fine-arts-houston, place: museum-of-fine-arts-houston}
+  - {key: nelson-atkins-museum-of-art, place: nelson-atkins-museum-of-art}
+  - {key: saint-louis-art-museum, place: saint-louis-art-museum}
+  - {key: walters-art-museum, place: walters-art-museum}
+  - {key: yale-center-for-british-art, place: yale-center-for-british-art}
+  - {key: harvard-art-museums, place: harvard-art-museums}
+  - {key: rijksmuseum, place: rijksmuseum}
+  - {key: van-gogh-museum, place: van-gogh-museum}
+  - {key: mauritshuis, place: mauritshuis}
+  - {key: stedelijk-museum-amsterdam, place: stedelijk-museum-amsterdam}
+
+# The museum records' founding years that differ from their Wikipedia infobox. Most are two
+# different milestones (founded vs opened); the museum record is left as it is for now.
+# Expected preview warnings: the 1992 (Tate Modern) and 1942 (Norton Simon) claims have no
+# source, because they come from the museum records and the cited articles don't support them.
+discrepancies:
+  - key: musee-rodin-founded
+    question: When was the Musée Rodin founded?
+    about: [{place: hotel-biron-paris}]
+    field: founded
+    claims:
+      - {value: 1916, sources: [wp-musee-rodin], note: "The French Assembly accepted Rodin's donation and gave the mansion to a museum (museum record)"}
+      - {value: 1919, sources: [wp-musee-rodin], note: "Opened to the public on 4 August 1919 (infobox)"}
+    note: The museum record keeps 1916.
+  - key: unterlinden-museum-founded
+    question: When was the Unterlinden Museum founded?
+    about: [{place: unterlinden-museum}]
+    field: founded
+    claims:
+      - {value: 1847, sources: [wp-unterlinden-museum], note: "The Société Schongauer, which saved the buildings, was founded (museum record)"}
+      - {value: 1849, sources: [wp-unterlinden-museum], note: "The museum was established"}
+      - {value: 1853, sources: [wp-unterlinden-museum], note: "Opened to the public (infobox)"}
+    note: The museum record keeps 1847; the place uses 1853.
+  - key: tate-modern-founded
+    question: When was Tate Modern founded?
+    about: [{place: tate-modern}]
+    field: founded
+    claims:
+      - {value: 1992, note: "Museum record; the article gives no event in 1992 (Bankside was chosen in April 1994)"}
+      - {value: 2000, sources: [wp-tate-modern], note: "Opened by the Queen on 11 May 2000 (infobox)"}
+    note: The museum record keeps 1992; the article supports 2000.
+  - key: wallace-collection-founded
+    question: When was the Wallace Collection founded?
+    about: [{place: wallace-collection}]
+    field: founded
+    claims:
+      - {value: 1897, sources: [wp-wallace-collection], note: "Lady Wallace bequeathed the collection to the nation (infobox)"}
+      - {value: 1900, sources: [wp-wallace-collection], note: "Hertford House opened as a museum on 22 June 1900 (museum record)"}
+    note: The museum record keeps 1900.
+  - key: guggenheim-museum-founded
+    question: When was the Solomon R. Guggenheim Museum founded?
+    about: [{place: solomon-r-guggenheim-museum}]
+    field: founded
+    claims:
+      - {value: 1937, sources: [wp-solomon-r-guggenheim-museum], note: "Guggenheim set up the Solomon R. Guggenheim Foundation (museum record)"}
+      - {value: 1939, sources: [wp-solomon-r-guggenheim-museum], note: "The Museum of Non-Objective Painting opened (infobox)"}
+    note: The museum record keeps 1937.
+  - key: whitney-museum-founded
+    question: When was the Whitney Museum of American Art founded?
+    about: [{place: whitney-museum-of-american-art}]
+    field: founded
+    claims:
+      - {value: 1930, sources: [wp-whitney-museum-of-american-art], note: "Founded by Gertrude Vanderbilt Whitney (infobox)"}
+      - {value: 1931, sources: [wp-whitney-museum-of-american-art], note: "Opened on 18 November 1931 (museum record)"}
+    note: The museum record keeps 1931.
+  - key: national-gallery-of-art-founded
+    question: When was the National Gallery of Art founded?
+    about: [{place: national-gallery-of-art}]
+    field: founded
+    claims:
+      - {value: 1937, sources: [wp-national-gallery-of-art], note: "Established by joint resolution of Congress, 24 March 1937 (museum record)"}
+      - {value: 1938, sources: [wp-national-gallery-of-art], note: "Infobox 'established'"}
+      - {value: 1941, sources: [wp-national-gallery-of-art], note: "The West Building opened"}
+    note: The museum record keeps 1937; the place uses 1941 (the West Building).
+  - key: brooklyn-museum-founded
+    question: When was the Brooklyn Museum founded?
+    about: [{place: brooklyn-museum}]
+    field: founded
+    claims:
+      - {value: 1823, sources: [wp-brooklyn-museum], note: "Began as the Brooklyn Apprentices' Library (infobox)"}
+      - {value: 1897, sources: [wp-brooklyn-museum], note: "The present building was completed and opened (museum record)"}
+    note: The museum record keeps 1897.
+  - key: harvard-art-museums-founded
+    question: When were the Harvard Art Museums founded?
+    about: [{place: harvard-art-museums}]
+    field: founded
+    claims:
+      - {value: 1895, sources: [wp-harvard-art-museums], note: "The Fogg Museum, the oldest of the three, was established (museum record)"}
+      - {value: 1983, sources: [wp-harvard-art-museums], note: "The three museums were joined as one institution (infobox)"}
+    note: The museum record keeps 1895.
+  - key: rijksmuseum-founded
+    question: When was the Rijksmuseum founded?
+    about: [{place: rijksmuseum}]
+    field: founded
+    claims:
+      - {value: 1798, sources: [wp-rijksmuseum], note: "Founded in The Hague on 19 November 1798 (infobox)"}
+      - {value: 1800, sources: [wp-rijksmuseum], note: "Its precursor, the National Art Gallery, opened in Huis ten Bosch on 31 May 1800 (museum record)"}
+    note: The museum record keeps 1800.
+  - key: norton-simon-museum-founded
+    question: When was the Norton Simon Museum founded?
+    about: [{place: norton-simon-museum}]
+    field: founded
+    claims:
+      - {value: 1942, note: "Museum record; the article gives no event in 1942"}
+      - {value: 1975, sources: [wp-norton-simon-museum], note: "Founded 1975 (infobox: 1 March 1975)"}
+    note: The museum record keeps 1942; the article supports 1975.
+  - key: petit-palais-founded
+    question: When did the Petit Palais become a museum?
+    about: [{place: petit-palais}]
+    field: founded
+    claims:
+      - {value: 1900, sources: [wp-petit-palais], note: "Built for the Exposition Universelle of 1900 (infobox)"}
+      - {value: 1902, sources: [wp-petit-palais], note: "Officially became the Palais des Beaux-Arts de la Ville de Paris (museum record)"}
+    note: The museum record keeps 1902; the place uses 1900 (the building).
