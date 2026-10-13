@@ -2306,8 +2306,17 @@ function partOf(pl) {
     return h("span", {}, h("b", { text: r }), note ? h("span", { class: "yrs", text: ` (${note})` }) : null, ts.length ? [" · ", xPerson(db.byId[ts[0].entity_id])] : null);
   };
   const box = h("div", { class: "xpartof" });
-  const byCountry = realmsAt(pl, y);
-  if (byCountry.length) box.append(h("span", { class: "lbl", text: `Realms in ${placeCountry(pl)}, ${fmtYear(y)}` }), " ", ...joinNodes(byCountry.map(realmNode)));
+  // Without a map: realms whose main country it is come first; those that held only part of it (a note says which
+  // part) fold into "N more", which opens the full list.
+  const C = placeCountry(pl), partial = r => !!(db.realmInfo[r]?.countries || []).find(c => normCountry(c.country) === C)?.note;
+  const byCountry = realmsAt(pl, y).sort((a, b) => (normCountry(db.countryOf[b]) === C) - (normCountry(db.countryOf[a]) === C) || partial(a) - partial(b));
+  const whole = byCountry.filter(r => !partial(r)).slice(0, 3), shown = whole.length ? whole : byCountry.slice(0, 3);
+  const rest = byCountry.filter(r => !shown.includes(r));
+  if (byCountry.length) {
+    const more = rest.length ? h("button", { type: "button", class: "plink", text: `and ${rest.length} more`, title: rest.join(", "),
+      onclick: e => { e.target.previousSibling?.remove(); e.target.replaceWith(", ", ...joinNodes(rest.map(realmNode))); } }) : null;
+    box.append(h("span", { class: "lbl", text: `Realms in ${C}, ${fmtYear(y)}` }), " ", ...joinNodes(shown.map(realmNode)), ...(more ? [" ", more] : []));
+  }
   mapRealmsAt(pl, y).then(r => {
     if (!r || X.place !== pl.id || X.year !== y || !box.isConnected) return;
     const parts = r.realms.length ? r.realms.map(realmNode) : r.names.map(n => h("b", { text: n }));
