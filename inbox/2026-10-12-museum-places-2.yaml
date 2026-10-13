@@ -1,0 +1,808 @@
+# Museums on the map, batch 2: give each museum a place, so an artwork's Work card
+# and the Place card can show where it hangs.
+#
+# Every fact was checked against the museum's English Wikipedia article (infobox,
+# coordinates and text, read 2026-10-12). Coordinates are the article's; all were
+# within ~200 m of the museum record, so no museum lat/lng changes.
+#
+# A place's `founded` is the year this building opened as the museum. Where the
+# building is much older and the article dates it, `founded` is the building's year
+# and the note says what it is. The institution's own founding year goes in the note.
+# `architect` is set only where the article's infobox names one.
+#
+# Skipped:
+#   - royal-collection: not a building. The Royal Collection is spread over 13 royal
+#     residences (Buckingham Palace, Windsor Castle, Hampton Court...), so no one place.
+
+batch:
+  title: "Museums on the map, batch 2"
+  requested: "Ty: link museums to places"
+  date: 2026-10-12
+
+sources:
+  # The National Museum of Sculpture article's own coordinates are rounded to two
+  # decimals (41.66, -4.72, about 450 m off); the museum record matches the
+  # Colegio de San Gregorio article, the building it is housed in, so that is cited.
+  - key: wp-colegio-de-san-gregorio
+    title: "Colegio de San Gregorio (Wikipedia)"
+    url: https://en.wikipedia.org/wiki/Colegio_de_San_Gregorio
+
+places:
+  # --- Netherlands, Spain ---
+  - key: museum-boijmans-van-beuningen
+    name: Museum Boijmans Van Beuningen
+    kind: museum
+    city: Rotterdam
+    region: South Holland
+    country: Netherlands
+    lat: 51.9142
+    lng: 4.4733
+    visitable: false
+    founded: 1935
+    note: "Museum opened 1849; this building at the Museumpark, by city architect Adriaan van der Steur, opened 1935. Closed for renovation since mid-2019."
+    sources: [wp-museum-boijmans-van-beuningen]
+
+  - key: museo-nacional-centro-de-arte-reina-sofia
+    name: Museo Nacional Centro de Arte Reina Sofía
+    kind: museum
+    city: Madrid
+    region: Community of Madrid
+    country: Spain
+    lat: 40.4086
+    lng: -3.694
+    visitable: true
+    founded: 1805
+    note: "Former General Hospital of Madrid, designed by José de Hermosilla and Francisco Sabatini, a hospital from 1805 to 1969; the museum was inaugurated in 1992."
+    sources: [wp-museo-nacional-centro-de-arte-reina-sofia]
+
+  - key: thyssen-bornemisza-museum
+    name: Thyssen-Bornemisza Museum
+    kind: museum
+    city: Madrid
+    region: Community of Madrid
+    country: Spain
+    lat: 40.416
+    lng: -3.6949
+    visitable: true
+    founded: 1992
+    note: "In the Palace of Villahermosa on the Paseo del Prado; opened 1992."
+    sources: [wp-thyssen-bornemisza-museum]
+
+  - key: guggenheim-museum-bilbao
+    name: Guggenheim Museum Bilbao
+    kind: museum
+    city: Bilbao
+    region: Basque Country
+    country: Spain
+    lat: 43.2686
+    lng: -2.9339
+    visitable: true
+    founded: 1997
+    architect: Frank Gehry
+    note: "Inaugurated 18 October 1997 by King Juan Carlos I, beside the Nervión."
+    sources: [wp-guggenheim-museum-bilbao]
+
+  - key: museu-nacional-d-art-de-catalunya
+    name: Museu Nacional d'Art de Catalunya
+    kind: museum
+    city: Barcelona
+    region: Catalonia
+    country: Spain
+    lat: 41.3683
+    lng: 2.1533
+    visitable: true
+    founded: 1929
+    note: "In the Palau Nacional on Montjuïc, a building of 1929; the art museum has been there since 1934."
+    sources: [wp-museu-nacional-d-art-de-catalunya]
+
+  - key: national-museum-of-sculpture-valladolid
+    name: National Museum of Sculpture
+    kind: museum
+    city: Valladolid
+    region: Castile and León
+    country: Spain
+    lat: 41.6572
+    lng: -4.7233
+    visitable: true
+    founded: 1933
+    note: "Founded 1842 as the Provincial Museum of Fine Arts; since 1933 in the Colegio de San Gregorio, an Isabelline-style former Dominican college."
+    sources: [wp-national-museum-of-sculpture-valladolid, wp-colegio-de-san-gregorio]
+
+  # --- Italy, Vatican City ---
+  - key: uffizi
+    name: Uffizi Gallery
+    kind: museum
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.7683
+    lng: 11.2553
+    visitable: true
+    founded: 1560
+    note: "Built 1560-1581 as offices for Cosimo I de' Medici, begun by Giorgio Vasari; open to visitors on request from the 16th century, officially public in 1769, formally a museum from 1865."
+    sources: [wp-uffizi]
+
+  - key: galleria-dell-accademia
+    name: Galleria dell'Accademia
+    kind: museum
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.7769
+    lng: 11.2589
+    visitable: true
+    founded: 1784
+    note: "Founded 1784 by Pietro Leopoldo, Grand Duke of Tuscany; home of Michelangelo's David."
+    sources: [wp-galleria-dell-accademia]
+
+  - key: bargello
+    name: Bargello
+    historical_name: Palazzo del Popolo
+    kind: palace
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.7704
+    lng: 11.2584
+    visitable: true
+    founded: 1255
+    note: "Begun 1255 for the Capitano del Popolo, later the seat of the podestà, then a prison; the Museo Nazionale del Bargello since 1865."
+    sources: [wp-bargello]
+
+  - key: vatican-museums
+    name: Vatican Museums
+    kind: museum
+    city: Vatican City
+    region: Vatican City
+    country: Vatican City
+    lat: 41.9064
+    lng: 12.4544
+    visitable: true
+    founded: 1506
+    note: "Traced to the Laocoön, found in 1506 and acquired under Pope Julius II; galleries in the Vatican palaces, with the Sistine Chapel on the visitor route."
+    sources: [wp-vatican-museums]
+
+  - key: pinacoteca-di-brera
+    name: Pinacoteca di Brera
+    kind: museum
+    city: Milan
+    region: Lombardy
+    country: Italy
+    lat: 45.4719
+    lng: 9.1881
+    visitable: true
+    founded: 1809
+    note: "In the Palazzo Brera (rebuilt by Francesco Maria Richini, 1627-28), with the Brera Academy founded 1776; the Reale Pinacoteca opened 15 August 1809."
+    sources: [wp-pinacoteca-di-brera]
+
+  - key: gallerie-dell-accademia
+    name: Gallerie dell'Accademia
+    kind: museum
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.4314
+    lng: 12.3281
+    visitable: true
+    founded: 1343
+    note: "In the former Scuola Grande (building dating to 1343), church and convent of Santa Maria della Carità; the academy (founded 1750) moved here in 1807 and opened its collections in 1817."
+    sources: [wp-gallerie-dell-accademia]
+
+  - key: peggy-guggenheim-collection
+    name: Peggy Guggenheim Collection
+    kind: museum
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.4306
+    lng: 12.3311
+    visitable: true
+    founded: 1980
+    note: "In the 18th-century Palazzo Venier dei Leoni, Peggy Guggenheim's home from 1949; shown seasonally from 1951, open year-round from 1980."
+    sources: [wp-peggy-guggenheim-collection]
+
+  - key: museo-di-capodimonte
+    name: Museo di Capodimonte
+    kind: palace
+    city: Naples
+    region: Campania
+    country: Italy
+    lat: 40.867
+    lng: 14.2506
+    visitable: true
+    founded: 1738
+    note: "Royal palace begun 1738 for Charles VII of Naples to house the Farnese collection, completed 1840; museum established 1757 (infobox), inaugurated in its current form 1957."
+    sources: [wp-museo-di-capodimonte]
+
+  # --- Austria ---
+  - key: albertina
+    name: Albertina
+    kind: palace
+    city: Vienna
+    region: Vienna
+    country: Austria
+    lat: 48.2047
+    lng: 16.3683
+    visitable: true
+    # No founded: the article dates only a refurbishment (1744) of the 17th-century
+    # court building office, not the building itself.
+    note: "Palace on the Augustinian Bastion, residence of Albert Casimir, Duke of Teschen, whose print collection it houses."
+    sources: [wp-albertina]
+
+  - key: belvedere-vienna
+    name: Belvedere
+    kind: palace
+    city: Vienna
+    region: Vienna
+    country: Austria
+    lat: 48.1942
+    lng: 16.3803
+    visitable: true
+    founded: 1712
+    founded_estimated: true
+    architect: Johann Lukas von Hildebrandt
+    note: "Summer residence of Prince Eugene of Savoy: Lower Belvedere begun by 1712, Upper Belvedere completed 1723. Now an art museum."
+    sources: [wp-belvedere-vienna]
+
+  - key: leopold-museum
+    name: Leopold Museum
+    kind: museum
+    city: Vienna
+    region: Vienna
+    country: Austria
+    lat: 48.2027
+    lng: 16.3591
+    visitable: true
+    founded: 2001
+    note: "In the MuseumsQuartier; opened 2001 with Rudolf Leopold's collection."
+    sources: [wp-leopold-museum]
+
+  # --- Germany ---
+  - key: alte-pinakothek
+    name: Alte Pinakothek
+    kind: museum
+    city: Munich
+    region: Bavaria
+    country: Germany
+    lat: 48.1483
+    lng: 11.57
+    visitable: true
+    founded: 1836
+    note: "Built 1826-1836 by Leo von Klenze for Ludwig I of Bavaria; reopened 1957 after war damage."
+    sources: [wp-alte-pinakothek]
+
+  - key: neue-pinakothek
+    name: Neue Pinakothek
+    kind: museum
+    city: Munich
+    region: Bavaria
+    country: Germany
+    lat: 48.1497
+    lng: 11.5711
+    visitable: true
+    founded: 1981
+    note: "Founded 1853 by Ludwig I; first building completed 1859; present building by Alexander von Branca opened 1981."
+    sources: [wp-neue-pinakothek]
+
+  - key: pinakothek-der-moderne
+    name: Pinakothek der Moderne
+    kind: museum
+    city: Munich
+    region: Bavaria
+    country: Germany
+    lat: 48.1469
+    lng: 11.5722
+    visitable: true
+    founded: 2002
+    architect: Stephan Braunfels
+    note: "Inaugurated September 2002 in the Kunstareal."
+    sources: [wp-pinakothek-der-moderne]
+
+  - key: gemaldegalerie-berlin
+    name: Gemäldegalerie, Berlin
+    kind: museum
+    city: Berlin
+    region: Berlin
+    country: Germany
+    lat: 52.5086
+    lng: 13.3647
+    visitable: true
+    founded: 1998
+    note: "First opened 1830; present building at the Kulturforum completed 1998."
+    sources: [wp-gemaldegalerie-berlin]
+
+  - key: alte-nationalgalerie
+    name: Alte Nationalgalerie
+    kind: museum
+    city: Berlin
+    region: Berlin
+    country: Germany
+    lat: 52.5208
+    lng: 13.3981
+    visitable: true
+    founded: 1876
+    note: "On Museum Island; built 1862-1876 to plans by Friedrich August Stüler, opened 22 March 1876."
+    sources: [wp-alte-nationalgalerie]
+
+  - key: neue-nationalgalerie
+    name: Neue Nationalgalerie
+    kind: museum
+    city: Berlin
+    region: Berlin
+    country: Germany
+    lat: 52.5069
+    lng: 13.3678
+    visitable: true
+    founded: 1968
+    architect: Ludwig Mies van der Rohe
+    note: "At the Kulturforum; opened 15 September 1968, renovated by David Chipperfield Architects and reopened 2021."
+    sources: [wp-neue-nationalgalerie]
+
+  - key: gemaldegalerie-alte-meister
+    name: Gemäldegalerie Alte Meister
+    kind: museum
+    city: Dresden
+    region: Saxony
+    country: Germany
+    lat: 51.0534
+    lng: 13.7347
+    visitable: true
+    founded: 1855
+    note: "In the Semper Gallery, the Zwinger's gallery wing, built 1847-1854 to Gottfried Semper's design and opened 1855. The collection goes back to the Electors' Kunstkammer of 1560."
+    sources: [wp-gemaldegalerie-alte-meister]
+
+  - key: stadel
+    name: Städel Museum
+    kind: museum
+    city: Frankfurt
+    region: Hesse
+    country: Germany
+    lat: 50.1032
+    lng: 8.6739
+    visitable: true
+    founded: 1878
+    architect: "Oskar Sommer (1878); Johannes Krahn (rebuild 1966); Gustav Peichl (extension 1990); Schneider+Schumacher (extension 2012)"
+    note: "Founded 1817 under the will of Johann Friedrich Städel (died 1816); this building on the Schaumainkai erected 1878."
+    sources: [wp-stadel]
+
+  - key: hamburger-kunsthalle
+    name: Hamburger Kunsthalle
+    kind: museum
+    city: Hamburg
+    region: Hamburg
+    country: Germany
+    lat: 53.555
+    lng: 10.0031
+    visitable: true
+    founded: 1869
+    note: "Founded 1850; main building 1863-1869, Kuppelsaal 1921, Galerie der Gegenwart by Oswald Mathias Ungers 1997."
+    sources: [wp-hamburger-kunsthalle]
+
+  - key: wallrafrichartz-museum
+    name: Wallraf–Richartz Museum
+    kind: museum
+    city: Cologne
+    region: North Rhine-Westphalia
+    country: Germany
+    lat: 50.9375
+    lng: 6.9586
+    visitable: true
+    founded: 2001
+    note: "Collection from Ferdinand Franz Wallraf's bequest of 1824, museum opened 1861; present building near the City Hall by Oswald Mathias Ungers, 2001, on the site of a Roman temple to Mars."
+    sources: [wp-wallrafrichartz-museum]
+
+  # --- Switzerland ---
+  - key: kunstmuseum-basel
+    name: Kunstmuseum Basel
+    kind: museum
+    city: Basel
+    region: Basel-Stadt
+    country: Switzerland
+    lat: 47.5542
+    lng: 7.5942
+    visitable: true
+    founded: 1936
+    note: "Collection from the Amerbach Cabinet, bought by the city and university in 1661; main building by Paul Bonatz and Rudolf Christ, 1931-1936."
+    sources: [wp-kunstmuseum-basel]
+
+  - key: kunsthaus-zurich
+    name: Kunsthaus Zürich
+    kind: museum
+    city: Zurich
+    region: Zurich
+    country: Switzerland
+    lat: 47.3703
+    lng: 8.5481
+    visitable: true
+    founded: 1910
+    note: "Original building by Karl Moser and Robert Curjel opened 1910; extended 1925, 1958, 1976 and by David Chipperfield in 2020."
+    sources: [wp-kunsthaus-zurich]
+
+  - key: beyeler-foundation
+    name: Beyeler Foundation
+    kind: museum
+    city: Riehen
+    region: Basel-Stadt
+    country: Switzerland
+    lat: 47.5881
+    lng: 7.6511
+    visitable: true
+    founded: 1997
+    note: "Foundation created 1982; museum by Renzo Piano in the Berower Park opened 18 October 1997."
+    sources: [wp-beyeler-foundation]
+
+  # --- Russia, Poland, Hungary ---
+  - key: hermitage-museum
+    name: Hermitage Museum
+    kind: museum
+    city: Saint Petersburg
+    region: Saint Petersburg
+    country: Russia
+    lat: 59.9406
+    lng: 30.3136
+    visitable: true
+    founded: 1764
+    note: "Founded 1764 by Catherine the Great; public since 1852. A complex of six buildings on the Palace Embankment, including the Winter Palace."
+    sources: [wp-hermitage-museum]
+
+  - key: pushkin-museum
+    name: Pushkin Museum of Fine Arts
+    kind: museum
+    city: Moscow
+    region: Moscow
+    country: Russia
+    lat: 55.747
+    lng: 37.606
+    visitable: true
+    founded: 1912
+    note: "Founded by Ivan Tsvetaev; building by Roman Klein and Vladimir Shukhov, built 1898-1912."
+    sources: [wp-pushkin-museum]
+
+  - key: russian-museum
+    name: Russian Museum
+    kind: palace
+    city: Saint Petersburg
+    region: Saint Petersburg
+    country: Russia
+    lat: 59.9386
+    lng: 30.3322
+    visitable: true
+    founded: 1819
+    note: "Main building the Mikhailovsky Palace, built 1819-1825 to Carlo Rossi's design; the museum was established 1895 or 1896 (see discrepancy) and opened 1898."
+    sources: [wp-russian-museum]
+
+  - key: national-museum-in-warsaw
+    name: National Museum in Warsaw
+    kind: museum
+    city: Warsaw
+    region: Masovia
+    country: Poland
+    lat: 52.2317
+    lng: 21.0247
+    visitable: true
+    founded: 1938
+    note: "Founded 1862 as the Museum of Fine Arts; present building on Jerusalem Avenue by Tadeusz Tolwiński inaugurated 18 June 1938."
+    sources: [wp-national-museum-in-warsaw]
+
+  - key: hungarian-national-gallery
+    name: Hungarian National Gallery
+    kind: museum
+    city: Budapest
+    region: Budapest
+    country: Hungary
+    lat: 47.4962
+    lng: 19.0398
+    visitable: true
+    founded: 1957
+    note: "In Buda Castle; established 1957."
+    sources: [wp-hungarian-national-gallery]
+
+  # --- Nordic countries ---
+  - key: national-gallery-of-denmark
+    name: National Gallery of Denmark (Statens Museum for Kunst)
+    kind: museum
+    city: Copenhagen
+    region: Capital Region
+    country: Denmark
+    lat: 55.6889
+    lng: 12.5786
+    visitable: true
+    founded: 1896
+    note: "Original building by Vilhelm Dahlerup and G. Møller, built 1889-1896."
+    sources: [wp-national-gallery-of-denmark]
+
+  - key: ateneum
+    name: Ateneum
+    kind: museum
+    city: Helsinki
+    region: Uusimaa
+    country: Finland
+    lat: 60.17
+    lng: 24.9442
+    visitable: true
+    founded: 1887
+    note: "Building by Theodor Höijer, completed 1887, on Rautatientori square."
+    sources: [wp-ateneum]
+
+  - key: skagens-museum
+    name: Skagens Museum
+    kind: museum
+    city: Skagen
+    region: North Jutland
+    country: Denmark
+    lat: 57.7246
+    lng: 10.5973
+    visitable: true
+    founded: 1928
+    architect: "Ulrik Plesner (1928); Friis & Moltke (2014-2016)"
+    note: "Founded 20 October 1908 in the dining room of Brøndums Hotel; Plesner's building opened 22 September 1928."
+    sources: [wp-skagens-museum]
+
+  - key: munch-museum
+    name: Munch Museum
+    kind: museum
+    city: Oslo
+    region: Oslo
+    country: Norway
+    lat: 59.9058
+    lng: 10.7553
+    visitable: true
+    founded: 2021
+    architect: Juan Herreros
+    note: "Opened 1963 at Tøyen; moved in 2021 to this building in Bjørvika, marketed as MUNCH."
+    sources: [wp-munch-museum]
+
+  # --- Belgium, France ---
+  - key: royal-museums-of-fine-arts-of-belgium
+    name: Royal Museums of Fine Arts of Belgium
+    kind: museum
+    city: Brussels
+    region: Brussels-Capital Region
+    country: Belgium
+    lat: 50.8417
+    lng: 4.3582
+    visitable: true
+    founded: 1887
+    note: "Main building: Alphonse Balat's Palace of Fine Arts on the Rue de la Régence, home of the Old Masters since 1887 (museum founded 1801, opened 1803). The Magritte and Fin-de-Siècle museums adjoin; the Wiertz and Meunier museums are elsewhere in Brussels."
+    sources: [wp-royal-museums-of-fine-arts-of-belgium]
+
+  - key: museum-of-fine-arts-ghent
+    name: Museum of Fine Arts, Ghent (MSK)
+    kind: museum
+    city: Ghent
+    region: East Flanders
+    country: Belgium
+    lat: 51.0383
+    lng: 3.7238
+    visitable: true
+    founded: 1798
+    note: "Founded 1798; building on the Citadelpark designed by city architect Charles van Rysselberghe around 1900."
+    sources: [wp-museum-of-fine-arts-ghent]
+
+  - key: royal-museum-of-fine-arts-antwerp
+    name: Royal Museum of Fine Arts Antwerp (KMSKA)
+    kind: museum
+    city: Antwerp
+    region: Antwerp
+    country: Belgium
+    lat: 51.2088
+    lng: 4.3943
+    visitable: true
+    founded: 1890
+    note: "Founded 1810; building by Jean-Jacques Winders and Frans Van Dijk, begun 1884, opened 1890, completed 1894."
+    sources: [wp-royal-museum-of-fine-arts-antwerp]
+
+  - key: groeningemuseum
+    name: Groeningemuseum
+    kind: museum
+    city: Bruges
+    region: West Flanders
+    country: Belgium
+    lat: 51.2053
+    lng: 3.2267
+    visitable: true
+    # No founded: the article gives no opening year (the museum record's 1929 is unconfirmed).
+    note: "Municipal museum on the site of the medieval Eekhout Abbey."
+    sources: [wp-groeningemuseum]
+
+  - key: musee-conde
+    name: Condé Museum
+    kind: museum
+    city: Chantilly
+    region: Oise
+    country: France
+    lat: 49.1939
+    lng: 2.4853
+    visitable: true
+    founded: 1898
+    note: "Inside the Château de Chantilly, left with its collections to the Institut de France in 1897 by Henri d'Orléans, Duke of Aumale; opened 1898."
+    sources: [wp-musee-conde]
+
+  - key: musee-fabre
+    name: Musée Fabre
+    kind: museum
+    city: Montpellier
+    region: Hérault
+    country: France
+    lat: 43.612
+    lng: 3.88
+    visitable: true
+    founded: 1828
+    note: "Founded 1825 with François-Xavier Fabre's gift; opened in the Hôtel de Massillian on 3 December 1828; renovated 2003-2007."
+    sources: [wp-musee-fabre]
+
+  # --- Britain and Ireland ---
+  - key: dulwich-picture-gallery
+    name: Dulwich Picture Gallery
+    kind: gallery
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.4461
+    lng: -0.0864
+    visitable: true
+    founded: 1817
+    note: "Designed by Sir John Soane under Sir Francis Bourgeois's will; opened 1817, the oldest public art gallery in England."
+    sources: [wp-dulwich-picture-gallery]
+
+  - key: scottish-national-gallery
+    name: Scottish National Gallery
+    kind: gallery
+    city: Edinburgh
+    region: City of Edinburgh
+    country: Scotland
+    lat: 55.9508
+    lng: -3.1956
+    visitable: true
+    founded: 1859
+    note: "On The Mound, designed by William Henry Playfair; foundation stone 1850, opened 1859. Now called The National."
+    sources: [wp-scottish-national-gallery]
+
+  - key: national-gallery-of-ireland
+    name: National Gallery of Ireland
+    kind: gallery
+    city: Dublin
+    region: Dublin
+    country: Ireland
+    lat: 53.3409
+    lng: -6.2526
+    visitable: true
+    founded: 1864
+    note: "On Merrion Square beside Leinster House; founded 1854, opened 1864."
+    sources: [wp-national-gallery-of-ireland]
+
+  - key: kelvingrove-art-gallery-and-museum
+    name: Kelvingrove Art Gallery and Museum
+    kind: museum
+    city: Glasgow
+    region: Glasgow
+    country: Scotland
+    lat: 55.8686
+    lng: -4.2906
+    visitable: true
+    founded: 1901
+    note: "In Kelvingrove Park; opened 1901 as the Palace of Fine Arts of the Glasgow International Exhibition, fully open to the public from 1 October 1902."
+    sources: [wp-kelvingrove-art-gallery-and-museum]
+
+museums:
+  # Existing places that are the museum or its building
+  - {key: museo-del-prado, place: museo-del-prado}
+  - {key: palazzo-pitti, place: palazzo-pitti}
+  - {key: galleria-borghese, place: galleria-borghese}
+  - {key: kunsthistorisches-museum, place: kunsthistorisches-museum-vienna}
+  - {key: tretyakov-gallery, place: tretyakov-gallery}
+  - {key: nationalmuseum, place: nationalmuseum-stockholm}
+  - {key: palace-of-versailles, place: palace-of-versailles}
+  - {key: hampton-court-palace, place: hampton-court-palace}
+  # New places above
+  - {key: museum-boijmans-van-beuningen, place: museum-boijmans-van-beuningen}
+  - {key: museo-nacional-centro-de-arte-reina-sofia, place: museo-nacional-centro-de-arte-reina-sofia}
+  - {key: thyssen-bornemisza-museum, place: thyssen-bornemisza-museum}
+  - {key: guggenheim-museum-bilbao, place: guggenheim-museum-bilbao}
+  - {key: museu-nacional-d-art-de-catalunya, place: museu-nacional-d-art-de-catalunya}
+  - {key: national-museum-of-sculpture-valladolid, place: national-museum-of-sculpture-valladolid}
+  - {key: uffizi, place: uffizi}
+  - {key: galleria-dell-accademia, place: galleria-dell-accademia}
+  - {key: bargello, place: bargello}
+  - {key: vatican-museums, place: vatican-museums}
+  - {key: pinacoteca-di-brera, place: pinacoteca-di-brera}
+  - {key: gallerie-dell-accademia, place: gallerie-dell-accademia}
+  - {key: peggy-guggenheim-collection, place: peggy-guggenheim-collection}
+  - {key: museo-di-capodimonte, place: museo-di-capodimonte}
+  - {key: albertina, place: albertina}
+  - {key: belvedere-vienna, place: belvedere-vienna}
+  - {key: leopold-museum, place: leopold-museum}
+  - {key: alte-pinakothek, place: alte-pinakothek}
+  - {key: neue-pinakothek, place: neue-pinakothek}
+  - {key: pinakothek-der-moderne, place: pinakothek-der-moderne}
+  - {key: gemaldegalerie-berlin, place: gemaldegalerie-berlin}
+  - {key: alte-nationalgalerie, place: alte-nationalgalerie}
+  - {key: neue-nationalgalerie, place: neue-nationalgalerie}
+  - {key: gemaldegalerie-alte-meister, place: gemaldegalerie-alte-meister}
+  - {key: stadel, place: stadel}
+  - {key: hamburger-kunsthalle, place: hamburger-kunsthalle}
+  - {key: wallrafrichartz-museum, place: wallrafrichartz-museum}
+  - {key: kunstmuseum-basel, place: kunstmuseum-basel}
+  - {key: kunsthaus-zurich, place: kunsthaus-zurich}
+  - {key: beyeler-foundation, place: beyeler-foundation}
+  - {key: hermitage-museum, place: hermitage-museum}
+  - {key: pushkin-museum, place: pushkin-museum}
+  - {key: russian-museum, place: russian-museum}
+  - {key: national-museum-in-warsaw, place: national-museum-in-warsaw}
+  - {key: hungarian-national-gallery, place: hungarian-national-gallery}
+  - {key: national-gallery-of-denmark, place: national-gallery-of-denmark}
+  - {key: ateneum, place: ateneum}
+  - {key: skagens-museum, place: skagens-museum}
+  - {key: munch-museum, place: munch-museum}
+  - {key: royal-museums-of-fine-arts-of-belgium, place: royal-museums-of-fine-arts-of-belgium}
+  - {key: museum-of-fine-arts-ghent, place: museum-of-fine-arts-ghent}
+  - {key: royal-museum-of-fine-arts-antwerp, place: royal-museum-of-fine-arts-antwerp}
+  - {key: groeningemuseum, place: groeningemuseum}
+  - {key: musee-conde, place: musee-conde}
+  - {key: musee-fabre, place: musee-fabre}
+  - {key: dulwich-picture-gallery, place: dulwich-picture-gallery}
+  - {key: scottish-national-gallery, place: scottish-national-gallery}
+  - {key: national-gallery-of-ireland, place: national-gallery-of-ireland}
+  - {key: kelvingrove-art-gallery-and-museum, place: kelvingrove-art-gallery-and-museum}
+
+# Founding years where the museum record (from an earlier batch) and its own
+# Wikipedia article disagree. Discrepancies can't be about a museum, so each is
+# about the museum's new place. The museum records are left as they are.
+# Expected preview warnings: the "museum record" claims for the Uffizi, Belvedere,
+# Städel, Hamburger Kunsthalle and Dulwich have no source, because the article the
+# museum record cites does not give that year. They are kept so the question stays open.
+discrepancies:
+  - key: uffizi-founding-year
+    question: In what year was the Uffizi Gallery founded as a museum?
+    about: [{place: uffizi}]
+    claims:
+      - {value: "1560", note: "Museum record. The year Vasari began the building, not a museum date"}
+      - {value: "1581", sources: [wp-uffizi], note: "Infobox 'established'; the year the building was completed"}
+      - {value: "1769", sources: [wp-uffizi], note: "Text: officially opened to the public (formally a museum from 1865)"}
+    note: The place uses 1560 as the building's year; the museum record's founding year needs settling.
+
+  - key: albertina-founding-year
+    question: In what year was the Albertina founded?
+    about: [{place: albertina}]
+    claims:
+      - {value: "1776", sources: [wp-albertina], note: "Museum record; the article's text says Count Durazzo gave the duke nearly 1,000 works in 1776"}
+      - {value: "1805", sources: [wp-albertina], note: "Infobox 'established', marked citation needed"}
+
+  - key: belvedere-vienna-founding-year
+    question: When was the Belvedere in Vienna begun?
+    about: [{place: belvedere-vienna}]
+    claims:
+      - {value: "1714", note: "Museum record; the article does not give this year"}
+      - {value: "1712", sources: [wp-belvedere-vienna], note: "Construction of the Lower Belvedere had begun by 1712; Upper Belvedere completed 1723"}
+    note: The place uses 1712 (estimated).
+
+  - key: stadel-founding-year
+    question: In what year was the Städel founded?
+    about: [{place: stadel}]
+    claims:
+      - {value: "1816", note: "Museum record. The year Johann Friedrich Städel died, leaving the bequest"}
+      - {value: "1817", sources: [wp-stadel], note: "Infobox and text: founded in 1817"}
+
+  - key: hamburger-kunsthalle-founding-year
+    question: In what year was the Hamburger Kunsthalle founded?
+    about: [{place: hamburger-kunsthalle}]
+    claims:
+      - {value: "1868", note: "Museum record; the article does not give this year"}
+      - {value: "1850", sources: [wp-hamburger-kunsthalle], note: "Text: founded in 1850 (collection established by the Kunstverein in 1849)"}
+      - {value: "1869", sources: [wp-hamburger-kunsthalle], note: "Infobox 'established' (20 August 1869), the opening of the main building"}
+    note: The place uses 1869, the main building's year.
+
+  - key: dulwich-picture-gallery-founding-year
+    question: In what year was Dulwich Picture Gallery founded?
+    about: [{place: dulwich-picture-gallery}]
+    claims:
+      - {value: "1811", note: "Museum record. The year Sir Francis Bourgeois died, leaving the collection and his instructions for a gallery"}
+      - {value: "1817", sources: [wp-dulwich-picture-gallery], note: "Infobox and text: opened 1817"}
+
+  - key: russian-museum-founding-year
+    question: In what year was the Russian Museum established?
+    about: [{place: russian-museum}]
+    claims:
+      - {value: "1895", sources: [wp-russian-museum], note: "Infobox 'established' and the museum record; its first director's term is given as 1895-1917"}
+      - {value: "1896", sources: [wp-russian-museum], note: "Text: 'established on April 13, 1896'"}
+    note: Both from the same article. The grand opening was 17 March 1898.
