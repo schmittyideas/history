@@ -1957,41 +1957,121 @@ function fill(kind, id) {
 }
 
 /* --- search */
+// A search can hold a year and a name in either order ("London 1850", "1850 Michelangelo"). Names forgive
+// small spelling slips ("Michaleanglo"): when nothing contains the words, the closest name within a few letters wins.
+const YEAR_IN = /(?:^|\s)((?:AD\s*)?\d{1,4}\s*(?:BCE|BC|AD|CE)\b|AD\s*\d{1,4}|\d{3,4})(?=\s|$)/i;
+function editDistance(a, b) {
+  if (Math.abs(a.length - b.length) > 3) return 99;
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j), prev2 = null;
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+      if (prev2 && i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) cur[j] = Math.min(cur[j], prev2[j - 2] + 1);   // swapped letters
+    }
+    prev2 = prev; prev = cur;
+  }
+  return prev[b.length];
+}
+const fold = s => (s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[’']/g, "'").replace(/\s+/g, " ").trim();
 function exploreSearch(text) {
-  const t = text.trim(), db = S.db, I = exploreIndex();
+  const db = S.db, I = exploreIndex();
+  let t = text.trim(), year = null;
   if (!t) return { error: "Type a name, a place, a work or a year." };
-  // A year on its own: "1504", "384 BC", "AD 14".
-  if (/^(ad\s*)?\d{1,4}(\s*(bc|bce|ad|ce))?$/i.test(t)) { const f = parseQuery(t, S.db); if (f.from != null) return { best: { kind: "year", id: f.from } }; }
-  const q = t.toLowerCase().replace(/[’']/g, "'");
+  const m = t.match(YEAR_IN);
+  if (m) {
+    const f = parseQuery(m[1], db);
+    if (f.from != null) { year = f.from; t = (t.slice(0, m.index) + " " + t.slice(m.index + m[0].length)).replace(/\s+/g, " ").trim(); }
+  }
+  if (!t) return year != null ? { best: { kind: "year", id: year }, year } : { error: "Type a name, a place, a work or a year." };
+  const q = fold(t);
   const score = name => {
-    const n = (name || "").toLowerCase().replace(/[’']/g, "'");
+    const n = fold(name);
     return !n ? 0 : n === q ? 3 : n.startsWith(q) ? 2 : (" " + n).includes(" " + q) ? 1 : n.includes(q) ? .5 : 0;
   };
-  const country = I.countryList.find(c => c.toLowerCase() === q || Object.keys(COUNTRY_ALIAS).some(a => a.toLowerCase() === q && COUNTRY_ALIAS[a] === c));
-  const hits = [];
-  db.people.forEach(p => { const s = score(p.name); if (s) hits.push({ kind: "person", id: p.id, name: p.name, s, f: fame(p) }); });
-  db.artworks.forEach(w => { const s = score(w.name); if (s && I.creatorOf.has(w.id)) hits.push({ kind: "work", id: w.id, name: w.name, s, f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) }); });
-  db.places.forEach(pl => { const s = Math.max(score(pl.name), score(pl.historical_name) * .9); if (s) hits.push({ kind: "place", id: pl.id, name: pl.name, s, f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length }); });
+  const country = I.countryList.find(c => fold(c) === q || Object.keys(COUNTRY_ALIAS).some(a => fold(a) === q && COUNTRY_ALIAS[a] === c));
+  const records = [
+    ...db.people.map(p => ({ kind: "person", id: p.id, name: p.name, names: [p.name], f: fame(p) })),
+    ...db.artworks.filter(w => I.creatorOf.has(w.id)).map(w => ({ kind: "work", id: w.id, name: w.name, names: [w.name], f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) })),
+    ...db.places.map(pl => ({ kind: "place", id: pl.id, name: pl.name, names: [pl.name, pl.historical_name].filter(Boolean), f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length })),
+  ];
+  let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s);
+  let fuzzy = false;
+  if (!hits.length && q.length >= 4) {
+    // Compare the words typed with every run of as many words in each name ("michaleanglo" ~ "michelangelo").
+    const nq = q.split(" ").length, limit = Math.max(1, Math.min(3, Math.floor(q.length / 4)));
+    hits = records.map(r => {
+      let d = 99;
+      r.names.forEach(name => { const w = fold(name).split(" "); for (let i = 0; i + nq <= w.length; i++) d = Math.min(d, editDistance(q, w.slice(i, i + nq).join(" "))); });
+      return { ...r, s: d <= limit ? 1 - d / 10 : 0 };
+    }).filter(r => r.s);
+    fuzzy = hits.length > 0;
+  }
   hits.sort((a, b) => b.s - a.s || b.f - a.f);
   if (country && !(hits[0]?.s === 3 && hits[0].kind !== "place")) {
     // "Italy": pick the country, and open its busiest place.
     const pl = db.places.filter(p => placeCountry(p) === country).sort((a, b) => db.eventsAt(b.id).length - db.eventsAt(a.id).length)[0];
-    return { country, best: pl ? { kind: "place", id: pl.id } : null, also: hits.slice(0, 6) };
+    return { country, year, best: pl ? { kind: "place", id: pl.id } : year != null ? { kind: "year", id: year } : null, also: hits.slice(0, 6) };
   }
   if (!hits.length) return { error: `Nothing called "${t}" yet. Try a person, a painting, a place or a year.` };
-  return { best: hits[0], also: hits.slice(1, 7) };
+  return { best: hits[0], year, fuzzy, typed: t, also: hits.slice(1, 7) };
+}
+// Fill the cards from a record and a year together: the record keeps its card, the year its own, and the other two
+// are chosen for that record at that time.
+function fillAt(kind, id, y) {
+  const db = S.db, I = exploreIndex(), near = (a, b) => Math.abs(a - b);
+  fill(kind, id);
+  X.year = y;
+  if (kind === "person") {
+    const ws = (I.worksBy.get(id) || []).filter(w => w.start_year != null);
+    const w = ws.sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0];
+    if (w) X.work = w.id;
+    const stop = stopsForPerson(id).filter(s => s.year != null).sort((a, b) => near(a.year, y) - near(b.year, y))[0];
+    if (stop) X.place = stop.place.id;
+  } else if (kind === "place") {
+    const C = placeCountry(db.placeById[id]);
+    // Someone recorded at the place near that year; else the best-known person in its country then.
+    // Grown-ups only (a child born there that year isn't who you'd want), scored by how big and how close the event was.
+    const adult = o => aliveIn(o, y) && (o.birth_year == null || yearsBetween(o.birth_year, y) >= 18);
+    const score = new Map(), add = (o, v) => adult(o) && score.set(o.id, Math.max(score.get(o.id) ?? -1e9, v + fame(o) / 1000));
+    db.momentsAt(id).forEach(m => m.year != null && near(m.year, y) <= 15 && add(m.person, 20 - near(m.year, y)));
+    db.eventsAt(id).forEach(e => e.start_year != null && near(e.start_year, y) <= 15 &&
+      db.peopleInEvent(e.id).forEach(x => add(x.person, (e.prominence ?? 3) * 10 - near(e.start_year, y))));
+    const best = [...score.entries()].sort((a, b) => b[1] - a[1])[0];
+    const p = (best && db.byId[best[0]])
+      || db.people.filter(o => adult(o) && (!C || I.inCountryAt(o.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+    X.person = p?.id ?? null;
+    const ws = db.artworks.filter(w => w.start_year != null && near(workYear(w), y) <= 10 && I.creatorOf.has(w.id));
+    const w = ws.filter(w => (I.placesOf.get(w.id) || []).some(x => x.place.id === id)).sort((a, b) => near(workYear(a), y) - near(workYear(b), y))[0]
+      || ws.filter(w => C && workCountry(w) === C).sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]))[0]
+      || (p && (I.worksBy.get(p.id) || []).filter(w => w.start_year != null).sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0]);
+    X.work = w?.id ?? null;
+  }
 }
 function runExplore(text) {
-  const r = exploreSearch(text), msg = $("x-msg");
+  const r = exploreSearch(text), msg = $("x-msg"), db = S.db;
   msg.replaceChildren();
   if (r.error) { msg.textContent = r.error; return; }
   if (r.country) setCountry(r.country, false);
-  if (r.best) fill(r.best.kind, r.best.id);
+  if (r.best) {
+    if (r.year != null && r.best.kind !== "year") fillAt(r.best.kind, r.best.id, r.year); else fill(r.best.kind, r.best.id);
+    // A place sets the country, so the Year card starts there.
+    const pc = r.best.kind === "place" && placeCountry(db.placeById[r.best.id]);
+    if (pc && I_hasCountry(pc)) setCountry(pc, false);
+  }
+  if (r.fuzzy) msg.append(`Showing ${r.best.name} (nothing is called "${r.typed}"). `);
+  // A person searched with a year outside their life: say how far off it is.
+  const p = r.best?.kind === "person" && r.year != null ? db.byId[r.best.id] : null;
+  if (p && p.death_year != null && r.year > p.death_year) msg.append(`${p.name} died in ${fmtYear(p.death_year)}, ${yearsBetween(p.death_year, r.year)} years before ${fmtYear(r.year)}. `);
+  if (p && p.birth_year != null && r.year < p.birth_year) msg.append(`${p.name} was born in ${fmtYear(p.birth_year)}, ${yearsBetween(r.year, p.birth_year)} years after ${fmtYear(r.year)}. `);
   const short = t => t.length > 40 ? t.slice(0, 38).trimEnd() + "…" : t;
-  if (r.also?.length) msg.append("Also: ", ...joinNodes(r.also.slice(0, 5).map(x => h("span", {}, xBtn(short(x.name), `Show ${x.name}`, () => { fill(x.kind, x.id); msg.replaceChildren(); renderExplore(CARDS); }),
-    h("span", { class: "yrs", text: ` ${x.kind}` })))));
+  if (r.also?.length) msg.append("Also: ", ...joinNodes(r.also.slice(0, 5).map(x => h("span", {}, xBtn(short(x.name), `Show ${x.name}`, () => {
+    if (r.year != null) fillAt(x.kind, x.id, r.year); else fill(x.kind, x.id);
+    msg.replaceChildren(); renderExplore(CARDS);
+  }), h("span", { class: "yrs", text: ` ${x.kind}` })))));
   renderExplore(CARDS);
 }
+const I_hasCountry = c => exploreIndex().countryList.includes(c);
 
 /* --- changing cards */
 function xGo(kind, id) {

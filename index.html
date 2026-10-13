@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Literata:opsz,wght@7..72,400;7..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-<link rel="stylesheet" href="styles.css?v=2026-10-12a">
+<link rel="stylesheet" href="styles.css?v=2026-10-12b">
 </head>
 <body>
 <div class="wrap">
@@ -26,7 +26,7 @@
   <section class="view explore" id="explore-view" aria-label="Explore: a year, a place, a person and a work" hidden>
     <div class="ask">
       <form class="xsearch" id="x-form" role="search">
-        <input type="search" id="x-q" autocomplete="off" placeholder="A person, place, painting or year" aria-label="Search for a person, place, painting or year">
+        <input type="search" id="x-q" autocomplete="off" placeholder="A person, place, painting or year: London 1850" aria-label="Search for a person, place, painting or year">
         <button class="btn" type="submit">Search</button>
         <button class="btn ghost" type="button" id="x-near" title="Use this device's location (not stored)">Near me</button>
         <label class="xcountry"><span>Country</span><select id="x-country" aria-label="Country to show first"></select></label>
@@ -36,6 +36,7 @@
         <button type="button" data-x="Michelangelo">Michelangelo</button>
         <button type="button" data-x="Mona Lisa">Mona Lisa</button>
         <button type="button" data-x="Westminster Abbey">Westminster Abbey</button>
+        <button type="button" data-x="London 1850">London 1850</button>
         <button type="button" data-x="1066">1066</button>
       </div>
     </div>
@@ -130,9 +131,9 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-<script src="config.js?v=2026-10-12a"></script>
+<script src="config.js?v=2026-10-12b"></script>
 <script src="data/snapshot.js"></script>
 <script src="data/land.js"></script>
-<script src="app.js?v=2026-10-12a"></script>
+<script src="app.js?v=2026-10-12b"></script>
 </body>
 </html>
