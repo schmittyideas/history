@@ -1,0 +1,488 @@
+# Realm years and countries, batch 1: 30 existing realms in the Americas,
+# Central Asia, East Asia and Eastern Europe get the years they existed and
+# every modern country they covered, from each realm's English Wikipedia
+# article: the infobox ("year_start", "year_end", "today") where it has them,
+# otherwise what the article's lead clearly states. Fetched 2026-10-12.
+#
+# Where an article gives two dates for a start or end (infobox vs lead, or two
+# founding years), a `discrepancies` entry records both; the realm holds the
+# better-supported value.
+#
+# Existing realm notes are kept (no `note` sent) except Bulgaria's, which now
+# covers both empires.
+
+batch:
+  title: "Realm years and countries, batch 1"
+  requested: "Ty: realms with start and end dates, mapped to today's countries"
+  date: 2026-10-12
+
+sources:
+  - {key: wp-aztec-empire, title: "Aztec Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Aztec_Empire}
+  - {key: wp-chagatai-khanate, title: "Chagatai Khanate (Wikipedia)", url: https://en.wikipedia.org/wiki/Chagatai_Khanate}
+  - {key: wp-ghaznavid-empire, title: "Ghaznavid Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Ghaznavid_Empire}
+  - {key: wp-ghurid-dynasty, title: "Ghurid dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Ghurid_dynasty}
+  - {key: wp-khwarazmian-empire, title: "Khwarazmian Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Khwarazmian_Empire}
+  - {key: wp-mongol-empire, title: "Mongol Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Mongol_Empire}
+  - {key: wp-timurid-empire, title: "Timurid Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Timurid_Empire}
+  - {key: wp-qara-khitai, title: "Qara Khitai (Wikipedia)", url: https://en.wikipedia.org/wiki/Qara_Khitai}
+  - {key: wp-ashikaga-shogunate, title: "Ashikaga shogunate (Wikipedia)", url: https://en.wikipedia.org/wiki/Ashikaga_shogunate}
+  - {key: wp-dali-kingdom, title: "Dali Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Dali_Kingdom}
+  - {key: wp-goryeo, title: "Goryeo (Wikipedia)", url: https://en.wikipedia.org/wiki/Goryeo}
+  - {key: wp-japan, title: "Japan (Wikipedia)", url: https://en.wikipedia.org/wiki/Japan}
+  - {key: wp-jin-dynasty-1115-1234, title: "Jin dynasty (1115–1234) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jin_dynasty_(1115%E2%80%931234)"}
+  - {key: wp-joseon, title: "Joseon (Wikipedia)", url: https://en.wikipedia.org/wiki/Joseon}
+  - {key: wp-kamakura-shogunate, title: "Kamakura shogunate (Wikipedia)", url: https://en.wikipedia.org/wiki/Kamakura_shogunate}
+  - {key: wp-liao-dynasty, title: "Liao dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Liao_dynasty}
+  - {key: wp-ming-dynasty, title: "Ming dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Ming_dynasty}
+  - {key: wp-ryukyu-kingdom, title: "Ryukyu Kingdom (Wikipedia)", url: https://en.wikipedia.org/wiki/Ryukyu_Kingdom}
+  - {key: wp-song-dynasty, title: "Song dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Song_dynasty}
+  - {key: wp-tokugawa-shogunate, title: "Tokugawa shogunate (Wikipedia)", url: https://en.wikipedia.org/wiki/Tokugawa_shogunate}
+  - {key: wp-western-xia, title: "Western Xia (Wikipedia)", url: https://en.wikipedia.org/wiki/Western_Xia}
+  - {key: wp-yuan-dynasty, title: "Yuan dynasty (Wikipedia)", url: https://en.wikipedia.org/wiki/Yuan_dynasty}
+  - {key: wp-duchy-of-bohemia, title: "Duchy of Bohemia (Wikipedia)", url: https://en.wikipedia.org/wiki/Duchy_of_Bohemia}
+  - {key: wp-kingdom-of-bohemia, title: "Kingdom of Bohemia (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Bohemia}
+  - {key: wp-banate-of-bosnia, title: "Banate of Bosnia (Wikipedia)", url: https://en.wikipedia.org/wiki/Banate_of_Bosnia}
+  - {key: wp-kingdom-of-bosnia, title: "Kingdom of Bosnia (Wikipedia)", url: https://en.wikipedia.org/wiki/Kingdom_of_Bosnia}
+  - {key: wp-first-bulgarian-empire, title: "First Bulgarian Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/First_Bulgarian_Empire}
+  - {key: wp-second-bulgarian-empire, title: "Second Bulgarian Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Second_Bulgarian_Empire}
+  - {key: wp-byzantine-empire, title: "Byzantine Empire (Wikipedia)", url: https://en.wikipedia.org/wiki/Byzantine_Empire}
+  - {key: wp-crimean-khanate, title: "Crimean Khanate (Wikipedia)", url: https://en.wikipedia.org/wiki/Crimean_Khanate}
+  - {key: wp-kingdom-of-croatia-925-1102, title: "Kingdom of Croatia (925–1102) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Croatia_(925%E2%80%931102)"}
+  - {key: wp-croatia-in-personal-union-with-hungary, title: "Croatia in personal union with Hungary (Wikipedia)", url: https://en.wikipedia.org/wiki/Croatia_in_personal_union_with_Hungary}
+  - {key: wp-kingdom-of-galicia-volhynia, title: "Kingdom of Galicia–Volhynia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Galicia%E2%80%93Volhynia"}
+
+realms:
+  # ---------------------------------------------------------------- Americas
+  # Infobox: 1428 (foundation of the Triple Alliance) to 1521 (Spanish
+  # conquest), today Mexico. Our titles start at 1396 with earlier tlatoque of
+  # Tenochtitlan; the realm's existing note already says the empire proper is later.
+  - name: Aztec Empire
+    from: 1428
+    to: 1521
+    countries:
+      - {country: Mexico}
+    sources: [wp-aztec-empire]
+
+  # A city, not a realm. The infobox and lead: incorporated as a municipality
+  # on 4 April 1850 (founded under Spain on 4 September 1781, in the US from 1848).
+  # Source wp-los-angeles already exists in the database, so it is re-used.
+  - name: Los Angeles
+    from: 1850
+    countries:
+      - {country: United States}
+    sources: [wp-los-angeles]
+
+  # ---------------------------------------------------------------- Central Asia
+  # Infobox: 1227 (Chagatai inherits his share) to 1347 for the whole khanate;
+  # the western part lasted to 1403 and the eastern (Moghulistan) to 1462.
+  # No "today" list, and the lead gives its extent only by rivers and
+  # mountains (Amu Darya to the Altai), so only the main country is listed.
+  - name: Chagatai Khanate
+    from: 1227
+    to: 1347
+    countries:
+      - {country: Uzbekistan}
+    sources: [wp-chagatai-khanate]
+
+  # Infobox 977-1186 (siege of Lahore); "today" is empty. The lead: after
+  # 1040 its holdings shrank to modern-day Afghanistan, Pakistan and Northern
+  # India; before that it reached Rey and Hamadan in the west (Iran).
+  - name: Ghaznavid Empire
+    from: 977
+    to: 1186
+    countries:
+      - {country: Afghanistan}
+      - {country: Pakistan}
+      - {country: India, note: northern India}
+      - {country: Iran, to: 1040, note: "the west, as far as Rey and Hamadan, lost to the Seljuks after 1040"}
+    sources: [wp-ghaznavid-empire]
+
+  # Infobox 786-1215; the lead says the dynasty ruled Ghor "from the
+  # 8th-century" (so the start is approximate) and became an empire 1175-1215.
+  # No "today" list; the lead names Ghor in central Afghanistan, eastern Iran,
+  # the Panjab and Lahore, and the Gangetic Plain.
+  - name: Ghurid Sultanate
+    from: 786
+    from_estimated: true
+    to: 1215
+    countries:
+      - {country: Afghanistan}
+      - {country: Iran, note: eastern Iran}
+      - {country: Pakistan, note: Panjab}
+      - {country: India, note: "northern India (the Gangetic Plain)"}
+    sources: [wp-ghurid-dynasty]
+
+  # Infobox c. 1077-1231 (a rump state in western Iran 1225-1231; the empire
+  # proper ended with the Mongol conquest of 1219-1221). The lead: "large parts
+  # of present-day Central Asia, Afghanistan, and Iran"; of Central Asia only
+  # Khwarazm itself (Uzbekistan, the main country) is listed. Founding date:
+  # see discrepancy khwarazmian-empire-founding.
+  - name: Khwarazmian Empire
+    from: 1077
+    from_estimated: true
+    to: 1231
+    countries:
+      - {country: Uzbekistan}
+      - {country: Afghanistan}
+      - {country: Iran}
+    sources: [wp-khwarazmian-empire]
+
+  # Infobox life span 1206-1368: by 1294 it had split into four khanates, and
+  # the Yuan lost China in 1368. No "today" list; the lead names modern
+  # Mongolia (its origin), China (the Yuan), Iran (the Ilkhanate) and Siberia.
+  # It covered much more (to the Levant and the Carpathians), but the article
+  # does not list those countries, so they are left out.
+  - name: Mongol Empire
+    from: 1206
+    to: 1368
+    note: "Proclaimed under Genghis Khan in 1206; by Kublai's death in 1294 it had split into four khanates (Golden Horde, Chagatai Khanate, Ilkhanate, Yuan dynasty). The end year is the fall of the Yuan in China, 1368."
+    countries:
+      - {country: Mongolia}
+      - {country: China}
+      - {country: Russia, note: Siberia}
+      - {country: Iran, note: under the Ilkhanate}
+    sources: [wp-mongol-empire]
+
+  # Infobox 1370-1507 (fall of Herat). The lead: "modern-day Iran, Iraq,
+  # Afghanistan, much of Central Asia, the South Caucasus, and parts of
+  # contemporary Pakistan, North India, and Turkey"; Samarkand and Ferghana
+  # are in Uzbekistan. Of Central Asia only Uzbekistan is named, so only it is listed.
+  - name: Timurid Empire
+    from: 1370
+    to: 1507
+    countries:
+      - {country: Uzbekistan}
+      - {country: Iran}
+      - {country: Iraq}
+      - {country: Afghanistan}
+      - {country: Azerbaijan, note: South Caucasus}
+      - {country: Armenia, note: South Caucasus}
+      - {country: Georgia, note: South Caucasus}
+      - {country: Pakistan, note: parts}
+      - {country: India, note: parts of northern India}
+      - {country: Turkey, note: parts}
+    sources: [wp-timurid-empire]
+
+  # Article "Qara Khitai". Infobox 1124 (Yelu Dashi proclaims himself king) to
+  # 1218; see discrepancy western-liao-end for 1211. The lead: "parts of
+  # modern-day China, Kazakhstan, Kyrgyzstan, Mongolia, Tajikistan and Uzbekistan".
+  - name: Western Liao
+    from: 1124
+    to: 1218
+    countries:
+      - {country: Kazakhstan}
+      - {country: China}
+      - {country: Kyrgyzstan}
+      - {country: Mongolia}
+      - {country: Tajikistan}
+      - {country: Uzbekistan}
+    sources: [wp-qara-khitai]
+
+  # ---------------------------------------------------------------- East Asia
+  # Infobox and lead: 1336-1573. Feudal military government of Japan.
+  - name: Ashikaga shogunate
+    from: 1336
+    to: 1573
+    countries:
+      - {country: Japan}
+    sources: [wp-ashikaga-shogunate]
+
+  # Infobox 937-1253 (conquered by the Mongols); today China, Laos, Myanmar, Vietnam.
+  - name: Dali Kingdom
+    from: 937
+    to: 1253
+    countries:
+      - {country: China}
+      - {country: Laos}
+      - {country: Myanmar}
+      - {country: Vietnam}
+    sources: [wp-dali-kingdom]
+
+  # Infobox 918-1392; today North Korea, South Korea.
+  - name: Goryeo
+    from: 918
+    to: 1392
+    countries:
+      - {country: South Korea}
+      - {country: North Korea}
+    sources: [wp-goryeo]
+
+  # The state still exists, so no `to`. No `from` either: the article's infobox
+  # gives no founding year, and the lead says only that its kingdoms were
+  # united under an emperor "between the 4th and 6th centuries".
+  - name: Japan
+    countries:
+      - {country: Japan}
+    sources: [wp-japan]
+
+  # Infobox 1115-1234; today China, North Korea, Russia.
+  - name: Jin dynasty
+    from: 1115
+    to: 1234
+    countries:
+      - {country: China}
+      - {country: North Korea}
+      - {country: Russia}
+    sources: [wp-jin-dynasty-1115-1234]
+
+  # Infobox 1392-1897 (proclamation of the Korean Empire); today North Korea, South Korea.
+  - name: Joseon
+    from: 1392
+    to: 1897
+    countries:
+      - {country: South Korea}
+      - {country: North Korea}
+    sources: [wp-joseon]
+
+  # Lead 1185-1333; the infobox starts at 1192. See discrepancy
+  # kamakura-shogunate-founding.
+  - name: Kamakura shogunate
+    from: 1185
+    to: 1333
+    countries:
+      - {country: Japan}
+    sources: [wp-kamakura-shogunate]
+
+  # Infobox and lead 916-1125; today China, Mongolia, North Korea, Russia.
+  # The Qara Khitai article dates the Liao from 907: see discrepancy
+  # liao-dynasty-founding.
+  - name: Liao dynasty
+    from: 916
+    to: 1125
+    countries:
+      - {country: China}
+      - {country: Mongolia}
+      - {country: North Korea}
+      - {country: Russia}
+    sources: [wp-liao-dynasty]
+
+  # Infobox 1368-1644 (fall of Beijing); Southern Ming rump regimes to 1662,
+  # see discrepancy ming-dynasty-end. No "today" list; the lead names only
+  # China (and an expansion "into Inner Asia" it does not map to countries).
+  - name: Ming dynasty
+    from: 1368
+    to: 1644
+    countries:
+      - {country: China}
+    sources: [wp-ming-dynasty]
+
+  # Infobox 1429 (unification of Okinawa Island) to 1879 (Okinawa Prefecture);
+  # today Japan. Our only title (Bunei, king of Chuzan 1398-1406) predates
+  # unification; the realm's note already says so.
+  - name: Ryukyu Kingdom
+    from: 1429
+    to: 1879
+    countries:
+      - {country: Japan}
+    sources: [wp-ryukyu-kingdom]
+
+  # Infobox and lead 960-1279 (Battle of Yamen). No "today" list; the lead
+  # places it in China (Northern Song 960-1127, Southern Song 1127-1279).
+  - name: Song dynasty
+    from: 960
+    to: 1279
+    countries:
+      - {country: China}
+    sources: [wp-song-dynasty]
+
+  # Lead and life span 1603-1868; the infobox's year_start is 1600. See
+  # discrepancy tokugawa-shogunate-founding. Today Japan.
+  - name: Tokugawa shogunate
+    from: 1603
+    to: 1868
+    countries:
+      - {country: Japan}
+    sources: [wp-tokugawa-shogunate]
+
+  # Infobox and lead 1038-1227; the lead: "north-central China".
+  - name: Western Xia
+    from: 1038
+    to: 1227
+    countries:
+      - {country: China, note: north-central China}
+    sources: [wp-western-xia]
+
+  # Infobox and lead 1271-1368; the lead: "most of modern-day China and its
+  # surrounding areas, including modern-day Mongolia". (The Northern Yuan rump
+  # state on the Mongolian Plateau, to 1635, is a separate realm.)
+  - name: Yuan dynasty
+    from: 1271
+    to: 1368
+    countries:
+      - {country: China}
+      - {country: Mongolia}
+    sources: [wp-yuan-dynasty]
+
+  # ---------------------------------------------------------------- Eastern Europe
+  # Our titles (999-1780) cover the Duchy of Bohemia (formed "around 870",
+  # infobox c. 870-1198) and the Kingdom of Bohemia (infobox 1198-1918, today
+  # Czech Republic, Germany, Poland, Slovakia). The duchy's infobox has no
+  # "today" list; the countries come from the kingdom's.
+  - name: Bohemia
+    from: 870
+    from_estimated: true
+    to: 1918
+    countries:
+      - {country: Czech Republic}
+      - {country: Germany}
+      - {country: Poland}
+      - {country: Slovakia}
+    sources: [wp-duchy-of-bohemia, wp-kingdom-of-bohemia]
+
+  # Banate of Bosnia (from "at least 1154", the first known ban, to 1377;
+  # today Bosnia and Herzegovina, Croatia, Montenegro, Serbia) and Kingdom of
+  # Bosnia (1377-1463, Ottoman conquest; no "today" list, the lead adds western
+  # Serbia and the Adriatic coast south of the Neretva).
+  - name: Bosnia
+    from: 1154
+    to: 1463
+    countries:
+      - {country: Bosnia and Herzegovina}
+      - {country: Croatia}
+      - {country: Montenegro}
+      - {country: Serbia}
+    sources: [wp-banate-of-bosnia, wp-kingdom-of-bosnia]
+
+  # Two states with a gap: the First Bulgarian Empire (infobox 681-1018) and
+  # the Second (infobox 1185-1396, today Albania, Bulgaria, Greece, Kosovo,
+  # North Macedonia, Romania, Serbia, Turkey). Between them Bulgaria was a
+  # Byzantine theme. The realm runs 681-1396 and the note gives the two spans.
+  # The First Empire's infobox has no "today" list, so the countries come from
+  # the Second's.
+  - name: Bulgaria
+    from: 681
+    to: 1396
+    note: "Two states: the First Bulgarian Empire (681-1018) and the Second Bulgarian Empire (1185-1396). Between them Bulgaria was ruled by the Byzantine Empire as the theme of Bulgaria."
+    countries:
+      - {country: Bulgaria}
+      - {country: Albania}
+      - {country: Greece}
+      - {country: Kosovo}
+      - {country: North Macedonia}
+      - {country: Romania}
+      - {country: Serbia}
+      - {country: Turkey}
+    sources: [wp-first-bulgarian-empire, wp-second-bulgarian-empire]
+
+  # Infobox life span 330-1453. No "today" list. Countries from the article:
+  # its lead (Italy reconquered under Justinian; Syria and Egypt lost in the
+  # 630s-640s; Asia Minor and Constantinople) and its map captions ("southern
+  # Greece, south-central Bulgaria, southern Crimea and most of Turkey"; in
+  # 1450 "only Southern Greece and northwestern Turkey").
+  - name: Byzantine Empire
+    from: 330
+    to: 1453
+    countries:
+      - {country: Turkey}
+      - {country: Greece}
+      - {country: Bulgaria, note: south-central Bulgaria}
+      - {country: Ukraine, note: southern Crimea}
+      - {country: Italy, note: "much of Italy, reconquered under Justinian I"}
+      - {country: Syria, note: lost to the Rashidun Caliphate in the 630s-640s}
+      - {country: Egypt, note: lost to the Rashidun Caliphate in the 630s-640s}
+    sources: [wp-byzantine-empire]
+
+  # Infobox 1441-1783 (annexed by the Russian Empire); today Moldova, Russia, Ukraine.
+  - name: Crimean Khanate
+    from: 1441
+    to: 1783
+    countries:
+      - {country: Ukraine}
+      - {country: Russia}
+      - {country: Moldova}
+    sources: [wp-crimean-khanate]
+
+  # Our titles (997-1204) cover the Kingdom of Croatia (infobox c. 925-1102:
+  # "most of what is today Croatia ... as well as most of the modern-day Bosnia
+  # and Herzegovina") and Croatia in personal union with Hungary (infobox
+  # 1102-1526, Battle of Mohacs; today Croatia, Bosnia and Herzegovina). The
+  # kingdom went on under the Habsburgs after 1526, a separate article not
+  # read here, so the end year is 1526 for now.
+  - name: Croatia
+    from: 925
+    from_estimated: true
+    to: 1526
+    countries:
+      - {country: Croatia}
+      - {country: Bosnia and Herzegovina}
+    sources: [wp-kingdom-of-croatia-925-1102, wp-croatia-in-personal-union-with-hungary]
+
+  # Lead and life span 1199-1349; the infobox's end date is 1452 (Volhynia
+  # incorporated by Lithuania): see discrepancy galicia-volhynia-end. The lead:
+  # "predominantly located in modern-day Ukraine, with parts in Belarus,
+  # Poland, Romania, Moldova, and Lithuania".
+  - name: Galicia-Volhynia
+    from: 1199
+    to: 1349
+    countries:
+      - {country: Ukraine}
+      - {country: Belarus, note: parts}
+      - {country: Poland, note: parts}
+      - {country: Romania, note: parts}
+      - {country: Moldova, note: parts}
+      - {country: Lithuania, note: parts}
+    sources: [wp-kingdom-of-galicia-volhynia]
+
+discrepancies:
+  - key: kamakura-shogunate-founding
+    question: When did the Kamakura shogunate begin, 1185 or 1192?
+    about: [{realm: kamakura-shogunate}]
+    field: from
+    claims:
+      - {value: 1185, sources: [wp-kamakura-shogunate], note: "Lead: 'from 1185 to 1333'; the later prevailing theory, when Yoritomo set up the shugo and jito"}
+      - {value: 1192, sources: [wp-kamakura-shogunate], note: "Infobox year_start: Minamoto no Yoritomo appointed shogun (the older popular theory)"}
+    note: "The article says Japanese textbooks (2016) give no single year. The realm uses 1185."
+
+  - key: tokugawa-shogunate-founding
+    question: When did the Tokugawa shogunate begin, 1600 or 1603?
+    about: [{realm: tokugawa-shogunate}]
+    field: from
+    claims:
+      - {value: 1603, sources: [wp-tokugawa-shogunate], note: "Lead and infobox life span: 1603-1868 (Ieyasu became shogun)"}
+      - {value: 1600, sources: [wp-tokugawa-shogunate], note: "Infobox year_start: 1600 (the Battle of Sekigahara)"}
+    note: The realm uses 1603.
+
+  - key: khwarazmian-empire-founding
+    question: When did the Khwarazmian state begin?
+    about: [{realm: khwarazmian-empire}]
+    field: from
+    claims:
+      - {value: "c. 1077", sources: [wp-khwarazmian-empire], note: "Infobox and lead: ruled from 1077, at first as vassals of the Seljuks and the Qara Khitai"}
+      - {value: "c. 1190", sources: [wp-khwarazmian-empire], note: "Lead: independent rulers from about 1190 (the infobox status: empire from the 1170s); 'the date of the founding of the state remains debatable'"}
+    note: The realm uses c. 1077, the start of the Anushtegin dynasty's rule in Khwarazm.
+
+  - key: western-liao-end
+    question: Did the Western Liao (Qara Khitai) end in 1211 or 1218?
+    about: [{realm: western-liao}]
+    field: to
+    claims:
+      - {value: 1218, sources: [wp-qara-khitai], note: "Infobox: Kuchlug executed by the Mongols; the state survived until the Mongol conquest of 1218"}
+      - {value: 1211, sources: [wp-qara-khitai], note: "Lead: Kuchlug usurped the throne in 1211, which traditional Chinese, Persian and Arabic sources treat as the end of the Khitan dynasty"}
+    note: The realm uses 1218.
+
+  - key: liao-dynasty-founding
+    question: Did the Liao dynasty begin in 907 or 916?
+    about: [{realm: liao-dynasty}]
+    field: from
+    claims:
+      - {value: 916, sources: [wp-liao-dynasty], note: "Infobox and lead: Abaoji proclaimed a Chinese-style dynastic state in 916"}
+      - {value: 907, sources: [wp-qara-khitai], note: "The Qara Khitai article's lead dates the Liao dynasty 907-1125"}
+    note: The realm uses 916, from the Liao dynasty's own article.
+
+  - key: ming-dynasty-end
+    question: Did the Ming dynasty end in 1644 or 1662?
+    about: [{realm: ming-dynasty}]
+    field: to
+    claims:
+      - {value: 1644, sources: [wp-ming-dynasty], note: "Infobox and lead: ruled 1368-1644; Beijing fell to Li Zicheng in 1644"}
+      - {value: 1662, sources: [wp-ming-dynasty], note: "Lead: Southern Ming rump regimes of the imperial family survived until 1662"}
+    note: The realm uses 1644.
+
+  - key: galicia-volhynia-end
+    question: Did Galicia-Volhynia end in 1349 or 1452?
+    about: [{realm: galicia-volhynia}]
+    field: to
+    claims:
+      - {value: 1349, sources: [wp-kingdom-of-galicia-volhynia], note: "Lead and infobox life span: 1199-1349, when Poland conquered Galicia"}
+      - {value: 1452, sources: [wp-kingdom-of-galicia-volhynia], note: "Infobox date_end: Volhynia incorporated by Lithuania as a province in 1452"}
+    note: The realm uses 1349.
