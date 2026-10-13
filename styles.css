@@ -400,3 +400,4 @@ body.x-full { overflow: hidden; }
 .xcard.full .xmap .then-map { height: 60vh; }
 .then-map .maplibregl-ctrl-attrib { font-size: 10px; }
 .xband.near { border-left-color: var(--madder); }
+.xempty { font-family: var(--display); font-size: 19px; color: var(--muted); margin: 4px 0 2px; }
