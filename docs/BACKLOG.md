@@ -126,6 +126,12 @@ Source: `inbox/examples/2026-10-05-white-ship.yaml` log `follow_up`.
 
 ---
 
+#### [P3] Data: duplicate places for New York City
+`type: task` · `area: data` · `status: ready` · `issue: #211`
+
+`new-york-city` and `new-york` are both "New York City" (kind city). Pick one as the main record, move the other's links to it in an intake batch, and leave a note on the other; look for other duplicate cities at the same time.
+Source: Explore search for "New York, 1932", 2026-10-13.
+
 ## Tooling
 
 ### Ready (ranked)

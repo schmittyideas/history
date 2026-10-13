@@ -395,3 +395,7 @@ body.x-full { overflow: hidden; }
 .xborder .map-credit { font-size: 11px; }
 .xborder .histmap { max-height: 230px; }
 .xcard.full .xborder .histmap { max-height: 55vh; }
+.xthen { margin-bottom: 6px; }
+.then-map { background: var(--land); }
+.xcard.full .xmap .then-map { height: 60vh; }
+.then-map .maplibregl-ctrl-attrib { font-size: 10px; }
