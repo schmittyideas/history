@@ -1,0 +1,508 @@
+batch:
+  title: "Places shown in landscapes and city views, part 1"
+  requested: "Ty: link the places in painting titles, starting with landscapes and city views"
+  date: 2026-10-13
+
+# Drafted by tools/depicts.py from Wikidata (P195 + P217 match, P136 landscape/city-view genre, P180 depicts with P625),
+# then checked by hand: each new place against its English Wikipedia article (or, where there is none, its Wikidata item).
+#
+# Dropped: Rocky Mountains (x2: Mt. Rosalie, Lander's Peak), Andes, Pyrenees, because they are mountain ranges;
+# Arno, Rhine, Seine, Connecticut River, Tagus, because they are rivers; Yosemite Valley, because a valley is an area,
+# not one spot (the painting is of Mount Starr King); Last Supper and crucifixion of Jesus, because they are not places;
+# Pardigon (Afternoon in Pardigon), because the Wikidata item is the Roman villa's archaeological site, not the coast
+# the painting shows.
+# Fixed: the draft linked Ponte Vecchio to palazzo-vecchio and Nieuwe Kerk Delft to delft (name-match slips); both are
+# now places of their own (ponte-vecchio, nieuwe-kerk-delft).
+# Coordinates moved to the Wikipedia article's where Wikidata's were more than ~300 m off: Niagara Falls,
+# White Cliffs of Dover, The Oxbow, Le Port-Marly.
+
+sources:
+  - {key: wp-eldena-abbey, title: "Eldena Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eldena_Abbey"}
+  - {key: wp-niagara-falls, title: "Niagara Falls (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niagara_Falls"}
+  - {key: wp-egmond-castle, title: "Egmond Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Egmond_Castle"}
+  - {key: wd-q962082, title: "rue de Moscou (Wikidata Q962082)", url: "https://www.wikidata.org/wiki/Q962082"}
+  - {key: wd-q3447463, title: "rue Clapeyron (Wikidata Q3447463)", url: "https://www.wikidata.org/wiki/Q3447463"}
+  - {key: wd-q3451108, title: "rue de Turin (Wikidata Q3451108)", url: "https://www.wikidata.org/wiki/Q3451108"}
+  - {key: wp-the-crystal-palace, title: "The Crystal Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Crystal_Palace"}
+  - {key: wd-q3390625, title: "place du Havre (Wikidata Q3390625)", url: "https://www.wikidata.org/wiki/Q3390625"}
+  - {key: wp-cotopaxi, title: "Cotopaxi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cotopaxi"}
+  - {key: wp-dents-du-midi, title: "Dents du Midi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dents_du_Midi"}
+  - {key: wp-white-cliffs-of-dover, title: "White Cliffs of Dover (Wikipedia)", url: "https://en.wikipedia.org/wiki/White_Cliffs_of_Dover"}
+  - {key: wp-emmerich-am-rhein, title: "Emmerich am Rhein (Wikipedia)", url: "https://en.wikipedia.org/wiki/Emmerich_am_Rhein"}
+  - {key: wp-ponte-vecchio, title: "Ponte Vecchio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ponte_Vecchio"}
+  - {key: wp-ponte-santa-trinita, title: "Ponte Santa Trinita (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ponte_Santa_Trinita"}
+  - {key: wp-trouville-sur-mer, title: "Trouville-sur-Mer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Trouville-sur-Mer"}
+  - {key: wp-egmond-abbey, title: "Egmond Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Egmond_Abbey"}
+  - {key: wp-rialto-bridge, title: "Rialto Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rialto_Bridge"}
+  - {key: wp-triumphal-arch-of-orange, title: "Triumphal Arch of Orange (Wikipedia)", url: "https://en.wikipedia.org/wiki/Triumphal_Arch_of_Orange"}
+  - {key: wp-nieuwe-kerk-delft, title: "Nieuwe Kerk (Delft) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nieuwe_Kerk_(Delft)"}
+  - {key: wp-view-of-delft, title: "View of Delft (Wikipedia)", url: "https://en.wikipedia.org/wiki/View_of_Delft"}
+  - {key: wd-q2294019, title: "Rotterdamse Poort (Wikidata Q2294019)", url: "https://www.wikidata.org/wiki/Q2294019"}
+  - {key: wd-q2752010, title: "Kolk (Wikidata Q2752010)", url: "https://www.wikidata.org/wiki/Q2752010"}
+  - {key: wd-q2802348, title: "Schiedamse poort (Wikidata Q2802348)", url: "https://www.wikidata.org/wiki/Q2802348"}
+  - {key: wd-q1918845, title: "Hochelten (Wikidata Q1918845)", url: "https://www.wikidata.org/wiki/Q1918845"}
+  - {key: wd-q3449688, title: "rue Ravignan (Wikidata Q3449688)", url: "https://www.wikidata.org/wiki/Q3449688"}
+  - {key: wp-stoke-by-nayland, title: "Stoke-by-Nayland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stoke-by-Nayland"}
+  - {key: wp-st-mary-s-church-stoke-by-nayland, title: "St Mary's Church, Stoke-by-Nayland (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Mary's_Church,_Stoke-by-Nayland"}
+  - {key: wp-villeneuve-la-garenne, title: "Villeneuve-la-Garenne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Villeneuve-la-Garenne"}
+  - {key: wd-q3397238, title: "Pont de l'île Saint-Denis (Wikidata Q3397238)", url: "https://www.wikidata.org/wiki/Q3397238"}
+  - {key: wp-pontaubert, title: "Pontaubert (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pontaubert"}
+  - {key: wd-q2491575, title: "Pellecussenpoort (Wikidata Q2491575)", url: "https://www.wikidata.org/wiki/Q2491575"}
+  - {key: wp-lander-peak, title: "Lander Peak (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lander_Peak"}
+  - {key: wp-mount-holyoke, title: "Mount Holyoke (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mount_Holyoke"}
+  - {key: wp-the-oxbow-connecticut-river, title: "The Oxbow (Connecticut River) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Oxbow_(Connecticut_River)"}
+  - {key: wp-le-port-marly, title: "Le Port-Marly (Wikipedia)", url: "https://en.wikipedia.org/wiki/Le_Port-Marly"}
+
+places:
+  - key: eldena-abbey
+    name: "Eldena Abbey"
+    kind: abbey
+    city: Greifswald
+    region: Mecklenburg-Vorpommern
+    country: Germany
+    lat: 54.0892
+    lng: 13.4522
+    visitable: true
+    note: "Former Cistercian monastery; only ruins survive, a frequent subject of Caspar David Friedrich."
+    sources: [wp-eldena-abbey]   # Wikidata Q455794
+  - key: niagara-falls
+    name: "Niagara Falls"
+    kind: waterfall
+    region: Ontario
+    country: Canada
+    lat: 43.0799
+    lng: -79.0747
+    visitable: true
+    note: "Three waterfalls on the border between Ontario (Canada) and New York (United States); the Horseshoe Falls straddle it, the American and Bridal Veil Falls are in the United States."
+    sources: [wp-niagara-falls]   # Wikidata Q34221
+  - key: egmond-castle
+    name: "Egmond Castle"
+    kind: castle
+    city: Egmond aan den Hoef
+    region: North Holland
+    country: Netherlands
+    lat: 52.6222
+    lng: 4.6537
+    visitable: true
+    note: "Ruined medieval castle, ancestral seat of the Egmond family; a national monument."
+    sources: [wp-egmond-castle]   # Wikidata Q2800737
+  - key: rue-de-moscou
+    name: "Rue de Moscou"
+    kind: street
+    city: Paris
+    country: France
+    lat: 48.8809
+    lng: 2.3241
+    sources: [wd-q962082]   # Wikidata Q962082
+  - key: rue-clapeyron
+    name: "Rue Clapeyron"
+    kind: street
+    city: Paris
+    country: France
+    lat: 48.8819
+    lng: 2.3238
+    sources: [wd-q3447463]   # Wikidata Q3447463
+  - key: rue-de-turin
+    name: "Rue de Turin"
+    kind: street
+    city: Paris
+    country: France
+    lat: 48.8816
+    lng: 2.3245
+    sources: [wd-q3451108]   # Wikidata Q3451108
+  - key: crystal-palace
+    name: "The Crystal Palace"
+    kind: exhibition building
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.4226
+    lng: -0.0756
+    founded: 1851
+    ended: 1936
+    visitable: false
+    architect: Joseph Paxton
+    note: "Built in Hyde Park for the Great Exhibition of 1851, rebuilt at Sydenham Hill, where it stood from 1854 until fire destroyed it in November 1936. The pin marks the Sydenham site."
+    sources: [wp-the-crystal-palace]   # Wikidata Q202902
+  - key: place-du-havre
+    name: "Place du Havre"
+    kind: square
+    city: Paris
+    country: France
+    lat: 48.8756
+    lng: 2.3267
+    sources: [wd-q3390625]   # Wikidata Q3390625
+  - key: cotopaxi
+    name: "Cotopaxi"
+    kind: volcano
+    region: Cotopaxi Province
+    country: Ecuador
+    lat: -0.6806
+    lng: -78.4378
+    note: "Active stratovolcano, 5,897 m, in Cotopaxi National Park south of Quito."
+    sources: [wp-cotopaxi]   # Wikidata Q181476
+  - key: dents-du-midi
+    name: "Dents du Midi"
+    kind: mountain
+    region: Valais
+    country: Switzerland
+    lat: 46.161
+    lng: 6.9234
+    note: "A 3 km ridge of seven peaks in the Chablais Alps, seen as one mountain above the Rhône valley."
+    sources: [wp-dents-du-midi]   # Wikidata Q15255
+  - key: white-cliffs-of-dover
+    name: "White Cliffs of Dover"
+    kind: cliffs
+    city: Dover
+    region: Kent
+    country: England
+    lat: 51.1078
+    lng: 1.2786
+    visitable: true
+    note: "Chalk cliffs on both sides of Dover, stretching about 13 km along the Strait of Dover."
+    sources: [wp-white-cliffs-of-dover]   # Wikidata Q754785
+  - key: emmerich-am-rhein
+    name: "Emmerich am Rhein"
+    kind: town
+    region: North Rhine-Westphalia
+    country: Germany
+    lat: 51.835
+    lng: 6.2453
+    sources: [wp-emmerich-am-rhein]   # Wikidata Q57006
+  - key: ponte-vecchio
+    name: "Ponte Vecchio"
+    kind: bridge
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.768
+    lng: 11.2532
+    founded: 1345
+    visitable: true
+    note: "Medieval bridge over the Arno lined with shops, rebuilt in 1345 after a flood; the only Florentine bridge spared in the Second World War."
+    sources: [wp-ponte-vecchio]   # Wikidata Q208633
+  - key: ponte-santa-trinita
+    name: "Ponte Santa Trinita"
+    kind: bridge
+    city: Florence
+    region: Tuscany
+    country: Italy
+    lat: 43.7689
+    lng: 11.2503
+    founded: 1569
+    architect: Bartolomeo Ammannati
+    visitable: true
+    note: "Renaissance bridge over the Arno, built 1567–1569; the oldest elliptic arch bridge in the world."
+    sources: [wp-ponte-santa-trinita]   # Wikidata Q545578
+  - key: trouville-sur-mer
+    name: "Trouville-sur-Mer"
+    kind: town
+    region: Calvados
+    country: France
+    lat: 49.3683
+    lng: 0.0825
+    sources: [wp-trouville-sur-mer]   # Wikidata Q272320
+  - key: egmond-abbey
+    name: "Egmond Abbey"
+    kind: abbey
+    city: Egmond-Binnen
+    region: North Holland
+    country: Netherlands
+    lat: 52.595
+    lng: 4.6603
+    founded: 920
+    founded_estimated: true
+    note: "Benedictine abbey founded 920–925, destroyed during the Reformation and re-founded in 1935 as the Sint-Adelbertabdij. Ruisdael's Jewish Cemetery shows the ruins of the old abbey."
+    sources: [wp-egmond-abbey]   # Wikidata Q381632
+  - key: rialto-bridge
+    name: "Rialto Bridge"
+    kind: bridge
+    city: Venice
+    region: Veneto
+    country: Italy
+    lat: 45.438
+    lng: 12.336
+    visitable: true
+    architect: Antonio da Ponte (present bridge)
+    note: "Oldest bridge over the Grand Canal: a pontoon bridge from 1173, a wooden bridge from 1255, and the present stone bridge of 1588–1591."
+    sources: [wp-rialto-bridge]   # Wikidata Q52505
+  - key: triumphal-arch-of-orange
+    name: "Triumphal Arch of Orange"
+    kind: triumphal arch
+    city: Orange
+    region: Vaucluse
+    country: France
+    lat: 44.1422
+    lng: 4.8048
+    visitable: true
+    note: "Roman triumphal arch, probably of Augustus's reign, dedicated to Tiberius in AD 27; UNESCO World Heritage Site."
+    sources: [wp-triumphal-arch-of-orange]   # Wikidata Q1777218
+  - key: nieuwe-kerk-delft
+    name: "Nieuwe Kerk, Delft"
+    kind: church
+    city: Delft
+    region: South Holland
+    country: Netherlands
+    lat: 52.0123
+    lng: 4.3609
+    visitable: true
+    note: "Protestant church on the Markt; burial place of William the Silent (1584) and the House of Orange-Nassau."
+    sources: [wp-nieuwe-kerk-delft, wp-view-of-delft]   # Wikidata Q678611
+  - key: rotterdam-gate-delft
+    name: "Rotterdam Gate, Delft"
+    historical_name: "Rotterdamse Poort"
+    kind: gate
+    city: Delft
+    region: South Holland
+    country: Netherlands
+    lat: 52.0056
+    lng: 4.3611
+    ended: 1836
+    visitable: false
+    note: "One of Delft's two southern gates, at the right of Vermeer's View of Delft."
+    sources: [wd-q2294019, wp-view-of-delft]   # Wikidata Q2294019
+  - key: kolk-delft
+    name: "Kolk, Delft"
+    kind: harbour
+    city: Delft
+    region: South Holland
+    country: Netherlands
+    lat: 52.0155
+    lng: 4.3537
+    note: "The harbour of the river Schie in the foreground of Vermeer's View of Delft; Wikidata records the Kolk today as a street."
+    sources: [wd-q2752010, wp-view-of-delft]   # Wikidata Q2752010
+  - key: schiedam-gate-delft
+    name: "Schiedam Gate, Delft"
+    historical_name: "Schiedamse Poort"
+    kind: gate
+    city: Delft
+    region: South Holland
+    country: Netherlands
+    lat: 52.0056
+    lng: 4.3606
+    ended: 1836
+    visitable: false
+    note: "One of Delft's two southern gates, in the middle of Vermeer's View of Delft."
+    sources: [wd-q2802348, wp-view-of-delft]   # Wikidata Q2802348
+  - key: hochelten
+    name: "Hochelten"
+    kind: village
+    city: Emmerich am Rhein
+    country: Germany
+    lat: 51.8659
+    lng: 6.1723
+    sources: [wd-q1918845]   # Wikidata Q1918845
+  - key: rue-ravignan
+    name: "Rue Ravignan"
+    kind: street
+    city: Paris
+    country: France
+    lat: 48.8855
+    lng: 2.3379
+    sources: [wd-q3449688]   # Wikidata Q3449688
+  - key: stoke-by-nayland
+    name: "Stoke-by-Nayland"
+    kind: village
+    region: Suffolk
+    country: England
+    lat: 51.9876
+    lng: 0.8917
+    sources: [wp-stoke-by-nayland]   # Wikidata Q2042664
+  - key: st-marys-church-stoke-by-nayland
+    name: "St Mary's Church, Stoke-by-Nayland"
+    kind: church
+    city: Stoke-by-Nayland
+    region: Suffolk
+    country: England
+    lat: 51.9894
+    lng: 0.8913
+    visitable: true
+    note: "Grade I listed parish church."
+    sources: [wp-st-mary-s-church-stoke-by-nayland]   # Wikidata Q15979427
+  - key: villeneuve-la-garenne
+    name: "Villeneuve-la-Garenne"
+    kind: town
+    region: Hauts-de-Seine
+    country: France
+    lat: 48.9372
+    lng: 2.3278
+    sources: [wp-villeneuve-la-garenne]   # Wikidata Q225451
+  - key: pont-de-l-ile-saint-denis
+    name: "Pont de l'Île-Saint-Denis"
+    kind: bridge
+    country: France
+    lat: 48.9358
+    lng: 2.3417
+    sources: [wd-q3397238]   # Wikidata Q3397238
+  - key: pontaubert
+    name: "Pontaubert"
+    kind: village
+    region: Yonne
+    country: France
+    lat: 47.4894
+    lng: 3.8592
+    sources: [wp-pontaubert]   # Wikidata Q1145200
+  - key: pellecussenpoort
+    name: "Pellecussenpoort"
+    kind: gate
+    city: Utrecht
+    country: Netherlands
+    lat: 52.1033
+    lng: 5.1115
+    visitable: false
+    note: "Former city gate of Utrecht."
+    sources: [wd-q2491575]   # Wikidata Q2491575
+  - key: lander-peak
+    name: "Lander Peak"
+    kind: mountain
+    region: Wyoming
+    country: United States
+    lat: 42.7849
+    lng: -110.5461
+    note: "Named Lander's Peak by Albert Bierstadt after Frederick W. Lander, whose 1859 expedition he joined."
+    sources: [wp-lander-peak]   # Wikidata Q6484420
+  - key: mount-holyoke
+    name: "Mount Holyoke"
+    kind: mountain
+    region: Massachusetts
+    country: United States
+    lat: 42.3008
+    lng: -72.5869
+    visitable: true
+    note: "Westernmost peak of the Holyoke Range, in J.A. Skinner State Park."
+    sources: [wp-mount-holyoke]   # Wikidata Q3321866
+  - key: the-oxbow
+    name: "The Oxbow"
+    kind: oxbow lake
+    city: Northampton
+    region: Massachusetts
+    country: United States
+    lat: 42.291
+    lng: -72.6292
+    sources: [wp-the-oxbow-connecticut-river]   # Wikidata Q7755777
+  - key: le-port-marly
+    name: "Le Port-Marly"
+    kind: town
+    region: Yvelines
+    country: France
+    lat: 48.8967
+    lng: 2.1106
+    sources: [wp-le-port-marly]   # Wikidata Q1462695
+
+artworks:
+  - key: the-abbey-in-the-oakwood-caspar-david-friedrich   # The Abbey in the Oakwood — Wikidata Q334360 (landscape)
+    places:
+      - {place: eldena-abbey, role: depicts}   # P180 Q455794 Eldena Abbey
+  - key: distant-view-of-niagara-falls-thomas-cole   # Distant View of Niagara Falls — Wikidata Q19900709 (landscape)
+    places:
+      - {place: niagara-falls, role: depicts}   # P180 Q34221 Niagara Falls
+  - key: landscape-with-the-ruins-of-the-castle-of-egmond-jacob-van-ruisdael   # Landscape with the Ruins of the Castle of Egmond — Wikidata Q20273922 (landscape)
+    places:
+      - {place: egmond-castle, role: depicts}   # P180 Q2800737 Castle Egmond
+  - key: paris-street-rainy-day   # Paris Street; Rainy Day — Wikidata Q1452762 (cityscape)
+    places:
+      - {place: rue-de-moscou, role: depicts}   # P180 Q962082 rue de Moscou
+      - {place: rue-clapeyron, role: depicts}   # P180 Q3447463 rue Clapeyron
+      - {place: rue-de-turin, role: depicts}   # P180 Q3451108 rue de Turin
+  - key: the-bay-of-marseille-seen-from-l-estaque-paul-cezanne   # The Bay of Marseille, Seen from L'Estaque — Wikidata Q20268642 (landscape)
+    places:
+      - {place: l-estaque, role: depicts}   # P180 Q1229951 L'Estaque
+  - key: the-crystal-palace-camille-pissarro   # The Crystal Palace — Wikidata Q20088061 (cityscape)
+    places:
+      - {place: crystal-palace, role: depicts}   # P180 Q202902 The Crystal Palace
+  - key: the-place-du-havre-paris-camille-pissarro   # The Place du Havre, Paris — Wikidata Q20271183 (cityscape)
+    places:
+      - {place: place-du-havre, role: depicts}   # P180 Q3390625 place du Havre
+  - key: view-of-cotopaxi-frederic-edwin-church   # View of Cotopaxi — Wikidata Q20202175 (landscape)
+    places:
+      - {place: cotopaxi, role: depicts}   # P180 Q181476 Cotopaxi volcano
+  - key: early-morning-after-a-storm-at-sea-winslow-homer   # Early Morning After a Storm at Sea — Wikidata Q60503457 (landscape)
+    places:
+      - {place: prouts-neck, role: depicts}   # P180 Q7252270 Prouts Neck
+  - key: panoramic-view-of-the-alps-les-dents-du-midi-gustave-courbet   # Panoramic View of the Alps, Les Dents du Midi — Wikidata Q60469411 (landscape)
+    places:
+      - {place: dents-du-midi, role: depicts}   # P180 Q15255 Dents du Midi
+  - key: portrait-of-king-charles-ii-of-england-philippe-de-champaigne   # Portrait of King Charles II of England — Wikidata Q60465232 (landscape); the cliffs are in the background
+    places:
+      - {place: white-cliffs-of-dover, role: depicts}   # P180 Q754785 White Cliffs of Dover
+  - key: view-of-emmerich-jan-van-goyen   # View of Emmerich — Wikidata Q56810259 (landscape)
+    places:
+      - {place: emmerich-am-rhein, role: depicts}   # P180 Q57006 Emmerich am Rhein
+  - key: view-of-florence-thomas-cole   # View of Florence — Wikidata Q16934583 (cityscape)
+    places:
+      - {place: ponte-vecchio, role: depicts}   # P180 Q208633 Ponte Vecchio
+      - {place: palazzo-vecchio, role: depicts}   # P180 Q271928 Palazzo Vecchio
+      - {place: florence-cathedral, role: depicts}   # P180 Q191739 Florence Cathedral
+      - {place: ponte-santa-trinita, role: depicts}   # P180 Q545578 Ponte Santa Trinita
+  - key: villas-at-trouville-gustave-caillebotte   # Villas at Trouville — Wikidata Q66289013 (landscape)
+    places:
+      - {place: trouville-sur-mer, role: depicts}   # P180 Q272320 Trouville-sur-Mer
+  - key: the-jewish-cemetery-jacob-van-ruisdael   # The Jewish Cemetery — Wikidata Q5824293 (landscape)
+    places:
+      - {place: egmond-abbey, role: depicts}   # P180 Q381632 Egmond Abbey
+  - key: miracle-of-the-holy-cross-at-the-rialto-bridge-vittore-carpaccio   # Miracle of the Holy Cross at the Rialto Bridge — Wikidata Q3817178 (architectural painting)
+    places:
+      - {place: rialto-bridge, role: depicts}   # P180 Q52505 Rialto Bridge
+  - key: st-mark-s-body-brought-to-venice-tintoretto   # St Mark's Body Brought to Venice — Wikidata Q924655 (architectural painting)
+    places:
+      - {place: venice, role: depicts}   # P180 Q641 Venice
+  - key: the-ruins-in-nimes-orange-and-saint-remy-de-prov-hubert-robert   # The Ruins in Nîmes, Orange and Saint-Rémy-de-Provence — Wikidata Q19609404 (landscape)
+    places:
+      - {place: triumphal-arch-of-orange, role: depicts}   # P180 Q1777218 Triumphal Arch of Orange
+  - key: entrance-to-the-port-of-palermo-by-moonlight-claude-joseph-vernet   # Entrance to the Port of Palermo by Moonlight — Wikidata Q20020043 (landscape)
+    places:
+      - {place: palermo, role: depicts}   # P180 Q2656 Palermo
+  - key: dead-city-iii-egon-schiele   # Dead City III — Wikidata Q2445555 (cityscape)
+    places:
+      - {place: cesky-krumlov, role: depicts}   # P180 Q188082 Český Krumlov
+  - key: view-of-delft-johannes-vermeer   # View of Delft — Wikidata Q523974 (cityscape)
+    places:
+      - {place: delft, role: depicts}   # P180 Q690 Delft
+      - {place: nieuwe-kerk-delft, role: depicts}   # P180 Q678611 Nieuwe Kerk Delft
+      - {place: rotterdam-gate-delft, role: depicts}   # P180 Q2294019 Rotterdamse Poort
+      - {place: kolk-delft, role: depicts}   # P180 Q2752010 Kolk
+      - {place: schiedam-gate-delft, role: depicts}   # P180 Q2802348 Schiedamse poort
+  - key: view-of-the-rhine-near-hoog-elten-jan-van-goyen   # View of the Rhine near Hoog-Elten — Wikidata Q17276108 (landscape)
+    places:
+      - {place: hochelten, role: depicts}   # P180 Q1918845 Hochelten
+  - key: 40-rue-ravignan-maurice-utrillo   # 40, Rue Ravignan — Wikidata Q20186207 (cityscape)
+    places:
+      - {place: rue-ravignan, role: depicts}   # P180 Q3449688 rue Ravignan
+  - key: morning-an-overcast-day-rouen-camille-pissarro   # Morning, An Overcast Day, Rouen — Wikidata Q19906270 (cityscape)
+    places:
+      - {place: rouen, role: depicts}   # P180 Q30974 Rouen
+  - key: stoke-by-nayland-john-constable   # Stoke-by-Nayland — Wikidata Q19905306 (landscape)
+    places:
+      - {place: stoke-by-nayland, role: depicts}   # P180 Q2042664 Stoke-by-Nayland
+      - {place: st-marys-church-stoke-by-nayland, role: depicts}   # P180 Q15979427 St Mary's Church, Stoke-by-Nayland
+  - key: the-bridge-at-villeneuve-la-garenne-alfred-sisley   # The Bridge at Villeneuve-la-Garenne — Wikidata Q6382435 (landscape)
+    places:
+      - {place: villeneuve-la-garenne, role: depicts}   # P180 Q225451 Villeneuve-la-Garenne
+      - {place: pont-de-l-ile-saint-denis, role: depicts}   # P180 Q3397238 Pont de l'île Saint-Denis
+  - key: the-forest-at-pontaubert-georges-seurat   # The Forest at Pontaubert — Wikidata Q3965263 (landscape)
+    places:
+      - {place: pontaubert, role: depicts}   # P180 Q1145200 Pontaubert
+  - key: the-pelkus-gate-near-utrecht-jan-van-goyen   # The Pelkus Gate near Utrecht — Wikidata Q19912634 (landscape)
+    places:
+      - {place: pellecussenpoort, role: depicts}   # P180 Q2491575 Pellecussenpoort
+  - key: the-rocky-mountains-landers-peak   # The Rocky Mountains, Lander's Peak — Wikidata Q7761325 (landscape)
+    places:
+      - {place: lander-peak, role: depicts}   # P180 Q6484420 Lander Peak
+  - key: view-from-mount-holyoke-northampton-massachusett-thomas-cole   # View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm—The Oxbow — Wikidata Q3172259 (landscape)
+    places:
+      - {place: northampton-massachusetts, role: depicts}   # P180 Q49186 Northampton
+      - {place: mount-holyoke, role: depicts}   # P180 Q3321866 Mount Holyoke
+      - {place: the-oxbow, role: depicts}   # P180 Q7755777 The Oxbow
+  - key: view-of-toledo-el-greco   # View of Toledo — Wikidata Q883994 (landscape)
+    places:
+      - {place: toledo, role: depicts}   # P180 Q5836 Toledo
+  - key: virgin-and-child-with-four-angels-gerard-david   # Virgin and Child with Four Angels — Wikidata Q7934007 (architectural painting)
+    places:
+      - {place: church-of-our-lady-bruges, role: depicts}   # P180 Q917183 Church of Our Lady
+      - {place: bruges, role: depicts}   # P180 Q12994 Bruges
+  - key: flooding-at-port-marly-alfred-sisley   # Flooding at Port-Marly — Wikidata Q3204212 (landscape)
+    places:
+      - {place: le-port-marly, role: depicts}   # P180 Q1462695 Le Port-Marly
+  - key: jerusalem-jean-leon-gerome   # Jerusalem — Wikidata Q5665712 (architectural painting)
+    places:
+      - {place: jerusalem, role: depicts}   # P180 Q1218 Jerusalem
