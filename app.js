@@ -2206,6 +2206,7 @@ function renderExplore(changed = []) {
   document.body.classList.toggle("x-full", !!X.open);
   if (S.viewMode === "explore") {
     placeMap();
+    placeBorderMap();
     syncExploreUrl();
   }
   // A card that changed lights up. Behind an expanded card, a note says what changed and opens it.
@@ -2347,6 +2348,7 @@ function placeCard() {
     h("div", { class: "xsub", text: [cap(pl.kind), where, pl.historical_name ? `then ${pl.historical_name}` : null].filter(Boolean).join(" · ") }),
     partOf(pl),
     h("div", { class: "xmap", id: "x-map" }),
+    h("div", { class: "xborder", id: "x-border", hidden: "" }),
     xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
     films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(e.name, xYear(e.start_year)))) : null,
     xSec("Works made or held here", xList("place", works, 4, x => row2([xWork(x.work), ` (${x.role})`], workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
@@ -2373,6 +2375,46 @@ async function mapRealmsAt(pl, y) {
   const all = [...new Set(hits.flatMap(pr => Object.entries(idx.realms).filter(([, ns]) => ns.includes(pr.NAME) || ns.includes(pr.SUBJECTO)).map(([r]) => r)))].filter(alive);
   const ruled = all.filter(r => db.titles.some(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y)));
   return { snap, realms: ruled.length ? ruled : all, names: [...new Set(hits.map(pr => pr.NAME).filter(Boolean))] };
+}
+// The Place card's border map: the place on the border snapshot for the Year card's year (data/maps, GPL-3.0), with
+// the realm it lies in shaded. Beside the street map (today), it shows the same spot as it was then.
+async function placeBorderMap() {
+  const host = $("x-border"), db = S.db, pl = db.placeById[X.place], y = X.year;
+  if (!host || !pl || pl.lat == null || pl.lng == null || y == null || !window.d3) return;
+  const idx = await mapIndex();
+  const snap = idx && Object.keys(idx.years).map(Number).sort((a, b) => a - b).filter(v => v <= y && y - v < 100).pop();
+  if (snap == null) return;
+  const geo = await mapGeo(idx.years[snap]);
+  if (!host.isConnected || X.place !== pl.id || X.year !== y) return;   // the card changed meanwhile
+  const pt = [Number(pl.lng), Number(pl.lat)], full = X.open === "place";
+  const W = 340, H = full ? 240 : 190, spanLng = full ? 14 : 9, spanLat = spanLng * .62;
+  const proj = d3.geoMercator().fitExtent([[0, 0], [W, H]],
+    { type: "MultiPoint", coordinates: [[pt[0] - spanLng, pt[1] - spanLat], [pt[0] + spanLng, pt[1] + spanLat]] }).clipExtent([[0, 0], [W, H]]);
+  const path = d3.geoPath(proj);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, class: "histmap", role: "img", "aria-label": `${pl.name} on the borders of about ${snap}` });
+  el("rect", { width: W, height: H, class: "hm-sea" }, svg);
+  const g = el("g", {}, svg);
+  const here = geo.features.filter(f => d3.geoContains(f, pt));
+  geo.features.forEach(f => {
+    const d = path(f);
+    if (!d) return;
+    const p = el("path", { d, class: "hm-land" + (here.includes(f) ? " ruled" : "") }, g);
+    el("title", {}, p).textContent = (f.properties || {}).NAME || "Unnamed";
+  });
+  const [x, yy] = proj(pt);
+  el("circle", { cx: x, cy: yy, r: 4.5, class: "xb-pin" }, g);
+  const name = here.map(f => (f.properties || {}).NAME).filter(Boolean)[0];
+  if (name) {
+    const t = el("text", { x: x + 8, y: yy - 7, class: "xb-label" }, g);
+    t.textContent = name;
+  }
+  host.replaceChildren(
+    h("h3", { class: "xb-head", text: `Borders around ${snap}` }),
+    h("div", { class: "histmap-box" }, svg),
+    h("p", { class: "hint map-credit" }, `Approximate. ${name ? `Shaded: ${name}. ` : ""}Map data: `,
+      h("a", { class: "ext", href: idx.source, target: "_blank", rel: "noopener", text: "historical-basemaps" }), " by André Ourednik, ",
+      h("a", { class: "ext", href: "data/maps/LICENSE", text: "GPL-3.0" }), "."));
+  host.hidden = false;
 }
 function partOf(pl) {
   const db = S.db, y = X.year;

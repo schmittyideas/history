@@ -386,3 +386,12 @@ body.x-full { overflow: hidden; }
 .xpartof { font-size: 13.5px; color: var(--ink); }
 .xpartof .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
 .xpartof .yrs { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+.xborder { display: grid; gap: 4px; }
+.xborder .xb-head { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 4px 0 0; font-weight: 500; }
+.xborder .histmap { cursor: default; }
+.xborder .hm-land.ruled { cursor: default; }
+.xb-pin { fill: var(--madder); stroke: var(--panel); stroke-width: 1.5; }
+.xb-label { font-family: var(--body); font-size: 12px; fill: var(--ink); paint-order: stroke; stroke: var(--land); stroke-width: 3px; stroke-linejoin: round; }
+.xborder .map-credit { font-size: 11px; }
+.xborder .histmap { max-height: 230px; }
+.xcard.full .xborder .histmap { max-height: 55vh; }
