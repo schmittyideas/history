@@ -1809,7 +1809,7 @@ function reignStrip(holders, a, b) {
 // screen and shrinks back to its spot. The address records the cards (by key), so a view can be shared.
 // The Show and Fame buttons belong to the timeline and Year views; the cards show everyone.
 
-const X = { year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
+const X = { hint: {}, year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
 const CARDS = ["year", "event", "place", "person", "work"];
 const CARD_LABEL = { year: "Year", event: "Event", place: "Place", person: "Person", work: "Work" };
 // One name per modern country: places say England, Scotland or Wales; realms say United Kingdom. Vatican City counts
@@ -1973,6 +1973,7 @@ function peopleAt(id) {
 }
 function fill(kind, id) {
   const db = S.db, I = exploreIndex();
+  X.hint = {};
   const set = { year: X.year, event: X.event, place: X.place, person: X.person, work: X.work };
   set[kind] = id;
   if (kind === "event") {
@@ -2004,18 +2005,26 @@ function fill(kind, id) {
         .filter(w => !C || workCountry(w) === C)
         .sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]));
       const ev = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!C || inCountryEvent(e, C)) && db.placeById[e.place_id]).sort(evOrder)[0];
-      const p = db.people.filter(p => aliveIn(p, y) && (!C || I.inCountryAt(p.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+      // Grown-ups only: the best-known person alive in 1812 shouldn't be a three-year-old Lincoln.
+      const p = db.people.filter(p => aliveIn(p, y) && (p.birth_year == null || yearsBetween(p.birth_year, y) >= 18) && (!C || I.inCountryAt(p.id, C, y)))
+        .sort((a, b) => fame(b) - fame(a))[0];
       return { ws, ev, p };
     };
     let { ws, ev, p } = pick(X.country || null);
     if (X.country && !ws.length && !ev && !p) ({ ws, ev, p } = pick(null));
+    else if (X.country && !ws.length) {
+      // Nothing made in the country that year: the Work card stays empty and offers the year's best work elsewhere.
+      const other = pick(null).ws[0];
+      X.hint.work = { text: `No work recorded in ${X.country} in ${fmtYear(y)}.`,
+        links: other ? [{ kind: "work", id: other.id, label: `Elsewhere that year: ${other.name}, ${db.byId[I.creatorOf.get(other.id)]?.name}` }] : [] };
+    }
     set.work = ws[0]?.id ?? null;
     set.person = ws[0] ? I.creatorOf.get(ws[0].id) : p?.id ?? null;
     // Where the work was made, or its artist's main place: not the museum that holds it now.
     const made = ws[0] && (I.placesOf.get(ws[0].id) || []).find(x => x.role !== "held" && x.role !== "displayed")?.place;
     set.place = ev ? ev.place_id : ws[0] ? (made ?? mainPlaceOf(I.creatorOf.get(ws[0].id)) ?? workPlace(ws[0]))?.id ?? null : null;
   }
-  if (kind !== "event") set.event = pickEvent(set, kind);
+  if (kind !== "event") { const r = pickEvent(set, kind); set.event = r.id; if (r.hint) X.hint.event = r.hint; }
   // A year search: a big event (4-5 stars) brings its main person, as clicking it would ("1963" gives Kennedy).
   if (kind === "year" && set.event != null) {
     const e = db.eventById[set.event], p = (e.prominence ?? 3) >= 4 ? mainPersonOf(e) : null;
@@ -2032,17 +2041,24 @@ function pickEvent(set, kind) {
   const atPlace = set.place != null ? best(db.eventsAt(set.place).filter(e => near(e) <= 10)) : null;
   const thatYear = y != null ? db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y)).sort(evOrder) : [];
   const inYear = thatYear.find(e => !X.country || inCountryEvent(e, X.country)), anywhere = thatYear[0];
-  // Nothing that year in the country: its nearest big event within ten years.
   const nearInCountry = y != null && X.country ? best(db.events.filter(e => e.start_year != null && near(e) <= 10 && inCountryEvent(e, X.country))) : null;
-  // An event from the year itself always comes first: the person's or the place's, then the country's, then anywhere.
-  // Only when the year has none does a nearby year's event stand in (the person's, the place's, the country's).
   const sameYear = e => e && near(e) === 0 ? e : null;
   const here = set.place != null ? db.placeById[set.place] : null;
   const nearHere = hasPoint(here) ? thatYear.find(e => eventNear(e, here)) : null;
-  const first = kind === "place" ? [atPlace, ofPerson] : [ofPerson, atPlace];
-  const order = kind === "year" ? [inYear, anywhere, ofPerson, atPlace]
-    : [...first.map(sameYear), nearHere, inYear, anywhere, ...first, nearInCountry];
-  return order.find(Boolean)?.id ?? null;
+  // What really belongs with the other cards: for a year on its own, any event that year (the country's first);
+  // otherwise the person's or the place's own event that year, or one that year within 50 km of the place.
+  const fits = kind === "year" ? [inYear, anywhere] : (kind === "place" ? [atPlace, ofPerson] : [ofPerson, atPlace]).map(sameYear).concat(nearHere);
+  const found = fits.find(Boolean);
+  if (found || y == null) return { id: (found || ofPerson || atPlace)?.id ?? null };
+  // Nothing fits: leave the card empty and offer the nearest things as links.
+  const links = [];
+  const add = (e, label) => e && !links.some(l => l.id === e.id) && links.push({ kind: "event", id: e.id, label });
+  const pl = e => db.placeById[e.place_id]?.name;
+  add(inYear || anywhere, e => `Elsewhere that year: ${e.name}${pl(e) ? `, ${pl(e)}` : ""}`);
+  add(atPlace || ofPerson, e => `Nearest ${atPlace ? "here" : `for ${db.byId[set.person]?.name}`}: ${e.name} (${fmtYear(e.start_year)})`);
+  add(nearInCountry, e => `Nearest in ${X.country}: ${e.name} (${fmtYear(e.start_year)})`);
+  const where = kind === "year" ? (X.country ? ` in ${X.country}` : "") : hasPoint(here) ? ` near ${here.name}` : set.person != null ? ` for ${db.byId[set.person]?.name}` : "";
+  return { id: null, hint: { text: `Nothing recorded${where} in ${fmtYear(y)}.`, links: links.map(l => ({ ...l, label: l.label(db.eventById[l.id]) })) } };
 }
 
 /* --- search */
@@ -2153,16 +2169,21 @@ function fillAt(kind, id, y) {
     const best = [...score.entries()].sort((a, b) => b[1] - a[1])[0];
     const ruler = realmsAt(db.placeById[id], y).flatMap(r => db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && HEAD_OF_STATE(t.title)))
       .map(t => db.byId[t.entity_id]).filter(Boolean).sort((a, b) => fame(b) - fame(a))[0];
-    const p = (best && db.byId[best[0]]) || ruler
-      || db.people.filter(o => adult(o) && (!C || I.inCountryAt(o.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
+    const p = (best && db.byId[best[0]]) || ruler;
+    const elsewhere = p ? null : db.people.filter(o => adult(o) && (!C || I.inCountryAt(o.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
     X.person = p?.id ?? null;
+    X.hint.person = p ? null : { text: `Nobody recorded at ${db.placeById[id].name} around ${fmtYear(y)}.`,
+      links: elsewhere ? [{ kind: "person", id: elsewhere.id, label: `Best known in ${C} then: ${elsewhere.name}` }] : [] };
     const ws = db.artworks.filter(w => w.start_year != null && near(workYear(w), y) <= 10 && I.creatorOf.has(w.id));
-    const w = ws.filter(w => (I.placesOf.get(w.id) || []).some(x => x.place.id === id)).sort((a, b) => near(workYear(a), y) - near(workYear(b), y))[0]
-      || ws.filter(w => C && workCountry(w) === C).sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]))[0]
-      || (p && (I.worksBy.get(p.id) || []).filter(w => w.start_year != null).sort((a, b) => near(a.start_year, y) - near(b.start_year, y))[0]);
+    // A work made here (or within 50 km) near then; one from elsewhere in the country is only offered as a link.
+    const w = ws.filter(w => (I.placesOf.get(w.id) || []).some(x => x.role !== "held" && x.role !== "displayed" && (x.place.id === id || placeNear(x.place, db.placeById[id]))))
+      .sort((a, b) => near(workYear(a), y) - near(workYear(b), y))[0];
+    const inCountry = w ? null : ws.filter(w => C && workCountry(w) === C).sort((a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]))[0];
     X.work = w?.id ?? null;
+    X.hint.work = w ? null : { text: `No work recorded as made at ${db.placeById[id].name} around ${fmtYear(y)}.`,
+      links: inCountry ? [{ kind: "work", id: inCountry.id, label: `Elsewhere in ${C}: ${inCountry.name}, ${db.byId[I.creatorOf.get(inCountry.id)]?.name}` }] : [] };
   }
-  if (kind !== "event") X.event = pickEvent(X, kind);
+  if (kind !== "event") { const r = pickEvent(X, kind); X.event = r.id; X.hint.event = r.hint; }
   if (X.place == null && X.event != null) X.place = db.eventById[X.event]?.place_id ?? null;
 }
 function runExplore(text) {
@@ -2197,9 +2218,11 @@ const I_hasCountry = c => exploreIndex().countryList.includes(c);
 /* --- changing cards */
 function xGo(kind, id) {
   X[kind] = id;
+  if (X.hint) X.hint[kind] = null;
   renderExplore([kind]);
 }
 function xGoEvent(id) {
+  if (X.hint) X.hint.event = null;
   const p = mainPersonOf(S.db.eventById[id]);
   X.event = id;
   if (p) X.person = p.id;
@@ -2255,7 +2278,8 @@ function renderExplore(changed = []) {
   if (thenMap) { thenMap.remove(); thenMap = null; }
   box.replaceChildren(...CARDS.map(kind => {
     const full = X.open === kind;
-    const body = { year: yearCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
+    const hint = X[kind] == null && X.hint?.[kind];
+    const body = hint ? hintCard(kind, hint) : { year: yearCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
     return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
       h("div", { class: "xhead" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
         h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
@@ -2370,6 +2394,13 @@ function yearCard() {
   return out;
 }
 
+// A card left empty on purpose: what's missing, and the nearest things as links.
+function hintCard(kind, hint) {
+  const go = l => l.kind === "event" ? xGoEvent(l.id) : xGo(l.kind, l.id);
+  return [h("p", { class: "xempty", text: hint.text }),
+    hint.links.length ? h("ul", { class: "xrows" }, ...hint.links.map(l => h("li", {}, h("span", {}, h("button", { type: "button", class: "plink", onclick: () => go(l), text: l.label }))))) : null];
+}
+
 /* --- Event card */
 function eventCard() {
   const db = S.db, e = db.eventById[X.event];
@@ -2383,16 +2414,7 @@ function eventCard() {
     && ((o.place_id != null && o.place_id === e.place_id) || db.peopleInEvent(o.id).some(x => ids.has(x.person.id))))
     .sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
   const venues = (e.venues || []).map(v => ({ v, pl: db.placeById[v.place_id] })).filter(x => x.pl);
-  // Only when the year itself has no event at all (an event clicked from another year is just that).
-  const inYr = o => o.start_year != null && overlaps(o.start_year, o.end_year ?? o.start_year, X.year, X.year);
-  const off = X.year != null && e.start_year != null && !inYr(e) && !db.events.some(o => !o.film && inYr(o));
-  // From the right year but far from the Place card's place, when nothing that year happened near it.
-  const here = db.placeById[X.place];
-  const away = !off && X.year != null && inYr(e) && hasPoint(here) && !eventNear(e, here) && !db.events.some(o => !o.film && inYr(o) && eventNear(o, here));
-  const where = [...eventCountries(e)][0];
   return [
-    off ? h("p", { class: "hint xoff", text: `Nothing recorded for ${fmtYear(X.year)}; the nearest is from ${fmtYear(e.start_year)}.` }) : null,
-    away ? h("p", { class: "hint xoff", text: `Nothing recorded near ${here.name} in ${fmtYear(X.year)}; this is elsewhere${where === placeCountry(here) ? ` in ${where}` : ""}.` }) : null,
     h("h2", { text: e.name }),
     h("div", { class: "xsub" }, [e.type, null].filter(Boolean).join(""), e.type ? " · " : "",
       e.start_year != null ? xYear(e.start_year, (e.estimated ? "c. " : "") + when) : "date unknown",
