@@ -1806,9 +1806,9 @@ function reignStrip(holders, a, b) {
 // screen and shrinks back to its spot. The address records the cards (by key), so a view can be shared.
 // The Show and Fame buttons belong to the timeline and Year views; the cards show everyone.
 
-const X = { year: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
-const CARDS = ["year", "place", "person", "work"];
-const CARD_LABEL = { year: "Year", place: "Place", person: "Person", work: "Work" };
+const X = { year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
+const CARDS = ["year", "event", "place", "person", "work"];
+const CARD_LABEL = { year: "Year", event: "Event", place: "Place", person: "Person", work: "Work" };
 // One name per modern country: places say England, Scotland or Wales; realms say United Kingdom.
 const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic" };
 const normCountry = c => c ? COUNTRY_ALIAS[c] || c : null;
@@ -1918,7 +1918,7 @@ const inCountryEvent = (e, C) => {
   // No place recorded: an event belongs to the country of a ruler who took part in it.
   return S.db.peopleInEvent(e.id).some(x => S.db.titlesOf(x.person.id).some(t => realmIn(t.realm, C, e.start_year)));
 };
-const evOrder = (x, y) => (y.prominence ?? 3) - (x.prominence ?? 3) || byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || "");
+const evOrder = (x, y) => (y.prominence ?? 3) - (x.prominence ?? 3) || byYear(x.start_year, y.start_year) || !x.start_date - !y.start_date || (x.start_date || "").localeCompare(y.start_date || "");
 
 /* --- links: each changes the card it matches */
 const xBtn = (text, title, go) => h("button", { type: "button", class: "plink", title, onclick: go, text });
@@ -1926,8 +1926,14 @@ const xYear = (y, text) => y == null ? null : xBtn(text ?? fmtYear(y), `${fmtYea
 const xPerson = (p, extra = "") => xBtn(p.name + extra, `${p.name} in the Person card`, () => xGo("person", p.id));
 const xPlace = (pl, extra = "") => xBtn(pl.name + extra, `${pl.name} in the Place card`, () => xGo("place", pl.id));
 const xWork = (w, extra = "") => xBtn(w.name + extra, `${w.name} in the Work card`, () => xGo("work", w.id));
-// Events have no card of their own: an event opens its year.
-const xEvent = e => e.start_year == null ? e.name : xBtn(e.name, `${fmtYear(e.start_year)} in the Year card`, () => xGo("year", e.start_year));
+// An event opens the Event card and brings its main person into the Person card ("William Wallace executed").
+const xEvent = (e, extra = "") => xBtn(e.name + extra, `${e.name} in the Event card`, () => xGoEvent(e.id));
+// The person an event is about: one whose name the event's own name contains, else the best known taking part.
+function mainPersonOf(e) {
+  const ppl = S.db.peopleInEvent(e.id).map(x => x.person), n = fold(e.name);
+  const named = ppl.filter(p => n.includes(fold(p.name)) || fold(p.name).split(" ").some(w => w.length > 3 && n.split(" ").includes(w)));
+  return (named.length ? named : ppl).sort((a, b) => fame(b) - fame(a))[0] || null;
+}
 
 // What goes with a record, for filling the other cards after a search.
 function bestWorkOf(id) {
@@ -1951,9 +1957,14 @@ function peopleAt(id) {
 }
 function fill(kind, id) {
   const db = S.db, I = exploreIndex();
-  const set = { year: X.year, place: X.place, person: X.person, work: X.work };
+  const set = { year: X.year, event: X.event, place: X.place, person: X.person, work: X.work };
   set[kind] = id;
-  if (kind === "person") {
+  if (kind === "event") {
+    const e = db.eventById[id], p = mainPersonOf(e);
+    set.person = p?.id ?? null; set.year = e.start_year ?? null; set.place = e.place_id ?? null;
+    const w = p && (I.worksBy.get(p.id) || []).filter(w => w.start_year != null).sort((a, b) => Math.abs(a.start_year - e.start_year) - Math.abs(b.start_year - e.start_year))[0];
+    set.work = w?.id ?? null;
+  } else if (kind === "person") {
     const p = db.byId[id], w = bestWorkOf(id), t = db.titlesOf(id)[0];
     set.work = w?.id ?? null;
     set.year = (w && workYear(w)) ?? t?.start_year ?? (p.birth_year != null ? Math.min(p.birth_year + 35, p.death_year ?? Infinity) : p.death_year);
@@ -1979,7 +1990,18 @@ function fill(kind, id) {
     set.person = ws[0] ? I.creatorOf.get(ws[0].id) : p?.id ?? null;
     set.place = ev ? ev.place_id : ws[0] ? workPlace(ws[0])?.id ?? null : null;
   }
+  if (kind !== "event") set.event = pickEvent(set, kind);
   Object.assign(X, set);
+}
+// The event that goes with the other cards: the person's biggest event nearest the year, else the place's, else the year's.
+function pickEvent(set, kind) {
+  const db = S.db, y = set.year, near = e => y == null || e.start_year == null ? 0 : Math.abs(e.start_year - y);
+  const best = es => es.filter(e => !e.film).sort((a, b) => near(a) - near(b) || evOrder(a, b))[0];
+  const ofPerson = set.person != null ? best(db.eventsOf(set.person).map(x => x.event).filter(e => near(e) <= 10)) : null;
+  const atPlace = set.place != null ? best(db.eventsAt(set.place).filter(e => near(e) <= 10)) : null;
+  const inYear = y != null ? db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (!X.country || inCountryEvent(e, X.country))).sort(evOrder)[0] : null;
+  // A year search starts on that year's biggest event; a person or place search on theirs.
+  return (kind === "year" ? inYear || ofPerson || atPlace : ofPerson || atPlace || inYear)?.id ?? null;
 }
 
 /* --- search */
@@ -2020,8 +2042,19 @@ function exploreSearch(text) {
     ...db.people.map(p => ({ kind: "person", id: p.id, name: p.name, names: [p.name], f: fame(p) })),
     ...db.artworks.filter(w => I.creatorOf.has(w.id)).map(w => ({ kind: "work", id: w.id, name: w.name, names: [w.name], f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) })),
     ...db.places.map(pl => ({ kind: "place", id: pl.id, name: pl.name, names: [pl.name, pl.historical_name].filter(Boolean), f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length })),
+    ...db.events.filter(e => !e.film).map(e => ({ kind: "event", id: e.id, name: e.name, names: [e.name], f: (e.prominence ?? 3) * 20 })),
   ];
   let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s);
+  // Words in any order, with endings ignored: "william wallace executed" finds "Execution of William Wallace".
+  if (!hits.length) {
+    const stem = w => w.slice(0, Math.max(4, Math.min(w.length, 6) - 1));
+    const qw = q.split(" ").filter(w => w.length > 2 && !STOP.has(w)).map(stem);
+    if (qw.length > 1) hits = records.map(r => {
+      const nw = r.names.map(n => fold(n).split(/[^\p{L}\p{N}']+/u).filter(Boolean)).flat();
+      const all = qw.every(q1 => nw.some(w => w.startsWith(q1) || q1.startsWith(w) && w.length > 3));
+      return { ...r, s: all ? .8 : 0 };
+    }).filter(r => r.s);
+  }
   let fuzzy = false;
   if (!hits.length && q.length >= 4) {
     // Compare the words typed with every run of as many words in each name ("michaleanglo" ~ "michelangelo").
@@ -2106,6 +2139,12 @@ function xGo(kind, id) {
   X[kind] = id;
   renderExplore([kind]);
 }
+function xGoEvent(id) {
+  const p = mainPersonOf(S.db.eventById[id]);
+  X.event = id;
+  if (p) X.person = p.id;
+  renderExplore(p ? ["event", "person"] : ["event"]);
+}
 function setCountry(c, render = true) {
   X.country = c || ""; store.set("country", X.country);
   $("x-country").value = X.country;
@@ -2118,6 +2157,7 @@ function syncExploreUrl() {
   if (X.place != null) p.set("place", db.placeById[X.place]?.key);
   if (X.person != null) p.set("person", db.byId[X.person]?.key);
   if (X.work != null) p.set("work", exploreIndex().workById[X.work]?.key);
+  if (X.event != null && db.eventById[X.event]?.key) p.set("event", db.eventById[X.event].key);
   if (X.open) p.set("open", X.open);
   const qs = p.toString();
   try { history.replaceState(history.state, "", qs ? "?" + qs : location.pathname); } catch (e) {}
@@ -2129,6 +2169,7 @@ function readExploreUrl(params) {
   X.place = byKey(db.places, params.get("place"));
   X.person = byKey(db.people, params.get("person"));
   X.work = params.get("work") ? Object.values(I.workById).find(w => w.key === params.get("work"))?.id ?? null : null;
+  X.event = byKey(db.events, params.get("event"));
   return CARDS.includes(params.get("open")) ? params.get("open") : null;
 }
 function expandCard(kind) {
@@ -2153,7 +2194,7 @@ function renderExplore(changed = []) {
   if (xMap) { xMap.remove(); xMap = null; }
   box.replaceChildren(...CARDS.map(kind => {
     const full = X.open === kind;
-    const body = { year: yearCard, place: placeCard, person: personCard, work: workCard }[kind]();
+    const body = { year: yearCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
     return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
       h("div", { class: "xhead" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
         h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
@@ -2174,7 +2215,7 @@ function renderExplore(changed = []) {
   const behind = changed.filter(k => X.open && k !== X.open);
   if (behind.length) {
     const k = behind[0], card = $("x-" + X.open);
-    const what = { year: () => fmtYear(X.year), place: () => S.db.placeById[X.place]?.name, person: () => S.db.byId[X.person]?.name, work: () => exploreIndex().workById[X.work]?.name }[k]();
+    const what = { year: () => fmtYear(X.year), event: () => S.db.eventById[X.event]?.name, place: () => S.db.placeById[X.place]?.name, person: () => S.db.byId[X.person]?.name, work: () => exploreIndex().workById[X.work]?.name }[k]();
     card.append(h("div", { class: "xnote", role: "status" }, `${CARD_LABEL[k]}: ${what ?? "cleared"} `,
       h("button", { type: "button", class: "btn", onclick: () => { X.open = k; renderExplore([]); window.scrollTo(0, 0); }, text: "Open" })));
   } else if (!X.open && changed.length === 1) {
@@ -2252,6 +2293,37 @@ function yearCard() {
   out.push(h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: () => openYear(y, y), text: "Open the Year view" }), " · ",
     h("button", { type: "button", class: "plink", onclick: toTimeline(() => run(rangeQuery(y - 10, y + 10), { pushTrail: true })), text: "See it on the timeline" })));
   return out;
+}
+
+/* --- Event card */
+function eventCard() {
+  const db = S.db, e = db.eventById[X.event];
+  if (!e) return [h("p", { class: "hint", text: "Search an event (Battle of Hastings, William Wallace executed), or click one in another card." })];
+  const pl = db.placeById[e.place_id], ppl = db.peopleInEvent(e.id), main = mainPersonOf(e);
+  const when = e.start_date ? fmtDate(e.start_date) : fmtYear(e.start_year);
+  const stars = e.prominence ? "★".repeat(e.prominence) + "☆".repeat(5 - e.prominence) : null;
+  // Around it: other events with the same people or at the same place, within ten years, in date order.
+  const ids = new Set(ppl.map(x => x.person.id));
+  const around = e.start_year == null ? [] : db.events.filter(o => o.id !== e.id && !o.film && o.start_year != null && Math.abs(o.start_year - e.start_year) <= 10
+    && ((o.place_id != null && o.place_id === e.place_id) || db.peopleInEvent(o.id).some(x => ids.has(x.person.id))))
+    .sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
+  const venues = (e.venues || []).map(v => ({ v, pl: db.placeById[v.place_id] })).filter(x => x.pl);
+  return [
+    h("h2", { text: e.name }),
+    h("div", { class: "xsub" }, [e.type, null].filter(Boolean).join(""), e.type ? " · " : "",
+      e.start_year != null ? xYear(e.start_year, (e.estimated ? "c. " : "") + when) : "date unknown",
+      e.end_year != null && e.end_year !== e.start_year ? ["–", xYear(e.end_year)] : null,
+      pl ? [" · ", xPlace(pl, pl.historical_name ? ` (then ${pl.historical_name})` : "")] : e.location ? ` · ${e.location}` : null,
+      stars ? h("span", { class: "yrs", title: `Prominence ${e.prominence} of 5`, text: ` ${stars}` }) : null),
+    e.note ? h("p", { class: "xnote-text", text: e.note }) : null,
+    xSec("Who took part", ppl.length ? xChips("event", ppl.sort((a, b) => (b.person === main) - (a.person === main) || fame(b.person) - fame(a.person)), 8,
+      x => h("span", { class: "xchip" }, xPerson(x.person), x.role ? h("span", { class: "yrs", text: ` ${x.role}` }) : null)) : h("p", { class: "hint", text: "Nobody linked yet." })),
+    venues.length ? xSec(`Places (${venues.length})`, xList("event", venues, 4, x => row2(xPlace(x.pl), x.v.note || x.v.role))) : null,
+    around.length ? xSec("Around it", xList("event", around, 5, o => row2(xEvent(o), xYear(o.start_year)))) : null,
+    e.visitable_today ? xSec("Visit today", h("p", { class: "xnote-text", text: e.visit_site || (pl ? pl.name : "Yes") })) : null,
+    h("div", { class: "xfoot" }, "Sources: ", ...sourceLinks(db.sourcesFor("event", e.key)), " · ",
+      h("button", { type: "button", class: "plink", onclick: toTimeline(() => revealEvent(e.id)), text: "See it on the timeline" })),
+  ];
 }
 
 /* --- Place card (the map is drawn after the card is in the page) */
