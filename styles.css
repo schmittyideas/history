@@ -383,3 +383,6 @@ body.x-full { overflow: hidden; }
 .xnote .btn { background: var(--panel); color: var(--ink); border-color: var(--panel); padding: 5px 12px; }
 .xcard .map-sec { margin-top: 8px; }
 #x-msg .yrs { font-family: var(--mono); font-size: 10.5px; color: var(--muted); }
+.xpartof { font-size: 13.5px; color: var(--ink); }
+.xpartof .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.xpartof .yrs { font-family: var(--mono); font-size: 11px; color: var(--muted); }

@@ -177,14 +177,29 @@ What titles rule, and which part of the world each is in. The Year view groups r
 |---|---|
 | `name` | Exactly as titles write it: "England", "Song dynasty" (required) |
 | `region` | One of: Western Europe, Northern Europe, Eastern Europe, Middle East and North Africa, Sub-Saharan Africa, Central Asia, South Asia, East Asia, Southeast Asia, Americas, Oceania (required for new realms) |
-| `country` | Where it is today: "France", "China" |
+| `country` | Its main country today: "France", "China" |
+| `from`, `to` | Years the realm existed (BC negative). `from_estimated` / `to_estimated`: `true` when approximate |
+| `countries` | Every country it covered, by today's borders: list of `{country, from, to, note}`. `from` / `to` only when it held land there for part of its life (Italy in the Holy Roman Empire); `note` says which part ("northern Italy"). Include the main country. Needs `sql/017` |
+| `sources` | Where the years and countries come from, usually the realm's Wikipedia article (its infobox "Today part of" line). Required once a realm has years or countries |
 | `key`, `note` | Optional. The key defaults to the name in lowercase with hyphens |
 
 ```yaml
 realms:
   - {name: England, region: Western Europe, country: United Kingdom}
   - {name: Song dynasty, region: East Asia, country: China}
+  - name: Holy Roman Empire
+    country: Germany
+    from: 962
+    to: 1806
+    countries:
+      - {country: Germany}
+      - {country: Austria}
+      - {country: Czech Republic}
+      - {country: Italy, to: 1648, note: northern Italy}
+    sources: [wp-holy-roman-empire]
 ```
+
+A year and a place then name the realm it was in: the site's Place card says "In 1453, part of: Byzantine Empire · Ottoman Empire", and a country picked on the Explore page gathers every realm that covered it. Re-sending a realm's country updates its years and note; it never duplicates or removes a country.
 
 ### `discrepancies`
 Where sources disagree. Record both sides rather than silently picking one, so a later source can settle it.

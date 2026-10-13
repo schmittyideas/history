@@ -19,7 +19,7 @@ class FakeDB:
         self.t = {"entities": snap["entities"], "places": snap["places"], "events": snap["events"],
                   "relationships": snap["relationships"], "person_places": snap["person_places"], "event_people": snap["event_people"],
                   "sources": [], "source_links": [], "learning_log": [], "learning_log_items": [], "discrepancies": [], "titles": [], "realms": [],
-                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": [], "external_links": [], "event_places": []}
+                  "artworks": [], "artwork_people": [], "artwork_places": [], "artwork_events": [], "museums": [], "external_links": [], "event_places": [], "realm_countries": []}
         for name in ("entities", "places", "events"):
             for r in self.t[name]:
                 r["key"] = KEYS.get(r["name"])
@@ -234,6 +234,34 @@ def test_realms():
     text = " ".join(bad.errors)
     assert "region must be one of" in text and "new realms need `name` and `region`" in text, text
 
+def test_realm_countries():
+    db = FakeDB(snapshot())
+    src = [{"key": "wp-hre", "title": "Holy Roman Empire (Wikipedia)"}]
+    hre = {"name": "Holy Roman Empire", "region": "Western Europe", "country": "Germany", "from": 962, "to": 1806, "sources": ["wp-hre"],
+           "countries": [{"country": "Germany"}, {"country": "Austria"}, {"country": "Italy", "to": 1250, "note": "northern Italy"}]}
+    docs = [("r.yaml", {"batch": {"title": "t"}, "sources": src, "realms": [hre]})]
+    world = intake.World(db)
+    plan = intake.plan_files(world, docs)
+    assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
+    assert plan.adds["realms"] == ["holy-roman-empire (3 countries)"], plan.adds["realms"]
+    intake.apply_files(world, docs, log=lambda m: None)
+    r = db.t["realms"][0]
+    assert (r["start_year"], r["end_year"], r["modern_country"]) == (962, 1806, "Germany"), r
+    rc = {c["modern_country"]: c for c in db.t["realm_countries"]}
+    assert set(rc) == {"Germany", "Austria", "Italy"} and rc["Italy"]["end_year"] == 1250 and rc["Italy"]["note"] == "northern Italy", rc
+    assert any(l["record_type"] == "realm" and l["record_key"] == "holy-roman-empire" for l in db.t["source_links"])
+    # Re-sending updates a country's years, never duplicates it.
+    docs2 = [("r2.yaml", {"batch": {"title": "t"}, "realms": [{"name": "Holy Roman Empire", "sources": ["wp-hre"], "countries": [{"country": "Italy", "to": 1268}]}]})]
+    world2 = intake.World(db)
+    assert not intake.plan_files(world2, docs2).errors
+    intake.apply_files(world2, docs2, log=lambda m: None)
+    assert len(db.t["realm_countries"]) == 3 and [c for c in db.t["realm_countries"] if c["modern_country"] == "Italy"][0]["end_year"] == 1268
+    bad = intake.plan_files(intake.World(db), [("b.yaml", {"batch": {"title": "t"}, "realms": [
+        {"name": "Mu", "region": "Oceania", "from": 900, "to": 800, "country": "Fiji", "countries": [{"country": "Tonga"}, {"country": "Tonga"}, {"note": "x"}, {"country": "Samoa", "from": 700}]}]})])
+    text = " ".join(bad.errors + bad.warnings)
+    for want in ("ended (800) before it began (900)", "listed twice", "needs `country`", "go outside the realm's own", "main country “Fiji” isn't under `countries`", "no source given"):
+        assert want in text, (want, text)
+
 def test_restdb_reads_every_page():
     # Supabase caps a request at 1,000 rows; select must keep reading until a page comes back short.
     rows = [{"id": i} for i in range(1, 2501)]
@@ -355,4 +383,4 @@ def test_event_places():
     assert any("unknown place `nowhere`" in e for e in errs) and any("needs `place` and `role`" in e for e in errs)
 
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_realm_countries(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); print("\nALL TESTS PASSED")
