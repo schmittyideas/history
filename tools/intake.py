@@ -224,6 +224,10 @@ class World:
         except RuntimeError:  # sql/008 not run yet
             self.realms = None
         try:
+            self.realm_countries = db.select("realm_countries", "id,realm_id,modern_country,start_year,end_year,note")
+        except RuntimeError:  # sql/017 not run yet
+            self.realm_countries = None
+        try:
             self.event_places = db.select("event_places", "id,event_id,place_id,role,note")
         except RuntimeError:  # sql/016 not run yet
             self.event_places = None
@@ -485,7 +489,32 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.errors.append(f"realm `{k}`: new realms need `name` and `region`")
             if x.get("region") and x["region"] not in REGIONS:
                 p.errors.append(f"realm `{k}`: region must be one of: {', '.join(REGIONS)}")
-            (p.adds if is_new else p.updates)["realms"].append(k)
+            where = f"realm `{k}`"
+            if any(f in x for f in ("from", "to", "countries")) and world.realm_countries is None:
+                p.errors.append(f"{where}: `from`, `to` and `countries` need sql/017_realm_countries.sql")
+            fy, _ = when(x, "from", where); ty, _ = when(x, "to", where)
+            if fy is not None and ty is not None and ty < fy:
+                p.errors.append(f"{where}: ended ({ty}) before it began ({fy})")
+            seen = set()
+            for c in as_list(x.get("countries")):
+                cw = f"{where} country `{c.get('country')}`"
+                if not isinstance(c, dict) or not c.get("country"):
+                    p.errors.append(f"{where}: every entry under `countries` needs `country`"); continue
+                if c["country"] in seen:
+                    p.errors.append(f"{cw}: listed twice")
+                seen.add(c["country"])
+                cf, _ = when(c, "from", cw); ct, _ = when(c, "to", cw)
+                if cf is not None and ct is not None and ct < cf:
+                    p.errors.append(f"{cw}: ended ({ct}) before it began ({cf})")
+                if (fy is not None and cf is not None and cf < fy) or (ty is not None and ct is not None and ct > ty):
+                    p.warnings.append(f"{cw}: its years ({cf}–{ct}) go outside the realm's own ({fy}–{ty})")
+            if x.get("countries") and x.get("country") and x["country"] not in seen:
+                p.warnings.append(f"{where}: its main country “{x['country']}” isn't under `countries`")
+            if any(f in x for f in ("from", "to", "countries")):
+                check_sources(x, where)
+            elif x.get("sources"):
+                check_sources(x, where, require=False)
+            (p.adds if is_new else p.updates)["realms"].append(k + (f" ({len(seen)} countries)" if seen else ""))
 
         known_realms = {r["name"] for r in (world.realms or {}).values()} | {x.get("name") for _, dd in docs for x in as_list(dd.get("realms"))}
         if d.get("titles") and world.titles is None:
@@ -766,8 +795,29 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
             link_sources("moment", f"{x['person']}:{x['role']}:{x['place']}", x.get("sources"))
     for _, d in docs:
         for x in as_list(d.get("realms")):
-            upsert_keyed("realms", world.realms, realm_key(x),
-                         {"name": x.get("name"), "region": x.get("region"), "modern_country": x.get("country"), "note": x.get("note")})
+            k = realm_key(x)
+            row = {"name": x.get("name"), "region": x.get("region"), "modern_country": x.get("country"), "note": x.get("note"),
+                   "start_estimated": x.get("from_estimated"), "end_estimated": x.get("to_estimated")}
+            if "from" in x:
+                row["start_year"] = parse_when(x["from"])[0]
+            if "to" in x:
+                row["end_year"] = parse_when(x["to"])[0]
+            realm = upsert_keyed("realms", world.realms, k, row)
+            for c in as_list(x.get("countries")):
+                crow = {"note": c.get("note")}
+                if "from" in c:
+                    crow["start_year"] = parse_when(c["from"])[0]
+                if "to" in c:
+                    crow["end_year"] = parse_when(c["to"])[0]
+                crow = {kk: v for kk, v in crow.items() if v is not None}
+                have = next((r for r in world.realm_countries if r["realm_id"] == realm["id"] and r["modern_country"] == c["country"]), None)
+                if have:
+                    if crow:
+                        db.update("realm_countries", {"id": have["id"]}, crow)
+                else:
+                    world.realm_countries.append(db.insert("realm_countries", {"realm_id": realm["id"], "modern_country": c["country"], **crow}))
+                    log(f"linked realm {k} to {c['country']}")
+            link_sources("realm", k, x.get("sources"))
     for _, d in docs:
         for x in as_list(d.get("titles")):
             k = title_key(x)

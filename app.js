@@ -70,8 +70,8 @@ async function loadData() {
       if (!raw.entities.length) throw new Error("no rows returned (check read policies)");
       // Titles (sql/007) are optional: without them the Year view just has no rulers to show.
       const optional = t => getAll(t).catch(() => []);
-      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links, raw.event_places, raw.museums] = await Promise.all(
-        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links", "event_places", "museums"].map(optional));
+      [raw.titles, raw.realms, raw.sources, raw.source_links, raw.artworks, raw.artwork_people, raw.artwork_places, raw.external_links, raw.event_places, raw.museums, raw.realm_countries] = await Promise.all(
+        ["titles", "realms", "sources", "source_links", "artworks", "artwork_people", "artwork_places", "external_links", "event_places", "museums", "realm_countries"].map(optional));
       return { source: "live", raw };
     } catch (e) {
       return { source: "snapshot", raw: window.HISTORY_SNAPSHOT || {}, error: e.message };
@@ -132,6 +132,10 @@ function indexData(raw) {
     eventsAt, momentsAt, titles,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
     countryOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.modern_country])),
+    // When each realm existed, and the countries it covers today (sql/017), each with its own years when they differ.
+    // A realm with no rows yet counts as covering its main country for its whole span.
+    realmInfo: Object.fromEntries((raw.realms || []).map(r => [r.name, { start: r.start_year, end: r.end_year,
+      countries: (raw.realm_countries || []).filter(c => c.realm_id === r.id).map(c => ({ country: c.modern_country, start: c.start_year, end: c.end_year, note: c.note })) }])),
     // Every realm a title names (England, Byzantine Empire, Kievan Rus'), for searching and focusing.
     realmNames: [...new Set([...titles.map(t => t.realm), ...(raw.realms || []).map(r => r.name)])].filter(Boolean),
     titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
@@ -1853,7 +1857,7 @@ function exploreIndex() {
   const countriesOf = id => {
     if (countries.has(id)) return countries.get(id);
     const c = new Set([
-      ...db.titlesOf(id).map(t => normCountry(db.countryOf[t.realm])),
+      ...db.titlesOf(id).flatMap(t => realmCountries(t.realm)),
       ...db.placesOfPerson(id).map(pl => normCountry(pl.modern_country)),
       ...(worksBy.get(id) || []).flatMap(w => (placesOf.get(w.id) || []).filter(x => x.role !== "held").map(x => normCountry(x.place.modern_country))),
     ].filter(Boolean));
@@ -1874,10 +1878,32 @@ function exploreIndex() {
   const inCountryAt = (id, C, y) => homeOf(id) === C
     || db.pp.some(x => x.entity_id === id && x.year != null && Math.abs(x.year - y) <= 3 && normCountry(db.placeById[x.place_id]?.modern_country) === C)
     || db.eventsOf(id).some(x => Math.abs((x.event.start_year ?? -1e9) - y) <= 3 && normCountry(db.placeById[x.event.place_id]?.modern_country) === C)
-    || db.titlesOf(id).some(t => overlaps(t.start_year, t.end_year, y, y) && normCountry(db.countryOf[t.realm]) === C);
+    || db.titlesOf(id).some(t => overlaps(t.start_year, t.end_year, y, y) && realmIn(t.realm, C, y));
   // Every country a record names, for the picker: most-used first is less useful than A-Z for finding one.
-  const countryList = [...new Set([...Object.values(db.countryOf), ...db.places.map(p => p.modern_country)].map(normCountry).filter(Boolean))].sort();
+  const countryList = [...new Set([...Object.values(db.countryOf), ...Object.values(db.realmInfo).flatMap(r => r.countries.map(c => c.country)),
+    ...db.places.map(p => p.modern_country)].map(normCountry).filter(Boolean))].sort();
   return XI = { workById, placeByKey, worksBy, creatorOf, subjectsOf, placesOf, worksAt, countriesOf, homeOf, inCountryAt, countryList };
+}
+// Does a realm cover today's country C in year y (any year when y is null)? Uses realm_countries, else the main country.
+function realmIn(realm, C, y = null) {
+  const db = S.db, info = db.realmInfo[realm] || {};
+  const rows = info.countries?.length ? info.countries : db.countryOf[realm] ? [{ country: db.countryOf[realm] }] : [];
+  return rows.some(c => normCountry(c.country) === C && (y == null || overlaps(c.start ?? info.start ?? -1e9, c.end ?? info.end, y, y)));
+}
+const realmCountries = realm => {
+  const info = S.db.realmInfo[realm];
+  return [...new Set((info?.countries?.length ? info.countries.map(c => c.country) : [S.db.countryOf[realm]]).map(normCountry).filter(Boolean))];
+};
+// The realms a place was part of in a year: those covering its country then that existed (or had a ruler) that year.
+function realmsAt(pl, y) {
+  const db = S.db, C = placeCountry(pl);
+  if (!C || y == null) return [];
+  return db.realmNames.filter(r => {
+    if (!realmIn(r, C, y)) return false;
+    const info = db.realmInfo[r] || {};
+    if (info.start != null || info.end != null) return overlaps(info.start ?? -1e9, info.end, y, y);
+    return db.titles.some(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y));
+  });
 }
 const workPlace = w => (exploreIndex().placesOf.get(w.id) || [])[0]?.place || null;
 const workCountry = w => {
@@ -1890,7 +1916,7 @@ const inCountryEvent = (e, C) => {
   const cs = eventCountries(e);
   if (cs.size) return cs.has(C);
   // No place recorded: an event belongs to the country of a ruler who took part in it.
-  return S.db.peopleInEvent(e.id).some(x => S.db.titlesOf(x.person.id).some(t => normCountry(S.db.countryOf[t.realm]) === C));
+  return S.db.peopleInEvent(e.id).some(x => S.db.titlesOf(x.person.id).some(t => realmIn(t.realm, C, e.start_year)));
 };
 const evOrder = (x, y) => (y.prominence ?? 3) - (x.prominence ?? 3) || byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || "");
 
@@ -2038,7 +2064,9 @@ function fillAt(kind, id, y) {
     db.eventsAt(id).forEach(e => e.start_year != null && near(e.start_year, y) <= 15 &&
       db.peopleInEvent(e.id).forEach(x => add(x.person, (e.prominence ?? 3) * 10 - near(e.start_year, y))));
     const best = [...score.entries()].sort((a, b) => b[1] - a[1])[0];
-    const p = (best && db.byId[best[0]])
+    const ruler = realmsAt(db.placeById[id], y).flatMap(r => db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && SOVEREIGN.test(t.title)))
+      .map(t => db.byId[t.entity_id]).filter(Boolean).sort((a, b) => fame(b) - fame(a))[0];
+    const p = (best && db.byId[best[0]]) || ruler
       || db.people.filter(o => adult(o) && (!C || I.inCountryAt(o.id, C, y))).sort((a, b) => fame(b) - fame(a))[0];
     X.person = p?.id ?? null;
     const ws = db.artworks.filter(w => w.start_year != null && near(workYear(w), y) <= 10 && I.creatorOf.has(w.id));
@@ -2182,7 +2210,7 @@ function yearCard() {
   const rulersRows = realms => realms.map(r => {
     const ts = titles.filter(t => t.realm === r).sort((a, b) => byYear(a.start_year, b.start_year));
     return h("li", {}, h("span", {}, h("b", { text: r }), " ", ...joinNodes(ts.map(t => xPerson(db.byId[t.entity_id], t.disputed ? " (disputed)" : "")))),
-      h("span", { class: "yrs" }, C && realmCountry(r) !== C ? xBtn(realmCountry(r) || "", `Put ${realmCountry(r)} first`, () => setCountry(realmCountry(r))) : null));
+      h("span", { class: "yrs" }, C && !realmIn(r, C, y) && realmCountry(r) ? xBtn(realmCountry(r), `Put ${realmCountry(r)} first`, () => setCountry(realmCountry(r))) : null));
   });
   const realmsAll = [...new Set(titles.map(t => t.realm))].sort();
   const evs = db.events.filter(e => overlaps(e.start_year, e.end_year ?? e.start_year, y, y));
@@ -2200,7 +2228,7 @@ function yearCard() {
   const personChip = p => h("span", { class: "xchip" }, xPerson(p), ageIn(p, y) != null ? h("span", { class: "yrs", text: ` ${ageIn(p, y)}` }) : null);
   const out = [head];
   if (C) {
-    const home = realmsAll.filter(r => realmCountry(r) === C), away = realmsAll.filter(r => realmCountry(r) !== C);
+    const home = realmsAll.filter(r => realmIn(r, C, y)), away = realmsAll.filter(r => !realmIn(r, C, y));
     const hereEv = evs.filter(e => inCountryEvent(e, C)).sort(evOrder);
     const hereWorks = works.filter(w => workCountry(w) === C).sort(workFame);
     const makers = alive.filter(p => MAKER_TYPES.includes(p.type) && I.inCountryAt(p.id, C, y));
@@ -2243,6 +2271,7 @@ function placeCard() {
   return [
     h("h2", { text: pl.name }),
     h("div", { class: "xsub", text: [cap(pl.kind), where, pl.historical_name ? `then ${pl.historical_name}` : null].filter(Boolean).join(" · ") }),
+    partOf(pl),
     h("div", { class: "xmap", id: "x-map" }),
     xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
     films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(e.name, xYear(e.start_year)))) : null,
@@ -2253,6 +2282,40 @@ function placeCard() {
     pl.note ? h("p", { class: "xnote-text", text: pl.note }) : null,
     h("div", { class: "xfoot" }, "Sources: ", ...sourceLinks(db.sourcesFor("place", pl.key))),
   ];
+}
+// Which realm a place was in, in the Year card's year. Where a border map covers the year (data/maps), the place's
+// own point decides ("Paris in 1200: Kingdom of France"); elsewhere the realms that covered its country are listed.
+async function mapRealmsAt(pl, y) {
+  if (!window.d3 || pl.lat == null || pl.lng == null || y == null) return null;
+  const idx = await mapIndex();
+  if (!idx) return null;
+  const snap = Object.keys(idx.years).map(Number).sort((a, b) => a - b).filter(v => v <= y && y - v < 100).pop();
+  if (snap == null) return null;
+  const geo = await mapGeo(idx.years[snap]), pt = [Number(pl.lng), Number(pl.lat)];
+  const hits = geo.features.filter(f => d3.geoContains(f, pt)).map(f => f.properties || {});
+  const realms = [...new Set(hits.flatMap(pr => Object.entries(idx.realms).filter(([, ns]) => ns.includes(pr.NAME) || ns.includes(pr.SUBJECTO)).map(([r]) => r)))];
+  return { snap, realms, names: [...new Set(hits.map(pr => pr.NAME).filter(Boolean))] };
+}
+function partOf(pl) {
+  const db = S.db, y = X.year;
+  if (y == null) return null;
+  const sovereign = t => SOVEREIGN.test(t.title) ? 0 : 1;
+  const realmNode = r => {
+    const ts = db.titles.filter(t => t.realm === r && overlaps(t.start_year, t.end_year, y, y) && db.byId[t.entity_id]).sort((a, b) => sovereign(a) - sovereign(b));
+    const note = (db.realmInfo[r]?.countries || []).find(c => normCountry(c.country) === placeCountry(pl))?.note;
+    return h("span", {}, h("b", { text: r }), note ? h("span", { class: "yrs", text: ` (${note})` }) : null, ts.length ? [" · ", xPerson(db.byId[ts[0].entity_id])] : null);
+  };
+  const box = h("div", { class: "xpartof" });
+  const byCountry = realmsAt(pl, y);
+  if (byCountry.length) box.append(h("span", { class: "lbl", text: `Realms in ${placeCountry(pl)}, ${fmtYear(y)}` }), " ", ...joinNodes(byCountry.map(realmNode)));
+  mapRealmsAt(pl, y).then(r => {
+    if (!r || X.place !== pl.id || X.year !== y || !box.isConnected) return;
+    const parts = r.realms.length ? r.realms.map(realmNode) : r.names.map(n => h("b", { text: n }));
+    if (!parts.length) return;
+    box.replaceChildren(h("span", { class: "lbl", text: `In ${fmtYear(y)}, part of` }), " ", ...joinNodes(parts),
+      h("span", { class: "yrs", title: "Borders from historical-basemaps (GPL-3.0), approximate", text: ` · ${r.snap} map` }));
+  }).catch(() => {});
+  return box;
 }
 // Spots within walking distance (areas such as cities are left out: they have a centre, not a spot).
 function nearbyList(pl) {
