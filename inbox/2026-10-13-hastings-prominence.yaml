@@ -1,0 +1,11 @@
+batch:
+  title: Hastings and William I's coronation as 5-star events
+  requested: "Ty: the Event card should open on the year's biggest event; CLAUDE.md names Hastings and a coronation that changed a country as 5-star events"
+  date: 2026-10-13
+
+# Both had no prominence (blank counts as 3), so a 3-star papal blessing sorted above them for 1066.
+events:
+  - key: battle-of-hastings
+    prominence: 5
+  - key: coronation-of-william-i
+    prominence: 5
