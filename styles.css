@@ -399,3 +399,4 @@ body.x-full { overflow: hidden; }
 .then-map { background: var(--land); }
 .xcard.full .xmap .then-map { height: 60vh; }
 .then-map .maplibregl-ctrl-attrib { font-size: 10px; }
+.xband.near { border-left-color: var(--madder); }
