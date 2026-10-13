@@ -1,0 +1,1160 @@
+# US Presidents, batch 2 of 3: the 16th to the 31st president (Lincoln to Hoover).
+# Batches 1 and 3 run in parallel; they share the realm `United States`, the title wording
+# "President of the United States" and the place keys united-states-capitol,
+# arlington-national-cemetery, washington-dc and new-york-city (re-sending a place is harmless).
+#
+# Every fact is from the person's English Wikipedia article (infobox and text), read on
+# 2026-10-13. Inauguration dates and places are from the list of inauguration ceremonies in
+# the "United States presidential inauguration" article. Place coordinates and dates are from
+# each place's own article. Titles run from the infobox's term start to term end.
+#
+# Prominence (hand-set; 5 = most important): Lincoln 5 (Civil War, emancipation, assassination).
+# 4 for two-term presidents and the consequential single-term ones: Andrew Johnson (Reconstruction,
+# first impeachment), Grant, Cleveland, McKinley, Theodore Roosevelt, Wilson (First World War),
+# Coolidge (most of two terms) and Hoover (the Great Depression). 3 for single terms with less
+# lasting weight: Hayes, Garfield, Arthur, Benjamin Harrison, Taft, Harding.
+#
+# Sitelinks: Wikipedia language editions counted from Wikidata on 2026-10-13.
+# Portraits: each article's lead image; Wikimedia Commons marks all fifteen public domain.
+# Size: about 208 rows, over the usual 150, because each of the 44 new places cites its own
+# article (88 rows for places and their sources). Kept as one batch so the presidents stay together.
+# Temple of Music has no `ended`: its article says it was demolished after the 1901 fair, no year.
+# Unusual inaugurations use the place the source names: Andrew Johnson (Kirkwood House hotel,
+# shown as washington-dc), Arthur (his New York home, shown as new-york-city), Theodore Roosevelt
+# (Ansley Wilcox House, Buffalo) and Coolidge (the family home, Plymouth Notch).
+# No parent-child links: no two presidents in this batch are parent and child (Benjamin
+# Harrison was the grandson of William Henry Harrison, who is in batch 1; not linked here).
+
+batch:
+  title: "US Presidents, batch 2: Abraham Lincoln–Herbert Hoover"
+  requested: "Ty: build out US Presidents"
+  date: 2026-10-13
+
+sources:
+  - {key: wp-united-states, title: United States (Wikipedia), url: "https://en.wikipedia.org/wiki/United_States"}
+  - {key: wp-united-states-presidential-inauguration, title: United States presidential inauguration (Wikipedia), url: "https://en.wikipedia.org/wiki/United_States_presidential_inauguration"}
+  - {key: wp-abraham-lincoln, title: "Abraham Lincoln (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abraham_Lincoln"}
+  - {key: wp-andrew-johnson, title: "Andrew Johnson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andrew_Johnson"}
+  - {key: wp-ulysses-s-grant, title: "Ulysses S. Grant (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ulysses_S._Grant"}
+  - {key: wp-rutherford-b-hayes, title: "Rutherford B. Hayes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rutherford_B._Hayes"}
+  - {key: wp-james-a-garfield, title: "James A. Garfield (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_A._Garfield"}
+  - {key: wp-chester-a-arthur, title: "Chester A. Arthur (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chester_A._Arthur"}
+  - {key: wp-grover-cleveland, title: "Grover Cleveland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grover_Cleveland"}
+  - {key: wp-benjamin-harrison, title: "Benjamin Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Benjamin_Harrison"}
+  - {key: wp-william-mckinley, title: "William McKinley (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_McKinley"}
+  - {key: wp-theodore-roosevelt, title: "Theodore Roosevelt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodore_Roosevelt"}
+  - {key: wp-william-howard-taft, title: "William Howard Taft (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Howard_Taft"}
+  - {key: wp-woodrow-wilson, title: "Woodrow Wilson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Woodrow_Wilson"}
+  - {key: wp-warren-g-harding, title: "Warren G. Harding (Wikipedia)", url: "https://en.wikipedia.org/wiki/Warren_G._Harding"}
+  - {key: wp-calvin-coolidge, title: "Calvin Coolidge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Calvin_Coolidge"}
+  - {key: wp-herbert-hoover, title: "Herbert Hoover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herbert_Hoover"}
+  - {key: wp-abraham-lincoln-birthplace, title: "Abraham Lincoln Birthplace National Historical Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abraham_Lincoln_Birthplace_National_Historical_Park"}
+  - {key: wp-fords-theatre, title: "Ford's Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ford's_Theatre"}
+  - {key: wp-petersen-house, title: "Petersen House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Petersen_House"}
+  - {key: wp-lincoln-tomb, title: "Lincoln Tomb (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lincoln_Tomb"}
+  - {key: wp-raleigh-north-carolina, title: "Raleigh, North Carolina (Wikipedia)", url: "https://en.wikipedia.org/wiki/Raleigh,_North_Carolina"}
+  - {key: wp-elizabethton-tennessee, title: "Elizabethton, Tennessee (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabethton,_Tennessee"}
+  - {key: wp-andrew-johnson-national-cemetery, title: "Andrew Johnson National Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andrew_Johnson_National_Cemetery"}
+  - {key: wp-point-pleasant-ohio, title: "Point Pleasant, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Point_Pleasant,_Ohio"}
+  - {key: wp-grant-cottage, title: "Grant Cottage State Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grant_Cottage_State_Historic_Site"}
+  - {key: wp-grants-tomb, title: "Grant's Tomb (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grant's_Tomb"}
+  - {key: wp-delaware-ohio, title: "Delaware, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Delaware,_Ohio"}
+  - {key: wp-spiegel-grove, title: "Spiegel Grove (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spiegel_Grove"}
+  - {key: wp-moreland-hills-ohio, title: "Moreland Hills, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Moreland_Hills,_Ohio"}
+  - {key: wp-elberon-new-jersey, title: "Elberon, New Jersey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elberon,_New_Jersey"}
+  - {key: wp-james-a-garfield-memorial, title: "James A. Garfield Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_A._Garfield_Memorial"}
+  - {key: wp-baltimore-and-potomac-railroad-station, title: "Baltimore and Potomac Railroad Station (Wikipedia)", url: "https://en.wikipedia.org/wiki/Baltimore_and_Potomac_Railroad_Station"}
+  - {key: wp-fairfield-vermont, title: "Fairfield, Vermont (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fairfield,_Vermont"}
+  - {key: wp-albany-rural-cemetery, title: "Albany Rural Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albany_Rural_Cemetery"}
+  - {key: wp-caldwell-new-jersey, title: "Caldwell, New Jersey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caldwell,_New_Jersey"}
+  - {key: wp-princeton-new-jersey, title: "Princeton, New Jersey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princeton,_New_Jersey"}
+  - {key: wp-princeton-cemetery, title: "Princeton Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princeton_Cemetery"}
+  - {key: wp-north-bend-ohio, title: "North Bend, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/North_Bend,_Ohio"}
+  - {key: wp-indianapolis, title: "Indianapolis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Indianapolis"}
+  - {key: wp-crown-hill-cemetery, title: "Crown Hill Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crown_Hill_Cemetery"}
+  - {key: wp-niles-ohio, title: "Niles, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niles,_Ohio"}
+  - {key: wp-buffalo-new-york, title: "Buffalo, New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Buffalo,_New_York"}
+  - {key: wp-temple-of-music, title: "Temple of Music (Wikipedia)", url: "https://en.wikipedia.org/wiki/Temple_of_Music"}
+  - {key: wp-mckinley-national-memorial, title: "McKinley National Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/McKinley_National_Memorial"}
+  - {key: wp-theodore-roosevelt-birthplace, title: "Theodore Roosevelt Birthplace National Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodore_Roosevelt_Birthplace_National_Historic_Site"}
+  - {key: wp-sagamore-hill, title: "Sagamore Hill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sagamore_Hill"}
+  - {key: wp-youngs-memorial-cemetery, title: "Youngs Memorial Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Youngs_Memorial_Cemetery"}
+  - {key: wp-theodore-roosevelt-inaugural-site, title: "Theodore Roosevelt Inaugural National Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodore_Roosevelt_Inaugural_National_Historic_Site"}
+  - {key: wp-cincinnati, title: "Cincinnati (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cincinnati"}
+  - {key: wp-arlington-national-cemetery, title: "Arlington National Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arlington_National_Cemetery"}
+  - {key: wp-staunton-virginia, title: "Staunton, Virginia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Staunton,_Virginia"}
+  - {key: wp-washington-national-cathedral, title: "Washington National Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Washington_National_Cathedral"}
+  - {key: wp-blooming-grove-ohio, title: "Blooming Grove, Ohio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blooming_Grove,_Ohio"}
+  - {key: wp-palace-hotel-san-francisco, title: "Palace Hotel, San Francisco (Wikipedia)", url: "https://en.wikipedia.org/wiki/Palace_Hotel,_San_Francisco"}
+  - {key: wp-harding-tomb, title: "Harding Tomb (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harding_Tomb"}
+  - {key: wp-plymouth-notch-vermont, title: "Plymouth Notch, Vermont (Wikipedia)", url: "https://en.wikipedia.org/wiki/Plymouth_Notch,_Vermont"}
+  - {key: wp-plymouth-notch-cemetery, title: "Plymouth Notch Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Plymouth_Notch_Cemetery"}
+  - {key: wp-northampton-massachusetts, title: "Northampton, Massachusetts (Wikipedia)", url: "https://en.wikipedia.org/wiki/Northampton,_Massachusetts"}
+  - {key: wp-herbert-hoover-national-historic-site, title: "Herbert Hoover National Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herbert_Hoover_National_Historic_Site"}
+  - {key: wp-united-states-capitol, title: "United States Capitol (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States_Capitol"}
+
+realms:
+  - name: United States
+    region: Americas
+    country: United States
+    from: 1776
+    countries:
+      - {country: United States}
+    sources: [wp-united-states]
+
+places:
+  - key: abraham-lincoln-birthplace
+    name: "Abraham Lincoln Birthplace National Historical Park"
+    kind: historic site
+    region: "Kentucky"
+    country: United States
+    lat: 37.5311
+    lng: -85.7375
+    visitable: true
+    note: "Sinking Spring Farm, south of Hodgenville in LaRue County, where Lincoln was born; a memorial building holds a symbolic log cabin."
+    sources: [wp-abraham-lincoln-birthplace]
+  - key: fords-theatre
+    name: "Ford's Theatre"
+    kind: theatre
+    city: "Washington, D.C."
+    region: "District of Columbia"
+    country: United States
+    lat: 38.89667
+    lng: -77.02583
+    visitable: true
+    founded: 1863
+    note: "Opened 1863; Lincoln was shot here on 14 April 1865. Later used as a warehouse and government offices."
+    sources: [wp-fords-theatre]
+  - key: petersen-house
+    name: "Petersen House"
+    kind: house
+    city: "Washington, D.C."
+    region: "District of Columbia"
+    country: United States
+    lat: 38.89678
+    lng: -77.02622
+    visitable: true
+    founded: 1849
+    built_by: "William A. Petersen"
+    note: "Row house at 516 10th Street NW, across from Ford's Theatre, where Lincoln died on 15 April 1865."
+    sources: [wp-petersen-house]
+  - key: lincoln-tomb
+    name: "Lincoln Tomb"
+    kind: tomb
+    city: "Springfield"
+    region: "Illinois"
+    country: United States
+    lat: 39.82333
+    lng: -89.65583
+    visitable: true
+    founded: 1868
+    architect: "Larkin Goldsmith Mead"
+    note: "In Oak Ridge Cemetery; built 1868-1874. Lincoln, Mary Todd Lincoln and three of their sons lie here."
+    sources: [wp-lincoln-tomb]
+  - key: raleigh-north-carolina
+    name: "Raleigh"
+    kind: city
+    region: "North Carolina"
+    country: United States
+    lat: 35.85417
+    lng: -78.76194
+    visitable: true
+    note: "Capital of North Carolina."
+    sources: [wp-raleigh-north-carolina]
+  - key: elizabethton-tennessee
+    name: "Elizabethton"
+    kind: city
+    region: "Tennessee"
+    country: United States
+    lat: 36.33639
+    lng: -82.23917
+    visitable: true
+    note: "County seat of Carter County, Tennessee."
+    sources: [wp-elizabethton-tennessee]
+  - key: andrew-johnson-national-cemetery
+    name: "Andrew Johnson National Cemetery"
+    kind: cemetery
+    city: "Greeneville"
+    region: "Tennessee"
+    country: United States
+    lat: 36.15556
+    lng: -82.83778
+    visitable: true
+    founded: 1906
+    note: "Part of the Andrew Johnson National Historic Site; established 1906 around Johnson's grave."
+    sources: [wp-andrew-johnson-national-cemetery]
+  - key: point-pleasant-ohio
+    name: "Point Pleasant"
+    kind: village
+    region: "Ohio"
+    country: United States
+    lat: 38.89444
+    lng: -84.23389
+    visitable: true
+    note: "Small community on the Ohio River in Clermont County, about 40 km south-east of Cincinnati."
+    sources: [wp-point-pleasant-ohio]
+  - key: grant-cottage
+    name: "Grant Cottage"
+    kind: house
+    city: "Moreau"
+    region: "New York"
+    country: United States
+    lat: 43.20096
+    lng: -73.74577
+    visitable: true
+    founded: 1872
+    note: "Cottage on Mount McGregor where Grant died of throat cancer on 23 July 1885; now Grant Cottage State Historic Site."
+    sources: [wp-grant-cottage]
+  - key: grants-tomb
+    name: "Grant's Tomb"
+    kind: tomb
+    city: "New York City"
+    region: "New York"
+    country: United States
+    lat: 40.81333
+    lng: -73.96306
+    visitable: true
+    founded: 1897
+    architect: "John H. Duncan"
+    note: "General Grant National Memorial, Riverside Drive at 122nd Street, Manhattan; dedicated 27 April 1897. Grant and his wife Julia lie here."
+    sources: [wp-grants-tomb]
+  - key: delaware-ohio
+    name: "Delaware"
+    kind: city
+    region: "Ohio"
+    country: United States
+    lat: 40.285
+    lng: -83.07417
+    visitable: true
+    note: "County seat of Delaware County, Ohio, north of Columbus."
+    sources: [wp-delaware-ohio]
+  - key: spiegel-grove
+    name: "Spiegel Grove"
+    kind: house
+    city: "Fremont"
+    region: "Ohio"
+    country: United States
+    lat: 41.34139
+    lng: -83.13
+    visitable: true
+    founded: 1873
+    built_by: "Sardis Birchard"
+    note: "Hayes's estate in Fremont (Hayes moved in 1873). Hayes and his wife Lucy are buried on the grounds."
+    sources: [wp-spiegel-grove]
+  - key: moreland-hills-ohio
+    name: "Moreland Hills"
+    kind: village
+    region: "Ohio"
+    country: United States
+    lat: 41.44056
+    lng: -81.42528
+    visitable: true
+    note: "Village in Cuyahoga County, east of Cleveland; formerly part of Orange Township."
+    sources: [wp-moreland-hills-ohio]
+  - key: elberon-new-jersey
+    name: "Elberon"
+    kind: village
+    city: "Long Branch"
+    region: "New Jersey"
+    country: United States
+    lat: 40.26917
+    lng: -73.99167
+    visitable: true
+    note: "Seaside community in Long Branch, Monmouth County."
+    sources: [wp-elberon-new-jersey]
+  - key: james-a-garfield-memorial
+    name: "James A. Garfield Memorial"
+    kind: tomb
+    city: "Cleveland"
+    region: "Ohio"
+    country: United States
+    lat: 41.51
+    lng: -81.59139
+    visitable: true
+    founded: 1890
+    architect: "George Keller"
+    note: "Mausoleum in Lake View Cemetery; begun 1885, dedicated 30 May 1890."
+    sources: [wp-james-a-garfield-memorial]
+  - key: baltimore-and-potomac-railroad-station
+    name: "Baltimore and Potomac Railroad Station"
+    kind: railway station
+    city: "Washington, D.C."
+    region: "District of Columbia"
+    country: United States
+    lat: 38.89167
+    lng: -77.02028
+    visitable: false
+    founded: 1872
+    ended: 1907
+    architect: "Wilson Brothers & Company"
+    note: "Station at 6th Street and B Street NW (1872-1907), where Garfield was shot on 2 July 1881. Closed in 1907; the National Gallery of Art West Building stands on the site."
+    sources: [wp-baltimore-and-potomac-railroad-station]
+  - key: fairfield-vermont
+    name: "Fairfield"
+    kind: town
+    region: "Vermont"
+    country: United States
+    lat: 44.80833
+    lng: -72.93056
+    visitable: true
+    founded: 1763
+    note: "Town in Franklin County, Vermont, chartered in 1763."
+    sources: [wp-fairfield-vermont]
+  - key: albany-rural-cemetery
+    name: "Albany Rural Cemetery"
+    kind: cemetery
+    city: "Menands"
+    region: "New York"
+    country: United States
+    lat: 42.70667
+    lng: -73.73556
+    visitable: true
+    founded: 1844
+    architect: "David Bates Douglass"
+    note: "Rural cemetery just outside Albany, established 7 October 1844."
+    sources: [wp-albany-rural-cemetery]
+  - key: caldwell-new-jersey
+    name: "Caldwell"
+    kind: town
+    region: "New Jersey"
+    country: United States
+    lat: 40.83924
+    lng: -74.27703
+    visitable: true
+    note: "Borough in Essex County, New Jersey."
+    sources: [wp-caldwell-new-jersey]
+  - key: princeton-new-jersey
+    name: "Princeton"
+    kind: town
+    region: "New Jersey"
+    country: United States
+    lat: 40.35824
+    lng: -74.66673
+    visitable: true
+    note: "Borough in Mercer County, New Jersey."
+    sources: [wp-princeton-new-jersey]
+  - key: princeton-cemetery
+    name: "Princeton Cemetery"
+    kind: cemetery
+    city: "Princeton"
+    region: "New Jersey"
+    country: United States
+    lat: 40.355
+    lng: -74.66
+    visitable: true
+    founded: 1757
+    note: "Owned by the Nassau Presbyterian Church."
+    sources: [wp-princeton-cemetery]
+  - key: north-bend-ohio
+    name: "North Bend"
+    kind: village
+    region: "Ohio"
+    country: United States
+    lat: 39.15056
+    lng: -84.74444
+    visitable: true
+    note: "Village on the Ohio River in Hamilton County, west of Cincinnati."
+    sources: [wp-north-bend-ohio]
+  - key: indianapolis
+    name: "Indianapolis"
+    kind: city
+    region: "Indiana"
+    country: United States
+    lat: 39.76861
+    lng: -86.15806
+    visitable: true
+    note: "Capital of Indiana."
+    sources: [wp-indianapolis]
+  - key: crown-hill-cemetery
+    name: "Crown Hill Cemetery"
+    kind: cemetery
+    city: "Indianapolis"
+    region: "Indiana"
+    country: United States
+    lat: 39.82028
+    lng: -86.17056
+    visitable: true
+    founded: 1863
+    note: "Rural cemetery established 1863 on Strawberry Hill."
+    sources: [wp-crown-hill-cemetery]
+  - key: niles-ohio
+    name: "Niles"
+    kind: city
+    region: "Ohio"
+    country: United States
+    lat: 41.18889
+    lng: -80.74722
+    visitable: true
+    note: "City in Trumbull County, Ohio, between Youngstown and Warren."
+    sources: [wp-niles-ohio]
+  - key: buffalo-new-york
+    name: "Buffalo"
+    kind: city
+    region: "New York"
+    country: United States
+    lat: 42.88639
+    lng: -78.87806
+    visitable: true
+    note: "City on Lake Erie in Western New York."
+    sources: [wp-buffalo-new-york]
+  - key: temple-of-music
+    name: "Temple of Music"
+    kind: concert hall
+    city: "Buffalo"
+    region: "New York"
+    country: United States
+    lat: 42.93869
+    lng: -78.87359
+    visitable: false
+    founded: 1901
+    architect: "August Esenwein and James A. Johnson"
+    note: "Concert hall of the 1901 Pan-American Exposition, where McKinley was shot on 6 September 1901. Demolished, like most of the fair, when the exposition ended (the article gives no year)."
+    sources: [wp-temple-of-music]
+  - key: mckinley-national-memorial
+    name: "McKinley National Memorial"
+    kind: tomb
+    city: "Canton"
+    region: "Ohio"
+    country: United States
+    lat: 40.80667
+    lng: -81.3925
+    visitable: true
+    founded: 1907
+    architect: "Harold Van Buren Magonigle"
+    note: "Mausoleum of William and Ida McKinley, dedicated 30 September 1907."
+    sources: [wp-mckinley-national-memorial]
+  - key: theodore-roosevelt-birthplace
+    name: "Theodore Roosevelt Birthplace National Historic Site"
+    kind: house
+    city: "New York City"
+    region: "New York"
+    country: United States
+    lat: 40.73881
+    lng: -73.98889
+    visitable: true
+    founded: 1923
+    architect: "Theodate Pope Riddle (replica)"
+    note: "Replica (1923) of the brownstone at 28 East 20th Street, Manhattan, where Roosevelt was born; the original house of 1848 was demolished in 1916."
+    sources: [wp-theodore-roosevelt-birthplace]
+  - key: sagamore-hill
+    name: "Sagamore Hill"
+    kind: house
+    city: "Cove Neck"
+    region: "New York"
+    country: United States
+    lat: 40.88556
+    lng: -73.4975
+    visitable: true
+    founded: 1884
+    architect: "Lamb & Rich"
+    note: "Roosevelt's home from 1885 until his death in 1919, near Oyster Bay, Long Island; now Sagamore Hill National Historic Site."
+    sources: [wp-sagamore-hill]
+  - key: youngs-memorial-cemetery
+    name: "Youngs Memorial Cemetery"
+    kind: cemetery
+    city: "Oyster Bay Cove"
+    region: "New York"
+    country: United States
+    lat: 40.87028
+    lng: -73.50639
+    visitable: true
+    founded: 1900
+    note: "Small cemetery chartered in 1900, about 2.4 km south of Sagamore Hill."
+    sources: [wp-youngs-memorial-cemetery]
+  - key: theodore-roosevelt-inaugural-site
+    name: "Ansley Wilcox House"
+    kind: house
+    city: "Buffalo"
+    region: "New York"
+    country: United States
+    lat: 42.90147
+    lng: -78.87242
+    visitable: true
+    note: "641 Delaware Avenue, where Roosevelt took the oath of office on 14 September 1901; now the Theodore Roosevelt Inaugural National Historic Site."
+    sources: [wp-theodore-roosevelt-inaugural-site]
+  - key: cincinnati
+    name: "Cincinnati"
+    kind: city
+    region: "Ohio"
+    country: United States
+    lat: 39.1
+    lng: -84.5125
+    visitable: true
+    note: "City on the Ohio River, county seat of Hamilton County."
+    sources: [wp-cincinnati]
+  - key: arlington-national-cemetery
+    name: "Arlington National Cemetery"
+    kind: cemetery
+    city: "Arlington"
+    region: "Virginia"
+    country: United States
+    lat: 38.87917
+    lng: -77.07222
+    visitable: true
+    founded: 1864
+    note: "National military cemetery in Arlington County, Virginia, established 13 May 1864."
+    sources: [wp-arlington-national-cemetery]
+  - key: staunton-virginia
+    name: "Staunton"
+    kind: city
+    region: "Virginia"
+    country: United States
+    lat: 38.15806
+    lng: -79.07639
+    visitable: true
+    note: "Independent city in the Shenandoah Valley, Virginia."
+    sources: [wp-staunton-virginia]
+  - key: washington-national-cathedral
+    name: "Washington National Cathedral"
+    kind: cathedral
+    city: "Washington, D.C."
+    region: "District of Columbia"
+    country: United States
+    lat: 38.93056
+    lng: -77.07083
+    visitable: true
+    founded: 1907
+    architect: "George Frederick Bodley and Henry Vaughan, then Philip Hubert Frohman"
+    note: "Episcopal cathedral of Saint Peter and Saint Paul; begun 1907, completed 1990. Wilson is the only president buried in the capital."
+    sources: [wp-washington-national-cathedral]
+  - key: blooming-grove-ohio
+    name: "Blooming Grove"
+    kind: village
+    region: "Ohio"
+    country: United States
+    lat: 40.70778
+    lng: -82.71667
+    visitable: true
+    note: "Unincorporated community in Morrow County, Ohio."
+    sources: [wp-blooming-grove-ohio]
+  - key: palace-hotel-san-francisco
+    name: "Palace Hotel"
+    kind: hotel
+    city: "San Francisco"
+    region: "California"
+    country: United States
+    lat: 37.7884
+    lng: -122.402
+    visitable: true
+    founded: 1909
+    architect: "Trowbridge & Livingston"
+    note: "Present building opened 19 December 1909 on the site of the 1875 hotel lost in the 1906 earthquake fire; Harding died here on 2 August 1923."
+    sources: [wp-palace-hotel-san-francisco]
+  - key: harding-tomb
+    name: "Harding Tomb"
+    kind: tomb
+    city: "Marion"
+    region: "Ohio"
+    country: United States
+    lat: 40.57306
+    lng: -83.12306
+    visitable: true
+    founded: 1926
+    architect: "Henry Hornbostel"
+    note: "Tomb of Warren and Florence Harding in Marion; built 1926, dedicated 1931."
+    sources: [wp-harding-tomb]
+  - key: plymouth-notch-vermont
+    name: "Plymouth Notch"
+    kind: village
+    city: "Plymouth"
+    region: "Vermont"
+    country: United States
+    lat: 43.5299
+    lng: -72.7388
+    visitable: true
+    note: "Village in Windsor County, Vermont, mostly within the Calvin Coolidge Homestead District."
+    sources: [wp-plymouth-notch-vermont]
+  - key: plymouth-notch-cemetery
+    name: "Plymouth Notch Cemetery"
+    kind: cemetery
+    city: "Plymouth"
+    region: "Vermont"
+    country: United States
+    lat: 43.53117
+    lng: -72.72341
+    visitable: true
+    note: "Coolidge family burial ground, in use since before 1800."
+    sources: [wp-plymouth-notch-cemetery]
+  - key: northampton-massachusetts
+    name: "Northampton"
+    kind: city
+    region: "Massachusetts"
+    country: United States
+    lat: 42.31806
+    lng: -72.63194
+    visitable: true
+    note: "County seat of Hampshire County, Massachusetts."
+    sources: [wp-northampton-massachusetts]
+  - key: herbert-hoover-national-historic-site
+    name: "Herbert Hoover National Historic Site"
+    kind: historic site
+    city: "West Branch"
+    region: "Iowa"
+    country: United States
+    lat: 41.66889
+    lng: -91.34806
+    visitable: true
+    founded: 1965
+    note: "National Park Service site (1965) with Hoover's birthplace cottage and his grave; the presidential library and museum stands next to it."
+    sources: [wp-herbert-hoover-national-historic-site]
+  - key: united-states-capitol
+    name: "United States Capitol"
+    kind: government building
+    city: "Washington, D.C."
+    region: "District of Columbia"
+    country: United States
+    lat: 38.88972
+    lng: -77.00889
+    visitable: true
+    founded: 1793
+    architect: "William Thornton; Benjamin Henry Latrobe"
+    note: "Seat of Congress on Capitol Hill. Construction began 18 September 1793; first occupied 1800."
+    sources: [wp-united-states-capitol]
+
+people:
+  - key: abraham-lincoln
+    name: "Abraham Lincoln"
+    type: Government
+    roles: [president, lawyer]
+    born: 1809-02-12
+    died: 1865-04-15
+    prominence: 5
+    sitelinks: 211
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Abraham_Lincoln_O-77_matte_collodion_print.jpg/500px-Abraham_Lincoln_O-77_matte_collodion_print.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-abraham-lincoln]
+  - key: andrew-johnson
+    name: "Andrew Johnson"
+    type: Government
+    roles: [president, tailor]
+    born: 1808-12-29
+    died: 1875-07-31
+    prominence: 4
+    sitelinks: 133
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e6/Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg/500px-Andrew_Johnson_photo_portrait_head_and_shoulders%2C_c1870-1880-Edit1.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Andrew_Johnson_photo_portrait_head_and_shoulders,_c1870-1880-Edit1.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-andrew-johnson]
+  - key: ulysses-s-grant
+    name: "Ulysses S. Grant"
+    type: Government
+    roles: [president, general]
+    born: 1822-04-27
+    died: 1885-07-23
+    prominence: 4
+    sitelinks: 140
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/98/Ulysses_S._Grant_1870-1880_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/98/Ulysses_S._Grant_1870-1880_%28cropped%29.jpg/500px-Ulysses_S._Grant_1870-1880_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-ulysses-s-grant]
+  - key: rutherford-b-hayes
+    name: "Rutherford B. Hayes"
+    type: Government
+    roles: [president, lawyer]
+    born: 1822-10-04
+    died: 1893-01-17
+    prominence: 3
+    sitelinks: 124
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/President_Rutherford_Hayes_1870_-_1880_Restored.jpg/500px-President_Rutherford_Hayes_1870_-_1880_Restored.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:President_Rutherford_Hayes_1870_-_1880_Restored.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-rutherford-b-hayes]
+  - key: james-a-garfield
+    name: "James A. Garfield"
+    type: Government
+    roles: [president, lawyer, preacher, educator]
+    born: 1831-11-19
+    died: 1881-09-19
+    prominence: 3
+    sitelinks: 131
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/James_Abram_Garfield%2C_photo_portrait_seated.jpg/500px-James_Abram_Garfield%2C_photo_portrait_seated.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:James_Abram_Garfield,_photo_portrait_seated.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-james-a-garfield]
+  - key: chester-a-arthur
+    name: "Chester A. Arthur"
+    type: Government
+    roles: [president, lawyer]
+    born: 1829-10-05
+    died: 1886-11-18
+    prominence: 3
+    sitelinks: 124
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6e/Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg/500px-Chester_A._Arthur_by_Abraham_Bogardus_%28cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Chester_A._Arthur_by_Abraham_Bogardus_(cropped)_(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-chester-a-arthur]
+  - key: grover-cleveland
+    name: "Grover Cleveland"
+    type: Government
+    roles: [president, lawyer]
+    born: 1837-03-18
+    died: 1908-06-24
+    prominence: 4
+    sitelinks: 129
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/36/StephenGroverCleveland.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/StephenGroverCleveland.jpg/500px-StephenGroverCleveland.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:StephenGroverCleveland.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-grover-cleveland]
+  - key: benjamin-harrison
+    name: "Benjamin Harrison"
+    type: Government
+    roles: [president, lawyer]
+    born: 1833-08-20
+    died: 1901-03-13
+    prominence: 3
+    sitelinks: 126
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/49/Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg/500px-Pach_Brothers_-_Benjamin_Harrison_%28cropped%29_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Pach_Brothers_-_Benjamin_Harrison_(cropped)_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-benjamin-harrison]
+  - key: william-mckinley
+    name: "William McKinley"
+    type: Government
+    roles: [president, lawyer]
+    born: 1843-01-29
+    died: 1901-09-14
+    prominence: 4
+    sitelinks: 128
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/30/McKinley_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/McKinley_%28cropped%29.jpg/500px-McKinley_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:McKinley_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-william-mckinley]
+  - key: theodore-roosevelt
+    name: "Theodore Roosevelt"
+    type: Government
+    roles: [president, author, conservationist, soldier]
+    born: 1858-10-27
+    died: 1919-01-06
+    prominence: 4
+    sitelinks: 146
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/69/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29_%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29_%282%29.jpg/500px-Theodore_Roosevelt_by_the_Pach_Bros_%284x5_cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros_(4x5_cropped)_(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-theodore-roosevelt]
+  - key: william-howard-taft
+    name: "William Howard Taft"
+    type: Government
+    roles: [president, chief justice, lawyer]
+    born: 1857-09-15
+    died: 1930-03-08
+    prominence: 3
+    sitelinks: 131
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/11/William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29_%28cropped%29.jpg/500px-William_Howard_Taft_by_Pach_Brothers_%283x4_ropped%29_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:William_Howard_Taft_by_Pach_Brothers_(3x4_ropped)_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-william-howard-taft]
+  - key: woodrow-wilson
+    name: "Woodrow Wilson"
+    type: Government
+    roles: [president, academic, lawyer]
+    born: 1856-12-28
+    died: 1924-02-03
+    prominence: 4
+    sitelinks: 148
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/96/President_Woodrow_Wilson_Harris_%26_Ewing_%283x4_cropped_b%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/President_Woodrow_Wilson_Harris_%26_Ewing_%283x4_cropped_b%29.jpg/500px-President_Woodrow_Wilson_Harris_%26_Ewing_%283x4_cropped_b%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:President_Woodrow_Wilson_Harris_%26_Ewing_(3x4_cropped_b).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-woodrow-wilson]
+  - key: warren-g-harding
+    name: "Warren G. Harding"
+    type: Government
+    roles: [president, journalist]
+    born: 1865-11-02
+    died: 1923-08-02
+    prominence: 3
+    sitelinks: 127
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/4e/Warren_G._Harding_1920s_portrait_%283x4_cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Warren_G._Harding_1920s_portrait_%283x4_cropped%29.jpg/500px-Warren_G._Harding_1920s_portrait_%283x4_cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Warren_G._Harding_1920s_portrait_(3x4_cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-warren-g-harding]
+  - key: calvin-coolidge
+    name: "Calvin Coolidge"
+    type: Government
+    roles: [president, lawyer]
+    born: 1872-07-04
+    died: 1933-01-05
+    prominence: 4
+    sitelinks: 135
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/4c/President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped_2%29.jpeg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped_2%29.jpeg/500px-President_Calvin_Coolidge%2C_1924_portrait_photograph_%283x4_cropped_2%29.jpeg
+    image_page: https://commons.wikimedia.org/wiki/File:President_Calvin_Coolidge,_1924_portrait_photograph_(3x4_cropped_2).jpeg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-calvin-coolidge]
+  - key: herbert-hoover
+    name: "Herbert Hoover"
+    type: Government
+    roles: [president, mining engineer, businessman]
+    born: 1874-08-10
+    died: 1964-10-20
+    prominence: 4
+    sitelinks: 135
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/57/President_Hoover_portrait.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/President_Hoover_portrait.jpg/500px-President_Hoover_portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:President_Hoover_portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    sources: [wp-herbert-hoover]
+
+titles:
+  - {person: abraham-lincoln, title: President of the United States, realm: United States, from: 1861-03-04, to: 1865-04-15, sources: [wp-abraham-lincoln]}
+  - {person: andrew-johnson, title: President of the United States, realm: United States, from: 1865-04-15, to: 1869-03-04, note: "Succeeded on Lincoln's death.", sources: [wp-andrew-johnson]}
+  - {person: ulysses-s-grant, title: President of the United States, realm: United States, from: 1869-03-04, to: 1877-03-04, sources: [wp-ulysses-s-grant]}
+  - {person: rutherford-b-hayes, title: President of the United States, realm: United States, from: 1877-03-04, to: 1881-03-04, sources: [wp-rutherford-b-hayes]}
+  - {person: james-a-garfield, title: President of the United States, realm: United States, from: 1881-03-04, to: 1881-09-19, sources: [wp-james-a-garfield]}
+  - {person: chester-a-arthur, title: President of the United States, realm: United States, from: 1881-09-19, to: 1885-03-04, note: "Succeeded on Garfield's death; sworn in early on 20 September.", sources: [wp-chester-a-arthur]}
+  - {person: grover-cleveland, title: President of the United States, realm: United States, from: 1885-03-04, to: 1889-03-04, note: "First of two non-consecutive terms (22nd president).", sources: [wp-grover-cleveland]}
+  - {person: benjamin-harrison, title: President of the United States, realm: United States, from: 1889-03-04, to: 1893-03-04, sources: [wp-benjamin-harrison]}
+  - {person: grover-cleveland, title: President of the United States, realm: United States, from: 1893-03-04, to: 1897-03-04, note: "Second, non-consecutive term (24th president).", sources: [wp-grover-cleveland]}
+  - {person: william-mckinley, title: President of the United States, realm: United States, from: 1897-03-04, to: 1901-09-14, sources: [wp-william-mckinley]}
+  - {person: theodore-roosevelt, title: President of the United States, realm: United States, from: 1901-09-14, to: 1909-03-04, note: "Succeeded on McKinley's death.", sources: [wp-theodore-roosevelt]}
+  - {person: william-howard-taft, title: President of the United States, realm: United States, from: 1909-03-04, to: 1913-03-04, sources: [wp-william-howard-taft]}
+  - {person: woodrow-wilson, title: President of the United States, realm: United States, from: 1913-03-04, to: 1921-03-04, sources: [wp-woodrow-wilson]}
+  - {person: warren-g-harding, title: President of the United States, realm: United States, from: 1921-03-04, to: 1923-08-02, sources: [wp-warren-g-harding]}
+  - {person: calvin-coolidge, title: President of the United States, realm: United States, from: 1923-08-02, to: 1929-03-04, note: "Succeeded on Harding's death; sworn in early on 3 August.", sources: [wp-calvin-coolidge]}
+  - {person: herbert-hoover, title: President of the United States, realm: United States, from: 1929-03-04, to: 1933-03-04, sources: [wp-herbert-hoover]}
+
+events:
+  - key: inauguration-of-abraham-lincoln
+    name: "Inauguration of Abraham Lincoln"
+    type: Inauguration
+    date: 1861-03-04
+    place: united-states-capitol
+    people: [{person: abraham-lincoln, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Roger B. Taney."
+    sources: [wp-united-states-presidential-inauguration, wp-abraham-lincoln]
+  - key: inauguration-of-abraham-lincoln-1865
+    name: "Second inauguration of Abraham Lincoln"
+    type: Inauguration
+    date: 1865-03-04
+    place: united-states-capitol
+    people: [{person: abraham-lincoln, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Salmon P. Chase."
+    sources: [wp-united-states-presidential-inauguration, wp-abraham-lincoln]
+  - key: inauguration-of-andrew-johnson
+    name: "Inauguration of Andrew Johnson"
+    type: Inauguration
+    date: 1865-04-15
+    place: washington-dc
+    people: [{person: andrew-johnson, role: inaugurated}]
+    prominence: 3
+    note: "Sworn in at the Kirkwood House hotel in Washington by Chief Justice Chase, hours after Lincoln's death."
+    sources: [wp-united-states-presidential-inauguration, wp-andrew-johnson]
+  - key: inauguration-of-ulysses-s-grant
+    name: "Inauguration of Ulysses S. Grant"
+    type: Inauguration
+    date: 1869-03-04
+    place: united-states-capitol
+    people: [{person: ulysses-s-grant, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Chase."
+    sources: [wp-united-states-presidential-inauguration, wp-ulysses-s-grant]
+  - key: inauguration-of-ulysses-s-grant-1873
+    name: "Second inauguration of Ulysses S. Grant"
+    type: Inauguration
+    date: 1873-03-04
+    place: united-states-capitol
+    people: [{person: ulysses-s-grant, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Chase."
+    sources: [wp-united-states-presidential-inauguration, wp-ulysses-s-grant]
+  - key: inauguration-of-rutherford-b-hayes
+    name: "Inauguration of Rutherford B. Hayes"
+    type: Inauguration
+    date: 1877-03-05
+    place: united-states-capitol
+    people: [{person: rutherford-b-hayes, role: inaugurated}]
+    prominence: 3
+    note: "March 4 fell on a Sunday: Hayes took the oath privately in the Red Room of the White House on Saturday 3 March, then publicly on the East Portico on Monday 5 March."
+    sources: [wp-united-states-presidential-inauguration, wp-rutherford-b-hayes]
+  - key: inauguration-of-james-a-garfield
+    name: "Inauguration of James A. Garfield"
+    type: Inauguration
+    date: 1881-03-04
+    place: united-states-capitol
+    people: [{person: james-a-garfield, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Morrison Waite."
+    sources: [wp-united-states-presidential-inauguration, wp-james-a-garfield]
+  - key: inauguration-of-chester-a-arthur
+    name: "Inauguration of Chester A. Arthur"
+    type: Inauguration
+    date: 1881-09-20
+    place: new-york-city
+    people: [{person: chester-a-arthur, role: inaugurated}]
+    prominence: 3
+    note: "Sworn in at his home on Lexington Avenue, New York, by Justice John R. Brady of the New York Supreme Court, after news of Garfield's death."
+    sources: [wp-united-states-presidential-inauguration, wp-chester-a-arthur]
+  - key: inauguration-of-grover-cleveland
+    name: "Inauguration of Grover Cleveland"
+    type: Inauguration
+    date: 1885-03-04
+    place: united-states-capitol
+    people: [{person: grover-cleveland, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Waite."
+    sources: [wp-united-states-presidential-inauguration, wp-grover-cleveland]
+  - key: inauguration-of-benjamin-harrison
+    name: "Inauguration of Benjamin Harrison"
+    type: Inauguration
+    date: 1889-03-04
+    place: united-states-capitol
+    people: [{person: benjamin-harrison, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Melville Fuller."
+    sources: [wp-united-states-presidential-inauguration, wp-benjamin-harrison]
+  - key: inauguration-of-grover-cleveland-1893
+    name: "Second inauguration of Grover Cleveland"
+    type: Inauguration
+    date: 1893-03-04
+    place: united-states-capitol
+    people: [{person: grover-cleveland, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; the start of his second, non-consecutive term."
+    sources: [wp-united-states-presidential-inauguration, wp-grover-cleveland]
+  - key: inauguration-of-william-mckinley
+    name: "Inauguration of William McKinley"
+    type: Inauguration
+    date: 1897-03-04
+    place: united-states-capitol
+    people: [{person: william-mckinley, role: inaugurated}]
+    prominence: 3
+    note: "In front of the original Senate wing; oath given by Chief Justice Fuller."
+    sources: [wp-united-states-presidential-inauguration, wp-william-mckinley]
+  - key: inauguration-of-william-mckinley-1901
+    name: "Second inauguration of William McKinley"
+    type: Inauguration
+    date: 1901-03-04
+    place: united-states-capitol
+    people: [{person: william-mckinley, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Fuller."
+    sources: [wp-united-states-presidential-inauguration, wp-william-mckinley]
+  - key: inauguration-of-theodore-roosevelt
+    name: "Inauguration of Theodore Roosevelt"
+    type: Inauguration
+    date: 1901-09-14
+    place: theodore-roosevelt-inaugural-site
+    people: [{person: theodore-roosevelt, role: inaugurated}]
+    prominence: 3
+    note: "Sworn in at the Ansley Wilcox House in Buffalo by Judge John R. Hazel, after McKinley's death."
+    sources: [wp-united-states-presidential-inauguration, wp-theodore-roosevelt]
+  - key: inauguration-of-theodore-roosevelt-1905
+    name: "Second inauguration of Theodore Roosevelt"
+    type: Inauguration
+    date: 1905-03-04
+    place: united-states-capitol
+    people: [{person: theodore-roosevelt, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; his only inauguration after winning an election."
+    sources: [wp-united-states-presidential-inauguration, wp-theodore-roosevelt]
+  - key: inauguration-of-william-howard-taft
+    name: "Inauguration of William Howard Taft"
+    type: Inauguration
+    date: 1909-03-04
+    place: united-states-capitol
+    people: [{person: william-howard-taft, role: inaugurated}]
+    prominence: 3
+    note: "Held in the Senate Chamber."
+    sources: [wp-united-states-presidential-inauguration, wp-william-howard-taft]
+  - key: inauguration-of-woodrow-wilson
+    name: "Inauguration of Woodrow Wilson"
+    type: Inauguration
+    date: 1913-03-04
+    place: united-states-capitol
+    people: [{person: woodrow-wilson, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Edward D. White."
+    sources: [wp-united-states-presidential-inauguration, wp-woodrow-wilson]
+  - key: inauguration-of-woodrow-wilson-1917
+    name: "Second inauguration of Woodrow Wilson"
+    type: Inauguration
+    date: 1917-03-05
+    place: united-states-capitol
+    people: [{person: woodrow-wilson, role: inaugurated}]
+    prominence: 3
+    note: "The term began on Sunday 4 March; the public ceremony on the East Portico was on Monday 5 March."
+    sources: [wp-united-states-presidential-inauguration, wp-woodrow-wilson]
+  - key: inauguration-of-warren-g-harding
+    name: "Inauguration of Warren G. Harding"
+    type: Inauguration
+    date: 1921-03-04
+    place: united-states-capitol
+    people: [{person: warren-g-harding, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice White."
+    sources: [wp-united-states-presidential-inauguration, wp-warren-g-harding]
+  - key: inauguration-of-calvin-coolidge
+    name: "Inauguration of Calvin Coolidge"
+    type: Inauguration
+    date: 1923-08-03
+    place: plymouth-notch-vermont
+    people: [{person: calvin-coolidge, role: inaugurated}]
+    prominence: 3
+    note: "Sworn in at 2:47 a.m. in the parlour of the family home (the Coolidge Homestead) by his father, a notary public and justice of the peace, by kerosene lamp, after Harding's death. Sworn in again in Washington later."
+    sources: [wp-united-states-presidential-inauguration, wp-calvin-coolidge]
+  - key: inauguration-of-calvin-coolidge-1925
+    name: "Second inauguration of Calvin Coolidge"
+    type: Inauguration
+    date: 1925-03-04
+    place: united-states-capitol
+    people: [{person: calvin-coolidge, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice William Howard Taft."
+    sources: [wp-united-states-presidential-inauguration, wp-calvin-coolidge]
+  - key: inauguration-of-herbert-hoover
+    name: "Inauguration of Herbert Hoover"
+    type: Inauguration
+    date: 1929-03-04
+    place: united-states-capitol
+    people: [{person: herbert-hoover, role: inaugurated}]
+    prominence: 3
+    note: "East Portico; oath given by Chief Justice Taft."
+    sources: [wp-united-states-presidential-inauguration, wp-herbert-hoover]
+  - key: assassination-of-abraham-lincoln
+    name: "Assassination of Abraham Lincoln"
+    type: Assassination
+    date: 1865-04-14
+    place: fords-theatre
+    places:
+      - {place: petersen-house, role: died, note: "Lincoln died here the next morning"}
+    people: [{person: abraham-lincoln, role: killed}]
+    prominence: 5
+    note: "Shot by John Wilkes Booth in his box at Ford's Theatre at about 10:15 p.m.; carried across the street to the Petersen House, where he died at 7:22 a.m. on 15 April."
+    sources: [wp-abraham-lincoln, wp-fords-theatre]
+  - key: assassination-of-james-a-garfield
+    name: "Assassination of James A. Garfield"
+    type: Assassination
+    date: 1881-07-02
+    place: baltimore-and-potomac-railroad-station
+    places:
+      - {place: elberon-new-jersey, role: died, note: "Garfield died here on 19 September 1881"}
+    people: [{person: james-a-garfield, role: killed}]
+    prominence: 4
+    note: "Shot by Charles J. Guiteau, a disappointed office-seeker, at the Baltimore and Potomac Railroad station in Washington; Garfield died of infections from the wounds on 19 September at Elberon, New Jersey."
+    sources: [wp-james-a-garfield, wp-baltimore-and-potomac-railroad-station]
+  - key: assassination-of-william-mckinley
+    name: "Assassination of William McKinley"
+    type: Assassination
+    date: 1901-09-06
+    place: temple-of-music
+    people: [{person: william-mckinley, role: killed}]
+    prominence: 4
+    note: "Shot twice in the abdomen by the anarchist Leon Czolgosz while greeting the public at the Temple of Music, Pan-American Exposition, Buffalo; McKinley died on 14 September."
+    sources: [wp-william-mckinley, wp-temple-of-music]
+
+moments:
+  - {person: abraham-lincoln, role: born, place: abraham-lincoln-birthplace, year: 1809, sources: [wp-abraham-lincoln]}   # log cabin on Sinking Spring Farm
+  - {person: abraham-lincoln, role: died, place: petersen-house, year: 1865, sources: [wp-abraham-lincoln]}
+  - {person: abraham-lincoln, role: buried, place: lincoln-tomb, year: 1865, sources: [wp-abraham-lincoln]}   # Oak Ridge Cemetery, Springfield
+  - {person: andrew-johnson, role: born, place: raleigh-north-carolina, year: 1808, sources: [wp-andrew-johnson]}
+  - {person: andrew-johnson, role: died, place: elizabethton-tennessee, year: 1875, sources: [wp-andrew-johnson]}   # his daughter Mary's farm near Elizabethton
+  - {person: andrew-johnson, role: buried, place: andrew-johnson-national-cemetery, year: 1875, sources: [wp-andrew-johnson]}   # funeral in Greeneville on 3 August 1875
+  - {person: ulysses-s-grant, role: born, place: point-pleasant-ohio, year: 1822, sources: [wp-ulysses-s-grant]}
+  - {person: ulysses-s-grant, role: died, place: grant-cottage, year: 1885, sources: [wp-ulysses-s-grant]}
+  - {person: ulysses-s-grant, role: buried, place: grants-tomb, year: 1897, sources: [wp-ulysses-s-grant]}   # temporary tomb in Riverside Park from 1885; moved into the finished tomb on 17 April 1897
+  - {person: rutherford-b-hayes, role: born, place: delaware-ohio, year: 1822, sources: [wp-rutherford-b-hayes]}
+  - {person: rutherford-b-hayes, role: died, place: spiegel-grove, year: 1893, sources: [wp-rutherford-b-hayes]}
+  - {person: rutherford-b-hayes, role: buried, place: spiegel-grove, year: 1915, sources: [wp-rutherford-b-hayes]}   # first interred in Oakwood Cemetery, Fremont, in 1893; reinterred at Spiegel Grove in 1915
+  - {person: james-a-garfield, role: born, place: moreland-hills-ohio, year: 1831, sources: [wp-james-a-garfield]}   # log cabin in Orange Township, now Moreland Hills
+  - {person: james-a-garfield, role: died, place: elberon-new-jersey, year: 1881, sources: [wp-james-a-garfield]}
+  - {person: james-a-garfield, role: buried, place: james-a-garfield-memorial, year: 1890, sources: [wp-james-a-garfield]}   # temporary vault in Lake View Cemetery from 1881; interred in the memorial on 19 May 1890
+  - {person: chester-a-arthur, role: born, place: fairfield-vermont, year: 1829, sources: [wp-chester-a-arthur]}
+  - {person: chester-a-arthur, role: died, place: new-york-city, year: 1886, sources: [wp-chester-a-arthur]}   # his home on Lexington Avenue
+  - {person: chester-a-arthur, role: buried, place: albany-rural-cemetery, year: 1886, sources: [wp-chester-a-arthur]}
+  - {person: grover-cleveland, role: born, place: caldwell-new-jersey, year: 1837, sources: [wp-grover-cleveland]}
+  - {person: grover-cleveland, role: died, place: princeton-new-jersey, year: 1908, sources: [wp-grover-cleveland]}   # Westland Mansion, his Princeton home
+  - {person: grover-cleveland, role: buried, place: princeton-cemetery, year: 1908, sources: [wp-grover-cleveland]}
+  - {person: benjamin-harrison, role: born, place: north-bend-ohio, year: 1833, sources: [wp-benjamin-harrison]}
+  - {person: benjamin-harrison, role: died, place: indianapolis, year: 1901, sources: [wp-benjamin-harrison]}   # his home in Indianapolis
+  - {person: benjamin-harrison, role: buried, place: crown-hill-cemetery, year: 1901, sources: [wp-benjamin-harrison]}
+  - {person: william-mckinley, role: born, place: niles-ohio, year: 1843, sources: [wp-william-mckinley]}
+  - {person: william-mckinley, role: died, place: buffalo-new-york, year: 1901, sources: [wp-william-mckinley]}
+  - {person: william-mckinley, role: buried, place: mckinley-national-memorial, year: 1907, sources: [wp-william-mckinley]}   # receiving vault at West Lawn Cemetery, Canton, until the memorial was finished in 1907
+  - {person: theodore-roosevelt, role: born, place: theodore-roosevelt-birthplace, year: 1858, sources: [wp-theodore-roosevelt]}   # 28 East 20th Street, Manhattan
+  - {person: theodore-roosevelt, role: died, place: sagamore-hill, year: 1919, sources: [wp-theodore-roosevelt]}
+  - {person: theodore-roosevelt, role: buried, place: youngs-memorial-cemetery, year: 1919, sources: [wp-theodore-roosevelt]}
+  - {person: william-howard-taft, role: born, place: cincinnati, year: 1857, sources: [wp-william-howard-taft]}
+  - {person: william-howard-taft, role: died, place: washington-dc, year: 1930, sources: [wp-william-howard-taft]}   # his home in Washington
+  - {person: william-howard-taft, role: buried, place: arlington-national-cemetery, year: 1930, sources: [wp-william-howard-taft]}
+  - {person: woodrow-wilson, role: born, place: staunton-virginia, year: 1856, sources: [wp-woodrow-wilson]}   # the Manse of the First Presbyterian Church
+  - {person: woodrow-wilson, role: died, place: washington-dc, year: 1924, sources: [wp-woodrow-wilson]}
+  - {person: woodrow-wilson, role: buried, place: washington-national-cathedral, year: 1924, sources: [wp-woodrow-wilson]}
+  - {person: warren-g-harding, role: born, place: blooming-grove-ohio, year: 1865, sources: [wp-warren-g-harding]}
+  - {person: warren-g-harding, role: died, place: palace-hotel-san-francisco, year: 1923, sources: [wp-warren-g-harding]}
+  - {person: warren-g-harding, role: buried, place: harding-tomb, year: 1923, sources: [wp-warren-g-harding]}   # receiving vault of Marion Cemetery in 1923; the tomb was dedicated in 1931
+  - {person: calvin-coolidge, role: born, place: plymouth-notch-vermont, year: 1872, sources: [wp-calvin-coolidge]}
+  - {person: calvin-coolidge, role: died, place: northampton-massachusetts, year: 1933, sources: [wp-calvin-coolidge]}   # The Beeches, his Northampton home
+  - {person: calvin-coolidge, role: buried, place: plymouth-notch-cemetery, year: 1933, sources: [wp-calvin-coolidge]}
+  - {person: herbert-hoover, role: born, place: herbert-hoover-national-historic-site, year: 1874, sources: [wp-herbert-hoover]}   # West Branch; his birthplace cottage is part of the site
+  - {person: herbert-hoover, role: died, place: new-york-city, year: 1964, sources: [wp-herbert-hoover]}
+  - {person: herbert-hoover, role: buried, place: herbert-hoover-national-historic-site, year: 1964, sources: [wp-herbert-hoover]}
+
+discrepancies:
+  - key: hoover-burial-place
+    question: "Where is Herbert Hoover buried: in the Herbert Hoover National Historic Site, or at the Presidential Library and Museum?"
+    about: [{person: herbert-hoover}, {place: herbert-hoover-national-historic-site}]
+    field: place
+    claims:
+      - {value: "Herbert Hoover National Historic Site, West Branch (grave on its grounds, near the library and his birthplace)", sources: [wp-herbert-hoover, wp-herbert-hoover-national-historic-site], note: "Article text, Death section"}
+      - {value: "Herbert Hoover Presidential Library and Museum, West Branch", sources: [wp-herbert-hoover], note: "Article infobox, resting place"}
+    note: "Both are in West Branch, side by side. The burial moment uses the National Historic Site, which the article text names and which holds the grave."
