@@ -1810,8 +1810,9 @@ function reignStrip(holders, a, b) {
 const X = { year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
 const CARDS = ["year", "event", "place", "person", "work"];
 const CARD_LABEL = { year: "Year", event: "Event", place: "Place", person: "Person", work: "Work" };
-// One name per modern country: places say England, Scotland or Wales; realms say United Kingdom.
-const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic" };
+// One name per modern country: places say England, Scotland or Wales; realms say United Kingdom. Vatican City counts
+// under Italy (Ty, 2026-10-13), so picking Italy includes the Sistine Chapel and the Vatican Museums.
+const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic", "Vatican City": "Italy" };
 const normCountry = c => c ? COUNTRY_ALIAS[c] || c : null;
 // How well known someone is: Wikipedia language editions (sitelinks), else their star rating.
 const fame = p => p.sitelinks ?? (p.prominence ?? 3) * 15;
