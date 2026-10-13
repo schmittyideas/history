@@ -27,12 +27,6 @@ Rules:
 
 ### Ready (ranked)
 
-#### [P2] Realms: fill thin country lists
-`type: task` · `area: data` · `status: ready` · `issue: #202`
-
-The realm batches (#194, #198–#201) took countries from each realm's Wikipedia infobox "Today part of" list; about a third of the articles have none, so those realms list only what the text names. Thinnest: the Ottoman Empire (Turkey only), Abbasid Caliphate, Golden Horde, Grand Duchy of Moscow, Poland, Chola, Norway, the First French Empire's annexations. Also: record batch 4's six date conflicts (Pagan, Sukhothai, Songhai, Malacca, Benin, Austria) as realm discrepancies (now possible, #195); Japan, Ireland and Pamplona have no years.
-Source: realm batches, 2026-10-12.
-
 #### [P3] Place card: realm by location after 1599
 `type: enhancement` · `area: site` · `status: ready` · `issue: #203`
 
@@ -155,6 +149,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Realms: fill thin country lists
+`type: task` · `area: data` · `status: done` · `issue: #202`
+
+Nine thin realms got their countries from their provinces' and successor states' Wikipedia articles: the Ottoman Empire (31 countries), Abbasid Caliphate (21), French Empire (14), Poland (8), Golden Horde, Norway, Chagatai Khanate, Grand Duchy of Moscow and Chola, each with the years it held them. Japan (from 703), Ireland (846–1800) and Pamplona (824–1150) got years. Batch 4's six date conflicts and six new ones are recorded as realm discrepancies. Vassals and tributaries (Wallachia, Moldavia, Crimea) are left out. Done 2026-10-12.
+Source: realm batches, 2026-10-12.
 
 #### [P1] Realms in time and museums on the map
 `type: task` · `area: data` · `status: done` · `issue: —`
