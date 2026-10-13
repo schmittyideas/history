@@ -1,0 +1,952 @@
+batch:
+  title: "US Presidents, batch 3: Franklin D. Roosevelt–Joe Biden"
+  requested: "Ty: build out US Presidents"
+  date: 2026-10-13
+
+# Notes for the reviewer
+# - Facts come from each president's English Wikipedia article (read through the Wikipedia API on 2026-10-13: infobox, birth, death and burial
+#   passages), inauguration dates and places from 'United States presidential inauguration' (its table of all inaugurations), and each place's
+#   coordinates from its own article. Sitelinks from Wikidata on 2026-10-13 (Wikipedia language editions only).
+# - Living as of 2026-10-13 (no death in their articles): Clinton, George W. Bush, Obama, Trump, Biden. Jimmy Carter died on 29 December 2024
+#   at his home in Plains, Georgia (confirmed in his article). Trump's second title row has no end: in office.
+# - Prominence (hand-set): 5 for Franklin D. Roosevelt only (four terms, the Depression and World War II). 4 for two-term or otherwise
+#   consequential presidents (Truman, who decided the end of the war and the post-war order; Eisenhower; Kennedy, for the assassination and his
+#   standing; Johnson; Nixon, for Watergate and the only resignation; Reagan; Clinton; George W. Bush; Obama; Trump, two non-consecutive terms).
+#   3 for one-term or short presidencies (Ford, Carter, George H. W. Bush, Biden).
+# - Inaugurations: all 27 are in (one per term, plus the extraordinary ones of Truman 1945, Johnson 1963 and Ford 1974). Dates are the public
+#   ceremony; for 1957, 1985 and 2013 the term began on Sunday 20 January with a private oath and the public ceremony was on Monday 21 January
+#   (the event note says so; not a disagreement). Roosevelt's 1945 inauguration was at the White House (South Portico); Reagan 1985 and
+#   Trump 2025 were in the Capitol Rotunda, so they keep united-states-capitol. Inauguration prominence 3, as asked; Kennedy's assassination and
+#   Nixon's resignation 5.
+# - Portraits: the article lead image, linked only, for every president whose image Commons marks public domain (14 of 15). Franklin D.
+#   Roosevelt's lead image (FDR-1944-Campaign-Portrait, 3x4 retouched, cropped) is CC BY 2.0 on Commons, not public domain or CC0, so his
+#   image fields are left out.
+# - Places: Roosevelt's birthplace is 'Hyde Park, New York' in his article; the Home of FDR National Historic Site article names Springwood as
+#   his birthplace, lifelong home and burial place, so one place serves for born and buried. Johnson's birth, death and grave all fall inside the
+#   Lyndon B. Johnson National Historical Park (its article: 'protects the birthplace, home, ranch, and grave'); his infobox says Gillespie County.
+#   Nixon's birth house is on the Nixon Library campus (the library article). Deaths in hospital use the city (Truman: Kansas City; Eisenhower:
+#   Washington, D.C.; Kennedy: Dallas; Nixon: New York City) (hospitals: Research Hospital, Walter Reed, Parkland, NewYork-Presbyterian; moments have no note field). Existing places reused:
+#   washington-dc, kansas-city-missouri, new-york-city, los-angeles, houston, and united-states-capitol and arlington-national-cemetery (added by
+#   batch 2) and white-house (batch 1), both already applied, so not redefined here. federal-hall is not used in this batch.
+#   The Jimmy Carter House is marked not visitable (a private home inside
+#   the National Historical Park; the article does not say it is open).
+# - Burial years: Ford was buried in January 2007 (he died on 26 December 2006) and Carter in January 2025 (died 29 December 2024).
+# - Discrepancies: none found. The articles agree with their infoboxes on every date and place used here.
+# - Family: George H. W. Bush -> George W. Bush (both articles).
+
+sources:
+  - {key: wp-franklin-d-roosevelt, title: "Franklin D. Roosevelt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt"}
+  - {key: wp-harry-s-truman, title: "Harry S. Truman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harry_S._Truman"}
+  - {key: wp-dwight-d-eisenhower, title: "Dwight D. Eisenhower (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dwight_D._Eisenhower"}
+  - {key: wp-john-f-kennedy, title: "John F. Kennedy (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_F._Kennedy"}
+  - {key: wp-lyndon-b-johnson, title: "Lyndon B. Johnson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lyndon_B._Johnson"}
+  - {key: wp-richard-nixon, title: "Richard Nixon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_Nixon"}
+  - {key: wp-gerald-ford, title: "Gerald Ford (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gerald_Ford"}
+  - {key: wp-jimmy-carter, title: "Jimmy Carter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jimmy_Carter"}
+  - {key: wp-ronald-reagan, title: "Ronald Reagan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ronald_Reagan"}
+  - {key: wp-george-h-w-bush, title: "George H. W. Bush (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_H._W._Bush"}
+  - {key: wp-bill-clinton, title: "Bill Clinton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bill_Clinton"}
+  - {key: wp-george-w-bush, title: "George W. Bush (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_W._Bush"}
+  - {key: wp-barack-obama, title: "Barack Obama (Wikipedia)", url: "https://en.wikipedia.org/wiki/Barack_Obama"}
+  - {key: wp-donald-trump, title: "Donald Trump (Wikipedia)", url: "https://en.wikipedia.org/wiki/Donald_Trump"}
+  - {key: wp-joe-biden, title: "Joe Biden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joe_Biden"}
+  - {key: wp-united-states-presidential-inauguration, title: "United States presidential inauguration (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States_presidential_inauguration"}
+  - {key: wp-united-states, title: "United States (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States"}
+  - {key: wp-home-of-franklin-d-roosevelt-national-historic-site, title: "Home of Franklin D. Roosevelt National Historic Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Home_of_Franklin_D._Roosevelt_National_Historic_Site"}
+  - {key: wp-little-white-house, title: "Little White House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Little_White_House"}
+  - {key: wp-lamar-missouri, title: "Lamar, Missouri (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lamar,_Missouri"}
+  - {key: wp-harry-s-truman-presidential-library-and-museum, title: "Harry S. Truman Presidential Library and Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harry_S._Truman_Presidential_Library_and_Museum"}
+  - {key: wp-denison-texas, title: "Denison, Texas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Denison,_Texas"}
+  - {key: wp-dwight-d-eisenhower-presidential-library-museum-and-boyhood-home, title: "Dwight D. Eisenhower Presidential Library, Museum and Boyhood Home (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dwight_D._Eisenhower_Presidential_Library,_Museum_and_Boyhood_Home"}
+  - {key: wp-brookline-massachusetts, title: "Brookline, Massachusetts (Wikipedia)", url: "https://en.wikipedia.org/wiki/Brookline,_Massachusetts"}
+  - {key: wp-dallas, title: "Dallas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dallas"}
+  - {key: wp-dealey-plaza, title: "Dealey Plaza (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dealey_Plaza"}
+  - {key: wp-dallas-love-field, title: "Dallas Love Field (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dallas_Love_Field"}
+  - {key: wp-lyndon-b-johnson-national-historical-park, title: "Lyndon B. Johnson National Historical Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lyndon_B._Johnson_National_Historical_Park"}
+  - {key: wp-richard-nixon-presidential-library-and-museum, title: "Richard Nixon Presidential Library and Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_Nixon_Presidential_Library_and_Museum"}
+  - {key: wp-omaha-nebraska, title: "Omaha, Nebraska (Wikipedia)", url: "https://en.wikipedia.org/wiki/Omaha,_Nebraska"}
+  - {key: wp-rancho-mirage-california, title: "Rancho Mirage, California (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rancho_Mirage,_California"}
+  - {key: wp-gerald-r-ford-presidential-museum, title: "Gerald R. Ford Presidential Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gerald_R._Ford_Presidential_Museum"}
+  - {key: wp-plains-georgia, title: "Plains, Georgia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Plains,_Georgia"}
+  - {key: wp-jimmy-carter-house, title: "Jimmy Carter House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jimmy_Carter_House"}
+  - {key: wp-tampico-illinois, title: "Tampico, Illinois (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tampico,_Illinois"}
+  - {key: wp-ronald-reagan-presidential-library, title: "Ronald Reagan Presidential Library (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ronald_Reagan_Presidential_Library"}
+  - {key: wp-milton-massachusetts, title: "Milton, Massachusetts (Wikipedia)", url: "https://en.wikipedia.org/wiki/Milton,_Massachusetts"}
+  - {key: wp-george-h-w-bush-presidential-library-and-museum, title: "George H. W. Bush Presidential Library and Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_H._W._Bush_Presidential_Library_and_Museum"}
+  - {key: wp-hope-arkansas, title: "Hope, Arkansas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hope,_Arkansas"}
+  - {key: wp-new-haven-connecticut, title: "New Haven, Connecticut (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Haven,_Connecticut"}
+  - {key: wp-honolulu, title: "Honolulu (Wikipedia)", url: "https://en.wikipedia.org/wiki/Honolulu"}
+  - {key: wp-queens, title: "Queens (Wikipedia)", url: "https://en.wikipedia.org/wiki/Queens"}
+  - {key: wp-scranton-pennsylvania, title: "Scranton, Pennsylvania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Scranton,_Pennsylvania"}
+
+realms:
+  - name: United States
+    region: Americas
+    country: United States
+    from: 1776
+    countries:
+      - {country: United States}
+    sources: [wp-united-states]
+
+places:
+  - key: springwood-hyde-park
+    name: "Springwood (Home of Franklin D. Roosevelt National Historic Site)"
+    kind: house
+    city: "Hyde Park"
+    region: "New York"
+    country: United States
+    lat: 41.7672
+    lng: -73.9356
+    visitable: true
+    note: "The Springwood estate in Hyde Park, New York: Franklin D. Roosevelt's birthplace, lifelong home and burial place (rose garden), now a National Historic Site."
+    sources: [wp-home-of-franklin-d-roosevelt-national-historic-site]
+  - key: little-white-house
+    name: "Little White House"
+    kind: house
+    city: "Warm Springs"
+    region: "Georgia"
+    country: United States
+    lat: 32.8814
+    lng: -84.6876
+    founded: 1932
+    visitable: true
+    note: "Franklin D. Roosevelt's personal retreat at Warm Springs, Georgia, finished in 1932; he died here on 12 April 1945."
+    sources: [wp-little-white-house]
+  - key: lamar-missouri
+    name: "Lamar"
+    kind: city
+    region: "Missouri"
+    country: United States
+    lat: 37.4978
+    lng: -94.2792
+    visitable: true
+    note: "County seat of Barton County, Missouri; birthplace of Harry S. Truman."
+    sources: [wp-lamar-missouri]
+  - key: harry-s-truman-presidential-library
+    name: "Harry S. Truman Presidential Library and Museum"
+    kind: presidential library
+    city: "Independence"
+    region: "Missouri"
+    country: United States
+    lat: 39.1033
+    lng: -94.4208
+    visitable: true
+    note: "Presidential library and resting place of Harry S. Truman, his wife Bess and daughter Margaret, in Independence, Missouri."
+    sources: [wp-harry-s-truman-presidential-library-and-museum]
+  - key: denison-texas
+    name: "Denison"
+    kind: city
+    region: "Texas"
+    country: United States
+    lat: 33.7497
+    lng: -96.5575
+    visitable: true
+    note: "City in Grayson County, Texas, near the Oklahoma border; birthplace of Dwight D. Eisenhower."
+    sources: [wp-denison-texas]
+  - key: eisenhower-presidential-library
+    name: "Dwight D. Eisenhower Presidential Library, Museum and Boyhood Home"
+    kind: presidential library
+    city: "Abilene"
+    region: "Kansas"
+    country: United States
+    lat: 38.9122
+    lng: -97.2108
+    visitable: true
+    note: "Eisenhower's presidential library and boyhood home in Abilene, Kansas; he is buried in its chapel, the Place of Meditation."
+    sources: [wp-dwight-d-eisenhower-presidential-library-museum-and-boyhood-home]
+  - key: brookline-massachusetts
+    name: "Brookline"
+    kind: town
+    region: "Massachusetts"
+    country: United States
+    lat: 42.3317
+    lng: -71.1217
+    visitable: true
+    note: "Town in Norfolk County, Massachusetts, beside Boston; birthplace of John F. Kennedy."
+    sources: [wp-brookline-massachusetts]
+  - key: dallas
+    name: "Dallas"
+    kind: city
+    region: "Texas"
+    country: United States
+    lat: 32.7792
+    lng: -96.8089
+    visitable: true
+    note: "City in northern Texas."
+    sources: [wp-dallas]
+  - key: dealey-plaza
+    name: "Dealey Plaza"
+    kind: plaza
+    city: "Dallas"
+    region: "Texas"
+    country: United States
+    lat: 32.7786
+    lng: -96.8086
+    visitable: true
+    note: "City park in downtown Dallas where John F. Kennedy was assassinated in 1963; a National Historic Landmark district."
+    sources: [wp-dealey-plaza]
+  - key: dallas-love-field
+    name: "Dallas Love Field"
+    kind: airport
+    city: "Dallas"
+    region: "Texas"
+    country: United States
+    lat: 32.8472
+    lng: -96.8517
+    visitable: true
+    note: "City-owned airport about 6 miles northwest of downtown Dallas; Lyndon B. Johnson took the presidential oath aboard Air Force One here on 22 November 1963."
+    sources: [wp-dallas-love-field]
+  - key: lyndon-b-johnson-national-historical-park
+    name: "Lyndon B. Johnson National Historical Park"
+    kind: historic park
+    city: "Stonewall"
+    region: "Texas"
+    country: United States
+    lat: 30.2408
+    lng: -98.6242
+    founded: 1969
+    visitable: true
+    note: "National Historical Park in the Texas Hill Country protecting Lyndon B. Johnson's birthplace, home, ranch (the 'Texas White House') and grave in the family cemetery. Established 2 December 1969."
+    sources: [wp-lyndon-b-johnson-national-historical-park]
+  - key: richard-nixon-presidential-library
+    name: "Richard Nixon Presidential Library and Museum"
+    kind: presidential library
+    city: "Yorba Linda"
+    region: "California"
+    country: United States
+    lat: 33.8892
+    lng: -117.8194
+    visitable: true
+    note: "Presidential library and burial site of Richard and Pat Nixon in Yorba Linda; the campus includes the Richard Nixon Birthplace, the house where he was born in 1913."
+    sources: [wp-richard-nixon-presidential-library-and-museum]
+  - key: omaha-nebraska
+    name: "Omaha"
+    kind: city
+    region: "Nebraska"
+    country: United States
+    lat: 41.2586
+    lng: -95.9375
+    visitable: true
+    note: "Most populous city of Nebraska, on the Missouri River; birthplace of Gerald Ford."
+    sources: [wp-omaha-nebraska]
+  - key: rancho-mirage
+    name: "Rancho Mirage"
+    kind: city
+    region: "California"
+    country: United States
+    lat: 33.7692
+    lng: -116.4211
+    visitable: true
+    note: "Desert city in Riverside County, California, near Palm Springs."
+    sources: [wp-rancho-mirage-california]
+  - key: gerald-r-ford-presidential-museum
+    name: "Gerald R. Ford Presidential Museum"
+    kind: presidential museum
+    city: "Grand Rapids"
+    region: "Michigan"
+    country: United States
+    lat: 42.9683
+    lng: -85.6775
+    visitable: true
+    note: "Presidential museum and burial place of Gerald and Betty Ford in Grand Rapids, Michigan."
+    sources: [wp-gerald-r-ford-presidential-museum]
+  - key: plains-georgia
+    name: "Plains"
+    kind: city
+    region: "Georgia"
+    country: United States
+    lat: 32.0336
+    lng: -84.3933
+    visitable: true
+    note: "Small city in Sumter County, Georgia; home and resting place of Jimmy and Rosalynn Carter."
+    sources: [wp-plains-georgia]
+  - key: jimmy-carter-house
+    name: "Jimmy Carter House"
+    kind: house
+    city: "Plains"
+    region: "Georgia"
+    country: United States
+    lat: 32.0356
+    lng: -84.4017
+    visitable: false
+    note: "The Carters' home at 209 Woodland Drive, Plains, the only house they ever owned, with their memorial garden and graves; part of the Jimmy Carter National Historical Park."
+    sources: [wp-jimmy-carter-house]
+  - key: tampico-illinois
+    name: "Tampico"
+    kind: village
+    region: "Illinois"
+    country: United States
+    lat: 41.6278
+    lng: -89.7856
+    visitable: true
+    note: "Village in Whiteside County, Illinois; birthplace of Ronald Reagan."
+    sources: [wp-tampico-illinois]
+  - key: ronald-reagan-presidential-library
+    name: "Ronald Reagan Presidential Library"
+    kind: presidential library
+    city: "Simi Valley"
+    region: "California"
+    country: United States
+    lat: 34.2595
+    lng: -118.8194
+    founded: 1991
+    visitable: true
+    note: "Presidential library and burial site of Ronald and Nancy Reagan in Simi Valley, California; opened in 1991."
+    sources: [wp-ronald-reagan-presidential-library]
+  - key: milton-massachusetts
+    name: "Milton"
+    kind: town
+    region: "Massachusetts"
+    country: United States
+    lat: 42.25
+    lng: -71.0667
+    visitable: true
+    note: "Town in Norfolk County, Massachusetts, a southern suburb of Boston; birthplace of George H. W. Bush."
+    sources: [wp-milton-massachusetts]
+  - key: george-h-w-bush-presidential-library
+    name: "George H. W. Bush Presidential Library and Museum"
+    kind: presidential library
+    city: "College Station"
+    region: "Texas"
+    country: United States
+    lat: 30.5966
+    lng: -96.3534
+    visitable: true
+    note: "Presidential library and burial site of George H. W. and Barbara Bush on the west campus of Texas A&M University, College Station."
+    sources: [wp-george-h-w-bush-presidential-library-and-museum]
+  - key: hope-arkansas
+    name: "Hope"
+    kind: city
+    region: "Arkansas"
+    country: United States
+    lat: 33.6764
+    lng: -93.59
+    visitable: true
+    note: "County seat of Hempstead County, Arkansas; birthplace of Bill Clinton."
+    sources: [wp-hope-arkansas]
+  - key: new-haven-connecticut
+    name: "New Haven"
+    kind: city
+    region: "Connecticut"
+    country: United States
+    lat: 41.3083
+    lng: -72.925
+    visitable: true
+    note: "City on Long Island Sound, Connecticut; birthplace of George W. Bush."
+    sources: [wp-new-haven-connecticut]
+  - key: honolulu
+    name: "Honolulu"
+    kind: city
+    region: "Hawaii"
+    country: United States
+    lat: 21.3
+    lng: -157.85
+    visitable: true
+    note: "Capital and largest city of Hawaii, on Oahu; birthplace of Barack Obama."
+    sources: [wp-honolulu]
+  - key: queens
+    name: "Queens"
+    kind: borough
+    city: "New York City"
+    region: "New York"
+    country: United States
+    lat: 40.7136
+    lng: -73.8281
+    visitable: true
+    note: "Largest by area of the five boroughs of New York City; birthplace of Donald Trump."
+    sources: [wp-queens]
+  - key: scranton-pennsylvania
+    name: "Scranton"
+    kind: city
+    region: "Pennsylvania"
+    country: United States
+    lat: 41.4106
+    lng: -75.6675
+    visitable: true
+    note: "County seat of Lackawanna County, Pennsylvania; birthplace of Joe Biden."
+    sources: [wp-scranton-pennsylvania]
+
+people:
+  - key: franklin-d-roosevelt
+    name: "Franklin D. Roosevelt"
+    type: Government
+    roles: [president, lawyer]
+    realm: United States
+    born: 1882-01-30
+    died: 1945-04-12
+    prominence: 5
+    sitelinks: 191
+    sitelinks_on: 2026-10-13
+    # No image: the lead image on Commons is CC BY 2.0, not public domain or CC0.
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "32nd president of the United States (1933-1945), the longest-serving and the only one elected to more than two terms; led the country through the Great Depression and most of World War II. Governor of New York 1929-1932. Died in office at the Little White House, Warm Springs."
+    sources: [wp-franklin-d-roosevelt]
+  - key: harry-s-truman
+    name: "Harry S. Truman"
+    type: Government
+    roles: [president, farmer, haberdasher]
+    realm: United States
+    born: 1884-05-08
+    died: 1972-12-26
+    prominence: 4
+    sitelinks: 160
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/TRUMAN_58-766-06_%28cropped%29.jpg/500px-TRUMAN_58-766-06_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:TRUMAN_58-766-06_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "33rd president of the United States (1945-1953). Vice president for 82 days, he succeeded on Roosevelt's death on 12 April 1945."
+    sources: [wp-harry-s-truman]
+  - key: dwight-d-eisenhower
+    name: "Dwight D. Eisenhower"
+    type: Government
+    roles: [president, general]
+    realm: United States
+    born: 1890-10-14
+    died: 1969-03-28
+    prominence: 4
+    sitelinks: 151
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/02/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg/500px-Dwight_D._Eisenhower%2C_official_photo_portrait%2C_May_29%2C_1959_%28cropped%29%283%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959_(cropped)(3).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "34th president of the United States (1953-1961). Before that a general: Supreme Commander of the Allied Expeditionary Force in World War II (Operation Torch, D-Day) and first Supreme Allied Commander Europe."
+    sources: [wp-dwight-d-eisenhower]
+  - key: john-f-kennedy
+    name: "John F. Kennedy"
+    type: Government
+    roles: [president, journalist]
+    realm: United States
+    born: 1917-05-29
+    died: 1963-11-22
+    prominence: 4
+    sitelinks: 177
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/John_F._Kennedy%2C_White_House_color_photo_portrait.jpg/500px-John_F._Kennedy%2C_White_House_color_photo_portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:John_F._Kennedy,_White_House_color_photo_portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "35th president of the United States (1961-1963). Assassinated in Dallas on 22 November 1963; the most recent president to die in office."
+    sources: [wp-john-f-kennedy]
+  - key: lyndon-b-johnson
+    name: "Lyndon B. Johnson"
+    type: Government
+    roles: [president, teacher]
+    realm: United States
+    born: 1908-08-27
+    died: 1973-01-22
+    prominence: 4
+    sitelinks: 148
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/54/Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg/500px-Lyndon_B._Johnson%2C_photo_portrait%2C_color_%283x4_cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Lyndon_B._Johnson,_photo_portrait,_color_(3x4_cropped)(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "36th president of the United States (1963-1969). Vice president under Kennedy, he took the oath aboard Air Force One at Dallas Love Field after the assassination."
+    sources: [wp-lyndon-b-johnson]
+  - key: richard-nixon
+    name: "Richard Nixon"
+    type: Government
+    roles: [president, lawyer, author]
+    realm: United States
+    born: 1913-01-09
+    died: 1994-04-22
+    prominence: 4
+    sitelinks: 156
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Richard_Nixon_presidential_portrait_%281%29.jpg/500px-Richard_Nixon_presidential_portrait_%281%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Richard_Nixon_presidential_portrait_(1).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "37th president of the United States (1969-1974); vice president under Eisenhower 1953-1961. Resigned on 9 August 1974, facing impeachment over Watergate, the only president to resign."
+    sources: [wp-richard-nixon]
+  - key: gerald-ford
+    name: "Gerald Ford"
+    type: Government
+    roles: [president, lawyer]
+    realm: United States
+    born: 1913-07-14
+    died: 2006-12-26
+    prominence: 3
+    sitelinks: 148
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/36/Gerald_Ford_presidential_portrait_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/36/Gerald_Ford_presidential_portrait_%28cropped%29.jpg/500px-Gerald_Ford_presidential_portrait_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Gerald_Ford_presidential_portrait_(cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "38th president of the United States (1974-1977). Became president on Nixon's resignation, having been appointed vice president in 1973: the only person to hold both offices without being elected to either."
+    sources: [wp-gerald-ford]
+  - key: jimmy-carter
+    name: "Jimmy Carter"
+    type: Government
+    roles: [president, humanitarian, author]
+    realm: United States
+    born: 1924-10-01
+    died: 2024-12-29
+    prominence: 3
+    sitelinks: 166
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6a/Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg/500px-Jimmy_Carter_Official_Portrait2_%283x4_cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Jimmy_Carter_Official_Portrait2_(3x4_cropped).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "39th president of the United States (1977-1981); governor of Georgia 1971-1975. Died at his home in Plains, Georgia, aged 100."
+    sources: [wp-jimmy-carter]
+  - key: ronald-reagan
+    name: "Ronald Reagan"
+    type: Government
+    roles: [president, actor, sports broadcaster, union leader]
+    realm: United States
+    born: 1911-02-06
+    died: 2004-06-05
+    prominence: 4
+    sitelinks: 249
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Portrait_of_President_Reagan_1981.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Portrait_of_President_Reagan_1981.jpg/500px-Official_Portrait_of_President_Reagan_1981.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "40th president of the United States (1981-1989); governor of California 1967-1975, earlier a film actor and president of the Screen Actors Guild."
+    sources: [wp-ronald-reagan]
+  - key: george-h-w-bush
+    name: "George H. W. Bush"
+    type: Government
+    roles: [president, businessman]
+    realm: United States
+    born: 1924-06-12
+    died: 2018-11-30
+    prominence: 3
+    sitelinks: 160
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/dc/George_H._W._Bush_presidential_portrait_%28cropped%29_%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/George_H._W._Bush_presidential_portrait_%28cropped%29_%282%29.jpg/500px-George_H._W._Bush_presidential_portrait_%28cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:George_H._W._Bush_presidential_portrait_(cropped)_(2).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "41st president of the United States (1989-1993); vice president under Reagan 1981-1989. Father of George W. Bush, the 43rd president."
+    sources: [wp-george-h-w-bush]
+  - key: bill-clinton
+    name: "Bill Clinton"
+    type: Government
+    roles: [president, lawyer]
+    realm: United States
+    born: 1946-08-19
+    prominence: 4
+    sitelinks: 175
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d3/Bill_Clinton.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/500px-Bill_Clinton.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Bill_Clinton.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "42nd president of the United States (1993-2001); governor of Arkansas 1979-1981 and 1983-1992."
+    sources: [wp-bill-clinton]
+  - key: george-w-bush
+    name: "George W. Bush"
+    type: Government
+    roles: [president, businessman]
+    realm: United States
+    born: 1946-07-06
+    prominence: 4
+    sitelinks: 216
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/d4/George-W-Bush.jpeg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/George-W-Bush.jpeg/500px-George-W-Bush.jpeg
+    image_page: https://commons.wikimedia.org/wiki/File:George-W-Bush.jpeg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "43rd president of the United States (2001-2009); governor of Texas 1995-2000. Eldest son of George H. W. Bush."
+    sources: [wp-george-w-bush]
+  - key: barack-obama
+    name: "Barack Obama"
+    type: Government
+    roles: [president, lawyer]
+    realm: United States
+    born: 1961-08-04
+    prominence: 4
+    sitelinks: 255
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/500px-President_Barack_Obama.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "44th president of the United States (2009-2017), the first African American president; senator from Illinois 2005-2008."
+    sources: [wp-barack-obama]
+  - key: donald-trump
+    name: "Donald Trump"
+    type: Government
+    roles: [president, businessman, media personality]
+    realm: United States
+    born: 1946-06-14
+    prominence: 4
+    sitelinks: 266
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg/500px-Official_Presidential_Portrait_of_President_Donald_J._Trump_%282025%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025).jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "45th and 47th president of the United States: two non-consecutive terms, 2017-2021 and from 20 January 2025."
+    sources: [wp-donald-trump]
+  - key: joe-biden
+    name: "Joe Biden"
+    type: Government
+    roles: [president, lawyer]
+    realm: United States
+    born: 1942-11-20
+    prominence: 3
+    sitelinks: 229
+    sitelinks_on: 2026-10-13
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/500px-Joe_Biden_presidential_portrait.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Presidency, birth, death and burial only; policies and family not yet added."
+    note: "46th president of the United States (2021-2025); senator from Delaware 1973-2009 and vice president under Obama 2009-2017."
+    sources: [wp-joe-biden]
+
+titles:
+  - {person: franklin-d-roosevelt, title: President of the United States, realm: United States, from: 1933-03-04, to: 1945-04-12, note: "Four terms; died in office", sources: [wp-franklin-d-roosevelt]}
+  - {person: harry-s-truman, title: President of the United States, realm: United States, from: 1945-04-12, to: 1953-01-20, note: "Succeeded on Roosevelt's death", sources: [wp-harry-s-truman]}
+  - {person: dwight-d-eisenhower, title: President of the United States, realm: United States, from: 1953-01-20, to: 1961-01-20, sources: [wp-dwight-d-eisenhower]}
+  - {person: john-f-kennedy, title: President of the United States, realm: United States, from: 1961-01-20, to: 1963-11-22, note: "Assassinated in office", sources: [wp-john-f-kennedy]}
+  - {person: lyndon-b-johnson, title: President of the United States, realm: United States, from: 1963-11-22, to: 1969-01-20, note: "Succeeded on Kennedy's assassination", sources: [wp-lyndon-b-johnson]}
+  - {person: richard-nixon, title: President of the United States, realm: United States, from: 1969-01-20, to: 1974-08-09, note: "Resigned", sources: [wp-richard-nixon]}
+  - {person: gerald-ford, title: President of the United States, realm: United States, from: 1974-08-09, to: 1977-01-20, note: "Succeeded on Nixon's resignation", sources: [wp-gerald-ford]}
+  - {person: jimmy-carter, title: President of the United States, realm: United States, from: 1977-01-20, to: 1981-01-20, sources: [wp-jimmy-carter]}
+  - {person: ronald-reagan, title: President of the United States, realm: United States, from: 1981-01-20, to: 1989-01-20, sources: [wp-ronald-reagan]}
+  - {person: george-h-w-bush, title: President of the United States, realm: United States, from: 1989-01-20, to: 1993-01-20, sources: [wp-george-h-w-bush]}
+  - {person: bill-clinton, title: President of the United States, realm: United States, from: 1993-01-20, to: 2001-01-20, sources: [wp-bill-clinton]}
+  - {person: george-w-bush, title: President of the United States, realm: United States, from: 2001-01-20, to: 2009-01-20, sources: [wp-george-w-bush]}
+  - {person: barack-obama, title: President of the United States, realm: United States, from: 2009-01-20, to: 2017-01-20, sources: [wp-barack-obama]}
+  - {person: donald-trump, title: President of the United States, realm: United States, from: 2017-01-20, to: 2021-01-20, note: "45th president", sources: [wp-donald-trump]}
+  - {person: donald-trump, title: President of the United States, realm: United States, from: 2025-01-20, note: "47th president; in office", sources: [wp-donald-trump]}
+  - {person: joe-biden, title: President of the United States, realm: United States, from: 2021-01-20, to: 2025-01-20, sources: [wp-joe-biden]}
+
+events:
+  - key: inauguration-of-franklin-d-roosevelt
+    name: "Inauguration of Franklin D. Roosevelt"
+    type: Inauguration
+    date: 1933-03-04
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: franklin-d-roosevelt, role: inaugurated}]
+    note: "First inauguration, East Portico of the Capitol; the last held on 4 March."
+    sources: [wp-united-states-presidential-inauguration, wp-franklin-d-roosevelt]
+  - key: inauguration-of-franklin-d-roosevelt-1937
+    name: "Second inauguration of Franklin D. Roosevelt"
+    type: Inauguration
+    date: 1937-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: franklin-d-roosevelt, role: inaugurated}]
+    note: "East Portico; the first inauguration held on 20 January."
+    sources: [wp-united-states-presidential-inauguration, wp-franklin-d-roosevelt]
+  - key: inauguration-of-franklin-d-roosevelt-1941
+    name: "Third inauguration of Franklin D. Roosevelt"
+    type: Inauguration
+    date: 1941-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: franklin-d-roosevelt, role: inaugurated}]
+    note: "East Portico; the only third inauguration of a president."
+    sources: [wp-united-states-presidential-inauguration, wp-franklin-d-roosevelt]
+  - key: inauguration-of-franklin-d-roosevelt-1945
+    name: "Fourth inauguration of Franklin D. Roosevelt"
+    type: Inauguration
+    date: 1945-01-20
+    place: white-house
+    prominence: 3
+    people: [{person: franklin-d-roosevelt, role: inaugurated}]
+    note: "Held on the South Portico of the White House during the war."
+    sources: [wp-united-states-presidential-inauguration, wp-franklin-d-roosevelt]
+  - key: inauguration-of-harry-s-truman
+    name: "Inauguration of Harry S. Truman"
+    type: Inauguration
+    date: 1945-04-12
+    place: white-house
+    prominence: 3
+    people: [{person: harry-s-truman, role: inaugurated}]
+    note: "Extraordinary inauguration in the Cabinet Room of the White House after Roosevelt's death the same day."
+    sources: [wp-united-states-presidential-inauguration, wp-harry-s-truman]
+  - key: inauguration-of-harry-s-truman-1949
+    name: "Second inauguration of Harry S. Truman"
+    type: Inauguration
+    date: 1949-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: harry-s-truman, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-harry-s-truman]
+  - key: inauguration-of-dwight-d-eisenhower
+    name: "Inauguration of Dwight D. Eisenhower"
+    type: Inauguration
+    date: 1953-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: dwight-d-eisenhower, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-dwight-d-eisenhower]
+  - key: inauguration-of-dwight-d-eisenhower-1957
+    name: "Second inauguration of Dwight D. Eisenhower"
+    type: Inauguration
+    date: 1957-01-21
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: dwight-d-eisenhower, role: inaugurated}]
+    note: "Public ceremony on Monday 21 January, East Portico; the term began on Sunday 20 January."
+    sources: [wp-united-states-presidential-inauguration, wp-dwight-d-eisenhower]
+  - key: inauguration-of-john-f-kennedy
+    name: "Inauguration of John F. Kennedy"
+    type: Inauguration
+    date: 1961-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: john-f-kennedy, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-john-f-kennedy]
+  - key: inauguration-of-lyndon-b-johnson
+    name: "Inauguration of Lyndon B. Johnson"
+    type: Inauguration
+    date: 1963-11-22
+    place: dallas-love-field
+    prominence: 3
+    people: [{person: lyndon-b-johnson, role: inaugurated}]
+    note: "Extraordinary inauguration aboard Air Force One at Dallas Love Field after Kennedy's assassination; oath given by Judge Sarah T. Hughes."
+    sources: [wp-united-states-presidential-inauguration, wp-lyndon-b-johnson]
+  - key: inauguration-of-lyndon-b-johnson-1965
+    name: "Second inauguration of Lyndon B. Johnson"
+    type: Inauguration
+    date: 1965-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: lyndon-b-johnson, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-lyndon-b-johnson]
+  - key: inauguration-of-richard-nixon
+    name: "Inauguration of Richard Nixon"
+    type: Inauguration
+    date: 1969-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: richard-nixon, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-richard-nixon]
+  - key: inauguration-of-richard-nixon-1973
+    name: "Second inauguration of Richard Nixon"
+    type: Inauguration
+    date: 1973-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: richard-nixon, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-richard-nixon]
+  - key: inauguration-of-gerald-ford
+    name: "Inauguration of Gerald Ford"
+    type: Inauguration
+    date: 1974-08-09
+    place: white-house
+    prominence: 3
+    people: [{person: gerald-ford, role: inaugurated}]
+    note: "Extraordinary inauguration in the East Room of the White House after Nixon's resignation."
+    sources: [wp-united-states-presidential-inauguration, wp-gerald-ford]
+  - key: inauguration-of-jimmy-carter
+    name: "Inauguration of Jimmy Carter"
+    type: Inauguration
+    date: 1977-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: jimmy-carter, role: inaugurated}]
+    note: "East Portico of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-jimmy-carter]
+  - key: inauguration-of-ronald-reagan
+    name: "Inauguration of Ronald Reagan"
+    type: Inauguration
+    date: 1981-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: ronald-reagan, role: inaugurated}]
+    note: "The first held on the West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-ronald-reagan]
+  - key: inauguration-of-ronald-reagan-1985
+    name: "Second inauguration of Ronald Reagan"
+    type: Inauguration
+    date: 1985-01-21
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: ronald-reagan, role: inaugurated}]
+    note: "Public ceremony on Monday 21 January in the Capitol Rotunda; the term began on Sunday 20 January."
+    sources: [wp-united-states-presidential-inauguration, wp-ronald-reagan]
+  - key: inauguration-of-george-h-w-bush
+    name: "Inauguration of George H. W. Bush"
+    type: Inauguration
+    date: 1989-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: george-h-w-bush, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-george-h-w-bush]
+  - key: inauguration-of-bill-clinton
+    name: "Inauguration of Bill Clinton"
+    type: Inauguration
+    date: 1993-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: bill-clinton, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-bill-clinton]
+  - key: inauguration-of-bill-clinton-1997
+    name: "Second inauguration of Bill Clinton"
+    type: Inauguration
+    date: 1997-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: bill-clinton, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-bill-clinton]
+  - key: inauguration-of-george-w-bush
+    name: "Inauguration of George W. Bush"
+    type: Inauguration
+    date: 2001-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: george-w-bush, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-george-w-bush]
+  - key: inauguration-of-george-w-bush-2005
+    name: "Second inauguration of George W. Bush"
+    type: Inauguration
+    date: 2005-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: george-w-bush, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-george-w-bush]
+  - key: inauguration-of-barack-obama
+    name: "Inauguration of Barack Obama"
+    type: Inauguration
+    date: 2009-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: barack-obama, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-barack-obama]
+  - key: inauguration-of-barack-obama-2013
+    name: "Second inauguration of Barack Obama"
+    type: Inauguration
+    date: 2013-01-21
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: barack-obama, role: inaugurated}]
+    note: "Public ceremony on Monday 21 January, West Front; the term began on Sunday 20 January."
+    sources: [wp-united-states-presidential-inauguration, wp-barack-obama]
+  - key: inauguration-of-donald-trump
+    name: "Inauguration of Donald Trump"
+    type: Inauguration
+    date: 2017-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: donald-trump, role: inaugurated}]
+    note: "First inauguration, West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-donald-trump]
+  - key: inauguration-of-joe-biden
+    name: "Inauguration of Joe Biden"
+    type: Inauguration
+    date: 2021-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: joe-biden, role: inaugurated}]
+    note: "West Front of the Capitol."
+    sources: [wp-united-states-presidential-inauguration, wp-joe-biden]
+  - key: inauguration-of-donald-trump-2025
+    name: "Second inauguration of Donald Trump"
+    type: Inauguration
+    date: 2025-01-20
+    place: united-states-capitol
+    prominence: 3
+    people: [{person: donald-trump, role: inaugurated}]
+    note: "Held in the Capitol Rotunda."
+    sources: [wp-united-states-presidential-inauguration, wp-donald-trump]
+  - key: assassination-of-john-f-kennedy
+    name: "Assassination of John F. Kennedy"
+    type: Assassination
+    date: 1963-11-22
+    place: dealey-plaza
+    prominence: 5
+    people: [{person: john-f-kennedy, role: assassinated}]
+    note: "Shot at 12:30 pm while riding in the presidential motorcade through Dealey Plaza, Dallas; pronounced dead at Parkland Hospital at 1:00 pm. Lyndon B. Johnson was sworn in the same day."
+    sources: [wp-john-f-kennedy, wp-dealey-plaza]
+  - key: resignation-of-richard-nixon
+    name: "Resignation of Richard Nixon"
+    type: Resignation
+    date: 1974-08-09
+    place: white-house
+    prominence: 5
+    people: [{person: richard-nixon, role: resigned}, {person: gerald-ford, role: succeeded}]
+    note: "Facing almost certain impeachment and removal over Watergate, Nixon announced on television on 8 August 1974 that he would resign; the resignation took effect on 9 August, when Ford took the oath. The only resignation of a US president."
+    sources: [wp-richard-nixon]
+
+moments:
+  - {person: franklin-d-roosevelt, role: born, place: springwood-hyde-park, year: 1882, sources: [wp-franklin-d-roosevelt, wp-home-of-franklin-d-roosevelt-national-historic-site]}
+  - {person: franklin-d-roosevelt, role: died, place: little-white-house, year: 1945, sources: [wp-franklin-d-roosevelt]}
+  - {person: franklin-d-roosevelt, role: buried, place: springwood-hyde-park, year: 1945, sources: [wp-franklin-d-roosevelt]}
+  - {person: harry-s-truman, role: born, place: lamar-missouri, year: 1884, sources: [wp-harry-s-truman]}
+  - {person: harry-s-truman, role: died, place: kansas-city-missouri, year: 1972, sources: [wp-harry-s-truman]}
+  - {person: harry-s-truman, role: buried, place: harry-s-truman-presidential-library, year: 1972, sources: [wp-harry-s-truman]}
+  - {person: dwight-d-eisenhower, role: born, place: denison-texas, year: 1890, sources: [wp-dwight-d-eisenhower]}
+  - {person: dwight-d-eisenhower, role: died, place: washington-dc, year: 1969, sources: [wp-dwight-d-eisenhower]}
+  - {person: dwight-d-eisenhower, role: buried, place: eisenhower-presidential-library, year: 1969, sources: [wp-dwight-d-eisenhower]}
+  - {person: john-f-kennedy, role: born, place: brookline-massachusetts, year: 1917, sources: [wp-john-f-kennedy]}
+  - {person: john-f-kennedy, role: died, place: dallas, year: 1963, sources: [wp-john-f-kennedy]}
+  - {person: john-f-kennedy, role: buried, place: arlington-national-cemetery, year: 1963, sources: [wp-john-f-kennedy]}
+  - {person: lyndon-b-johnson, role: born, place: lyndon-b-johnson-national-historical-park, year: 1908, sources: [wp-lyndon-b-johnson, wp-lyndon-b-johnson-national-historical-park]}
+  - {person: lyndon-b-johnson, role: died, place: lyndon-b-johnson-national-historical-park, year: 1973, sources: [wp-lyndon-b-johnson]}
+  - {person: lyndon-b-johnson, role: buried, place: lyndon-b-johnson-national-historical-park, year: 1973, sources: [wp-lyndon-b-johnson]}
+  - {person: richard-nixon, role: born, place: richard-nixon-presidential-library, year: 1913, sources: [wp-richard-nixon, wp-richard-nixon-presidential-library-and-museum]}
+  - {person: richard-nixon, role: died, place: new-york-city, year: 1994, sources: [wp-richard-nixon]}
+  - {person: richard-nixon, role: buried, place: richard-nixon-presidential-library, year: 1994, sources: [wp-richard-nixon]}
+  - {person: gerald-ford, role: born, place: omaha-nebraska, year: 1913, sources: [wp-gerald-ford]}
+  - {person: gerald-ford, role: died, place: rancho-mirage, year: 2006, sources: [wp-gerald-ford]}
+  - {person: gerald-ford, role: buried, place: gerald-r-ford-presidential-museum, year: 2007, sources: [wp-gerald-ford]}
+  - {person: jimmy-carter, role: born, place: plains-georgia, year: 1924, sources: [wp-jimmy-carter]}
+  - {person: jimmy-carter, role: died, place: jimmy-carter-house, year: 2024, sources: [wp-jimmy-carter]}
+  - {person: jimmy-carter, role: buried, place: jimmy-carter-house, year: 2025, sources: [wp-jimmy-carter]}
+  - {person: ronald-reagan, role: born, place: tampico-illinois, year: 1911, sources: [wp-ronald-reagan]}
+  - {person: ronald-reagan, role: died, place: los-angeles, year: 2004, sources: [wp-ronald-reagan]}
+  - {person: ronald-reagan, role: buried, place: ronald-reagan-presidential-library, year: 2004, sources: [wp-ronald-reagan]}
+  - {person: george-h-w-bush, role: born, place: milton-massachusetts, year: 1924, sources: [wp-george-h-w-bush]}
+  - {person: george-h-w-bush, role: died, place: houston, year: 2018, sources: [wp-george-h-w-bush]}
+  - {person: george-h-w-bush, role: buried, place: george-h-w-bush-presidential-library, year: 2018, sources: [wp-george-h-w-bush]}
+  - {person: bill-clinton, role: born, place: hope-arkansas, year: 1946, sources: [wp-bill-clinton]}
+  - {person: george-w-bush, role: born, place: new-haven-connecticut, year: 1946, sources: [wp-george-w-bush]}
+  - {person: barack-obama, role: born, place: honolulu, year: 1961, sources: [wp-barack-obama]}
+  - {person: donald-trump, role: born, place: queens, year: 1946, sources: [wp-donald-trump]}
+  - {person: joe-biden, role: born, place: scranton-pennsylvania, year: 1942, sources: [wp-joe-biden]}
+
+links:
+  - {parent: george-h-w-bush, child: george-w-bush, sources: [wp-george-h-w-bush, wp-george-w-bush]}
