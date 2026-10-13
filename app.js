@@ -2717,12 +2717,18 @@ function lifeStrip(p, works, evs, titles) {
 // A painting's title with the places it shows as links: "Hampstead Heath, Looking Toward Harrow". A place's name is
 // found in the title ignoring case and accents, its full name first, then the part before a comma or bracket
 // ("Florence Cathedral (Santa Maria del Fiore)" → "Florence Cathedral").
+const GENERIC_PLACE_WORDS = /^(lake|gulf|bay|mount|mont|monte|river|saint|st\.?|san|santa|piazza|place|rue|church|castle|palace|bridge|ponte|the|old|new|great|little|upper|lower|north|south|east|west|port|fort|cape|isle|island)$/i;
 function titleWithPlaces(w, places) {
   // Fold accents one character at a time, so positions in `low` stay those in the title.
   const t = w.name, low = Array.from(t, c => (c.normalize("NFD")[0] || c).toLowerCase().slice(0, c.length).padEnd(c.length, " ")).join("");
   const hits = [];
   places.forEach(pl => {
-    const tries = [pl.name, pl.name.split(/[,(]/)[0].trim(), pl.historical_name].filter(n => n && n.length > 2);
+    // Then shorter leading parts of the name ("Harrow on the Hill" → "Harrow"), never a generic word on its own.
+    const words = pl.name.split(/[,(]/)[0].trim().split(/\s+/);
+    const prefixes = words.map((_, i) => words.slice(0, words.length - 1 - i).join(" ")).filter(x => x.length > 3 && !GENERIC_PLACE_WORDS.test(x));
+    // and the part before a hyphen ("Chailly-en-Bière" → "Chailly", "Auvers-sur-Oise" → "Auvers").
+    const beforeHyphen = words[0].includes("-") ? words[0].split("-")[0] : null;
+    const tries = [pl.name, pl.name.split(/[,(]/)[0].trim(), pl.historical_name, ...prefixes, beforeHyphen && beforeHyphen.length > 3 && !GENERIC_PLACE_WORDS.test(beforeHyphen) ? beforeHyphen : null].filter(n => n && n.length > 2);
     for (const n of tries) {
       const k = n.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
       const m = new RegExp(`(^|[^\\p{L}])(${k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")})(?![\\p{L}])`, "u").exec(low);
