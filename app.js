@@ -1810,8 +1810,8 @@ function reignStrip(holders, a, b) {
 // The Show and Fame buttons belong to the timeline and Year views; the cards show everyone.
 
 const X = { hint: {}, year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
-const CARDS = ["year", "event", "place", "person", "work"];
-const CARD_LABEL = { year: "Year", event: "Event", place: "Place", person: "Person", work: "Work" };
+const CARDS = ["year", "world", "event", "place", "person", "work"];
+const CARD_LABEL = { year: "Year", world: "World", event: "Event", place: "Place", person: "Person", work: "Work" };
 // One name per modern country: places say England, Scotland or Wales; realms say United Kingdom. Vatican City counts
 // under Italy (Ty, 2026-10-13), so picking Italy includes the Sistine Chapel and the Vatican Museums.
 const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic", "Vatican City": "Italy" };
@@ -2273,13 +2273,14 @@ function shrinkCard(fromHistory = false) {
 
 let xMap = null, xNoteTimer = null;
 function renderExplore(changed = []) {
+  if (changed.includes("year") && !changed.includes("world")) changed = [...changed, "world"];
   const box = $("x-cards");
   if (xMap) { xMap.remove(); xMap = null; }
   if (thenMap) { thenMap.remove(); thenMap = null; }
   box.replaceChildren(...CARDS.map(kind => {
     const full = X.open === kind;
     const hint = X[kind] == null && X.hint?.[kind];
-    const body = hint ? hintCard(kind, hint) : { year: yearCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
+    const body = hint ? hintCard(kind, hint) : { year: yearCard, world: worldCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
     return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
       h("div", { class: "xhead" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
         h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
@@ -2329,7 +2330,7 @@ const row2 = (left, right) => h("li", {}, h("span", {}, ...[left].flat()), h("sp
 
 /* --- Year card */
 function yearCard() {
-  const y = X.year, db = S.db, I = exploreIndex(), C = X.country || null, full = X.open === "year";
+  const y = X.year, db = S.db, I = exploreIndex(), C = X.country || null;
   if (y == null) return [h("p", { class: "hint", text: "Search a year (1504, 1066, 384 BC), or click one in another card." })];
   const head = h("div", { class: "xyear" }, xYear(prevYear(y), `← ${fmtYear(prevYear(y))}`), h("h2", { text: fmtYear(y) }), xYear(nextYear(y), `${fmtYear(nextYear(y))} →`));
   const titles = db.titles.filter(t => overlaps(t.start_year, t.end_year, y, y) && db.byId[t.entity_id]);
@@ -2346,17 +2347,12 @@ function yearCard() {
   const workRow = w => row2([xWork(w), " · ", xPerson(db.byId[I.creatorOf.get(w.id)])], workYear(w) === y ? "finished" : "in progress");
   const byFame = (a, b) => fame(b) - fame(a);
   const workFame = (a, b) => !!b.image_thumb - !!a.image_thumb || fame(db.byId[I.creatorOf.get(b.id)]) - fame(db.byId[I.creatorOf.get(a.id)]);
-  const regionOf = r => db.regionOf[r] || "Other";
-  const regionRows = realms => REGIONS.flatMap(g => {
-    const rs = realms.filter(r => regionOf(r) === g);
-    return rs.length ? [h("li", { class: "xregion", text: g }), ...rulersRows(rs)] : [];
-  });
   const alive = db.people.filter(p => aliveIn(p, y)).sort(byFame);
   const personChip = p => h("span", { class: "xchip" }, xPerson(p), ageIn(p, y) != null ? h("span", { class: "yrs", text: ` ${ageIn(p, y)}` }) : null);
   const out = [head];
   if (C) {
     const here = db.placeById[X.place], herePl = here && placeCountry(here) === C ? here : null;
-    const home = realmsAll.filter(r => realmIn(r, C, y) && realmFits(r, herePl)), away = realmsAll.filter(r => !home.includes(r));
+    const home = realmsAll.filter(r => realmIn(r, C, y) && realmFits(r, herePl));
     // Near the Place card's place first: that year's events within 50 km, works made there, people recorded there.
     if (hasPoint(here)) {
       const nearEv = evs.filter(e => eventNear(e, here)).sort(evOrder);
@@ -2377,18 +2373,13 @@ function yearCard() {
       xSec("What happened", xList("year", hereEv, 6, evRow, "No events recorded here this year.")),
       xSec("Works made", xList("year", hereWorks, 4, workRow)),
       xSec("Artists, writers and thinkers at work", xChips("year", makers, 8, personChip))));
-    const awayEv = evs.filter(e => !inCountryEvent(e, C) && (e.prominence ?? 3) >= 4).sort(evOrder);
-    out.push(xSec("Elsewhere in the world",
-      xList("year", awayEv, 3, evRow),
-      full ? h("ul", { class: "xrows" }, ...regionRows(away)) : xList("year", away, 5, r => rulersRows([r])[0])));
   } else {
-    out.push(xSec("Who ruled", full ? h("ul", { class: "xrows" }, ...regionRows(realmsAll)) : xList("year", realmsAll, 6, r => rulersRows([r])[0], `No rulers recorded for ${fmtYear(y)}.`)),
-      xSec("What happened", xList("year", evs.sort(evOrder), 6, evRow, "No events recorded this year.")),
+    // Without a country the Year card keeps what happened; who ruled where is on the World card.
+    out.push(xSec("What happened", xList("year", evs.sort(evOrder), 6, evRow, "No events recorded this year.")),
       xSec("Works made", xList("year", works.sort(workFame), 4, workRow)),
-      h("p", { class: "hint", text: "Pick a country above to see it first." }));
+      h("p", { class: "hint", text: "Pick a country above to see it first; the World card shows who ruled everywhere." }));
   }
   out.push(xSec("Influential people alive", xChips("year", alive, 10, personChip)));
-  if (full) out.push(yearMap(y, y, realmsAll, r => setCountry(realmCountry(r))));
   out.push(h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: () => openYear(y, y), text: "Open the Year view" }), " · ",
     h("button", { type: "button", class: "plink", onclick: toTimeline(() => run(rangeQuery(y - 10, y + 10), { pushTrail: true })), text: "See it on the timeline" })));
   return out;
@@ -2399,6 +2390,45 @@ function hintCard(kind, hint) {
   const go = l => l.kind === "event" ? xGoEvent(l.id) : xGo(l.kind, l.id);
   return [h("p", { class: "xempty", text: hint.text }),
     hint.links.length ? h("ul", { class: "xrows" }, ...hint.links.map(l => h("li", {}, h("span", {}, h("button", { type: "button", class: "plink", onclick: () => go(l), text: l.label }))))) : null];
+}
+
+/* --- World card: the world in the Year card's year, beside it */
+// The border map for the year, who led each realm (grouped by region; outside the chosen country when there is one),
+// and the year's big events elsewhere. A realm on the map or in the list puts its country first.
+function worldCard() {
+  const y = X.year, db = S.db, C = X.country || null, full = X.open === "world";
+  if (y == null) return [h("p", { class: "hint", text: "Search a year, and the world in that year shows here: its borders and who led each realm." })];
+  const titles = db.titles.filter(t => overlaps(t.start_year, t.end_year, y, y) && db.byId[t.entity_id]);
+  const realmCountry = r => normCountry(db.countryOf[r]);
+  const realmsAll = [...new Set(titles.map(t => t.realm))];
+  const here = db.placeById[X.place], herePl = C && here && placeCountry(here) === C ? here : null;
+  const away = realmsAll.filter(r => !C || !(realmIn(r, C, y) && realmFits(r, herePl)));
+  const regionOf = r => db.regionOf[r] || "Other";
+  away.sort((a, b) => REGIONS.indexOf(regionOf(a)) - REGIONS.indexOf(regionOf(b)) || a.localeCompare(b));
+  // A realm's leaders that year: its sovereign or president first.
+  const leaderRow = (r, withRegion) => {
+    const ts = titles.filter(t => t.realm === r).sort((a, b) => !HEAD_OF_STATE(a.title) - !HEAD_OF_STATE(b.title) || byYear(a.start_year, b.start_year));
+    const realmBtn = xBtn(r, `Put ${realmCountry(r) || r} first`, () => realmCountry(r) && setCountry(realmCountry(r)));
+    realmBtn.classList.add("xrealm");
+    return h("li", {}, h("span", {}, realmBtn, " ",
+        ...joinNodes(ts.map(t => xPerson(db.byId[t.entity_id], t.disputed ? " (disputed)" : "")))),
+      h("span", { class: "yrs", text: withRegion ? regionOf(r) : realmCountry(r) || "" }));
+  };
+  const byRegion = REGIONS.flatMap(g => {
+    const rs = away.filter(r => regionOf(r) === g);
+    return rs.length ? [h("li", { class: "xregion", text: g }), ...rs.map(r => leaderRow(r, false))] : [];
+  });
+  const big = db.events.filter(e => !e.film && overlaps(e.start_year, e.end_year ?? e.start_year, y, y) && (e.prominence ?? 3) >= 4 && (!C || !inCountryEvent(e, C))).sort(evOrder);
+  const evRow = e => row2([xEvent(e), db.placeById[e.place_id] ? [" · ", xPlace(db.placeById[e.place_id])] : null], [...eventCountries(e)][0] || null);
+  return [
+    h("h2", { text: `The world in ${fmtYear(y)}` }),
+    C ? h("div", { class: "xsub", text: `Outside ${C}` }) : null,
+    yearMap(y, y, realmsAll, r => realmCountry(r) && setCountry(realmCountry(r))),
+    xSec(C ? "Who led elsewhere" : "Who led", full ? h("ul", { class: "xrows" }, ...byRegion)
+      : xList("world", away, 8, r => leaderRow(r, true), `No rulers recorded for ${fmtYear(y)}${C ? ` outside ${C}` : ""}.`)),
+    big.length ? xSec("Big events elsewhere", xList("world", big, 4, evRow)) : null,
+    h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: () => openYear(y, y), text: "Open the Year view" })),
+  ];
 }
 
 /* --- Event card */
