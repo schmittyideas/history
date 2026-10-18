@@ -1,0 +1,119 @@
+# The Papacy, antipopes 1328-1449 (part 2 of the 999-1503 batch): Nicholas V, the Avignon and Pisan claimants of the
+# Western Schism (Clement VII, Benedict XIII, Alexander V, John XXIII), their successors (Clement VIII and the two
+# Benedict XIVs), and Felix V, entered under his own name, Amadeus VIII of Savoy, with his Savoy titles.
+# Conventions and checks as part 1 (inbox/2026-10-18-popes-999-1503.yaml): title "Pope", `disputed: true`, keyed
+# <name>-antipope, display name "(antipope)"; each claimant's own article for dates and note, the Antipope table for
+# pontificates, Wikidata for sitelinks and coordinates.
+# Stated honestly:
+#  - Discrepancies recorded, the record using the claimant's own article: Nicholas V's end (25 July 1330; the table
+#    12 August), Alexander V's start (26 June 1409; the table 25th), Benedict XIII's birth (1342; Wikidata 1328) and
+#    Clement VIII's death (1445/46; Wikidata 1447).
+#  - Benedict XIV is two men in one article, Bernard Garnier and Jean Carrier, entered separately with year-only dates.
+#  - Nicholas V's birthplace, Corvaro, has no coordinates on Wikidata; Clement VII's, Benedict XIII's and John XXIII's
+#    birthplaces are not given in the table and are left out.
+batch:
+  title: "The Papacy: antipopes 1328-1449"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-nicholas-v-antipope, title: "Antipope Nicholas V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Nicholas_V"}
+  - {key: wp-clement-vii-antipope, title: "Antipope Clement VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Clement_VII"}
+  - {key: wp-benedict-xiii-antipope, title: "Antipope Benedict XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Benedict_XIII"}
+  - {key: wd-benedict-xiii-antipope, title: "Antipope Benedict XIII (Wikidata)", url: "https://www.wikidata.org/wiki/Q310371"}
+  - {key: wp-alexander-v-antipope, title: "Antipope Alexander V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Alexander_V"}
+  - {key: wp-john-xxiii-antipope, title: "Antipope John XXIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_John_XXIII"}
+  - {key: wp-clement-viii-antipope, title: "Antipope Clement VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Clement_VIII"}
+  - {key: wd-clement-viii-antipope, title: "Antipope Clement VIII (Wikidata)", url: "https://www.wikidata.org/wiki/Q348629"}
+  - {key: wp-benedict-xiv-antipope-garnier, title: "Antipope Benedict XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Benedict_XIV"}
+  - {key: wp-benedict-xiv-antipope-carrier, title: "Antipope Benedict XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Benedict_XIV"}
+  - {key: wp-amadeus-viii-of-savoy, title: "Antipope Felix V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Felix_V"}
+  - {key: wp-crete, title: "Crete (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crete"}
+  - {key: wp-teruel, title: "Teruel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Teruel"}
+  - {key: wp-chambery, title: "Chambéry (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chamb%C3%A9ry"}
+
+people:
+  - {key: nicholas-v-antipope, name: "Nicholas V (antipope)", type: Clergy, roles: [antipope], born: 1258, born_estimated: true, died: 1333-10-16, realm: Papacy, prominence: 1, sitelinks: 38, sitelinks_on: 2026-10-18,
+     note: "Pietro Rainalducci of Corvaro, a Franciscan preacher, set up by the excommunicated Louis the Bavarian against John XXII in Avignon (1328); the last antipope made by an emperor.",
+     sources: [wp-nicholas-v-antipope]}
+  - {key: clement-vii-antipope, name: "Clement VII (antipope)", type: Clergy, roles: [antipope], born: 1342, died: 1394-09-16, realm: Papacy, prominence: 3, sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "Robert of Geneva, son of Amadeus III of Geneva, Archbishop of Cambrai; as legate he is said to have authorised the massacre at Cesena (1377). The cardinals who rejected Urban VI elected him in 1378: the first Avignon antipope, whose election began the Western Schism.",
+     sources: [wp-clement-vii-antipope]}
+  - {key: benedict-xiii-antipope, name: "Benedict XIII (antipope)", type: Clergy, roles: [antipope], born: 1342, died: 1423-05-23, realm: Papacy, prominence: 3, sitelinks: 45, sitelinks_on: 2026-10-18,
+     note: "Pedro de Luna, 'Papa Luna', an Aragonese noble: the Avignon claimant of the Western Schism from 1394, who never gave up his claim and died in 1423.",
+     sources: [wp-benedict-xiii-antipope]}
+  - {key: alexander-v-antipope, name: "Alexander V (antipope)", type: Clergy, roles: [antipope], born: 1339, born_estimated: true, died: 1410-05-03, realm: Papacy, prominence: 2, sitelinks: 48, sitelinks_on: 2026-10-18,
+     note: "Peter of Candia (Petros Philarges) of Crete, elected by the Council of Pisa against both Gregory XII and Benedict XIII; reigned less than a year. Alexander VI later took his number.",
+     sources: [wp-alexander-v-antipope]}
+  - {key: john-xxiii-antipope, name: "John XXIII (antipope)", type: Clergy, roles: [antipope], died: 1419, realm: Papacy, prominence: 3, sitelinks: 53, sitelinks_on: 2026-10-18,
+     note: "Baldassarre Cossa, the Pisan claimant of the Western Schism (1410-1415), deposed by the Council of Constance; long counted as a lawful pope until the schism was reinterpreted in 1958. Died November 1419.",
+     sources: [wp-john-xxiii-antipope]}
+  - {key: clement-viii-antipope, name: "Clement VIII (antipope)", type: Clergy, roles: [antipope], born: 1369, born_estimated: true, died: 1446, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "Gil Sánchez Muñoz of Teruel, successor of Benedict XIII in the Avignon obedience (1423-1429); abdicated after Alfonso V of Aragon made terms with Martin V, and became Bishop of Mallorca. Died 1445 or 1446.",
+     sources: [wp-clement-viii-antipope]}
+  - {key: benedict-xiv-antipope-garnier, name: "Benedict XIV (antipope, Bernard Garnier)", type: Clergy, roles: [antipope], died: 1429, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 9, sitelinks_on: 2026-10-18,
+     note: "Bernard Garnier, the first of two minor antipopes who claimed to succeed Benedict XIII; died c. 1429.",
+     sources: [wp-benedict-xiv-antipope-garnier]}
+  - {key: benedict-xiv-antipope-carrier, name: "Benedict XIV (antipope, Jean Carrier)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 9, sitelinks_on: 2026-10-18,
+     note: "Jean Carrier, the second Benedict XIV, claimant from c. 1430; left office by 1437, by death or resignation.",
+     sources: [wp-benedict-xiv-antipope-carrier]}
+  - {key: amadeus-viii-of-savoy, name: "Amadeus VIII of Savoy", type: Nobility, roles: [antipope], born: 1383-09-04, died: 1451-01-07, realm: Savoy, prominence: 3, sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "'The Peaceful': Count of Savoy from 1391 and its first duke from 1416, a reforming ruler. Elected by the Council of Basel as Felix V (1439-1449) against Eugene IV and Nicholas V, the last antipope with a real following.",
+     sources: [wp-amadeus-viii-of-savoy]}
+
+titles:
+  - {person: nicholas-v-antipope, title: Pope, realm: Papacy, from: 1328-05-12, to: 1330-07-25, disputed: true, sources: [wp-nicholas-v-antipope, wp-antipope], note: "Antipope, in opposition to John XXII."}
+  - {person: clement-vii-antipope, title: Pope, realm: Papacy, from: 1378-09-20, to: 1394-09-16, disputed: true, sources: [wp-clement-vii-antipope, wp-antipope], note: "Antipope, in opposition to Urban VI."}
+  - {person: benedict-xiii-antipope, title: Pope, realm: Papacy, from: 1394-09-28, to: 1423-05-23, disputed: true, sources: [wp-benedict-xiii-antipope, wp-antipope], note: "Antipope (Avignon), against Boniface IX, Innocent VII, Gregory XII and Martin V."}
+  - {person: alexander-v-antipope, title: Pope, realm: Papacy, from: 1409-06-26, to: 1410-05-03, disputed: true, sources: [wp-alexander-v-antipope, wp-antipope], note: "Antipope (Pisa), against Gregory XII and Benedict XIII."}
+  - {person: john-xxiii-antipope, title: Pope, realm: Papacy, from: 1410-05-25, to: 1415-05-29, disputed: true, sources: [wp-john-xxiii-antipope, wp-antipope], note: "Antipope (Pisa), against Gregory XII and Benedict XIII; deposed at Constance."}
+  - {person: clement-viii-antipope, title: Pope, realm: Papacy, from: 1423-06-10, to: 1429-07-26, disputed: true, sources: [wp-clement-viii-antipope, wp-antipope], note: "Antipope, in opposition to Martin V."}
+  - {person: benedict-xiv-antipope-garnier, title: Pope, realm: Papacy, from: 1424, to: 1429, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-benedict-xiv-antipope-garnier, wp-antipope], note: "Antipope, claiming to succeed Benedict XIII."}
+  - {person: benedict-xiv-antipope-carrier, title: Pope, realm: Papacy, from: 1430, to: 1437, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-benedict-xiv-antipope-carrier, wp-antipope], note: "Antipope, claiming to succeed Benedict XIII."}
+  - {person: amadeus-viii-of-savoy, title: Pope, realm: Papacy, from: 1439-11-05, to: 1449-04-07, disputed: true, sources: [wp-amadeus-viii-of-savoy, wp-antipope], note: "Antipope as Felix V, elected by the Council of Basel, against Eugene IV and Nicholas V."}
+  - {person: amadeus-viii-of-savoy, title: Count of Savoy, realm: Savoy, from: 1391, to: 1416, sources: [wp-amadeus-viii-of-savoy]}
+  - {person: amadeus-viii-of-savoy, title: Duke of Savoy, realm: Savoy, from: 1416, to: 1440, sources: [wp-amadeus-viii-of-savoy]}
+
+places:
+  - {key: crete, name: Crete, kind: island, country: Greece, lat: 35.3097, lng: 24.8933, sources: [wp-crete]}
+  - {key: teruel, name: Teruel, kind: city, region: Aragon, country: Spain, lat: 40.3436, lng: -1.1072, sources: [wp-teruel]}
+  - {key: chambery, name: Chambéry, kind: city, region: Savoie, country: France, lat: 45.5664, lng: 5.9208, sources: [wp-chambery]}
+
+moments:
+  - {person: alexander-v-antipope, role: born, place: crete, year: 1339}
+  - {person: clement-viii-antipope, role: born, place: teruel, year: 1369}
+  - {person: amadeus-viii-of-savoy, role: born, place: chambery, year: 1383}
+
+discrepancies:
+  - key: nicholas-v-antipope-end
+    question: "When did Nicholas V (antipope)'s claim end?"
+    about: [{person: nicholas-v-antipope}]
+    field: end
+    claims:
+      - {value: "1330-07-25", sources: [wp-nicholas-v-antipope]}
+      - {value: "1330-08-12", sources: [wp-antipope]}
+    note: "The record uses his own article."
+  - key: benedict-xiii-antipope-born
+    question: "When was Benedict XIII (antipope) born?"
+    about: [{person: benedict-xiii-antipope}]
+    field: born
+    claims:
+      - {value: "1342", sources: [wp-benedict-xiii-antipope]}
+      - {value: "1328-11-25", sources: [wd-benedict-xiii-antipope]}
+    note: "The record uses his own article."
+  - key: alexander-v-antipope-start
+    question: "When did Alexander V (antipope)'s pontificate begin?"
+    about: [{person: alexander-v-antipope}]
+    field: start
+    claims:
+      - {value: "1409-06-26", sources: [wp-alexander-v-antipope]}
+      - {value: "1409-06-25", sources: [wp-antipope]}
+    note: "The record uses his own article."
+  - key: clement-viii-antipope-died
+    question: "When did Clement VIII (antipope) die?"
+    about: [{person: clement-viii-antipope}]
+    field: died
+    claims:
+      - {value: "1446", sources: [wp-clement-viii-antipope]}
+      - {value: "1447-12-28", sources: [wd-clement-viii-antipope]}
+    note: "The record uses his own article."
