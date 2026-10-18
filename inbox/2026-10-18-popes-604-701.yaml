@@ -1,0 +1,257 @@
+# The Papacy, 604-701 (the Byzantine Papacy and the Monothelite controversy): the 20 popes of the century not yet here,
+# from Sabinian to Sergius I, the antipopes Theodore and Paschal (687), the consecration of the Pantheon as a church
+# (609) and the Third Council of Constantinople (680-681).
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml). Birth and death dates from each
+# article's lead; Wikidata's differing full dates recorded as discrepancies (often a few days apart), the records using
+# the articles.
+# Also: Samnium, added by the previous batch as Felix IV's birthplace, is a region, not a town; its kind is corrected.
+# Stated honestly: birthplaces that are regions (Marsica, Thrace), "near" a town (Martin I, near Todi) or unidentified
+# (Aydonum) are left in the notes.
+batch:
+  title: "The Papacy, 604-701"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-sabinian, title: "Pope Sabinian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sabinian"}
+  - {key: wp-boniface-iii, title: "Pope Boniface III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_III"}
+  - {key: wp-boniface-iv, title: "Pope Boniface IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_IV"}
+  - {key: wp-adeodatus-i, title: "Pope Adeodatus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adeodatus_I"}
+  - {key: wp-boniface-v, title: "Pope Boniface V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_V"}
+  - {key: wp-honorius-i, title: "Pope Honorius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Honorius_I"}
+  - {key: wp-severinus, title: "Pope Severinus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Severinus"}
+  - {key: wp-john-iv, title: "Pope John IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_IV"}
+  - {key: wd-john-iv, title: "Pope John IV (Wikidata)", url: "https://www.wikidata.org/wiki/Q199491"}
+  - {key: wp-theodore-i, title: "Pope Theodore I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Theodore_I"}
+  - {key: wd-theodore-i, title: "Pope Theodore I (Wikidata)", url: "https://www.wikidata.org/wiki/Q104244"}
+  - {key: wp-martin-i, title: "Pope Martin I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Martin_I"}
+  - {key: wd-martin-i, title: "Pope Martin I (Wikidata)", url: "https://www.wikidata.org/wiki/Q172390"}
+  - {key: wp-eugene-i, title: "Pope Eugene I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Eugene_I"}
+  - {key: wd-eugene-i, title: "Pope Eugene I (Wikidata)", url: "https://www.wikidata.org/wiki/Q199498"}
+  - {key: wp-vitalian, title: "Pope Vitalian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Vitalian"}
+  - {key: wd-vitalian, title: "Pope Vitalian (Wikidata)", url: "https://www.wikidata.org/wiki/Q199612"}
+  - {key: wp-adeodatus-ii, title: "Pope Adeodatus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adeodatus_II"}
+  - {key: wp-donus, title: "Pope Donus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Donus"}
+  - {key: wd-donus, title: "Pope Donus (Wikidata)", url: "https://www.wikidata.org/wiki/Q103545"}
+  - {key: wp-agatho, title: "Pope Agatho (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Agatho"}
+  - {key: wp-leo-ii, title: "Pope Leo II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_II"}
+  - {key: wd-leo-ii, title: "Pope Leo II (Wikidata)", url: "https://www.wikidata.org/wiki/Q103328"}
+  - {key: wp-benedict-ii, title: "Pope Benedict II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_II"}
+  - {key: wp-john-v, title: "Pope John V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_V"}
+  - {key: wp-conon, title: "Pope Conon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Conon"}
+  - {key: wd-conon, title: "Pope Conon (Wikidata)", url: "https://www.wikidata.org/wiki/Q171537"}
+  - {key: wp-sergius-i, title: "Pope Sergius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sergius_I"}
+  - {key: wp-theodore-antipope, title: "Antipope Theodore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Theodore"}
+  - {key: wp-paschal-antipope, title: "Antipope Paschal (687) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Paschal_(687)"}
+  - {key: wp-ceprano, title: "Ceprano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ceprano"}
+  - {key: wp-segni, title: "Segni (Wikipedia)", url: "https://en.wikipedia.org/wiki/Segni"}
+  - {key: wp-antioch, title: "Antioch (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antioch"}
+  - {key: wp-blera, title: "Blera (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blera"}
+
+people:
+  - {key: sabinian, name: "Sabinian", type: Clergy, roles: [pope], died: 0606-02-22, realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "A former apocrisiarius to Constantinople, pope 604-606 under Byzantine rule.",
+     sources: [wp-sabinian]}
+  - {key: boniface-iii, name: "Boniface III", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent; pope for nine months in 607.",
+     sources: [wp-boniface-iii]}
+  - {key: boniface-iv, name: "Boniface IV", type: Clergy, roles: [pope], born: 550, died: 0615-05-08, realm: Papacy, prominence: 2, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "A Benedictine from the Marsica who ran the Lateran as a monastery; with Emperor Phocas's leave he consecrated the Pantheon as a church on 13 May 609, and conferred with Mellitus, Bishop of London (610). A saint.",
+     sources: [wp-boniface-iv]}
+  - {key: adeodatus-i, name: "Adeodatus I", type: Clergy, roles: [pope], born: 570, died: 0618-11-08, realm: Papacy, prominence: 1, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "The first priest elected pope since John II; the first lead seals (bullae) on papal documents are his. A saint.",
+     sources: [wp-adeodatus-i]}
+  - {key: boniface-v, name: "Boniface V", type: Clergy, roles: [pope], died: 0625-10-25, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "A Neapolitan who furthered the conversion of Anglo-Saxon England and decreed that churches were places of sanctuary.",
+     sources: [wp-boniface-v]}
+  - {key: honorius-i, name: "Honorius I", type: Clergy, roles: [pope], died: 0638-10-12, realm: Papacy, prominence: 2, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "Of Campania; sent Birinus to the West Saxons and urged the Irish and British to adopt the Roman Easter. Condemned as a heretic for Monothelitism by the Third Council of Constantinople (680).",
+     sources: [wp-honorius-i]}
+  - {key: severinus, name: "Severinus", type: Clergy, roles: [pope], died: 0640-08-02, realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Refused Emperor Heraclius's demand that he accept Monothelitism, which held up his recognition for eighteen months; confirmed on 28 May 640, he died two months later.",
+     sources: [wp-severinus]}
+  - {key: john-iv, name: "John IV", type: Clergy, roles: [pope], died: 0642-10-12, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Dalmatian from Zadar; condemned Monothelitism and corrected the Irish and Scots on the date of Easter.",
+     sources: [wp-john-iv]}
+  - {key: theodore-i, name: "Theodore I", type: Clergy, roles: [pope], died: 0649-05-14, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "A Greek from Jerusalem, the last pope from Palestine; his pontificate was taken up with the fight against Monothelitism.",
+     sources: [wp-theodore-i]}
+  - {key: martin-i, name: "Martin I", type: Clergy, roles: [pope], born: 590, born_estimated: true, died: 0655-09-16, realm: Papacy, prominence: 2, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Born near Todi; Theodore I's envoy to Constantinople, elected without waiting for imperial assent. For opposing Monothelitism, Constans II had him arrested and carried to Constantinople; he died in exile, the last pope venerated as a martyr.",
+     sources: [wp-martin-i]}
+  - {key: eugene-i, name: "Eugene I", type: Clergy, roles: [pope], died: 0657-06-02, realm: Papacy, prominence: 1, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "Chosen after Constans II deposed and banished Martin I over Monothelitism (654). A saint.",
+     sources: [wp-eugene-i]}
+  - {key: vitalian, name: "Vitalian", type: Clergy, roles: [pope], died: 0672-01-27, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "Sought to resolve the Monothelite dispute and was on good terms with Constans II, who visited him in Rome. A saint.",
+     sources: [wp-vitalian]}
+  - {key: adeodatus-ii, name: "Adeodatus II", type: Clergy, roles: [pope], born: 621, born_estimated: true, died: 0676-06-17, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Benedictine; spent his pontificate (672-676) restoring churches and fighting Monothelitism.",
+     sources: [wp-adeodatus-ii]}
+  - {key: donus, name: "Donus", type: Clergy, roles: [pope], died: 0678-04-11, realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Pope 676-678; little is known beyond the Liber Pontificalis.",
+     sources: [wp-donus]}
+  - {key: agatho, name: "Agatho", type: Clergy, roles: [pope], born: 577, born_estimated: true, died: 0681-01-10, realm: Papacy, prominence: 2, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "A Sicilian Greek; heard Wilfrid of York's appeal, and in his time the Sixth Ecumenical Council (Third of Constantinople, 680-681) condemned Monothelitism. A saint in East and West.",
+     sources: [wp-agatho]}
+  - {key: leo-ii, name: "Leo II", type: Clergy, roles: [pope], born: 611, born_estimated: true, died: 0683-06-28, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "A Sicilian Greek of the Byzantine Papacy, described as just and learned; confirmed the Sixth Council. A saint.",
+     sources: [wp-leo-ii]}
+  - {key: benedict-ii, name: "Benedict II", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "A Roman, pope 684-685. A saint.",
+     sources: [wp-benedict-ii]}
+  - {key: john-v, name: "John V", type: Clergy, roles: [pope], died: 0686-08-02, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "A Syrian from Antioch: the first pope of the Byzantine Papacy consecrated without prior imperial consent and the first of ten successive popes of Eastern origin.",
+     sources: [wp-john-v]}
+  - {key: conon, name: "Conon", type: Clergy, roles: [pope], died: 0687-09-21, realm: Papacy, prominence: 1, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "From Thrace; a compromise between Rome's military and clerical factions (686). Consecrated the Irish missionary Kilian and sent him to Franconia.",
+     sources: [wp-conon]}
+  - {key: sergius-i, name: "Sergius I", type: Clergy, roles: [pope], born: 650, born_estimated: true, died: 0701-09-08, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Syrian born in Palermo, elected over the rivals Theodore and Paschal (687). Refused the canons of the Quinisext Council; when Justinian II ordered his arrest, the Romans protected him. Brought the Agnus Dei into the Mass.",
+     sources: [wp-sergius-i]}
+  - {key: theodore-antipope, name: "Theodore (antipope)", type: Clergy, roles: [antipope], born: 599, born_estimated: true, realm: Papacy, prominence: 1, sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "One of the two rivals, with the archdeacon Paschal, whose deadlock after Conon's death (687) was settled by electing Sergius I.",
+     sources: [wp-theodore-antipope]}
+  - {key: paschal-antipope, name: "Paschal (antipope, 687)", type: Clergy, roles: [antipope], born: 598, born_estimated: true, died: 692, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "The archdeacon who, with Theodore, contested the papacy in 687; Sergius I was elected over both.",
+     sources: [wp-paschal-antipope]}
+
+titles:
+  - {person: sabinian, title: Pope, realm: Papacy, from: 0604-09-13, to: 0606-02-22, sources: [wp-sabinian, wp-list-of-popes]}
+  - {person: boniface-iii, title: Pope, realm: Papacy, from: 0607-02-19, to: 0607-11-12, sources: [wp-boniface-iii, wp-list-of-popes]}
+  - {person: boniface-iv, title: Pope, realm: Papacy, from: 0608-09-15, to: 0615-05-08, sources: [wp-boniface-iv, wp-list-of-popes]}
+  - {person: adeodatus-i, title: Pope, realm: Papacy, from: 0615-11-13, to: 0618-11-08, sources: [wp-adeodatus-i, wp-list-of-popes]}
+  - {person: boniface-v, title: Pope, realm: Papacy, from: 0619-12-23, to: 0625-10-25, sources: [wp-boniface-v, wp-list-of-popes]}
+  - {person: honorius-i, title: Pope, realm: Papacy, from: 0625-10-27, to: 0638-10-12, sources: [wp-honorius-i, wp-list-of-popes]}
+  - {person: severinus, title: Pope, realm: Papacy, from: 0640-05-28, to: 0640-08-02, sources: [wp-severinus, wp-list-of-popes]}
+  - {person: john-iv, title: Pope, realm: Papacy, from: 0640-12-24, to: 0642-10-12, sources: [wp-john-iv, wp-list-of-popes]}
+  - {person: theodore-i, title: Pope, realm: Papacy, from: 0642-11-24, to: 0649-05-14, sources: [wp-theodore-i, wp-list-of-popes]}
+  - {person: martin-i, title: Pope, realm: Papacy, from: 0649-07-05, to: 0654-08-10, sources: [wp-martin-i, wp-list-of-popes]}
+  - {person: eugene-i, title: Pope, realm: Papacy, from: 0654-08-10, to: 0657-06-02, sources: [wp-eugene-i, wp-list-of-popes]}
+  - {person: vitalian, title: Pope, realm: Papacy, from: 0657-07-30, to: 0672-01-27, sources: [wp-vitalian, wp-list-of-popes]}
+  - {person: adeodatus-ii, title: Pope, realm: Papacy, from: 0672-04-11, to: 0676-06-17, sources: [wp-adeodatus-ii, wp-list-of-popes]}
+  - {person: donus, title: Pope, realm: Papacy, from: 0676-11-02, to: 0678-04-11, sources: [wp-donus, wp-list-of-popes]}
+  - {person: agatho, title: Pope, realm: Papacy, from: 0678-06-27, to: 0681-01-10, sources: [wp-agatho, wp-list-of-popes]}
+  - {person: leo-ii, title: Pope, realm: Papacy, from: 0682-08-17, to: 0683-07-03, sources: [wp-leo-ii, wp-list-of-popes]}
+  - {person: benedict-ii, title: Pope, realm: Papacy, from: 0684-06-26, to: 0685-05-08, sources: [wp-benedict-ii, wp-list-of-popes]}
+  - {person: john-v, title: Pope, realm: Papacy, from: 0685-07-23, to: 0686-08-02, sources: [wp-john-v, wp-list-of-popes]}
+  - {person: conon, title: Pope, realm: Papacy, from: 0686-10-21, to: 0687-09-21, sources: [wp-conon, wp-list-of-popes]}
+  - {person: sergius-i, title: Pope, realm: Papacy, from: 0687-12-15, to: 0701-09-08, sources: [wp-sergius-i, wp-list-of-popes]}
+  - {person: theodore-antipope, title: Pope, realm: Papacy, from: 0687-06-16, to: 0687-09-21, disputed: true, sources: [wp-theodore-antipope, wp-antipope], note: "Antipope, against Conon and Sergius I."}
+  - {person: paschal-antipope, title: Pope, realm: Papacy, from: 0687-09-21, to: 0687-12-27, disputed: true, sources: [wp-paschal-antipope, wp-antipope], note: "Antipope, against Sergius I."}
+
+places:
+  - {key: ceprano, name: Ceprano, historical_name: Ceperanum, kind: town, region: Lazio, country: Italy, lat: 41.55, lng: 13.5167, sources: [wp-ceprano]}
+  - {key: segni, name: Segni, historical_name: Signia, kind: town, region: Lazio, country: Italy, lat: 41.6833, lng: 13.0167, sources: [wp-segni]}
+  - {key: antioch, name: Antioch, historical_name: Antiochia, kind: ancient city, city: Antakya, country: Turkey, lat: 36.2047, lng: 36.1817, sources: [wp-antioch]}
+  - {key: blera, name: Blera, kind: town, region: Lazio, country: Italy, lat: 42.2733, lng: 12.0325, sources: [wp-blera]}
+  - {key: samnium, kind: region}
+
+moments:
+  - {person: sabinian, role: born, place: blera}
+  - {person: boniface-iii, role: born, place: rome}
+  - {person: adeodatus-i, role: born, place: rome, year: 570}
+  - {person: boniface-v, role: born, place: naples}
+  - {person: honorius-i, role: born, place: ceprano}
+  - {person: severinus, role: born, place: rome}
+  - {person: john-iv, role: born, place: zadar}
+  - {person: theodore-i, role: born, place: jerusalem}
+  - {person: eugene-i, role: born, place: rome}
+  - {person: vitalian, role: born, place: segni}
+  - {person: adeodatus-ii, role: born, place: rome, year: 621}
+  - {person: donus, role: born, place: rome}
+  - {person: agatho, role: born, place: palermo, year: 577}
+  - {person: benedict-ii, role: born, place: rome}
+  - {person: john-v, role: born, place: antioch}
+  - {person: sergius-i, role: born, place: palermo, year: 650}
+  - {person: theodore-antipope, role: born, place: rome, year: 599}
+  - {person: paschal-antipope, role: born, place: rome, year: 598}
+
+events:
+  - key: pantheon-consecrated-609
+    name: Pantheon consecrated as a church
+    type: Consecration
+    date: 0609-05-13
+    place: pantheon-rome
+    people:
+      - {person: boniface-iv, role: consecrated it}
+    prominence: 3
+    note: "With Emperor Phocas's leave, Boniface IV turned Agrippa's temple into a church dedicated to Mary and the martyrs."
+    sources: [wp-boniface-iv]
+  - key: third-council-of-constantinople-680
+    name: Third Council of Constantinople
+    type: Council
+    year: 680
+    end_year: 681
+    place: constantinople
+    people:
+      - {person: agatho, role: pope at the time}
+    prominence: 3
+    note: "The Sixth Ecumenical Council, which condemned Monothelitism (and Pope Honorius I)."
+    sources: [wp-agatho, wp-honorius-i]
+
+discrepancies:
+  - key: john-iv-died
+    question: "When did John IV die?"
+    about: [{person: john-iv}]
+    field: died
+    claims:
+      - {value: "0642-10-12", sources: [wp-john-iv]}
+      - {value: "0642-10-15", sources: [wd-john-iv]}
+    note: "The record uses his own article."
+  - key: theodore-i-died
+    question: "When did Theodore I die?"
+    about: [{person: theodore-i}]
+    field: died
+    claims:
+      - {value: "0649-05-14", sources: [wp-theodore-i]}
+      - {value: "0649-05-17", sources: [wd-theodore-i]}
+    note: "The record uses his own article."
+  - key: martin-i-died
+    question: "When did Martin I die?"
+    about: [{person: martin-i}]
+    field: died
+    claims:
+      - {value: "0655-09-16", sources: [wp-martin-i]}
+      - {value: "0655-09-19", sources: [wd-martin-i]}
+    note: "The record uses his own article."
+  - key: eugene-i-died
+    question: "When did Eugene I die?"
+    about: [{person: eugene-i}]
+    field: died
+    claims:
+      - {value: "0657-06-02", sources: [wp-eugene-i]}
+      - {value: "0657-06-04", sources: [wd-eugene-i]}
+    note: "The record uses his own article."
+  - key: vitalian-died
+    question: "When did Vitalian die?"
+    about: [{person: vitalian}]
+    field: died
+    claims:
+      - {value: "0672-01-27", sources: [wp-vitalian]}
+      - {value: "0672-01-30", sources: [wd-vitalian]}
+    note: "The record uses his own article."
+  - key: donus-died
+    question: "When did Donus die?"
+    about: [{person: donus}]
+    field: died
+    claims:
+      - {value: "0678-04-11", sources: [wp-donus]}
+      - {value: "0678-04-14", sources: [wd-donus]}
+    note: "The record uses his own article."
+  - key: leo-ii-died
+    question: "When did Leo II die?"
+    about: [{person: leo-ii}]
+    field: died
+    claims:
+      - {value: "0683-06-28", sources: [wp-leo-ii]}
+      - {value: "0683-07-01", sources: [wd-leo-ii]}
+    note: "The record uses his own article."
+  - key: conon-died
+    question: "When did Conon die?"
+    about: [{person: conon}]
+    field: died
+    claims:
+      - {value: "0687-09-21", sources: [wp-conon]}
+      - {value: "0687-09-24", sources: [wd-conon]}
+    note: "The record uses his own article."
