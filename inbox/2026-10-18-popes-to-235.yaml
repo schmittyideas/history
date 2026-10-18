@@ -1,0 +1,153 @@
+# The Papacy, c. 30-235 (the early Roman church): the 19 popes from Saint Peter to Pontian, the first to abdicate, and
+# the earliest antipopes, Natalius (c. 199) and Hippolytus of Rome (217-235).
+# Ty's choice (2026-10-18): every pope on the official list, including those whose dates and even whose lives rest on
+# tradition, with the dates marked estimated ("c.") and a note where the article calls them traditional.
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml): each person's own English
+# Wikipedia article (2026-10-18) for dates and note, the List of popes and the Antipope table for pontificates and
+# birthplaces. Pontificate dates before 230 are the List of popes' traditional years and are all estimated.
+# Stated honestly: the earliest birthplaces are the List of popes' traditional ones (Bethsaida, Volterra, Athens,
+# Bethlehem, Aquileia, Emesa, Fundi); regional ones ("Italia", Nicopolis, the province of Africa) are left in the notes.
+batch:
+  title: "The Papacy, c. 30-235"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-saint-peter, title: "Saint Peter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saint_Peter"}
+  - {key: wp-linus, title: "Pope Linus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Linus"}
+  - {key: wp-anacletus, title: "Pope Anacletus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anacletus"}
+  - {key: wp-clement-i, title: "Clement of Rome (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clement_of_Rome"}
+  - {key: wp-evaristus, title: "Pope Evaristus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Evaristus"}
+  - {key: wp-alexander-i, title: "Pope Alexander I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Alexander_I"}
+  - {key: wp-sixtus-i, title: "Pope Sixtus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sixtus_I"}
+  - {key: wp-telesphorus, title: "Pope Telesphorus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Telesphorus"}
+  - {key: wp-hyginus, title: "Pope Hyginus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Hyginus"}
+  - {key: wp-pius-i, title: "Pope Pius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_I"}
+  - {key: wp-anicetus, title: "Pope Anicetus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anicetus"}
+  - {key: wp-soter, title: "Pope Soter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Soter"}
+  - {key: wp-eleutherius, title: "Pope Eleutherius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Eleutherius"}
+  - {key: wp-victor-i, title: "Pope Victor I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Victor_I"}
+  - {key: wp-zephyrinus, title: "Pope Zephyrinus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Zephyrinus"}
+  - {key: wp-callixtus-i, title: "Pope Callixtus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Callixtus_I"}
+  - {key: wp-urban-i, title: "Pope Urban I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Urban_I"}
+  - {key: wp-pontian, title: "Pope Pontian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pontian"}
+  - {key: wp-natalius-antipope, title: "Antipope Natalius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Natalius"}
+  - {key: wp-hippolytus-of-rome, title: "Hippolytus of Rome (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hippolytus_of_Rome"}
+  - {key: wp-volterra, title: "Volterra (Wikipedia)", url: "https://en.wikipedia.org/wiki/Volterra"}
+  - {key: wp-athens, title: "Athens (Wikipedia)", url: "https://en.wikipedia.org/wiki/Athens"}
+  - {key: wp-bethsaida, title: "Bethsaida (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bethsaida"}
+  - {key: wp-bethlehem, title: "Bethlehem (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bethlehem"}
+  - {key: wp-aquileia, title: "Aquileia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Aquileia"}
+  - {key: wp-fondi, title: "Fondi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fondi"}
+  - {key: wp-homs, title: "Homs (Wikipedia)", url: "https://en.wikipedia.org/wiki/Homs"}
+
+people:
+  - {key: saint-peter, name: "Saint Peter", type: Clergy, roles: [pope], died: 64, died_estimated: true, realm: Papacy, prominence: 5, sitelinks: 154, sitelinks_on: 2026-10-18,
+     note: "Simon, son of Jonah, a fisherman like his brother Andrew and one of the twelve apostles of Jesus, prominent in the gospels and Acts. Catholic and Orthodox tradition counts him the first bishop of Rome and of Antioch; by tradition he was crucified upside down in Rome under Nero. Dates traditional.",
+     sources: [wp-saint-peter]}
+  - {key: linus, name: "Linus", type: Clergy, roles: [pope], realm: Papacy, prominence: 2, sitelinks: 98, sitelinks_on: 2026-10-18,
+     note: "Traditionally the second bishop of Rome, after Peter; Irenaeus identified him with the Linus of the Second Epistle to Timothy. Dates traditional (c. 64-76, or 68-80).",
+     sources: [wp-linus]}
+  - {key: anacletus, name: "Anacletus", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 92, sitelinks_on: 2026-10-18,
+     note: "Cletus, traditionally the third bishop of Rome and the first Greek; credited with ordaining priests and setting up about 25 parishes in Rome. Dates uncertain.",
+     sources: [wp-anacletus]}
+  - {key: clement-i, name: "Clement I", type: Clergy, roles: [pope], died: 99, realm: Papacy, prominence: 3, sitelinks: 110, sitelinks_on: 2026-10-18,
+     note: "Clement of Rome, the first of the Apostolic Fathers, said by Tertullian to have been ordained by Peter; author of the letter known as First Clement.",
+     sources: [wp-clement-i]}
+  - {key: evaristus, name: "Evaristus", type: Clergy, roles: [pope], died: 107, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 87, sitelinks_on: 2026-10-18,
+     note: "A Hellenised Jew, traditionally born in Bethlehem; pope c. 99-107, when John the Apostle probably died, ending the Apostolic Age.",
+     sources: [wp-evaristus]}
+  - {key: alexander-i, name: "Alexander I", type: Clergy, roles: [pope], died: 115, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 87, sitelinks_on: 2026-10-18,
+     note: "Traditionally the fifth pope after Peter, perhaps martyred under Trajan or Hadrian; credited with the custom of blessing houses with holy water.",
+     sources: [wp-alexander-i]}
+  - {key: sixtus-i, name: "Sixtus I", type: Clergy, roles: [pope], died: 126, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 86, sitelinks_on: 2026-10-18,
+     note: "A Roman of Greek descent, pope c. 117-126; feast day 6 April.",
+     sources: [wp-sixtus-i]}
+  - {key: telesphorus, name: "Telesphorus", type: Clergy, roles: [pope], died: 137, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent, pope c. 126-137 under Hadrian and Antoninus Pius; traditionally a martyr.",
+     sources: [wp-telesphorus]}
+  - {key: hyginus, name: "Hyginus", type: Clergy, roles: [pope], died: 142, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "A Greek, pope c. 138-142; tradition credits him with defining the grades of the clergy and instituting godparents at baptism.",
+     sources: [wp-hyginus]}
+  - {key: pius-i, name: "Pius I", type: Clergy, roles: [pope], died: 154, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "Brother of the freedman Hermas; pope c. 140-154, opposed the Valentinians and Gnostics. Traditionally martyred.",
+     sources: [wp-pius-i]}
+  - {key: anicetus, name: "Anicetus", type: Clergy, roles: [pope], died: 168, realm: Papacy, prominence: 1, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "From Emesa, the first Syrian pope (c. 157-168); opposed Gnosticism and Marcionism and received Polycarp of Smyrna in Rome over the Easter controversy.",
+     sources: [wp-anicetus]}
+  - {key: soter, name: "Soter", type: Clergy, roles: [pope], died: 174, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "From Fundi (Fondi) in Lazio, pope c. 167-174; held that marriage was valid only when blessed by a priest. Traditionally martyred.",
+     sources: [wp-soter]}
+  - {key: eleutherius, name: "Eleutherius", type: Clergy, roles: [pope], died: 0189-05-24, realm: Papacy, prominence: 1, sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "A Greek from Nicopolis, pope c. 174-189; a legend has him receive a letter from 'Lucius, King of Britain'.",
+     sources: [wp-eleutherius]}
+  - {key: victor-i, name: "Victor I", type: Clergy, roles: [pope], died: 199, realm: Papacy, prominence: 2, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "A Berber from the Roman province of Africa, the first pope born in Africa (c. 189-199). Feast day 28 July.",
+     sources: [wp-victor-i]}
+  - {key: zephyrinus, name: "Zephyrinus", type: Clergy, roles: [pope], died: 0217-12-20, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "A Roman who fought the heresies of his day and defended the divinity of Christ; succeeded by his adviser Callixtus I (217).",
+     sources: [wp-zephyrinus]}
+  - {key: callixtus-i, name: "Callixtus I", type: Clergy, roles: [pope], died: 222, died_estimated: true, realm: Papacy, prominence: 2, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent, pope c. 218-222 under Elagabalus and Severus Alexander; readmitted repentant sinners to the Church, which drew Hippolytus's opposition. Martyred.",
+     sources: [wp-callixtus-i]}
+  - {key: urban-i, name: "Urban I", type: Clergy, roles: [pope], died: 230, realm: Papacy, prominence: 1, sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "A Roman, successor of the martyred Callixtus I; long thought a martyr, he probably died of natural causes.",
+     sources: [wp-urban-i]}
+  - {key: pontian, name: "Pontian", type: Clergy, roles: [pope], died: 235, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Arrested in Maximinus Thrax's persecution and sent with Hippolytus to the mines of Sardinia, he resigned on 28 September 235 so a successor could be chosen: the first pope to abdicate. He and Hippolytus may have been reconciled before they died.",
+     sources: [wp-pontian]}
+  - {key: natalius-antipope, name: "Natalius (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 12, sitelinks_on: 2026-10-18,
+     note: "A priest who took the bishopric of the Adoptionists in Rome; he soon repented and tearfully begged Zephyrinus to readmit him. Known only from Eusebius.",
+     sources: [wp-natalius-antipope]}
+  - {key: hippolytus-of-rome, name: "Hippolytus of Rome", type: Clergy, roles: [antipope], born: 170, born_estimated: true, died: 235, died_estimated: true, realm: Papacy, prominence: 3, sitelinks: 62, sitelinks_on: 2026-10-18,
+     note: "One of the most important Christian thinkers of the 2nd and 3rd centuries, who opposed Callixtus I and led a rival community against him and his successors; exiled with Pontian to Sardinia (235), he is venerated as a saint.",
+     sources: [wp-hippolytus-of-rome]}
+
+titles:
+  - {person: saint-peter, title: Pope, realm: Papacy, from: 30, to: 64, from_estimated: true, to_estimated: true, sources: [wp-saint-peter, wp-list-of-popes]}
+  - {person: linus, title: Pope, realm: Papacy, from: 64, to: 76, from_estimated: true, to_estimated: true, sources: [wp-linus, wp-list-of-popes]}
+  - {person: anacletus, title: Pope, realm: Papacy, from: 76, to: 88, from_estimated: true, to_estimated: true, sources: [wp-anacletus, wp-list-of-popes]}
+  - {person: clement-i, title: Pope, realm: Papacy, from: 88, to: 97, from_estimated: true, to_estimated: true, sources: [wp-clement-i, wp-list-of-popes]}
+  - {person: evaristus, title: Pope, realm: Papacy, from: 97, to: 105, from_estimated: true, to_estimated: true, sources: [wp-evaristus, wp-list-of-popes]}
+  - {person: alexander-i, title: Pope, realm: Papacy, from: 105, to: 115, from_estimated: true, to_estimated: true, sources: [wp-alexander-i, wp-list-of-popes]}
+  - {person: sixtus-i, title: Pope, realm: Papacy, from: 115, to: 125, from_estimated: true, to_estimated: true, sources: [wp-sixtus-i, wp-list-of-popes]}
+  - {person: telesphorus, title: Pope, realm: Papacy, from: 125, to: 136, from_estimated: true, to_estimated: true, sources: [wp-telesphorus, wp-list-of-popes]}
+  - {person: hyginus, title: Pope, realm: Papacy, from: 136, to: 140, from_estimated: true, to_estimated: true, sources: [wp-hyginus, wp-list-of-popes]}
+  - {person: pius-i, title: Pope, realm: Papacy, from: 140, to: 154, from_estimated: true, to_estimated: true, sources: [wp-pius-i, wp-list-of-popes]}
+  - {person: anicetus, title: Pope, realm: Papacy, from: 155, to: 166, from_estimated: true, to_estimated: true, sources: [wp-anicetus, wp-list-of-popes]}
+  - {person: soter, title: Pope, realm: Papacy, from: 166, to: 174, from_estimated: true, to_estimated: true, sources: [wp-soter, wp-list-of-popes]}
+  - {person: eleutherius, title: Pope, realm: Papacy, from: 174, to: 189, from_estimated: true, to_estimated: true, sources: [wp-eleutherius, wp-list-of-popes]}
+  - {person: victor-i, title: Pope, realm: Papacy, from: 189, to: 198, from_estimated: true, to_estimated: true, sources: [wp-victor-i, wp-list-of-popes]}
+  - {person: zephyrinus, title: Pope, realm: Papacy, from: 198, to: 0217-12-20, from_estimated: true, sources: [wp-zephyrinus, wp-list-of-popes]}
+  - {person: callixtus-i, title: Pope, realm: Papacy, from: 218, to: 0222-10-14, from_estimated: true, sources: [wp-callixtus-i, wp-list-of-popes]}
+  - {person: urban-i, title: Pope, realm: Papacy, from: 222, to: 0230-05-19, from_estimated: true, sources: [wp-urban-i, wp-list-of-popes]}
+  - {person: pontian, title: Pope, realm: Papacy, from: 0230-07-21, to: 0235-09-28, sources: [wp-pontian, wp-list-of-popes], note: "Abdicated on 28 September 235 in exile on Sardinia."}
+  - {person: natalius-antipope, title: Pope, realm: Papacy, from: 199, to: 200, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-natalius-antipope, wp-antipope], note: "Antipope (Adoptionist), against Zephyrinus; later reconciled."}
+  - {person: hippolytus-of-rome, title: Pope, realm: Papacy, from: 0217-12-20, to: 0235-09-28, disputed: true, sources: [wp-hippolytus-of-rome, wp-antipope], note: "Antipope, against Callixtus I, Urban I and Pontian; reconciled with Pontian."}
+
+places:
+  - {key: volterra, name: Volterra, historical_name: Volaterrae, kind: town, region: Tuscany, country: Italy, lat: 43.4, lng: 10.8667, sources: [wp-volterra]}
+  - {key: athens, name: Athens, historical_name: Athenae, kind: city, country: Greece, lat: 37.9842, lng: 23.7281, sources: [wp-athens]}
+  - {key: bethsaida, name: Bethsaida, kind: ancient town, country: Israel, lat: 32.91, lng: 35.6305, sources: [wp-bethsaida]}
+  - {key: bethlehem, name: Bethlehem, kind: city, country: Palestine, lat: 31.7044, lng: 35.2061, sources: [wp-bethlehem]}
+  - {key: aquileia, name: Aquileia, kind: town, region: Friuli-Venezia Giulia, country: Italy, lat: 45.7667, lng: 13.3667, sources: [wp-aquileia]}
+  - {key: fondi, name: Fondi, historical_name: Fundi, kind: town, region: Lazio, country: Italy, lat: 41.35, lng: 13.4167, sources: [wp-fondi]}
+  - {key: homs, name: Homs, historical_name: Emesa, kind: city, country: Syria, lat: 34.7333, lng: 36.7167, sources: [wp-homs]}
+
+moments:
+  - {person: saint-peter, role: born, place: bethsaida}
+  - {person: linus, role: born, place: volterra}
+  - {person: anacletus, role: born, place: athens}
+  - {person: clement-i, role: born, place: rome}
+  - {person: evaristus, role: born, place: bethlehem}
+  - {person: alexander-i, role: born, place: rome}
+  - {person: hyginus, role: born, place: athens}
+  - {person: pius-i, role: born, place: aquileia}
+  - {person: anicetus, role: born, place: homs}
+  - {person: soter, role: born, place: fondi}
+  - {person: zephyrinus, role: born, place: rome}
+  - {person: callixtus-i, role: born, place: rome}
+  - {person: urban-i, role: born, place: rome}
+  - {person: pontian, role: born, place: rome}
+  - {person: natalius-antipope, role: born, place: rome}
+  - {person: hippolytus-of-rome, role: born, place: rome, year: 170}
