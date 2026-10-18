@@ -153,7 +153,7 @@ Source: Ty, 2026-10-10.
 #### [P3] Explore: rearrange the cards
 `type: enhancement` · `area: site` · `status: done` · `issue: #243`
 
-Move the Explore cards into your own order: drag a card by its header on a computer, or use the ← → buttons in its header on a phone or keyboard. The order is kept per browser; a card added later joins the end. Done 2026-10-18 (#244).
+Move the Explore cards into your own order: drag a card by its header on a computer, or use the ← → buttons in its header on a phone or keyboard. The order is kept per browser; a card added later joins the end. Done 2026-10-18 (#244). Follow-up the same day: dragging now uses pointer events (it hadn't worked for Ty; now mouse, pen and touch all work), and the cards pack up and to the left with no gaps under short ones.
 Source: Ty, 2026-10-18.
 
 #### [P2] US Presidents

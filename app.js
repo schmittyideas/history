@@ -2346,6 +2346,7 @@ function renderExplore(changed = []) {
   const box = $("x-cards");
   if (xMap) { xMap.remove(); xMap = null; }
   if (thenMap) { thenMap.remove(); thenMap = null; }
+  cardSizer.disconnect();
   box.replaceChildren(...cardOrder().map(kind => {
     const full = X.open === kind;
     const hint = X[kind] == null && X.hint?.[kind];
@@ -2353,13 +2354,15 @@ function renderExplore(changed = []) {
     const move = (d, sym, where) => h("button", { type: "button", class: "xmove", "data-d": d, onclick: () => moveCard(kind, d),
       title: `Move the ${CARD_LABEL[kind]} card ${where}`, "aria-label": `Move the ${CARD_LABEL[kind]} card ${where}`, text: sym });
     return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "data-kind": kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
-      h("div", { class: "xhead" + (full ? "" : " grab"), title: full ? null : "Drag to move this card" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
+      h("div", { class: "xhead" + (full ? "" : " grab"), title: full ? null : "Drag to move this card" },
+        h("span", { class: "xkind" }, full ? null : h("span", { class: "xgrip", "aria-hidden": "true", text: "⠿" }), CARD_LABEL[kind]),
         h("span", { class: "xtools" }, ...(full ? [] : [move(-1, "←", "earlier"), move(1, "→", "later")]),
           h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
             title: full ? "Back to the cards (Esc)" : `Fill the screen with the ${CARD_LABEL[kind]} card`, text: full ? "Shrink ✕" : "Expand ⤢" }))),
       ...body);
   }));
   markMoveEnds();
+  box.querySelectorAll(".xcard").forEach(c => { sizeCard(c); cardSizer.observe(c); });
   document.body.classList.toggle("x-full", !!X.open);
   if (S.viewMode === "explore") {
     placeMap();
@@ -2408,47 +2411,57 @@ function markMoveEnds() {
   const order = cardOrder();
   order.forEach((k, i) => $("x-" + k)?.querySelectorAll(".xmove").forEach(b => { b.disabled = b.dataset.d < 0 ? i === 0 : i === order.length - 1; }));
 }
-// Dragging, on a computer: a card is draggable only while the pointer is down on its header, so text in the
-// card can still be selected and the maps can still be panned. Dropping on another card puts it before or after
-// that card, by which half of it the pointer is over. Phones use the arrow buttons.
+// Cards differ in height. The grid is cut into 2px rows and each card spans as many as it needs (plus the 14px gap),
+// so the next card moves up into the space under a short one: cards fill up and to the left, still in order.
+// Sized once when drawn, then again whenever a card changes height (a picture loads, a list opens).
+const sizeCard = c => { const ht = c.getBoundingClientRect().height; if (ht) c.style.gridRowEnd = `span ${Math.ceil((ht + 14) / 2)}`; };
+const cardSizer = new ResizeObserver(es => es.forEach(e => sizeCard(e.target)));
+// Dragging, with pointer events so a mouse, a pen and a finger all work: the header is the handle (on a touch
+// screen, its name and grip, so the rest of the header still scrolls the page). The card follows the pointer;
+// letting go over another card puts it before or after that card, by which half of it the pointer is over.
 function wireCardDrag() {
   const box = $("x-cards");
-  let dragged = null;
+  let drag = null;
   const clear = () => box.querySelectorAll(".drop-before, .drop-after").forEach(c => c.classList.remove("drop-before", "drop-after"));
-  // Which side of the target: in a grid of two columns, side by side cards split left and right, stacked ones top and bottom.
+  // Which side of the target: side by side cards split left and right, a card filling the row splits top and bottom.
   const side = (c, e) => { const r = c.getBoundingClientRect(), wide = r.width > box.clientWidth * .75;
     return (wide ? e.clientY - r.top < r.height / 2 : e.clientX - r.left < r.width / 2) ? "before" : "after"; };
+  // The card under the pointer, looking through the dragged card itself.
+  const targetAt = e => document.elementsFromPoint(e.clientX, e.clientY).map(el => el.closest(".xcard")).find(c => c && c !== drag.card && box.contains(c)) || null;
   box.addEventListener("pointerdown", e => {
     const head = e.target.closest(".xhead.grab");
-    if (head && !e.target.closest("button") && e.pointerType === "mouse") head.parentElement.draggable = true;
+    if (!head || e.target.closest("button") || e.button !== 0) return;
+    if (e.pointerType !== "mouse" && !e.target.closest(".xkind")) return;
+    drag = { card: head.parentElement, x: e.pageX, y: e.pageY, on: false };
+    head.setPointerCapture(e.pointerId);
+    e.preventDefault();   // no text selection
   });
-  addEventListener("pointerup", () => box.querySelectorAll(".xcard[draggable]").forEach(c => { if (c !== dragged) c.removeAttribute("draggable"); }));
-  box.addEventListener("dragstart", e => {
-    const c = e.target.closest?.(".xcard[draggable]");
+  box.addEventListener("pointermove", e => {
+    if (!drag) return;
+    if (!drag.on) {
+      if (Math.hypot(e.pageX - drag.x, e.pageY - drag.y) < 6) return;
+      drag.on = true; drag.card.classList.add("dragging");
+    }
+    // Near the top or bottom of the window, scroll so a card can travel the whole stack on a phone.
+    if (e.clientY < 60) scrollBy(0, -16); else if (e.clientY > innerHeight - 60) scrollBy(0, 16);
+    drag.card.style.transform = `translate(${e.pageX - drag.x}px, ${e.pageY - drag.y}px)`;
+    const c = targetAt(e), s = c && "drop-" + side(c, e);
+    if (!c || !c.classList.contains(s)) { clear(); c?.classList.add(s); }
+  });
+  const end = (e, drop) => {
+    if (!drag) return;
+    const { card, on } = drag, c = on && drop ? targetAt(e) : null;
+    card.classList.remove("dragging"); card.style.transform = "";
+    clear(); drag = null;
     if (!c) return;
-    dragged = c; c.classList.add("dragging");
-    e.dataTransfer.effectAllowed = "move";
-    e.dataTransfer.setData("text/plain", CARD_LABEL[c.dataset.kind]);
-  });
-  box.addEventListener("dragover", e => {
-    const c = e.target.closest(".xcard");
-    if (!dragged || !c || c === dragged) { clear(); return; }
-    e.preventDefault(); e.dataTransfer.dropEffect = "move";
-    const s = side(c, e);
-    if (!c.classList.contains("drop-" + s)) { clear(); c.classList.add("drop-" + s); }
-  });
-  box.addEventListener("drop", e => {
-    const c = e.target.closest(".xcard");
-    if (!dragged || !c || c === dragged) return;
-    e.preventDefault();
-    const order = cardOrder().filter(k => k !== dragged.dataset.kind);
-    order.splice(order.indexOf(c.dataset.kind) + (side(c, e) === "after" ? 1 : 0), 0, dragged.dataset.kind);
+    const order = cardOrder().filter(k => k !== card.dataset.kind);
+    order.splice(order.indexOf(c.dataset.kind) + (side(c, e) === "after" ? 1 : 0), 0, card.dataset.kind);
     setCardOrder(order);
-  });
-  box.addEventListener("dragend", () => {
-    if (dragged) { dragged.classList.remove("dragging"); dragged.removeAttribute("draggable"); }
-    dragged = null; clear();
-  });
+    card.classList.remove("hit"); void card.offsetWidth; card.classList.add("hit");
+  };
+  box.addEventListener("pointerup", e => end(e, true));
+  box.addEventListener("pointercancel", e => end(e, false));
+  addEventListener("keydown", e => { if (e.key === "Escape" && drag) end(e, false); });
 }
 
 // A list that shows a few rows on the small card and everything when the card is expanded.
