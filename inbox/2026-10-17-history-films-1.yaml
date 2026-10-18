@@ -1,0 +1,514 @@
+# History films, batch 1: the twelve best-known films in Ty's entertainment database tagged History (by TMDB vote
+# count), each as an artwork (kind: film) linked to its director (creator) and to the places and events it depicts
+# (role: depicts). This is the locale database: no cast, plot or posters; everything else about a film stays in the
+# entertainment database, linked with `external` (its id there, plus its TMDB id).
+# Candidates came from the entertainment database (read-only: titles tagged History, their TMDB keywords and
+# descriptions). Ty chose (2026-10-17): link the cities a film is set in as well as the specific places and events;
+# add missing places and events; where Wikipedia doesn't confirm a link, keep it and cite TMDB.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-17 with tools/wiki.py (revision IDs in the session
+# scratchpad). Every depicts link below is stated in the film's article (lead, plot or historical-accuracy section),
+# so none needed the TMDB fallback in this batch. Coordinates of new places are from Wikidata (P625), rounded.
+# Stated honestly:
+#  - Directors are added with life dates, sitelinks and one line only (coverage: not-read), as in the Los Angeles
+#    batches. Prominence for them comes from sitelinks (read from Wikidata on 2026-10-17).
+#  - Theodore Melfi: his Wikipedia article gives no birth date (Wikidata says 27 October 1970), so it is left out.
+#  - 1917 is "inspired by" Operation Alberich: the film is set just after the withdrawal, on 6 April 1917; the link
+#    note says so.
+#  - Saving Private Ryan's Ramelle and Neuville-au-Plain, The King's Speech's 1925 British Empire Exhibition, and
+#    Oppenheimer's Berkeley years, security hearing and the Hiroshima and Nagasaki bombings (shown only in passing)
+#    are left for later.
+#  - The Favourite, Apocalypto and the other thirteen top films go in batch 2.
+batch:
+  title: "History films, batch 1"
+  requested: "Match the History films in the entertainment database to our places and events, as an intake file for review (cities too; add missing places and events)"
+  date: 2026-10-17
+
+sources:
+  # Films
+  - {key: wp-the-imitation-game-2014, title: "The Imitation Game (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Imitation_Game"}
+  - {key: wp-schindlers-list-1993, title: "Schindler's List (Wikipedia)", url: "https://en.wikipedia.org/wiki/Schindler%27s_List"}
+  - {key: wp-saving-private-ryan-1998, title: "Saving Private Ryan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saving_Private_Ryan"}
+  - {key: wp-hacksaw-ridge-2016, title: "Hacksaw Ridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hacksaw_Ridge"}
+  - {key: wp-1917-film-2019, title: "1917 (2019 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/1917_(2019_film)"}
+  - {key: wp-green-book-2018, title: "Green Book (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Green_Book_(film)"}
+  - {key: wp-oppenheimer-2023, title: "Oppenheimer (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oppenheimer_(film)"}
+  - {key: wp-12-years-a-slave-2013, title: "12 Years a Slave (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/12_Years_a_Slave_(film)"}
+  - {key: wp-braveheart-1995, title: "Braveheart (Wikipedia)", url: "https://en.wikipedia.org/wiki/Braveheart"}
+  - {key: wp-hidden-figures-2016, title: "Hidden Figures (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hidden_Figures"}
+  - {key: wp-the-kings-speech-2010, title: "The King's Speech (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_King%27s_Speech"}
+  - {key: wp-ford-v-ferrari-2019, title: "Ford v Ferrari (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ford_v_Ferrari"}
+  # Directors
+  - {key: wp-morten-tyldum, title: "Morten Tyldum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Morten_Tyldum"}
+  - {key: wp-mel-gibson, title: "Mel Gibson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mel_Gibson"}
+  - {key: wp-sam-mendes, title: "Sam Mendes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sam_Mendes"}
+  - {key: wp-peter-farrelly, title: "Peter Farrelly (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peter_Farrelly"}
+  - {key: wp-steve-mcqueen-director, title: "Steve McQueen (director) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Steve_McQueen_(director)"}
+  - {key: wp-theodore-melfi, title: "Theodore Melfi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodore_Melfi"}
+  - {key: wp-tom-hooper, title: "Tom Hooper (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tom_Hooper"}
+  - {key: wp-james-mangold, title: "James Mangold (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Mangold"}
+  # Places
+  - {key: wp-krakow-plaszow-concentration-camp, title: "Kraków-Płaszów concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Krak%C3%B3w-P%C5%82asz%C3%B3w_concentration_camp"}
+  - {key: wp-auschwitz-concentration-camp, title: "Auschwitz concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp"}
+  - {key: wp-omaha-beach, title: "Omaha Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Omaha_Beach"}
+  - {key: wp-lynchburg-virginia, title: "Lynchburg, Virginia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lynchburg,_Virginia"}
+  - {key: wp-okinawa-island, title: "Okinawa Island (Wikipedia)", url: "https://en.wikipedia.org/wiki/Okinawa_Island"}
+  - {key: wp-ecoust-saint-mein, title: "Écoust-Saint-Mein (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%89coust-Saint-Mein"}
+  - {key: wp-louisville-kentucky, title: "Louisville, Kentucky (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louisville,_Kentucky"}
+  - {key: wp-birmingham-alabama, title: "Birmingham, Alabama (Wikipedia)", url: "https://en.wikipedia.org/wiki/Birmingham,_Alabama"}
+  - {key: wp-los-alamos-national-laboratory, title: "Los Alamos National Laboratory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Los_Alamos_National_Laboratory"}
+  - {key: wp-saratoga-springs-new-york, title: "Saratoga Springs, New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saratoga_Springs,_New_York"}
+  - {key: wp-langley-research-center, title: "Langley Research Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Langley_Research_Center"}
+  - {key: wp-wembley-stadium-1923, title: "Wembley Stadium (1923) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wembley_Stadium_(1923)"}
+  - {key: wp-circuit-de-la-sarthe, title: "Circuit de la Sarthe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Circuit_de_la_Sarthe"}
+  - {key: wp-daytona-international-speedway, title: "Daytona International Speedway (Wikipedia)", url: "https://en.wikipedia.org/wiki/Daytona_International_Speedway"}
+  # Events
+  - {key: wp-krakow-ghetto, title: "Kraków Ghetto (Wikipedia)", url: "https://en.wikipedia.org/wiki/Krak%C3%B3w_Ghetto"}
+  - {key: wp-normandy-landings, title: "Normandy landings (Wikipedia)", url: "https://en.wikipedia.org/wiki/Normandy_landings"}
+  - {key: wp-battle-of-okinawa, title: "Battle of Okinawa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Okinawa"}
+  - {key: wp-operation-alberich, title: "Operation Alberich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Alberich"}
+  - {key: wp-trinity-nuclear-test, title: "Trinity (nuclear test) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)"}
+  - {key: wp-mercury-atlas-6, title: "Mercury-Atlas 6 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mercury-Atlas_6"}
+  - {key: wp-1966-24-hours-of-le-mans, title: "1966 24 Hours of Le Mans (Wikipedia)", url: "https://en.wikipedia.org/wiki/1966_24_Hours_of_Le_Mans"}
+
+people:
+  # Directors (Steven Spielberg and Christopher Nolan already exist). All type Artist, role film director; not built out.
+  - {key: morten-tyldum, name: Morten Tyldum, type: Artist, roles: [film director], born: 1967-05-19, prominence: 1,
+     sitelinks: 35, sitelinks_on: 2026-10-17,
+     note: "Norwegian director of Headhunters (2011) and The Imitation Game (2014).",
+     coverage: not-read, coverage_note: "Added as director of The Imitation Game.", sources: [wp-morten-tyldum]}
+  - {key: mel-gibson, name: Mel Gibson, type: Artist, roles: [film director, actor], born: 1956-01-03, prominence: 4,
+     sitelinks: 119, sitelinks_on: 2026-10-17,
+     note: "American actor and director, known for directing historical films: Braveheart, Apocalypto, Hacksaw Ridge.",
+     coverage: not-read, coverage_note: "Added as director of Braveheart and Hacksaw Ridge.", sources: [wp-mel-gibson]}
+  - {key: sam-mendes, name: Sam Mendes, type: Artist, roles: [film director], born: 1965-08-01, prominence: 3,
+     sitelinks: 63, sitelinks_on: 2026-10-17,
+     note: "English film and stage director: American Beauty, Skyfall, 1917.",
+     coverage: not-read, coverage_note: "Added as director of 1917.", sources: [wp-sam-mendes]}
+  - {key: peter-farrelly, name: Peter Farrelly, type: Artist, roles: [film director], born: 1956-12-17, prominence: 1,
+     sitelinks: 31, sitelinks_on: 2026-10-17,
+     note: "American director; with his brother Bobby made Dumb and Dumber and There's Something About Mary; alone, Green Book.",
+     coverage: not-read, coverage_note: "Added as director of Green Book.", sources: [wp-peter-farrelly]}
+  - {key: steve-mcqueen-director, name: Steve McQueen, type: Artist, roles: [film director], born: 1969-10-09, prominence: 2,
+     sitelinks: 50, sitelinks_on: 2026-10-17,
+     note: "British director and video artist (Turner Prize 1999): Hunger, Shame, 12 Years a Slave.",
+     coverage: not-read, coverage_note: "Added as director of 12 Years a Slave.", sources: [wp-steve-mcqueen-director]}
+  - {key: theodore-melfi, name: Theodore Melfi, type: Artist, roles: [film director], prominence: 1,
+     sitelinks: 16, sitelinks_on: 2026-10-17,
+     note: "American filmmaker who co-wrote, directed and co-produced Hidden Figures (2016).",
+     coverage: not-read, coverage_note: "Added as director of Hidden Figures. Birth date not in his Wikipedia article.", sources: [wp-theodore-melfi]}
+  - {key: tom-hooper, name: Tom Hooper, type: Artist, roles: [film director], born: 1972-10-05, prominence: 2,
+     sitelinks: 54, sitelinks_on: 2026-10-17,
+     note: "British-Australian director: The King's Speech, Les Misérables (2012), The Danish Girl.",
+     coverage: not-read, coverage_note: "Added as director of The King's Speech.", sources: [wp-tom-hooper]}
+  - {key: james-mangold, name: James Mangold, type: Artist, roles: [film director], born: 1963-12-16, prominence: 2,
+     sitelinks: 49, sitelinks_on: 2026-10-17,
+     note: "American director: Walk the Line, 3:10 to Yuma, Logan, Ford v Ferrari.",
+     coverage: not-read, coverage_note: "Added as director of Ford v Ferrari.", sources: [wp-james-mangold]}
+
+places:
+  - key: krakow-plaszow-concentration-camp
+    name: Kraków-Płaszów concentration camp
+    kind: concentration camp
+    city: Kraków
+    region: Lesser Poland
+    country: Poland
+    lat: 50.0327
+    lng: 19.9618
+    ended: 1945
+    sources: [wp-krakow-plaszow-concentration-camp]
+  - key: auschwitz-concentration-camp
+    name: Auschwitz concentration camp
+    kind: concentration camp
+    city: Oświęcim
+    region: Lesser Poland
+    country: Poland
+    lat: 50.0358
+    lng: 19.1783
+    ended: 1945
+    sources: [wp-auschwitz-concentration-camp]
+  - key: omaha-beach
+    name: Omaha Beach
+    kind: beach
+    region: Calvados, Normandy
+    country: France
+    lat: 49.3689
+    lng: -0.8686
+    sources: [wp-omaha-beach]
+  - key: lynchburg-virginia
+    name: Lynchburg
+    kind: city
+    region: Virginia
+    country: United States
+    lat: 37.4037
+    lng: -79.1702
+    founded: 1757
+    built_by: "John Lynch, a Quaker ferry operator"
+    sources: [wp-lynchburg-virginia]
+  - key: okinawa-island
+    name: Okinawa Island
+    kind: island
+    region: Okinawa Prefecture
+    country: Japan
+    lat: 26.4833
+    lng: 127.95
+    sources: [wp-okinawa-island]
+  - key: ecoust-saint-mein
+    name: Écoust-Saint-Mein
+    kind: village
+    region: Pas-de-Calais
+    country: France
+    lat: 50.1819
+    lng: 2.9103
+    sources: [wp-ecoust-saint-mein]
+  - key: louisville-kentucky
+    name: Louisville
+    kind: city
+    region: Kentucky
+    country: United States
+    lat: 38.2561
+    lng: -85.7514
+    sources: [wp-louisville-kentucky]
+  - key: birmingham-alabama
+    name: Birmingham
+    kind: city
+    region: Alabama
+    country: United States
+    lat: 33.5175
+    lng: -86.8094
+    sources: [wp-birmingham-alabama]
+  - key: los-alamos-national-laboratory
+    name: Los Alamos National Laboratory
+    kind: laboratory
+    city: Los Alamos
+    region: New Mexico
+    country: United States
+    lat: 35.8756
+    lng: -106.3242
+    founded: 1943
+    sources: [wp-los-alamos-national-laboratory]
+  - key: trinity-site
+    name: Trinity Site
+    kind: test site
+    region: New Mexico
+    country: United States
+    lat: 33.6772
+    lng: -106.4753
+    sources: [wp-trinity-nuclear-test]
+  - key: saratoga-springs-new-york
+    name: Saratoga Springs
+    kind: city
+    region: New York
+    country: United States
+    lat: 43.0753
+    lng: -73.7825
+    sources: [wp-saratoga-springs-new-york]
+  - key: langley-research-center
+    name: Langley Research Center
+    kind: research centre
+    city: Hampton
+    region: Virginia
+    country: United States
+    lat: 37.0925
+    lng: -76.3825
+    sources: [wp-langley-research-center]
+  - key: wembley-stadium-1923
+    name: Wembley Stadium (1923)
+    historical_name: Empire Stadium
+    kind: stadium
+    city: London
+    region: Greater London
+    country: England
+    lat: 51.5556
+    lng: -0.2797
+    founded: 1923
+    ended: 2002
+    sources: [wp-wembley-stadium-1923]
+  - key: circuit-de-la-sarthe
+    name: Circuit de la Sarthe
+    kind: racing circuit
+    city: Le Mans
+    region: Sarthe
+    country: France
+    lat: 47.9499
+    lng: 0.2075
+    sources: [wp-circuit-de-la-sarthe]
+  - key: daytona-international-speedway
+    name: Daytona International Speedway
+    kind: racing circuit
+    city: Daytona Beach
+    region: Florida
+    country: United States
+    lat: 29.1856
+    lng: -81.0694
+    founded: 1959
+    sources: [wp-daytona-international-speedway]
+
+events:
+  - key: liquidation-of-the-krakow-ghetto-1943
+    name: Liquidation of the Kraków Ghetto
+    type: Massacre
+    date: 1943-03-13
+    place: krakow
+    places:
+      - {place: krakow-plaszow-concentration-camp, role: camp, note: "Two thousand Jews deemed able to work were sent to Płaszów"}
+    prominence: 3
+    note: "The final liquidation of the ghetto on 13-14 March 1943, under SS-Untersturmführer Amon Göth."
+    sources: [wp-krakow-ghetto]
+  - key: normandy-landings-1944
+    name: Normandy landings (D-Day)
+    type: Invasion
+    date: 1944-06-06
+    places:
+      - {place: omaha-beach, role: beach, note: "One of five Allied landing sectors; US forces"}
+    prominence: 5
+    note: "The Allied seaborne and airborne landings that opened Operation Overlord, the largest seaborne invasion in history."
+    sources: [wp-normandy-landings, wp-omaha-beach]
+  - key: battle-of-okinawa-1945
+    name: Battle of Okinawa
+    type: Battle
+    date: 1945-04-01
+    end_year: 1945
+    place: okinawa-island
+    prominence: 4
+    note: "82-day battle of the Pacific War, 1 April to 22 June 1945; the largest amphibious assault in the Pacific Theater."
+    sources: [wp-battle-of-okinawa]
+  - key: operation-alberich-1917
+    name: Operation Alberich
+    type: Military operation
+    date: 1917-02-09
+    end_year: 1917
+    prominence: 2
+    note: "German withdrawal to the Hindenburg Line in northern France, 9 February to 20 March 1917."
+    sources: [wp-operation-alberich]
+  - key: trinity-test-1945
+    name: Trinity nuclear test
+    type: Nuclear test
+    date: 1945-07-16
+    place: trinity-site
+    prominence: 4
+    note: "The first detonation of a nuclear weapon, by the US Army as part of the Manhattan Project."
+    sources: [wp-trinity-nuclear-test]
+  - key: mercury-atlas-6-1962
+    name: Friendship 7 (Mercury-Atlas 6)
+    type: Spaceflight
+    date: 1962-02-20
+    prominence: 3
+    note: "John Glenn's flight, the first crewed American orbital spaceflight."
+    sources: [wp-mercury-atlas-6]
+  - key: 1966-24-hours-of-le-mans
+    name: 1966 24 Hours of Le Mans
+    type: Race
+    date: 1966-06-18
+    place: circuit-de-la-sarthe
+    prominence: 2
+    note: "Held 18-19 June 1966; the Ford GT40's first overall win at Le Mans."
+    sources: [wp-1966-24-hours-of-le-mans]
+
+artworks:
+  - key: the-imitation-game-2014
+    name: The Imitation Game
+    kind: film
+    made: 2014
+    prominence: 3
+    note: "Alan Turing and the code-breakers at Bletchley Park, from Britain's declaration of war in 1939."
+    people:
+      - {person: morten-tyldum, role: creator}
+    places:
+      - {place: bletchley-park, role: depicts}
+    events:
+      - {event: britain-enters-second-world-war, role: depicts}
+    external:
+      - {system: entertainment, id: e68aa907-fc5d-4c5a-87ad-df259ba45c17}
+      - {system: tmdb, id: "205596", url: "https://www.themoviedb.org/movie/205596"}
+    sources: [wp-the-imitation-game-2014]
+  - key: schindlers-list-1993
+    name: Schindler's List
+    kind: film
+    made: 1993
+    prominence: 3
+    note: "Oskar Schindler saves more than a thousand Jews in German-occupied Kraków: the ghetto, Płaszów and Auschwitz-Birkenau."
+    people:
+      - {person: steven-spielberg, role: creator}
+    places:
+      - {place: krakow, role: depicts}
+      - {place: krakow-plaszow-concentration-camp, role: depicts}
+      - {place: auschwitz-concentration-camp, role: depicts}
+    events:
+      - {event: liquidation-of-the-krakow-ghetto-1943, role: depicts}
+    external:
+      - {system: entertainment, id: 6f0daa23-67b6-4127-b276-65d5b1965a97}
+      - {system: tmdb, id: "424", url: "https://www.themoviedb.org/movie/424"}
+    sources: [wp-schindlers-list-1993]
+  - key: saving-private-ryan-1998
+    name: Saving Private Ryan
+    kind: film
+    made: 1998
+    prominence: 3
+    note: "Opens with the US landing at Omaha Beach on 6 June 1944, then follows a squad through Normandy."
+    people:
+      - {person: steven-spielberg, role: creator}
+    places:
+      - {place: omaha-beach, role: depicts}
+    events:
+      - {event: normandy-landings-1944, role: depicts}
+    external:
+      - {system: entertainment, id: 51107cd3-55b3-4cb1-96de-4f29e20aa32b}
+      - {system: tmdb, id: "857", url: "https://www.themoviedb.org/movie/857"}
+    sources: [wp-saving-private-ryan-1998]
+  - key: hacksaw-ridge-2016
+    name: Hacksaw Ridge
+    kind: film
+    made: 2016
+    prominence: 3
+    note: "Combat medic Desmond Doss, from Lynchburg, Virginia, to the Maeda Escarpment in the Battle of Okinawa."
+    people:
+      - {person: mel-gibson, role: creator}
+    places:
+      - {place: lynchburg-virginia, role: depicts}
+      - {place: okinawa-island, role: depicts}
+    events:
+      - {event: battle-of-okinawa-1945, role: depicts}
+    external:
+      - {system: entertainment, id: 4bd71743-e30e-4ab0-aa19-88bf9f4b9431}
+      - {system: tmdb, id: "324786", url: "https://www.themoviedb.org/movie/324786"}
+    sources: [wp-hacksaw-ridge-2016]
+  - key: 1917-film-2019
+    name: "1917"
+    kind: film
+    made: 2019
+    prominence: 3
+    note: "Two British soldiers cross no man's land on 6 April 1917; inspired by Operation Alberich. A ruined canal bridge near Écoust-Saint-Mein is a setting."
+    people:
+      - {person: sam-mendes, role: creator}
+    places:
+      - {place: ecoust-saint-mein, role: depicts}
+    events:
+      - {event: operation-alberich-1917, role: depicts}
+    external:
+      - {system: entertainment, id: 21466053-643b-4220-a6fc-426883fbafa2}
+      - {system: tmdb, id: "530915", url: "https://www.themoviedb.org/movie/530915"}
+    sources: [wp-1917-film-2019, wp-ecoust-saint-mein]
+  - key: green-book-2018
+    name: Green Book
+    kind: film
+    made: 2018
+    prominence: 3
+    note: "Don Shirley's 1962 concert tour of the Deep South, from the Bronx through Louisville to Birmingham, Alabama."
+    people:
+      - {person: peter-farrelly, role: creator}
+    places:
+      - {place: the-bronx, role: depicts}
+      - {place: louisville-kentucky, role: depicts}
+      - {place: birmingham-alabama, role: depicts}
+    external:
+      - {system: entertainment, id: b14a62e1-157d-4df8-8e15-c8c73eeeeaa6}
+      - {system: tmdb, id: "490132", url: "https://www.themoviedb.org/movie/490132"}
+    sources: [wp-green-book-2018]
+  - key: oppenheimer-2023
+    name: Oppenheimer
+    kind: film
+    made: 2023
+    prominence: 3
+    note: "J. Robert Oppenheimer's direction of the Los Alamos Laboratory and the Trinity test of July 1945."
+    people:
+      - {person: christopher-nolan, role: creator}
+    places:
+      - {place: los-alamos-national-laboratory, role: depicts}
+      - {place: trinity-site, role: depicts}
+    events:
+      - {event: trinity-test-1945, role: depicts}
+    external:
+      - {system: entertainment, id: fbbb59a3-90f0-4867-8ab6-793185e139b4}
+      - {system: tmdb, id: "872585", url: "https://www.themoviedb.org/movie/872585"}
+    sources: [wp-oppenheimer-2023]
+  - key: 12-years-a-slave-2013
+    name: 12 Years a Slave
+    kind: film
+    made: 2013
+    prominence: 3
+    note: "Solomon Northup of Saratoga Springs is kidnapped in Washington, D.C. in 1841 and shipped to New Orleans to be sold into slavery."
+    people:
+      - {person: steve-mcqueen-director, role: creator}
+    places:
+      - {place: saratoga-springs-new-york, role: depicts}
+      - {place: washington-dc, role: depicts}
+      - {place: new-orleans, role: depicts}
+    external:
+      - {system: entertainment, id: 7136e2af-28a6-41aa-aa91-f59e6cd5b486}
+      - {system: tmdb, id: "76203", url: "https://www.themoviedb.org/movie/76203"}
+    sources: [wp-12-years-a-slave-2013]
+  - key: braveheart-1995
+    name: Braveheart
+    kind: film
+    made: 1995
+    prominence: 3
+    note: "William Wallace in the First War of Scottish Independence: Stirling, the sack of York, Falkirk, his capture at Edinburgh, his execution and Bannockburn (1314)."
+    people:
+      - {person: mel-gibson, role: creator}
+    places:
+      - {place: stirling-bridge, role: depicts}
+      - {place: york, role: depicts}
+      - {place: edinburgh, role: depicts}
+    events:
+      - {event: battle-of-stirling-bridge-1297, role: depicts}
+      - {event: battle-of-falkirk-1298, role: depicts}
+      - {event: execution-of-william-wallace-1305, role: depicts}
+      - {event: battle-of-bannockburn-1314, role: depicts}
+    external:
+      - {system: entertainment, id: 6c0b707e-d384-459e-a564-f3bb702e8ad2}
+      - {system: tmdb, id: "197", url: "https://www.themoviedb.org/movie/197"}
+    sources: [wp-braveheart-1995]
+  - key: hidden-figures-2016
+    name: Hidden Figures
+    kind: film
+    made: 2016
+    prominence: 3
+    note: "Katherine Johnson, Dorothy Vaughan and Mary Jackson at NASA's Langley Research Center, up to John Glenn's Friendship 7 flight."
+    people:
+      - {person: theodore-melfi, role: creator}
+    places:
+      - {place: langley-research-center, role: depicts}
+    events:
+      - {event: mercury-atlas-6-1962, role: depicts}
+    external:
+      - {system: entertainment, id: 461407d7-a602-44e1-b401-d1de2d5b9b29}
+      - {system: tmdb, id: "381284", url: "https://www.themoviedb.org/movie/381284"}
+    sources: [wp-hidden-figures-2016]
+  - key: the-kings-speech-2010
+    name: The King's Speech
+    kind: film
+    made: 2010
+    prominence: 3
+    note: "George VI and his speech therapist Lionel Logue, from Wembley in 1925 through the abdication and coronation to the 1939 wartime broadcast from Buckingham Palace."
+    people:
+      - {person: tom-hooper, role: creator}
+    places:
+      - {place: wembley-stadium-1923, role: depicts}
+      - {place: westminster-abbey, role: depicts}
+      - {place: buckingham-palace, role: depicts}
+    events:
+      - {event: abdication-of-edward-viii, role: depicts}
+      - {event: coronation-of-george-vi, role: depicts}
+      - {event: britain-enters-second-world-war, role: depicts}
+    external:
+      - {system: entertainment, id: fbc36f0e-243c-4c08-9280-89aff0ab407a}
+      - {system: tmdb, id: "45269", url: "https://www.themoviedb.org/movie/45269"}
+    sources: [wp-the-kings-speech-2010]
+  - key: ford-v-ferrari-2019
+    name: Ford v Ferrari
+    kind: film
+    made: 2019
+    prominence: 3
+    note: "Carroll Shelby and Ken Miles build the Ford GT40 at Los Angeles International Airport, race at Daytona, and win the 1966 24 Hours of Le Mans."
+    people:
+      - {person: james-mangold, role: creator}
+    places:
+      - {place: los-angeles-international-airport, role: depicts}
+      - {place: daytona-international-speedway, role: depicts}
+      - {place: circuit-de-la-sarthe, role: depicts}
+    events:
+      - {event: 1966-24-hours-of-le-mans, role: depicts}
+    external:
+      - {system: entertainment, id: f4a3dcaf-4bf7-4fce-a1f5-fd2fc45a5f87}
+      - {system: tmdb, id: "359724", url: "https://www.themoviedb.org/movie/359724"}
+    sources: [wp-ford-v-ferrari-2019]
