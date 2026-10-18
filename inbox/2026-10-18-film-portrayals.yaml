@@ -1,0 +1,245 @@
+# Film portrayals: the real people the History films (batches 1 and 2) portray, linked as `subject` so each shows on the
+# person ("Portrayed in"), the film ("Portrays") and the places the film is set ("Films set here").
+# Ty's choices (2026-10-18): link each film's main real subjects, adding them if missing, plus real people in the film
+# who are already in the database; people known for one story get the new type Notable (own Show button and colour;
+# prominence from sitelinks, like cultural figures).
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-17/18 with tools/wiki.py (revision IDs in the
+# session scratchpad): each person's dates and one-line note from their own article; each portrayal from the film's
+# article (plot or cast). Sitelinks read from Wikidata on 2026-10-18.
+# Stated honestly:
+#  - Films with no real main subject are left alone: Saving Private Ryan, 1917, The Boy in the Striped Pyjamas,
+#    Gangs of New York and Black Hawk Down (fictional or composite leads), The Impossible (the family is renamed),
+#    Spotlight (an ensemble of journalists).
+#  - Braveheart: Edward II is "Longshanks' son" in the plot; the film's history is loose, but he is who it portrays.
+#  - Winston Churchill (The King's Speech) and Robert F. Kennedy (Green Book) appear but aren't in the database yet.
+#  - Solomon Northup: born "July 10, c. 1807/1808"; death unknown (after 1857). Born 1808, estimated; no death date.
+#  - Jimmy Hoffa: disappeared 30 July 1975, declared dead in 1982. Died 1975, estimated, with a note.
+#  - Sarah Churchill: Wikipedia gives 5 June 1660 (Old Style); Wikidata gives 15 June (New Style). Old Style kept,
+#    as the article gives it.
+#  - Abigail Masham: born c. 1670 (estimated).
+batch:
+  title: "Film portrayals"
+  requested: "If we know a historical person is portrayed in a film, show it on the person, the film and the location"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-alan-turing, title: "Alan Turing (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alan_Turing"}
+  - {key: wp-oskar-schindler, title: "Oskar Schindler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oskar_Schindler"}
+  - {key: wp-desmond-doss, title: "Desmond Doss (Wikipedia)", url: "https://en.wikipedia.org/wiki/Desmond_Doss"}
+  - {key: wp-don-shirley, title: "Don Shirley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Don_Shirley"}
+  - {key: wp-tony-lip, title: "Tony Lip (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tony_Lip"}
+  - {key: wp-j-robert-oppenheimer, title: "J. Robert Oppenheimer (Wikipedia)", url: "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer"}
+  - {key: wp-solomon-northup, title: "Solomon Northup (Wikipedia)", url: "https://en.wikipedia.org/wiki/Solomon_Northup"}
+  - {key: wp-katherine-johnson, title: "Katherine Johnson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Katherine_Johnson"}
+  - {key: wp-dorothy-vaughan, title: "Dorothy Vaughan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dorothy_Vaughan"}
+  - {key: wp-mary-jackson-engineer, title: "Mary Jackson (engineer) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Jackson_(engineer)"}
+  - {key: wp-lionel-logue, title: "Lionel Logue (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lionel_Logue"}
+  - {key: wp-carroll-shelby, title: "Carroll Shelby (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carroll_Shelby"}
+  - {key: wp-ken-miles, title: "Ken Miles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ken_Miles"}
+  - {key: wp-ron-woodroof, title: "Ron Woodroof (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ron_Woodroof"}
+  - {key: wp-ron-stallworth, title: "Ron Stallworth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ron_Stallworth"}
+  - {key: wp-sully-sullenberger, title: "Sully Sullenberger (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sully_Sullenberger"}
+  - {key: wp-frank-sheeran, title: "Frank Sheeran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frank_Sheeran"}
+  - {key: wp-eliot-ness, title: "Eliot Ness (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eliot_Ness"}
+  - {key: wp-al-capone, title: "Al Capone (Wikipedia)", url: "https://en.wikipedia.org/wiki/Al_Capone"}
+  - {key: wp-jim-lovell, title: "Jim Lovell (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jim_Lovell"}
+  - {key: wp-fred-haise, title: "Fred Haise (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fred_Haise"}
+  - {key: wp-jack-swigert, title: "Jack Swigert (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jack_Swigert"}
+  - {key: wp-sarah-churchill-duchess-of-marlborough, title: "Sarah Churchill, Duchess of Marlborough (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sarah_Churchill,_Duchess_of_Marlborough"}
+  - {key: wp-abigail-masham, title: "Abigail Masham, Baroness Masham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abigail_Masham,_Baroness_Masham"}
+
+people:
+  # Scholars, a writer and a composer
+  - {key: alan-turing, name: Alan Turing, type: Scholar, roles: [mathematician, logician], born: 1912-06-23, died: 1954-06-07, prominence: 5,
+     sitelinks: 190, sitelinks_on: 2026-10-18,
+     note: "English mathematician and logician, father of theoretical computer science; broke German ciphers at Bletchley Park.",
+     coverage: not-read, coverage_note: "Added as the subject of The Imitation Game.", sources: [wp-alan-turing]}
+  - {key: j-robert-oppenheimer, name: J. Robert Oppenheimer, type: Scholar, roles: [physicist], born: 1904-04-22, died: 1967-02-18, prominence: 4,
+     sitelinks: 129, sitelinks_on: 2026-10-18,
+     note: "American theoretical physicist who directed the Manhattan Project's Los Alamos Laboratory.",
+     coverage: not-read, coverage_note: "Added as the subject of Oppenheimer.", sources: [wp-j-robert-oppenheimer]}
+  - {key: katherine-johnson, name: Katherine Johnson, type: Scholar, roles: [mathematician], born: 1918-08-26, died: 2020-02-24, prominence: 3,
+     sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "American mathematician whose orbital calculations at NASA were critical to the first US crewed spaceflights.",
+     coverage: not-read, coverage_note: "Added as a subject of Hidden Figures.", sources: [wp-katherine-johnson]}
+  - {key: dorothy-vaughan, name: Dorothy Vaughan, type: Scholar, roles: [mathematician, computer programmer], born: 1910-09-20, died: 2008-11-10, prominence: 1,
+     sitelinks: 36, sitelinks_on: 2026-10-18,
+     note: "American mathematician and programmer at NACA and NASA's Langley Research Center.",
+     coverage: not-read, coverage_note: "Added as a subject of Hidden Figures.", sources: [wp-dorothy-vaughan]}
+  - {key: mary-jackson-engineer, name: Mary Jackson, type: Scholar, roles: [aerospace engineer, mathematician], born: 1921-04-09, died: 2005-02-11, prominence: 2,
+     sitelinks: 48, sitelinks_on: 2026-10-18,
+     note: "American aerospace engineer and mathematician at NACA and NASA's Langley Research Center.",
+     coverage: not-read, coverage_note: "Added as a subject of Hidden Figures.", sources: [wp-mary-jackson-engineer]}
+  - {key: solomon-northup, name: Solomon Northup, type: Writer, roles: [abolitionist], born: 1808, born_estimated: true, prominence: 1,
+     sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "Free-born New Yorker kidnapped into slavery; abolitionist and primary author of the memoir Twelve Years a Slave (1853). Death date unknown.",
+     coverage: not-read, coverage_note: "Added as the subject of 12 Years a Slave.", sources: [wp-solomon-northup]}
+  - {key: don-shirley, name: Don Shirley, type: Composer, roles: [pianist, composer], born: 1927-01-29, died: 2013-04-06, prominence: 1,
+     sitelinks: 25, sitelinks_on: 2026-10-18,
+     note: "American pianist and composer who set popular and folk songs in a classical style.",
+     coverage: not-read, coverage_note: "Added as a subject of Green Book.", sources: [wp-don-shirley]}
+  - {key: tony-lip, name: Tony Lip, type: Artist, roles: [actor], born: 1930-07-30, died: 2013-01-04, prominence: 1,
+     sitelinks: 24, sitelinks_on: 2026-10-18,
+     note: "Frank Vallelonga, American actor (Carmine Lupertazzi in The Sopranos); Don Shirley's driver in 1962.",
+     coverage: not-read, coverage_note: "Added as a subject of Green Book.", sources: [wp-tony-lip]}
+  # Notable people
+  - {key: oskar-schindler, name: Oskar Schindler, type: Notable, roles: [industrialist], born: 1908-04-28, died: 1974-10-09, prominence: 3,
+     sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "German industrialist credited with saving 1,200 Jews in the Holocaust by employing them in his factories.",
+     coverage: not-read, coverage_note: "Added as the subject of Schindler's List.", sources: [wp-oskar-schindler]}
+  - {key: desmond-doss, name: Desmond Doss, type: Notable, roles: [combat medic], born: 1919-02-07, died: 2006-03-23, prominence: 2,
+     sitelinks: 47, sitelinks_on: 2026-10-18,
+     note: "US Army combat medic in World War II who refused to carry a weapon; Medal of Honor for Okinawa.",
+     coverage: not-read, coverage_note: "Added as the subject of Hacksaw Ridge.", sources: [wp-desmond-doss]}
+  - {key: lionel-logue, name: Lionel Logue, type: Notable, roles: [speech therapist], born: 1880-02-26, died: 1953-04-12, prominence: 1,
+     sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "Australian speech and language therapist who helped King George VI manage his stammer.",
+     coverage: not-read, coverage_note: "Added as a subject of The King's Speech.", sources: [wp-lionel-logue]}
+  - {key: carroll-shelby, name: Carroll Shelby, type: Notable, roles: [automotive designer, racing driver], born: 1923-01-11, died: 2012-05-10, prominence: 1,
+     sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "American automotive designer and racing driver; with Ken Miles developed the Ford GT40.",
+     coverage: not-read, coverage_note: "Added as a subject of Ford v Ferrari.", sources: [wp-carroll-shelby]}
+  - {key: ken-miles, name: Ken Miles, type: Notable, roles: [racing driver, engineer], born: 1918-11-01, died: 1966-08-17, prominence: 1,
+     sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "English sports car racing engineer and driver, best known for his career with American teams.",
+     coverage: not-read, coverage_note: "Added as a subject of Ford v Ferrari.", sources: [wp-ken-miles]}
+  - {key: ron-woodroof, name: Ron Woodroof, type: Notable, born: 1950-02-03, died: 1992-09-12, prominence: 1,
+     sitelinks: 19, sitelinks_on: 2026-10-18,
+     note: "American who founded the Dallas Buyers Club in 1988, one of the AIDS buyers clubs of the time.",
+     coverage: not-read, coverage_note: "Added as the subject of Dallas Buyers Club.", sources: [wp-ron-woodroof]}
+  - {key: ron-stallworth, name: Ron Stallworth, type: Notable, roles: [police officer], born: 1953-06-18, prominence: 1,
+     sitelinks: 17, sitelinks_on: 2026-10-18,
+     note: "First African-American detective in the Colorado Springs Police Department; infiltrated the Ku Klux Klan in the late 1970s.",
+     coverage: not-read, coverage_note: "Added as the subject of BlacKkKlansman.", sources: [wp-ron-stallworth]}
+  - {key: sully-sullenberger, name: Sully Sullenberger, type: Notable, roles: [pilot], born: 1951-01-23, prominence: 1,
+     sitelinks: 35, sitelinks_on: 2026-10-18,
+     note: "Chesley Sullenberger, American pilot who ditched US Airways Flight 1549 on the Hudson River in 2009.",
+     coverage: not-read, coverage_note: "Added as the subject of Sully.", sources: [wp-sully-sullenberger]}
+  - {key: frank-sheeran, name: Frank Sheeran, type: Notable, roles: [labor union official], born: 1920-10-25, died: 2003-12-14, prominence: 1,
+     sitelinks: 26, sitelinks_on: 2026-10-18,
+     note: "'The Irishman': American labor union official and enforcer for Jimmy Hoffa and Russell Bufalino.",
+     coverage: not-read, coverage_note: "Added as the subject of The Irishman.", sources: [wp-frank-sheeran]}
+  - {key: jimmy-hoffa, name: Jimmy Hoffa, type: Notable, roles: [labor union leader], born: 1913-02-14, died: 1975, died_estimated: true, prominence: 2,
+     sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "General President of the Teamsters union; disappeared on 30 July 1975 and was declared dead in 1982.",
+     coverage: not-read, coverage_note: "Added as a subject of The Irishman.", sources: [wp-jimmy-hoffa]}
+  - {key: eliot-ness, name: Eliot Ness, type: Notable, roles: [Prohibition agent], born: 1903-04-19, died: 1957-05-16, prominence: 1,
+     sitelinks: 28, sitelinks_on: 2026-10-18,
+     note: "American Prohibition agent who led The Untouchables against Al Capone in Chicago.",
+     coverage: not-read, coverage_note: "Added as a subject of The Untouchables.", sources: [wp-eliot-ness]}
+  - {key: al-capone, name: Al Capone, type: Notable, roles: [gangster], born: 1899-01-17, died: 1947-01-25, prominence: 4,
+     sitelinks: 109, sitelinks_on: 2026-10-18,
+     note: "American gangster, co-founder and boss of the Chicago Outfit during Prohibition (1925-1931).",
+     coverage: not-read, coverage_note: "Added as a subject of The Untouchables.", sources: [wp-al-capone]}
+  - {key: jim-lovell, name: Jim Lovell, type: Notable, roles: [astronaut], born: 1928-03-25, died: 2025-08-07, prominence: 3,
+     sitelinks: 65, sitelinks_on: 2026-10-18,
+     note: "American astronaut: Apollo 8, one of the first three people to orbit the Moon, and commander of Apollo 13.",
+     coverage: not-read, coverage_note: "Added as a subject of Apollo 13.", sources: [wp-jim-lovell]}
+  - {key: fred-haise, name: Fred Haise, type: Notable, roles: [astronaut], born: 1933-11-14, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "American NASA astronaut and test pilot; Lunar Module pilot of Apollo 13.",
+     coverage: not-read, coverage_note: "Added as a subject of Apollo 13.", sources: [wp-fred-haise]}
+  - {key: jack-swigert, name: Jack Swigert, type: Notable, roles: [astronaut], born: 1931-08-30, died: 1982-12-27, prominence: 2,
+     sitelinks: 45, sitelinks_on: 2026-10-18,
+     note: "American NASA astronaut and politician; command module pilot of Apollo 13.",
+     coverage: not-read, coverage_note: "Added as a subject of Apollo 13.", sources: [wp-jack-swigert]}
+  # Queen Anne's court
+  - {key: sarah-churchill-duchess-of-marlborough, name: "Sarah Churchill, Duchess of Marlborough", type: Nobility, born: 1660-06-05, died: 1744-10-18, prominence: 3,
+     sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "English courtier, one of the most influential women of her time through her friendship with Queen Anne. Born 5 June 1660 (Old Style).",
+     coverage: not-read, coverage_note: "Added as a subject of The Favourite.", sources: [wp-sarah-churchill-duchess-of-marlborough]}
+  - {key: abigail-masham, name: "Abigail Masham, Baroness Masham", type: Nobility, born: 1670, born_estimated: true, died: 1734-12-06, prominence: 2,
+     sitelinks: 18, sitelinks_on: 2026-10-18,
+     note: "English courtier, a favourite of Queen Anne and cousin of Sarah, Duchess of Marlborough.",
+     coverage: not-read, coverage_note: "Added as a subject of The Favourite.", sources: [wp-abigail-masham]}
+
+events:
+  # The people at the events the films show (each from the person's own article).
+  - key: us-airways-flight-1549-2009
+    people:
+      - {person: sully-sullenberger, role: captain}
+    sources: [wp-sully-sullenberger]
+  - key: disappearance-of-jimmy-hoffa-1975
+    people:
+      - {person: jimmy-hoffa, role: disappeared}
+  - key: apollo-13-1970
+    people:
+      - {person: jim-lovell, role: commander}
+      - {person: jack-swigert, role: command module pilot}
+      - {person: fred-haise, role: lunar module pilot}
+    sources: [wp-jim-lovell, wp-jack-swigert, wp-fred-haise]
+  - key: battle-of-okinawa-1945
+    people:
+      - {person: desmond-doss, role: combat medic}
+    sources: [wp-desmond-doss]
+
+artworks:
+  # Who each film portrays (role subject), from the film's own article.
+  - key: the-imitation-game-2014
+    people:
+      - {person: alan-turing, role: subject}
+  - key: schindlers-list-1993
+    people:
+      - {person: oskar-schindler, role: subject}
+  - key: hacksaw-ridge-2016
+    people:
+      - {person: desmond-doss, role: subject}
+  - key: green-book-2018
+    people:
+      - {person: don-shirley, role: subject}
+      - {person: tony-lip, role: subject}
+  - key: oppenheimer-2023
+    people:
+      - {person: j-robert-oppenheimer, role: subject}
+      - {person: harry-s-truman, role: subject}
+  - key: 12-years-a-slave-2013
+    people:
+      - {person: solomon-northup, role: subject}
+  - key: braveheart-1995
+    people:
+      - {person: william-wallace, role: subject}
+      - {person: robert-i-of-scotland, role: subject}
+      - {person: edward-i-of-england, role: subject}
+      - {person: edward-ii-of-england, role: subject}
+  - key: hidden-figures-2016
+    people:
+      - {person: katherine-johnson, role: subject}
+      - {person: dorothy-vaughan, role: subject}
+      - {person: mary-jackson-engineer, role: subject}
+  - key: the-kings-speech-2010
+    people:
+      - {person: george-vi, role: subject}
+      - {person: lionel-logue, role: subject}
+      - {person: edward-viii, role: subject}
+      - {person: george-v, role: subject}
+  - key: ford-v-ferrari-2019
+    people:
+      - {person: carroll-shelby, role: subject}
+      - {person: ken-miles, role: subject}
+  - key: dallas-buyers-club-2013
+    people:
+      - {person: ron-woodroof, role: subject}
+  - key: blackkklansman-2018
+    people:
+      - {person: ron-stallworth, role: subject}
+  - key: sully-2016
+    people:
+      - {person: sully-sullenberger, role: subject}
+  - key: the-irishman-2019
+    people:
+      - {person: frank-sheeran, role: subject}
+      - {person: jimmy-hoffa, role: subject}
+  - key: the-untouchables-1987
+    people:
+      - {person: eliot-ness, role: subject}
+      - {person: al-capone, role: subject}
+  - key: apollo-13-1995
+    people:
+      - {person: jim-lovell, role: subject}
+      - {person: fred-haise, role: subject}
+      - {person: jack-swigert, role: subject}
+  - key: the-favourite-2018
+    people:
+      - {person: anne-of-great-britain, role: subject}
+      - {person: sarah-churchill-duchess-of-marlborough, role: subject}
+      - {person: abigail-masham, role: subject}
