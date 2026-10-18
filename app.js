@@ -542,8 +542,8 @@ function crownPath(x, y, w = 12) {
   const h = w * .75;
   return `M${x},${y + h} L${x},${y + h * .2} L${x + w * .27},${y + h * .55} L${x + w / 2},${y} L${x + w * .73},${y + h * .55} L${x + w},${y + h * .2} L${x + w},${y + h} Z`;
 }
-// Elected and appointed offices (mayors, governors, presidents: type Government) get a column, not a crown.
-const isOffice = p => p?.type === "Government";
+// Offices (a column, not a crown): officials, and the roles notable people hold, such as First Lady.
+const isOffice = p => p?.type === "Government" || p?.type === "Notable";
 function columnPath(x, y, w = 12) {
   const h = w * .75, X = f => x + w * f, Y = f => y + h * f;
   return `M${X(.08)},${y} H${X(.92)} V${Y(.2)} H${X(.74)} V${Y(.8)} H${x + w} V${y + h} H${x} V${Y(.8)} H${X(.26)} V${Y(.2)} H${X(.08)} Z`;
