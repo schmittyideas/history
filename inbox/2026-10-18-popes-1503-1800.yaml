@@ -1,0 +1,253 @@
+# The Papacy, 1503-1800: the 22 popes of the period not yet here (Pius III to Pius VI), with their births and burials,
+# new birthplaces, the Trevi Fountain, Pius VI's death at Valence, and the Council of Trent.
+# Part of "all the popes" (Ty, 2026-10-18): every pope on the official list (Wikipedia's "List of popes"); antipopes
+# with the same title, marked disputed (none in this period); lawful popes undisputed.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the session
+# scratchpad): each pope's article for his dates, burial and note (with the List of popes' notes); the List of popes
+# for pontificate dates and birthplaces; Wikidata for sitelinks and the new places' coordinates (P625).
+# Conventions as inbox/2026-10-18-popes-since-1800.yaml. Prominence hand-set: 3 for popes with a lasting mark
+# (Adrian VI, Paul IV, Pius IV, Gregory XV, Innocent XI, Clement XI, Benedict XIV, Pius VI), 2 for the rest.
+# Stated honestly:
+#  - Where Wikidata or the List of popes differs from the pope's own article, the article is used and the difference is
+#    a discrepancy: Pius III's birth (9 May 1439; Wikidata 7 June), Innocent XI's birth (16 May 1611; Wikidata 19 May),
+#    and the first day of Marcellus II (10 April 1555; the list 9 April) and Pius IV (25 December 1559; the list 26th).
+#  - Burials are the final resting place, with the year where the article gives it (Paul IV moved to Santa Maria
+#    sopra Minerva in 1566, Urban VII in 1606, Pius IV to Santa Maria degli Angeli in 1583, Clement XII to St John
+#    Lateran in 1742, Pius VI from Valence to Rome in 1802). Adrian VI's tomb in Santa Maria dell'Anima is not a place
+#    record and is left in his article. Births are the List of popes' birthplaces.
+batch:
+  title: "The Papacy, 1503-1800"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-pius-iii, title: "Pope Pius III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_III"}
+  - {key: wd-pius-iii, title: "Pope Pius III (Wikidata)", url: "https://www.wikidata.org/wiki/Q160030"}
+  - {key: wp-adrian-vi, title: "Pope Adrian VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adrian_VI"}
+  - {key: wp-marcellus-ii, title: "Pope Marcellus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Marcellus_II"}
+  - {key: wp-montefano, title: "Montefano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Montefano"}
+  - {key: wp-paul-iv, title: "Pope Paul IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Paul_IV"}
+  - {key: wp-capriglia-irpina, title: "Capriglia Irpina (Wikipedia)", url: "https://en.wikipedia.org/wiki/Capriglia_Irpina"}
+  - {key: wp-pius-iv, title: "Pope Pius IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_IV"}
+  - {key: wp-urban-vii, title: "Pope Urban VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Urban_VII"}
+  - {key: wp-gregory-xiv, title: "Pope Gregory XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_XIV"}
+  - {key: wp-somma-lombardo, title: "Somma Lombardo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Somma_Lombardo"}
+  - {key: wp-innocent-ix, title: "Pope Innocent IX (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_IX"}
+  - {key: wp-leo-xi, title: "Pope Leo XI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_XI"}
+  - {key: wp-gregory-xv, title: "Pope Gregory XV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_XV"}
+  - {key: wp-clement-ix, title: "Pope Clement IX (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Clement_IX"}
+  - {key: wp-pistoia, title: "Pistoia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pistoia"}
+  - {key: wp-clement-x, title: "Pope Clement X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Clement_X"}
+  - {key: wp-innocent-xi, title: "Pope Innocent XI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_XI"}
+  - {key: wp-como, title: "Como (Wikipedia)", url: "https://en.wikipedia.org/wiki/Como"}
+  - {key: wd-innocent-xi, title: "Pope Innocent XI (Wikidata)", url: "https://www.wikidata.org/wiki/Q101286"}
+  - {key: wp-alexander-viii, title: "Pope Alexander VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Alexander_VIII"}
+  - {key: wp-innocent-xii, title: "Pope Innocent XII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_XII"}
+  - {key: wp-spinazzola, title: "Spinazzola (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spinazzola"}
+  - {key: wp-clement-xi, title: "Pope Clement XI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Clement_XI"}
+  - {key: wp-innocent-xiii, title: "Pope Innocent XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_XIII"}
+  - {key: wp-benedict-xiii, title: "Pope Benedict XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_XIII"}
+  - {key: wp-gravina-in-puglia, title: "Gravina in Puglia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gravina_in_Puglia"}
+  - {key: wp-clement-xii, title: "Pope Clement XII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Clement_XII"}
+  - {key: wp-benedict-xiv, title: "Pope Benedict XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_XIV"}
+  - {key: wp-clement-xiii, title: "Pope Clement XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Clement_XIII"}
+  - {key: wp-pius-vi, title: "Pope Pius VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_VI"}
+  - {key: wp-poli-lazio, title: "Poli, Lazio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Poli,_Lazio"}
+  - {key: wp-valence-drome, title: "Valence, Drôme (Wikipedia)", url: "https://en.wikipedia.org/wiki/Valence,_Dr%C3%B4me"}
+  - {key: wp-trevi-fountain, title: "Trevi Fountain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Trevi_Fountain"}
+  - {key: wp-council-of-trent, title: "Council of Trent (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Trent"}
+
+people:
+  - {key: pius-iii, name: "Pius III", type: Clergy, roles: [pope], born: 1439-05-09, died: 1503-10-18, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Francesco Todeschini Piccolomini, nephew of Pius II, who made him Archbishop of Siena at 21. Elected as a compromise between the Borgia and della Rovere factions; died after 26 days, one of the shortest pontificates.",
+     sources: [wp-pius-iii]}
+  - {key: adrian-vi, name: "Adrian VI", type: Clergy, roles: [pope], born: 1459-03-02, died: 1523-09-14, realm: Papacy, prominence: 3, sitelinks: 87, sitelinks_on: 2026-10-18,
+     note: "Adriaan Florensz of Utrecht, professor and rector at Leuven and tutor of the future Charles V: the only Dutch pope, and the last non-Italian until John Paul II.",
+     sources: [wp-adrian-vi]}
+  - {key: marcellus-ii, name: "Marcellus II", type: Clergy, roles: [pope], born: 1501-05-06, died: 1555-05-01, realm: Papacy, prominence: 2, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "Marcello Cervini, Cardinal of Santa Croce in Gerusalemme. Died 22 days after his election; the last pope to keep his own name. Palestrina's Missa Papae Marcelli honours him.",
+     sources: [wp-marcellus-ii]}
+  - {key: paul-iv, name: "Paul IV", type: Clergy, roles: [pope], born: 1476-06-28, died: 1559-08-18, realm: Papacy, prominence: 3, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Gian Pietro Carafa, co-founder of the Theatines. Anti-Spanish after serving as nuncio in Spain, he called in the French against Spain; established the Roman Ghetto (1555) and the Index of Forbidden Books (1559). Rome rioted at his death.",
+     sources: [wp-paul-iv]}
+  - {key: pius-iv, name: "Pius IV", type: Clergy, roles: [pope], born: 1499-03-31, died: 1565-12-09, realm: Papacy, prominence: 3, sitelinks: 86, sitelinks_on: 2026-10-18,
+     note: "Giovanni Angelo Medici of Milan, Archbishop of Ragusa. Reopened and closed the Council of Trent (1563) and issued the Tridentine Creed; his nephew Charles Borromeo was his close adviser. Improved Rome's water supply.",
+     sources: [wp-pius-iv]}
+  - {key: urban-vii, name: "Urban VII", type: Clergy, roles: [pope], born: 1521-08-04, died: 1590-09-27, realm: Papacy, prominence: 2, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Giovanni Battista Castagna, Archbishop of Rossano and a father at the Council of Trent. Reigned 13 days, the shortest recognised papacy, and died before his coronation; set the first known smoking ban, in and near churches.",
+     sources: [wp-urban-vii]}
+  - {key: gregory-xiv, name: "Gregory XIV", type: Clergy, roles: [pope], born: 1535-02-11, died: 1591-10-16, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Niccolò Sfondrato of the Duchy of Milan. In his ten months he made gambling on papal elections punishable by excommunication (Cogit nos, 1591).",
+     sources: [wp-gregory-xiv]}
+  - {key: innocent-ix, name: "Innocent IX", type: Clergy, roles: [pope], born: 1519-07-20, died: 1591-12-30, realm: Papacy, prominence: 2, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "Giovanni Antonio Facchinetti, canon lawyer and diplomat; as legate to Venice helped form the Holy League that won at Lepanto. Pope for two months in 1591; supported Philip II and the Catholic League in France.",
+     sources: [wp-innocent-ix]}
+  - {key: leo-xi, name: "Leo XI", type: Clergy, roles: [pope], born: 1535-06-02, died: 1605-04-27, realm: Papacy, prominence: 2, sitelinks: 85, sitelinks_on: 2026-10-18,
+     note: "Alessandro de' Medici, great-nephew of Leo X, Archbishop of Florence and legate to France. Elected at almost seventy, he died within a month: the 'Lightning Pope'.",
+     sources: [wp-leo-xi]}
+  - {key: gregory-xv, name: "Gregory XV", type: Clergy, roles: [pope], born: 1554-01-09, died: 1623-07-08, realm: Papacy, prominence: 3, sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "Alessandro Ludovisi. Founded the Congregation for the Propagation of the Faith (1622), required secret ballots in conclaves, and canonised Ignatius of Loyola, Francis Xavier, Teresa of Ávila and Philip Neri.",
+     sources: [wp-gregory-xv]}
+  - {key: clement-ix, name: "Clement IX", type: Clergy, roles: [pope], born: 1600-01-28, died: 1669-12-09, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Giulio Rospigliosi, poet, librettist and patron of Poussin, nuncio to Spain. Mediated the Peace of Aachen (1668).",
+     sources: [wp-clement-ix]}
+  - {key: clement-x, name: "Clement X", type: Clergy, roles: [pope], born: 1590-07-13, died: 1676-07-22, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Emilio Altieri of the Roman nobility, elected at almost 80 after a four-month conclave. Canonised Rose of Lima, the first saint from the Americas (1671), and decorated the Ponte Sant'Angelo with ten statues of angels.",
+     sources: [wp-clement-x]}
+  - {key: innocent-xi, name: "Innocent XI", type: Clergy, roles: [pope], born: 1611-05-16, died: 1689-08-12, realm: Papacy, prominence: 3, sitelinks: 85, sitelinks_on: 2026-10-18,
+     note: "Benedetto Odescalchi of Como, beatified. Frugal and against nepotism, he cut taxes and balanced the papal budget; clashed constantly with Louis XIV and built the Holy League against the Ottomans.",
+     sources: [wp-innocent-xi]}
+  - {key: alexander-viii, name: "Alexander VIII", type: Clergy, roles: [pope], born: 1610-04-22, died: 1691-02-01, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Pietro Ottoboni of Venice, a lawyer from Padua. Reversed many of Innocent XI's policies and returned to nepotism; the last pope named Alexander.",
+     sources: [wp-alexander-viii]}
+  - {key: innocent-xii, name: "Innocent XII", type: Clergy, roles: [pope], born: 1615-03-13, died: 1700-09-27, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Antonio Pignatelli of the Kingdom of Naples. His bull Romanum decet Pontificem (1692) forbade nepotism, barring popes from giving revenues or land to relatives.",
+     sources: [wp-innocent-xii]}
+  - {key: clement-xi, name: "Clement XI", type: Clergy, roles: [pope], born: 1649-07-23, died: 1721-03-19, realm: Papacy, prominence: 3, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Giovanni Francesco Albani, patron of arts, science and the Vatican Library; opened excavations of the Roman catacombs. Ruled in the Chinese Rites controversy.",
+     sources: [wp-clement-xi]}
+  - {key: innocent-xiii, name: "Innocent XIII", type: Clergy, roles: [pope], born: 1655-05-13, died: 1724-03-07, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Michelangelo dei Conti, the last pope named Innocent. Reform-minded and frugal, he forbade his successors to grant land, offices or income to relatives, and barred the Jesuits from taking new members for China.",
+     sources: [wp-innocent-xiii]}
+  - {key: benedict-xiii, name: "Benedict XIII", type: Clergy, roles: [pope], born: 1649-02-02, died: 1730-02-21, realm: Papacy, prominence: 2, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "Pietro Francesco (Vincenzo Maria) Orsini, a Dominican, the last of three Orsini popes. Devoted to his work as bishop, he left administration to a secretary whose abuses ruined the papal treasury.",
+     sources: [wp-benedict-xiii]}
+  - {key: clement-xii, name: "Clement XII", type: Clergy, roles: [pope], born: 1652-04-07, died: 1740-02-06, realm: Papacy, prominence: 2, sitelinks: 86, sitelinks_on: 2026-10-18,
+     note: "Lorenzo Corsini of Florence. With a papal surplus he built the new façade of St John Lateran, began the Trevi Fountain (1732) and bought the Albani antiquities; In eminenti (1738) first condemned Freemasonry.",
+     sources: [wp-clement-xii]}
+  - {key: benedict-xiv, name: "Benedict XIV", type: Clergy, roles: [pope], born: 1675-03-31, died: 1758-05-03, realm: Papacy, prominence: 3, sitelinks: 91, sitelinks_on: 2026-10-18,
+     note: "Prospero Lambertini of Bologna, 'the Enlightenment Pope': a great scholar who promoted science teaching, the arts and Thomism, reformed the training of priests, and founded academies.",
+     sources: [wp-benedict-xiv]}
+  - {key: clement-xiii, name: "Clement XIII", type: Clergy, roles: [pope], born: 1693-03-07, died: 1769-02-02, realm: Papacy, prominence: 2, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Carlo della Torre di Rezzonico of Venice. Under pressure to suppress the Jesuits, he defended them (Apostolicum pascendi, 1765); sought dialogue with Protestants.",
+     sources: [wp-clement-xiii]}
+  - {key: pius-vi, name: "Pius VI", type: Clergy, roles: [pope], born: 1717-12-25, died: 1799-08-29, realm: Papacy, prominence: 3, sitelinks: 90, sitelinks_on: 2026-10-18,
+     note: "Giovanni Angelo Braschi of Cesena. Condemned the French Revolution; Napoleon's army took the Papal States in 1796, and in 1798 the pope was carried off a prisoner to France, where he died at Valence. One of the longest pontificates.",
+     sources: [wp-pius-vi]}
+
+titles:
+  - {person: pius-iii, title: Pope, realm: Papacy, from: 1503-09-22, to: 1503-10-18, sources: [wp-pius-iii, wp-list-of-popes]}
+  - {person: adrian-vi, title: Pope, realm: Papacy, from: 1522-01-09, to: 1523-09-14, sources: [wp-adrian-vi, wp-list-of-popes]}
+  - {person: marcellus-ii, title: Pope, realm: Papacy, from: 1555-04-10, to: 1555-05-01, sources: [wp-marcellus-ii, wp-list-of-popes]}
+  - {person: paul-iv, title: Pope, realm: Papacy, from: 1555-05-23, to: 1559-08-18, sources: [wp-paul-iv, wp-list-of-popes]}
+  - {person: pius-iv, title: Pope, realm: Papacy, from: 1559-12-25, to: 1565-12-09, sources: [wp-pius-iv, wp-list-of-popes]}
+  - {person: urban-vii, title: Pope, realm: Papacy, from: 1590-09-15, to: 1590-09-27, sources: [wp-urban-vii, wp-list-of-popes]}
+  - {person: gregory-xiv, title: Pope, realm: Papacy, from: 1590-12-05, to: 1591-10-16, sources: [wp-gregory-xiv, wp-list-of-popes]}
+  - {person: innocent-ix, title: Pope, realm: Papacy, from: 1591-10-29, to: 1591-12-30, sources: [wp-innocent-ix, wp-list-of-popes]}
+  - {person: leo-xi, title: Pope, realm: Papacy, from: 1605-04-01, to: 1605-04-27, sources: [wp-leo-xi, wp-list-of-popes]}
+  - {person: gregory-xv, title: Pope, realm: Papacy, from: 1621-02-09, to: 1623-07-08, sources: [wp-gregory-xv, wp-list-of-popes]}
+  - {person: clement-ix, title: Pope, realm: Papacy, from: 1667-06-20, to: 1669-12-09, sources: [wp-clement-ix, wp-list-of-popes]}
+  - {person: clement-x, title: Pope, realm: Papacy, from: 1670-04-29, to: 1676-07-22, sources: [wp-clement-x, wp-list-of-popes]}
+  - {person: innocent-xi, title: Pope, realm: Papacy, from: 1676-09-21, to: 1689-08-12, sources: [wp-innocent-xi, wp-list-of-popes]}
+  - {person: alexander-viii, title: Pope, realm: Papacy, from: 1689-10-06, to: 1691-02-01, sources: [wp-alexander-viii, wp-list-of-popes]}
+  - {person: innocent-xii, title: Pope, realm: Papacy, from: 1691-07-12, to: 1700-09-27, sources: [wp-innocent-xii, wp-list-of-popes]}
+  - {person: clement-xi, title: Pope, realm: Papacy, from: 1700-11-23, to: 1721-03-19, sources: [wp-clement-xi, wp-list-of-popes]}
+  - {person: innocent-xiii, title: Pope, realm: Papacy, from: 1721-05-08, to: 1724-03-07, sources: [wp-innocent-xiii, wp-list-of-popes]}
+  - {person: benedict-xiii, title: Pope, realm: Papacy, from: 1724-05-29, to: 1730-02-21, sources: [wp-benedict-xiii, wp-list-of-popes]}
+  - {person: clement-xii, title: Pope, realm: Papacy, from: 1730-07-12, to: 1740-02-06, sources: [wp-clement-xii, wp-list-of-popes]}
+  - {person: benedict-xiv, title: Pope, realm: Papacy, from: 1740-08-17, to: 1758-05-03, sources: [wp-benedict-xiv, wp-list-of-popes]}
+  - {person: clement-xiii, title: Pope, realm: Papacy, from: 1758-07-06, to: 1769-02-02, sources: [wp-clement-xiii, wp-list-of-popes]}
+  - {person: pius-vi, title: Pope, realm: Papacy, from: 1775-02-15, to: 1799-08-29, sources: [wp-pius-vi, wp-list-of-popes]}
+
+places:
+  - {key: montefano, name: "Montefano", kind: town, region: "Marche", country: Italy, lat: 43.4116, lng: 13.4387, sources: [wp-montefano]}
+  - {key: capriglia-irpina, name: "Capriglia Irpina", kind: town, region: "Campania", country: Italy, lat: 40.9614, lng: 14.7781, sources: [wp-capriglia-irpina]}
+  - {key: somma-lombardo, name: "Somma Lombardo", kind: town, region: "Lombardy", country: Italy, lat: 45.6833, lng: 8.7, sources: [wp-somma-lombardo]}
+  - {key: pistoia, name: "Pistoia", kind: city, region: "Tuscany", country: Italy, lat: 43.9333, lng: 10.9167, sources: [wp-pistoia]}
+  - {key: como, name: "Como", kind: city, region: "Lombardy", country: Italy, lat: 45.8103, lng: 9.0861, sources: [wp-como]}
+  - {key: spinazzola, name: "Spinazzola", kind: town, region: "Apulia", country: Italy, lat: 40.9667, lng: 16.0833, sources: [wp-spinazzola]}
+  - {key: gravina-in-puglia, name: "Gravina in Puglia", kind: town, region: "Apulia", country: Italy, lat: 40.8206, lng: 16.4233, sources: [wp-gravina-in-puglia]}
+  - {key: poli-lazio, name: Poli, kind: town, region: Lazio, country: Italy, lat: 41.8833, lng: 12.8833, sources: [wp-poli-lazio]}
+  - {key: valence-drome, name: Valence, kind: city, region: Drôme, country: France, lat: 44.9325, lng: 4.8908, sources: [wp-valence-drome]}
+  - {key: trevi-fountain, name: Trevi Fountain, kind: fountain, city: Rome, region: Lazio, country: Italy, lat: 41.9009, lng: 12.4833, founded: 1732, visitable: true, architect: "Nicola Salvi; completed by Giuseppe Pannini (1762)", built_by: "Clement XII, who began it", sources: [wp-trevi-fountain, wp-clement-xii]}
+
+moments:
+  - {person: pius-iii, role: born, place: siena, year: 1439}
+  - {person: pius-iii, role: buried, place: st-peters-basilica-rome, year: 1503}
+  - {person: adrian-vi, role: born, place: utrecht, year: 1459}
+  - {person: adrian-vi, role: died, place: rome, year: 1523}
+  - {person: marcellus-ii, role: born, place: montefano, year: 1501}
+  - {person: paul-iv, role: born, place: capriglia-irpina, year: 1476}
+  - {person: paul-iv, role: buried, place: santa-maria-sopra-minerva, year: 1566}
+  - {person: pius-iv, role: born, place: milan, year: 1499}
+  - {person: pius-iv, role: buried, place: santa-maria-degli-angeli-e-dei-martiri-rome, year: 1583}
+  - {person: urban-vii, role: born, place: rome, year: 1521}
+  - {person: urban-vii, role: buried, place: santa-maria-sopra-minerva, year: 1606}
+  - {person: gregory-xiv, role: born, place: somma-lombardo, year: 1535}
+  - {person: innocent-ix, role: born, place: bologna, year: 1519}
+  - {person: innocent-ix, role: buried, place: st-peters-basilica-rome, year: 1591}
+  - {person: leo-xi, role: born, place: florence, year: 1535}
+  - {person: gregory-xv, role: born, place: bologna, year: 1554}
+  - {person: gregory-xv, role: buried, place: sant-ignazio-rome}
+  - {person: clement-ix, role: born, place: pistoia, year: 1600}
+  - {person: clement-ix, role: buried, place: santa-maria-maggiore-rome}
+  - {person: clement-x, role: born, place: rome, year: 1590}
+  - {person: innocent-xi, role: born, place: como, year: 1611}
+  - {person: innocent-xi, role: buried, place: st-peters-basilica-rome, year: 1689}
+  - {person: alexander-viii, role: born, place: venice, year: 1610}
+  - {person: alexander-viii, role: buried, place: st-peters-basilica-rome, year: 1691}
+  - {person: innocent-xii, role: born, place: spinazzola, year: 1615}
+  - {person: innocent-xii, role: buried, place: st-peters-basilica-rome, year: 1700}
+  - {person: clement-xi, role: born, place: urbino, year: 1649}
+  - {person: clement-xi, role: died, place: rome, year: 1721}
+  - {person: clement-xi, role: buried, place: st-peters-basilica-rome, year: 1721}
+  - {person: innocent-xiii, role: buried, place: st-peters-basilica-rome, year: 1724}
+  - {person: benedict-xiii, role: born, place: gravina-in-puglia, year: 1649}
+  - {person: benedict-xiii, role: buried, place: santa-maria-sopra-minerva}
+  - {person: clement-xii, role: born, place: florence, year: 1652}
+  - {person: clement-xii, role: buried, place: lateran-palace-rome, year: 1742}
+  - {person: benedict-xiv, role: born, place: bologna, year: 1675}
+  - {person: benedict-xiv, role: buried, place: st-peters-basilica-rome, year: 1758}
+  - {person: clement-xiii, role: born, place: venice, year: 1693}
+  - {person: pius-vi, role: born, place: cesena, year: 1717}
+  - {person: pius-vi, role: died, place: valence-drome, year: 1799}
+  - {person: pius-vi, role: buried, place: rome, year: 1802}
+  - {person: innocent-xiii, role: born, place: poli-lazio, year: 1655}
+
+events:
+  - key: council-of-trent-1545
+    name: Council of Trent
+    type: Council
+    date: 1545-12-13
+    end_year: 1563
+    place: trento
+    people:
+      - {person: paul-iii, role: convoked it}
+      - {person: pius-iv, role: reopened and closed it}
+    prominence: 5
+    note: "The 19th ecumenical council, 13 December 1545 to 4 December 1563, prompted by the Protestant Reformation: the embodiment of the Counter-Reformation, and the last council held outside Rome."
+    sources: [wp-council-of-trent, wp-pius-iv]
+
+discrepancies:
+  - key: pius-iii-born
+    question: "When was Pius III born?"
+    about: [{person: pius-iii}]
+    field: born
+    claims:
+      - {value: "1439-05-09", sources: [wp-pius-iii]}
+      - {value: "1439-06-07", sources: [wd-pius-iii]}
+    note: "The record uses his own article."
+  - key: marcellus-ii-start
+    question: "When did Marcellus II's pontificate begin?"
+    about: [{person: marcellus-ii}]
+    field: start
+    claims:
+      - {value: "1555-04-10", sources: [wp-marcellus-ii]}
+      - {value: "1555-04-09", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: pius-iv-start
+    question: "When did Pius IV's pontificate begin?"
+    about: [{person: pius-iv}]
+    field: start
+    claims:
+      - {value: "1559-12-25", sources: [wp-pius-iv]}
+      - {value: "1559-12-26", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: innocent-xi-born
+    question: "When was Innocent XI born?"
+    about: [{person: innocent-xi}]
+    field: born
+    claims:
+      - {value: "1611-05-16", sources: [wp-innocent-xi]}
+      - {value: "1611-05-19", sources: [wd-innocent-xi]}
+    note: "The record uses his own article."
