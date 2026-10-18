@@ -1,0 +1,435 @@
+# History films, batch 2: films 13-25 of the best-known films in Ty's entertainment database tagged History (by TMDB
+# vote count), following inbox/2026-10-17-history-films-1.yaml: each film is an artwork (kind: film) linked to its
+# director (creator) and to the places and events it depicts (role: depicts), with `external` links to the
+# entertainment database and TMDB. No cast, plot or posters.
+# Ty's choices (2026-10-17): cities a film is set in count; missing places and events are added; a link Wikipedia
+# doesn't confirm is kept and cites TMDB.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-17 with tools/wiki.py (revision IDs in the session
+# scratchpad). Coordinates of new places are from Wikidata (P625), rounded. Sitelinks read from Wikidata on 2026-10-17.
+# Stated honestly:
+#  - The Irishman -> Chicago comes only from the entertainment database's description ("sends him to Chicago") and
+#    TMDB's keywords; the film's Wikipedia article doesn't say it. Kept, citing TMDB, as Ty chose.
+#  - The Favourite -> War of the Spanish Succession: the article's plot says "In 1705, England is at war with France";
+#    TMDB's keywords name the war. Hatfield House and Hampton Court Palace are where it was shot (role: filmed), from
+#    the article; the plot names no palace, so nothing is linked as depicted.
+#  - Apocalypto is left out: Wikipedia says it is "set in either Yucatán or Guatemala" in 1502, naming no place or event.
+#  - The Boy in the Striped Pyjamas links only to Berlin: its camp is never named (critics compare it with Auschwitz).
+#  - Sully: the Hudson River is not added as a place (Wikidata's point for it is the river's source, 300 km north);
+#    the flight's ditching is the event, at New York City.
+#  - Hoffa's disappearance has no Wikipedia article of its own; the event cites his biography, which places it at the
+#    Machus Red Fox restaurant in Bloomfield Township, near Detroit.
+#  - New York City is the record `new-york-city`; a second record, `new-york` (same name, 4 life moments), looks like
+#    a duplicate and is left for Ty.
+batch:
+  title: "History films, batch 2"
+  requested: "Match the History films in the entertainment database to our places and events (films 13-25 of the top 25)"
+  date: 2026-10-17
+
+sources:
+  # Films
+  - {key: wp-dallas-buyers-club-2013, title: "Dallas Buyers Club (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dallas_Buyers_Club"}
+  - {key: wp-spotlight-2015, title: "Spotlight (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spotlight_(film)"}
+  - {key: wp-blackkklansman-2018, title: "BlacKkKlansman (Wikipedia)", url: "https://en.wikipedia.org/wiki/BlacKkKlansman"}
+  - {key: wp-sully-2016, title: "Sully (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sully_(film)"}
+  - {key: wp-the-boy-in-the-striped-pyjamas-2008, title: "The Boy in the Striped Pyjamas (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Boy_in_the_Striped_Pyjamas_(film)"}
+  - {key: wp-the-irishman-2019, title: "The Irishman (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Irishman"}
+  - {key: tmdb-the-irishman-2019, title: "The Irishman (2019) (TMDB)", url: "https://www.themoviedb.org/movie/398978"}
+  - {key: wp-gangs-of-new-york-2002, title: "Gangs of New York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gangs_of_New_York"}
+  - {key: wp-the-impossible-2012, title: "The Impossible (2012 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Impossible_(2012_film)"}
+  - {key: wp-black-hawk-down-2001, title: "Black Hawk Down (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Black_Hawk_Down_(film)"}
+  - {key: wp-the-untouchables-1987, title: "The Untouchables (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Untouchables_(film)"}
+  - {key: wp-apollo-13-1995, title: "Apollo 13 (film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Apollo_13_(film)"}
+  - {key: wp-the-favourite-2018, title: "The Favourite (2018 film) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Favourite_(2018_film)"}
+  - {key: tmdb-the-favourite-2018, title: "The Favourite (2018) (TMDB)", url: "https://www.themoviedb.org/movie/375262"}
+  # Directors
+  - {key: wp-jean-marc-vallee, title: "Jean-Marc Vallée (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jean-Marc_Vall%C3%A9e"}
+  - {key: wp-tom-mccarthy-director, title: "Tom McCarthy (director) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tom_McCarthy_(director)"}
+  - {key: wp-spike-lee, title: "Spike Lee (Wikipedia)", url: "https://en.wikipedia.org/wiki/Spike_Lee"}
+  - {key: wp-clint-eastwood, title: "Clint Eastwood (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clint_Eastwood"}
+  - {key: wp-mark-herman, title: "Mark Herman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mark_Herman"}
+  - {key: wp-martin-scorsese, title: "Martin Scorsese (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martin_Scorsese"}
+  - {key: wp-j-a-bayona, title: "J. A. Bayona (Wikipedia)", url: "https://en.wikipedia.org/wiki/J._A._Bayona"}
+  - {key: wp-brian-de-palma, title: "Brian De Palma (Wikipedia)", url: "https://en.wikipedia.org/wiki/Brian_De_Palma"}
+  - {key: wp-ron-howard, title: "Ron Howard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ron_Howard"}
+  - {key: wp-yorgos-lanthimos, title: "Yorgos Lanthimos (Wikipedia)", url: "https://en.wikipedia.org/wiki/Yorgos_Lanthimos"}
+  # Places
+  - {key: wp-colorado-springs-colorado, title: "Colorado Springs, Colorado (Wikipedia)", url: "https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado"}
+  - {key: wp-laguardia-airport, title: "LaGuardia Airport (Wikipedia)", url: "https://en.wikipedia.org/wiki/LaGuardia_Airport"}
+  - {key: wp-detroit, title: "Detroit (Wikipedia)", url: "https://en.wikipedia.org/wiki/Detroit"}
+  - {key: wp-five-points-manhattan, title: "Five Points, Manhattan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Five_Points,_Manhattan"}
+  - {key: wp-khao-lak, title: "Khao Lak (Wikipedia)", url: "https://en.wikipedia.org/wiki/Khao_Lak"}
+  - {key: wp-mogadishu, title: "Mogadishu (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mogadishu"}
+  - {key: wp-kennedy-space-center, title: "Kennedy Space Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kennedy_Space_Center"}
+  - {key: wp-hatfield-house, title: "Hatfield House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hatfield_House"}
+  # Events
+  - {key: wp-us-airways-flight-1549, title: "US Airways Flight 1549 (Wikipedia)", url: "https://en.wikipedia.org/wiki/US_Airways_Flight_1549"}
+  - {key: wp-jimmy-hoffa, title: "Jimmy Hoffa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jimmy_Hoffa"}
+  - {key: wp-new-york-city-draft-riots, title: "New York City draft riots (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_York_City_draft_riots"}
+  - {key: wp-2004-indian-ocean-earthquake-and-tsunami, title: "2004 Indian Ocean earthquake and tsunami (Wikipedia)", url: "https://en.wikipedia.org/wiki/2004_Indian_Ocean_earthquake_and_tsunami"}
+  - {key: wp-battle-of-mogadishu-1993, title: "Battle of Mogadishu (1993) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Mogadishu_(1993)"}
+  - {key: wp-apollo-13, title: "Apollo 13 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Apollo_13"}
+  - {key: wp-war-of-the-spanish-succession, title: "War of the Spanish Succession (Wikipedia)", url: "https://en.wikipedia.org/wiki/War_of_the_Spanish_Succession"}
+
+people:
+  # Directors (Ridley Scott already exists). All type Artist, role film director; not built out.
+  - {key: jean-marc-vallee, name: Jean-Marc Vallée, type: Artist, roles: [film director], born: 1963-03-09, died: 2021-12-25, prominence: 1,
+     sitelinks: 26, sitelinks_on: 2026-10-17,
+     note: "Canadian director: C.R.A.Z.Y., Dallas Buyers Club, Wild, Big Little Lies.",
+     coverage: not-read, coverage_note: "Added as director of Dallas Buyers Club.", sources: [wp-jean-marc-vallee]}
+  - {key: tom-mccarthy-director, name: Tom McCarthy, type: Artist, roles: [film director, actor], born: 1966-06-07, prominence: 1,
+     sitelinks: 35, sitelinks_on: 2026-10-17,
+     note: "American filmmaker and actor; directed and co-wrote Spotlight (2015).",
+     coverage: not-read, coverage_note: "Added as director of Spotlight.", sources: [wp-tom-mccarthy-director]}
+  - {key: spike-lee, name: Spike Lee, type: Artist, roles: [film director, actor], born: 1957-03-20, prominence: 3,
+     sitelinks: 68, sitelinks_on: 2026-10-17,
+     note: "American filmmaker whose work explores race relations: Do the Right Thing, Malcolm X, BlacKkKlansman.",
+     coverage: not-read, coverage_note: "Added as director of BlacKkKlansman.", sources: [wp-spike-lee]}
+  - {key: clint-eastwood, name: Clint Eastwood, type: Artist, roles: [film director, actor], born: 1930-05-31, prominence: 4,
+     sitelinks: 135, sitelinks_on: 2026-10-17,
+     note: "American actor and filmmaker: the Man with No Name in Leone's Dollars Trilogy; directed Unforgiven, Million Dollar Baby, Sully.",
+     coverage: not-read, coverage_note: "Added as director of Sully.", sources: [wp-clint-eastwood]}
+  - {key: mark-herman, name: Mark Herman, type: Artist, roles: [film director], born: 1954, prominence: 1,
+     sitelinks: 18, sitelinks_on: 2026-10-17,
+     note: "British writer-director of Brassed Off (1996) and The Boy in the Striped Pyjamas (2008).",
+     coverage: not-read, coverage_note: "Added as director of The Boy in the Striped Pyjamas.", sources: [wp-mark-herman]}
+  - {key: martin-scorsese, name: Martin Scorsese, type: Artist, roles: [film director], born: 1942-11-17, prominence: 4,
+     sitelinks: 114, sitelinks_on: 2026-10-17,
+     note: "American filmmaker of the New Hollywood era: Taxi Driver, Raging Bull, Goodfellas, Gangs of New York, The Irishman.",
+     coverage: not-read, coverage_note: "Added as director of Gangs of New York and The Irishman.", sources: [wp-martin-scorsese]}
+  - {key: j-a-bayona, name: J. A. Bayona, type: Artist, roles: [film director], born: 1975-05-09, prominence: 1,
+     sitelinks: 36, sitelinks_on: 2026-10-17,
+     note: "Spanish director: The Orphanage, The Impossible, A Monster Calls.",
+     coverage: not-read, coverage_note: "Added as director of The Impossible.", sources: [wp-j-a-bayona]}
+  - {key: brian-de-palma, name: Brian De Palma, type: Artist, roles: [film director], born: 1940-09-11, prominence: 3,
+     sitelinks: 68, sitelinks_on: 2026-10-17,
+     note: "American director of suspense and crime films: Carrie, Scarface, The Untouchables.",
+     coverage: not-read, coverage_note: "Added as director of The Untouchables.", sources: [wp-brian-de-palma]}
+  - {key: ron-howard, name: Ron Howard, type: Artist, roles: [film director, actor], born: 1954-03-01, prominence: 3,
+     sitelinks: 70, sitelinks_on: 2026-10-17,
+     note: "American child actor turned director: Apollo 13, A Beautiful Mind.",
+     coverage: not-read, coverage_note: "Added as director of Apollo 13.", sources: [wp-ron-howard]}
+  - {key: yorgos-lanthimos, name: Yorgos Lanthimos, type: Artist, roles: [film director], born: 1973-09-23, prominence: 2,
+     sitelinks: 47, sitelinks_on: 2026-10-17,
+     note: "Greek film and theatre director: Dogtooth, The Favourite, Poor Things.",
+     coverage: not-read, coverage_note: "Added as director of The Favourite.", sources: [wp-yorgos-lanthimos]}
+
+places:
+  - key: colorado-springs
+    name: Colorado Springs
+    kind: city
+    region: Colorado
+    country: United States
+    lat: 38.8633
+    lng: -104.7919
+    sources: [wp-colorado-springs-colorado]
+  - key: laguardia-airport
+    name: LaGuardia Airport
+    kind: airport
+    city: New York City
+    region: New York
+    country: United States
+    lat: 40.775
+    lng: -73.875
+    sources: [wp-laguardia-airport]
+  - key: detroit
+    name: Detroit
+    kind: city
+    region: Michigan
+    country: United States
+    lat: 42.3317
+    lng: -83.0475
+    sources: [wp-detroit]
+  - key: five-points-manhattan
+    name: Five Points
+    kind: district
+    city: New York City
+    region: New York
+    country: United States
+    lat: 40.7144
+    lng: -74.0003
+    sources: [wp-five-points-manhattan]
+  - key: khao-lak
+    name: Khao Lak
+    kind: village
+    region: Phang Nga
+    country: Thailand
+    lat: 8.6299
+    lng: 98.2443
+    sources: [wp-khao-lak]
+  - key: mogadishu
+    name: Mogadishu
+    kind: city
+    country: Somalia
+    lat: 2.0392
+    lng: 45.3419
+    sources: [wp-mogadishu]
+  - key: kennedy-space-center
+    name: Kennedy Space Center
+    kind: launch site
+    region: Florida
+    country: United States
+    lat: 28.5247
+    lng: -80.6486
+    sources: [wp-kennedy-space-center]
+  - key: hatfield-house
+    name: Hatfield House
+    kind: house
+    city: Hatfield
+    region: Hertfordshire
+    country: England
+    lat: 51.7606
+    lng: -0.2092
+    founded: 1611
+    built_by: "Robert Cecil, 1st Earl of Salisbury"
+    sources: [wp-hatfield-house]
+
+events:
+  - key: us-airways-flight-1549-2009
+    name: US Airways Flight 1549 ditches in the Hudson
+    type: Air accident
+    date: 2009-01-15
+    place: new-york-city
+    places:
+      - {place: laguardia-airport, role: start, note: "Took off from LaGuardia; a bird strike stopped both engines"}
+    prominence: 2
+    note: "The 'Miracle on the Hudson': Captain Chesley Sullenberger ditched the Airbus A320 on the Hudson River."
+    sources: [wp-us-airways-flight-1549]
+  - key: disappearance-of-jimmy-hoffa-1975
+    name: Disappearance of Jimmy Hoffa
+    type: Disappearance
+    date: 1975-07-30
+    prominence: 2
+    note: "The former Teamsters leader vanished after going to a meeting at the Machus Red Fox restaurant in Bloomfield Township, near Detroit; declared dead in 1982."
+    sources: [wp-jimmy-hoffa]
+  - key: new-york-city-draft-riots-1863
+    name: New York City draft riots
+    type: Riot
+    date: 1863-07-13
+    end_year: 1863
+    place: new-york-city
+    prominence: 3
+    note: "13-16 July 1863 in Lower Manhattan, against the Civil War draft; they turned into a race riot against African Americans."
+    sources: [wp-new-york-city-draft-riots]
+  - key: indian-ocean-earthquake-and-tsunami-2004
+    name: Indian Ocean earthquake and tsunami
+    type: Natural disaster
+    date: 2004-12-26
+    places:
+      - {place: khao-lak, role: struck}
+    prominence: 4
+    note: "A magnitude 9.2-9.3 earthquake off Aceh, Sumatra, and the tsunami it raised around the Indian Ocean."
+    sources: [wp-2004-indian-ocean-earthquake-and-tsunami, wp-the-impossible-2012]
+  - key: battle-of-mogadishu-1993
+    name: Battle of Mogadishu
+    type: Battle
+    date: 1993-10-03
+    place: mogadishu
+    prominence: 2
+    note: "3-4 October 1993: US forces against Somali National Alliance fighters; two Black Hawk helicopters shot down."
+    sources: [wp-battle-of-mogadishu-1993]
+  - key: apollo-13-1970
+    name: Apollo 13
+    type: Spaceflight
+    date: 1970-04-11
+    place: kennedy-space-center
+    prominence: 3
+    note: "11-17 April 1970: the Moon landing was aborted after an oxygen tank exploded; the crew returned safely."
+    sources: [wp-apollo-13]
+  - key: war-of-the-spanish-succession
+    name: War of the Spanish Succession
+    type: War
+    year: 1701
+    end_year: 1714
+    prominence: 4
+    note: "European great-power war over who would succeed the childless Charles II of Spain."
+    sources: [wp-war-of-the-spanish-succession]
+
+artworks:
+  - key: dallas-buyers-club-2013
+    name: Dallas Buyers Club
+    kind: film
+    made: 2013
+    prominence: 3
+    note: "Ron Woodroof, a Dallas electrician diagnosed with AIDS in 1985, smuggles unapproved drugs to sell in Dallas."
+    people:
+      - {person: jean-marc-vallee, role: creator}
+    places:
+      - {place: dallas, role: depicts}
+    external:
+      - {system: entertainment, id: 2a38f7e0-1027-4628-a40b-387cf5540793}
+      - {system: tmdb, id: "152532", url: "https://www.themoviedb.org/movie/152532"}
+    sources: [wp-dallas-buyers-club-2013]
+  - key: spotlight-2015
+    name: Spotlight
+    kind: film
+    made: 2015
+    prominence: 3
+    note: "The Boston Globe's Spotlight team uncovers the cover-up of child sexual abuse in the Catholic Archdiocese of Boston."
+    people:
+      - {person: tom-mccarthy-director, role: creator}
+    places:
+      - {place: boston, role: depicts}
+    external:
+      - {system: entertainment, id: cfd6d600-6673-425a-a129-a90a37cb3833}
+      - {system: tmdb, id: "314365", url: "https://www.themoviedb.org/movie/314365"}
+    sources: [wp-spotlight-2015]
+  - key: blackkklansman-2018
+    name: BlacKkKlansman
+    kind: film
+    made: 2018
+    prominence: 3
+    note: "Ron Stallworth, the first Black officer in the Colorado Springs police, infiltrates the local Ku Klux Klan in 1972."
+    people:
+      - {person: spike-lee, role: creator}
+    places:
+      - {place: colorado-springs, role: depicts}
+    external:
+      - {system: entertainment, id: 47f18d84-91df-4ff5-924d-596c69cfad6d}
+      - {system: tmdb, id: "487558", url: "https://www.themoviedb.org/movie/487558"}
+    sources: [wp-blackkklansman-2018]
+  - key: sully-2016
+    name: Sully
+    kind: film
+    made: 2016
+    prominence: 3
+    note: "Captain Sullenberger ditches US Airways Flight 1549 on the Hudson after taking off from LaGuardia, and faces the inquiry."
+    people:
+      - {person: clint-eastwood, role: creator}
+    places:
+      - {place: laguardia-airport, role: depicts}
+      - {place: new-york-city, role: depicts}
+    events:
+      - {event: us-airways-flight-1549-2009, role: depicts}
+    external:
+      - {system: entertainment, id: cdd9e81f-5480-452d-8fb6-ffc11c532719}
+      - {system: tmdb, id: "363676", url: "https://www.themoviedb.org/movie/363676"}
+    sources: [wp-sully-2016]
+  - key: the-boy-in-the-striped-pyjamas-2008
+    name: The Boy in the Striped Pyjamas
+    kind: film
+    made: 2008
+    prominence: 3
+    note: "An SS officer's son moves from Berlin to a house beside an extermination camp and befriends a Jewish boy behind the fence."
+    people:
+      - {person: mark-herman, role: creator}
+    places:
+      - {place: berlin, role: depicts}
+    external:
+      - {system: entertainment, id: 7a1da52b-6914-4da9-a047-a07eb0267077}
+      - {system: tmdb, id: "14574", url: "https://www.themoviedb.org/movie/14574"}
+    sources: [wp-the-boy-in-the-striped-pyjamas-2008]
+  - key: the-irishman-2019
+    name: The Irishman
+    kind: film
+    made: 2019
+    prominence: 3
+    note: "Hitman Frank Sheeran in the Philadelphia underworld and his friendship with Jimmy Hoffa, up to Hoffa's disappearance near Detroit in 1975. Chicago from TMDB."
+    people:
+      - {person: martin-scorsese, role: creator}
+    places:
+      - {place: philadelphia, role: depicts}
+      - {place: detroit, role: depicts}
+      - {place: chicago, role: depicts}
+    events:
+      - {event: disappearance-of-jimmy-hoffa-1975, role: depicts}
+    external:
+      - {system: entertainment, id: 24ad9581-8569-47e3-b91c-b8c950d9a435}
+      - {system: tmdb, id: "398978", url: "https://www.themoviedb.org/movie/398978"}
+    sources: [wp-the-irishman-2019, tmdb-the-irishman-2019]
+  - key: gangs-of-new-york-2002
+    name: Gangs of New York
+    kind: film
+    made: 2002
+    prominence: 3
+    note: "Gang war in the Five Points, 1846-1863, ending in the Civil War draft riots."
+    people:
+      - {person: martin-scorsese, role: creator}
+    places:
+      - {place: five-points-manhattan, role: depicts}
+      - {place: new-york-city, role: depicts}
+    events:
+      - {event: new-york-city-draft-riots-1863, role: depicts}
+    external:
+      - {system: entertainment, id: 2637f110-fe61-4993-a467-73605566a471}
+      - {system: tmdb, id: "3131", url: "https://www.themoviedb.org/movie/3131"}
+    sources: [wp-gangs-of-new-york-2002]
+  - key: the-impossible-2012
+    name: The Impossible
+    kind: film
+    made: 2012
+    prominence: 3
+    note: "A family on holiday at Khao Lak, Thailand, caught by the 2004 Indian Ocean tsunami; based on María Belón's experience."
+    people:
+      - {person: j-a-bayona, role: creator}
+    places:
+      - {place: khao-lak, role: depicts}
+    events:
+      - {event: indian-ocean-earthquake-and-tsunami-2004, role: depicts}
+    external:
+      - {system: entertainment, id: 53f0d784-c9d5-45d2-bd4f-37664203c0fa}
+      - {system: tmdb, id: "80278", url: "https://www.themoviedb.org/movie/80278"}
+    sources: [wp-the-impossible-2012]
+  - key: black-hawk-down-2001
+    name: Black Hawk Down
+    kind: film
+    made: 2001
+    prominence: 3
+    note: "US Rangers and Delta Force in the Battle of Mogadishu, 3-4 October 1993."
+    people:
+      - {person: ridley-scott, role: creator}
+    places:
+      - {place: mogadishu, role: depicts}
+    events:
+      - {event: battle-of-mogadishu-1993, role: depicts}
+    external:
+      - {system: entertainment, id: 294d54fe-bee4-463c-944e-f9686b2b4968}
+      - {system: tmdb, id: "855", url: "https://www.themoviedb.org/movie/855"}
+    sources: [wp-black-hawk-down-2001]
+  - key: the-untouchables-1987
+    name: The Untouchables
+    kind: film
+    made: 1987
+    prominence: 3
+    note: "Eliot Ness and the Untouchables against Al Capone in 1930 Chicago, during Prohibition."
+    people:
+      - {person: brian-de-palma, role: creator}
+    places:
+      - {place: chicago, role: depicts}
+    external:
+      - {system: entertainment, id: e0129d3f-34fe-4883-a7ba-48d99cb4450c}
+      - {system: tmdb, id: "117", url: "https://www.themoviedb.org/movie/117"}
+    sources: [wp-the-untouchables-1987]
+  - key: apollo-13-1995
+    name: Apollo 13
+    kind: film
+    made: 1995
+    prominence: 3
+    note: "The aborted 1970 lunar mission, from the launch at Kennedy Space Center to Mission Control in Houston."
+    people:
+      - {person: ron-howard, role: creator}
+    places:
+      - {place: kennedy-space-center, role: depicts}
+      - {place: houston, role: depicts}
+    events:
+      - {event: apollo-13-1970, role: depicts}
+    external:
+      - {system: entertainment, id: b0b88a45-3cd3-4d3f-838f-1158b9c682f5}
+      - {system: tmdb, id: "568", url: "https://www.themoviedb.org/movie/568"}
+    sources: [wp-apollo-13-1995]
+  - key: the-favourite-2018
+    name: The Favourite
+    kind: film
+    made: 2018
+    prominence: 3
+    note: "Sarah Churchill and Abigail Hill vie for Queen Anne's favour in 1705, with England at war with France. Shot at Hatfield House and Hampton Court Palace."
+    people:
+      - {person: yorgos-lanthimos, role: creator}
+    places:
+      - {place: hatfield-house, role: filmed}
+      - {place: hampton-court-palace, role: filmed}
+    events:
+      - {event: war-of-the-spanish-succession, role: depicts}
+    external:
+      - {system: entertainment, id: 14fcd8f3-b532-486c-b6c0-946cf699af4c}
+      - {system: tmdb, id: "375262", url: "https://www.themoviedb.org/movie/375262"}
+    sources: [wp-the-favourite-2018, tmdb-the-favourite-2018]
