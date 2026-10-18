@@ -2433,7 +2433,7 @@ function wireCardDrag() {
     if (!head || e.target.closest("button") || e.button !== 0) return;
     if (e.pointerType !== "mouse" && !e.target.closest(".xkind")) return;
     drag = { card: head.parentElement, x: e.pageX, y: e.pageY, on: false };
-    head.setPointerCapture(e.pointerId);
+    try { head.setPointerCapture(e.pointerId); } catch (err) {}   // the pointer may already be gone
     e.preventDefault();   // no text selection
   });
   box.addEventListener("pointermove", e => {
