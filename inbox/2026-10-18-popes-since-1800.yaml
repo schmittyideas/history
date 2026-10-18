@@ -1,0 +1,270 @@
+# The Papacy since 1800: the 16 popes after Pius VII (already here), from Leo XII (1823) to Leo XIV, with their
+# births, deaths and burials, the places those happened, and the main events of their pontificates.
+# Part of "all the popes" (Ty, 2026-10-18): every pope on the Catholic Church's official list (Wikipedia's "List of
+# popes", revision 1380439001), antipopes with the same title marked disputed (none in this period), and the lawful
+# popes undisputed.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the
+# session scratchpad): each pope's own article for his dates, pontificate and the facts in his note; the List of popes
+# for the pontificate dates and birthplaces; the event articles for event dates; place articles and Wikidata (P625)
+# for places. Sitelinks read from Wikidata on 2026-10-18.
+# Conventions (as the earlier Papacy batches, inbox/2026-10-08-popes-*.yaml): type Clergy, roles [pope], realm Papacy;
+# title "Pope", realm Papacy, from election to death or resignation; prominence hand-set (4 for the popes of the
+# Vatican Councils and of world standing: Pius IX, Leo XIII, Pius XII, John XXIII, Paul VI, John Paul II, Benedict XVI,
+# Francis; 3 for the rest).
+# Stated honestly:
+#  - Leo XII's birth: his article says 2 August 1760; the List of popes (and Wikidata) say 22 August. Recorded as a
+#    discrepancy; the record uses his article.
+#  - Death places are recorded only where the article states one (Pius VIII at the Quirinal Palace, Pius XI in the
+#    Apostolic Palace, Paul VI at Castel Gandolfo, Leo XII at the Vatican, Benedict XVI at the Mater Ecclesiae
+#    Monastery and Francis at the Domus Sanctae Marthae, both in Vatican City). Burials likewise; only the final
+#    resting place, with the year the body was laid there where the article gives a move (Pius IX moved to San Lorenzo
+#    fuori le Mura in 1881; Leo XIII to St John Lateran in 1924). Pius VIII's and Pius XII's burials are not stated in
+#    their articles and are left out.
+#  - San Lorenzo fuori le Mura has no coordinates on Wikidata; the coordinates are approximate (the basilica stands
+#    beside the Verano cemetery).
+batch:
+  title: "The Papacy since 1800"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-list-of-popes, title: "List of popes (Wikipedia)", url: "https://en.wikipedia.org/wiki/List_of_popes"}
+  - {key: wp-leo-xii, title: "Pope Leo XII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_XII"}
+  - {key: wd-leo-xii, title: "Pope Leo XII (Wikidata)", url: "https://www.wikidata.org/wiki/Q43727"}
+  - {key: wp-pius-viii, title: "Pope Pius VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_VIII"}
+  - {key: wp-gregory-xvi, title: "Pope Gregory XVI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_XVI"}
+  - {key: wp-pius-ix, title: "Pope Pius IX (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_IX"}
+  - {key: wp-leo-xiii, title: "Pope Leo XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_XIII"}
+  - {key: wp-pius-x, title: "Pope Pius X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_X"}
+  - {key: wp-benedict-xv, title: "Pope Benedict XV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_XV"}
+  - {key: wp-pius-xi, title: "Pope Pius XI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_XI"}
+  - {key: wp-pius-xii, title: "Pope Pius XII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pius_XII"}
+  - {key: wp-john-xxiii, title: "Pope John XXIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XXIII"}
+  - {key: wp-paul-vi, title: "Pope Paul VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Paul_VI"}
+  - {key: wp-john-paul-i, title: "Pope John Paul I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_Paul_I"}
+  - {key: wp-john-paul-ii, title: "Pope John Paul II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_Paul_II"}
+  - {key: wp-benedict-xvi, title: "Pope Benedict XVI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_XVI"}
+  - {key: wp-francis, title: "Pope Francis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Francis"}
+  - {key: wp-leo-xiv, title: "Pope Leo XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_XIV"}
+  # Events
+  - {key: wp-first-vatican-council, title: "First Vatican Council (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_Vatican_Council"}
+  - {key: wp-capture-of-rome, title: "Capture of Rome (Wikipedia)", url: "https://en.wikipedia.org/wiki/Capture_of_Rome"}
+  - {key: wp-lateran-treaty, title: "Lateran Treaty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lateran_Treaty"}
+  - {key: wp-second-vatican-council, title: "Second Vatican Council (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_Vatican_Council"}
+  - {key: wp-attempted-assassination-of-john-paul-ii, title: "Attempted assassination of Pope John Paul II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Attempted_assassination_of_Pope_John_Paul_II"}
+  - {key: wp-resignation-of-benedict-xvi, title: "Resignation of Pope Benedict XVI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Resignation_of_Pope_Benedict_XVI"}
+  # Places
+  - {key: wp-genga, title: "Genga, Marche (Wikipedia)", url: "https://en.wikipedia.org/wiki/Genga,_Marche"}
+  - {key: wp-cingoli, title: "Cingoli (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cingoli"}
+  - {key: wp-belluno, title: "Belluno (Wikipedia)", url: "https://en.wikipedia.org/wiki/Belluno"}
+  - {key: wp-senigallia, title: "Senigallia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Senigallia"}
+  - {key: wp-carpineto-romano, title: "Carpineto Romano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carpineto_Romano"}
+  - {key: wp-riese-pio-x, title: "Riese Pio X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Riese_Pio_X"}
+  - {key: wp-desio, title: "Desio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Desio"}
+  - {key: wp-sotto-il-monte, title: "Sotto il Monte Giovanni XXIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sotto_il_Monte_Giovanni_XXIII"}
+  - {key: wp-concesio, title: "Concesio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Concesio"}
+  - {key: wp-canale-dagordo, title: "Canale d'Agordo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Canale_d%27Agordo"}
+  - {key: wp-wadowice, title: "Wadowice (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wadowice"}
+  - {key: wp-marktl, title: "Marktl (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marktl"}
+  - {key: wp-buenos-aires, title: "Buenos Aires (Wikipedia)", url: "https://en.wikipedia.org/wiki/Buenos_Aires"}
+  - {key: wp-vatican-city, title: "Vatican City (Wikipedia)", url: "https://en.wikipedia.org/wiki/Vatican_City"}
+  - {key: wp-castel-gandolfo, title: "Castel Gandolfo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Castel_Gandolfo"}
+  - {key: wp-san-lorenzo-fuori-le-mura, title: "Basilica of Saint Lawrence outside the Walls (Wikipedia)", url: "https://en.wikipedia.org/wiki/Basilica_of_Saint_Lawrence_outside_the_Walls"}
+
+people:
+  - {key: leo-xii, name: Leo XII, type: Clergy, roles: [pope], born: 1760-08-02, died: 1829-02-10, realm: Papacy, prominence: 3, sitelinks: 92, sitelinks_on: 2026-10-18,
+     note: "Annibale della Genga. In ill health throughout his pontificate (1823-1829); a deeply conservative ruler of the Papal States who enforced controversial laws, including one forbidding Jews to own property.",
+     sources: [wp-leo-xii]}
+  - {key: pius-viii, name: Pius VIII, type: Clergy, roles: [pope], born: 1761-11-20, died: 1830-11-30, realm: Papacy, prominence: 3, sitelinks: 90, sitelinks_on: 2026-10-18,
+     note: "Francesco Saverio Castiglioni. His brief pontificate (1829-1830), the shortest of the 19th century, saw Catholic Emancipation in the United Kingdom, which he welcomed, and the July Revolution in France, which he accepted reluctantly.",
+     sources: [wp-pius-viii]}
+  - {key: gregory-xvi, name: Gregory XVI, type: Clergy, roles: [pope], born: 1765-09-18, died: 1846-06-01, realm: Papacy, prominence: 3, sitelinks: 98, sitelinks_on: 2026-10-18,
+     note: "Bartolomeo Cappellari, a Camaldolese monk. A staunch defender of traditional doctrine who defended the Papal States against the Italian patriotic movements; the last pope not a bishop when elected.",
+     sources: [wp-gregory-xvi]}
+  - {key: pius-ix, name: Pius IX, type: Clergy, roles: [pope], born: 1792-05-13, died: 1878-02-07, realm: Papacy, prominence: 4, sitelinks: 109, sitelinks_on: 2026-10-18,
+     note: "Giovanni Maria Mastai-Ferretti. The longest verified pontificate (1846-1878). Convoked the First Vatican Council, which defined papal infallibility; lost Rome to the Kingdom of Italy in 1870 and called himself a 'prisoner in the Vatican'.",
+     sources: [wp-pius-ix]}
+  - {key: leo-xiii, name: Leo XIII, type: Clergy, roles: [pope], born: 1810-03-02, died: 1903-07-20, realm: Papacy, prominence: 4, sitelinks: 115, sitelinks_on: 2026-10-18,
+     note: "Gioacchino Pecci. Reigned 1878-1903, one of the longest pontificates; wrote 86 encyclicals, including Rerum novarum (1891) on workers' rights to a fair wage and to form trade unions, and was called the 'Social Pope'.",
+     sources: [wp-leo-xiii]}
+  - {key: pius-x, name: Pius X, type: Clergy, roles: [pope], born: 1835-06-02, died: 1914-08-20, realm: Papacy, prominence: 3, sitelinks: 118, sitelinks_on: 2026-10-18,
+     note: "Giuseppe Sarto, born to a poor family in the Austrian Empire. Opposed modernist theology, reformed the liturgy and began the 1917 Code of Canon Law; venerated as a saint.",
+     sources: [wp-pius-x]}
+  - {key: benedict-xv, name: Benedict XV, type: Clergy, roles: [pope], born: 1854-11-21, died: 1922-01-22, realm: Papacy, prominence: 3, sitelinks: 113, sitelinks_on: 2026-10-18,
+     note: "Giacomo della Chiesa, elected as the First World War began. Declared the Holy See neutral, called the war 'the suicide of civilized Europe' and tried to mediate peace in 1916 and 1917; both sides rejected him.",
+     sources: [wp-benedict-xv]}
+  - {key: pius-xi, name: Pius XI, type: Clergy, roles: [pope], born: 1857-05-31, died: 1939-02-10, realm: Papacy, prominence: 3, sitelinks: 121, sitelinks_on: 2026-10-18,
+     note: "Achille Ratti. First sovereign of Vatican City (1929); concluded a record number of concordats, among them the Reichskonkordat, and wrote Quadragesimo anno on social justice.",
+     sources: [wp-pius-xi]}
+  - {key: pius-xii, name: Pius XII, type: Clergy, roles: [pope], born: 1876-03-02, died: 1958-10-09, realm: Papacy, prominence: 4, sitelinks: 122, sitelinks_on: 2026-10-18,
+     note: "Eugenio Pacelli, a Roman and long the Vatican's chief diplomat. His pontificate (1939-1958) spanned the Second World War, the Holocaust and the early Cold War; his wartime conduct remains debated.",
+     sources: [wp-pius-xii]}
+  - {key: john-xxiii, name: John XXIII, type: Clergy, roles: [pope], born: 1881-11-25, died: 1963-06-03, realm: Papacy, prominence: 4, sitelinks: 137, sitelinks_on: 2026-10-18,
+     note: "Angelo Roncalli, a sharecropper's son from Sotto il Monte, nuncio in France and Patriarch of Venice. Elected at 76 as an expected caretaker, he called the Second Vatican Council.",
+     sources: [wp-john-xxiii]}
+  - {key: paul-vi, name: Paul VI, type: Clergy, roles: [pope], born: 1897-09-26, died: 1978-08-06, realm: Papacy, prominence: 4, sitelinks: 125, sitelinks_on: 2026-10-18,
+     note: "Giovanni Battista Montini, Archbishop of Milan. Continued and closed the Second Vatican Council (1965) and carried out its reforms; fostered ecumenical relations with the Orthodox and Protestant churches.",
+     sources: [wp-paul-vi]}
+  - {key: john-paul-i, name: John Paul I, type: Clergy, roles: [pope], born: 1912-10-17, died: 1978-09-28, realm: Papacy, prominence: 3, sitelinks: 127, sitelinks_on: 2026-10-18,
+     note: "Albino Luciani. Died 33 days after his election, one of the shortest reigns in papal history; the first pope with a double name and the most recent Italian-born pope.",
+     sources: [wp-john-paul-i]}
+  - {key: john-paul-ii, name: John Paul II, type: Clergy, roles: [pope], born: 1920-05-18, died: 2005-04-02, realm: Papacy, prominence: 4, sitelinks: 209, sitelinks_on: 2026-10-18,
+     note: "Karol Wojtyła of Wadowice, Poland: the first non-Italian pope since Adrian VI and the third longest-serving (1978-2005); a philosopher and theologian, shot in St Peter's Square in 1981.",
+     sources: [wp-john-paul-ii]}
+  - {key: benedict-xvi, name: Benedict XVI, type: Clergy, roles: [pope], born: 1927-04-16, died: 2022-12-31, realm: Papacy, prominence: 4, sitelinks: 200, sitelinks_on: 2026-10-18,
+     note: "Joseph Ratzinger, theologian and Archbishop of Munich and Freising. Resigned in 2013, the first pope to do so since Gregory XII in 1415, and lived on as pope emeritus.",
+     sources: [wp-benedict-xvi]}
+  - {key: francis, name: Francis, type: Clergy, roles: [pope], born: 1936-12-17, died: 2025-04-21, realm: Papacy, prominence: 4, sitelinks: 236, sitelinks_on: 2026-10-18,
+     note: "Jorge Mario Bergoglio, Archbishop of Buenos Aires: the first Jesuit pope, the first from Latin America and the first born outside Europe since Gregory III. Buried at Santa Maria Maggiore, as he wished.",
+     sources: [wp-francis]}
+  - {key: leo-xiv, name: Leo XIV, type: Clergy, roles: [pope], born: 1955-09-14, realm: Papacy, prominence: 3, sitelinks: 175, sitelinks_on: 2026-10-18,
+     note: "Robert Francis Prevost of Chicago, an Augustinian friar, missionary and Bishop of Chiclayo in Peru, and a Peruvian citizen; prefect of the Dicastery for Bishops under Francis. The first pope born in the United States.",
+     sources: [wp-leo-xiv, wp-list-of-popes]}
+
+titles:
+  - {person: leo-xii, title: Pope, realm: Papacy, from: 1823-09-28, to: 1829-02-10, sources: [wp-leo-xii, wp-list-of-popes]}
+  - {person: pius-viii, title: Pope, realm: Papacy, from: 1829-03-31, to: 1830-11-30, sources: [wp-pius-viii, wp-list-of-popes]}
+  - {person: gregory-xvi, title: Pope, realm: Papacy, from: 1831-02-02, to: 1846-06-01, sources: [wp-gregory-xvi, wp-list-of-popes]}
+  - {person: pius-ix, title: Pope, realm: Papacy, from: 1846-06-16, to: 1878-02-07, sources: [wp-pius-ix, wp-list-of-popes]}
+  - {person: leo-xiii, title: Pope, realm: Papacy, from: 1878-02-20, to: 1903-07-20, sources: [wp-leo-xiii, wp-list-of-popes]}
+  - {person: pius-x, title: Pope, realm: Papacy, from: 1903-08-04, to: 1914-08-20, sources: [wp-pius-x, wp-list-of-popes]}
+  - {person: benedict-xv, title: Pope, realm: Papacy, from: 1914-09-03, to: 1922-01-22, sources: [wp-benedict-xv, wp-list-of-popes]}
+  - {person: pius-xi, title: Pope, realm: Papacy, from: 1922-02-06, to: 1939-02-10, sources: [wp-pius-xi, wp-list-of-popes]}
+  - {person: pius-xii, title: Pope, realm: Papacy, from: 1939-03-02, to: 1958-10-09, sources: [wp-pius-xii, wp-list-of-popes]}
+  - {person: john-xxiii, title: Pope, realm: Papacy, from: 1958-10-28, to: 1963-06-03, sources: [wp-john-xxiii, wp-list-of-popes]}
+  - {person: paul-vi, title: Pope, realm: Papacy, from: 1963-06-21, to: 1978-08-06, sources: [wp-paul-vi, wp-list-of-popes]}
+  - {person: john-paul-i, title: Pope, realm: Papacy, from: 1978-08-26, to: 1978-09-28, sources: [wp-john-paul-i, wp-list-of-popes]}
+  - {person: john-paul-ii, title: Pope, realm: Papacy, from: 1978-10-16, to: 2005-04-02, sources: [wp-john-paul-ii, wp-list-of-popes]}
+  - {person: benedict-xvi, title: Pope, realm: Papacy, from: 2005-04-19, to: 2013-02-28, sources: [wp-benedict-xvi, wp-list-of-popes], note: "Resigned; pope emeritus until his death on 31 December 2022."}
+  - {person: francis, title: Pope, realm: Papacy, from: 2013-03-13, to: 2025-04-21, sources: [wp-francis, wp-list-of-popes]}
+  - {person: leo-xiv, title: Pope, realm: Papacy, from: 2025-05-08, sources: [wp-leo-xiv, wp-list-of-popes]}
+
+places:
+  - {key: genga, name: Genga, kind: town, region: Marche, country: Italy, lat: 43.4305, lng: 12.9356, sources: [wp-genga]}
+  - {key: cingoli, name: Cingoli, kind: town, region: Marche, country: Italy, lat: 43.3742, lng: 13.2164, sources: [wp-cingoli]}
+  - {key: belluno, name: Belluno, kind: city, region: Veneto, country: Italy, lat: 46.1408, lng: 12.2156, sources: [wp-belluno]}
+  - {key: senigallia, name: Senigallia, kind: town, region: Marche, country: Italy, lat: 43.7131, lng: 13.2183, sources: [wp-senigallia]}
+  - {key: carpineto-romano, name: Carpineto Romano, kind: town, region: Lazio, country: Italy, lat: 41.6, lng: 13.0833, sources: [wp-carpineto-romano]}
+  - {key: riese-pio-x, name: Riese Pio X, historical_name: Riese, kind: town, region: Veneto, country: Italy, lat: 45.7299, lng: 11.92, sources: [wp-riese-pio-x]}
+  - {key: desio, name: Desio, kind: town, region: Lombardy, country: Italy, lat: 45.6167, lng: 9.2167, sources: [wp-desio]}
+  - {key: sotto-il-monte, name: Sotto il Monte Giovanni XXIII, historical_name: Sotto il Monte, kind: village, region: Lombardy, country: Italy, lat: 45.7072, lng: 9.4992, sources: [wp-sotto-il-monte]}
+  - {key: concesio, name: Concesio, kind: town, region: Lombardy, country: Italy, lat: 45.6, lng: 10.2167, sources: [wp-concesio]}
+  - {key: canale-dagordo, name: Canale d'Agordo, historical_name: Forno di Canale, kind: village, region: Veneto, country: Italy, lat: 46.3606, lng: 11.9144, sources: [wp-canale-dagordo, wp-list-of-popes]}
+  - {key: wadowice, name: Wadowice, kind: town, region: Lesser Poland, country: Poland, lat: 49.8833, lng: 19.5, sources: [wp-wadowice]}
+  - {key: marktl, name: Marktl, kind: town, region: Bavaria, country: Germany, lat: 48.2533, lng: 12.8431, sources: [wp-marktl]}
+  - {key: buenos-aires, name: Buenos Aires, kind: city, country: Argentina, lat: -34.5997, lng: -58.3819, sources: [wp-buenos-aires]}
+  - {key: vatican-city, name: Vatican City, kind: city-state, city: Rome, country: Vatican City, lat: 41.904, lng: 12.453, founded: 1929, sources: [wp-vatican-city, wp-lateran-treaty]}
+  - {key: castel-gandolfo, name: Castel Gandolfo, kind: town, region: Lazio, country: Italy, lat: 41.7469, lng: 12.6519, sources: [wp-castel-gandolfo]}
+  - {key: san-lorenzo-fuori-le-mura, name: San Lorenzo fuori le Mura, kind: basilica, city: Rome, region: Lazio, country: Italy, lat: 41.9025, lng: 12.5208, sources: [wp-san-lorenzo-fuori-le-mura]}
+
+moments:
+  - {person: leo-xii, role: born, place: genga, year: 1760}
+  - {person: pius-viii, role: born, place: cingoli, year: 1761}
+  - {person: gregory-xvi, role: born, place: belluno, year: 1765}
+  - {person: pius-ix, role: born, place: senigallia, year: 1792}
+  - {person: leo-xiii, role: born, place: carpineto-romano, year: 1810}
+  - {person: pius-x, role: born, place: riese-pio-x, year: 1835}
+  - {person: benedict-xv, role: born, place: genoa, year: 1854}
+  - {person: pius-xi, role: born, place: desio, year: 1857}
+  - {person: pius-xii, role: born, place: rome, year: 1876}
+  - {person: john-xxiii, role: born, place: sotto-il-monte, year: 1881}
+  - {person: paul-vi, role: born, place: concesio, year: 1897}
+  - {person: john-paul-i, role: born, place: canale-dagordo, year: 1912}
+  - {person: john-paul-ii, role: born, place: wadowice, year: 1920}
+  - {person: benedict-xvi, role: born, place: marktl, year: 1927}
+  - {person: francis, role: born, place: buenos-aires, year: 1936}
+  - {person: leo-xiv, role: born, place: chicago, year: 1955}
+  - {person: leo-xii, role: died, place: vatican-city, year: 1829}
+  - {person: pius-viii, role: died, place: quirinal-palace, year: 1830}
+  - {person: pius-xi, role: died, place: apostolic-palace, year: 1939}
+  - {person: paul-vi, role: died, place: castel-gandolfo, year: 1978}
+  - {person: benedict-xvi, role: died, place: vatican-city, year: 2022}
+  - {person: francis, role: died, place: vatican-city, year: 2025}
+  - {person: leo-xii, role: buried, place: st-peters-basilica-rome, year: 1829}
+  - {person: gregory-xvi, role: buried, place: st-peters-basilica-rome, year: 1846}
+  - {person: pius-ix, role: buried, place: san-lorenzo-fuori-le-mura, year: 1881}
+  - {person: leo-xiii, role: buried, place: lateran-palace-rome, year: 1924}
+  - {person: pius-x, role: buried, place: st-peters-basilica-rome, year: 1914}
+  - {person: benedict-xv, role: buried, place: st-peters-basilica-rome, year: 1922}
+  - {person: pius-xi, role: buried, place: st-peters-basilica-rome, year: 1939}
+  - {person: john-xxiii, role: buried, place: st-peters-basilica-rome, year: 1963}
+  - {person: paul-vi, role: buried, place: st-peters-basilica-rome, year: 1978}
+  - {person: john-paul-i, role: buried, place: st-peters-basilica-rome, year: 1978}
+  - {person: john-paul-ii, role: buried, place: st-peters-basilica-rome, year: 2005}
+  - {person: benedict-xvi, role: buried, place: st-peters-basilica-rome, year: 2023}
+  - {person: francis, role: buried, place: santa-maria-maggiore-rome, year: 2025}
+
+events:
+  - key: first-vatican-council-1869
+    name: First Vatican Council
+    type: Council
+    date: 1869-12-08
+    end_year: 1870
+    place: vatican-city
+    people:
+      - {person: pius-ix, role: convoked it}
+    prominence: 4
+    note: "The 20th ecumenical council, convoked on 29 June 1868 and opened on 8 December 1869; it defined papal infallibility and was adjourned on 20 September 1870 after the capture of Rome."
+    sources: [wp-first-vatican-council]
+  - key: capture-of-rome-1870
+    name: Capture of Rome
+    type: Conquest
+    date: 1870-09-20
+    place: rome
+    people:
+      - {person: pius-ix, role: defeated}
+    prominence: 4
+    note: "The Kingdom of Italy took Rome and the Papal States, ending the popes' temporal power; Rome became Italy's capital on 3 February 1871."
+    sources: [wp-capture-of-rome, wp-pius-ix]
+  - key: lateran-treaty-1929
+    name: Lateran Treaty
+    type: Treaty
+    date: 1929-02-11
+    place: lateran-palace-rome
+    people:
+      - {person: pius-xi, role: signatory}
+    prominence: 4
+    note: "Signed at the Lateran Palace. Italy under Victor Emmanuel III and Mussolini recognised Vatican City as an independent state under the Holy See, settling the Roman question, and paid compensation for the Papal States."
+    sources: [wp-lateran-treaty, wp-pius-xi]
+  - key: second-vatican-council-1962
+    name: Second Vatican Council
+    type: Council
+    date: 1962-10-11
+    end_year: 1965
+    place: st-peters-basilica-rome
+    people:
+      - {person: john-xxiii, role: convoked it}
+      - {person: paul-vi, role: presided over its last three sessions}
+    prominence: 4
+    note: "The 21st and most recent ecumenical council, in four sessions at St Peter's from 11 October 1962 to 8 December 1965; Paul VI promulgated all sixteen of its documents."
+    sources: [wp-second-vatican-council]
+  - key: attempted-assassination-of-john-paul-ii-1981
+    name: Attempted assassination of John Paul II
+    type: Assassination attempt
+    date: 1981-05-13
+    place: vatican-city
+    people:
+      - {person: john-paul-ii, role: wounded}
+    prominence: 3
+    note: "Mehmet Ali Ağca shot the pope twice in St Peter's Square; the pope forgave him, and Italy pardoned him at the pope's request in 2000."
+    sources: [wp-attempted-assassination-of-john-paul-ii]
+  - key: resignation-of-benedict-xvi-2013
+    name: Resignation of Benedict XVI
+    type: Abdication
+    date: 2013-02-28
+    place: vatican-city
+    people:
+      - {person: benedict-xvi, role: resigned}
+    prominence: 3
+    note: "Announced on 11 February 2013 and effective on 28 February; the first papal resignation since Gregory XII in 1415."
+    sources: [wp-resignation-of-benedict-xvi]
+
+discrepancies:
+  - key: leo-xii-born
+    question: "When was Leo XII born?"
+    about: [{person: leo-xii}]
+    field: born
+    claims:
+      - {value: "1760-08-02", sources: [wp-leo-xii]}
+      - {value: "1760-08-22", sources: [wp-list-of-popes, wd-leo-xii]}
+    note: "The record uses his own article's date."
