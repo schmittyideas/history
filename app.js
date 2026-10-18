@@ -2163,10 +2163,12 @@ function exploreSearch(text) {
     ...db.places.map(pl => ({ kind: "place", id: pl.id, name: pl.name, names: [pl.name, pl.historical_name].filter(Boolean), f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length })),
     ...db.events.filter(e => !e.film).map(e => ({ kind: "event", id: e.id, name: e.name, names: [e.name], f: (e.prominence ?? 3) * 20 })),
   ];
-  // A city, region or country whose name starts with the words beats a painting or event named after it.
+  // A city, region or country whose name starts with the words beats a painting or event named after it, but not a
+  // person whose whole name was typed ("Saint Peter" is the apostle, not Saint Petersburg).
   const AREA_KIND = /^(city|town|village|borough|district|county|region|state|province|country|island)$/i;
-  let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s)
-    .map(r => r.kind === "place" && r.s >= 2 && AREA_KIND.test(db.placeById[r.id]?.kind || "") ? { ...r, s: r.s + 1.5 } : r);
+  let hits = records.map(r => ({ ...r, s: Math.max(...r.names.map(score)) })).filter(r => r.s);
+  const exactPerson = hits.some(r => r.kind === "person" && r.s === 3);
+  hits = hits.map(r => r.kind === "place" && r.s >= 2 && !(exactPerson && r.s < 3) && AREA_KIND.test(db.placeById[r.id]?.kind || "") ? { ...r, s: r.s + 1.5 } : r);
   // Words in any order, with endings ignored: "william wallace executed" finds "Execution of William Wallace".
   if (!hits.length) {
     const stem = w => w.slice(0, Math.max(4, Math.min(w.length, 6) - 1));
