@@ -1,0 +1,155 @@
+# Vice presidents' spouses, batch 1 of 2: the wives of the vice presidents who took office 1789-1873 (Burr to Wilson),
+# and the Second Lady title for the wives already here whose husbands were vice president before president
+# (Abigail Adams, Letitia Tyler, Abigail Fillmore, Eliza Johnson).
+# Ty's choices (2026-10-18): every wife, type Notable (prominence from sitelinks), with the title "Second Lady of the
+# United States" (realm United States) for the years she held it, mirroring the First Ladies.
+# VERIFIED: spouses from Wikidata (P26), checked against English Wikipedia downloaded on 2026-10-18 with tools/wiki.py
+# (revision IDs in the session scratchpad): her own article's lead for her dates, and her article or his for the
+# wedding. Titles: the vice president's term dates (inbox/2026-10-18-vice-presidents.yaml), cut to the marriage and her
+# life. Sitelinks read from Wikidata on 2026-10-18.
+# Stated honestly:
+#  - Wives with no Wikipedia article of their own cite their husband's article and record only what it says: Sarah
+#    Cornelia Tappen (George Clinton; died 1800, Wikidata says 1804: a discrepancy), Sarah Jane Emery (Hannibal Hamlin's
+#    first wife; married 1833, died 1855) and Harriet Malvina Howe (Henry Wilson; 1824-1870).
+#  - Julia Chinn: Richard Mentor Johnson's common-law wife, an enslaved woman he could not legally marry (his and her
+#    articles); the spouse link has no year. William R. King never married.
+#  - Aaron Burr's wives: Theodosia Bartow Prevost (married 2 July 1782; died 18 May 1794, Wikidata 28 May) and Eliza
+#    Jumel (married 1 July 1833; born 2 April 1775, Wikidata 7 April); neither was Second Lady.
+#  - Sophia Dallas: born 24 June 1798 (Wikidata 25 June). Every Wikidata difference is a discrepancy; the records use
+#    Wikipedia.
+batch:
+  title: "Vice presidents' spouses, batch 1"
+  requested: "And then vice presidents and their wives"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-theodosia-bartow-prevost, title: "Theodosia Bartow Prevost (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theodosia_Bartow_Prevost"}
+  - {key: wd-theodosia-bartow-prevost, title: "Theodosia Bartow Prevost (Wikidata)", url: "https://www.wikidata.org/wiki/Q23303391"}
+  - {key: wp-eliza-jumel, title: "Eliza Jumel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eliza_Jumel"}
+  - {key: wd-eliza-jumel, title: "Eliza Jumel (Wikidata)", url: "https://www.wikidata.org/wiki/Q5362157"}
+  - {key: wd-sarah-cornelia-tappen-clinton, title: "Sarah Cornelia Tappen (Wikidata)", url: "https://www.wikidata.org/wiki/None"}
+  - {key: wp-ann-gerry, title: "Ann Gerry (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ann_Gerry"}
+  - {key: wp-hannah-tompkins, title: "Hannah Tompkins (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hannah_Tompkins"}
+  - {key: wp-floride-calhoun, title: "Floride Calhoun (Wikipedia)", url: "https://en.wikipedia.org/wiki/Floride_Calhoun"}
+  - {key: wp-julia-chinn, title: "Julia Chinn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Julia_Chinn"}
+  - {key: wp-sophia-dallas, title: "Sophia Dallas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sophia_Dallas"}
+  - {key: wd-sophia-dallas, title: "Sophia Dallas (Wikidata)", url: "https://www.wikidata.org/wiki/Q3490813"}
+  - {key: wp-mary-cyrene-breckinridge, title: "Mary Cyrene Breckinridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Cyrene_Breckinridge"}
+  - {key: wp-ellen-hamlin, title: "Ellen Hamlin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ellen_Hamlin"}
+  - {key: wp-ellen-maria-colfax, title: "Ellen Maria Colfax (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ellen_Maria_Colfax"}
+
+people:
+  - {key: theodosia-bartow-prevost, name: "Theodosia Bartow Prevost", type: Notable, born: 1746, died: 1794-05-18, prominence: 1,
+     sitelinks: 3, sitelinks_on: 2026-10-18,
+     note: "Wife of Aaron Burr; not Second Lady: she died before he became vice president. Born November 1746.",
+     coverage: not-read, coverage_note: "Added as the wife of Aaron Burr.", sources: [wp-theodosia-bartow-prevost]}
+  - {key: eliza-jumel, name: "Eliza Jumel", type: Notable, born: 1775-04-02, died: 1865-07-16, prominence: 1,
+     sitelinks: 5, sitelinks_on: 2026-10-18,
+     note: "Wife of Aaron Burr; not Second Lady: they married after his vice presidency. A wealthy New York socialite; their divorce was finalized on the day of Burr's death.",
+     coverage: not-read, coverage_note: "Added as the wife of Aaron Burr.", sources: [wp-eliza-jumel]}
+  - {key: sarah-cornelia-tappen-clinton, name: "Sarah Cornelia Tappen", type: Notable, died: 1800, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of George Clinton; not Second Lady: she died before he became vice president. Recorded from George Clinton's article.",
+     coverage: not-read, coverage_note: "Added as the wife of George Clinton.", sources: [wp-george-clinton]}
+  - {key: ann-gerry, name: "Ann Gerry", type: Notable, born: 1763-08-12, died: 1849-03-17, prominence: 1,
+     sitelinks: 10, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1813-1814, as the wife of Elbridge Gerry.",
+     coverage: not-read, coverage_note: "Added as the wife of Elbridge Gerry.", sources: [wp-ann-gerry]}
+  - {key: hannah-tompkins, name: "Hannah Tompkins", type: Notable, born: 1781-08-28, died: 1829-02-18, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1817-1825, as the wife of Daniel D. Tompkins.",
+     coverage: not-read, coverage_note: "Added as the wife of Daniel D. Tompkins.", sources: [wp-hannah-tompkins]}
+  - {key: floride-calhoun, name: "Floride Calhoun", type: Notable, born: 1792-02-15, died: 1866-07-25, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1825-1832, as the wife of John C. Calhoun.",
+     coverage: not-read, coverage_note: "Added as the wife of John C. Calhoun.", sources: [wp-floride-calhoun]}
+  - {key: julia-chinn, name: "Julia Chinn", type: Notable, born: 1790, born_estimated: true, died: 1833, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Common-law wife of Richard Mentor Johnson; not Second Lady: she died before he became vice president. Enslaved woman and plantation manager; they could not legally marry. Born c. 1790; died July 1833.",
+     coverage: not-read, coverage_note: "Added as the wife of Richard Mentor Johnson.", sources: [wp-julia-chinn]}
+  - {key: sophia-dallas, name: "Sophia Dallas", type: Notable, born: 1798-06-24, died: 1869-01-11, prominence: 1,
+     sitelinks: 7, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1845-1849, as the wife of George M. Dallas.",
+     coverage: not-read, coverage_note: "Added as the wife of George M. Dallas.", sources: [wp-sophia-dallas]}
+  - {key: mary-cyrene-breckinridge, name: "Mary Cyrene Breckinridge", type: Notable, born: 1826-08-16, died: 1907-10-08, prominence: 1,
+     sitelinks: 10, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1857-1861, as the wife of John C. Breckinridge.",
+     coverage: not-read, coverage_note: "Added as the wife of John C. Breckinridge.", sources: [wp-mary-cyrene-breckinridge]}
+  - {key: sarah-jane-emery-hamlin, name: "Sarah Jane Emery", type: Notable, died: 1855, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of Hannibal Hamlin; not Second Lady: she died before he became vice president. Recorded from Hannibal Hamlin's article.",
+     coverage: not-read, coverage_note: "Added as the wife of Hannibal Hamlin.", sources: [wp-hannibal-hamlin]}
+  - {key: ellen-hamlin, name: "Ellen Hamlin", type: Notable, born: 1835-09-14, died: 1925-02-01, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1861-1865, as the wife of Hannibal Hamlin. Half-sister of his first wife, Sarah Jane Emery.",
+     coverage: not-read, coverage_note: "Added as the wife of Hannibal Hamlin.", sources: [wp-ellen-hamlin]}
+  - {key: ellen-maria-colfax, name: "Ellen Maria Colfax", type: Notable, born: 1836-07-26, died: 1911-03-04, prominence: 1,
+     sitelinks: 6, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1869-1873, as the wife of Schuyler Colfax.",
+     coverage: not-read, coverage_note: "Added as the wife of Schuyler Colfax.", sources: [wp-ellen-maria-colfax]}
+  - {key: harriet-malvina-howe-wilson, name: "Harriet Malvina Howe", type: Notable, born: 1824, died: 1870, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of Henry Wilson; not Second Lady: she died before he became vice president. Recorded from Henry Wilson's article.",
+     coverage: not-read, coverage_note: "Added as the wife of Henry Wilson.", sources: [wp-henry-wilson]}
+
+links:
+  - {spouse: aaron-burr, to: theodosia-bartow-prevost, year: 1782}
+  - {spouse: aaron-burr, to: eliza-jumel, year: 1833}
+  - {spouse: george-clinton, to: sarah-cornelia-tappen-clinton, year: 1770}
+  - {spouse: elbridge-gerry, to: ann-gerry, year: 1786}
+  - {spouse: daniel-d-tompkins, to: hannah-tompkins, year: 1798}
+  - {spouse: john-c-calhoun, to: floride-calhoun, year: 1811}
+  - {spouse: richard-mentor-johnson, to: julia-chinn}
+  - {spouse: george-m-dallas, to: sophia-dallas, year: 1816}
+  - {spouse: john-c-breckinridge, to: mary-cyrene-breckinridge, year: 1843}
+  - {spouse: hannibal-hamlin, to: sarah-jane-emery-hamlin, year: 1833}
+  - {spouse: hannibal-hamlin, to: ellen-hamlin, year: 1856}
+  - {spouse: schuyler-colfax, to: ellen-maria-colfax, year: 1868}
+  - {spouse: henry-wilson, to: harriet-malvina-howe-wilson, year: 1840}
+
+titles:
+  - {person: ann-gerry, title: Second Lady of the United States, realm: United States, from: 1813-03-04, to: 1814-11-23, sources: [wp-ann-gerry, wp-elbridge-gerry]}
+  - {person: hannah-tompkins, title: Second Lady of the United States, realm: United States, from: 1817-03-04, to: 1825-03-04, sources: [wp-hannah-tompkins, wp-daniel-d-tompkins]}
+  - {person: floride-calhoun, title: Second Lady of the United States, realm: United States, from: 1825-03-04, to: 1832-12-28, sources: [wp-floride-calhoun, wp-john-c-calhoun]}
+  - {person: sophia-dallas, title: Second Lady of the United States, realm: United States, from: 1845-03-04, to: 1849-03-04, sources: [wp-sophia-dallas, wp-george-m-dallas]}
+  - {person: mary-cyrene-breckinridge, title: Second Lady of the United States, realm: United States, from: 1857-03-04, to: 1861-03-04, sources: [wp-mary-cyrene-breckinridge, wp-john-c-breckinridge]}
+  - {person: ellen-hamlin, title: Second Lady of the United States, realm: United States, from: 1861-03-04, to: 1865-03-04, sources: [wp-ellen-hamlin, wp-hannibal-hamlin]}
+  - {person: ellen-maria-colfax, title: Second Lady of the United States, realm: United States, from: 1869-03-04, to: 1873-03-04, sources: [wp-ellen-maria-colfax, wp-schuyler-colfax]}
+  - {person: abigail-adams, title: Second Lady of the United States, realm: United States, from: 1789-04-21, to: 1797-03-04, sources: [wp-abigail-adams, wp-john-adams]}
+  - {person: letitia-christian-tyler, title: Second Lady of the United States, realm: United States, from: 1841-03-04, to: 1841-04-04, sources: [wp-letitia-christian-tyler, wp-john-tyler]}
+  - {person: abigail-fillmore, title: Second Lady of the United States, realm: United States, from: 1849-03-04, to: 1850-07-09, sources: [wp-abigail-fillmore, wp-millard-fillmore]}
+  - {person: eliza-mccardle-johnson, title: Second Lady of the United States, realm: United States, from: 1865-03-04, to: 1865-04-15, sources: [wp-eliza-mccardle-johnson, wp-andrew-johnson]}
+
+discrepancies:
+  - key: theodosia-bartow-prevost-died
+    question: "When did Theodosia Bartow Prevost die?"
+    about: [{person: theodosia-bartow-prevost}]
+    field: died
+    claims:
+      - {value: "1794-05-18", sources: [wp-theodosia-bartow-prevost]}
+      - {value: "1794-05-28", sources: [wd-theodosia-bartow-prevost]}
+    note: "The record uses Wikipedia's date."
+  - key: eliza-jumel-born
+    question: "When was Eliza Jumel born?"
+    about: [{person: eliza-jumel}]
+    field: born
+    claims:
+      - {value: "1775-04-02", sources: [wp-eliza-jumel]}
+      - {value: "1775-04-07", sources: [wd-eliza-jumel]}
+    note: "The record uses Wikipedia's date."
+  - key: sarah-cornelia-tappen-clinton-died
+    question: "When did Sarah Cornelia Tappen die?"
+    about: [{person: sarah-cornelia-tappen-clinton}]
+    field: died
+    claims:
+      - {value: "1800", sources: [wp-george-clinton]}
+      - {value: "1804", sources: [wd-sarah-cornelia-tappen-clinton]}
+    note: "The record uses Wikipedia's date."
+  - key: sophia-dallas-born
+    question: "When was Sophia Dallas born?"
+    about: [{person: sophia-dallas}]
+    field: born
+    claims:
+      - {value: "1798-06-24", sources: [wp-sophia-dallas]}
+      - {value: "1798-06-25", sources: [wd-sophia-dallas]}
+    note: "The record uses Wikipedia's date."
