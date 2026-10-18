@@ -150,6 +150,12 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P3] Explore: rearrange the cards
+`type: enhancement` · `area: site` · `status: done` · `issue: #243`
+
+Move the Explore cards into your own order: drag a card by its header on a computer, or use the ← → buttons in its header on a phone or keyboard. The order is kept per browser; a card added later joins the end. Done 2026-10-18 (#244).
+Source: Ty, 2026-10-18.
+
 #### [P2] US Presidents
 `type: task` · `area: data` · `status: done` · `issue: —`
 
