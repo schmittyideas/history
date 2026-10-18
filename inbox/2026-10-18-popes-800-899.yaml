@@ -1,0 +1,206 @@
+# The Papacy, 800-899 (the Carolingian popes to the Cadaver Synod): the 20 popes of the century not yet here, from
+# Stephen IV to John IX, the antipopes John VIII (844) and Anastasius Bibliothecarius (855), and three events: the Arab
+# raid against Rome (846), the Battle of Ostia (849) and the Cadaver Synod (897).
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml); a Wikidata date is used only
+# where the article confirms it, and birth years Wikidata gives but the articles don't are left out.
+# Stated honestly:
+#  - Discrepancy recorded: Benedict III's death (17 April 858; Wikidata 7 April).
+#  - Dates the articles give only to the month or year are kept to the year (Paschal I died 824, Stephen VI and Romanus
+#    897, John IX January 900).
+batch:
+  title: "The Papacy, 800-899"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-stephen-iv, title: "Pope Stephen IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_IV"}
+  - {key: wp-paschal-i, title: "Pope Paschal I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Paschal_I"}
+  - {key: wp-eugene-ii, title: "Pope Eugene II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Eugene_II"}
+  - {key: wp-valentine, title: "Pope Valentine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Valentine"}
+  - {key: wp-gregory-iv, title: "Pope Gregory IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_IV"}
+  - {key: wp-sergius-ii, title: "Pope Sergius II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sergius_II"}
+  - {key: wp-leo-iv, title: "Pope Leo IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_IV"}
+  - {key: wp-benedict-iii, title: "Pope Benedict III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_III"}
+  - {key: wd-benedict-iii, title: "Pope Benedict III (Wikidata)", url: "https://www.wikidata.org/wiki/Q172445"}
+  - {key: wp-nicholas-i, title: "Pope Nicholas I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Nicholas_I"}
+  - {key: wp-adrian-ii, title: "Pope Adrian II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adrian_II"}
+  - {key: wp-john-viii, title: "Pope John VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_VIII"}
+  - {key: wp-marinus-i, title: "Pope Marinus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Marinus_I"}
+  - {key: wp-gallese, title: "Gallese (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gallese"}
+  - {key: wp-adrian-iii, title: "Pope Adrian III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adrian_III"}
+  - {key: wp-stephen-v, title: "Pope Stephen V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_V"}
+  - {key: wp-formosus, title: "Pope Formosus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Formosus"}
+  - {key: wp-boniface-vi, title: "Pope Boniface VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_VI"}
+  - {key: wp-stephen-vi, title: "Pope Stephen VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_VI"}
+  - {key: wp-romanus, title: "Pope Romanus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Romanus"}
+  - {key: wp-theodore-ii, title: "Pope Theodore II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Theodore_II"}
+  - {key: wp-john-ix, title: "Pope John IX (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_IX"}
+  - {key: wp-john-viii-antipope, title: "Antipope John VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_John_VIII"}
+  - {key: wp-anastasius-bibliothecarius, title: "Anastasius Bibliothecarius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anastasius_Bibliothecarius"}
+  - {key: wp-ostia-antica, title: "Ostia Antica (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ostia_Antica"}
+  - {key: wp-arab-raid-against-rome, title: "Arab raid against Rome (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arab_raid_against_Rome"}
+  - {key: wp-battle-of-ostia, title: "Battle of Ostia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Ostia"}
+  - {key: wp-cadaver-synod, title: "Cadaver Synod (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cadaver_Synod"}
+
+people:
+  - {key: stephen-iv, name: "Stephen IV", type: Clergy, roles: [pope], died: 0817-01-24, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "Of a noble Roman family; crowned Louis the Pious emperor at Reims in October 816 and died the following January. Sometimes numbered Stephen V.",
+     sources: [wp-stephen-iv]}
+  - {key: paschal-i, name: "Paschal I", type: Clergy, roles: [pope], died: 824, realm: Papacy, prominence: 2, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "An aristocratic Roman, abbot of St Stephen's; crowned Lothair I emperor in Rome (823) and rebuilt churches including three basilicas. Credited with finding the body of St Cecilia. A saint.",
+     sources: [wp-paschal-i]}
+  - {key: eugene-ii, name: "Eugene II", type: Clergy, roles: [pope], died: 0827-08-27, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Chosen by the nobles over the clergy's candidate (824), confirming the Carolingians' hold on papal elections; his council of 826 condemned simony and ordered cathedral schools.",
+     sources: [wp-eugene-ii]}
+  - {key: valentine, name: "Valentine", type: Clergy, roles: [pope], died: 0827-10-10, realm: Papacy, prominence: 1, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "A noble, unusually close to Eugene II; elected before he was ordained a priest, he reigned some forty days (827).",
+     sources: [wp-valentine]}
+  - {key: gregory-iv, name: "Gregory IV", type: Clergy, roles: [pope], died: 0844-01-25, realm: Papacy, prominence: 2, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Pope 827-844 as the papacy tried to mediate between Louis the Pious and his sons, and the Carolingian Empire broke up (843); rebuilt the atrium of St Peter's.",
+     sources: [wp-gregory-iv]}
+  - {key: sergius-ii, name: "Sergius II", type: Clergy, roles: [pope], died: 0847-01-27, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "Elected by the lay aristocracy over the people's candidate, the antipope John (844); his reign saw the Arab raid on Rome (846).",
+     sources: [wp-sergius-ii]}
+  - {key: leo-iv, name: "Leo IV", type: Clergy, roles: [pope], died: 0855-07-17, realm: Papacy, prominence: 2, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "A Benedictine of Lombard descent: repaired the churches damaged in the Arab raid, built the Leonine Wall round the Vatican hill, and led the league that won the Battle of Ostia (849). A saint.",
+     sources: [wp-leo-iv]}
+  - {key: benedict-iii, name: "Benedict III", type: Clergy, roles: [pope], died: 0858-04-17, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Elected in 855 and briefly displaced by the emperor's candidate, the antipope Anastasius; pope until 858.",
+     sources: [wp-benedict-iii]}
+  - {key: nicholas-i, name: "Nicholas I", type: Clergy, roles: [pope], born: 800, born_estimated: true, died: 0867-11-13, realm: Papacy, prominence: 3, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "'The Great', the last of three popes so called: a consolidator of papal authority who claimed it over Christian rulers and encouraged missions. A saint.",
+     sources: [wp-nicholas-i]}
+  - {key: adrian-ii, name: "Adrian II", type: Clergy, roles: [pope], born: 0792, died: 0872-12-14, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Continued Nicholas I's policy; placed under watch by Louis II's partisans, who killed his wife and daughters. Pope during the Fourth Council of Constantinople (869-870).",
+     sources: [wp-adrian-ii]}
+  - {key: john-viii, name: "John VIII", type: Clergy, roles: [pope], died: 0882-12-16, realm: Papacy, prominence: 2, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "One of the ablest 9th-century popes: fought Muslim advances in southern Italy, strengthened Rome's defences and supported Methodius's mission to the Slavs; the first pope to be assassinated (882).",
+     sources: [wp-john-viii]}
+  - {key: marinus-i, name: "Marinus I", type: Clergy, roles: [pope], died: 0884-05-15, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Already a bishop when elected, which was controversial, and once legate to Constantinople; mistakenly called Martin II.",
+     sources: [wp-marinus-i]}
+  - {key: adrian-iii, name: "Adrian III", type: Clergy, roles: [pope], died: 0885-07-08, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Pope for little more than a year (884-885), working for Italians in famine and war. A saint.",
+     sources: [wp-adrian-iii]}
+  - {key: stephen-v, name: "Stephen V", type: Clergy, roles: [pope], died: 0891-09-14, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Followed Nicholas I's line with Photius of Constantinople and the young Slavic church (885-891). Sometimes numbered Stephen VI.",
+     sources: [wp-stephen-v]}
+  - {key: formosus, name: "Formosus", type: Clergy, roles: [pope], born: 816, born_estimated: true, died: 0896-04-04, realm: Papacy, prominence: 2, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Pope 891-896 amid struggles over Constantinople, West Francia and the Empire; because he backed Arnulf of Carinthia against Lambert of Spoleto, his corpse was exhumed and tried in the Cadaver Synod (897).",
+     sources: [wp-formosus]}
+  - {key: boniface-vi, name: "Boniface VI", type: Clergy, roles: [pope], died: 0896-04-26, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Elected in riots after Formosus's death though twice deposed from orders; died or was ousted after fifteen days (896).",
+     sources: [wp-boniface-vi]}
+  - {key: stephen-vi, name: "Stephen VI", type: Clergy, roles: [pope], died: 897, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Instigator of the Cadaver Synod against Formosus (January 897), which led to his own downfall and death. Sometimes numbered Stephen VII.",
+     sources: [wp-stephen-vi]}
+  - {key: romanus, name: "Romanus", type: Clergy, roles: [pope], died: 897, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "Pope for a few months of 897 amid the factional strife after the Cadaver Synod; deposed and confined to a monastery.",
+     sources: [wp-romanus]}
+  - {key: theodore-ii, name: "Theodore II", type: Clergy, roles: [pope], born: 840, died: 897, realm: Papacy, prominence: 1, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "A Greek who in his twenty days (December 897) annulled the Cadaver Synod, restored Formosus's acts and had his body recovered from the Tiber and reburied with honour.",
+     sources: [wp-theodore-ii]}
+  - {key: john-ix, name: "John IX", type: Clergy, roles: [pope], born: 825, born_estimated: true, died: 900, realm: Papacy, prominence: 1, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "A Benedictine of Lombard descent from Tivoli; confirmed Theodore II's restoration of Formosus (898-900). Died January 900.",
+     sources: [wp-john-ix]}
+  - {key: john-viii-antipope, name: "John VIII (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 28, sitelinks_on: 2026-10-18,
+     note: "A deacon acclaimed by the Roman populace and enthroned in the Lateran on Gregory IV's death (844); ejected by the aristocracy, who chose Sergius II.",
+     sources: [wp-john-viii-antipope]}
+  - {key: anastasius-bibliothecarius, name: "Anastasius Bibliothecarius", type: Clergy, roles: [antipope], born: 810, born_estimated: true, died: 878, died_estimated: true, realm: Papacy, prominence: 2, sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "A learned Roman, later the chief archivist and librarian (bibliothecarius) of the Holy See; briefly claimed the papacy against Benedict III in 855.",
+     sources: [wp-anastasius-bibliothecarius]}
+
+titles:
+  - {person: stephen-iv, title: Pope, realm: Papacy, from: 0816-06-22, to: 0817-01-24, sources: [wp-stephen-iv, wp-list-of-popes]}
+  - {person: paschal-i, title: Pope, realm: Papacy, from: 0817-01-25, to: 0824-02-11, sources: [wp-paschal-i, wp-list-of-popes]}
+  - {person: eugene-ii, title: Pope, realm: Papacy, from: 0824-06-06, to: 0827-08-27, sources: [wp-eugene-ii, wp-list-of-popes]}
+  - {person: valentine, title: Pope, realm: Papacy, from: 0827-08-31, to: 0827-10-10, sources: [wp-valentine, wp-list-of-popes]}
+  - {person: gregory-iv, title: Pope, realm: Papacy, from: 0827-12-20, to: 0844-01-25, sources: [wp-gregory-iv, wp-list-of-popes]}
+  - {person: sergius-ii, title: Pope, realm: Papacy, from: 0844-01-25, to: 0847-01-27, sources: [wp-sergius-ii, wp-list-of-popes]}
+  - {person: leo-iv, title: Pope, realm: Papacy, from: 0847-04-10, to: 0855-07-17, sources: [wp-leo-iv, wp-list-of-popes]}
+  - {person: benedict-iii, title: Pope, realm: Papacy, from: 0855-09-29, to: 0858-04-17, sources: [wp-benedict-iii, wp-list-of-popes]}
+  - {person: nicholas-i, title: Pope, realm: Papacy, from: 0858-04-24, to: 0867-11-13, sources: [wp-nicholas-i, wp-list-of-popes]}
+  - {person: adrian-ii, title: Pope, realm: Papacy, from: 0867-12-14, to: 0872-12-14, sources: [wp-adrian-ii, wp-list-of-popes]}
+  - {person: john-viii, title: Pope, realm: Papacy, from: 0872-12-14, to: 0882-12-16, sources: [wp-john-viii, wp-list-of-popes]}
+  - {person: marinus-i, title: Pope, realm: Papacy, from: 0882-12-16, to: 0884-05-15, sources: [wp-marinus-i, wp-list-of-popes]}
+  - {person: adrian-iii, title: Pope, realm: Papacy, from: 0884-05-17, to: 0885-07-08, sources: [wp-adrian-iii, wp-list-of-popes]}
+  - {person: stephen-v, title: Pope, realm: Papacy, from: 885, to: 0891-09-14, from_estimated: true, sources: [wp-stephen-v, wp-list-of-popes]}
+  - {person: formosus, title: Pope, realm: Papacy, from: 0891-10-06, to: 0896-04-04, sources: [wp-formosus, wp-list-of-popes]}
+  - {person: boniface-vi, title: Pope, realm: Papacy, from: 0896-04-11, to: 0896-04-26, sources: [wp-boniface-vi, wp-list-of-popes]}
+  - {person: stephen-vi, title: Pope, realm: Papacy, from: 0896-05-22, to: 0897-08-14, sources: [wp-stephen-vi, wp-list-of-popes]}
+  - {person: romanus, title: Pope, realm: Papacy, from: 0897-08-14, to: 897, to_estimated: true, sources: [wp-romanus, wp-list-of-popes]}
+  - {person: theodore-ii, title: Pope, realm: Papacy, from: 897, to: 0897-12-20, from_estimated: true, sources: [wp-theodore-ii, wp-list-of-popes]}
+  - {person: john-ix, title: Pope, realm: Papacy, from: 0898-01-18, to: 900, sources: [wp-john-ix, wp-list-of-popes]}
+  - {person: john-viii-antipope, title: Pope, realm: Papacy, from: 0844-01-25, to: 0844-05-31, disputed: true, sources: [wp-john-viii-antipope, wp-antipope], note: "Antipope, against Sergius II."}
+  - {person: anastasius-bibliothecarius, title: Pope, realm: Papacy, from: 855, to: 855, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-anastasius-bibliothecarius, wp-antipope], note: "Antipope, against Benedict III."}
+
+places:
+  - {key: gallese, name: "Gallese", kind: town, region: "Lazio", country: Italy, lat: 42.3744, lng: 12.3997, sources: [wp-gallese]}
+  - {key: ostia-antica, name: Ostia Antica, historical_name: Ostia, kind: ancient city, city: Rome, region: Lazio, country: Italy, lat: 41.7542, lng: 12.2875, visitable: true, sources: [wp-ostia-antica]}
+
+moments:
+  - {person: stephen-iv, role: born, place: rome}
+  - {person: paschal-i, role: born, place: rome}
+  - {person: eugene-ii, role: born, place: rome}
+  - {person: valentine, role: born, place: rome}
+  - {person: gregory-iv, role: born, place: rome}
+  - {person: sergius-ii, role: born, place: rome}
+  - {person: leo-iv, role: born, place: rome}
+  - {person: benedict-iii, role: born, place: rome}
+  - {person: nicholas-i, role: born, place: rome, year: 800}
+  - {person: adrian-ii, role: born, place: rome, year: 792}
+  - {person: john-viii, role: born, place: rome}
+  - {person: marinus-i, role: born, place: gallese}
+  - {person: adrian-iii, role: born, place: rome}
+  - {person: stephen-v, role: born, place: rome}
+  - {person: formosus, role: born, place: ostia-antica, year: 816}
+  - {person: boniface-vi, role: born, place: rome}
+  - {person: stephen-vi, role: born, place: rome}
+  - {person: romanus, role: born, place: gallese}
+  - {person: theodore-ii, role: born, place: rome, year: 840}
+  - {person: john-ix, role: born, place: tivoli, year: 825}
+  - {person: john-viii-antipope, role: born, place: rome}
+  - {person: anastasius-bibliothecarius, role: born, place: rome, year: 810}
+
+events:
+  - key: arab-raid-against-rome-846
+    name: Arab raid against Rome
+    type: Raid
+    year: 846
+    place: rome
+    people:
+      - {person: sergius-ii, role: pope at the time}
+    prominence: 3
+    note: "Arab raiders plundered the outskirts of Rome, sacking Old St Peter's and St Paul's Outside the Walls, but the Aurelian Walls kept them out of the city."
+    sources: [wp-arab-raid-against-rome]
+  - key: battle-of-ostia-849
+    name: Battle of Ostia
+    type: Battle
+    year: 849
+    place: ostia-antica
+    people:
+      - {person: leo-iv, role: organised the league}
+    prominence: 2
+    note: "A league of Papal, Neapolitan, Amalfitan and Gaetan ships defeated a Muslim fleet in the Tyrrhenian Sea off Ostia."
+    sources: [wp-battle-of-ostia, wp-leo-iv]
+  - key: cadaver-synod-897
+    name: Cadaver Synod
+    type: Trial
+    year: 897
+    place: lateran-palace-rome
+    people:
+      - {person: stephen-vi, role: conducted it}
+      - {person: formosus, role: tried posthumously}
+    prominence: 3
+    note: "Stephen VI had the corpse of Formosus, dead some nine months, exhumed and tried in the Lateran basilica in January 897."
+    sources: [wp-cadaver-synod]
+
+discrepancies:
+  - key: benedict-iii-died
+    question: "When did Benedict III die?"
+    about: [{person: benedict-iii}]
+    field: died
+    claims:
+      - {value: "0858-04-17", sources: [wp-benedict-iii]}
+      - {value: "0858-04-07", sources: [wd-benedict-iii]}
+    note: "The record uses his own article."
