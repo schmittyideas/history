@@ -91,9 +91,10 @@ function indexData(raw) {
     const at = filmed.filter(x => x.artwork_id === w.id && x.role === "filmed").map(x => x.place_id);
     const shownIds = filmed.filter(x => x.artwork_id === w.id && x.role === "depicts").map(x => x.place_id);
     const shownEventIds = filmEvents.filter(x => x.artwork_id === w.id && x.role === "depicts").map(x => x.event_id);
+    const portrayedIds = (raw.artwork_people || []).filter(x => x.artwork_id === w.id && x.role === "subject").map(x => x.entity_id);
     return { id: "f" + w.id, key: w.key, name: w.name, type: "Film", film: true, start_year: w.start_year, end_year: null,
       estimated: w.estimated, prominence: w.prominence, note: w.note, obsidian_link: w.obsidian_link, place_id: at[0] ?? null, placeIds: at,
-      shownIds, shownEventIds };
+      shownIds, shownEventIds, portrayedIds };
   });
   const filmIds = new Set(films.map(f => f.id));
   const directors = (raw.artwork_people || []).filter(x => x.role === "creator" && filmIds.has("f" + x.artwork_id))
@@ -135,9 +136,12 @@ function indexData(raw) {
   // Films set at a place, and films about an event (role "depicts"), oldest first.
   const filmsSetAt = id => films.filter(f => f.shownIds.includes(id)).sort((a, b) => byYear(a.start_year, b.start_year));
   const filmsAbout = id => films.filter(f => f.shownEventIds.includes(id)).sort((a, b) => byYear(a.start_year, b.start_year));
+  // Films that portray a real person (role "subject"), and the people a film portrays.
+  const filmsPortraying = id => films.filter(f => f.portrayedIds.includes(id)).sort((a, b) => byYear(a.start_year, b.start_year));
+  const portrayedIn = f => (f.portrayedIds || []).map(id => byId[id]).filter(Boolean);
   return { people, rels, events, ep, places, pp, byId, eventById, placeById, parentLinks, spouseLinks,
     parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
-    eventsAt, momentsAt, titles, filmsSetAt, filmsAbout,
+    eventsAt, momentsAt, titles, filmsSetAt, filmsAbout, filmsPortraying, portrayedIn,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
     countryOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.modern_country])),
     // When each realm existed, and the countries it covers today (sql/017), each with its own years when they differ.
@@ -184,8 +188,9 @@ const TYPE_WORDS = [
   [/\b(inventors?|scientists?|philosophers?)\b/gi, "Scholar"],
   [/\b(mayors?|governors?|presidents?|politicians?|government)\b/gi, "Government"],
   [/\b(patrons?|benefactors?|philanthropists?)\b/gi, "Patron"],
+  [/\b(notables?|notable people)\b/gi, "Notable"],
 ];
-const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials", Patron: "patrons and benefactors" };
+const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials", Patron: "patrons and benefactors", Notable: "notable people" };
 // Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
 // Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
 const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
@@ -203,9 +208,11 @@ const CATS = [
   { key: "composers", label: "Composers", color: "var(--rose)", test: p => p.type === "Composer" },
   { key: "scholars", label: "Scholars", color: "var(--slate)", test: p => p.type === "Scholar" },
   { key: "patrons", label: "Patrons", color: "var(--indigo)", test: p => p.type === "Patron" },
+  // Real people known for one story rather than an office or a body of work: Schindler, Desmond Doss, Al Capone.
+  { key: "notable", label: "Notable people", color: "var(--sage)", test: p => p.type === "Notable" },
 ];
 const catsOf = p => { const ks = CATS.filter(c => c.test(p)).map(c => c.key); return ks.length ? ks : ["other"]; };
-// Fame: artists, writers, composers and scholars are ranked by how many Wikipedia language editions cover them (sitelinks).
+// Fame: artists, writers, composers, scholars and notable people are ranked by how many Wikipedia language editions cover them (sitelinks).
 // The cut-off hides the long tail by default; rulers and officials are never hidden by it. Whoever you searched for or selected always shows.
 const FAME = [
   { key: "icons", label: "Icons", min: 150 },
@@ -213,7 +220,7 @@ const FAME = [
   { key: "known", label: "Well known", min: 60 },
   { key: "all", label: "Everyone", min: 0 },
 ];
-const FAME_TYPES = ["Artist", "Writer", "Composer", "Scholar"];
+const FAME_TYPES = ["Artist", "Writer", "Composer", "Scholar", "Notable"];
 const fameMin = () => (FAME.find(f => f.key === S.fame) || FAME[2]).min;
 const fameFiltering = () => fameMin() > 0;
 const fameOn = p => !p || !FAME_TYPES.includes(p.type) || fameMin() === 0 || p.sitelinks == null || p.sitelinks >= fameMin() || p.id === S.selected || p.id === S.filter?.focus;
@@ -367,7 +374,7 @@ function computeView(db, f) {
 
 /* ------------------------------------------------------------------ lanes */
 
-const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar", "Patron"];
+const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar", "Patron", "Notable"];
 
 function familyOrder(db, members, ids) {
   const order = [], seen = new Set();
@@ -908,6 +915,7 @@ function select(id) {
     ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
+    ...(db.filmsPortraying(id).length ? [["Portrayed in", joinNodes(db.filmsPortraying(id).map(f => eventLink(f, ` (${fmtYear(f.start_year)})`)))]] : []),
     ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(isOffice(p) ? "Held an office" : "Held a title", p), isOffice(p) ? " Offices" : " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
       title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
       text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
@@ -965,6 +973,7 @@ function selectEvent(id) {
     const dl = h("dl");
     [["Released", (e.estimated ? "c. " : "") + fmtYear(e.start_year)],
      ["Directed by", joinNodes(db.peopleInEvent(id).map(x => personLink(x.person)), "Unknown")],
+     ...(db.portrayedIn(e).length ? [["Portrays", joinNodes(db.portrayedIn(e).map(p => personLink(p)))]] : []),
      ...(e.shownIds.length ? [["Set in", joinNodes(e.shownIds.map(pid => db.placeById[pid]).filter(Boolean).map(pl => placeLink(pl)))]] : []),
      ...(e.shownEventIds.length ? [["Shows", joinNodes(e.shownEventIds.map(eid => db.eventById[eid]).filter(Boolean)
        .map(ev => eventLink(ev, ev.start_year != null ? ` (${fmtYear(ev.start_year)})` : "")))]] : []),
@@ -1016,7 +1025,9 @@ function selectPlace(id) {
       const v = (e.venues || []).filter(x => x.place_id === id).map(x => x.note || x.role).join("; ");
       return eventLink(e, e.start_year != null || v ? ` (${[fmtYear(e.start_year), v].filter(Boolean).join(": ")})` : "");
     }), "None linked")],
-    ...(db.filmsSetAt(id).length ? [["Films set here", joinNodes(db.filmsSetAt(id).map(e => eventLink(e, ` (${fmtYear(e.start_year)})`)))]] : []),
+    // Each film with who it portrays; films are split by semicolons, since the people are split by commas.
+    ...(db.filmsSetAt(id).length ? [["Films set here", db.filmsSetAt(id).flatMap((e, i) => [i ? "; " : "", eventLink(e, ` (${fmtYear(e.start_year)})`),
+      ...(db.portrayedIn(e).length ? [" · ", ...joinNodes(db.portrayedIn(e).map(p => personLink(p)))] : [])])]] : []),
     ...(films.length ? [["Films shot here", joinNodes(films.map(e => eventLink(e, ` (${fmtYear(e.start_year)})`)))]] : []),
     ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
     ...nearbyRows(pl),
@@ -2499,6 +2510,7 @@ function filmCard(e, around) {
     h("div", { class: "xsub" }, "Film · ", xYear(e.start_year, (e.estimated ? "c. " : "") + fmtYear(e.start_year))),
     e.note ? h("p", { class: "xnote-text", text: e.note }) : null,
     xSec("Directed by", xChips("event", db.peopleInEvent(e.id), 4, x => h("span", { class: "xchip" }, xPerson(x.person)))),
+    xSec("Portrays", xChips("event", db.portrayedIn(e).sort((a, b) => fame(b) - fame(a)), 8, p => h("span", { class: "xchip" }, xPerson(p)))),
     shows.length ? xSec("Shows", xList("event", shows, 5, o => row2(xEvent(o), xYear(o.start_year)))) : null,
     set.length ? xSec("Set in", xList("event", set, 5, pl => row2(xPlace(pl), cap(pl.kind || "")))) : null,
     shot.length ? xSec("Filmed at", xList("event", shot, 5, pl => row2(xPlace(pl), cap(pl.kind || "")))) : null,
@@ -2529,7 +2541,8 @@ function placeCard() {
     h("div", { class: "xmap", id: "x-map" }),
     h("div", { class: "xborder", id: "x-border", hidden: "" }),
     xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
-    setHere.length ? xSec(`Films set here (${setHere.length})`, xList("place", setHere, 3, e => row2(xEvent(e), xYear(e.start_year)))) : null,
+    setHere.length ? xSec(`Films set here (${setHere.length})`, xList("place", setHere, 3, e => row2([xEvent(e),
+      ...(db.portrayedIn(e).length ? [" · ", ...joinNodes(db.portrayedIn(e).slice(0, 3).map(p => xPerson(p)))] : [])], xYear(e.start_year)))) : null,
     films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(xEvent(e), xYear(e.start_year)))) : null,
     xSec("Shown in", xList("place", works.filter(x => x.role === "depicts"), 4, x => row2([xWork(x.work), I.creatorOf.has(x.work.id) ? ` · ${db.byId[I.creatorOf.get(x.work.id)]?.name}` : ""],
       workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
@@ -2746,6 +2759,7 @@ function personCard() {
   if (!p) return [h("p", { class: "hint", text: "Search a person (Michelangelo, Henry VIII), or click one in another card." })];
   const works = I.worksBy.get(p.id) || [], dated = works.filter(w => w.start_year != null), undated = works.filter(w => w.start_year == null);
   const evs = db.eventsOf(p.id).filter(x => !x.event.film).sort((a, b) => byYear(a.event.start_year, b.event.start_year));
+  const portrayed = db.filmsPortraying(p.id);
   const titles = db.titlesOf(p.id);
   const roles = (p.roles || []).slice(0, 3).join(", ");
   const countries = [...I.countriesOf(p.id)];
@@ -2768,6 +2782,7 @@ function personCard() {
       w => row2([xWork(w), w.kind ? ` (${w.kind})` : ""], workSpan(w) ? xYear(w.start_year, workSpan(w)) : "undated"))),
     titles.length ? xSec("Titles", xList("person", titles, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null,
     evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
+    portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xEvent(f), xYear(f.start_year)))) : null,
     xSec("Places", xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
       s => h("span", { class: "xchip" }, xPlace(s.place), s.what && s.what.length < 14 ? h("span", { class: "yrs", text: ` ${s.what.toLowerCase()}` }) : null))),
     family.length ? xSec("Family", xChips("person", family, 6, ([o, r]) => h("span", { class: "xchip" }, xPerson(o), h("span", { class: "yrs", text: ` ${r}` })))) : null,

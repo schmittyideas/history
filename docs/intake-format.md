@@ -33,7 +33,7 @@ sources:
 |---|---|
 | `key` | Unique key (required) |
 | `name` | Display name (required for new people) |
-| `type` | Main type, used for colour: Royalty, Nobility, Clergy, Government (mayors, governors, presidents: elected or appointed offices), Artist, Writer, Composer, Scholar, Patron (benefactors and founders who gave a city a park, museum or district). Film people are Artists with a film role (`film director`, `actor`, `animator`) |
+| `type` | Main type, used for colour: Royalty, Nobility, Clergy, Government (mayors, governors, presidents: elected or appointed offices), Artist, Writer, Composer, Scholar, Patron (benefactors and founders who gave a city a park, museum or district), Notable (real people known for one story rather than an office or a body of work, often the subject of a film: Oskar Schindler, Desmond Doss, Al Capone). Film people are Artists with a film role (`film director`, `actor`, `animator`) |
 | `roles` | Extra roles: e.g. `[patron]`, `[pope]`, `[painter, architect]` |
 | `born`, `died` | Year, or full date `1120-11-25`. BC years are negative: `-384` = 384 BC (see below) |
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |
@@ -114,7 +114,7 @@ Paintings, prints, miniatures, sculptures and other works as records of their ow
 | `collection` | Where it is now, as text ("Chatsworth House"). Use `museum` below when the museum is a record |
 | `museum`, `accession`, `museum_url` | Museum key; the museum's own number for the object; the object's page on the museum's site |
 | `image_url`, `image_thumb`, `image_page`, `image_license`, `image_credit` | Links to the picture and a thumbnail; the Commons (or museum) page where author and licence can be checked; short licence name; credit line as the source gives it |
-| `people` | List of `{person: key, role: …}`. Roles: `creator`, `subject` (portrayed), `patron` (commissioned it), `after` (the artist of the original it copies), `engraver`, `owner` |
+| `people` | List of `{person: key, role: …}`. Roles: `creator`, `subject` (portrayed; for a film, a real person it portrays), `patron` (commissioned it), `after` (the artist of the original it copies), `engraver`, `owner` |
 | `places` | List of `{place: key, role: …}`. Roles: `made`, `depicts`, `held`, `made-for`, `displayed`, `filmed` (a film shot scenes there) |
 | `events` | List of `{event: key, role: …}`. Roles: `depicts`, `commemorates`, `made-during` |
 | `prominence`, `obsidian_link`, `note`, `sources` | As above |
