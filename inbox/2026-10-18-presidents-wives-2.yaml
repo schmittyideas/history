@@ -1,0 +1,253 @@
+# Presidents' wives, batch 2 of 2: the wives of the presidents who took office 1885-2025 (Cleveland to Trump; every
+# wife, not only First Ladies). Same conventions as batch 1 (inbox/2026-10-18-presidents-wives-1.yaml):
+# Ty's choices (2026-10-18): every wife; type Notable (prominence from sitelinks), except where a wife is best known
+# for something else (Hillary Clinton: Government, as senator and Secretary of State; Jane Wyman: Artist, as an
+# actress); the First Ladyship as a title, "First Lady of the United States", realm United States.
+# VERIFIED: wives and marriage dates from Wikidata (P26 with start/end qualifiers), each checked against the wife's
+# English Wikipedia article downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the session scratchpad).
+# Sitelinks read from Wikidata on 2026-10-18. First Lady years: her husband's term dates (from
+# inbox/2026-10-13-us-presidents-*.yaml), cut to the marriage and her life.
+# Stated honestly:
+#  - Frances Cleveland married Cleveland during his first term (2 June 1886) and holds the title for both his terms;
+#    Melania Trump likewise for both of Trump's (the second is open-ended).
+#  - Ellen Axson Wilson died in office (6 August 1914); Edith Wilson married Wilson on 18 December 1915.
+#  - Eleanor Roosevelt: Wikipedia says she married Franklin D. Roosevelt in 1905 (17 March); Wikidata says 1903.
+#    Recorded as a discrepancy; the link uses 1905.
+#  - Wives who were never First Lady: Mary Dimmick Harrison (married after his presidency), Alice Hathaway Roosevelt
+#    and Neilia Hunter Biden (died before), Jane Wyman, Ivana Trump and Marla Maples (divorced before).
+batch:
+  title: "Presidents' wives, batch 2"
+  requested: "Have we added all the US presidents and their wives? Add the wives (all of them), as Notable people with the First Lady title"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-frances-cleveland, title: "Frances Cleveland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frances_Cleveland"}
+  - {key: wp-mary-dimmick-harrison, title: "Mary Dimmick Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Dimmick_Harrison"}
+  - {key: wp-caroline-harrison, title: "Caroline Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caroline_Harrison"}
+  - {key: wp-ida-saxton-mckinley, title: "Ida Saxton McKinley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ida_Saxton_McKinley"}
+  - {key: wp-alice-hathaway-roosevelt, title: "Alice Hathaway Roosevelt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alice_Hathaway_Roosevelt"}
+  - {key: wp-edith-roosevelt, title: "Edith Roosevelt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edith_Roosevelt"}
+  - {key: wp-helen-herron-taft, title: "Helen Herron Taft (Wikipedia)", url: "https://en.wikipedia.org/wiki/Helen_Herron_Taft"}
+  - {key: wp-edith-wilson, title: "Edith Wilson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edith_Wilson"}
+  - {key: wp-ellen-axson-wilson, title: "Ellen Axson Wilson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ellen_Axson_Wilson"}
+  - {key: wp-florence-harding, title: "Florence Harding (Wikipedia)", url: "https://en.wikipedia.org/wiki/Florence_Harding"}
+  - {key: wp-grace-coolidge, title: "Grace Coolidge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grace_Coolidge"}
+  - {key: wp-lou-henry-hoover, title: "Lou Henry Hoover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lou_Henry_Hoover"}
+  - {key: wp-eleanor-roosevelt, title: "Eleanor Roosevelt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_Roosevelt"}
+  - {key: wd-eleanor-roosevelt, title: "Eleanor Roosevelt (Wikidata)", url: "https://www.wikidata.org/wiki/Q83396"}
+  - {key: wp-bess-truman, title: "Bess Truman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bess_Truman"}
+  - {key: wp-mamie-eisenhower, title: "Mamie Eisenhower (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mamie_Eisenhower"}
+  - {key: wp-jacqueline-kennedy-onassis, title: "Jacqueline Kennedy Onassis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jacqueline_Kennedy_Onassis"}
+  - {key: wp-lady-bird-johnson, title: "Lady Bird Johnson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lady_Bird_Johnson"}
+  - {key: wp-pat-nixon, title: "Pat Nixon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pat_Nixon"}
+  - {key: wp-betty-ford, title: "Betty Ford (Wikipedia)", url: "https://en.wikipedia.org/wiki/Betty_Ford"}
+  - {key: wp-rosalynn-carter, title: "Rosalynn Carter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rosalynn_Carter"}
+  - {key: wp-jane-wyman, title: "Jane Wyman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jane_Wyman"}
+  - {key: wp-nancy-reagan, title: "Nancy Reagan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nancy_Reagan"}
+  - {key: wp-barbara-bush, title: "Barbara Bush (Wikipedia)", url: "https://en.wikipedia.org/wiki/Barbara_Bush"}
+  - {key: wp-hillary-clinton, title: "Hillary Clinton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hillary_Clinton"}
+  - {key: wp-laura-bush, title: "Laura Bush (Wikipedia)", url: "https://en.wikipedia.org/wiki/Laura_Bush"}
+  - {key: wp-michelle-obama, title: "Michelle Obama (Wikipedia)", url: "https://en.wikipedia.org/wiki/Michelle_Obama"}
+  - {key: wp-ivana-trump, title: "Ivana Trump (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ivana_Trump"}
+  - {key: wp-marla-maples, title: "Marla Maples (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marla_Maples"}
+  - {key: wp-melania-trump, title: "Melania Trump (Wikipedia)", url: "https://en.wikipedia.org/wiki/Melania_Trump"}
+  - {key: wp-neilia-hunter-biden, title: "Neilia Hunter Biden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Neilia_Hunter_Biden"}
+  - {key: wp-jill-biden, title: "Jill Biden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jill_Biden"}
+
+people:
+  - {key: frances-cleveland, name: "Frances Cleveland", type: Notable, born: 1864-07-21, died: 1947-10-29, prominence: 2,
+     sitelinks: 46, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1886-1889; 1893-1897, as the wife of Grover Cleveland.",
+     coverage: not-read, coverage_note: "Added as the wife of Grover Cleveland.", sources: [wp-frances-cleveland]}
+  - {key: mary-dimmick-harrison, name: "Mary Dimmick Harrison", type: Notable, born: 1858-04-30, died: 1948-01-05, prominence: 1,
+     sitelinks: 13, sitelinks_on: 2026-10-18,
+     note: "Wife of Benjamin Harrison; not First Lady: they married after his presidency.",
+     coverage: not-read, coverage_note: "Added as the wife of Benjamin Harrison.", sources: [wp-mary-dimmick-harrison]}
+  - {key: caroline-harrison, name: "Caroline Harrison", type: Notable, born: 1832-10-01, died: 1892-10-25, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1889-1892, as the wife of Benjamin Harrison.",
+     coverage: not-read, coverage_note: "Added as the wife of Benjamin Harrison.", sources: [wp-caroline-harrison]}
+  - {key: ida-saxton-mckinley, name: "Ida Saxton McKinley", type: Notable, born: 1847-06-08, died: 1907-05-26, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1897-1901, as the wife of William McKinley.",
+     coverage: not-read, coverage_note: "Added as the wife of William McKinley.", sources: [wp-ida-saxton-mckinley]}
+  - {key: alice-hathaway-roosevelt, name: "Alice Hathaway Roosevelt", type: Notable, born: 1861-07-29, died: 1884-02-14, prominence: 1,
+     sitelinks: 20, sitelinks_on: 2026-10-18,
+     note: "Wife of Theodore Roosevelt; not First Lady: she died before he became president.",
+     coverage: not-read, coverage_note: "Added as the wife of Theodore Roosevelt.", sources: [wp-alice-hathaway-roosevelt]}
+  - {key: edith-roosevelt, name: "Edith Roosevelt", type: Notable, born: 1861-08-06, died: 1948-09-30, prominence: 2,
+     sitelinks: 48, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1901-1909, as the wife of Theodore Roosevelt.",
+     coverage: not-read, coverage_note: "Added as the wife of Theodore Roosevelt.", sources: [wp-edith-roosevelt]}
+  - {key: helen-herron-taft, name: "Helen Herron Taft", type: Notable, born: 1861-06-02, died: 1943-05-22, prominence: 2,
+     sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1909-1913, as the wife of William Howard Taft.",
+     coverage: not-read, coverage_note: "Added as the wife of William Howard Taft.", sources: [wp-helen-herron-taft]}
+  - {key: edith-wilson, name: "Edith Wilson", type: Notable, born: 1872-10-15, died: 1961-12-28, prominence: 2,
+     sitelinks: 46, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1915-1921, as the wife of Woodrow Wilson.",
+     coverage: not-read, coverage_note: "Added as the wife of Woodrow Wilson.", sources: [wp-edith-wilson]}
+  - {key: ellen-axson-wilson, name: "Ellen Axson Wilson", type: Notable, born: 1860-05-15, died: 1914-08-06, prominence: 2,
+     sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1913-1914, as the wife of Woodrow Wilson.",
+     coverage: not-read, coverage_note: "Added as the wife of Woodrow Wilson.", sources: [wp-ellen-axson-wilson]}
+  - {key: florence-harding, name: "Florence Harding", type: Notable, born: 1860-08-15, died: 1924-11-21, prominence: 2,
+     sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1921-1923, as the wife of Warren G. Harding.",
+     coverage: not-read, coverage_note: "Added as the wife of Warren G. Harding.", sources: [wp-florence-harding]}
+  - {key: grace-coolidge, name: "Grace Coolidge", type: Notable, born: 1879-01-03, died: 1957-07-08, prominence: 2,
+     sitelinks: 46, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1923-1929, as the wife of Calvin Coolidge.",
+     coverage: not-read, coverage_note: "Added as the wife of Calvin Coolidge.", sources: [wp-grace-coolidge]}
+  - {key: lou-henry-hoover, name: "Lou Henry Hoover", type: Notable, born: 1874-03-29, died: 1944-01-07, prominence: 2,
+     sitelinks: 53, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1929-1933, as the wife of Herbert Hoover.",
+     coverage: not-read, coverage_note: "Added as the wife of Herbert Hoover.", sources: [wp-lou-henry-hoover]}
+  - {key: eleanor-roosevelt, name: "Eleanor Roosevelt", type: Notable, born: 1884-10-11, died: 1962-11-07, prominence: 4,
+     sitelinks: 149, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1933-1945, as the wife of Franklin D. Roosevelt. Political figure, diplomat and activist; the longest-serving first lady.",
+     coverage: not-read, coverage_note: "Added as the wife of Franklin D. Roosevelt.", sources: [wp-eleanor-roosevelt]}
+  - {key: bess-truman, name: "Bess Truman", type: Notable, born: 1885-02-13, died: 1982-10-18, prominence: 2,
+     sitelinks: 55, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1945-1953, as the wife of Harry S. Truman.",
+     coverage: not-read, coverage_note: "Added as the wife of Harry S. Truman.", sources: [wp-bess-truman]}
+  - {key: mamie-eisenhower, name: "Mamie Eisenhower", type: Notable, born: 1896-11-14, died: 1979-11-01, prominence: 2,
+     sitelinks: 57, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1953-1961, as the wife of Dwight D. Eisenhower.",
+     coverage: not-read, coverage_note: "Added as the wife of Dwight D. Eisenhower.", sources: [wp-mamie-eisenhower]}
+  - {key: jacqueline-kennedy-onassis, name: "Jacqueline Kennedy Onassis", type: Notable, born: 1929-07-28, died: 1994-05-19, prominence: 4,
+     sitelinks: 102, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1961-1963, as the wife of John F. Kennedy.",
+     coverage: not-read, coverage_note: "Added as the wife of John F. Kennedy.", sources: [wp-jacqueline-kennedy-onassis]}
+  - {key: lady-bird-johnson, name: "Lady Bird Johnson", type: Notable, born: 1912-12-22, died: 2007-07-11, prominence: 2,
+     sitelinks: 59, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1963-1969, as the wife of Lyndon B. Johnson.",
+     coverage: not-read, coverage_note: "Added as the wife of Lyndon B. Johnson.", sources: [wp-lady-bird-johnson]}
+  - {key: pat-nixon, name: "Pat Nixon", type: Notable, born: 1912-03-16, died: 1993-06-22, prominence: 3,
+     sitelinks: 61, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1969-1974, as the wife of Richard Nixon.",
+     coverage: not-read, coverage_note: "Added as the wife of Richard Nixon.", sources: [wp-pat-nixon]}
+  - {key: betty-ford, name: "Betty Ford", type: Notable, born: 1918-04-08, died: 2011-07-08, prominence: 3,
+     sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1974-1977, as the wife of Gerald Ford.",
+     coverage: not-read, coverage_note: "Added as the wife of Gerald Ford.", sources: [wp-betty-ford]}
+  - {key: rosalynn-carter, name: "Rosalynn Carter", type: Notable, born: 1927-08-18, died: 2023-11-19, prominence: 3,
+     sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1977-1981, as the wife of Jimmy Carter.",
+     coverage: not-read, coverage_note: "Added as the wife of Jimmy Carter.", sources: [wp-rosalynn-carter]}
+  - {key: jane-wyman, name: "Jane Wyman", type: Artist, roles: [actress], born: 1917-01-05, died: 2007-09-10, prominence: 3,
+     sitelinks: 69, sitelinks_on: 2026-10-18,
+     note: "Wife of Ronald Reagan; not First Lady: they divorced before his presidency. Actress (Academy Award for Johnny Belinda); married to Ronald Reagan 1940-1949.",
+     coverage: not-read, coverage_note: "Added as the wife of Ronald Reagan.", sources: [wp-jane-wyman]}
+  - {key: nancy-reagan, name: "Nancy Reagan", type: Notable, born: 1921-07-06, died: 2016-03-06, prominence: 4,
+     sitelinks: 106, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1981-1989, as the wife of Ronald Reagan.",
+     coverage: not-read, coverage_note: "Added as the wife of Ronald Reagan.", sources: [wp-nancy-reagan]}
+  - {key: barbara-bush, name: "Barbara Bush", type: Notable, born: 1925-06-08, died: 2018-04-17, prominence: 3,
+     sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1989-1993, as the wife of George H. W. Bush.",
+     coverage: not-read, coverage_note: "Added as the wife of George H. W. Bush.", sources: [wp-barbara-bush]}
+  - {key: hillary-clinton, name: "Hillary Clinton", type: Government, roles: [politician, lawyer], born: 1947-10-26, prominence: 5,
+     sitelinks: 197, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1993-2001, as the wife of Bill Clinton. Later US senator for New York and Secretary of State.",
+     coverage: not-read, coverage_note: "Added as the wife of Bill Clinton.", sources: [wp-hillary-clinton]}
+  - {key: laura-bush, name: "Laura Bush", type: Notable, born: 1946-11-04, prominence: 3,
+     sitelinks: 95, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 2001-2009, as the wife of George W. Bush.",
+     coverage: not-read, coverage_note: "Added as the wife of George W. Bush.", sources: [wp-laura-bush]}
+  - {key: michelle-obama, name: "Michelle Obama", type: Notable, born: 1964-01-17, prominence: 4,
+     sitelinks: 137, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 2009-2017, as the wife of Barack Obama.",
+     coverage: not-read, coverage_note: "Added as the wife of Barack Obama.", sources: [wp-michelle-obama]}
+  - {key: ivana-trump, name: "Ivana Trump", type: Notable, born: 1949-02-20, died: 2022-07-14, prominence: 3,
+     sitelinks: 67, sitelinks_on: 2026-10-18,
+     note: "Wife of Donald Trump; not First Lady: they divorced before his presidency.",
+     coverage: not-read, coverage_note: "Added as the wife of Donald Trump.", sources: [wp-ivana-trump]}
+  - {key: marla-maples, name: "Marla Maples", type: Notable, born: 1963-10-27, prominence: 2,
+     sitelinks: 50, sitelinks_on: 2026-10-18,
+     note: "Wife of Donald Trump; not First Lady: they divorced before his presidency.",
+     coverage: not-read, coverage_note: "Added as the wife of Donald Trump.", sources: [wp-marla-maples]}
+  - {key: melania-trump, name: "Melania Trump", type: Notable, born: 1970-04-26, prominence: 4,
+     sitelinks: 118, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 2017-2021; 2025-, as the wife of Donald Trump.",
+     coverage: not-read, coverage_note: "Added as the wife of Donald Trump.", sources: [wp-melania-trump]}
+  - {key: neilia-hunter-biden, name: "Neilia Hunter Biden", type: Notable, born: 1942-07-28, died: 1972-12-18, prominence: 1,
+     sitelinks: 36, sitelinks_on: 2026-10-18,
+     note: "Wife of Joe Biden; not First Lady: she died before he became president.",
+     coverage: not-read, coverage_note: "Added as the wife of Joe Biden.", sources: [wp-neilia-hunter-biden]}
+  - {key: jill-biden, name: "Jill Biden", type: Notable, born: 1951-06-03, prominence: 3,
+     sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 2021-2025, as the wife of Joe Biden.",
+     coverage: not-read, coverage_note: "Added as the wife of Joe Biden.", sources: [wp-jill-biden]}
+
+links:
+  - {spouse: grover-cleveland, to: frances-cleveland, year: 1886}
+  - {spouse: benjamin-harrison, to: mary-dimmick-harrison, year: 1896}
+  - {spouse: benjamin-harrison, to: caroline-harrison, year: 1853}
+  - {spouse: william-mckinley, to: ida-saxton-mckinley, year: 1871}
+  - {spouse: theodore-roosevelt, to: alice-hathaway-roosevelt, year: 1880}
+  - {spouse: theodore-roosevelt, to: edith-roosevelt, year: 1886}
+  - {spouse: william-howard-taft, to: helen-herron-taft, year: 1886}
+  - {spouse: woodrow-wilson, to: edith-wilson, year: 1915}
+  - {spouse: woodrow-wilson, to: ellen-axson-wilson, year: 1885}
+  - {spouse: warren-g-harding, to: florence-harding, year: 1891}
+  - {spouse: calvin-coolidge, to: grace-coolidge, year: 1905}
+  - {spouse: herbert-hoover, to: lou-henry-hoover, year: 1899}
+  - {spouse: franklin-d-roosevelt, to: eleanor-roosevelt, year: 1905}
+  - {spouse: harry-s-truman, to: bess-truman, year: 1919}
+  - {spouse: dwight-d-eisenhower, to: mamie-eisenhower, year: 1916}
+  - {spouse: john-f-kennedy, to: jacqueline-kennedy-onassis, year: 1953}
+  - {spouse: lyndon-b-johnson, to: lady-bird-johnson, year: 1934}
+  - {spouse: richard-nixon, to: pat-nixon, year: 1940}
+  - {spouse: gerald-ford, to: betty-ford, year: 1948}
+  - {spouse: jimmy-carter, to: rosalynn-carter, year: 1946}
+  - {spouse: ronald-reagan, to: jane-wyman, year: 1940}
+  - {spouse: ronald-reagan, to: nancy-reagan, year: 1952}
+  - {spouse: george-h-w-bush, to: barbara-bush, year: 1945}
+  - {spouse: bill-clinton, to: hillary-clinton, year: 1975}
+  - {spouse: george-w-bush, to: laura-bush, year: 1977}
+  - {spouse: barack-obama, to: michelle-obama, year: 1992}
+  - {spouse: donald-trump, to: ivana-trump, year: 1977}
+  - {spouse: donald-trump, to: marla-maples, year: 1993}
+  - {spouse: donald-trump, to: melania-trump, year: 2005}
+  - {spouse: joe-biden, to: neilia-hunter-biden, year: 1966}
+  - {spouse: joe-biden, to: jill-biden, year: 1977}
+
+titles:
+  - {person: frances-cleveland, title: First Lady of the United States, realm: United States, from: 1886-06-02, to: 1889-03-04, sources: [wp-frances-cleveland, wp-grover-cleveland]}
+  - {person: frances-cleveland, title: First Lady of the United States, realm: United States, from: 1893-03-04, to: 1897-03-04, sources: [wp-frances-cleveland, wp-grover-cleveland]}
+  - {person: caroline-harrison, title: First Lady of the United States, realm: United States, from: 1889-03-04, to: 1892-10-25, sources: [wp-caroline-harrison, wp-benjamin-harrison]}
+  - {person: ida-saxton-mckinley, title: First Lady of the United States, realm: United States, from: 1897-03-04, to: 1901-09-14, sources: [wp-ida-saxton-mckinley, wp-william-mckinley]}
+  - {person: edith-roosevelt, title: First Lady of the United States, realm: United States, from: 1901-09-14, to: 1909-03-04, sources: [wp-edith-roosevelt, wp-theodore-roosevelt]}
+  - {person: helen-herron-taft, title: First Lady of the United States, realm: United States, from: 1909-03-04, to: 1913-03-04, sources: [wp-helen-herron-taft, wp-william-howard-taft]}
+  - {person: edith-wilson, title: First Lady of the United States, realm: United States, from: 1915-12-18, to: 1921-03-04, sources: [wp-edith-wilson, wp-woodrow-wilson]}
+  - {person: ellen-axson-wilson, title: First Lady of the United States, realm: United States, from: 1913-03-04, to: 1914-08-06, sources: [wp-ellen-axson-wilson, wp-woodrow-wilson]}
+  - {person: florence-harding, title: First Lady of the United States, realm: United States, from: 1921-03-04, to: 1923-08-02, sources: [wp-florence-harding, wp-warren-g-harding]}
+  - {person: grace-coolidge, title: First Lady of the United States, realm: United States, from: 1923-08-02, to: 1929-03-04, sources: [wp-grace-coolidge, wp-calvin-coolidge]}
+  - {person: lou-henry-hoover, title: First Lady of the United States, realm: United States, from: 1929-03-04, to: 1933-03-04, sources: [wp-lou-henry-hoover, wp-herbert-hoover]}
+  - {person: eleanor-roosevelt, title: First Lady of the United States, realm: United States, from: 1933-03-04, to: 1945-04-12, sources: [wp-eleanor-roosevelt, wp-franklin-d-roosevelt]}
+  - {person: bess-truman, title: First Lady of the United States, realm: United States, from: 1945-04-12, to: 1953-01-20, sources: [wp-bess-truman, wp-harry-s-truman]}
+  - {person: mamie-eisenhower, title: First Lady of the United States, realm: United States, from: 1953-01-20, to: 1961-01-20, sources: [wp-mamie-eisenhower, wp-dwight-d-eisenhower]}
+  - {person: jacqueline-kennedy-onassis, title: First Lady of the United States, realm: United States, from: 1961-01-20, to: 1963-11-22, sources: [wp-jacqueline-kennedy-onassis, wp-john-f-kennedy]}
+  - {person: lady-bird-johnson, title: First Lady of the United States, realm: United States, from: 1963-11-22, to: 1969-01-20, sources: [wp-lady-bird-johnson, wp-lyndon-b-johnson]}
+  - {person: pat-nixon, title: First Lady of the United States, realm: United States, from: 1969-01-20, to: 1974-08-09, sources: [wp-pat-nixon, wp-richard-nixon]}
+  - {person: betty-ford, title: First Lady of the United States, realm: United States, from: 1974-08-09, to: 1977-01-20, sources: [wp-betty-ford, wp-gerald-ford]}
+  - {person: rosalynn-carter, title: First Lady of the United States, realm: United States, from: 1977-01-20, to: 1981-01-20, sources: [wp-rosalynn-carter, wp-jimmy-carter]}
+  - {person: nancy-reagan, title: First Lady of the United States, realm: United States, from: 1981-01-20, to: 1989-01-20, sources: [wp-nancy-reagan, wp-ronald-reagan]}
+  - {person: barbara-bush, title: First Lady of the United States, realm: United States, from: 1989-01-20, to: 1993-01-20, sources: [wp-barbara-bush, wp-george-h-w-bush]}
+  - {person: hillary-clinton, title: First Lady of the United States, realm: United States, from: 1993-01-20, to: 2001-01-20, sources: [wp-hillary-clinton, wp-bill-clinton]}
+  - {person: laura-bush, title: First Lady of the United States, realm: United States, from: 2001-01-20, to: 2009-01-20, sources: [wp-laura-bush, wp-george-w-bush]}
+  - {person: michelle-obama, title: First Lady of the United States, realm: United States, from: 2009-01-20, to: 2017-01-20, sources: [wp-michelle-obama, wp-barack-obama]}
+  - {person: melania-trump, title: First Lady of the United States, realm: United States, from: 2017-01-20, to: 2021-01-20, sources: [wp-melania-trump, wp-donald-trump]}
+  - {person: melania-trump, title: First Lady of the United States, realm: United States, from: 2025-01-20, sources: [wp-melania-trump, wp-donald-trump]}
+  - {person: jill-biden, title: First Lady of the United States, realm: United States, from: 2021-01-20, to: 2025-01-20, sources: [wp-jill-biden, wp-joe-biden]}
+
+discrepancies:
+  - key: eleanor-roosevelt-married
+    question: "When did Eleanor Roosevelt marry Franklin D. Roosevelt?"
+    about: [{person: eleanor-roosevelt}]
+    field: married
+    claims:
+      - {value: "1905-03-17", sources: [wp-eleanor-roosevelt]}
+      - {value: "1903-03-17", sources: [wd-eleanor-roosevelt]}
+    note: "The record uses Wikipedia's date."
