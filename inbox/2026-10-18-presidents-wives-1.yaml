@@ -1,0 +1,199 @@
+# Presidents' wives, batch 1 of 2: the wives of the presidents who took office 1789-1881 (Washington to Arthur) (every wife, not only First Ladies).
+# Ty's choices (2026-10-18): every wife; type Notable (prominence from sitelinks, like cultural figures), except where
+# a wife is best known for something else (Hillary Clinton: Government, as senator and Secretary of State; Jane Wyman:
+# Artist, as an actress); the First Ladyship as a title, "First Lady of the United States", realm United States.
+# Hostesses who weren't wives (Harriet Lane, Martha Jefferson Randolph, Emily Donelson...) are left out.
+# VERIFIED: wives and marriage dates from Wikidata (P26 with start/end qualifiers), each checked against the wife's
+# English Wikipedia article downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the session scratchpad):
+# birth and death dates in the lead, and the marriage date in the text. Sitelinks read from Wikidata on 2026-10-18.
+# First Lady years: her husband's term dates (from inbox/2026-10-13-us-presidents-*.yaml, from his own article), cut to
+# the marriage and her life: a wife who married during the term starts on the wedding day; one who died ends that day.
+# Wives who were never First Lady get no title, and their note says why.
+# Stated honestly:
+#  - Martha Washington: her article gives her birth only in the Old Style, 2 June 1731; kept as given, with a note.
+#  - Rachel Jackson: married Jackson c. 1791 believing her divorce final; they remarried on 18 January 1794 (the date
+#    used). She died on 22 December 1828, before his inauguration, so she was never First Lady.
+#  - Julia Gardiner Tyler: Wikipedia says born 4 May 1820, Wikidata 22 April; Lucretia Garfield: Wikipedia says died
+#    13 March 1918, Wikidata 14 March. Both recorded as discrepancies; the records use Wikipedia.
+#  - James Buchanan never married.
+batch:
+  title: "Presidents' wives, batch 1"
+  requested: "Have we added all the US presidents and their wives? Add the wives (all of them), as Notable people with the First Lady title"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-martha-washington, title: "Martha Washington (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martha_Washington"}
+  - {key: wp-abigail-adams, title: "Abigail Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abigail_Adams"}
+  - {key: wp-martha-jefferson, title: "Martha Jefferson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Martha_Jefferson"}
+  - {key: wp-dolley-madison, title: "Dolley Madison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dolley_Madison"}
+  - {key: wp-elizabeth-monroe, title: "Elizabeth Monroe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_Monroe"}
+  - {key: wp-louisa-adams, title: "Louisa Adams (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louisa_Adams"}
+  - {key: wp-rachel-jackson, title: "Rachel Jackson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rachel_Jackson"}
+  - {key: wp-hannah-van-buren, title: "Hannah Van Buren (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hannah_Van_Buren"}
+  - {key: wp-anna-harrison, title: "Anna Harrison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anna_Harrison"}
+  - {key: wp-letitia-christian-tyler, title: "Letitia Christian Tyler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Letitia_Christian_Tyler"}
+  - {key: wp-julia-gardiner-tyler, title: "Julia Gardiner Tyler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Julia_Gardiner_Tyler"}
+  - {key: wd-julia-gardiner-tyler, title: "Julia Gardiner Tyler (Wikidata)", url: "https://www.wikidata.org/wiki/Q234525"}
+  - {key: wp-sarah-childress-polk, title: "Sarah Childress Polk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sarah_Childress_Polk"}
+  - {key: wp-margaret-taylor, title: "Margaret Taylor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_Taylor"}
+  - {key: wp-abigail-fillmore, title: "Abigail Fillmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abigail_Fillmore"}
+  - {key: wp-caroline-c-fillmore, title: "Caroline C. Fillmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caroline_C._Fillmore"}
+  - {key: wp-jane-pierce, title: "Jane Pierce (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jane_Pierce"}
+  - {key: wp-mary-todd-lincoln, title: "Mary Todd Lincoln (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Todd_Lincoln"}
+  - {key: wp-eliza-mccardle-johnson, title: "Eliza McCardle Johnson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eliza_McCardle_Johnson"}
+  - {key: wp-julia-grant, title: "Julia Grant (Wikipedia)", url: "https://en.wikipedia.org/wiki/Julia_Grant"}
+  - {key: wp-lucy-webb-hayes, title: "Lucy Webb Hayes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lucy_Webb_Hayes"}
+  - {key: wp-nell-arthur, title: "Nell Arthur (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nell_Arthur"}
+  - {key: wp-lucretia-garfield, title: "Lucretia Garfield (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lucretia_Garfield"}
+  - {key: wd-lucretia-garfield, title: "Lucretia Garfield (Wikidata)", url: "https://www.wikidata.org/wiki/Q234261"}
+
+people:
+  - {key: martha-washington, name: "Martha Washington", type: Notable, born: 1731-06-02, died: 1802-05-22, prominence: 3,
+     sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1789-1797, as the wife of George Washington. Born 2 June 1731 (Old Style), as her article gives it.",
+     coverage: not-read, coverage_note: "Added as the wife of George Washington.", sources: [wp-martha-washington]}
+  - {key: abigail-adams, name: "Abigail Adams", type: Notable, born: 1744-11-22, died: 1818-10-28, prominence: 3,
+     sitelinks: 85, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1797-1801, as the wife of John Adams.",
+     coverage: not-read, coverage_note: "Added as the wife of John Adams.", sources: [wp-abigail-adams]}
+  - {key: martha-jefferson, name: "Martha Jefferson", type: Notable, born: 1748-10-30, died: 1782-09-06, prominence: 1,
+     sitelinks: 29, sitelinks_on: 2026-10-18,
+     note: "Wife of Thomas Jefferson; not First Lady: she died before he became president.",
+     coverage: not-read, coverage_note: "Added as the wife of Thomas Jefferson.", sources: [wp-martha-jefferson]}
+  - {key: dolley-madison, name: "Dolley Madison", type: Notable, born: 1768-05-20, died: 1849-07-12, prominence: 2,
+     sitelinks: 51, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1809-1817, as the wife of James Madison.",
+     coverage: not-read, coverage_note: "Added as the wife of James Madison.", sources: [wp-dolley-madison]}
+  - {key: elizabeth-monroe, name: "Elizabeth Monroe", type: Notable, born: 1768-06-30, died: 1830-09-23, prominence: 2,
+     sitelinks: 46, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1817-1825, as the wife of James Monroe.",
+     coverage: not-read, coverage_note: "Added as the wife of James Monroe.", sources: [wp-elizabeth-monroe]}
+  - {key: louisa-adams, name: "Louisa Adams", type: Notable, born: 1775-02-12, died: 1852-05-15, prominence: 2,
+     sitelinks: 49, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1825-1829, as the wife of John Quincy Adams.",
+     coverage: not-read, coverage_note: "Added as the wife of John Quincy Adams.", sources: [wp-louisa-adams]}
+  - {key: rachel-jackson, name: "Rachel Jackson", type: Notable, born: 1767-06-15, died: 1828-12-22, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "Wife of Andrew Jackson; not First Lady: she died before he became president. Married Jackson c. 1791 believing her divorce final; they remarried in 1794. She died days after his election.",
+     coverage: not-read, coverage_note: "Added as the wife of Andrew Jackson.", sources: [wp-rachel-jackson]}
+  - {key: hannah-van-buren, name: "Hannah Van Buren", type: Notable, born: 1783-03-08, died: 1819-02-05, prominence: 1,
+     sitelinks: 25, sitelinks_on: 2026-10-18,
+     note: "Wife of Martin Van Buren; not First Lady: she died before he became president.",
+     coverage: not-read, coverage_note: "Added as the wife of Martin Van Buren.", sources: [wp-hannah-van-buren]}
+  - {key: anna-harrison, name: "Anna Harrison", type: Notable, born: 1775-07-25, died: 1864-02-25, prominence: 1,
+     sitelinks: 39, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1841-1841, as the wife of William Henry Harrison.",
+     coverage: not-read, coverage_note: "Added as the wife of William Henry Harrison.", sources: [wp-anna-harrison]}
+  - {key: letitia-christian-tyler, name: "Letitia Christian Tyler", type: Notable, born: 1790-11-12, died: 1842-09-10, prominence: 2,
+     sitelinks: 43, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1841-1842, as the wife of John Tyler.",
+     coverage: not-read, coverage_note: "Added as the wife of John Tyler.", sources: [wp-letitia-christian-tyler]}
+  - {key: julia-gardiner-tyler, name: "Julia Gardiner Tyler", type: Notable, born: 1820-05-04, died: 1889-07-10, prominence: 2,
+     sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1844-1845, as the wife of John Tyler.",
+     coverage: not-read, coverage_note: "Added as the wife of John Tyler.", sources: [wp-julia-gardiner-tyler]}
+  - {key: sarah-childress-polk, name: "Sarah Childress Polk", type: Notable, born: 1803-09-04, died: 1891-08-14, prominence: 1,
+     sitelinks: 38, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1845-1849, as the wife of James K. Polk.",
+     coverage: not-read, coverage_note: "Added as the wife of James K. Polk.", sources: [wp-sarah-childress-polk]}
+  - {key: margaret-taylor, name: "Margaret Taylor", type: Notable, born: 1788-09-21, died: 1852-08-14, prominence: 1,
+     sitelinks: 39, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1849-1850, as the wife of Zachary Taylor.",
+     coverage: not-read, coverage_note: "Added as the wife of Zachary Taylor.", sources: [wp-margaret-taylor]}
+  - {key: abigail-fillmore, name: "Abigail Fillmore", type: Notable, born: 1798-03-13, died: 1853-03-30, prominence: 2,
+     sitelinks: 41, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1850-1853, as the wife of Millard Fillmore.",
+     coverage: not-read, coverage_note: "Added as the wife of Millard Fillmore.", sources: [wp-abigail-fillmore]}
+  - {key: caroline-c-fillmore, name: "Caroline C. Fillmore", type: Notable, born: 1813-10-21, died: 1881-08-11, prominence: 1,
+     sitelinks: 3, sitelinks_on: 2026-10-18,
+     note: "Wife of Millard Fillmore; not First Lady: they married after his presidency.",
+     coverage: not-read, coverage_note: "Added as the wife of Millard Fillmore.", sources: [wp-caroline-c-fillmore]}
+  - {key: jane-pierce, name: "Jane Pierce", type: Notable, born: 1806-03-12, died: 1863-12-02, prominence: 1,
+     sitelinks: 39, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1853-1857, as the wife of Franklin Pierce.",
+     coverage: not-read, coverage_note: "Added as the wife of Franklin Pierce.", sources: [wp-jane-pierce]}
+  - {key: mary-todd-lincoln, name: "Mary Todd Lincoln", type: Notable, born: 1818-12-13, died: 1882-07-16, prominence: 2,
+     sitelinks: 57, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1861-1865, as the wife of Abraham Lincoln.",
+     coverage: not-read, coverage_note: "Added as the wife of Abraham Lincoln.", sources: [wp-mary-todd-lincoln]}
+  - {key: eliza-mccardle-johnson, name: "Eliza McCardle Johnson", type: Notable, born: 1810-10-04, died: 1876-01-15, prominence: 2,
+     sitelinks: 41, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1865-1869, as the wife of Andrew Johnson.",
+     coverage: not-read, coverage_note: "Added as the wife of Andrew Johnson.", sources: [wp-eliza-mccardle-johnson]}
+  - {key: julia-grant, name: "Julia Grant", type: Notable, born: 1826-01-26, died: 1902-12-14, prominence: 2,
+     sitelinks: 43, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1869-1877, as the wife of Ulysses S. Grant.",
+     coverage: not-read, coverage_note: "Added as the wife of Ulysses S. Grant.", sources: [wp-julia-grant]}
+  - {key: lucy-webb-hayes, name: "Lucy Webb Hayes", type: Notable, born: 1831-08-28, died: 1889-06-25, prominence: 1,
+     sitelinks: 39, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1877-1881, as the wife of Rutherford B. Hayes.",
+     coverage: not-read, coverage_note: "Added as the wife of Rutherford B. Hayes.", sources: [wp-lucy-webb-hayes]}
+  - {key: nell-arthur, name: "Nell Arthur", type: Notable, born: 1837-08-30, died: 1880-01-12, prominence: 1,
+     sitelinks: 23, sitelinks_on: 2026-10-18,
+     note: "Wife of Chester A. Arthur; not First Lady: she died before he became president.",
+     coverage: not-read, coverage_note: "Added as the wife of Chester A. Arthur.", sources: [wp-nell-arthur]}
+  - {key: lucretia-garfield, name: "Lucretia Garfield", type: Notable, born: 1832-04-19, died: 1918-03-13, prominence: 1,
+     sitelinks: 39, sitelinks_on: 2026-10-18,
+     note: "First Lady of the United States 1881-1881, as the wife of James A. Garfield.",
+     coverage: not-read, coverage_note: "Added as the wife of James A. Garfield.", sources: [wp-lucretia-garfield]}
+
+links:
+  - {spouse: george-washington, to: martha-washington, year: 1759}
+  - {spouse: john-adams, to: abigail-adams, year: 1764}
+  - {spouse: thomas-jefferson, to: martha-jefferson, year: 1772}
+  - {spouse: james-madison, to: dolley-madison, year: 1794}
+  - {spouse: james-monroe, to: elizabeth-monroe, year: 1786}
+  - {spouse: john-quincy-adams, to: louisa-adams, year: 1797}
+  - {spouse: andrew-jackson, to: rachel-jackson, year: 1794}
+  - {spouse: martin-van-buren, to: hannah-van-buren, year: 1807}
+  - {spouse: william-henry-harrison, to: anna-harrison, year: 1795}
+  - {spouse: john-tyler, to: letitia-christian-tyler, year: 1813}
+  - {spouse: john-tyler, to: julia-gardiner-tyler, year: 1844}
+  - {spouse: james-k-polk, to: sarah-childress-polk, year: 1824}
+  - {spouse: zachary-taylor, to: margaret-taylor, year: 1810}
+  - {spouse: millard-fillmore, to: abigail-fillmore, year: 1826}
+  - {spouse: millard-fillmore, to: caroline-c-fillmore, year: 1858}
+  - {spouse: franklin-pierce, to: jane-pierce, year: 1834}
+  - {spouse: abraham-lincoln, to: mary-todd-lincoln, year: 1842}
+  - {spouse: andrew-johnson, to: eliza-mccardle-johnson, year: 1827}
+  - {spouse: ulysses-s-grant, to: julia-grant, year: 1848}
+  - {spouse: rutherford-b-hayes, to: lucy-webb-hayes, year: 1852}
+  - {spouse: chester-a-arthur, to: nell-arthur, year: 1859}
+  - {spouse: james-a-garfield, to: lucretia-garfield, year: 1858}
+
+titles:
+  - {person: martha-washington, title: First Lady of the United States, realm: United States, from: 1789-04-30, to: 1797-03-04, sources: [wp-martha-washington, wp-george-washington]}
+  - {person: abigail-adams, title: First Lady of the United States, realm: United States, from: 1797-03-04, to: 1801-03-04, sources: [wp-abigail-adams, wp-john-adams]}
+  - {person: dolley-madison, title: First Lady of the United States, realm: United States, from: 1809-03-04, to: 1817-03-04, sources: [wp-dolley-madison, wp-james-madison]}
+  - {person: elizabeth-monroe, title: First Lady of the United States, realm: United States, from: 1817-03-04, to: 1825-03-04, sources: [wp-elizabeth-monroe, wp-james-monroe]}
+  - {person: louisa-adams, title: First Lady of the United States, realm: United States, from: 1825-03-04, to: 1829-03-04, sources: [wp-louisa-adams, wp-john-quincy-adams]}
+  - {person: anna-harrison, title: First Lady of the United States, realm: United States, from: 1841-03-04, to: 1841-04-04, sources: [wp-anna-harrison, wp-william-henry-harrison]}
+  - {person: letitia-christian-tyler, title: First Lady of the United States, realm: United States, from: 1841-04-04, to: 1842-09-10, sources: [wp-letitia-christian-tyler, wp-john-tyler]}
+  - {person: julia-gardiner-tyler, title: First Lady of the United States, realm: United States, from: 1844-06-26, to: 1845-03-04, sources: [wp-julia-gardiner-tyler, wp-john-tyler]}
+  - {person: sarah-childress-polk, title: First Lady of the United States, realm: United States, from: 1845-03-04, to: 1849-03-04, sources: [wp-sarah-childress-polk, wp-james-k-polk]}
+  - {person: margaret-taylor, title: First Lady of the United States, realm: United States, from: 1849-03-04, to: 1850-07-09, sources: [wp-margaret-taylor, wp-zachary-taylor]}
+  - {person: abigail-fillmore, title: First Lady of the United States, realm: United States, from: 1850-07-09, to: 1853-03-04, sources: [wp-abigail-fillmore, wp-millard-fillmore]}
+  - {person: jane-pierce, title: First Lady of the United States, realm: United States, from: 1853-03-04, to: 1857-03-04, sources: [wp-jane-pierce, wp-franklin-pierce]}
+  - {person: mary-todd-lincoln, title: First Lady of the United States, realm: United States, from: 1861-03-04, to: 1865-04-15, sources: [wp-mary-todd-lincoln, wp-abraham-lincoln]}
+  - {person: eliza-mccardle-johnson, title: First Lady of the United States, realm: United States, from: 1865-04-15, to: 1869-03-04, sources: [wp-eliza-mccardle-johnson, wp-andrew-johnson]}
+  - {person: julia-grant, title: First Lady of the United States, realm: United States, from: 1869-03-04, to: 1877-03-04, sources: [wp-julia-grant, wp-ulysses-s-grant]}
+  - {person: lucy-webb-hayes, title: First Lady of the United States, realm: United States, from: 1877-03-04, to: 1881-03-04, sources: [wp-lucy-webb-hayes, wp-rutherford-b-hayes]}
+  - {person: lucretia-garfield, title: First Lady of the United States, realm: United States, from: 1881-03-04, to: 1881-09-19, sources: [wp-lucretia-garfield, wp-james-a-garfield]}
+
+discrepancies:
+  - key: julia-gardiner-tyler-born
+    question: "When was Julia Gardiner Tyler born?"
+    about: [{person: julia-gardiner-tyler}]
+    field: born
+    claims:
+      - {value: "1820-05-04", sources: [wp-julia-gardiner-tyler]}
+      - {value: "1820-04-22", sources: [wd-julia-gardiner-tyler]}
+    note: "The record uses Wikipedia's date."
+  - key: lucretia-garfield-died
+    question: "When did Lucretia Garfield die?"
+    about: [{person: lucretia-garfield}]
+    field: died
+    claims:
+      - {value: "1918-03-13", sources: [wp-lucretia-garfield]}
+      - {value: "1918-03-14", sources: [wd-lucretia-garfield]}
+    note: "The record uses Wikipedia's date."
