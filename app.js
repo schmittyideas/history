@@ -92,7 +92,7 @@ function indexData(raw) {
     const shownIds = filmed.filter(x => x.artwork_id === w.id && x.role === "depicts").map(x => x.place_id);
     const shownEventIds = filmEvents.filter(x => x.artwork_id === w.id && x.role === "depicts").map(x => x.event_id);
     const portrayedIds = (raw.artwork_people || []).filter(x => x.artwork_id === w.id && x.role === "subject").map(x => x.entity_id);
-    return { id: "f" + w.id, key: w.key, name: w.name, type: "Film", film: true, start_year: w.start_year, end_year: null,
+    return { id: "f" + w.id, artId: w.id, key: w.key, name: w.name, type: "Film", film: true, start_year: w.start_year, end_year: null,
       estimated: w.estimated, prominence: w.prominence, note: w.note, obsidian_link: w.obsidian_link, place_id: at[0] ?? null, placeIds: at,
       shownIds, shownEventIds, portrayedIds };
   });
@@ -171,8 +171,10 @@ function indexData(raw) {
     },
     // Where a record has an entry in another database (sql/015): the entertainment database for a film, and so on.
     externalFor: (type, key) => (raw.external_links || []).filter(l => l.record_type === type && l.record_key === key),
-    // Raw artwork tables for the Explore page's Work card (films are events, above).
-    artworks: (raw.artworks || []).filter(w => w.kind !== "film"), artworkPeople: raw.artwork_people || [],
+    // Raw artwork tables for the Explore page's Work card. Films are events on the timeline (above), but in Explore
+    // they are works: filmArtworks are added to the Work card's index there.
+    artworks: (raw.artworks || []).filter(w => w.kind !== "film"), filmArtworks: (raw.artworks || []).filter(w => w.kind === "film"),
+    artworkPeople: raw.artwork_people || [],
     artworkPlaces: raw.artwork_places || [], museums: raw.museums || [] };
 }
 
@@ -1857,7 +1859,7 @@ let XI = null;
 function exploreIndex() {
   if (XI) return XI;
   const db = S.db;
-  const workById = Object.fromEntries(db.artworks.map(w => [w.id, w]));
+  const workById = Object.fromEntries([...db.artworks, ...db.filmArtworks].map(w => [w.id, w]));
   const placeByKey = Object.fromEntries(db.places.map(p => [p.key, p]));
   const worksBy = new Map(), creatorOf = new Map(), subjectsOf = new Map(), placesOf = new Map(), worksAt = new Map();
   const push = (m, k, v) => { if (!m.has(k)) m.set(k, []); m.get(k).push(v); };
@@ -1875,7 +1877,7 @@ function exploreIndex() {
     const w = workById[x.artwork_id], pl = db.placeById[x.place_id];
     if (!w || !pl) return;
     push(placesOf, w.id, { place: pl, role: x.role });
-    push(worksAt, pl.id, { work: w, role: x.role });
+    if (w.kind !== "film") push(worksAt, pl.id, { work: w, role: x.role });
   });
   placesOf.forEach(xs => xs.sort((a, b) => (ROLE_RANK[a.role] ?? 9) - (ROLE_RANK[b.role] ?? 9)));
   const museumById = db.museumById;
@@ -1971,11 +1973,24 @@ const xPlace = (pl, extra = "") => xBtn(pl.name + extra, `${pl.name} in the Plac
 const xWork = (w, extra = "") => xBtn(w.name + extra, `${w.name} in the Work card`, () => xGo("work", w.id));
 // An event opens the Event card and brings its main person into the Person card ("William Wallace executed").
 const xEvent = (e, extra = "") => xBtn(e.name + extra, `${e.name} in the Event card`, () => xGoEvent(e.id));
+// A film (the timeline's film event) opens the Work card.
+const xFilm = (f, extra = "") => xBtn(f.name + extra, `${f.name} in the Work card`, () => xGo("work", f.artId));
 // The person an event is about: one whose name the event's own name contains, else the best known taking part.
 function mainPersonOf(e) {
   const ppl = S.db.peopleInEvent(e.id).map(x => x.person), n = fold(e.name);
   const named = ppl.filter(p => n.includes(fold(p.name)) || fold(p.name).split(" ").some(w => w.length > 3 && n.split(" ").includes(w)));
   return (named.length ? named : ppl).sort((a, b) => fame(b) - fame(a))[0] || null;
+}
+
+// The person a film is about: one it portrays whose name its title shares, else the first it portrays.
+function mainSubjectOf(f) {
+  const ppl = S.db.portrayedIn(f), t = fold(f.name).split(" ");
+  return ppl.find(p => fold(p.name).split(" ").some(w => w.length > 3 && t.includes(w))) || ppl[0] || null;
+}
+// The film to show for a person with no works of their own: one about them (named after them first), else the latest.
+function filmAbout(p) {
+  const fs = S.db.filmsPortraying(p.id);
+  return fs.find(f => mainSubjectOf(f) === p) || fs[fs.length - 1] || null;
 }
 
 // What goes with a record, for filling the other cards after a search.
@@ -2006,18 +2021,26 @@ function fill(kind, id) {
   if (kind === "event") {
     const e = db.eventById[id], p = mainPersonOf(e);
     set.person = p?.id ?? null; set.year = e.start_year ?? null; set.place = e.place_id ?? null;
-    // A film fills the cards with what it shows: the place it is set in, and the year of the first event it portrays.
-    if (e.film) {
-      const first = e.shownEventIds.map(x => db.eventById[x]).filter(x => x?.start_year != null).sort((a, b) => byYear(a.start_year, b.start_year))[0];
-      set.year = first?.start_year ?? set.year; set.place = e.shownIds[0] ?? set.place ?? first?.place_id ?? null;
-    }
     const w = p && (I.worksBy.get(p.id) || []).filter(w => w.start_year != null).sort((a, b) => Math.abs(a.start_year - e.start_year) - Math.abs(b.start_year - e.start_year))[0];
     set.work = w?.id ?? null;
   } else if (kind === "person") {
     const p = db.byId[id], w = bestWorkOf(id), t = db.titlesOf(id)[0];
-    set.work = w?.id ?? null;
-    set.year = (w && workYear(w)) ?? t?.start_year ?? (p.birth_year != null ? Math.min(p.birth_year + 35, p.death_year ?? Infinity) : p.death_year);
-    set.place = (w && workPlace(w)?.id) ?? mainPlaceOf(id)?.id ?? null;
+    // Someone known from a film (no works of their own) is shown at the first event the film portrays in their lifetime.
+    const film = w ? null : filmAbout(p);
+    const shown = film && !t ? film.shownEventIds.map(x => db.eventById[x]).filter(e => e?.start_year != null && aliveIn(p, e.start_year))
+      .sort((a, b) => byYear(a.start_year, b.start_year))[0] : null;
+    set.work = w?.id ?? film?.artId ?? null;
+    set.year = (w && workYear(w)) ?? t?.start_year ?? shown?.start_year ?? (p.birth_year != null ? Math.min(p.birth_year + 35, p.death_year ?? Infinity) : p.death_year);
+    set.place = (w && workPlace(w)?.id) ?? shown?.place_id ?? mainPlaceOf(id)?.id ?? film?.shownIds[0] ?? null;
+  } else if (kind === "work" && db.eventById["f" + id]) {
+    // A film fills the cards with what it shows: the person it is about, the place it is set in, and the first
+    // event it portrays (and that event's year); its director is a click away.
+    const f = db.eventById["f" + id];
+    const first = f.shownEventIds.map(x => db.eventById[x]).filter(x => x?.start_year != null).sort((a, b) => byYear(a.start_year, b.start_year))[0];
+    set.person = mainSubjectOf(f)?.id ?? I.creatorOf.get(id) ?? null;
+    set.year = first?.start_year ?? f.start_year ?? null;
+    set.place = f.shownIds[0] ?? first?.place_id ?? f.place_id ?? null;
+    set.event = first?.id ?? null;
   } else if (kind === "work") {
     const w = I.workById[id];
     set.person = I.creatorOf.get(id) ?? null; set.year = workYear(w) ?? null;
@@ -2026,7 +2049,9 @@ function fill(kind, id) {
     const ev = db.eventsAt(id).filter(e => !e.film).sort(evOrder)[0];
     const p = peopleAt(id).sort((a, b) => fame(b) - fame(a))[0];
     const w = (I.worksAt.get(id) || []).map(x => x.work).sort((a, b) => !!b.image_thumb - !!a.image_thumb)[0] || (p && bestWorkOf(p.id));
-    set.person = p?.id ?? null; set.work = w?.id ?? null;
+    // With no artwork here, a film set (or shot) here fills the Work card.
+    const film = w ? null : db.filmsSetAt(id)[0] || db.eventsAt(id).find(e => e.film);
+    set.person = p?.id ?? null; set.work = w?.id ?? film?.artId ?? null;
     set.year = ev?.start_year ?? (w && workYear(w)) ?? db.placeById[id].start_year ?? null;
   } else if (kind === "year") {
     const y = id;
@@ -2056,7 +2081,9 @@ function fill(kind, id) {
     const made = ws[0] && (I.placesOf.get(ws[0].id) || []).find(x => x.role !== "held" && x.role !== "displayed")?.place;
     set.place = ev ? ev.place_id : ws[0] ? (made ?? mainPlaceOf(I.creatorOf.get(ws[0].id)) ?? workPlace(ws[0]))?.id ?? null : null;
   }
-  if (kind !== "event") { const r = pickEvent(set, kind); set.event = r.id; if (r.hint) X.hint.event = r.hint; }
+  // A film already chose its event (the first one it portrays); everything else picks one for the year and place.
+  const filmEvent = kind === "work" && db.eventById["f" + id] && set.event != null;
+  if (kind !== "event" && !filmEvent) { const r = pickEvent(set, kind); set.event = r.id; if (r.hint) X.hint.event = r.hint; }
   // A year search: a big event (4-5 stars) brings its main person, as clicking it would ("1963" gives Kennedy).
   if (kind === "year" && set.event != null) {
     const e = db.eventById[set.event], p = (e.prominence ?? 3) >= 4 ? mainPersonOf(e) : null;
@@ -2129,9 +2156,9 @@ function exploreSearch(text) {
   const country = I.countryList.find(c => fold(c) === q || Object.keys(COUNTRY_ALIAS).some(a => fold(a) === q && COUNTRY_ALIAS[a] === c));
   const records = [
     ...db.people.map(p => ({ kind: "person", id: p.id, name: p.name, names: [p.name], f: fame(p) })),
-    ...db.artworks.filter(w => I.creatorOf.has(w.id)).map(w => ({ kind: "work", id: w.id, name: w.name, names: [w.name], f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) })),
+    ...Object.values(I.workById).filter(w => I.creatorOf.has(w.id)).map(w => ({ kind: "work", id: w.id, name: w.name, names: [w.name], f: (w.image_thumb ? 30 : 0) + fame(db.byId[I.creatorOf.get(w.id)]) })),
     ...db.places.map(pl => ({ kind: "place", id: pl.id, name: pl.name, names: [pl.name, pl.historical_name].filter(Boolean), f: db.eventsAt(pl.id).length * 5 + db.momentsAt(pl.id).length })),
-    ...db.events.map(e => ({ kind: "event", id: e.id, name: e.name, names: [e.name], f: (e.prominence ?? 3) * 20 })),
+    ...db.events.filter(e => !e.film).map(e => ({ kind: "event", id: e.id, name: e.name, names: [e.name], f: (e.prominence ?? 3) * 20 })),
   ];
   // A city, region or country whose name starts with the words beats a painting or event named after it.
   const AREA_KIND = /^(city|town|village|borough|district|county|region|state|province|country|island)$/i;
@@ -2161,6 +2188,12 @@ function exploreSearch(text) {
   // Equal matches: a person, then a place, then an event, then a work ("New York" is the city, not "New York Movie").
   const KIND_RANK = { person: 0, place: 1, event: 2, work: 3 };
   hits.sort((a, b) => b.s - a.s || KIND_RANK[a.kind] - KIND_RANK[b.kind] || b.f - a.f);
+  // A film named after someone it portrays ("Oppenheimer"): the person leads, and the film fills the Work card.
+  const film = hits[0]?.kind === "work" && db.eventById["f" + hits[0].id];
+  if (film) {
+    const p = hits.find(r => r.kind === "person" && film.portrayedIds.includes(r.id));
+    if (p) hits = [p, ...hits.filter(r => r !== p)];
+  }
   if (country && !(hits[0]?.s === 3 && hits[0].kind !== "place")) {
     // "Italy": pick the country, and open its busiest place.
     const pl = db.places.filter(p => placeCountry(p) === country).sort((a, b) => db.eventsAt(b.id).length - db.eventsAt(a.id).length)[0];
@@ -2285,6 +2318,7 @@ function readExploreUrl(params) {
   X.person = byKey(db.people, params.get("person"));
   X.work = params.get("work") ? Object.values(I.workById).find(w => w.key === params.get("work"))?.id ?? null : null;
   X.event = byKey(db.events, params.get("event"));
+  if (db.eventById[X.event]?.film) { X.work = db.eventById[X.event].artId; X.event = null; }
   return CARDS.includes(params.get("open")) ? params.get("open") : null;
 }
 function expandCard(kind) {
@@ -2476,7 +2510,6 @@ function eventCard() {
     && ((o.place_id != null && o.place_id === e.place_id) || db.peopleInEvent(o.id).some(x => ids.has(x.person.id))))
     .sort((a, b) => byYear(a.start_year, b.start_year) || (a.start_date || "").localeCompare(b.start_date || ""));
   const venues = (e.venues || []).map(v => ({ v, pl: db.placeById[v.place_id] })).filter(x => x.pl);
-  if (e.film) return filmCard(e, around);
   const films = db.filmsAbout(e.id);
   return [
     h("h2", { text: e.name }),
@@ -2489,7 +2522,7 @@ function eventCard() {
     xSec("Who took part", ppl.length ? xChips("event", ppl.sort((a, b) => (b.person === main) - (a.person === main) || fame(b.person) - fame(a.person)), 8,
       x => h("span", { class: "xchip" }, xPerson(x.person), x.role ? h("span", { class: "yrs", text: ` ${x.role}` }) : null)) : h("p", { class: "hint", text: "Nobody linked yet." })),
     venues.length ? xSec(`Places (${venues.length})`, xList("event", venues, 4, x => row2(xPlace(x.pl), x.v.note || x.v.role))) : null,
-    films.length ? xSec(`Films about it (${films.length})`, xList("event", films, 3, f => row2(xEvent(f), xYear(f.start_year)))) : null,
+    films.length ? xSec(`Films about it (${films.length})`, xList("event", films, 3, f => row2(xFilm(f), xYear(f.start_year)))) : null,
     around.length ? xSec("Around it", xList("event", around, 5, o => row2(xEvent(o), xYear(o.start_year)))) : null,
     e.visitable_today ? xSec("Visit today", h("p", { class: "xnote-text", text: e.visit_site || (pl ? pl.name : "Yes") })) : null,
     h("div", { class: "xfoot" }, "Sources: ", ...sourceLinks(db.sourcesFor("event", e.key)), " · ",
@@ -2497,9 +2530,9 @@ function eventCard() {
   ];
 }
 
-// A film in the Event card: who made it, the places and events it shows, where it was shot, and its entries in
+// A film in the Work card: who made it, the places and events it shows, where it was shot, and its entries in
 // the entertainment database and TMDB.
-function filmCard(e, around) {
+function filmCard(e) {
   const db = S.db;
   const set = e.shownIds.map(id => db.placeById[id]).filter(Boolean);
   const shows = e.shownEventIds.map(id => db.eventById[id]).filter(Boolean).sort((a, b) => byYear(a.start_year, b.start_year));
@@ -2541,9 +2574,9 @@ function placeCard() {
     h("div", { class: "xmap", id: "x-map" }),
     h("div", { class: "xborder", id: "x-border", hidden: "" }),
     xSec("What happened here", xList("place", happened, 6, x => row2(x.node, xYear(x.y)), "Nothing recorded here yet.")),
-    setHere.length ? xSec(`Films set here (${setHere.length})`, xList("place", setHere, 3, e => row2([xEvent(e),
+    setHere.length ? xSec(`Films set here (${setHere.length})`, xList("place", setHere, 3, e => row2([xFilm(e),
       ...(db.portrayedIn(e).length ? [" · ", ...joinNodes(db.portrayedIn(e).slice(0, 3).map(p => xPerson(p)))] : [])], xYear(e.start_year)))) : null,
-    films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(xEvent(e), xYear(e.start_year)))) : null,
+    films.length ? xSec(`Films shot here (${films.length})`, xList("place", films, 3, e => row2(xFilm(e), xYear(e.start_year)))) : null,
     xSec("Shown in", xList("place", works.filter(x => x.role === "depicts"), 4, x => row2([xWork(x.work), I.creatorOf.has(x.work.id) ? ` · ${db.byId[I.creatorOf.get(x.work.id)]?.name}` : ""],
       workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
     xSec("Works made or held here", xList("place", works.filter(x => x.role !== "depicts"), 4, x => row2([xWork(x.work), ` (${x.role})`], workSpan(x.work) ? xYear(workYear(x.work), workSpan(x.work)) : null))),
@@ -2782,7 +2815,7 @@ function personCard() {
       w => row2([xWork(w), w.kind ? ` (${w.kind})` : ""], workSpan(w) ? xYear(w.start_year, workSpan(w)) : "undated"))),
     titles.length ? xSec("Titles", xList("person", titles, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null,
     evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
-    portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xEvent(f), xYear(f.start_year)))) : null,
+    portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xFilm(f), xYear(f.start_year)))) : null,
     xSec("Places", xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
       s => h("span", { class: "xchip" }, xPlace(s.place), s.what && s.what.length < 14 ? h("span", { class: "yrs", text: ` ${s.what.toLowerCase()}` }) : null))),
     family.length ? xSec("Family", xChips("person", family, 6, ([o, r]) => h("span", { class: "xchip" }, xPerson(o), h("span", { class: "yrs", text: ` ${r}` })))) : null,
@@ -2838,7 +2871,8 @@ function titleWithPlaces(w, places) {
 /* --- Work card */
 function workCard() {
   const db = S.db, I = exploreIndex(), w = I.workById[X.work];
-  if (!w) return [h("p", { class: "hint", text: "Search a painting or building (Mona Lisa, David), or click one in another card." })];
+  if (!w) return [h("p", { class: "hint", text: "Search a painting, building or film (Mona Lisa, David, Braveheart), or click one in another card." })];
+  if (w.kind === "film" && db.eventById["f" + w.id]) return filmCard(db.eventById["f" + w.id]);
   const creator = db.byId[I.creatorOf.get(w.id)];
   const seq = creator ? (I.worksBy.get(creator.id) || []).filter(o => o.start_year != null) : [];
   const i = seq.findIndex(o => o.id === w.id), prev = i > 0 ? seq[i - 1] : null, next = i >= 0 && i < seq.length - 1 ? seq[i + 1] : null;
