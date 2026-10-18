@@ -1,0 +1,197 @@
+# The Papacy, 235-384 (persecution, toleration and the Arian controversy): the 19 popes from Anterus to Damasus I, the
+# antipopes Novatian, Heraclius, Felix II and Ursicinus, the Edict of Milan (313) and the First Council of Nicaea (325).
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml). Birth and death dates from each
+# article's lead; a Wikidata full date that differs is recorded as a discrepancy, the record using the article.
+# Stated honestly: Eusebius's article gives his death as 21 October 310 (in exile in Sicily) while his pontificate in the
+# List of popes ends 17 August 310; the death date is the article's. Birthplaces that are regions (Achaea, Africa) are
+# left in the notes.
+batch:
+  title: "The Papacy, 235-384"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-anterus, title: "Pope Anterus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anterus"}
+  - {key: wp-fabian, title: "Pope Fabian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Fabian"}
+  - {key: wp-cornelius, title: "Pope Cornelius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Cornelius"}
+  - {key: wp-lucius-i, title: "Pope Lucius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Lucius_I"}
+  - {key: wp-stephen-i, title: "Pope Stephen I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_I"}
+  - {key: wp-sixtus-ii, title: "Pope Sixtus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sixtus_II"}
+  - {key: wp-dionysius, title: "Pope Dionysius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Dionysius"}
+  - {key: wp-felix-i, title: "Pope Felix I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Felix_I"}
+  - {key: wp-eutychian, title: "Pope Eutychian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Eutychian"}
+  - {key: wp-caius, title: "Pope Caius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Caius"}
+  - {key: wp-marcellinus, title: "Pope Marcellinus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Marcellinus"}
+  - {key: wp-marcellus-i, title: "Pope Marcellus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Marcellus_I"}
+  - {key: wp-eusebius, title: "Pope Eusebius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Eusebius"}
+  - {key: wd-eusebius, title: "Pope Eusebius (Wikidata)", url: "https://www.wikidata.org/wiki/Q160514"}
+  - {key: wp-miltiades, title: "Pope Miltiades (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Miltiades"}
+  - {key: wp-sylvester-i, title: "Pope Sylvester I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sylvester_I"}
+  - {key: wp-mark, title: "Pope Mark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Mark"}
+  - {key: wp-julius-i, title: "Pope Julius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Julius_I"}
+  - {key: wp-liberius, title: "Pope Liberius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Liberius"}
+  - {key: wp-damasus-i, title: "Pope Damasus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Damasus_I"}
+  - {key: wp-novatian-antipope, title: "Antipope Novatian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Novatian"}
+  - {key: wp-heraclius-antipope, title: "Antipope Heraclius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Heraclius"}
+  - {key: wp-felix-ii-antipope, title: "Antipope Felix II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Felix_II"}
+  - {key: wp-ursicinus-antipope, title: "Antipope Ursicinus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Ursicinus"}
+  - {key: wp-athens, title: "Athens (Wikipedia)", url: "https://en.wikipedia.org/wiki/Athens"}
+  - {key: wp-idanha-a-velha, title: "Idanha-a-Velha (Wikipedia)", url: "https://en.wikipedia.org/wiki/Idanha-a-Velha"}
+  - {key: wp-solin, title: "Solin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Solin"}
+  - {key: wp-strongoli, title: "Strongoli (Wikipedia)", url: "https://en.wikipedia.org/wiki/Strongoli"}
+  - {key: wp-edict-of-milan, title: "Edict of Milan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edict_of_Milan"}
+  - {key: wp-first-council-of-nicaea, title: "First Council of Nicaea (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_Council_of_Nicaea"}
+
+people:
+  - {key: anterus, name: "Anterus", type: Clergy, roles: [pope], died: 0236-01-03, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent from Petelia (Strongoli); pope for some six weeks (235-236).",
+     sources: [wp-anterus]}
+  - {key: fabian, name: "Fabian", type: Clergy, roles: [pope], died: 0250-01-20, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Chosen, the story goes, when a dove settled on his head; divided Rome's Christians into seven districts under deacons. Martyred in the Decian persecution (250).",
+     sources: [wp-fabian]}
+  - {key: cornelius, name: "Cornelius", type: Clergy, roles: [pope], died: 253, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Pope 251-253 during persecution and the schism over the lapsed; with Cyprian of Carthage he held that those who had lapsed could be readmitted, against Novatian. Died a martyr.",
+     sources: [wp-cornelius]}
+  - {key: lucius-i, name: "Lucius I", type: Clergy, roles: [pope], died: 0254-03-05, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Banished soon after his consecration, he was allowed back; mistakenly counted a martyr of Valerian's persecution, which began after his death.",
+     sources: [wp-lucius-i]}
+  - {key: stephen-i, name: "Stephen I", type: Clergy, roles: [pope], died: 0257-08-02, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent; by some accounts killed while celebrating Mass (257). A saint.",
+     sources: [wp-stephen-i]}
+  - {key: sixtus-ii, name: "Sixtus II", type: Clergy, roles: [pope], died: 0258-08-06, realm: Papacy, prominence: 2, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "Killed with seven deacons, among them Lawrence of Rome, in Valerian's persecution (6 August 258).",
+     sources: [wp-sixtus-ii]}
+  - {key: dionysius, name: "Dionysius", type: Clergy, roles: [pope], died: 268, realm: Papacy, prominence: 1, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent; led the Roman church from Valerian's persecution to Gallienus's toleration (260) and reorganised it into parishes under presbyters.",
+     sources: [wp-dionysius]}
+  - {key: felix-i, name: "Felix I", type: Clergy, roles: [pope], died: 0274-12-30, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Roman; wrote a dogmatic letter on the unity of Christ's person and opposed Paul of Samosata.",
+     sources: [wp-felix-i]}
+  - {key: eutychian, name: "Eutychian", type: Clergy, roles: [pope], died: 0283-12-07, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Known almost only from his epitaph in the catacomb of Callixtus; the Liber Pontificalis gives him nearly nine years (275-283), Eusebius ten months.",
+     sources: [wp-eutychian]}
+  - {key: caius, name: "Caius", type: Clergy, roles: [pope], died: 0296-04-22, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "From Salona in Dalmatia; little is known beyond a legendary account in the Liber Pontificalis. Martyred, by legend.",
+     sources: [wp-caius]}
+  - {key: marcellinus, name: "Marcellinus", type: Clergy, roles: [pope], died: 304, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Pope during Diocletian's persecution; some sources say he lapsed, a claim Augustine rejected. A saint.",
+     sources: [wp-marcellinus]}
+  - {key: marcellus-i, name: "Marcellus I", type: Clergy, roles: [pope], born: 0255-01-06, died: 0309-01-16, realm: Papacy, prominence: 1, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "Succeeded Marcellinus after a long vacancy; Maxentius banished him in 309 over the tumult caused by his harsh penances for the lapsed, and he died in exile that year.",
+     sources: [wp-marcellus-i]}
+  - {key: eusebius, name: "Eusebius", type: Clergy, roles: [pope], died: 310, realm: Papacy, prominence: 1, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent; quarrelled with Heraclius over the lapsed, and Maxentius banished both. Died in exile in Sicily (310).",
+     sources: [wp-eusebius]}
+  - {key: miltiades, name: "Miltiades (Melchiades)", type: Clergy, roles: [pope], died: 0314-01-11, realm: Papacy, prominence: 2, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "Of Berber descent, the first pope after the persecutions ended: in his time Constantine issued the Edict of Milan (313), and the pope was given Empress Fausta's palace, where the Lateran would rise.",
+     sources: [wp-miltiades]}
+  - {key: sylvester-i, name: "Sylvester I", type: Clergy, roles: [pope], died: 0335-12-31, realm: Papacy, prominence: 3, sitelinks: 89, sitelinks_on: 2026-10-18,
+     note: "Pope 314-335 at a turning point for the Church, though little is known of him; in his time came the Council of Arles (314) and the First Council of Nicaea (325).",
+     sources: [wp-sylvester-i]}
+  - {key: mark, name: "Mark", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "A Roman, son of Priscus; pope for most of 336. May have founded two churches in Rome.",
+     sources: [wp-mark]}
+  - {key: julius-i, name: "Julius I", type: Clergy, roles: [pope], realm: Papacy, prominence: 2, sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "Backed Athanasius of Alexandria when Arian bishops deposed him, asserting the pope's authority over the Arian East.",
+     sources: [wp-julius-i]}
+  - {key: liberius, name: "Liberius", type: Clergy, roles: [pope], born: 310, died: 0366-09-24, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Banished by the Arian-leaning Constantius II, who installed Felix II, and later yielded to him; the earliest pope not venerated as a saint.",
+     sources: [wp-liberius]}
+  - {key: damasus-i, name: "Damasus I", type: Clergy, roles: [pope], born: 305, born_estimated: true, died: 0384-12-11, realm: Papacy, prominence: 3, sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "From Egitania in modern Portugal, elected in 366 against the rival Ursicinus. His Council of Rome (382) fixed the canon of scripture, and he commissioned Jerome's Vulgate.",
+     sources: [wp-damasus-i]}
+  - {key: novatian-antipope, name: "Novatian (antipope)", type: Clergy, roles: [antipope], born: 200, born_estimated: true, died: 258, died_estimated: true, realm: Papacy, prominence: 2, sitelinks: 46, sitelinks_on: 2026-10-18,
+     note: "A noted theologian, the first Roman to write theology in Latin; set up against Cornelius in the dispute over readmitting the lapsed, he founded Novatianism.",
+     sources: [wp-novatian-antipope]}
+  - {key: heraclius-antipope, name: "Heraclius (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 5, sitelinks_on: 2026-10-18,
+     note: "Known only from Damasus I's epitaph for Eusebius: the two disagreed over the lapsed, and Maxentius banished both.",
+     sources: [wp-heraclius-antipope]}
+  - {key: felix-ii-antipope, name: "Felix II (antipope)", type: Clergy, roles: [antipope], died: 0365-11-22, realm: Papacy, prominence: 1, sitelinks: 40, sitelinks_on: 2026-10-18,
+     note: "An archdeacon of Rome installed by Emperor Constantius II in place of the banished Liberius (355).",
+     sources: [wp-felix-ii-antipope]}
+  - {key: ursicinus-antipope, name: "Ursicinus (antipope)", type: Clergy, roles: [antipope], died: 381, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 35, sitelinks_on: 2026-10-18,
+     note: "Elected at the same time as Damasus I amid rioting (366); ruled in Rome for some months, was later declared an antipope, and died after 381.",
+     sources: [wp-ursicinus-antipope]}
+
+titles:
+  - {person: anterus, title: Pope, realm: Papacy, from: 0235-11-21, to: 0236-01-03, sources: [wp-anterus, wp-list-of-popes]}
+  - {person: fabian, title: Pope, realm: Papacy, from: 0236-01-10, to: 0250-01-20, sources: [wp-fabian, wp-list-of-popes]}
+  - {person: cornelius, title: Pope, realm: Papacy, from: 251, to: 253, from_estimated: true, to_estimated: true, sources: [wp-cornelius, wp-list-of-popes]}
+  - {person: lucius-i, title: Pope, realm: Papacy, from: 0253-06-25, to: 0254-03-05, sources: [wp-lucius-i, wp-list-of-popes]}
+  - {person: stephen-i, title: Pope, realm: Papacy, from: 0254-03-12, to: 0257-08-02, sources: [wp-stephen-i, wp-list-of-popes]}
+  - {person: sixtus-ii, title: Pope, realm: Papacy, from: 0257-08-31, to: 0258-08-06, sources: [wp-sixtus-ii, wp-list-of-popes]}
+  - {person: dionysius, title: Pope, realm: Papacy, from: 0259-07-22, to: 0268-12-27, sources: [wp-dionysius, wp-list-of-popes]}
+  - {person: felix-i, title: Pope, realm: Papacy, from: 0269-01-05, to: 0274-12-30, sources: [wp-felix-i, wp-list-of-popes]}
+  - {person: eutychian, title: Pope, realm: Papacy, from: 0275-01-04, to: 0283-12-07, sources: [wp-eutychian, wp-list-of-popes]}
+  - {person: caius, title: Pope, realm: Papacy, from: 0283-12-17, to: 0296-04-22, sources: [wp-caius, wp-list-of-popes]}
+  - {person: marcellinus, title: Pope, realm: Papacy, from: 0296-06-30, to: 0304-10-25, sources: [wp-marcellinus, wp-list-of-popes]}
+  - {person: marcellus-i, title: Pope, realm: Papacy, from: 0308-05-27, to: 0309-01-16, sources: [wp-marcellus-i, wp-list-of-popes]}
+  - {person: eusebius, title: Pope, realm: Papacy, from: 0309-04-18, to: 0310-08-17, sources: [wp-eusebius, wp-list-of-popes]}
+  - {person: miltiades, title: Pope, realm: Papacy, from: 0311-07-02, to: 0314-01-10, sources: [wp-miltiades, wp-list-of-popes]}
+  - {person: sylvester-i, title: Pope, realm: Papacy, from: 0314-01-31, to: 0335-12-31, sources: [wp-sylvester-i, wp-list-of-popes]}
+  - {person: mark, title: Pope, realm: Papacy, from: 0336-01-18, to: 0336-10-07, sources: [wp-mark, wp-list-of-popes]}
+  - {person: julius-i, title: Pope, realm: Papacy, from: 0337-02-06, to: 0352-04-12, sources: [wp-julius-i, wp-list-of-popes]}
+  - {person: liberius, title: Pope, realm: Papacy, from: 0352-05-17, to: 0366-09-24, sources: [wp-liberius, wp-list-of-popes]}
+  - {person: damasus-i, title: Pope, realm: Papacy, from: 0366-10-01, to: 0384-12-11, sources: [wp-damasus-i, wp-list-of-popes]}
+  - {person: novatian-antipope, title: Pope, realm: Papacy, from: 0251-03-01, to: 0258-08-01, disputed: true, sources: [wp-novatian-antipope, wp-antipope], note: "Antipope, against Cornelius, Lucius I, Stephen I and Sixtus II."}
+  - {person: heraclius-antipope, title: Pope, realm: Papacy, from: 0309-04-20, to: 0310-08-16, disputed: true, sources: [wp-heraclius-antipope, wp-antipope], note: "Antipope, against Eusebius."}
+  - {person: felix-ii-antipope, title: Pope, realm: Papacy, from: 0355-01-01, to: 0365-11-26, disputed: true, from_estimated: true, sources: [wp-felix-ii-antipope, wp-antipope], note: "Antipope, installed by Constantius II, against Liberius."}
+  - {person: ursicinus-antipope, title: Pope, realm: Papacy, from: 0366-10-01, to: 0367-11-16, disputed: true, sources: [wp-ursicinus-antipope, wp-antipope], note: "Antipope, against Damasus I."}
+
+places:
+  - {key: athens, name: Athens, historical_name: Athenae, kind: city, country: Greece, lat: 37.9842, lng: 23.7281, sources: [wp-athens]}
+  - {key: idanha-a-velha, name: Idanha-a-Velha, historical_name: Egitania, kind: village, country: Portugal, lat: 39.9969, lng: -7.1444, sources: [wp-idanha-a-velha]}
+  - {key: solin, name: Solin, historical_name: Salona, kind: town, country: Croatia, lat: 43.5317, lng: 16.4947, sources: [wp-solin]}
+  - {key: strongoli, name: Strongoli, historical_name: Petelia, kind: town, region: Calabria, country: Italy, lat: 39.2667, lng: 17.0667, sources: [wp-strongoli]}
+
+moments:
+  - {person: anterus, role: born, place: strongoli}
+  - {person: fabian, role: born, place: rome}
+  - {person: cornelius, role: born, place: rome}
+  - {person: lucius-i, role: born, place: rome}
+  - {person: stephen-i, role: born, place: rome}
+  - {person: sixtus-ii, role: born, place: athens}
+  - {person: felix-i, role: born, place: rome}
+  - {person: caius, role: born, place: solin}
+  - {person: marcellinus, role: born, place: rome}
+  - {person: marcellus-i, role: born, place: rome, year: 255}
+  - {person: mark, role: born, place: rome}
+  - {person: julius-i, role: born, place: rome}
+  - {person: liberius, role: born, place: rome, year: 310}
+  - {person: damasus-i, role: born, place: idanha-a-velha, year: 305}
+  - {person: novatian-antipope, role: born, place: rome, year: 200}
+  - {person: heraclius-antipope, role: born, place: rome}
+  - {person: felix-ii-antipope, role: born, place: rome}
+  - {person: ursicinus-antipope, role: born, place: rome}
+
+events:
+  - key: edict-of-milan-313
+    name: Edict of Milan
+    type: Edict
+    date: 0313-02-13
+    place: milan
+    people:
+      - {person: miltiades, role: pope at the time}
+    prominence: 5
+    note: "Constantine I and Licinius, meeting at Mediolanum, agreed to treat Christians benevolently throughout the Roman Empire."
+    sources: [wp-edict-of-milan]
+  - key: first-council-of-nicaea-325
+    name: First Council of Nicaea
+    type: Council
+    year: 325
+    place: nicaea
+    people:
+      - {person: sylvester-i, role: pope at the time}
+    prominence: 5
+    note: "The first ecumenical council, called by Constantine I at Nicaea (İznik), May to July 325."
+    sources: [wp-first-council-of-nicaea]
+
+discrepancies:
+  - key: eusebius-died
+    question: "When did Eusebius die?"
+    about: [{person: eusebius}]
+    field: died
+    claims:
+      - {value: "0310-10-21", sources: [wp-eusebius]}
+      - {value: "310", sources: [wd-eusebius]}
+    note: "The record uses his own article."
