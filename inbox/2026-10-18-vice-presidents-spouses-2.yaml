@@ -1,0 +1,249 @@
+# Vice presidents' spouses, batch 2 of 2: the spouses of the vice presidents who took office 1877-2025 (Wheeler to
+# Vance), and the Second Lady title for the wives already here whose husbands were vice president before president
+# (Edith Roosevelt, Grace Coolidge, Bess Truman, Pat Nixon, Lady Bird Johnson, Betty Ford, Barbara Bush, Jill Biden).
+# Same conventions and checks as batch 1 (inbox/2026-10-18-vice-presidents-spouses-1.yaml): every wife, type
+# Notable, title "Second Lady of the United States" cut to the marriage and her life; Wikidata checked against
+# English Wikipedia (2026-10-18); every difference recorded as a discrepancy, the records using Wikipedia.
+# Stated honestly:
+#  - Kamala Harris's spouse is her husband, Doug Emhoff: added the same way, with the title "Second Gentleman of the
+#    United States" (his article: "the first second gentleman").
+#  - Muriel Humphrey is typed Government, not Notable: she was appointed to her husband's Senate seat in 1978 (as
+#    Hillary Clinton was typed Government among the First Ladies).
+#  - Wives with no Wikipedia article of their own cite their husband's article: Mary King (Wheeler; born 1828,
+#    Wikidata 1830: a discrepancy), Lucy Young Kimball (Morton's first wife; married 15 October 1856, died 1871),
+#    Annie Elizabeth Baird (Curtis; 1860-1924) and Dorothy Brower (Barkley's first wife; 1882-1947).
+#  - Discrepancies with Wikidata: Cornelia Fairbanks died 24 October 1913 (Wikidata 25), Caro Dawes born 1865
+#    (Wikidata 1866), Ilo Wallace born 1889 (Wikidata 1888).
+#  - Jane Hadley Barkley married Barkley while he was vice president (18 November 1949); her title starts that day.
+#    Mary Rockefeller (divorced 1962) and the four wives who died first were never Second Lady.
+batch:
+  title: "Vice presidents' spouses, batch 2"
+  requested: "And then vice presidents and their wives"
+  date: 2026-10-18
+
+sources:
+  - {key: wd-mary-king-wheeler, title: "Mary King (Wikidata)", url: "https://www.wikidata.org/wiki/None"}
+  - {key: wp-eliza-hendricks, title: "Eliza Hendricks (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eliza_Hendricks"}
+  - {key: wp-anna-morton, title: "Anna Morton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anna_Morton"}
+  - {key: wp-letitia-stevenson, title: "Letitia Stevenson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Letitia_Stevenson"}
+  - {key: wp-jennie-tuttle-hobart, title: "Jennie Tuttle Hobart (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jennie_Tuttle_Hobart"}
+  - {key: wp-cornelia-cole-fairbanks, title: "Cornelia Cole Fairbanks (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cornelia_Cole_Fairbanks"}
+  - {key: wd-cornelia-cole-fairbanks, title: "Cornelia Cole Fairbanks (Wikidata)", url: "https://www.wikidata.org/wiki/Q441366"}
+  - {key: wp-carrie-babcock-sherman, title: "Carrie Babcock Sherman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carrie_Babcock_Sherman"}
+  - {key: wp-lois-irene-marshall, title: "Lois Irene Marshall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lois_Irene_Marshall"}
+  - {key: wp-caro-dawes, title: "Caro Dawes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caro_Dawes"}
+  - {key: wd-caro-dawes, title: "Caro Dawes (Wikidata)", url: "https://www.wikidata.org/wiki/Q516737"}
+  - {key: wp-mariette-rheiner-garner, title: "Mariette Rheiner Garner (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mariette_Rheiner_Garner"}
+  - {key: wp-ilo-wallace, title: "Ilo Wallace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ilo_Wallace"}
+  - {key: wd-ilo-wallace, title: "Ilo Wallace (Wikidata)", url: "https://www.wikidata.org/wiki/Q525020"}
+  - {key: wp-jane-hadley-barkley, title: "Jane Hadley Barkley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jane_Hadley_Barkley"}
+  - {key: wp-muriel-humphrey, title: "Muriel Humphrey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Muriel_Humphrey"}
+  - {key: wp-judy-agnew, title: "Judy Agnew (Wikipedia)", url: "https://en.wikipedia.org/wiki/Judy_Agnew"}
+  - {key: wp-mary-rockefeller, title: "Mary Rockefeller (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Rockefeller"}
+  - {key: wp-happy-rockefeller, title: "Happy Rockefeller (Wikipedia)", url: "https://en.wikipedia.org/wiki/Happy_Rockefeller"}
+  - {key: wp-joan-mondale, title: "Joan Mondale (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_Mondale"}
+  - {key: wp-marilyn-quayle, title: "Marilyn Quayle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marilyn_Quayle"}
+  - {key: wp-tipper-gore, title: "Tipper Gore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tipper_Gore"}
+  - {key: wp-lynne-cheney, title: "Lynne Cheney (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lynne_Cheney"}
+  - {key: wp-karen-pence, title: "Karen Pence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Karen_Pence"}
+  - {key: wp-doug-emhoff, title: "Doug Emhoff (Wikipedia)", url: "https://en.wikipedia.org/wiki/Doug_Emhoff"}
+  - {key: wp-usha-vance, title: "Usha Vance (Wikipedia)", url: "https://en.wikipedia.org/wiki/Usha_Vance"}
+
+people:
+  - {key: mary-king-wheeler, name: "Mary King", type: Notable, born: 1828, died: 1876, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of William A. Wheeler; not Second Lady: she died before he became vice president. Recorded from William A. Wheeler's article.",
+     coverage: not-read, coverage_note: "Added as the wife of William A. Wheeler.", sources: [wp-william-a-wheeler]}
+  - {key: eliza-hendricks, name: "Eliza Hendricks", type: Notable, born: 1823-11-23, died: 1903-11-03, prominence: 1,
+     sitelinks: 7, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1885-1885, as the wife of Thomas A. Hendricks.",
+     coverage: not-read, coverage_note: "Added as the wife of Thomas A. Hendricks.", sources: [wp-eliza-hendricks]}
+  - {key: lucy-young-kimball-morton, name: "Lucy Young Kimball", type: Notable, died: 1871, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of Levi P. Morton; not Second Lady: she died before he became vice president. Recorded from Levi P. Morton's article.",
+     coverage: not-read, coverage_note: "Added as the wife of Levi P. Morton.", sources: [wp-levi-p-morton]}
+  - {key: anna-morton, name: "Anna Morton", type: Notable, born: 1846-05-18, died: 1918-08-14, prominence: 1,
+     sitelinks: 9, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1889-1893, as the wife of Levi P. Morton.",
+     coverage: not-read, coverage_note: "Added as the wife of Levi P. Morton.", sources: [wp-anna-morton]}
+  - {key: letitia-stevenson, name: "Letitia Stevenson", type: Notable, born: 1843-01-08, died: 1913-12-25, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1893-1897, as the wife of Adlai Stevenson I.",
+     coverage: not-read, coverage_note: "Added as the wife of Adlai Stevenson I.", sources: [wp-letitia-stevenson]}
+  - {key: jennie-tuttle-hobart, name: "Jennie Tuttle Hobart", type: Notable, born: 1849-04-30, died: 1941-01-08, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1897-1899, as the wife of Garret Hobart.",
+     coverage: not-read, coverage_note: "Added as the wife of Garret Hobart.", sources: [wp-jennie-tuttle-hobart]}
+  - {key: cornelia-cole-fairbanks, name: "Cornelia Cole Fairbanks", type: Notable, born: 1852-01-14, died: 1913-10-24, prominence: 1,
+     sitelinks: 11, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1905-1909, as the wife of Charles W. Fairbanks.",
+     coverage: not-read, coverage_note: "Added as the wife of Charles W. Fairbanks.", sources: [wp-cornelia-cole-fairbanks]}
+  - {key: carrie-babcock-sherman, name: "Carrie Babcock Sherman", type: Notable, born: 1856-11-16, died: 1931-10-06, prominence: 1,
+     sitelinks: 11, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1909-1912, as the wife of James S. Sherman.",
+     coverage: not-read, coverage_note: "Added as the wife of James S. Sherman.", sources: [wp-carrie-babcock-sherman]}
+  - {key: lois-irene-marshall, name: "Lois Irene Marshall", type: Notable, born: 1873-05-09, died: 1958-01-06, prominence: 1,
+     sitelinks: 12, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1913-1921, as the wife of Thomas R. Marshall.",
+     coverage: not-read, coverage_note: "Added as the wife of Thomas R. Marshall.", sources: [wp-lois-irene-marshall]}
+  - {key: caro-dawes, name: "Caro Dawes", type: Notable, born: 1865-01-06, died: 1957-10-03, prominence: 1,
+     sitelinks: 7, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1925-1929, as the wife of Charles G. Dawes.",
+     coverage: not-read, coverage_note: "Added as the wife of Charles G. Dawes.", sources: [wp-caro-dawes]}
+  - {key: annie-elizabeth-baird-curtis, name: "Annie Elizabeth Baird", type: Notable, born: 1860, died: 1924, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of Charles Curtis; not Second Lady: she died before he became vice president. Recorded from Charles Curtis's article.",
+     coverage: not-read, coverage_note: "Added as the wife of Charles Curtis.", sources: [wp-charles-curtis]}
+  - {key: mariette-rheiner-garner, name: "Mariette Rheiner Garner", type: Notable, born: 1869-07-17, died: 1948-08-17, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1933-1941, as the wife of John Nance Garner.",
+     coverage: not-read, coverage_note: "Added as the wife of John Nance Garner.", sources: [wp-mariette-rheiner-garner]}
+  - {key: ilo-wallace, name: "Ilo Wallace", type: Notable, born: 1889-03-10, died: 1981-02-22, prominence: 1,
+     sitelinks: 8, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1941-1945, as the wife of Henry A. Wallace.",
+     coverage: not-read, coverage_note: "Added as the wife of Henry A. Wallace.", sources: [wp-ilo-wallace]}
+  - {key: dorothy-brower-barkley, name: "Dorothy Brower", type: Notable, born: 1882-11-14, died: 1947-03-10, prominence: 1,
+     sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Wife of Alben W. Barkley; not Second Lady: she died before he became vice president. Recorded from Alben W. Barkley's article.",
+     coverage: not-read, coverage_note: "Added as the wife of Alben W. Barkley.", sources: [wp-alben-w-barkley]}
+  - {key: jane-hadley-barkley, name: "Jane Hadley Barkley", type: Notable, born: 1911-09-23, died: 1964-09-06, prominence: 1,
+     sitelinks: 11, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1949-1953, as the wife of Alben W. Barkley.",
+     coverage: not-read, coverage_note: "Added as the wife of Alben W. Barkley.", sources: [wp-jane-hadley-barkley]}
+  - {key: muriel-humphrey, name: "Muriel Humphrey", type: Government, born: 1912-02-20, died: 1998-09-20, prominence: 1,
+     sitelinks: 23, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1965-1969, as the wife of Hubert Humphrey. Appointed to her husband's Senate seat after his death in 1978.",
+     coverage: not-read, coverage_note: "Added as the wife of Hubert Humphrey.", sources: [wp-muriel-humphrey]}
+  - {key: judy-agnew, name: "Judy Agnew", type: Notable, born: 1921-04-23, died: 2012-06-20, prominence: 1,
+     sitelinks: 15, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1969-1973, as the wife of Spiro Agnew.",
+     coverage: not-read, coverage_note: "Added as the wife of Spiro Agnew.", sources: [wp-judy-agnew]}
+  - {key: mary-rockefeller, name: "Mary Rockefeller", type: Notable, born: 1907-06-17, died: 1999-04-21, prominence: 1,
+     sitelinks: 4, sitelinks_on: 2026-10-18,
+     note: "Wife of Nelson Rockefeller; not Second Lady: the marriage ended before he became vice president.",
+     coverage: not-read, coverage_note: "Added as the wife of Nelson Rockefeller.", sources: [wp-mary-rockefeller]}
+  - {key: happy-rockefeller, name: "Happy Rockefeller", type: Notable, born: 1926-06-09, died: 2015-05-19, prominence: 1,
+     sitelinks: 20, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1974-1977, as the wife of Nelson Rockefeller.",
+     coverage: not-read, coverage_note: "Added as the wife of Nelson Rockefeller.", sources: [wp-happy-rockefeller]}
+  - {key: joan-mondale, name: "Joan Mondale", type: Notable, born: 1930-08-08, died: 2014-02-03, prominence: 1,
+     sitelinks: 22, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1977-1981, as the wife of Walter Mondale.",
+     coverage: not-read, coverage_note: "Added as the wife of Walter Mondale.", sources: [wp-joan-mondale]}
+  - {key: marilyn-quayle, name: "Marilyn Quayle", type: Notable, born: 1949-07-29, prominence: 1,
+     sitelinks: 24, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1989-1993, as the wife of Dan Quayle.",
+     coverage: not-read, coverage_note: "Added as the wife of Dan Quayle.", sources: [wp-marilyn-quayle]}
+  - {key: tipper-gore, name: "Tipper Gore", type: Notable, born: 1948-08-19, prominence: 1,
+     sitelinks: 28, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 1993-2001, as the wife of Al Gore.",
+     coverage: not-read, coverage_note: "Added as the wife of Al Gore.", sources: [wp-tipper-gore]}
+  - {key: lynne-cheney, name: "Lynne Cheney", type: Notable, born: 1941-08-14, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 2001-2009, as the wife of Dick Cheney.",
+     coverage: not-read, coverage_note: "Added as the wife of Dick Cheney.", sources: [wp-lynne-cheney]}
+  - {key: karen-pence, name: "Karen Pence", type: Notable, born: 1957-01-01, prominence: 1,
+     sitelinks: 34, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 2017-2021, as the wife of Mike Pence.",
+     coverage: not-read, coverage_note: "Added as the wife of Mike Pence.", sources: [wp-karen-pence]}
+  - {key: doug-emhoff, name: "Doug Emhoff", type: Notable, born: 1964-10-13, prominence: 2,
+     sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "Second Gentleman of the United States 2021-2025, as the husband of Kamala Harris. Lawyer; the first second gentleman of the United States.",
+     coverage: not-read, coverage_note: "Added as the husband of Kamala Harris.", sources: [wp-doug-emhoff]}
+  - {key: usha-vance, name: "Usha Vance", type: Notable, born: 1986-01-06, prominence: 2,
+     sitelinks: 41, sitelinks_on: 2026-10-18,
+     note: "Second Lady of the United States 2025-, as the wife of JD Vance.",
+     coverage: not-read, coverage_note: "Added as the wife of JD Vance.", sources: [wp-usha-vance]}
+
+links:
+  - {spouse: william-a-wheeler, to: mary-king-wheeler, year: 1845}
+  - {spouse: thomas-a-hendricks, to: eliza-hendricks, year: 1845}
+  - {spouse: levi-p-morton, to: lucy-young-kimball-morton, year: 1856}
+  - {spouse: levi-p-morton, to: anna-morton, year: 1873}
+  - {spouse: adlai-stevenson-i, to: letitia-stevenson, year: 1866}
+  - {spouse: garret-hobart, to: jennie-tuttle-hobart, year: 1869}
+  - {spouse: charles-w-fairbanks, to: cornelia-cole-fairbanks, year: 1874}
+  - {spouse: james-s-sherman, to: carrie-babcock-sherman, year: 1881}
+  - {spouse: thomas-r-marshall, to: lois-irene-marshall, year: 1895}
+  - {spouse: charles-g-dawes, to: caro-dawes, year: 1889}
+  - {spouse: charles-curtis, to: annie-elizabeth-baird-curtis, year: 1884}
+  - {spouse: john-nance-garner, to: mariette-rheiner-garner, year: 1895}
+  - {spouse: henry-a-wallace, to: ilo-wallace, year: 1914}
+  - {spouse: alben-w-barkley, to: dorothy-brower-barkley, year: 1903}
+  - {spouse: alben-w-barkley, to: jane-hadley-barkley, year: 1949}
+  - {spouse: hubert-humphrey, to: muriel-humphrey, year: 1936}
+  - {spouse: spiro-agnew, to: judy-agnew, year: 1942}
+  - {spouse: nelson-rockefeller, to: mary-rockefeller, year: 1930}
+  - {spouse: nelson-rockefeller, to: happy-rockefeller, year: 1963}
+  - {spouse: walter-mondale, to: joan-mondale, year: 1955}
+  - {spouse: dan-quayle, to: marilyn-quayle, year: 1972}
+  - {spouse: al-gore, to: tipper-gore, year: 1970}
+  - {spouse: dick-cheney, to: lynne-cheney, year: 1964}
+  - {spouse: mike-pence, to: karen-pence, year: 1985}
+  - {spouse: kamala-harris, to: doug-emhoff, year: 2014}
+  - {spouse: jd-vance, to: usha-vance, year: 2014}
+
+titles:
+  - {person: eliza-hendricks, title: Second Lady of the United States, realm: United States, from: 1885-03-04, to: 1885-11-25, sources: [wp-eliza-hendricks, wp-thomas-a-hendricks]}
+  - {person: anna-morton, title: Second Lady of the United States, realm: United States, from: 1889-03-04, to: 1893-03-04, sources: [wp-anna-morton, wp-levi-p-morton]}
+  - {person: letitia-stevenson, title: Second Lady of the United States, realm: United States, from: 1893-03-04, to: 1897-03-04, sources: [wp-letitia-stevenson, wp-adlai-stevenson-i]}
+  - {person: jennie-tuttle-hobart, title: Second Lady of the United States, realm: United States, from: 1897-03-04, to: 1899-11-21, sources: [wp-jennie-tuttle-hobart, wp-garret-hobart]}
+  - {person: cornelia-cole-fairbanks, title: Second Lady of the United States, realm: United States, from: 1905-03-04, to: 1909-03-04, sources: [wp-cornelia-cole-fairbanks, wp-charles-w-fairbanks]}
+  - {person: carrie-babcock-sherman, title: Second Lady of the United States, realm: United States, from: 1909-03-04, to: 1912-10-30, sources: [wp-carrie-babcock-sherman, wp-james-s-sherman]}
+  - {person: lois-irene-marshall, title: Second Lady of the United States, realm: United States, from: 1913-03-04, to: 1921-03-04, sources: [wp-lois-irene-marshall, wp-thomas-r-marshall]}
+  - {person: caro-dawes, title: Second Lady of the United States, realm: United States, from: 1925-03-04, to: 1929-03-04, sources: [wp-caro-dawes, wp-charles-g-dawes]}
+  - {person: mariette-rheiner-garner, title: Second Lady of the United States, realm: United States, from: 1933-03-04, to: 1941-01-20, sources: [wp-mariette-rheiner-garner, wp-john-nance-garner]}
+  - {person: ilo-wallace, title: Second Lady of the United States, realm: United States, from: 1941-01-20, to: 1945-01-20, sources: [wp-ilo-wallace, wp-henry-a-wallace]}
+  - {person: jane-hadley-barkley, title: Second Lady of the United States, realm: United States, from: 1949-11-18, to: 1953-01-20, sources: [wp-jane-hadley-barkley, wp-alben-w-barkley]}
+  - {person: muriel-humphrey, title: Second Lady of the United States, realm: United States, from: 1965-01-20, to: 1969-01-20, sources: [wp-muriel-humphrey, wp-hubert-humphrey]}
+  - {person: judy-agnew, title: Second Lady of the United States, realm: United States, from: 1969-01-20, to: 1973-10-10, sources: [wp-judy-agnew, wp-spiro-agnew]}
+  - {person: happy-rockefeller, title: Second Lady of the United States, realm: United States, from: 1974-12-19, to: 1977-01-20, sources: [wp-happy-rockefeller, wp-nelson-rockefeller]}
+  - {person: joan-mondale, title: Second Lady of the United States, realm: United States, from: 1977-01-20, to: 1981-01-20, sources: [wp-joan-mondale, wp-walter-mondale]}
+  - {person: marilyn-quayle, title: Second Lady of the United States, realm: United States, from: 1989-01-20, to: 1993-01-20, sources: [wp-marilyn-quayle, wp-dan-quayle]}
+  - {person: tipper-gore, title: Second Lady of the United States, realm: United States, from: 1993-01-20, to: 2001-01-20, sources: [wp-tipper-gore, wp-al-gore]}
+  - {person: lynne-cheney, title: Second Lady of the United States, realm: United States, from: 2001-01-20, to: 2009-01-20, sources: [wp-lynne-cheney, wp-dick-cheney]}
+  - {person: karen-pence, title: Second Lady of the United States, realm: United States, from: 2017-01-20, to: 2021-01-20, sources: [wp-karen-pence, wp-mike-pence]}
+  - {person: doug-emhoff, title: Second Gentleman of the United States, realm: United States, from: 2021-01-20, to: 2025-01-20, sources: [wp-doug-emhoff, wp-kamala-harris]}
+  - {person: usha-vance, title: Second Lady of the United States, realm: United States, from: 2025-01-20, sources: [wp-usha-vance, wp-jd-vance]}
+  - {person: edith-roosevelt, title: Second Lady of the United States, realm: United States, from: 1901-03-04, to: 1901-09-14, sources: [wp-edith-roosevelt, wp-theodore-roosevelt]}
+  - {person: grace-coolidge, title: Second Lady of the United States, realm: United States, from: 1921-03-04, to: 1923-08-02, sources: [wp-grace-coolidge, wp-calvin-coolidge]}
+  - {person: bess-truman, title: Second Lady of the United States, realm: United States, from: 1945-01-20, to: 1945-04-12, sources: [wp-bess-truman, wp-harry-s-truman]}
+  - {person: pat-nixon, title: Second Lady of the United States, realm: United States, from: 1953-01-20, to: 1961-01-20, sources: [wp-pat-nixon, wp-richard-nixon]}
+  - {person: lady-bird-johnson, title: Second Lady of the United States, realm: United States, from: 1961-01-20, to: 1963-11-22, sources: [wp-lady-bird-johnson, wp-lyndon-b-johnson]}
+  - {person: betty-ford, title: Second Lady of the United States, realm: United States, from: 1973-12-06, to: 1974-08-09, sources: [wp-betty-ford, wp-gerald-ford]}
+  - {person: barbara-bush, title: Second Lady of the United States, realm: United States, from: 1981-01-20, to: 1989-01-20, sources: [wp-barbara-bush, wp-george-h-w-bush]}
+  - {person: jill-biden, title: Second Lady of the United States, realm: United States, from: 2009-01-20, to: 2017-01-20, sources: [wp-jill-biden, wp-joe-biden]}
+
+discrepancies:
+  - key: mary-king-wheeler-born
+    question: "When was Mary King born?"
+    about: [{person: mary-king-wheeler}]
+    field: born
+    claims:
+      - {value: "1828", sources: [wp-william-a-wheeler]}
+      - {value: "1830", sources: [wd-mary-king-wheeler]}
+    note: "The record uses Wikipedia's date."
+  - key: cornelia-cole-fairbanks-died
+    question: "When did Cornelia Cole Fairbanks die?"
+    about: [{person: cornelia-cole-fairbanks}]
+    field: died
+    claims:
+      - {value: "1913-10-24", sources: [wp-cornelia-cole-fairbanks]}
+      - {value: "1913-10-25", sources: [wd-cornelia-cole-fairbanks]}
+    note: "The record uses Wikipedia's date."
+  - key: caro-dawes-born
+    question: "When was Caro Dawes born?"
+    about: [{person: caro-dawes}]
+    field: born
+    claims:
+      - {value: "1865-01-06", sources: [wp-caro-dawes]}
+      - {value: "1866-01-06", sources: [wd-caro-dawes]}
+    note: "The record uses Wikipedia's date."
+  - key: ilo-wallace-born
+    question: "When was Ilo Wallace born?"
+    about: [{person: ilo-wallace}]
+    field: born
+    claims:
+      - {value: "1889-03-10", sources: [wp-ilo-wallace]}
+      - {value: "1888-03-10", sources: [wd-ilo-wallace]}
+    note: "The record uses Wikipedia's date."
