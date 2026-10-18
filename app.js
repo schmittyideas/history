@@ -1025,8 +1025,9 @@ function selectPlace(id) {
       const v = (e.venues || []).filter(x => x.place_id === id).map(x => x.note || x.role).join("; ");
       return eventLink(e, e.start_year != null || v ? ` (${[fmtYear(e.start_year), v].filter(Boolean).join(": ")})` : "");
     }), "None linked")],
-    ...(db.filmsSetAt(id).length ? [["Films set here", joinNodes(db.filmsSetAt(id).map(e => h("span", {}, eventLink(e, ` (${fmtYear(e.start_year)})`),
-      ...(db.portrayedIn(e).length ? [" · ", ...joinNodes(db.portrayedIn(e).map(p => personLink(p)))] : []))))]] : []),
+    // Each film with who it portrays; films are split by semicolons, since the people are split by commas.
+    ...(db.filmsSetAt(id).length ? [["Films set here", db.filmsSetAt(id).flatMap((e, i) => [i ? "; " : "", eventLink(e, ` (${fmtYear(e.start_year)})`),
+      ...(db.portrayedIn(e).length ? [" · ", ...joinNodes(db.portrayedIn(e).map(p => personLink(p)))] : [])])]] : []),
     ...(films.length ? [["Films shot here", joinNodes(films.map(e => eventLink(e, ` (${fmtYear(e.start_year)})`)))]] : []),
     ["People", joinNodes(people.map(p => personLink(p)), "None linked")],
     ...nearbyRows(pl),
