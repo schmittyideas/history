@@ -1,0 +1,222 @@
+# The Papacy, 900-999 (the Saeculum obscurum and the Ottonian popes): the 23 lawful popes of the century not yet here,
+# from Benedict IV to Gregory V, and the antipopes Christopher, Boniface VII and John XVI.
+# Conventions and checks as inbox/2026-10-18-popes-999-1503.yaml: popes undisputed; antipopes with the title "Pope",
+# `disputed: true`, keyed <name>-antipope, named "(antipope)"; each person's own English Wikipedia article (2026-10-18)
+# for dates and note, the List of popes and the Antipope table for pontificates and birthplaces, Wikidata for sitelinks
+# and coordinates. Dates are often a year or "c." and recorded as the articles give them.
+# Stated honestly:
+#  - John XII has two pontificates (955-963 and his return in 964): one person, two titles. Boniface VII claimed the
+#    papacy twice (974, 984-985): two disputed titles.
+#  - Leo VIII is on the official list from June 964; the Church counts his first period (963-964, set up by Otto I
+#    against John XII and Benedict V) as an antipapacy, so that title is marked disputed.
+#  - Discrepancies recorded, the record using the person's own article: the deaths of John X (928; Wikidata 929),
+#    John XI (935; Wikidata 936) and Gregory V (18 February 999; Wikidata 23 February), and the end of Stephen VII's
+#    pontificate (his death, 15 March 931; the List of popes 13 February).
+#  - Birthplaces left out: Leo V (Priapi near Ardea), Lando (the Sabina) and John X (Tossignano) have no coordinates.
+batch:
+  title: "The Papacy, 900-999"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-benedict-iv, title: "Pope Benedict IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_IV"}
+  - {key: wp-leo-v, title: "Pope Leo V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_V"}
+  - {key: wp-sergius-iii, title: "Pope Sergius III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sergius_III"}
+  - {key: wp-anastasius-iii, title: "Pope Anastasius III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anastasius_III"}
+  - {key: wp-lando, title: "Pope Lando (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Lando"}
+  - {key: wp-john-x, title: "Pope John X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_X"}
+  - {key: wd-john-x, title: "Pope John X (Wikidata)", url: "https://www.wikidata.org/wiki/Q227976"}
+  - {key: wp-leo-vi, title: "Pope Leo VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_VI"}
+  - {key: wp-stephen-vii, title: "Pope Stephen VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_VII"}
+  - {key: wp-john-xi, title: "Pope John XI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XI"}
+  - {key: wd-john-xi, title: "Pope John XI (Wikidata)", url: "https://www.wikidata.org/wiki/Q181959"}
+  - {key: wp-leo-vii, title: "Pope Leo VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_VII"}
+  - {key: wp-stephen-viii, title: "Pope Stephen VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Stephen_VIII"}
+  - {key: wp-marinus-ii, title: "Pope Marinus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Marinus_II"}
+  - {key: wp-agapetus-ii, title: "Pope Agapetus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Agapetus_II"}
+  - {key: wp-john-xii, title: "Pope John XII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XII"}
+  - {key: wp-benedict-v, title: "Pope Benedict V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_V"}
+  - {key: wp-leo-viii, title: "Pope Leo VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_VIII"}
+  - {key: wp-john-xiii, title: "Pope John XIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XIII"}
+  - {key: wp-benedict-vi, title: "Pope Benedict VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_VI"}
+  - {key: wp-benedict-vii, title: "Pope Benedict VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_VII"}
+  - {key: wp-john-xiv, title: "Pope John XIV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XIV"}
+  - {key: wp-pavia, title: "Pavia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pavia"}
+  - {key: wp-john-xv, title: "Pope John XV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XV"}
+  - {key: wp-gregory-v, title: "Pope Gregory V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_V"}
+  - {key: wp-stainach, title: "Stainach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stainach"}
+  - {key: wd-gregory-v, title: "Pope Gregory V (Wikidata)", url: "https://www.wikidata.org/wiki/Q58571"}
+  - {key: wp-christopher-antipope, title: "Antipope Christopher (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Christopher"}
+  - {key: wp-boniface-vii-antipope, title: "Antipope Boniface VII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Boniface_VII"}
+  - {key: wp-john-xvi-antipope, title: "Antipope John XVI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_John_XVI"}
+  - {key: wp-rossano, title: "Rossano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rossano"}
+
+people:
+  - {key: benedict-iv, name: "Benedict IV", type: Clergy, roles: [pope], born: 840, born_estimated: true, died: 0903-07-30, realm: Papacy, prominence: 2, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "A Roman of noble birth, ordained by Formosus, called 'the Great' by the chronicler Flodoard for his generosity; excommunicated the murderers of Archbishop Fulk of Reims (900).",
+     sources: [wp-benedict-iv]}
+  - {key: leo-v, name: "Leo V", type: Clergy, roles: [pope], died: 903, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Born at Priapi near Ardea; pope for a few months in 903, on the eve of the Saeculum obscurum. Deposed by Christopher and later killed. Died 903 or 904.",
+     sources: [wp-leo-v]}
+  - {key: sergius-iii, name: "Sergius III", type: Clergy, roles: [pope], born: 860, born_estimated: true, died: 0911-04-14, realm: Papacy, prominence: 2, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Seized the papacy from the antipope Christopher with the backing of Theophylact of Tusculum (904); his reign opens the Saeculum obscurum, when Roman aristocrats ruled the papacy. The first pope shown wearing the tiara.",
+     sources: [wp-sergius-iii]}
+  - {key: anastasius-iii, name: "Anastasius III", type: Clergy, roles: [pope], born: 865, born_estimated: true, died: 913, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "A Roman, perhaps an illegitimate son of Sergius III; almost nothing is recorded of his reign (911-913). Died June 913.",
+     sources: [wp-anastasius-iii]}
+  - {key: lando, name: "Lando", type: Clergy, roles: [pope], died: 914, realm: Papacy, prominence: 1, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "Born in the Sabina, son of a Lombard count; pope 913-914. The last pope to take a new, uncompounded name until Francis.",
+     sources: [wp-lando]}
+  - {key: john-x, name: "John X", type: Clergy, roles: [pope], died: 0928-05-28, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Candidate of the Tusculan counts; worked to unite Italy under Berengar of Friuli and helped defeat the Saracens at the Garigliano (915). Marozia had him deposed, imprisoned and murdered.",
+     sources: [wp-john-x]}
+  - {key: leo-vi, name: "Leo VI", type: Clergy, roles: [pope], born: 880, died: 0929-02-12, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Pope for seven months (928-929) during the Saeculum obscurum.",
+     sources: [wp-leo-vi]}
+  - {key: stephen-vii, name: "Stephen VII", type: Clergy, roles: [pope], died: 0931-03-15, realm: Papacy, prominence: 1, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "A candidate of Marozia, pope 929-931 in the Saeculum obscurum; sometimes numbered Stephen VIII.",
+     sources: [wp-stephen-vii]}
+  - {key: john-xi, name: "John XI", type: Clergy, roles: [pope], born: 910, died: 935, realm: Papacy, prominence: 2, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "Son of Marozia, probably by Sergius III; Rome was ruled by his mother and then his brother Alberic II of Spoleto. Died December 935.",
+     sources: [wp-john-xi]}
+  - {key: leo-vii, name: "Leo VII", type: Clergy, roles: [pope], died: 0939-07-13, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Benedictine, pope 936-939 under Alberic II.",
+     sources: [wp-leo-vii]}
+  - {key: stephen-viii, name: "Stephen VIII", type: Clergy, roles: [pope], died: 942, realm: Papacy, prominence: 1, sitelinks: 69, sitelinks_on: 2026-10-18,
+     note: "Pope 939-942, caught in the conflict between his patron Alberic II and King Hugh of Italy; sometimes numbered Stephen IX. Died October 942.",
+     sources: [wp-stephen-viii]}
+  - {key: marinus-ii, name: "Marinus II", type: Clergy, roles: [pope], died: 946, realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Pope 942-946 under Alberic II; mistakenly called Martin III, which is why the next Martin took the number IV. Died May 946.",
+     sources: [wp-marinus-ii]}
+  - {key: agapetus-ii, name: "Agapetus II", type: Clergy, roles: [pope], born: 911, born_estimated: true, died: 0955, realm: Papacy, prominence: 1, sitelinks: 70, sitelinks_on: 2026-10-18,
+     note: "Nominee of Alberic II, princeps of Rome; pope 946-955.",
+     sources: [wp-agapetus-ii]}
+  - {key: john-xii, name: "John XII", type: Clergy, roles: [pope], born: 937, born_estimated: true, died: 0964-05-14, realm: Papacy, prominence: 3, sitelinks: 82, sitelinks_on: 2026-10-18,
+     note: "Octavian, son of Alberic II and kin of the Tusculan counts, pope at 17 to 25: perhaps the youngest ever. Crowned Otto I emperor (962), was deposed by him (963), returned in 964 and died that May.",
+     sources: [wp-john-xii]}
+  - {key: benedict-v, name: "Benedict V", type: Clergy, roles: [pope], died: 0965-07-04, realm: Papacy, prominence: 1, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "Elected by the Romans against Otto I's pope Leo VIII (964); Otto overthrew him after a month and exiled him to Hamburg, where he died.",
+     sources: [wp-benedict-v]}
+  - {key: leo-viii, name: "Leo VIII", type: Clergy, roles: [pope], born: 915, born_estimated: true, died: 0965, realm: Papacy, prominence: 2, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "A Roman layman made pope by Otto I in place of John XII (963); today counted an antipope for 963-964 and the lawful pope from June 964 to his death.",
+     sources: [wp-leo-viii]}
+  - {key: john-xiii, name: "John XIII", type: Clergy, roles: [pope], born: 930, born_estimated: true, died: 0972-09-06, realm: Papacy, prominence: 2, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "Pope 965-972 amid Otto I's quarrels with the Roman nobility; arranged a Byzantine marriage for Otto II. Remembered as 'the Good'.",
+     sources: [wp-john-xiii]}
+  - {key: benedict-vi, name: "Benedict VI", type: Clergy, roles: [pope], born: 950, died: 974, realm: Papacy, prominence: 1, sitelinks: 74, sitelinks_on: 2026-10-18,
+     note: "Of Lombard descent; pope 973-974 between Otto I and Otto II, amid the Crescentii's struggle for power. Deposed and murdered (June 974).",
+     sources: [wp-benedict-vi]}
+  - {key: benedict-vii, name: "Benedict VII", type: Clergy, roles: [pope], died: 0983-07-10, realm: Papacy, prominence: 1, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "Pope from October 974 to his death in 983, after the antipope Boniface VII fled Rome.",
+     sources: [wp-benedict-vii]}
+  - {key: john-xiv, name: "John XIV", type: Clergy, roles: [pope], died: 0984-08-20, realm: Papacy, prominence: 1, sitelinks: 75, sitelinks_on: 2026-10-18,
+     note: "Peter Canepanova, Bishop of Pavia, named by Otto II without consulting the Romans (983); deposed and confined in Castel Sant'Angelo by the antipope Boniface VII, he died there in August 984, by starvation or poison.",
+     sources: [wp-john-xiv]}
+  - {key: john-xv, name: "John XV", type: Clergy, roles: [pope], died: 996, realm: Papacy, prominence: 2, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "A Roman; the first pope to canonise a saint formally (993). The deposition of Archbishop Arnulf of Reims soured relations with the Capetian kings. Died March 996.",
+     sources: [wp-john-xv]}
+  - {key: gregory-v, name: "Gregory V", type: Clergy, roles: [pope], born: 972, born_estimated: true, died: 0999-02-23, realm: Papacy, prominence: 2, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Bruno of Carinthia, of the Salian dynasty, made pope by his cousin Otto III: the first German pope (996-999).",
+     sources: [wp-gregory-v]}
+  - {key: christopher-antipope, name: "Christopher (antipope)", type: Clergy, roles: [antipope], died: 904, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 36, sitelinks_on: 2026-10-18,
+     note: "Deposed Leo V and claimed the papacy from October 903 to January 904, when Sergius III ousted him; listed as a lawful pope until the 20th century.",
+     sources: [wp-christopher-antipope]}
+  - {key: boniface-vii-antipope, name: "Boniface VII (antipope)", type: Clergy, roles: [antipope], died: 0985-07-20, realm: Papacy, prominence: 2, sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "Franco Ferrucci, supposed to have had Benedict VI killed (974); fled to Constantinople with a vast treasure, returned in 984, deposed John XIV, and died suspiciously in 985.",
+     sources: [wp-boniface-vii-antipope]}
+  - {key: john-xvi-antipope, name: "John XVI (antipope)", type: Clergy, roles: [antipope], born: 945, born_estimated: true, died: 1001, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "John Philagathos, a Greek from Rossano, set up against Gregory V by Crescentius II with the support of Emperor Basil II (997-998).",
+     sources: [wp-john-xvi-antipope]}
+
+titles:
+  - {person: benedict-iv, title: Pope, realm: Papacy, from: 0900-02-01, to: 0903-07-30, sources: [wp-benedict-iv, wp-list-of-popes]}
+  - {person: leo-v, title: Pope, realm: Papacy, from: 0903-07-30, to: 903, to_estimated: true, sources: [wp-leo-v, wp-list-of-popes]}
+  - {person: sergius-iii, title: Pope, realm: Papacy, from: 0904-01-29, to: 0911-04-14, sources: [wp-sergius-iii, wp-list-of-popes]}
+  - {person: anastasius-iii, title: Pope, realm: Papacy, from: 0911-04-14, to: 913, to_estimated: true, sources: [wp-anastasius-iii, wp-list-of-popes]}
+  - {person: lando, title: Pope, realm: Papacy, from: 0913-07-07, to: 0914-02-05, sources: [wp-lando, wp-list-of-popes]}
+  - {person: john-x, title: Pope, realm: Papacy, from: 914, to: 0928-05-28, from_estimated: true, sources: [wp-john-x, wp-list-of-popes]}
+  - {person: leo-vi, title: Pope, realm: Papacy, from: 0928-05-28, to: 0929-02-12, to_estimated: true, sources: [wp-leo-vi, wp-list-of-popes]}
+  - {person: stephen-vii, title: Pope, realm: Papacy, from: 0929-02-03, to: 0931-02-13, sources: [wp-stephen-vii, wp-list-of-popes]}
+  - {person: john-xi, title: Pope, realm: Papacy, from: 0931-03-15, to: 935, to_estimated: true, sources: [wp-john-xi, wp-list-of-popes]}
+  - {person: leo-vii, title: Pope, realm: Papacy, from: 0936-01-03, to: 0939-07-13, sources: [wp-leo-vii, wp-list-of-popes]}
+  - {person: stephen-viii, title: Pope, realm: Papacy, from: 0939-07-14, to: 0942-10-30, sources: [wp-stephen-viii, wp-list-of-popes]}
+  - {person: marinus-ii, title: Pope, realm: Papacy, from: 0942-10-30, to: 0946-05-01, sources: [wp-marinus-ii, wp-list-of-popes]}
+  - {person: agapetus-ii, title: Pope, realm: Papacy, from: 0946-05-10, to: 0955-11-08, sources: [wp-agapetus-ii, wp-list-of-popes]}
+  - {person: john-xii, title: Pope, realm: Papacy, from: 0955-12-16, to: 0963-12-06, sources: [wp-john-xii, wp-list-of-popes], note: "Deposed by Otto I on 4/6 December 963."}
+  - {person: john-xii, title: Pope, realm: Papacy, from: 0964-02-26, to: 0964-05-14, sources: [wp-john-xii, wp-list-of-popes], note: "Restored, February to his death on 14 May 964."}
+  - {person: benedict-v, title: Pope, realm: Papacy, from: 0964-05-22, to: 0964-06-23, sources: [wp-benedict-v, wp-list-of-popes]}
+  - {person: leo-viii, title: Pope, realm: Papacy, from: 0964-06-23, to: 0965-03-01, sources: [wp-leo-viii, wp-list-of-popes]}
+  - {person: leo-viii, title: Pope, realm: Papacy, from: 963, to: 964, disputed: true, from_estimated: true, note: "Antipope in the Church's reckoning: set up by Otto I against John XII and Benedict V.", sources: [wp-leo-viii]}
+  - {person: john-xiii, title: Pope, realm: Papacy, from: 0965-10-01, to: 0972-09-06, sources: [wp-john-xiii, wp-list-of-popes]}
+  - {person: benedict-vi, title: Pope, realm: Papacy, from: 0973-01-19, to: 0974-06-08, sources: [wp-benedict-vi, wp-list-of-popes]}
+  - {person: benedict-vii, title: Pope, realm: Papacy, from: 974, to: 0983-07-10, from_estimated: true, sources: [wp-benedict-vii, wp-list-of-popes]}
+  - {person: john-xiv, title: Pope, realm: Papacy, from: 983, to: 0984-08-20, from_estimated: true, sources: [wp-john-xiv, wp-list-of-popes]}
+  - {person: john-xv, title: Pope, realm: Papacy, from: 0985-08-20, to: 0996-04-01, sources: [wp-john-xv, wp-list-of-popes]}
+  - {person: gregory-v, title: Pope, realm: Papacy, from: 0996-05-03, to: 0999-02-18, sources: [wp-gregory-v, wp-list-of-popes]}
+  - {person: christopher-antipope, title: Pope, realm: Papacy, from: 0903-10-03, to: 0904-01-27, disputed: true, sources: [wp-christopher-antipope, wp-antipope], note: "Antipope, in opposition to Leo V and Sergius III."}
+  - {person: boniface-vii-antipope, title: Pope, realm: Papacy, from: 0974-07-01, to: 974, disputed: true, sources: [wp-boniface-vii-antipope, wp-antipope], note: "Antipope, against Benedict VI (974)."}
+  - {person: boniface-vii-antipope, title: Pope, realm: Papacy, from: 984, to: 0985-07-20, disputed: true, from_estimated: true, note: "Antipope again, after deposing John XIV.", sources: [wp-boniface-vii-antipope]}
+  - {person: john-xvi-antipope, title: Pope, realm: Papacy, from: 997, to: 998, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-john-xvi-antipope, wp-antipope], note: "Antipope, against Gregory V."}
+
+places:
+  - {key: pavia, name: "Pavia", kind: city, region: "Lombardy", country: Italy, lat: 45.1853, lng: 9.155, sources: [wp-pavia]}
+  - {key: stainach, name: "Stainach", kind: town, region: "Styria", country: Austria, lat: 47.5333, lng: 14.1, sources: [wp-stainach]}
+  - {key: rossano, name: Rossano, kind: town, region: Calabria, country: Italy, lat: 39.5667, lng: 16.6333, sources: [wp-rossano]}
+
+moments:
+  - {person: benedict-iv, role: born, place: rome, year: 840}
+  - {person: sergius-iii, role: born, place: rome, year: 860}
+  - {person: anastasius-iii, role: born, place: rome, year: 865}
+  - {person: leo-vi, role: born, place: rome, year: 880}
+  - {person: stephen-vii, role: born, place: rome}
+  - {person: john-xi, role: born, place: rome, year: 910}
+  - {person: leo-vii, role: born, place: rome}
+  - {person: stephen-viii, role: born, place: rome}
+  - {person: marinus-ii, role: born, place: rome}
+  - {person: agapetus-ii, role: born, place: rome, year: 911}
+  - {person: john-xii, role: born, place: rome, year: 937}
+  - {person: benedict-v, role: born, place: rome}
+  - {person: leo-viii, role: born, place: rome, year: 915}
+  - {person: john-xiii, role: born, place: rome, year: 930}
+  - {person: benedict-vi, role: born, place: rome, year: 950}
+  - {person: benedict-vii, role: born, place: rome}
+  - {person: john-xiv, role: born, place: pavia}
+  - {person: john-xv, role: born, place: rome}
+  - {person: gregory-v, role: born, place: stainach, year: 972}
+  - {person: christopher-antipope, role: born, place: rome}
+  - {person: boniface-vii-antipope, role: born, place: rome}
+  - {person: john-xvi-antipope, role: born, place: rossano, year: 945}
+
+discrepancies:
+  - key: john-x-died
+    question: "When did John X die?"
+    about: [{person: john-x}]
+    field: died
+    claims:
+      - {value: "0928-05-28", sources: [wp-john-x]}
+      - {value: "0929", sources: [wd-john-x]}
+    note: "The record uses his own article."
+  - key: stephen-vii-end
+    question: "When did Stephen VII's pontificate end?"
+    about: [{person: stephen-vii}]
+    field: end
+    claims:
+      - {value: "0931-03-15", sources: [wp-stephen-vii]}
+      - {value: "0931-02-13", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: john-xi-died
+    question: "When did John XI die?"
+    about: [{person: john-xi}]
+    field: died
+    claims:
+      - {value: "935", sources: [wp-john-xi]}
+      - {value: "936", sources: [wd-john-xi]}
+    note: "The record uses his own article."
+  - key: gregory-v-died
+    question: "When did Gregory V die?"
+    about: [{person: gregory-v}]
+    field: died
+    claims:
+      - {value: "0999-02-18", sources: [wp-gregory-v]}
+      - {value: "0999-02-23", sources: [wd-gregory-v]}
+    note: "The record uses his own article."
