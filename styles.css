@@ -329,6 +329,13 @@ body.x-full { overflow: hidden; }
 .xkind { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .xexp { border: 1px solid var(--rule); background: transparent; color: var(--ink); border-radius: 999px; font-size: 12px; padding: 3px 10px; cursor: pointer; }
 .xexp:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+.xtools { display: flex; align-items: center; gap: 4px; }
+.xmove { border: 1px solid var(--rule); background: transparent; color: var(--ink); border-radius: 999px; font-size: 12px; line-height: 1; padding: 4px 8px; cursor: pointer; }
+.xmove:disabled { opacity: .35; cursor: default; }
+.xmove:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+.xhead.grab { cursor: grab; }
+.xcard.dragging { opacity: .45; }
+.xcard.drop-before, .xcard.drop-after { outline: 2px dashed var(--woad); outline-offset: 3px; }
 .xcard h2 { font-family: var(--display); font-weight: 400; font-size: 26px; margin: 0; line-height: 1.1; overflow-wrap: anywhere; }
 .xcard.full h2 { font-size: 34px; }
 .xsub { color: var(--muted); font-size: 13.5px; }

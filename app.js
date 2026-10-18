@@ -1841,6 +1841,9 @@ function reignStrip(holders, a, b) {
 const X = { hint: {}, year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
 const CARDS = ["year", "world", "event", "place", "person", "work"];
 const CARD_LABEL = { year: "Year", world: "World", event: "Event", place: "Place", person: "Person", work: "Work" };
+// The reader can put the cards in their own order (drag a card by its header, or its ← → buttons), kept per browser.
+// A card added later joins at the end of a saved order.
+const cardOrder = () => { const saved = store.get("cardOrder", []).filter(k => CARDS.includes(k)); return [...new Set([...saved, ...CARDS])]; };
 // One name per modern country: places say England, Scotland or Wales; realms say United Kingdom. Vatican City counts
 // under Italy (Ty, 2026-10-13), so picking Italy includes the Sistine Chapel and the Vatican Museums.
 const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic", "Vatican City": "Italy" };
@@ -2343,16 +2346,20 @@ function renderExplore(changed = []) {
   const box = $("x-cards");
   if (xMap) { xMap.remove(); xMap = null; }
   if (thenMap) { thenMap.remove(); thenMap = null; }
-  box.replaceChildren(...CARDS.map(kind => {
+  box.replaceChildren(...cardOrder().map(kind => {
     const full = X.open === kind;
     const hint = X[kind] == null && X.hint?.[kind];
     const body = hint ? hintCard(kind, hint) : { year: yearCard, world: worldCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
-    return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
-      h("div", { class: "xhead" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
-        h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
-          title: full ? "Back to the four cards (Esc)" : `Fill the screen with the ${CARD_LABEL[kind]} card`, text: full ? "Shrink ✕" : "Expand ⤢" })),
+    const move = (d, sym, where) => h("button", { type: "button", class: "xmove", "data-d": d, onclick: () => moveCard(kind, d),
+      title: `Move the ${CARD_LABEL[kind]} card ${where}`, "aria-label": `Move the ${CARD_LABEL[kind]} card ${where}`, text: sym });
+    return h("section", { class: "xcard" + (full ? " full" : ""), id: "x-" + kind, "data-kind": kind, "aria-label": `${CARD_LABEL[kind]} card`, hidden: X.open && !full ? "" : null },
+      h("div", { class: "xhead" + (full ? "" : " grab"), title: full ? null : "Drag to move this card" }, h("span", { class: "xkind", text: CARD_LABEL[kind] }),
+        h("span", { class: "xtools" }, ...(full ? [] : [move(-1, "←", "earlier"), move(1, "→", "later")]),
+          h("button", { type: "button", class: "xexp", "aria-expanded": full, onclick: () => full ? shrinkCard() : expandCard(kind),
+            title: full ? "Back to the cards (Esc)" : `Fill the screen with the ${CARD_LABEL[kind]} card`, text: full ? "Shrink ✕" : "Expand ⤢" }))),
       ...body);
   }));
+  markMoveEnds();
   document.body.classList.toggle("x-full", !!X.open);
   if (S.viewMode === "explore") {
     placeMap();
@@ -2376,6 +2383,72 @@ function renderExplore(changed = []) {
     const c = $("x-" + changed[0]), r = c.getBoundingClientRect();
     if (r.top < 0 || r.top > innerHeight * .6) c.scrollIntoView({ block: "start", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }
+}
+
+// Reordering moves the card elements themselves rather than redrawing, so the maps inside keep their place.
+function setCardOrder(order) {
+  store.set("cardOrder", order);
+  const box = $("x-cards");
+  order.forEach(k => { const c = $("x-" + k); if (c) box.append(c); });
+  markMoveEnds();
+  xMap?.invalidateSize();
+  thenMap?.resize();
+}
+function moveCard(kind, d) {
+  const order = cardOrder(), i = order.indexOf(kind), j = i + d;
+  if (j < 0 || j >= order.length) return;
+  [order[i], order[j]] = [order[j], order[i]];
+  setCardOrder(order);
+  // Moving an element drops its focus: keep it on the same button (or the other one, at an end) so presses can repeat.
+  const c = $("x-" + kind), b = c.querySelector(`.xmove[data-d="${d}"]`);
+  (b.disabled ? c.querySelector(`.xmove[data-d="${-d}"]`) : b).focus();
+  c.classList.remove("hit"); void c.offsetWidth; c.classList.add("hit");
+}
+function markMoveEnds() {
+  const order = cardOrder();
+  order.forEach((k, i) => $("x-" + k)?.querySelectorAll(".xmove").forEach(b => { b.disabled = b.dataset.d < 0 ? i === 0 : i === order.length - 1; }));
+}
+// Dragging, on a computer: a card is draggable only while the pointer is down on its header, so text in the
+// card can still be selected and the maps can still be panned. Dropping on another card puts it before or after
+// that card, by which half of it the pointer is over. Phones use the arrow buttons.
+function wireCardDrag() {
+  const box = $("x-cards");
+  let dragged = null;
+  const clear = () => box.querySelectorAll(".drop-before, .drop-after").forEach(c => c.classList.remove("drop-before", "drop-after"));
+  // Which side of the target: in a grid of two columns, side by side cards split left and right, stacked ones top and bottom.
+  const side = (c, e) => { const r = c.getBoundingClientRect(), wide = r.width > box.clientWidth * .75;
+    return (wide ? e.clientY - r.top < r.height / 2 : e.clientX - r.left < r.width / 2) ? "before" : "after"; };
+  box.addEventListener("pointerdown", e => {
+    const head = e.target.closest(".xhead.grab");
+    if (head && !e.target.closest("button") && e.pointerType === "mouse") head.parentElement.draggable = true;
+  });
+  addEventListener("pointerup", () => box.querySelectorAll(".xcard[draggable]").forEach(c => { if (c !== dragged) c.removeAttribute("draggable"); }));
+  box.addEventListener("dragstart", e => {
+    const c = e.target.closest?.(".xcard[draggable]");
+    if (!c) return;
+    dragged = c; c.classList.add("dragging");
+    e.dataTransfer.effectAllowed = "move";
+    e.dataTransfer.setData("text/plain", CARD_LABEL[c.dataset.kind]);
+  });
+  box.addEventListener("dragover", e => {
+    const c = e.target.closest(".xcard");
+    if (!dragged || !c || c === dragged) { clear(); return; }
+    e.preventDefault(); e.dataTransfer.dropEffect = "move";
+    const s = side(c, e);
+    if (!c.classList.contains("drop-" + s)) { clear(); c.classList.add("drop-" + s); }
+  });
+  box.addEventListener("drop", e => {
+    const c = e.target.closest(".xcard");
+    if (!dragged || !c || c === dragged) return;
+    e.preventDefault();
+    const order = cardOrder().filter(k => k !== dragged.dataset.kind);
+    order.splice(order.indexOf(c.dataset.kind) + (side(c, e) === "after" ? 1 : 0), 0, dragged.dataset.kind);
+    setCardOrder(order);
+  });
+  box.addEventListener("dragend", () => {
+    if (dragged) { dragged.classList.remove("dragging"); dragged.removeAttribute("draggable"); }
+    dragged = null; clear();
+  });
 }
 
 // A list that shows a few rows on the small card and everything when the card is expanded.
@@ -2925,6 +2998,7 @@ function nearMe() {
 }
 
 function wireExplore() {
+  wireCardDrag();
   $("x-form").addEventListener("submit", e => { e.preventDefault(); runExplore($("x-q").value); });
   $("x-q").addEventListener("input", () => { $("x-msg").textContent = ""; });
   $("x-near").addEventListener("click", nearMe);
