@@ -1,0 +1,281 @@
+# The Papacy, 999-1503, part 1: the 13 lawful popes of the period not yet here (John XVII to Honorius IV), and the 15
+# antipopes whose claims began 1012-1179, from Gregory VI to Innocent III (the antipope). The Western Schism antipopes
+# (1328-1449) follow in part 2 (inbox/2026-10-18-popes-antipopes-1328-1449.yaml).
+# Ty's choices (2026-10-18): every pope on the official list; antipopes with the same title "Pope", marked
+# `disputed: true`, keyed <name>-antipope, roles [antipope]; the lawful popes undisputed (their notes say who
+# contested them, as the earlier Papacy batches did).
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the session
+# scratchpad): each pope's and antipope's own article for his dates and note; the List of popes and the Antipope
+# article's table for pontificates and birthplaces; Wikidata for sitelinks and new places' coordinates.
+# Stated honestly:
+#  - Early dates are often a year or "c.": recorded as given, estimated where the article says c. Where the article
+#    gives only a month or "June or July", the year alone is used.
+#  - Disagreements recorded as discrepancies, the record using the person's own article: John XVII's and Celestine IV's
+#    deaths (vs Wikidata); the first day of Sylvester III, Lucius II and Anastasius IV (vs the List of popes); Benedict
+#    X's election, Paschal III's end, Innocent III's (antipope) start, Nicholas V's end and Alexander V's start (vs the
+#    Antipope table); Benedict XIII's (antipope) birth and Clement VIII's (antipope) death (vs Wikidata).
+#  - Felix V is entered under his own name, Amadeus VIII of Savoy, typed Nobility (he was Count and then the first Duke
+#    of Savoy), with both Savoy titles and the disputed papal title.
+#  - Benedict XIV (antipope) is two men in one article: Bernard Garnier and Jean Carrier, entered separately.
+#  - Celestine II (1124) resigned before consecration; Wikipedia calls him a "pope-elect" and lists him with the
+#    antipopes, so he is entered as one.
+#  - Birthplaces not on Wikidata with coordinates (Corvaro, Pildenau) and states rather than towns (County of Savoy) are
+#    left out; the notes keep them.
+batch:
+  title: "The Papacy, 999-1503, and its antipopes, part 1"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-john-xvii, title: "Pope John XVII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XVII"}
+  - {key: wd-john-xvii, title: "Pope John XVII (Wikidata)", url: "https://www.wikidata.org/wiki/Q227963"}
+  - {key: wp-john-xviii, title: "Pope John XVIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XVIII"}
+  - {key: wp-rapagnano, title: "Rapagnano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rapagnano"}
+  - {key: wp-sergius-iv, title: "Pope Sergius IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sergius_IV"}
+  - {key: wp-john-xix, title: "Pope John XIX (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XIX"}
+  - {key: wp-sylvester-iii, title: "Pope Sylvester III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sylvester_III"}
+  - {key: wp-damasus-ii, title: "Pope Damasus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Damasus_II"}
+  - {key: wp-lucius-ii, title: "Pope Lucius II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Lucius_II"}
+  - {key: wp-anastasius-iv, title: "Pope Anastasius IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anastasius_IV"}
+  - {key: wp-celestine-iv, title: "Pope Celestine IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Celestine_IV"}
+  - {key: wd-celestine-iv, title: "Pope Celestine IV (Wikidata)", url: "https://www.wikidata.org/wiki/Q171238"}
+  - {key: wp-innocent-v, title: "Pope Innocent V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_V"}
+  - {key: wp-adrian-v, title: "Pope Adrian V (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Adrian_V"}
+  - {key: wp-john-xxi, title: "Pope John XXI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_XXI"}
+  - {key: wp-honorius-iv, title: "Pope Honorius IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Honorius_IV"}
+  - {key: wp-gregory-vi-antipope, title: "Antipope Gregory VI (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Gregory_VI"}
+  - {key: wp-benedict-x-antipope, title: "Antipope Benedict X (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Benedict_X"}
+  - {key: wp-honorius-ii-antipope, title: "Antipope Honorius II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Honorius_II"}
+  - {key: wp-clement-iii-antipope, title: "Antipope Clement III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Clement_III"}
+  - {key: wp-theodoric-antipope, title: "Antipope Theodoric (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Theodoric"}
+  - {key: wp-adalbert-antipope, title: "Antipope Adalbert (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Adalbert"}
+  - {key: wp-sylvester-iv-antipope, title: "Antipope Sylvester IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Sylvester_IV"}
+  - {key: wp-gregory-viii-antipope, title: "Antipope Gregory VIII (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Gregory_VIII"}
+  - {key: wp-celestine-ii-antipope, title: "Antipope Celestine II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Celestine_II"}
+  - {key: wp-anacletus-ii-antipope, title: "Antipope Anacletus II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Anacletus_II"}
+  - {key: wp-victor-iv-antipope-1138, title: "Antipope Victor IV (1138) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Victor_IV_(1138)"}
+  - {key: wp-victor-iv-antipope-1159, title: "Antipope Victor IV (1159–1164) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Victor_IV_(1159%E2%80%931164)"}
+  - {key: wp-paschal-iii-antipope, title: "Antipope Paschal III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Paschal_III"}
+  - {key: wp-callixtus-iii-antipope, title: "Antipope Callixtus III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Callixtus_III"}
+  - {key: wp-innocent-iii-antipope, title: "Antipope Innocent III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Innocent_III"}
+  - {key: wp-antipope, title: "Antipope (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope"}
+  - {key: wp-rapagnano, title: "Rapagnano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rapagnano"}
+  - {key: wp-crema-lombardy, title: "Crema, Lombardy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Crema,_Lombardy"}
+  - {key: wp-sezze, title: "Sezze (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sezze"}
+  - {key: wp-ceccano, title: "Ceccano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ceccano"}
+  - {key: wp-atella, title: "Atella (Wikipedia)", url: "https://en.wikipedia.org/wiki/Atella"}
+
+people:
+  - {key: john-xvii, name: "John XVII", type: Clergy, roles: [pope], died: 1003-11-06, realm: Papacy, prominence: 2, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "John Sicco, pope for about seven months in 1003, one of the popes chosen and overshadowed by the patrician John II Crescentius.",
+     sources: [wp-john-xvii]}
+  - {key: john-xviii, name: "John XVIII", type: Clergy, roles: [pope], died: 1009, realm: Papacy, prominence: 2, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "Pope from Christmas 1003 to his abdication in 1009, with little temporal power amid the struggle between John II Crescentius and Henry II for Rome; the last pope for centuries to keep his baptismal name.",
+     sources: [wp-john-xviii]}
+  - {key: sergius-iv, name: "Sergius IV", type: Clergy, roles: [pope], died: 1012-05-12, realm: Papacy, prominence: 2, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "A Benedictine, pope 1009-1012 under the shadow of John II Crescentius. From his time it became the rule that a new pope takes a new name.",
+     sources: [wp-sergius-iv]}
+  - {key: john-xix, name: "John XIX", type: Clergy, roles: [pope], died: 1032, realm: Papacy, prominence: 2, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Romanus of Tusculum, brother and successor of Benedict VIII; supported Emperor Conrad II and was patron of Guido of Arezzo. Relations with Constantinople soured in his time.",
+     sources: [wp-john-xix]}
+  - {key: sylvester-iii, name: "Sylvester III", type: Clergy, roles: [pope], born: 1000, born_estimated: true, died: 1063, realm: Papacy, prominence: 2, sitelinks: 68, sitelinks_on: 2026-10-18,
+     note: "John of Rome, pope from January to March 1045 in the contest with Benedict IX. The validity of his election was questioned; the Council of Sutri deposed him (1046). Died October 1063.",
+     sources: [wp-sylvester-iii]}
+  - {key: damasus-ii, name: "Damasus II", type: Clergy, roles: [pope], died: 1048-08-09, realm: Papacy, prominence: 2, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Poppo of Brixen, a Bavarian: the second German pope named by Henry III and the third German pope. Reigned 23 days in 1048.",
+     sources: [wp-damasus-ii]}
+  - {key: lucius-ii, name: "Lucius II", type: Clergy, roles: [pope], died: 1145-02-15, realm: Papacy, prominence: 2, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Gherardo Caccianemici of Bologna, a canon regular. Fought the Commune of Rome for control of the city; supported Empress Matilda in the Anarchy and quarrelled with Roger II of Sicily.",
+     sources: [wp-lucius-ii]}
+  - {key: anastasius-iv, name: "Anastasius IV", type: Clergy, roles: [pope], born: 1073, born_estimated: true, died: 1154-12-03, realm: Papacy, prominence: 2, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "Corrado Demetri della Suburra, a Roman; the last pope named Anastasius.",
+     sources: [wp-anastasius-iv]}
+  - {key: celestine-iv, name: "Celestine IV", type: Clergy, roles: [pope], born: 1180, born_estimated: true, died: 1241-11-10, realm: Papacy, prominence: 2, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "Goffredo da Castiglione of Milan. Elected on 25 October 1241, he died 17 days later, before his coronation.",
+     sources: [wp-celestine-iv]}
+  - {key: innocent-v, name: "Innocent V", type: Clergy, roles: [pope], born: 1225, born_estimated: true, died: 1276-06-22, realm: Papacy, prominence: 2, sitelinks: 73, sitelinks_on: 2026-10-18,
+     note: "Pierre de Tarentaise, a Dominican preacher who held one of the Dominican chairs at Paris, beatified. Pope from January to June 1276, the first elected in a conclave.",
+     sources: [wp-innocent-v]}
+  - {key: adrian-v, name: "Adrian V", type: Clergy, roles: [pope], born: 1210, born_estimated: true, died: 1276-08-18, realm: Papacy, prominence: 2, sitelinks: 70, sitelinks_on: 2026-10-18,
+     note: "Ottobuono de' Fieschi of Genoa, who as legate settled the disputes between Henry III of England and his barons (1265). Pope for five weeks in 1276; died before ordination as priest.",
+     sources: [wp-adrian-v]}
+  - {key: john-xxi, name: "John XXI", type: Clergy, roles: [pope], born: 1215, born_estimated: true, died: 1277-05-20, realm: Papacy, prominence: 2, sitelinks: 71, sitelinks_on: 2026-10-18,
+     note: "Pedro Julião, the only Portuguese pope, perhaps the logician and physician Peter of Spain. Numbering confusion skipped 'John XX'.",
+     sources: [wp-john-xxi]}
+  - {key: honorius-iv, name: "Honorius IV", type: Clergy, roles: [pope], born: 1210, born_estimated: true, died: 1287-04-03, realm: Papacy, prominence: 2, sitelinks: 68, sitelinks_on: 2026-10-18,
+     note: "Giacomo Savelli of Rome, elected unanimously on the first ballot (1285). His pontificate was taken up with the Sicilian conflict.",
+     sources: [wp-honorius-iv]}
+  - {key: gregory-vi-antipope, name: "Gregory VI (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 33, sitelinks_on: 2026-10-18,
+     note: "A 'certain Gregory', set up by a small faction against Benedict VIII on Sergius IV's death in 1012; expelled from Rome, he sought Henry II's support at Christmas 1012 in vain.",
+     sources: [wp-gregory-vi-antipope]}
+  - {key: benedict-x-antipope, name: "Benedict X (antipope)", type: Clergy, roles: [antipope], died: 1073, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 32, sitelinks_on: 2026-10-18,
+     note: "Giovanni, son of the lord of Poli of the Tusculan counts and nephew of Benedict IX. Elected to succeed Stephen IX, opposed by the faction that chose Nicholas II; fled Rome in January 1059. Died 1073 or 1080.",
+     sources: [wp-benedict-x-antipope]}
+  - {key: honorius-ii-antipope, name: "Honorius II (antipope)", type: Clergy, roles: [antipope], born: 1010, born_estimated: true, died: 1072, realm: Papacy, prominence: 1, sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "Pietro Cadalo of the County of Verona, Bishop of Parma from 1045; set up against Alexander II with the backing of the regent Agnes, he kept his claim until his death at Parma in 1072.",
+     sources: [wp-honorius-ii-antipope]}
+  - {key: clement-iii-antipope, name: "Clement III (antipope)", type: Clergy, roles: [antipope], born: 1029, born_estimated: true, died: 1100-09-08, realm: Papacy, prominence: 2, sitelinks: 38, sitelinks_on: 2026-10-18,
+     note: "Wibert (Guibert) of Ravenna, Archbishop of Ravenna, elected in 1080 against Gregory VII by the emperor's supporters in the Investiture Controversy; held Rome from 1084 and crowned Henry IV.",
+     sources: [wp-clement-iii-antipope]}
+  - {key: theodoric-antipope, name: "Theodoric (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 26, sitelinks_on: 2026-10-18,
+     note: "Successor of Wibert (Clement III) in the imperial party's schism, against Paschal II.",
+     sources: [wp-theodoric-antipope]}
+  - {key: adalbert-antipope, name: "Adalbert (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 27, sitelinks_on: 2026-10-18,
+     note: "A cardinal of Clement III, elected by the Roman party opposed to Paschal II in February 1101; after 105 days Paschal's partisans captured him and made him a monk.",
+     sources: [wp-adalbert-antipope]}
+  - {key: sylvester-iv-antipope, name: "Sylvester IV (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 25, sitelinks_on: 2026-10-18,
+     note: "Maginulf, probably a Roman priest, claimant 1105-1111 against Paschal II with the Roman militia's backing; the emperor first supported him, then forced him to abdicate.",
+     sources: [wp-sylvester-iv-antipope]}
+  - {key: gregory-viii-antipope, name: "Gregory VIII (antipope)", type: Clergy, roles: [antipope], died: 1137, realm: Papacy, prominence: 1, sitelinks: 29, sitelinks_on: 2026-10-18,
+     note: "Maurice Bourdin, educated at Cluny, Bishop of Coimbra and Archbishop of Braga; crowned Henry V in 1117 and was set up against Gelasius II (1118-1121).",
+     sources: [wp-gregory-viii-antipope]}
+  - {key: celestine-ii-antipope, name: "Celestine II (pope-elect, antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 0, sitelinks_on: 2026-10-18,
+     note: "Teobaldo Boccapecci, elected after Callixtus II's death in December 1124; violence broke out at his investiture and he resigned before consecration to avoid a schism.",
+     sources: [wp-celestine-ii-antipope]}
+  - {key: anacletus-ii-antipope, name: "Anacletus II (antipope)", type: Clergy, roles: [antipope], died: 1138-01-25, realm: Papacy, prominence: 2, sitelinks: 35, sitelinks_on: 2026-10-18,
+     note: "Pietro Pierleoni, elected by the larger body of cardinals in 1130 after eight had chosen Innocent II; held Rome with most Romans and the Frangipani until his death in 1138.",
+     sources: [wp-anacletus-ii-antipope]}
+  - {key: victor-iv-antipope-1138, name: "Victor IV (antipope, 1138)", type: Clergy, roles: [antipope], died: 1139, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 30, sitelinks_on: 2026-10-18,
+     note: "Successor of Anacletus II, antipope from March to 29 May 1138; died after April 1139.",
+     sources: [wp-victor-iv-antipope-1138]}
+  - {key: victor-iv-antipope-1159, name: "Victor IV (antipope, 1159)", type: Clergy, roles: [antipope], born: 1095, died: 1164-04-20, realm: Papacy, prominence: 2, sitelinks: 30, sitelinks_on: 2026-10-18,
+     note: "Ottaviano di Monticelli, a Ghibelline elected against Alexander III in 1159 with the backing of Frederick Barbarossa; he ignored the antipope Victor IV of 1138.",
+     sources: [wp-victor-iv-antipope-1159]}
+  - {key: paschal-iii-antipope, name: "Paschal III (antipope)", type: Clergy, roles: [antipope], born: 1110, born_estimated: true, died: 1168-09-20, realm: Papacy, prominence: 1, sitelinks: 34, sitelinks_on: 2026-10-18,
+     note: "Guido of Crema, the second antipope against Alexander III (1164-1168), formerly a cardinal.",
+     sources: [wp-paschal-iii-antipope]}
+  - {key: callixtus-iii-antipope, name: "Callixtus III (antipope)", type: Clergy, roles: [antipope], died: 1180, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 29, sitelinks_on: 2026-10-18,
+     note: "John, abbot of Struma near Arezzo: the third antipope against Alexander III (1168-1178) in Barbarossa's struggle; resigned in 1178. Died between 1180 and 1184.",
+     sources: [wp-callixtus-iii-antipope]}
+  - {key: innocent-iii-antipope, name: "Innocent III (antipope)", type: Clergy, roles: [antipope], realm: Papacy, prominence: 1, sitelinks: 29, sitelinks_on: 2026-10-18,
+     note: "Lando of Sezze, the last of the four antipopes against Alexander III (September 1179 to January 1180); died at La Cava.",
+     sources: [wp-innocent-iii-antipope]}
+
+titles:
+  - {person: john-xvii, title: Pope, realm: Papacy, from: 1003-05-16, to: 1003-11-06, sources: [wp-john-xvii, wp-list-of-popes]}
+  - {person: john-xviii, title: Pope, realm: Papacy, from: 1003-12-25, to: 1009-07-18, sources: [wp-john-xviii, wp-list-of-popes], note: "Abdicated in June or July 1009."}
+  - {person: sergius-iv, title: Pope, realm: Papacy, from: 1009-07-31, to: 1012-05-12, sources: [wp-sergius-iv, wp-list-of-popes]}
+  - {person: john-xix, title: Pope, realm: Papacy, from: 1024-05-14, to: 1032-10-06, sources: [wp-john-xix, wp-list-of-popes]}
+  - {person: sylvester-iii, title: Pope, realm: Papacy, from: 1045-01-20, to: 1045-03-10, sources: [wp-sylvester-iii, wp-list-of-popes]}
+  - {person: damasus-ii, title: Pope, realm: Papacy, from: 1048-07-17, to: 1048-08-09, sources: [wp-damasus-ii, wp-list-of-popes]}
+  - {person: lucius-ii, title: Pope, realm: Papacy, from: 1144-03-09, to: 1145-02-15, sources: [wp-lucius-ii, wp-list-of-popes]}
+  - {person: anastasius-iv, title: Pope, realm: Papacy, from: 1153-07-08, to: 1154-12-03, sources: [wp-anastasius-iv, wp-list-of-popes]}
+  - {person: celestine-iv, title: Pope, realm: Papacy, from: 1241-10-25, to: 1241-11-10, sources: [wp-celestine-iv, wp-list-of-popes]}
+  - {person: innocent-v, title: Pope, realm: Papacy, from: 1276-01-21, to: 1276-06-22, sources: [wp-innocent-v, wp-list-of-popes]}
+  - {person: adrian-v, title: Pope, realm: Papacy, from: 1276-07-11, to: 1276-08-18, sources: [wp-adrian-v, wp-list-of-popes]}
+  - {person: john-xxi, title: Pope, realm: Papacy, from: 1276-09-08, to: 1277-05-20, sources: [wp-john-xxi, wp-list-of-popes]}
+  - {person: honorius-iv, title: Pope, realm: Papacy, from: 1285-04-02, to: 1287-04-03, sources: [wp-honorius-iv, wp-list-of-popes]}
+  - {person: gregory-vi-antipope, title: Pope, realm: Papacy, from: 1012, to: 1012, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-gregory-vi-antipope, wp-antipope], note: "Antipope, in opposition to Benedict VIII."}
+  - {person: benedict-x-antipope, title: Pope, realm: Papacy, from: 1058-04-05, to: 1059-01-24, disputed: true, sources: [wp-benedict-x-antipope, wp-antipope], note: "Antipope, in opposition to Nicholas II."}
+  - {person: honorius-ii-antipope, title: Pope, realm: Papacy, from: 1061-07-01, to: 1064-05-31, disputed: true, sources: [wp-honorius-ii-antipope, wp-antipope], note: "Antipope, in opposition to Alexander II."}
+  - {person: clement-iii-antipope, title: Pope, realm: Papacy, from: 1080-06-25, to: 1100-09-08, disputed: true, sources: [wp-clement-iii-antipope, wp-antipope], note: "Antipope, against Gregory VII, Victor III, Urban II and Paschal II; elected 25 June 1080, enthroned 21 March 1084."}
+  - {person: theodoric-antipope, title: Pope, realm: Papacy, from: 1100, to: 1101, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-theodoric-antipope, wp-antipope], note: "Antipope, in opposition to Paschal II."}
+  - {person: adalbert-antipope, title: Pope, realm: Papacy, from: 1101, to: 1101, disputed: true, from_estimated: true, to_estimated: true, sources: [wp-adalbert-antipope, wp-antipope], note: "Antipope, against Paschal II."}
+  - {person: sylvester-iv-antipope, title: Pope, realm: Papacy, from: 1105-11-08, to: 1111-04-11, disputed: true, sources: [wp-sylvester-iv-antipope, wp-antipope], note: "Antipope, against Paschal II."}
+  - {person: gregory-viii-antipope, title: Pope, realm: Papacy, from: 1118-03-10, to: 1121-04-22, disputed: true, sources: [wp-gregory-viii-antipope, wp-antipope], note: "Antipope, against Gelasius II and Callixtus II."}
+  - {person: celestine-ii-antipope, title: Pope, realm: Papacy, from: 1124-12-16, to: 1124-12-16, disputed: true, sources: [wp-celestine-ii-antipope, wp-antipope], note: "Elected December 1124 and resigned before consecration; listed among the antipopes."}
+  - {person: anacletus-ii-antipope, title: Pope, realm: Papacy, from: 1130-02-14, to: 1138-01-25, disputed: true, sources: [wp-anacletus-ii-antipope, wp-antipope], note: "Antipope, in opposition to Innocent II."}
+  - {person: victor-iv-antipope-1138, title: Pope, realm: Papacy, from: 1138, to: 1138-05-29, disputed: true, from_estimated: true, sources: [wp-victor-iv-antipope-1138, wp-antipope], note: "Antipope, against Innocent II."}
+  - {person: victor-iv-antipope-1159, title: Pope, realm: Papacy, from: 1159-09-07, to: 1164-04-20, disputed: true, sources: [wp-victor-iv-antipope-1159, wp-antipope], note: "Antipope, in opposition to Alexander III."}
+  - {person: paschal-iii-antipope, title: Pope, realm: Papacy, from: 1164-04-22, to: 1168-09-20, disputed: true, sources: [wp-paschal-iii-antipope, wp-antipope], note: "Antipope, against Alexander III."}
+  - {person: callixtus-iii-antipope, title: Pope, realm: Papacy, from: 1168-09-01, to: 1178-08-29, disputed: true, sources: [wp-callixtus-iii-antipope, wp-antipope], note: "Antipope, against Alexander III; resigned 29 August 1178."}
+  - {person: innocent-iii-antipope, title: Pope, realm: Papacy, from: 1179-09-29, to: 1180, disputed: true, to_estimated: true, sources: [wp-innocent-iii-antipope, wp-antipope], note: "Antipope, against Alexander III."}
+
+places:
+  - {key: rapagnano, name: "Rapagnano", kind: town, country: Italy, lat: 43.1611, lng: 13.5929, sources: [wp-rapagnano]}
+  - {key: rapagnano, name: Rapagnano, kind: village, region: Marche, country: Italy, lat: 43.1611, lng: 13.5929, sources: [wp-rapagnano]}
+  - {key: crema-lombardy, name: Crema, kind: town, region: Lombardy, country: Italy, lat: 45.3667, lng: 9.6833, sources: [wp-crema-lombardy]}
+  - {key: sezze, name: Sezze, kind: town, region: Lazio, country: Italy, lat: 41.5, lng: 13.0667, sources: [wp-sezze]}
+  - {key: ceccano, name: Ceccano, kind: town, region: Lazio, country: Italy, lat: 41.5667, lng: 13.3333, sources: [wp-ceccano]}
+  - {key: atella, name: Atella, historical_name: Atella (ancient), kind: town, region: Campania, country: Italy, lat: 40.96, lng: 14.2593, sources: [wp-atella]}
+
+moments:
+  - {person: john-xvii, role: born, place: rome}
+  - {person: john-xviii, role: born, place: rapagnano}
+  - {person: sergius-iv, role: born, place: rome}
+  - {person: john-xix, role: born, place: rome}
+  - {person: sylvester-iii, role: born, place: rome, year: 1000}
+  - {person: lucius-ii, role: born, place: bologna}
+  - {person: anastasius-iv, role: born, place: rome, year: 1073}
+  - {person: adrian-v, role: born, place: genoa, year: 1210}
+  - {person: john-xxi, role: born, place: lisbon, year: 1215}
+  - {person: honorius-iv, role: born, place: rome, year: 1210}
+  - {person: gregory-vi-antipope, role: born, place: rome}
+  - {person: honorius-ii-antipope, role: born, place: verona, year: 1010}
+  - {person: honorius-ii-antipope, role: died, place: parma, year: 1072}
+  - {person: clement-iii-antipope, role: born, place: parma, year: 1029}
+  - {person: sylvester-iv-antipope, role: born, place: rome}
+  - {person: celestine-ii-antipope, role: born, place: rome}
+  - {person: anacletus-ii-antipope, role: born, place: rome}
+  - {person: victor-iv-antipope-1159, role: born, place: tivoli, year: 1095}
+  - {person: paschal-iii-antipope, role: born, place: crema-lombardy, year: 1110}
+  - {person: innocent-iii-antipope, role: born, place: sezze}
+  - {person: john-xviii, role: born, place: rapagnano}
+  - {person: victor-iv-antipope-1138, role: born, place: ceccano}
+  - {person: adalbert-antipope, role: born, place: atella}
+
+discrepancies:
+  - key: john-xvii-died
+    question: "When did John XVII die?"
+    about: [{person: john-xvii}]
+    field: died
+    claims:
+      - {value: "1003-11-06", sources: [wp-john-xvii]}
+      - {value: "1003-12-12", sources: [wd-john-xvii]}
+    note: "The record uses his own article."
+  - key: sylvester-iii-start
+    question: "When did Sylvester III's pontificate begin?"
+    about: [{person: sylvester-iii}]
+    field: start
+    claims:
+      - {value: "1045-01-20", sources: [wp-sylvester-iii]}
+      - {value: "1045-01-13", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: lucius-ii-start
+    question: "When did Lucius II's pontificate begin?"
+    about: [{person: lucius-ii}]
+    field: start
+    claims:
+      - {value: "1144-03-09", sources: [wp-lucius-ii]}
+      - {value: "1144-03-12", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: anastasius-iv-start
+    question: "When did Anastasius IV's pontificate begin?"
+    about: [{person: anastasius-iv}]
+    field: start
+    claims:
+      - {value: "1153-07-08", sources: [wp-anastasius-iv]}
+      - {value: "1153-07-12", sources: [wp-list-of-popes]}
+    note: "The record uses his own article."
+  - key: celestine-iv-died
+    question: "When did Celestine IV die?"
+    about: [{person: celestine-iv}]
+    field: died
+    claims:
+      - {value: "1241-11-10", sources: [wp-celestine-iv]}
+      - {value: "1241-11-17", sources: [wd-celestine-iv]}
+    note: "The record uses his own article."
+  - key: benedict-x-antipope-start
+    question: "When did Benedict X (antipope)'s pontificate begin?"
+    about: [{person: benedict-x-antipope}]
+    field: start
+    claims:
+      - {value: "1058-04-05", sources: [wp-benedict-x-antipope]}
+      - {value: "1058-04-04", sources: [wp-antipope]}
+    note: "The record uses his own article."
+  - key: paschal-iii-antipope-end
+    question: "When did Paschal III (antipope)'s claim end?"
+    about: [{person: paschal-iii-antipope}]
+    field: end
+    claims:
+      - {value: "1168-09-20", sources: [wp-paschal-iii-antipope]}
+      - {value: "1168-09-28", sources: [wp-antipope]}
+    note: "The record uses his own article."
+  - key: innocent-iii-antipope-start
+    question: "When did Innocent III (antipope)'s pontificate begin?"
+    about: [{person: innocent-iii-antipope}]
+    field: start
+    claims:
+      - {value: "1179-09-29", sources: [wp-innocent-iii-antipope]}
+      - {value: "1179-09-28", sources: [wp-antipope]}
+    note: "The record uses his own article."
