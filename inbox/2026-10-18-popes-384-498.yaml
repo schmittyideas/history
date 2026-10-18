@@ -1,0 +1,185 @@
+# The Papacy, 384-498 (the late Roman Empire): the 13 popes from Siricius to Anastasius II, the antipope Eulalius
+# (418-419), and the age's events: the Sack of Rome (410), the Councils of Ephesus (431) and Chalcedon (451), Leo I's
+# meeting with Attila (452) and the deposition of Romulus Augustulus (476). With this batch every pope on the official
+# list, and every antipope in Wikipedia's Antipope table, is in the database.
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml).
+# Also a fix: Amadeus VIII of Savoy (Felix V, added in inbox/2026-10-18-popes-antipopes-1328-1449.yaml) was given 0
+# sitelinks because his article title is a redirect; Wikidata gives 49 (read 2026-10-18).
+# Stated honestly: Leo I's and Gelasius I's birthplaces ("Etruria", "Africa") and Hilarius's (Sardinia) are regions and
+# are left in the notes. The Council of Chalcedon has no place record (Chalcedon is today Kadıköy, Istanbul).
+batch:
+  title: "The Papacy, 384-498"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-siricius, title: "Pope Siricius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Siricius"}
+  - {key: wd-siricius, title: "Pope Siricius (Wikidata)", url: "https://www.wikidata.org/wiki/Q161443"}
+  - {key: wp-anastasius-i, title: "Pope Anastasius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anastasius_I"}
+  - {key: wp-innocent-i, title: "Pope Innocent I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Innocent_I"}
+  - {key: wp-zosimus, title: "Pope Zosimus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Zosimus"}
+  - {key: wp-boniface-i, title: "Pope Boniface I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_I"}
+  - {key: wp-celestine-i, title: "Pope Celestine I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Celestine_I"}
+  - {key: wp-campania, title: "Campania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Campania"}
+  - {key: wp-sixtus-iii, title: "Pope Sixtus III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Sixtus_III"}
+  - {key: wp-leo-i, title: "Pope Leo I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Leo_I"}
+  - {key: wd-leo-i, title: "Pope Leo I (Wikidata)", url: "https://www.wikidata.org/wiki/Q43954"}
+  - {key: wp-hilarius, title: "Pope Hilarius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Hilarius"}
+  - {key: wp-simplicius, title: "Pope Simplicius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Simplicius"}
+  - {key: wp-felix-iii, title: "Pope Felix III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Felix_III"}
+  - {key: wp-gelasius-i, title: "Pope Gelasius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gelasius_I"}
+  - {key: wp-anastasius-ii, title: "Pope Anastasius II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Anastasius_II"}
+  - {key: wp-eulalius-antipope, title: "Antipope Eulalius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Eulalius"}
+  - {key: wp-albano-laziale, title: "Albano Laziale (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albano_Laziale"}
+  - {key: wp-mesoraca, title: "Mesoraca (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mesoraca"}
+  - {key: wp-sack-of-rome-410, title: "Sack of Rome (410) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sack_of_Rome_(410)"}
+  - {key: wp-council-of-ephesus, title: "Council of Ephesus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Ephesus"}
+  - {key: wp-council-of-chalcedon, title: "Council of Chalcedon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Chalcedon"}
+  - {key: wp-romulus-augustulus, title: "Romulus Augustulus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Romulus_Augustulus"}
+
+people:
+  - {key: amadeus-viii-of-savoy, sitelinks: 49, sitelinks_on: 2026-10-18}
+  - {key: siricius, name: "Siricius", type: Clergy, roles: [pope], born: 334, born_estimated: true, died: 0399-11-26, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "His Directa decretal to Himerius of Tarragona is the oldest fully preserved papal decretal; perhaps the first bishop of Rome to call himself 'pope'.",
+     sources: [wp-siricius]}
+  - {key: anastasius-i, name: "Anastasius I", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "A Roman, son of Maximus; condemned the writings of Origen after their translation into Latin (400).",
+     sources: [wp-anastasius-i]}
+  - {key: innocent-i, name: "Innocent I", type: Clergy, roles: [pope], died: 0417-03-12, realm: Papacy, prominence: 2, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Acted as arbiter of church disputes East and West from the start of his pontificate; in his time the Visigoths under Alaric sacked Rome (410).",
+     sources: [wp-innocent-i]}
+  - {key: zosimus, name: "Zosimus", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Of Greek descent; took a fractious part in the dispute between the sees of Arles and Vienne, deciding for Arles.",
+     sources: [wp-zosimus]}
+  - {key: boniface-i, name: "Boniface I", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "His election was contested by Eulalius until Emperor Honorius settled it in his favour (419); upheld church discipline.",
+     sources: [wp-boniface-i]}
+  - {key: celestine-i, name: "Celestine I", type: Clergy, roles: [pope], born: 359, born_estimated: true, died: 0432-07-27, realm: Papacy, prominence: 2, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Spent his pontificate against heresies; delegated to Cyril of Alexandria the condemnation of Nestorius, confirmed at the Council of Ephesus (431).",
+     sources: [wp-celestine-i]}
+  - {key: sixtus-iii, name: "Sixtus III", type: Clergy, roles: [pope], realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "A Roman whose pontificate (432-440) saw a burst of building in Rome.",
+     sources: [wp-sixtus-iii]}
+  - {key: leo-i, name: "Leo I", type: Clergy, roles: [pope], born: 391, born_estimated: true, died: 0461-11-10, realm: Papacy, prominence: 5, sitelinks: 95, sitelinks_on: 2026-10-18,
+     note: "Leo the Great, a Roman aristocrat who grounded papal authority on the succession from Peter; best known for meeting Attila the Hun in 452 and persuading him to turn back from Italy.",
+     sources: [wp-leo-i]}
+  - {key: hilarius, name: "Hilarius", type: Clergy, roles: [pope], died: 0468-02-29, realm: Papacy, prominence: 1, sitelinks: 72, sitelinks_on: 2026-10-18,
+     note: "A Sardinian; as Leo I's legate at the Second Council of Ephesus (449) he opposed Flavian's condemnation and escaped Dioscorus of Alexandria.",
+     sources: [wp-hilarius]}
+  - {key: simplicius, name: "Simplicius", type: Clergy, roles: [pope], died: 0483-03-10, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "From Tibur (Tivoli); pope 468-483, when Odoacer deposed the last Western emperor, Romulus Augustulus (476). Fought the Eutychian heresy.",
+     sources: [wp-simplicius]}
+  - {key: felix-iii, name: "Felix III", type: Clergy, roles: [pope], died: 0492-03-01, realm: Papacy, prominence: 1, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "His rejection of the Henotikon began the Acacian schism with Constantinople; great-great-grandfather of Gregory the Great. Sometimes numbered Felix II.",
+     sources: [wp-felix-iii]}
+  - {key: gelasius-i, name: "Gelasius I", type: Clergy, roles: [pope], realm: Papacy, prominence: 2, sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "Of Berber descent, the last pope born in Africa; a prolific writer on the cusp of late antiquity whose letter Duo sunt (494) to Emperor Anastasius set out the relation of Church and state.",
+     sources: [wp-gelasius-i]}
+  - {key: anastasius-ii, name: "Anastasius II", type: Clergy, roles: [pope], died: 0498-11-19, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "A Roman, son of a priest; his efforts to end the Acacian schism led instead to the Laurentian schism after his death. Buried in St Peter's.",
+     sources: [wp-anastasius-ii]}
+  - {key: eulalius-antipope, name: "Eulalius (antipope)", type: Clergy, roles: [antipope], died: 423, realm: Papacy, prominence: 1, sitelinks: 30, sitelinks_on: 2026-10-18,
+     note: "Elected in a double election with Boniface I (418); lost when Emperor Honorius decided for Boniface, and became bishop of Nepete (Napete).",
+     sources: [wp-eulalius-antipope]}
+
+titles:
+  - {person: siricius, title: Pope, realm: Papacy, from: 0384-12-17, to: 0399-11-26, sources: [wp-siricius, wp-list-of-popes]}
+  - {person: anastasius-i, title: Pope, realm: Papacy, from: 0399-11-27, to: 0401-12-19, sources: [wp-anastasius-i, wp-list-of-popes]}
+  - {person: innocent-i, title: Pope, realm: Papacy, from: 0401-12-21, to: 0417-03-12, sources: [wp-innocent-i, wp-list-of-popes]}
+  - {person: zosimus, title: Pope, realm: Papacy, from: 0417-03-18, to: 0418-12-26, sources: [wp-zosimus, wp-list-of-popes]}
+  - {person: boniface-i, title: Pope, realm: Papacy, from: 0418-12-28, to: 0422-09-04, sources: [wp-boniface-i, wp-list-of-popes]}
+  - {person: celestine-i, title: Pope, realm: Papacy, from: 0422-09-10, to: 0432-07-27, sources: [wp-celestine-i, wp-list-of-popes]}
+  - {person: sixtus-iii, title: Pope, realm: Papacy, from: 0432-07-31, to: 0440-08-18, sources: [wp-sixtus-iii, wp-list-of-popes]}
+  - {person: leo-i, title: Pope, realm: Papacy, from: 0440-09-29, to: 0461-11-10, sources: [wp-leo-i, wp-list-of-popes]}
+  - {person: hilarius, title: Pope, realm: Papacy, from: 0461-11-19, to: 0468-02-29, sources: [wp-hilarius, wp-list-of-popes]}
+  - {person: simplicius, title: Pope, realm: Papacy, from: 0468-03-03, to: 0483-03-10, sources: [wp-simplicius, wp-list-of-popes]}
+  - {person: felix-iii, title: Pope, realm: Papacy, from: 0483-03-13, to: 0492-03-01, sources: [wp-felix-iii, wp-list-of-popes]}
+  - {person: gelasius-i, title: Pope, realm: Papacy, from: 0492-03-01, to: 0496-11-21, sources: [wp-gelasius-i, wp-list-of-popes]}
+  - {person: anastasius-ii, title: Pope, realm: Papacy, from: 0496-11-24, to: 0498-11-19, sources: [wp-anastasius-ii, wp-list-of-popes]}
+  - {person: eulalius-antipope, title: Pope, realm: Papacy, from: 0418-12-27, to: 0419-04-03, disputed: true, sources: [wp-eulalius-antipope, wp-antipope], note: "Antipope, against Boniface I."}
+
+places:
+  - {key: campania, name: "Campania", kind: town, country: Italy, lat: 40.75, lng: 14.95, sources: [wp-campania]}
+  - {key: albano-laziale, name: Albano Laziale, historical_name: Albanum, kind: town, region: Lazio, country: Italy, lat: 41.7333, lng: 12.6667, sources: [wp-albano-laziale]}
+  - {key: mesoraca, name: Mesoraca, kind: town, region: Calabria, country: Italy, lat: 39.0833, lng: 16.7833, sources: [wp-mesoraca]}
+
+moments:
+  - {person: siricius, role: born, place: rome, year: 334}
+  - {person: anastasius-i, role: born, place: rome}
+  - {person: innocent-i, role: born, place: albano-laziale}
+  - {person: zosimus, role: born, place: mesoraca}
+  - {person: boniface-i, role: born, place: rome}
+  - {person: celestine-i, role: born, place: campania, year: 359}
+  - {person: sixtus-iii, role: born, place: rome}
+  - {person: simplicius, role: born, place: tivoli}
+  - {person: felix-iii, role: born, place: rome}
+  - {person: anastasius-ii, role: born, place: rome}
+  - {person: anastasius-ii, role: buried, place: st-peters-basilica-rome, year: 498}
+  - {person: eulalius-antipope, role: born, place: rome}
+
+events:
+  - key: sack-of-rome-410
+    name: Sack of Rome
+    type: Sack
+    date: 0410-08-24
+    place: rome
+    people:
+      - {person: innocent-i, role: pope at the time}
+    prominence: 5
+    note: "The Visigoths under Alaric sacked Rome, no longer the Western capital but still the eternal city."
+    sources: [wp-sack-of-rome-410]
+  - key: council-of-ephesus-431
+    name: Council of Ephesus
+    type: Council
+    year: 431
+    place: ephesus
+    people:
+      - {person: celestine-i, role: pope at the time}
+    prominence: 3
+    note: "The third ecumenical council, called by Theodosius II; confirmed the Nicene Creed and condemned Nestorius."
+    sources: [wp-council-of-ephesus]
+  - key: council-of-chalcedon-451
+    name: Council of Chalcedon
+    type: Council
+    date: 0451-10-08
+    people:
+      - {person: leo-i, role: pope at the time}
+    prominence: 4
+    note: "The fourth ecumenical council, called by Emperor Marcian at Chalcedon (Kadıköy, Istanbul), 8 October to 1 November 451, with over 520 bishops."
+    sources: [wp-council-of-chalcedon]
+  - key: leo-i-meets-attila-452
+    name: Leo I meets Attila
+    type: Diplomacy
+    year: 452
+    people:
+      - {person: leo-i, role: envoy}
+    prominence: 4
+    note: "Leo persuaded Attila the Hun to turn back from his invasion of Italy, though how large a part he played is debated."
+    sources: [wp-leo-i]
+  - key: deposition-of-romulus-augustulus-476
+    name: Deposition of Romulus Augustulus
+    type: Deposition
+    date: 0476-09-04
+    people:
+      - {person: simplicius, role: pope at the time}
+    prominence: 5
+    note: "Odoacer deposed the last Western Roman emperor, conventionally the end of the Western Roman Empire."
+    sources: [wp-romulus-augustulus, wp-simplicius]
+
+discrepancies:
+  - key: siricius-died
+    question: "When did Siricius die?"
+    about: [{person: siricius}]
+    field: died
+    claims:
+      - {value: "0399-11-26", sources: [wp-siricius]}
+      - {value: "0399-11-27", sources: [wd-siricius]}
+    note: "The record uses his own article."
+  - key: leo-i-died
+    question: "When did Leo I die?"
+    about: [{person: leo-i}]
+    field: died
+    claims:
+      - {value: "0461-11-10", sources: [wp-leo-i]}
+      - {value: "0461-11-11", sources: [wd-leo-i]}
+    note: "The record uses his own article."
