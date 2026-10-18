@@ -1,0 +1,214 @@
+# Film figures: 22 real people with a substantial part in the History films' stories, added and linked to the films
+# that portray them (role subject), following inbox/2026-10-18-film-portrayals.yaml. Ty chose (2026-10-18) Churchill and
+# Robert F. Kennedy, plus the key figures in the films' stories.
+# VERIFIED against English Wikipedia articles downloaded on 2026-10-18 with tools/wiki.py (revision IDs in the session
+# scratchpad): each person's dates and note from their own article; each portrayal from the film's article (plot,
+# cast or lead). Sitelinks read from Wikidata on 2026-10-18. Types follow CLAUDE.md: statesmen and officials
+# Government, queens Royalty, a duchess Nobility, scientists Scholar; people known for one story Notable.
+# Prominence: Scholars and Notable people from sitelinks; Government, Royalty and Nobility hand-set.
+# Stated honestly:
+#  - Isabella of France: born c. 1295 (estimated).
+#  - Itzhak Stern: Wikipedia says he died 30 January 1969; Wikidata says 27 June 1969. Recorded as a discrepancy; the
+#    record uses Wikipedia's date.
+#  - John Glenn was also a US senator for 24 years; typed Notable like the other astronauts, as the films know him.
+#  - Also added: the four marriages that join these people to people already here (Isabella and Edward II, Elizabeth
+#    and George VI, Wallis Simpson and Edward VIII, Kitty and J. Robert Oppenheimer), and Glenn and Kranz at the
+#    flights the films show. Titles (Prime Minister, Queen consort...) are left for a later batch.
+batch:
+  title: "Film figures"
+  requested: "Add the real people portrayed in the History films who aren't in the database yet: Churchill, RFK and the key figures"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-winston-churchill, title: "Winston Churchill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Winston_Churchill"}
+  - {key: wp-robert-f-kennedy, title: "Robert F. Kennedy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_F._Kennedy"}
+  - {key: wp-isabella-of-france, title: "Isabella of France (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella_of_France"}
+  - {key: wp-amon-goth, title: "Amon Göth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Amon_G%C3%B6th"}
+  - {key: wp-itzhak-stern, title: "Itzhak Stern (Wikipedia)", url: "https://en.wikipedia.org/wiki/Itzhak_Stern"}
+  - {key: wd-itzhak-stern, title: "Itzhak Stern (Wikidata)", url: "https://www.wikidata.org/wiki/Q642430"}
+  - {key: wp-joan-clarke, title: "Joan Clarke (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_Clarke"}
+  - {key: wp-leslie-groves, title: "Leslie Groves (Wikipedia)", url: "https://en.wikipedia.org/wiki/Leslie_Groves"}
+  - {key: wp-kitty-oppenheimer, title: "Kitty Oppenheimer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kitty_Oppenheimer"}
+  - {key: wp-lewis-strauss, title: "Lewis Strauss (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lewis_Strauss"}
+  - {key: wp-edward-teller, title: "Edward Teller (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_Teller"}
+  - {key: wp-albert-einstein, title: "Albert Einstein (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albert_Einstein"}
+  - {key: wp-queen-elizabeth-the-queen-mother, title: "Queen Elizabeth The Queen Mother (Wikipedia)", url: "https://en.wikipedia.org/wiki/Queen_Elizabeth_The_Queen_Mother"}
+  - {key: wp-wallis-simpson, title: "Wallis Simpson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wallis_Simpson"}
+  - {key: wp-henry-ford-ii, title: "Henry Ford II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Ford_II"}
+  - {key: wp-lee-iacocca, title: "Lee Iacocca (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lee_Iacocca"}
+  - {key: wp-enzo-ferrari, title: "Enzo Ferrari (Wikipedia)", url: "https://en.wikipedia.org/wiki/Enzo_Ferrari"}
+  - {key: wp-russell-bufalino, title: "Russell Bufalino (Wikipedia)", url: "https://en.wikipedia.org/wiki/Russell_Bufalino"}
+  - {key: wp-gene-kranz, title: "Gene Kranz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gene_Kranz"}
+  - {key: wp-ken-mattingly, title: "Ken Mattingly (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ken_Mattingly"}
+  - {key: wp-robert-harley, title: "Robert Harley, 1st Earl of Oxford and Earl Mortimer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Harley,_1st_Earl_of_Oxford_and_Earl_Mortimer"}
+  - {key: wp-david-duke, title: "David Duke (Wikipedia)", url: "https://en.wikipedia.org/wiki/David_Duke"}
+  - {key: wp-john-glenn, title: "John Glenn (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Glenn"}
+
+people:
+  # Statesmen and officials
+  - {key: winston-churchill, name: Winston Churchill, type: Government, roles: [statesman, writer], born: 1874-11-30, died: 1965-01-24, prominence: 5,
+     sitelinks: 262, sitelinks_on: 2026-10-18,
+     note: "British statesman, soldier and writer; Prime Minister of the United Kingdom 1940-1945, during the Second World War, and 1951-1955.",
+     coverage: not-read, coverage_note: "Added as a figure in The Imitation Game and The King's Speech.", sources: [wp-winston-churchill]}
+  - {key: robert-f-kennedy, name: Robert F. Kennedy, type: Government, roles: [politician, lawyer], born: 1925-11-20, died: 1968-06-06, prominence: 3,
+     sitelinks: 98, sitelinks_on: 2026-10-18,
+     note: "American politician and lawyer; 64th United States Attorney General.",
+     coverage: not-read, coverage_note: "Added as a figure in Green Book.", sources: [wp-robert-f-kennedy]}
+  - {key: lewis-strauss, name: Lewis Strauss, type: Government, roles: [government official, businessman], born: 1896-01-31, died: 1974-01-21, prominence: 2,
+     sitelinks: 25, sitelinks_on: 2026-10-18,
+     note: "American government official and businessman; an original member of the US Atomic Energy Commission and later its chairman.",
+     coverage: not-read, coverage_note: "Added as a figure in Oppenheimer.", sources: [wp-lewis-strauss]}
+  - {key: robert-harley, name: "Robert Harley, 1st Earl of Oxford", type: Government, roles: [statesman], born: 1661-12-05, died: 1724-05-21, prominence: 2,
+     sitelinks: 17, sitelinks_on: 2026-10-18,
+     note: "British statesman of the late Stuart and early Georgian periods; began as a Whig and became a Tory leader under Queen Anne.",
+     coverage: not-read, coverage_note: "Added as a figure in The Favourite.", sources: [wp-robert-harley]}
+  # Queens and a duchess
+  - {key: isabella-of-france, name: Isabella of France, type: Royalty, born: 1295, born_estimated: true, died: 1358-08-22, prominence: 3,
+     sitelinks: 52, sitelinks_on: 2026-10-18,
+     note: "Queen of England as the wife of Edward II, and de facto regent of England 1327-1330; called the She-Wolf of France.",
+     coverage: not-read, coverage_note: "Added as a figure in Braveheart.", sources: [wp-isabella-of-france]}
+  - {key: queen-elizabeth-the-queen-mother, name: Queen Elizabeth The Queen Mother, type: Royalty, born: 1900-08-04, died: 2002-03-30, prominence: 4,
+     sitelinks: 92, sitelinks_on: 2026-10-18,
+     note: "Elizabeth Bowes-Lyon, Queen of the United Kingdom 1936-1952 as the wife of George VI, and mother of Elizabeth II.",
+     coverage: not-read, coverage_note: "Added as a figure in The King's Speech.", sources: [wp-queen-elizabeth-the-queen-mother]}
+  - {key: wallis-simpson, name: Wallis Simpson, type: Nobility, born: 1896-06-19, died: 1986-04-24, prominence: 3,
+     sitelinks: 69, sitelinks_on: 2026-10-18,
+     note: "Wallis, Duchess of Windsor: American socialite whose intended marriage to Edward VIII, as a divorcée, led to his abdication.",
+     coverage: not-read, coverage_note: "Added as a figure in The King's Speech.", sources: [wp-wallis-simpson]}
+  # Scholars
+  - {key: albert-einstein, name: Albert Einstein, type: Scholar, roles: [physicist], born: 1879-03-14, died: 1955-04-18, prominence: 5,
+     sitelinks: 322, sitelinks_on: 2026-10-18,
+     note: "German-born theoretical physicist best known for developing the theory of relativity.",
+     coverage: not-read, coverage_note: "Added as a figure in Oppenheimer.", sources: [wp-albert-einstein]}
+  - {key: edward-teller, name: Edward Teller, type: Scholar, roles: [physicist], born: 1908-01-15, died: 2003-09-09, prominence: 3,
+     sitelinks: 84, sitelinks_on: 2026-10-18,
+     note: "Hungarian-American theoretical physicist, known as the father of the hydrogen bomb.",
+     coverage: not-read, coverage_note: "Added as a figure in Oppenheimer.", sources: [wp-edward-teller]}
+  - {key: joan-clarke, name: Joan Clarke, type: Scholar, roles: [cryptanalyst, numismatist], born: 1917-06-24, died: 1996-09-04, prominence: 1,
+     sitelinks: 30, sitelinks_on: 2026-10-18,
+     note: "English cryptanalyst and numismatist who broke codes at Bletchley Park in the Second World War.",
+     coverage: not-read, coverage_note: "Added as a figure in The Imitation Game.", sources: [wp-joan-clarke]}
+  - {key: kitty-oppenheimer, name: Kitty Oppenheimer, type: Scholar, roles: [biologist, botanist], born: 1910-08-08, died: 1972-10-27, prominence: 1,
+     sitelinks: 21, sitelinks_on: 2026-10-18,
+     note: "American biologist and botanist; wife of J. Robert Oppenheimer.",
+     coverage: not-read, coverage_note: "Added as a figure in Oppenheimer.", sources: [wp-kitty-oppenheimer]}
+  # Notable people
+  - {key: amon-goth, name: Amon Göth, type: Notable, roles: [SS officer], born: 1908-12-11, died: 1946-09-13, prominence: 1,
+     sitelinks: 37, sitelinks_on: 2026-10-18,
+     note: "Austrian SS functionary and war criminal, commandant of the Kraków-Płaszów concentration camp.",
+     coverage: not-read, coverage_note: "Added as a figure in Schindler's List.", sources: [wp-amon-goth]}
+  - {key: itzhak-stern, name: Itzhak Stern, type: Notable, roles: [accountant], born: 1901-01-25, died: 1969-01-30, prominence: 1,
+     sitelinks: 21, sitelinks_on: 2026-10-18,
+     note: "Polish Jew and Holocaust survivor who worked for Oskar Schindler and helped him in his rescue work.",
+     coverage: not-read, coverage_note: "Added as a figure in Schindler's List.", sources: [wp-itzhak-stern]}
+  - {key: leslie-groves, name: Leslie Groves, type: Notable, roles: [army officer], born: 1896-08-17, died: 1970-07-13, prominence: 2,
+     sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "US Army Corps of Engineers officer who oversaw building the Pentagon and directed the Manhattan Project.",
+     coverage: not-read, coverage_note: "Added as a figure in Oppenheimer.", sources: [wp-leslie-groves]}
+  - {key: henry-ford-ii, name: Henry Ford II, type: Notable, roles: [businessman], born: 1917-09-04, died: 1987-09-29, prominence: 1,
+     sitelinks: 35, sitelinks_on: 2026-10-18,
+     note: "American automotive businessman, grandson of Henry Ford; ran the Ford Motor Company.",
+     coverage: not-read, coverage_note: "Added as a figure in Ford v Ferrari.", sources: [wp-henry-ford-ii]}
+  - {key: lee-iacocca, name: Lee Iacocca, type: Notable, roles: [automotive executive], born: 1924-10-15, died: 2019-07-02, prominence: 2,
+     sitelinks: 45, sitelinks_on: 2026-10-18,
+     note: "American engineer and executive who developed the Ford Mustang at Ford.",
+     coverage: not-read, coverage_note: "Added as a figure in Ford v Ferrari.", sources: [wp-lee-iacocca]}
+  - {key: enzo-ferrari, name: Enzo Ferrari, type: Notable, roles: [racing driver, entrepreneur], born: 1898-02-18, died: 1988-08-14, prominence: 3,
+     sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "Italian racing driver and entrepreneur, founder of Scuderia Ferrari and of the Ferrari car company.",
+     coverage: not-read, coverage_note: "Added as a figure in Ford v Ferrari.", sources: [wp-enzo-ferrari]}
+  - {key: russell-bufalino, name: Russell Bufalino, type: Notable, roles: [mobster], born: 1903-10-29, died: 1994-02-25, prominence: 1,
+     sitelinks: 17, sitelinks_on: 2026-10-18,
+     note: "Italian-American mobster, boss of the Northeastern Pennsylvania Mafia family named after him.",
+     coverage: not-read, coverage_note: "Added as a figure in The Irishman.", sources: [wp-russell-bufalino]}
+  - {key: gene-kranz, name: Gene Kranz, type: Notable, roles: [flight director], born: 1933-08-17, prominence: 1,
+     sitelinks: 29, sitelinks_on: 2026-10-18,
+     note: "American aerospace engineer, NASA's second Chief Flight Director for the Mercury, Gemini and Apollo programs.",
+     coverage: not-read, coverage_note: "Added as a figure in Apollo 13.", sources: [wp-gene-kranz]}
+  - {key: ken-mattingly, name: Ken Mattingly, type: Notable, roles: [astronaut], born: 1936-03-17, died: 2023-10-31, prominence: 2,
+     sitelinks: 42, sitelinks_on: 2026-10-18,
+     note: "American astronaut and naval aviator who was replaced as Apollo 13 command module pilot three days before launch, and later orbited the Moon on Apollo 16.",
+     coverage: not-read, coverage_note: "Added as a figure in Apollo 13.", sources: [wp-ken-mattingly]}
+  - {key: david-duke, name: David Duke, type: Notable, roles: [Ku Klux Klan leader], born: 1950-07-01, prominence: 1,
+     sitelinks: 36, sitelinks_on: 2026-10-18,
+     note: "American white supremacist, former politician and grand wizard of the Knights of the Ku Klux Klan.",
+     coverage: not-read, coverage_note: "Added as a figure in BlacKkKlansman.", sources: [wp-david-duke]}
+  - {key: john-glenn, name: John Glenn, type: Notable, roles: [astronaut, politician], born: 1921-07-18, died: 2016-12-08, prominence: 3,
+     sitelinks: 83, sitelinks_on: 2026-10-18,
+     note: "American Marine aviator, astronaut and senator; the first American to orbit the Earth (1962).",
+     coverage: not-read, coverage_note: "Added as a figure in Hidden Figures.", sources: [wp-john-glenn]}
+
+links:
+  - {spouse: edward-ii-of-england, to: isabella-of-france, year: 1308}
+  - {spouse: george-vi, to: queen-elizabeth-the-queen-mother, year: 1923}
+  - {spouse: edward-viii, to: wallis-simpson, year: 1937}
+  - {spouse: j-robert-oppenheimer, to: kitty-oppenheimer, year: 1940}
+
+events:
+  - key: mercury-atlas-6-1962
+    people:
+      - {person: john-glenn, role: pilot}
+    sources: [wp-john-glenn]
+  - key: apollo-13-1970
+    people:
+      - {person: gene-kranz, role: flight director}
+    sources: [wp-gene-kranz]
+
+discrepancies:
+  - key: itzhak-stern-death-date
+    question: "When did Itzhak Stern die?"
+    about: [{person: itzhak-stern}]
+    field: died
+    claims:
+      - {value: "1969-01-30", sources: [wp-itzhak-stern]}
+      - {value: "1969-06-27", sources: [wd-itzhak-stern]}
+    note: "The record uses Wikipedia's 30 January 1969."
+
+artworks:
+  - key: the-imitation-game-2014
+    people:
+      - {person: winston-churchill, role: subject}
+      - {person: joan-clarke, role: subject}
+  - key: the-kings-speech-2010
+    people:
+      - {person: winston-churchill, role: subject}
+      - {person: queen-elizabeth-the-queen-mother, role: subject}
+      - {person: wallis-simpson, role: subject}
+  - key: green-book-2018
+    people:
+      - {person: robert-f-kennedy, role: subject}
+  - key: braveheart-1995
+    people:
+      - {person: isabella-of-france, role: subject}
+  - key: schindlers-list-1993
+    people:
+      - {person: amon-goth, role: subject}
+      - {person: itzhak-stern, role: subject}
+  - key: oppenheimer-2023
+    people:
+      - {person: leslie-groves, role: subject}
+      - {person: kitty-oppenheimer, role: subject}
+      - {person: lewis-strauss, role: subject}
+      - {person: edward-teller, role: subject}
+      - {person: albert-einstein, role: subject}
+  - key: ford-v-ferrari-2019
+    people:
+      - {person: henry-ford-ii, role: subject}
+      - {person: lee-iacocca, role: subject}
+      - {person: enzo-ferrari, role: subject}
+  - key: the-irishman-2019
+    people:
+      - {person: russell-bufalino, role: subject}
+  - key: apollo-13-1995
+    people:
+      - {person: gene-kranz, role: subject}
+      - {person: ken-mattingly, role: subject}
+  - key: the-favourite-2018
+    people:
+      - {person: robert-harley, role: subject}
+  - key: blackkklansman-2018
+    people:
+      - {person: david-duke, role: subject}
+  - key: hidden-figures-2016
+    people:
+      - {person: john-glenn, role: subject}
