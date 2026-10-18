@@ -1,0 +1,21 @@
+# The Papacy: Pope Symmachus (498-514), missed between the batches for 498-599 and 384-498 (one ended before 498, the
+# next began at 500). With him all 267 pontificates on the official List of popes are in the database.
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml): his English Wikipedia article
+# (2026-10-18) and the List of popes. His birthplace, Sardinia, is an island region and is left in the note.
+batch:
+  title: "The Papacy: Symmachus"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-symmachus, title: "Pope Symmachus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Symmachus"}
+
+people:
+  - {key: symmachus, name: "Symmachus", type: Clergy, roles: [pope], died: 0514-07-19, realm: Papacy, prominence: 2, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "A Sardinian, elected by the majority of the Roman clergy on 22 November 498, the same day a pro-Byzantine faction chose Laurentius; the Laurentian schism split the Church, the Senate and the people of Rome until about 506. A saint.",
+     sources: [wp-symmachus]}
+
+titles:
+  - {person: symmachus, title: Pope, realm: Papacy, from: 0498-11-22, to: 0514-07-19, sources: [wp-symmachus, wp-list-of-popes]}
+
+moments:
