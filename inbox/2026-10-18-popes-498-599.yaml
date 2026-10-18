@@ -1,0 +1,160 @@
+# The Papacy, 498-599 (Ostrogothic Italy and the start of the Byzantine Papacy): the 14 popes of the century not yet
+# here, from Hormisdas to Gregory I the Great, and the antipopes Laurentius (498) and Dioscorus (530).
+# Conventions and checks as the earlier Papacy batches (inbox/2026-10-18-popes-*.yaml). Birth and death dates come from
+# each article's lead; where Wikidata gives a different full date it is recorded as a discrepancy (mostly a few days
+# apart, often the burial rather than the death), the record using the article.
+# Stated honestly: birthplaces that are regions or kingdoms (Samnium, the Ostrogothic Kingdom) or unidentified
+# (Cicanum) are left in the notes.
+batch:
+  title: "The Papacy, 498-599"
+  requested: "Do we have all popes? Get them all, with the disputed ones (antipopes) marked disputed"
+  date: 2026-10-18
+
+sources:
+  - {key: wp-hormisdas, title: "Pope Hormisdas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Hormisdas"}
+  - {key: wp-john-i, title: "Pope John I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_I"}
+  - {key: wd-john-i, title: "Pope John I (Wikidata)", url: "https://www.wikidata.org/wiki/Q160916"}
+  - {key: wp-felix-iv, title: "Pope Felix IV (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Felix_IV"}
+  - {key: wp-samnium, title: "Samnium (Wikipedia)", url: "https://en.wikipedia.org/wiki/Samnium"}
+  - {key: wp-boniface-ii, title: "Pope Boniface II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Boniface_II"}
+  - {key: wp-john-ii, title: "Pope John II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_II"}
+  - {key: wp-agapetus-i, title: "Pope Agapetus I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Agapetus_I"}
+  - {key: wp-silverius, title: "Pope Silverius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Silverius"}
+  - {key: wd-silverius, title: "Pope Silverius (Wikidata)", url: "https://www.wikidata.org/wiki/Q149315"}
+  - {key: wp-vigilius, title: "Pope Vigilius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Vigilius"}
+  - {key: wp-pelagius-i, title: "Pope Pelagius I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pelagius_I"}
+  - {key: wd-pelagius-i, title: "Pope Pelagius I (Wikidata)", url: "https://www.wikidata.org/wiki/Q170303"}
+  - {key: wp-john-iii, title: "Pope John III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_John_III"}
+  - {key: wp-benedict-i, title: "Pope Benedict I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Benedict_I"}
+  - {key: wd-benedict-i, title: "Pope Benedict I (Wikidata)", url: "https://www.wikidata.org/wiki/Q151902"}
+  - {key: wp-pelagius-ii, title: "Pope Pelagius II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Pelagius_II"}
+  - {key: wd-pelagius-ii, title: "Pope Pelagius II (Wikidata)", url: "https://www.wikidata.org/wiki/Q151908"}
+  - {key: wp-gregory-i, title: "Pope Gregory I (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pope_Gregory_I"}
+  - {key: wp-laurentius-antipope, title: "Antipope Laurentius (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Laurentius"}
+  - {key: wp-dioscorus-antipope, title: "Antipope Dioscorus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Antipope_Dioscorus"}
+  - {key: wp-frosinone, title: "Frosinone (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frosinone"}
+
+people:
+  - {key: hormisdas, name: "Hormisdas", type: Clergy, roles: [pope], born: 450, born_estimated: true, died: 0523-08-06, realm: Papacy, prominence: 2, sitelinks: 81, sitelinks_on: 2026-10-18,
+     note: "Ended the Acacian schism with Constantinople: the reunion was ratified in Constantinople's cathedral on 28 March 519. Father of Pope Silverius. A saint.",
+     sources: [wp-hormisdas]}
+  - {key: john-i, name: "John I", type: Clergy, roles: [pope], died: 0526-05-18, realm: Papacy, prominence: 2, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Of Siena; with the monk Dionysius Exiguus he standardised the Western reckoning of Easter (525). Sent by the Arian king Theoderic to Constantinople, he was arrested on his return and died in prison at Ravenna. A saint.",
+     sources: [wp-john-i]}
+  - {key: felix-iv, name: "Felix IV", type: Clergy, roles: [pope], born: 489, born_estimated: true, died: 0530-09-22, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "The candidate of Theoderic the Great, who had imprisoned John I; built Santi Cosma e Damiano. Sometimes numbered Felix III. A saint.",
+     sources: [wp-felix-iv]}
+  - {key: boniface-ii, name: "Boniface II", type: Clergy, roles: [pope], died: 0532-10-17, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "An Ostrogoth, the first Germanic pope (530-532), chosen by Felix IV over the majority's candidate Dioscorus.",
+     sources: [wp-boniface-ii]}
+  - {key: john-ii, name: "John II", type: Clergy, roles: [pope], born: 475, born_estimated: true, died: 0535-05-08, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Mercurius, a priest of San Clemente, the first pope to take a new name, since his own was a pagan god's (533).",
+     sources: [wp-john-ii]}
+  - {key: agapetus-i, name: "Agapetus I", type: Clergy, roles: [pope], born: 489, born_estimated: true, died: 0536-04-22, realm: Papacy, prominence: 2, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "Son of a Roman priest; went to Constantinople at King Theodahad's bidding in 536 and failed to talk Justinian I out of invading Ostrogothic Italy. A saint.",
+     sources: [wp-agapetus-i]}
+  - {key: silverius, name: "Silverius", type: Clergy, roles: [pope], died: 0537-12-02, realm: Papacy, prominence: 1, sitelinks: 77, sitelinks_on: 2026-10-18,
+     note: "Son of Pope Hormisdas, raised from deacon to pope by Theodahad on the eve of the Gothic War; deposed by Belisarius, he was exiled to the island of Palmarola, where he starved to death. A saint.",
+     sources: [wp-silverius]}
+  - {key: vigilius, name: "Vigilius", type: Clergy, roles: [pope], died: 0555-06-07, realm: Papacy, prominence: 2, sitelinks: 76, sitelinks_on: 2026-10-18,
+     note: "A Roman aristocrat and apocrisiarius in Constantinople, ally of Empress Theodora, made pope on Silverius's deposition: the first pope of the Byzantine Papacy. Clashed with Justinian over the Three Chapters.",
+     sources: [wp-vigilius]}
+  - {key: pelagius-i, name: "Pelagius I", type: Clergy, roles: [pope], died: 0561-03-03, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "A former apocrisiarius, elected as Justinian I's candidate, unwelcome in the West; having opposed the condemnation of the Three Chapters, he later accepted it.",
+     sources: [wp-pelagius-i]}
+  - {key: john-iii, name: "John III", type: Clergy, roles: [pope], died: 0574-07-13, realm: Papacy, prominence: 1, sitelinks: 79, sitelinks_on: 2026-10-18,
+     note: "Pope 561-574 under Byzantine rule; the second pope to change his name.",
+     sources: [wp-john-iii]}
+  - {key: benedict-i, name: "Benedict I", type: Clergy, roles: [pope], died: 0579-07-30, realm: Papacy, prominence: 1, sitelinks: 78, sitelinks_on: 2026-10-18,
+     note: "Pope 575-579, as the Lombards spread through Italy and famine struck Rome.",
+     sources: [wp-benedict-i]}
+  - {key: pelagius-ii, name: "Pelagius II", type: Clergy, roles: [pope], died: 0590-02-07, realm: Papacy, prominence: 1, sitelinks: 80, sitelinks_on: 2026-10-18,
+     note: "Of Ostrogothic descent; pope 579-590, he ordered the building of the basilica of San Lorenzo fuori le Mura.",
+     sources: [wp-pelagius-ii]}
+  - {key: gregory-i, name: "Gregory I", type: Clergy, roles: [pope], born: 540, born_estimated: true, died: 0604-03-12, realm: Papacy, prominence: 5, sitelinks: 112, sitelinks_on: 2026-10-18,
+     note: "Gregory the Great: a senator's son and prefect of Rome at 30 who became a monk, then pope (590-604). Ran Rome's relief better than the emperors, sent the mission to convert the Anglo-Saxons, and shaped the medieval papacy.",
+     sources: [wp-gregory-i]}
+  - {key: laurentius-antipope, name: "Laurentius (antipope)", type: Clergy, roles: [antipope], born: 460, born_estimated: true, died: 507, died_estimated: true, realm: Papacy, prominence: 1, sitelinks: 36, sitelinks_on: 2026-10-18,
+     note: "Elected in 498 by a faction with Byzantine sympathies, backed by Emperor Anastasius I, against Symmachus; the split ran through the Church, the Senate and the people of Rome until about 506.",
+     sources: [wp-laurentius-antipope]}
+  - {key: dioscorus-antipope, name: "Dioscorus (antipope)", type: Clergy, roles: [antipope], born: 450, born_estimated: true, died: 0530-10-14, realm: Papacy, prominence: 1, sitelinks: 33, sitelinks_on: 2026-10-18,
+     note: "Chosen by most electors after Felix IV's death (530), against Felix's wish for Boniface II; he died within a month, leaving Boniface pope.",
+     sources: [wp-dioscorus-antipope]}
+
+titles:
+  - {person: hormisdas, title: Pope, realm: Papacy, from: 0514-07-20, to: 0523-08-06, sources: [wp-hormisdas, wp-list-of-popes]}
+  - {person: john-i, title: Pope, realm: Papacy, from: 0523-08-13, to: 0526-05-18, sources: [wp-john-i, wp-list-of-popes]}
+  - {person: felix-iv, title: Pope, realm: Papacy, from: 0526-07-12, to: 0530-09-22, sources: [wp-felix-iv, wp-list-of-popes]}
+  - {person: boniface-ii, title: Pope, realm: Papacy, from: 0530-09-22, to: 0532-10-17, sources: [wp-boniface-ii, wp-list-of-popes]}
+  - {person: john-ii, title: Pope, realm: Papacy, from: 0533-01-02, to: 0535-05-08, sources: [wp-john-ii, wp-list-of-popes]}
+  - {person: agapetus-i, title: Pope, realm: Papacy, from: 0535-05-13, to: 0536-04-22, sources: [wp-agapetus-i, wp-list-of-popes]}
+  - {person: silverius, title: Pope, realm: Papacy, from: 0536-06-08, to: 0537-03-11, sources: [wp-silverius, wp-list-of-popes]}
+  - {person: vigilius, title: Pope, realm: Papacy, from: 0537-03-29, to: 0555-06-07, sources: [wp-vigilius, wp-list-of-popes]}
+  - {person: pelagius-i, title: Pope, realm: Papacy, from: 0556-04-16, to: 0561-03-04, sources: [wp-pelagius-i, wp-list-of-popes]}
+  - {person: john-iii, title: Pope, realm: Papacy, from: 0561-07-17, to: 0574-07-13, sources: [wp-john-iii, wp-list-of-popes]}
+  - {person: benedict-i, title: Pope, realm: Papacy, from: 0575-06-02, to: 0579-07-30, sources: [wp-benedict-i, wp-list-of-popes]}
+  - {person: pelagius-ii, title: Pope, realm: Papacy, from: 0579-11-26, to: 0590-02-07, sources: [wp-pelagius-ii, wp-list-of-popes]}
+  - {person: gregory-i, title: Pope, realm: Papacy, from: 0590-09-03, to: 0604-03-12, sources: [wp-gregory-i, wp-list-of-popes]}
+  - {person: laurentius-antipope, title: Pope, realm: Papacy, from: 0498-11-22, to: 506, disputed: true, to_estimated: true, sources: [wp-laurentius-antipope, wp-antipope], note: "Antipope, against Symmachus."}
+  - {person: dioscorus-antipope, title: Pope, realm: Papacy, from: 0530-09-22, to: 0530-10-14, disputed: true, sources: [wp-dioscorus-antipope, wp-antipope], note: "Antipope, against Boniface II."}
+
+places:
+  - {key: samnium, name: "Samnium", kind: town, country: Italy, lat: 41.4322, lng: 14.6228, sources: [wp-samnium]}
+  - {key: frosinone, name: Frosinone, historical_name: Frusino, kind: town, region: Lazio, country: Italy, lat: 41.6333, lng: 13.35, sources: [wp-frosinone]}
+
+moments:
+  - {person: hormisdas, role: born, place: frosinone, year: 450}
+  - {person: john-i, role: born, place: siena}
+  - {person: felix-iv, role: born, place: samnium, year: 489}
+  - {person: john-ii, role: born, place: rome, year: 475}
+  - {person: agapetus-i, role: born, place: rome, year: 489}
+  - {person: vigilius, role: born, place: rome}
+  - {person: pelagius-i, role: born, place: rome}
+  - {person: john-iii, role: born, place: rome}
+  - {person: benedict-i, role: born, place: rome}
+  - {person: pelagius-ii, role: born, place: rome}
+  - {person: gregory-i, role: born, place: rome, year: 540}
+  - {person: laurentius-antipope, role: born, place: rome, year: 460}
+  - {person: dioscorus-antipope, role: born, place: alexandria, year: 450}
+
+discrepancies:
+  - key: john-i-died
+    question: "When did John I die?"
+    about: [{person: john-i}]
+    field: died
+    claims:
+      - {value: "0526-05-18", sources: [wp-john-i]}
+      - {value: "0526-05-20", sources: [wd-john-i]}
+    note: "The record uses his own article."
+  - key: silverius-died
+    question: "When did Silverius die?"
+    about: [{person: silverius}]
+    field: died
+    claims:
+      - {value: "0537-12-02", sources: [wp-silverius]}
+      - {value: "0537-06-20", sources: [wd-silverius]}
+    note: "The record uses his own article."
+  - key: pelagius-i-died
+    question: "When did Pelagius I die?"
+    about: [{person: pelagius-i}]
+    field: died
+    claims:
+      - {value: "0561-03-03", sources: [wp-pelagius-i]}
+      - {value: "0561-03-05", sources: [wd-pelagius-i]}
+    note: "The record uses his own article."
+  - key: benedict-i-died
+    question: "When did Benedict I die?"
+    about: [{person: benedict-i}]
+    field: died
+    claims:
+      - {value: "0579-07-30", sources: [wp-benedict-i]}
+      - {value: "0579-08-01", sources: [wd-benedict-i]}
+    note: "The record uses his own article."
+  - key: pelagius-ii-died
+    question: "When did Pelagius II die?"
+    about: [{person: pelagius-ii}]
+    field: died
+    claims:
+      - {value: "0590-02-07", sources: [wp-pelagius-ii]}
+      - {value: "0590-02-09", sources: [wd-pelagius-ii]}
+    note: "The record uses his own article."
