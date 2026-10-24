@@ -1,0 +1,456 @@
+batch:
+  title: "WWII, batch 2a: the European war's commanders"
+  requested: "Ty: go ahead with batch 2, the European war and its commanders"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each person's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body).
+#   Sitelinks are Wikipedia language editions only, from Wikidata on 2026-10-24. Place coordinates are from Wikidata.
+# - Types: Military for the soldiers, sailors and airmen. Goring is Government (a Nazi leader who also held civil offices for
+#   twelve years), with his Luftwaffe command as a military title. Marshall and Donitz are Military: known mainly for their service,
+#   with their later or brief civil offices (Secretary of State and of Defense; President of Germany for 23 days) as plain titles.
+# - Military titles (kind: military) are each commander's main WWII-era commands, with the realm of the forces they served. Where the
+#   article gives only a month or a year, the title has the year alone. Commands with no end date in the article are left out
+#   (Zhukov's Leningrad, Western and 1st Belorussian Fronts; Donitz as Commander of the U-boats; Guderian as Inspector General).
+#   Konev's article does not say when the 2nd Ukrainian Front gave way to the 1st, so it is one title for both.
+# - Portraits: the article lead image, linked only, where Commons marks it public domain or CC0 (Patton's is CC0). Left out, as
+#   Commons gives them CC BY or CC BY-SA: Zhukov, Konev, Rokossovsky (CC BY 4.0), Manstein, Keitel, Jodl, Donitz (CC BY-SA 3.0 de,
+#   Bundesarchiv).
+# - Birth moments left out where the place has no coordinates on Wikipedia or Wikidata: Zhukov (Strelkovka), Konev (Lodeyno),
+#   Keitel (Helmscherode), Dowding (Moffat). Rokossovsky's birthplace is disputed (see discrepancies), so it is left out too.
+#   Montgomery was born in Kennington and Donitz in Grunau: both are filed at London and Berlin. Keitel, Jodl and Goring died in
+#   Nuremberg's prison: filed at Nuremberg. Rommel's death and burial are filed at Herrlingen (now part of Blaustein). Burials are
+#   left out where the cemetery has no record here and no coordinates (Montgomery at Binsted, Manstein at Dorfmark, Guderian at
+#   Goslar, Harris at Goring). Keitel, Jodl and Goring have no grave: their ashes were scattered.
+# - Existing places reused: london, berlin, moscow, nuremberg, dresden, baden-baden, new-york-city, washington-dc,
+#   arlington-national-cemetery, kremlin-wall-necropolis, westminster-abbey.
+# - Their roles in battles come in batch 2b (2026-10-24-wwii-europe-battles.yaml).
+
+sources:
+  - {key: wp-bernard-montgomery, title: "Bernard Montgomery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bernard_Montgomery"}
+  - {key: wp-george-s-patton, title: "George S. Patton (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_S._Patton"}
+  - {key: wp-omar-bradley, title: "Omar Bradley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Omar_Bradley"}
+  - {key: wp-george-c-marshall, title: "George C. Marshall (Wikipedia)", url: "https://en.wikipedia.org/wiki/George_C._Marshall"}
+  - {key: wp-georgy-zhukov, title: "Georgy Zhukov (Wikipedia)", url: "https://en.wikipedia.org/wiki/Georgy_Zhukov"}
+  - {key: wp-ivan-konev, title: "Ivan Konev (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ivan_Konev"}
+  - {key: wp-konstantin-rokossovsky, title: "Konstantin Rokossovsky (Wikipedia)", url: "https://en.wikipedia.org/wiki/Konstantin_Rokossovsky"}
+  - {key: wp-hugh-dowding, title: "Hugh Dowding (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hugh_Dowding"}
+  - {key: wp-arthur-harris, title: "Sir Arthur Harris, 1st Baronet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sir_Arthur_Harris,_1st_Baronet"}
+  - {key: wp-erwin-rommel, title: "Erwin Rommel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Erwin_Rommel"}
+  - {key: wp-erich-von-manstein, title: "Erich von Manstein (Wikipedia)", url: "https://en.wikipedia.org/wiki/Erich_von_Manstein"}
+  - {key: wp-friedrich-paulus, title: "Friedrich Paulus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Friedrich_Paulus"}
+  - {key: wp-wilhelm-keitel, title: "Wilhelm Keitel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wilhelm_Keitel"}
+  - {key: wp-alfred-jodl, title: "Alfred Jodl (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alfred_Jodl"}
+  - {key: wp-hermann-goring, title: "Hermann Göring (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hermann_G%C3%B6ring"}
+  - {key: wp-karl-donitz, title: "Karl Dönitz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Karl_D%C3%B6nitz"}
+  - {key: wp-heinz-guderian, title: "Heinz Guderian (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heinz_Guderian"}
+  - {key: wd-places-2026-10-24, title: "Wikidata coordinates (P625), read 2026-10-24", url: "https://www.wikidata.org/"}
+  - {key: wp-isington, title: "Isington (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isington"}
+  - {key: wp-heidelberg, title: "Heidelberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heidelberg"}
+  - {key: wp-luxembourg-american-cemetery, title: "Luxembourg American Cemetery and Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/Luxembourg_American_Cemetery_and_Memorial"}
+  - {key: wp-san-gabriel-california, title: "San Gabriel, California (Wikipedia)", url: "https://en.wikipedia.org/wiki/San_Gabriel,_California"}
+  - {key: wp-clark-missouri, title: "Clark, Missouri (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clark,_Missouri"}
+  - {key: wp-uniontown-pennsylvania, title: "Uniontown, Pennsylvania (Wikipedia)", url: "https://en.wikipedia.org/wiki/Uniontown,_Pennsylvania"}
+  - {key: wp-royal-tunbridge-wells, title: "Royal Tunbridge Wells (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Tunbridge_Wells"}
+  - {key: wp-cheltenham, title: "Cheltenham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cheltenham"}
+  - {key: wp-goring-on-thames, title: "Goring-on-Thames (Wikipedia)", url: "https://en.wikipedia.org/wiki/Goring-on-Thames"}
+  - {key: wp-heidenheim-an-der-brenz, title: "Heidenheim an der Brenz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heidenheim_an_der_Brenz"}
+  - {key: wp-blaustein, title: "Blaustein (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blaustein"}
+  - {key: wp-icking, title: "Icking (Wikipedia)", url: "https://en.wikipedia.org/wiki/Icking"}
+  - {key: wp-guxhagen, title: "Guxhagen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Guxhagen"}
+  - {key: wp-wurzburg, title: "Würzburg (Wikipedia)", url: "https://en.wikipedia.org/wiki/W%C3%BCrzburg"}
+  - {key: wp-rosenheim, title: "Rosenheim (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rosenheim"}
+  - {key: wp-aumuhle, title: "Aumühle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Aum%C3%BChle"}
+  - {key: wp-chelmno, title: "Chełmno (Wikipedia)", url: "https://en.wikipedia.org/wiki/Che%C5%82mno"}
+  - {key: wp-schwangau, title: "Schwangau (Wikipedia)", url: "https://en.wikipedia.org/wiki/Schwangau"}
+
+places:
+  - {key: isington, name: Isington, kind: hamlet, region: Hampshire, country: England, lat: 51.1772, lng: -0.8927, sources: [wp-isington, wd-places-2026-10-24]}
+  - {key: heidelberg, name: Heidelberg, kind: city, region: Baden-Württemberg, country: Germany, lat: 49.4094, lng: 8.6947, sources: [wp-heidelberg, wd-places-2026-10-24]}
+  - {key: luxembourg-american-cemetery, name: Luxembourg American Cemetery and Memorial, kind: cemetery, city: Luxembourg City, country: Luxembourg, lat: 49.6117, lng: 6.1856, visitable: true, sources: [wp-luxembourg-american-cemetery, wd-places-2026-10-24]}
+  - {key: san-gabriel-california, name: "San Gabriel, California", kind: city, region: Los Angeles County, country: United States, lat: 34.1028, lng: -118.0997, sources: [wp-san-gabriel-california]}
+  - {key: clark-missouri, name: "Clark, Missouri", kind: village, region: Missouri, country: United States, lat: 39.2803, lng: -92.3436, sources: [wp-clark-missouri, wd-places-2026-10-24]}
+  - {key: uniontown-pennsylvania, name: "Uniontown, Pennsylvania", kind: city, region: Pennsylvania, country: United States, lat: 39.9, lng: -79.7244, sources: [wp-uniontown-pennsylvania, wd-places-2026-10-24]}
+  - {key: royal-tunbridge-wells, name: Royal Tunbridge Wells, kind: town, region: Kent, country: England, lat: 51.132, lng: 0.263, sources: [wp-royal-tunbridge-wells, wd-places-2026-10-24]}
+  - {key: cheltenham, name: Cheltenham, kind: town, region: Gloucestershire, country: England, lat: 51.8965, lng: -2.0784, sources: [wp-cheltenham, wd-places-2026-10-24]}
+  - {key: goring-on-thames, name: Goring-on-Thames, kind: village, region: Oxfordshire, country: England, lat: 51.523, lng: -1.135, sources: [wp-goring-on-thames, wd-places-2026-10-24]}
+  - {key: heidenheim-an-der-brenz, name: Heidenheim an der Brenz, kind: town, region: Baden-Württemberg, country: Germany, lat: 48.6761, lng: 10.1544, sources: [wp-heidenheim-an-der-brenz, wd-places-2026-10-24]}
+  - {key: herrlingen, name: Herrlingen, kind: village, city: Blaustein, region: Baden-Württemberg, country: Germany, lat: 48.4183, lng: 9.9081, note: "Coordinates are Blaustein's, the town Herrlingen is now part of", sources: [wp-blaustein]}
+  - {key: irschenhausen, name: Irschenhausen, kind: village, city: Icking, region: Bavaria, country: Germany, lat: 47.95, lng: 11.4333, note: "Coordinates are Icking's, the municipality it belongs to", sources: [wp-icking]}
+  - {key: guxhagen, name: Guxhagen, kind: village, region: Hesse, country: Germany, lat: 51.2, lng: 9.4833, sources: [wp-guxhagen, wd-places-2026-10-24]}
+  - {key: wurzburg, name: Würzburg, kind: city, region: Bavaria, country: Germany, lat: 49.7944, lng: 9.9294, sources: [wp-wurzburg, wd-places-2026-10-24]}
+  - {key: rosenheim, name: Rosenheim, kind: town, region: Bavaria, country: Germany, lat: 47.8561, lng: 12.1289, sources: [wp-rosenheim, wd-places-2026-10-24]}
+  - {key: aumuhle, name: Aumühle, kind: village, region: Schleswig-Holstein, country: Germany, lat: 53.5253, lng: 10.3135, sources: [wp-aumuhle, wd-places-2026-10-24]}
+  - {key: chelmno, name: Chełmno, historical_name: Kulm, kind: town, region: Kuyavian-Pomeranian Voivodeship, country: Poland, lat: 53.3492, lng: 18.4261, sources: [wp-chelmno, wd-places-2026-10-24]}
+  - {key: schwangau, name: Schwangau, kind: village, region: Bavaria, country: Germany, lat: 47.5767, lng: 10.7353, sources: [wp-schwangau, wd-places-2026-10-24]}
+
+people:
+  - key: bernard-montgomery
+    name: Bernard Montgomery
+    type: Military
+    born: 1887-11-17
+    died: 1976-03-24
+    prominence: 4
+    sitelinks: 72
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and main WWII commands; post-war career not built out."
+    note: Commanded the British Eighth Army at El Alamein, then the Allied ground forces in Normandy and the 21st Army Group.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/85/General_Sir_Bernard_Montgomery_in_England%2C_1943_TR1036_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/General_Sir_Bernard_Montgomery_in_England%2C_1943_TR1036_%28cropped%29.jpg/500px-General_Sir_Bernard_Montgomery_in_England%2C_1943_TR1036_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:General_Sir_Bernard_Montgomery_in_England,_1943_TR1036_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-bernard-montgomery]
+  - key: george-s-patton
+    name: George S. Patton
+    type: Military
+    born: 1885-11-11
+    died: 1945-12-21
+    prominence: 4
+    sitelinks: 60
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and main WWII commands; the First World War and the slapping incidents not built out."
+    note: Led the US Seventh Army in Sicily and the Third Army across France; relieved Bastogne; died after a car accident in Germany.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a0/General_George_Patton_by_Robert_F._Cranston%2C_Lee_Elkins%2C_and_Harry_Warnecke%2C_1945%2C_color_carbro_print%2C_from_the_National_Portrait_Gallery_-_NPG-NPG_95_404Patton-000002.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a0/General_George_Patton_by_Robert_F._Cranston%2C_Lee_Elkins%2C_and_Harry_Warnecke%2C_1945%2C_color_carbro_print%2C_from_the_National_Portrait_Gallery_-_NPG-NPG_95_404Patton-000002.jpg/500px-thumbnail.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:General_George_Patton_by_Robert_F._Cranston,_Lee_Elkins,_and_Harry_Warnecke,_1945,_color_carbro_print,_from_the_National_Portrait_Gallery_-_NPG-NPG_95_404Patton-000002.jpg
+    image_license: CC0
+    sources: [wp-george-s-patton]
+  - key: omar-bradley
+    name: Omar Bradley
+    type: Military
+    born: 1893-02-12
+    died: 1981-04-08
+    prominence: 3
+    sitelinks: 50
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and main commands; his post as Administrator of Veterans Affairs (1945–1947) not added."
+    note: Commanded the US First Army on D-Day and then the 12th Army Group; later the first Chairman of the Joint Chiefs of Staff.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3f/General_of_the_Army_Omar_Bradley.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/General_of_the_Army_Omar_Bradley.jpg/500px-General_of_the_Army_Omar_Bradley.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:General_of_the_Army_Omar_Bradley.jpg
+    image_license: Public domain
+    sources: [wp-omar-bradley]
+  - key: george-c-marshall
+    name: George C. Marshall
+    type: Military
+    born: 1880-12-31
+    died: 1959-10-16
+    prominence: 4
+    sitelinks: 83
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, his wartime command and two cabinet posts; the Marshall Plan and the China mission not built out."
+    note: US Army Chief of Staff through the war and organiser of the Allied victory; later Secretary of State and author of the Marshall Plan.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/ab/General_George_C._Marshall%2C_official_military_photo%2C_1946_%28cropped%29%28c%29.JPEG
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/General_George_C._Marshall%2C_official_military_photo%2C_1946_%28cropped%29%28c%29.JPEG/500px-General_George_C._Marshall%2C_official_military_photo%2C_1946_%28cropped%29%28c%29.JPEG
+    image_page: https://commons.wikimedia.org/wiki/File:General_George_C._Marshall,_official_military_photo,_1946_(cropped)(c).JPEG
+    image_license: Public domain
+    sources: [wp-george-c-marshall]
+  - key: georgy-zhukov
+    name: Georgy Zhukov
+    type: Military
+    born: 1896-12-01
+    died: 1974-06-18
+    prominence: 4
+    sitelinks: 90
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, death and burial, and the commands the article dates; birthplace (Strelkovka) has no coordinates."
+    note: Deputy Supreme Commander of the Red Army; defended Leningrad and Moscow, planned Stalingrad's encirclement and took Berlin.
+    sources: [wp-georgy-zhukov]
+  - key: ivan-konev
+    name: Ivan Konev
+    type: Military
+    born: 1897-12-28
+    died: 1973-05-21
+    prominence: 3
+    sitelinks: 56
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, death and burial, and two commands (the article gives months, not days); birthplace (Lodeyno) has no coordinates."
+    note: Soviet front commander at Moscow and Kursk, then in Ukraine and Poland, at Berlin and Prague.
+    sources: [wp-ivan-konev]
+  - key: konstantin-rokossovsky
+    name: Konstantin Rokossovsky
+    type: Military
+    born: 1896-12-21
+    died: 1968-08-03
+    prominence: 3
+    sitelinks: 59
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, death and burial, two fronts and his Polish ministry; birthplace disputed."
+    note: Led the Don Front at Stalingrad, the Central Front at Kursk and the Belorussian Fronts; later Poland's defence minister.
+    sources: [wp-konstantin-rokossovsky]
+  - key: hugh-dowding
+    name: Hugh Dowding
+    type: Military
+    born: 1882-04-24
+    died: 1970-02-15
+    prominence: 3
+    sitelinks: 30
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, death and burial, and his command; birthplace (Moffat) has no coordinates."
+    note: Led RAF Fighter Command in the Battle of Britain and built its radar-based air defence system.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/7c/Hugh_Dowding.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Hugh_Dowding.jpg/500px-Hugh_Dowding.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Hugh_Dowding.jpg
+    image_license: Public domain
+    sources: [wp-hugh-dowding]
+  - key: arthur-harris
+    name: Arthur Harris
+    type: Military
+    born: 1892-04-13
+    died: 1984-04-05
+    prominence: 3
+    sitelinks: 30
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, birth and death places, and his command."
+    note: Led RAF Bomber Command's area-bombing campaign against German cities from 1942, including Dresden.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0b/Air_Chief_Marshal_Sir_Arthur_Harris.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Air_Chief_Marshal_Sir_Arthur_Harris.jpg/500px-Air_Chief_Marshal_Sir_Arthur_Harris.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Air_Chief_Marshal_Sir_Arthur_Harris.jpg
+    image_license: Public domain
+    sources: [wp-arthur-harris]
+  - key: erwin-rommel
+    name: Erwin Rommel
+    type: Military
+    born: 1891-11-15
+    died: 1944-10-14
+    prominence: 4
+    sitelinks: 91
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and main commands; the First World War not built out."
+    note: The "Desert Fox"; led Axis forces in North Africa, then Army Group B in Normandy; forced to take poison after the 20 July plot.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/29/Erwin-Rommel-1941.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/29/Erwin-Rommel-1941.jpg/500px-Erwin-Rommel-1941.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Erwin-Rommel-1941.jpg
+    image_license: Public domain
+    sources: [wp-erwin-rommel]
+  - key: erich-von-manstein
+    name: Erich von Manstein
+    type: Military
+    born: 1887-11-24
+    died: 1973-06-10
+    prominence: 3
+    sitelinks: 58
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, birth and death places, and main commands; his 1949 war-crimes conviction is in the note only."
+    note: Planned the 1940 thrust through the Ardennes and led Army Group Don and South after Stalingrad; convicted of war crimes in 1949.
+    sources: [wp-erich-von-manstein]
+  - key: friedrich-paulus
+    name: Friedrich Paulus
+    type: Military
+    born: 1890-09-23
+    died: 1957-02-01
+    prominence: 3
+    sitelinks: 62
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his Stalingrad command."
+    note: Commanded the German Sixth Army destroyed at Stalingrad and surrendered a day after being made field marshal.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/74/Friedrich_Paulus.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/7/74/Friedrich_Paulus.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Friedrich_Paulus.jpg
+    image_license: Public domain
+    sources: [wp-friedrich-paulus]
+  - key: wilhelm-keitel
+    name: Wilhelm Keitel
+    type: Military
+    born: 1882-09-22
+    died: 1946-10-16
+    prominence: 3
+    sitelinks: 66
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, death place and his command; birthplace (Helmscherode) has no coordinates."
+    note: Chief of the Wehrmacht High Command throughout the war; signed the surrender in Berlin; hanged after the Nuremberg trials.
+    sources: [wp-wilhelm-keitel]
+  - key: alfred-jodl
+    name: Alfred Jodl
+    type: Military
+    born: 1890-05-10
+    died: 1946-10-16
+    prominence: 3
+    sitelinks: 61
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his two posts."
+    note: Chief of the Wehrmacht's operations staff; signed the surrender at Reims; hanged after the Nuremberg trials.
+    sources: [wp-alfred-jodl]
+  - key: hermann-goring
+    name: Hermann Göring
+    type: Government
+    born: 1893-01-12
+    died: 1946-10-15
+    prominence: 4
+    sitelinks: 86
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, the Luftwaffe command and three civil offices; his other ministries and art looting not built out."
+    note: Commander of the Luftwaffe and Hitler's designated successor until April 1945; took poison the night before his execution.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/4/49/Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/4/49/Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg/500px-Hermann_Goering_-_Nuremberg_2_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Hermann_Goering_-_Nuremberg_2_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-hermann-goring]
+  - key: karl-donitz
+    name: Karl Dönitz
+    type: Military
+    born: 1891-09-16
+    died: 1980-12-24
+    prominence: 3
+    sitelinks: 78
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, his navy command and his weeks as head of state."
+    note: Led the U-boat war, then the German navy; Hitler named him head of state, and he served ten years at Spandau.
+    sources: [wp-karl-donitz]
+  - key: heinz-guderian
+    name: Heinz Guderian
+    type: Military
+    born: 1888-06-17
+    died: 1954-05-14
+    prominence: 3
+    sitelinks: 63
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, birth and death places, and two commands."
+    note: Pioneer of armoured warfare; led panzer thrusts in Poland, at Sedan in 1940 and towards Moscow in 1941.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8b/Heinz_Guderian_portrait_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Heinz_Guderian_portrait_%28cropped%29.jpg/500px-Heinz_Guderian_portrait_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Heinz_Guderian_portrait_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-heinz-guderian]
+
+moments:
+  - {person: bernard-montgomery, role: born, place: london, year: 1887}
+  - {person: bernard-montgomery, role: died, place: isington, year: 1976}
+  - {person: george-s-patton, role: born, place: san-gabriel-california, year: 1885}
+  - {person: george-s-patton, role: died, place: heidelberg, year: 1945}
+  - {person: george-s-patton, role: buried, place: luxembourg-american-cemetery, year: 1945}
+  - {person: omar-bradley, role: born, place: clark-missouri, year: 1893}
+  - {person: omar-bradley, role: died, place: new-york-city, year: 1981}
+  - {person: omar-bradley, role: buried, place: arlington-national-cemetery, year: 1981}
+  - {person: george-c-marshall, role: born, place: uniontown-pennsylvania, year: 1880}
+  - {person: george-c-marshall, role: died, place: washington-dc, year: 1959}
+  - {person: george-c-marshall, role: buried, place: arlington-national-cemetery, year: 1959}
+  - {person: georgy-zhukov, role: died, place: moscow, year: 1974}
+  - {person: georgy-zhukov, role: buried, place: kremlin-wall-necropolis, year: 1974}
+  - {person: ivan-konev, role: died, place: moscow, year: 1973}
+  - {person: ivan-konev, role: buried, place: kremlin-wall-necropolis, year: 1973}
+  - {person: konstantin-rokossovsky, role: died, place: moscow, year: 1968}
+  - {person: konstantin-rokossovsky, role: buried, place: kremlin-wall-necropolis, year: 1968}
+  - {person: hugh-dowding, role: died, place: royal-tunbridge-wells, year: 1970}
+  - {person: hugh-dowding, role: buried, place: westminster-abbey, year: 1970}
+  - {person: arthur-harris, role: born, place: cheltenham, year: 1892}
+  - {person: arthur-harris, role: died, place: goring-on-thames, year: 1984}
+  - {person: erwin-rommel, role: born, place: heidenheim-an-der-brenz, year: 1891}
+  - {person: erwin-rommel, role: died, place: herrlingen, year: 1944}
+  - {person: erwin-rommel, role: buried, place: herrlingen, year: 1944}
+  - {person: erich-von-manstein, role: born, place: berlin, year: 1887}
+  - {person: erich-von-manstein, role: died, place: irschenhausen, year: 1973}
+  - {person: friedrich-paulus, role: born, place: guxhagen, year: 1890}
+  - {person: friedrich-paulus, role: died, place: dresden, year: 1957}
+  - {person: friedrich-paulus, role: buried, place: baden-baden, year: 1957}
+  - {person: wilhelm-keitel, role: died, place: nuremberg, year: 1946}
+  - {person: alfred-jodl, role: born, place: wurzburg, year: 1890}
+  - {person: alfred-jodl, role: died, place: nuremberg, year: 1946}
+  - {person: hermann-goring, role: born, place: rosenheim, year: 1893}
+  - {person: hermann-goring, role: died, place: nuremberg, year: 1946}
+  - {person: karl-donitz, role: born, place: berlin, year: 1891}
+  - {person: karl-donitz, role: died, place: aumuhle, year: 1980}
+  - {person: karl-donitz, role: buried, place: aumuhle, year: 1981}
+  - {person: heinz-guderian, role: born, place: chelmno, year: 1888}
+  - {person: heinz-guderian, role: died, place: schwangau, year: 1954}
+
+titles:
+  - {person: bernard-montgomery, title: Commander of the Eighth Army, realm: United Kingdom, kind: military, from: 1942, to: 1943, note: From August 1942; won at El Alamein, sources: [wp-bernard-montgomery]}
+  - {person: bernard-montgomery, title: Commander of Allied Ground Forces in Normandy, realm: United Kingdom, kind: military, from: 1944-06-06, to: 1944-09-01, sources: [wp-bernard-montgomery]}
+  - {person: bernard-montgomery, title: Commander of the 21st Army Group, realm: United Kingdom, kind: military, from: 1944, to: 1945, sources: [wp-bernard-montgomery]}
+  - {person: george-s-patton, title: "Commanding General, Seventh Army", realm: United States, kind: military, from: 1943-07-10, to: 1944-01-25, sources: [wp-george-s-patton]}
+  - {person: george-s-patton, title: "Commanding General, Third Army", realm: United States, kind: military, from: 1944-01-26, to: 1945-10-06, sources: [wp-george-s-patton]}
+  - {person: omar-bradley, title: "Commanding General, First Army", realm: United States, kind: military, from: 1944-01-28, to: 1944-08-01, sources: [wp-omar-bradley]}
+  - {person: omar-bradley, title: "Commanding General, 12th Army Group", realm: United States, kind: military, from: 1944-08-01, to: 1945-07-12, sources: [wp-omar-bradley]}
+  - {person: omar-bradley, title: Chief of Staff of the United States Army, realm: United States, kind: military, from: 1948-02-07, to: 1949-08-15, sources: [wp-omar-bradley]}
+  - {person: omar-bradley, title: Chairman of the Joint Chiefs of Staff, realm: United States, kind: military, from: 1949-08-19, to: 1953-08-15, note: "The first; his assignment list says 15 August 1949", sources: [wp-omar-bradley]}
+  - {person: george-c-marshall, title: Chief of Staff of the United States Army, realm: United States, kind: military, from: 1939-09-01, to: 1945-11-18, sources: [wp-george-c-marshall]}
+  - {person: george-c-marshall, title: United States Secretary of State, realm: United States, from: 1947-01-21, to: 1949-01-20, sources: [wp-george-c-marshall]}
+  - {person: george-c-marshall, title: United States Secretary of Defense, realm: United States, from: 1950-09-21, to: 1951-09-12, sources: [wp-george-c-marshall]}
+  - {person: georgy-zhukov, title: Chief of the General Staff of the Red Army, realm: Soviet Union, kind: military, from: 1941-01-15, to: 1941-07-29, note: "The body says from 2 February 1941", sources: [wp-georgy-zhukov]}
+  - {person: georgy-zhukov, title: Commander of the 1st Ukrainian Front, realm: Soviet Union, kind: military, from: 1944-03-01, to: 1944, note: To early May 1944, sources: [wp-georgy-zhukov]}
+  - {person: georgy-zhukov, title: Military Governor of the Soviet Occupation Zone in Germany, realm: Soviet Union, kind: military, from: 1945-06-09, to: 1946-03-21, sources: [wp-georgy-zhukov]}
+  - {person: georgy-zhukov, title: Minister of Defence of the Soviet Union, realm: Soviet Union, from: 1955-02-09, to: 1957-10-26, sources: [wp-georgy-zhukov]}
+  - {person: ivan-konev, title: Commander of the Kalinin Front, realm: Soviet Union, kind: military, from: 1941, to: 1942, note: October 1941 to August 1942, sources: [wp-ivan-konev]}
+  - {person: ivan-konev, title: "Commander of the 2nd, then the 1st Ukrainian Front", realm: Soviet Union, kind: military, from: 1943, to: 1945, note: July 1943 to May 1945, sources: [wp-ivan-konev]}
+  - {person: konstantin-rokossovsky, title: Commander of the Don Front, realm: Soviet Union, kind: military, from: 1942-09-28, to: 1943, note: To the Stalingrad surrender in February 1943, sources: [wp-konstantin-rokossovsky]}
+  - {person: konstantin-rokossovsky, title: Commander of the 2nd Belorussian Front, realm: Soviet Union, kind: military, from: 1944, to: 1945, note: November 1944 to the end of the war, sources: [wp-konstantin-rokossovsky]}
+  - {person: konstantin-rokossovsky, title: Minister of National Defence of Poland, realm: Poland, from: 1949-11-06, to: 1956-11-13, sources: [wp-konstantin-rokossovsky]}
+  - {person: hugh-dowding, title: Commander-in-Chief of RAF Fighter Command, realm: United Kingdom, kind: military, from: 1936, to: 1940-11-24, note: From July 1936, sources: [wp-hugh-dowding]}
+  - {person: arthur-harris, title: Commander-in-Chief of RAF Bomber Command, realm: United Kingdom, kind: military, from: 1942, to: 1945, note: From February 1942, sources: [wp-arthur-harris]}
+  - {person: erwin-rommel, title: Commander of the Afrika Korps, realm: Germany, kind: military, from: 1941-02-06, to: 1941, note: Then Panzer Army Africa from August 1941, sources: [wp-erwin-rommel]}
+  - {person: erwin-rommel, title: Commander of Panzer Army Africa, realm: Germany, kind: military, from: 1941, to: 1943, sources: [wp-erwin-rommel]}
+  - {person: erwin-rommel, title: Commander of Army Group B, realm: Germany, kind: military, from: 1943, to: 1944-07-17, note: "In Italy, then Normandy from January 1944, until wounded on 17 July 1944", sources: [wp-erwin-rommel]}
+  - {person: erich-von-manstein, title: Commander of the 11th Army, realm: Germany, kind: military, from: 1941, to: 1942, note: September 1941 to November 1942; took Sevastopol, sources: [wp-erich-von-manstein]}
+  - {person: erich-von-manstein, title: Commander of Army Group Don (from February 1943 Army Group South), realm: Germany, kind: military, from: 1942, to: 1944-03-30, sources: [wp-erich-von-manstein]}
+  - {person: friedrich-paulus, title: Commander of the Sixth Army, realm: Germany, kind: military, from: 1942-01-20, to: 1943-01-31, note: Surrendered at Stalingrad, sources: [wp-friedrich-paulus]}
+  - {person: wilhelm-keitel, title: Chief of the OKW, realm: Germany, kind: military, from: 1938-02-04, to: 1945-05-13, note: Wehrmacht High Command; arrested 13 May 1945, sources: [wp-wilhelm-keitel]}
+  - {person: alfred-jodl, title: Chief of the Operations Staff of the OKW, realm: Germany, kind: military, from: 1939-09-01, to: 1945-05-13, sources: [wp-alfred-jodl]}
+  - {person: alfred-jodl, title: Chief of the OKW, realm: Germany, kind: military, from: 1945-05-13, to: 1945-05-23, sources: [wp-alfred-jodl]}
+  - {person: hermann-goring, title: Commander-in-Chief of the Luftwaffe, realm: Germany, kind: military, from: 1935-03-01, to: 1945-04-23, note: Reichsmarschall from 1940, sources: [wp-hermann-goring]}
+  - {person: hermann-goring, title: President of the Reichstag, realm: Germany, from: 1932-08-30, to: 1945-04-23, sources: [wp-hermann-goring]}
+  - {person: hermann-goring, title: Minister-President of Prussia, realm: Prussia, from: 1933-04-11, to: 1945-04-23, sources: [wp-hermann-goring]}
+  - {person: karl-donitz, title: Commander-in-Chief of the Kriegsmarine, realm: Germany, kind: military, from: 1943-01-30, to: 1945-05-01, sources: [wp-karl-donitz]}
+  - {person: karl-donitz, title: President of Germany, realm: Germany, from: 1945-04-30, to: 1945-05-23, note: "Named by Hitler's will; the Flensburg Government was arrested on 23 May (dissolved de jure on 5 June)", sources: [wp-karl-donitz]}
+  - {person: heinz-guderian, title: Commander of the 2nd Panzer Group, realm: Germany, kind: military, from: 1941, to: 1941-12-25, note: Relieved of command, sources: [wp-heinz-guderian]}
+  - {person: heinz-guderian, title: Chief of the General Staff of the Army, realm: Germany, kind: military, from: 1944-07-21, to: 1945-03-28, note: "Acting, the body says", sources: [wp-heinz-guderian]}
+
+discrepancies:
+  - key: montgomery-death-place
+    question: Did Montgomery die at Alton or at Isington Mill, Isington?
+    about: [{person: bernard-montgomery}]
+    field: place
+    claims:
+      - {value: "Alton, Hampshire", sources: [wp-bernard-montgomery], note: Infobox}
+      - {value: "His home, Isington Mill, Isington, Hampshire", sources: [wp-bernard-montgomery], note: Body}
+    note: Filed at Isington, the more precise place (a hamlet near Alton).
+  - key: omar-bradley-birthplace
+    question: Was Omar Bradley born in Clark or near Moberly, Missouri?
+    about: [{person: omar-bradley}]
+    field: place
+    claims:
+      - {value: "Clark, Missouri", sources: [wp-omar-bradley], note: Infobox}
+      - {value: "Rural Randolph County, near Moberly", sources: [wp-omar-bradley], note: Body}
+    note: Filed at Clark, the infobox place (in Randolph County).
+  - key: rokossovsky-birthplace
+    question: Where was Konstantin Rokossovsky born?
+    about: [{person: konstantin-rokossovsky}]
+    field: place
+    claims:
+      - {value: "Velikiye Luki, Russia", sources: [wp-konstantin-rokossovsky]}
+      - {value: "Warsaw, Congress Poland", sources: [wp-konstantin-rokossovsky]}
+      - {value: "Telekhany, Brest Region", sources: [wp-konstantin-rokossovsky], note: Body only}
+    note: No birth moment is recorded until a source settles it.
+  - key: zhukov-military-governor-dates
+    question: When did Zhukov's time as military governor in Germany begin and end?
+    about: [{person: georgy-zhukov}]
+    field: date
+    claims:
+      - {value: "9 June 1945 – 21 March 1946", sources: [wp-georgy-zhukov], note: Infobox}
+      - {value: "10 June 1945 – 10 April 1946 (replaced by Sokolovsky)", sources: [wp-georgy-zhukov], note: Body}
+    note: The title uses the infobox dates.
+  - key: jodl-operations-staff-start
+    question: Did Jodl become chief of the OKW operations staff on 23 August or 1 September 1939?
+    about: [{person: alfred-jodl}]
+    field: date
+    claims:
+      - {value: "1939-09-01", sources: [wp-alfred-jodl], note: Infobox}
+      - {value: "1939-08-23 (chosen by Hitler)", sources: [wp-alfred-jodl], note: Body}
+    note: The title uses the infobox date.
