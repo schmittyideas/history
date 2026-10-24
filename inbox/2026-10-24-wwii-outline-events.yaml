@@ -1,0 +1,364 @@
+batch:
+  title: "WWII, batch 1b: the war's outline events"
+  requested: "Ty: search and find WWII events and famous people to add (batch 1 of the WWII build-out: outline events)"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each event's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body). Site
+#   coordinates come from each site's own article ({{coord}}); the Reims surrender museum has no English article, so its coordinates
+#   come from French Wikipedia (Musée de la Reddition, 12 rue Franklin Roosevelt).
+# - Prominence (agreed with Ty): 5 for the turning points only (invasion of Poland, Pearl Harbor, the atomic bombings, the German
+#   surrender, Japan's surrender; D-Day is already 5). 4 for major battles, treaties and conferences that shaped the war or the peace.
+#   3 for the rest.
+# - People: only leaders already in the database are linked here. Commanders (Zhukov, Nimitz, Yamamoto, Paulus, MacArthur,
+#   Tibbets...) and their roles in these events come in batches 2 and 3, which will re-send these event keys to add them.
+# - Events with only a start and end year: the intake format has no end date, so the note gives the exact end.
+# - Battle of Britain and Operation Barbarossa have no place: the articles give only "British airspace" and "the western Soviet Union".
+# - The Battle of France is placed at the Glade of the Armistice at Compiègne, where it ended (the campaign covered the Low Countries
+#   and France). The invasion of Poland is placed at Westerplatte, where the first shots were fired.
+# - Hitler's appointment: the article says only "in Hindenburg's office" in Berlin, so the city is used. The Molotov-Ribbentrop Pact
+#   is placed at the Moscow Kremlin; the article names no building inside it.
+# - The UN Charter was signed in the Herbst Theatre (Veterans Building), not the Opera House next door, where the conference met
+#   (Charter of the United Nations and Herbst Theatre articles agree).
+# - Japan's surrender anchorage (USS Missouri in Tokyo Bay): the coordinates are tagged "citation needed" on Wikipedia, so the place
+#   is marked approximate in its note.
+# - Existing events updated: Chamberlain is linked to Britain's declaration of war (his article), Eisenhower to the Normandy
+#   landings as supreme commander (his article).
+
+sources:
+  - {key: wp-adolf-hitlers-rise-to-power, title: "Adolf Hitler's rise to power (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adolf_Hitler%27s_rise_to_power"}
+  - {key: wp-anschluss, title: "Anschluss (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anschluss"}
+  - {key: wp-heldenplatz, title: "Heldenplatz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heldenplatz"}
+  - {key: wp-munich-agreement, title: "Munich Agreement (Wikipedia)", url: "https://en.wikipedia.org/wiki/Munich_Agreement"}
+  - {key: wp-fuhrerbau, title: "Führerbau (Wikipedia)", url: "https://en.wikipedia.org/wiki/F%C3%BChrerbau"}
+  - {key: wp-molotov-ribbentrop-pact, title: "Molotov–Ribbentrop Pact (Wikipedia)", url: "https://en.wikipedia.org/wiki/Molotov%E2%80%93Ribbentrop_Pact"}
+  - {key: wp-moscow-kremlin, title: "Moscow Kremlin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Moscow_Kremlin"}
+  - {key: wp-invasion-of-poland, title: "Invasion of Poland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Invasion_of_Poland"}
+  - {key: wp-battle-of-westerplatte, title: "Battle of Westerplatte (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Westerplatte"}
+  - {key: wp-battle-of-france, title: "Battle of France (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_France"}
+  - {key: wp-armistice-of-22-june-1940, title: "Armistice of 22 June 1940 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Armistice_of_22_June_1940"}
+  - {key: wp-glade-of-the-armistice, title: "Glade of the Armistice (Wikipedia)", url: "https://en.wikipedia.org/wiki/Glade_of_the_Armistice"}
+  - {key: wp-battle-of-britain, title: "Battle of Britain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Britain"}
+  - {key: wp-operation-barbarossa, title: "Operation Barbarossa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Barbarossa"}
+  - {key: wp-attack-on-pearl-harbor, title: "Attack on Pearl Harbor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"}
+  - {key: wp-pearl-harbor, title: "Pearl Harbor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pearl_Harbor"}
+  - {key: wp-uss-arizona-memorial, title: "USS Arizona Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/USS_Arizona_Memorial"}
+  - {key: wp-battle-of-midway, title: "Battle of Midway (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Midway"}
+  - {key: wp-midway-atoll, title: "Midway Atoll (Wikipedia)", url: "https://en.wikipedia.org/wiki/Midway_Atoll"}
+  - {key: wp-battle-of-stalingrad, title: "Battle of Stalingrad (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Stalingrad"}
+  - {key: wp-volgograd, title: "Volgograd (Wikipedia)", url: "https://en.wikipedia.org/wiki/Volgograd"}
+  - {key: wp-mamayev-kurgan, title: "Mamayev Kurgan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mamayev_Kurgan"}
+  - {key: wp-tehran-conference, title: "Tehran Conference (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tehran_Conference"}
+  - {key: wp-embassy-of-russia-tehran, title: "Embassy of Russia, Tehran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Embassy_of_Russia,_Tehran"}
+  - {key: wp-yalta-conference, title: "Yalta Conference (Wikipedia)", url: "https://en.wikipedia.org/wiki/Yalta_Conference"}
+  - {key: wp-livadia-palace, title: "Livadia Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Livadia_Palace"}
+  - {key: wp-german-instrument-of-surrender, title: "German Instrument of Surrender (Wikipedia)", url: "https://en.wikipedia.org/wiki/German_Instrument_of_Surrender"}
+  - {key: wp-victory-in-europe-day, title: "Victory in Europe Day (Wikipedia)", url: "https://en.wikipedia.org/wiki/Victory_in_Europe_Day"}
+  - {key: wp-museum-berlin-karlshorst, title: "Museum Berlin-Karlshorst (Wikipedia)", url: "https://en.wikipedia.org/wiki/Museum_Berlin-Karlshorst"}
+  - {key: frwp-musee-de-la-reddition, title: "Musée de la Reddition (French Wikipedia)", url: "https://fr.wikipedia.org/wiki/Mus%C3%A9e_de_la_Reddition"}
+  - {key: wp-potsdam-conference, title: "Potsdam Conference (Wikipedia)", url: "https://en.wikipedia.org/wiki/Potsdam_Conference"}
+  - {key: wp-cecilienhof, title: "Cecilienhof (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cecilienhof"}
+  - {key: wp-atomic-bombings-of-hiroshima-and-nagasaki, title: "Atomic bombings of Hiroshima and Nagasaki (Wikipedia)", url: "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki"}
+  - {key: wp-hiroshima, title: "Hiroshima (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hiroshima"}
+  - {key: wp-nagasaki, title: "Nagasaki (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nagasaki"}
+  - {key: wp-hiroshima-peace-memorial, title: "Hiroshima Peace Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hiroshima_Peace_Memorial"}
+  - {key: wp-hirohito-surrender-broadcast, title: "Hirohito surrender broadcast (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hirohito_surrender_broadcast"}
+  - {key: wp-surrender-of-japan, title: "Surrender of Japan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Surrender_of_Japan"}
+  - {key: wp-japanese-instrument-of-surrender, title: "Japanese Instrument of Surrender (Wikipedia)", url: "https://en.wikipedia.org/wiki/Japanese_Instrument_of_Surrender"}
+  - {key: wp-charter-of-the-united-nations, title: "Charter of the United Nations (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charter_of_the_United_Nations"}
+  - {key: wp-herbst-theatre, title: "Herbst Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herbst_Theatre"}
+  - {key: wp-war-memorial-opera-house, title: "War Memorial Opera House (Wikipedia)", url: "https://en.wikipedia.org/wiki/War_Memorial_Opera_House"}
+  - {key: wp-nuremberg-trials, title: "Nuremberg trials (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nuremberg_trials"}
+  - {key: wp-palace-of-justice-nuremberg, title: "Palace of Justice, Nuremberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Palace_of_Justice,_Nuremberg"}
+  - {key: wp-marco-polo-bridge-incident, title: "Marco Polo Bridge incident (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marco_Polo_Bridge_incident"}
+  - {key: wp-marco-polo-bridge, title: "Marco Polo Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marco_Polo_Bridge"}
+  - {key: wp-world-war-ii, title: "World War II (Wikipedia)", url: "https://en.wikipedia.org/wiki/World_War_II"}
+
+places:
+  - {key: heldenplatz, name: Heldenplatz, kind: square, city: Vienna, country: Austria, lat: 48.2066, lng: 16.3629, visitable: true, sources: [wp-heldenplatz]}
+  - {key: fuhrerbau, name: Führerbau, kind: building, city: Munich, region: Bavaria, country: Germany, lat: 48.1461, lng: 11.5678, visitable: true, note: "Nazi party building where the Munich Agreement was signed; now a music and theatre university", sources: [wp-fuhrerbau]}
+  - {key: moscow-kremlin, name: Moscow Kremlin, kind: fortress, city: Moscow, country: Russia, lat: 55.7517, lng: 37.6178, visitable: true, sources: [wp-moscow-kremlin]}
+  - {key: westerplatte, name: Westerplatte, kind: battlefield, city: Gdańsk, region: Pomeranian Voivodeship, country: Poland, lat: 54.4075, lng: 18.6714, visitable: true, sources: [wp-battle-of-westerplatte]}
+  - {key: glade-of-the-armistice, name: Glade of the Armistice, kind: memorial, city: Compiègne, region: Oise, country: France, lat: 49.4272, lng: 2.9064, visitable: true, note: "Where the armistices of 1918 and 22 June 1940 were signed, in the same railway carriage", sources: [wp-glade-of-the-armistice]}
+  - {key: pearl-harbor, name: Pearl Harbor, kind: harbour, city: Honolulu, region: Hawaii, country: United States, lat: 21.3679, lng: -157.9771, sources: [wp-pearl-harbor]}
+  - {key: uss-arizona-memorial, name: USS Arizona Memorial, kind: memorial, city: Honolulu, region: Hawaii, country: United States, lat: 21.365, lng: -157.95, visitable: true, sources: [wp-uss-arizona-memorial]}
+  - {key: midway-atoll, name: Midway Atoll, kind: island, country: United States, lat: 28.2075, lng: -177.35, sources: [wp-midway-atoll]}
+  - {key: volgograd, name: Volgograd, historical_name: Stalingrad, kind: city, region: Volgograd Oblast, country: Russia, lat: 48.7086, lng: 44.5147, sources: [wp-volgograd]}
+  - {key: mamayev-kurgan, name: Mamayev Kurgan, kind: memorial, city: Volgograd, country: Russia, lat: 48.7425, lng: 44.5369, visitable: true, note: "Hill fought over in the battle, now the memorial complex to it", sources: [wp-mamayev-kurgan]}
+  - {key: soviet-embassy-tehran, name: "Soviet Embassy, Tehran (now Embassy of Russia)", kind: embassy, city: Tehran, country: Iran, lat: 35.6986, lng: 51.4142, sources: [wp-embassy-of-russia-tehran]}
+  - {key: livadia-palace, name: Livadia Palace, kind: palace, city: Yalta, region: Crimea, country: Ukraine, lat: 44.4678, lng: 34.1433, visitable: true, sources: [wp-livadia-palace]}
+  - {key: musee-de-la-reddition, name: "Musée de la Reddition (Reims surrender schoolhouse)", kind: museum, city: Reims, region: Marne, country: France, lat: 49.263, lng: 4.0269, visitable: true, note: "SHAEF headquarters in a red-brick technical school, where Germany first surrendered on 7 May 1945", sources: [frwp-musee-de-la-reddition, wp-german-instrument-of-surrender]}
+  - {key: museum-berlin-karlshorst, name: Museum Berlin-Karlshorst, kind: museum, city: Berlin, country: Germany, lat: 52.4861, lng: 13.5397, visitable: true, note: "Seat of the Soviet Military Administration, where the definitive German surrender was signed", sources: [wp-museum-berlin-karlshorst]}
+  - {key: cecilienhof, name: Cecilienhof, kind: palace, city: Potsdam, region: Brandenburg, country: Germany, lat: 52.4192, lng: 13.0708, visitable: true, sources: [wp-cecilienhof]}
+  - {key: hiroshima, name: Hiroshima, kind: city, region: Hiroshima Prefecture, country: Japan, lat: 34.3914, lng: 132.4519, sources: [wp-hiroshima]}
+  - {key: nagasaki, name: Nagasaki, kind: city, region: Nagasaki Prefecture, country: Japan, lat: 32.7447, lng: 129.8736, sources: [wp-nagasaki]}
+  - {key: hiroshima-peace-memorial, name: Hiroshima Peace Memorial (Genbaku Dome), kind: memorial, city: Hiroshima, country: Japan, lat: 34.3956, lng: 132.4536, visitable: true, sources: [wp-hiroshima-peace-memorial]}
+  - {key: uss-missouri-tokyo-bay, name: "USS Missouri's anchorage, Tokyo Bay", kind: anchorage, country: Japan, lat: 35.3547, lng: 139.76, note: "Approximate: the coordinates are uncited on Wikipedia. The battleship is now a museum at Pearl Harbor", sources: [wp-surrender-of-japan]}
+  - {key: herbst-theatre, name: Herbst Theatre (Veterans Building), kind: theatre, city: San Francisco, region: California, country: United States, lat: 37.7797, lng: -122.4205, visitable: true, sources: [wp-herbst-theatre]}
+  - {key: war-memorial-opera-house, name: War Memorial Opera House, kind: opera house, city: San Francisco, region: California, country: United States, lat: 37.7786, lng: -122.4208, visitable: true, sources: [wp-war-memorial-opera-house]}
+  - {key: palace-of-justice-nuremberg, name: "Palace of Justice, Nuremberg", kind: courthouse, city: Nuremberg, region: Bavaria, country: Germany, lat: 49.4549, lng: 11.0465, visitable: true, visit_site: Memorium Nuremberg Trials, sources: [wp-palace-of-justice-nuremberg]}
+  - {key: marco-polo-bridge, name: Marco Polo Bridge (Lugou Bridge), kind: bridge, city: Beijing, country: China, lat: 39.8492, lng: 116.2131, visitable: true, sources: [wp-marco-polo-bridge]}
+
+events:
+  - key: hitler-appointed-chancellor
+    name: Hitler appointed Chancellor of Germany
+    type: Appointment
+    date: 1933-01-30
+    place: berlin
+    prominence: 4
+    people: [{person: adolf-hitler, role: appointed}]
+    note: President Hindenburg appointed Hitler Chancellor at the head of a Nazi–nationalist coalition cabinet, sworn in in Hindenburg's office.
+    sources: [wp-adolf-hitlers-rise-to-power]
+  - key: anschluss
+    name: Anschluss (Germany annexes Austria)
+    type: Annexation
+    date: 1938-03-12
+    place: vienna
+    places: [{place: heldenplatz, role: speech, note: "Hitler announced the Anschluss here on 15 March 1938"}]
+    prominence: 3
+    people: [{person: adolf-hitler, role: announced}]
+    note: German troops entered Austria on 12 March 1938; the union was enacted by law on 13 March and put to a referendum on 10 April.
+    sources: [wp-anschluss, wp-heldenplatz]
+  - key: munich-agreement
+    name: Munich Agreement
+    type: Treaty
+    date: 1938-09-30
+    place: fuhrerbau
+    prominence: 4
+    people: [{person: adolf-hitler, role: signed}, {person: neville-chamberlain, role: signed}, {person: benito-mussolini, role: signed}]
+    note: Germany, Britain, France and Italy agreed to Germany's annexation of the Sudetenland; agreed on 29 September, signed at about 1:30 a.m. on the 30th.
+    sources: [wp-munich-agreement, wp-fuhrerbau]
+  - key: molotov-ribbentrop-pact
+    name: Molotov–Ribbentrop Pact
+    type: Treaty
+    date: 1939-08-23
+    place: moscow-kremlin
+    prominence: 4
+    people: [{person: joseph-stalin, role: present}]
+    note: German–Soviet non-aggression pact, with a secret protocol dividing Eastern Europe; signed by Ribbentrop and Molotov. Germany broke it in June 1941.
+    sources: [wp-molotov-ribbentrop-pact]
+  - key: invasion-of-poland
+    name: Invasion of Poland
+    type: Invasion
+    date: 1939-09-01
+    end_year: 1939
+    place: westerplatte
+    prominence: 5
+    note: Germany invaded on 1 September and the Soviet Union on 17 September; Poland was divided by 6 October. Generally taken as the start of the war.
+    sources: [wp-invasion-of-poland, wp-battle-of-westerplatte, wp-world-war-ii]
+  - key: battle-of-france
+    name: Battle of France
+    type: Campaign
+    date: 1940-05-10
+    end_year: 1940
+    place: glade-of-the-armistice
+    prominence: 4
+    note: German offensive through the Low Countries and France; the armistice was signed at Compiègne on 22 June and took effect on 25 June 1940.
+    sources: [wp-battle-of-france, wp-armistice-of-22-june-1940]
+  - key: battle-of-britain
+    name: Battle of Britain
+    type: Battle
+    date: 1940-07-10
+    end_year: 1940
+    prominence: 4
+    note: Air campaign in which the RAF defeated the Luftwaffe's attempt to win air superiority over Britain (10 July – 31 October 1940, by the British dating).
+    sources: [wp-battle-of-britain]
+  - key: operation-barbarossa
+    name: Operation Barbarossa
+    type: Invasion
+    date: 1941-06-22
+    end_year: 1941
+    prominence: 4
+    people: [{person: adolf-hitler, role: commander}, {person: joseph-stalin, role: commander}]
+    note: The Axis invasion of the Soviet Union, which stalled before Moscow in December 1941 (the article ends it on 5 December).
+    sources: [wp-operation-barbarossa]
+  - key: attack-on-pearl-harbor
+    name: Attack on Pearl Harbor
+    type: Attack
+    date: 1941-12-07
+    place: pearl-harbor
+    places: [{place: uss-arizona-memorial, role: memorial, note: "Over the wreck of USS Arizona, sunk in the attack"}]
+    prominence: 5
+    note: Japanese carrier aircraft struck the US Pacific Fleet at 7:48 a.m. Hawaiian time, bringing the United States into the war.
+    sources: [wp-attack-on-pearl-harbor, wp-uss-arizona-memorial]
+  - key: battle-of-midway
+    name: Battle of Midway
+    type: Battle
+    date: 1942-06-04
+    end_year: 1942
+    place: midway-atoll
+    prominence: 4
+    note: US carriers sank four Japanese carriers near Midway (4–7 June 1942), turning the naval war in the Pacific.
+    sources: [wp-battle-of-midway, wp-midway-atoll]
+  - key: battle-of-stalingrad
+    name: Battle of Stalingrad
+    type: Battle
+    date: 1942-07-17
+    end_year: 1943
+    place: volgograd
+    places: [{place: mamayev-kurgan, role: memorial, note: "Hill fought over in the battle; now its memorial"}]
+    prominence: 4
+    people: [{person: adolf-hitler, role: commander}, {person: joseph-stalin, role: commander}]
+    note: Soviet victory that destroyed the German Sixth Army (to 2 February 1943); often seen as the turning point of the war in Europe.
+    sources: [wp-battle-of-stalingrad, wp-mamayev-kurgan]
+  - key: tehran-conference
+    name: Tehran Conference
+    type: Conference
+    date: 1943-11-28
+    end_year: 1943
+    place: soviet-embassy-tehran
+    prominence: 3
+    people: [{person: joseph-stalin, role: attended}, {person: franklin-d-roosevelt, role: attended}, {person: winston-churchill, role: attended}]
+    note: First meeting of the Big Three (to 1 December); they agreed to open a second front in Western Europe.
+    sources: [wp-tehran-conference, wp-embassy-of-russia-tehran]
+  - key: yalta-conference
+    name: Yalta Conference
+    type: Conference
+    date: 1945-02-04
+    end_year: 1945
+    place: livadia-palace
+    prominence: 4
+    people: [{person: joseph-stalin, role: attended}, {person: franklin-d-roosevelt, role: attended}, {person: winston-churchill, role: attended}]
+    note: The Big Three planned post-war Europe and Soviet entry into the war against Japan (4–11 February 1945).
+    sources: [wp-yalta-conference, wp-livadia-palace]
+  - key: death-of-benito-mussolini
+    name: Death of Benito Mussolini
+    type: Death
+    date: 1945-04-28
+    place: giulino-di-mezzegra
+    prominence: 3
+    people: [{person: benito-mussolini, role: died}]
+    note: Partisans captured Mussolini near Dongo and shot him and Clara Petacci at Giulino di Mezzegra; the bodies were shown in Milan.
+    sources: [wp-death-of-benito-mussolini]
+  - key: death-of-adolf-hitler
+    name: Death of Adolf Hitler
+    type: Death
+    date: 1945-04-30
+    place: fuhrerbunker
+    prominence: 4
+    people: [{person: adolf-hitler, role: died}, {person: eva-braun, role: died}]
+    note: Hitler shot himself in the Führerbunker as Soviet forces took Berlin; Eva Braun died with him, and both bodies were burned.
+    sources: [wp-death-of-adolf-hitler]
+  - key: german-surrender-1945
+    name: German surrender (VE Day)
+    type: Surrender
+    date: 1945-05-08
+    place: museum-berlin-karlshorst
+    places: [{place: musee-de-la-reddition, role: signing, note: "Preliminary act signed by Jodl at 02:41 on 7 May 1945 at SHAEF headquarters"}]
+    prominence: 5
+    note: Germany surrendered unconditionally at Reims on 7 May; the definitive act was signed at Berlin-Karlshorst and took effect at 23:01 on 8 May, VE Day.
+    sources: [wp-german-instrument-of-surrender, wp-victory-in-europe-day, wp-museum-berlin-karlshorst]
+  - key: signing-of-the-united-nations-charter
+    name: Signing of the United Nations Charter
+    type: Treaty
+    date: 1945-06-26
+    place: herbst-theatre
+    places: [{place: war-memorial-opera-house, role: venue, note: "The San Francisco Conference met here from April 1945"}]
+    prominence: 4
+    note: Fifty nations signed the Charter in San Francisco; it came into force on 24 October 1945.
+    sources: [wp-charter-of-the-united-nations, wp-herbst-theatre, wp-war-memorial-opera-house]
+  - key: potsdam-conference
+    name: Potsdam Conference
+    type: Conference
+    date: 1945-07-17
+    end_year: 1945
+    place: cecilienhof
+    prominence: 3
+    people: [{person: joseph-stalin, role: attended}, {person: harry-s-truman, role: attended}, {person: winston-churchill, role: attended}, {person: clement-attlee, role: attended}]
+    note: The Allied leaders set terms for occupied Germany and issued the Potsdam Declaration to Japan (to 2 August); Attlee replaced Churchill midway.
+    sources: [wp-potsdam-conference, wp-cecilienhof]
+  - key: atomic-bombings-of-hiroshima-and-nagasaki
+    name: Atomic bombings of Hiroshima and Nagasaki
+    type: Bombing
+    date: 1945-08-06
+    place: hiroshima
+    places:
+      - {place: nagasaki, role: target, note: "Second bomb (Fat Man), 9 August 1945; Kokura was the primary target"}
+      - {place: hiroshima-peace-memorial, role: memorial, note: "The building left standing nearest the Hiroshima hypocentre"}
+    prominence: 5
+    note: The United States dropped atomic bombs on Hiroshima (6 August) and Nagasaki (9 August 1945), the only nuclear weapons used in war.
+    sources: [wp-atomic-bombings-of-hiroshima-and-nagasaki, wp-hiroshima-peace-memorial]
+  - key: hirohito-surrender-broadcast
+    name: Hirohito's surrender broadcast
+    type: Broadcast
+    date: 1945-08-15
+    place: tokyo
+    prominence: 4
+    people: [{person: hirohito, role: announced}]
+    note: At noon Japan time, a recording of Hirohito announced that Japan accepted the Potsdam Declaration; often marked as VJ Day.
+    sources: [wp-hirohito-surrender-broadcast]
+  - key: surrender-of-japan
+    name: Surrender of Japan
+    type: Surrender
+    date: 1945-09-02
+    place: uss-missouri-tokyo-bay
+    prominence: 5
+    note: Japan's Instrument of Surrender was signed aboard USS Missouri in Tokyo Bay, ending the Second World War.
+    sources: [wp-surrender-of-japan, wp-japanese-instrument-of-surrender, wp-world-war-ii]
+  - key: nuremberg-trials
+    name: Nuremberg trials
+    type: Trial
+    date: 1945-11-20
+    end_year: 1946
+    place: palace-of-justice-nuremberg
+    prominence: 4
+    note: The International Military Tribunal tried 22 leading Nazis; on 1 October 1946 twelve were sentenced to death and three acquitted.
+    sources: [wp-nuremberg-trials, wp-palace-of-justice-nuremberg]
+  - key: marco-polo-bridge-incident
+    name: Marco Polo Bridge incident
+    type: Battle
+    date: 1937-07-07
+    place: marco-polo-bridge
+    prominence: 4
+    note: A night clash between Chinese and Japanese troops near Beijing that began the Second Sino-Japanese War; some date the war in Asia from here.
+    sources: [wp-marco-polo-bridge-incident, wp-marco-polo-bridge, wp-world-war-ii]
+  # Existing events: link the leaders now in the database.
+  - key: britain-enters-second-world-war
+    people: [{person: neville-chamberlain, role: declared}]
+    sources: [wp-neville-chamberlain]
+  - key: normandy-landings-1944
+    people: [{person: dwight-d-eisenhower, role: supreme commander}]
+    sources: [wp-dwight-d-eisenhower]
+
+discrepancies:
+  - key: molotov-ribbentrop-signing-date
+    question: Was the Molotov–Ribbentrop Pact signed on 23 or 24 August 1939?
+    about: [{event: molotov-ribbentrop-pact}]
+    field: date
+    claims:
+      - {value: "1939-08-23", sources: [wp-molotov-ribbentrop-pact], note: Infobox date signed}
+      - {value: "Signed on 24 August, backdated to 23 August", sources: [wp-molotov-ribbentrop-pact], note: Body}
+    note: The record uses 23 August, the pact's own date.
+  - key: battle-of-britain-dates
+    question: When did the Battle of Britain begin and end?
+    about: [{event: battle-of-britain}]
+    field: date
+    claims:
+      - {value: "10 July – 31 October 1940", sources: [wp-battle-of-britain], note: British dating; the article's main dates}
+      - {value: "July 1940 – mid-May 1941", sources: [wp-battle-of-britain], note: "German historians' usual dating (article footnote)"}
+    note: The record uses the British dates.
+  - key: pearl-harbor-date-japan
+    question: Did the attack on Pearl Harbor happen on 7 or 8 December 1941?
+    about: [{event: attack-on-pearl-harbor}]
+    field: date
+    claims:
+      - {value: "7 December 1941, 7:48 a.m. Hawaiian time", sources: [wp-attack-on-pearl-harbor]}
+      - {value: "8 December 1941, 3:18 a.m. Japan Standard Time (as kept by the Japanese fleet)", sources: [wp-attack-on-pearl-harbor]}
+    note: The same moment in two time zones; the record uses the local date, 7 December.
+  - key: stalingrad-start-date
+    question: Did the Battle of Stalingrad begin on 17 July or 23 August 1942?
+    about: [{event: battle-of-stalingrad}]
+    field: date
+    claims:
+      - {value: "1942-07-17", sources: [wp-battle-of-stalingrad], note: "Infobox; 'more common in the war's historiography'"}
+      - {value: "1942-08-23", sources: [wp-battle-of-stalingrad], note: "Some historians start it in August, most commonly 23 August"}
+    note: The record uses 17 July, the infobox date.
+  - key: german-surrender-date
+    question: Did Germany surrender on 7, 8 or 9 May 1945?
+    about: [{event: german-surrender-1945}]
+    field: date
+    claims:
+      - {value: "7 May 1945, 02:41, at Reims (preliminary act)", sources: [wp-german-instrument-of-surrender]}
+      - {value: "8 May 1945 at Berlin-Karlshorst (definitive act; signed near 01:00 on 9 May CET and backdated)", sources: [wp-german-instrument-of-surrender]}
+      - {value: "9 May 1945 (Moscow time; VE Day in Russia and other countries)", sources: [wp-victory-in-europe-day]}
+    note: The record uses 8 May, when the surrender took effect and VE Day in the West.
