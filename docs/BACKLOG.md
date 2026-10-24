@@ -62,12 +62,6 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### In progress
 
-#### [P2] WWII: events and people
-`type: task` · `area: data` · `status: in progress` · `issue: #262`
-
-Five batches: (1) leaders and the war's outline events, (2) European war and commanders, (3) Pacific and China, (4) Holocaust and resistance, (5) science and codebreaking. Turning points get 5 stars (invasion of Poland, Pearl Harbor, Hiroshima and Nagasaki, VE Day, Japan's surrender), major battles 4. Leaders' titles use their real offices; commands are `kind: military` titles.
-Source: Ty, 2026-10-24.
-
 #### [P1] Places: today's location (city, county, country) and current coordinates
 `type: task` · `area: data` · `status: ready` · `issue: #39`
 
@@ -155,6 +149,13 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] WWII: events and people
+`type: task` · `area: data` · `status: done` · `issue: #262`
+
+Five batches, nine PRs, all checked against English Wikipedia: (1) the war's leaders and 23 outline events (#264, #265); (2) 17 European commanders and 17 battles, with the D-Day beaches (#266, #267); (3) 19 Asia-Pacific leaders and commanders, including Mao, Curtin and Blamey, and 21 events from Mukden to the Tokyo Trial (#268, #269); (4) 19 Holocaust perpetrators, victims, rescuers and resisters, and 18 events from the Nuremberg Laws to the Eichmann trial (#270, #271); (5) 15 scientists and codebreakers and 11 events, with Groves's Manhattan Project command (#272). Commands are iron military titles. Source disagreements (death tolls, dates) are logged as discrepancies. Done 2026-10-24.
+Left for later: New Zealand's leaders; portraits that aren't public domain; commands the articles give no dates for; the duplicate Saint Petersburg places (`st-petersburg`, `saint-petersburg`).
+Source: Ty, 2026-10-24.
 
 #### [P2] Military group, and military titles drawn in iron
 `type: enhancement` · `area: site` · `status: done` · `issue: #261`
