@@ -1,0 +1,386 @@
+batch:
+  title: "WWII, batch 1a: the war's leaders"
+  requested: "Ty: search and find WWII events and famous people to add (batch 1 of the WWII build-out: leaders)"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each person's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox, lead, birth and
+#   death passages). Sitelinks are Wikipedia language editions only, from Wikidata on 2026-10-24. Place coordinates come from each
+#   place's own article, or from its Wikidata coordinates where the article has none.
+# - The outline events of the war (Munich, Poland, Pearl Harbor, Stalingrad, Hiroshima, the surrenders...) are in the next file,
+#   2026-10-24-wwii-outline-events.yaml, so each preview stays near 150 rows.
+# - Titles use each person's real offices, one wording per office (agreed with Ty on 2026-10-24). New realms: Germany, Soviet Union,
+#   Italy, China, Italian Social Republic (the Mussolini article treats it as a separate German puppet state), Albania.
+#   Chiang's presidency 1950-1975 was on Taiwan; it stays under realm China (the Republic of China), as his article does.
+# - Military titles (kind: military, new in sql/018): Eisenhower's four commands, from his infobox, and Petain's two First World War
+#   commands (2nd Army at Verdun; commander-in-chief of the French Army). Supreme commands held ex officio by heads of state
+#   (Hitler over the Wehrmacht, Stalin as People's Commissar for Defence) are left out: they were powers of the office, not service.
+#   Commanders proper (Patton, Zhukov, Rommel, Yamamoto...) come in batches 2 and 3.
+# - Leslie Groves and Desmond Doss become type Military (agreed with Ty). Eisenhower stays Government.
+# - Victor Emmanuel III as Emperor of Ethiopia (1936-1941) is marked disputed: a title taken by conquest while Haile Selassie
+#   reigned in exile. King of the Albanians (1939-1943) likewise came by invasion but was not contested in the article.
+# - Portraits: the article lead image, linked only, where Commons marks it public domain. Left out: Hitler (Commons: CC BY-SA 3.0 de,
+#   Bundesarchiv/Hoffmann) and Chiang Kai-shek (Commons: Taiwan's GWOIA attribution licence), as the site links only public-domain
+#   or CC0 pictures. Attlee's image is public domain on Commons but its author is uncertain (presumably Yousuf Karsh).
+# - Places: Stalin's death is filed at Moscow (infobox "Moscow"; the body says he was found at his Kuntsevo Dacha, which has no
+#   coordinates on Wikipedia or Wikidata). Hirohito's birth is filed at Tokyo, as the building is disputed (see discrepancies).
+#   Attlee was born in Putney and died at Westminster Hospital: both are filed at London. Chamberlain was born at Southbourne,
+#   Edgbaston: filed at Birmingham. Petain died in a private house at Port-Joinville on the Ile d'Yeu: filed at the island.
+#   Hitler and Eva Braun died in the Fuhrerbunker (Death of Adolf Hitler; the Hitler article says only that they died "the next day"
+#   after marrying in the bunker). Existing places reused: london, birmingham, munich, naples, alexandria, lille, moscow, tokyo,
+#   westminster-abbey.
+# - Not confirmed, so left out: Hitler's birth house, Chamberlain's house at Heckfield (the village is used), de Gaulle's churchyard
+#   (Colombey is used), Chiang's place of death beyond Taipei.
+# - Chiang's death: 5 April 1975 in the article; a hidden editor comment in the infobox says "(or 4 April)". The visible date is used;
+#   not logged as a discrepancy, as no source is cited for 4 April.
+# - Churchill's first term runs unbroken 1940-1945 as in his infobox (he resigned on 23 May 1945 and formed the caretaker ministry
+#   the same day).
+
+sources:
+  - {key: wp-adolf-hitler, title: "Adolf Hitler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adolf_Hitler"}
+  - {key: wp-eva-braun, title: "Eva Braun (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eva_Braun"}
+  - {key: wp-death-of-adolf-hitler, title: "Death of Adolf Hitler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Death_of_Adolf_Hitler"}
+  - {key: wp-joseph-stalin, title: "Joseph Stalin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joseph_Stalin"}
+  - {key: wp-benito-mussolini, title: "Benito Mussolini (Wikipedia)", url: "https://en.wikipedia.org/wiki/Benito_Mussolini"}
+  - {key: wp-hirohito, title: "Hirohito (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hirohito"}
+  - {key: wp-charles-de-gaulle, title: "Charles de Gaulle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charles_de_Gaulle"}
+  - {key: wp-philippe-petain, title: "Philippe Pétain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philippe_P%C3%A9tain"}
+  - {key: wp-chiang-kai-shek, title: "Chiang Kai-shek (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chiang_Kai-shek"}
+  - {key: wp-neville-chamberlain, title: "Neville Chamberlain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Neville_Chamberlain"}
+  - {key: wp-clement-attlee, title: "Clement Attlee (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clement_Attlee"}
+  - {key: wp-victor-emmanuel-iii-of-italy, title: "Victor Emmanuel III (Wikipedia)", url: "https://en.wikipedia.org/wiki/Victor_Emmanuel_III"}
+  - {key: wp-germany, title: "Germany (Wikipedia)", url: "https://en.wikipedia.org/wiki/Germany"}
+  - {key: wp-soviet-union, title: "Soviet Union (Wikipedia)", url: "https://en.wikipedia.org/wiki/Soviet_Union"}
+  - {key: wp-kingdom-of-italy, title: "Kingdom of Italy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingdom_of_Italy"}
+  - {key: wp-republic-of-china-1912-1949, title: "Republic of China (1912–1949) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)"}
+  - {key: wp-italian-social-republic, title: "Italian Social Republic (Wikipedia)", url: "https://en.wikipedia.org/wiki/Italian_Social_Republic"}
+  - {key: wp-albanian-kingdom-1939-1943, title: "Albanian Kingdom (1939–1943) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albanian_Kingdom_(1939%E2%80%931943)"}
+  - {key: wp-braunau-am-inn, title: "Braunau am Inn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Braunau_am_Inn"}
+  - {key: wp-fuhrerbunker, title: "Führerbunker (Wikipedia)", url: "https://en.wikipedia.org/wiki/F%C3%BChrerbunker"}
+  - {key: wp-gori-georgia, title: "Gori, Georgia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gori,_Georgia"}
+  - {key: wp-kremlin-wall-necropolis, title: "Kremlin Wall Necropolis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kremlin_Wall_Necropolis"}
+  - {key: wp-predappio, title: "Predappio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Predappio"}
+  - {key: wp-death-of-benito-mussolini, title: "Death of Benito Mussolini (Wikipedia)", url: "https://en.wikipedia.org/wiki/Death_of_Benito_Mussolini"}
+  - {key: wp-mezzegra, title: "Mezzegra (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mezzegra"}
+  - {key: wp-fukiage-palace, title: "Fukiage Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fukiage_Palace"}
+  - {key: wp-musashi-imperial-graveyard, title: "Musashi Imperial Graveyard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Musashi_Imperial_Graveyard"}
+  - {key: wp-colombey-les-deux-eglises, title: "Colombey-les-Deux-Églises (Wikipedia)", url: "https://en.wikipedia.org/wiki/Colombey_les_Deux_%C3%89glises"}
+  - {key: wp-cauchy-a-la-tour, title: "Cauchy-à-la-Tour (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cauchy-%C3%A0-la-Tour"}
+  - {key: wp-ile-d-yeu, title: "Île d'Yeu (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%8Ele_d%27Yeu"}
+  - {key: wp-xikou, title: "Xikou (Wikipedia)", url: "https://en.wikipedia.org/wiki/Xikou"}
+  - {key: wp-taipei, title: "Taipei (Wikipedia)", url: "https://en.wikipedia.org/wiki/Taipei"}
+  - {key: wp-cihu-mausoleum, title: "Cihu Mausoleum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cihu_Mausoleum"}
+  - {key: wp-heckfield, title: "Heckfield (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heckfield"}
+
+realms:
+  - {name: Germany, region: Western Europe, country: Germany, sources: [wp-germany]}
+  - {name: Soviet Union, region: Eastern Europe, country: Russia, sources: [wp-soviet-union]}
+  - {name: Italy, region: Western Europe, country: Italy, sources: [wp-kingdom-of-italy]}
+  - {name: China, region: East Asia, country: China, sources: [wp-republic-of-china-1912-1949]}
+  - {name: Italian Social Republic, region: Western Europe, country: Italy, sources: [wp-italian-social-republic]}
+  - {name: Albania, region: Eastern Europe, country: Albania, sources: [wp-albanian-kingdom-1939-1943]}
+
+places:
+  - {key: braunau-am-inn, name: Braunau am Inn, kind: town, region: Upper Austria, country: Austria, lat: 48.2583, lng: 13.0353, sources: [wp-braunau-am-inn]}
+  - {key: fuhrerbunker, name: Führerbunker, kind: bunker, city: Berlin, region: Berlin, country: Germany, lat: 52.5125, lng: 13.3815, founded: 1936, ended: 1947, visitable: false, built_by: "Hochtief, for Adolf Hitler (Vorbunker 1936, main bunker 1944)", note: "Air-raid shelter under the Reich Chancellery garden where Hitler spent his last months; the site is now a car park with an information board", sources: [wp-fuhrerbunker]}
+  - {key: gori, name: "Gori, Georgia", kind: city, region: Shida Kartli, country: Georgia, lat: 41.9667, lng: 44.1, sources: [wp-gori-georgia]}
+  - {key: kremlin-wall-necropolis, name: Kremlin Wall Necropolis, kind: cemetery, city: Moscow, country: Russia, lat: 55.7538, lng: 37.6193, visitable: true, sources: [wp-kremlin-wall-necropolis]}
+  - {key: predappio, name: Predappio, kind: town, region: Emilia-Romagna, country: Italy, lat: 44.1042, lng: 11.985, sources: [wp-predappio]}
+  - {key: giulino-di-mezzegra, name: Giulino di Mezzegra, kind: village, city: Tremezzina, region: Lombardy, country: Italy, lat: 45.9825, lng: 9.2061, sources: [wp-death-of-benito-mussolini, wp-mezzegra]}
+  - {key: fukiage-palace, name: Fukiage Palace, kind: palace, city: Tokyo, country: Japan, lat: 35.6843, lng: 139.7484, visitable: false, sources: [wp-fukiage-palace]}
+  - {key: musashi-imperial-graveyard, name: Musashi Imperial Graveyard, kind: cemetery, city: Hachiōji, region: Tokyo, country: Japan, lat: 35.6502, lng: 139.28, visitable: true, sources: [wp-musashi-imperial-graveyard]}
+  - {key: colombey-les-deux-eglises, name: Colombey-les-Deux-Églises, kind: village, region: Haute-Marne, country: France, lat: 48.2233, lng: 4.8858, sources: [wp-colombey-les-deux-eglises]}
+  - {key: cauchy-a-la-tour, name: Cauchy-à-la-Tour, kind: village, region: Pas-de-Calais, country: France, lat: 50.5044, lng: 2.4525, sources: [wp-cauchy-a-la-tour]}
+  - {key: ile-d-yeu, name: Île d'Yeu, kind: island, region: Vendée, country: France, lat: 46.725, lng: -2.347, sources: [wp-ile-d-yeu]}
+  - {key: xikou, name: Xikou, kind: town, city: Fenghua, region: Zhejiang, country: China, lat: 29.6898, lng: 121.2835, sources: [wp-xikou]}
+  - {key: taipei, name: Taipei, kind: city, country: Taiwan, lat: 25.0375, lng: 121.5625, sources: [wp-taipei]}
+  - {key: cihu-mausoleum, name: Cihu Mausoleum, kind: mausoleum, city: Taoyuan, country: Taiwan, lat: 24.8422, lng: 121.2993, visitable: true, sources: [wp-cihu-mausoleum]}
+  - {key: heckfield, name: Heckfield, kind: village, region: Hampshire, country: England, lat: 51.3423, lng: -0.9741, sources: [wp-heckfield]}
+
+people:
+  - key: adolf-hitler
+    name: Adolf Hitler
+    type: Government
+    born: 1889-04-20
+    died: 1945-04-30
+    prominence: 5
+    sitelinks: 251
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, birth and death places; the war's events are in batch 1b. Life before 1933, the Holocaust and military decisions not built out."
+    note: Nazi dictator of Germany 1933–1945; started the Second World War in Europe by invading Poland; central to the Holocaust.
+    sources: [wp-adolf-hitler]
+  - key: eva-braun
+    name: Eva Braun
+    type: Notable
+    born: 1912-02-06
+    died: 1945-04-30
+    prominence: 2
+    sitelinks: 83
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and marriage only."
+    note: Hitler's companion; married him in the Führerbunker on 29 April 1945 and died with him the next day.
+    sources: [wp-eva-braun]
+  - key: joseph-stalin
+    name: Joseph Stalin
+    type: Government
+    born: 1878-12-18
+    died: 1953-03-05
+    prominence: 5
+    sitelinks: 209
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, birth, death and burial places. Purges, collectivisation and the post-war years not built out."
+    note: Soviet dictator; led the USSR through the war against Germany on the Eastern Front; Generalissimo from 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/08/StalinCropped1943.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/StalinCropped1943.jpg/500px-StalinCropped1943.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:StalinCropped1943.jpg
+    image_license: Public domain
+    sources: [wp-joseph-stalin]
+  - key: benito-mussolini
+    name: Benito Mussolini
+    type: Government
+    born: 1883-07-29
+    died: 1945-04-28
+    prominence: 4
+    sitelinks: 154
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, birth, death and burial places. The Ethiopian war and the Fascist regime's history not built out."
+    note: Fascist dictator of Italy; took Italy into the war on Germany's side in June 1940; later led a German puppet state in the north.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8a/Mussolini_mezzobusto.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Mussolini_mezzobusto.jpg/500px-Mussolini_mezzobusto.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Mussolini_mezzobusto.jpg
+    image_license: Public domain
+    sources: [wp-benito-mussolini]
+  - key: hirohito
+    name: Hirohito
+    type: Royalty
+    born: 1901-04-29
+    died: 1989-01-07
+    prominence: 4
+    sitelinks: 139
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, titles, birth, death and burial places. The post-war reign not built out."
+    note: Emperor of Japan through its war in Asia and the Pacific; announced Japan's surrender by radio in August 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/b/bc/Hirohito_in_dress_uniform_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bc/Hirohito_in_dress_uniform_%28cropped%29.jpg/500px-Hirohito_in_dress_uniform_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Hirohito_in_dress_uniform_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-hirohito]
+  - key: charles-de-gaulle
+    name: Charles de Gaulle
+    type: Government
+    born: 1890-11-22
+    died: 1970-11-09
+    prominence: 4
+    sitelinks: 174
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, birth, death and burial places. His 1940 commands and the Fifth Republic years not built out."
+    note: Led Free France from London after his Appeal of 18 June 1940; headed France's liberation government; later President.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/9d/De_Gaulle-OWI_%28cropped%29_%28c%29%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9d/De_Gaulle-OWI_%28cropped%29_%28c%29%282%29.jpg/500px-De_Gaulle-OWI_%28cropped%29_%28c%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:De_Gaulle-OWI_(cropped)_(c)(2).jpg
+    image_license: Public domain
+    sources: [wp-charles-de-gaulle]
+  - key: philippe-petain
+    name: Philippe Pétain
+    type: Government
+    born: 1856-04-24
+    died: 1951-07-23
+    prominence: 3
+    sitelinks: 85
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, two First World War commands, birth, death and burial places. His trial and Verdun not built out."
+    note: First World War hero of Verdun; signed the 1940 armistice and led collaborationist Vichy France; his ranks were revoked in 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/a/a9/P%C3%A9tain_-_portrait_photographique.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/P%C3%A9tain_-_portrait_photographique.jpg/500px-P%C3%A9tain_-_portrait_photographique.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:P%C3%A9tain_-_portrait_photographique.jpg
+    image_license: Public domain
+    sources: [wp-philippe-petain]
+  - key: chiang-kai-shek
+    name: Chiang Kai-shek
+    type: Government
+    born: 1887-10-31
+    died: 1975-04-05
+    prominence: 4
+    sitelinks: 125
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, offices, birth, death and burial places. The civil war and Taiwan years not built out."
+    note: Nationalist leader of China in the war against Japan (1937–1945); later ruled the Republic of China on Taiwan.
+    sources: [wp-chiang-kai-shek]
+  - key: neville-chamberlain
+    name: Neville Chamberlain
+    type: Government
+    born: 1869-03-18
+    died: 1940-11-09
+    prominence: 3
+    sitelinks: 95
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, office, birth, death and burial places."
+    note: British Prime Minister 1937–1940; signed the 1938 Munich Agreement and declared war on Germany in September 1939.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/de/Neville-Chamberlain.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Neville-Chamberlain.jpg/500px-Neville-Chamberlain.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Neville-Chamberlain.jpg
+    image_license: Public domain
+    sources: [wp-neville-chamberlain]
+  - key: clement-attlee
+    name: Clement Attlee
+    type: Government
+    born: 1883-01-03
+    died: 1967-10-08
+    prominence: 3
+    sitelinks: 93
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, office, birth, death and burial places. His wartime posts (Lord Privy Seal, Deputy Prime Minister) not added."
+    note: Labour leader and Churchill's deputy in the wartime coalition; Prime Minister after the 1945 election.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e6/Person_attlee2.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Person_attlee2.jpg/500px-Person_attlee2.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Person_attlee2.jpg
+    image_license: Public domain
+    sources: [wp-clement-attlee]
+  - key: victor-emmanuel-iii-of-italy
+    name: Victor Emmanuel III
+    type: Royalty
+    born: 1869-11-11
+    died: 1947-12-28
+    prominence: 3
+    sitelinks: 71
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, titles, birth, death and first burial place (reburied at Vicoforte in 2017; not added)."
+    note: King of Italy who appointed Mussolini in 1922 and dismissed him in July 1943; abdicated in 1946 and died in exile.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/35/Vitorio_Emanuel_III_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Vitorio_Emanuel_III_%28cropped%29.jpg/500px-Vitorio_Emanuel_III_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Vitorio_Emanuel_III_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-victor-emmanuel-iii-of-italy]
+  # Soldiers already in the database (agreed with Ty): their type becomes Military.
+  - {key: leslie-groves, type: Military}
+  - {key: desmond-doss, type: Military}
+
+links:
+  - {spouse: adolf-hitler, to: eva-braun, year: 1945}
+
+moments:
+  - {person: adolf-hitler, role: born, place: braunau-am-inn, year: 1889}
+  - {person: adolf-hitler, role: died, place: fuhrerbunker, year: 1945}
+  - {person: eva-braun, role: born, place: munich, year: 1912}
+  - {person: eva-braun, role: died, place: fuhrerbunker, year: 1945}
+  - {person: joseph-stalin, role: born, place: gori, year: 1878}
+  - {person: joseph-stalin, role: died, place: moscow, year: 1953}
+  - {person: joseph-stalin, role: buried, place: kremlin-wall-necropolis, year: 1961}
+  - {person: benito-mussolini, role: born, place: predappio, year: 1883}
+  - {person: benito-mussolini, role: died, place: giulino-di-mezzegra, year: 1945}
+  - {person: benito-mussolini, role: buried, place: predappio, year: 1957}
+  - {person: hirohito, role: born, place: tokyo, year: 1901}
+  - {person: hirohito, role: died, place: fukiage-palace, year: 1989}
+  - {person: hirohito, role: buried, place: musashi-imperial-graveyard, year: 1989}
+  - {person: charles-de-gaulle, role: born, place: lille, year: 1890}
+  - {person: charles-de-gaulle, role: died, place: colombey-les-deux-eglises, year: 1970}
+  - {person: charles-de-gaulle, role: buried, place: colombey-les-deux-eglises, year: 1970}
+  - {person: philippe-petain, role: born, place: cauchy-a-la-tour, year: 1856}
+  - {person: philippe-petain, role: died, place: ile-d-yeu, year: 1951}
+  - {person: philippe-petain, role: buried, place: ile-d-yeu, year: 1951}
+  - {person: chiang-kai-shek, role: born, place: xikou, year: 1887}
+  - {person: chiang-kai-shek, role: died, place: taipei, year: 1975}
+  - {person: chiang-kai-shek, role: buried, place: cihu-mausoleum, year: 1975}
+  - {person: neville-chamberlain, role: born, place: birmingham, year: 1869}
+  - {person: neville-chamberlain, role: died, place: heckfield, year: 1940}
+  - {person: neville-chamberlain, role: buried, place: westminster-abbey, year: 1940}
+  - {person: clement-attlee, role: born, place: london, year: 1883}
+  - {person: clement-attlee, role: died, place: london, year: 1967}
+  - {person: clement-attlee, role: buried, place: westminster-abbey, year: 1967}
+  - {person: victor-emmanuel-iii-of-italy, role: born, place: naples, year: 1869}
+  - {person: victor-emmanuel-iii-of-italy, role: died, place: alexandria, year: 1947}
+  - {person: victor-emmanuel-iii-of-italy, role: buried, place: alexandria, year: 1947}
+
+titles:
+  - {person: adolf-hitler, title: Chancellor of Germany, realm: Germany, from: 1933-01-30, to: 1945-04-30, note: "From 1934 styled Führer und Reichskanzler; Reichskanzler was eventually dropped", sources: [wp-adolf-hitler]}
+  - {person: adolf-hitler, title: Führer of Germany, realm: Germany, from: 1934-08-02, to: 1945-04-30, sources: [wp-adolf-hitler]}
+  - {person: joseph-stalin, title: General Secretary of the Communist Party of the Soviet Union, realm: Soviet Union, from: 1922-04-03, to: 1952-10-16, note: "The office was abolished in 1952, but Stalin kept its powers until his death", sources: [wp-joseph-stalin]}
+  - {person: joseph-stalin, title: Premier of the Soviet Union, realm: Soviet Union, from: 1941-05-06, to: 1953-03-05, note: "Chairman of the Council of People's Commissars, from 1946 the Council of Ministers", sources: [wp-joseph-stalin]}
+  - {person: benito-mussolini, title: Prime Minister of Italy, realm: Italy, from: 1922-10-31, to: 1943-07-25, note: "From 1925 styled Head of Government; dismissed by the king after the Grand Council vote", sources: [wp-benito-mussolini]}
+  - {person: benito-mussolini, title: Duce of the Italian Social Republic, realm: Italian Social Republic, from: 1943-09-23, to: 1945-04-25, sources: [wp-benito-mussolini]}
+  - {person: hirohito, title: "Regent (Sesshō)", realm: Japan, from: 1921-11-25, to: 1926-12-25, note: Regent for his father Taishō, sources: [wp-hirohito]}
+  - {person: hirohito, title: Emperor of Japan, realm: Japan, from: 1926-12-25, to: 1989-01-07, sources: [wp-hirohito]}
+  - {person: charles-de-gaulle, title: Leader of Free France, realm: France, from: 1940-06-18, to: 1944-06-03, note: "From his Appeal of 18 June 1940; the infobox gives Head of the Empire Defence Council (1940), Chairman of the French National Committee (1941) and of the French Committee of National Liberation (1943)", sources: [wp-charles-de-gaulle]}
+  - {person: charles-de-gaulle, title: Chairman of the Provisional Government of the French Republic, realm: France, from: 1944-06-03, to: 1946-01-26, sources: [wp-charles-de-gaulle]}
+  - {person: charles-de-gaulle, title: Prime Minister of France, realm: France, from: 1958-06-01, to: 1959-01-08, sources: [wp-charles-de-gaulle]}
+  - {person: charles-de-gaulle, title: President of France, realm: France, from: 1959-01-08, to: 1969-04-28, sources: [wp-charles-de-gaulle]}
+  - {person: philippe-petain, title: Commander of the 2nd Army, realm: France, kind: military, from: 1915-06-21, to: 1916-05-01, note: Commanded at Verdun, sources: [wp-philippe-petain]}
+  - {person: philippe-petain, title: Commander-in-Chief of the French Army, realm: France, kind: military, from: 1917-05-16, to: 1919-10-20, note: Commander of the Grand Quartier Général; Marshal of France from 1918, sources: [wp-philippe-petain]}
+  - {person: philippe-petain, title: Prime Minister of France, realm: France, from: 1940-06-16, to: 1942-04-18, note: Head of government until Laval took over, sources: [wp-philippe-petain]}
+  - {person: philippe-petain, title: Chief of the French State, realm: France, from: 1940-07-11, to: 1944-08-20, note: "Vichy France; the infobox says Head of the French State", sources: [wp-philippe-petain]}
+  - {person: chiang-kai-shek, title: Chairman of the Nationalist Government, realm: China, from: 1928-10-10, to: 1931-12-15, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: Chairman of the Nationalist Government, realm: China, from: 1943-08-01, to: 1948-05-20, note: Acting until 10 October 1943, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: President of the Republic of China, realm: China, from: 1948-05-20, to: 1949-01-21, note: Resigned, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: President of the Republic of China, realm: China, from: 1950-03-01, to: 1975-04-05, note: On Taiwan, sources: [wp-chiang-kai-shek]}
+  - {person: neville-chamberlain, title: Prime Minister of the United Kingdom, realm: United Kingdom, from: 1937-05-28, to: 1940-05-10, sources: [wp-neville-chamberlain]}
+  - {person: winston-churchill, title: Prime Minister of the United Kingdom, realm: United Kingdom, from: 1940-05-10, to: 1945-07-26, note: "Wartime coalition, then the caretaker ministry from 23 May 1945", sources: [wp-winston-churchill]}
+  - {person: winston-churchill, title: Prime Minister of the United Kingdom, realm: United Kingdom, from: 1951-10-26, to: 1955-04-05, sources: [wp-winston-churchill]}
+  - {person: clement-attlee, title: Prime Minister of the United Kingdom, realm: United Kingdom, from: 1945-07-26, to: 1951-10-26, sources: [wp-clement-attlee]}
+  - {person: victor-emmanuel-iii-of-italy, title: King of Italy, realm: Italy, from: 1900-07-29, to: 1946-05-09, note: Abdicated; from June 1944 his son Umberto ruled as Lieutenant General of the Realm, sources: [wp-victor-emmanuel-iii-of-italy]}
+  - {person: victor-emmanuel-iii-of-italy, title: Emperor of Ethiopia, realm: Ethiopian Empire, from: 1936-05-09, to: 1941-05-05, disputed: true, note: "Taken by conquest while Haile Selassie reigned in exile", sources: [wp-victor-emmanuel-iii-of-italy]}
+  - {person: victor-emmanuel-iii-of-italy, title: King of the Albanians, realm: Albania, from: 1939-04-16, to: 1943-09-08, sources: [wp-victor-emmanuel-iii-of-italy]}
+  - {person: dwight-d-eisenhower, title: "Supreme Commander, Allied Expeditionary Force", realm: United States, kind: military, from: 1943-12-24, to: 1945-07-14, note: Commanded the Allied invasion of Normandy and the advance into Germany, sources: [wp-dwight-d-eisenhower]}
+  - {person: dwight-d-eisenhower, title: Military Governor of the American Zone of Occupied Germany, realm: United States, kind: military, from: 1945-05-08, to: 1945-11-10, sources: [wp-dwight-d-eisenhower]}
+  - {person: dwight-d-eisenhower, title: Chief of Staff of the United States Army, realm: United States, kind: military, from: 1945-11-19, to: 1948-02-06, sources: [wp-dwight-d-eisenhower]}
+  - {person: dwight-d-eisenhower, title: Supreme Allied Commander Europe, realm: United States, kind: military, from: 1951-04-02, to: 1952-05-30, note: NATO's first supreme commander, sources: [wp-dwight-d-eisenhower]}
+
+discrepancies:
+  - key: stalin-birth-date
+    question: Was Stalin born on 18 December 1878 or 21 December 1879?
+    about: [{person: joseph-stalin}]
+    field: born
+    claims:
+      - {value: "1878-12-18 (6 December Old Style)", sources: [wp-joseph-stalin], note: "Church records and all pre-revolution documents (article footnote)"}
+      - {value: "1879-12-21", sources: [wp-joseph-stalin], note: "The date Stalin gave after coming to power, celebrated in the USSR"}
+    note: The record uses 1878-12-18, as the article does.
+  - key: hirohito-birthplace
+    question: Was Hirohito born at the Takanawa Imperial Residence or at Tōgū Palace in Aoyama?
+    about: [{person: hirohito}]
+    field: place
+    claims:
+      - {value: "Takanawa Imperial Residence, Tokyo", sources: [wp-hirohito], note: Infobox}
+      - {value: "Tōgū Palace, Aoyama, Tokyo", sources: [wp-hirohito], note: "Body text (its link points to the Takanawa Residence article)"}
+    note: The birth is filed at Tokyo until a source settles the building.
+  - key: mussolini-dismissal-date
+    question: Was Mussolini dismissed on 25 or 26 July 1943?
+    about: [{person: benito-mussolini}, {person: victor-emmanuel-iii-of-italy}]
+    field: date
+    claims:
+      - {value: "Grand Council vote 24 July, dismissed 25 July 1943", sources: [wp-benito-mussolini]}
+      - {value: "Grand Council vote on the night of 25 July, audience the following afternoon", sources: [wp-victor-emmanuel-iii-of-italy]}
+    note: His Prime Minister title ends on 25 July, as the Mussolini article and infobox give it.
+  - key: de-gaulle-provisional-government-end
+    question: Did de Gaulle's time as head of the Provisional Government end on 20 or 26 January 1946?
+    about: [{person: charles-de-gaulle}]
+    field: date
+    claims:
+      - {value: "1946-01-26", sources: [wp-charles-de-gaulle], note: Infobox (presumably when Félix Gouin took over)}
+      - {value: "1946-01-20", sources: [wp-charles-de-gaulle], note: "Body: he abruptly resigned on 20 January 1946"}
+    note: The title ends on 26 January, the infobox date; both may be right (resignation vs successor taking office).
+  - key: eisenhower-shaef-start
+    question: When did Eisenhower become Supreme Commander, Allied Expeditionary Force?
+    about: [{person: dwight-d-eisenhower}]
+    field: date
+    claims:
+      - {value: "1943-12-24", sources: [wp-dwight-d-eisenhower], note: Infobox}
+      - {value: "February 1944", sources: [wp-dwight-d-eisenhower], note: "Body: chosen in December 1943, officially designated two months later; the succession box says 1944–1945"}
+    note: The title starts on 24 December 1943, the infobox date (when Roosevelt's choice was announced).
+  - key: victor-emmanuel-iii-ethiopia-end
+    question: When did Victor Emmanuel III stop being Emperor of Ethiopia?
+    about: [{person: victor-emmanuel-iii-of-italy}]
+    field: date
+    claims:
+      - {value: "1941-05-05 (Haile Selassie back in Addis Ababa)", sources: [wp-victor-emmanuel-iii-of-italy], note: Infobox}
+      - {value: "November 1943 (renounced his claims)", sources: [wp-victor-emmanuel-iii-of-italy], note: Body}
+    note: The title ends on 5 May 1941, the infobox date.
