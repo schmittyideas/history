@@ -174,7 +174,8 @@ ARTWORK_LINKS = (("people", "person", "artwork_people", "entity_id"),   # sectio
                  ("places", "place", "artwork_places", "place_id"),
                  ("events", "event", "artwork_events", "event_id"))
 TITLE_FIELDS = {"title": "title", "realm": "realm", "from_estimated": "start_estimated", "to_estimated": "end_estimated",
-                "disputed": "disputed", "note": "note", "obsidian_link": "obsidian_link"}
+                "disputed": "disputed", "kind": "kind", "note": "note", "obsidian_link": "obsidian_link"}
+TITLE_KINDS = ("military",)  # blank: a reign or an office
 LOG_FIELDS = {"title": "title", "learned_on": "learned_on", "medium": "medium", "source_title": "source_title",
               "source_detail": "source_detail", "url": "url", "where": "where_text", "notes": "notes",
               "links": "links", "details": "details"}
@@ -527,6 +528,8 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             ok = ref("person", who, where)
             if k not in (world.titles or {}) and (not x.get("title") or not x.get("realm")):
                 p.errors.append(f"{where}: new titles need `title` and `realm`")
+            if x.get("kind") is not None and x["kind"] not in TITLE_KINDS:
+                p.errors.append(f"{where}: kind must be blank or one of {', '.join(TITLE_KINDS)}, not `{x['kind']}`")
             fy, _ = when(x, "from", where); ty, _ = when(x, "to", where)
             if fy is not None and ty is not None and ty < fy:
                 p.errors.append(f"{where}: ended ({ty}) before it began ({fy})")

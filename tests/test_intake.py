@@ -193,27 +193,31 @@ def test_titles():
     src = [{"key": "s", "title": "S"}]
     docs = [("t.yaml", {"batch": {"title": "t"}, "sources": src, "titles": [
         {"person": "william-i-of-england", "title": "King of England", "realm": "England", "from": "1066-12-25", "to": "1087-09-09", "sources": ["s"]},
-        {"person": "william-i-of-england", "title": "Duke of Normandy", "realm": "Normandy", "from": 1035, "to": 1087, "sources": ["s"]}]})]
+        {"person": "william-i-of-england", "title": "Duke of Normandy", "realm": "Normandy", "from": 1035, "to": 1087, "sources": ["s"]},
+        {"person": "william-i-of-england", "title": "Commander at Hastings", "realm": "Normandy", "kind": "military", "from": 1066, "to": 1066, "sources": ["s"]}]})]
     world = intake.World(db)
     plan = intake.plan_files(world, docs)
     assert not plan.errors and all("no region" in w for w in plan.warnings), (plan.errors, plan.warnings)
-    assert plan.adds["titles"] == ["william-i-of-england--king-of-england--1066", "william-i-of-england--duke-of-normandy--1035"]
+    assert plan.adds["titles"] == ["william-i-of-england--king-of-england--1066", "william-i-of-england--duke-of-normandy--1035", "william-i-of-england--commander-at-hastings--1066"]
     intake.apply_files(world, docs, log=lambda m: None)
     t = {r["key"]: r for r in db.t["titles"]}["william-i-of-england--king-of-england--1066"]
-    assert (t["start_year"], t["start_date"], t["end_year"], t["realm"]) == (1066, "1066-12-25", 1087, "England")
+    assert (t["start_year"], t["start_date"], t["end_year"], t["realm"]) == (1066, "1066-12-25", 1087, "England") and "kind" not in t
+    assert {r["key"]: r for r in db.t["titles"]}["william-i-of-england--commander-at-hastings--1066"]["kind"] == "military"
     assert any(l["record_type"] == "title" for l in db.t["source_links"])
     # Re-sending updates rather than duplicating.
     plan2 = intake.plan_files(intake.World(db), docs)
-    assert not plan2.adds["titles"] and len(plan2.updates["titles"]) == 2
+    assert not plan2.adds["titles"] and len(plan2.updates["titles"]) == 3
     bad = [("b.yaml", {"batch": {"title": "t"}, "titles": [
         {"person": "william-i-of-england", "title": "King of England", "realm": "England", "from": 1090, "to": 1080},
         {"person": "william-i-of-england", "title": "Count of Nowhere", "realm": "Nowhere", "from": 1000},
         {"person": "nobody", "title": "X", "realm": "Y"},
-        {"person": "william-i-of-england", "from": 1050}]})]
+        {"person": "william-i-of-england", "from": 1050},
+        {"person": "william-i-of-england", "title": "Admiral", "realm": "Normandy", "kind": "naval", "from": 1066}]})]
     p3 = intake.plan_files(intake.World(db), bad)
     text = " ".join(p3.errors) + " | " + " ".join(p3.warnings)
     assert "ended (1080) before it began (1090)" in text and "unknown person `nobody`" in text, text
     assert "need `title` and `realm`" in text and "starts (1000) before william-i-of-england was born (1028)" in text, text
+    assert "kind must be blank or one of military, not `naval`" in text, text
 
 def test_realms():
     db = FakeDB(snapshot())

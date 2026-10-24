@@ -106,9 +106,13 @@ function indexData(raw) {
     e.venues = venuesOf[e.id] || [];
     if (e.venues.length) e.placeIds = [...new Set([e.place_id, ...e.venues.map(v => v.place_id)].filter(v => v != null))];
   });
-  const people = raw.entities || [], rels = raw.relationships || [], events = [...(raw.events || []), ...films];
-  const ep = [...(raw.event_people || []), ...directors], places = raw.places || [], pp = raw.person_places || [], titles = raw.titles || [];
-  const byId = Object.fromEntries(people.map(p => [p.id, p]));
+  const people = raw.entities || [], byIdEarly = Object.fromEntries(people.map(p => [p.id, p])), rels = raw.relationships || [], events = [...(raw.events || []), ...films];
+  const ep = [...(raw.event_people || []), ...directors], places = raw.places || [], pp = raw.person_places || [], allTitles = raw.titles || [];
+  // Military titles (commands held for a time: Eisenhower's wartime posts) belong to their holder's life, not to who ruled where,
+  // so db.titles keeps reigns and offices only and titlesOf gives a person both.
+  const titles = allTitles.filter(t => t.kind !== "military");
+  allTitles.forEach(t => { if (t.kind === "military" && byIdEarly[t.entity_id]) byIdEarly[t.entity_id].served = true; });
+  const byId = byIdEarly;
   const eventById = Object.fromEntries(events.map(e => [e.id, e]));
   const placeById = Object.fromEntries(places.map(p => [p.id, p]));
   const parentLinks = rels.filter(r => r.rel_type === "parent");
@@ -150,7 +154,7 @@ function indexData(raw) {
       countries: (raw.realm_countries || []).filter(c => c.realm_id === r.id).map(c => ({ country: c.modern_country, start: c.start_year, end: c.end_year, note: c.note })) }])),
     // Every realm a title names (England, Byzantine Empire, Kievan Rus'), for searching and focusing.
     realmNames: [...new Set([...titles.map(t => t.realm), ...(raw.realms || []).map(r => r.name)])].filter(Boolean),
-    titlesOf: id => titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
+    titlesOf: id => allTitles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
     // Artworks a person made (artwork_people role "creator").
     worksBy: id => {
       const byId = Object.fromEntries((raw.artworks || []).map(w => [w.id, w]));
@@ -191,8 +195,9 @@ const TYPE_WORDS = [
   [/\b(mayors?|governors?|presidents?|politicians?|government)\b/gi, "Government"],
   [/\b(patrons?|benefactors?|philanthropists?)\b/gi, "Patron"],
   [/\b(notables?|notable people)\b/gi, "Notable"],
+  [/\b(military|soldiers?|generals?|admirals?|commanders?|marshals?)\b/gi, "Military"],
 ];
-const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials", Patron: "patrons and benefactors", Notable: "notable people" };
+const TYPE_LABEL = { Royalty: "royalty", Nobility: "nobility", Clergy: "popes and clergy", Artist: "painters and artists", Writer: "writers", Composer: "composers", Scholar: "scholars and inventors", Government: "mayors and officials", Patron: "patrons and benefactors", Notable: "notable people", Military: "soldiers and commanders" };
 // Who to show: the groups behind the buttons under the title. A person shows if any group they belong to is on.
 // Architects are a role, not a type (Wren is typed Artist), so groups match roles as well as types.
 const hasRole = (p, re) => (p.roles || []).some(r => re.test(r));
@@ -210,6 +215,8 @@ const CATS = [
   { key: "composers", label: "Composers", color: "var(--rose)", test: p => p.type === "Composer" },
   { key: "scholars", label: "Scholars", color: "var(--slate)", test: p => p.type === "Scholar" },
   { key: "patrons", label: "Patrons", color: "var(--indigo)", test: p => p.type === "Patron" },
+  // Soldiers, and anyone who held a military title: Eisenhower is Government by type, and shows here too for his commands.
+  { key: "military", label: "Military", color: "var(--iron)", test: p => p.type === "Military" || !!p.served },
   // Real people known for one story rather than an office or a body of work: Schindler, Desmond Doss, Al Capone.
   { key: "notable", label: "Notable people", color: "var(--sage)", test: p => p.type === "Notable" },
 ];
@@ -352,7 +359,7 @@ function computeView(db, f) {
   if (f.missingRegions.length) warnings.push(`No places recorded yet for ${f.missingRegions.join(", ")}`);
   if (f.regions.length || f.missingRegions.length || f.realms.length) {
     const pool = new Set(people.map(p => p.id));
-    const ruled = p => db.titlesOf(p.id).some(t => f.realms.includes(t.realm) && (f.from == null || overlaps(t.start_year, t.end_year, f.from, f.to)));
+    const ruled = p => db.titlesOf(p.id).some(t => t.kind !== "military" && f.realms.includes(t.realm) && (f.from == null || overlaps(t.start_year, t.end_year, f.from, f.to)));
     const hit = new Set(people.filter(p => (f.regions.length && db.placesOfPerson(p.id).some(pl => placeMatches(pl, f.regions))) || (f.realms.length && ruled(p))).map(p => p.id));
     // Include close family of matched people, so sparse place data doesn't hide relatives.
     [...hit].forEach(id => db.neighbours(id).forEach(n => { if (pool.has(n.id)) hit.add(n.id); }));
@@ -376,7 +383,7 @@ function computeView(db, f) {
 
 /* ------------------------------------------------------------------ lanes */
 
-const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar", "Patron", "Notable"];
+const TYPE_ORDER = ["Royalty", "Nobility", "Clergy", "Government", "Artist", "Writer", "Composer", "Scholar", "Patron", "Military", "Notable"];
 
 function familyOrder(db, members, ids) {
   const order = [], seen = new Set();
@@ -543,7 +550,7 @@ function crownPath(x, y, w = 12) {
   return `M${x},${y + h} L${x},${y + h * .2} L${x + w * .27},${y + h * .55} L${x + w / 2},${y} L${x + w * .73},${y + h * .55} L${x + w},${y + h * .2} L${x + w},${y + h} Z`;
 }
 // Offices (a column, not a crown): officials, and the roles notable people hold, such as First Lady.
-const isOffice = p => p?.type === "Government" || p?.type === "Notable";
+const isOffice = p => p?.type === "Government" || p?.type === "Notable" || p?.type === "Military";
 function columnPath(x, y, w = 12) {
   const h = w * .75, X = f => x + w * f, Y = f => y + h * f;
   return `M${X(.08)},${y} H${X(.92)} V${Y(.2)} H${X(.74)} V${Y(.8)} H${x + w} V${y + h} H${x} V${Y(.8)} H${X(.26)} V${Y(.2)} H${X(.08)} Z`;
@@ -754,7 +761,7 @@ function render() {
       let k = tracks.findIndex(last => last < t.start_year);
       if (k < 0) k = tracks.push(end) - 1; else tracks[k] = end;
       const ry = y(t.start_year), rh = Math.max(2, y(end) - ry);
-      el("rect", { x: cx + Z.bar / 2 + 2 + k * 5, y: ry, width: 3, height: rh, rx: 1.5, class: "reign" + (t.disputed ? " disputed" : "") }, g);
+      el("rect", { x: cx + Z.bar / 2 + 2 + k * 5, y: ry, width: 3, height: rh, rx: 1.5, class: "reign" + (t.disputed ? " disputed" : "") + (t.kind === "military" ? " military" : "") }, g);
     });
     // Click area: from the name card down to the end of the bar.
     const hy = LANE_H + 4 + dy;
@@ -2917,7 +2924,7 @@ function lifeStrip(p, works, evs, titles) {
   if (a == null || b == null || b <= a) return null;
   const x = y => `${Math.max(0, Math.min(100, (y - a) / (b - a) * 100))}%`;
   const strip = h("div", { class: "xstrip", role: "group", "aria-label": `${p.name}'s life, ${fmtSpan(a, b)}` });
-  titles.forEach(t => strip.append(h("span", { class: "xreign", style: `left:${x(t.start_year ?? a)};width:calc(${x(t.end_year ?? b)} - ${x(t.start_year ?? a)})`, title: `${t.title}, ${reignSpan(t)}` })));
+  titles.forEach(t => strip.append(h("span", { class: "xreign" + (t.kind === "military" ? " military" : ""), style: `left:${x(t.start_year ?? a)};width:calc(${x(t.end_year ?? b)} - ${x(t.start_year ?? a)})`, title: `${t.title}, ${reignSpan(t)}` })));
   evs.forEach(({ event: e }) => e.start_year != null && strip.append(h("button", { type: "button", class: "xmark ev", style: `left:${x(e.start_year)}`,
     title: `${fmtYear(e.start_year)}: ${e.name}`, "aria-label": `${fmtYear(e.start_year)}: ${e.name}`, onclick: () => xGo("year", e.start_year) })));
   works.forEach(w => strip.append(h("button", { type: "button", class: "xmark" + (w.id === X.work ? " on" : ""), style: `left:${x(w.start_year)}`,
