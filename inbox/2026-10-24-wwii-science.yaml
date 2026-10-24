@@ -1,0 +1,299 @@
+batch:
+  title: "WWII, batch 5: science and codebreaking"
+  requested: "Ty: WWII build-out, batch 5 (science and codebreaking); do all batches"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from English Wikipedia, read through the Wikipedia API on 2026-10-24: each person's article, and each event's article
+#   (Nuclear fission, Einstein–Szilard letter, Manhattan Project, Chicago Pile-1, Cipher Bureau (Poland), Bombe, V-2 rocket,
+#   Albert Alexander, Chain Home, Operation Hydra). Sitelinks from Wikidata on 2026-10-24; coordinates from each place's article.
+# - All 15 new people are type Scholar, so their prominence follows the sitelinks scale (150+ = 5 ... under 40 = 1); roles say
+#   physicist, chemist, engineer, cryptanalyst and so on. Von Braun's note says he was a Nazi Party and SS member who used forced
+#   labour, as his article does.
+# - Existing people: Leslie Groves gets his Manhattan Project command as a military title (from his promotion on 23 September
+#   1942 to the handover to the Atomic Energy Commission on 1 January 1947; other dates are logged). Oppenheimer, Turing, Einstein
+#   and Teller are linked to the events their articles put them in. Tommy Flowers is linked to the existing Colossus event.
+# - Portraits: public domain lead images only. Left out: Heisenberg, Hahn, Rejewski (CC BY-SA), Feynman and Welchman (local
+#   non-free files).
+# - Places: the wartime Kaiser Wilhelm Institutes have no coordinates of their own (their articles now describe the Max Planck
+#   institutes elsewhere), so fission is placed at Dahlem, the Berlin district where they stood. Operation Hydra's own coordinates
+#   are mistyped on Wikipedia (west longitude), so the Peenemünde Army Research Center's are used. Flowers was born in Poplar and
+#   died in Mill Hill: both are filed at London. Welchman was born in Fishponds: filed at Bristol. Burials are left out where the
+#   article names none (Szilard, Lawrence, Flowers, Welchman, Chain) or the cremation left no grave (Florey; Watson-Watt's
+#   churchyard has no coordinates).
+# - The Polish break of Enigma (December 1932) and Chain Home (operational 1938) have no exact day in their articles: years only.
+
+sources:
+  - {key: wp-enrico-fermi, title: "Enrico Fermi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Enrico_Fermi"}
+  - {key: wp-leo-szilard, title: "Leo Szilard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Leo_Szilard"}
+  - {key: wp-niels-bohr, title: "Niels Bohr (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niels_Bohr"}
+  - {key: wp-werner-heisenberg, title: "Werner Heisenberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Werner_Heisenberg"}
+  - {key: wp-lise-meitner, title: "Lise Meitner (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lise_Meitner"}
+  - {key: wp-otto-hahn, title: "Otto Hahn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Otto_Hahn"}
+  - {key: wp-ernest-lawrence, title: "Ernest Lawrence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ernest_Lawrence"}
+  - {key: wp-richard-feynman, title: "Richard Feynman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_Feynman"}
+  - {key: wp-wernher-von-braun, title: "Wernher von Braun (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wernher_von_Braun"}
+  - {key: wp-robert-watson-watt, title: "Robert Watson-Watt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_Watson-Watt"}
+  - {key: wp-tommy-flowers, title: "Tommy Flowers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tommy_Flowers"}
+  - {key: wp-gordon-welchman, title: "Gordon Welchman (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gordon_Welchman"}
+  - {key: wp-marian-rejewski, title: "Marian Rejewski (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marian_Rejewski"}
+  - {key: wp-howard-florey, title: "Howard Florey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Howard_Florey"}
+  - {key: wp-ernst-chain, title: "Ernst Chain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ernst_Chain"}
+  - {key: wp-nuclear-fission, title: "Nuclear fission (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nuclear_fission"}
+  - {key: wp-einstein-szilard-letter, title: "Einstein–Szilard letter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Einstein%E2%80%93Szilard_letter"}
+  - {key: wp-manhattan-project, title: "Manhattan Project (Wikipedia)", url: "https://en.wikipedia.org/wiki/Manhattan_Project"}
+  - {key: wp-chicago-pile-1, title: "Chicago Pile-1 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chicago_Pile-1"}
+  - {key: wp-cipher-bureau-poland, title: "Cipher Bureau (Poland) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cipher_Bureau_(Poland)"}
+  - {key: wp-bombe, title: "Bombe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bombe"}
+  - {key: wp-v-2-rocket, title: "V-2 rocket (Wikipedia)", url: "https://en.wikipedia.org/wiki/V-2_rocket"}
+  - {key: wp-albert-alexander, title: "Albert Alexander (police officer) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albert_Alexander_(police_officer)"}
+  - {key: wp-chain-home, title: "Chain Home (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chain_Home"}
+  - {key: wp-operation-hydra-1943, title: "Operation Hydra (1943) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Hydra_(1943)"}
+  - {key: wp-peenemunde-army-research-center, title: "Peenemünde Army Research Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peenem%C3%BCnde_Army_Research_Center"}
+  - {key: wp-oak-ridge-tennessee, title: "Oak Ridge, Tennessee (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oak_Ridge,_Tennessee"}
+  - {key: wp-hanford-site, title: "Hanford Site (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hanford_Site"}
+  - {key: wp-dahlem-berlin, title: "Dahlem (Berlin) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dahlem_(Berlin)"}
+  - {key: wp-saxon-palace, title: "Saxon Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Saxon_Palace"}
+  - {key: wp-pyry-warsaw, title: "Pyry, Warsaw (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pyry,_Warsaw"}
+  - {key: wp-radcliffe-infirmary, title: "Radcliffe Infirmary (Wikipedia)", url: "https://en.wikipedia.org/wiki/Radcliffe_Infirmary"}
+  - {key: wp-bawdsey-manor, title: "Bawdsey Manor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bawdsey_Manor"}
+  - {key: wp-chiswick, title: "Chiswick (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chiswick"}
+  - {key: wp-trinity-nuclear-test, title: "Trinity (nuclear test) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)"}
+
+places:
+  - {key: oak-woods-cemetery, name: Oak Woods Cemetery, kind: cemetery, city: Chicago, region: Illinois, country: United States, lat: 41.77, lng: -87.6, visitable: true, sources: [wp-enrico-fermi]}
+  - {key: san-diego, name: San Diego, kind: city, region: California, country: United States, lat: 32.715, lng: -117.1625, sources: [wp-leo-szilard]}
+  - {key: munich-waldfriedhof, name: Munich Waldfriedhof, kind: cemetery, city: Munich, region: Bavaria, country: Germany, lat: 48.1028, lng: 11.4936, visitable: true, sources: [wp-werner-heisenberg]}
+  - {key: st-james-church-bramley, name: "St James' Church, Bramley", kind: church, city: Bramley, region: Hampshire, country: England, lat: 51.3259, lng: -1.0759, sources: [wp-lise-meitner]}
+  - {key: gottingen, name: Göttingen, kind: city, region: Lower Saxony, country: Germany, lat: 51.5339, lng: 9.9356, sources: [wp-otto-hahn]}
+  - {key: stadtfriedhof-gottingen, name: Stadtfriedhof Göttingen, kind: cemetery, city: Göttingen, region: Lower Saxony, country: Germany, lat: 51.5325, lng: 9.9097, visitable: true, sources: [wp-otto-hahn]}
+  - {key: canton-south-dakota, name: "Canton, South Dakota", kind: city, region: South Dakota, country: United States, lat: 43.3033, lng: -96.585, sources: [wp-ernest-lawrence]}
+  - {key: palo-alto, name: "Palo Alto, California", kind: city, region: California, country: United States, lat: 37.4444, lng: -122.16, sources: [wp-ernest-lawrence]}
+  - {key: mountain-view-cemetery-altadena, name: Mountain View Cemetery (Altadena), kind: cemetery, city: Altadena, region: Los Angeles County, country: United States, lat: 34.1866, lng: -118.1476, visitable: true, sources: [wp-richard-feynman]}
+  - {key: wyrzysk, name: Wyrzysk, historical_name: Wirsitz, kind: town, region: Greater Poland Voivodeship, country: Poland, lat: 53.1525, lng: 17.2678, sources: [wp-wernher-von-braun]}
+  - {key: alexandria-virginia, name: "Alexandria, Virginia", kind: city, region: Virginia, country: United States, lat: 38.8203, lng: -77.0503, sources: [wp-wernher-von-braun]}
+  - {key: ivy-hill-cemetery, name: Ivy Hill Cemetery, kind: cemetery, city: Alexandria, region: Virginia, country: United States, lat: 38.8175, lng: -77.0736, sources: [wp-wernher-von-braun]}
+  - {key: brechin, name: Brechin, kind: town, region: Angus, country: Scotland, lat: 56.7299, lng: -2.6553, sources: [wp-robert-watson-watt]}
+  - {key: inverness, name: Inverness, kind: city, region: Highland, country: Scotland, lat: 57.4778, lng: -4.2247, sources: [wp-robert-watson-watt]}
+  - {key: newburyport, name: "Newburyport, Massachusetts", kind: city, region: Massachusetts, country: United States, lat: 42.8125, lng: -70.8778, sources: [wp-gordon-welchman]}
+  - {key: bydgoszcz, name: Bydgoszcz, historical_name: Bromberg, kind: city, region: Kuyavian-Pomeranian Voivodeship, country: Poland, lat: 53.1219, lng: 18.0003, sources: [wp-marian-rejewski]}
+  - {key: powazki-military-cemetery, name: Powązki Military Cemetery, kind: cemetery, city: Warsaw, country: Poland, lat: 52.2583, lng: 20.9531, visitable: true, sources: [wp-marian-rejewski]}
+  - {key: adelaide, name: Adelaide, kind: city, region: South Australia, country: Australia, lat: -34.9275, lng: 138.6, sources: [wp-howard-florey]}
+  - {key: castlebar, name: Castlebar, kind: town, region: County Mayo, country: Ireland, lat: 53.8608, lng: -9.2988, sources: [wp-ernst-chain]}
+  - {key: chicago-pile-1-site, name: Chicago Pile-1 site (old Stagg Field), kind: laboratory, city: Chicago, region: Illinois, country: United States, lat: 41.7925, lng: -87.6011, visitable: true, note: "Under the west stands of the old Stagg Field, University of Chicago; now a National Historic Landmark marked by Henry Moore's Nuclear Energy", sources: [wp-chicago-pile-1]}
+  - {key: oak-ridge-tennessee, name: "Oak Ridge, Tennessee", kind: city, region: Tennessee, country: United States, lat: 36.0103, lng: -84.2697, founded: 1942, sources: [wp-oak-ridge-tennessee, wp-manhattan-project]}
+  - {key: hanford-site, name: Hanford Site, kind: nuclear site, region: Washington, country: United States, lat: 46.6475, lng: -119.5986, sources: [wp-hanford-site]}
+  - {key: peenemunde-army-research-center, name: Peenemünde Army Research Center, kind: research centre, region: Mecklenburg-Vorpommern, country: Germany, lat: 54.15, lng: 13.8, visitable: true, visit_site: Peenemünde Historical Technical Museum, sources: [wp-peenemunde-army-research-center]}
+  - {key: dahlem-berlin, name: Dahlem (Berlin), kind: district, city: Berlin, country: Germany, lat: 52.4581, lng: 13.2875, note: "District of Berlin where the Kaiser Wilhelm Institutes for Chemistry and Physics stood", sources: [wp-dahlem-berlin]}
+  - {key: saxon-palace-warsaw, name: Saxon Palace, Warsaw, kind: palace, city: Warsaw, country: Poland, lat: 52.2411, lng: 21.0114, ended: 1944, note: "Seat of the Polish General Staff and its Cipher Bureau; blown up in 1944, only the Tomb of the Unknown Soldier remains", sources: [wp-saxon-palace, wp-cipher-bureau-poland]}
+  - {key: pyry, name: Pyry, Warsaw (Kabaty Woods), kind: woods, city: Warsaw, country: Poland, lat: 52.1294, lng: 21.0178, visitable: true, sources: [wp-pyry-warsaw]}
+  - {key: radcliffe-infirmary, name: Radcliffe Infirmary, kind: hospital, city: Oxford, country: England, lat: 51.7603, lng: -1.2619, sources: [wp-radcliffe-infirmary]}
+  - {key: bawdsey-manor, name: Bawdsey Manor, kind: manor house, region: Suffolk, country: England, lat: 51.9896, lng: 1.3996, visitable: true, note: "Britain's radar research station and the first Chain Home site", sources: [wp-bawdsey-manor]}
+  - {key: chiswick, name: Chiswick, kind: district, city: London, country: England, lat: 51.49, lng: -0.26, sources: [wp-chiswick]}
+
+people:
+  - {key: enrico-fermi, name: Enrico Fermi, type: Scholar, roles: [physicist], born: 1901-09-29, died: 1954-11-28, prominence: 5, sitelinks: 151, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and his wartime work; pre-war physics not built out.", note: "Nobel physicist who led the team that built Chicago Pile-1, the first nuclear reactor; later a division head at Los Alamos.", image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d4/Enrico_Fermi_1943-49.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/Enrico_Fermi_1943-49.jpg/500px-Enrico_Fermi_1943-49.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Enrico_Fermi_1943-49.jpg", image_license: Public domain, sources: [wp-enrico-fermi]}
+  - {key: leo-szilard, name: Leo Szilard, type: Scholar, roles: [physicist], born: 1898-02-11, died: 1964-05-30, prominence: 2, sitelinks: 57, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and his wartime work.", note: "Physicist who conceived the nuclear chain reaction and drafted the Einstein–Szilard letter; worked on Chicago Pile-1.", image_url: "https://upload.wikimedia.org/wikipedia/commons/2/20/Leo_Szilard-cropped.png", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Leo_Szilard-cropped.png/500px-Leo_Szilard-cropped.png", image_page: "https://commons.wikimedia.org/wiki/File:Leo_Szilard-cropped.png", image_license: Public domain, sources: [wp-leo-szilard]}
+  - {key: niels-bohr, name: Niels Bohr, type: Scholar, roles: [physicist], born: 1885-10-07, died: 1962-11-18, prominence: 4, sitelinks: 144, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and his wartime escape and consulting.", note: "Danish Nobel physicist who fled occupied Denmark in 1943 and advised the British and American bomb projects.", image_url: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Niels_Bohr.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Niels_Bohr.jpg/500px-Niels_Bohr.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Niels_Bohr.jpg", image_license: Public domain, sources: [wp-niels-bohr]}
+  - {key: werner-heisenberg, name: Werner Heisenberg, type: Scholar, roles: [physicist], born: 1901-12-05, died: 1976-02-01, prominence: 4, sitelinks: 115, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates and places; the German nuclear programme is in the note only.", note: "Nobel physicist who was the leading scientist of Germany's wartime nuclear programme.", sources: [wp-werner-heisenberg]}
+  - {key: lise-meitner, name: Lise Meitner, type: Scholar, roles: [physicist], born: 1878-11-07, died: 1968-10-27, prominence: 3, sitelinks: 87, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and fission.", note: "Physicist who fled Germany in 1938 and, with Otto Frisch, explained and named nuclear fission.", image_url: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Lise_Meitner_NatGeo.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Lise_Meitner_NatGeo.jpg/500px-Lise_Meitner_NatGeo.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Lise_Meitner_NatGeo.jpg", image_license: Public domain, sources: [wp-lise-meitner]}
+  - {key: otto-hahn, name: Otto Hahn, type: Scholar, roles: [chemist], born: 1879-03-08, died: 1968-07-28, prominence: 3, sitelinks: 87, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and fission.", note: "Chemist who discovered nuclear fission with Fritz Strassmann in December 1938; Nobel Prize in Chemistry 1944.", sources: [wp-otto-hahn]}
+  - {key: ernest-lawrence, name: Ernest Lawrence, type: Scholar, roles: [physicist], born: 1901-08-08, died: 1958-08-27, prominence: 3, sitelinks: 91, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and his wartime work.", note: "Inventor of the cyclotron who developed the calutrons that separated uranium for the Manhattan Project.", image_url: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ernest_Lawrence.jpg", image_thumb: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Ernest_Lawrence.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Ernest_Lawrence.jpg", image_license: Public domain, sources: [wp-ernest-lawrence]}
+  - {key: richard-feynman, name: Richard Feynman, type: Scholar, roles: [physicist], born: 1918-05-11, died: 1988-02-15, prominence: 4, sitelinks: 115, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and his Los Alamos work.", note: "Young physicist who led a group in the Theoretical Division at Los Alamos; later a Nobel laureate.", sources: [wp-richard-feynman]}
+  - {key: wernher-von-braun, name: Wernher von Braun, type: Scholar, roles: [rocket engineer], born: 1912-03-23, died: 1977-06-16, prominence: 3, sitelinks: 87, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and the V-2; his NASA years not built out.", note: "Technical director of the V-2 rocket at Peenemünde, a Nazi Party and SS member who used forced labour; later led NASA's Saturn V.", image_url: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Wernher_von_Braun_crop.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Wernher_von_Braun_crop.jpg/500px-Wernher_von_Braun_crop.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Wernher_von_Braun_crop.jpg", image_license: Public domain, sources: [wp-wernher-von-braun]}
+  - {key: robert-watson-watt, name: Robert Watson-Watt, type: Scholar, roles: [engineer, physicist], born: 1892-04-13, died: 1973-12-05, prominence: 1, sitelinks: 32, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and radar.", note: "Radio engineer who led the development of British radar, in service as Chain Home from 1938; knighted in 1942.", image_url: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Robert_Watson-Watt.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Robert_Watson-Watt.jpg/500px-Robert_Watson-Watt.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Robert_Watson-Watt.jpg", image_license: Public domain, sources: [wp-robert-watson-watt]}
+  - {key: tommy-flowers, name: Tommy Flowers, type: Scholar, roles: [engineer], born: 1905-12-22, died: 1998-10-28, prominence: 1, sitelinks: 24, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates and Colossus.", note: "Post Office engineer who designed and built Colossus, the first programmable electronic computer, for Bletchley Park.", image_url: "https://upload.wikimedia.org/wikipedia/commons/8/84/Tommy_Flowers.jpg", image_thumb: "https://upload.wikimedia.org/wikipedia/commons/8/84/Tommy_Flowers.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Tommy_Flowers.jpg", image_license: Public domain, sources: [wp-tommy-flowers]}
+  - {key: gordon-welchman, name: Gordon Welchman, type: Scholar, roles: [mathematician, cryptanalyst], born: 1906-06-15, died: 1985-10-08, prominence: 1, sitelinks: 14, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and Bletchley Park.", note: "Head of Hut 6 at Bletchley Park, which broke Army and Air Force Enigma; added the diagonal board to the bombe.", sources: [wp-gordon-welchman]}
+  - {key: marian-rejewski, name: Marian Rejewski, type: Scholar, roles: [mathematician, cryptanalyst], born: 1905-08-16, died: 1980-02-13, prominence: 2, sitelinks: 40, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and the Enigma break.", note: "Polish mathematician who reconstructed the German Enigma in 1932; his methods were handed to the Allies in July 1939.", sources: [wp-marian-rejewski]}
+  - {key: howard-florey, name: Howard Florey, type: Scholar, roles: [pharmacologist], born: 1898-09-24, died: 1968-02-21, prominence: 3, sitelinks: 64, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and penicillin.", note: "Led the Oxford team that turned penicillin into a usable drug; Nobel Prize 1945 with Chain and Fleming.", image_url: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Sir_Howard_Florey.jpg", image_thumb: "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Sir_Howard_Florey.jpg/500px-Sir_Howard_Florey.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Sir_Howard_Florey.jpg", image_license: Public domain, sources: [wp-howard-florey]}
+  - {key: ernst-chain, name: Ernst Chain, type: Scholar, roles: [chemist], born: 1906-06-19, died: 1979-08-12, prominence: 3, sitelinks: 61, sitelinks_on: 2026-10-24, coverage: partly, coverage_note: "Dates, places and penicillin.", note: "Biochemist who, with Florey at Oxford, showed penicillin's healing power and worked out its chemistry; Nobel Prize 1945.", image_url: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Ernst_Boris_Chain_1945.jpg", image_thumb: "https://upload.wikimedia.org/wikipedia/commons/a/ae/Ernst_Boris_Chain_1945.jpg", image_page: "https://commons.wikimedia.org/wiki/File:Ernst_Boris_Chain_1945.jpg", image_license: Public domain, sources: [wp-ernst-chain]}
+
+moments:
+  - {person: enrico-fermi, role: born, place: rome, year: 1901}
+  - {person: enrico-fermi, role: died, place: chicago, year: 1954}
+  - {person: enrico-fermi, role: buried, place: oak-woods-cemetery, year: 1954}
+  - {person: leo-szilard, role: born, place: budapest, year: 1898}
+  - {person: leo-szilard, role: died, place: san-diego, year: 1964}
+  - {person: niels-bohr, role: born, place: copenhagen, year: 1885}
+  - {person: niels-bohr, role: died, place: copenhagen, year: 1962}
+  - {person: niels-bohr, role: buried, place: assistens-cemetery, year: 1962}
+  - {person: werner-heisenberg, role: born, place: wurzburg, year: 1901}
+  - {person: werner-heisenberg, role: died, place: munich, year: 1976}
+  - {person: werner-heisenberg, role: buried, place: munich-waldfriedhof, year: 1976}
+  - {person: lise-meitner, role: born, place: vienna, year: 1878}
+  - {person: lise-meitner, role: died, place: cambridge, year: 1968}
+  - {person: lise-meitner, role: buried, place: st-james-church-bramley, year: 1968}
+  - {person: otto-hahn, role: born, place: frankfurt, year: 1879}
+  - {person: otto-hahn, role: died, place: gottingen, year: 1968}
+  - {person: otto-hahn, role: buried, place: stadtfriedhof-gottingen, year: 1968}
+  - {person: ernest-lawrence, role: born, place: canton-south-dakota, year: 1901}
+  - {person: ernest-lawrence, role: died, place: palo-alto, year: 1958}
+  - {person: richard-feynman, role: born, place: new-york-city, year: 1918}
+  - {person: richard-feynman, role: died, place: los-angeles, year: 1988}
+  - {person: richard-feynman, role: buried, place: mountain-view-cemetery-altadena, year: 1988}
+  - {person: wernher-von-braun, role: born, place: wyrzysk, year: 1912}
+  - {person: wernher-von-braun, role: died, place: alexandria-virginia, year: 1977}
+  - {person: wernher-von-braun, role: buried, place: ivy-hill-cemetery, year: 1977}
+  - {person: robert-watson-watt, role: born, place: brechin, year: 1892}
+  - {person: robert-watson-watt, role: died, place: inverness, year: 1973}
+  - {person: tommy-flowers, role: born, place: london, year: 1905}
+  - {person: tommy-flowers, role: died, place: london, year: 1998}
+  - {person: gordon-welchman, role: born, place: bristol, year: 1906}
+  - {person: gordon-welchman, role: died, place: newburyport, year: 1985}
+  - {person: marian-rejewski, role: born, place: bydgoszcz, year: 1905}
+  - {person: marian-rejewski, role: died, place: warsaw, year: 1980}
+  - {person: marian-rejewski, role: buried, place: powazki-military-cemetery, year: 1980}
+  - {person: howard-florey, role: born, place: adelaide, year: 1898}
+  - {person: howard-florey, role: died, place: oxford, year: 1968}
+  - {person: ernst-chain, role: born, place: berlin, year: 1906}
+  - {person: ernst-chain, role: died, place: castlebar, year: 1979}
+
+titles:
+  - {person: leslie-groves, title: Director of the Manhattan Project, realm: United States, kind: military, from: 1942-09-23, to: 1947-01-01, note: "Commanding General, Manhattan Engineer District; took command on his promotion to brigadier general", sources: [wp-leslie-groves]}
+
+events:
+  - key: discovery-of-nuclear-fission
+    name: Discovery of nuclear fission
+    type: Discovery
+    date: 1938-12-17
+    place: dahlem-berlin
+    prominence: 4
+    people: [{person: otto-hahn, role: discovered}, {person: lise-meitner, role: explained}]
+    note: Hahn and Strassmann found barium in uranium bombarded with neutrons; Meitner and Frisch explained it as the nucleus splitting.
+    sources: [wp-otto-hahn, wp-nuclear-fission, wp-lise-meitner]
+  - key: einstein-szilard-letter
+    name: Einstein–Szilard letter
+    type: Letter
+    date: 1939-08-02
+    place: white-house
+    prominence: 4
+    people: [{person: leo-szilard, role: drafted}, {person: albert-einstein, role: signed}, {person: edward-teller, role: drove Szilard to Einstein}]
+    note: A letter drafted by Szilard and signed by Einstein warned Roosevelt of possible German atomic bombs; it reached him on 11 October 1939.
+    sources: [wp-einstein-szilard-letter]
+  - key: manhattan-project
+    name: Manhattan Project
+    type: Project
+    date: 1942-08-13
+    end_year: 1946
+    place: oak-ridge-tennessee
+    places:
+      - {place: los-alamos-national-laboratory, role: laboratory, note: "Project Y, where the bombs were designed"}
+      - {place: hanford-site, role: plutonium production}
+      - {place: chicago-pile-1-site, role: reactor}
+    prominence: 4
+    people:
+      - {person: leslie-groves, role: director}
+      - {person: j-robert-oppenheimer, role: Los Alamos director}
+      - {person: enrico-fermi, role: scientist}
+      - {person: ernest-lawrence, role: scientist}
+      - {person: leo-szilard, role: scientist}
+      - {person: richard-feynman, role: scientist}
+      - {person: edward-teller, role: scientist}
+      - {person: niels-bohr, role: consultant}
+    note: The US-led programme, with Britain and Canada, that built the first nuclear weapons, with nearly 130,000 staff, to the end of 1946.
+    sources: [wp-manhattan-project]
+  - key: chicago-pile-1
+    name: Chicago Pile-1 goes critical
+    type: Experiment
+    date: 1942-12-02
+    place: chicago-pile-1-site
+    prominence: 4
+    people: [{person: enrico-fermi, role: led}, {person: leo-szilard, role: present}]
+    note: Fermi's team achieved the first human-made self-sustaining nuclear chain reaction, in a squash court under Stagg Field's stands.
+    sources: [wp-chicago-pile-1, wp-enrico-fermi]
+  - key: polish-enigma-break
+    name: Rejewski breaks the Enigma
+    type: Breakthrough
+    year: 1932
+    place: saxon-palace-warsaw
+    prominence: 3
+    people: [{person: marian-rejewski, role: broke the cipher}]
+    note: In December 1932 Rejewski used permutation theory to work out the German military Enigma's wiring without ever seeing the machine.
+    sources: [wp-marian-rejewski, wp-cipher-bureau-poland]
+  - key: pyry-enigma-meeting
+    name: Pyry meeting on Enigma
+    type: Conference
+    date: 1939-07-25
+    place: pyry
+    prominence: 3
+    people: [{person: marian-rejewski, role: presented}]
+    note: Five weeks before the war, the Polish Cipher Bureau showed French and British intelligence its Enigma methods and replica machines.
+    sources: [wp-marian-rejewski, wp-cipher-bureau-poland]
+  - key: first-bombe
+    name: First British bombe installed
+    type: Invention
+    date: 1940-03-18
+    place: bletchley-park
+    prominence: 3
+    people: [{person: alan-turing, role: designer}, {person: gordon-welchman, role: improved}]
+    note: "The bombe Victory, Turing's electromechanical Enigma-breaking machine built by BTM, went into Hut 1 at Bletchley Park; Welchman's diagonal board followed."
+    sources: [wp-bombe, wp-alan-turing]
+  - key: first-penicillin-patient
+    name: First patient treated with penicillin
+    type: Experiment
+    date: 1941-02-12
+    place: radcliffe-infirmary
+    prominence: 3
+    people: [{person: howard-florey, role: treated}, {person: ernst-chain, role: treated}]
+    note: Constable Albert Alexander became the first person given injected penicillin; he improved, then died when the supply ran out.
+    sources: [wp-albert-alexander, wp-howard-florey]
+  - key: chain-home-radar
+    name: Chain Home radar goes into service
+    type: Invention
+    year: 1938
+    place: bawdsey-manor
+    prominence: 3
+    people: [{person: robert-watson-watt, role: developed}]
+    note: The first five stations of Chain Home, the first early-warning radar network, were declared operational during the 1938 Munich crisis.
+    sources: [wp-chain-home, wp-robert-watson-watt]
+  - key: peenemunde-raid
+    name: Peenemünde raid (Operation Hydra)
+    type: Attack
+    date: 1943-08-17
+    place: peenemunde-army-research-center
+    prominence: 2
+    note: An RAF Bomber Command night raid on the German rocket centre; 40 bombers were lost, and hundreds of forced labourers were killed.
+    sources: [wp-operation-hydra-1943, wp-peenemunde-army-research-center]
+  - key: first-v-2-attack
+    name: First V-2 rocket attacks
+    type: Attack
+    date: 1944-09-08
+    place: chiswick
+    prominence: 3
+    people: [{person: wernher-von-braun, role: designer}]
+    note: The first combat V-2s were fired at Paris and London; the first to hit London fell in Chiswick on the evening of 8 September 1944.
+    sources: [wp-v-2-rocket, wp-chiswick]
+  # Existing events: link the people now in the database.
+  - key: colossus-first-message
+    people: [{person: tommy-flowers, role: built Colossus}]
+    sources: [wp-tommy-flowers]
+  - key: trinity-test-1945
+    people: [{person: j-robert-oppenheimer, role: present}]
+    sources: [wp-j-robert-oppenheimer]
+
+discrepancies:
+  - key: fission-discovery-date
+    question: When did Hahn and Strassmann discover nuclear fission?
+    about: [{event: discovery-of-nuclear-fission}]
+    field: date
+    claims:
+      - {value: "16–17 December 1938 (the decisive experiment)", sources: [wp-otto-hahn]}
+      - {value: "19 December 1938", sources: [wp-nuclear-fission], note: "Also the date of Hahn's letter to Meitner"}
+    note: The record uses 17 December, the experiment.
+  - key: manhattan-project-start
+    question: When was the Manhattan Project's Manhattan District created?
+    about: [{event: manhattan-project}, {person: leslie-groves}]
+    field: date
+    claims:
+      - {value: "13 August 1942", sources: [wp-manhattan-project]}
+      - {value: "16 August 1942 (formally established)", sources: [wp-leslie-groves]}
+      - {value: "June 1942", sources: [wp-j-robert-oppenheimer], note: "Also Groves's DSM citation, 'from June 1942 to August 1945'"}
+    note: The event uses 13 August; Groves's title starts when he took command, 23 September 1942.
+  - key: pyry-meeting-dates
+    question: Was the Pyry meeting on 25 July or 25–26 July 1939?
+    about: [{event: pyry-enigma-meeting}]
+    field: date
+    claims:
+      - {value: "25 July 1939", sources: [wp-marian-rejewski]}
+      - {value: "25 and 26 July 1939", sources: [wp-cipher-bureau-poland]}
+    note: The record uses 25 July, the day it began.
