@@ -62,6 +62,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### In progress
 
+#### [P2] WWII: events and people
+`type: task` · `area: data` · `status: in progress` · `issue: #262`
+
+Five batches: (1) leaders and the war's outline events, (2) European war and commanders, (3) Pacific and China, (4) Holocaust and resistance, (5) science and codebreaking. Turning points get 5 stars (invasion of Poland, Pearl Harbor, Hiroshima and Nagasaki, VE Day, Japan's surrender), major battles 4. Leaders' titles use their real offices; commands are `kind: military` titles.
+Source: Ty, 2026-10-24.
+
 #### [P1] Places: today's location (city, county, country) and current coordinates
 `type: task` · `area: data` · `status: ready` · `issue: #39`
 
@@ -149,6 +155,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Military group, and military titles drawn in iron
+`type: enhancement` · `area: site` · `status: done` · `issue: #261`
+
+A Military type and Show button (iron grey). Titles have a `kind` field (sql/018): `kind: military` titles are drawn in iron instead of gold, put their holder in the Military group whatever their type (Eisenhower stays Government), and stay out of the Year view's rulers. Done 2026-10-24 (PR pending).
+Source: Ty, 2026-10-24.
 
 #### [P3] Explore: rearrange the cards
 `type: enhancement` · `area: site` · `status: done` · `issue: #243`
