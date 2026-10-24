@@ -551,6 +551,8 @@ function crownPath(x, y, w = 12) {
 }
 // Offices (a column, not a crown): officials, and the roles notable people hold, such as First Lady.
 const isOffice = p => p?.type === "Government" || p?.type === "Notable" || p?.type === "Military";
+// A military title: a command held for a time (sql/018), shown as "Commands" rather than among titles and offices.
+const isCommand = t => t?.kind === "military";
 function columnPath(x, y, w = 12) {
   const h = w * .75, X = f => x + w * f, Y = f => y + h * f;
   return `M${X(.08)},${y} H${X(.92)} V${Y(.2)} H${X(.74)} V${Y(.8)} H${x + w} V${y + h} H${x} V${Y(.8)} H${X(.26)} V${Y(.2)} H${X(.08)} Z`;
@@ -925,9 +927,13 @@ function select(id) {
     ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
     ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
     ...(db.filmsPortraying(id).length ? [["Portrayed in", joinNodes(db.filmsPortraying(id).map(f => eventLink(f, ` (${fmtYear(f.start_year)})`)))]] : []),
-    ...(db.titlesOf(id).length ? [[h("span", {}, crownIcon(isOffice(p) ? "Held an office" : "Held a title", p), isOffice(p) ? " Offices" : " Titles"), joinNodes(db.titlesOf(id).map(t => h("button", { type: "button", class: "plink",
-      title: `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
-      text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]] : []),
+    // Reigns and offices first, then military commands in a row of their own (iron, like their strip on the timeline).
+    ...[db.titlesOf(id).filter(t => !isCommand(t)), db.titlesOf(id).filter(isCommand)].filter(ts => ts.length).map(ts => [
+      isCommand(ts[0]) ? h("span", {}, h("i", { class: "sw cmd-sw", "aria-hidden": "true" }), " Commands")
+        : h("span", {}, crownIcon(isOffice(p) ? "Held an office" : "Held a title", p), isOffice(p) ? " Offices" : " Titles"),
+      joinNodes(ts.map(t => h("button", { type: "button", class: "plink",
+        title: isCommand(t) ? `What happened during ${reignSpan(t)}` : `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
+        text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]),
     ...externalRow("person", p.key),
     ["Sources", sourceLinks(db.sourcesFor("person", p.key))],
     ["Obsidian note", obsidianLink(p.obsidian_link)],
@@ -2908,7 +2914,8 @@ function personCard() {
     lifeStrip(p, dated, evs, titles),
     xSec(`Works in order${works.length ? ` (${works.length})` : ""}`, xList("person", [...dated, ...undated], 6,
       w => row2([xWork(w), w.kind ? ` (${w.kind})` : ""], workSpan(w) ? xYear(w.start_year, workSpan(w)) : "undated"))),
-    titles.length ? xSec("Titles", xList("person", titles, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null,
+    ...[["Titles", titles.filter(t => !isCommand(t))], ["Commands", titles.filter(isCommand)]].map(([label, ts]) =>
+      ts.length ? xSec(label, xList("person", ts, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null),
     evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
     portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xFilm(f), xYear(f.start_year)))) : null,
     xSec("Places", xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,

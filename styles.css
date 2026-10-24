@@ -132,6 +132,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.5vw
 .crown-icon { fill: var(--gold); vertical-align: -1px; flex: none; }
 li.disputed .crown-icon { fill-opacity: .45; }
 .sw.crown-sw { background: none; width: 13px; }
+.sw.cmd-sw { background: var(--iron); width: 10px; height: 10px; vertical-align: -1px; }
 .person, .event { cursor: pointer; outline: none; }
 .person:hover .bar { opacity: .75; }
 .person:focus-visible .hit, .event:focus-visible .hit { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 3 3; }
