@@ -1,0 +1,407 @@
+batch:
+  title: "WWII, batch 2b: the European war's battles and campaigns"
+  requested: "Ty: go ahead with batch 2, the European war and its commanders"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each event's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body). Site
+#   coordinates come from each site's own article; Licata and the Alamein Memorial have none there, so theirs come from Wikidata.
+# - Needs batch 2a (2026-10-24-wwii-europe-commanders.yaml) applied first: the commanders linked here are added there.
+# - People: infobox commanders, plus people the body names in a clear role (Churchill ordered Dunkirk's evacuation; Harris proposed
+#   the Dresden raids; Jodl, Keitel and Zhukov signed the surrenders). Passing mentions are left out.
+# - Existing events updated with the commanders now in the database: invasion of Poland, Battle of France, Battle of Britain,
+#   Operation Barbarossa, Stalingrad, Normandy (plus its five beaches as places), the German surrender, the Nuremberg trials.
+#   Patton's role at Normandy was only the decoy army in England, so he is not linked to it.
+# - Prominence: 4 for the big battles and turning points (Dunkirk, the Blitz, Leningrad, Moscow, El Alamein, Kursk, Bagration,
+#   Liberation of Paris, the Bulge, Berlin); 3 for the rest.
+# - Market Garden: the article deliberately gives no one-word result (a debated outcome); the note says what failed and what was won.
+# - The longer armistice with Italy, signed at Malta on 29 September 1943 aboard HMS Nelson, is mentioned in the Cassibile note only.
+# - Bagration is placed at Minsk (liberated 4 July 1944); the infobox location is a whole region.
+# - Torch is placed at Casablanca, with Oran and Algiers as the other landings.
+
+sources:
+  - {key: wp-dunkirk-evacuation, title: "Dunkirk evacuation (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dunkirk_evacuation"}
+  - {key: wp-dunkirk, title: "Dunkirk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dunkirk"}
+  - {key: wp-dover-castle, title: "Dover Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dover_Castle"}
+  - {key: wp-the-blitz, title: "The Blitz (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Blitz"}
+  - {key: wp-siege-of-leningrad, title: "Siege of Leningrad (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Leningrad"}
+  - {key: wp-battle-of-moscow, title: "Battle of Moscow (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Moscow"}
+  - {key: wp-second-battle-of-el-alamein, title: "Second Battle of El Alamein (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"}
+  - {key: wp-el-alamein, title: "El Alamein (Wikipedia)", url: "https://en.wikipedia.org/wiki/El_Alamein"}
+  - {key: wp-alamein-memorial, title: "Alamein Memorial (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alamein_Memorial"}
+  - {key: wp-operation-torch, title: "Operation Torch (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Torch"}
+  - {key: wp-casablanca, title: "Casablanca (Wikipedia)", url: "https://en.wikipedia.org/wiki/Casablanca"}
+  - {key: wp-oran, title: "Oran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oran"}
+  - {key: wp-algiers, title: "Algiers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Algiers"}
+  - {key: wp-allied-invasion-of-sicily, title: "Allied invasion of Sicily (Wikipedia)", url: "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily"}
+  - {key: wp-gela, title: "Gela (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gela"}
+  - {key: wp-licata, title: "Licata (Wikipedia)", url: "https://en.wikipedia.org/wiki/Licata"}
+  - {key: wp-cassibile, title: "Cassibile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cassibile"}
+  - {key: wp-battle-of-kursk, title: "Battle of Kursk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kursk"}
+  - {key: wp-kursk, title: "Kursk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kursk"}
+  - {key: wp-battle-of-prokhorovka, title: "Battle of Prokhorovka (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Prokhorovka"}
+  - {key: wp-armistice-of-cassibile, title: "Armistice of Cassibile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Armistice_of_Cassibile"}
+  - {key: wp-battle-of-monte-cassino, title: "Battle of Monte Cassino (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Monte_Cassino"}
+  - {key: wp-operation-bagration, title: "Operation Bagration (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Bagration"}
+  - {key: wp-minsk, title: "Minsk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Minsk"}
+  - {key: wp-warsaw-uprising, title: "Warsaw Uprising (Wikipedia)", url: "https://en.wikipedia.org/wiki/Warsaw_Uprising"}
+  - {key: wp-warsaw-uprising-museum, title: "Warsaw Uprising Museum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Warsaw_Uprising_Museum"}
+  - {key: wp-liberation-of-paris, title: "Liberation of Paris (Wikipedia)", url: "https://en.wikipedia.org/wiki/Liberation_of_Paris"}
+  - {key: wp-le-meurice, title: "Le Meurice (Wikipedia)", url: "https://en.wikipedia.org/wiki/Le_Meurice"}
+  - {key: wp-paris-police-prefecture, title: "Paris Police Prefecture (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paris_Police_Prefecture"}
+  - {key: wp-gare-montparnasse, title: "Gare Montparnasse (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gare_Montparnasse"}
+  - {key: wp-arc-de-triomphe, title: "Arc de Triomphe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arc_de_Triomphe"}
+  - {key: wp-operation-market-garden, title: "Operation Market Garden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Market_Garden"}
+  - {key: wp-john-frost-bridge, title: "John Frost Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Frost_Bridge"}
+  - {key: wp-nijmegen, title: "Nijmegen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nijmegen"}
+  - {key: wp-eindhoven, title: "Eindhoven (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eindhoven"}
+  - {key: wp-battle-of-the-bulge, title: "Battle of the Bulge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Bulge"}
+  - {key: wp-bastogne, title: "Bastogne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bastogne"}
+  - {key: wp-bombing-of-dresden, title: "Bombing of Dresden in World War II (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bombing_of_Dresden_in_World_War_II"}
+  - {key: wp-frauenkirche-dresden, title: "Frauenkirche, Dresden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frauenkirche,_Dresden"}
+  - {key: wp-battle-of-berlin, title: "Battle of Berlin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Berlin"}
+  - {key: wp-reichstag-building, title: "Reichstag building (Wikipedia)", url: "https://en.wikipedia.org/wiki/Reichstag_building"}
+  - {key: wp-raising-a-flag-over-the-reichstag, title: "Raising a Flag over the Reichstag (Wikipedia)", url: "https://en.wikipedia.org/wiki/Raising_a_Flag_over_the_Reichstag"}
+  - {key: wp-normandy-landings, title: "Normandy landings (Wikipedia)", url: "https://en.wikipedia.org/wiki/Normandy_landings"}
+  - {key: wp-utah-beach, title: "Utah Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Utah_Beach"}
+  - {key: wp-gold-beach, title: "Gold Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gold_Beach"}
+  - {key: wp-juno-beach, title: "Juno Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Juno_Beach"}
+  - {key: wp-sword-beach, title: "Sword Beach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sword_Beach"}
+
+places:
+  - {key: dunkirk, name: Dunkirk, kind: city, region: Nord, country: France, lat: 51.0383, lng: 2.3775, sources: [wp-dunkirk]}
+  - {key: dover-castle, name: Dover Castle, kind: castle, city: Dover, region: Kent, country: England, lat: 51.1297, lng: 1.3214, visitable: true, visit_site: Dover Castle and its Secret Wartime Tunnels (English Heritage), sources: [wp-dover-castle]}
+  - {key: el-alamein, name: El Alamein, kind: town, region: Matrouh Governorate, country: Egypt, lat: 30.8333, lng: 28.95, sources: [wp-el-alamein]}
+  - {key: alamein-memorial, name: El Alamein War Cemetery and Alamein Memorial, kind: cemetery, city: El Alamein, country: Egypt, lat: 30.8381, lng: 28.9471, visitable: true, sources: [wp-alamein-memorial]}
+  - {key: casablanca, name: Casablanca, kind: city, country: Morocco, lat: 33.5333, lng: -7.5833, sources: [wp-casablanca]}
+  - {key: oran, name: Oran, kind: city, country: Algeria, lat: 35.6969, lng: -0.6331, sources: [wp-oran]}
+  - {key: algiers, name: Algiers, kind: city, country: Algeria, lat: 36.7325, lng: 3.0872, sources: [wp-algiers]}
+  - {key: gela, name: Gela, kind: city, region: Sicily, country: Italy, lat: 37.0667, lng: 14.25, sources: [wp-gela]}
+  - {key: licata, name: Licata, kind: town, region: Sicily, country: Italy, lat: 37.1083, lng: 13.9469, sources: [wp-licata]}
+  - {key: cassibile, name: Cassibile, kind: village, city: Syracuse, region: Sicily, country: Italy, lat: 36.9764, lng: 15.1975, sources: [wp-cassibile]}
+  - {key: kursk, name: Kursk, kind: city, region: Kursk Oblast, country: Russia, lat: 51.7167, lng: 36.1833, sources: [wp-kursk]}
+  - {key: prokhorovka, name: Prokhorovka, kind: town, region: Belgorod Oblast, country: Russia, lat: 51.0364, lng: 36.7364, sources: [wp-battle-of-prokhorovka]}
+  - {key: minsk, name: Minsk, kind: city, country: Belarus, lat: 53.9006, lng: 27.5586, sources: [wp-minsk]}
+  - {key: warsaw-uprising-museum, name: Warsaw Uprising Museum, kind: museum, city: Warsaw, country: Poland, lat: 52.2322, lng: 20.9808, visitable: true, sources: [wp-warsaw-uprising-museum]}
+  - {key: le-meurice, name: Le Meurice, kind: hotel, city: Paris, country: France, lat: 48.8653, lng: 2.3283, note: "German headquarters in occupied Paris, where Choltitz surrendered on 25 August 1944", sources: [wp-le-meurice]}
+  - {key: paris-police-prefecture, name: Paris Police Prefecture (Caserne de la Cité), kind: building, city: Paris, country: France, lat: 48.8544, lng: 2.3468, sources: [wp-paris-police-prefecture]}
+  - {key: gare-montparnasse, name: Gare Montparnasse, kind: railway station, city: Paris, country: France, lat: 48.84, lng: 2.3186, sources: [wp-gare-montparnasse]}
+  - {key: arc-de-triomphe, name: Arc de Triomphe, kind: monument, city: Paris, country: France, lat: 48.8738, lng: 2.295, visitable: true, sources: [wp-arc-de-triomphe]}
+  - {key: john-frost-bridge, name: John Frost Bridge, kind: bridge, city: Arnhem, country: Netherlands, lat: 51.9747, lng: 5.9119, visitable: true, note: "The road bridge over the Lower Rhine at Arnhem, Market Garden's last objective; renamed after the British commander who held its north end", sources: [wp-john-frost-bridge]}
+  - {key: nijmegen, name: Nijmegen, kind: city, region: Gelderland, country: Netherlands, lat: 51.8475, lng: 5.8625, sources: [wp-nijmegen]}
+  - {key: eindhoven, name: Eindhoven, kind: city, region: North Brabant, country: Netherlands, lat: 51.4333, lng: 5.4833, sources: [wp-eindhoven]}
+  - {key: bastogne, name: Bastogne, kind: town, region: Luxembourg Province, country: Belgium, lat: 50.0042, lng: 5.72, sources: [wp-bastogne]}
+  - {key: frauenkirche-dresden, name: "Frauenkirche, Dresden", kind: church, city: Dresden, region: Saxony, country: Germany, lat: 51.0519, lng: 13.7417, visitable: true, note: "Collapsed a few days after the February 1945 raids; the ruins stood as a war memorial until the church was rebuilt and reconsecrated in 2005", sources: [wp-frauenkirche-dresden]}
+  - {key: reichstag-building, name: Reichstag building, kind: parliament, city: Berlin, country: Germany, lat: 52.5186, lng: 13.3761, visitable: true, sources: [wp-reichstag-building]}
+  - {key: utah-beach, name: Utah Beach, kind: beach, region: Manche, country: France, lat: 49.4181, lng: -1.1764, visitable: true, sources: [wp-utah-beach]}
+  - {key: gold-beach, name: Gold Beach, kind: beach, region: Calvados, country: France, lat: 49.3453, lng: -0.5717, visitable: true, sources: [wp-gold-beach]}
+  - {key: juno-beach, name: Juno Beach, kind: beach, region: Calvados, country: France, lat: 49.3353, lng: -0.4153, visitable: true, sources: [wp-juno-beach]}
+  - {key: sword-beach, name: Sword Beach, kind: beach, region: Calvados, country: France, lat: 49.3064, lng: -0.3211, visitable: true, sources: [wp-sword-beach]}
+
+events:
+  - key: dunkirk-evacuation
+    name: Dunkirk evacuation (Operation Dynamo)
+    type: Evacuation
+    date: 1940-05-26
+    end_year: 1940
+    place: dunkirk
+    places: [{place: dover-castle, role: planning, note: "Admiral Ramsay ran the operation from the tunnels below the castle"}]
+    prominence: 4
+    people: [{person: winston-churchill, role: ordered}, {person: hermann-goring, role: commander}, {person: adolf-hitler, role: halt order}]
+    note: More than 338,000 Allied soldiers were taken off Dunkirk's beaches and harbour by navy and civilian ships, 26 May – 4 June 1940.
+    sources: [wp-dunkirk-evacuation]
+  - key: the-blitz
+    name: The Blitz
+    type: Bombing
+    date: 1940-09-07
+    end_year: 1941
+    place: london
+    prominence: 4
+    people: [{person: winston-churchill, role: commander}, {person: hugh-dowding, role: commander}, {person: adolf-hitler, role: commander}, {person: hermann-goring, role: commander}]
+    note: German bombing of British cities to 16 May 1941; London was bombed on 56 of 57 days and nights from 7 September 1940.
+    sources: [wp-the-blitz]
+  - key: siege-of-leningrad
+    name: Siege of Leningrad
+    type: Siege
+    date: 1941-09-08
+    end_year: 1944
+    place: saint-petersburg
+    prominence: 4
+    people: [{person: georgy-zhukov, role: commander}, {person: adolf-hitler, role: ordered}]
+    note: German and Finnish forces besieged Leningrad for 872 days, to 27 January 1944, without taking it; hundreds of thousands starved.
+    sources: [wp-siege-of-leningrad]
+  - key: battle-of-moscow
+    name: Battle of Moscow
+    type: Battle
+    date: 1941-10-02
+    end_year: 1942
+    place: moscow
+    prominence: 4
+    people:
+      - {person: adolf-hitler, role: commander}
+      - {person: wilhelm-keitel, role: commander}
+      - {person: alfred-jodl, role: commander}
+      - {person: heinz-guderian, role: commander}
+      - {person: hermann-goring, role: commander}
+      - {person: joseph-stalin, role: commander}
+      - {person: georgy-zhukov, role: commander}
+      - {person: konstantin-rokossovsky, role: commander}
+      - {person: ivan-konev, role: commander}
+    note: The German drive on Moscow (Operation Typhoon) was halted, and a Soviet counteroffensive from 5 December pushed it back, to 7 January 1942.
+    sources: [wp-battle-of-moscow]
+  - key: second-battle-of-el-alamein
+    name: Second Battle of El Alamein
+    type: Battle
+    date: 1942-10-23
+    end_year: 1942
+    place: el-alamein
+    places: [{place: alamein-memorial, role: memorial}]
+    prominence: 4
+    people: [{person: bernard-montgomery, role: victor}, {person: erwin-rommel, role: defeated}]
+    note: Montgomery's Eighth Army broke the Axis line near El Alamein (23 October – 4 November 1942), and Rommel retreated.
+    sources: [wp-second-battle-of-el-alamein, wp-alamein-memorial]
+  - key: operation-torch
+    name: Operation Torch
+    type: Invasion
+    date: 1942-11-08
+    end_year: 1942
+    place: casablanca
+    places:
+      - {place: oran, role: landing, note: Centre Task Force}
+      - {place: algiers, role: landing, note: Eastern Task Force}
+    prominence: 3
+    people: [{person: dwight-d-eisenhower, role: supreme commander}, {person: george-s-patton, role: commander}, {person: winston-churchill, role: proposed}]
+    note: Anglo-American landings in Vichy French North Africa at Casablanca (Patton's Western Task Force), Oran and Algiers, to 16 November 1942.
+    sources: [wp-operation-torch]
+  - key: allied-invasion-of-sicily
+    name: Allied invasion of Sicily (Operation Husky)
+    type: Invasion
+    date: 1943-07-09
+    end_year: 1943
+    place: gela
+    places:
+      - {place: licata, role: landing, note: Western end of the US landings}
+      - {place: cassibile, role: landing, note: Eastern end of the landings}
+      - {place: syracuse-sicily, role: target, note: British airborne landing at Ponte Grande}
+      - {place: messina, role: finish, note: "US troops entered on the night of 16 August; the campaign ended on 17 August"}
+    prominence: 3
+    people:
+      - {person: dwight-d-eisenhower, role: supreme commander}
+      - {person: george-s-patton, role: commander}
+      - {person: bernard-montgomery, role: commander}
+      - {person: omar-bradley, role: commander}
+    note: Airborne and seaborne invasion, then a six-week campaign; it led to Mussolini's fall, and Axis forces escaped over the Strait of Messina.
+    sources: [wp-allied-invasion-of-sicily]
+  - key: battle-of-kursk
+    name: Battle of Kursk
+    type: Battle
+    date: 1943-07-05
+    end_year: 1943
+    place: kursk
+    places: [{place: prokhorovka, role: tank battle, note: 12 July 1943}]
+    prominence: 4
+    people:
+      - {person: adolf-hitler, role: commander}
+      - {person: erich-von-manstein, role: commander}
+      - {person: joseph-stalin, role: commander}
+      - {person: georgy-zhukov, role: commander}
+      - {person: konstantin-rokossovsky, role: commander}
+      - {person: ivan-konev, role: commander}
+    note: Germany's Operation Citadel against the Kursk salient failed, and Soviet counteroffensives followed, to 23 August 1943.
+    sources: [wp-battle-of-kursk, wp-battle-of-prokhorovka]
+  - key: armistice-of-cassibile
+    name: Armistice of Cassibile
+    type: Armistice
+    date: 1943-09-03
+    place: cassibile
+    prominence: 3
+    people: [{person: dwight-d-eisenhower, role: announced}]
+    note: Italy's secret armistice with the Allies, signed at Fairfield Camp and announced on 8 September; a longer one followed at Malta on 29 September.
+    sources: [wp-armistice-of-cassibile]
+  - key: battle-of-monte-cassino
+    name: Battle of Monte Cassino
+    type: Battle
+    date: 1944-01-17
+    end_year: 1944
+    place: monte-cassino
+    prominence: 3
+    note: Four Allied assaults on the Gustav Line around the abbey, which Allied bombers destroyed on 15 February; Polish troops took it on 18 May 1944.
+    sources: [wp-battle-of-monte-cassino]
+  - key: operation-bagration
+    name: Operation Bagration
+    type: Offensive
+    date: 1944-06-22
+    end_year: 1944
+    place: minsk
+    prominence: 4
+    people:
+      - {person: georgy-zhukov, role: commander}
+      - {person: konstantin-rokossovsky, role: commander}
+      - {person: ivan-konev, role: commander}
+    note: Soviet offensive in Byelorussia that destroyed much of German Army Group Centre (to 19 August 1944); Minsk was freed on 4 July.
+    sources: [wp-operation-bagration]
+  - key: warsaw-uprising
+    name: Warsaw Uprising
+    type: Uprising
+    date: 1944-08-01
+    end_year: 1944
+    place: warsaw
+    places: [{place: warsaw-uprising-museum, role: memorial}]
+    prominence: 3
+    people: [{person: joseph-stalin, role: withheld support}]
+    note: The Polish Home Army rose against the German occupation for 63 days, to 2 October 1944, while Soviet forces waited; most of Warsaw was destroyed.
+    sources: [wp-warsaw-uprising]
+  - key: liberation-of-paris
+    name: Liberation of Paris
+    type: Liberation
+    date: 1944-08-19
+    end_year: 1944
+    place: paris
+    places:
+      - {place: paris-police-prefecture, role: start, note: "The uprising began here on 19 August; Choltitz signed the official surrender here on 25 August"}
+      - {place: le-meurice, role: surrender, note: "Choltitz surrendered at his headquarters at 15:30 on 25 August"}
+      - {place: gare-montparnasse, role: signing, note: "Leclerc's command post, where the surrender of the German troops was signed"}
+      - {place: hotel-de-ville-paris, role: speech, note: "De Gaulle's speech, 25 August"}
+      - {place: arc-de-triomphe, role: parade, note: "The victory parade set off here on 26 August"}
+    prominence: 4
+    people: [{person: charles-de-gaulle, role: commander}, {person: dwight-d-eisenhower, role: allowed the advance}]
+    note: A Resistance uprising, then Leclerc's 2nd Armoured Division and the US 4th Infantry freed Paris; the garrison surrendered on 25 August 1944.
+    sources: [wp-liberation-of-paris]
+  - key: operation-market-garden
+    name: Operation Market Garden
+    type: Operation
+    date: 1944-09-17
+    end_year: 1944
+    place: arnhem
+    places:
+      - {place: john-frost-bridge, role: objective, note: The Arnhem road bridge, never held}
+      - {place: nijmegen, role: bridge}
+      - {place: eindhoven, role: objective}
+    prominence: 3
+    people: [{person: bernard-montgomery, role: planned}, {person: dwight-d-eisenhower, role: supreme commander}]
+    note: An airborne and armoured push for the Dutch river bridges (to 25 September 1944); it took Eindhoven and Nijmegen but failed at Arnhem.
+    sources: [wp-operation-market-garden, wp-john-frost-bridge]
+  - key: battle-of-the-bulge
+    name: Battle of the Bulge
+    type: Battle
+    date: 1944-12-16
+    end_year: 1945
+    place: bastogne
+    prominence: 4
+    people:
+      - {person: adolf-hitler, role: ordered}
+      - {person: dwight-d-eisenhower, role: supreme commander}
+      - {person: bernard-montgomery, role: commander}
+      - {person: omar-bradley, role: commander}
+      - {person: george-s-patton, role: relieved Bastogne}
+    note: Germany's Ardennes offensive towards Antwerp; besieged Bastogne held until Patton's Third Army relieved it on 26 December.
+    sources: [wp-battle-of-the-bulge, wp-bastogne]
+  - key: bombing-of-dresden
+    name: Bombing of Dresden
+    type: Bombing
+    date: 1945-02-13
+    end_year: 1945
+    place: dresden
+    places: [{place: frauenkirche-dresden, role: destroyed}]
+    prominence: 3
+    people: [{person: arthur-harris, role: commander}, {person: winston-churchill, role: pressed for}]
+    note: Four RAF and USAAF raids (13–15 February 1945) dropped over 3,900 tons of bombs on Dresden and killed up to 25,000 people.
+    sources: [wp-bombing-of-dresden, wp-frauenkirche-dresden]
+  - key: battle-of-berlin
+    name: Battle of Berlin
+    type: Battle
+    date: 1945-04-16
+    end_year: 1945
+    place: berlin
+    places: [{place: reichstag-building, role: assault, note: "Soviet troops entered on 30 April; the famous flag photo was taken in the days after"}]
+    prominence: 4
+    people:
+      - {person: joseph-stalin, role: commander}
+      - {person: georgy-zhukov, role: commander}
+      - {person: konstantin-rokossovsky, role: commander}
+      - {person: ivan-konev, role: commander}
+      - {person: adolf-hitler, role: commander}
+    note: The last Soviet offensive of the war in Europe; Berlin's garrison surrendered on 2 May 1945, two days after Hitler's suicide.
+    sources: [wp-battle-of-berlin, wp-reichstag-building]
+  # Existing events: link the commanders now in the database.
+  - key: invasion-of-poland
+    people: [{person: adolf-hitler, role: ordered}, {person: joseph-stalin, role: ordered}, {person: heinz-guderian, role: commander}]
+    sources: [wp-invasion-of-poland]
+  - key: battle-of-france
+    people:
+      - {person: hermann-goring, role: commander}
+      - {person: heinz-guderian, role: commander}
+      - {person: erwin-rommel, role: commander}
+      - {person: erich-von-manstein, role: planned}
+      - {person: charles-de-gaulle, role: commander}
+      - {person: wilhelm-keitel, role: signed}
+    sources: [wp-battle-of-france]
+  - key: battle-of-britain
+    people: [{person: hugh-dowding, role: victor}, {person: hermann-goring, role: defeated}, {person: winston-churchill, role: prime minister}]
+    sources: [wp-battle-of-britain]
+  - key: operation-barbarossa
+    people:
+      - {person: hermann-goring, role: commander}
+      - {person: georgy-zhukov, role: commander}
+      - {person: ivan-konev, role: commander}
+      - {person: heinz-guderian, role: commander}
+      - {person: erich-von-manstein, role: commander}
+    sources: [wp-operation-barbarossa]
+  - key: battle-of-stalingrad
+    people:
+      - {person: friedrich-paulus, role: surrendered}
+      - {person: erich-von-manstein, role: commander}
+      - {person: hermann-goring, role: commander}
+      - {person: georgy-zhukov, role: commander}
+      - {person: konstantin-rokossovsky, role: commander}
+    sources: [wp-battle-of-stalingrad]
+  - key: normandy-landings-1944
+    places:
+      - {place: utah-beach, role: landing, note: US}
+      - {place: omaha-beach, role: landing, note: US}
+      - {place: gold-beach, role: landing, note: British}
+      - {place: juno-beach, role: landing, note: Canadian}
+      - {place: sword-beach, role: landing, note: British}
+    people: [{person: bernard-montgomery, role: commander}, {person: omar-bradley, role: commander}, {person: erwin-rommel, role: defeated}]
+    sources: [wp-normandy-landings, wp-utah-beach, wp-gold-beach, wp-juno-beach, wp-sword-beach]
+  - key: german-surrender-1945
+    people:
+      - {person: alfred-jodl, role: signed at Reims}
+      - {person: wilhelm-keitel, role: signed in Berlin}
+      - {person: georgy-zhukov, role: signed in Berlin}
+      - {person: karl-donitz, role: head of state}
+    sources: [wp-german-instrument-of-surrender]
+  - key: nuremberg-trials
+    people:
+      - {person: hermann-goring, role: sentenced to death}
+      - {person: wilhelm-keitel, role: sentenced to death}
+      - {person: alfred-jodl, role: sentenced to death}
+      - {person: karl-donitz, role: sentenced to prison}
+      - {person: friedrich-paulus, role: witness}
+    sources: [wp-nuremberg-trials]
+
+discrepancies:
+  - key: battle-of-moscow-start
+    question: Did the Battle of Moscow begin on 30 September or 2 October 1941?
+    about: [{event: battle-of-moscow}]
+    field: date
+    claims:
+      - {value: "1941-10-02", sources: [wp-battle-of-moscow], note: Infobox}
+      - {value: "1941-09-30", sources: [wp-battle-of-moscow], note: "Body: the advance 'resumed on 30 September 1941'; section 'Initial German advance (30 September – 10 October)'"}
+    note: The record uses 2 October, the infobox date.
+  - key: battle-of-the-bulge-end
+    question: Did the Battle of the Bulge end on 25 or 28 January 1945?
+    about: [{event: battle-of-the-bulge}]
+    field: date
+    claims:
+      - {value: "1945-01-28", sources: [wp-battle-of-the-bulge], note: "Infobox (citing Jones 2019)"}
+      - {value: "1945-01-25", sources: [wp-battle-of-the-bulge], note: "Lead and body: 'The German offensive drew to a close on 25 January'"}
+    note: Only the end year (1945) is stored, so the record is right either way.
+  - key: reichstag-flag-date
+    question: Was the flag photo over the Reichstag taken on 1 or 2 May 1945?
+    about: [{event: battle-of-berlin}, {place: reichstag-building}]
+    field: date
+    claims:
+      - {value: "The day after the building was taken (a re-enactment)", sources: [wp-battle-of-berlin]}
+      - {value: "2 May 1945", sources: [wp-raising-a-flag-over-the-reichstag]}
+    note: The record gives no date for the photo.
