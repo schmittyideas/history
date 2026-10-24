@@ -159,7 +159,7 @@ Source: Ty, 2026-10-10.
 #### [P2] Military group, and military titles drawn in iron
 `type: enhancement` · `area: site` · `status: done` · `issue: #261`
 
-A Military type and Show button (iron grey). Titles have a `kind` field (sql/018): `kind: military` titles are drawn in iron instead of gold, put their holder in the Military group whatever their type (Eisenhower stays Government), and stay out of the Year view's rulers. Done 2026-10-24 (PR pending).
+A Military type and Show button (iron grey). Titles have a `kind` field (sql/018): `kind: military` titles are drawn in iron instead of gold, put their holder in the Military group whatever their type (Eisenhower stays Government), and stay out of the Year view's rulers. Done 2026-10-24 (#263).
 Source: Ty, 2026-10-24.
 
 #### [P3] Explore: rearrange the cards
