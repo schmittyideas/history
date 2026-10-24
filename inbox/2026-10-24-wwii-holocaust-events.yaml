@@ -1,0 +1,325 @@
+batch:
+  title: "WWII, batch 4b: the Holocaust and resistance — events"
+  requested: "Ty: WWII build-out, batch 4 (Holocaust and resistance); do all batches"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each event's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body). Site
+#   coordinates come from each site's own article.
+# - Needs batch 4a (2026-10-24-wwii-holocaust-people.yaml) applied first: most people linked here are added there.
+# - Death tolls are given as the articles give them, with their ranges; disputed figures are logged as discrepancies.
+# - The Holocaust itself is an umbrella event (1941-1945, the article's span), placed at Auschwitz, the largest killing centre;
+#   the article has no coordinates of its own. It gets 5 stars: it defines the period as much as any battle.
+# - Operation Reinhard began "around March 1942" and ended in November 1943: year only, with the months in the note. The
+#   Grossaktion Warsaw is its own event, the 1942 deportations that came before the ghetto uprising.
+# - Kristallnacht is placed at Berlin's Fasanenstrasse Synagogue, shown burning in the article's infobox (the pogrom was nationwide).
+# - The White Rose event is the execution of Hans and Sophie Scholl on 22 February 1943, with their arrest at the university
+#   (18 February) as a second site.
+# - Wolf's Lair coordinates are from its own article. The Grossaktion Warsaw article's own coordinate falls outside Warsaw (it looks
+#   mistyped), so the Umschlagplatz is used.
+# - The existing place `chelmno` is the town of Chełmno (Kulm) in Pomerania; the extermination camp at Chełmno nad Nerem is new here.
+# - People: only those the article names in a clear role for the event. Wallenberg, Sugihara, Sendler and Moulin are not named in
+#   these articles; their own stories are in batch 4a.
+
+sources:
+  - {key: wp-nuremberg-laws, title: "Nuremberg Laws (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nuremberg_Laws"}
+  - {key: wp-kristallnacht, title: "Kristallnacht (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kristallnacht"}
+  - {key: wp-fasanenstrasse-synagogue, title: "Fasanenstrasse Synagogue (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fasanenstrasse_Synagogue"}
+  - {key: wp-babi-yar, title: "Babi Yar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Babi_Yar"}
+  - {key: wp-wannsee-conference, title: "Wannsee Conference (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wannsee_Conference"}
+  - {key: wp-assassination-of-reinhard-heydrich, title: "Assassination of Reinhard Heydrich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Assassination_of_Reinhard_Heydrich"}
+  - {key: wp-cathedral-of-saints-cyril-and-methodius-prague, title: "Cathedral of Saints Cyril and Methodius (Prague) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cathedral_of_Saints_Cyril_and_Methodius_(Prague)"}
+  - {key: wp-lidice-massacre, title: "Lidice massacre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lidice_massacre"}
+  - {key: wp-chelmno-extermination-camp, title: "Chełmno extermination camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Che%C5%82mno_extermination_camp"}
+  - {key: wp-ravensbruck, title: "Ravensbrück concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ravensbr%C3%BCck_concentration_camp"}
+  - {key: wp-white-rose, title: "White Rose (Wikipedia)", url: "https://en.wikipedia.org/wiki/White_Rose"}
+  - {key: wp-lmu-munich, title: "LMU Munich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ludwig_Maximilian_University_of_Munich"}
+  - {key: wp-stadelheim-prison, title: "Stadelheim Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stadelheim_Prison"}
+  - {key: wp-warsaw-ghetto-uprising, title: "Warsaw Ghetto Uprising (Wikipedia)", url: "https://en.wikipedia.org/wiki/Warsaw_Ghetto_Uprising"}
+  - {key: wp-grossaktion-warsaw, title: "Grossaktion Warsaw (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grossaktion_Warsaw"}
+  - {key: wp-umschlagplatz, title: "Umschlagplatz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Umschlagplatz"}
+  - {key: wp-monument-to-the-ghetto-heroes, title: "Monument to the Ghetto Heroes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Monument_to_the_Ghetto_Heroes"}
+  - {key: wp-rescue-of-the-danish-jews, title: "Rescue of the Danish Jews (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rescue_of_the_Danish_Jews"}
+  - {key: wp-theresienstadt-ghetto, title: "Theresienstadt Ghetto (Wikipedia)", url: "https://en.wikipedia.org/wiki/Theresienstadt_Ghetto"}
+  - {key: wp-anne-frank, title: "Anne Frank (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Frank"}
+  - {key: wp-anne-frank-house, title: "Anne Frank House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Frank_House"}
+  - {key: wp-westerbork, title: "Westerbork transit camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Westerbork_transit_camp"}
+  - {key: wp-bergen-belsen, title: "Bergen-Belsen concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bergen-Belsen_concentration_camp"}
+  - {key: wp-operation-reinhard, title: "Operation Reinhard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Operation_Reinhard"}
+  - {key: wp-belzec, title: "Bełżec extermination camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Be%C5%82%C5%BCec_extermination_camp"}
+  - {key: wp-sobibor, title: "Sobibor extermination camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sobibor_extermination_camp"}
+  - {key: wp-treblinka, title: "Treblinka extermination camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treblinka_extermination_camp"}
+  - {key: wp-20-july-plot, title: "20 July plot (Wikipedia)", url: "https://en.wikipedia.org/wiki/20_July_plot"}
+  - {key: wp-wolfs-lair, title: "Wolf's Lair (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wolf%27s_Lair"}
+  - {key: wp-bendlerblock, title: "Bendlerblock (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bendlerblock"}
+  - {key: wp-auschwitz-concentration-camp, title: "Auschwitz concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp"}
+  - {key: wp-dachau-concentration-camp, title: "Dachau concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dachau_concentration_camp"}
+  - {key: wp-eichmann-trial, title: "Eichmann trial (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eichmann_trial"}
+  - {key: wp-gerard-behar-center, title: "Gerard Behar Center (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gerard_Behar_Center"}
+  - {key: wp-ayalon-prison, title: "Ayalon Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ayalon_Prison"}
+  - {key: wp-the-holocaust, title: "The Holocaust (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Holocaust"}
+  - {key: wp-krakow-ghetto, title: "Kraków Ghetto (Wikipedia)", url: "https://en.wikipedia.org/wiki/Krak%C3%B3w_Ghetto"}
+
+places:
+  - {key: fasanenstrasse-synagogue, name: Fasanenstrasse Synagogue, kind: synagogue, city: Berlin, country: Germany, lat: 52.5044, lng: 13.3281, ended: 1958, note: "Burned on Kristallnacht; the ruins were demolished and a Jewish community centre stands on the site", sources: [wp-fasanenstrasse-synagogue, wp-kristallnacht]}
+  - {key: babi-yar, name: Babi Yar (Babyn Yar), kind: ravine, city: Kyiv, country: Ukraine, lat: 50.4714, lng: 30.4489, visitable: true, note: "Ravine where tens of thousands of Jews were shot in September 1941; now a memorial site", sources: [wp-babi-yar]}
+  - {key: house-of-the-wannsee-conference, name: House of the Wannsee Conference, kind: villa, city: Berlin, country: Germany, lat: 52.4331, lng: 13.1656, visitable: true, visit_site: "Memorial and educational site, opened 20 January 1992", sources: [wp-wannsee-conference]}
+  - {key: heydrich-attack-site, name: Heydrich assassination site (Libeň), kind: street, city: Prague, country: Czech Republic, lat: 50.1178, lng: 14.4642, visitable: true, sources: [wp-assassination-of-reinhard-heydrich]}
+  - {key: saints-cyril-and-methodius-cathedral-prague, name: Cathedral of Saints Cyril and Methodius, Prague, kind: cathedral, city: Prague, country: Czech Republic, lat: 50.0758, lng: 14.4169, visitable: true, visit_site: National Memorial to the Heroes of the Heydrich Terror (in the crypt), sources: [wp-cathedral-of-saints-cyril-and-methodius-prague]}
+  - {key: lidice, name: Lidice, kind: village, region: Central Bohemian Region, country: Czech Republic, lat: 50.1436, lng: 14.1903, visitable: true, visit_site: Lidice Memorial, sources: [wp-lidice-massacre]}
+  - {key: chelmno-extermination-camp, name: Chełmno extermination camp, kind: extermination camp, city: Chełmno nad Nerem, region: Greater Poland Voivodeship, country: Poland, lat: 52.1542, lng: 18.7231, visitable: true, sources: [wp-chelmno-extermination-camp]}
+  - {key: ravensbruck-concentration-camp, name: Ravensbrück concentration camp, kind: concentration camp, city: Fürstenberg/Havel, region: Brandenburg, country: Germany, lat: 53.189, lng: 13.17, visitable: true, sources: [wp-ravensbruck]}
+  - {key: lmu-munich, name: LMU Munich (main building), kind: university, city: Munich, region: Bavaria, country: Germany, lat: 48.1508, lng: 11.5803, visitable: true, sources: [wp-lmu-munich]}
+  - {key: umschlagplatz, name: Umschlagplatz, kind: memorial, city: Warsaw, country: Poland, lat: 52.2523, lng: 20.9891, visitable: true, note: "The holding area by the railway where ghetto Jews were loaded onto trains to Treblinka", sources: [wp-umschlagplatz]}
+  - {key: monument-to-the-ghetto-heroes, name: Monument to the Ghetto Heroes, kind: monument, city: Warsaw, country: Poland, lat: 52.2497, lng: 20.9939, visitable: true, sources: [wp-monument-to-the-ghetto-heroes]}
+  - {key: theresienstadt-ghetto, name: Theresienstadt Ghetto (Terezín), kind: ghetto, city: Terezín, country: Czech Republic, lat: 50.5133, lng: 14.1669, visitable: true, sources: [wp-theresienstadt-ghetto]}
+  - {key: anne-frank-house, name: Anne Frank House, kind: house museum, city: Amsterdam, country: Netherlands, lat: 52.3753, lng: 4.8843, visitable: true, note: "Prinsengracht 263, where the Frank family hid in the Secret Annex from 1942 to 1944; a museum since 1960", sources: [wp-anne-frank-house]}
+  - {key: westerbork-transit-camp, name: Westerbork transit camp, kind: transit camp, region: Drenthe, country: Netherlands, lat: 52.9175, lng: 6.6072, visitable: true, sources: [wp-westerbork]}
+  - {key: belzec-extermination-camp, name: Bełżec extermination camp, kind: extermination camp, region: Lublin Voivodeship, country: Poland, lat: 50.3717, lng: 23.4575, visitable: true, sources: [wp-belzec]}
+  - {key: sobibor-extermination-camp, name: Sobibor extermination camp, kind: extermination camp, region: Lublin Voivodeship, country: Poland, lat: 51.4472, lng: 23.5936, visitable: true, sources: [wp-sobibor]}
+  - {key: treblinka-extermination-camp, name: Treblinka extermination camp, kind: extermination camp, region: Masovian Voivodeship, country: Poland, lat: 52.6311, lng: 22.0531, visitable: true, sources: [wp-treblinka]}
+  - {key: wolfs-lair, name: Wolf's Lair, kind: bunker, region: Warmian-Masurian Voivodeship, country: Poland, lat: 54.0804, lng: 21.4941, visitable: true, sources: [wp-wolfs-lair]}
+  - {key: dachau-concentration-camp, name: Dachau concentration camp, kind: concentration camp, city: Dachau, region: Bavaria, country: Germany, lat: 48.2689, lng: 11.4686, visitable: true, founded: 1933, sources: [wp-dachau-concentration-camp]}
+  - {key: gerard-behar-center, name: Gerard Behar Center (Beit Ha'am), kind: cultural centre, city: Jerusalem, country: Israel, lat: 31.781, lng: 35.2129, sources: [wp-gerard-behar-center]}
+
+events:
+  - key: nuremberg-laws
+    name: Nuremberg Laws
+    type: Law
+    date: 1935-09-15
+    place: nuremberg
+    prominence: 4
+    people: [{person: adolf-hitler, role: ordered}]
+    note: Two laws passed at the Nuremberg Rally barred marriage between Jews and other Germans and limited citizenship to people of "German blood".
+    sources: [wp-nuremberg-laws]
+  - key: kristallnacht
+    name: Kristallnacht
+    type: Pogrom
+    date: 1938-11-09
+    end_year: 1938
+    place: fasanenstrasse-synagogue
+    prominence: 4
+    people: [{person: reinhard-heydrich, role: sent instructions}, {person: hermann-goring, role: planned the expropriation}, {person: adolf-hitler, role: perpetrator}]
+    note: A nationwide pogrom on 9–10 November 1938; over 1,400 synagogues were damaged and about 30,000 Jewish men were sent to camps.
+    sources: [wp-kristallnacht, wp-fasanenstrasse-synagogue]
+  - key: babi-yar-massacre
+    name: Babi Yar massacre
+    type: Massacre
+    date: 1941-09-29
+    end_year: 1941
+    place: babi-yar
+    prominence: 4
+    note: German forces shot 33,771 Jews from Kyiv at the ravine on 29–30 September 1941; killings went on there until 1943.
+    sources: [wp-babi-yar]
+  - key: wannsee-conference
+    name: Wannsee Conference
+    type: Conference
+    date: 1942-01-20
+    place: house-of-the-wannsee-conference
+    prominence: 4
+    people: [{person: reinhard-heydrich, role: chaired}, {person: adolf-eichmann, role: wrote the minutes}]
+    note: Heydrich met 15 senior officials to coordinate the deportation and murder of Europe's Jews, the "Final Solution".
+    sources: [wp-wannsee-conference]
+  - key: assassination-of-reinhard-heydrich
+    name: Assassination of Reinhard Heydrich (Operation Anthropoid)
+    type: Assassination
+    date: 1942-05-27
+    place: heydrich-attack-site
+    places: [{place: saints-cyril-and-methodius-cathedral-prague, role: last stand, note: "The paratroopers died in the crypt on 18 June 1942"}]
+    prominence: 3
+    people: [{person: reinhard-heydrich, role: killed}, {person: adolf-hitler, role: ordered reprisals}]
+    note: Czechoslovak soldiers trained in Britain fatally wounded Heydrich in Prague (he died on 4 June); brutal reprisals followed.
+    sources: [wp-assassination-of-reinhard-heydrich, wp-cathedral-of-saints-cyril-and-methodius-prague]
+  - key: lidice-massacre
+    name: Lidice massacre
+    type: Massacre
+    date: 1942-06-10
+    place: lidice
+    places:
+      - {place: chelmno-extermination-camp, role: killing site, note: "82 of the village's children were gassed here in summer 1942"}
+      - {place: ravensbruck-concentration-camp, role: deportation, note: The women were sent here}
+    prominence: 3
+    people: [{person: adolf-hitler, role: ordered}, {person: adolf-eichmann, role: ordered the children killed}]
+    note: In reprisal for Heydrich's death, the village was destroyed, its 173 men were shot, and the women and children were deported.
+    sources: [wp-lidice-massacre, wp-chelmno-extermination-camp]
+  - key: grossaktion-warsaw
+    name: Grossaktion Warsaw (deportations from the Warsaw Ghetto)
+    type: Deportation
+    date: 1942-07-22
+    end_year: 1942
+    place: umschlagplatz
+    places: [{place: treblinka-extermination-camp, role: destination}]
+    prominence: 3
+    people: [{person: heinrich-himmler, role: ordered}]
+    note: About 254,000–265,000 Jews were deported from the Warsaw Ghetto to Treblinka and murdered, July to 21 September 1942.
+    sources: [wp-grossaktion-warsaw, wp-umschlagplatz]
+  - key: operation-reinhard
+    name: Operation Reinhard
+    type: Deportation
+    year: 1942
+    end_year: 1943
+    place: treblinka-extermination-camp
+    places:
+      - {place: belzec-extermination-camp, role: extermination camp, note: Gassing from about March 1942}
+      - {place: sobibor-extermination-camp, role: extermination camp, note: Operating by May 1942}
+    prominence: 4
+    people: [{person: heinrich-himmler, role: ordered}, {person: reinhard-heydrich, role: planned}]
+    note: The SS plan, March 1942 to November 1943, to murder the Jews of occupied Poland in Bełżec, Sobibor and Treblinka; about two million were killed.
+    sources: [wp-operation-reinhard, wp-belzec, wp-sobibor, wp-treblinka]
+  - key: white-rose-executions
+    name: Execution of Hans and Sophie Scholl (White Rose)
+    type: Execution
+    date: 1943-02-22
+    place: stadelheim-prison
+    places: [{place: lmu-munich, role: arrest, note: "Arrested distributing leaflets in the atrium on 18 February 1943"}]
+    prominence: 3
+    people: [{person: hans-scholl, role: executed}, {person: sophie-scholl, role: executed}]
+    note: The People's Court sentenced the White Rose students to death; Hans and Sophie Scholl and Christoph Probst were guillotined the same day.
+    sources: [wp-white-rose, wp-lmu-munich, wp-stadelheim-prison]
+  - key: warsaw-ghetto-uprising
+    name: Warsaw Ghetto Uprising
+    type: Uprising
+    date: 1943-04-19
+    end_year: 1943
+    place: warsaw-ghetto
+    places: [{place: monument-to-the-ghetto-heroes, role: memorial}, {place: umschlagplatz, role: deportation}]
+    prominence: 4
+    people: [{person: mordechai-anielewicz, role: led}, {person: heinrich-himmler, role: ordered it crushed}]
+    note: Jewish fighters resisted the ghetto's final deportation for four weeks, to 16 May 1943, as German forces razed it block by block.
+    sources: [wp-warsaw-ghetto-uprising, wp-monument-to-the-ghetto-heroes]
+  - key: rescue-of-the-danish-jews
+    name: Rescue of the Danish Jews
+    type: Rescue
+    date: 1943-09-28
+    place: oresund
+    places:
+      - {place: copenhagen, role: roundup, note: The night of 1–2 October 1943}
+      - {place: theresienstadt-ghetto, role: deportation, note: "464 people deported; 51 died there"}
+    prominence: 3
+    people: [{person: adolf-hitler, role: ordered the deportation}]
+    note: Warned of the roundup, the Danish resistance and ordinary people ferried about 7,500 of Denmark's 8,000 Jews to Sweden in October 1943.
+    sources: [wp-rescue-of-the-danish-jews, wp-theresienstadt-ghetto]
+  - key: twenty-july-plot
+    name: 20 July plot
+    type: Plot
+    date: 1944-07-20
+    place: wolfs-lair
+    places: [{place: bendlerblock, role: execution, note: "Stauffenberg and three others were shot in the courtyard just after midnight"}]
+    prominence: 4
+    people:
+      - {person: claus-von-stauffenberg, role: planted the bomb}
+      - {person: adolf-hitler, role: survived}
+      - {person: wilhelm-keitel, role: present}
+      - {person: heinrich-himmler, role: crushed the coup}
+    note: Stauffenberg's briefcase bomb only lightly wounded Hitler, and the coup in Berlin failed within hours; about 4,980 people were executed afterwards.
+    sources: [wp-20-july-plot, wp-wolfs-lair, wp-bendlerblock]
+  - key: arrest-of-anne-frank
+    name: Arrest of Anne Frank
+    type: Arrest
+    date: 1944-08-04
+    place: anne-frank-house
+    places:
+      - {place: westerbork-transit-camp, role: deportation}
+      - {place: auschwitz-concentration-camp, role: deportation, note: On the last transport from Westerbork, 3 September 1944}
+      - {place: bergen-belsen-concentration-camp, role: died, note: "Anne and Margot were moved here on 1 November 1944"}
+    prominence: 3
+    people: [{person: anne-frank, role: arrested}, {person: otto-frank, role: arrested}]
+    note: Police stormed the Secret Annex and arrested the eight people hidden there after two years; who betrayed them is unknown.
+    sources: [wp-anne-frank, wp-anne-frank-house]
+  - key: liberation-of-auschwitz
+    name: Liberation of Auschwitz
+    type: Liberation
+    date: 1945-01-27
+    place: auschwitz-concentration-camp
+    prominence: 4
+    people: [{person: primo-levi, role: liberated}]
+    note: Soviet troops found about 7,000 prisoners left behind; at least 1.1 million people were murdered there. 27 January is Holocaust Remembrance Day.
+    sources: [wp-auschwitz-concentration-camp]
+  - key: liberation-of-bergen-belsen
+    name: Liberation of Bergen-Belsen
+    type: Liberation
+    date: 1945-04-15
+    place: bergen-belsen-concentration-camp
+    prominence: 3
+    note: British troops found about 60,000 starving prisoners and 13,000 unburied bodies; about 14,000 more died after liberation.
+    sources: [wp-bergen-belsen]
+  - key: liberation-of-dachau
+    name: Liberation of Dachau
+    type: Liberation
+    date: 1945-04-29
+    place: dachau-concentration-camp
+    prominence: 3
+    people: [{person: heinrich-himmler, role: refused to surrender it}]
+    note: US troops freed about 30,000 prisoners at Dachau, the first and longest-running Nazi concentration camp, opened in 1933.
+    sources: [wp-dachau-concentration-camp]
+  - key: eichmann-trial
+    name: Eichmann trial
+    type: Trial
+    date: 1961-04-11
+    end_year: 1961
+    place: gerard-behar-center
+    places: [{place: ayalon-prison, role: execution, note: Hanged in 1962}]
+    prominence: 3
+    people: [{person: adolf-eichmann, role: sentenced to death}, {person: simon-wiesenthal, role: helped find him}]
+    note: Seized in Argentina in 1960, Eichmann was tried in Jerusalem in the first widely televised trial and sentenced to death on 15 December 1961.
+    sources: [wp-eichmann-trial, wp-gerard-behar-center, wp-ayalon-prison]
+  - key: the-holocaust
+    name: The Holocaust
+    type: Genocide
+    year: 1941
+    end_year: 1945
+    place: auschwitz-concentration-camp
+    prominence: 5
+    people:
+      - {person: adolf-hitler, role: ordered}
+      - {person: heinrich-himmler, role: organised}
+      - {person: reinhard-heydrich, role: organised}
+      - {person: adolf-eichmann, role: organised}
+    note: Nazi Germany and its collaborators murdered about six million Jews, two-thirds of Europe's Jews, by mass shootings and in extermination camps.
+    sources: [wp-the-holocaust]
+  # Existing events: link the people now in the database.
+  - key: liquidation-of-the-krakow-ghetto-1943
+    people: [{person: amon-goth, role: commander}]
+    sources: [wp-krakow-ghetto]
+  - key: nuremberg-trials
+    people: [{person: rudolf-hoss, role: witness}]
+    sources: [wp-nuremberg-trials]
+
+discrepancies:
+  - key: kristallnacht-death-toll
+    question: How many people died in Kristallnacht?
+    about: [{event: kristallnacht}]
+    claims:
+      - {value: "91 (early reports)", sources: [wp-kristallnacht]}
+      - {value: "1,000–2,000, including 638 suicides (Richard J. Evans)", sources: [wp-kristallnacht], note: The article's modern figure}
+  - key: grossaktion-warsaw-start
+    question: Did the Grossaktion Warsaw begin on 22 or 23 July 1942?
+    about: [{event: grossaktion-warsaw}]
+    field: date
+    claims:
+      - {value: "1942-07-22 (the Judenrat was told of the 'resettlement')", sources: [wp-grossaktion-warsaw], note: Lead}
+      - {value: "1942-07-23 (most transports from Tisha B'Av)", sources: [wp-grossaktion-warsaw, wp-warsaw-ghetto-uprising], note: "Infobox; the Warsaw Ghetto Uprising article"}
+    note: The record uses 22 July, as the Grossaktion article's lead does.
+  - key: auschwitz-first-gassing
+    question: When were the first gassings at Auschwitz?
+    about: [{place: auschwitz-concentration-camp}]
+    field: date
+    claims:
+      - {value: "Around August 1941", sources: [wp-auschwitz-concentration-camp], note: Lead and two other passages}
+      - {value: "3 September 1941 (about 850 people in Block 11)", sources: [wp-auschwitz-concentration-camp], note: Gas chamber section}
+    note: No record uses this date yet.
+  - key: lidice-children-killed
+    question: How many children from Lidice were murdered?
+    about: [{event: lidice-massacre}]
+    claims:
+      - {value: "82 children gassed at Chełmno", sources: [wp-lidice-massacre], note: Infobox}
+      - {value: "88 children among about 340 victims (192 men, 60 women, 88 children)", sources: [wp-lidice-massacre], note: Lead}
+    note: The place note uses 82, the number gassed at Chełmno.
+  - key: eichmann-execution-date
+    question: Was Eichmann hanged on 31 May or 1 June 1962?
+    about: [{person: adolf-eichmann}, {event: eichmann-trial}]
+    field: died
+    claims:
+      - {value: "1962-06-01", sources: [wp-eichmann-trial], note: Lead}
+      - {value: "Early on 31 May 1962", sources: [wp-eichmann-trial], note: Body}
+    note: Hanged around midnight; batch 4a takes his death date from his own article.
