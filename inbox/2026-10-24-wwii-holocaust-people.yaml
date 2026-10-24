@@ -1,0 +1,476 @@
+batch:
+  title: "WWII, batch 4a: the Holocaust and resistance — people"
+  requested: "Ty: WWII build-out, batch 4 (Holocaust and resistance); do all batches"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each person's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body).
+#   Sitelinks are Wikipedia language editions only, from Wikidata on 2026-10-24. New places cite the person's own article (which
+#   names the place) and the place's coordinates from its own article or Wikidata. This is sensitive history: notes stay factual.
+# - Types. Government: Himmler and Heydrich (senior Nazi officials). Military: the SS officers Eichmann, Höss and Mengele, and
+#   Stauffenberg. Writer: Anne Frank, Primo Levi, Elie Wiesel (the articles frame them as writers; their prominence follows the
+#   sitelinks scale). Scholar: Bonhoeffer, a theologian and pastor (roles say so; Clergy is for popes and bishops). Notable: the
+#   rescuers, resisters and witnesses known for one story (Otto Frank, Wallenberg, Sugihara, Sendler, the Scholls, Moulin,
+#   Anielewicz, Wiesenthal).
+# - SS and police posts are military titles, so they stay out of the Year view's rulers (Reichsführer-SS, head of the RSHA,
+#   commandant of Auschwitz). Himmler's Interior Ministry and Heydrich's post in Bohemia and Moravia are plain titles; the
+#   Protectorate of Bohemia and Moravia is a new realm.
+# - Left out as titles: Eichmann's RSHA section (no end date), Moulin's National Council of the Resistance and Sugihara's Kaunas
+#   consulate (a resistance body and a consular post, which would show as rulers of France and Japan). Their notes say what they did.
+# - Uncertain deaths: Anne Frank died in February or March 1945 (year, estimated); Wallenberg's death is disputed (1947, estimated,
+#   with no death place). Both are logged. Anielewicz's birth is the year only (1919).
+# - Portraits: public domain or CC0 lead images only. Left out: Himmler, Otto Frank, Bonhoeffer (CC BY-SA), Hans Scholl (non-free),
+#   Primo Levi and Elie Wiesel (CC BY-SA). Sophie Scholl's lead image is the Gestapo photograph taken after her arrest; it is the
+#   article's own lead image and public domain, so it is used.
+# - Places moved here from batch 4b because people died there: Bergen-Belsen, Stadelheim Prison, the Bendlerblock, Ayalon Prison,
+#   the Warsaw Ghetto. No burial is recorded where there is no grave: Eichmann's and Höss's ashes were scattered, Himmler's grave
+#   is unmarked and unknown, Bonhoeffer has no known grave, and Anne Frank lies in a mass grave at Bergen-Belsen.
+
+sources:
+  - {key: wp-heinrich-himmler, title: "Heinrich Himmler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heinrich_Himmler"}
+  - {key: wp-reinhard-heydrich, title: "Reinhard Heydrich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Reinhard_Heydrich"}
+  - {key: wp-adolf-eichmann, title: "Adolf Eichmann (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adolf_Eichmann"}
+  - {key: wp-josef-mengele, title: "Josef Mengele (Wikipedia)", url: "https://en.wikipedia.org/wiki/Josef_Mengele"}
+  - {key: wp-rudolf-hoss, title: "Rudolf Höss (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rudolf_H%C3%B6ss"}
+  - {key: wp-anne-frank, title: "Anne Frank (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Frank"}
+  - {key: wp-otto-frank, title: "Otto Frank (Wikipedia)", url: "https://en.wikipedia.org/wiki/Otto_Frank"}
+  - {key: wp-raoul-wallenberg, title: "Raoul Wallenberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Raoul_Wallenberg"}
+  - {key: wp-chiune-sugihara, title: "Chiune Sugihara (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chiune_Sugihara"}
+  - {key: wp-irena-sendler, title: "Irena Sendler (Wikipedia)", url: "https://en.wikipedia.org/wiki/Irena_Sendler"}
+  - {key: wp-sophie-scholl, title: "Sophie Scholl (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sophie_Scholl"}
+  - {key: wp-hans-scholl, title: "Hans Scholl (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hans_Scholl"}
+  - {key: wp-claus-von-stauffenberg, title: "Claus von Stauffenberg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Claus_von_Stauffenberg"}
+  - {key: wp-dietrich-bonhoeffer, title: "Dietrich Bonhoeffer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dietrich_Bonhoeffer"}
+  - {key: wp-jean-moulin, title: "Jean Moulin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jean_Moulin"}
+  - {key: wp-mordechai-anielewicz, title: "Mordechai Anielewicz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mordechai_Anielewicz"}
+  - {key: wp-primo-levi, title: "Primo Levi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Primo_Levi"}
+  - {key: wp-elie-wiesel, title: "Elie Wiesel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elie_Wiesel"}
+  - {key: wp-simon-wiesenthal, title: "Simon Wiesenthal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Simon_Wiesenthal"}
+  - {key: wp-protectorate-of-bohemia-and-moravia, title: "Protectorate of Bohemia and Moravia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Protectorate_of_Bohemia_and_Moravia"}
+  - {key: wp-bergen-belsen, title: "Bergen-Belsen concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bergen-Belsen_concentration_camp"}
+  - {key: wp-stadelheim-prison, title: "Stadelheim Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stadelheim_Prison"}
+  - {key: wp-bendlerblock, title: "Bendlerblock (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bendlerblock"}
+  - {key: wp-ayalon-prison, title: "Ayalon Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ayalon_Prison"}
+  - {key: wp-warsaw-ghetto-uprising, title: "Warsaw Ghetto Uprising (Wikipedia)", url: "https://en.wikipedia.org/wiki/Warsaw_Ghetto_Uprising"}
+  - {key: wd-places-2026-10-24, title: "Wikidata coordinates (P625), read 2026-10-24", url: "https://www.wikidata.org/"}
+
+realms:
+  - {name: Protectorate of Bohemia and Moravia, region: Eastern Europe, country: Czech Republic, sources: [wp-protectorate-of-bohemia-and-moravia]}
+
+places:
+  - {key: bergen-belsen-concentration-camp, name: Bergen-Belsen concentration camp, kind: concentration camp, region: Lower Saxony, country: Germany, lat: 52.7578, lng: 9.9078, visitable: true, sources: [wp-bergen-belsen]}
+  - {key: stadelheim-prison, name: Stadelheim Prison, kind: prison, city: Munich, region: Bavaria, country: Germany, lat: 48.0997, lng: 11.5919, sources: [wp-stadelheim-prison]}
+  - {key: bendlerblock, name: Bendlerblock, kind: building, city: Berlin, country: Germany, lat: 52.5069, lng: 13.3614, visitable: true, visit_site: German Resistance Memorial Center, sources: [wp-bendlerblock]}
+  - {key: ayalon-prison, name: Ayalon Prison (Ramla), kind: prison, city: Ramla, country: Israel, lat: 31.9351, lng: 34.8813, sources: [wp-ayalon-prison]}
+  - {key: warsaw-ghetto, name: Warsaw Ghetto, kind: district, city: Warsaw, country: Poland, lat: 52.2461, lng: 20.9958, founded: 1940, ended: 1943, sources: [wp-warsaw-ghetto-uprising]}
+  - {key: luneburg, name: Lüneburg, kind: town, region: Lower Saxony, country: Germany, lat: 53.2525, lng: 10.4144, sources: [wp-heinrich-himmler]}
+  - {key: halle-saale, name: Halle (Saale), kind: city, region: Saxony-Anhalt, country: Germany, lat: 51.4828, lng: 11.9697, sources: [wp-reinhard-heydrich]}
+  - {key: bulovka-hospital, name: Bulovka Hospital, kind: hospital, city: Prague, country: Czech Republic, lat: 50.1155, lng: 14.4643, sources: [wp-reinhard-heydrich]}
+  - {key: invalids-cemetery-berlin, name: "Invalids' Cemetery, Berlin", kind: cemetery, city: Berlin, country: Germany, lat: 52.5319, lng: 13.3711, visitable: true, sources: [wp-reinhard-heydrich]}
+  - {key: gunzburg, name: Günzburg, kind: town, region: Bavaria, country: Germany, lat: 48.4527, lng: 10.2713, sources: [wp-josef-mengele]}
+  - {key: bertioga, name: Bertioga, kind: town, region: São Paulo, country: Brazil, lat: -23.8547, lng: -46.1389, sources: [wp-josef-mengele]}
+  - {key: embu-das-artes, name: Embu das Artes, kind: town, region: São Paulo, country: Brazil, lat: -23.6489, lng: -46.8519, sources: [wp-josef-mengele]}
+  - {key: birsfelden, name: Birsfelden, kind: town, region: Basel-Landschaft, country: Switzerland, lat: 47.5533, lng: 7.6233, sources: [wp-otto-frank]}
+  - {key: lidingo, name: Lidingö, kind: town, region: Stockholm County, country: Sweden, lat: 59.3667, lng: 18.15, sources: [wp-raoul-wallenberg]}
+  - {key: mino-gifu, name: "Mino, Gifu", kind: city, region: Gifu, country: Japan, lat: 35.5448, lng: 136.9076, sources: [wp-chiune-sugihara]}
+  - {key: forchtenberg, name: Forchtenberg, kind: town, region: Baden-Württemberg, country: Germany, lat: 49.2833, lng: 9.5667, sources: [wp-sophie-scholl]}
+  - {key: crailsheim, name: Crailsheim, kind: town, region: Baden-Württemberg, country: Germany, lat: 49.1347, lng: 10.0706, sources: [wp-hans-scholl]}
+  - {key: perlacher-forst-cemetery, name: Perlacher Forst Cemetery, kind: cemetery, city: Munich, region: Bavaria, country: Germany, lat: 48.0986, lng: 11.5966, visitable: true, sources: [wp-sophie-scholl, wd-places-2026-10-24]}
+  - {key: jettingen-scheppach, name: Jettingen-Scheppach, kind: town, region: Bavaria, country: Germany, lat: 48.3833, lng: 10.4333, note: Stauffenberg Castle stands here, sources: [wp-claus-von-stauffenberg]}
+  - {key: flossenburg-concentration-camp, name: Flossenbürg concentration camp, kind: concentration camp, region: Bavaria, country: Germany, lat: 49.7356, lng: 12.3558, visitable: true, sources: [wp-dietrich-bonhoeffer]}
+  - {key: beziers, name: Béziers, kind: city, region: Hérault, country: France, lat: 43.3476, lng: 3.219, sources: [wp-jean-moulin]}
+  - {key: metz, name: Metz, kind: city, region: Moselle, country: France, lat: 49.1203, lng: 6.1778, sources: [wp-jean-moulin]}
+  - {key: wyszkow, name: Wyszków, kind: town, region: Masovian Voivodeship, country: Poland, lat: 52.5933, lng: 21.46, sources: [wp-mordechai-anielewicz]}
+  - {key: sighetu-marmatiei, name: Sighetu Marmației, historical_name: Sighet, kind: town, region: Maramureș, country: Romania, lat: 47.9286, lng: 23.8925, sources: [wp-elie-wiesel]}
+  - {key: kensico-cemetery, name: Kensico Cemetery (Sharon Gardens), kind: cemetery, city: Valhalla, region: New York, country: United States, lat: 41.0779, lng: -73.7865, sources: [wp-elie-wiesel]}
+  - {key: buchach, name: Buchach, historical_name: Buczacz, kind: town, region: Ternopil Oblast, country: Ukraine, lat: 49.0833, lng: 25.4, sources: [wp-simon-wiesenthal]}
+  - {key: herzliya, name: Herzliya, kind: city, country: Israel, lat: 32.1653, lng: 34.8458, sources: [wp-simon-wiesenthal]}
+
+people:
+  - key: heinrich-himmler
+    name: Heinrich Himmler
+    type: Government
+    born: 1900-10-07
+    died: 1945-05-23
+    prominence: 4
+    sitelinks: 97
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two offices; his police and administrative posts not all added."
+    note: Reichsführer-SS from 1929 and a principal architect of the Holocaust; killed himself in British custody.
+    sources: [wp-heinrich-himmler]
+  - key: reinhard-heydrich
+    name: Reinhard Heydrich
+    type: Government
+    born: 1904-03-07
+    died: 1942-06-04
+    prominence: 4
+    sitelinks: 73
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two posts."
+    note: Head of the Reich Security Main Office who chaired the Wannsee Conference; assassinated in Prague in 1942.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/8f/Reinhard_Heydrich_1940_Portrait_%283x4_cropped%29_%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8f/Reinhard_Heydrich_1940_Portrait_%283x4_cropped%29_%282%29.jpg/500px-Reinhard_Heydrich_1940_Portrait_%283x4_cropped%29_%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Reinhard_Heydrich_1940_Portrait_(3x4_cropped)_(2).jpg
+    image_license: Public domain
+    sources: [wp-reinhard-heydrich]
+  - key: adolf-eichmann
+    name: Adolf Eichmann
+    type: Military
+    born: 1906-03-19
+    died: 1962-06-01
+    prominence: 4
+    sitelinks: 79
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his RSHA section and the Hungarian deportations are in the note only."
+    note: SS officer who organised the deportation of Jews to the camps; seized in Argentina, tried in Jerusalem and hanged in 1962.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2c/Adolf_Eichmann%2C_1942_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Adolf_Eichmann%2C_1942_%28cropped%29.jpg/500px-Adolf_Eichmann%2C_1942_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Adolf_Eichmann,_1942_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-adolf-eichmann]
+  - key: josef-mengele
+    name: Josef Mengele
+    type: Military
+    born: 1911-03-16
+    died: 1979-02-07
+    prominence: 3
+    sitelinks: 71
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: SS physician at Auschwitz who selected prisoners for death and experimented on them; escaped trial and died in Brazil.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Josef_Mengele%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Josef_Mengele%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29.jpg/500px-Josef_Mengele%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Josef_Mengele,_Auschwitz._Album_H%C3%B6cker_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-josef-mengele]
+  - key: rudolf-hoss
+    name: Rudolf Höss
+    type: Military
+    born: 1901-11-25
+    died: 1947-04-16
+    prominence: 3
+    sitelinks: 48
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his first term as commandant."
+    note: The longest-serving commandant of Auschwitz; tried in Poland and hanged at the camp in 1947.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/7/71/Rudolf_Hoess%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/Rudolf_Hoess%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29%282%29.jpg/500px-Rudolf_Hoess%2C_Auschwitz._Album_H%C3%B6cker_%28cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Rudolf_Hoess,_Auschwitz._Album_H%C3%B6cker_(cropped)(2).jpg
+    image_license: Public domain
+    sources: [wp-rudolf-hoss]
+  - key: anne-frank
+    name: Anne Frank
+    type: Writer
+    roles: [diarist]
+    born: 1929-06-12
+    died: 1945
+    died_estimated: true
+    prominence: 4
+    sitelinks: 132
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and the diary; its editions and the house are in batch 4b's events."
+    note: Jewish girl who hid in Amsterdam for two years and kept a diary; she died at Bergen-Belsen in February or March 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/6b/Anne_Frank_passport_photo%2C_May_1942_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6b/Anne_Frank_passport_photo%2C_May_1942_%28cropped%29.jpg/500px-Anne_Frank_passport_photo%2C_May_1942_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Anne_Frank_passport_photo,_May_1942_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-anne-frank]
+  - key: otto-frank
+    name: Otto Frank
+    type: Notable
+    born: 1889-05-12
+    died: 1980-08-19
+    prominence: 2
+    sitelinks: 35
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: Anne Frank's father; survived Auschwitz and published her diary in 1947.
+    sources: [wp-otto-frank]
+  - key: raoul-wallenberg
+    name: Raoul Wallenberg
+    type: Notable
+    born: 1912-08-04
+    died: 1947
+    died_estimated: true
+    prominence: 3
+    sitelinks: 57
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Birth date and place; his death is disputed."
+    note: Swedish diplomat who protected Jews in Budapest in 1944; detained by Soviet forces in January 1945, he disappeared.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0d/Raoul_Wallenberg.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Raoul_Wallenberg.jpg/500px-Raoul_Wallenberg.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Raoul_Wallenberg.jpg
+    image_license: Public domain
+    sources: [wp-raoul-wallenberg]
+  - key: chiune-sugihara
+    name: Chiune Sugihara
+    type: Notable
+    born: 1900-01-01
+    died: 1986-07-31
+    prominence: 3
+    sitelinks: 50
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his consular posts are in the note."
+    note: Japanese vice-consul in Kaunas who issued transit visas to thousands of Jewish refugees in the summer of 1940.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5b/Sugihara_b_%283x4_cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5b/Sugihara_b_%283x4_cropped%29.jpg/500px-Sugihara_b_%283x4_cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Sugihara_b_(3x4_cropped).jpg
+    image_license: Public domain
+    sources: [wp-chiune-sugihara]
+  - key: irena-sendler
+    name: Irena Sendler
+    type: Notable
+    born: 1910-02-15
+    died: 2008-05-12
+    prominence: 3
+    sitelinks: 64
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: Polish social worker in the Żegota network who helped smuggle Jewish children out of the Warsaw Ghetto.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/2f/Irena_Sendlerowa_1942.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/Irena_Sendlerowa_1942.jpg/500px-Irena_Sendlerowa_1942.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Irena_Sendlerowa_1942.jpg
+    image_license: Public domain
+    sources: [wp-irena-sendler]
+  - key: sophie-scholl
+    name: Sophie Scholl
+    type: Notable
+    born: 1921-05-09
+    died: 1943-02-22
+    prominence: 3
+    sitelinks: 65
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: Munich student in the White Rose resistance group; executed with her brother Hans in 1943.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/2/29/Gestapo_photo_of_Sophie_Scholl_taken_after_her_capture_on_February_18%2C_1943-2.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/2/29/Gestapo_photo_of_Sophie_Scholl_taken_after_her_capture_on_February_18%2C_1943-2.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Gestapo_photo_of_Sophie_Scholl_taken_after_her_capture_on_February_18,_1943-2.jpg
+    image_license: Public domain
+    sources: [wp-sophie-scholl]
+  - key: hans-scholl
+    name: Hans Scholl
+    type: Notable
+    born: 1918-09-22
+    died: 1943-02-22
+    prominence: 2
+    sitelinks: 35
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: Medical student who co-founded the White Rose; executed with his sister Sophie in 1943.
+    sources: [wp-hans-scholl]
+  - key: claus-von-stauffenberg
+    name: Claus von Stauffenberg
+    type: Military
+    born: 1907-11-15
+    died: 1944-07-21
+    prominence: 3
+    sitelinks: 71
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; the article gives no formal title for his 1944 staff post."
+    note: German army officer who planted the bomb in the failed 20 July 1944 plot against Hitler; shot that night.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/9/9c/Claus_von_Stauffenberg_Portrait_Photograph.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/Claus_von_Stauffenberg_Portrait_Photograph.jpg/500px-Claus_von_Stauffenberg_Portrait_Photograph.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Claus_von_Stauffenberg_Portrait_Photograph.jpg
+    image_license: Public domain
+    sources: [wp-claus-von-stauffenberg]
+  - key: dietrich-bonhoeffer
+    name: Dietrich Bonhoeffer
+    type: Scholar
+    roles: [theologian, pastor]
+    born: 1906-02-04
+    died: 1945-04-09
+    prominence: 3
+    sitelinks: 62
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his writings not added."
+    note: Lutheran pastor and theologian of the Confessing Church; hanged at Flossenbürg in April 1945.
+    sources: [wp-dietrich-bonhoeffer]
+  - key: jean-moulin
+    name: Jean Moulin
+    type: Notable
+    born: 1899-06-20
+    died: 1943-07-08
+    prominence: 3
+    sitelinks: 40
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places."
+    note: French prefect who united the Resistance under de Gaulle and first chaired its National Council; died after Gestapo torture.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/15/Moulin_Harcourt_1937.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/1/15/Moulin_Harcourt_1937.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Moulin_Harcourt_1937.jpg
+    image_license: Public domain
+    sources: [wp-jean-moulin]
+  - key: mordechai-anielewicz
+    name: Mordechai Anielewicz
+    type: Notable
+    born: 1919
+    died: 1943-05-08
+    prominence: 3
+    sitelinks: 27
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his death date is presumed."
+    note: Commander of the Jewish Combat Organization in the 1943 Warsaw Ghetto Uprising; presumed killed in its command bunker.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/8/85/Mordechai_Anielewicz.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/8/85/Mordechai_Anielewicz.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Mordechai_Anielewicz.jpg
+    image_license: Public domain
+    sources: [wp-mordechai-anielewicz]
+  - key: primo-levi
+    name: Primo Levi
+    type: Writer
+    roles: [writer, chemist]
+    born: 1919-07-31
+    died: 1987-04-11
+    prominence: 3
+    sitelinks: 67
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his works not added as records."
+    note: Italian Jewish chemist and writer who survived Auschwitz and described it in If This Is a Man (1947).
+    sources: [wp-primo-levi]
+  - key: elie-wiesel
+    name: Elie Wiesel
+    type: Writer
+    born: 1928-09-30
+    died: 2016-07-02
+    prominence: 3
+    sitelinks: 82
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his works not added as records."
+    note: Romanian-born writer who survived Auschwitz and Buchenwald; author of Night; Nobel Peace Prize 1986.
+    sources: [wp-elie-wiesel]
+  - key: simon-wiesenthal
+    name: Simon Wiesenthal
+    type: Notable
+    born: 1908-12-31
+    died: 2005-09-20
+    prominence: 3
+    sitelinks: 58
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; the article notes that his memoirs exaggerate his role in some cases."
+    note: Austrian Holocaust survivor who documented Nazi crimes and tracked down war criminals from Linz and Vienna.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f1/Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg/500px-Dr._Simon_Wiesenthal%2C_Bestanddeelnr_932-3671.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Dr._Simon_Wiesenthal,_Bestanddeelnr_932-3671.jpg
+    image_license: CC0
+    sources: [wp-simon-wiesenthal]
+
+links:
+  - {parent: otto-frank, child: anne-frank}
+
+moments:
+  - {person: heinrich-himmler, role: born, place: munich, year: 1900}
+  - {person: heinrich-himmler, role: died, place: luneburg, year: 1945}
+  - {person: reinhard-heydrich, role: born, place: halle-saale, year: 1904}
+  - {person: reinhard-heydrich, role: died, place: bulovka-hospital, year: 1942}
+  - {person: reinhard-heydrich, role: buried, place: invalids-cemetery-berlin, year: 1942}
+  - {person: adolf-eichmann, role: born, place: solingen, year: 1906}
+  - {person: adolf-eichmann, role: died, place: ayalon-prison, year: 1962}
+  - {person: josef-mengele, role: born, place: gunzburg, year: 1911}
+  - {person: josef-mengele, role: died, place: bertioga, year: 1979}
+  - {person: josef-mengele, role: buried, place: embu-das-artes, year: 1979}
+  - {person: rudolf-hoss, role: born, place: baden-baden, year: 1901}
+  - {person: rudolf-hoss, role: died, place: auschwitz-concentration-camp, year: 1947}
+  - {person: anne-frank, role: born, place: frankfurt, year: 1929}
+  - {person: anne-frank, role: died, place: bergen-belsen-concentration-camp, year: 1945}
+  - {person: otto-frank, role: born, place: frankfurt, year: 1889}
+  - {person: otto-frank, role: died, place: birsfelden, year: 1980}
+  - {person: raoul-wallenberg, role: born, place: lidingo, year: 1912}
+  - {person: chiune-sugihara, role: born, place: mino-gifu, year: 1900}
+  - {person: chiune-sugihara, role: died, place: kamakura, year: 1986}
+  - {person: irena-sendler, role: born, place: warsaw, year: 1910}
+  - {person: irena-sendler, role: died, place: warsaw, year: 2008}
+  - {person: irena-sendler, role: buried, place: powazki-cemetery, year: 2008}
+  - {person: sophie-scholl, role: born, place: forchtenberg, year: 1921}
+  - {person: sophie-scholl, role: died, place: stadelheim-prison, year: 1943}
+  - {person: sophie-scholl, role: buried, place: perlacher-forst-cemetery, year: 1943}
+  - {person: hans-scholl, role: born, place: crailsheim, year: 1918}
+  - {person: hans-scholl, role: died, place: stadelheim-prison, year: 1943}
+  - {person: hans-scholl, role: buried, place: perlacher-forst-cemetery, year: 1943}
+  - {person: claus-von-stauffenberg, role: born, place: jettingen-scheppach, year: 1907}
+  - {person: claus-von-stauffenberg, role: died, place: bendlerblock, year: 1944}
+  - {person: dietrich-bonhoeffer, role: born, place: wroclaw, year: 1906}
+  - {person: dietrich-bonhoeffer, role: died, place: flossenburg-concentration-camp, year: 1945}
+  - {person: jean-moulin, role: born, place: beziers, year: 1899}
+  - {person: jean-moulin, role: died, place: metz, year: 1943}
+  - {person: jean-moulin, role: buried, place: pantheon-paris, year: 1964}
+  - {person: mordechai-anielewicz, role: born, place: wyszkow, year: 1919}
+  - {person: mordechai-anielewicz, role: died, place: warsaw-ghetto, year: 1943}
+  - {person: primo-levi, role: born, place: turin, year: 1919}
+  - {person: primo-levi, role: died, place: turin, year: 1987}
+  - {person: elie-wiesel, role: born, place: sighetu-marmatiei, year: 1928}
+  - {person: elie-wiesel, role: died, place: new-york-city, year: 2016}
+  - {person: elie-wiesel, role: buried, place: kensico-cemetery, year: 2016}
+  - {person: simon-wiesenthal, role: born, place: buchach, year: 1908}
+  - {person: simon-wiesenthal, role: died, place: vienna, year: 2005}
+  - {person: simon-wiesenthal, role: buried, place: herzliya, year: 2005}
+
+titles:
+  - {person: heinrich-himmler, title: Reichsführer-SS, realm: Germany, kind: military, from: 1929-01-06, to: 1945-04-29, sources: [wp-heinrich-himmler]}
+  - {person: heinrich-himmler, title: Reich Minister of the Interior, realm: Germany, from: 1943-08-24, to: 1945-04-29, sources: [wp-heinrich-himmler]}
+  - {person: reinhard-heydrich, title: Director of the Reich Security Main Office (RSHA), realm: Germany, kind: military, from: 1939-09-27, to: 1942-06-04, sources: [wp-reinhard-heydrich]}
+  - {person: reinhard-heydrich, title: Deputy Reich Protector of Bohemia and Moravia, realm: Protectorate of Bohemia and Moravia, from: 1941-09-27, to: 1942-06-04, sources: [wp-reinhard-heydrich]}
+  - {person: rudolf-hoss, title: Commandant of Auschwitz, realm: Germany, kind: military, from: 1940-05-04, to: 1943-11-10, note: "His first term; he returned in May 1944 for the deportation of Hungary's Jews", sources: [wp-rudolf-hoss]}
+
+discrepancies:
+  - key: anne-frank-death-date
+    question: When did Anne Frank die?
+    about: [{person: anne-frank}]
+    field: died
+    claims:
+      - {value: "March 1945 (Red Cross estimate)", sources: [wp-anne-frank]}
+      - {value: "31 March 1945 (the date set by the Dutch authorities)", sources: [wp-anne-frank]}
+      - {value: "February 1945 (2015 research on when typhus was seen)", sources: [wp-anne-frank]}
+    note: The record has 1945, estimated.
+  - key: wallenberg-death
+    question: When and how did Raoul Wallenberg die?
+    about: [{person: raoul-wallenberg}]
+    field: died
+    claims:
+      - {value: "17 July 1947 in his Lubyanka cell, probably of a heart attack (Soviet document, 1957)", sources: [wp-raoul-wallenberg]}
+      - {value: "Executed in the Lubyanka in 1947 (Russian inquiries, 1991 and 2000; Serov diary)", sources: [wp-raoul-wallenberg]}
+      - {value: "31 July 1952 (pro forma date when Sweden declared him dead, 2016)", sources: [wp-raoul-wallenberg]}
+    note: The record has 1947, estimated, and no death place.
+  - key: heydrich-deputy-protector-start
+    question: Did Heydrich become Deputy Reich Protector on 27 or 29 September 1941?
+    about: [{person: reinhard-heydrich}]
+    field: date
+    claims:
+      - {value: "1941-09-27 (appointed)", sources: [wp-reinhard-heydrich], note: Body}
+      - {value: "1941-09-29", sources: [wp-reinhard-heydrich], note: Infobox term start}
+    note: The title uses the appointment date.
+  - key: hoss-commandant-dates
+    question: When was Höss commandant of Auschwitz?
+    about: [{person: rudolf-hoss}]
+    field: date
+    claims:
+      - {value: "4 May 1940 – November 1943", sources: [wp-rudolf-hoss], note: Lead}
+      - {value: "From 30 April 1940", sources: [wp-rudolf-hoss], note: Infobox}
+      - {value: "Until 1 December 1943 (his own 1946 affidavit); replaced by Liebehenschel on 10 November 1943 (body)", sources: [wp-rudolf-hoss]}
+    note: The title runs 4 May 1940 – 10 November 1943.
+  - key: moulin-death-place
+    question: Where did Jean Moulin die?
+    about: [{person: jean-moulin}]
+    field: place
+    claims:
+      - {value: "In or near Metz station, on a train to Germany (German death certificate)", sources: [wp-jean-moulin]}
+      - {value: "Uncertain: the article says reports of the place and time conflict", sources: [wp-jean-moulin]}
+    note: Filed at Metz, as on the death certificate.
