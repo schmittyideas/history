@@ -1,0 +1,385 @@
+batch:
+  title: "WWII, batch 3b: the war in Asia and the Pacific"
+  requested: "Ty: go ahead with batch 3, the Pacific and China (with Southeast Asia, atrocities in Asia, the Chinese Communists, and Australia and New Zealand); do all batches"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each event's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body). Site
+#   coordinates come from each site's own article; Yokoamichō Park, Kokoda and Isurava come from Wikidata.
+# - Needs batch 3a (2026-10-24-wwii-asia-commanders.yaml) applied first: the people linked here are added there.
+# - Atrocities (Nanjing, Unit 731, Bataan) give death tolls as the articles do, with the range; the disputed figures are logged as
+#   discrepancies rather than settled.
+# - Unit 731 has no single event date: the event spans its existence in its infobox (1933-1945), placed at its Pingfang compound.
+# - Sea battles are placed at the article's own point at sea (Philippine Sea; Coral Sea from the Coral Sea article, as the battle
+#   article has none). The Doolittle Raid is placed at Tokyo, its main target; the article gives no coordinates.
+# - The Tokyo Trial is placed at Ichigaya, the former army building where the court sat (article caption); the present Ministry
+#   of Defense stands there. MacArthur's Leyte landing is not mentioned in the Leyte Gulf article, so it is left out.
+# - People: infobox commanders and people the body names in a clear role. Desmond Doss is already linked to Okinawa.
+# - Prominence: 4 for the invasion of Manchuria, Nanjing, Singapore, Guadalcanal, Leyte Gulf, Iwo Jima, the Tokyo firebombing and
+#   the Soviet invasion of Manchuria; 3 for the rest.
+
+sources:
+  - {key: wp-mukden-incident, title: "Mukden incident (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mukden_incident"}
+  - {key: wp-japanese-invasion-of-manchuria, title: "Japanese invasion of Manchuria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Japanese_invasion_of_Manchuria"}
+  - {key: wp-shenyang, title: "Shenyang (Wikipedia)", url: "https://en.wikipedia.org/wiki/Shenyang"}
+  - {key: wp-battle-of-shanghai, title: "Battle of Shanghai (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Shanghai"}
+  - {key: wp-defense-of-sihang-warehouse, title: "Defense of Sihang Warehouse (Wikipedia)", url: "https://en.wikipedia.org/wiki/Defense_of_Sihang_Warehouse"}
+  - {key: wp-nanjing-massacre, title: "Nanjing Massacre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Nanjing_Massacre"}
+  - {key: wp-nanjing-massacre-memorial-hall, title: "Memorial Hall of the Victims in Nanjing Massacre by Japanese Invaders (Wikipedia)", url: "https://en.wikipedia.org/wiki/Memorial_Hall_of_the_Victims_in_Nanjing_Massacre_by_Japanese_Invaders"}
+  - {key: wp-hundred-regiments-offensive, title: "Hundred Regiments Offensive (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hundred_Regiments_Offensive"}
+  - {key: wp-niangzi-pass, title: "Niangzi Pass (Wikipedia)", url: "https://en.wikipedia.org/wiki/Niangzi_Pass"}
+  - {key: wp-unit-731, title: "Unit 731 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Unit_731"}
+  - {key: wp-fall-of-singapore, title: "Fall of Singapore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fall_of_Singapore"}
+  - {key: wp-former-ford-factory, title: "Former Ford Factory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Former_Ford_Factory"}
+  - {key: wp-bombing-of-darwin, title: "Bombing of Darwin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bombing_of_Darwin"}
+  - {key: wp-bataan-death-march, title: "Bataan Death March (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bataan_Death_March"}
+  - {key: wp-camp-odonnell, title: "Camp O'Donnell (Wikipedia)", url: "https://en.wikipedia.org/wiki/Camp_O%27Donnell"}
+  - {key: wp-mariveles, title: "Mariveles (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mariveles"}
+  - {key: wp-doolittle-raid, title: "Doolittle Raid (Wikipedia)", url: "https://en.wikipedia.org/wiki/Doolittle_Raid"}
+  - {key: wp-battle-of-the-coral-sea, title: "Battle of the Coral Sea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Coral_Sea"}
+  - {key: wp-coral-sea, title: "Coral Sea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Coral_Sea"}
+  - {key: wp-tulagi, title: "Tulagi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tulagi"}
+  - {key: wp-kokoda-track-campaign, title: "Kokoda Track campaign (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kokoda_Track_campaign"}
+  - {key: wp-guadalcanal-campaign, title: "Guadalcanal campaign (Wikipedia)", url: "https://en.wikipedia.org/wiki/Guadalcanal_campaign"}
+  - {key: wp-henderson-field-guadalcanal, title: "Henderson Field (Guadalcanal) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Honiara_International_Airport"}
+  - {key: wp-battle-of-imphal, title: "Battle of Imphal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Imphal"}
+  - {key: wp-imphal-war-cemetery, title: "Imphal War Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Imphal_War_Cemetery"}
+  - {key: wp-battle-of-kohima, title: "Battle of Kohima (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kohima"}
+  - {key: wp-kohima-war-cemetery, title: "Kohima War Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kohima_War_Cemetery"}
+  - {key: wp-battle-of-the-philippine-sea, title: "Battle of the Philippine Sea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Philippine_Sea"}
+  - {key: wp-battle-of-leyte-gulf, title: "Battle of Leyte Gulf (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf"}
+  - {key: wp-battle-of-iwo-jima, title: "Battle of Iwo Jima (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima"}
+  - {key: wp-mount-suribachi, title: "Mount Suribachi (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mount_Suribachi"}
+  - {key: wp-bombing-of-tokyo-10-march-1945, title: "Bombing of Tokyo (10 March 1945) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bombing_of_Tokyo_(10_March_1945)"}
+  - {key: wp-soviet-invasion-of-manchuria, title: "Soviet invasion of Manchuria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Soviet_invasion_of_Manchuria"}
+  - {key: wp-international-military-tribunal-for-the-far-east, title: "International Military Tribunal for the Far East (Wikipedia)", url: "https://en.wikipedia.org/wiki/International_Military_Tribunal_for_the_Far_East"}
+  - {key: wp-ichigaya, title: "Ichigaya (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ichigaya"}
+  - {key: wp-sugamo-prison, title: "Sugamo Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sugamo_Prison"}
+  - {key: wd-places-2026-10-24, title: "Wikidata coordinates (P625), read 2026-10-24", url: "https://www.wikidata.org/"}
+
+places:
+  - {key: mukden-incident-site, name: Liutiao Lake (Mukden incident site), kind: railway, city: Shenyang, region: Liaoning, country: China, lat: 41.8346, lng: 123.466, note: "Where Japanese officers set off a charge by the South Manchuria Railway on 18 September 1931", sources: [wp-mukden-incident]}
+  - {key: shenyang, name: Shenyang, historical_name: Mukden, kind: city, region: Liaoning, country: China, lat: 41.8025, lng: 123.4281, sources: [wp-shenyang]}
+  - {key: shanghai, name: Shanghai, kind: city, country: China, lat: 31.2323, lng: 121.469, sources: [wp-battle-of-shanghai]}
+  - {key: sihang-warehouse, name: Sihang Warehouse, kind: warehouse, city: Shanghai, country: China, lat: 31.2422, lng: 121.4663, visitable: true, sources: [wp-defense-of-sihang-warehouse]}
+  - {key: nanjing-massacre-memorial-hall, name: Memorial Hall of the Victims in Nanjing Massacre, kind: memorial, city: Nanjing, region: Jiangsu, country: China, lat: 32.0355, lng: 118.7435, founded: 1985, visitable: true, sources: [wp-nanjing-massacre-memorial-hall]}
+  - {key: niangzi-pass, name: Niangzi Pass, kind: pass, region: Shanxi, country: China, lat: 37.967, lng: 113.878, sources: [wp-niangzi-pass]}
+  - {key: unit-731-pingfang, name: Unit 731 compound (Pingfang), kind: military base, city: Harbin, region: Heilongjiang, country: China, lat: 45.6086, lng: 126.6319, ended: 1945, visitable: true, note: "Blown up by its staff in August 1945; part is preserved as a museum", sources: [wp-unit-731]}
+  - {key: singapore, name: Singapore, kind: city, country: Singapore, lat: 1.3525, lng: 103.7689, sources: [wp-fall-of-singapore]}
+  - {key: former-ford-factory, name: Former Ford Factory, kind: factory, city: Singapore, country: Singapore, lat: 1.3528, lng: 103.7689, visitable: true, note: "Where Percival surrendered Singapore to Yamashita on 15 February 1942", sources: [wp-former-ford-factory]}
+  - {key: darwin, name: Darwin, kind: city, region: Northern Territory, country: Australia, lat: -12.475, lng: 130.85, sources: [wp-bombing-of-darwin]}
+  - {key: mariveles, name: Mariveles, kind: town, region: Bataan, country: Philippines, lat: 14.43, lng: 120.48, sources: [wp-mariveles]}
+  - {key: camp-odonnell, name: Camp O'Donnell, kind: prison camp, city: Capas, region: Tarlac, country: Philippines, lat: 15.3759, lng: 120.5119, visitable: true, sources: [wp-camp-odonnell]}
+  - {key: coral-sea, name: Coral Sea, kind: sea, country: Australia, lat: -18.0, lng: 158.0, sources: [wp-coral-sea]}
+  - {key: tulagi, name: Tulagi, kind: island, country: Solomon Islands, lat: -9.1014, lng: 160.1467, sources: [wp-tulagi]}
+  - {key: kokoda, name: Kokoda, kind: village, region: Oro Province, country: Papua New Guinea, lat: -8.8778, lng: 147.7375, sources: [wp-kokoda-track-campaign, wd-places-2026-10-24]}
+  - {key: isurava, name: Isurava, kind: village, region: Oro Province, country: Papua New Guinea, lat: -8.9862, lng: 147.7356, sources: [wp-kokoda-track-campaign, wd-places-2026-10-24]}
+  - {key: guadalcanal, name: Guadalcanal, kind: island, country: Solomon Islands, lat: -9.4456, lng: 160.0203, sources: [wp-guadalcanal-campaign]}
+  - {key: henderson-field-guadalcanal, name: Henderson Field (now Honiara International Airport), kind: airfield, city: Honiara, country: Solomon Islands, lat: -9.4281, lng: 160.0547, sources: [wp-henderson-field-guadalcanal]}
+  - {key: imphal, name: Imphal, kind: city, region: Manipur, country: India, lat: 24.8074, lng: 93.9384, sources: [wp-battle-of-imphal]}
+  - {key: imphal-war-cemetery, name: Imphal War Cemetery, kind: cemetery, city: Imphal, region: Manipur, country: India, lat: 24.8225, lng: 93.9462, visitable: true, sources: [wp-imphal-war-cemetery]}
+  - {key: kohima, name: Kohima, kind: city, region: Nagaland, country: India, lat: 25.6664, lng: 94.1004, sources: [wp-battle-of-kohima]}
+  - {key: kohima-war-cemetery, name: Kohima War Cemetery, kind: cemetery, city: Kohima, region: Nagaland, country: India, lat: 25.6676, lng: 94.1029, visitable: true, sources: [wp-kohima-war-cemetery]}
+  - {key: philippine-sea, name: Philippine Sea, kind: sea, lat: 20.0, lng: 130.0, sources: [wp-battle-of-the-philippine-sea]}
+  - {key: leyte-gulf, name: Leyte Gulf, kind: gulf, country: Philippines, lat: 10.37, lng: 125.355, sources: [wp-battle-of-leyte-gulf]}
+  - {key: iwo-jima, name: Iwo Jima, kind: island, region: Tokyo, country: Japan, lat: 24.78, lng: 141.32, sources: [wp-battle-of-iwo-jima]}
+  - {key: mount-suribachi, name: Mount Suribachi, kind: mountain, region: Tokyo, country: Japan, lat: 24.7503, lng: 141.2889, sources: [wp-mount-suribachi]}
+  - {key: yokoamicho-park, name: Yokoamichō Park, kind: memorial, city: Tokyo, country: Japan, lat: 35.6994, lng: 139.796, visitable: true, note: "Memorial and charnel house for the dead of the 1923 earthquake and the 1945 air raids", sources: [wp-bombing-of-tokyo-10-march-1945, wd-places-2026-10-24]}
+  - {key: manchuria, name: Manchuria, kind: region, country: China, lat: 49.0, lng: 125.0, sources: [wp-soviet-invasion-of-manchuria]}
+  - {key: ichigaya, name: Ichigaya (former army headquarters), kind: building, city: Tokyo, country: Japan, lat: 35.6871, lng: 139.7377, note: "The Tokyo Trial sat in the former Imperial Army building here; the Ministry of Defense now occupies the site", sources: [wp-ichigaya, wp-international-military-tribunal-for-the-far-east]}
+
+events:
+  - key: mukden-incident
+    name: Mukden incident
+    type: Incident
+    date: 1931-09-18
+    place: mukden-incident-site
+    prominence: 3
+    note: Japanese officers set off a small charge by the Japanese-owned railway near Mukden, blamed Chinese dissidents, and used it to invade Manchuria.
+    sources: [wp-mukden-incident]
+  - key: japanese-invasion-of-manchuria
+    name: Japanese invasion of Manchuria
+    type: Invasion
+    date: 1931-09-18
+    end_year: 1932
+    place: shenyang
+    prominence: 4
+    note: The Kwantung Army occupied Manchuria (official resistance ended 27 February 1932), and Japan set up the puppet state of Manchukuo.
+    sources: [wp-japanese-invasion-of-manchuria]
+  - key: battle-of-shanghai
+    name: Battle of Shanghai
+    type: Battle
+    date: 1937-08-13
+    end_year: 1937
+    place: shanghai
+    places: [{place: sihang-warehouse, role: last stand, note: "Defence of Sihang Warehouse, October 1937"}]
+    prominence: 3
+    people: [{person: chiang-kai-shek, role: commander}, {person: iwane-matsui, role: commander}, {person: fumimaro-konoe, role: prime minister}]
+    note: The first major battle of the Second Sino-Japanese War, and its largest urban battle before Stalingrad; Japan took Shanghai by 26 November.
+    sources: [wp-battle-of-shanghai, wp-defense-of-sihang-warehouse]
+  - key: nanjing-massacre
+    name: Nanjing Massacre
+    type: Massacre
+    date: 1937-12-13
+    end_year: 1938
+    place: nanjing
+    places: [{place: nanjing-massacre-memorial-hall, role: memorial}]
+    prominence: 4
+    people: [{person: iwane-matsui, role: commander}, {person: fumimaro-konoe, role: prime minister}]
+    note: After taking Nanjing, the Japanese army murdered and raped civilians and prisoners for weeks; most estimates put the dead at 100,000–200,000 or more.
+    sources: [wp-nanjing-massacre, wp-nanjing-massacre-memorial-hall]
+  - key: hundred-regiments-offensive
+    name: Hundred Regiments Offensive
+    type: Offensive
+    date: 1940-08-20
+    end_year: 1941
+    place: niangzi-pass
+    prominence: 3
+    people: [{person: zhu-de, role: commander}, {person: mao-zedong, role: opposed the strategy}]
+    note: The Communist Eighth Route Army's 105 regiments attacked Japanese railways and strongpoints across North China (to 24 January 1941).
+    sources: [wp-hundred-regiments-offensive, wp-niangzi-pass]
+  - key: unit-731
+    name: Unit 731
+    type: Atrocity
+    year: 1933
+    end_year: 1945
+    place: unit-731-pingfang
+    prominence: 3
+    people: [{person: hirohito, role: decree of 1936}, {person: douglas-macarthur, role: granted immunity}]
+    note: A secret Japanese army unit for biological and chemical warfare that experimented on and killed thousands of prisoners; its staff were given US immunity.
+    sources: [wp-unit-731]
+  - key: fall-of-singapore
+    name: Fall of Singapore
+    type: Battle
+    date: 1942-02-08
+    end_year: 1942
+    place: singapore
+    places: [{place: former-ford-factory, role: surrender, note: "Percival surrendered here on 15 February 1942"}]
+    prominence: 4
+    people: [{person: tomoyuki-yamashita, role: victor}, {person: arthur-percival, role: surrendered}, {person: winston-churchill, role: ordered resistance}]
+    note: Japan crossed the Johor Strait and took Singapore on 15 February 1942, the largest surrender in British history (about 80,000 prisoners).
+    sources: [wp-fall-of-singapore, wp-former-ford-factory]
+  - key: bombing-of-darwin
+    name: Bombing of Darwin
+    type: Bombing
+    date: 1942-02-19
+    place: darwin
+    prominence: 3
+    people: [{person: chuichi-nagumo, role: commander}]
+    note: 188 Japanese aircraft struck Darwin in two raids, the largest foreign attack on Australia; the official count is about 250 dead.
+    sources: [wp-bombing-of-darwin]
+  - key: bataan-death-march
+    name: Bataan Death March
+    type: Atrocity
+    date: 1942-04-09
+    end_year: 1942
+    place: mariveles
+    places: [{place: camp-odonnell, role: finish}]
+    prominence: 3
+    note: The Japanese army forced about 72,000–78,000 Filipino and American prisoners to march to Camp O'Donnell; thousands were killed or died.
+    sources: [wp-bataan-death-march, wp-camp-odonnell, wp-mariveles]
+  - key: doolittle-raid
+    name: Doolittle Raid
+    type: Raid
+    date: 1942-04-18
+    place: tokyo
+    prominence: 3
+    people: [{person: william-halsey-jr, role: escort commander}, {person: franklin-d-roosevelt, role: pressed for}]
+    note: Sixteen US Army B-25s flew off the carrier Hornet to bomb Tokyo and other cities, the first American strike on Japan's home islands.
+    sources: [wp-doolittle-raid]
+  - key: battle-of-the-coral-sea
+    name: Battle of the Coral Sea
+    type: Battle
+    date: 1942-05-04
+    end_year: 1942
+    place: coral-sea
+    places: [{place: tulagi, role: invaded, note: "Taken by Japan on 3–4 May"}]
+    prominence: 3
+    people: [{person: douglas-macarthur, role: commander}, {person: chester-w-nimitz, role: commander}, {person: isoroku-yamamoto, role: commander}]
+    note: The first battle between aircraft carriers (4–8 May 1942); a tactical Japanese win but a strategic Allied one that saved Port Moresby.
+    sources: [wp-battle-of-the-coral-sea, wp-tulagi]
+  - key: kokoda-track-campaign
+    name: Kokoda Track campaign
+    type: Campaign
+    date: 1942-07-21
+    end_year: 1942
+    place: kokoda
+    places: [{place: isurava, role: battle, note: From 26 August 1942}]
+    prominence: 3
+    people: [{person: douglas-macarthur, role: commander}, {person: thomas-blamey, role: commander}, {person: john-curtin, role: prime minister}]
+    note: Australian and Papuan troops stopped Japan's overland drive on Port Moresby across the Owen Stanley Range and pushed it back, to 16 November.
+    sources: [wp-kokoda-track-campaign]
+  - key: guadalcanal-campaign
+    name: Guadalcanal campaign
+    type: Campaign
+    date: 1942-08-07
+    end_year: 1943
+    place: guadalcanal
+    places:
+      - {place: henderson-field-guadalcanal, role: objective, note: "The airfield, taken on 8 August and fought over for months"}
+      - {place: tulagi, role: landing}
+    prominence: 4
+    people:
+      - {person: chester-w-nimitz, role: commander}
+      - {person: william-halsey-jr, role: commander}
+      - {person: isoroku-yamamoto, role: commander}
+      - {person: chuichi-nagumo, role: commander}
+    note: The first major Allied land offensive against Japan, fought over the island's airfield and the seas around it, to 9 February 1943.
+    sources: [wp-guadalcanal-campaign]
+  - key: battle-of-imphal
+    name: Battle of Imphal
+    type: Battle
+    date: 1944-03-08
+    end_year: 1944
+    place: imphal
+    places: [{place: imphal-war-cemetery, role: memorial}]
+    prominence: 3
+    people: [{person: william-slim, role: commander}, {person: louis-mountbatten, role: supreme commander}, {person: hideki-tojo, role: approved the offensive}]
+    note: Japan's offensive into India failed around Imphal (to 3 July 1944), turning the Burma campaign in the Allies' favour.
+    sources: [wp-battle-of-imphal, wp-imphal-war-cemetery]
+  - key: battle-of-kohima
+    name: Battle of Kohima
+    type: Battle
+    date: 1944-04-04
+    end_year: 1944
+    place: kohima
+    places: [{place: kohima-war-cemetery, role: memorial}]
+    prominence: 3
+    people: [{person: william-slim, role: commander}]
+    note: British and Indian troops held Kohima ridge in three stages and reopened the road to besieged Imphal on 22 June 1944.
+    sources: [wp-battle-of-kohima, wp-kohima-war-cemetery]
+  - key: battle-of-the-philippine-sea
+    name: Battle of the Philippine Sea
+    type: Battle
+    date: 1944-06-19
+    end_year: 1944
+    place: philippine-sea
+    prominence: 3
+    people: [{person: raymond-a-spruance, role: commander}]
+    note: The largest carrier battle in history, the "Great Marianas Turkey Shoot", which ended Japan's ability to fight big carrier actions.
+    sources: [wp-battle-of-the-philippine-sea]
+  - key: battle-of-leyte-gulf
+    name: Battle of Leyte Gulf
+    type: Battle
+    date: 1944-10-23
+    end_year: 1944
+    place: leyte-gulf
+    prominence: 4
+    people: [{person: william-halsey-jr, role: commander}, {person: douglas-macarthur, role: pressed for the invasion}]
+    note: By some measures the largest naval battle in history (23–26 October 1944); the US fleets defeated Japan's bid to stop the Philippine landings.
+    sources: [wp-battle-of-leyte-gulf]
+  - key: battle-of-iwo-jima
+    name: Battle of Iwo Jima
+    type: Battle
+    date: 1945-02-19
+    end_year: 1945
+    place: iwo-jima
+    places: [{place: mount-suribachi, role: flag raising, note: 23 February 1945}]
+    prominence: 4
+    people: [{person: raymond-a-spruance, role: commander}]
+    note: US Marines took the island from dug-in defenders by 26 March 1945; the flag raising on Suribachi became one of the war's best-known photographs.
+    sources: [wp-battle-of-iwo-jima, wp-mount-suribachi]
+  - key: bombing-of-tokyo-1945
+    name: Bombing of Tokyo (Operation Meetinghouse)
+    type: Bombing
+    date: 1945-03-09
+    end_year: 1945
+    place: tokyo
+    places: [{place: yokoamicho-park, role: memorial}]
+    prominence: 4
+    people: [{person: hirohito, role: toured the ruins}]
+    note: 279 B-29s firebombed eastern Tokyo overnight on 9–10 March 1945, the most destructive single air raid of the war; about 90,000–100,000 died.
+    sources: [wp-bombing-of-tokyo-10-march-1945]
+  - key: soviet-invasion-of-manchuria
+    name: Soviet invasion of Manchuria
+    type: Invasion
+    date: 1945-08-09
+    end_year: 1945
+    place: manchuria
+    prominence: 4
+    people: [{person: joseph-stalin, role: ordered}]
+    note: The Soviet Union declared war on Japan on 8 August and invaded Manchukuo just after midnight, between the two atomic bombings.
+    sources: [wp-soviet-invasion-of-manchuria]
+  - key: tokyo-trial
+    name: Tokyo Trial (International Military Tribunal for the Far East)
+    type: Trial
+    date: 1946-04-29
+    end_year: 1948
+    place: ichigaya
+    places: [{place: sugamo-prison, role: executions, note: "Seven were hanged here on 23 December 1948"}]
+    prominence: 3
+    people:
+      - {person: hideki-tojo, role: sentenced to death}
+      - {person: iwane-matsui, role: sentenced to death}
+      - {person: douglas-macarthur, role: set up the tribunal}
+    note: The Allies tried 28 Japanese leaders; on 12 November 1948 seven were sentenced to death and sixteen to life imprisonment.
+    sources: [wp-international-military-tribunal-for-the-far-east, wp-sugamo-prison]
+  # Existing events: link the people now in the database.
+  - key: attack-on-pearl-harbor
+    people: [{person: isoroku-yamamoto, role: planned}, {person: chuichi-nagumo, role: commander}, {person: hirohito, role: approved}, {person: franklin-d-roosevelt, role: infamy speech}]
+    sources: [wp-attack-on-pearl-harbor]
+  - key: battle-of-midway
+    people:
+      - {person: chester-w-nimitz, role: victor}
+      - {person: raymond-a-spruance, role: commander}
+      - {person: isoroku-yamamoto, role: defeated}
+      - {person: chuichi-nagumo, role: defeated}
+    sources: [wp-battle-of-midway]
+  - key: battle-of-okinawa-1945
+    people: [{person: chester-w-nimitz, role: commander}, {person: raymond-a-spruance, role: commander}, {person: joseph-stilwell, role: commander}]
+    sources: [wp-battle-of-okinawa]
+  - key: atomic-bombings-of-hiroshima-and-nagasaki
+    people: [{person: paul-tibbets, role: piloted Enola Gay}, {person: harry-s-truman, role: approved}]
+    sources: [wp-atomic-bombings-of-hiroshima-and-nagasaki]
+  - key: surrender-of-japan
+    people:
+      - {person: douglas-macarthur, role: accepted}
+      - {person: chester-w-nimitz, role: signed}
+      - {person: thomas-blamey, role: signed}
+      - {person: arthur-percival, role: witness}
+    sources: [wp-japanese-instrument-of-surrender]
+  - key: marco-polo-bridge-incident
+    people: [{person: chiang-kai-shek, role: sent troops north}, {person: fumimaro-konoe, role: prime minister}]
+    sources: [wp-marco-polo-bridge-incident]
+
+discrepancies:
+  - key: nanjing-massacre-death-toll
+    question: How many people were killed in the Nanjing Massacre?
+    about: [{event: nanjing-massacre}]
+    claims:
+      - {value: "100,000–200,000 (newer estimates; the infobox's main range)", sources: [wp-nanjing-massacre]}
+      - {value: "More than 200,000 (Tokyo Trial)", sources: [wp-nanjing-massacre]}
+      - {value: "300,000 or more (1947 Nanjing War Crimes Tribunal; Chinese government)", sources: [wp-nanjing-massacre]}
+      - {value: "From 40,000 (the city alone) to over 340,000 (the whole Shanghai–Nanjing region)", sources: [wp-nanjing-massacre], note: The full spread of estimates}
+    note: The note gives the infobox's range and says the figure is disputed.
+  - key: nanjing-massacre-span
+    question: Over what dates did the Nanjing Massacre take place?
+    about: [{event: nanjing-massacre}]
+    field: date
+    claims:
+      - {value: "Six weeks from 13 December 1937 (traditional account)", sources: [wp-nanjing-massacre]}
+      - {value: "4 December 1937 – 28 March 1938 in the Nanjing area (infobox; Wakabayashi and Kasahara)", sources: [wp-nanjing-massacre]}
+    note: The record starts on 13 December 1937 and ends in 1938.
+  - key: bataan-death-march-start
+    question: Did the Bataan Death March begin on 9, 10 or 11 April 1942?
+    about: [{event: bataan-death-march}]
+    field: date
+    claims:
+      - {value: "1942-04-09", sources: [wp-bataan-death-march], note: Infobox and lead (the day Bataan surrendered)}
+      - {value: "Prisoners left Mariveles on 10 April and Bagac on 11 April", sources: [wp-bataan-death-march], note: Body}
+    note: The record uses 9 April.
+  - key: darwin-death-toll
+    question: How many people were killed in the bombing of Darwin?
+    about: [{event: bombing-of-darwin}]
+    claims:
+      - {value: "243, about 250 (Lowe Commission, March 1942)", sources: [wp-bombing-of-darwin], note: The article's main figure}
+      - {value: "900 to 1,100 (Burton; Macredie; Army Intelligence)", sources: [wp-bombing-of-darwin]}
+    note: The note gives the official figure.
+  - key: soviet-invasion-of-manchuria-start
+    question: Did the Soviet invasion of Manchuria begin on 8 or 9 August 1945?
+    about: [{event: soviet-invasion-of-manchuria}]
+    field: date
+    claims:
+      - {value: "1945-08-08 (declaration of war, 5 pm Moscow time)", sources: [wp-soviet-invasion-of-manchuria], note: Infobox and lead}
+      - {value: "1945-08-09 (the attack began just after midnight)", sources: [wp-soviet-invasion-of-manchuria], note: Body}
+    note: The record uses 9 August, when the fighting began.
