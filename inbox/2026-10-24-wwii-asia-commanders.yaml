@@ -1,0 +1,516 @@
+batch:
+  title: "WWII, batch 3a: the war in Asia and the Pacific — leaders and commanders"
+  requested: "Ty: go ahead with batch 3, the Pacific and China (with Southeast Asia, atrocities in Asia, the Chinese Communists, and Australia and New Zealand); do all batches"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Facts come from each person's English Wikipedia article, read through the Wikipedia API on 2026-10-24 (infobox and body).
+#   Sitelinks are Wikipedia language editions only, from Wikidata on 2026-10-24. New birth, death and burial places cite the
+#   person's own article (which names the place) and the place's coordinates from its own article or Wikidata.
+# - Types: Military for the soldiers and sailors. Government for Tojo (an army general, but Prime Minister; his army posts are
+#   military titles), Konoe, Mao and Curtin. Mountbatten and Slim are Military, with their later viceroyalty and governor-
+#   generalship as plain titles.
+# - Mao's party chairmanship (from 1943) is filed under realm China, as Stalin's party post is under the Soviet Union, so the Year
+#   view shows both Chiang and Mao for China in 1943-1949, the years of civil war. The succession box dates it from 1945 (logged).
+# - New Zealand: none of its leaders is in this batch; Australia has Curtin and Blamey. New realms: Australia, Dominion of India.
+# - Military titles: commands the article dates; where it gives only a month or a year, the title has the year. Left out for lack of
+#   dates: Tibbets's 509th Composite Group, Zhu De's Eighth Route Army (no dates in his article), Slim's Burma Corps.
+# - Portraits: the article lead image, linked only; all are public domain on Commons except Mountbatten's (CC BY-SA 3.0), left out.
+# - Places: Tojo's and Konoe's births are filed at Tokyo; MacArthur's at Little Rock (the barracks is now the Tower Building of the
+#   Little Rock Arsenal); Slim's at Bristol (body: St Andrews; infobox: Bishopston, both in Bristol); Blamey's at Wagga Wagga
+#   (body: Lake Albert, near Wagga Wagga); Percival's death at London (King Edward VII's Hospital). Tojo's, Matsui's, Stilwell's
+#   and Tibbets's ashes were scattered or taken, so they have no burial. Existing places reused: tokyo, beijing, london, bristol,
+#   columbus-ohio, washington-dc, arlington-national-cemetery.
+# - Their roles in events come in batch 3b (2026-10-24-wwii-asia-events.yaml).
+
+sources:
+  - {key: wp-hideki-tojo, title: "Hideki Tojo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hideki_Tojo"}
+  - {key: wp-fumimaro-konoe, title: "Fumimaro Konoe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fumimaro_Konoe"}
+  - {key: wp-isoroku-yamamoto, title: "Isoroku Yamamoto (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isoroku_Yamamoto"}
+  - {key: wp-tomoyuki-yamashita, title: "Tomoyuki Yamashita (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tomoyuki_Yamashita"}
+  - {key: wp-chuichi-nagumo, title: "Chūichi Nagumo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ch%C5%AByichi_Nagumo"}
+  - {key: wp-iwane-matsui, title: "Iwane Matsui (Wikipedia)", url: "https://en.wikipedia.org/wiki/Iwane_Matsui"}
+  - {key: wp-douglas-macarthur, title: "Douglas MacArthur (Wikipedia)", url: "https://en.wikipedia.org/wiki/Douglas_MacArthur"}
+  - {key: wp-chester-w-nimitz, title: "Chester W. Nimitz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chester_W._Nimitz"}
+  - {key: wp-william-halsey-jr, title: "William Halsey Jr. (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Halsey_Jr."}
+  - {key: wp-raymond-a-spruance, title: "Raymond A. Spruance (Wikipedia)", url: "https://en.wikipedia.org/wiki/Raymond_A._Spruance"}
+  - {key: wp-joseph-stilwell, title: "Joseph Stilwell (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joseph_Stilwell"}
+  - {key: wp-paul-tibbets, title: "Paul Tibbets (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paul_Tibbets"}
+  - {key: wp-william-slim, title: "William Slim, 1st Viscount Slim (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_Slim,_1st_Viscount_Slim"}
+  - {key: wp-louis-mountbatten, title: "Louis Mountbatten, 1st Earl Mountbatten of Burma (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louis_Mountbatten,_1st_Earl_Mountbatten_of_Burma"}
+  - {key: wp-arthur-percival, title: "Arthur Percival (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arthur_Percival"}
+  - {key: wp-mao-zedong, title: "Mao Zedong (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mao_Zedong"}
+  - {key: wp-zhu-de, title: "Zhu De (Wikipedia)", url: "https://en.wikipedia.org/wiki/Zhu_De"}
+  - {key: wp-john-curtin, title: "John Curtin (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Curtin"}
+  - {key: wp-thomas-blamey, title: "Thomas Blamey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Thomas_Blamey"}
+  - {key: wp-australia, title: "Australia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Australia"}
+  - {key: wp-dominion-of-india, title: "Dominion of India (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dominion_of_India"}
+  - {key: wp-sugamo-prison, title: "Sugamo Prison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sugamo_Prison"}
+  - {key: wd-places-2026-10-24, title: "Wikidata coordinates (P625), read 2026-10-24", url: "https://www.wikidata.org/"}
+
+realms:
+  - {name: Australia, region: Oceania, country: Australia, sources: [wp-australia]}
+  - {name: Dominion of India, region: South Asia, country: India, sources: [wp-dominion-of-india]}
+
+places:
+  - {key: sugamo-prison, name: Sugamo Prison, kind: prison, city: Tokyo, country: Japan, lat: 35.7296, lng: 139.7178, ended: 1971, sources: [wp-sugamo-prison]}
+  - {key: tekigai-so, name: Tekigai-sō, kind: house, city: Tokyo, country: Japan, lat: 35.6986, lng: 139.6223, sources: [wp-fumimaro-konoe, wd-places-2026-10-24]}
+  - {key: nagaoka-niigata, name: "Nagaoka, Niigata", kind: city, region: Niigata, country: Japan, lat: 37.4462, lng: 138.8512, sources: [wp-isoroku-yamamoto, wd-places-2026-10-24]}
+  - {key: panguna, name: Panguna, kind: town, region: Bougainville, country: Papua New Guinea, lat: -6.3153, lng: 155.4964, note: Yamamoto's plane was shot down nearby on 18 April 1943, sources: [wp-isoroku-yamamoto]}
+  - {key: tama-cemetery, name: Tama Cemetery, kind: cemetery, city: Fuchū, region: Tokyo, country: Japan, lat: 35.6853, lng: 139.5097, visitable: true, sources: [wp-isoroku-yamamoto, wd-places-2026-10-24]}
+  - {key: otoyo-kochi, name: "Ōtoyo, Kōchi", kind: town, region: Kōchi, country: Japan, lat: 33.7667, lng: 133.6667, sources: [wp-tomoyuki-yamashita]}
+  - {key: los-banos-laguna, name: "Los Baños, Laguna", kind: town, region: Laguna, country: Philippines, lat: 14.17, lng: 121.22, sources: [wp-tomoyuki-yamashita]}
+  - {key: yonezawa, name: "Yonezawa, Yamagata", kind: city, region: Yamagata, country: Japan, lat: 37.9222, lng: 140.1168, sources: [wp-chuichi-nagumo]}
+  - {key: saipan, name: Saipan, kind: island, country: United States, lat: 15.1833, lng: 145.75, sources: [wp-chuichi-nagumo]}
+  - {key: engaku-ji, name: Engaku-ji, kind: temple, city: Kamakura, country: Japan, lat: 35.3377, lng: 139.5475, visitable: true, sources: [wp-chuichi-nagumo]}
+  - {key: nagoya, name: Nagoya, kind: city, region: Aichi, country: Japan, lat: 35.1833, lng: 136.9, sources: [wp-iwane-matsui]}
+  - {key: little-rock-arkansas, name: "Little Rock, Arkansas", kind: city, region: Arkansas, country: United States, lat: 34.7444, lng: -92.2881, sources: [wp-douglas-macarthur, wd-places-2026-10-24]}
+  - {key: macarthur-memorial, name: MacArthur Memorial, kind: memorial, city: Norfolk, region: Virginia, country: United States, lat: 36.8477, lng: -76.2886, visitable: true, note: "The old Norfolk City Hall, where MacArthur is buried in the rotunda", sources: [wp-douglas-macarthur, wd-places-2026-10-24]}
+  - {key: fredericksburg-texas, name: "Fredericksburg, Texas", kind: city, region: Texas, country: United States, lat: 30.2742, lng: -98.8719, sources: [wp-chester-w-nimitz, wd-places-2026-10-24]}
+  - {key: yerba-buena-island, name: Yerba Buena Island, kind: island, city: San Francisco, region: California, country: United States, lat: 37.8099, lng: -122.3661, sources: [wp-chester-w-nimitz, wd-places-2026-10-24]}
+  - {key: golden-gate-national-cemetery, name: Golden Gate National Cemetery, kind: cemetery, city: San Bruno, region: California, country: United States, lat: 37.6324, lng: -122.4344, visitable: true, sources: [wp-chester-w-nimitz, wd-places-2026-10-24]}
+  - {key: elizabeth-new-jersey, name: "Elizabeth, New Jersey", kind: city, region: New Jersey, country: United States, lat: 40.663, lng: -74.214, sources: [wp-william-halsey-jr]}
+  - {key: fishers-island, name: "Fishers Island, New York", kind: island, region: New York, country: United States, lat: 41.2619, lng: -72.0072, sources: [wp-william-halsey-jr, wd-places-2026-10-24]}
+  - {key: baltimore, name: Baltimore, kind: city, region: Maryland, country: United States, lat: 39.2864, lng: -76.615, sources: [wp-raymond-a-spruance, wd-places-2026-10-24]}
+  - {key: pebble-beach-california, name: "Pebble Beach, California", kind: town, region: California, country: United States, lat: 36.5664, lng: -121.9467, sources: [wp-raymond-a-spruance, wd-places-2026-10-24]}
+  - {key: palatka-florida, name: "Palatka, Florida", kind: city, region: Florida, country: United States, lat: 29.6394, lng: -81.6625, sources: [wp-joseph-stilwell]}
+  - {key: presidio-of-san-francisco, name: Presidio of San Francisco, kind: military base, city: San Francisco, region: California, country: United States, lat: 37.7981, lng: -122.4658, visitable: true, sources: [wp-joseph-stilwell]}
+  - {key: quincy-illinois, name: "Quincy, Illinois", kind: city, region: Illinois, country: United States, lat: 39.9311, lng: -91.3722, sources: [wp-paul-tibbets]}
+  - {key: frogmore-house, name: Frogmore House, kind: house, city: Windsor, region: Berkshire, country: England, lat: 51.4743, lng: -0.5943, visitable: true, sources: [wp-louis-mountbatten, wd-places-2026-10-24]}
+  - {key: mullaghmore, name: "Mullaghmore, County Sligo", kind: village, region: County Sligo, country: Ireland, lat: 54.4664, lng: -8.4486, sources: [wp-louis-mountbatten]}
+  - {key: romsey-abbey, name: Romsey Abbey, kind: abbey, city: Romsey, region: Hampshire, country: England, lat: 50.9897, lng: -1.5014, visitable: true, sources: [wp-louis-mountbatten]}
+  - {key: aspenden, name: Aspenden, kind: village, region: Hertfordshire, country: England, lat: 51.9356, lng: -0.0193, sources: [wp-arthur-percival, wd-places-2026-10-24]}
+  - {key: shaoshan, name: Shaoshan, kind: town, region: Hunan, country: China, lat: 27.915, lng: 112.5267, visitable: true, sources: [wp-mao-zedong]}
+  - {key: mausoleum-of-mao-zedong, name: Mausoleum of Mao Zedong, kind: mausoleum, city: Beijing, country: China, lat: 39.901, lng: 116.3915, visitable: true, sources: [wp-mao-zedong]}
+  - {key: yilong-county, name: Yilong County, kind: county, region: Sichuan, country: China, lat: 31.2682, lng: 106.2966, sources: [wp-zhu-de, wd-places-2026-10-24]}
+  - {key: creswick-victoria, name: "Creswick, Victoria", kind: town, region: Victoria, country: Australia, lat: -37.425, lng: 143.8917, sources: [wp-john-curtin]}
+  - {key: the-lodge-canberra, name: "The Lodge, Canberra", kind: residence, city: Canberra, country: Australia, lat: -35.3108, lng: 149.1165, note: Official residence of the Prime Minister of Australia, sources: [wp-john-curtin]}
+  - {key: karrakatta-cemetery, name: Karrakatta Cemetery, kind: cemetery, city: Perth, region: Western Australia, country: Australia, lat: -31.97, lng: 115.7992, visitable: true, sources: [wp-john-curtin, wd-places-2026-10-24]}
+  - {key: wagga-wagga, name: Wagga Wagga, kind: city, region: New South Wales, country: Australia, lat: -35.1189, lng: 147.3689, sources: [wp-thomas-blamey]}
+  - {key: heidelberg-victoria, name: "Heidelberg, Victoria", kind: suburb, city: Melbourne, region: Victoria, country: Australia, lat: -37.752, lng: 145.07, sources: [wp-thomas-blamey]}
+
+people:
+  - key: hideki-tojo
+    name: Hideki Tojo
+    type: Government
+    born: 1884-12-30
+    died: 1948-12-23
+    prominence: 4
+    sitelinks: 77
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, premiership, army minister and two army posts; his many cabinet portfolios not added."
+    note: Army general and Prime Minister of Japan when it attacked Pearl Harbor; hanged for war crimes after the Tokyo Trial.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f7/Hideki_Tojo_Portrait_1941_%283x4_cropped%29%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Hideki_Tojo_Portrait_1941_%283x4_cropped%29%282%29.jpg/500px-Hideki_Tojo_Portrait_1941_%283x4_cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Hideki_Tojo_Portrait_1941_(3x4_cropped)(2).jpg
+    image_license: Public domain
+    sources: [wp-hideki-tojo]
+  - key: fumimaro-konoe
+    name: Fumimaro Konoe
+    type: Government
+    born: 1891-10-12
+    died: 1945-12-16
+    prominence: 3
+    sitelinks: 46
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his two premierships."
+    note: Prince and three-time Prime Minister who led Japan into full war with China in 1937; took poison before he could be arrested.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/0/0c/Fumimaro_Konoe_%28cropped%29%28b%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/Fumimaro_Konoe_%28cropped%29%28b%29.jpg/500px-Fumimaro_Konoe_%28cropped%29%28b%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Fumimaro_Konoe_(cropped)(b).jpg
+    image_license: Public domain
+    sources: [wp-fumimaro-konoe]
+  - key: isoroku-yamamoto
+    name: Isoroku Yamamoto
+    type: Military
+    born: 1884-04-04
+    died: 1943-04-18
+    prominence: 4
+    sitelinks: 65
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his fleet command."
+    note: Commander of Japan's Combined Fleet who planned the attack on Pearl Harbor; killed when US fighters shot down his plane.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/df/Portrait_of_Yamamoto_Isoroku_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Portrait_of_Yamamoto_Isoroku_%28cropped%29.jpg/500px-Portrait_of_Yamamoto_Isoroku_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Portrait_of_Yamamoto_Isoroku_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-isoroku-yamamoto]
+  - key: tomoyuki-yamashita
+    name: Tomoyuki Yamashita
+    type: Military
+    born: 1885-11-08
+    died: 1946-02-23
+    prominence: 3
+    sitelinks: 40
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two commands; the trial is in the note."
+    note: The "Tiger of Malaya", who took Malaya and Singapore in 1942; hanged in 1946 for his troops' atrocities in the Philippines.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f5/Yamashita_Tomoyuki.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Yamashita_Tomoyuki.jpg/500px-Yamashita_Tomoyuki.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Yamashita_Tomoyuki.jpg
+    image_license: Public domain
+    sources: [wp-tomoyuki-yamashita]
+  - key: chuichi-nagumo
+    name: Chūichi Nagumo
+    type: Military
+    born: 1887-03-25
+    died: 1944-07-06
+    prominence: 3
+    sitelinks: 41
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two fleet commands."
+    note: Led Japan's carrier striking force at Pearl Harbor and Midway; killed himself during the Battle of Saipan.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cc/Chuichi_Nagumo.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Chuichi_Nagumo.jpg/500px-Chuichi_Nagumo.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Chuichi_Nagumo.jpg
+    image_license: Public domain
+    sources: [wp-chuichi-nagumo]
+  - key: iwane-matsui
+    name: Iwane Matsui
+    type: Military
+    born: 1878-07-27
+    died: 1948-12-23
+    prominence: 3
+    sitelinks: 27
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his 1937 commands."
+    note: Commanded the Japanese forces at Shanghai and Nanjing in 1937; hanged for failing to stop the Nanjing Massacre.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e5/%E6%9D%BE%E4%BA%95_%E7%9F%B3%E6%A0%B9.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/%E6%9D%BE%E4%BA%95_%E7%9F%B3%E6%A0%B9.jpg/500px-%E6%9D%BE%E4%BA%95_%E7%9F%B3%E6%A0%B9.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:%E6%9D%BE%E4%BA%95_%E7%9F%B3%E6%A0%B9.jpg
+    image_license: Public domain
+    sources: [wp-iwane-matsui]
+  - key: douglas-macarthur
+    name: Douglas MacArthur
+    type: Military
+    born: 1880-01-26
+    died: 1964-04-05
+    prominence: 4
+    sitelinks: 88
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two commands; the Philippines before 1941 and the Korean War not built out."
+    note: Led Allied forces in the South West Pacific, accepted Japan's surrender and ran the occupation of Japan.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/67/MacArthur_Manila_%28cropped2%29%28b%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/MacArthur_Manila_%28cropped2%29%28b%29.jpg/500px-MacArthur_Manila_%28cropped2%29%28b%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:MacArthur_Manila_(cropped2)(b).jpg
+    image_license: Public domain
+    sources: [wp-douglas-macarthur]
+  - key: chester-w-nimitz
+    name: Chester W. Nimitz
+    type: Military
+    born: 1885-02-24
+    died: 1966-02-20
+    prominence: 4
+    sitelinks: 60
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two commands."
+    note: Commanded the US Pacific Fleet from just after Pearl Harbor to Japan's surrender, which he signed for the United States.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cf/Chester_Nimitz_as_CNO_%28cropped%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Chester_Nimitz_as_CNO_%28cropped%29.jpg/500px-Chester_Nimitz_as_CNO_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Chester_Nimitz_as_CNO_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-chester-w-nimitz]
+  - key: william-halsey-jr
+    name: William Halsey Jr.
+    type: Military
+    born: 1882-10-30
+    died: 1959-08-16
+    prominence: 3
+    sitelinks: 32
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two commands."
+    note: Carrier admiral who led the South Pacific forces at Guadalcanal and later the US Third Fleet.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/cd/W_Halsey.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/W_Halsey.jpg/500px-W_Halsey.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:W_Halsey.jpg
+    image_license: Public domain
+    sources: [wp-william-halsey-jr]
+  - key: raymond-a-spruance
+    name: Raymond A. Spruance
+    type: Military
+    born: 1886-07-03
+    died: 1969-12-13
+    prominence: 3
+    sitelinks: 31
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his Fifth Fleet command."
+    note: Commanded the US carriers that won at Midway, then the Fifth Fleet across the Central Pacific.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e2/Ray_Spruance.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Ray_Spruance.jpg/500px-Ray_Spruance.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Ray_Spruance.jpg
+    image_license: Public domain
+    sources: [wp-raymond-a-spruance]
+  - key: joseph-stilwell
+    name: Joseph Stilwell
+    type: Military
+    born: 1883-03-19
+    died: 1946-10-12
+    prominence: 3
+    sitelinks: 28
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and two commands."
+    note: US commander in the China–Burma–India theatre and chief of staff to Chiang Kai-shek until recalled in 1944.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/d/dc/Stilwell001.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Stilwell001.jpg/500px-Stilwell001.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Stilwell001.jpg
+    image_license: Public domain
+    sources: [wp-joseph-stilwell]
+  - key: paul-tibbets
+    name: Paul Tibbets
+    type: Military
+    born: 1915-02-23
+    died: 2007-11-01
+    prominence: 3
+    sitelinks: 35
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates and places; his 509th Composite Group command has no dates in the article."
+    note: Pilot of the B-29 Enola Gay, which dropped the atomic bomb on Hiroshima on 6 August 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c4/Paul_W._Tibbets.JPG
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Paul_W._Tibbets.JPG/500px-Paul_W._Tibbets.JPG
+    image_page: https://commons.wikimedia.org/wiki/File:Paul_W._Tibbets.JPG
+    image_license: Public domain
+    sources: [wp-paul-tibbets]
+  - key: william-slim
+    name: William Slim
+    type: Military
+    born: 1891-08-06
+    died: 1970-12-14
+    prominence: 3
+    sitelinks: 27
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, his Fourteenth Army command and two later posts."
+    note: Commanded the British Fourteenth Army that drove the Japanese out of Burma; later Governor-General of Australia.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/32/British_Generals_1939-1945_IND3595.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/British_Generals_1939-1945_IND3595.jpg/500px-British_Generals_1939-1945_IND3595.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:British_Generals_1939-1945_IND3595.jpg
+    image_license: Public domain
+    sources: [wp-william-slim]
+  - key: louis-mountbatten
+    name: Louis Mountbatten
+    type: Military
+    born: 1900-06-25
+    died: 1979-08-27
+    prominence: 3
+    sitelinks: 58
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, his South East Asia command and his two posts in India."
+    note: Supreme Allied Commander in South East Asia from 1943, then the last Viceroy of India; killed by an IRA bomb in 1979.
+    sources: [wp-louis-mountbatten]
+  - key: arthur-percival
+    name: Arthur Percival
+    type: Military
+    born: 1887-12-26
+    died: 1966-01-31
+    prominence: 2
+    sitelinks: 22
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, birth and death places, and his Malaya command."
+    note: British commander in Malaya who surrendered Singapore to Yamashita in 1942; a prisoner until 1945.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/1/16/Lieutenant_General_Arthur_Percival_%28cropped%29.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/1/16/Lieutenant_General_Arthur_Percival_%28cropped%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Lieutenant_General_Arthur_Percival_(cropped).jpg
+    image_license: Public domain
+    sources: [wp-arthur-percival]
+  - key: mao-zedong
+    name: Mao Zedong
+    type: Government
+    born: 1893-12-26
+    died: 1976-09-09
+    prominence: 5
+    sitelinks: 186
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and three offices; the Long March, the civil war and the People's Republic not built out."
+    note: Led the Chinese Communists, whose armies fought Japan in the north; founded the People's Republic of China in 1949.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/5/5e/Mao_Zedong_1950_Portrait_%283x4_cropped%29%282%29.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Mao_Zedong_1950_Portrait_%283x4_cropped%29%282%29.jpg/500px-Mao_Zedong_1950_Portrait_%283x4_cropped%29%282%29.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Mao_Zedong_1950_Portrait_(3x4_cropped)(2).jpg
+    image_license: Public domain
+    sources: [wp-mao-zedong]
+  - key: zhu-de
+    name: Zhu De
+    type: Military
+    born: 1886-12-01
+    died: 1976-07-06
+    prominence: 3
+    sitelinks: 46
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places, his PLA command and two state posts; the Eighth Route Army command has no dates in his article."
+    note: Commander-in-chief of the Communist Eighth Route Army against Japan; first of the People's Republic's ten marshals.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/e/e1/Zhu_De%2C_Commander_of_PLA.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Zhu_De%2C_Commander_of_PLA.jpg/500px-Zhu_De%2C_Commander_of_PLA.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Zhu_De,_Commander_of_PLA.jpg
+    image_license: Public domain
+    sources: [wp-zhu-de]
+  - key: john-curtin
+    name: John Curtin
+    type: Government
+    born: 1885-01-08
+    died: 1945-07-05
+    prominence: 3
+    sitelinks: 43
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his premiership."
+    note: Labor Prime Minister of Australia through the Pacific War, who turned to the United States; died in office.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/6/62/JohnCurtin.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/JohnCurtin.jpg/500px-JohnCurtin.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:JohnCurtin.jpg
+    image_license: Public domain
+    sources: [wp-john-curtin]
+  - key: thomas-blamey
+    name: Thomas Blamey
+    type: Military
+    born: 1884-01-24
+    died: 1951-05-27
+    prominence: 3
+    sitelinks: 21
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, birth and death places, and two commands."
+    note: Commander-in-chief of Australia's army and of Allied land forces under MacArthur; signed Japan's surrender for Australia.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/f/f8/General_Sir_Thomas_Blamey.jpg
+    image_thumb: https://upload.wikimedia.org/wikipedia/commons/f/f8/General_Sir_Thomas_Blamey.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:General_Sir_Thomas_Blamey.jpg
+    image_license: Public domain
+    sources: [wp-thomas-blamey]
+
+moments:
+  - {person: hideki-tojo, role: born, place: tokyo, year: 1884}
+  - {person: hideki-tojo, role: died, place: sugamo-prison, year: 1948}
+  - {person: fumimaro-konoe, role: born, place: tokyo, year: 1891}
+  - {person: fumimaro-konoe, role: died, place: tekigai-so, year: 1945}
+  - {person: isoroku-yamamoto, role: born, place: nagaoka-niigata, year: 1884}
+  - {person: isoroku-yamamoto, role: died, place: panguna, year: 1943}
+  - {person: isoroku-yamamoto, role: buried, place: tama-cemetery, year: 1943}
+  - {person: tomoyuki-yamashita, role: born, place: otoyo-kochi, year: 1885}
+  - {person: tomoyuki-yamashita, role: died, place: los-banos-laguna, year: 1946}
+  - {person: tomoyuki-yamashita, role: buried, place: tama-cemetery, year: 1946}
+  - {person: chuichi-nagumo, role: born, place: yonezawa, year: 1887}
+  - {person: chuichi-nagumo, role: died, place: saipan, year: 1944}
+  - {person: chuichi-nagumo, role: buried, place: engaku-ji, year: 1944}
+  - {person: iwane-matsui, role: born, place: nagoya, year: 1878}
+  - {person: iwane-matsui, role: died, place: sugamo-prison, year: 1948}
+  - {person: douglas-macarthur, role: born, place: little-rock-arkansas, year: 1880}
+  - {person: douglas-macarthur, role: died, place: washington-dc, year: 1964}
+  - {person: douglas-macarthur, role: buried, place: macarthur-memorial, year: 1964}
+  - {person: chester-w-nimitz, role: born, place: fredericksburg-texas, year: 1885}
+  - {person: chester-w-nimitz, role: died, place: yerba-buena-island, year: 1966}
+  - {person: chester-w-nimitz, role: buried, place: golden-gate-national-cemetery, year: 1966}
+  - {person: william-halsey-jr, role: born, place: elizabeth-new-jersey, year: 1882}
+  - {person: william-halsey-jr, role: died, place: fishers-island, year: 1959}
+  - {person: william-halsey-jr, role: buried, place: arlington-national-cemetery, year: 1959}
+  - {person: raymond-a-spruance, role: born, place: baltimore, year: 1886}
+  - {person: raymond-a-spruance, role: died, place: pebble-beach-california, year: 1969}
+  - {person: raymond-a-spruance, role: buried, place: golden-gate-national-cemetery, year: 1969}
+  - {person: joseph-stilwell, role: born, place: palatka-florida, year: 1883}
+  - {person: joseph-stilwell, role: died, place: presidio-of-san-francisco, year: 1946}
+  - {person: paul-tibbets, role: born, place: quincy-illinois, year: 1915}
+  - {person: paul-tibbets, role: died, place: columbus-ohio, year: 2007}
+  - {person: william-slim, role: born, place: bristol, year: 1891}
+  - {person: william-slim, role: died, place: london, year: 1970}
+  - {person: louis-mountbatten, role: born, place: frogmore-house, year: 1900}
+  - {person: louis-mountbatten, role: died, place: mullaghmore, year: 1979}
+  - {person: louis-mountbatten, role: buried, place: romsey-abbey, year: 1979}
+  - {person: arthur-percival, role: born, place: aspenden, year: 1887}
+  - {person: arthur-percival, role: died, place: london, year: 1966}
+  - {person: mao-zedong, role: born, place: shaoshan, year: 1893}
+  - {person: mao-zedong, role: died, place: beijing, year: 1976}
+  - {person: mao-zedong, role: buried, place: mausoleum-of-mao-zedong, year: 1977}
+  - {person: zhu-de, role: born, place: yilong-county, year: 1886}
+  - {person: zhu-de, role: died, place: beijing, year: 1976}
+  - {person: john-curtin, role: born, place: creswick-victoria, year: 1885}
+  - {person: john-curtin, role: died, place: the-lodge-canberra, year: 1945}
+  - {person: john-curtin, role: buried, place: karrakatta-cemetery, year: 1945}
+  - {person: thomas-blamey, role: born, place: wagga-wagga, year: 1884}
+  - {person: thomas-blamey, role: died, place: heidelberg-victoria, year: 1951}
+
+titles:
+  - {person: hideki-tojo, title: Chief of Staff of the Kwantung Army, realm: Japan, kind: military, from: 1937, to: 1938, sources: [wp-hideki-tojo]}
+  - {person: hideki-tojo, title: Minister of the Army, realm: Japan, from: 1940-07-22, to: 1944-07-22, sources: [wp-hideki-tojo]}
+  - {person: hideki-tojo, title: Prime Minister of Japan, realm: Japan, from: 1941-10-18, to: 1944-07-22, sources: [wp-hideki-tojo]}
+  - {person: hideki-tojo, title: Chief of the Army General Staff, realm: Japan, kind: military, from: 1944-02-21, to: 1944-07-18, sources: [wp-hideki-tojo]}
+  - {person: fumimaro-konoe, title: Prime Minister of Japan, realm: Japan, from: 1937-06-04, to: 1939-01-05, sources: [wp-fumimaro-konoe]}
+  - {person: fumimaro-konoe, title: Prime Minister of Japan, realm: Japan, from: 1940-07-22, to: 1941-10-18, note: His second and third cabinets, sources: [wp-fumimaro-konoe]}
+  - {person: isoroku-yamamoto, title: Commander-in-Chief of the Combined Fleet, realm: Japan, kind: military, from: 1939-08-30, to: 1943-04-18, sources: [wp-isoroku-yamamoto]}
+  - {person: tomoyuki-yamashita, title: Commander of the Twenty-Fifth Army, realm: Japan, kind: military, from: 1941-11-06, to: 1942-07-17, note: Took Malaya and Singapore, sources: [wp-tomoyuki-yamashita]}
+  - {person: tomoyuki-yamashita, title: Commander of the Fourteenth Area Army, realm: Japan, kind: military, from: 1944-10-10, to: 1945-09-02, note: In the Philippines, sources: [wp-tomoyuki-yamashita]}
+  - {person: chuichi-nagumo, title: Commander-in-Chief of the 1st Air Fleet, realm: Japan, kind: military, from: 1941-04-10, to: 1942, note: "Until after Midway, mid-1942", sources: [wp-chuichi-nagumo]}
+  - {person: chuichi-nagumo, title: Commander of the Central Pacific Area Fleet, realm: Japan, kind: military, from: 1944-03-04, to: 1944-07-06, sources: [wp-chuichi-nagumo]}
+  - {person: iwane-matsui, title: Commander of the Shanghai Expeditionary Army, realm: Japan, kind: military, from: 1937-08-15, to: 1937-11-07, sources: [wp-iwane-matsui]}
+  - {person: iwane-matsui, title: Commander of the Central China Area Army, realm: Japan, kind: military, from: 1937-11-07, to: 1938-02-21, note: Sailed home from Shanghai on 21 February 1938, sources: [wp-iwane-matsui]}
+  - {person: douglas-macarthur, title: "Supreme Commander, Southwest Pacific Area", realm: United States, kind: military, from: 1942-04-18, to: 1945, sources: [wp-douglas-macarthur]}
+  - {person: douglas-macarthur, title: Supreme Commander for the Allied Powers, realm: United States, kind: military, from: 1945-08-14, to: 1951-04-11, note: The occupation of Japan, sources: [wp-douglas-macarthur]}
+  - {person: chester-w-nimitz, title: "Commander in Chief, US Pacific Fleet", realm: United States, kind: military, from: 1941-12-31, to: 1945, note: "Until November 1945; also Commander in Chief, Pacific Ocean Areas", sources: [wp-chester-w-nimitz]}
+  - {person: chester-w-nimitz, title: Chief of Naval Operations, realm: United States, kind: military, from: 1945-12-15, to: 1947-12-15, sources: [wp-chester-w-nimitz]}
+  - {person: william-halsey-jr, title: "Commander, South Pacific Area", realm: United States, kind: military, from: 1942-10-18, to: 1944, sources: [wp-william-halsey-jr]}
+  - {person: william-halsey-jr, title: "Commander, US Third Fleet", realm: United States, kind: military, from: 1944, to: 1945, sources: [wp-william-halsey-jr]}
+  - {person: raymond-a-spruance, title: "Commander, Central Pacific Force (Fifth Fleet)", realm: United States, kind: military, from: 1943-08-05, to: 1945, sources: [wp-raymond-a-spruance]}
+  - {person: joseph-stilwell, title: "Commander, China Burma India Theater", realm: United States, kind: military, from: 1942, to: 1944-10-19, note: "From February 1942; also Chiang Kai-shek's chief of staff; recalled", sources: [wp-joseph-stilwell]}
+  - {person: joseph-stilwell, title: "Commanding General, Tenth Army", realm: United States, kind: military, from: 1945-06-23, to: 1945-10-15, note: Took over on Okinawa after Buckner was killed, sources: [wp-joseph-stilwell]}
+  - {person: william-slim, title: Commander of the Fourteenth Army, realm: United Kingdom, kind: military, from: 1943, to: 1945, sources: [wp-william-slim]}
+  - {person: william-slim, title: Chief of the Imperial General Staff, realm: United Kingdom, kind: military, from: 1949-01-01, to: 1952-11-01, sources: [wp-william-slim]}
+  - {person: william-slim, title: Governor-General of Australia, realm: Australia, from: 1953-05-08, to: 1960-02-02, sources: [wp-william-slim]}
+  - {person: louis-mountbatten, title: "Supreme Allied Commander, South East Asia Command", realm: United Kingdom, kind: military, from: 1943, to: 1946, note: From August 1943 until the command was disbanded in May 1946, sources: [wp-louis-mountbatten]}
+  - {person: louis-mountbatten, title: Viceroy of India, realm: British India, from: 1947-02-21, to: 1947-08-15, note: The last, sources: [wp-louis-mountbatten]}
+  - {person: louis-mountbatten, title: Governor-General of India, realm: Dominion of India, from: 1947-08-15, to: 1948-06-21, sources: [wp-louis-mountbatten]}
+  - {person: arthur-percival, title: General Officer Commanding Malaya, realm: United Kingdom, kind: military, from: 1941, to: 1942-02-15, note: From April 1941 until he surrendered Singapore, sources: [wp-arthur-percival]}
+  - {person: mao-zedong, title: Chairman of the Chinese Communist Party, realm: China, from: 1943-03-20, to: 1976-09-09, note: A party post; leader of the Communist side in the civil war until 1949, sources: [wp-mao-zedong]}
+  - {person: mao-zedong, title: Chairman of the Central People's Government, realm: China, from: 1949-10-01, to: 1954-09-27, sources: [wp-mao-zedong]}
+  - {person: mao-zedong, title: Chairman of the People's Republic of China, realm: China, from: 1954-09-27, to: 1959-04-27, sources: [wp-mao-zedong]}
+  - {person: zhu-de, title: Commander-in-Chief of the People's Liberation Army, realm: China, kind: military, from: 1946-11-28, to: 1954-09-27, sources: [wp-zhu-de]}
+  - {person: zhu-de, title: Chairman of the Standing Committee of the National People's Congress, realm: China, from: 1959-04-28, to: 1976-07-06, sources: [wp-zhu-de]}
+  - {person: john-curtin, title: Prime Minister of Australia, realm: Australia, from: 1941-10-07, to: 1945-07-05, note: Died in office, sources: [wp-john-curtin]}
+  - {person: thomas-blamey, title: "Commander-in-Chief, Australian Military Forces", realm: Australia, kind: military, from: 1942, to: 1946-01-31, note: From March 1942, sources: [wp-thomas-blamey]}
+  - {person: thomas-blamey, title: "Commander, Allied Land Forces, South West Pacific Area", realm: Australia, kind: military, from: 1942, to: 1945-09-02, sources: [wp-thomas-blamey]}
+
+discrepancies:
+  - key: tojo-premiership-dates
+    question: When did Tojo's premiership begin and end?
+    about: [{person: hideki-tojo}]
+    field: date
+    claims:
+      - {value: "18 October 1941 – 22 July 1944", sources: [wp-hideki-tojo], note: Infobox}
+      - {value: "From 17 October 1941; forced to resign on 18 July 1944", sources: [wp-hideki-tojo], note: Body and lead}
+    note: The title uses the infobox dates (taking and leaving office, rather than appointment and resignation).
+  - key: halsey-third-fleet-start
+    question: When did Halsey take command of the US Third Fleet?
+    about: [{person: william-halsey-jr}]
+    field: date
+    claims:
+      - {value: "1943", sources: [wp-william-halsey-jr], note: Lead}
+      - {value: "May 1944 (newly formed)", sources: [wp-william-halsey-jr], note: Body}
+      - {value: "June 1944", sources: [wp-william-halsey-jr], note: Succession box}
+    note: The title starts in 1944.
+  - key: mao-party-chairman-start
+    question: When did Mao become Chairman of the Chinese Communist Party?
+    about: [{person: mao-zedong}]
+    field: date
+    claims:
+      - {value: "20 March 1943", sources: [wp-mao-zedong], note: Infobox and body}
+      - {value: "1945 (Chairman of the Central Committee)", sources: [wp-mao-zedong], note: Succession box}
+    note: The title starts on 20 March 1943; he had led the party in practice since the Zunyi conference of January 1935.
+  - key: zhu-de-pla-start
+    question: When did Zhu De become Commander-in-Chief of the People's Liberation Army?
+    about: [{person: zhu-de}]
+    field: date
+    claims:
+      - {value: "28 November 1946", sources: [wp-zhu-de], note: Infobox}
+      - {value: "1949", sources: [wp-zhu-de], note: Body and succession box}
+    note: The title uses the infobox date.
