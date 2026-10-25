@@ -1,0 +1,149 @@
+batch:
+  title: "Events cite their own Wikipedia article (4)"
+  requested: "When an event mentions the Truce of God or a similar act, reference that act's own article too: every event"
+  date: 2026-10-25
+
+# Each event below gets its own Wikipedia article as a source (the article about that battle, treaty, council or act,
+# e.g. the Truce of God at Caen -> 'Peace and Truce of God'). Matched by title search, then checked by hand or by a
+# reviewer reading the article; events with no dedicated article were left out. Existing sources are reused.
+
+sources:
+  - {key: wp-buckingham-s-rebellion, title: "Buckingham's rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Buckingham%27s_rebellion"}
+  - {key: wp-princes-in-the-tower, title: "Princes in the Tower (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princes_in_the_Tower"}
+  - {key: wp-battle-of-stoke-field, title: "Battle of Stoke Field (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Stoke_Field"}
+  - {key: wp-battle-of-sauchieburn, title: "Battle of Sauchieburn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Sauchieburn"}
+  - {key: wp-alhambra-decree, title: "Alhambra Decree (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alhambra_Decree"}
+  - {key: wp-granada-war, title: "Granada War (Wikipedia)", url: "https://en.wikipedia.org/wiki/Granada_War"}
+  - {key: wp-inter-caetera, title: "Inter caetera (Wikipedia)", url: "https://en.wikipedia.org/wiki/Inter_caetera"}
+  - {key: wp-italian-war-of-14941495, title: "Italian War of 1494–1495 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Italian_War_of_1494%E2%80%931495"}
+  - {key: wp-diet-of-worms-1495, title: "Diet of Worms (1495) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Diet_of_Worms_(1495)"}
+  - {key: wp-portuguese-discovery-of-the-sea-route-to-india, title: "Portuguese discovery of the sea route to India (Wikipedia)", url: "https://en.wikipedia.org/wiki/Portuguese_discovery_of_the_sea_route_to_India"}
+  - {key: wp-battle-of-vedrosha, title: "Battle of Vedrosha (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Vedrosha"}
+  - {key: wp-treaty-of-granada-1500, title: "Treaty of Granada (1500) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Granada_(1500)"}
+  - {key: wp-treaty-of-perpetual-peace, title: "Treaty of Perpetual Peace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Perpetual_Peace"}
+  - {key: wp-battle-of-flodden, title: "Battle of Flodden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Flodden"}
+  - {key: wp-battle-of-marj-dabiq, title: "Battle of Marj Dabiq (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Marj_Dabiq"}
+  - {key: wp-battle-of-ridaniya, title: "Battle of Ridaniya (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Ridaniya"}
+  - {key: wp-field-of-the-cloth-of-gold, title: "Field of the Cloth of Gold (Wikipedia)", url: "https://en.wikipedia.org/wiki/Field_of_the_Cloth_of_Gold"}
+  - {key: wp-battle-of-raichur, title: "Battle of Raichur (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Raichur"}
+  - {key: wp-jiajing-wokou-raids, title: "Jiajing wokou raids (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jiajing_wokou_raids"}
+  - {key: wp-siege-of-belgrade-1521, title: "Siege of Belgrade (1521) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Belgrade_(1521)"}
+  - {key: wp-mac-dynasty, title: "Mạc dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/M%E1%BA%A1c_dynasty"}
+  - {key: wp-acts-of-supremacy, title: "Acts of Supremacy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Acts_of_Supremacy"}
+  - {key: wp-english-reformation, title: "English Reformation (Wikipedia)", url: "https://en.wikipedia.org/wiki/English_Reformation"}
+  - {key: wp-dissolution-of-the-monasteries, title: "Dissolution of the monasteries (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dissolution_of_the_monasteries"}
+  - {key: wp-pilgrimage-of-grace, title: "Pilgrimage of Grace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pilgrimage_of_Grace"}
+  - {key: wp-battle-of-chausa, title: "Battle of Chausa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Chausa"}
+  - {key: wp-battle-of-kannauj, title: "Battle of Kannauj (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kannauj"}
+  - {key: wp-prayer-book-rebellion, title: "Prayer Book Rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prayer_Book_Rebellion"}
+  - {key: wp-book-of-common-prayer, title: "Book of Common Prayer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Book_of_Common_Prayer"}
+  - {key: wp-wyatt-s-rebellion, title: "Wyatt's rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wyatt%27s_rebellion"}
+  - {key: wp-siege-of-calais-1558, title: "Siege of Calais (1558) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Calais_(1558)"}
+  - {key: wp-elizabethan-religious-settlement, title: "Elizabethan religious settlement (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabethan_religious_settlement"}
+  - {key: wp-battle-of-okehazama, title: "Battle of Okehazama (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Okehazama"}
+  - {key: wp-siege-of-chittorgarh-15671568, title: "Siege of Chittorgarh (1567–1568) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Chittorgarh_(1567%E2%80%931568)"}
+  - {key: wp-honno-ji-incident, title: "Honnō-ji Incident (Wikipedia)", url: "https://en.wikipedia.org/wiki/Honn%C5%8D-ji_Incident"}
+  - {key: wp-siege-of-odawara-1590, title: "Siege of Odawara (1590) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Odawara_(1590)"}
+  - {key: wp-battle-of-okpo, title: "Battle of Okpo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Okpo"}
+  - {key: wp-battle-of-hansan-island, title: "Battle of Hansan Island (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Hansan_Island"}
+  - {key: wp-siege-of-jinju-1592, title: "Siege of Jinju (1592) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Jinju_(1592)"}
+  - {key: wp-battle-of-chilcheollyang, title: "Battle of Chilcheollyang (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Chilcheollyang"}
+  - {key: wp-battle-of-myeongnyang, title: "Battle of Myeongnyang (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Myeongnyang"}
+  - {key: wp-battle-of-noryang, title: "Battle of Noryang (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Noryang"}
+  - {key: wp-union-of-the-crowns, title: "Union of the Crowns (Wikipedia)", url: "https://en.wikipedia.org/wiki/Union_of_the_Crowns"}
+  - {key: wp-gunpowder-plot, title: "Gunpowder Plot (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gunpowder_Plot"}
+  - {key: wp-the-masque-of-blackness, title: "The Masque of Blackness (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Masque_of_Blackness"}
+  - {key: wp-siege-of-osaka, title: "Siege of Osaka (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Osaka"}
+  - {key: wp-novum-organum, title: "Novum Organum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Novum_Organum"}
+  - {key: wp-banqueting-house, title: "Banqueting House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Banqueting_House"}
+  - {key: wp-devotions-upon-emergent-occasions, title: "Devotions upon Emergent Occasions (Wikipedia)", url: "https://en.wikipedia.org/wiki/Devotions_upon_Emergent_Occasions"}
+  - {key: wp-exercitatio-anatomica-de-motu-cordis-et-sanguinis-in-animalibus, title: "Exercitatio Anatomica de Motu Cordis et Sanguinis in Animalibus (Wikipedia)", url: "https://en.wikipedia.org/wiki/Exercitatio_Anatomica_de_Motu_Cordis_et_Sanguinis_in_Animalibus"}
+  - {key: wp-comus-milton, title: "Comus (Milton) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Comus_(Milton)"}
+  - {key: wp-queen-s-house, title: "Queen's House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Queen%27s_House"}
+  - {key: wp-battle-of-edgehill, title: "Battle of Edgehill (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Edgehill"}
+  - {key: wp-battle-of-marston-moor, title: "Battle of Marston Moor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Marston_Moor"}
+  - {key: wp-areopagitica, title: "Areopagitica (Wikipedia)", url: "https://en.wikipedia.org/wiki/Areopagitica"}
+  - {key: wp-battle-of-naseby, title: "Battle of Naseby (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Naseby"}
+  - {key: wp-siege-of-drogheda, title: "Siege of Drogheda (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Drogheda"}
+  - {key: wp-battle-of-dunbar-1650, title: "Battle of Dunbar (1650) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Dunbar_(1650)"}
+  - {key: wp-battle-of-worcester, title: "Battle of Worcester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Worcester"}
+  - {key: wp-leviathan-hobbes-book, title: "Leviathan (Hobbes book) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Leviathan_(Hobbes_book)"}
+  - {key: wp-the-protectorate, title: "The Protectorate (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Protectorate"}
+  - {key: wp-stuart-restoration, title: "Stuart Restoration (Wikipedia)", url: "https://en.wikipedia.org/wiki/Stuart_Restoration"}
+  - {key: wp-royal-society, title: "Royal Society (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Society"}
+  - {key: wp-oliver-cromwell-s-head, title: "Oliver Cromwell's head (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oliver_Cromwell%27s_head"}
+  - {key: wp-the-sceptical-chymist, title: "The Sceptical Chymist (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Sceptical_Chymist"}
+  - {key: wp-sylva-or-a-discourse-of-forest-trees-and-the-propagation-of-timber, title: "Sylva, or A Discourse of Forest-Trees and the Propagation of Timber (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sylva,_or_A_Discourse_of_Forest-Trees_and_the_Propagation_of_Timber"}
+  - {key: wp-micrographia, title: "Micrographia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Micrographia"}
+
+events:
+  - {key: buckinghams-rebellion, sources: [wp-buckingham-s-rebellion]}
+  - {key: princes-in-the-tower, sources: [wp-princes-in-the-tower]}
+  - {key: battle-of-bosworth-field, sources: [wp-battle-of-bosworth-field]}
+  - {key: battle-of-stoke-field, sources: [wp-battle-of-stoke-field]}
+  - {key: battle-of-sauchieburn-1488, sources: [wp-battle-of-sauchieburn]}
+  - {key: alhambra-decree-1492, sources: [wp-alhambra-decree]}
+  - {key: fall-of-granada-1492, sources: [wp-granada-war]}
+  - {key: inter-caetera-1493, sources: [wp-inter-caetera]}
+  - {key: italian-war-of-1494, sources: [wp-italian-war-of-14941495]}
+  - {key: diet-of-worms-1495, sources: [wp-diet-of-worms-1495]}
+  - {key: vasco-da-gama-route-to-india-1498, sources: [wp-portuguese-discovery-of-the-sea-route-to-india]}
+  - {key: battle-of-vedrosha-1500, sources: [wp-battle-of-vedrosha]}
+  - {key: treaty-of-granada-1500, sources: [wp-treaty-of-granada-1500]}
+  - {key: treaty-of-perpetual-peace-1502, sources: [wp-treaty-of-perpetual-peace]}
+  - {key: battle-of-flodden-1513, sources: [wp-battle-of-flodden]}
+  - {key: battle-of-marj-dabiq-1516, sources: [wp-battle-of-marj-dabiq]}
+  - {key: battle-of-ridaniya-1517, sources: [wp-battle-of-ridaniya]}
+  - {key: field-of-the-cloth-of-gold, sources: [wp-field-of-the-cloth-of-gold]}
+  - {key: capture-of-raichur-1520, sources: [wp-battle-of-raichur]}
+  - {key: wokou-raids-jiajing-era-1520, sources: [wp-jiajing-wokou-raids]}
+  - {key: siege-of-belgrade-1521, sources: [wp-siege-of-belgrade-1521]}
+  - {key: battle-of-mohacs-1526, sources: [wp-battle-of-mohacs]}
+  - {key: mac-dang-dung-proclaimed-emperor-1527, sources: [wp-mac-dynasty]}
+  - {key: act-of-supremacy-1534, sources: [wp-acts-of-supremacy]}
+  - {key: english-reformation, sources: [wp-english-reformation]}
+  - {key: dissolution-of-the-monasteries, sources: [wp-dissolution-of-the-monasteries]}
+  - {key: pilgrimage-of-grace, sources: [wp-pilgrimage-of-grace]}
+  - {key: battle-of-chausa-1539, sources: [wp-battle-of-chausa]}
+  - {key: battle-of-kannauj-1540, sources: [wp-battle-of-kannauj]}
+  - {key: prayer-book-rebellion, sources: [wp-prayer-book-rebellion]}
+  - {key: book-of-common-prayer-1549, sources: [wp-book-of-common-prayer]}
+  - {key: wyatts-rebellion, sources: [wp-wyatt-s-rebellion]}
+  - {key: loss-of-calais, sources: [wp-siege-of-calais-1558]}
+  - {key: elizabethan-religious-settlement, sources: [wp-elizabethan-religious-settlement]}
+  - {key: battle-of-okehazama-1560, sources: [wp-battle-of-okehazama]}
+  - {key: siege-of-chittorgarh-1568, sources: [wp-siege-of-chittorgarh-15671568]}
+  - {key: honno-ji-incident-1582, sources: [wp-honno-ji-incident]}
+  - {key: siege-of-odawara-1590, sources: [wp-siege-of-odawara-1590]}
+  - {key: battle-of-okpo-1592, sources: [wp-battle-of-okpo]}
+  - {key: battle-of-hansan-island-1592, sources: [wp-battle-of-hansan-island]}
+  - {key: first-siege-of-jinju-1592, sources: [wp-siege-of-jinju-1592]}
+  - {key: battle-of-chilcheollyang-1597, sources: [wp-battle-of-chilcheollyang]}
+  - {key: battle-of-myeongnyang-1597, sources: [wp-battle-of-myeongnyang]}
+  - {key: battle-of-noryang-1598, sources: [wp-battle-of-noryang]}
+  - {key: union-of-the-crowns-1603, sources: [wp-union-of-the-crowns]}
+  - {key: tokugawa-shogunate-founded-1603, sources: [wp-tokugawa-shogunate]}
+  - {key: gunpowder-plot, sources: [wp-gunpowder-plot]}
+  - {key: masque-of-blackness-1605, sources: [wp-the-masque-of-blackness]}
+  - {key: siege-of-osaka-1614, sources: [wp-siege-of-osaka]}
+  - {key: instauratio-magna-1620, sources: [wp-novum-organum]}
+  - {key: banqueting-house-completed, sources: [wp-banqueting-house]}
+  - {key: devotions-upon-emergent-occasions-1624, sources: [wp-devotions-upon-emergent-occasions]}
+  - {key: de-motu-cordis-published-1628, sources: [wp-exercitatio-anatomica-de-motu-cordis-et-sanguinis-in-animalibus]}
+  - {key: comus-first-performance-1634, sources: [wp-comus-milton]}
+  - {key: queens-house-greenwich-completed, sources: [wp-queen-s-house]}
+  - {key: battle-of-edgehill, sources: [wp-battle-of-edgehill]}
+  - {key: battle-of-marston-moor, sources: [wp-battle-of-marston-moor]}
+  - {key: areopagitica-published-1644, sources: [wp-areopagitica]}
+  - {key: battle-of-naseby, sources: [wp-battle-of-naseby]}
+  - {key: siege-of-drogheda, sources: [wp-siege-of-drogheda]}
+  - {key: battle-of-dunbar-1650, sources: [wp-battle-of-dunbar-1650]}
+  - {key: battle-of-worcester, sources: [wp-battle-of-worcester]}
+  - {key: leviathan-published-1651, sources: [wp-leviathan-hobbes-book]}
+  - {key: cromwell-made-lord-protector, sources: [wp-the-protectorate]}
+  - {key: restoration-of-charles-ii, sources: [wp-stuart-restoration]}
+  - {key: royal-society-founded-1660, sources: [wp-royal-society]}
+  - {key: posthumous-execution-of-cromwell, sources: [wp-oliver-cromwell-s-head]}
+  - {key: sceptical-chymist-published-1661, sources: [wp-the-sceptical-chymist]}
+  - {key: sylva-published-1664, sources: [wp-sylva-or-a-discourse-of-forest-trees-and-the-propagation-of-timber]}
+  - {key: micrographia-published-1665, sources: [wp-micrographia]}
