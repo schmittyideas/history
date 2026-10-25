@@ -62,12 +62,6 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### In progress
 
-#### [P2] Royal families: spouses, children and sex for rulers
-`type: task` · `area: data` · `status: ready` · `issue: #292`
-
-576 royals but only 116 marriages and 199 parent links (Henry VIII has none), and no one has `sex` yet, so the new family block mostly shows Children or nothing. Batches by realm, England first, about 150 rows each: spouses with marriage year, children named in the ruler's article, `sex` on rulers, spouses and children, and gaps in title lines that put the wrong predecessor on the card (Cnut, Harold I and Harthacnut are missing from King of England).
-Source: Ty, 2026-10-25.
-
 #### [P1] Places: today's location (city, county, country) and current coordinates
 `type: task` · `area: data` · `status: ready` · `issue: #39`
 
@@ -155,6 +149,13 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Royal families: English monarchs
+`type: task` · `area: data` · `status: done` · `issue: #292`
+
+All 52 English and British monarchs, Æthelred to Charles III, now have `sex`, both parents, every marriage with its year, and the legitimate children who reached 12, with born/buried places: 178 marriages and 544 parent links in the database (from 116 and 199). Batch 1 also added the missing kings Edmund Ironside, Cnut, Harold I and Harthacnut, and Henrietta Maria's consort titles were deleted once with Ty's approval (sql/022). Ten batches, #295-#304. Each file lists what was left out (children with no article, unconfirmed places and dates). Done 2026-10-25.
+Next: other realms (France, Scotland, the Holy Roman Empire) the same way, when Ty asks.
+Source: Ty, 2026-10-25.
 
 #### [P3] The Rosel-to-Russell line, with "traditional" family links
 `type: enhancement` · `area: data` · `status: done`

@@ -1,4 +1,4 @@
--- 021: a one-off data fix, approved by Ty on 2026-10-25 as an exception to "never delete data".
+-- 022: a one-off data fix, approved by Ty on 2026-10-25 as an exception to "never delete data".
 -- Henrietta Maria was Charles I's queen consort, not a ruler, but had been given three reign titles
 -- (Queen of England, Scotland and Ireland, 1625-1649). They put her in the line of monarchs, so the
 -- person panel's Succession showed her beside Charles I. She stays as a person and as his spouse.
