@@ -17,7 +17,16 @@
     "1800": "world_1800.geojson",
     "1815": "world_1815.geojson",
     "1880": "world_1880.geojson",
-    "1900": "world_1900.geojson"
+    "1900": "world_1900.geojson",
+    "1914": "world_1914.geojson",
+    "1920": "world_1920.geojson",
+    "1930": "world_1930.geojson",
+    "1938": "world_1938.geojson",
+    "1945": "world_1945.geojson",
+    "1960": "world_1960.geojson",
+    "1994": "world_1994.geojson",
+    "2000": "world_2000.geojson",
+    "2010": "world_2010.geojson"
   },
   "realms": {
     "England": [
@@ -137,7 +146,9 @@
       "Shogun Japan (Kamakura)",
       "Japan",
       "Japan (Warring States)",
-      "Imperial Japan"
+      "Imperial Japan",
+      "Empire of Japan",
+      "Japan (USA)"
     ],
     "Goryeo": [
       "Korea"
@@ -354,7 +365,8 @@
       "Kediri"
     ],
     "Ethiopian Empire": [
-      "Ethiopia"
+      "Ethiopia",
+      "Ethiopia (Italy)"
     ],
     "Mali Empire": [
       "Mali"
@@ -393,7 +405,8 @@
       "United Kingdom of Great Britain and Ireland"
     ],
     "British India": [
-      "British Raj"
+      "British Raj",
+      "India"
     ],
     "Austria": [
       "Austrian Empire",
@@ -463,6 +476,42 @@
     "Tokugawa shogunate": [
       "Tokugawa shogunate",
       "Japan"
+    ],
+    "Germany": [
+      "German Empire",
+      "Germany",
+      "Germany (France)",
+      "Germany (Soviet)",
+      "Germany (UK)",
+      "Germany (USA)",
+      "West Germany",
+      "East Germany"
+    ],
+    "Soviet Union": [
+      "USSR"
+    ],
+    "Italy": [
+      "Kingdom of Italy",
+      "Italy"
+    ],
+    "China": [
+      "China",
+      "Chinese Warlords",
+      "Chinese warlords",
+      "Taiwan"
+    ],
+    "United States": [
+      "United States",
+      "USA"
+    ],
+    "Australia": [
+      "Australia"
+    ],
+    "Albania": [
+      "Albania"
+    ],
+    "Dominion of India": [
+      "India"
     ]
   },
   "points": {
@@ -713,6 +762,18 @@
     "Mamluk Sultanate": [
       31.24,
       30.04
+    ],
+    "Protectorate of Bohemia and Moravia": [
+      14.421,
+      50.088
+    ],
+    "Italian Social Republic": [
+      10.533,
+      45.6
+    ],
+    "Prussia": [
+      13.405,
+      52.52
     ]
   }
 }
