@@ -1,0 +1,148 @@
+batch:
+  title: "Events cite their own Wikipedia article (2)"
+  requested: "When an event mentions the Truce of God or a similar act, reference that act's own article too: every event"
+  date: 2026-10-25
+
+# Each event below gets its own Wikipedia article as a source (the article about that battle, treaty, council or act,
+# e.g. the Truce of God at Caen -> 'Peace and Truce of God'). Matched by title search, then checked by hand or by a
+# reviewer reading the article; events with no dedicated article were left out. Existing sources are reused.
+
+sources:
+  - {key: wp-sack-of-constantinople, title: "Sack of Constantinople (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sack_of_Constantinople"}
+  - {key: wp-battle-of-zawichost, title: "Battle of Zawichost (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Zawichost"}
+  - {key: wp-albigensian-crusade, title: "Albigensian Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Albigensian_Crusade"}
+  - {key: wp-battle-of-gestilren, title: "Battle of Gestilren (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Gestilren"}
+  - {key: wp-battle-of-las-navas-de-tolosa, title: "Battle of Las Navas de Tolosa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Las_Navas_de_Tolosa"}
+  - {key: wp-golden-bull-of-sicily, title: "Golden Bull of Sicily (Wikipedia)", url: "https://en.wikipedia.org/wiki/Golden_Bull_of_Sicily"}
+  - {key: wp-battle-of-muret, title: "Battle of Muret (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Muret"}
+  - {key: wp-battle-of-bouvines, title: "Battle of Bouvines (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Bouvines"}
+  - {key: wp-fourth-council-of-the-lateran, title: "Fourth Council of the Lateran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fourth_Council_of_the_Lateran"}
+  - {key: wp-sieges-of-zhongdu, title: "Sieges of Zhongdu (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sieges_of_Zhongdu"}
+  - {key: wp-university-of-salamanca, title: "University of Salamanca (Wikipedia)", url: "https://en.wikipedia.org/wiki/University_of_Salamanca"}
+  - {key: wp-jokyu-war, title: "Jōkyū War (Wikipedia)", url: "https://en.wikipedia.org/wiki/J%C5%8Dky%C5%AB_War"}
+  - {key: wp-tran-dynasty, title: "Trần dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tr%E1%BA%A7n_dynasty"}
+  - {key: wp-mongol-conquest-of-western-xia, title: "Mongol conquest of Western Xia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_conquest_of_Western_Xia"}
+  - {key: wp-sixth-crusade, title: "Sixth Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sixth_Crusade"}
+  - {key: wp-treaty-of-paris-1229, title: "Treaty of Paris (1229) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1229)"}
+  - {key: wp-treaty-of-benavente, title: "Treaty of Benavente (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Benavente"}
+  - {key: wp-siege-of-caizhou, title: "Siege of Caizhou (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Caizhou"}
+  - {key: wp-mongol-conquest-of-the-jin-dynasty, title: "Mongol conquest of the Jin dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Jin_dynasty"}
+  - {key: wp-siege-of-cordoba-1236, title: "Siege of Córdoba (1236) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_C%C3%B3rdoba_(1236)"}
+  - {key: wp-tripitaka-koreana, title: "Tripitaka Koreana (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tripitaka_Koreana"}
+  - {key: wp-battle-of-katasin, title: "Battle of Katasin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Katasin"}
+  - {key: wp-first-council-of-lyon, title: "First Council of Lyon (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_Council_of_Lyon"}
+  - {key: wp-seventh-crusade, title: "Seventh Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Seventh_Crusade"}
+  - {key: wp-siege-of-seville, title: "Siege of Seville (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Seville"}
+  - {key: wp-treaty-of-corbeil-1258, title: "Treaty of Corbeil (1258) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Corbeil_(1258)"}
+  - {key: wp-treaty-of-paris-1259, title: "Treaty of Paris (1259) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1259)"}
+  - {key: wp-battle-of-pelagonia, title: "Battle of Pelagonia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Pelagonia"}
+  - {key: wp-toluid-civil-war, title: "Toluid Civil War (Wikipedia)", url: "https://en.wikipedia.org/wiki/Toluid_Civil_War"}
+  - {key: wp-reconquest-of-constantinople, title: "Reconquest of Constantinople (Wikipedia)", url: "https://en.wikipedia.org/wiki/Reconquest_of_Constantinople"}
+  - {key: wp-battle-of-largs, title: "Battle of Largs (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Largs"}
+  - {key: wp-treaty-of-perth, title: "Treaty of Perth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Perth"}
+  - {key: wp-eighth-crusade, title: "Eighth Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eighth_Crusade"}
+  - {key: wp-sambyeolcho-rebellion, title: "Sambyeolcho Rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sambyeolcho_Rebellion"}
+  - {key: wp-second-council-of-lyon, title: "Second Council of Lyon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_Council_of_Lyon"}
+  - {key: wp-battle-on-the-marchfeld, title: "Battle on the Marchfeld (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_on_the_Marchfeld"}
+  - {key: wp-mongol-conquest-of-the-song-dynasty, title: "Mongol conquest of the Song dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_conquest_of_the_Song_dynasty"}
+  - {key: wp-sicilian-vespers, title: "Sicilian Vespers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sicilian_Vespers"}
+  - {key: wp-battle-of-orewin-bridge, title: "Battle of Orewin Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Orewin_Bridge"}
+  - {key: wp-aragonese-crusade, title: "Aragonese Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Aragonese_Crusade"}
+  - {key: wp-edict-of-expulsion, title: "Edict of Expulsion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edict_of_Expulsion"}
+  - {key: wp-siege-of-acre-1291, title: "Siege of Acre (1291) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Acre_(1291)"}
+  - {key: wp-treaty-of-anagni, title: "Treaty of Anagni (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Anagni"}
+  - {key: wp-auld-alliance, title: "Auld Alliance (Wikipedia)", url: "https://en.wikipedia.org/wiki/Auld_Alliance"}
+  - {key: wp-battle-of-dunbar-1296, title: "Battle of Dunbar (1296) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Dunbar_(1296)"}
+  - {key: wp-battle-of-stirling-bridge, title: "Battle of Stirling Bridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Stirling_Bridge"}
+  - {key: wp-treaty-of-alcanices, title: "Treaty of Alcañices (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Alca%C3%B1ices"}
+  - {key: wp-serrata-del-maggior-consiglio, title: "Serrata del Maggior Consiglio (Wikipedia)", url: "https://en.wikipedia.org/wiki/Serrata_del_Maggior_Consiglio"}
+  - {key: wp-battle-of-falkirk, title: "Battle of Falkirk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Falkirk"}
+  - {key: wp-battle-of-kili, title: "Battle of Kili (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kili"}
+  - {key: wp-alauddin-khalji-s-conquest-of-gujarat, title: "Alauddin Khalji's conquest of Gujarat (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alauddin_Khalji%27s_conquest_of_Gujarat"}
+  - {key: wp-battle-of-wadi-al-khaznadar, title: "Battle of Wadi al-Khaznadar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Wadi_al-Khaznadar"}
+  - {key: wp-alauddin-khalji-s-conquest-of-ranthambore, title: "Alauddin Khalji's conquest of Ranthambore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alauddin_Khalji%27s_conquest_of_Ranthambore"}
+  - {key: wp-battle-of-the-golden-spurs, title: "Battle of the Golden Spurs (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Golden_Spurs"}
+  - {key: wp-unam-sanctam, title: "Unam sanctam (Wikipedia)", url: "https://en.wikipedia.org/wiki/Unam_sanctam"}
+  - {key: wp-peace-of-caltabellotta, title: "Peace of Caltabellotta (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peace_of_Caltabellotta"}
+  - {key: wp-battle-of-marj-al-saffar-1303, title: "Battle of Marj al-Saffar (1303) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Marj_al-Saffar_(1303)"}
+  - {key: wp-siege-of-chittorgarh-1303, title: "Siege of Chittorgarh (1303) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Chittorgarh_(1303)"}
+  - {key: wp-mongol-invasion-of-india-1303, title: "Mongol invasion of India (1303) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mongol_invasion_of_India_(1303)"}
+  - {key: wp-first-siege-of-gibraltar, title: "First siege of Gibraltar (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_siege_of_Gibraltar"}
+  - {key: wp-council-of-vienne, title: "Council of Vienne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Vienne"}
+  - {key: wp-battle-of-bannockburn, title: "Battle of Bannockburn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Bannockburn"}
+  - {key: wp-tour-de-nesle-affair, title: "Tour de Nesle affair (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tour_de_Nesle_affair"}
+  - {key: wp-shepherds-crusade-1320, title: "Shepherds' Crusade (1320) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Shepherds%27_Crusade_(1320)"}
+  - {key: wp-declaration-of-arbroath, title: "Declaration of Arbroath (Wikipedia)", url: "https://en.wikipedia.org/wiki/Declaration_of_Arbroath"}
+  - {key: wp-tughlaq-dynasty, title: "Tughlaq dynasty (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tughlaq_dynasty"}
+
+events:
+  - {key: sack-of-constantinople-1204, sources: [wp-sack-of-constantinople]}
+  - {key: battle-of-zawichost-1205, sources: [wp-battle-of-zawichost]}
+  - {key: albigensian-crusade-1208, sources: [wp-albigensian-crusade]}
+  - {key: battle-of-gestilren-1210, sources: [wp-battle-of-gestilren]}
+  - {key: battle-of-las-navas-de-tolosa-1212, sources: [wp-battle-of-las-navas-de-tolosa]}
+  - {key: golden-bull-of-sicily-1212, sources: [wp-golden-bull-of-sicily]}
+  - {key: battle-of-muret-1213, sources: [wp-battle-of-muret]}
+  - {key: battle-of-bouvines-1214, sources: [wp-battle-of-bouvines]}
+  - {key: fourth-lateran-council-1215, sources: [wp-fourth-council-of-the-lateran]}
+  - {key: fall-of-zhongdu-1215, sources: [wp-sieges-of-zhongdu]}
+  - {key: founding-of-university-of-salamanca-1218, sources: [wp-university-of-salamanca]}
+  - {key: jokyu-war-1221, sources: [wp-jokyu-war]}
+  - {key: tran-dynasty-founded-1225, sources: [wp-tran-dynasty]}
+  - {key: mongol-conquest-of-western-xia-1227, sources: [wp-mongol-conquest-of-western-xia]}
+  - {key: sixth-crusade-1228, sources: [wp-sixth-crusade]}
+  - {key: treaty-of-paris-1229, sources: [wp-treaty-of-paris-1229]}
+  - {key: union-of-leon-and-castile-1230, sources: [wp-treaty-of-benavente]}
+  - {key: mongol-conquest-of-the-jin-1234, sources: [wp-siege-of-caizhou]}
+  - {key: mongol-conquest-of-jin-1234, sources: [wp-mongol-conquest-of-the-jin-dynasty]}
+  - {key: capture-of-cordoba-1236, sources: [wp-siege-of-cordoba-1236]}
+  - {key: tripitaka-koreana-carving-1237, sources: [wp-tripitaka-koreana]}
+  - {key: battle-of-kose-dag-1243, sources: [wp-battle-of-kose-dag]}
+  - {key: battle-of-katasin-1244, sources: [wp-battle-of-katasin]}
+  - {key: council-of-lyon-1245, sources: [wp-first-council-of-lyon]}
+  - {key: seventh-crusade-1248, sources: [wp-seventh-crusade]}
+  - {key: capture-of-seville-1248, sources: [wp-siege-of-seville]}
+  - {key: treaty-of-corbeil-1258, sources: [wp-treaty-of-corbeil-1258]}
+  - {key: treaty-of-paris-1259, sources: [wp-treaty-of-paris-1259]}
+  - {key: battle-of-pelagonia-1259, sources: [wp-battle-of-pelagonia]}
+  - {key: toluid-civil-war-1260, sources: [wp-toluid-civil-war]}
+  - {key: recapture-of-constantinople-1261, sources: [wp-reconquest-of-constantinople]}
+  - {key: battle-of-largs-1263, sources: [wp-battle-of-largs]}
+  - {key: treaty-of-perth-1266, sources: [wp-treaty-of-perth]}
+  - {key: eighth-crusade-1270, sources: [wp-eighth-crusade]}
+  - {key: sambyeolcho-rebellion-1270, sources: [wp-sambyeolcho-rebellion]}
+  - {key: founding-of-yuan-dynasty-1271, sources: [wp-yuan-dynasty]}
+  - {key: second-council-of-lyon-1274, sources: [wp-second-council-of-lyon]}
+  - {key: battle-of-the-marchfeld-1278, sources: [wp-battle-on-the-marchfeld]}
+  - {key: fall-of-southern-song-1279, sources: [wp-mongol-conquest-of-the-song-dynasty]}
+  - {key: sicilian-vespers-1282, sources: [wp-sicilian-vespers]}
+  - {key: death-of-llywelyn-ap-gruffudd-1282, sources: [wp-battle-of-orewin-bridge]}
+  - {key: aragonese-crusade-1285, sources: [wp-aragonese-crusade]}
+  - {key: battle-of-bach-dang-1288, sources: [wp-battle-of-bach-dang-1288]}
+  - {key: edict-of-expulsion-1290, sources: [wp-edict-of-expulsion]}
+  - {key: fall-of-acre-1291, sources: [wp-siege-of-acre-1291]}
+  - {key: founding-of-majapahit-1293, sources: [wp-majapahit]}
+  - {key: treaty-of-anagni-1295, sources: [wp-treaty-of-anagni]}
+  - {key: auld-alliance-1295, sources: [wp-auld-alliance]}
+  - {key: battle-of-dunbar-1296, sources: [wp-battle-of-dunbar-1296]}
+  - {key: battle-of-stirling-bridge-1297, sources: [wp-battle-of-stirling-bridge]}
+  - {key: treaty-of-alcanices-1297, sources: [wp-treaty-of-alcanices]}
+  - {key: serrata-del-maggior-consiglio-1297, sources: [wp-serrata-del-maggior-consiglio]}
+  - {key: battle-of-falkirk-1298, sources: [wp-battle-of-falkirk]}
+  - {key: battle-of-kili-1299, sources: [wp-battle-of-kili]}
+  - {key: khalji-raid-on-gujarat-1299, sources: [wp-alauddin-khalji-s-conquest-of-gujarat]}
+  - {key: battle-of-wadi-al-khazandar-1299, sources: [wp-battle-of-wadi-al-khaznadar]}
+  - {key: fall-of-ranthambore-1301, sources: [wp-alauddin-khalji-s-conquest-of-ranthambore]}
+  - {key: battle-of-the-golden-spurs-1302, sources: [wp-battle-of-the-golden-spurs]}
+  - {key: unam-sanctam-1302, sources: [wp-unam-sanctam]}
+  - {key: treaty-of-caltabellotta-1302, sources: [wp-peace-of-caltabellotta]}
+  - {key: battle-of-marj-al-saffar-1303, sources: [wp-battle-of-marj-al-saffar-1303]}
+  - {key: siege-of-chittor-1303, sources: [wp-siege-of-chittorgarh-1303]}
+  - {key: mongol-siege-of-delhi-1303, sources: [wp-mongol-invasion-of-india-1303]}
+  - {key: capture-of-gibraltar-1309, sources: [wp-first-siege-of-gibraltar]}
+  - {key: council-of-vienne-1311, sources: [wp-council-of-vienne]}
+  - {key: battle-of-bannockburn-1314, sources: [wp-battle-of-bannockburn]}
+  - {key: tour-de-nesle-affair-1314, sources: [wp-tour-de-nesle-affair]}
+  - {key: shepherds-crusade-1320, sources: [wp-shepherds-crusade-1320]}
+  - {key: declaration-of-arbroath-1320, sources: [wp-declaration-of-arbroath]}
+  - {key: founding-of-tughluq-dynasty-1320, sources: [wp-tughlaq-dynasty]}
