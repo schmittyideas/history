@@ -156,6 +156,12 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P3] The Rosel-to-Russell line, with "traditional" family links
+`type: enhancement` · `area: data` · `status: done`
+
+Ty asked to record the traditional descent of the Russells, Earls and Dukes of Bedford, from Hugh de Rosel, who held Grainville of William I (charter c. 1077), down to John Russell, 1st Earl of Bedford. Family links can now be marked `uncertain` with a note (sql/021); the site shows them as "traditional, unproven", with the reason on hover. Hugh II to Robert, Odo and Sir John of Kingston Russell are uncertain; Stephen Russell of Weymouth to the 1st Earl is proven; nothing joins the two halves, and a discrepancy records both views. Done 2026-10-25.
+Source: Ty, 2026-10-25.
+
 #### [P2] Royal family and succession on person panels
 `type: enhancement` · `area: site` · `status: done` · `issue: #291`
 

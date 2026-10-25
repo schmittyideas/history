@@ -410,5 +410,22 @@ def test_event_month():
     errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
     assert any("m1`: month must be" in e for e in errs) and any("m2`: month needs" in e for e in errs) and any("m3`: month 9 disagrees" in e for e in errs), errs
 
+def test_uncertain_links():
+    db = FakeDB(snapshot()); world = intake.World(db)
+    doc = {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+           "people": [{"key": "a-rosel", "name": "A", "type": "Nobility", "sources": ["s"]}, {"key": "b-rosel", "name": "B", "type": "Nobility", "sources": ["s"]}],
+           "links": [{"parent": "a-rosel", "child": "b-rosel", "uncertain": True, "note": "Family trees only", "sources": ["s"]}]}
+    plan = intake.plan_files(world, [("a.yaml", doc)])
+    assert not plan.errors, plan.errors
+    assert any("(uncertain)" in x for x in plan.adds["links"]), plan.adds["links"]
+    intake.apply_files(world, [("a.yaml", doc)], log=lambda m: None)
+    rel = db.t["relationships"][-1]
+    assert (rel["uncertain"], rel["note"]) == (True, "Family trees only"), rel
+    bad = {"batch": {"title": "t"}, "links": [{"parent": "a-rosel", "child": "b-rosel", "uncertain": "yes"}]}
+    p2 = intake.plan_files(intake.World(db), [("b.yaml", bad)])
+    assert any("uncertain must be true or false" in e for e in p2.errors), p2.errors
+    quiet = {"batch": {"title": "t"}, "links": [{"parent": "a-rosel", "child": "b-rosel", "uncertain": True}]}
+    assert any("no note saying why" in w for w in intake.plan_files(intake.World(db), [("c.yaml", quiet)]).warnings)
+
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_realm_countries(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); test_event_month(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_realm_countries(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); test_event_month(); test_uncertain_links(); print("\nALL TESTS PASSED")

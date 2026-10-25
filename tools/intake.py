@@ -477,8 +477,12 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
             for f in ("year", "from") + (("to",) if kind in ("patron", "teacher") else ()):
                 when(x, f, f"{kind} link {a} → {b}")
             ok = ref("person", a, f"{kind} link") & ref("person", b, f"{kind} link")
+            if "uncertain" in x and not isinstance(x["uncertain"], bool):
+                p.errors.append(f"{kind} link {a} → {b}: uncertain must be true or false")
+            if x.get("uncertain") and not x.get("note"):
+                p.warnings.append(f"{kind} link {a} → {b}: uncertain, but no note saying why")
             if ok:
-                (p.updates if find_rel(world, a, b, LINK_KINDS[kind][2]) else p.adds)["links"].append(f"{kind}: {a} → {b}")
+                (p.updates if find_rel(world, a, b, LINK_KINDS[kind][2]) else p.adds)["links"].append(f"{kind}: {a} → {b}" + (" (uncertain)" if x.get("uncertain") else ""))
 
         for x in as_list(d.get("moments")):
             ok = ref("person", x.get("person"), "moment") & ref("place", x.get("place"), "moment")
@@ -792,6 +796,11 @@ def apply_files(world: World, docs: list[tuple[str, dict]], log=print):
                 years["start_year"] = x["from"]
             if "to" in x and kind in ("patron", "teacher"):
                 years["end_year"] = x["to"]
+            # sql/021: a link tradition claims but no record proves, with a note on why it is doubted.
+            if "uncertain" in x:
+                years["uncertain"] = bool(x["uncertain"])
+            if "note" in x:
+                years["note"] = x["note"]
             existing = find_rel(world, x[a_key], x[b_key], rel_type)
             if existing:
                 if years:

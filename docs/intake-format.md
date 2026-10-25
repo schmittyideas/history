@@ -144,7 +144,9 @@ links:
   - {spouse: william-adelin, to: matilda-of-anjou, year: 1119}   # first = family member, second = married in
   - {patron: lorenzo-de-medici, artist: michelangelo, from: 1489, to: 1492}
   - {teacher: verrocchio, student: leonardo-da-vinci}
+  - {parent: robert-russel-of-berwick, child: odo-russel, uncertain: true, note: "Only in family-tree sites; Stirnet makes Hugh the father", sources: [stirnet-russell]}
 ```
+`uncertain: true` marks a link that tradition or family-tree sites claim but no record proves; the site shows it as "traditional, unproven", with the `note` (why it is doubted, who claims it) on hover. Give it a `note`, and record a `discrepancies` entry when sources name someone else. Needs `sql/021`.
 
 ### `moments`
 Life moments that aren't events: born, died, buried, trained, worked, lived.
