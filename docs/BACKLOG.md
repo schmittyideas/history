@@ -62,6 +62,12 @@ Source: `docs/intake-format.md` ("used for lanes later").
 
 ### In progress
 
+#### [P2] Royal families: spouses, children and sex for rulers
+`type: task` · `area: data` · `status: ready` · `issue: #292`
+
+576 royals but only 116 marriages and 199 parent links (Henry VIII has none), and no one has `sex` yet, so the new family block mostly shows Children or nothing. Batches by realm, England first, about 150 rows each: spouses with marriage year, children named in the ruler's article, `sex` on rulers, spouses and children, and gaps in title lines that put the wrong predecessor on the card (Cnut, Harold I and Harthacnut are missing from King of England).
+Source: Ty, 2026-10-25.
+
 #### [P1] Places: today's location (city, county, country) and current coordinates
 `type: task` · `area: data` · `status: ready` · `issue: #39`
 
@@ -149,6 +155,12 @@ Batch 14 (55 pre-1500 masters, sculptors, major architects and graphic artists, 
 Source: Ty, 2026-10-10.
 
 ## Done
+
+#### [P2] Royal family and succession on person panels
+`type: enhancement` · `area: site` · `status: done` · `issue: #291`
+
+The timeline side panel and the Explore Person card show, for anyone with a title, a Succession row per title ("← predecessor · successor →", from that title's holders in date order; military commands left out) and a Family block: Parents, Spouses with marriage year, Sons and Daughters with their years, and Children for anyone whose sex isn't recorded. People got an optional `sex` (sql/020). Done 2026-10-25.
+Source: Ty, 2026-10-25.
 
 #### [P3] Events cite their own Wikipedia article
 `type: task` · `area: data` · `status: done`
