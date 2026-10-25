@@ -123,6 +123,8 @@ function indexData(raw) {
   const spousesOf = id => spouseLinks.filter(r => r.source_id === id || r.target_id === id)
     .map(r => ({ person: byId[r.source_id === id ? r.target_id : r.source_id], year: r.start_year }))
     .filter(s => s.person).sort((a, b) => byYear(a.year, b.year));
+  // sql/021: a parent link tradition claims but no record proves; doubtOf gives it (with its note) or null.
+  const doubtOf = (parentId, childId) => parentLinks.find(r => r.source_id === parentId && r.target_id === childId && r.uncertain) || null;
   const marriedIn = new Set(spouseLinks.map(r => r.target_id).filter(id => parentsOf(id).length === 0));
   const marriageYear = id => { const r = spouseLinks.find(r => r.target_id === id); return r ? r.start_year : null; };
   const startOf = p => p.birth_year ?? marriageYear(p.id) ?? p.death_year;
@@ -144,7 +146,7 @@ function indexData(raw) {
   const filmsPortraying = id => films.filter(f => f.portrayedIds.includes(id)).sort((a, b) => byYear(a.start_year, b.start_year));
   const portrayedIn = f => (f.portrayedIds || []).map(id => byId[id]).filter(Boolean);
   return { people, rels, events, ep, places, pp, byId, eventById, placeById, parentLinks, spouseLinks,
-    parentsOf, childrenOf, spousesOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
+    parentsOf, childrenOf, spousesOf, doubtOf, marriedIn, marriageYear, startOf, endOf, eventsOf, peopleInEvent, placesOfPerson, neighbours,
     eventsAt, momentsAt, titles, filmsSetAt, filmsAbout, filmsPortraying, portrayedIn,
     regionOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.region])),
     countryOf: Object.fromEntries((raw.realms || []).map(r => [r.name, r.modern_country])),
@@ -904,6 +906,8 @@ function linkNames(text) {
   return text.split(new RegExp(`(?<![\\w])(${names.map(esc).join("|")})(?![\\w])`)).filter(Boolean)
     .map(part => byName[part] ? personLink(byName[part]) : part);
 }
+// "(traditional, unproven)" after a parent or child whose link no record proves, with the reason on hover.
+const doubtTag = rel => rel ? h("span", { class: "doubt", title: rel.note || "Claimed by tradition; no record proves it", text: " (traditional, unproven)" }) : null;
 const joinNodes = (nodes, empty = "None recorded") => nodes.length ? nodes.flatMap((n, i) => i ? [", ", n] : [n]) : [empty];
 
 // A person's family as labelled rows, shared by the side panel and the Explore Person card; `link` draws a person.
@@ -911,11 +915,11 @@ const joinNodes = (nodes, empty = "None recorded") => nodes.length ? nodes.flatM
 // left out, but a person with no children recorded at all says so.
 function familyRows(id, link) {
   const db = S.db, kids = db.childrenOf(id);
-  const kid = k => link(k, k.birth_year != null || k.death_year != null ? ` (${fmtSpan(k.birth_year, k.death_year)})` : "");
+  const kid = k => h("span", {}, link(k, k.birth_year != null || k.death_year != null ? ` (${fmtSpan(k.birth_year, k.death_year)})` : ""), doubtTag(db.doubtOf(id, k.id)));
   const split = [["Sons", kids.filter(k => k.sex === "male")], ["Daughters", kids.filter(k => k.sex === "female")], ["Children", kids.filter(k => !k.sex)]]
     .filter(([, ks]) => ks.length).map(([label, ks]) => [label, joinNodes(ks.map(kid))]);
   return [
-    ["Parents", joinNodes(db.parentsOf(id).map(x => link(x)))],
+    ["Parents", joinNodes(db.parentsOf(id).map(x => h("span", {}, link(x), doubtTag(db.doubtOf(x.id, id)))))],
     ["Spouses", joinNodes(db.spousesOf(id).map(s => link(s.person, s.year != null ? ` (m. ${fmtYear(s.year)})` : "")))],
     ...(split.length ? split : [["Children", joinNodes([])]]),
   ];

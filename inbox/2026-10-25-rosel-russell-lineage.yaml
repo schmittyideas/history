@@ -1,0 +1,205 @@
+batch:
+  title: "The Rosel-to-Russell line: Hugh de Rosel to John Russell, 1st Earl of Bedford"
+  requested: "Ty: add the traditional lineage from Hugh de Rosel to the 1st Earl of Bedford, marking documented links as solid and traditional ones as uncertain (agreed 2026-10-25)"
+  date: 2026-10-25
+
+# Notes for the reviewer
+# - Agreed with Ty on 2026-10-25: unproven parent links go in with `uncertain: true` and a note (sql/021), and the site shows them
+#   as "traditional, unproven". Robert and Odo are sourced to the Stirnet genealogy site, labelled as such. The line stops at the 1st Earl.
+#   Types: Nobility for the Norman landholders, Sir John and the Earl; Notable for the Weymouth merchants and the Berwick gentry.
+# - Documented: Hugh Rosel held land at Grainville of William I and gave it to St Stephen's, Caen, when he became a monk
+#   (William I's charter, c. 1077, Calendar of Documents preserved in France no. 450). Henry II's charter of 1156-7 (no. 453)
+#   names a Hugh de Rosel whose father became a monk there, holding land at Rosel and Grouchy.
+# - Traditional only: Hugh II -> Robert -> Odo -> Sir John of Kingston Russell. Nothing links Sir John (d. c. 1224) to Stephen
+#   Russell of Weymouth, the first proven ancestor of the Bedfords, so there is no parent link across that gap; the discrepancy
+#   `russell-descent-from-rosel` records both sides.
+# - Left out: RootsWeb's birth years (Robert c. 1125, Odo c. 1160): the page refuses automated reading, so they could not be checked.
+#   Hugh, Hugh II, Odo and Stephen have no dates any source gives, so they have none here (notes say when they were active).
+#   No Earl of Bedford title: the database holds no peerage titles, and a realm "Bedford" would list him among rulers in the Year view.
+# - Grainville: the calendar does not say which Grainville; Grainville-sur-Odon, beside Rosel and near Caen, is the likely one.
+#   "Berwick, Swyre" uses Swyre village's coordinates; Berwick is a farm in that parish with no article of its own.
+
+sources:
+  - {key: cdf-france-calvados-1, title: "Calendar of Documents preserved in France, 918-1206 (ed. J. H. Round, 1899): Calvados, part 1 (British History Online)", url: "https://www.british-history.ac.uk/cal-state-papers/france/918-1206/pp141-163"}
+  - {key: web-1066-roussel, title: "Hugue de Roussel (1066.co.nz, family history page; cites no archive)", url: "https://www.1066.co.nz/Mosaic%20DVD/text/people/roussel.htm"}
+  - {key: stirnet-russell-01, title: "Russell 1 (Stirnet, genealogy site: early generations 'with some caution')", url: "https://www.stirnet.com/genie/data/british/qr/russell01.php"}
+  - {key: britannica-1911-russell-family, title: "Russell (family), Encyclopaedia Britannica 1911, by Oswald Barron (Wikisource)", url: "https://en.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Russell_(family)"}
+  - {key: wiffen-house-of-russell, title: "J. H. Wiffen, Historical Memoirs of the House of Russell (1833), bibliographic record", url: "https://armorial.bibsoc.org.uk/node/60919.html"}
+  - {key: wp-john-russell-1st-earl-of-bedford, title: "John Russell, 1st Earl of Bedford (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Russell,_1st_Earl_of_Bedford"}
+  - {key: wp-john-russell-knight, title: "John Russell (knight) (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_Russell_(knight)"}
+  - {key: wp-philip-i-of-castile, title: "Philip I of Castile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philip_I_of_Castile"}
+  - {key: wp-rosel-calvados, title: "Rosel, Calvados (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rosel,_Calvados"}
+  - {key: wp-grainville-sur-odon, title: "Grainville-sur-Odon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grainville-sur-Odon"}
+  - {key: wp-kingston-russell, title: "Kingston Russell (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kingston_Russell"}
+  - {key: wp-swyre, title: "Swyre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Swyre"}
+  - {key: wp-weymouth-dorset, title: "Weymouth, Dorset (Wikipedia)", url: "https://en.wikipedia.org/wiki/Weymouth,_Dorset"}
+  - {key: wp-chenies-manor-house, title: "Chenies Manor House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chenies_Manor_House"}
+  - {key: wp-chenies, title: "Chenies (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chenies"}
+  - {key: wp-woburn-abbey, title: "Woburn Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Woburn_Abbey"}
+
+places:
+  - {key: rosel-calvados, name: Rosel, kind: village, region: Calvados, country: France, lat: 49.2297, lng: -0.4569, sources: [wp-rosel-calvados, cdf-france-calvados-1]}
+  - {key: grainville-sur-odon, name: Grainville-sur-Odon, kind: village, region: Calvados, country: France, lat: 49.1389, lng: -0.5283, sources: [wp-grainville-sur-odon, cdf-france-calvados-1]}
+  - {key: kingston-russell, name: Kingston Russell, kind: manor, region: Dorset, country: England, lat: 50.7204, lng: -2.5941, sources: [wp-kingston-russell, wp-john-russell-knight]}
+  - {key: berwick-swyre, name: "Berwick, Swyre", kind: manor, city: Swyre, region: Dorset, country: England, lat: 50.6919, lng: -2.6699, sources: [wp-swyre, wp-john-russell-1st-earl-of-bedford]}
+  - {key: weymouth, name: Weymouth, historical_name: "Weymouth and Melcombe Regis (two towns until 1571)", kind: harbour, region: Dorset, country: England, lat: 50.6097, lng: -2.4547, sources: [wp-weymouth-dorset]}
+  - {key: chenies-manor-house, name: Chenies Manor House, kind: manor house, city: Chenies, region: Buckinghamshire, country: England, lat: 51.6744, lng: -0.5330, visitable: true, visit_site: "Chenies Manor House (open at limited times; a private home)", built_by: "John Russell, 1st Earl of Bedford, probably c. 1530-1550", sources: [wp-chenies-manor-house]}
+  - {key: st-michaels-chenies, name: "St Michael's Church, Chenies", kind: church, city: Chenies, region: Buckinghamshire, country: England, lat: 51.675, lng: -0.532, visitable: true, visit_site: "St Michael's Church and the Bedford Chapel, the Russells' burial place", sources: [wp-chenies, wp-john-russell-1st-earl-of-bedford]}
+  - {key: woburn-abbey, name: Woburn Abbey, kind: abbey, city: Woburn, region: Bedfordshire, country: England, lat: 51.9831, lng: -0.5968, visitable: true, visit_site: "Woburn Abbey and Gardens (open on set days)", founded: 1145, built_by: "Cistercian abbey, 1145; the Russells' seat from 1547; manor house rebuilt c. 1630 by Francis Russell, 4th Earl of Bedford", sources: [wp-woburn-abbey]}
+
+people:
+  - key: hugh-de-rosel
+    name: Hugh de Rosel
+    type: Nobility
+    prominence: 1
+    note: "Norman landholder (fl. c. 1077). Held land at Grainville of William I and gave it to St Stephen's, Caen, when he became a monk there. Claimed as founder of the Russells, Dukes of Bedford, by family tradition (J. H. Wiffen, 1833); the descent is unproven."
+    sources: [cdf-france-calvados-1, web-1066-roussel]
+  - key: hugh-de-rosel-ii
+    name: Hugh de Rosel II
+    type: Nobility
+    prominence: 1
+    note: "Son of Hugh de Rosel (fl. late 11th century). Henry II's charter of 1156-7 confirms a gift on Hugh de Rosel's fief 'of the land which his father gave St. Stephen's when he was made a monk there', and Hugh's own gift of land and tithes at Rosel and Grouchy. 1066.co.nz says he fought at Hastings and held Dorset land in 1086; no record found supports either."
+    sources: [cdf-france-calvados-1, web-1066-roussel]
+  - key: robert-russel-of-berwick
+    name: Robert Russel
+    type: Nobility
+    died: 1201
+    prominence: 1
+    note: "Traditional ancestor of the Russells: only in genealogy sources. Stirnet's 'TUDOR' source gives Robert de Russell (d. 1201) as Odo's father; 1066.co.nz names a Robert Russel, son of Hugh II, in a charter of Stephen's reign (not identified). Family trees give his birth as c. 1125 at Berwick, Dorset; not checked."
+    sources: [stirnet-russell-01, web-1066-roussel]
+  - key: odo-russel
+    name: Odo Russel
+    type: Nobility
+    prominence: 1
+    note: "Odo (Eudo) Russell of Barwick (Berwick), Dorset, fl. c. 1200. Only in genealogy sources, which disagree on his father (Robert or Hugh) and make him the father of Sir John Russell of Kingston Russell."
+    sources: [stirnet-russell-01]
+  - key: john-russell-knight
+    name: John Russell (knight)
+    type: Nobility
+    died: 1224
+    died_estimated: true
+    prominence: 2
+    coverage: partly
+    coverage_note: "Death, Kingston Russell serjeanty and offices captured; castles held (Corfe, Sherborne, Peveril, Bolsover) and family not built out."
+    note: "Household knight of Richard I, John and Henry III, steward of Henry III's household, sheriff of Somerset (1223-1224). Held Kingston Russell, Dorset, by grand serjeanty as marshal of the king's buttery (Book of Fees, 1211). Wikipedia names no father."
+    sources: [wp-john-russell-knight]
+  - key: stephen-russell-of-weymouth
+    name: Stephen Russell
+    type: Notable
+    prominence: 1
+    note: "Weymouth merchant in the wine trade with Bordeaux (late 14th century); the earliest ancestor of the Russells, Earls and Dukes of Bedford, that records prove. His son Henry called himself 'son and heir of Sir Stephen Russell and of Alice, his wife' in a deed of April 1440."
+    sources: [wp-john-russell-1st-earl-of-bedford, britannica-1911-russell-family]
+  - key: henry-russell-of-weymouth
+    name: Henry Russell
+    type: Notable
+    died: 1464
+    died_estimated: true
+    prominence: 1
+    note: "Wine merchant and shipper of Weymouth, four times its member in the House of Commons (between 1425 and 1442); died 1463/4. A 1442 pardon names him 'Henry Russell alias Henry Gascoign', the root of the theory that the family were Gascon wine merchants."
+    sources: [wp-john-russell-1st-earl-of-bedford, britannica-1911-russell-family]
+  - key: john-russell-the-elder
+    name: John Russell (the elder)
+    type: Notable
+    died: 1505
+    prominence: 1
+    note: "Son of Henry Russell, grandfather of the 1st Earl of Bedford; married Alice Froxmere. Died before November 1505."
+    sources: [wp-john-russell-1st-earl-of-bedford]
+  - key: james-russell-of-berwick
+    name: James Russell
+    type: Notable
+    died: 1505
+    prominence: 1
+    note: "Sir James Russell of Berwick, Dorset, father of the 1st Earl of Bedford; married Alice Wyse of Sidenham, Devon. Died November 1505 (some sources: December 1505 to February 1506)."
+    sources: [wp-john-russell-1st-earl-of-bedford]
+  - key: john-russell-1st-earl-of-bedford
+    name: John Russell, 1st Earl of Bedford
+    type: Nobility
+    born: 1485
+    born_estimated: true
+    died: 1555-03-14
+    prominence: 3
+    coverage: partly
+    coverage_note: "Ancestry, birth, the 1506 Castile shipwreck, Chenies, Woburn and burial captured; his career under Henry VIII and Edward VI (Lord Privy Seal, Lord High Admiral) and the earldom (19 January 1550) not built out."
+    note: "Founder of the Russells' fortune. Born probably at Berwick, Dorset; attended Philip and Joanna of Castile when a storm drove them ashore in Dorset (1506) and was recommended to Henry VII. Gained Chenies by marrying Anne Sapcote (1526) and Woburn Abbey after the Dissolution. Created Earl of Bedford in 1550; buried in the Bedford Chapel at Chenies."
+    sources: [wp-john-russell-1st-earl-of-bedford]
+
+events:
+  - key: hugh-rosel-gives-grainville-to-st-stephens
+    name: Hugh Rosel becomes a monk and gives Grainville to St Stephen's, Caen
+    type: Donation
+    year: 1077
+    estimated: true
+    place: abbaye-aux-hommes
+    places:
+      - {place: grainville-sur-odon, role: land, note: "The land Hugh held of William I; probably this Grainville (the calendar does not say which)"}
+    people:
+      - {person: hugh-de-rosel, role: donor}
+      - {person: william-i-of-england, role: confirmed}
+    prominence: 1
+    note: "William I's charter to his abbey of St Stephen's (c. 1077) grants 'the land that Hugh Rosel held of him in Grainville, and gave the said monastery when he became a monk'. The only record linking a Rosel to the Conqueror."
+    sources: [cdf-france-calvados-1]
+  - key: philip-and-joanna-driven-ashore-1506
+    name: Philip and Joanna of Castile driven ashore in Dorset
+    type: Shipwreck
+    year: 1506
+    month: 1
+    place: weymouth
+    people:
+      - {person: john-russell-1st-earl-of-bedford, role: attendant}
+    prominence: 2
+    note: "Sailing to Spain, Philip and Joanna were caught in a storm and forced ashore near Melcombe Regis (now part of Weymouth). Sir Thomas Trenchard hosted them at Wolfeton House; John Russell attended them, and Philip recommended him to Henry VII, the start of his career at court."
+    sources: [wp-philip-i-of-castile, wp-john-russell-1st-earl-of-bedford]
+
+links:
+  - {parent: hugh-de-rosel, child: hugh-de-rosel-ii, note: "Henry II's charter of 1156-7 names a Hugh de Rosel whose father gave land to St Stephen's on becoming a monk there; 1066.co.nz says the son Hugh consented to the gift", sources: [cdf-france-calvados-1, web-1066-roussel]}
+  - {parent: hugh-de-rosel-ii, child: robert-russel-of-berwick, uncertain: true, note: "Claimed by 1066.co.nz from a charter of Stephen's reign it does not identify. Stirnet's 'TUDOR' source puts an unnamed generation between. Hugh II was grown by 1077, so a son born c. 1125 is unlikely", sources: [web-1066-roussel, stirnet-russell-01]}
+  - {parent: robert-russel-of-berwick, child: odo-russel, uncertain: true, note: "Only in genealogy sources ('TUDOR', via Stirnet). Stirnet's other source (MGH) makes Odo a son of Hugh de Russell", sources: [stirnet-russell-01]}
+  - {parent: odo-russel, child: john-russell-knight, uncertain: true, note: "Only in genealogy sources (MGH, via Stirnet). Wikipedia's article on Sir John names no father", sources: [stirnet-russell-01]}
+  - {parent: stephen-russell-of-weymouth, child: henry-russell-of-weymouth, sources: [wp-john-russell-1st-earl-of-bedford]}
+  - {parent: henry-russell-of-weymouth, child: john-russell-the-elder, sources: [wp-john-russell-1st-earl-of-bedford]}
+  - {parent: john-russell-the-elder, child: james-russell-of-berwick, sources: [wp-john-russell-1st-earl-of-bedford]}
+  - {parent: james-russell-of-berwick, child: john-russell-1st-earl-of-bedford, sources: [wp-john-russell-1st-earl-of-bedford]}
+
+moments:
+  - {person: hugh-de-rosel, role: held, place: grainville-sur-odon, year: 1077, sources: [cdf-france-calvados-1]}
+  - {person: hugh-de-rosel-ii, role: held, place: rosel-calvados, sources: [cdf-france-calvados-1]}
+  - {person: john-russell-knight, role: held, place: kingston-russell, year: 1211, sources: [wp-john-russell-knight, wp-kingston-russell]}
+  - {person: stephen-russell-of-weymouth, role: worked, place: weymouth, sources: [wp-john-russell-1st-earl-of-bedford, britannica-1911-russell-family]}
+  - {person: henry-russell-of-weymouth, role: worked, place: weymouth, sources: [wp-john-russell-1st-earl-of-bedford, britannica-1911-russell-family]}
+  - {person: john-russell-1st-earl-of-bedford, role: born, place: berwick-swyre, year: 1485, sources: [wp-john-russell-1st-earl-of-bedford]}
+  - {person: john-russell-1st-earl-of-bedford, role: lived, place: chenies-manor-house, year: 1526, sources: [wp-john-russell-1st-earl-of-bedford, wp-chenies-manor-house]}
+  - {person: john-russell-1st-earl-of-bedford, role: lived, place: woburn-abbey, year: 1547, sources: [wp-john-russell-1st-earl-of-bedford, wp-woburn-abbey]}
+  - {person: john-russell-1st-earl-of-bedford, role: buried, place: st-michaels-chenies, year: 1555, sources: [wp-john-russell-1st-earl-of-bedford]}
+
+discrepancies:
+  - key: russell-descent-from-rosel
+    question: Do the Russells, Earls and Dukes of Bedford, descend from Hugh de Rosel through the Russells of Kingston Russell?
+    about: [{person: hugh-de-rosel}, {person: john-russell-knight}, {person: stephen-russell-of-weymouth}, {person: john-russell-1st-earl-of-bedford}]
+    claims:
+      - {value: "Yes: Hugh de Rosel, then the Russells of Kingston Russell, then Weymouth and Bedford", sources: [wiffen-house-of-russell, web-1066-roussel, stirnet-russell-01], note: "Family tradition, set out by J. H. Wiffen (1833) and repeated by family-tree sites"}
+      - {value: "Unproven: the line is certain only from Stephen Russell of Weymouth (late 14th century)", sources: [wp-john-russell-1st-earl-of-bedford, britannica-1911-russell-family], note: "Gladys Scott Thomson (1930) found the Kingston Russell link unproven; the 1911 Britannica calls the early pedigree padding and suggests Gascon wine merchants (Henry Russell 'alias Henry Gascoign', 1442)"}
+    note: "The database links Hugh de Rosel down to Sir John Russell (d. c. 1224) with uncertain links, and Stephen Russell down to the 1st Earl with proven ones. Nothing links Sir John to Stephen."
+  - key: odo-russel-father
+    question: Was Odo Russel the son of Robert Russel or of Hugh de Russell?
+    about: [{person: odo-russel}, {person: robert-russel-of-berwick}]
+    field: parent
+    claims:
+      - {value: "Robert de Russell (d. 1201)", sources: [stirnet-russell-01], note: "'TUDOR' (2003, 2021), as reported by Stirnet"}
+      - {value: "Hugh de Russell of Barwick", sources: [stirnet-russell-01], note: "MGH (1914), which Stirnet provisionally follows"}
+    note: "The record uses Robert (an uncertain link), the line Ty asked for on 2026-10-25."
+  - key: james-russell-death
+    question: When did Sir James Russell, father of the 1st Earl of Bedford, die?
+    about: [{person: james-russell-of-berwick}]
+    field: died
+    claims:
+      - {value: "November 1505", sources: [wp-john-russell-1st-earl-of-bedford]}
+      - {value: "Between December 1505 and February 1506", sources: [wp-john-russell-1st-earl-of-bedford], note: "Other sources, per Wikipedia"}
+    note: "The record uses 1505."
+  - key: john-russell-1st-earl-death
+    question: Did John Russell, 1st Earl of Bedford, die on 14 March or 14 May 1555?
+    about: [{person: john-russell-1st-earl-of-bedford}]
+    field: died
+    claims:
+      - {value: "1555-03-14", sources: [wp-john-russell-1st-earl-of-bedford], note: "Wikipedia's lead and its death and burial section (14 March 1554/5)"}
+      - {value: "1555-05-14", sources: [wp-john-russell-1st-earl-of-bedford], note: "Wikipedia's infobox"}
+    note: "The record uses 14 March 1555, which the article's text gives twice."
