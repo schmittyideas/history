@@ -1,0 +1,439 @@
+batch:
+  title: "Royal families, part 5a: Hanover, George I to George III (1714-1820)"
+  requested: "Ty: fill in parents, spouses and children (who reached 12) for each English monarch (issue #292, agreed 2026-10-25)"
+  date: 2026-10-25
+  notes: "Sex for George I, George II and George III; their parents, marriages and legitimate children who reached age 12, each with their own Wikipedia article, birth and burial places. George III's sons George IV and William IV get their own marriages in part 5b. Also Victoria's father (a son of George III), linked here so part 5b need not define him; her mother is in part 5b."
+
+# Notes for the reviewer
+# - Dates are each article's own (New Style where the article gives both; Hanover used the Gregorian calendar from 1700).
+#   Prince William, Duke of Cumberland: the article gives 15 April 1721 marked "[N.S.]"; England then used Old Style, and
+#   Wikidata also has 26 April. Kept the article's date, with a note.
+# - Burial moments carry a year only where the article dates the burial; otherwise the year is left out.
+#   Sophia of Hanover was buried in the Leineschloss chapel (moved to the Berggarten mausoleum in 1957); her moment is the
+#   first burial. Sophia Dorothea of Celle was buried in the Stadtkirche in Celle, which has no article: the moment uses Celle.
+#   Princess Mary of Great Britain, Anne (Princess of Orange), Sophia Dorothea of Hanover and Princess Mary, Duchess of
+#   Gloucester: their articles name no burial place, so no buried moment.
+#   Ernest Augustus, Elector of Hanover: his article names no burial place (Sophia's article says he lies in the Leineschloss
+#   chapel too); no moment. Prince Edward, Duke of Kent: his article names no birthplace; no born moment.
+# Left out
+# - George I's three daughters by Melusine von der Schulenburg (illegitimate).
+# - George II: Prince George William (1717-1718), died in infancy; an illegitimate son, Johann Ludwig von Wallmoden.
+# - George III: Prince Octavius (1779-1783) and Prince Alfred (1780-1782), died before 12.
+# - No title changes in this batch.
+
+sources:
+  - {key: wp-ernest-augustus-elector-of-hanover, title: "Ernest Augustus, Elector of Hanover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ernest_Augustus,_Elector_of_Hanover"}
+  - {key: wp-sophia-of-hanover, title: "Sophia of Hanover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sophia_of_Hanover"}
+  - {key: wp-sophia-dorothea-of-celle, title: "Sophia Dorothea of Celle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sophia_Dorothea_of_Celle"}
+  - {key: wp-sophia-dorothea-of-hanover, title: "Sophia Dorothea of Hanover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sophia_Dorothea_of_Hanover"}
+  - {key: wp-caroline-of-ansbach, title: "Caroline of Ansbach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caroline_of_Ansbach"}
+  - {key: wp-frederick-prince-of-wales, title: "Frederick, Prince of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frederick,_Prince_of_Wales"}
+  - {key: wp-anne-princess-royal-and-princess-of-orange, title: "Anne, Princess Royal and Princess of Orange (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne,_Princess_Royal_and_Princess_of_Orange"}
+  - {key: wp-princess-amelia-of-great-britain, title: "Princess Amelia of Great Britain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Amelia_of_Great_Britain"}
+  - {key: wp-princess-caroline-of-great-britain, title: "Princess Caroline of Great Britain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Caroline_of_Great_Britain"}
+  - {key: wp-prince-william-duke-of-cumberland, title: "Prince William, Duke of Cumberland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_William,_Duke_of_Cumberland"}
+  - {key: wp-princess-mary-of-great-britain, title: "Princess Mary of Great Britain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Mary_of_Great_Britain"}
+  - {key: wp-louise-of-great-britain, title: "Louise of Great Britain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louise_of_Great_Britain"}
+  - {key: wp-princess-augusta-of-saxe-gotha, title: "Princess Augusta of Saxe-Gotha (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Augusta_of_Saxe-Gotha"}
+  - {key: wp-charlotte-of-mecklenburg-strelitz, title: "Charlotte of Mecklenburg-Strelitz (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlotte_of_Mecklenburg-Strelitz"}
+  - {key: wp-prince-frederick-duke-of-york-and-albany, title: "Prince Frederick, Duke of York and Albany (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Frederick,_Duke_of_York_and_Albany"}
+  - {key: wp-charlotte-princess-royal, title: "Charlotte, Princess Royal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Charlotte,_Princess_Royal"}
+  - {key: wp-prince-edward-duke-of-kent-and-strathearn, title: "Prince Edward, Duke of Kent and Strathearn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Edward,_Duke_of_Kent_and_Strathearn"}
+  - {key: wp-princess-augusta-sophia-of-the-united-kingdom, title: "Princess Augusta Sophia of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Augusta_Sophia_of_the_United_Kingdom"}
+  - {key: wp-princess-elizabeth-of-the-united-kingdom, title: "Princess Elizabeth of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Elizabeth_of_the_United_Kingdom"}
+  - {key: wp-ernest-augustus-king-of-hanover, title: "Ernest Augustus, King of Hanover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ernest_Augustus,_King_of_Hanover"}
+  - {key: wp-prince-augustus-frederick-duke-of-sussex, title: "Prince Augustus Frederick, Duke of Sussex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Augustus_Frederick,_Duke_of_Sussex"}
+  - {key: wp-prince-adolphus-duke-of-cambridge, title: "Prince Adolphus, Duke of Cambridge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Adolphus,_Duke_of_Cambridge"}
+  - {key: wp-princess-mary-duchess-of-gloucester-and-edinburgh, title: "Princess Mary, Duchess of Gloucester and Edinburgh (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Mary,_Duchess_of_Gloucester_and_Edinburgh"}
+  - {key: wp-princess-sophia-of-the-united-kingdom, title: "Princess Sophia of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Sophia_of_the_United_Kingdom"}
+  - {key: wp-princess-amelia-of-the-united-kingdom, title: "Princess Amelia of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Amelia_of_the_United_Kingdom"}
+  - {key: wp-herzberg-castle, title: "Herzberg Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herzberg_Castle"}
+  - {key: wp-leineschloss, title: "Leineschloss (Wikipedia)", url: "https://en.wikipedia.org/wiki/Leineschloss"}
+  - {key: wp-celle, title: "Celle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Celle"}
+  - {key: wp-ansbach, title: "Ansbach (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ansbach"}
+  - {key: wp-herrenhausen-palace, title: "Herrenhausen Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herrenhausen_Palace"}
+  - {key: wp-leicester-house-westminster, title: "Leicester House, Westminster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Leicester_House,_Westminster"}
+  - {key: wp-gotha, title: "Gotha (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gotha"}
+  - {key: wp-mirow, title: "Mirow (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mirow"}
+  - {key: wp-ludwigsburg-palace, title: "Ludwigsburg Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ludwigsburg_Palace"}
+  - {key: wp-bad-homburg-castle, title: "Bad Homburg Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bad_Homburg_Castle"}
+  - {key: wp-kensal-green-cemetery, title: "Kensal Green Cemetery (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kensal_Green_Cemetery"}
+  - {key: wp-royal-lodge, title: "Royal Lodge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Lodge"}
+
+places:
+  - {key: herzberg-castle, name: Herzberg Castle, kind: castle, city: Herzberg am Harz, region: Lower Saxony, country: Germany, lat: 51.6558, lng: 10.3311, sources: [wp-herzberg-castle]}
+  - {key: leineschloss, name: Leineschloss, historical_name: Leine Palace, kind: palace, city: Hanover, region: Lower Saxony, country: Germany, lat: 52.3706, lng: 9.7336, sources: [wp-leineschloss]}
+  - {key: celle, name: Celle, kind: town, region: Lower Saxony, country: Germany, lat: 52.6256, lng: 10.0825, sources: [wp-celle]}
+  - {key: ansbach, name: Ansbach, kind: city, region: Bavaria, country: Germany, lat: 49.3, lng: 10.5833, sources: [wp-ansbach]}
+  - {key: herrenhausen-palace, name: Herrenhausen Palace, kind: palace, city: Hanover, region: Lower Saxony, country: Germany, lat: 52.3912, lng: 9.6977, sources: [wp-herrenhausen-palace]}
+  - {key: leicester-house-westminster, name: Leicester House, kind: townhouse, city: London, region: Greater London, country: England, lat: 51.5111, lng: -0.1306, sources: [wp-leicester-house-westminster]}
+  - {key: gotha, name: Gotha, kind: town, region: Thuringia, country: Germany, lat: 50.9492, lng: 10.705, sources: [wp-gotha]}
+  - {key: mirow, name: Mirow, kind: town, region: Mecklenburg-Vorpommern, country: Germany, lat: 53.2667, lng: 12.8, sources: [wp-mirow]}
+  - {key: ludwigsburg-palace, name: Ludwigsburg Palace, kind: palace, city: Ludwigsburg, region: Baden-Württemberg, country: Germany, lat: 48.9, lng: 9.1958, sources: [wp-ludwigsburg-palace]}
+  - {key: bad-homburg-castle, name: Bad Homburg Castle, historical_name: Homburg Castle, kind: castle, city: Bad Homburg, region: Hesse, country: Germany, lat: 50.2279, lng: 8.61, sources: [wp-bad-homburg-castle]}
+  - {key: kensal-green-cemetery, name: Kensal Green Cemetery, kind: cemetery, city: London, region: Greater London, country: England, lat: 51.5286, lng: -0.2241, sources: [wp-kensal-green-cemetery]}
+  - {key: royal-lodge, name: Royal Lodge, kind: house, city: Windsor Great Park, region: Berkshire, country: England, lat: 51.439, lng: -0.6068, sources: [wp-royal-lodge]}
+
+people:
+  # Monarchs: sex only
+  - {key: george-i-of-great-britain, sex: male}
+  - {key: george-ii-of-great-britain, sex: male}
+  - {key: george-iii, sex: male}
+
+  # George I's parents, wife and daughter
+  - key: ernest-augustus-elector-of-hanover
+    name: Ernest Augustus, Elector of Hanover
+    type: Nobility
+    sex: male
+    house: Hanover
+    born: 1629-11-20
+    died: 1698-01-23
+    coverage: not-read
+    note: "Duke of Brunswick-Lüneburg, Prince-Bishop of Osnabrück from 1662, Prince of Calenberg from 1679 and the first Elector of Hanover (1692). Father of George I."
+    sources: [wp-ernest-augustus-elector-of-hanover]
+  - key: sophia-of-hanover
+    name: Sophia of Hanover
+    type: Royalty
+    sex: female
+    born: 1630-10-14
+    died: 1714-06-08
+    coverage: not-read
+    note: "Granddaughter of James VI and I, Electress of Hanover as wife of Ernest Augustus. Heiress presumptive under the Act of Settlement 1701; she died less than two months before Queen Anne, so her son George I succeeded."
+    sources: [wp-sophia-of-hanover]
+  - key: sophia-dorothea-of-celle
+    name: Sophia Dorothea of Celle
+    type: Royalty
+    sex: female
+    born: 1666-09-15
+    died: 1726-11-13
+    coverage: not-read
+    note: "Wife of the future George I (married 1682, divorced 1694). After her alleged affair with Count Philip Christoph von Königsmarck she was held at Ahlden Castle for the last thirty years of her life."
+    sources: [wp-sophia-dorothea-of-celle]
+  - key: sophia-dorothea-of-hanover
+    name: Sophia Dorothea of Hanover
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1687-03-26
+    died: 1757-06-28
+    coverage: not-read
+    note: "Daughter of George I; Queen in Prussia as wife of Frederick William I (married 1706) and mother of Frederick the Great."
+    sources: [wp-sophia-dorothea-of-hanover]
+
+  # George II's wife and children
+  - key: caroline-of-ansbach
+    name: Caroline of Ansbach
+    type: Royalty
+    sex: female
+    born: 1683-03-01
+    died: 1737-11-20
+    coverage: not-read
+    note: "Queen of Great Britain as wife of George II (married 1705); regent during his absences in Hanover."
+    sources: [wp-caroline-of-ansbach]
+  - key: frederick-prince-of-wales
+    name: Frederick, Prince of Wales
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1707-01-31
+    died: 1751-03-31
+    coverage: not-read
+    note: "Eldest son and heir of George II, estranged from his parents; died before his father. Father of George III."
+    sources: [wp-frederick-prince-of-wales]
+  - key: anne-princess-royal-and-princess-of-orange
+    name: Anne, Princess Royal and Princess of Orange
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1709-11-02
+    died: 1759-01-12
+    coverage: not-read
+    note: "Eldest daughter of George II; wife of William IV, Prince of Orange (married 1734), and regent of the Dutch Republic for her son William V from 1751 until her death."
+    sources: [wp-anne-princess-royal-and-princess-of-orange]
+  - key: princess-amelia-of-great-britain
+    name: Princess Amelia of Great Britain
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1711-06-10
+    died: 1786-10-31
+    coverage: not-read
+    note: "Second daughter of George II; never married, and the last of her parents' children to die."
+    sources: [wp-princess-amelia-of-great-britain]
+  - key: princess-caroline-of-great-britain
+    name: Princess Caroline of Great Britain
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1713-06-10
+    died: 1757-12-28
+    coverage: not-read
+    note: "Third daughter of George II; died unmarried at St James's Palace."
+    sources: [wp-princess-caroline-of-great-britain]
+  - key: prince-william-duke-of-cumberland
+    name: Prince William, Duke of Cumberland
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1721-04-15
+    died: 1765-10-31
+    coverage: not-read
+    note: "Third son of George II; crushed the Jacobite Rising at Culloden (1746). Wikipedia gives his birth as 15 April 1721 marked New Style, but England then used the Old Style calendar (Wikidata also has 26 April)."
+    sources: [wp-prince-william-duke-of-cumberland]
+  - key: princess-mary-of-great-britain
+    name: Princess Mary of Great Britain
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1723-03-05
+    died: 1772-01-14
+    coverage: not-read
+    note: "Daughter of George II; Landgravine of Hesse-Kassel as wife of Frederick II. Died at Hanau on 14 or 16 January 1772 (the article gives both)."
+    sources: [wp-princess-mary-of-great-britain]
+  - key: louise-of-great-britain
+    name: Louise of Great Britain
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1724-12-18
+    died: 1751-12-19
+    coverage: not-read
+    note: "Youngest daughter of George II; Queen of Denmark and Norway from 1746 as first wife of Frederick V."
+    sources: [wp-louise-of-great-britain]
+
+  # George III's mother and wife
+  - key: princess-augusta-of-saxe-gotha
+    name: Princess Augusta of Saxe-Gotha
+    type: Royalty
+    sex: female
+    born: 1719-11-30
+    died: 1772-02-08
+    coverage: not-read
+    note: "Princess of Wales as wife of Frederick, Prince of Wales (married 1736); mother of George III. Never queen, as Frederick died before his father."
+    sources: [wp-princess-augusta-of-saxe-gotha]
+  - key: charlotte-of-mecklenburg-strelitz
+    name: Charlotte of Mecklenburg-Strelitz
+    type: Royalty
+    sex: female
+    born: 1744-05-19
+    died: 1818-11-17
+    coverage: not-read
+    note: "Queen of Great Britain and Ireland, then of the United Kingdom, as wife of George III from their marriage on 8 September 1761; mother of fifteen children."
+    sources: [wp-charlotte-of-mecklenburg-strelitz]
+
+  # George III's children (George IV and William IV are already in)
+  - key: prince-frederick-duke-of-york-and-albany
+    name: Prince Frederick, Duke of York and Albany
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1763-08-16
+    died: 1827-01-05
+    coverage: not-read
+    note: "Second son of George III; soldier and commander-in-chief of the British Army, Prince-Bishop of Osnabrück (1764-1803), heir presumptive from 1820."
+    sources: [wp-prince-frederick-duke-of-york-and-albany]
+  - key: charlotte-princess-royal
+    name: Charlotte, Princess Royal
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1766-09-29
+    died: 1828-10-06
+    coverage: not-read
+    note: "Eldest daughter of George III; Queen of Württemberg as wife of King Frederick I (married 1797)."
+    sources: [wp-charlotte-princess-royal]
+  - key: prince-edward-duke-of-kent-and-strathearn
+    name: Prince Edward, Duke of Kent and Strathearn
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1767-11-02
+    died: 1820-01-23
+    coverage: not-read
+    note: "Fourth son of George III; lived in Lower Canada and Nova Scotia 1791-1800 as a commander of British forces in North America. Married Princess Victoria of Saxe-Coburg-Saalfeld in 1818; their only child was Queen Victoria."
+    sources: [wp-prince-edward-duke-of-kent-and-strathearn]
+  - key: princess-augusta-sophia-of-the-united-kingdom
+    name: Princess Augusta Sophia
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1768-11-08
+    died: 1840-09-22
+    coverage: not-read
+    note: "Second daughter of George III; never married."
+    sources: [wp-princess-augusta-sophia-of-the-united-kingdom]
+  - key: princess-elizabeth-of-the-united-kingdom
+    name: Princess Elizabeth
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1770-05-22
+    died: 1840-01-10
+    coverage: not-read
+    note: "Third daughter of George III; Landgravine of Hesse-Homburg as wife of Frederick VI (married 1818). Died in Frankfurt."
+    sources: [wp-princess-elizabeth-of-the-united-kingdom]
+  - key: ernest-augustus-king-of-hanover
+    name: Ernest Augustus, King of Hanover
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1771-06-05
+    died: 1851-11-18
+    coverage: not-read
+    note: "Fifth son of George III, Duke of Cumberland; King of Hanover from 1837, when Salic law kept Victoria from the Hanoverian throne."
+    sources: [wp-ernest-augustus-king-of-hanover]
+  - key: prince-augustus-frederick-duke-of-sussex
+    name: Prince Augustus Frederick, Duke of Sussex
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1773-01-27
+    died: 1843-04-21
+    coverage: not-read
+    note: "Sixth son of George III; a liberal Whig. Both his marriages broke the Royal Marriages Act 1772."
+    sources: [wp-prince-augustus-frederick-duke-of-sussex]
+  - key: prince-adolphus-duke-of-cambridge
+    name: Prince Adolphus, Duke of Cambridge
+    type: Royalty
+    sex: male
+    house: Hanover
+    born: 1774-02-24
+    died: 1850-07-08
+    coverage: not-read
+    note: "Seventh son of George III; Viceroy of Hanover 1816-1837."
+    sources: [wp-prince-adolphus-duke-of-cambridge]
+  - key: princess-mary-duchess-of-gloucester-and-edinburgh
+    name: Princess Mary, Duchess of Gloucester and Edinburgh
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1776-04-25
+    died: 1857-04-30
+    coverage: not-read
+    note: "Fourth daughter of George III; married her cousin Prince William Frederick, Duke of Gloucester and Edinburgh, in 1816."
+    sources: [wp-princess-mary-duchess-of-gloucester-and-edinburgh]
+  - key: princess-sophia-of-the-united-kingdom
+    name: Princess Sophia
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1777-11-03
+    died: 1848-05-27
+    coverage: not-read
+    note: "Fifth daughter of George III; never married."
+    sources: [wp-princess-sophia-of-the-united-kingdom]
+  - key: princess-amelia-of-the-united-kingdom
+    name: Princess Amelia
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1783-08-07
+    died: 1810-11-02
+    coverage: not-read
+    note: "Youngest child and favourite of George III; her death is credited with contributing to his final decline and the Regency of 1811."
+    sources: [wp-princess-amelia-of-the-united-kingdom]
+
+
+links:
+  # George I
+  - {parent: ernest-augustus-elector-of-hanover, child: george-i-of-great-britain}
+  - {parent: sophia-of-hanover, child: george-i-of-great-britain}
+  - {spouse: george-i-of-great-britain, to: sophia-dorothea-of-celle, year: 1682}
+  - {parent: george-i-of-great-britain, child: george-ii-of-great-britain}
+  - {parent: sophia-dorothea-of-celle, child: george-ii-of-great-britain}
+  - {parent: george-i-of-great-britain, child: sophia-dorothea-of-hanover}
+  - {parent: sophia-dorothea-of-celle, child: sophia-dorothea-of-hanover}
+  # George II
+  - {spouse: george-ii-of-great-britain, to: caroline-of-ansbach, year: 1705}
+  - {parent: george-ii-of-great-britain, child: frederick-prince-of-wales}
+  - {parent: caroline-of-ansbach, child: frederick-prince-of-wales}
+  - {parent: george-ii-of-great-britain, child: anne-princess-royal-and-princess-of-orange}
+  - {parent: caroline-of-ansbach, child: anne-princess-royal-and-princess-of-orange}
+  - {parent: george-ii-of-great-britain, child: princess-amelia-of-great-britain}
+  - {parent: caroline-of-ansbach, child: princess-amelia-of-great-britain}
+  - {parent: george-ii-of-great-britain, child: princess-caroline-of-great-britain}
+  - {parent: caroline-of-ansbach, child: princess-caroline-of-great-britain}
+  - {parent: george-ii-of-great-britain, child: prince-william-duke-of-cumberland}
+  - {parent: caroline-of-ansbach, child: prince-william-duke-of-cumberland}
+  - {parent: george-ii-of-great-britain, child: princess-mary-of-great-britain}
+  - {parent: caroline-of-ansbach, child: princess-mary-of-great-britain}
+  - {parent: george-ii-of-great-britain, child: louise-of-great-britain}
+  - {parent: caroline-of-ansbach, child: louise-of-great-britain}
+  # George III
+  - {parent: frederick-prince-of-wales, child: george-iii}
+  - {parent: princess-augusta-of-saxe-gotha, child: george-iii}
+  - {spouse: george-iii, to: charlotte-of-mecklenburg-strelitz, year: 1761}
+  - {parent: george-iii, child: george-iv}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: george-iv}
+  - {parent: george-iii, child: prince-frederick-duke-of-york-and-albany}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: prince-frederick-duke-of-york-and-albany}
+  - {parent: george-iii, child: william-iv}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: william-iv}
+  - {parent: george-iii, child: charlotte-princess-royal}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: charlotte-princess-royal}
+  - {parent: george-iii, child: prince-edward-duke-of-kent-and-strathearn}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: prince-edward-duke-of-kent-and-strathearn}
+  - {parent: george-iii, child: princess-augusta-sophia-of-the-united-kingdom}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: princess-augusta-sophia-of-the-united-kingdom}
+  - {parent: george-iii, child: princess-elizabeth-of-the-united-kingdom}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: princess-elizabeth-of-the-united-kingdom}
+  - {parent: george-iii, child: ernest-augustus-king-of-hanover}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: ernest-augustus-king-of-hanover}
+  - {parent: george-iii, child: prince-augustus-frederick-duke-of-sussex}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: prince-augustus-frederick-duke-of-sussex}
+  - {parent: george-iii, child: prince-adolphus-duke-of-cambridge}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: prince-adolphus-duke-of-cambridge}
+  - {parent: george-iii, child: princess-mary-duchess-of-gloucester-and-edinburgh}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: princess-mary-duchess-of-gloucester-and-edinburgh}
+  - {parent: george-iii, child: princess-sophia-of-the-united-kingdom}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: princess-sophia-of-the-united-kingdom}
+  - {parent: george-iii, child: princess-amelia-of-the-united-kingdom}
+  - {parent: charlotte-of-mecklenburg-strelitz, child: princess-amelia-of-the-united-kingdom}
+  # Victoria's father (her mother is in part 5b)
+  - {parent: prince-edward-duke-of-kent-and-strathearn, child: victoria-of-the-united-kingdom}
+
+moments:
+  - {person: ernest-augustus-elector-of-hanover, role: born, place: herzberg-castle, year: 1629}
+  - {person: sophia-of-hanover, role: born, place: the-hague, year: 1630}
+  - {person: sophia-of-hanover, role: buried, place: leineschloss}
+  - {person: sophia-dorothea-of-celle, role: born, place: celle, year: 1666}
+  - {person: sophia-dorothea-of-celle, role: buried, place: celle, year: 1727}
+  - {person: sophia-dorothea-of-hanover, role: born, place: hanover, year: 1687}
+  - {person: caroline-of-ansbach, role: born, place: ansbach, year: 1683}
+  - {person: caroline-of-ansbach, role: buried, place: westminster-abbey, year: 1737}
+  - {person: frederick-prince-of-wales, role: born, place: hanover, year: 1707}
+  - {person: frederick-prince-of-wales, role: buried, place: westminster-abbey, year: 1751}
+  - {person: anne-princess-royal-and-princess-of-orange, role: born, place: herrenhausen-palace, year: 1709}
+  - {person: princess-amelia-of-great-britain, role: born, place: herrenhausen-palace, year: 1711}
+  - {person: princess-amelia-of-great-britain, role: buried, place: westminster-abbey}
+  - {person: princess-caroline-of-great-britain, role: born, place: herrenhausen-palace, year: 1713}
+  - {person: princess-caroline-of-great-britain, role: buried, place: westminster-abbey}
+  - {person: prince-william-duke-of-cumberland, role: born, place: leicester-house-westminster, year: 1721}
+  - {person: prince-william-duke-of-cumberland, role: buried, place: westminster-abbey}
+  - {person: princess-mary-of-great-britain, role: born, place: leicester-house-westminster, year: 1723}
+  - {person: louise-of-great-britain, role: born, place: leicester-house-westminster, year: 1724}
+  - {person: louise-of-great-britain, role: buried, place: roskilde-cathedral}
+  - {person: princess-augusta-of-saxe-gotha, role: born, place: gotha, year: 1719}
+  - {person: princess-augusta-of-saxe-gotha, role: buried, place: westminster-abbey, year: 1772}
+  - {person: charlotte-of-mecklenburg-strelitz, role: born, place: mirow, year: 1744}
+  - {person: charlotte-of-mecklenburg-strelitz, role: buried, place: st-georges-chapel-windsor, year: 1818}
+  - {person: prince-frederick-duke-of-york-and-albany, role: born, place: st-jamess-palace, year: 1763}
+  - {person: prince-frederick-duke-of-york-and-albany, role: buried, place: st-georges-chapel-windsor}
+  - {person: charlotte-princess-royal, role: born, place: buckingham-palace, year: 1766}
+  - {person: charlotte-princess-royal, role: buried, place: ludwigsburg-palace}
+  - {person: prince-edward-duke-of-kent-and-strathearn, role: buried, place: st-georges-chapel-windsor}
+  - {person: princess-augusta-sophia-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1768}
+  - {person: princess-augusta-sophia-of-the-united-kingdom, role: buried, place: st-georges-chapel-windsor, year: 1840}
+  - {person: princess-elizabeth-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1770}
+  - {person: princess-elizabeth-of-the-united-kingdom, role: buried, place: bad-homburg-castle}
+  - {person: ernest-augustus-king-of-hanover, role: born, place: buckingham-palace, year: 1771}
+  - {person: ernest-augustus-king-of-hanover, role: buried, place: berggarten-mausoleum-hanover}
+  - {person: prince-augustus-frederick-duke-of-sussex, role: born, place: buckingham-palace, year: 1773}
+  - {person: prince-augustus-frederick-duke-of-sussex, role: buried, place: kensal-green-cemetery, year: 1843}
+  - {person: prince-adolphus-duke-of-cambridge, role: born, place: buckingham-palace, year: 1774}
+  - {person: prince-adolphus-duke-of-cambridge, role: buried, place: st-annes-church-kew}
+  - {person: princess-mary-duchess-of-gloucester-and-edinburgh, role: born, place: buckingham-palace, year: 1776}
+  - {person: princess-sophia-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1777}
+  - {person: princess-sophia-of-the-united-kingdom, role: buried, place: kensal-green-cemetery}
+  - {person: princess-amelia-of-the-united-kingdom, role: born, place: royal-lodge, year: 1783}
+  - {person: princess-amelia-of-the-united-kingdom, role: buried, place: st-georges-chapel-windsor}
