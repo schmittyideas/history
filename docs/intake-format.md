@@ -38,6 +38,7 @@ sources:
 | `born`, `died` | Year, or full date `1120-11-25`. BC years are negative: `-384` = 384 BC (see below) |
 | `born_estimated`, `died_estimated` | `true` when the date is approximate (shown as "c.") |
 | `house`, `realm` | Optional: dynasty and realm, used for lanes later |
+| `sex` | `male` or `female`, as the source states. Person panels list a parent's children as Sons and Daughters with it; children without it show as Children |
 | `prominence` | 1–5 stars: how important (5 = always shown). For events, the timeline labels 5s always, then 4, 3, 2, 1 while labels fit; the rest get a small marker with the name on hover. Left out, it counts as 3 |
 | `image_url`, `image_thumb` | Links to the person's picture and a ~400px thumbnail (Wikimedia Commons). Links only; nothing is copied. Use only images the Commons page marks public domain or freely licensed |
 | `image_page` | The Commons file page (author, licence, credit) |

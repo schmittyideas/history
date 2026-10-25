@@ -155,6 +155,17 @@ function indexData(raw) {
     // Every realm a title names (England, Byzantine Empire, Kievan Rus'), for searching and focusing.
     realmNames: [...new Set([...titles.map(t => t.realm), ...(raw.realms || []).map(r => r.name)])].filter(Boolean),
     titlesOf: id => allTitles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)),
+    // Who held each of a person's titles just before and after them: that title's holders in date order, as the
+    // Year view lists them. A ruler with two spells (Æthelred) gets the one before the first and the one after the last.
+    // Military commands are left out.
+    successionOf: id => [...new Set(titles.filter(t => t.entity_id === id).sort((a, b) => byYear(a.start_year, b.start_year)).map(t => t.title))]
+      .map(name => {
+        const line = titles.filter(t => t.title === name)
+          .sort((x, y) => byYear(x.start_year, y.start_year) || (x.start_date || "").localeCompare(y.start_date || ""));
+        const first = line.findIndex(t => t.entity_id === id), last = line.findLastIndex(t => t.entity_id === id);
+        const prev = line.slice(0, first).reverse().find(t => t.entity_id !== id), next = line.slice(last + 1).find(t => t.entity_id !== id);
+        return { title: name, prev: prev && byId[prev.entity_id], next: next && byId[next.entity_id] };
+      }),
     // Artworks a person made (artwork_people role "creator").
     worksBy: id => {
       const byId = Object.fromEntries((raw.artworks || []).map(w => [w.id, w]));
@@ -895,6 +906,24 @@ function linkNames(text) {
 }
 const joinNodes = (nodes, empty = "None recorded") => nodes.length ? nodes.flatMap((n, i) => i ? [", ", n] : [n]) : [empty];
 
+// A person's family as labelled rows, shared by the side panel and the Explore Person card; `link` draws a person.
+// Children split into Sons and Daughters by `sex` (sql/020); those without it stay Children. Empty child rows are
+// left out, but a person with no children recorded at all says so.
+function familyRows(id, link) {
+  const db = S.db, kids = db.childrenOf(id);
+  const kid = k => link(k, k.birth_year != null || k.death_year != null ? ` (${fmtSpan(k.birth_year, k.death_year)})` : "");
+  const split = [["Sons", kids.filter(k => k.sex === "male")], ["Daughters", kids.filter(k => k.sex === "female")], ["Children", kids.filter(k => !k.sex)]]
+    .filter(([, ks]) => ks.length).map(([label, ks]) => [label, joinNodes(ks.map(kid))]);
+  return [
+    ["Parents", joinNodes(db.parentsOf(id).map(x => link(x)))],
+    ["Spouses", joinNodes(db.spousesOf(id).map(s => link(s.person, s.year != null ? ` (m. ${fmtYear(s.year)})` : "")))],
+    ...(split.length ? split : [["Children", joinNodes([])]]),
+  ];
+}
+// One line per title: "King of England" over "← Henry VII · Edward VI →".
+const successionLine = (s, link) => h("span", { class: "succ" }, h("span", { class: "succ-t", text: s.title }),
+  h("span", {}, ...(s.prev ? ["← ", link(s.prev)] : ["none recorded"]), " · ", ...(s.next ? [link(s.next), " →"] : ["none recorded"])));
+
 function reveal(id) {
   const L = S.layout, c = $("chart");
   if (L && L.xOf[id] != null) {
@@ -930,11 +959,6 @@ function select(id) {
     ["Born", fmtYear(p.birth_year) ?? "Unknown"],
     ["Died", fmtYear(p.death_year) ?? "Unknown"],
     ["Age at death", age ?? "Unknown"],
-    ["Spouses", joinNodes(db.spousesOf(id).map(s => personLink(s.person, s.year != null ? ` (m. ${fmtYear(s.year)})` : "")))],
-    ["Parents", joinNodes(db.parentsOf(id).map(x => personLink(x)))],
-    ["Children", joinNodes(db.childrenOf(id).map(x => personLink(x)))],
-    ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
-    ...(db.filmsPortraying(id).length ? [["Portrayed in", joinNodes(db.filmsPortraying(id).map(f => eventLink(f, ` (${fmtYear(f.start_year)})`)))]] : []),
     // Reigns and offices first, then military commands in a row of their own (iron, like their strip on the timeline).
     ...[db.titlesOf(id).filter(t => !isCommand(t)), db.titlesOf(id).filter(isCommand)].filter(ts => ts.length).map(ts => [
       isCommand(ts[0]) ? h("span", {}, h("i", { class: "sw cmd-sw", "aria-hidden": "true" }), " Commands")
@@ -942,6 +966,10 @@ function select(id) {
       joinNodes(ts.map(t => h("button", { type: "button", class: "plink",
         title: isCommand(t) ? `What happened during ${reignSpan(t)}` : `Who else ruled during ${reignSpan(t)}`, onclick: () => openYear(t.start_year, t.end_year ?? t.start_year),
         text: `${t.title}${t.disputed ? " (disputed)" : ""}, ${reignSpan(t)}` })))]),
+    ...(db.successionOf(id).length ? [["Succession", db.successionOf(id).map(s => successionLine(s, personLink))]] : []),
+    ...familyRows(id, personLink),
+    ["Events", joinNodes(db.eventsOf(id).map(x => eventLink(x.event, x.role ? ` (${x.role})` : "")), "None linked")],
+    ...(db.filmsPortraying(id).length ? [["Portrayed in", joinNodes(db.filmsPortraying(id).map(f => eventLink(f, ` (${fmtYear(f.start_year)})`)))]] : []),
     ...externalRow("person", p.key),
     ["Sources", sourceLinks(db.sourcesFor("person", p.key))],
     ["Obsidian note", obsidianLink(p.obsidian_link)],
@@ -3203,13 +3231,14 @@ function personCard() {
       w => row2([xWork(w), w.kind ? ` (${w.kind})` : ""], workSpan(w) ? xYear(w.start_year, workSpan(w)) : "undated"))),
     ...[["Titles", titles.filter(t => !isCommand(t))], ["Commands", titles.filter(isCommand)]].map(([label, ts]) =>
       ts.length ? xSec(label, xList("person", ts, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null),
+    xSec("Succession", xList("person", db.successionOf(p.id), 3, s => h("li", { class: "xsucc" }, successionLine(s, xPerson)))),
+    family.length ? xSec("Family", h("dl", { class: "xfam" }, ...familyRows(p.id, xPerson).flatMap(([k, v]) => [h("dt", { text: k }), h("dd", {}, ...v)]))) : null,
     evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
     portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xFilm(f), xYear(f.start_year)))) : null,
     xSec("Places", new Set(stopsForPerson(p.id).map(s => s.place.id)).size >= 2
       ? h("button", { type: "button", class: "xexp xjourney", title: `Follow ${p.name}'s life stop by stop, full screen`, onclick: () => openJourney(p.id, "explore"), text: "Journey ⤢" }) : null,
       xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
       s => h("span", { class: "xchip" }, xPlace(s.place), s.what && s.what.length < 14 ? h("span", { class: "yrs", text: ` ${s.what.toLowerCase()}` }) : null))),
-    family.length ? xSec("Family", xChips("person", family, 6, ([o, r]) => h("span", { class: "xchip" }, xPerson(o), h("span", { class: "yrs", text: ` ${r}` })))) : null,
     xSec("Contemporaries", xChips("person", contemporaries, 8, o => h("span", { class: "xchip" }, xPerson(o)))),
     h("div", { class: "xfoot" }, h("button", { type: "button", class: "plink", onclick: toTimeline(() => reveal(p.id)), text: "See them on the timeline" })),
   ];

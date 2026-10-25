@@ -136,15 +136,16 @@ def test_artworks():
 def test_person_coverage():
     db = FakeDB(snapshot())
     docs = [("c.yaml", {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}], "people": [
-        {"key": "c1", "name": "C1", "type": "Artist", "coverage": "partly", "coverage_note": "dates only", "sitelinks": 120, "sitelinks_on": "2026-10-10", "sources": ["s"]}]})]
+        {"key": "c1", "name": "C1", "type": "Artist", "coverage": "partly", "coverage_note": "dates only", "sitelinks": 120, "sitelinks_on": "2026-10-10", "sex": "female", "sources": ["s"]}]})]
     world = intake.World(db)
     plan = intake.plan_files(world, docs)
     assert not plan.errors and not plan.warnings, (plan.errors, plan.warnings)
     intake.apply_files(world, docs, log=lambda m: None)
     r = [x for x in db.t["entities"] if x["key"] == "c1"][0]
-    assert (r["coverage"], r["coverage_note"], r["sitelinks"]) == ("partly", "dates only", 120)
-    bad = [("d.yaml", {"batch": {"title": "t"}, "people": [{"key": "c1", "coverage": "done"}, {"key": "c1", "coverage": "partly"}]})]
+    assert (r["coverage"], r["coverage_note"], r["sitelinks"], r["sex"]) == ("partly", "dates only", 120, "female")
+    bad = [("d.yaml", {"batch": {"title": "t"}, "people": [{"key": "c1", "coverage": "done", "sex": "f"}, {"key": "c1", "coverage": "partly"}]})]
     plan = intake.plan_files(intake.World(db), bad)
+    assert any("sex must be one of" in e for e in plan.errors)
     assert any("coverage must be one of" in e for e in plan.errors) and any("without a `coverage_note`" in w for w in plan.warnings)
 
 def test_museums():
