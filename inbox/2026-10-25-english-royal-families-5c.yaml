@@ -1,0 +1,246 @@
+batch:
+  title: "Royal families, part 5c: Windsor, George V to Charles III (1910-today)"
+  requested: "Ty: fill in parents, spouses and children (who reached 12) for each English monarch (issue #292, agreed 2026-10-25)"
+  date: 2026-10-25
+  notes: "Sex for George V, Edward VIII, George VI, Elizabeth II and Charles III; their marriages and legitimate children who reached age 12, each with their own Wikipedia article, birth and burial places. George V's parents are linked in part 5b. Living people get birth facts only."
+
+# Notes for the reviewer
+# - Already in: Edward VIII's marriage to Wallis Simpson (1937) and George VI's to Elizabeth Bowes-Lyon (1923), so no new
+#   spouse links for them; Edward VIII had no children. Queen Elizabeth The Queen Mother and Prince Philip are existing records.
+# - Burial moments carry a year only where the article dates the burial; otherwise the year is left out. Where someone was
+#   moved, the moment is the final resting place: Prince George, Duke of Kent (reburied in the Royal Burial Ground, Frogmore,
+#   1968); Princess Margaret (ashes placed in the King George VI Memorial Chapel, St George's Chapel, Windsor, 2002).
+#   Diana's grave is on an island in the grounds of Althorp; the article does not date the burial.
+# - Living people (Anne, Andrew, Edward, Camilla, William, Harry): birth date and birthplace only, no death.
+# - Royal Burial Ground, Frogmore is also defined in part 5b (same key and values), so either part can go in first.
+# Left out
+# - Nobody: every legitimate child of these monarchs reached 12 (George V's youngest, Prince John, died at 13).
+# - No title changes in this batch.
+
+sources:
+  - {key: wp-mary-of-teck, title: "Mary of Teck (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_of_Teck"}
+  - {key: wp-mary-princess-royal-and-countess-of-harewood, title: "Mary, Princess Royal and Countess of Harewood (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary,_Princess_Royal_and_Countess_of_Harewood"}
+  - {key: wp-prince-henry-duke-of-gloucester, title: "Prince Henry, Duke of Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Henry,_Duke_of_Gloucester"}
+  - {key: wp-prince-george-duke-of-kent, title: "Prince George, Duke of Kent (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_George,_Duke_of_Kent"}
+  - {key: wp-prince-john-of-the-united-kingdom, title: "Prince John of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_John_of_the_United_Kingdom"}
+  - {key: wp-princess-margaret-countess-of-snowdon, title: "Princess Margaret, Countess of Snowdon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Margaret,_Countess_of_Snowdon"}
+  - {key: wp-anne-princess-royal, title: "Anne, Princess Royal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne,_Princess_Royal"}
+  - {key: wp-andrew-mountbatten-windsor, title: "Andrew Mountbatten-Windsor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andrew_Mountbatten-Windsor"}
+  - {key: wp-prince-edward-duke-of-edinburgh, title: "Prince Edward, Duke of Edinburgh (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Edward,_Duke_of_Edinburgh"}
+  - {key: wp-diana-princess-of-wales, title: "Diana, Princess of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Diana,_Princess_of_Wales"}
+  - {key: wp-queen-camilla, title: "Queen Camilla (Wikipedia)", url: "https://en.wikipedia.org/wiki/Queen_Camilla"}
+  - {key: wp-william-prince-of-wales, title: "William, Prince of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/William,_Prince_of_Wales"}
+  - {key: wp-prince-harry-duke-of-sussex, title: "Prince Harry, Duke of Sussex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Harry,_Duke_of_Sussex"}
+  - {key: wp-all-saints-church-harewood, title: "All Saints' Church, Harewood (Wikipedia)", url: "https://en.wikipedia.org/wiki/All_Saints%27_Church,_Harewood"}
+  - {key: wp-st-mary-magdalene-church-sandringham, title: "St Mary Magdalene Church, Sandringham (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Mary_Magdalene_Church,_Sandringham"}
+  - {key: wp-clarence-house, title: "Clarence House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clarence_House"}
+  - {key: wp-park-house-sandringham, title: "Park House, Sandringham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Park_House,_Sandringham"}
+  - {key: wp-althorp, title: "Althorp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Althorp"}
+  - {key: wp-kings-college-hospital, title: "King's College Hospital (Wikipedia)", url: "https://en.wikipedia.org/wiki/King%27s_College_Hospital"}
+  - {key: wp-royal-burial-ground-frogmore, title: "Royal Burial Ground, Frogmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Burial_Ground,_Frogmore"}
+
+places:
+  - {key: all-saints-church-harewood, name: "All Saints' Church, Harewood", kind: church, city: Harewood, region: West Yorkshire, country: England, lat: 53.9003, lng: -1.524, sources: [wp-all-saints-church-harewood]}
+  - {key: st-mary-magdalene-church-sandringham, name: "St Mary Magdalene Church, Sandringham", kind: church, city: Sandringham, region: Norfolk, country: England, lat: 52.8282, lng: 0.5089, sources: [wp-st-mary-magdalene-church-sandringham]}
+  - {key: clarence-house, name: Clarence House, kind: house, city: London, region: Greater London, country: England, lat: 51.504, lng: -0.1385, sources: [wp-clarence-house]}
+  - {key: park-house-sandringham, name: "Park House, Sandringham", kind: house, city: Sandringham, region: Norfolk, country: England, lat: 52.8277, lng: 0.5058, sources: [wp-park-house-sandringham]}
+  - {key: althorp, name: Althorp, kind: country house, region: Northamptonshire, country: England, lat: 52.2802, lng: -1.0019, sources: [wp-althorp]}
+  - {key: kings-college-hospital, name: "King's College Hospital", kind: hospital, city: London, region: Greater London, country: England, lat: 51.468, lng: -0.0938, sources: [wp-kings-college-hospital]}
+  - {key: royal-burial-ground-frogmore, name: "Royal Burial Ground, Frogmore", kind: cemetery, city: Windsor, region: Berkshire, country: England, lat: 51.474, lng: -0.5986, sources: [wp-royal-burial-ground-frogmore]}
+
+people:
+  # Monarchs: sex only
+  - {key: george-v, sex: male}
+  - {key: edward-viii, sex: male}
+  - {key: george-vi, sex: male}
+  - {key: elizabeth-ii, sex: female}
+  - {key: charles-iii, sex: male}
+
+  # George V's wife and children (Edward VIII and George VI are already in)
+  - key: mary-of-teck
+    name: Mary of Teck
+    type: Royalty
+    sex: female
+    born: 1867-05-26
+    died: 1953-03-24
+    coverage: not-read
+    note: "Queen of the United Kingdom as wife of George V (married 6 July 1893); first engaged to his elder brother Prince Albert Victor, who died in 1892."
+    sources: [wp-mary-of-teck]
+  - key: mary-princess-royal-and-countess-of-harewood
+    name: Mary, Princess Royal
+    type: Royalty
+    sex: female
+    house: Windsor
+    born: 1897-04-25
+    died: 1965-03-28
+    coverage: not-read
+    note: "Only daughter of George V; married Henry Lascelles, Viscount Lascelles (later 6th Earl of Harewood), in 1922."
+    sources: [wp-mary-princess-royal-and-countess-of-harewood]
+  - key: prince-henry-duke-of-gloucester
+    name: Prince Henry, Duke of Gloucester
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1900-03-31
+    died: 1974-06-10
+    coverage: not-read
+    note: "Third son of George V; Governor-General of Australia 1945-1947."
+    sources: [wp-prince-henry-duke-of-gloucester]
+  - key: prince-george-duke-of-kent
+    name: Prince George, Duke of Kent
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1902-12-20
+    died: 1942-08-25
+    coverage: not-read
+    note: "Fourth son of George V; served in the Royal Navy in the 1920s; killed in an air crash in Scotland in 1942."
+    sources: [wp-prince-george-duke-of-kent]
+  - key: prince-john-of-the-united-kingdom
+    name: Prince John
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1905-07-12
+    died: 1919-01-18
+    coverage: not-read
+    note: "Youngest child of George V; found to have epilepsy in 1909, he died after a seizure at Wood Farm, Sandringham, aged 13."
+    sources: [wp-prince-john-of-the-united-kingdom]
+
+  # George VI's younger daughter (Elizabeth II is already in)
+  - key: princess-margaret-countess-of-snowdon
+    name: Princess Margaret, Countess of Snowdon
+    type: Royalty
+    sex: female
+    house: Windsor
+    born: 1930-08-21
+    died: 2002-02-09
+    coverage: not-read
+    note: "Younger daughter of George VI and only sibling of Elizabeth II; married Antony Armstrong-Jones, later Earl of Snowdon, in 1960 (divorced 1978)."
+    sources: [wp-princess-margaret-countess-of-snowdon]
+
+  # Elizabeth II's children (Charles III is already in)
+  - key: anne-princess-royal
+    name: Anne, Princess Royal
+    type: Royalty
+    sex: female
+    house: Windsor
+    born: 1950-08-15
+    coverage: not-read
+    note: "Only daughter of Elizabeth II and Prince Philip."
+    sources: [wp-anne-princess-royal]
+  - key: andrew-mountbatten-windsor
+    name: Andrew Mountbatten-Windsor
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1960-02-19
+    coverage: not-read
+    note: "Second son of Elizabeth II and Prince Philip; Royal Navy helicopter pilot in the Falklands War; created Duke of York in 1986. Charles III removed his remaining royal styles and honours in 2025."
+    sources: [wp-andrew-mountbatten-windsor]
+  - key: prince-edward-duke-of-edinburgh
+    name: Prince Edward, Duke of Edinburgh
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1964-03-10
+    coverage: not-read
+    note: "Youngest child of Elizabeth II and Prince Philip; made Duke of Edinburgh, his father's title, in 2023."
+    sources: [wp-prince-edward-duke-of-edinburgh]
+
+  # Charles III's wives and sons
+  - key: diana-princess-of-wales
+    name: Diana, Princess of Wales
+    type: Royalty
+    sex: female
+    born: 1961-07-01
+    died: 1997-08-31
+    coverage: not-read
+    note: "First wife of Charles III (married 29 July 1981 at St Paul's Cathedral, divorced 1996) and mother of Princes William and Harry; died after a car crash in Paris."
+    sources: [wp-diana-princess-of-wales]
+  - key: queen-camilla
+    name: Queen Camilla
+    type: Royalty
+    sex: female
+    born: 1947-07-17
+    coverage: not-read
+    note: "Born Camilla Shand; wife of Charles III since 2005 and Queen since his accession in 2022."
+    sources: [wp-queen-camilla]
+  - key: william-prince-of-wales
+    name: William, Prince of Wales
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1982-06-21
+    coverage: not-read
+    note: "Elder son of Charles III and Diana; heir apparent to the throne."
+    sources: [wp-william-prince-of-wales]
+  - key: prince-harry-duke-of-sussex
+    name: Prince Harry, Duke of Sussex
+    type: Royalty
+    sex: male
+    house: Windsor
+    born: 1984-09-15
+    coverage: not-read
+    note: "Younger son of Charles III and Diana."
+    sources: [wp-prince-harry-duke-of-sussex]
+
+links:
+  # George V (his parents are linked in part 5b)
+  - {spouse: george-v, to: mary-of-teck, year: 1893}
+  - {parent: george-v, child: edward-viii}
+  - {parent: mary-of-teck, child: edward-viii}
+  - {parent: george-v, child: george-vi}
+  - {parent: mary-of-teck, child: george-vi}
+  - {parent: george-v, child: mary-princess-royal-and-countess-of-harewood}
+  - {parent: mary-of-teck, child: mary-princess-royal-and-countess-of-harewood}
+  - {parent: george-v, child: prince-henry-duke-of-gloucester}
+  - {parent: mary-of-teck, child: prince-henry-duke-of-gloucester}
+  - {parent: george-v, child: prince-george-duke-of-kent}
+  - {parent: mary-of-teck, child: prince-george-duke-of-kent}
+  - {parent: george-v, child: prince-john-of-the-united-kingdom}
+  - {parent: mary-of-teck, child: prince-john-of-the-united-kingdom}
+  # George VI (marriage already in)
+  - {parent: george-vi, child: elizabeth-ii}
+  - {parent: queen-elizabeth-the-queen-mother, child: elizabeth-ii}
+  - {parent: george-vi, child: princess-margaret-countess-of-snowdon}
+  - {parent: queen-elizabeth-the-queen-mother, child: princess-margaret-countess-of-snowdon}
+  # Elizabeth II
+  - {spouse: elizabeth-ii, to: prince-philip-duke-of-edinburgh, year: 1947}
+  - {parent: elizabeth-ii, child: charles-iii}
+  - {parent: prince-philip-duke-of-edinburgh, child: charles-iii}
+  - {parent: elizabeth-ii, child: anne-princess-royal}
+  - {parent: prince-philip-duke-of-edinburgh, child: anne-princess-royal}
+  - {parent: elizabeth-ii, child: andrew-mountbatten-windsor}
+  - {parent: prince-philip-duke-of-edinburgh, child: andrew-mountbatten-windsor}
+  - {parent: elizabeth-ii, child: prince-edward-duke-of-edinburgh}
+  - {parent: prince-philip-duke-of-edinburgh, child: prince-edward-duke-of-edinburgh}
+  # Charles III
+  - {spouse: charles-iii, to: diana-princess-of-wales, year: 1981}
+  - {spouse: charles-iii, to: queen-camilla, year: 2005}
+  - {parent: charles-iii, child: william-prince-of-wales}
+  - {parent: diana-princess-of-wales, child: william-prince-of-wales}
+  - {parent: charles-iii, child: prince-harry-duke-of-sussex}
+  - {parent: diana-princess-of-wales, child: prince-harry-duke-of-sussex}
+
+moments:
+  - {person: mary-of-teck, role: born, place: kensington-palace, year: 1867}
+  - {person: mary-of-teck, role: buried, place: st-georges-chapel-windsor}
+  - {person: mary-princess-royal-and-countess-of-harewood, role: born, place: york-cottage, year: 1897}
+  - {person: mary-princess-royal-and-countess-of-harewood, role: buried, place: all-saints-church-harewood}
+  - {person: prince-henry-duke-of-gloucester, role: born, place: york-cottage, year: 1900}
+  - {person: prince-henry-duke-of-gloucester, role: buried, place: royal-burial-ground-frogmore}
+  - {person: prince-george-duke-of-kent, role: born, place: york-cottage, year: 1902}
+  - {person: prince-george-duke-of-kent, role: buried, place: royal-burial-ground-frogmore, year: 1968}
+  - {person: prince-john-of-the-united-kingdom, role: born, place: york-cottage, year: 1905}
+  - {person: prince-john-of-the-united-kingdom, role: buried, place: st-mary-magdalene-church-sandringham}
+  - {person: princess-margaret-countess-of-snowdon, role: born, place: glamis-castle, year: 1930}
+  - {person: princess-margaret-countess-of-snowdon, role: buried, place: st-georges-chapel-windsor, year: 2002}
+  - {person: anne-princess-royal, role: born, place: clarence-house, year: 1950}
+  - {person: andrew-mountbatten-windsor, role: born, place: buckingham-palace, year: 1960}
+  - {person: prince-edward-duke-of-edinburgh, role: born, place: buckingham-palace, year: 1964}
+  - {person: diana-princess-of-wales, role: born, place: park-house-sandringham, year: 1961}
+  - {person: diana-princess-of-wales, role: buried, place: althorp}
+  - {person: queen-camilla, role: born, place: kings-college-hospital, year: 1947}
+  - {person: william-prince-of-wales, role: born, place: st-marys-hospital-london, year: 1982}
+  - {person: prince-harry-duke-of-sussex, role: born, place: st-marys-hospital-london, year: 1984}
