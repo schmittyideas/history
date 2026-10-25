@@ -1417,11 +1417,11 @@ function journeyStops(id) {
   const ok = pl => pl && pl.lat != null && pl.lng != null;
   return stops.filter(s => s.year != null).sort(byStop).map(s => ({ ...s, place: ok(s.place) ? s.place : null }));
 }
-// The person's age in a stop's year ("age 19", "age c. 19" when the birth year is approximate), or "" if unknown.
+// The person's age in a stop's year ("age 19"), or "" if unknown. An approximate birth year is noted once, above the list.
 const ageAt = (p, y) => {
   if (p?.birth_year == null || y == null) return "";
   const a = yearsBetween(p.birth_year, y);
-  return a <= 0 || (p.death_year != null && y > p.death_year) ? "" : `age ${p.birth_estimated ? "c. " : ""}${a}`;
+  return a <= 0 || (p.death_year != null && y > p.death_year) ? "" : `age ${a}`;
 };
 const stopWhen = s => s.date ? fmtDate(s.date) : s.event?.start_month ? `${MONTHS[s.event.start_month - 1]} ${fmtYear(s.year)}` : fmtYear(s.year);
 
@@ -1445,7 +1445,7 @@ function openJourney(id, from = "timeline") {
         h("button", { type: "button", class: "xexp", id: "journey-close", title: "Back to the panel (Esc)", text: "Shrink ✕", onclick: () => closeJourney() }))),
     h("div", { class: "jbody" },
       h("div", { class: "jmapcol" }, h("div", { class: "jmap", id: "jmap" }), h("p", { class: "hint map-credit", id: "jcredit" })),
-      h("div", { class: "jside" }, h("div", { class: "jstop", id: "jstop", "aria-live": "polite" }), h("ol", { class: "stops jlist", id: "jlist" }))));
+      h("div", { class: "jside" }, h("div", { class: "jstop", id: "jstop", "aria-live": "polite" }), p.birth_estimated && p.birth_year != null ? h("p", { class: "hint", text: `Born about ${fmtYear(p.birth_year)}, so the ages are approximate.` }) : null, h("ol", { class: "stops jlist", id: "jlist" }))));
   [["borders", "Borders then"], ["street", "Street map today"]].forEach(([b, label]) => seg.append(h("button", { type: "button", "aria-pressed": J.base === b, text: label,
     onclick: () => { J.base = b; store.set("journeyBase", b); seg.querySelectorAll("button").forEach((x, i) => x.setAttribute("aria-pressed", (i === 0) === (b === "borders"))); J.k = null; drawJourneyMap(true); } })));
   document.body.append(shell);
