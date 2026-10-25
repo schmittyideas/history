@@ -1,0 +1,49 @@
+batch:
+  title: "China's rulers 1931–1943: Lin Sen, and Chiang Kai-shek as Premier"
+  requested: "Ty: the 1941 world map isn't filling in properly (China had no ruler recorded for 1931-1943)"
+  date: 2026-10-24
+
+# Notes for the reviewer
+# - Lin Sen chaired the Nationalist Government between Chiang's two terms in that post (15 December 1931 – 1 August 1943, his
+#   infobox), so China had no ruler in the database in those years and the Year view and its map left China blank.
+# - Chiang's four terms as Premier (head of the Executive Yuan) come from his infobox's additional positions; the office is the
+#   one his article links as "Premier of the Republic of China".
+# - Facts read through the Wikipedia API on 2026-10-24 (Lin Sen's and Chiang Kai-shek's articles). Sitelinks and place coordinates
+#   from Wikidata. Lin Sen's portrait is public domain on Commons.
+
+sources:
+  - {key: wp-lin-sen, title: "Lin Sen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lin_Sen"}
+  - {key: wd-places-2026-10-24, title: "Wikidata coordinates (P625), read 2026-10-24", url: "https://www.wikidata.org/"}
+
+places:
+  - {key: minhou-county, name: Minhou County, kind: county, region: Fujian, country: China, lat: 26.1512, lng: 119.1363, sources: [wp-lin-sen, wd-places-2026-10-24]}
+  - {key: chongqing, name: Chongqing, kind: city, country: China, lat: 29.55, lng: 106.5069, note: "China's wartime capital from 1937", sources: [wp-lin-sen, wd-places-2026-10-24]}
+
+people:
+  - key: lin-sen
+    name: Lin Sen
+    type: Government
+    born: 1868-03-16
+    died: 1943-08-01
+    prominence: 2
+    sitelinks: 24
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Dates, places and his chairmanship."
+    note: Chairman of China's Nationalist Government, a largely ceremonial head of state, from 1931 until his death in wartime Chongqing.
+    image_url: https://upload.wikimedia.org/wikipedia/commons/3/3b/Lin_Sen.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3b/Lin_Sen.jpg/500px-Lin_Sen.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Lin_Sen.jpg
+    image_license: Public domain
+    sources: [wp-lin-sen]
+
+moments:
+  - {person: lin-sen, role: born, place: minhou-county, year: 1868}
+  - {person: lin-sen, role: died, place: chongqing, year: 1943}
+
+titles:
+  - {person: lin-sen, title: Chairman of the Nationalist Government, realm: China, from: 1931-12-15, to: 1943-08-01, note: Died in office, sources: [wp-lin-sen]}
+  - {person: chiang-kai-shek, title: Premier of the Republic of China, realm: China, from: 1930-12-04, to: 1931-12-15, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: Premier of the Republic of China, realm: China, from: 1935-12-09, to: 1938-01-01, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: Premier of the Republic of China, realm: China, from: 1939-11-20, to: 1945-05-31, sources: [wp-chiang-kai-shek]}
+  - {person: chiang-kai-shek, title: Premier of the Republic of China, realm: China, from: 1947-03-01, to: 1947-04-18, sources: [wp-chiang-kai-shek]}
