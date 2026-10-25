@@ -1,0 +1,204 @@
+batch:
+  title: "English royal families 3b: the Tudors and Philip II, 1485-1603"
+  requested: "Issue #292: parents, spouses (with marriage year) and children who reached 12 for Henry VII, Henry VIII, Edward VI, Lady Jane Grey, Mary I, Philip II of Spain and Elizabeth I"
+  date: 2026-10-25
+  notes: "Family links for the Tudor monarchs and Philip II of Spain (Mary I's husband, with his four marriages and the children who reached 12), with sex on each monarch and their family. Part 3a covers Lancaster and York."
+
+# Notes for the reviewer
+# - Facts checked against each person's own English Wikipedia article (fetched 2026-10-25 with tools/wiki.py).
+# - Children left out because they died before 12: Henry VII's Elizabeth (1492-1495), Edmund and Katherine; Henry VIII's
+#   children who died as infants; Philip II's Ferdinand (1571-1578), Charles Laurence (1573-1575), Diego Felix (1575-1582) and
+#   Maria (1580-1583). Illegitimate children (Henry FitzRoy) are left out. Edward VI, Elizabeth I and Mary I had no children.
+# - Henry VIII's marriages: Anne Boleyn's year is 1533, the formal wedding on 25 January; both her article and Henry's also
+#   record a secret wedding on 14 November 1532.
+# - Elizabeth of York is defined in both 3a and 3b (same key and fields) so this file works whichever merges first; her
+#   birth and burial moments are in 3a.
+# - Lady Jane Grey's mother Frances is a daughter of Mary Tudor, Queen of France: that link is added too, so Jane's family
+#   joins the Tudors. Frances's father, Charles Brandon, 1st Duke of Suffolk, is not in the database and is left for later.
+# - Final resting places are used where a body was moved: Edmund Tudor (Greyfriars, Carmarthen, then St Davids Cathedral in
+#   1539), Mary Tudor (Bury St Edmunds Abbey, then St Mary's Church), Isabella of Portugal (Royal Chapel of Granada, then El
+#   Escorial in 1574), Maria Manuela (Granada, then El Escorial) and Anna of Austria (Badajoz, then El Escorial).
+# - Places left out (article silent): birthplaces of Catherine Parr ("it was once thought" Kendal Castle), Lord Guildford
+#   Dudley, Anna of Austria ("born in Spain"), Catalina Micaela; burials of Henry Grey, Elisabeth of Valois, Carlos and
+#   Catalina Micaela. Henry Grey was born "at Westminster, London", which has no place record of its own: left out.
+# - Frances Grey's article says her remains went to Westminster Abbey, where her funeral was held and her tomb is: buried there.
+# - Mary Tudor was born at Sheen Palace, rebuilt as Richmond Palace from 1501 (the Wikipedia title redirects): richmond-palace.
+# - Arthur was born at Saint Swithun's Priory, the priory of Winchester Cathedral: winchester-cathedral.
+# - Elisabeth of Valois: her article gives 2 April 1546 (Wikidata says 1545); the article is used.
+
+sources:
+  - {key: wp-edmund-tudor-1st-earl-of-richmond, title: "Edmund Tudor, 1st Earl of Richmond (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_Tudor,_1st_Earl_of_Richmond"}
+  - {key: wp-lady-margaret-beaufort, title: "Lady Margaret Beaufort (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lady_Margaret_Beaufort"}
+  - {key: wp-elizabeth-of-york, title: "Elizabeth of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_of_York"}
+  - {key: wp-arthur-prince-of-wales, title: "Arthur, Prince of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Arthur,_Prince_of_Wales"}
+  - {key: wp-margaret-tudor, title: "Margaret Tudor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_Tudor"}
+  - {key: wp-mary-tudor-queen-of-france, title: "Mary Tudor, Queen of France (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_Tudor,_Queen_of_France"}
+  - {key: wp-anne-of-cleves, title: "Anne of Cleves (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_of_Cleves"}
+  - {key: wp-catherine-howard, title: "Catherine Howard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_Howard"}
+  - {key: wp-catherine-parr, title: "Catherine Parr (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_Parr"}
+  - {key: wp-henry-grey-duke-of-suffolk, title: "Henry Grey, Duke of Suffolk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Grey,_Duke_of_Suffolk"}
+  - {key: wp-frances-grey-duchess-of-suffolk, title: "Frances Grey, Duchess of Suffolk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Frances_Grey,_Duchess_of_Suffolk"}
+  - {key: wp-lord-guildford-dudley, title: "Lord Guildford Dudley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lord_Guildford_Dudley"}
+  - {key: wp-isabella-of-portugal, title: "Isabella of Portugal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella_of_Portugal"}
+  - {key: wp-maria-manuela-princess-of-portugal, title: "Maria Manuela, Princess of Portugal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Maria_Manuela,_Princess_of_Portugal"}
+  - {key: wp-elisabeth-of-valois, title: "Elisabeth of Valois (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elisabeth_of_Valois"}
+  - {key: wp-anna-of-austria-queen-of-spain, title: "Anna of Austria, Queen of Spain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anna_of_Austria,_Queen_of_Spain"}
+  - {key: wp-carlos-prince-of-asturias, title: "Carlos, Prince of Asturias (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carlos,_Prince_of_Asturias"}
+  - {key: wp-catalina-micaela-of-spain, title: "Catalina Micaela of Spain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catalina_Micaela_of_Spain"}
+  - {key: wp-palace-of-westminster, title: "Palace of Westminster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Palace_of_Westminster"}
+  - {key: wp-much-hadham, title: "Much Hadham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Much_Hadham"}
+  - {key: wp-bletsoe-castle, title: "Bletsoe Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bletsoe_Castle"}
+  - {key: wp-perth-charterhouse, title: "Perth Charterhouse (Wikipedia)", url: "https://en.wikipedia.org/wiki/Perth_Charterhouse"}
+  - {key: wp-st-marys-church-bury-st-edmunds, title: "St Mary's Church, Bury St Edmunds (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Bury_St_Edmunds"}
+  - {key: wp-lambeth, title: "Lambeth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lambeth"}
+  - {key: wp-sudeley-castle, title: "Sudeley Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sudeley_Castle"}
+  - {key: wp-hatfield-hertfordshire, title: "Hatfield, Hertfordshire (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hatfield,_Hertfordshire"}
+
+places:
+  - {key: palace-of-westminster, name: Palace of Westminster, kind: palace, city: London, region: Greater London, country: England, lat: 51.4992, lng: -0.1247, visitable: true, sources: [wp-palace-of-westminster]}
+  - {key: much-hadham, name: Much Hadham, kind: village, region: Hertfordshire, country: England, lat: 51.854, lng: 0.072, sources: [wp-much-hadham, wp-edmund-tudor-1st-earl-of-richmond]}
+  - {key: bletsoe-castle, name: Bletsoe Castle, kind: castle, city: Bletsoe, region: Bedfordshire, country: England, lat: 52.2143, lng: -0.5026, sources: [wp-bletsoe-castle]}
+  - {key: perth-charterhouse, name: Perth Charterhouse, kind: priory, city: Perth, region: Perth and Kinross, country: Scotland, lat: 56.395, lng: -3.435, ended: 1559, sources: [wp-perth-charterhouse, wp-margaret-tudor]}
+  - {key: st-marys-church-bury-st-edmunds, name: "St Mary's Church, Bury St Edmunds", kind: church, city: Bury St Edmunds, region: Suffolk, country: England, lat: 52.2424, lng: 0.7172, visitable: true, sources: [wp-st-marys-church-bury-st-edmunds]}
+  - {key: lambeth, name: Lambeth, kind: district, city: London, region: Greater London, country: England, lat: 51.49, lng: -0.119, sources: [wp-lambeth]}
+  - {key: sudeley-castle, name: Sudeley Castle, kind: castle, city: Winchcombe, region: Gloucestershire, country: England, lat: 51.9472, lng: -1.9561, visitable: true, sources: [wp-sudeley-castle]}
+  - {key: hatfield-hertfordshire, name: Hatfield, kind: town, region: Hertfordshire, country: England, lat: 51.7636, lng: -0.2258, sources: [wp-hatfield-hertfordshire]}
+
+people:
+  # The monarchs: sex only
+  - {key: henry-vii-of-england, sex: male}
+  - {key: henry-viii-of-england, sex: male}
+  - {key: edward-vi-of-england, sex: male}
+  - {key: lady-jane-grey, sex: female}
+  - {key: mary-i-of-england, sex: female}
+  - {key: philip-ii-of-spain, sex: male}
+  - {key: elizabeth-i-of-england, sex: female}
+  # Family already in the database: sex only
+  - {key: catherine-of-aragon, sex: female}
+  - {key: anne-boleyn, sex: female}
+  - {key: jane-seymour, sex: female}
+  - {key: charles-v-holy-roman-emperor, sex: male}
+  - {key: isabella-clara-eugenia, sex: female}
+  - {key: philip-iii-of-spain, sex: male}
+
+  # Henry VII's parents, wife and children
+  - {key: edmund-tudor-1st-earl-of-richmond, name: "Edmund Tudor, 1st Earl of Richmond", type: Nobility, born: 1430, born_estimated: true, died: 1456-11-03, sex: male, house: Tudor, coverage: not-read, sources: [wp-edmund-tudor-1st-earl-of-richmond]}
+  - {key: lady-margaret-beaufort, name: Lady Margaret Beaufort, type: Nobility, born: 1443-05-31, died: 1509-06-29, sex: female, house: Beaufort, coverage: not-read, sources: [wp-lady-margaret-beaufort]}
+  - {key: elizabeth-of-york, name: Elizabeth of York, type: Royalty, born: 1466-02-11, died: 1503-02-11, sex: female, house: York, coverage: not-read, sources: [wp-elizabeth-of-york]}
+  - {key: arthur-prince-of-wales, name: "Arthur, Prince of Wales", type: Royalty, born: 1486-09-20, died: 1502-04-02, sex: male, house: Tudor, coverage: not-read, sources: [wp-arthur-prince-of-wales]}
+  - {key: margaret-tudor, name: Margaret Tudor, type: Royalty, born: 1489-11-29, died: 1541-10-18, sex: female, house: Tudor, coverage: not-read, sources: [wp-margaret-tudor]}
+  - {key: mary-tudor-queen-of-france, name: "Mary Tudor, Queen of France", type: Royalty, born: 1496-03-18, died: 1533-06-25, sex: female, house: Tudor, coverage: not-read, sources: [wp-mary-tudor-queen-of-france]}
+
+  # Henry VIII's wives not yet in the database
+  - {key: anne-of-cleves, name: Anne of Cleves, type: Royalty, born: 1515, died: 1557-07-16, sex: female, house: La Marck, coverage: not-read, sources: [wp-anne-of-cleves]}
+  - {key: catherine-howard, name: Catherine Howard, type: Royalty, born: 1523, born_estimated: true, died: 1542-02-13, sex: female, coverage: not-read, sources: [wp-catherine-howard]}
+  - {key: catherine-parr, name: Catherine Parr, type: Royalty, born: 1512, born_estimated: true, died: 1548-09-05, sex: female, coverage: not-read, sources: [wp-catherine-parr]}
+
+  # Lady Jane Grey's parents and husband
+  - {key: henry-grey-duke-of-suffolk, name: "Henry Grey, Duke of Suffolk", type: Nobility, born: 1517-01-17, died: 1554-02-23, sex: male, coverage: not-read, sources: [wp-henry-grey-duke-of-suffolk]}
+  - {key: frances-grey-duchess-of-suffolk, name: "Frances Grey, Duchess of Suffolk", type: Nobility, born: 1517-07-16, died: 1559-11-20, sex: female, coverage: not-read, sources: [wp-frances-grey-duchess-of-suffolk]}
+  - {key: lord-guildford-dudley, name: Lord Guildford Dudley, type: Nobility, born: 1535, born_estimated: true, died: 1554-02-12, sex: male, coverage: not-read, sources: [wp-lord-guildford-dudley]}
+
+  # Philip II's mother, wives and children
+  - {key: isabella-of-portugal, name: Isabella of Portugal, type: Royalty, born: 1503-10-24, died: 1539-05-01, sex: female, coverage: not-read, sources: [wp-isabella-of-portugal]}
+  - {key: maria-manuela-princess-of-portugal, name: "Maria Manuela, Princess of Portugal", type: Royalty, born: 1527-10-15, died: 1545-07-12, sex: female, coverage: not-read, sources: [wp-maria-manuela-princess-of-portugal]}
+  - {key: elisabeth-of-valois, name: Elisabeth of Valois, type: Royalty, born: 1546-04-02, died: 1568-10-03, sex: female, coverage: not-read, sources: [wp-elisabeth-of-valois]}
+  - {key: anna-of-austria-queen-of-spain, name: "Anna of Austria, Queen of Spain", type: Royalty, born: 1549-11-02, died: 1580-10-26, sex: female, coverage: not-read, sources: [wp-anna-of-austria-queen-of-spain]}
+  - {key: carlos-prince-of-asturias, name: "Carlos, Prince of Asturias", type: Royalty, born: 1545-07-08, died: 1568-07-24, sex: male, house: Habsburg, coverage: not-read, sources: [wp-carlos-prince-of-asturias]}
+  - {key: catalina-micaela-of-spain, name: Catalina Micaela of Spain, type: Royalty, born: 1567-10-10, died: 1597-11-06, sex: female, coverage: not-read, sources: [wp-catalina-micaela-of-spain]}
+
+links:
+  # Henry VII
+  - {parent: edmund-tudor-1st-earl-of-richmond, child: henry-vii-of-england}
+  - {parent: lady-margaret-beaufort, child: henry-vii-of-england}
+  - {spouse: edmund-tudor-1st-earl-of-richmond, to: lady-margaret-beaufort, year: 1455}
+  - {spouse: henry-vii-of-england, to: elizabeth-of-york, year: 1486}
+  - {parent: henry-vii-of-england, child: arthur-prince-of-wales}
+  - {parent: elizabeth-of-york, child: arthur-prince-of-wales}
+  - {parent: henry-vii-of-england, child: margaret-tudor}
+  - {parent: elizabeth-of-york, child: margaret-tudor}
+  - {parent: henry-vii-of-england, child: henry-viii-of-england}
+  - {parent: elizabeth-of-york, child: henry-viii-of-england}
+  - {parent: henry-vii-of-england, child: mary-tudor-queen-of-france}
+  - {parent: elizabeth-of-york, child: mary-tudor-queen-of-france}
+  # Henry VIII: six marriages, three children
+  - {spouse: henry-viii-of-england, to: catherine-of-aragon, year: 1509}
+  - {spouse: henry-viii-of-england, to: anne-boleyn, year: 1533}
+  - {spouse: henry-viii-of-england, to: jane-seymour, year: 1536}
+  - {spouse: henry-viii-of-england, to: anne-of-cleves, year: 1540}
+  - {spouse: henry-viii-of-england, to: catherine-howard, year: 1540}
+  - {spouse: henry-viii-of-england, to: catherine-parr, year: 1543}
+  - {parent: henry-viii-of-england, child: mary-i-of-england}
+  - {parent: catherine-of-aragon, child: mary-i-of-england}
+  - {parent: henry-viii-of-england, child: elizabeth-i-of-england}
+  - {parent: anne-boleyn, child: elizabeth-i-of-england}
+  - {parent: henry-viii-of-england, child: edward-vi-of-england}
+  - {parent: jane-seymour, child: edward-vi-of-england}
+  # Lady Jane Grey
+  - {parent: henry-grey-duke-of-suffolk, child: lady-jane-grey}
+  - {parent: frances-grey-duchess-of-suffolk, child: lady-jane-grey}
+  - {spouse: henry-grey-duke-of-suffolk, to: frances-grey-duchess-of-suffolk, year: 1533}
+  - {parent: mary-tudor-queen-of-france, child: frances-grey-duchess-of-suffolk}
+  - {spouse: lady-jane-grey, to: lord-guildford-dudley, year: 1553}
+  # Mary I and Philip II
+  - {spouse: mary-i-of-england, to: philip-ii-of-spain, year: 1554}
+  # Philip II
+  - {parent: charles-v-holy-roman-emperor, child: philip-ii-of-spain}
+  - {parent: isabella-of-portugal, child: philip-ii-of-spain}
+  - {spouse: charles-v-holy-roman-emperor, to: isabella-of-portugal, year: 1526}
+  - {spouse: philip-ii-of-spain, to: maria-manuela-princess-of-portugal, year: 1543}
+  - {spouse: philip-ii-of-spain, to: elisabeth-of-valois, year: 1559}
+  - {spouse: philip-ii-of-spain, to: anna-of-austria-queen-of-spain, year: 1570}
+  - {parent: philip-ii-of-spain, child: carlos-prince-of-asturias}
+  - {parent: maria-manuela-princess-of-portugal, child: carlos-prince-of-asturias}
+  - {parent: philip-ii-of-spain, child: isabella-clara-eugenia}
+  - {parent: elisabeth-of-valois, child: isabella-clara-eugenia}
+  - {parent: philip-ii-of-spain, child: catalina-micaela-of-spain}
+  - {parent: elisabeth-of-valois, child: catalina-micaela-of-spain}
+  - {parent: philip-ii-of-spain, child: philip-iii-of-spain}
+  - {parent: anna-of-austria-queen-of-spain, child: philip-iii-of-spain}
+
+moments:
+  - {person: edmund-tudor-1st-earl-of-richmond, role: born, place: much-hadham, year: 1430}
+  - {person: edmund-tudor-1st-earl-of-richmond, role: buried, place: st-davids-cathedral, year: 1539}
+  - {person: lady-margaret-beaufort, role: born, place: bletsoe-castle, year: 1443}
+  - {person: lady-margaret-beaufort, role: buried, place: westminster-abbey, year: 1509}
+  - {person: arthur-prince-of-wales, role: born, place: winchester-cathedral, year: 1486}
+  - {person: arthur-prince-of-wales, role: buried, place: worcester-cathedral, year: 1502}
+  - {person: margaret-tudor, role: born, place: palace-of-westminster, year: 1489}
+  - {person: margaret-tudor, role: buried, place: perth-charterhouse, year: 1541}
+  - {person: mary-tudor-queen-of-france, role: born, place: richmond-palace, year: 1496}
+  - {person: mary-tudor-queen-of-france, role: buried, place: st-marys-church-bury-st-edmunds}
+  - {person: anne-of-cleves, role: born, place: dusseldorf, year: 1515}
+  - {person: anne-of-cleves, role: buried, place: westminster-abbey, year: 1557}
+  - {person: catherine-howard, role: born, place: lambeth, year: 1523}
+  - {person: catherine-howard, role: buried, place: st-peter-ad-vincula, year: 1542}
+  - {person: catherine-parr, role: buried, place: sudeley-castle, year: 1548}
+  - {person: frances-grey-duchess-of-suffolk, role: born, place: hatfield-hertfordshire, year: 1517}
+  - {person: frances-grey-duchess-of-suffolk, role: buried, place: westminster-abbey, year: 1559}
+  - {person: lord-guildford-dudley, role: buried, place: st-peter-ad-vincula, year: 1554}
+  - {person: isabella-of-portugal, role: born, place: lisbon, year: 1503}
+  - {person: isabella-of-portugal, role: buried, place: el-escorial, year: 1574}
+  - {person: maria-manuela-princess-of-portugal, role: born, place: coimbra, year: 1527}
+  - {person: maria-manuela-princess-of-portugal, role: buried, place: el-escorial}
+  - {person: elisabeth-of-valois, role: born, place: fontainebleau-castle, year: 1546}
+  - {person: anna-of-austria-queen-of-spain, role: buried, place: el-escorial}
+  - {person: carlos-prince-of-asturias, role: born, place: valladolid, year: 1545}
+
+discrepancies:
+  - key: margaret-beaufort-birth-year
+    question: Was Lady Margaret Beaufort born in 1441 or 1443?
+    about: [{person: lady-margaret-beaufort}]
+    field: born
+    claims:
+      - {value: "1443-05-31", sources: [wp-lady-margaret-beaufort], note: "More likely: in May 1443 her father negotiated with the king over the wardship of his unborn child"}
+      - {value: "1441-05-31", sources: [wp-lady-margaret-beaufort], note: "William Dugdale (17th century), from her father's inquisitions post mortem, followed by a number of her biographers (as reported in the same article)"}
+    note: "The record uses 1443-05-31."
+  - key: margaret-tudor-birth-date
+    question: Was Margaret Tudor born on 28 or 29 November 1489?
+    about: [{person: margaret-tudor}]
+    field: born
+    claims:
+      - {value: "1489-11-29", sources: [wp-margaret-tudor]}
+      - {value: "1489-11-28", sources: [wp-elizabeth-of-york, wp-henry-vii-of-england]}
+    note: "The record uses her own article's date, 29 November 1489."
