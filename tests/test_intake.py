@@ -393,5 +393,21 @@ def test_event_places():
     errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
     assert any("unknown place `nowhere`" in e for e in errs) and any("needs `place` and `role`" in e for e in errs)
 
+def test_event_month():
+    db = FakeDB(snapshot()); world = intake.World(db)
+    doc = {"batch": {"title": "t"}, "sources": [{"key": "s", "title": "S"}],
+           "events": [{"key": "berkhamsted", "name": "Submission", "type": "Submission", "year": 1066, "month": 12, "sources": ["s"]}]}
+    plan = intake.plan_files(world, [("a.yaml", doc)])
+    assert not plan.errors, plan.errors
+    intake.apply_files(world, [("a.yaml", doc)], log=lambda m: None)
+    ev = next(r for r in db.t["events"] if r.get("key") == "berkhamsted")
+    assert (ev["start_year"], ev["start_month"], ev.get("start_date")) == (1066, 12, None), ev
+    bad = {"batch": {"title": "t"}, "events": [
+        {"key": "m1", "name": "A", "type": "x", "year": 1066, "month": 13},
+        {"key": "m2", "name": "B", "type": "x", "month": 5},
+        {"key": "m3", "name": "C", "type": "x", "date": "1066-10-14", "month": 9}]}
+    errs = intake.plan_files(intake.World(db), [("b.yaml", bad)]).errors
+    assert any("m1`: month must be" in e for e in errs) and any("m2`: month needs" in e for e in errs) and any("m3`: month 9 disagrees" in e for e in errs), errs
+
 if __name__ == "__main__":
-    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_realm_countries(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); print("\nALL TESTS PASSED")
+    test_example_plans_and_applies(); test_errors_are_caught(); test_bad_dates_are_errors_not_crashes(); test_restdb_reads_every_page(); test_person_image_fields(); test_artworks(); test_person_coverage(); test_museums(); test_place_dates_and_builders(); test_titles(); test_realms(); test_realm_countries(); test_discrepancies_are_stored_and_surfaced(); test_external_links(); test_event_places(); test_event_month(); print("\nALL TESTS PASSED")

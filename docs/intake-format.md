@@ -77,6 +77,7 @@ An entry whose `key` already exists is an **update**: only the fields given chan
 |---|---|
 | `key`, `name`, `type` | Required for new events (type: Battle, Coronation, Shipwreck, Treaty, Crusade, …) |
 | `date` or `year` | Start; add `end_year` for long events |
+| `month` | 1–12, with `year`, when the source gives the month but not the day ("early December 1066" = `year: 1066, month: 12`). It puts events of the same year in order (the journey map steps through them); say "early", "late" and the like in the note. Needs `sql/019` |
 | `estimated` | `true` if the date is approximate |
 | `place` | Place key: the main place |
 | `places` | Every other place it happened at: list of `{place: key, role: …, note: …}`. Roles: `venue`, `ceremony`, `village`, `start`, `finish`, … The note says what happened there ("Swimming; Paralympic swimming"). The map shows them all when the event is selected |
