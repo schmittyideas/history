@@ -1419,13 +1419,15 @@ function journeyStops(id) {
 }
 const stopWhen = s => s.date ? fmtDate(s.date) : s.event?.start_month ? `${MONTHS[s.event.start_month - 1]} ${fmtYear(s.year)}` : fmtYear(s.year);
 
-function openJourney(id) {
+// from: "explore" when opened from the Explore page's Person card, so links inside go to its cards, not the timeline.
+function openJourney(id, from = "timeline") {
   const stops = journeyStops(id);
   if (!stops.some(s => s.place)) return;
   if (J.person !== id) { J.i = Math.max(0, stops.findIndex(s => s.place)); J.k = null; }
   J.person = id; J.stops = stops; J.i = Math.min(J.i, stops.length - 1);
-  J.back = document.activeElement;
   closeJourney(false);
+  J.back = document.activeElement; J.from = from;
+  J.locked = document.body.classList.contains("x-full");   // an expanded Explore card already locks the page
   const p = S.db.byId[id];
   const seg = h("div", { class: "seg", role: "group", "aria-label": "Map shows" });
   const shell = J.el = h("div", { class: "journey", role: "dialog", "aria-modal": "true", "aria-label": `Journey: ${p.name}` },
@@ -1460,8 +1462,9 @@ function openJourney(id) {
 
 function closeJourney(restore = true) {
   if (J.map) { J.map.remove(); J.map = null; }
-  if (J.el) { J.el.remove(); J.el = null; }
-  document.body.classList.remove("x-full");
+  if (!J.el) return;
+  J.el.remove(); J.el = null;
+  if (!J.locked) document.body.classList.remove("x-full");
   if (restore && J.back?.isConnected) J.back.focus();
 }
 
@@ -1472,8 +1475,9 @@ function journeyGo(i, first = false) {
   const s = J.stops[i], db = S.db;
   // Links inside the journey close it first, then go to the record in the panel.
   const go = fn => () => { closeJourney(false); fn(); };
-  const pLink = (p, extra = "") => h("button", { type: "button", class: "plink", title: `Show ${p.name}`, onclick: go(() => reveal(p.id)), text: p.name + extra });
-  const plLink = pl => h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: go(() => selectPlace(pl.id)), text: pl.name });
+  const ex = J.from === "explore";
+  const pLink = (p, extra = "") => h("button", { type: "button", class: "plink", title: `Show ${p.name}`, onclick: go(() => ex ? xGo("person", p.id) : reveal(p.id)), text: p.name + extra });
+  const plLink = pl => h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: go(() => ex ? xGo("place", pl.id) : selectPlace(pl.id)), text: pl.name });
   const card = $("jstop"), dl = h("dl");
   const rows = [];
   if (s.event) {
@@ -1495,7 +1499,7 @@ function journeyGo(i, first = false) {
     h("h3", {}, s.event ? s.event.name : s.what, stars ? h("span", { class: "yrs", title: `Prominence ${s.event.prominence} of 5`, text: ` ${stars}` }) : null),
     s.event?.note ? h("p", { class: "jnote", text: s.event.note }) : null,
     dl,
-    s.event ? h("button", { type: "button", class: "plink", onclick: go(() => revealEvent(s.event.id)), text: "Open this event in the panel" }) : null].filter(Boolean));
+    s.event ? h("button", { type: "button", class: "plink", onclick: go(() => ex ? xGoEvent(s.event.id) : revealEvent(s.event.id)), text: ex ? "Open this event in its card" : "Open this event in the panel" }) : null].filter(Boolean));
   $("jlist").querySelectorAll("li").forEach((li, k) => li.classList.toggle("cur", k === i));
   // Side by side, the list scrolls to the stop; on a phone (map, stop, list stacked) the page goes back up to the map.
   const smooth = first || matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
@@ -1628,7 +1632,7 @@ function markJourney(svg) {
 
 addEventListener("keydown", e => {
   if (!J.el) return;
-  if (e.key === "Escape") { e.preventDefault(); closeJourney(); }
+  if (e.key === "Escape") { e.preventDefault(); e.stopImmediatePropagation(); closeJourney(); }   // not also the expanded card behind it
   else if ((e.key === "ArrowRight" || e.key === "ArrowLeft") && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName || "")
     && !document.activeElement?.closest(".leaflet-container, .jborders")) {
     e.preventDefault(); journeyGo(J.i + (e.key === "ArrowRight" ? 1 : -1));
@@ -3177,7 +3181,9 @@ function personCard() {
       ts.length ? xSec(label, xList("person", ts, 4, t => row2(`${t.title}${t.disputed ? " (disputed)" : ""}`, xYear(t.start_year, reignSpan(t))))) : null),
     evs.length ? xSec("Events", xList("person", evs, 5, x => row2([xEvent(x.event), x.role ? ` (${x.role})` : ""], xYear(x.event.start_year)))) : null,
     portrayed.length ? xSec(`Portrayed in (${portrayed.length})`, xList("person", portrayed, 4, f => row2(xFilm(f), xYear(f.start_year)))) : null,
-    xSec("Places", xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
+    xSec("Places", new Set(stopsForPerson(p.id).map(s => s.place.id)).size >= 2
+      ? h("button", { type: "button", class: "xexp xjourney", title: `Follow ${p.name}'s life stop by stop, full screen`, onclick: () => openJourney(p.id, "explore"), text: "Journey ⤢" }) : null,
+      xChips("person", [...new Map(stopsForPerson(p.id).map(s => [s.place.id, s])).values()], 8,
       s => h("span", { class: "xchip" }, xPlace(s.place), s.what && s.what.length < 14 ? h("span", { class: "yrs", text: ` ${s.what.toLowerCase()}` }) : null))),
     family.length ? xSec("Family", xChips("person", family, 6, ([o, r]) => h("span", { class: "xchip" }, xPerson(o), h("span", { class: "yrs", text: ` ${r}` })))) : null,
     xSec("Contemporaries", xChips("person", contemporaries, 8, o => h("span", { class: "xchip" }, xPerson(o)))),
