@@ -1,0 +1,226 @@
+batch:
+  title: "English royal families 3a: Lancaster and York, 1399-1485"
+  requested: "Issue #292: parents, spouses (with marriage year) and children who reached 12 for Henry IV, Henry V, Henry VI, Edward IV, Edward V and Richard III"
+  date: 2026-10-25
+  notes: "Family links for the Lancastrian and Yorkist kings, with sex on each king and their family. Part 3b covers the Tudors and Philip II."
+
+# Notes for the reviewer
+# - Facts checked against each person's own English Wikipedia article (fetched 2026-10-25 with tools/wiki.py).
+# - Children left out because they died before 12: Richard of Shrewsbury, Duke of York (b. 1473, disappeared 1483 aged 9),
+#   Margaret of York (1472) and George, Duke of Bedford (1477-1479), children of Edward IV; Edward of Middleham (d. 1484 aged
+#   about 7-10), son of Richard III. Henry IV and Joan of Navarre had no surviving children. No illegitimate children.
+# - John of Gaunt is a child of Edward III, whom batch 2 covers; he is defined here with the same key (john-of-gaunt) so this
+#   file works whichever merges first. His link to Edward III and Philippa of Hainault is left to batch 2.
+# - Elizabeth of York is defined in both 3a and 3b (same key and fields); her moments are only here.
+# - Places left out (article unsure or silent): Thomas, Duke of Clarence's birthplace ("probably London, but some sources give
+#   Kenilworth"); Cecily of York's burial ("one version" Quarr Abbey, Isle of Wight, versus Hatfield per Rosemary Horrox);
+#   Catherine of York's birthplace ("the alleged birthplace is Eltham Palace"). No birthplace in the articles for Mary de Bohun,
+#   Joan of Navarre, John of Bedford, Humphrey of Gloucester, Richard of York.
+# - Clarence's burial: his article says his remains went "to Canterbury for their interment", so the moment uses the city.
+# - Burial moments without a year are reburials the article dates no further (Richard of York, first buried at Pontefract and
+#   later moved to Fotheringhay; Anne of York, first buried at Thetford Priory and later moved to Framlingham).
+# - Richard of York's article gives 21 September 1411 in the lead and 22 September in "Descent"; the lead (and Wikidata) is used.
+# - Bridget of York: Wikidata still says 1517, but her article says she was dead by December 1507 (Henry VII paid for her grave
+#   stone), as Elizabeth Woodville's article also gives 1507; died 1507, estimated.
+# - Philippa of England is "mid-1394" and Blanche of England "spring 1392" in their articles: years only.
+# - Blanche of England's burial church (St Mary's, now St Aegidius, Neustadt) has no article: the moment uses Neustadt itself.
+
+sources:
+  - {key: wp-john-of-gaunt, title: "John of Gaunt (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_of_Gaunt"}
+  - {key: wp-blanche-of-lancaster, title: "Blanche of Lancaster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blanche_of_Lancaster"}
+  - {key: wp-mary-de-bohun, title: "Mary de Bohun (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_de_Bohun"}
+  - {key: wp-joan-of-navarre-queen-of-england, title: "Joan of Navarre, Queen of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_Navarre,_Queen_of_England"}
+  - {key: wp-thomas-of-lancaster-duke-of-clarence, title: "Thomas of Lancaster, Duke of Clarence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Thomas_of_Lancaster,_Duke_of_Clarence"}
+  - {key: wp-john-of-lancaster-duke-of-bedford, title: "John of Lancaster, Duke of Bedford (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_of_Lancaster,_Duke_of_Bedford"}
+  - {key: wp-humphrey-duke-of-gloucester, title: "Humphrey, Duke of Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Humphrey,_Duke_of_Gloucester"}
+  - {key: wp-blanche-of-england, title: "Blanche of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Blanche_of_England"}
+  - {key: wp-philippa-of-england, title: "Philippa of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philippa_of_England"}
+  - {key: wp-catherine-of-valois, title: "Catherine of Valois (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_of_Valois"}
+  - {key: wp-margaret-of-anjou, title: "Margaret of Anjou (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_of_Anjou"}
+  - {key: wp-edward-of-westminster-prince-of-wales, title: "Edward of Westminster, Prince of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_of_Westminster,_Prince_of_Wales"}
+  - {key: wp-richard-of-york-3rd-duke-of-york, title: "Richard of York, 3rd Duke of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_of_York,_3rd_Duke_of_York"}
+  - {key: wp-cecily-neville-duchess-of-york, title: "Cecily Neville, Duchess of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cecily_Neville,_Duchess_of_York"}
+  - {key: wp-elizabeth-woodville, title: "Elizabeth Woodville (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_Woodville"}
+  - {key: wp-elizabeth-of-york, title: "Elizabeth of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_of_York"}
+  - {key: wp-mary-of-york, title: "Mary of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_of_York"}
+  - {key: wp-cecily-of-york, title: "Cecily of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cecily_of_York"}
+  - {key: wp-anne-of-york-daughter-of-edward-iv, title: "Anne of York (daughter of Edward IV) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_of_York_(daughter_of_Edward_IV)"}
+  - {key: wp-catherine-of-york, title: "Catherine of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_of_York"}
+  - {key: wp-bridget-of-york, title: "Bridget of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bridget_of_York"}
+  - {key: wp-anne-neville, title: "Anne Neville (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Neville"}
+  - {key: wp-old-st-pauls-cathedral, title: "Old St Paul's Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Old_St_Paul%27s_Cathedral"}
+  - {key: wp-bolingbroke-castle, title: "Bolingbroke Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bolingbroke_Castle"}
+  - {key: wp-church-of-the-annunciation-of-our-lady-of-the-newarke, title: "Church of the Annunciation of Our Lady of the Newarke (Wikipedia)", url: "https://en.wikipedia.org/wiki/Church_of_the_Annunciation_of_Our_Lady_of_the_Newarke"}
+  - {key: wp-rouen-cathedral, title: "Rouen Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rouen_Cathedral"}
+  - {key: wp-st-albans-cathedral, title: "St Albans Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Albans_Cathedral"}
+  - {key: wp-peterborough-castle, title: "Peterborough Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peterborough_Castle"}
+  - {key: wp-neustadt-an-der-weinstrasse, title: "Neustadt an der Weinstraße (Wikipedia)", url: "https://en.wikipedia.org/wiki/Neustadt_an_der_Weinstra%C3%9Fe"}
+  - {key: wp-vadstena-abbey, title: "Vadstena Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Vadstena_Abbey"}
+  - {key: wp-pont-a-mousson, title: "Pont-à-Mousson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pont-%C3%A0-Mousson"}
+  - {key: wp-angers-cathedral, title: "Angers Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Angers_Cathedral"}
+  - {key: wp-palace-of-westminster, title: "Palace of Westminster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Palace_of_Westminster"}
+  - {key: wp-tewkesbury-abbey, title: "Tewkesbury Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tewkesbury_Abbey"}
+  - {key: wp-church-of-st-mary-and-all-saints-fotheringhay, title: "Church of St Mary and All Saints, Fotheringhay (Wikipedia)", url: "https://en.wikipedia.org/wiki/Church_of_St_Mary_and_All_Saints,_Fotheringhay"}
+  - {key: wp-raby-castle, title: "Raby Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Raby_Castle"}
+  - {key: wp-grafton-regis, title: "Grafton Regis (Wikipedia)", url: "https://en.wikipedia.org/wiki/Grafton_Regis"}
+  - {key: wp-st-michael-the-archangels-church-framlingham, title: "St Michael the Archangel's Church, Framlingham (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Michael_the_Archangel%27s_Church,_Framlingham"}
+  - {key: wp-st-peters-church-tiverton, title: "St Peter's Church, Tiverton (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Peter%27s_Church,_Tiverton"}
+  - {key: wp-eltham-palace, title: "Eltham Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eltham_Palace"}
+  - {key: wp-dartford-priory, title: "Dartford Priory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dartford_Priory"}
+
+places:
+  - {key: old-st-pauls-cathedral, name: "Old St Paul's Cathedral", kind: cathedral, city: London, region: City of London, country: England, lat: 51.5136, lng: -0.0983, ended: 1666, sources: [wp-old-st-pauls-cathedral]}
+  - {key: bolingbroke-castle, name: Bolingbroke Castle, kind: castle, city: Old Bolingbroke, region: Lincolnshire, country: England, lat: 53.1652, lng: 0.017, visitable: true, sources: [wp-bolingbroke-castle]}
+  - {key: church-of-the-annunciation-of-our-lady-of-the-newarke, name: "Church of the Annunciation of Our Lady of the Newarke", kind: church, city: Leicester, region: Leicestershire, country: England, lat: 52.6313, lng: -1.1397, sources: [wp-church-of-the-annunciation-of-our-lady-of-the-newarke]}
+  - {key: rouen-cathedral, name: Rouen Cathedral, kind: cathedral, city: Rouen, region: Normandy, country: France, lat: 49.4402, lng: 1.095, visitable: true, sources: [wp-rouen-cathedral]}
+  - {key: st-albans-cathedral, name: St Albans Cathedral, historical_name: St Albans Abbey, kind: cathedral, city: St Albans, region: Hertfordshire, country: England, lat: 51.7506, lng: -0.3422, visitable: true, sources: [wp-st-albans-cathedral]}
+  - {key: peterborough-castle, name: Peterborough Castle, kind: castle, city: Peterborough, region: Cambridgeshire, country: England, lat: 52.573, lng: -0.2396, sources: [wp-peterborough-castle]}
+  - {key: neustadt-an-der-weinstrasse, name: Neustadt an der Weinstraße, kind: town, region: Rhineland-Palatinate, country: Germany, lat: 49.35, lng: 8.15, sources: [wp-neustadt-an-der-weinstrasse]}
+  - {key: vadstena-abbey, name: Vadstena Abbey, kind: abbey, city: Vadstena, region: Östergötland, country: Sweden, lat: 58.4506, lng: 14.8914, visitable: true, sources: [wp-vadstena-abbey]}
+  - {key: pont-a-mousson, name: Pont-à-Mousson, kind: town, region: Meurthe-et-Moselle, country: France, lat: 48.9053, lng: 6.0547, sources: [wp-pont-a-mousson]}
+  - {key: angers-cathedral, name: Angers Cathedral, kind: cathedral, city: Angers, region: Maine-et-Loire, country: France, lat: 47.4706, lng: -0.555, visitable: true, sources: [wp-angers-cathedral]}
+  - {key: palace-of-westminster, name: Palace of Westminster, kind: palace, city: London, region: Greater London, country: England, lat: 51.4992, lng: -0.1247, visitable: true, sources: [wp-palace-of-westminster]}
+  - {key: tewkesbury-abbey, name: Tewkesbury Abbey, kind: abbey, city: Tewkesbury, region: Gloucestershire, country: England, lat: 51.9903, lng: -2.1606, visitable: true, sources: [wp-tewkesbury-abbey]}
+  - {key: church-of-st-mary-and-all-saints-fotheringhay, name: "Church of St Mary and All Saints, Fotheringhay", kind: church, city: Fotheringhay, region: Northamptonshire, country: England, lat: 52.5259, lng: -0.4391, visitable: true, sources: [wp-church-of-st-mary-and-all-saints-fotheringhay]}
+  - {key: raby-castle, name: Raby Castle, kind: castle, city: Staindrop, region: County Durham, country: England, lat: 54.5908, lng: -1.8019, visitable: true, sources: [wp-raby-castle]}
+  - {key: grafton-regis, name: Grafton Regis, kind: village, region: Northamptonshire, country: England, lat: 52.1145, lng: -0.8965, sources: [wp-grafton-regis]}
+  - {key: st-michael-the-archangels-church-framlingham, name: "St Michael the Archangel's Church, Framlingham", kind: church, city: Framlingham, region: Suffolk, country: England, lat: 52.2224, lng: 1.3444, visitable: true, sources: [wp-st-michael-the-archangels-church-framlingham]}
+  - {key: st-peters-church-tiverton, name: "St Peter's Church, Tiverton", kind: church, city: Tiverton, region: Devon, country: England, lat: 50.9056, lng: -3.4889, visitable: true, sources: [wp-st-peters-church-tiverton]}
+  - {key: eltham-palace, name: Eltham Palace, kind: palace, city: London, region: Greater London, country: England, lat: 51.4472, lng: 0.0481, visitable: true, sources: [wp-eltham-palace]}
+  - {key: dartford-priory, name: Dartford Priory, kind: priory, city: Dartford, region: Kent, country: England, lat: 51.4477, lng: 0.2139, sources: [wp-dartford-priory]}
+
+people:
+  # The kings: sex only
+  - {key: henry-iv-of-england, sex: male}
+  - {key: henry-v-of-england, sex: male}
+  - {key: henry-vi-of-england, sex: male}
+  - {key: edward-iv-of-england, sex: male}
+  - {key: edward-v-of-england, sex: male}
+  - {key: richard-iii-of-england, sex: male}
+
+  # Henry IV's parents, wives and children
+  - {key: john-of-gaunt, name: John of Gaunt, type: Royalty, born: 1340-03-06, died: 1399-02-03, sex: male, house: Lancaster, coverage: not-read, sources: [wp-john-of-gaunt]}
+  - {key: blanche-of-lancaster, name: Blanche of Lancaster, type: Nobility, born: 1342-03-25, died: 1368-09-12, sex: female, house: Lancaster, coverage: not-read, sources: [wp-blanche-of-lancaster]}
+  - {key: mary-de-bohun, name: Mary de Bohun, type: Nobility, born: 1369, born_estimated: true, died: 1394-06-04, sex: female, coverage: not-read, sources: [wp-mary-de-bohun]}
+  - {key: joan-of-navarre-queen-of-england, name: Joan of Navarre, type: Royalty, born: 1368, born_estimated: true, died: 1437-06-10, sex: female, coverage: not-read, sources: [wp-joan-of-navarre-queen-of-england]}
+  - {key: thomas-of-lancaster-duke-of-clarence, name: "Thomas of Lancaster, Duke of Clarence", type: Royalty, born: 1387, born_estimated: true, died: 1421-03-22, sex: male, house: Lancaster, coverage: not-read, sources: [wp-thomas-of-lancaster-duke-of-clarence]}
+  - {key: john-of-lancaster-duke-of-bedford, name: "John of Lancaster, Duke of Bedford", type: Royalty, born: 1389-06-20, died: 1435-09-14, sex: male, house: Lancaster, coverage: not-read, sources: [wp-john-of-lancaster-duke-of-bedford]}
+  - {key: humphrey-duke-of-gloucester, name: "Humphrey, Duke of Gloucester", type: Royalty, born: 1390-10-03, died: 1447-02-23, sex: male, house: Lancaster, coverage: not-read, sources: [wp-humphrey-duke-of-gloucester]}
+  - {key: blanche-of-england, name: Blanche of England, type: Royalty, born: 1392, died: 1409-05-22, sex: female, house: Lancaster, coverage: not-read, sources: [wp-blanche-of-england]}
+  - {key: philippa-of-england, name: Philippa of England, type: Royalty, born: 1394, died: 1430-01-05, sex: female, house: Lancaster, coverage: not-read, sources: [wp-philippa-of-england]}
+
+  # Henry V's and Henry VI's wives, Henry VI's son
+  - {key: catherine-of-valois, name: Catherine of Valois, type: Royalty, born: 1401-10-27, died: 1437-01-03, sex: female, house: Valois, coverage: not-read, sources: [wp-catherine-of-valois]}
+  - {key: margaret-of-anjou, name: Margaret of Anjou, type: Royalty, born: 1430-03-23, died: 1482-08-25, sex: female, house: Valois-Anjou, coverage: not-read, sources: [wp-margaret-of-anjou]}
+  - {key: edward-of-westminster-prince-of-wales, name: "Edward of Westminster, Prince of Wales", type: Royalty, born: 1453-10-13, died: 1471-05-04, sex: male, house: Lancaster, coverage: not-read, sources: [wp-edward-of-westminster-prince-of-wales]}
+
+  # York: Edward IV's and Richard III's parents, wives and Edward IV's daughters
+  - {key: richard-of-york-3rd-duke-of-york, name: "Richard of York, 3rd Duke of York", type: Nobility, born: 1411-09-21, died: 1460-12-30, sex: male, house: York, coverage: not-read, sources: [wp-richard-of-york-3rd-duke-of-york]}
+  - {key: cecily-neville-duchess-of-york, name: "Cecily Neville, Duchess of York", type: Nobility, born: 1415-05-03, died: 1495-05-31, sex: female, house: Neville, coverage: not-read, sources: [wp-cecily-neville-duchess-of-york]}
+  - {key: elizabeth-woodville, name: Elizabeth Woodville, type: Royalty, born: 1437, born_estimated: true, died: 1492-06-08, sex: female, coverage: not-read, sources: [wp-elizabeth-woodville]}
+  - {key: elizabeth-of-york, name: Elizabeth of York, type: Royalty, born: 1466-02-11, died: 1503-02-11, sex: female, house: York, coverage: not-read, sources: [wp-elizabeth-of-york]}
+  - {key: mary-of-york, name: Mary of York, type: Royalty, born: 1467-08-11, died: 1482-05-23, sex: female, house: York, coverage: not-read, sources: [wp-mary-of-york]}
+  - {key: cecily-of-york, name: Cecily of York, type: Royalty, born: 1469-03-20, died: 1507-08-24, sex: female, house: York, coverage: not-read, sources: [wp-cecily-of-york]}
+  - {key: anne-of-york-daughter-of-edward-iv, name: Anne of York, type: Royalty, born: 1475-11-02, died: 1511-11-23, sex: female, house: York, coverage: not-read, sources: [wp-anne-of-york-daughter-of-edward-iv]}
+  - {key: catherine-of-york, name: Catherine of York, type: Royalty, born: 1479-08-14, died: 1527-11-15, sex: female, house: York, coverage: not-read, sources: [wp-catherine-of-york]}
+  - {key: bridget-of-york, name: Bridget of York, type: Royalty, born: 1480-11-10, died: 1507, died_estimated: true, sex: female, house: York, coverage: not-read, sources: [wp-bridget-of-york]}
+  - {key: anne-neville, name: Anne Neville, type: Royalty, born: 1456-06-11, died: 1485-03-16, sex: female, house: Neville, coverage: not-read, sources: [wp-anne-neville]}
+
+links:
+  # Henry IV
+  - {parent: john-of-gaunt, child: henry-iv-of-england}
+  - {parent: blanche-of-lancaster, child: henry-iv-of-england}
+  - {spouse: john-of-gaunt, to: blanche-of-lancaster, year: 1359}
+  - {spouse: henry-iv-of-england, to: mary-de-bohun, year: 1381}
+  - {spouse: henry-iv-of-england, to: joan-of-navarre-queen-of-england, year: 1403}
+  - {parent: henry-iv-of-england, child: henry-v-of-england}
+  - {parent: mary-de-bohun, child: henry-v-of-england}
+  - {parent: henry-iv-of-england, child: thomas-of-lancaster-duke-of-clarence}
+  - {parent: mary-de-bohun, child: thomas-of-lancaster-duke-of-clarence}
+  - {parent: henry-iv-of-england, child: john-of-lancaster-duke-of-bedford}
+  - {parent: mary-de-bohun, child: john-of-lancaster-duke-of-bedford}
+  - {parent: henry-iv-of-england, child: humphrey-duke-of-gloucester}
+  - {parent: mary-de-bohun, child: humphrey-duke-of-gloucester}
+  - {parent: henry-iv-of-england, child: blanche-of-england}
+  - {parent: mary-de-bohun, child: blanche-of-england}
+  - {parent: henry-iv-of-england, child: philippa-of-england}
+  - {parent: mary-de-bohun, child: philippa-of-england}
+  # Henry V
+  - {spouse: henry-v-of-england, to: catherine-of-valois, year: 1420}
+  - {parent: henry-v-of-england, child: henry-vi-of-england}
+  - {parent: catherine-of-valois, child: henry-vi-of-england}
+  # Henry VI
+  - {spouse: henry-vi-of-england, to: margaret-of-anjou, year: 1445}
+  - {parent: henry-vi-of-england, child: edward-of-westminster-prince-of-wales}
+  - {parent: margaret-of-anjou, child: edward-of-westminster-prince-of-wales}
+  # Edward IV
+  - {parent: richard-of-york-3rd-duke-of-york, child: edward-iv-of-england}
+  - {parent: cecily-neville-duchess-of-york, child: edward-iv-of-england}
+  - {spouse: richard-of-york-3rd-duke-of-york, to: cecily-neville-duchess-of-york, year: 1429}
+  - {spouse: edward-iv-of-england, to: elizabeth-woodville, year: 1464}
+  - {parent: edward-iv-of-england, child: elizabeth-of-york}
+  - {parent: elizabeth-woodville, child: elizabeth-of-york}
+  - {parent: edward-iv-of-england, child: mary-of-york}
+  - {parent: elizabeth-woodville, child: mary-of-york}
+  - {parent: edward-iv-of-england, child: cecily-of-york}
+  - {parent: elizabeth-woodville, child: cecily-of-york}
+  - {parent: edward-iv-of-england, child: edward-v-of-england}
+  - {parent: elizabeth-woodville, child: edward-v-of-england}
+  - {parent: edward-iv-of-england, child: anne-of-york-daughter-of-edward-iv}
+  - {parent: elizabeth-woodville, child: anne-of-york-daughter-of-edward-iv}
+  - {parent: edward-iv-of-england, child: catherine-of-york}
+  - {parent: elizabeth-woodville, child: catherine-of-york}
+  - {parent: edward-iv-of-england, child: bridget-of-york}
+  - {parent: elizabeth-woodville, child: bridget-of-york}
+  # Richard III
+  - {parent: richard-of-york-3rd-duke-of-york, child: richard-iii-of-england}
+  - {parent: cecily-neville-duchess-of-york, child: richard-iii-of-england}
+  - {spouse: richard-iii-of-england, to: anne-neville, year: 1472}
+
+moments:
+  - {person: john-of-gaunt, role: born, place: ghent, year: 1340}
+  - {person: john-of-gaunt, role: buried, place: old-st-pauls-cathedral, year: 1399}
+  - {person: blanche-of-lancaster, role: born, place: bolingbroke-castle, year: 1342}
+  - {person: blanche-of-lancaster, role: buried, place: old-st-pauls-cathedral, year: 1368}
+  - {person: mary-de-bohun, role: buried, place: church-of-the-annunciation-of-our-lady-of-the-newarke, year: 1394}
+  - {person: joan-of-navarre-queen-of-england, role: buried, place: canterbury-cathedral, year: 1437}
+  - {person: thomas-of-lancaster-duke-of-clarence, role: buried, place: canterbury, year: 1421}
+  - {person: john-of-lancaster-duke-of-bedford, role: buried, place: rouen-cathedral, year: 1435}
+  - {person: humphrey-duke-of-gloucester, role: buried, place: st-albans-cathedral, year: 1447}
+  - {person: blanche-of-england, role: born, place: peterborough-castle, year: 1392}
+  - {person: blanche-of-england, role: buried, place: neustadt-an-der-weinstrasse, year: 1409}
+  - {person: philippa-of-england, role: born, place: peterborough-castle, year: 1394}
+  - {person: philippa-of-england, role: buried, place: vadstena-abbey, year: 1430}
+  - {person: catherine-of-valois, role: born, place: hotel-saint-pol, year: 1401}
+  - {person: catherine-of-valois, role: buried, place: westminster-abbey, year: 1437}
+  - {person: margaret-of-anjou, role: born, place: pont-a-mousson, year: 1430}
+  - {person: margaret-of-anjou, role: buried, place: angers-cathedral, year: 1482}
+  - {person: edward-of-westminster-prince-of-wales, role: born, place: palace-of-westminster, year: 1453}
+  - {person: edward-of-westminster-prince-of-wales, role: buried, place: tewkesbury-abbey, year: 1471}
+  - {person: richard-of-york-3rd-duke-of-york, role: buried, place: church-of-st-mary-and-all-saints-fotheringhay}
+  - {person: cecily-neville-duchess-of-york, role: born, place: raby-castle, year: 1415}
+  - {person: cecily-neville-duchess-of-york, role: buried, place: church-of-st-mary-and-all-saints-fotheringhay, year: 1495}
+  - {person: elizabeth-woodville, role: born, place: grafton-regis, year: 1437}
+  - {person: elizabeth-woodville, role: buried, place: st-georges-chapel-windsor, year: 1492}
+  - {person: elizabeth-of-york, role: born, place: palace-of-westminster, year: 1466}
+  - {person: elizabeth-of-york, role: buried, place: westminster-abbey, year: 1503}
+  - {person: mary-of-york, role: born, place: windsor-castle, year: 1467}
+  - {person: mary-of-york, role: buried, place: st-georges-chapel-windsor, year: 1482}
+  - {person: cecily-of-york, role: born, place: palace-of-westminster, year: 1469}
+  - {person: anne-of-york-daughter-of-edward-iv, role: born, place: palace-of-westminster, year: 1475}
+  - {person: anne-of-york-daughter-of-edward-iv, role: buried, place: st-michael-the-archangels-church-framlingham}
+  - {person: catherine-of-york, role: buried, place: st-peters-church-tiverton, year: 1527}
+  - {person: bridget-of-york, role: born, place: eltham-palace, year: 1480}
+  - {person: bridget-of-york, role: buried, place: dartford-priory, year: 1507}
+  - {person: anne-neville, role: born, place: warwick-castle, year: 1456}
+  - {person: anne-neville, role: buried, place: westminster-abbey, year: 1485}
+
+discrepancies:
+  - key: henry-iv-mary-de-bohun-marriage-year
+    question: In which year did Henry Bolingbroke (Henry IV) marry Mary de Bohun?
+    about: [{person: henry-iv-of-england}, {person: mary-de-bohun}]
+    field: marriage year
+    claims:
+      - {value: "1381 (5 February)", sources: [wp-henry-iv, wp-mary-de-bohun], note: "The accepted date of the ceremony, at Rochford Hall, Essex; the marriage licence was bought in June 1380"}
+      - {value: "1380", sources: [wp-henry-v], note: "Henry V's article: Mary was 'married to him as a child in 1380'"}
+    note: "The spouse link uses 1381. The 1380 date may be the licence rather than the wedding."
