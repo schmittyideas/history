@@ -1,0 +1,491 @@
+batch:
+  title: "English royal families 2b: Edward I, Edward II, Edward III and Richard II (1272-1399)"
+  requested: "Ty (issue #292): fill in each English monarch's parents, spouses (with marriage year) and legitimate children who reached 12, with sex on the monarchs"
+  date: 2026-10-25
+  notes: "Family links for Edward I, Edward II, Edward III and Richard II. New people are the spouses and children with their own Wikipedia articles, with birth and burial places where the article names them. No title changes."
+
+# Built from the English Wikipedia articles on each monarch (scratchpad copies, October 2026) and each new
+# person's own article, cited per person below. Coordinates from each place article (Wikipedia coordinates).
+# Edward I's parents (Henry III and Eleanor of Provence) are linked in file 2a. Edward II's marriage to
+# Isabella of France (1308) is already in the database.
+#
+# Left out (died before 12): Edward I's Katherine (1261/1263-1264), Joan (1265), John (1266-1271), Henry (1268-1274),
+#   an unnamed daughter (1271), Alphonso, Earl of Chester (1273-1284, died at 10), Berengaria (1276-1277/1278), an
+#   unnamed child (1278) and Eleanor (1306-1311); Edward III's William of Hatfield (1337), Blanche (1342) and William
+#   of Windsor (1348). "Thomas of Windsor" (1347) is left out too: Edward III's article calls him probably a composite.
+# Left out (illegitimate): Adam FitzRoy (c. 1307-1322), son of Edward II; John Botetourt, claimed (unproven) as Edward I's son.
+# Richard II had no children.
+# Moments left out because the article names no place: births of Margaret of France, Eleanor Countess of Bar, Mary of
+#   Woodstock and Anne of Bohemia; burials of Joan of the Tower and of Joan (died 1348) (her article: "some accounts"
+#   say Bordeaux Cathedral); Eleanor of Woodstock's burial in the Franciscan church at Deventer is told as legend.
+# Edmund of Woodstock was born "at Woodstock in Oxfordshire": the moment uses Woodstock Palace, as for his
+#   Woodstock-born kin. He was buried first in Winchester and moved to Westminster Abbey in 1331 (the moment's year).
+# Lionel of Antwerp was buried first at Pavia and later moved to Clare Priory (year not given): no year on that moment.
+# Margaret, Countess of Pembroke: her article says "born in Windsor"; Edward III's article says Windsor Castle.
+# John of Gaunt, Old St Paul's Cathedral: defined the same way as in batches 1a and 3a (house Lancaster), so the
+#   order of applying does not matter. Edmund of Langley is house York and Edmund Crouchback house Lancaster, as
+#   their articles call each the founder of that house; the other children are Plantagenet.
+# Amesbury Priory is also defined in file 2a (same entry), so either file can be applied first.
+# Isabella of Valois was buried in the Abbey of Saint-Laumer at Blois (no article); the moment uses Blois.
+# Uncertain dates are marked estimated: Philippa of Hainault (born 24 June 1310? or as late as 1315), Margaret of
+#   France (c. 1279), Joan of Kent (c. 1328), Joan (died 1348) (born 19 December 1333 or 28 January 1334).
+# Months without a day become the year alone: Joan of Acre (born April 1272), Mary of Woodstock (died before 8 July
+#   1332), Thomas of Brotherton (died August/September 1338), Mary of Waltham (died September 1361), Margaret
+#   Countess of Pembroke (died October/December 1361), Thomas of Woodstock (died 8 or 9 September 1397), Joan of Kent
+#   (died August 1385).
+# John of Gaunt's birth: his article gives 6 March 1340 (Wikidata says 24 June 1340); the record uses the article.
+# Not added (outside this batch's scope): the Black Prince's marriage to Joan of Kent (1361).
+
+sources:
+  - {key: wp-edward-the-black-prince, title: "Edward the Black Prince (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_the_Black_Prince"}
+  - {key: wp-eleanor-of-castile, title: "Eleanor of Castile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_Castile"}
+  - {key: wp-margaret-of-france-queen-of-england, title: "Margaret of France, Queen of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_of_France,_Queen_of_England"}
+  - {key: wp-eleanor-of-england-countess-of-bar, title: "Eleanor of England, Countess of Bar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_England,_Countess_of_Bar"}
+  - {key: wp-joan-of-acre, title: "Joan of Acre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_Acre"}
+  - {key: wp-margaret-of-england-duchess-of-brabant, title: "Margaret of England, Duchess of Brabant (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_of_England,_Duchess_of_Brabant"}
+  - {key: wp-mary-of-woodstock, title: "Mary of Woodstock (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_of_Woodstock"}
+  - {key: wp-elizabeth-of-rhuddlan, title: "Elizabeth of Rhuddlan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_of_Rhuddlan"}
+  - {key: wp-thomas-of-brotherton-1st-earl-of-norfolk, title: "Thomas of Brotherton, 1st Earl of Norfolk (Wikipedia)", url: "https://en.wikipedia.org/wiki/Thomas_of_Brotherton,_1st_Earl_of_Norfolk"}
+  - {key: wp-edmund-of-woodstock-1st-earl-of-kent, title: "Edmund of Woodstock, 1st Earl of Kent (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_of_Woodstock,_1st_Earl_of_Kent"}
+  - {key: wp-john-of-eltham, title: "John of Eltham (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_of_Eltham"}
+  - {key: wp-eleanor-of-woodstock, title: "Eleanor of Woodstock (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_Woodstock"}
+  - {key: wp-joan-of-the-tower, title: "Joan of the Tower (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_the_Tower"}
+  - {key: wp-philippa-of-hainault, title: "Philippa of Hainault (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philippa_of_Hainault"}
+  - {key: wp-isabella-countess-of-bedford, title: "Isabella, Countess of Bedford (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella,_Countess_of_Bedford"}
+  - {key: wp-joan-of-england-died-1348, title: "Joan of England (died 1348) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_England_(died_1348)"}
+  - {key: wp-lionel-of-antwerp-duke-of-clarence, title: "Lionel of Antwerp, Duke of Clarence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Lionel_of_Antwerp,_Duke_of_Clarence"}
+  - {key: wp-john-of-gaunt, title: "John of Gaunt (Wikipedia)", url: "https://en.wikipedia.org/wiki/John_of_Gaunt"}
+  - {key: wp-edmund-of-langley-1st-duke-of-york, title: "Edmund of Langley, 1st Duke of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_of_Langley,_1st_Duke_of_York"}
+  - {key: wp-mary-of-waltham, title: "Mary of Waltham (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_of_Waltham"}
+  - {key: wp-margaret-countess-of-pembroke, title: "Margaret, Countess of Pembroke (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret,_Countess_of_Pembroke"}
+  - {key: wp-thomas-of-woodstock-duke-of-gloucester, title: "Thomas of Woodstock, Duke of Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Thomas_of_Woodstock,_Duke_of_Gloucester"}
+  - {key: wp-joan-of-kent, title: "Joan of Kent (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_Kent"}
+  - {key: wp-anne-of-bohemia, title: "Anne of Bohemia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_of_Bohemia"}
+  - {key: wp-isabella-of-valois, title: "Isabella of Valois (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella_of_Valois"}
+  - {key: wp-christ-church-greyfriars, title: "Christ Church Greyfriars (Wikipedia)", url: "https://en.wikipedia.org/wiki/Christ_Church_Greyfriars"}
+  - {key: wp-burgos, title: "Burgos (Wikipedia)", url: "https://en.wikipedia.org/wiki/Burgos"}
+  - {key: wp-clare-priory, title: "Clare Priory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clare_Priory"}
+  - {key: wp-cathedral-of-st-michael-and-st-gudula, title: "Cathedral of St. Michael and St. Gudula (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cathedral_of_St._Michael_and_St._Gudula"}
+  - {key: wp-rhuddlan-castle, title: "Rhuddlan Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rhuddlan_Castle"}
+  - {key: wp-brotherton, title: "Brotherton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Brotherton"}
+  - {key: wp-bury-st-edmunds-abbey, title: "Bury St Edmunds Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bury_St_Edmunds_Abbey"}
+  - {key: wp-woodstock-palace, title: "Woodstock Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Woodstock_Palace"}
+  - {key: wp-eltham-palace, title: "Eltham Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eltham_Palace"}
+  - {key: wp-kings-langley-palace, title: "Kings Langley Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kings_Langley_Palace"}
+  - {key: wp-kings-langley-priory, title: "Kings Langley Priory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kings_Langley_Priory"}
+  - {key: wp-bishops-waltham-palace, title: "Bishop's Waltham Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bishop%27s_Waltham_Palace"}
+  - {key: wp-abingdon-abbey, title: "Abingdon Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Abingdon_Abbey"}
+  - {key: wp-amesbury-priory, title: "Amesbury Priory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Amesbury_Priory"}
+  - {key: wp-old-st-pauls-cathedral, title: "Old St Paul's Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Old_St_Paul%27s_Cathedral"}
+  - {key: wp-greyfriars-stamford, title: "Greyfriars, Stamford (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greyfriars,_Stamford"}
+
+places:
+  - {key: christ-church-greyfriars, name: "Christ Church Greyfriars", kind: church, city: "London", region: "Greater London", country: England, lat: 51.5158, lng: -0.0991, sources: [wp-christ-church-greyfriars]}
+  - {key: burgos, name: "Burgos", kind: city, region: "Castile and León", country: Spain, lat: 42.35, lng: -3.7067, sources: [wp-burgos]}
+  - {key: clare-priory, name: "Clare Priory", kind: priory, city: "Clare", region: "Suffolk", country: England, lat: 52.0751, lng: 0.5814, sources: [wp-clare-priory]}
+  - {key: cathedral-of-st-michael-and-st-gudula, name: "Cathedral of St. Michael and St. Gudula", kind: cathedral, city: "Brussels", country: Belgium, lat: 50.8478, lng: 4.3603, sources: [wp-cathedral-of-st-michael-and-st-gudula]}
+  - {key: rhuddlan-castle, name: "Rhuddlan Castle", kind: castle, city: "Rhuddlan", region: "Denbighshire", country: Wales, lat: 53.2889, lng: -3.4645, sources: [wp-rhuddlan-castle]}
+  - {key: brotherton, name: "Brotherton", kind: village, region: "North Yorkshire", country: England, lat: 53.7283, lng: -1.2719, sources: [wp-brotherton]}
+  - {key: bury-st-edmunds-abbey, name: "Bury St Edmunds Abbey", kind: abbey, city: "Bury St Edmunds", region: "Suffolk", country: England, lat: 52.2441, lng: 0.7192, sources: [wp-bury-st-edmunds-abbey]}
+  - {key: woodstock-palace, name: "Woodstock Palace", kind: palace, city: "Woodstock", region: "Oxfordshire", country: England, lat: 51.8458, lng: -1.3639, sources: [wp-woodstock-palace]}
+  - {key: eltham-palace, name: "Eltham Palace", kind: palace, city: "London", region: "Greater London", country: England, lat: 51.4472, lng: 0.0481, sources: [wp-eltham-palace]}
+  - {key: kings-langley-palace, name: "Kings Langley Palace", kind: palace, city: "Kings Langley", region: "Hertfordshire", country: England, lat: 51.7119, lng: -0.4589, sources: [wp-kings-langley-palace]}
+  - {key: kings-langley-priory, name: "Kings Langley Priory", kind: priory, city: "Kings Langley", region: "Hertfordshire", country: England, lat: 51.713, lng: -0.4603, sources: [wp-kings-langley-priory]}
+  - {key: bishops-waltham-palace, name: "Bishop's Waltham Palace", kind: palace, city: "Bishop's Waltham", region: "Hampshire", country: England, lat: 50.9536, lng: -1.2156, sources: [wp-bishops-waltham-palace]}
+  - {key: abingdon-abbey, name: "Abingdon Abbey", kind: abbey, city: "Abingdon", region: "Oxfordshire", country: England, lat: 51.6706, lng: -1.2753, sources: [wp-abingdon-abbey]}
+  - {key: amesbury-priory, name: "Amesbury Priory", kind: priory, city: "Amesbury", region: "Wiltshire", country: England, lat: 51.174, lng: -1.784, sources: [wp-amesbury-priory]}
+  - {key: old-st-pauls-cathedral, name: "Old St Paul's Cathedral", kind: cathedral, city: "London", region: "Greater London", country: England, lat: 51.5136, lng: -0.0983, ended: 1666, sources: [wp-old-st-pauls-cathedral]}
+  - {key: greyfriars-stamford, name: "Greyfriars, Stamford", kind: friary, city: "Stamford", region: "Lincolnshire", country: England, lat: 52.655, lng: -0.47, sources: [wp-greyfriars-stamford]}
+
+people:
+  - {key: edward-i-of-england, sex: male}
+  - {key: edward-ii-of-england, sex: male}
+  - {key: edward-iii-of-england, sex: male}
+  - {key: richard-ii-of-england, sex: male}
+  - {key: isabella-of-france, sex: female}
+  - {key: edward-the-black-prince, sex: male}
+
+  - key: eleanor-of-castile
+    name: "Eleanor of Castile"
+    type: Royalty
+    born: 1241
+    died: 1290-11-28
+    sex: female
+    coverage: not-read
+    note: "Queen of England as Edward I's first wife; probably born towards the end of 1241. Her heart was buried separately."
+    sources: [wp-eleanor-of-castile]
+
+  - key: margaret-of-france-queen-of-england
+    name: "Margaret of France, Queen of England"
+    type: Royalty
+    born: 1279
+    born_estimated: true
+    died: 1318-02-14
+    sex: female
+    coverage: not-read
+    note: "Edward I's second wife, married at Canterbury on 10 September 1299."
+    sources: [wp-margaret-of-france-queen-of-england]
+
+  - key: eleanor-of-england-countess-of-bar
+    name: "Eleanor of England, Countess of Bar"
+    type: Royalty
+    born: 1269-06-18
+    died: 1298-08-29
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-eleanor-of-england-countess-of-bar]
+
+  - key: joan-of-acre
+    name: "Joan of Acre"
+    type: Royalty
+    born: 1272
+    died: 1307-04-23
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-joan-of-acre]
+
+  - key: margaret-of-england-duchess-of-brabant
+    name: "Margaret of England, Duchess of Brabant"
+    type: Royalty
+    born: 1275-03-15
+    died: 1333
+    died_estimated: true
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Died after 1333 (her article); Edward I's article gives 1333."
+    sources: [wp-margaret-of-england-duchess-of-brabant]
+
+  - key: mary-of-woodstock
+    name: "Mary of Woodstock"
+    type: Royalty
+    born: 1279-03-11
+    died: 1332
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "A nun at Amesbury Priory. Died before 8 July 1332."
+    sources: [wp-mary-of-woodstock]
+
+  - key: elizabeth-of-rhuddlan
+    name: "Elizabeth of Rhuddlan"
+    type: Royalty
+    born: 1282-08-07
+    died: 1316-05-05
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-elizabeth-of-rhuddlan]
+
+  - key: thomas-of-brotherton-1st-earl-of-norfolk
+    name: "Thomas of Brotherton, 1st Earl of Norfolk"
+    type: Royalty
+    born: 1300-06-01
+    died: 1338
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-thomas-of-brotherton-1st-earl-of-norfolk]
+
+  - key: edmund-of-woodstock-1st-earl-of-kent
+    name: "Edmund of Woodstock, 1st Earl of Kent"
+    type: Royalty
+    born: 1301-08-05
+    died: 1330-03-19
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-edmund-of-woodstock-1st-earl-of-kent]
+
+  - key: john-of-eltham
+    name: "John of Eltham"
+    type: Royalty
+    born: 1316-08-15
+    died: 1336-09-13
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-john-of-eltham]
+
+  - key: eleanor-of-woodstock
+    name: "Eleanor of Woodstock"
+    type: Royalty
+    born: 1318-06-18
+    died: 1355-04-22
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-eleanor-of-woodstock]
+
+  - key: joan-of-the-tower
+    name: "Joan of the Tower"
+    type: Royalty
+    born: 1321-07-05
+    died: 1362-09-07
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Queen of Scots as the first wife of David II."
+    sources: [wp-joan-of-the-tower]
+
+  - key: philippa-of-hainault
+    name: "Philippa of Hainault"
+    type: Royalty
+    born: 1310
+    born_estimated: true
+    died: 1369-08-15
+    sex: female
+    coverage: not-read
+    note: "Born perhaps 24 June 1310, possibly as late as 1315. Married Edward III at York Minster on 24 January 1328."
+    sources: [wp-philippa-of-hainault]
+
+  - key: isabella-countess-of-bedford
+    name: "Isabella, Countess of Bedford"
+    type: Royalty
+    born: 1332-06-16
+    died: 1382
+    died_estimated: true
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Also called Isabella of Coucy. Died 1379 or 1382: buried at Westminster Abbey on 4 May 1379 or between June and October 1382."
+    sources: [wp-isabella-countess-of-bedford]
+
+  - key: joan-of-england-died-1348
+    name: "Joan of England (died 1348)"
+    type: Royalty
+    born: 1334
+    born_estimated: true
+    died: 1348-09-02
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Born 19 December 1333 or 28 January 1334. Died of the Black Death near Bordeaux on her way to marry Peter of Castile."
+    sources: [wp-joan-of-england-died-1348]
+
+  - key: lionel-of-antwerp-duke-of-clarence
+    name: "Lionel of Antwerp, Duke of Clarence"
+    type: Royalty
+    born: 1338-11-29
+    died: 1368-10-17
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    note: "Born at St. Michael's Abbey, Antwerp. Buried first at Pavia, later moved to Clare Priory beside his first wife."
+    sources: [wp-lionel-of-antwerp-duke-of-clarence]
+
+  - key: john-of-gaunt
+    name: "John of Gaunt"
+    type: Royalty
+    born: 1340-03-06
+    died: 1399-02-03
+    sex: male
+    house: Lancaster
+    coverage: not-read
+    note: "Duke of Lancaster, father of Henry IV. Born in Ghent, most likely at Saint Bavo's Abbey; buried beside Blanche of Lancaster in Old St Paul's."
+    sources: [wp-john-of-gaunt]
+
+  - key: edmund-of-langley-1st-duke-of-york
+    name: "Edmund of Langley, 1st Duke of York"
+    type: Royalty
+    born: 1341-06-05
+    died: 1402-08-01
+    sex: male
+    house: York
+    coverage: not-read
+    note: "Founder of the House of York. His tomb was moved to All Saints' Church, Kings Langley, in 1575."
+    sources: [wp-edmund-of-langley-1st-duke-of-york]
+
+  - key: mary-of-waltham
+    name: "Mary of Waltham"
+    type: Royalty
+    born: 1344-10-10
+    died: 1361
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Duchess of Brittany as the wife of John IV. Died September 1361."
+    sources: [wp-mary-of-waltham]
+
+  - key: margaret-countess-of-pembroke
+    name: "Margaret, Countess of Pembroke"
+    type: Royalty
+    born: 1346-07-20
+    died: 1361
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Died between October and December 1361."
+    sources: [wp-margaret-countess-of-pembroke]
+
+  - key: thomas-of-woodstock-duke-of-gloucester
+    name: "Thomas of Woodstock, Duke of Gloucester"
+    type: Royalty
+    born: 1355-01-07
+    died: 1397
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    note: "Led the Lords Appellant against Richard II in 1388; murdered in custody on 8 or 9 September 1397."
+    sources: [wp-thomas-of-woodstock-duke-of-gloucester]
+
+  - key: joan-of-kent
+    name: "Joan of Kent"
+    type: Royalty
+    born: 1328
+    born_estimated: true
+    died: 1385
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "The Fair Maid of Kent, Countess of Kent in her own right; mother of Richard II by her third husband, the Black Prince. Died August 1385."
+    sources: [wp-joan-of-kent]
+
+  - key: anne-of-bohemia
+    name: "Anne of Bohemia"
+    type: Royalty
+    born: 1366-05-11
+    died: 1394-06-07
+    sex: female
+    house: Luxembourg
+    coverage: not-read
+    sources: [wp-anne-of-bohemia]
+
+  - key: isabella-of-valois
+    name: "Isabella of Valois"
+    type: Royalty
+    born: 1389-11-09
+    died: 1409-09-13
+    sex: female
+    house: Valois
+    coverage: not-read
+    note: "Richard II's second wife (married at Calais, 31 October 1396). Buried in the Abbey of Saint-Laumer, Blois; moved in 1624 to the Celestines in Paris."
+    sources: [wp-isabella-of-valois]
+
+links:
+  # Edward I
+  - {spouse: edward-i-of-england, to: eleanor-of-castile, year: 1254, sources: [wp-edward-i, wp-eleanor-of-castile]}
+  - {spouse: edward-i-of-england, to: margaret-of-france-queen-of-england, year: 1299, sources: [wp-edward-i, wp-margaret-of-france-queen-of-england]}
+  - {parent: edward-i-of-england, child: eleanor-of-england-countess-of-bar, sources: [wp-edward-i, wp-eleanor-of-england-countess-of-bar]}
+  - {parent: eleanor-of-castile, child: eleanor-of-england-countess-of-bar, sources: [wp-eleanor-of-castile, wp-eleanor-of-england-countess-of-bar]}
+  - {parent: edward-i-of-england, child: joan-of-acre, sources: [wp-edward-i, wp-joan-of-acre]}
+  - {parent: eleanor-of-castile, child: joan-of-acre, sources: [wp-eleanor-of-castile, wp-joan-of-acre]}
+  - {parent: edward-i-of-england, child: margaret-of-england-duchess-of-brabant, sources: [wp-edward-i, wp-margaret-of-england-duchess-of-brabant]}
+  - {parent: eleanor-of-castile, child: margaret-of-england-duchess-of-brabant, sources: [wp-eleanor-of-castile, wp-margaret-of-england-duchess-of-brabant]}
+  - {parent: edward-i-of-england, child: mary-of-woodstock, sources: [wp-edward-i, wp-mary-of-woodstock]}
+  - {parent: eleanor-of-castile, child: mary-of-woodstock, sources: [wp-eleanor-of-castile, wp-mary-of-woodstock]}
+  - {parent: edward-i-of-england, child: elizabeth-of-rhuddlan, sources: [wp-edward-i, wp-elizabeth-of-rhuddlan]}
+  - {parent: eleanor-of-castile, child: elizabeth-of-rhuddlan, sources: [wp-eleanor-of-castile, wp-elizabeth-of-rhuddlan]}
+  - {parent: edward-i-of-england, child: edward-ii-of-england, sources: [wp-edward-i, wp-edward-ii]}
+  - {parent: eleanor-of-castile, child: edward-ii-of-england, sources: [wp-eleanor-of-castile, wp-edward-ii]}
+  - {parent: edward-i-of-england, child: thomas-of-brotherton-1st-earl-of-norfolk, sources: [wp-edward-i, wp-thomas-of-brotherton-1st-earl-of-norfolk]}
+  - {parent: margaret-of-france-queen-of-england, child: thomas-of-brotherton-1st-earl-of-norfolk, sources: [wp-margaret-of-france-queen-of-england, wp-thomas-of-brotherton-1st-earl-of-norfolk]}
+  - {parent: edward-i-of-england, child: edmund-of-woodstock-1st-earl-of-kent, sources: [wp-edward-i, wp-edmund-of-woodstock-1st-earl-of-kent]}
+  - {parent: margaret-of-france-queen-of-england, child: edmund-of-woodstock-1st-earl-of-kent, sources: [wp-margaret-of-france-queen-of-england, wp-edmund-of-woodstock-1st-earl-of-kent]}
+  # Edward II (marriage to Isabella of France already recorded)
+  - {parent: edward-ii-of-england, child: edward-iii-of-england, sources: [wp-edward-ii, wp-edward-iii]}
+  - {parent: isabella-of-france, child: edward-iii-of-england, sources: [wp-isabella-of-france, wp-edward-iii]}
+  - {parent: edward-ii-of-england, child: john-of-eltham, sources: [wp-edward-ii, wp-john-of-eltham]}
+  - {parent: isabella-of-france, child: john-of-eltham, sources: [wp-isabella-of-france, wp-john-of-eltham]}
+  - {parent: edward-ii-of-england, child: eleanor-of-woodstock, sources: [wp-edward-ii, wp-eleanor-of-woodstock]}
+  - {parent: isabella-of-france, child: eleanor-of-woodstock, sources: [wp-isabella-of-france, wp-eleanor-of-woodstock]}
+  - {parent: edward-ii-of-england, child: joan-of-the-tower, sources: [wp-edward-ii, wp-joan-of-the-tower]}
+  - {parent: isabella-of-france, child: joan-of-the-tower, sources: [wp-isabella-of-france, wp-joan-of-the-tower]}
+  # Edward III
+  - {spouse: edward-iii-of-england, to: philippa-of-hainault, year: 1328, sources: [wp-edward-iii, wp-philippa-of-hainault]}
+  - {parent: edward-iii-of-england, child: edward-the-black-prince, sources: [wp-edward-iii, wp-edward-the-black-prince]}
+  - {parent: philippa-of-hainault, child: edward-the-black-prince, sources: [wp-philippa-of-hainault, wp-edward-the-black-prince]}
+  - {parent: edward-iii-of-england, child: isabella-countess-of-bedford, sources: [wp-edward-iii, wp-isabella-countess-of-bedford]}
+  - {parent: philippa-of-hainault, child: isabella-countess-of-bedford, sources: [wp-philippa-of-hainault, wp-isabella-countess-of-bedford]}
+  - {parent: edward-iii-of-england, child: joan-of-england-died-1348, sources: [wp-edward-iii, wp-joan-of-england-died-1348]}
+  - {parent: philippa-of-hainault, child: joan-of-england-died-1348, sources: [wp-philippa-of-hainault, wp-joan-of-england-died-1348]}
+  - {parent: edward-iii-of-england, child: lionel-of-antwerp-duke-of-clarence, sources: [wp-edward-iii, wp-lionel-of-antwerp-duke-of-clarence]}
+  - {parent: philippa-of-hainault, child: lionel-of-antwerp-duke-of-clarence, sources: [wp-philippa-of-hainault, wp-lionel-of-antwerp-duke-of-clarence]}
+  - {parent: edward-iii-of-england, child: john-of-gaunt, sources: [wp-edward-iii, wp-john-of-gaunt]}
+  - {parent: philippa-of-hainault, child: john-of-gaunt, sources: [wp-philippa-of-hainault, wp-john-of-gaunt]}
+  - {parent: edward-iii-of-england, child: edmund-of-langley-1st-duke-of-york, sources: [wp-edward-iii, wp-edmund-of-langley-1st-duke-of-york]}
+  - {parent: philippa-of-hainault, child: edmund-of-langley-1st-duke-of-york, sources: [wp-philippa-of-hainault, wp-edmund-of-langley-1st-duke-of-york]}
+  - {parent: edward-iii-of-england, child: mary-of-waltham, sources: [wp-edward-iii, wp-mary-of-waltham]}
+  - {parent: philippa-of-hainault, child: mary-of-waltham, sources: [wp-philippa-of-hainault, wp-mary-of-waltham]}
+  - {parent: edward-iii-of-england, child: margaret-countess-of-pembroke, sources: [wp-edward-iii, wp-margaret-countess-of-pembroke]}
+  - {parent: philippa-of-hainault, child: margaret-countess-of-pembroke, sources: [wp-philippa-of-hainault, wp-margaret-countess-of-pembroke]}
+  - {parent: edward-iii-of-england, child: thomas-of-woodstock-duke-of-gloucester, sources: [wp-edward-iii, wp-thomas-of-woodstock-duke-of-gloucester]}
+  - {parent: philippa-of-hainault, child: thomas-of-woodstock-duke-of-gloucester, sources: [wp-philippa-of-hainault, wp-thomas-of-woodstock-duke-of-gloucester]}
+  # Richard II (no children)
+  - {parent: edward-the-black-prince, child: richard-ii-of-england, sources: [wp-richard-ii, wp-edward-the-black-prince]}
+  - {parent: joan-of-kent, child: richard-ii-of-england, sources: [wp-richard-ii, wp-joan-of-kent]}
+  - {spouse: richard-ii-of-england, to: anne-of-bohemia, year: 1382, sources: [wp-richard-ii, wp-anne-of-bohemia]}
+  - {spouse: richard-ii-of-england, to: isabella-of-valois, year: 1396, sources: [wp-richard-ii, wp-isabella-of-valois]}
+
+moments:
+  - {person: eleanor-of-castile, role: born, place: burgos, year: 1241, sources: [wp-eleanor-of-castile]}
+  - {person: eleanor-of-castile, role: buried, place: westminster-abbey, year: 1290, sources: [wp-eleanor-of-castile]}
+  - {person: margaret-of-france-queen-of-england, role: buried, place: christ-church-greyfriars, year: 1318, sources: [wp-margaret-of-france-queen-of-england]}
+  - {person: eleanor-of-england-countess-of-bar, role: buried, place: westminster-abbey, year: 1298, sources: [wp-eleanor-of-england-countess-of-bar]}
+  - {person: joan-of-acre, role: born, place: acre, year: 1272, sources: [wp-joan-of-acre]}
+  - {person: joan-of-acre, role: buried, place: clare-priory, year: 1307, sources: [wp-joan-of-acre]}
+  - {person: margaret-of-england-duchess-of-brabant, role: born, place: windsor-castle, year: 1275, sources: [wp-margaret-of-england-duchess-of-brabant]}
+  - {person: margaret-of-england-duchess-of-brabant, role: buried, place: cathedral-of-st-michael-and-st-gudula, year: 1333, sources: [wp-margaret-of-england-duchess-of-brabant]}
+  - {person: mary-of-woodstock, role: buried, place: amesbury-priory, year: 1332, sources: [wp-mary-of-woodstock]}
+  - {person: elizabeth-of-rhuddlan, role: born, place: rhuddlan-castle, year: 1282, sources: [wp-elizabeth-of-rhuddlan]}
+  - {person: elizabeth-of-rhuddlan, role: buried, place: waltham-abbey, year: 1316, sources: [wp-elizabeth-of-rhuddlan]}
+  - {person: thomas-of-brotherton-1st-earl-of-norfolk, role: born, place: brotherton, year: 1300, sources: [wp-thomas-of-brotherton-1st-earl-of-norfolk]}
+  - {person: thomas-of-brotherton-1st-earl-of-norfolk, role: buried, place: bury-st-edmunds-abbey, year: 1338, sources: [wp-thomas-of-brotherton-1st-earl-of-norfolk]}
+  - {person: edmund-of-woodstock-1st-earl-of-kent, role: born, place: woodstock-palace, year: 1301, sources: [wp-edmund-of-woodstock-1st-earl-of-kent]}
+  - {person: edmund-of-woodstock-1st-earl-of-kent, role: buried, place: westminster-abbey, year: 1331, sources: [wp-edmund-of-woodstock-1st-earl-of-kent]}
+  - {person: john-of-eltham, role: born, place: eltham-palace, year: 1316, sources: [wp-john-of-eltham]}
+  - {person: john-of-eltham, role: buried, place: westminster-abbey, year: 1337, sources: [wp-john-of-eltham]}
+  - {person: eleanor-of-woodstock, role: born, place: woodstock-palace, year: 1318, sources: [wp-eleanor-of-woodstock]}
+  - {person: joan-of-the-tower, role: born, place: tower-of-london, year: 1321, sources: [wp-joan-of-the-tower]}
+  - {person: philippa-of-hainault, role: born, place: valenciennes, year: 1310, sources: [wp-philippa-of-hainault]}
+  - {person: philippa-of-hainault, role: buried, place: westminster-abbey, year: 1370, sources: [wp-philippa-of-hainault]}
+  - {person: isabella-countess-of-bedford, role: born, place: woodstock-palace, year: 1332, sources: [wp-isabella-countess-of-bedford]}
+  - {person: isabella-countess-of-bedford, role: buried, place: westminster-abbey, year: 1382, sources: [wp-isabella-countess-of-bedford]}
+  - {person: joan-of-england-died-1348, role: born, place: tower-of-london, year: 1334, sources: [wp-joan-of-england-died-1348]}
+  - {person: lionel-of-antwerp-duke-of-clarence, role: born, place: antwerp, year: 1338, sources: [wp-lionel-of-antwerp-duke-of-clarence]}
+  - {person: lionel-of-antwerp-duke-of-clarence, role: buried, place: clare-priory, sources: [wp-lionel-of-antwerp-duke-of-clarence]}
+  - {person: john-of-gaunt, role: born, place: ghent, year: 1340, sources: [wp-john-of-gaunt]}
+  - {person: john-of-gaunt, role: buried, place: old-st-pauls-cathedral, year: 1399, sources: [wp-john-of-gaunt]}
+  - {person: edmund-of-langley-1st-duke-of-york, role: born, place: kings-langley-palace, year: 1341, sources: [wp-edmund-of-langley-1st-duke-of-york]}
+  - {person: edmund-of-langley-1st-duke-of-york, role: buried, place: kings-langley-priory, year: 1402, sources: [wp-edmund-of-langley-1st-duke-of-york]}
+  - {person: mary-of-waltham, role: born, place: bishops-waltham-palace, year: 1344, sources: [wp-mary-of-waltham]}
+  - {person: mary-of-waltham, role: buried, place: abingdon-abbey, year: 1361, sources: [wp-mary-of-waltham]}
+  - {person: margaret-countess-of-pembroke, role: born, place: windsor-castle, year: 1346, sources: [wp-margaret-countess-of-pembroke]}
+  - {person: margaret-countess-of-pembroke, role: buried, place: abingdon-abbey, year: 1361, sources: [wp-margaret-countess-of-pembroke]}
+  - {person: thomas-of-woodstock-duke-of-gloucester, role: born, place: woodstock-palace, year: 1355, sources: [wp-thomas-of-woodstock-duke-of-gloucester]}
+  - {person: thomas-of-woodstock-duke-of-gloucester, role: buried, place: westminster-abbey, year: 1397, sources: [wp-thomas-of-woodstock-duke-of-gloucester]}
+  - {person: joan-of-kent, role: born, place: woodstock-palace, year: 1328, sources: [wp-joan-of-kent]}
+  - {person: joan-of-kent, role: buried, place: greyfriars-stamford, year: 1385, sources: [wp-joan-of-kent]}
+  - {person: anne-of-bohemia, role: buried, place: westminster-abbey, year: 1394, sources: [wp-anne-of-bohemia]}
+  - {person: isabella-of-valois, role: born, place: paris, year: 1389, sources: [wp-isabella-of-valois]}
+  - {person: isabella-of-valois, role: buried, place: blois, year: 1409, sources: [wp-isabella-of-valois]}
+
+discrepancies:
+  - key: mary-of-woodstock-birth-year
+    question: Was Mary of Woodstock born in 1278 or 1279?
+    about: [{person: mary-of-woodstock}]
+    field: born
+    claims:
+      - {value: "11 March 1279", sources: [wp-mary-of-woodstock]}
+      - {value: "1278", sources: [wp-edward-i], note: "List of Edward I's children: Mary (1278-1332)"}
+    note: The record uses 11 March 1279, the date her own article gives.
+
+  - key: margaret-of-brabant-death-year
+    question: Did Margaret of England, Duchess of Brabant, die in 1333 or after it?
+    about: [{person: margaret-of-england-duchess-of-brabant}]
+    field: died
+    claims:
+      - {value: "after 1333", sources: [wp-margaret-of-england-duchess-of-brabant]}
+      - {value: "1333", sources: [wp-edward-i], note: "List of Edward I's children: Margaret (1275-1333)"}
+    note: The record uses 1333, marked approximate.
+
+  - key: isabella-countess-of-bedford-death-year
+    question: Did Isabella, Edward III's eldest daughter, die in 1379 or 1382?
+    about: [{person: isabella-countess-of-bedford}]
+    field: died
+    claims:
+      - {value: "1379 (buried at Westminster Abbey on 4 May 1379)", sources: [wp-isabella-countess-of-bedford]}
+      - {value: "c. 1382 (buried between 17 June and 5 October 1382)", sources: [wp-isabella-countess-of-bedford, wp-edward-iii]}
+    note: The record uses 1382, marked approximate, as Edward III's article does.
