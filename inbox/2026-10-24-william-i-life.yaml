@@ -1,0 +1,552 @@
+batch:
+  title: "William I: parents, battles, marriage and the path of his life"
+  requested: "Expand William I: his significant events, when and who he married, his battles, when and where he became Duke of Normandy, so his path can be followed on a map"
+  date: 2026-10-24
+
+# Built from the English Wikipedia articles on William the Conqueror (revision 1380609130), Robert I of
+# Normandy (1365575215), Herleva (1362211466), Matilda of Flanders (1379839811) and the battle and siege
+# articles cited below. Coordinates from Wikidata (P625).
+#
+# Where William became duke: the article gives no place. Robert I had the Norman magnates swear fealty to
+# William as his heir at a council in January 1035 (no place named), then died at Nicaea on his way back
+# from Jerusalem in early July 1035, when William succeeded at seven or eight. Both events are in, without
+# a place. Fécamp, often named for the council, is not in any of these articles, so it is left out.
+#
+# Left out: the 1051 visit to England (the article calls it unlikely), the capture of Alençon and Domfront
+# (no year), the 1067 visits to Rouen and Fécamp, the Revolt of the Earls and the siege of Sainte-Suzanne
+# (William was not there), Odo's arrest (no place), and the Tower of London's White Tower (no year).
+# Herleva's husband Herluin and her sons Odo and Robert of Mortain are not in the database; not added here.
+# `month` is set where the source gives a month but no day, so the journey map can order a year's stops.
+
+sources:
+  - {key: wp-william-i, title: "William the Conqueror (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_the_Conqueror"}
+  - {key: wp-robert-i-of-normandy, title: "Robert I of Normandy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Robert_I_of_Normandy"}
+  - {key: wp-herleva, title: "Herleva (Wikipedia)", url: "https://en.wikipedia.org/wiki/Herleva"}
+  - {key: wp-matilda-of-flanders, title: "Matilda of Flanders (Wikipedia)", url: "https://en.wikipedia.org/wiki/Matilda_of_Flanders"}
+  - {key: wp-battle-of-val-es-dunes, title: "Battle of Val-ès-Dunes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Val-%C3%A8s-Dunes"}
+  - {key: wp-battle-of-mortemer, title: "Battle of Mortemer (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Mortemer"}
+  - {key: wp-battle-of-varaville, title: "Battle of Varaville (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Varaville"}
+  - {key: wp-siege-of-exeter-1068, title: "Siege of Exeter (1068) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Exeter_(1068)"}
+  - {key: wp-harrying-of-the-north, title: "Harrying of the North (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harrying_of_the_North"}
+  - {key: wp-treaty-of-abernethy, title: "Treaty of Abernethy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Abernethy"}
+  - {key: wp-siege-of-dol, title: "Siege of Dol (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Dol"}
+  - {key: wp-hastings-castle, title: "Hastings Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hastings_Castle"}
+  - {key: wp-pevensey-castle, title: "Pevensey Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pevensey_Castle"}
+
+people:
+  - key: william-i-of-england
+    born_estimated: true
+    coverage: partly
+    coverage_note: "Article read: parents, marriage, battles, sieges, campaigns, the 1066 invasion route, castles he built, and the councils and crown-wearings with a place. Not captured: his daughters' marriages, Odo's arrest, the Revolt of the Earls, Domesday Book as an event."
+    sources: [wp-william-i]
+
+  - key: robert-i-of-normandy
+    name: Robert I of Normandy
+    type: Nobility
+    born: 1000-06-22
+    died: 1035-07-02
+    house: Normandy
+    realm: Normandy
+    prominence: 3
+    sitelinks: 45
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Life dates, reign, death at Nicaea and his son William. Not captured: his revolt against Richard III, the Flanders and Brittany campaigns, the failed invasion of England."
+    note: "Duke of Normandy 1027-1035, called the Magnificent and the Devil. He made his illegitimate son William his heir before going on pilgrimage to Jerusalem, and died at Nicaea on the way back."
+    sources: [wp-robert-i-of-normandy]
+
+  - key: herleva
+    name: Herleva
+    type: Notable
+    born: 1005
+    born_estimated: true
+    died: 1050
+    died_estimated: true
+    prominence: 2
+    sitelinks: 22
+    sitelinks_on: 2026-10-24
+    coverage: partly
+    coverage_note: "Life dates, her son William and her burial at Grestain (death year approximate). Not captured: her marriage to Herluin de Conteville (1031) and her sons Odo of Bayeux and Robert of Mortain, who are not in the database yet."
+    note: "Mother of William the Conqueror by Robert I of Normandy, whom she never married; probably from Falaise, the daughter of Fulbert, perhaps a tanner or embalmer."
+    sources: [wp-herleva]
+
+links:
+  - {parent: robert-i-of-normandy, child: william-i-of-england}
+  - {parent: herleva, child: william-i-of-england}
+  - {parent: richard-ii-of-normandy, child: robert-i-of-normandy}
+
+titles:
+  - {person: robert-i-of-normandy, title: Duke of Normandy, realm: Normandy, from: 1027-08-06, to: 1035-07-02, note: "Succeeded his elder brother Richard III", sources: [wp-william-i, wp-robert-i-of-normandy]}
+
+places:
+  - {key: valognes, name: Valognes, kind: town, region: Normandy, country: France, lat: 49.5092, lng: -1.4692, visitable: true, sources: [wp-william-i]}
+  - {key: val-es-dunes-battlefield, name: Val-ès-Dunes battlefield, kind: battlefield, region: Normandy, country: France, lat: 49.0833, lng: -0.25, visitable: true, visit_site: "1851 memorial at Vimont", note: "The plain south-east of Caen, near Conteville, where William and Henry I of France beat the rebel barons in 1047.", sources: [wp-battle-of-val-es-dunes]}
+  - {key: caen, name: Caen, kind: city, region: Normandy, country: France, lat: 49.1814, lng: -0.3636, sources: [wp-battle-of-val-es-dunes, wp-william-i]}
+  - {key: brionne, name: Brionne, kind: castle, region: Normandy, country: France, lat: 49.1947, lng: 0.7203, note: "Guy of Burgundy's castle, besieged by William after Val-ès-Dunes until 1050.", sources: [wp-william-i, wp-battle-of-val-es-dunes]}
+  - {key: chateau-d-eu, name: Eu, historical_name: Castle of Eu, kind: castle, city: Eu, region: Normandy, country: France, lat: 50.0494, lng: 1.4169, visitable: true, visit_site: "Château d'Eu (the present château is later)", note: "Where William married Matilda of Flanders, according to William of Jumièges.", sources: [wp-matilda-of-flanders]}
+  - {key: mortemer, name: Mortemer, kind: village, region: Normandy, country: France, lat: 49.7508, lng: 1.5503, sources: [wp-battle-of-mortemer]}
+  - {key: varaville, name: Varaville, kind: village, region: Normandy, country: France, lat: 49.2847, lng: -0.1544, note: "At a ford on the Dives estuary.", sources: [wp-battle-of-varaville]}
+  - {key: thimert, name: Thimert, kind: village, region: Centre-Val de Loire, country: France, lat: 48.5694, lng: 1.2514, sources: [wp-william-i]}
+  - {key: le-mans, name: Le Mans, kind: city, region: Pays de la Loire, country: France, lat: 48.0042, lng: 0.1969, note: "Chief town of the county of Maine.", sources: [wp-william-i]}
+  - {key: dives-sur-mer, name: Dives-sur-Mer, kind: harbour, region: Normandy, country: France, lat: 49.2856, lng: -0.1011, note: "At the mouth of the Dives, where William of Poitiers says the invasion fleet was built.", sources: [wp-william-i]}
+  - {key: saint-valery-sur-somme, name: Saint-Valery-sur-Somme, kind: harbour, region: Hauts-de-France, country: France, lat: 50.1883, lng: 1.6294, note: "Where the invasion fleet sailed from in September 1066.", sources: [wp-william-i]}
+  - {key: pevensey-castle, name: Pevensey Castle, historical_name: Anderitum, kind: castle, city: Pevensey, region: East Sussex, country: England, lat: 50.8192, lng: 0.3331, visitable: true, visit_site: "Pevensey Castle (English Heritage)", founded: 1066, built_by: "A Roman Saxon Shore fort, reoccupied by William the Conqueror in 1066; Norman castle built by Robert, Count of Mortain", note: "The Normans landed in Pevensey Bay on 28 September 1066 and sheltered in the old Roman fort.", sources: [wp-pevensey-castle, wp-william-i]}
+  - {key: hastings-castle, name: Hastings Castle, kind: castle, city: Hastings, region: East Sussex, country: England, lat: 50.856, lng: 0.585, visitable: true, visit_site: "Hastings Castle", founded: 1066, built_by: "William the Conqueror (timber, 1066; rebuilt in stone from 1070)", note: "William's base before the battle, on the West Hill cliffs; much has fallen into the sea.", sources: [wp-hastings-castle]}
+  - {key: wallingford, name: Wallingford, kind: town, region: Oxfordshire, country: England, lat: 51.599, lng: -1.125, note: "Where William crossed the Thames in December 1066.", sources: [wp-william-i]}
+  - {key: berkhamsted-castle, name: Berkhamsted, kind: castle, city: Berkhamsted, region: Hertfordshire, country: England, lat: 51.7641, lng: -0.5588, visitable: true, visit_site: "Berkhamsted Castle (English Heritage)", note: "Where the English leaders submitted to William in December 1066. The castle ruins are of the castle built afterwards.", sources: [wp-william-i]}
+  - {key: rougemont-castle, name: Rougemont Castle, kind: castle, city: Exeter, region: Devon, country: England, lat: 50.7261, lng: -3.5303, visitable: true, founded: 1068, built_by: "William the Conqueror, after the siege of 1068", sources: [wp-william-i, wp-siege-of-exeter-1068]}
+  - {key: warwick-castle, name: Warwick Castle, kind: castle, city: Warwick, region: Warwickshire, country: England, lat: 52.2796, lng: -1.5856, visitable: true, visit_site: "Warwick Castle", founded: 1068, built_by: "William the Conqueror, 1068", sources: [wp-william-i]}
+  - {key: york-castle, name: York Castle, kind: castle, city: York, region: North Yorkshire, country: England, lat: 53.9558, lng: -1.08, visitable: true, visit_site: "Clifford's Tower (English Heritage)", founded: 1068, built_by: "William the Conqueror, 1068; a second castle in 1069", sources: [wp-william-i]}
+  - {key: lincoln-castle, name: Lincoln Castle, kind: castle, city: Lincoln, region: Lincolnshire, country: England, lat: 53.2349, lng: -0.5409, visitable: true, visit_site: "Lincoln Castle", founded: 1068, built_by: "William the Conqueror, 1068", sources: [wp-william-i]}
+  - {key: ely, name: Ely, historical_name: Isle of Ely, kind: city, region: Cambridgeshire, country: England, lat: 52.3981, lng: 0.2622, sources: [wp-william-i]}
+  - {key: abernethy, name: Abernethy, kind: village, region: Perth and Kinross, country: Scotland, lat: 56.3265, lng: -3.3109, sources: [wp-treaty-of-abernethy]}
+  - {key: dol-de-bretagne, name: Dol-de-Bretagne, historical_name: Dol, kind: town, region: Brittany, country: France, lat: 48.5497, lng: -1.7508, sources: [wp-siege-of-dol]}
+  - {key: gerberoy, name: Gerberoy, kind: castle, region: Hauts-de-France, country: France, lat: 49.5342, lng: 1.8497, sources: [wp-william-i]}
+  - {key: lillebonne, name: Lillebonne, kind: town, region: Normandy, country: France, lat: 49.5208, lng: 0.5375, sources: [wp-william-i]}
+  - {key: st-davids-cathedral, name: St Davids Cathedral, kind: cathedral, city: St Davids, region: Pembrokeshire, country: Wales, lat: 51.8819, lng: -5.2678, visitable: true, visit_site: "St Davids Cathedral", sources: [wp-william-i]}
+  - {key: old-sarum, name: Old Sarum, historical_name: Salisbury, kind: hillfort, region: Wiltshire, country: England, lat: 51.0933, lng: -1.8047, visitable: true, visit_site: "Old Sarum (English Heritage)", note: "The Salisbury of 1086, on the hill north of today's city.", sources: [wp-william-i]}
+  - {key: mantes-la-jolie, name: Mantes-la-Jolie, historical_name: Mantes, kind: town, region: Île-de-France, country: France, lat: 48.9906, lng: 1.7167, sources: [wp-william-i]}
+  - {key: grestain-abbey, name: Grestain Abbey, kind: abbey, region: Normandy, country: France, lat: 49.4078, lng: 0.3292, founded: 1050, founded_estimated: true, built_by: "Herluin de Conteville and his son Robert, Count of Mortain", sources: [wp-herleva]}
+
+events:
+  - key: norman-magnates-swear-fealty-to-william-1035
+    name: Norman magnates swear fealty to William as Robert I's heir
+    type: Oath
+    year: 1035
+    month: 1
+    prominence: 3
+    note: "Before leaving on pilgrimage to Jerusalem, Robert I convened a council in January 1035 and had the magnates swear fealty to William, his only son, as heir. The article does not say where the council met."
+    people:
+      - {person: robert-i-of-normandy, role: convened the council}
+      - {person: william-i-of-england, role: named heir}
+    sources: [wp-william-i]
+
+  - key: william-succeeds-as-duke-of-normandy-1035
+    name: William succeeds as Duke of Normandy
+    type: Succession
+    year: 1035
+    month: 7
+    prominence: 4
+    note: "Robert I died at Nicaea in early July 1035 (2 July, says his own article) on his way back from Jerusalem. William, seven or eight and illegitimate, succeeded with the support of Archbishop Robert of Rouen and King Henry I of France. The article names no place for the succession."
+    people:
+      - {person: william-i-of-england, role: succeeded}
+      - {person: robert-i-of-normandy, role: died}
+      - {person: henry-i-of-france, role: supporter}
+    sources: [wp-william-i, wp-robert-i-of-normandy]
+
+  - key: attempt-to-seize-william-at-valognes-1046
+    name: Rebels try to seize William at Valognes
+    type: Rebellion
+    year: 1046
+    prominence: 2
+    place: valognes
+    places:
+      - {place: poissy, role: refuge, note: "King Henry I's court, where William fled (Val-ès-Dunes article)"}
+    note: "Late 1046, in the rebellion led by Guy of Burgundy. William escaped under cover of darkness to King Henry. The article warns the story may have legendary elements."
+    people:
+      - {person: william-i-of-england, role: escaped}
+      - {person: henry-i-of-france, role: gave refuge}
+    sources: [wp-william-i, wp-battle-of-val-es-dunes]
+
+  - key: battle-of-val-es-dunes-1047
+    place: val-es-dunes-battlefield
+    prominence: 3
+    note: "William and Henry I of France beat the rebel barons led by Guy of Burgundy on the plain near Caen: the turning point in William's control of Normandy. The date is disputed (see discrepancies), so only the year is kept."
+    people:
+      - {person: william-i-of-england, role: victor}
+    sources: [wp-william-i, wp-battle-of-val-es-dunes]
+
+  - key: truce-of-god-caen-1047
+    name: William declares the Truce of God at Caen
+    type: Council
+    year: 1047
+    month: 10
+    prominence: 2
+    place: caen
+    note: "Shortly after Val-ès-Dunes. Private war was banned from Wednesday evening to Monday morning; William and the king were exempt."
+    people:
+      - {person: william-i-of-england, role: promulgated}
+    sources: [wp-william-i, wp-battle-of-val-es-dunes]
+
+  - key: siege-of-brionne-1047
+    name: Siege of Brionne
+    type: Siege
+    year: 1047
+    end_year: 1050
+    prominence: 2
+    place: brionne
+    note: "Guy of Burgundy held out in his castle at Brionne after Val-ès-Dunes; after a long siege William exiled him in 1050."
+    people:
+      - {person: william-i-of-england, role: besieger}
+    sources: [wp-william-i, wp-battle-of-val-es-dunes]
+
+  - key: council-of-reims-forbids-william-marriage-1049
+    name: Leo IX forbids William's marriage at the Council of Reims
+    type: Council
+    year: 1049
+    month: 10
+    prominence: 2
+    place: reims
+    note: "The marriage had been arranged in 1049; the pope banned it on grounds of consanguinity (the couple were third cousins once removed)."
+    people:
+      - {person: leo-ix, role: forbade the marriage}
+      - {person: william-i-of-england, role: groom}
+      - {person: matilda-of-flanders, role: bride}
+    sources: [wp-william-i, wp-matilda-of-flanders]
+
+  - key: marriage-of-william-and-matilda-1051
+    name: Marriage of William and Matilda of Flanders
+    type: Marriage
+    year: 1051
+    estimated: true
+    prominence: 4
+    place: chateau-d-eu
+    note: "c. 1051-1052 at the castle of Eu (William of Jumièges); the William article says only 'the early 1050s'. Matilda, daughter of Count Baldwin V of Flanders, brought a powerful ally. They had four sons and five or six daughters, and founded the two abbeys in Caen."
+    people:
+      - {person: william-i-of-england, role: groom}
+      - {person: matilda-of-flanders, role: bride}
+    sources: [wp-matilda-of-flanders, wp-william-i]
+
+  - key: edward-chooses-william-as-heir-1051
+    name: Edward the Confessor appears to choose William as his heir
+    type: Succession
+    year: 1051
+    prominence: 3
+    note: "During the exile of Earl Godwin's family. The basis of William's claim to England; no English source mentions the embassy that is said to have carried the promise."
+    people:
+      - {person: edward-the-confessor, role: named his heir}
+      - {person: william-i-of-england, role: heir}
+    sources: [wp-william-i]
+
+  - key: battle-of-mortemer-1054
+    name: Battle of Mortemer
+    type: Battle
+    year: 1054
+    month: 2
+    prominence: 3
+    place: mortemer
+    note: "Henry I and the rebels invaded Normandy on two fronts. William faced the king himself; his second army, under Robert of Eu and others, routed Odo's wing at Mortemer. A turning point in William's hold on the duchy."
+    people:
+      - {person: william-i-of-england, role: victor (his army; he was facing the king elsewhere)}
+      - {person: henry-i-of-france, role: defeated}
+    sources: [wp-william-i, wp-battle-of-mortemer]
+
+  - key: battle-of-varaville-1057
+    name: Battle of Varaville
+    type: Battle
+    year: 1057
+    month: 8
+    prominence: 3
+    place: varaville
+    note: "William attacked the half of the French and Angevin army left behind when the tide cut the ford on the Dives estuary. The last invasion of Normandy in his lifetime."
+    people:
+      - {person: william-i-of-england, role: victor}
+      - {person: henry-i-of-france, role: defeated}
+    sources: [wp-william-i, wp-battle-of-varaville]
+
+  - key: siege-of-thimert-1058
+    name: Siege of Thimert
+    type: Siege
+    year: 1058
+    end_year: 1060
+    prominence: 2
+    place: thimert
+    note: "William invaded the County of Dreux and took Tillières-sur-Avre and Thimert; Henry I's siege of Thimert dragged on until the king's death in 1060."
+    people:
+      - {person: william-i-of-england, role: held the castle}
+      - {person: henry-i-of-france, role: besieger}
+    sources: [wp-william-i]
+
+  - key: william-conquers-maine-1062
+    name: William conquers the county of Maine
+    type: Campaign
+    year: 1062
+    end_year: 1064
+    prominence: 3
+    place: le-mans
+    note: "After Count Herbert II of Maine died in 1062, William claimed the county through his son Robert's betrothal to Herbert's sister, and had control by 1064. He appointed a Norman bishop of Le Mans in 1065."
+    people:
+      - {person: william-i-of-england, role: conqueror}
+      - {person: robert-curthose, role: claimant by betrothal}
+    sources: [wp-william-i]
+
+  - key: william-breton-campaign-1064
+    name: William's campaign in Brittany
+    type: Campaign
+    year: 1064
+    prominence: 2
+    note: "Obscure in its details; it destabilised Duke Conan II. Some sources say Harold Godwinson took part and swore to uphold William's claim to England, but no English source reports it. The article names no place."
+    people:
+      - {person: william-i-of-england, role: commander}
+      - {person: harold-ii-of-england, role: said to have taken part}
+    sources: [wp-william-i]
+
+  - key: norman-invasion-fleet-assembles-1066
+    name: William's invasion fleet assembles
+    type: Campaign
+    year: 1066
+    month: 8
+    prominence: 3
+    place: dives-sur-mer
+    note: "Ready by early August, then held in Normandy by adverse winds until late September. Where it was built is disputed: the mouth of the Dives (William of Poitiers) or Saint-Valery-sur-Somme (William of Jumièges). Matilda governed Normandy while William was away."
+    people:
+      - {person: william-i-of-england, role: commander}
+      - {person: matilda-of-flanders, role: regent of Normandy}
+    sources: [wp-william-i, wp-matilda-of-flanders]
+
+  - key: norman-fleet-sails-1066
+    name: The Norman fleet sails for England
+    type: Campaign
+    date: 1066-09-27
+    prominence: 3
+    place: saint-valery-sur-somme
+    note: "Two days after Harold beat Harald Hardrada and Tostig at Stamford Bridge."
+    people:
+      - {person: william-i-of-england, role: commander}
+    sources: [wp-william-i]
+
+  - key: norman-landing-at-pevensey-1066
+    name: The Normans land at Pevensey
+    type: Invasion
+    date: 1066-09-28
+    prominence: 4
+    place: pevensey-castle
+    places:
+      - {place: hastings-castle, role: base, note: "William moved to Hastings a few miles east and built a castle as his base"}
+    note: "The army sheltered in the Roman fort for the night, then moved to Hastings, built a castle, ravaged the interior and waited for Harold."
+    people:
+      - {person: william-i-of-england, role: commander}
+    sources: [wp-william-i, wp-pevensey-castle, wp-hastings-castle]
+
+  - key: english-submit-at-wallingford-1066
+    name: William crosses the Thames at Wallingford; Stigand submits
+    type: Submission
+    year: 1066
+    month: 12
+    prominence: 2
+    place: wallingford
+    note: "Early December 1066. After Hastings William secured Dover, Kent and Canterbury, reached Southwark in late November, and circled south and west of London, burning as he went."
+    people:
+      - {person: william-i-of-england, role: received the submission}
+    sources: [wp-william-i]
+
+  - key: english-submit-at-berkhamsted-1066
+    name: The English leaders submit to William at Berkhamsted
+    type: Submission
+    year: 1066
+    month: 12
+    prominence: 3
+    place: berkhamsted-castle
+    note: "Edgar the Ætheling, Earls Morcar and Edwin and Archbishop Ealdred submitted. William then sent men into London to build a castle."
+    people:
+      - {person: william-i-of-england, role: received the submission}
+    sources: [wp-william-i, wp-siege-of-exeter-1068]
+
+  - key: siege-of-exeter-1068
+    name: Siege of Exeter
+    type: Siege
+    year: 1068
+    prominence: 3
+    place: exeter
+    places:
+      - {place: rougemont-castle, role: castle, note: "William built a castle to hold the city"}
+    note: "Early 1068. Exeter, where Harold's mother Gytha had taken refuge, refused fealty; it held out 18 days and surrendered on generous terms."
+    people:
+      - {person: william-i-of-england, role: besieger}
+    sources: [wp-william-i, wp-siege-of-exeter-1068]
+
+  - key: coronation-of-matilda-of-flanders-1068
+    name: Coronation of Matilda of Flanders
+    type: Coronation
+    date: 1068-05-11
+    prominence: 3
+    place: westminster-abbey
+    note: "At Pentecost, presided over by the archbishop of York; William was crowned again at the same time. The William article says only that she was crowned in May 1068."
+    people:
+      - {person: matilda-of-flanders, role: crowned}
+      - {person: william-i-of-england, role: crowned again}
+    sources: [wp-matilda-of-flanders, wp-william-i]
+
+  - key: harrying-of-the-north-1069
+    name: Crown-wearing at York and the Harrying of the North
+    type: Campaign
+    year: 1069
+    month: 12
+    end_year: 1070
+    prominence: 4
+    place: york
+    note: "After Edgar the Ætheling and Sweyn of Denmark took York, William wore his crown in its ruins on Christmas Day 1069, bought off the Danes and laid waste to the north as far as the Tees, then crossed the Pennines to beat the last rebels at Shrewsbury. Over by April 1070. Domesday suggests up to 75% of the population died or never returned."
+    people:
+      - {person: william-i-of-england, role: commander}
+    sources: [wp-william-i, wp-harrying-of-the-north]
+
+  - key: papal-legates-crown-william-at-winchester-1070
+    name: Papal legates crown William at Winchester
+    type: Coronation
+    year: 1070
+    prominence: 2
+    place: winchester-cathedral
+    note: "At the Easter court of 1070 (in the Old Minster, on the site of today's cathedral). David Bates calls it the papacy's seal of approval on the conquest; councils then deposed Stigand and other English prelates."
+    people:
+      - {person: william-i-of-england, role: crowned}
+    sources: [wp-william-i]
+
+  - key: siege-of-ely-1071
+    name: Siege of Ely
+    type: Siege
+    year: 1071
+    prominence: 3
+    place: ely
+    note: "William built a causeway to reach the Isle of Ely, where Hereward the Wake and Earl Morcar were hiding. Hereward escaped; Morcar was captured. The last rebellion of the north."
+    people:
+      - {person: william-i-of-england, role: victor}
+    sources: [wp-william-i]
+
+  - key: treaty-of-abernethy-1072
+    name: Treaty of Abernethy
+    type: Treaty
+    year: 1072
+    prominence: 3
+    place: abernethy
+    note: "William invaded Scotland; Malcolm III swore allegiance, probably gave his son Duncan as a hostage, and expelled Edgar the Ætheling."
+    people:
+      - {person: william-i-of-england, role: signatory}
+      - {person: malcolm-iii-of-scotland, role: signatory}
+    sources: [wp-william-i, wp-treaty-of-abernethy]
+
+  - key: william-retakes-le-mans-1073
+    name: William retakes Le Mans
+    type: Campaign
+    year: 1073
+    month: 3
+    prominence: 2
+    place: le-mans
+    note: "A swift campaign against Fulk le Rechin of Anjou, complete by 30 March 1073."
+    people:
+      - {person: william-i-of-england, role: victor}
+    sources: [wp-william-i]
+
+  - key: siege-of-dol-1076
+    name: Siege of Dol
+    type: Siege
+    year: 1076
+    month: 9
+    prominence: 3
+    place: dol-de-bretagne
+    note: "William besieged the rebel Ralph de Gael in Dol; Philip I of France relieved it. William's first defeat in battle."
+    people:
+      - {person: william-i-of-england, role: defeated}
+      - {person: philip-i-of-france, role: victor}
+    sources: [wp-william-i, wp-siege-of-dol]
+
+  - key: siege-of-gerberoy-1079
+    name: Siege of Gerberoy
+    type: Siege
+    year: 1079
+    month: 1
+    prominence: 3
+    place: gerberoy
+    note: "William besieged his rebel son Robert, who was given the castle by Philip I. After three weeks the garrison sallied out; Robert unhorsed his father, who was saved by the Englishman Toki son of Wigod. The siege was lifted."
+    people:
+      - {person: william-i-of-england, role: defeated}
+      - {person: robert-curthose, role: victor}
+    sources: [wp-william-i]
+
+  - key: council-of-lillebonne-1080
+    name: Council of Lillebonne
+    type: Council
+    year: 1080
+    prominence: 2
+    place: lillebonne
+    note: "Confirmed William's ultimate authority over the Norman church."
+    people:
+      - {person: william-i-of-england, role: presided}
+    sources: [wp-william-i]
+
+  - key: william-in-wales-1081
+    name: William goes to St Davids
+    type: Campaign
+    year: 1081
+    prominence: 2
+    place: st-davids-cathedral
+    note: "A military campaign, says the Anglo-Saxon Chronicle; a pilgrimage to St Davids, say Welsh sources (see discrepancies)."
+    people:
+      - {person: william-i-of-england, role: visitor}
+    sources: [wp-william-i]
+
+  - key: salisbury-oath-1086
+    name: The Salisbury Oath
+    type: Oath
+    date: 1086-08-01
+    prominence: 3
+    place: old-sarum
+    note: "William received the Domesday survey, ordered at Christmas 1085, and the chief magnates renewed their oaths of allegiance."
+    people:
+      - {person: william-i-of-england, role: received the oath}
+    sources: [wp-william-i]
+
+  - key: sack-of-mantes-1087
+    name: William seizes Mantes and is fatally hurt
+    type: Campaign
+    year: 1087
+    month: 7
+    prominence: 3
+    place: mantes-la-jolie
+    note: "On campaign against the French Vexin, William fell ill or was injured by the pommel of his saddle while seizing Mantes. He was carried to the priory of Saint-Gervais at Rouen and died there on 9 September."
+    people:
+      - {person: william-i-of-england, role: commander}
+    sources: [wp-william-i]
+
+moments:
+  - {person: robert-i-of-normandy, role: died, place: nicaea, year: 1035}
+  - {person: herleva, role: buried, place: grestain-abbey, year: 1050}
+  - {person: william-i-of-england, role: built, place: warwick-castle, year: 1068}
+  - {person: william-i-of-england, role: built, place: york-castle, year: 1068}
+  - {person: william-i-of-england, role: built, place: nottingham-castle, year: 1068}
+  - {person: william-i-of-england, role: built, place: lincoln-castle, year: 1068}
+  - {person: william-i-of-england, role: founded, place: battle-abbey, year: 1070}
+
+discrepancies:
+  - key: william-i-birth-year
+    question: Was William the Conqueror born in 1027 or 1028?
+    about: [{person: william-i-of-england}]
+    field: born
+    claims:
+      - {value: "1028 (most likely towards the end of the year)", sources: [wp-william-i]}
+      - {value: "1026/1027, per Orderic Vitalis", sources: [wp-herleva]}
+    note: The record uses 1028, marked approximate.
+
+  - key: val-es-dunes-date
+    question: When in 1047 was the Battle of Val-ès-Dunes fought?
+    about: [{event: battle-of-val-es-dunes-1047}]
+    field: date
+    claims:
+      - {value: "Early 1047", sources: [wp-william-i, wp-battle-of-val-es-dunes], note: "David Douglas, from the flooded Orne"}
+      - {value: "10 August 1047 (traditional)", sources: [wp-battle-of-val-es-dunes], note: "No decisive evidence"}
+      - {value: "Summer 1047", sources: [wp-battle-of-val-es-dunes], note: "David Bates: the tide explains the drownings"}
+    note: The record keeps the year alone.
+
+  - key: norman-fleet-built-where-1066
+    question: Where was William's invasion fleet built in 1066?
+    about: [{event: norman-invasion-fleet-assembles-1066}]
+    field: place
+    claims:
+      - {value: "At the mouth of the River Dives (William of Poitiers)", sources: [wp-william-i]}
+      - {value: "At Saint-Valery-sur-Somme (William of Jumièges)", sources: [wp-william-i]}
+    note: Both agree it sailed from Saint-Valery. The assembly event uses Dives-sur-Mer; the sailing event uses Saint-Valery.
+
+  - key: william-matilda-papal-sanction
+    question: When did the pope sanction William's marriage to Matilda?
+    about: [{event: marriage-of-william-and-matilda-1051}]
+    field: date
+    claims:
+      - {value: "1059, after Lanfranc won a dispensation from Nicholas II", sources: [wp-matilda-of-flanders]}
+      - {value: "Probably earlier in the 1050s; the 1059 date comes from a late source not generally thought reliable", sources: [wp-william-i]}
+    note: No event is recorded for the sanction.
+
+  - key: william-wales-1081-purpose
+    question: Was William's 1081 visit to Wales a military campaign or a pilgrimage to St Davids?
+    about: [{event: william-in-wales-1081}]
+    claims:
+      - {value: "A military campaign (Anglo-Saxon Chronicle; David Bates thinks this more likely)", sources: [wp-william-i]}
+      - {value: "A pilgrimage to St Davids in honour of Saint David (Welsh sources)", sources: [wp-william-i]}

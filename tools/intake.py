@@ -164,7 +164,7 @@ PLACE_FIELDS = {"name": "name", "historical_name": "historical_name", "kind": "k
                 "city": "city", "country": "modern_country", "lat": "lat", "lng": "lng", "visitable": "visitable_today",
                 "visit_site": "visit_site", "obsidian_link": "obsidian_link", "note": "note",
                 "founded_estimated": "start_estimated", "built_by": "built_by", "architect": "architect"}
-EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "estimated": "estimated",
+EVENT_FIELDS = {"name": "name", "type": "type", "end_year": "end_year", "month": "start_month", "estimated": "estimated",
                 "prominence": "prominence", "obsidian_link": "obsidian_link", "note": "note", "visitable": "visitable_today",
                 "visit_site": "visit_site"}
 ARTWORK_FIELDS = {"accession": "accession_number", "museum_url": "museum_url", "name": "name", "kind": "kind", "medium": "medium", "estimated": "estimated", "collection": "collection",
@@ -363,6 +363,15 @@ def plan_files(world: World, docs: list[tuple[str, dict]]) -> Plan:
                 p.adds["events"].append(k)
             for f in ("date", "year", "end_year"):
                 when(x, f, f"event `{k}`")
+            # `month`: the month when the source gives one but no day, so events order within their year (sql/019).
+            if "month" in x:
+                mo = x["month"]
+                if not isinstance(mo, int) or isinstance(mo, bool) or not 1 <= mo <= 12:
+                    p.errors.append(f"event `{k}`: month must be a number 1–12")
+                elif x.get("year") is None and x.get("date") is None and k not in world.events:
+                    p.errors.append(f"event `{k}`: month needs a `year`")
+                elif x.get("date") is not None and re.fullmatch(r"\d{1,4}-\d{1,2}-\d{1,2}", str(x["date"])) and int(str(x["date"]).split("-")[1]) != mo:
+                    p.errors.append(f"event `{k}`: month {mo} disagrees with date {x['date']}")
             if x.get("place"):
                 ref("place", x["place"], f"event `{k}`")
             # `places`: every other place the event happened at (the venues of an Olympics), each with a role.
