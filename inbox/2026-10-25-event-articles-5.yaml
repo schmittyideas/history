@@ -1,0 +1,120 @@
+batch:
+  title: "Events cite their own Wikipedia article (5)"
+  requested: "When an event mentions the Truce of God or a similar act, reference that act's own article too: every event"
+  date: 2026-10-25
+
+# Each event below gets its own Wikipedia article as a source (the article about that battle, treaty, council or act,
+# e.g. the Truce of God at Caen -> 'Peace and Truce of God'). Matched by title search, then checked by hand or by a
+# reviewer reading the article; events with no dedicated article were left out. Existing sources are reused.
+
+sources:
+  - {key: wp-great-fire-of-london, title: "Great Fire of London (Wikipedia)", url: "https://en.wikipedia.org/wiki/Great_Fire_of_London"}
+  - {key: wp-the-blazing-world, title: "The Blazing World (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Blazing_World"}
+  - {key: wp-clarendon-house, title: "Clarendon House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Clarendon_House"}
+  - {key: wp-paradise-lost, title: "Paradise Lost (Wikipedia)", url: "https://en.wikipedia.org/wiki/Paradise_Lost"}
+  - {key: wp-annus-mirabilis-poem, title: "Annus Mirabilis (poem) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Annus_Mirabilis_(poem)"}
+  - {key: wp-sheldonian-theatre, title: "Sheldonian Theatre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sheldonian_Theatre"}
+  - {key: wp-secret-treaty-of-dover, title: "Secret Treaty of Dover (Wikipedia)", url: "https://en.wikipedia.org/wiki/Secret_Treaty_of_Dover"}
+  - {key: wp-the-forc-d-marriage, title: "The Forc'd Marriage (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Forc%27d_Marriage"}
+  - {key: wp-the-country-wife, title: "The Country Wife (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Country_Wife"}
+  - {key: wp-monument-to-the-great-fire-of-london, title: "Monument to the Great Fire of London (Wikipedia)", url: "https://en.wikipedia.org/wiki/Monument_to_the_Great_Fire_of_London"}
+  - {key: wp-royal-observatory-greenwich, title: "Royal Observatory, Greenwich (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Observatory,_Greenwich"}
+  - {key: wp-the-pilgrim-s-progress, title: "The Pilgrim's Progress (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Pilgrim%27s_Progress"}
+  - {key: wp-absalom-and-achitophel, title: "Absalom and Achitophel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Absalom_and_Achitophel"}
+  - {key: wp-battle-of-sedgemoor, title: "Battle of Sedgemoor (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Sedgemoor"}
+  - {key: wp-philosophi-naturalis-principia-mathematica, title: "Philosophiæ Naturalis Principia Mathematica (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica"}
+  - {key: wp-glorious-revolution, title: "Glorious Revolution (Wikipedia)", url: "https://en.wikipedia.org/wiki/Glorious_Revolution"}
+  - {key: wp-seven-bishops, title: "Seven Bishops (Wikipedia)", url: "https://en.wikipedia.org/wiki/Seven_Bishops"}
+  - {key: wp-oroonoko, title: "Oroonoko (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oroonoko"}
+  - {key: wp-declaration-of-right-1689, title: "Declaration of Right, 1689 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Declaration_of_Right,_1689"}
+  - {key: wp-dido-and-aeneas, title: "Dido and Aeneas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Dido_and_Aeneas"}
+  - {key: wp-a-letter-concerning-toleration, title: "A Letter Concerning Toleration (Wikipedia)", url: "https://en.wikipedia.org/wiki/A_Letter_Concerning_Toleration"}
+  - {key: wp-battle-of-the-boyne, title: "Battle of the Boyne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Boyne"}
+  - {key: wp-royal-hospital-chelsea, title: "Royal Hospital Chelsea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Hospital_Chelsea"}
+  - {key: wp-the-old-bachelor, title: "The Old Bachelor (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Old_Bachelor"}
+  - {key: wp-love-for-love, title: "Love for Love (Wikipedia)", url: "https://en.wikipedia.org/wiki/Love_for_Love"}
+  - {key: wp-the-relapse, title: "The Relapse (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Relapse"}
+  - {key: wp-the-provoked-wife, title: "The Provoked Wife (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Provoked_Wife"}
+  - {key: wp-the-way-of-the-world, title: "The Way of the World (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Way_of_the_World"}
+  - {key: wp-act-of-settlement-1701, title: "Act of Settlement 1701 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Act_of_Settlement_1701"}
+  - {key: wp-opticks, title: "Opticks (Wikipedia)", url: "https://en.wikipedia.org/wiki/Opticks"}
+  - {key: wp-st-paul-s-cathedral, title: "St Paul's Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Paul%27s_Cathedral"}
+  - {key: wp-jacobite-rising-of-1715, title: "Jacobite rising of 1715 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jacobite_rising_of_1715"}
+  - {key: wp-coronation-of-george-ii-and-caroline, title: "Coronation of George II and Caroline (Wikipedia)", url: "https://en.wikipedia.org/wiki/Coronation_of_George_II_and_Caroline"}
+  - {key: wp-jacobite-rising-of-1745, title: "Jacobite rising of 1745 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jacobite_rising_of_1745"}
+  - {key: wp-battle-of-culloden, title: "Battle of Culloden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Culloden"}
+  - {key: wp-questions-sur-l-encyclopedie, title: "Questions sur l'Encyclopédie (Wikipedia)", url: "https://en.wikipedia.org/wiki/Questions_sur_l%27Encyclop%C3%A9die"}
+  - {key: wp-united-states-declaration-of-independence, title: "United States Declaration of Independence (Wikipedia)", url: "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence"}
+  - {key: wp-treaty-of-paris-1783, title: "Treaty of Paris (1783) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Paris_(1783)"}
+  - {key: wp-battle-of-waterloo, title: "Battle of Waterloo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Waterloo"}
+  - {key: wp-slavery-abolition-act-1833, title: "Slavery Abolition Act 1833 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833"}
+  - {key: wp-great-exhibition, title: "Great Exhibition (Wikipedia)", url: "https://en.wikipedia.org/wiki/Great_Exhibition"}
+  - {key: wp-royal-titles-act-1876, title: "Royal Titles Act 1876 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Titles_Act_1876"}
+  - {key: wp-death-and-state-funeral-of-queen-victoria, title: "Death and state funeral of Queen Victoria (Wikipedia)", url: "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Queen_Victoria"}
+  - {key: wp-delhi-durbar, title: "Delhi Durbar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Delhi_Durbar"}
+  - {key: wp-house-of-windsor, title: "House of Windsor (Wikipedia)", url: "https://en.wikipedia.org/wiki/House_of_Windsor"}
+  - {key: wp-power-jets-wu, title: "Power Jets WU (Wikipedia)", url: "https://en.wikipedia.org/wiki/Power_Jets_WU"}
+  - {key: wp-british-declaration-of-war-on-germany-1939, title: "British declaration of war on Germany (1939) (Wikipedia)", url: "https://en.wikipedia.org/wiki/British_declaration_of_war_on_Germany_(1939)"}
+  - {key: wp-bombing-of-dresden-2, title: "Bombing of Dresden (Wikipedia)", url: "https://en.wikipedia.org/wiki/Bombing_of_Dresden"}
+  - {key: wp-liberation-of-auschwitz-concentration-camp, title: "Liberation of Auschwitz concentration camp (Wikipedia)", url: "https://en.wikipedia.org/wiki/Liberation_of_Auschwitz_concentration_camp"}
+  - {key: wp-indian-independence-act-1947, title: "Indian Independence Act 1947 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Indian_Independence_Act_1947"}
+
+events:
+  - {key: great-fire-of-london, sources: [wp-great-fire-of-london]}
+  - {key: the-blazing-world-published-1666, sources: [wp-the-blazing-world]}
+  - {key: clarendon-house-completed, sources: [wp-clarendon-house]}
+  - {key: paradise-lost-published-1667, sources: [wp-paradise-lost]}
+  - {key: annus-mirabilis-published-1667, sources: [wp-annus-mirabilis-poem]}
+  - {key: sheldonian-theatre-completed, sources: [wp-sheldonian-theatre]}
+  - {key: treaty-of-dover-1670, sources: [wp-secret-treaty-of-dover]}
+  - {key: the-forced-marriage-staged-1670, sources: [wp-the-forc-d-marriage]}
+  - {key: the-country-wife-published-1675, sources: [wp-the-country-wife]}
+  - {key: monument-london-completed, sources: [wp-monument-to-the-great-fire-of-london]}
+  - {key: royal-observatory-greenwich-built, sources: [wp-royal-observatory-greenwich]}
+  - {key: pilgrims-progress-published-1678, sources: [wp-the-pilgrim-s-progress]}
+  - {key: absalom-and-achitophel-published-1681, sources: [wp-absalom-and-achitophel]}
+  - {key: battle-of-sedgemoor, sources: [wp-battle-of-sedgemoor]}
+  - {key: principia-published-1687, sources: [wp-philosophi-naturalis-principia-mathematica]}
+  - {key: glorious-revolution, sources: [wp-glorious-revolution]}
+  - {key: acquittal-of-the-seven-bishops, sources: [wp-seven-bishops]}
+  - {key: oroonoko-published-1688, sources: [wp-oroonoko]}
+  - {key: declaration-of-right-1689, sources: [wp-declaration-of-right-1689]}
+  - {key: dido-and-aeneas-first-performance, sources: [wp-dido-and-aeneas]}
+  - {key: letter-concerning-toleration-1689, sources: [wp-a-letter-concerning-toleration]}
+  - {key: battle-of-the-boyne, sources: [wp-battle-of-the-boyne]}
+  - {key: royal-hospital-chelsea-completed, sources: [wp-royal-hospital-chelsea]}
+  - {key: the-old-bachelor-1693, sources: [wp-the-old-bachelor]}
+  - {key: love-for-love-premiere-1695, sources: [wp-love-for-love]}
+  - {key: the-relapse-1696, sources: [wp-the-relapse]}
+  - {key: the-provoked-wife-1697, sources: [wp-the-provoked-wife]}
+  - {key: the-way-of-the-world-premiere-1700, sources: [wp-the-way-of-the-world]}
+  - {key: act-of-settlement-1701, sources: [wp-act-of-settlement-1701]}
+  - {key: opticks-published-1704, sources: [wp-opticks]}
+  - {key: st-pauls-cathedral-completed, sources: [wp-st-paul-s-cathedral]}
+  - {key: jacobite-rising-1715, sources: [wp-jacobite-rising-of-1715]}
+  - {key: coronation-of-george-ii, sources: [wp-coronation-of-george-ii-and-caroline]}
+  - {key: jacobite-rising-1745, sources: [wp-jacobite-rising-of-1745]}
+  - {key: battle-of-culloden, sources: [wp-battle-of-culloden]}
+  - {key: questions-sur-l-encyclopedie, sources: [wp-questions-sur-l-encyclopedie]}
+  - {key: american-declaration-of-independence, sources: [wp-united-states-declaration-of-independence]}
+  - {key: treaty-of-paris-1783, sources: [wp-treaty-of-paris-1783]}
+  - {key: battle-of-waterloo, sources: [wp-battle-of-waterloo]}
+  - {key: slavery-abolition-act-1833, sources: [wp-slavery-abolition-act-1833]}
+  - {key: great-exhibition-1851, sources: [wp-great-exhibition]}
+  - {key: victoria-empress-of-india-1876, sources: [wp-royal-titles-act-1876]}
+  - {key: death-of-queen-victoria, sources: [wp-death-and-state-funeral-of-queen-victoria]}
+  - {key: delhi-durbar-1911, sources: [wp-delhi-durbar]}
+  - {key: house-of-windsor-1917, sources: [wp-house-of-windsor]}
+  - {key: hollywoodland-sign-dedicated, sources: [wp-hollywood-sign]}
+  - {key: whittle-engine-ground-run, sources: [wp-power-jets-wu]}
+  - {key: britain-enters-second-world-war, sources: [wp-british-declaration-of-war-on-germany-1939]}
+  - {key: heinkel-he-178-first-flight, sources: [wp-heinkel-he-178]}
+  - {key: union-station-opening, sources: [wp-los-angeles-union-station]}
+  - {key: gloster-e28-39-first-flight, sources: [wp-gloster-e28-39]}
+  - {key: peenemunde-raid, sources: [wp-operation-hydra-1943]}
+  - {key: bombing-of-dresden, sources: [wp-bombing-of-dresden-2]}
+  - {key: liberation-of-auschwitz, sources: [wp-liberation-of-auschwitz-concentration-camp]}
+  - {key: tokyo-trial, sources: [wp-international-military-tribunal-for-the-far-east]}
+  - {key: independence-of-india-and-pakistan-1947, sources: [wp-indian-independence-act-1947]}
+  - {key: mercury-atlas-6-1962, sources: [wp-mercury-atlas-6]}
+  - {key: lacma-opens-on-wilshire, sources: [wp-los-angeles-county-museum-of-art]}
