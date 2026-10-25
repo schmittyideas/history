@@ -2126,12 +2126,22 @@ function reignStrip(holders, a, b) {
 // screen and shrinks back to its spot. The address records the cards (by key), so a view can be shared.
 // The Show and Fame buttons belong to the timeline and Year views; the cards show everyone.
 
-const X = { hint: {}, year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false };
+const X = { hint: {}, year: null, event: null, place: null, person: null, work: null, open: null, country: store.get("country", ""), pushed: false, lift: [] };
 const CARDS = ["year", "world", "event", "place", "person", "work"];
 const CARD_LABEL = { year: "Year", world: "World", event: "Event", place: "Place", person: "Person", work: "Work" };
 // The reader can put the cards in their own order (drag a card by its header, or its ← → buttons), kept per browser.
 // A card added later joins at the end of a saved order.
 const cardOrder = () => { const saved = store.get("cardOrder", []).filter(k => CARDS.includes(k)); return [...new Set([...saved, ...CARDS])]; };
+// A search lifts the cards it matched to the top, for that search only: the year first, then the person, event, work
+// or place ("1850 Michelangelo" gives Year, Person). The rest follow the saved order, which the search leaves alone.
+const shownOrder = () => [...new Set([...X.lift, ...cardOrder()])];
+// After a search: lift its cards, and blank any card it couldn't fill, so nothing from an earlier search lingers
+// and no far-off suggestions crowd in. A link in another card fills it in place.
+function afterSearch(kind, year) {
+  X.lift = [...new Set([year != null ? "year" : null, kind].filter(k => CARDS.includes(k)))];
+  X.hint = {};
+  ["year", "event", "place", "person", "work"].forEach(k => { if (X[k] == null) X.hint[k] = { text: "Nothing for this search. Pick a link in another card to fill this one.", links: [] }; });
+}
 // One name per modern country: places say England, Scotland or Wales; realms say United Kingdom. Vatican City counts
 // under Italy (Ty, 2026-10-13), so picking Italy includes the Sistine Chapel and the Vatican Museums.
 const COUNTRY_ALIAS = { England: "United Kingdom", Scotland: "United Kingdom", Wales: "United Kingdom", "Northern Ireland": "United Kingdom", "Great Britain": "United Kingdom", Czechia: "Czech Republic", "Vatican City": "Italy" };
@@ -2558,6 +2568,7 @@ function runExplore(text) {
       : b.kind === "work" ? workCountry(I.workById[b.id]) : b.kind === "event" ? [...eventCountries(db.eventById[b.id])][0] : null;
     if (pc && I_hasCountry(pc)) setCountry(pc, false);
     if (r.year != null && r.best.kind !== "year") fillAt(r.best.kind, r.best.id, r.year); else fill(r.best.kind, r.best.id);
+    afterSearch(r.best.kind, r.year);
   }
   if (r.fuzzy) msg.append(`Showing ${r.best.name} (nothing is called "${r.typed}"). `);
   // A person searched with a year outside their life: say how far off it is.
@@ -2567,6 +2578,7 @@ function runExplore(text) {
   const short = t => t.length > 40 ? t.slice(0, 38).trimEnd() + "…" : t;
   if (r.also?.length) msg.append("Also: ", ...joinNodes(r.also.slice(0, 5).map(x => h("span", {}, xBtn(short(x.name), `Show ${x.name}`, () => {
     if (r.year != null) fillAt(x.kind, x.id, r.year); else fill(x.kind, x.id);
+    afterSearch(x.kind, r.year);
     msg.replaceChildren(); renderExplore(CARDS);
   }), h("span", { class: "yrs", text: ` ${x.kind}` })))));
   renderExplore(CARDS);
@@ -2637,7 +2649,7 @@ function renderExplore(changed = []) {
   if (xMap) { xMap.remove(); xMap = null; }
   if (thenMap) { thenMap.remove(); thenMap = null; }
   cardSizer.disconnect();
-  box.replaceChildren(...cardOrder().map(kind => {
+  box.replaceChildren(...shownOrder().map(kind => {
     const full = X.open === kind;
     const hint = X[kind] == null && X.hint?.[kind];
     const body = hint ? hintCard(kind, hint) : { year: yearCard, world: worldCard, event: eventCard, place: placeCard, person: personCard, work: workCard }[kind]();
@@ -2680,7 +2692,7 @@ function renderExplore(changed = []) {
 
 // Reordering moves the card elements themselves rather than redrawing, so the maps inside keep their place.
 function setCardOrder(order) {
-  store.set("cardOrder", order);
+  store.set("cardOrder", order); X.lift = [];
   const box = $("x-cards");
   order.forEach(k => { const c = $("x-" + k); if (c) box.append(c); });
   markMoveEnds();
@@ -2688,7 +2700,7 @@ function setCardOrder(order) {
   thenMap?.resize();
 }
 function moveCard(kind, d) {
-  const order = cardOrder(), i = order.indexOf(kind), j = i + d;
+  const order = shownOrder(), i = order.indexOf(kind), j = i + d;
   if (j < 0 || j >= order.length) return;
   [order[i], order[j]] = [order[j], order[i]];
   setCardOrder(order);
@@ -2698,7 +2710,7 @@ function moveCard(kind, d) {
   c.classList.remove("hit"); void c.offsetWidth; c.classList.add("hit");
 }
 function markMoveEnds() {
-  const order = cardOrder();
+  const order = shownOrder();
   order.forEach((k, i) => $("x-" + k)?.querySelectorAll(".xmove").forEach(b => { b.disabled = b.dataset.d < 0 ? i === 0 : i === order.length - 1; }));
 }
 // Cards differ in height. The grid is cut into 2px rows and each card spans as many as it needs (plus the 14px gap),
@@ -2744,7 +2756,7 @@ function wireCardDrag() {
     card.classList.remove("dragging"); card.style.transform = "";
     clear(); drag = null;
     if (!c) return;
-    const order = cardOrder().filter(k => k !== card.dataset.kind);
+    const order = shownOrder().filter(k => k !== card.dataset.kind);
     order.splice(order.indexOf(c.dataset.kind) + (side(c, e) === "after" ? 1 : 0), 0, card.dataset.kind);
     setCardOrder(order);
     card.classList.remove("hit"); void card.offsetWidth; card.classList.add("hit");
@@ -3299,6 +3311,7 @@ function nearMe() {
     msg.textContent = near.km > 50 ? `The nearest place recorded is ${near.p.name}, ${Math.round(near.km)} km away.` : "";
     setCountry(placeCountry(near.p) || "", false);
     fill("place", near.p.id);
+    afterSearch("place", null);
     renderExplore(CARDS);
   }, () => { msg.textContent = "Couldn't get your location. Your browser may have blocked it."; }, { timeout: 10000, maximumAge: 60000 });
 }
