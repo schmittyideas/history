@@ -1417,6 +1417,12 @@ function journeyStops(id) {
   const ok = pl => pl && pl.lat != null && pl.lng != null;
   return stops.filter(s => s.year != null).sort(byStop).map(s => ({ ...s, place: ok(s.place) ? s.place : null }));
 }
+// The person's age in a stop's year ("age 19", "age c. 19" when the birth year is approximate), or "" if unknown.
+const ageAt = (p, y) => {
+  if (p?.birth_year == null || y == null) return "";
+  const a = yearsBetween(p.birth_year, y);
+  return a <= 0 || (p.death_year != null && y > p.death_year) ? "" : `age ${p.birth_estimated ? "c. " : ""}${a}`;
+};
 const stopWhen = s => s.date ? fmtDate(s.date) : s.event?.start_month ? `${MONTHS[s.event.start_month - 1]} ${fmtYear(s.year)}` : fmtYear(s.year);
 
 // from: "explore" when opened from the Explore page's Person card, so links inside go to its cards, not the timeline.
@@ -1447,12 +1453,16 @@ function openJourney(id, from = "timeline") {
   // The list, numbered like the side panel's map (only stops with a place get a number).
   const list = $("jlist");
   let n = 0;
+  let lastYear = null;
   J.stops.forEach((s, i) => {
     s.n = s.place ? ++n : null;
+    // The age shows on the first stop of each new year.
+    const age = s.year !== lastYear ? ageAt(p, s.year) : "";
+    lastYear = s.year;
     const li = h("li", {},
       h("span", { class: "n" + (s.place ? "" : " none"), text: s.n ?? "–" }),
       h("button", { type: "button", class: "jpick", onclick: () => journeyGo(i) },
-        h("span", { class: "yrs", text: stopWhen(s) + "  " }), h("span", { class: "what", text: s.what }),
+        h("span", { class: "yrs", text: stopWhen(s) + (age ? ` (${age})` : "") + "  " }), h("span", { class: "what", text: s.what }),
         h("span", { class: "where", text: s.place ? ` · ${s.place.name}` : " · no place recorded" })));
     list.append(li);
   });
@@ -1482,13 +1492,15 @@ function journeyGo(i, first = false) {
   const rows = [];
   if (s.event) {
     const e = s.event;
-    rows.push(["Date", stopWhen(s) + (e.estimated ? " (approximate)" : "") + (e.end_year != null && e.end_year !== e.start_year ? ` to ${fmtYear(e.end_year)}` : "")]);
+    const age = ageAt(db.byId[J.person], s.year);
+    rows.push(["Date", stopWhen(s) + (age ? ` (${age})` : "") + (e.estimated ? " (approximate)" : "") + (e.end_year != null && e.end_year !== e.start_year ? ` to ${fmtYear(e.end_year)}` : "")]);
     rows.push(["Where", s.place ? [plLink(s.place), s.place.historical_name ? ` (then ${s.place.historical_name})` : ""] : "No place recorded"]);
     if (e.venues?.length) rows.push(["Also at", joinNodes(e.venues.map(v => db.placeById[v.place_id] && [plLink(db.placeById[v.place_id]), ` (${v.note || v.role})`]).filter(Boolean))]);
     rows.push(["People", joinNodes(db.peopleInEvent(e.id).map(x => pLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")]);
     rows.push(["Sources", sourceLinks(db.sourcesFor("event", e.key))]);
   } else {
-    rows.push(["Date", fmtYear(s.year)], ["Where", [plLink(s.place), s.place.historical_name ? ` (then ${s.place.historical_name})` : ""]]);
+    const age = ageAt(db.byId[J.person], s.year);
+    rows.push(["Date", fmtYear(s.year) + (age ? ` (${age})` : "")], ["Where", [plLink(s.place), s.place.historical_name ? ` (then ${s.place.historical_name})` : ""]]);
     if (s.place.note) rows.push(["About", s.place.note]);
   }
   rows.forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
