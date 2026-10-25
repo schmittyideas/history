@@ -1,0 +1,174 @@
+batch:
+  title: "English royal families 1b: Edward the Confessor to Stephen (1042-1154)"
+  requested: "Ty: fill in parents, spouses and children (who reached 12) for every English monarch, with sex on each monarch (issue #292)."
+  date: 2026-10-25
+  notes: "Family links for Edward the Confessor, Harold II, William I, William II, Henry I and Stephen. Part b of two (part a: Æthelred to Harthacnut, which also links Edward to his parents). Checked against each person's English Wikipedia article (revisions of 2026-10)."
+
+# Notes for the reviewer
+# - William II never married. Henry I already has both wives and both legitimate children, with both parents linked:
+#   only his sex is added. William I already had his parents, Matilda and four children: Matilda's links to those four
+#   are added, plus the four children not yet in.
+# Left out: no Wikipedia article of their own
+# - William I's daughter Matilda (c. 1061 - c. 1086?) and the disputed Agatha (her title redirects to William's article).
+# - Harold II's sons Godwine, Edmund, Magnus, Ulf and Harold.
+# Left out: not shown to reach 12
+# - Stephen's son Baldwin (c. 1132 - before 1147) and daughter Matilda (c. 1133 - before 1147).
+# Left out: not legitimate
+# - Henry I's many illegitimate children; Stephen's son Gervase.
+# Left out: facts not confirmed
+# - Births: Constance of Normandy ("between 1057 and 1061"), Godwin, Adeliza: no year given.
+# - Birth places: Marie of Boulogne "in or near London"; Constance "in Normandy".
+# - Burials: William of Boulogne (Montmorel Abbey, no English article) and Marie of Boulogne (a "Montreuil Abbey" that can't be
+#   identified for sure).
+# - Marriage years: Edith the Fair to Harold (a handfast marriage of "about twenty years"); Godwin to Gytha (c. 1019-1023).
+#   Ealdgyth of Mercia married Harold "in about January 1066" (Harold's article) or "in spring 1066" (Edith the Fair's).
+# Choices
+# - Harold II and Edith the Fair: a more danico (handfast) marriage per Harold's article, so a spouse link with a note, and
+#   their daughters Gytha and Gunhild count as children of the marriage.
+
+sources:
+  - {key: wp-godwin-earl-of-wessex, title: "Godwin, Earl of Wessex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Godwin,_Earl_of_Wessex"}
+  - {key: wp-gytha-thorkelsdottir, title: "Gytha Thorkelsdóttir (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gytha_Thorkelsd%C3%B3ttir"}
+  - {key: wp-ealdgyth-of-mercia, title: "Ealdgyth of Mercia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ealdgyth_of_Mercia"}
+  - {key: wp-edith-the-fair, title: "Edith the Fair (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edith_the_Fair"}
+  - {key: wp-gytha-of-wessex, title: "Gytha of Wessex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gytha_of_Wessex"}
+  - {key: wp-gunhild-of-wessex, title: "Gunhild of Wessex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gunhild_of_Wessex"}
+  - {key: wp-edith-of-wessex, title: "Edith of Wessex (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edith_of_Wessex"}
+  - {key: wp-richard-son-of-william-the-conqueror, title: "Richard (son of William the Conqueror) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_(son_of_William_the_Conqueror)"}
+  - {key: wp-adeliza-of-normandy, title: "Adeliza of Normandy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adeliza_of_Normandy"}
+  - {key: wp-cecilia-of-normandy, title: "Cecilia of Normandy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cecilia_of_Normandy"}
+  - {key: wp-constance-of-normandy, title: "Constance of Normandy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Constance_of_Normandy"}
+  - {key: wp-matilda-of-boulogne, title: "Matilda of Boulogne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Matilda_of_Boulogne"}
+  - {key: wp-eustace-iv-of-boulogne, title: "Eustace IV of Boulogne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eustace_IV_of_Boulogne"}
+  - {key: wp-william-i-of-boulogne, title: "William I of Boulogne (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_I_of_Boulogne"}
+  - {key: wp-marie-of-boulogne, title: "Marie of Boulogne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Marie_of_Boulogne"}
+
+people:
+  # Sex on the monarchs (existing records)
+  - {key: edward-the-confessor, sex: male}
+  - {key: harold-ii-of-england, sex: male}
+  - {key: william-i-of-england, sex: male}
+  - {key: william-ii-of-england, sex: male}
+  - {key: henry-i-of-england, sex: male}
+  - {key: king-stephen, sex: male}
+
+  # Harold II's family
+  - {key: godwin-earl-of-wessex, name: "Godwin, Earl of Wessex", type: Nobility, died: 1053-04-15, sex: male, house: Godwin, prominence: 3, coverage: not-read, note: "Made the first Earl of Wessex by Cnut (c. 1020); father of Harold II and of Queen Edith.", sources: [wp-godwin-earl-of-wessex]}
+  - {key: gytha-thorkelsdottir, name: Gytha Thorkelsdóttir, type: Nobility, born: 997, born_estimated: true, died: 1069, died_estimated: true, sex: female, prominence: 1, coverage: not-read, note: "Danish noblewoman, wife of Earl Godwin and mother of Harold II and Edith of Wessex; sister of Ulf Jarl.", sources: [wp-gytha-thorkelsdottir]}
+  - {key: ealdgyth-of-mercia, name: Ealdgyth of Mercia, type: Royalty, sex: female, prominence: 1, coverage: not-read, note: "Daughter of Ælfgar, Earl of Mercia (fl. c. 1057-1066); widow of Gruffudd ap Llywelyn of Wales, then wife and queen of Harold II in 1066.", sources: [wp-ealdgyth-of-mercia]}
+  - {key: edith-the-fair, name: Edith the Fair, type: Nobility, born: 1025, born_estimated: true, died: 1086, died_estimated: true, sex: female, prominence: 2, coverage: not-read, note: "Edith Swanneck, one of the wealthiest magnates in England in 1066; Harold II's handfast (more danico) wife for about twenty years. Said to have identified his body after Hastings.", sources: [wp-edith-the-fair]}
+  - {key: gytha-of-wessex, name: Gytha of Wessex, type: Royalty, born: 1053, born_estimated: true, died: 1098, died_estimated: true, sex: female, house: Godwin, prominence: 1, coverage: not-read, note: "Daughter of Harold II and Edith the Fair (born c. 1053/1061); married Vladimir II Monomakh, prince of Smolensk, and was the mother of Mstislav the Great.", sources: [wp-gytha-of-wessex]}
+  - {key: gunhild-of-wessex, name: Gunhild of Wessex, type: Royalty, sex: female, house: Godwin, prominence: 1, coverage: not-read, note: "Younger daughter of Harold II and Edith the Fair (fl. 1066-1093); educated at Wilton Abbey, she left it in 1093 to live with Alan the Red.", sources: [wp-gunhild-of-wessex]}
+
+  # Edward the Confessor's wife
+  - {key: edith-of-wessex, name: Edith of Wessex, type: Royalty, born: 1025, born_estimated: true, died: 1075-12-18, sex: female, house: Godwin, prominence: 2, coverage: not-read, note: "Daughter of Earl Godwin; queen of England as wife of Edward the Confessor from 23 January 1045, and crowned. Buried with him in Westminster Abbey.", sources: [wp-edith-of-wessex]}
+
+  # William I's children
+  - {key: richard-son-of-william-the-conqueror, name: Richard of Normandy, type: Royalty, born: 1054, born_estimated: true, died: 1070, died_estimated: true, sex: male, house: Normandy, prominence: 1, coverage: not-read, note: "Second son of William the Conqueror and Matilda; killed in a hunting accident in the New Forest, probably in 1070 or shortly after.", sources: [wp-richard-son-of-william-the-conqueror]}
+  - {key: adeliza-of-normandy, name: Adeliza of Normandy, type: Royalty, sex: female, house: Normandy, prominence: 1, coverage: not-read, note: "Probably the eldest daughter of William the Conqueror and Matilda; said to have been betrothed to Harold Godwinson; probably a nun of St Léger at Préaux. Died before 1113.", sources: [wp-adeliza-of-normandy]}
+  - {key: cecilia-of-normandy, name: Cecilia of Normandy, type: Royalty, roles: [abbess], born: 1056, born_estimated: true, died: 1126-07-30, sex: female, house: Normandy, prominence: 1, coverage: not-read, note: "Daughter of William the Conqueror and Matilda, given to the Abbey of the Holy Trinity, Caen, in 1066; its abbess from 1112.", sources: [wp-cecilia-of-normandy]}
+  - {key: constance-of-normandy, name: Constance of Normandy, type: Royalty, died: 1090-08-13, sex: female, house: Normandy, prominence: 1, coverage: not-read, note: "Daughter of William the Conqueror and Matilda (born between 1057 and 1061); married Alan IV Fergant, Duke of Brittany, in 1086.", sources: [wp-constance-of-normandy]}
+
+  # Stephen's family
+  - {key: matilda-of-boulogne, name: Matilda of Boulogne, type: Royalty, born: 1105, born_estimated: true, died: 1152-05-03, sex: female, house: Boulogne, prominence: 3, coverage: not-read, note: "Countess of Boulogne in her own right from 1125 and queen of England as Stephen's wife from 1135; led his cause while he was captive in 1141.", sources: [wp-matilda-of-boulogne]}
+  - {key: eustace-iv-of-boulogne, name: Eustace IV of Boulogne, type: Royalty, born: 1130, born_estimated: true, died: 1153-08-17, sex: male, house: Blois, prominence: 2, coverage: not-read, note: "Eldest son of Stephen and Matilda; Count of Boulogne from 1146 and heir to England until he died in 1153.", sources: [wp-eustace-iv-of-boulogne]}
+  - {key: william-i-of-boulogne, name: William I of Boulogne, type: Royalty, born: 1135, born_estimated: true, died: 1159-10-11, sex: male, house: Blois, prominence: 1, coverage: not-read, note: "Second son of Stephen and Matilda; Count of Boulogne and Earl of Surrey (by his wife Isabel de Warenne) from 1153. Died near Toulouse, childless.", sources: [wp-william-i-of-boulogne]}
+  - {key: marie-of-boulogne, name: Marie of Boulogne, type: Royalty, born: 1136, born_estimated: true, died: 1182-07-25, sex: female, house: Blois, prominence: 1, coverage: not-read, note: "Daughter of Stephen and Matilda, born late 1136; nun and abbess of Romsey, then Countess of Boulogne from 1159, taken from her abbey by Matthew of Alsace.", sources: [wp-marie-of-boulogne]}
+
+links:
+
+  # Edward the Confessor (parents above)
+  - {spouse: edward-the-confessor, to: edith-of-wessex, year: 1045}
+  - {parent: godwin-earl-of-wessex, child: edith-of-wessex}
+  - {parent: gytha-thorkelsdottir, child: edith-of-wessex}
+
+  # Harold II
+  - {parent: godwin-earl-of-wessex, child: harold-ii-of-england}
+  - {parent: gytha-thorkelsdottir, child: harold-ii-of-england}
+  - {spouse: godwin-earl-of-wessex, to: gytha-thorkelsdottir}
+  - {spouse: harold-ii-of-england, to: edith-the-fair, note: "A more danico (handfast) marriage of about twenty years, not recognised by the Church"}
+  - {spouse: harold-ii-of-england, to: ealdgyth-of-mercia, year: 1066}
+  - {parent: harold-ii-of-england, child: gytha-of-wessex}
+  - {parent: edith-the-fair, child: gytha-of-wessex}
+  - {parent: harold-ii-of-england, child: gunhild-of-wessex}
+  - {parent: edith-the-fair, child: gunhild-of-wessex}
+
+  # William I: Matilda's links to the children already linked to William, and the children not yet in
+  - {parent: matilda-of-flanders, child: robert-curthose}
+  - {parent: matilda-of-flanders, child: william-ii-of-england}
+  - {parent: matilda-of-flanders, child: henry-i-of-england}
+  - {parent: matilda-of-flanders, child: adela-of-normandy}
+  - {parent: william-i-of-england, child: richard-son-of-william-the-conqueror}
+  - {parent: matilda-of-flanders, child: richard-son-of-william-the-conqueror}
+  - {parent: william-i-of-england, child: adeliza-of-normandy}
+  - {parent: matilda-of-flanders, child: adeliza-of-normandy}
+  - {parent: william-i-of-england, child: cecilia-of-normandy}
+  - {parent: matilda-of-flanders, child: cecilia-of-normandy}
+  - {parent: william-i-of-england, child: constance-of-normandy}
+  - {parent: matilda-of-flanders, child: constance-of-normandy}
+
+  # Stephen
+  - {spouse: king-stephen, to: matilda-of-boulogne, year: 1125}
+  - {parent: king-stephen, child: eustace-iv-of-boulogne}
+  - {parent: matilda-of-boulogne, child: eustace-iv-of-boulogne}
+  - {parent: king-stephen, child: william-i-of-boulogne}
+  - {parent: matilda-of-boulogne, child: william-i-of-boulogne}
+  - {parent: king-stephen, child: marie-of-boulogne}
+  - {parent: matilda-of-boulogne, child: marie-of-boulogne}
+
+moments:
+  - {person: edith-of-wessex, role: buried, place: westminster-abbey, year: 1075}
+  - {person: richard-son-of-william-the-conqueror, role: buried, place: winchester-cathedral, year: 1070}
+  - {person: cecilia-of-normandy, role: buried, place: abbaye-aux-dames, year: 1126}
+  - {person: matilda-of-boulogne, role: buried, place: faversham-abbey, year: 1152}
+  - {person: eustace-iv-of-boulogne, role: buried, place: faversham-abbey, year: 1153}
+
+discrepancies:
+  - key: gytha-of-wessex-death-year
+    question: Did Gytha of Wessex die in 1098 or 1107?
+    about: [{person: gytha-of-wessex}]
+    field: died
+    claims:
+      - {value: "1098 (10 March)", sources: [wp-gytha-of-wessex], note: "Necrology of St Pantaleon, Cologne; the year is presumed"}
+      - {value: "1107 (7 May)", sources: [wp-gytha-of-wessex], note: "If she was the mother of Yuri Dolgorukiy, whose mother died then (Testament of Vladimir Monomakh)"}
+    note: "The record uses 1098, marked approximate."
+  - key: edith-of-wessex-death-date
+    question: Did Edith of Wessex die on 18 or 19 December 1075?
+    about: [{person: edith-of-wessex}]
+    field: died
+    claims:
+      - {value: 1075-12-18, sources: [wp-edith-of-wessex]}
+      - {value: 1075-12-19, sources: [wp-gytha-thorkelsdottir]}
+    note: "The record uses 18 December, from her own article."
+  - key: cecilia-of-normandy-death-year
+    question: Did Cecilia of Normandy die in 1126 or 1127?
+    about: [{person: cecilia-of-normandy}]
+    field: died
+    claims:
+      - {value: 1126-07-30, sources: [wp-cecilia-of-normandy]}
+      - {value: 1127, sources: [wp-william-i]}
+    note: "The record uses 30 July 1126, from her own article."
+  - key: eustace-iv-of-boulogne-birth-year
+    question: When was Eustace IV of Boulogne born?
+    about: [{person: eustace-iv-of-boulogne}]
+    field: born
+    claims:
+      - {value: "c. 1130 (c. 1129/1131)", sources: [wp-eustace-iv-of-boulogne, wp-king-stephen]}
+      - {value: "around 1127", sources: [wp-matilda-of-boulogne]}
+    note: "The record uses 1130, marked approximate."
+  - key: william-i-of-boulogne-birth-year
+    question: When was William I of Boulogne born?
+    about: [{person: william-i-of-boulogne}]
+    field: born
+    claims:
+      - {value: "December 1135 (c. 1135)", sources: [wp-matilda-of-boulogne, wp-king-stephen]}
+      - {value: "c. 1137", sources: [wp-william-i-of-boulogne]}
+    note: "The record uses 1135, marked approximate."
+  - key: marie-of-boulogne-birth-year
+    question: When was Marie of Boulogne born?
+    about: [{person: marie-of-boulogne}]
+    field: born
+    claims:
+      - {value: "late 1136", sources: [wp-marie-of-boulogne], note: "The last child of Stephen and Matilda"}
+      - {value: "c. 1128", sources: [wp-king-stephen], note: "Listed in Stephen's article as his eldest child"}
+    note: "The record uses 1136, from her own article."
