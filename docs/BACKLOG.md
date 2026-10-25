@@ -150,6 +150,12 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P3] Events cite their own Wikipedia article
+`type: task` · `area: data` · `status: done`
+
+Ty asked that an event such as the Truce of God at Caen also reference the act's own article. 338 of the 462 events with no own-article source now cite the article about that battle, treaty, council or act ("Peace and Truce of God"), matched by title search and checked by reviewers. The other 124 have no dedicated article (Council of Reims 1049, many coronations and openings) and were left alone; a later pass could retry them. Done 2026-10-25 (#283-#287).
+Source: Ty, 2026-10-25.
+
 #### [P2] Journey map, and William I's life in full
 `type: enhancement` · `area: site` · `status: done` · `issue: #279`
 
