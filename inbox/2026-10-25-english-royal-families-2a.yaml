@@ -1,0 +1,321 @@
+batch:
+  title: "English royal families 2a: Henry II, Richard I, John and Henry III (1154-1272)"
+  requested: "Ty (issue #292): fill in each English monarch's parents, spouses (with marriage year) and legitimate children who reached 12, with sex on the monarchs"
+  date: 2026-10-25
+  notes: "Family links for Henry II, Richard I, John and Henry III. New people are the spouses and children with their own Wikipedia articles, with birth and burial places where the article names them. No title changes."
+
+# Built from the English Wikipedia articles on each monarch (scratchpad copies, October 2026) and each new
+# person's own article, cited per person below. Coordinates from each place article (Wikipedia coordinates).
+#
+# Left out (died before 12): William, Count of Poitiers (1153-1156), Henry II's eldest son; Katherine
+#   (1253-1257), Henry III's daughter; the two sons Eleanor of Provence bore before her daughters (died very young, unnamed).
+# Left out (illegitimate): Henry II's children by mistresses (Geoffrey, Archbishop of York; William Longespée and
+#   others); John's (Richard FitzRoy, Joan Lady of Wales, Oliver fitz Regis and others).
+# Richard I had no children by Berengaria. Edward I is linked here as Henry III's son; his own family is in file 2b.
+# Moments left out because the article names no place: births of Henry the Young King, Geoffrey II, Isabella
+#   of Angouleme, Joan Queen of Scotland, Isabella of England, Eleanor of Provence and Beatrice; Berengaria's
+#   birth ("in Navarre", a kingdom, not a place); Isabella of Gloucester's birth and burial (the article only
+#   says she was "likely" buried at Keynsham).
+# Matilda of Saxony's birth is put in London: her article says "in London or, less likely, at Windsor Castle".
+# Joan of Sicily was buried first at Rouen Cathedral and re-interred at Fontevraud (year not given): the moment
+#   is Fontevraud with no year. Edmund Crouchback was buried at Westminster Abbey in 1301, five years after his death.
+# Eleanor of Leicester was buried at Montargis Abbey, which has no article: the moment uses the town, Montargis.
+# Uncertain birth years are marked estimated: Eleanor Queen of Castile (c. 1161), Berengaria (c. 1165-1170, record
+#   1165), Isabella of Gloucester (c. 1160-1166, record 1160), Isabella of Angouleme (c. 1186/1188, record 1186),
+#   Isabella of England ("around 1214"), Eleanor of Provence (c. 1223, "probably born latest in 1223").
+# Months without a day become the year alone: Matilda of Saxony (June 1156 - June/July 1189), Joan of Sicily
+#   (October 1165), Isabella of Gloucester (died October 1217), Eleanor of Provence (died 24/25 June 1291).
+# Isabella of Gloucester is Nobility: she was not crowned with John in May 1199 ("only a consort, rather than a
+#   queen") and the marriage was annulled by spring 1200.
+
+sources:
+  - {key: wp-henry-the-young-king, title: "Henry the Young King (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_the_Young_King"}
+  - {key: wp-matilda-of-england-duchess-of-saxony, title: "Matilda of England, Duchess of Saxony (Wikipedia)", url: "https://en.wikipedia.org/wiki/Matilda_of_England,_Duchess_of_Saxony"}
+  - {key: wp-geoffrey-ii-of-brittany, title: "Geoffrey II of Brittany (Wikipedia)", url: "https://en.wikipedia.org/wiki/Geoffrey_II_of_Brittany"}
+  - {key: wp-eleanor-of-england-queen-of-castile, title: "Eleanor of England, Queen of Castile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_England,_Queen_of_Castile"}
+  - {key: wp-joan-of-england-queen-of-sicily, title: "Joan of England, Queen of Sicily (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_England,_Queen_of_Sicily"}
+  - {key: wp-berengaria-of-navarre, title: "Berengaria of Navarre (Wikipedia)", url: "https://en.wikipedia.org/wiki/Berengaria_of_Navarre"}
+  - {key: wp-isabella-countess-of-gloucester, title: "Isabella, Countess of Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella,_Countess_of_Gloucester"}
+  - {key: wp-isabella-of-angouleme, title: "Isabella of Angoulême (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella_of_Angoul%C3%AAme"}
+  - {key: wp-richard-of-cornwall, title: "Richard of Cornwall (Wikipedia)", url: "https://en.wikipedia.org/wiki/Richard_of_Cornwall"}
+  - {key: wp-joan-of-england-queen-of-scotland, title: "Joan of England, Queen of Scotland (Wikipedia)", url: "https://en.wikipedia.org/wiki/Joan_of_England,_Queen_of_Scotland"}
+  - {key: wp-isabella-of-england, title: "Isabella of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Isabella_of_England"}
+  - {key: wp-eleanor-of-england-countess-of-leicester, title: "Eleanor of England, Countess of Leicester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_England,_Countess_of_Leicester"}
+  - {key: wp-eleanor-of-provence, title: "Eleanor of Provence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eleanor_of_Provence"}
+  - {key: wp-margaret-of-england, title: "Margaret of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Margaret_of_England"}
+  - {key: wp-beatrice-of-england, title: "Beatrice of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Beatrice_of_England"}
+  - {key: wp-edmund-crouchback, title: "Edmund Crouchback (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_Crouchback"}
+  - {key: wp-rouen-cathedral, title: "Rouen Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rouen_Cathedral"}
+  - {key: wp-brunswick-cathedral, title: "Brunswick Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Brunswick_Cathedral"}
+  - {key: wp-chateau-de-domfront, title: "Château de Domfront (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ch%C3%A2teau_de_Domfront"}
+  - {key: wp-chateau-dangers, title: "Château d'Angers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ch%C3%A2teau_d%27Angers"}
+  - {key: wp-lepau-abbey, title: "L'Épau Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/L%27%C3%89pau_Abbey"}
+  - {key: wp-winchester-castle, title: "Winchester Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Winchester_Castle"}
+  - {key: wp-hailes-abbey, title: "Hailes Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hailes_Abbey"}
+  - {key: wp-tarrant-abbey, title: "Tarrant Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tarrant_Abbey"}
+  - {key: wp-andria-cathedral, title: "Andria Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andria_Cathedral"}
+  - {key: wp-gloucester, title: "Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gloucester"}
+  - {key: wp-amesbury-priory, title: "Amesbury Priory (Wikipedia)", url: "https://en.wikipedia.org/wiki/Amesbury_Priory"}
+  - {key: wp-greyfriars-london, title: "Greyfriars, London (Wikipedia)", url: "https://en.wikipedia.org/wiki/Greyfriars,_London"}
+
+places:
+  - {key: rouen-cathedral, name: "Rouen Cathedral", kind: cathedral, city: "Rouen", region: "Normandy", country: France, lat: 49.4402, lng: 1.095, sources: [wp-rouen-cathedral]}
+  - {key: brunswick-cathedral, name: "Brunswick Cathedral", kind: cathedral, city: "Braunschweig", region: "Lower Saxony", country: Germany, lat: 52.2642, lng: 10.5242, sources: [wp-brunswick-cathedral]}
+  - {key: chateau-de-domfront, name: "Château de Domfront", kind: castle, city: "Domfront", region: "Orne", country: France, lat: 48.5942, lng: -0.6525, sources: [wp-chateau-de-domfront]}
+  - {key: chateau-dangers, name: "Château d'Angers", kind: castle, city: "Angers", region: "Maine-et-Loire", country: France, lat: 47.47, lng: -0.56, sources: [wp-chateau-dangers]}
+  - {key: lepau-abbey, name: "L'Épau Abbey", kind: abbey, city: "Le Mans", region: "Sarthe", country: France, lat: 47.9911, lng: 0.2419, sources: [wp-lepau-abbey]}
+  - {key: winchester-castle, name: "Winchester Castle", kind: castle, city: "Winchester", region: "Hampshire", country: England, lat: 51.0624, lng: -1.3205, sources: [wp-winchester-castle]}
+  - {key: hailes-abbey, name: "Hailes Abbey", kind: abbey, city: "Hailes", region: "Gloucestershire", country: England, lat: 51.9683, lng: -1.9281, sources: [wp-hailes-abbey]}
+  - {key: tarrant-abbey, name: "Tarrant Abbey", kind: abbey, city: "Tarrant Crawford", region: "Dorset", country: England, lat: 50.8314, lng: -2.1223, sources: [wp-tarrant-abbey]}
+  - {key: andria-cathedral, name: "Andria Cathedral", kind: cathedral, city: "Andria", region: "Apulia", country: Italy, lat: 41.2258, lng: 16.2956, sources: [wp-andria-cathedral]}
+  - {key: gloucester, name: "Gloucester", kind: city, region: "Gloucestershire", country: England, lat: 51.8653, lng: -2.2458, sources: [wp-gloucester]}
+  - {key: amesbury-priory, name: "Amesbury Priory", kind: priory, city: "Amesbury", region: "Wiltshire", country: England, lat: 51.174, lng: -1.784, sources: [wp-amesbury-priory]}
+  - {key: greyfriars-london, name: "Greyfriars, London", kind: friary, city: "London", region: "Greater London", country: England, lat: 51.5162, lng: -0.0996, sources: [wp-greyfriars-london]}
+
+people:
+  - {key: henry-ii-of-england, sex: male}
+  - {key: richard-i-of-england, sex: male}
+  - {key: john-of-england, sex: male}
+  - {key: henry-iii-of-england, sex: male}
+  - {key: geoffrey-plantagenet, sex: male}
+  - {key: empress-matilda, sex: female}
+  - {key: eleanor-of-aquitaine, sex: female}
+
+  - key: henry-the-young-king
+    name: "Henry the Young King"
+    type: Royalty
+    born: 1155-02-28
+    died: 1183-06-11
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-henry-the-young-king]
+
+  - key: matilda-of-england-duchess-of-saxony
+    name: "Matilda of England, Duchess of Saxony"
+    type: Royalty
+    born: 1156
+    died: 1189
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Born June 1156, in London or, less likely, at Windsor Castle; died June or July 1189 (sources give five dates)."
+    sources: [wp-matilda-of-england-duchess-of-saxony]
+
+  - key: geoffrey-ii-of-brittany
+    name: "Geoffrey II, Duke of Brittany"
+    type: Royalty
+    born: 1158-09-23
+    died: 1186-08-19
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-geoffrey-ii-of-brittany]
+
+  - key: eleanor-of-england-queen-of-castile
+    name: "Eleanor of England, Queen of Castile"
+    type: Royalty
+    born: 1161
+    born_estimated: true
+    died: 1214-10-31
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-eleanor-of-england-queen-of-castile]
+
+  - key: joan-of-england-queen-of-sicily
+    name: "Joan of England, Queen of Sicily"
+    type: Royalty
+    born: 1165
+    died: 1199-09-04
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Born October 1165. Buried first at Rouen Cathedral, then re-interred at Fontevraud Abbey."
+    sources: [wp-joan-of-england-queen-of-sicily]
+
+  - key: berengaria-of-navarre
+    name: "Berengaria of Navarre"
+    type: Royalty
+    born: 1165
+    born_estimated: true
+    died: 1230-12-23
+    sex: female
+    coverage: not-read
+    note: "Born c. 1165-1170. Queen of England as Richard I's wife; the marriage was childless."
+    sources: [wp-berengaria-of-navarre]
+
+  - key: isabella-countess-of-gloucester
+    name: "Isabella, Countess of Gloucester"
+    type: Nobility
+    born: 1160
+    born_estimated: true
+    died: 1217
+    sex: female
+    coverage: not-read
+    note: "Born c. 1160-1166; died October 1217. John's first wife (married 29 August 1189 at Marlborough Castle); he set her aside to marry Isabella of Angouleme."
+    sources: [wp-isabella-countess-of-gloucester]
+
+  - key: isabella-of-angouleme
+    name: "Isabella of Angoulême"
+    type: Royalty
+    born: 1186
+    born_estimated: true
+    died: 1246-06-04
+    sex: female
+    coverage: not-read
+    note: "Born c. 1186/1188. Queen of England 1200-1216; Countess of Angouleme in her own right."
+    sources: [wp-isabella-of-angouleme]
+
+  - key: richard-of-cornwall
+    name: "Richard of Cornwall"
+    type: Royalty
+    born: 1209-01-05
+    died: 1272-04-02
+    sex: male
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-richard-of-cornwall]
+
+  - key: joan-of-england-queen-of-scotland
+    name: "Joan of England, Queen of Scotland"
+    type: Royalty
+    born: 1210-07-22
+    died: 1238-03-04
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-joan-of-england-queen-of-scotland]
+
+  - key: isabella-of-england
+    name: "Isabella of England"
+    type: Royalty
+    born: 1214
+    born_estimated: true
+    died: 1241-12-01
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-isabella-of-england]
+
+  - key: eleanor-of-england-countess-of-leicester
+    name: "Eleanor of England, Countess of Leicester"
+    type: Royalty
+    born: 1215
+    died: 1275-04-13
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Wife of Simon de Montfort. Died a nun at Montargis Abbey and was buried there."
+    sources: [wp-eleanor-of-england-countess-of-leicester]
+
+  - key: eleanor-of-provence
+    name: "Eleanor of Provence"
+    type: Royalty
+    born: 1223
+    born_estimated: true
+    died: 1291
+    sex: female
+    coverage: not-read
+    note: "Born c. 1223; died 24 or 25 June 1291 at Amesbury Priory, where she was buried (grave unmarked)."
+    sources: [wp-eleanor-of-provence]
+
+  - key: margaret-of-england
+    name: "Margaret of England"
+    type: Royalty
+    born: 1240-09-29
+    died: 1275-02-26
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    note: "Queen of Scots as the wife of Alexander III."
+    sources: [wp-margaret-of-england]
+
+  - key: beatrice-of-england
+    name: "Beatrice of England"
+    type: Royalty
+    born: 1242-06-25
+    died: 1275-03-24
+    sex: female
+    house: Plantagenet
+    coverage: not-read
+    sources: [wp-beatrice-of-england]
+
+  - key: edmund-crouchback
+    name: "Edmund Crouchback"
+    type: Royalty
+    born: 1245-01-16
+    died: 1296-06-05
+    sex: male
+    house: Lancaster
+    coverage: not-read
+    sources: [wp-edmund-crouchback]
+
+links:
+  # Henry II
+  - {parent: geoffrey-plantagenet, child: henry-ii-of-england, sources: [wp-henry-ii]}
+  - {parent: empress-matilda, child: henry-ii-of-england, sources: [wp-henry-ii]}
+  - {spouse: henry-ii-of-england, to: eleanor-of-aquitaine, year: 1152, sources: [wp-henry-ii, wp-eleanor-of-aquitaine]}
+  - {parent: henry-ii-of-england, child: henry-the-young-king, sources: [wp-henry-ii, wp-henry-the-young-king]}
+  - {parent: eleanor-of-aquitaine, child: henry-the-young-king, sources: [wp-eleanor-of-aquitaine, wp-henry-the-young-king]}
+  - {parent: henry-ii-of-england, child: matilda-of-england-duchess-of-saxony, sources: [wp-henry-ii, wp-matilda-of-england-duchess-of-saxony]}
+  - {parent: eleanor-of-aquitaine, child: matilda-of-england-duchess-of-saxony, sources: [wp-eleanor-of-aquitaine, wp-matilda-of-england-duchess-of-saxony]}
+  - {parent: henry-ii-of-england, child: richard-i-of-england, sources: [wp-henry-ii, wp-richard-i]}
+  - {parent: eleanor-of-aquitaine, child: richard-i-of-england, sources: [wp-eleanor-of-aquitaine, wp-richard-i]}
+  - {parent: henry-ii-of-england, child: geoffrey-ii-of-brittany, sources: [wp-henry-ii, wp-geoffrey-ii-of-brittany]}
+  - {parent: eleanor-of-aquitaine, child: geoffrey-ii-of-brittany, sources: [wp-eleanor-of-aquitaine, wp-geoffrey-ii-of-brittany]}
+  - {parent: henry-ii-of-england, child: eleanor-of-england-queen-of-castile, sources: [wp-henry-ii, wp-eleanor-of-england-queen-of-castile]}
+  - {parent: eleanor-of-aquitaine, child: eleanor-of-england-queen-of-castile, sources: [wp-eleanor-of-aquitaine, wp-eleanor-of-england-queen-of-castile]}
+  - {parent: henry-ii-of-england, child: joan-of-england-queen-of-sicily, sources: [wp-henry-ii, wp-joan-of-england-queen-of-sicily]}
+  - {parent: eleanor-of-aquitaine, child: joan-of-england-queen-of-sicily, sources: [wp-eleanor-of-aquitaine, wp-joan-of-england-queen-of-sicily]}
+  - {parent: henry-ii-of-england, child: john-of-england, sources: [wp-henry-ii, wp-john-of-england]}
+  - {parent: eleanor-of-aquitaine, child: john-of-england, sources: [wp-eleanor-of-aquitaine, wp-john-of-england]}
+  # Richard I (no children)
+  - {spouse: richard-i-of-england, to: berengaria-of-navarre, year: 1191, sources: [wp-richard-i, wp-berengaria-of-navarre]}
+  # John
+  - {spouse: john-of-england, to: isabella-countess-of-gloucester, year: 1189, sources: [wp-john-of-england, wp-isabella-countess-of-gloucester]}
+  - {spouse: john-of-england, to: isabella-of-angouleme, year: 1200, sources: [wp-john-of-england, wp-isabella-of-angouleme]}
+  - {parent: john-of-england, child: henry-iii-of-england, sources: [wp-john-of-england, wp-henry-iii]}
+  - {parent: isabella-of-angouleme, child: henry-iii-of-england, sources: [wp-isabella-of-angouleme, wp-henry-iii]}
+  - {parent: john-of-england, child: richard-of-cornwall, sources: [wp-john-of-england, wp-richard-of-cornwall]}
+  - {parent: isabella-of-angouleme, child: richard-of-cornwall, sources: [wp-isabella-of-angouleme, wp-richard-of-cornwall]}
+  - {parent: john-of-england, child: joan-of-england-queen-of-scotland, sources: [wp-john-of-england, wp-joan-of-england-queen-of-scotland]}
+  - {parent: isabella-of-angouleme, child: joan-of-england-queen-of-scotland, sources: [wp-isabella-of-angouleme, wp-joan-of-england-queen-of-scotland]}
+  - {parent: john-of-england, child: isabella-of-england, sources: [wp-john-of-england, wp-isabella-of-england]}
+  - {parent: isabella-of-angouleme, child: isabella-of-england, sources: [wp-isabella-of-angouleme, wp-isabella-of-england]}
+  - {parent: john-of-england, child: eleanor-of-england-countess-of-leicester, sources: [wp-john-of-england, wp-eleanor-of-england-countess-of-leicester]}
+  - {parent: isabella-of-angouleme, child: eleanor-of-england-countess-of-leicester, sources: [wp-isabella-of-angouleme, wp-eleanor-of-england-countess-of-leicester]}
+  # Henry III
+  - {spouse: henry-iii-of-england, to: eleanor-of-provence, year: 1236, sources: [wp-henry-iii, wp-eleanor-of-provence]}
+  - {parent: henry-iii-of-england, child: edward-i-of-england, sources: [wp-henry-iii, wp-edward-i]}
+  - {parent: eleanor-of-provence, child: edward-i-of-england, sources: [wp-eleanor-of-provence, wp-edward-i]}
+  - {parent: henry-iii-of-england, child: margaret-of-england, sources: [wp-henry-iii, wp-margaret-of-england]}
+  - {parent: eleanor-of-provence, child: margaret-of-england, sources: [wp-eleanor-of-provence, wp-margaret-of-england]}
+  - {parent: henry-iii-of-england, child: beatrice-of-england, sources: [wp-henry-iii, wp-beatrice-of-england]}
+  - {parent: eleanor-of-provence, child: beatrice-of-england, sources: [wp-eleanor-of-provence, wp-beatrice-of-england]}
+  - {parent: henry-iii-of-england, child: edmund-crouchback, sources: [wp-henry-iii, wp-edmund-crouchback]}
+  - {parent: eleanor-of-provence, child: edmund-crouchback, sources: [wp-eleanor-of-provence, wp-edmund-crouchback]}
+
+moments:
+  - {person: henry-the-young-king, role: buried, place: rouen-cathedral, year: 1183, sources: [wp-henry-the-young-king]}
+  - {person: matilda-of-england-duchess-of-saxony, role: born, place: london, year: 1156, sources: [wp-matilda-of-england-duchess-of-saxony]}
+  - {person: matilda-of-england-duchess-of-saxony, role: buried, place: brunswick-cathedral, year: 1189, sources: [wp-matilda-of-england-duchess-of-saxony]}
+  - {person: geoffrey-ii-of-brittany, role: buried, place: notre-dame-de-paris, year: 1186, sources: [wp-geoffrey-ii-of-brittany]}
+  - {person: eleanor-of-england-queen-of-castile, role: born, place: chateau-de-domfront, year: 1161, sources: [wp-eleanor-of-england-queen-of-castile]}
+  - {person: eleanor-of-england-queen-of-castile, role: buried, place: las-huelgas-burgos, year: 1214, sources: [wp-eleanor-of-england-queen-of-castile]}
+  - {person: joan-of-england-queen-of-sicily, role: born, place: chateau-dangers, year: 1165, sources: [wp-joan-of-england-queen-of-sicily]}
+  - {person: joan-of-england-queen-of-sicily, role: buried, place: fontevraud-abbey, sources: [wp-joan-of-england-queen-of-sicily]}
+  - {person: berengaria-of-navarre, role: buried, place: lepau-abbey, year: 1230, sources: [wp-berengaria-of-navarre]}
+  - {person: isabella-of-angouleme, role: buried, place: fontevraud-abbey, year: 1246, sources: [wp-isabella-of-angouleme]}
+  - {person: richard-of-cornwall, role: born, place: winchester-castle, year: 1209, sources: [wp-richard-of-cornwall]}
+  - {person: richard-of-cornwall, role: buried, place: hailes-abbey, year: 1272, sources: [wp-richard-of-cornwall]}
+  - {person: joan-of-england-queen-of-scotland, role: buried, place: tarrant-abbey, year: 1238, sources: [wp-joan-of-england-queen-of-scotland]}
+  - {person: isabella-of-england, role: buried, place: andria-cathedral, year: 1241, sources: [wp-isabella-of-england]}
+  - {person: eleanor-of-england-countess-of-leicester, role: born, place: gloucester, year: 1215, sources: [wp-eleanor-of-england-countess-of-leicester]}
+  - {person: eleanor-of-england-countess-of-leicester, role: buried, place: montargis, year: 1275, sources: [wp-eleanor-of-england-countess-of-leicester]}
+  - {person: eleanor-of-provence, role: buried, place: amesbury-priory, year: 1291, sources: [wp-eleanor-of-provence]}
+  - {person: margaret-of-england, role: born, place: windsor-castle, year: 1240, sources: [wp-margaret-of-england]}
+  - {person: margaret-of-england, role: buried, place: dunfermline-abbey, year: 1275, sources: [wp-margaret-of-england]}
+  - {person: beatrice-of-england, role: buried, place: greyfriars-london, year: 1275, sources: [wp-beatrice-of-england]}
+  - {person: edmund-crouchback, role: born, place: london, year: 1245, sources: [wp-edmund-crouchback]}
+  - {person: edmund-crouchback, role: buried, place: westminster-abbey, year: 1301, sources: [wp-edmund-crouchback]}
