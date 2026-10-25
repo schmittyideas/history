@@ -1,0 +1,173 @@
+batch:
+  title: "English royal families 4: the Stuarts, 1603-1714"
+  requested: "Ty (issue #292): parents, spouses and children who reached 12 for each English monarch, James I to Anne"
+  date: 2026-10-25
+  notes: "Family links for James I, Charles I, Charles II, James II, William III, Mary II and Anne, with the new parents, spouses and children each citing their own Wikipedia article. No title changes."
+
+# Notes for the reviewer
+# - Already in the database, so not re-sent: James I > Charles I; Charles I > Charles II and James II; James II > Mary II and Anne;
+#   William III married Mary II (1677). Henrietta Maria (`henrietta-maria`) exists; she gets only `sex` here, no titles.
+# - Left out as children who died before 12 (each monarch's article or the parent's article):
+#   James I: Margaret (1598-1600), Robert, Duke of Kintyre (1602), Mary (1605-1607), Sophia (1606).
+#   Charles I: Charles James (1629, died within a day), Anne (1637-1640), Catherine (1639, died at birth).
+#   James II: Anne Hyde's six children who died in early childhood; Mary of Modena's children other than James Francis Edward and Louisa Maria.
+#   Anne: all her children died young; the longest-lived, Prince William, Duke of Gloucester (24 July 1689 - 30 July 1700), died at 11.
+#   Mary II: no children (miscarriages only). William III: no legitimate children.
+# - Charles II: no legitimate children with Catherine of Braganza. His article says he acknowledged at least 12 illegitimate
+#   children by various mistresses (its Issue list names 14 claimed); none are added.
+# - Illegitimate children of James II (by Arabella Churchill, Catherine Sedley and others) are left out.
+# - Mary, Queen of Scots, is added as James I's mother only; her own reign as Queen of Scotland (title) is not in this batch.
+# - Dates: Henrietta of England's birth is 16 June 1644 (Old Style, as English dates of the time); her article gives 26 June N.S. too.
+#   Mary of Modena's dates are New Style (5 October 1658 - 7 May 1718), as her article leads with them.
+#   Louisa Maria Stuart's death: her lead says 18 April 1712; the body says 28 April (18 April Old Style). The lead's date is used.
+#   Darnley's birth: 1546 per his article ("more recent research"); 5 December 1545 was the older belief (same article, so no discrepancy entry).
+#   James II married Mary of Modena by proxy on 20 September 1673 (James II's article) / 30 September 1673 (hers): the same day Old and
+#   New Style, so not a discrepancy; only the year is stored.
+# - Burial moments without a year where the article gives no burial date: Mary, Princess Royal (died 24 December 1660) at Westminster
+#   Abbey; Elizabeth Stuart (d. 1650) at Sts Thomas Minster, Newport; Catherine of Braganza (d. 31 December 1705) at the Braganza pantheon.
+# - Left out, not confirmed or no article: Henry Frederick's burial (his article only says the cortege went to Westminster Abbey);
+#   William II of Orange's birth and burial places (not in his article); Mary of Modena's burial (the convent at Chaillot, no article)
+#   and Louisa Maria's (the English Benedictines' church in Paris, no article). Henrietta's birthplace, Bedford House, has no article:
+#   the moment uses Exeter. Louisa Maria's article says she was born "at Saint-Germain-en-Laye", where the exiled court lived in the
+#   château: the moment uses the existing Château de Saint-Germain-en-Laye. Anne of Denmark was born at Skanderborg Castle, which has no article of its own: the moment uses Skanderborg.
+# - Spouses of non-monarchs (Darnley-Mary, William II-Mary, Elizabeth-Frederick V, Henrietta-Philippe) are out of this batch's scope.
+
+sources:
+  - {key: wp-mary-queen-of-scots, title: "Mary, Queen of Scots (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots"}
+  - {key: wp-henry-stuart-lord-darnley, title: "Henry Stuart, Lord Darnley (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Stuart,_Lord_Darnley"}
+  - {key: wp-anne-of-denmark, title: "Anne of Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_of_Denmark"}
+  - {key: wp-henry-frederick-prince-of-wales, title: "Henry Frederick, Prince of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Frederick,_Prince_of_Wales"}
+  - {key: wp-elizabeth-stuart-queen-of-bohemia, title: "Elizabeth Stuart, Queen of Bohemia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_Stuart,_Queen_of_Bohemia"}
+  - {key: wp-mary-princess-royal-and-princess-of-orange, title: "Mary, Princess Royal and Princess of Orange (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary,_Princess_Royal_and_Princess_of_Orange"}
+  - {key: wp-elizabeth-stuart-daughter-of-charles-i, title: "Elizabeth Stuart (daughter of Charles I) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Elizabeth_Stuart_(daughter_of_Charles_I)"}
+  - {key: wp-henry-stuart-duke-of-gloucester, title: "Henry Stuart, Duke of Gloucester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henry_Stuart,_Duke_of_Gloucester"}
+  - {key: wp-henrietta-of-england, title: "Henrietta of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Henrietta_of_England"}
+  - {key: wp-catherine-of-braganza, title: "Catherine of Braganza (Wikipedia)", url: "https://en.wikipedia.org/wiki/Catherine_of_Braganza"}
+  - {key: wp-anne-hyde, title: "Anne Hyde (Wikipedia)", url: "https://en.wikipedia.org/wiki/Anne_Hyde"}
+  - {key: wp-mary-of-modena, title: "Mary of Modena (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mary_of_Modena"}
+  - {key: wp-james-francis-edward-stuart, title: "James Francis Edward Stuart (Wikipedia)", url: "https://en.wikipedia.org/wiki/James_Francis_Edward_Stuart"}
+  - {key: wp-louisa-maria-stuart, title: "Louisa Maria Stuart (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louisa_Maria_Stuart"}
+  - {key: wp-william-ii-of-orange, title: "William II of Orange (Wikipedia)", url: "https://en.wikipedia.org/wiki/William_II_of_Orange"}
+  - {key: wp-prince-george-of-denmark, title: "Prince George of Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_George_of_Denmark"}
+  - {key: wp-temple-newsam, title: "Temple Newsam (Wikipedia)", url: "https://en.wikipedia.org/wiki/Temple_Newsam"}
+  - {key: wp-skanderborg, title: "Skanderborg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Skanderborg"}
+  - {key: wp-oatlands-palace, title: "Oatlands Palace (Wikipedia)", url: "https://en.wikipedia.org/wiki/Oatlands_Palace"}
+  - {key: wp-cranbourne-lodge, title: "Cranbourne Lodge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cranbourne_Lodge"}
+  - {key: wp-ducal-palace-of-vila-vicosa, title: "Ducal Palace of Vila Viçosa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ducal_Palace_of_Vila_Vi%C3%A7osa"}
+  - {key: wp-copenhagen-castle, title: "Copenhagen Castle (Wikipedia)", url: "https://en.wikipedia.org/wiki/Copenhagen_Castle"}
+  - {key: wp-sts-thomas-minster, title: "Sts Thomas Minster (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sts_Thomas_Minster"}
+  - {key: wp-pantheon-of-the-house-of-braganza, title: "Pantheon of the House of Braganza (Wikipedia)", url: "https://en.wikipedia.org/wiki/Pantheon_of_the_House_of_Braganza"}
+
+places:
+  - {key: temple-newsam, name: Temple Newsam, kind: house, city: Leeds, region: West Yorkshire, country: England, lat: 53.7842, lng: -1.4595, visitable: true, sources: [wp-temple-newsam]}
+  - {key: skanderborg, name: Skanderborg, kind: town, region: Central Denmark, country: Denmark, lat: 56.0381, lng: 9.9253, sources: [wp-skanderborg]}
+  - {key: oatlands-palace, name: Oatlands Palace, kind: palace, city: Weybridge, region: Surrey, country: England, lat: 51.3751, lng: -0.4424, sources: [wp-oatlands-palace]}
+  - {key: cranbourne-lodge, name: Cranbourne Lodge, kind: lodge, city: Windsor, region: Berkshire, country: England, lat: 51.4492, lng: -0.6440, sources: [wp-cranbourne-lodge]}
+  - {key: ducal-palace-of-vila-vicosa, name: Ducal Palace of Vila Viçosa, kind: palace, city: Vila Viçosa, region: Alentejo, country: Portugal, lat: 38.7824, lng: -7.4219, visitable: true, sources: [wp-ducal-palace-of-vila-vicosa]}
+  - {key: copenhagen-castle, name: Copenhagen Castle, kind: castle, city: Copenhagen, country: Denmark, lat: 55.6772, lng: 12.58, sources: [wp-copenhagen-castle]}
+  - {key: sts-thomas-minster, name: Sts Thomas Minster, historical_name: "St Thomas's Church, Newport", kind: church, city: Newport, region: Isle of Wight, country: England, lat: 50.6997, lng: -1.2936, visitable: true, sources: [wp-sts-thomas-minster]}
+  - {key: pantheon-of-the-house-of-braganza, name: Pantheon of the House of Braganza, kind: mausoleum, city: Lisbon, country: Portugal, lat: 38.7147, lng: -9.1269, visitable: true, sources: [wp-pantheon-of-the-house-of-braganza]}
+
+people:
+  # The monarchs (and Henrietta Maria): sex only
+  - {key: james-i-of-england, sex: male}
+  - {key: charles-i-of-england, sex: male}
+  - {key: charles-ii-of-england, sex: male}
+  - {key: james-ii-of-england, sex: male}
+  - {key: william-iii-of-england, sex: male}
+  - {key: mary-ii-of-england, sex: female}
+  - {key: anne-of-great-britain, sex: female}
+  - {key: henrietta-maria, sex: female}
+
+  # James I's parents and wife
+  - {key: mary-queen-of-scots, name: "Mary, Queen of Scots", type: Royalty, born: 1542-12-08, died: 1587-02-08, sex: female, house: Stuart, coverage: not-read, sources: [wp-mary-queen-of-scots]}
+  - {key: henry-stuart-lord-darnley, name: "Henry Stuart, Lord Darnley", type: Royalty, born: 1546, died: 1567-02-10, sex: male, house: Stuart, coverage: not-read, sources: [wp-henry-stuart-lord-darnley]}
+  - {key: anne-of-denmark, name: Anne of Denmark, type: Royalty, born: 1574-12-12, died: 1619-03-02, sex: female, house: Oldenburg, coverage: not-read, sources: [wp-anne-of-denmark]}
+  # James I's children
+  - {key: henry-frederick-prince-of-wales, name: "Henry Frederick, Prince of Wales", type: Royalty, born: 1594-02-19, died: 1612-11-06, sex: male, house: Stuart, coverage: not-read, sources: [wp-henry-frederick-prince-of-wales]}
+  - {key: elizabeth-stuart-queen-of-bohemia, name: "Elizabeth Stuart, Queen of Bohemia", type: Royalty, born: 1596-08-19, died: 1662-02-13, sex: female, house: Stuart, coverage: not-read, sources: [wp-elizabeth-stuart-queen-of-bohemia]}
+  # Charles I's children
+  - {key: mary-princess-royal-and-princess-of-orange, name: "Mary, Princess Royal", type: Royalty, born: 1631-11-04, died: 1660-12-24, sex: female, house: Stuart, coverage: not-read, sources: [wp-mary-princess-royal-and-princess-of-orange]}
+  - {key: elizabeth-stuart-daughter-of-charles-i, name: Elizabeth Stuart, type: Royalty, born: 1635-12-28, died: 1650-09-08, sex: female, house: Stuart, note: "Second daughter of Charles I; a prisoner of Parliament from age six, she died at Carisbrooke Castle aged 14.", coverage: not-read, sources: [wp-elizabeth-stuart-daughter-of-charles-i]}
+  - {key: henry-stuart-duke-of-gloucester, name: "Henry Stuart, Duke of Gloucester", type: Royalty, born: 1640-07-08, died: 1660-09-13, sex: male, house: Stuart, coverage: not-read, sources: [wp-henry-stuart-duke-of-gloucester]}
+  - {key: henrietta-of-england, name: Henrietta of England, type: Royalty, born: 1644-06-16, died: 1670-06-30, sex: female, house: Stuart, coverage: not-read, sources: [wp-henrietta-of-england]}
+  # Charles II's wife
+  - {key: catherine-of-braganza, name: Catherine of Braganza, type: Royalty, born: 1638-11-25, died: 1705-12-31, sex: female, house: Braganza, coverage: not-read, sources: [wp-catherine-of-braganza]}
+  # James II's wives and children
+  - {key: anne-hyde, name: Anne Hyde, type: Royalty, born: 1637-03-12, died: 1671-03-31, sex: female, note: "Duchess of York, first wife of the future James II; mother of Mary II and Anne. She died before he became king.", coverage: not-read, sources: [wp-anne-hyde]}
+  - {key: mary-of-modena, name: Mary of Modena, type: Royalty, born: 1658-10-05, died: 1718-05-07, sex: female, house: Este, coverage: not-read, sources: [wp-mary-of-modena]}
+  - {key: james-francis-edward-stuart, name: James Francis Edward Stuart, type: Royalty, born: 1688-06-10, died: 1766-01-01, sex: male, house: Stuart, note: "The Old Pretender: Jacobite claimant to the thrones from 1701.", coverage: not-read, sources: [wp-james-francis-edward-stuart]}
+  - {key: louisa-maria-stuart, name: Louisa Maria Stuart, type: Royalty, born: 1692-06-28, died: 1712-04-18, sex: female, house: Stuart, coverage: not-read, sources: [wp-louisa-maria-stuart]}
+  # William III's father
+  - {key: william-ii-of-orange, name: "William II, Prince of Orange", type: Royalty, born: 1626-05-27, died: 1650-11-06, sex: male, house: Orange, coverage: not-read, sources: [wp-william-ii-of-orange]}
+  # Anne's husband
+  - {key: prince-george-of-denmark, name: Prince George of Denmark, type: Royalty, born: 1653-04-02, died: 1708-10-28, sex: male, house: Oldenburg, coverage: not-read, sources: [wp-prince-george-of-denmark]}
+
+links:
+  # James I
+  - {parent: mary-queen-of-scots, child: james-i-of-england, sources: [wp-james-vi-and-i, wp-mary-queen-of-scots]}
+  - {parent: henry-stuart-lord-darnley, child: james-i-of-england, sources: [wp-james-vi-and-i, wp-henry-stuart-lord-darnley]}
+  - {spouse: james-i-of-england, to: anne-of-denmark, year: 1589, sources: [wp-james-vi-and-i, wp-anne-of-denmark]}
+  - {parent: james-i-of-england, child: henry-frederick-prince-of-wales, sources: [wp-james-vi-and-i]}
+  - {parent: anne-of-denmark, child: henry-frederick-prince-of-wales, sources: [wp-henry-frederick-prince-of-wales]}
+  - {parent: james-i-of-england, child: elizabeth-stuart-queen-of-bohemia, sources: [wp-james-vi-and-i]}
+  - {parent: anne-of-denmark, child: elizabeth-stuart-queen-of-bohemia, sources: [wp-elizabeth-stuart-queen-of-bohemia]}
+  - {parent: anne-of-denmark, child: charles-i-of-england, sources: [wp-charles-i, wp-anne-of-denmark]}
+  # Charles I
+  - {spouse: charles-i-of-england, to: henrietta-maria, year: 1625, sources: [wp-charles-i]}
+  - {parent: henrietta-maria, child: charles-ii-of-england, sources: [wp-charles-ii]}
+  - {parent: henrietta-maria, child: james-ii-of-england, sources: [wp-james-ii]}
+  - {parent: charles-i-of-england, child: mary-princess-royal-and-princess-of-orange, sources: [wp-mary-princess-royal-and-princess-of-orange]}
+  - {parent: henrietta-maria, child: mary-princess-royal-and-princess-of-orange, sources: [wp-mary-princess-royal-and-princess-of-orange]}
+  - {parent: charles-i-of-england, child: elizabeth-stuart-daughter-of-charles-i, sources: [wp-elizabeth-stuart-daughter-of-charles-i]}
+  - {parent: henrietta-maria, child: elizabeth-stuart-daughter-of-charles-i, sources: [wp-elizabeth-stuart-daughter-of-charles-i]}
+  - {parent: charles-i-of-england, child: henry-stuart-duke-of-gloucester, sources: [wp-henry-stuart-duke-of-gloucester]}
+  - {parent: henrietta-maria, child: henry-stuart-duke-of-gloucester, sources: [wp-henry-stuart-duke-of-gloucester]}
+  - {parent: charles-i-of-england, child: henrietta-of-england, sources: [wp-henrietta-of-england]}
+  - {parent: henrietta-maria, child: henrietta-of-england, sources: [wp-henrietta-of-england]}
+  # Charles II
+  - {spouse: charles-ii-of-england, to: catherine-of-braganza, year: 1662, sources: [wp-charles-ii, wp-catherine-of-braganza]}
+  # James II
+  - {spouse: james-ii-of-england, to: anne-hyde, year: 1660, sources: [wp-james-ii, wp-anne-hyde]}
+  - {spouse: james-ii-of-england, to: mary-of-modena, year: 1673, sources: [wp-james-ii, wp-mary-of-modena]}
+  - {parent: anne-hyde, child: mary-ii-of-england, sources: [wp-anne-hyde]}
+  - {parent: anne-hyde, child: anne-of-great-britain, sources: [wp-anne-hyde]}
+  - {parent: james-ii-of-england, child: james-francis-edward-stuart, sources: [wp-james-francis-edward-stuart]}
+  - {parent: mary-of-modena, child: james-francis-edward-stuart, sources: [wp-james-francis-edward-stuart]}
+  - {parent: james-ii-of-england, child: louisa-maria-stuart, sources: [wp-louisa-maria-stuart]}
+  - {parent: mary-of-modena, child: louisa-maria-stuart, sources: [wp-louisa-maria-stuart]}
+  # William III
+  - {parent: william-ii-of-orange, child: william-iii-of-england, sources: [wp-william-iii, wp-william-ii-of-orange]}
+  - {parent: mary-princess-royal-and-princess-of-orange, child: william-iii-of-england, sources: [wp-william-iii, wp-mary-princess-royal-and-princess-of-orange]}
+  # Anne
+  - {spouse: anne-of-great-britain, to: prince-george-of-denmark, year: 1683, sources: [wp-anne, wp-prince-george-of-denmark]}
+
+moments:
+  - {person: mary-queen-of-scots, role: born, place: linlithgow-palace, year: 1542, sources: [wp-mary-queen-of-scots]}
+  - {person: mary-queen-of-scots, role: buried, place: peterborough-cathedral, year: 1587, sources: [wp-mary-queen-of-scots]}
+  - {person: mary-queen-of-scots, role: buried, place: westminster-abbey, year: 1612, sources: [wp-mary-queen-of-scots]}
+  - {person: henry-stuart-lord-darnley, role: born, place: temple-newsam, year: 1546, sources: [wp-henry-stuart-lord-darnley]}
+  - {person: henry-stuart-lord-darnley, role: buried, place: holyrood-abbey, year: 1567, sources: [wp-henry-stuart-lord-darnley]}
+  - {person: anne-of-denmark, role: born, place: skanderborg, year: 1574, sources: [wp-anne-of-denmark]}
+  - {person: anne-of-denmark, role: buried, place: westminster-abbey, year: 1619, sources: [wp-anne-of-denmark]}
+  - {person: henry-frederick-prince-of-wales, role: born, place: stirling-castle, year: 1594, sources: [wp-henry-frederick-prince-of-wales]}
+  - {person: elizabeth-stuart-queen-of-bohemia, role: born, place: dunfermline-palace, year: 1596, sources: [wp-elizabeth-stuart-queen-of-bohemia]}
+  - {person: elizabeth-stuart-queen-of-bohemia, role: buried, place: westminster-abbey, year: 1662, sources: [wp-elizabeth-stuart-queen-of-bohemia]}
+  - {person: mary-princess-royal-and-princess-of-orange, role: born, place: st-jamess-palace, year: 1631, sources: [wp-mary-princess-royal-and-princess-of-orange]}
+  - {person: mary-princess-royal-and-princess-of-orange, role: buried, place: westminster-abbey, sources: [wp-mary-princess-royal-and-princess-of-orange]}
+  - {person: elizabeth-stuart-daughter-of-charles-i, role: born, place: st-jamess-palace, year: 1635, sources: [wp-elizabeth-stuart-daughter-of-charles-i]}
+  - {person: elizabeth-stuart-daughter-of-charles-i, role: buried, place: sts-thomas-minster, sources: [wp-elizabeth-stuart-daughter-of-charles-i]}
+  - {person: henry-stuart-duke-of-gloucester, role: born, place: oatlands-palace, year: 1640, sources: [wp-henry-stuart-duke-of-gloucester]}
+  - {person: henry-stuart-duke-of-gloucester, role: buried, place: westminster-abbey, year: 1660, sources: [wp-henry-stuart-duke-of-gloucester]}
+  - {person: henrietta-of-england, role: born, place: exeter, year: 1644, sources: [wp-henrietta-of-england]}
+  - {person: henrietta-of-england, role: buried, place: basilica-of-saint-denis, year: 1670, sources: [wp-henrietta-of-england]}
+  - {person: catherine-of-braganza, role: born, place: ducal-palace-of-vila-vicosa, year: 1638, sources: [wp-catherine-of-braganza]}
+  - {person: catherine-of-braganza, role: buried, place: pantheon-of-the-house-of-braganza, sources: [wp-catherine-of-braganza]}
+  - {person: anne-hyde, role: born, place: cranbourne-lodge, year: 1637, sources: [wp-anne-hyde]}
+  - {person: anne-hyde, role: buried, place: westminster-abbey, year: 1671, sources: [wp-anne-hyde]}
+  - {person: mary-of-modena, role: born, place: modena, year: 1658, sources: [wp-mary-of-modena]}
+  - {person: james-francis-edward-stuart, role: born, place: st-jamess-palace, year: 1688, sources: [wp-james-francis-edward-stuart]}
+  - {person: james-francis-edward-stuart, role: buried, place: st-peters-basilica-rome, year: 1766, sources: [wp-james-francis-edward-stuart]}
+  - {person: louisa-maria-stuart, role: born, place: chateau-de-saint-germain-en-laye, year: 1692, sources: [wp-louisa-maria-stuart]}
+  - {person: prince-george-of-denmark, role: born, place: copenhagen-castle, year: 1653, sources: [wp-prince-george-of-denmark]}
+  - {person: prince-george-of-denmark, role: buried, place: westminster-abbey, year: 1708, sources: [wp-prince-george-of-denmark]}
