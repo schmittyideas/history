@@ -532,9 +532,17 @@ const colorFor = p => (CATS.find(c => c.test(p)) || { color: "var(--muted)" }).c
 // Crowns: who held a title, and which one to name. Sovereign titles outrank dukes, counts and offices.
 const SOVEREIGN = /\b(king|queen|emperor|empress|caliph|sultan|tsar|pope|high king|grand prince|doge|khan|lady of the english)\b/i;
 // Who heads a realm for the Explore page (its ruler fallback and "part of" line): sovereigns, and elected heads of state.
-const HEAD_OF_STATE = t => SOVEREIGN.test(t) || /^president of /i.test(t);
-// 0 = sovereign, 1 = co-ruler of one (Byzantine co-emperor, co-king), 2 = everything else (dukes, regents, offices).
-const titleRank = t => /\bco-/i.test(t) ? 1 : SOVEREIGN.test(t) ? 0 : 2;
+// Modern heads of state: presidents, the Führer, party leaders, chairmen of a government. "President of" a chamber, council
+// or society (the Reichstag, the Privy Council) is neither a head of state nor of government.
+const NOT_HEAD = /\b(reichstag|privy council|house of peers|legislative yuan|executive yuan|red cross|war college|imperial rule)\b/i;
+const MODERN_HEAD = t => !NOT_HEAD.test(t) && /^(president of|führer of|chief of the .*state|general secretary of|chairman of the (nationalist|central people's|provisional) government|chairman of the people's republic)\b/i.test(t);
+// Heads of government, and leaders of a movement or a government in exile (de Gaulle's Free France), who rank below a
+// sitting head of state (Pétain, 1940-1944).
+const HEAD_OF_GOVERNMENT = t => /^(prime minister|premier|chancellor|leader) of\b/i.test(t);
+const HEAD_OF_STATE = t => SOVEREIGN.test(t) || MODERN_HEAD(t);
+// 0 = sovereign, 1 = co-ruler of one (Byzantine co-emperor, co-king), 2 = a modern head of state, 3 = a head of
+// government (prime minister, premier, chancellor), 4 = everything else (dukes, regents, offices, commands).
+const titleRank = t => /\bco-/i.test(t) ? 1 : SOVEREIGN.test(t) ? 0 : MODERN_HEAD(t) ? 2 : HEAD_OF_GOVERNMENT(t) ? 3 : 4;
 // The title to show under a name: one held in the view's years if it asks for some, else the highest held in life.
 function headlineTitle(id, from, to) {
   let ts = S.db.titlesOf(id);
