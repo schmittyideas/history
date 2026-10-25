@@ -150,6 +150,12 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P2] Journey map, and William I's life in full
+`type: enhancement` · `area: site` · `status: done` · `issue: #279`
+
+A "Journey ⤢" button on the side panel's map opens a person's life full screen: their events and places in date order, the stop's event, people and sources beside the map, historical borders from the snapshot nearest each stop (or today's street map), Esc or "Shrink ✕" to close. Events got an optional month (sql/019) so a year's stops sort. William I was the first: his parents Robert I and Herleva, and 31 placed events from the 1035 succession to Mantes (#278). Done 2026-10-24 (#280).
+Source: Ty, 2026-10-24.
+
 #### [P2] WWII: events and people
 `type: task` · `area: data` · `status: done` · `issue: #262`
 

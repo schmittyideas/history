@@ -1196,17 +1196,23 @@ function renderDetailEmpty() {
 const ROLE_ORDER = { born: 0, died: 8, buried: 9 };
 const ROUTE_COLORS = ["var(--woad)", "var(--madder)", "var(--weld)", "var(--stitch)", "var(--ochre)", "var(--ink)"];
 
+// Where a stop falls inside its year: the month from a full date or the event's month (sql/019), else 0 (start of
+// the year). Deaths and burials go after everything else that year; births before.
+const monthOf = e => e.start_date ? Number(e.start_date.slice(5, 7)) : e.start_month || 0;
+const momentMonth = role => role === "born" ? -1 : role === "died" || role === "buried" ? 13 : 0;
+const byStop = (a, b) => byYear(a.year, b.year) || (a.month ?? 0) - (b.month ?? 0) || a.rank - b.rank
+  || (a.date || "").localeCompare(b.date || "") || (a.order ?? 0) - (b.order ?? 0);
 function stopsForPerson(id) {
   const db = S.db, stops = [];
   db.pp.filter(x => x.entity_id === id).forEach(x => {
     const place = db.placeById[x.place_id];
-    if (place) stops.push({ year: x.year, date: null, what: cap(x.role), place, rank: ROLE_ORDER[x.role] ?? 5 });
+    if (place) stops.push({ year: x.year, month: momentMonth(x.role), date: null, what: cap(x.role), place, rank: ROLE_ORDER[x.role] ?? 5 });
   });
   db.eventsOf(id).forEach(({ event: e, role }) => {
     const place = db.placeById[e.place_id];
-    if (place) stops.push({ year: e.start_year, date: e.start_date, what: e.name + (role ? ` (${role})` : ""), place, rank: 2 });
+    if (place) stops.push({ year: e.start_year, month: monthOf(e), date: e.start_date, what: e.name + (role ? ` (${role})` : ""), place, rank: 2, order: e.id });
   });
-  return stops.sort((a, b) => byYear(a.year, b.year) || a.rank - b.rank || (a.date || "").localeCompare(b.date || ""));
+  return stops.sort(byStop);
 }
 function stopsForEvent(id) {
   const e = S.db.eventById[id];
@@ -1303,6 +1309,15 @@ function drawMap() {
     if (!s.length) emptyMsg = `Nothing linked to ${pl.name} yet.`;
   } else emptyMsg = "Select a person, event or place to see where it happened.";
   const placeMode = S.selected?.kind === "place" && S.mapMode !== "everyone";
+  // A person with two or more places gets a full-screen journey through their life.
+  const jBox = $("map-journey");
+  if (jBox) {
+    jBox.innerHTML = "";
+    const who = S.selected?.kind === "person" && S.mapMode !== "everyone" ? db.byId[S.selected.id] : null;
+    if (who && new Set(routes[0]?.stops.map(s => s.place.id)).size >= 2)
+      jBox.append(h("button", { type: "button", class: "xexp", id: "journey-open", title: `Follow ${who.name}'s life stop by stop, full screen`,
+        onclick: () => openJourney(who.id), text: "Journey ⤢" }));
+  }
 
   const pts = routes.flatMap(r => r.stops.map(s => [Number(s.place.lng), Number(s.place.lat)]));
   let lon0 = -3, lon1 = 3, lat0 = 48, lat1 = 53;
@@ -1383,6 +1398,242 @@ function setMapMode(m) {
   $("map-everyone").setAttribute("aria-pressed", m === "everyone");
   drawMap();
 }
+
+/* ------------------------------------------------------------------ journey */
+// A person's life as a journey: every event they took part in and every place moment, in date order, on a full-
+// screen map beside the list of stops. Picking a stop moves the map to it and shows that event and its people.
+// The map is the border snapshot nearest the stop's year (data/maps, GPL-3.0), or today's street map for a
+// traveller. "Shrink ✕" or Esc closes it; reopening for the same person returns to the stop you were on.
+const J = { person: null, i: 0, stops: [], el: null, map: null, zoom: null, k: null, back: null, base: store.get("journeyBase", "borders") };
+
+function journeyStops(id) {
+  const db = S.db;
+  const stops = [
+    ...db.eventsOf(id).filter(x => !x.event.film).map(({ event: e, role }) => ({ year: e.start_year, month: monthOf(e), date: e.start_date,
+      event: e, role, what: e.name, place: db.placeById[e.place_id] || null, rank: 2, order: e.id })),
+    ...db.pp.filter(x => x.entity_id === id && db.placeById[x.place_id]).map(x => ({ year: x.year, month: momentMonth(x.role), date: null,
+      moment: x, what: `${cap(x.role)} at ${db.placeById[x.place_id].name}`, place: db.placeById[x.place_id], rank: ROLE_ORDER[x.role] ?? 5 })),
+  ];
+  const ok = pl => pl && pl.lat != null && pl.lng != null;
+  return stops.filter(s => s.year != null).sort(byStop).map(s => ({ ...s, place: ok(s.place) ? s.place : null }));
+}
+const stopWhen = s => s.date ? fmtDate(s.date) : s.event?.start_month ? `${MONTHS[s.event.start_month - 1]} ${fmtYear(s.year)}` : fmtYear(s.year);
+
+function openJourney(id) {
+  const stops = journeyStops(id);
+  if (!stops.some(s => s.place)) return;
+  if (J.person !== id) { J.i = Math.max(0, stops.findIndex(s => s.place)); J.k = null; }
+  J.person = id; J.stops = stops; J.i = Math.min(J.i, stops.length - 1);
+  J.back = document.activeElement;
+  closeJourney(false);
+  const p = S.db.byId[id];
+  const seg = h("div", { class: "seg", role: "group", "aria-label": "Map shows" });
+  const shell = J.el = h("div", { class: "journey", role: "dialog", "aria-modal": "true", "aria-label": `Journey: ${p.name}` },
+    h("div", { class: "jhead" },
+      h("div", {}, h("div", { class: "xkind", text: "Journey" }), h("h2", { text: p.name })),
+      h("div", { class: "jtools" }, seg,
+        h("button", { type: "button", class: "xmove", "aria-label": "Previous stop", title: "Previous stop (←)", text: "◀", onclick: () => journeyGo(J.i - 1) }),
+        h("button", { type: "button", class: "xmove", "aria-label": "Next stop", title: "Next stop (→)", text: "▶", onclick: () => journeyGo(J.i + 1) }),
+        h("button", { type: "button", class: "xexp", id: "journey-close", title: "Back to the panel (Esc)", text: "Shrink ✕", onclick: () => closeJourney() }))),
+    h("div", { class: "jbody" },
+      h("div", { class: "jmapcol" }, h("div", { class: "jmap", id: "jmap" }), h("p", { class: "hint map-credit", id: "jcredit" })),
+      h("div", { class: "jside" }, h("div", { class: "jstop", id: "jstop", "aria-live": "polite" }), h("ol", { class: "stops jlist", id: "jlist" }))));
+  [["borders", "Borders then"], ["street", "Street map today"]].forEach(([b, label]) => seg.append(h("button", { type: "button", "aria-pressed": J.base === b, text: label,
+    onclick: () => { J.base = b; store.set("journeyBase", b); seg.querySelectorAll("button").forEach((x, i) => x.setAttribute("aria-pressed", (i === 0) === (b === "borders"))); J.k = null; drawJourneyMap(true); } })));
+  document.body.append(shell);
+  document.body.classList.add("x-full");
+  // The list, numbered like the side panel's map (only stops with a place get a number).
+  const list = $("jlist");
+  let n = 0;
+  J.stops.forEach((s, i) => {
+    s.n = s.place ? ++n : null;
+    const li = h("li", {},
+      h("span", { class: "n" + (s.place ? "" : " none"), text: s.n ?? "–" }),
+      h("button", { type: "button", class: "jpick", onclick: () => journeyGo(i) },
+        h("span", { class: "yrs", text: stopWhen(s) + "  " }), h("span", { class: "what", text: s.what }),
+        h("span", { class: "where", text: s.place ? ` · ${s.place.name}` : " · no place recorded" })));
+    list.append(li);
+  });
+  journeyGo(J.i, true);
+  $("journey-close").focus();
+}
+
+function closeJourney(restore = true) {
+  if (J.map) { J.map.remove(); J.map = null; }
+  if (J.el) { J.el.remove(); J.el = null; }
+  document.body.classList.remove("x-full");
+  if (restore && J.back?.isConnected) J.back.focus();
+}
+
+function journeyGo(i, first = false) {
+  if (!J.el || i < 0 || i >= J.stops.length) return;
+  const prevYear = J.stops[J.i]?.year;
+  J.i = i;
+  const s = J.stops[i], db = S.db;
+  // Links inside the journey close it first, then go to the record in the panel.
+  const go = fn => () => { closeJourney(false); fn(); };
+  const pLink = (p, extra = "") => h("button", { type: "button", class: "plink", title: `Show ${p.name}`, onclick: go(() => reveal(p.id)), text: p.name + extra });
+  const plLink = pl => h("button", { type: "button", class: "plink", title: `Show ${pl.name}`, onclick: go(() => selectPlace(pl.id)), text: pl.name });
+  const card = $("jstop"), dl = h("dl");
+  const rows = [];
+  if (s.event) {
+    const e = s.event;
+    rows.push(["Date", stopWhen(s) + (e.estimated ? " (approximate)" : "") + (e.end_year != null && e.end_year !== e.start_year ? ` to ${fmtYear(e.end_year)}` : "")]);
+    rows.push(["Where", s.place ? [plLink(s.place), s.place.historical_name ? ` (then ${s.place.historical_name})` : ""] : "No place recorded"]);
+    if (e.venues?.length) rows.push(["Also at", joinNodes(e.venues.map(v => db.placeById[v.place_id] && [plLink(db.placeById[v.place_id]), ` (${v.note || v.role})`]).filter(Boolean))]);
+    rows.push(["People", joinNodes(db.peopleInEvent(e.id).map(x => pLink(x.person, x.role ? ` (${x.role})` : "")), "None linked")]);
+    rows.push(["Sources", sourceLinks(db.sourcesFor("event", e.key))]);
+  } else {
+    rows.push(["Date", fmtYear(s.year)], ["Where", [plLink(s.place), s.place.historical_name ? ` (then ${s.place.historical_name})` : ""]]);
+    if (s.place.note) rows.push(["About", s.place.note]);
+  }
+  rows.forEach(([k, v]) => dl.append(h("dt", { text: k }), h("dd", {}, ...(Array.isArray(v) ? v : [v]))));
+  const stars = s.event?.prominence ? "★".repeat(s.event.prominence) + "☆".repeat(5 - s.event.prominence) : null;
+  card.replaceChildren(...[
+    h("div", { class: "jcount", text: `Stop ${i + 1} of ${J.stops.length}` }),
+    h("div", { class: "kind", style: "color:var(--madder)", text: s.event ? (s.event.type || "Event") + (s.role ? ` · ${s.role}` : "") : "Life" }),
+    h("h3", {}, s.event ? s.event.name : s.what, stars ? h("span", { class: "yrs", title: `Prominence ${s.event.prominence} of 5`, text: ` ${stars}` }) : null),
+    s.event?.note ? h("p", { class: "jnote", text: s.event.note }) : null,
+    dl,
+    s.event ? h("button", { type: "button", class: "plink", onclick: go(() => revealEvent(s.event.id)), text: "Open this event in the panel" }) : null].filter(Boolean));
+  $("jlist").querySelectorAll("li").forEach((li, k) => li.classList.toggle("cur", k === i));
+  // Side by side, the list scrolls to the stop; on a phone (map, stop, list stacked) the page goes back up to the map.
+  const smooth = first || matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  if (matchMedia("(max-width: 760px)").matches) { if (!first) J.el.scrollTo({ top: 0, behavior: smooth }); }
+  else $("jlist").children[i]?.scrollIntoView({ block: "nearest", behavior: smooth });
+  // Borders: a new snapshot only when the year's nearest snapshot changes; otherwise just move the highlight.
+  drawJourneyMap(first || J.base === "borders" && nearestSnapshot(prevYear) !== nearestSnapshot(s.year));
+}
+
+let J_YEARS = null;
+const nearestSnapshot = y => !J_YEARS || y == null ? null
+  : J_YEARS.reduce((best, x) => Math.abs(x - y) < Math.abs(best - y) ? x : best, J_YEARS[0]);
+
+async function drawJourneyMap(rebuild) {
+  const host = $("jmap"), credit = $("jcredit");
+  if (!host) return;
+  const placed = J.stops.filter(s => s.place), cur = J.stops[J.i];
+  const ll = s => [Number(s.place.lat), Number(s.place.lng)];
+  if (J.base === "street" && window.L) {
+    if (rebuild || !J.map) {
+      if (J.map) { J.map.remove(); J.map = null; }
+      host.replaceChildren();
+      const box = h("div", { class: "street-map" }); host.append(box);
+      const map = J.map = L.map(box, { zoomControl: true, attributionControl: true });
+      map.attributionControl.setPrefix('<a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a>');
+      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 19,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors' }).addTo(map);
+      L.polyline(placed.map(ll), { color: getComputedStyle(document.documentElement).getPropertyValue("--madder").trim(), weight: 2, opacity: .7, dashArray: "4 4" }).addTo(map);
+      J.pins = new Map();
+      placed.forEach(s => {
+        const label = placed.filter(x => x.place.id === s.place.id).map(x => x.n).join(",");
+        if (J.pins.has(s.place.id)) return;
+        const icon = L.divIcon({ className: "street-pin-wrap", iconSize: null, html: `<span class="street-pin jpin${label.length > 2 ? " wide" : ""}" data-place="${s.place.id}" style="background:var(--madder)">${label}</span>` });
+        const m = L.marker(ll(s), { icon, keyboard: true, title: s.place.name, alt: s.place.name }).addTo(map);
+        m.bindTooltip(s.place.name, { direction: "top", offset: [0, -8] });
+        m.on("click", () => journeyGo(J.stops.indexOf(s)));
+        J.pins.set(s.place.id, m);
+      });
+      map.fitBounds(placed.map(ll), { padding: [30, 30] });
+      credit.replaceChildren("Today's streets. Numbers follow the list; the dashed line joins the stops in order, not the roads taken.");
+    }
+    host.querySelectorAll(".jpin").forEach(el => el.classList.toggle("cur", cur.place && Number(el.dataset.place) === cur.place.id));
+    if (cur.place) J.map.flyTo(ll(cur), Math.max(J.map.getZoom(), 10), { duration: matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : .8 });
+    return;
+  }
+  // Borders then: the snapshot nearest the stop's year, Mercator fitted to every stop.
+  const idx = await mapIndex();
+  if (!idx || !window.d3 || !J.el) return;
+  J_YEARS = Object.keys(idx.years).map(Number).sort((a, b) => a - b);
+  const shownYear = nearestSnapshot(cur.year);
+  const svgOld = host.querySelector("svg.jborders");
+  if (!rebuild && svgOld && Number(svgOld.dataset.year) === shownYear) return markJourney(svgOld);
+  const geo = await mapGeo(idx.years[shownYear]);
+  if (!J.el || J.base !== "borders") return;
+  if (J.map) { J.map.remove(); J.map = null; }
+  const W = 900, H = 640;
+  const pts = placed.map(s => [Number(s.place.lng), Number(s.place.lat)]);
+  let [x0, y0] = [Math.min(...pts.map(p => p[0])), Math.min(...pts.map(p => p[1]))], [x1, y1] = [Math.max(...pts.map(p => p[0])), Math.max(...pts.map(p => p[1]))];
+  if (x1 - x0 < 4) { const c = (x0 + x1) / 2; x0 = c - 2; x1 = c + 2; }
+  if (y1 - y0 < 3) { const c = (y0 + y1) / 2; y0 = c - 1.5; y1 = c + 1.5; }
+  const px = (x1 - x0) * .12, py = (y1 - y0) * .12;
+  const proj = d3.geoMercator().fitExtent([[10, 10], [W - 10, H - 10]], { type: "MultiPoint", coordinates: [[x0 - px, y0 - py], [x1 + px, y1 + py]] });
+  const path = d3.geoPath(proj);
+  const svg = el("svg", { viewBox: `0 0 ${W} ${H}`, class: "histmap jborders", "data-year": shownYear, role: "img", "aria-label": `Borders around ${fmtYear(shownYear)} with the journey's stops` });
+  const g = el("g", {}, svg);
+  el("rect", { x: -W * 4, y: -H * 4, width: W * 9, height: H * 9, class: "hm-sea" }, g);
+  const land = el("g", {}, g), lab = el("g", { class: "jlabels" }, g);
+  const inView = ([x, y]) => x > 20 && x < W - 20 && y > 20 && y < H - 20;
+  const labels = [];
+  geo.features.forEach(f => {
+    const d = path(f); if (!d) return;
+    const p = el("path", { d, class: "hm-land" }, land);
+    p.__f = f;
+    const name = f.properties?.NAME;
+    el("title", {}, p).textContent = name || "";
+    const c = path.centroid(f), a = path.area(f);
+    if (name && inView(c) && a > 1500) labels.push({ name, c, a });
+  });
+  labels.sort((p, q) => q.a - p.a).slice(0, 12).forEach(l => el("text", { x: l.c[0], y: l.c[1], class: "jrealm", "text-anchor": "middle" }, lab).textContent = l.name);
+  const xy = placed.map(s => proj([Number(s.place.lng), Number(s.place.lat)]));
+  el("path", { d: "M" + xy.map(p => p.join(",")).join("L"), class: "jroute" }, g);
+  el("path", { d: "", class: "jroute done" }, g);
+  const pins = el("g", {}, g), seen = new Map();
+  placed.forEach((s, k) => {
+    const key = s.place.id;
+    if (seen.has(key)) { seen.get(key).nums.push(s.n); return; }
+    const pg = el("g", { class: "jpt", transform: `translate(${xy[k].join(",")})`, tabindex: 0, role: "button", "data-place": key, "aria-label": s.place.name }, pins);
+    el("circle", { r: 9 }, pg);
+    const t = el("text", { y: 3.5, "text-anchor": "middle" }, pg);
+    el("title", {}, pg).textContent = s.place.name;
+    const pick = () => { const at = J.stops.findIndex((x, j) => j > J.i && x.place?.id === key); journeyGo(at >= 0 ? at : J.stops.findIndex(x => x.place?.id === key)); };
+    pg.addEventListener("click", pick);
+    pg.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(); } });
+    seen.set(key, { t, nums: [s.n] });
+  });
+  seen.forEach(({ t, nums }) => t.textContent = nums.length > 2 ? `${nums[0]}…` : nums.join(","));
+  svg.__xy = new Map(placed.map((s, k) => [s, xy[k]]));
+  host.replaceChildren(svg);
+  // Pan and zoom; the zoom carries over between stops and snapshots.
+  const zoom = J.zoom = d3.zoom().scaleExtent([1, 16]).translateExtent([[-W, -H], [2 * W, 2 * H]]).on("zoom", ev => {
+    g.setAttribute("transform", ev.transform); J.k = ev.transform;
+    g.querySelectorAll(".jpt").forEach(n => n.setAttribute("transform", n.getAttribute("transform").replace(/ scale\([^)]*\)/, "") + ` scale(${1 / ev.transform.k})`));
+    lab.setAttribute("font-size", 13 / ev.transform.k);
+  });
+  const sel = d3.select(svg).call(zoom);
+  if (J.k) sel.call(zoom.transform, J.k);
+  host.append(h("div", { class: "map-zoom" },
+    h("button", { type: "button", "aria-label": "Zoom in", text: "+", onclick: () => sel.transition().call(zoom.scaleBy, 1.8) }),
+    h("button", { type: "button", "aria-label": "Zoom out", text: "−", onclick: () => sel.transition().call(zoom.scaleBy, 1 / 1.8) }),
+    h("button", { type: "button", "aria-label": "Show every stop", text: "⟲", onclick: () => sel.transition().call(zoom.transform, d3.zoomIdentity) })));
+  credit.replaceChildren(`Borders around ${fmtYear(shownYear)}, approximate (the snapshot nearest this stop's year; it changes as the journey moves through time). The shaded land is the realm the stop is in. Map data: `,
+    h("a", { class: "ext", href: idx.source, target: "_blank", rel: "noopener", text: "historical-basemaps" }), " by André Ourednik, ",
+    h("a", { class: "ext", href: "data/maps/LICENSE", target: "_blank", rel: "noopener", text: "GPL-3.0" }), ".");
+  markJourney(svg);
+}
+
+// Highlights the current stop, the route walked so far, and the realm the stop lies in.
+function markJourney(svg) {
+  const cur = J.stops[J.i], xy = svg.__xy;
+  svg.querySelectorAll(".jpt").forEach(n => n.classList.toggle("cur", !!cur.place && Number(n.dataset.place) === cur.place.id));
+  const walked = J.stops.slice(0, J.i + 1).filter(s => s.place).map(s => xy.get(s)).filter(Boolean);
+  svg.querySelector(".jroute.done").setAttribute("d", walked.length > 1 ? "M" + walked.map(p => p.join(",")).join("L") : "");
+  svg.querySelectorAll(".hm-land").forEach(p => p.classList.toggle("here", !!cur.place && d3.geoContains(p.__f, [Number(cur.place.lng), Number(cur.place.lat)])));
+  // Bring the stop into view when zoomed in and it is off-screen.
+  if (cur.place && J.k && J.k.k > 1 && J.zoom) {
+    const [x, y] = xy.get(cur), [sx, sy] = J.k.apply([x, y]);
+    if (sx < 40 || sx > 860 || sy < 40 || sy > 600) d3.select(svg).transition().call(J.zoom.translateTo, x, y);
+  }
+}
+
+addEventListener("keydown", e => {
+  if (!J.el) return;
+  if (e.key === "Escape") { e.preventDefault(); closeJourney(); }
+  else if ((e.key === "ArrowRight" || e.key === "ArrowLeft") && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName || "")
+    && !document.activeElement?.closest(".leaflet-container, .jborders")) {
+    e.preventDefault(); journeyGo(J.i + (e.key === "ArrowRight" ? 1 : -1));
+  }
+});
 
 /* ------------------------------------------------------------------ year view */
 // Who ruled where, and what happened, in a year or a span. Rulers come from the titles table,
