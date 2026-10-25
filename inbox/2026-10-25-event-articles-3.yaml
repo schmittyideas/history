@@ -1,0 +1,145 @@
+batch:
+  title: "Events cite their own Wikipedia article (3)"
+  requested: "When an event mentions the Truce of God or a similar act, reference that act's own article too: every event"
+  date: 2026-10-25
+
+# Each event below gets its own Wikipedia article as a source (the article about that battle, treaty, council or act,
+# e.g. the Truce of God at Caen -> 'Peace and Truce of God'). Matched by title search, then checked by hand or by a
+# reviewer reading the article; events with no dedicated article were left out. Existing sources are reused.
+
+sources:
+  - {key: wp-battle-of-muhldorf, title: "Battle of Mühldorf (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_M%C3%BChldorf"}
+  - {key: wp-siege-of-warangal-1323, title: "Siege of Warangal (1323) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Warangal_(1323)"}
+  - {key: wp-war-of-saint-sardos, title: "War of Saint-Sardos (Wikipedia)", url: "https://en.wikipedia.org/wiki/War_of_Saint-Sardos"}
+  - {key: wp-siege-of-bursa, title: "Siege of Bursa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Bursa"}
+  - {key: wp-treaty-of-edinburghnorthampton, title: "Treaty of Edinburgh–Northampton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Edinburgh%E2%80%93Northampton"}
+  - {key: wp-battle-of-pelekanon, title: "Battle of Pelekanon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Pelekanon"}
+  - {key: wp-siege-of-kamakura-1333, title: "Siege of Kamakura (1333) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Kamakura_(1333)"}
+  - {key: wp-hundred-years-war, title: "Hundred Years' War (Wikipedia)", url: "https://en.wikipedia.org/wiki/Hundred_Years%27_War"}
+  - {key: wp-battle-of-sluys, title: "Battle of Sluys (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Sluys"}
+  - {key: wp-battle-of-rio-salado, title: "Battle of Río Salado (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_R%C3%ADo_Salado"}
+  - {key: wp-battle-of-kannanur, title: "Battle of Kannanur (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kannanur"}
+  - {key: wp-battle-of-crecy, title: "Battle of Crécy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Cr%C3%A9cy"}
+  - {key: wp-battle-of-neville-s-cross, title: "Battle of Neville's Cross (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Neville%27s_Cross"}
+  - {key: wp-siege-of-calais-13461347, title: "Siege of Calais (1346–1347) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Calais_(1346%E2%80%931347)"}
+  - {key: wp-black-death-in-england, title: "Black Death in England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Black_Death_in_England"}
+  - {key: wp-order-of-the-garter, title: "Order of the Garter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Order_of_the_Garter"}
+  - {key: wp-battle-of-poitiers, title: "Battle of Poitiers (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Poitiers"}
+  - {key: wp-golden-bull-of-1356, title: "Golden Bull of 1356 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Golden_Bull_of_1356"}
+  - {key: wp-jacquerie, title: "Jacquerie (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jacquerie"}
+  - {key: wp-red-turban-invasions-of-goryeo, title: "Red Turban invasions of Goryeo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Red_Turban_invasions_of_Goryeo"}
+  - {key: wp-treaty-of-bretigny, title: "Treaty of Brétigny (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Br%C3%A9tigny"}
+  - {key: wp-battle-of-najera, title: "Battle of Nájera (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_N%C3%A1jera"}
+  - {key: wp-battle-of-montiel, title: "Battle of Montiel (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Montiel"}
+  - {key: wp-peasants-revolt, title: "Peasants' Revolt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peasants%27_Revolt"}
+  - {key: wp-battle-of-aljubarrota, title: "Battle of Aljubarrota (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Aljubarrota"}
+  - {key: wp-union-of-krewo, title: "Union of Krewo (Wikipedia)", url: "https://en.wikipedia.org/wiki/Union_of_Krewo"}
+  - {key: wp-wihwado-retreat, title: "Wihwado Retreat (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wihwado_Retreat"}
+  - {key: wp-battle-of-rovine, title: "Battle of Rovine (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Rovine"}
+  - {key: wp-kalmar-union, title: "Kalmar Union (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kalmar_Union"}
+  - {key: wp-sack-of-delhi-1398, title: "Sack of Delhi (1398) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Sack_of_Delhi_(1398)"}
+  - {key: wp-first-strife-of-the-princes, title: "First Strife of the Princes (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_Strife_of_the_Princes"}
+  - {key: wp-jingnan-campaign, title: "Jingnan campaign (Wikipedia)", url: "https://en.wikipedia.org/wiki/Jingnan_campaign"}
+  - {key: wp-battle-of-the-vorskla-river, title: "Battle of the Vorskla River (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Vorskla_River"}
+  - {key: wp-battle-of-ankara, title: "Battle of Ankara (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Ankara"}
+  - {key: wp-battle-of-shrewsbury, title: "Battle of Shrewsbury (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Shrewsbury"}
+  - {key: wp-ming-treasure-voyages, title: "Ming treasure voyages (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ming_treasure_voyages"}
+  - {key: wp-ming-conquest-of-ai-ngu, title: "Ming conquest of Đại Ngu (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ming_conquest_of_%C4%90%E1%BA%A1i_Ngu"}
+  - {key: wp-council-of-pisa, title: "Council of Pisa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Pisa"}
+  - {key: wp-battle-of-grunwald, title: "Battle of Grunwald (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Grunwald"}
+  - {key: wp-battle-of-camurlu, title: "Battle of Çamurlu (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_%C3%87amurlu"}
+  - {key: wp-battle-of-agincourt, title: "Battle of Agincourt (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Agincourt"}
+  - {key: wp-portuguese-conquest-of-ceuta, title: "Portuguese conquest of Ceuta (Wikipedia)", url: "https://en.wikipedia.org/wiki/Portuguese_conquest_of_Ceuta"}
+  - {key: wp-assassination-of-john-the-fearless, title: "Assassination of John the Fearless (Wikipedia)", url: "https://en.wikipedia.org/wiki/Assassination_of_John_the_Fearless"}
+  - {key: wp-oei-invasion, title: "Ōei Invasion (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C5%8Cei_Invasion"}
+  - {key: wp-treaty-of-troyes, title: "Treaty of Troyes (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Troyes"}
+  - {key: wp-battle-of-tot-ong-chuc-ong, title: "Battle of Tốt Động – Chúc Động (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_T%E1%BB%91t_%C4%90%E1%BB%99ng_%E2%80%93_Ch%C3%BAc_%C4%90%E1%BB%99ng"}
+  - {key: wp-siege-of-orleans-14281429, title: "Siege of Orléans (1428–1429) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Orl%C3%A9ans_(1428%E2%80%931429)"}
+  - {key: wp-congress-of-arras, title: "Congress of Arras (Wikipedia)", url: "https://en.wikipedia.org/wiki/Congress_of_Arras"}
+  - {key: wp-council-of-florence, title: "Council of Florence (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Florence"}
+  - {key: wp-origin-of-hangul, title: "Origin of Hangul (Wikipedia)", url: "https://en.wikipedia.org/wiki/Origin_of_Hangul"}
+  - {key: wp-battle-of-formigny, title: "Battle of Formigny (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Formigny"}
+  - {key: wp-battle-of-castillon, title: "Battle of Castillon (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Castillon"}
+  - {key: wp-battle-of-northampton-1460, title: "Battle of Northampton (1460) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Northampton_(1460)"}
+  - {key: wp-battle-of-towton, title: "Battle of Towton (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Towton"}
+  - {key: wp-treaty-of-the-bulls-of-guisando, title: "Treaty of the Bulls of Guisando (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_the_Bulls_of_Guisando"}
+  - {key: wp-battle-of-barnet, title: "Battle of Barnet (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Barnet"}
+  - {key: wp-battle-of-tewkesbury, title: "Battle of Tewkesbury (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Tewkesbury"}
+  - {key: wp-champaai-viet-war-1471, title: "Champa–Đại Việt War (1471) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Champa%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_War_(1471)"}
+  - {key: wp-treaty-of-picquigny, title: "Treaty of Picquigny (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Picquigny"}
+  - {key: wp-battle-of-toro, title: "Battle of Toro (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Toro"}
+  - {key: wp-battle-of-nancy, title: "Battle of Nancy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Nancy"}
+  - {key: wp-treaty-of-alcacovas, title: "Treaty of Alcáçovas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Alc%C3%A1%C3%A7ovas"}
+  - {key: wp-great-stand-on-the-ugra-river, title: "Great Stand on the Ugra River (Wikipedia)", url: "https://en.wikipedia.org/wiki/Great_Stand_on_the_Ugra_River"}
+
+events:
+  - {key: battle-of-muhldorf-1322, sources: [wp-battle-of-muhldorf]}
+  - {key: fall-of-warangal-1323, sources: [wp-siege-of-warangal-1323]}
+  - {key: war-of-saint-sardos-1324, sources: [wp-war-of-saint-sardos]}
+  - {key: capture-of-bursa-1326, sources: [wp-siege-of-bursa]}
+  - {key: treaty-of-edinburgh-northampton-1328, sources: [wp-treaty-of-edinburghnorthampton]}
+  - {key: battle-of-pelekanon-1329, sources: [wp-battle-of-pelekanon]}
+  - {key: kamakura-shogunate-ended-1333, sources: [wp-siege-of-kamakura-1333]}
+  - {key: founding-of-vijayanagara-empire-1336, sources: [wp-vijayanagara-empire]}
+  - {key: start-of-the-hundred-years-war-1337, sources: [wp-hundred-years-war]}
+  - {key: ashikaga-shogunate-founded-1338, sources: [wp-ashikaga-shogunate]}
+  - {key: battle-of-sluys-1340, sources: [wp-battle-of-sluys]}
+  - {key: battle-of-rio-salado-1340, sources: [wp-battle-of-rio-salado]}
+  - {key: battle-of-kannanur-1342, sources: [wp-battle-of-kannanur]}
+  - {key: battle-of-crecy-1346, sources: [wp-battle-of-crecy]}
+  - {key: battle-of-nevilles-cross-1346, sources: [wp-battle-of-neville-s-cross]}
+  - {key: siege-of-calais-1346, sources: [wp-siege-of-calais-13461347]}
+  - {key: founding-of-bahmani-sultanate-1347, sources: [wp-bahmani-kingdom]}
+  - {key: black-death-in-england-1348, sources: [wp-black-death-in-england]}
+  - {key: founding-of-the-order-of-the-garter, sources: [wp-order-of-the-garter]}
+  - {key: battle-of-poitiers-1356, sources: [wp-battle-of-poitiers]}
+  - {key: golden-bull-1356, sources: [wp-golden-bull-of-1356]}
+  - {key: jacquerie-1358, sources: [wp-jacquerie]}
+  - {key: red-turban-invasions-of-goryeo-1359, sources: [wp-red-turban-invasions-of-goryeo]}
+  - {key: treaty-of-bretigny-1360, sources: [wp-treaty-of-bretigny]}
+  - {key: battle-of-najera-1367, sources: [wp-battle-of-najera]}
+  - {key: founding-of-ming-dynasty-1368, sources: [wp-ming-dynasty]}
+  - {key: battle-of-montiel-1369, sources: [wp-battle-of-montiel]}
+  - {key: peasants-revolt-1381, sources: [wp-peasants-revolt]}
+  - {key: battle-of-aljubarrota-1385, sources: [wp-battle-of-aljubarrota]}
+  - {key: union-of-krewo-1385, sources: [wp-union-of-krewo]}
+  - {key: wihwado-retreat-1388, sources: [wp-wihwado-retreat]}
+  - {key: joseon-founded-1392, sources: [wp-joseon]}
+  - {key: battle-of-rovine-1395, sources: [wp-battle-of-rovine]}
+  - {key: kalmar-union-1397, sources: [wp-kalmar-union]}
+  - {key: timur-sack-of-delhi-1398, sources: [wp-sack-of-delhi-1398]}
+  - {key: first-strife-of-the-princes-1398, sources: [wp-first-strife-of-the-princes]}
+  - {key: jingnan-campaign-1399, sources: [wp-jingnan-campaign]}
+  - {key: battle-of-the-vorskla-1399, sources: [wp-battle-of-the-vorskla-river]}
+  - {key: ho-usurpation-1400, sources: [wp-ho-dynasty]}
+  - {key: battle-of-ankara-1402, sources: [wp-battle-of-ankara]}
+  - {key: battle-of-shrewsbury-1403, sources: [wp-battle-of-shrewsbury]}
+  - {key: zheng-he-treasure-voyages-1405, sources: [wp-ming-treasure-voyages]}
+  - {key: ming-conquest-of-dai-ngu-1406, sources: [wp-ming-conquest-of-ai-ngu]}
+  - {key: council-of-pisa-1409, sources: [wp-council-of-pisa]}
+  - {key: battle-of-grunwald-1410, sources: [wp-battle-of-grunwald]}
+  - {key: battle-of-camurlu-1413, sources: [wp-battle-of-camurlu]}
+  - {key: battle-of-agincourt-1415, sources: [wp-battle-of-agincourt]}
+  - {key: conquest-of-ceuta-1415, sources: [wp-portuguese-conquest-of-ceuta]}
+  - {key: murder-of-john-the-fearless-1419, sources: [wp-assassination-of-john-the-fearless]}
+  - {key: oei-invasion-of-tsushima-1419, sources: [wp-oei-invasion]}
+  - {key: treaty-of-troyes-1420, sources: [wp-treaty-of-troyes]}
+  - {key: battle-of-tot-dong-chuc-dong-1426, sources: [wp-battle-of-tot-ong-chuc-ong]}
+  - {key: siege-of-orleans-1429, sources: [wp-siege-of-orleans-14281429]}
+  - {key: treaty-of-arras-1435, sources: [wp-congress-of-arras]}
+  - {key: council-of-florence-1439, sources: [wp-council-of-florence]}
+  - {key: hangul-created-1443, sources: [wp-origin-of-hangul]}
+  - {key: battle-of-formigny-1450, sources: [wp-battle-of-formigny]}
+  - {key: battle-of-castillon-1453, sources: [wp-battle-of-castillon]}
+  - {key: battle-of-northampton-1460, sources: [wp-battle-of-northampton-1460]}
+  - {key: battle-of-towton, sources: [wp-battle-of-towton]}
+  - {key: onin-war-1467, sources: [wp-onin-war]}
+  - {key: treaty-of-toros-de-guisando-1468, sources: [wp-treaty-of-the-bulls-of-guisando]}
+  - {key: battle-of-barnet, sources: [wp-battle-of-barnet]}
+  - {key: battle-of-tewkesbury, sources: [wp-battle-of-tewkesbury]}
+  - {key: conquest-of-champa-1471, sources: [wp-champaai-viet-war-1471]}
+  - {key: treaty-of-picquigny, sources: [wp-treaty-of-picquigny]}
+  - {key: battle-of-toro-1476, sources: [wp-battle-of-toro]}
+  - {key: battle-of-nancy-1477, sources: [wp-battle-of-nancy]}
+  - {key: treaty-of-alcacovas-1479, sources: [wp-treaty-of-alcacovas]}
+  - {key: great-stand-on-the-ugra-1480, sources: [wp-great-stand-on-the-ugra-river]}
