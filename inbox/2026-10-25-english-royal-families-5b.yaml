@@ -1,0 +1,325 @@
+batch:
+  title: "Royal families, part 5b: George IV to Edward VII (1820-1910)"
+  requested: "Ty: fill in parents, spouses and children (who reached 12) for each English monarch (issue #292, agreed 2026-10-25)"
+  date: 2026-10-25
+  notes: "Sex for George IV, William IV, Victoria and Edward VII; their marriages and legitimate children who reached age 12, each with their own Wikipedia article, birth and burial places, and Victoria's mother. Their fathers' links are in part 5a (George III, and Victoria's father Prince Edward, Duke of Kent)."
+
+# Notes for the reviewer
+# - Burial moments carry a year only where the article dates the burial; otherwise the year is left out.
+#   Where someone was moved, the moment is the final resting place: Princess Helena (Royal Burial Ground, Frogmore, 1928),
+#   Princess Louise, Duchess of Argyll (ashes moved there in 1940), Prince Arthur (reburied there 1942), Princess Victoria
+#   (reburied there 1936), Princess Beatrice (Whippingham, 1945), Louise, Princess Royal (removed to the private chapel at
+#   Mar Lodge, Braemar; no date given).
+#   Prince Leopold and Prince Albert Victor lie in the Albert Memorial Chapel at Windsor, which has no article of its own:
+#   their moments use St George's Chapel, Windsor, which it adjoins.
+#   Alfred lies in the ducal mausoleum in the Friedhof am Glockenberg, Coburg (no article): the moment uses Coburg.
+# Left out
+# - George IV: his 1785 marriage to Maria Fitzherbert, void under the Royal Marriages Act 1772 (no spouse link).
+# - William IV: no legitimate child reached 12. He and Adelaide had two short-lived daughters (Charlotte, 1819;
+#   Elizabeth, 1820-1821) and she had two miscarriages. His ten illegitimate FitzClarence children by Dorothea Jordan are left out.
+# - Edward VII: Prince Alexander John (1871), died the day after his birth.
+# - All nine of Victoria's children reached adulthood; all are here.
+# - No title changes in this batch.
+
+sources:
+  - {key: wp-caroline-of-brunswick, title: "Caroline of Brunswick (Wikipedia)", url: "https://en.wikipedia.org/wiki/Caroline_of_Brunswick"}
+  - {key: wp-princess-charlotte-of-wales-1796-1817, title: "Princess Charlotte of Wales (1796-1817) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Charlotte_of_Wales_(1796%E2%80%931817)"}
+  - {key: wp-adelaide-of-saxe-meiningen, title: "Adelaide of Saxe-Meiningen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Adelaide_of_Saxe-Meiningen"}
+  - {key: wp-princess-victoria-of-saxe-coburg-saalfeld, title: "Princess Victoria of Saxe-Coburg-Saalfeld (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Victoria_of_Saxe-Coburg-Saalfeld"}
+  - {key: wp-victoria-princess-royal, title: "Victoria, Princess Royal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Victoria,_Princess_Royal"}
+  - {key: wp-princess-alice-of-the-united-kingdom, title: "Princess Alice of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Alice_of_the_United_Kingdom"}
+  - {key: wp-alfred-duke-of-saxe-coburg-and-gotha, title: "Alfred, Duke of Saxe-Coburg and Gotha (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alfred,_Duke_of_Saxe-Coburg_and_Gotha"}
+  - {key: wp-princess-helena-of-the-united-kingdom, title: "Princess Helena of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Helena_of_the_United_Kingdom"}
+  - {key: wp-princess-louise-duchess-of-argyll, title: "Princess Louise, Duchess of Argyll (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Louise,_Duchess_of_Argyll"}
+  - {key: wp-prince-arthur-duke-of-connaught-and-strathearn, title: "Prince Arthur, Duke of Connaught and Strathearn (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Arthur,_Duke_of_Connaught_and_Strathearn"}
+  - {key: wp-prince-leopold-duke-of-albany, title: "Prince Leopold, Duke of Albany (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Leopold,_Duke_of_Albany"}
+  - {key: wp-princess-beatrice-of-the-united-kingdom, title: "Princess Beatrice of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Beatrice_of_the_United_Kingdom"}
+  - {key: wp-alexandra-of-denmark, title: "Alexandra of Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alexandra_of_Denmark"}
+  - {key: wp-prince-albert-victor-duke-of-clarence-and-avondale, title: "Prince Albert Victor, Duke of Clarence and Avondale (Wikipedia)", url: "https://en.wikipedia.org/wiki/Prince_Albert_Victor,_Duke_of_Clarence_and_Avondale"}
+  - {key: wp-louise-princess-royal, title: "Louise, Princess Royal (Wikipedia)", url: "https://en.wikipedia.org/wiki/Louise,_Princess_Royal"}
+  - {key: wp-princess-victoria-of-the-united-kingdom, title: "Princess Victoria of the United Kingdom (Wikipedia)", url: "https://en.wikipedia.org/wiki/Princess_Victoria_of_the_United_Kingdom"}
+  - {key: wp-maud-of-wales, title: "Maud of Wales (Wikipedia)", url: "https://en.wikipedia.org/wiki/Maud_of_Wales"}
+  - {key: wp-braunschweig, title: "Braunschweig (Wikipedia)", url: "https://en.wikipedia.org/wiki/Braunschweig"}
+  - {key: wp-brunswick-cathedral, title: "Brunswick Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Brunswick_Cathedral"}
+  - {key: wp-carlton-house, title: "Carlton House (Wikipedia)", url: "https://en.wikipedia.org/wiki/Carlton_House"}
+  - {key: wp-meiningen, title: "Meiningen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Meiningen"}
+  - {key: wp-coburg, title: "Coburg (Wikipedia)", url: "https://en.wikipedia.org/wiki/Coburg"}
+  - {key: wp-duchess-of-kents-mausoleum, title: "Duchess of Kent's Mausoleum (Wikipedia)", url: "https://en.wikipedia.org/wiki/Duchess_of_Kent%27s_Mausoleum"}
+  - {key: wp-church-of-peace-potsdam, title: "Church of Peace, Potsdam (Wikipedia)", url: "https://en.wikipedia.org/wiki/Church_of_Peace,_Potsdam"}
+  - {key: wp-rosenhohe-park, title: "Rosenhöhe Park (Wikipedia)", url: "https://en.wikipedia.org/wiki/Rosenh%C3%B6he_Park"}
+  - {key: wp-royal-burial-ground-frogmore, title: "Royal Burial Ground, Frogmore (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Burial_Ground,_Frogmore"}
+  - {key: wp-st-mildreds-church-whippingham, title: "St Mildred's Church, Whippingham (Wikipedia)", url: "https://en.wikipedia.org/wiki/St_Mildred%27s_Church,_Whippingham"}
+  - {key: wp-yellow-palace-copenhagen, title: "Yellow Palace, Copenhagen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Yellow_Palace,_Copenhagen"}
+  - {key: wp-mar-lodge, title: "Mar Lodge (Wikipedia)", url: "https://en.wikipedia.org/wiki/Mar_Lodge"}
+  - {key: wp-royal-mausoleum-norway, title: "Royal Mausoleum (Norway) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Royal_Mausoleum_(Norway)"}
+
+places:
+  - {key: braunschweig, name: Braunschweig, historical_name: Brunswick, kind: city, region: Lower Saxony, country: Germany, lat: 52.2667, lng: 10.5167, sources: [wp-braunschweig]}
+  - {key: brunswick-cathedral, name: Brunswick Cathedral, kind: cathedral, city: Braunschweig, region: Lower Saxony, country: Germany, lat: 52.2642, lng: 10.5242, sources: [wp-brunswick-cathedral]}
+  - {key: carlton-house, name: Carlton House, kind: townhouse, city: London, region: Greater London, country: England, lat: 51.5061, lng: -0.1317, sources: [wp-carlton-house]}
+  - {key: meiningen, name: Meiningen, kind: town, region: Thuringia, country: Germany, lat: 50.55, lng: 10.4167, sources: [wp-meiningen]}
+  - {key: coburg, name: Coburg, kind: town, region: Bavaria, country: Germany, lat: 50.2667, lng: 10.9667, sources: [wp-coburg]}
+  - {key: duchess-of-kents-mausoleum, name: "Duchess of Kent's Mausoleum", kind: mausoleum, city: Windsor, region: Berkshire, country: England, lat: 51.4738, lng: -0.5967, sources: [wp-duchess-of-kents-mausoleum]}
+  - {key: church-of-peace-potsdam, name: "Church of Peace, Potsdam", historical_name: Friedenskirche, kind: church, city: Potsdam, region: Brandenburg, country: Germany, lat: 52.4008, lng: 13.0433, sources: [wp-church-of-peace-potsdam]}
+  - {key: rosenhohe-park, name: Rosenhöhe Park, kind: park, city: Darmstadt, region: Hesse, country: Germany, lat: 49.8764, lng: 8.6783, sources: [wp-rosenhohe-park]}
+  - {key: royal-burial-ground-frogmore, name: "Royal Burial Ground, Frogmore", kind: cemetery, city: Windsor, region: Berkshire, country: England, lat: 51.474, lng: -0.5986, sources: [wp-royal-burial-ground-frogmore]}
+  - {key: st-mildreds-church-whippingham, name: "St Mildred's Church, Whippingham", kind: church, city: Whippingham, region: Isle of Wight, country: England, lat: 50.74, lng: -1.2769, sources: [wp-st-mildreds-church-whippingham]}
+  - {key: yellow-palace-copenhagen, name: Yellow Palace, kind: townhouse, city: Copenhagen, region: Capital Region, country: Denmark, lat: 55.6829, lng: 12.5926, sources: [wp-yellow-palace-copenhagen]}
+  - {key: mar-lodge, name: Mar Lodge, kind: house, city: Braemar, region: Aberdeenshire, country: Scotland, lat: 56.9917, lng: -3.4886, sources: [wp-mar-lodge]}
+  - {key: royal-mausoleum-norway, name: "Royal Mausoleum, Akershus Castle", kind: mausoleum, city: Oslo, region: Oslo, country: Norway, lat: 59.9076, lng: 10.738, sources: [wp-royal-mausoleum-norway]}
+
+people:
+  # Monarchs: sex only
+  - {key: george-iv, sex: male}
+  - {key: william-iv, sex: male}
+  - {key: victoria-of-the-united-kingdom, sex: female}
+  - {key: edward-vii, sex: male}
+
+  # George IV's wife and daughter; William IV's wife
+  - key: caroline-of-brunswick
+    name: Caroline of Brunswick
+    type: Royalty
+    sex: female
+    born: 1768-05-17
+    died: 1821-08-07
+    coverage: not-read
+    note: "Wife of George IV (married 1795), separated soon after their daughter's birth; Queen from 1820, but barred from his coronation in 1821."
+    sources: [wp-caroline-of-brunswick]
+  - key: princess-charlotte-of-wales-1796-1817
+    name: Princess Charlotte of Wales
+    type: Royalty
+    sex: female
+    house: Hanover
+    born: 1796-01-07
+    died: 1817-11-06
+    coverage: not-read
+    note: "Only child of George IV, expected to succeed him; married Prince Leopold of Saxe-Coburg-Saalfeld in 1816 and died in childbirth at 21."
+    sources: [wp-princess-charlotte-of-wales-1796-1817]
+  - key: adelaide-of-saxe-meiningen
+    name: Adelaide of Saxe-Meiningen
+    type: Royalty
+    sex: female
+    born: 1792-08-13
+    died: 1849-12-02
+    coverage: not-read
+    note: "Queen of the United Kingdom and of Hanover as wife of William IV (married 1818); none of their children survived infancy."
+    sources: [wp-adelaide-of-saxe-meiningen]
+
+  # Victoria's mother and children (Prince Albert is already in)
+  - key: princess-victoria-of-saxe-coburg-saalfeld
+    name: Princess Victoria of Saxe-Coburg-Saalfeld
+    type: Royalty
+    sex: female
+    born: 1786-08-17
+    died: 1861-03-16
+    coverage: not-read
+    note: "Duchess of Kent and Strathearn; widow of Emich Karl, Prince of Leiningen, then wife of Prince Edward, Duke of Kent (married 1818), and mother of Queen Victoria."
+    sources: [wp-princess-victoria-of-saxe-coburg-saalfeld]
+  - key: victoria-princess-royal
+    name: Victoria, Princess Royal
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1840-11-21
+    died: 1901-08-05
+    coverage: not-read
+    note: "Eldest child of Queen Victoria; German Empress and Queen of Prussia as wife of Frederick III (married 1858), mother of Wilhelm II."
+    sources: [wp-victoria-princess-royal]
+  - key: princess-alice-of-the-united-kingdom
+    name: Princess Alice
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1843-04-25
+    died: 1878-12-14
+    coverage: not-read
+    note: "Second daughter of Queen Victoria; Grand Duchess of Hesse and by Rhine as wife of Louis IV (married 1862). Mother of Alexandra, the last Russian empress."
+    sources: [wp-princess-alice-of-the-united-kingdom]
+  - key: alfred-duke-of-saxe-coburg-and-gotha
+    name: Alfred, Duke of Saxe-Coburg and Gotha
+    type: Royalty
+    sex: male
+    house: Saxe-Coburg and Gotha
+    born: 1844-08-06
+    died: 1900-07-30
+    coverage: not-read
+    note: "Second son of Queen Victoria; Duke of Edinburgh from 1866, naval officer, and sovereign Duke of Saxe-Coburg and Gotha from 1893."
+    sources: [wp-alfred-duke-of-saxe-coburg-and-gotha]
+  - key: princess-helena-of-the-united-kingdom
+    name: Princess Helena
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1846-05-25
+    died: 1923-06-09
+    coverage: not-read
+    note: "Third daughter of Queen Victoria; married Prince Christian of Schleswig-Holstein in 1866 and stayed in Britain as Princess Christian."
+    sources: [wp-princess-helena-of-the-united-kingdom]
+  - key: princess-louise-duchess-of-argyll
+    name: Princess Louise, Duchess of Argyll
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1848-03-18
+    died: 1939-12-03
+    coverage: not-read
+    note: "Fourth daughter of Queen Victoria; sculptor and supporter of the arts, higher education and the feminist cause; wife of the Marquess of Lorne, later 9th Duke of Argyll."
+    sources: [wp-princess-louise-duchess-of-argyll]
+  - key: prince-arthur-duke-of-connaught-and-strathearn
+    name: Prince Arthur, Duke of Connaught and Strathearn
+    type: Royalty
+    sex: male
+    house: Saxe-Coburg and Gotha
+    born: 1850-05-01
+    died: 1942-01-16
+    coverage: not-read
+    note: "Third son of Queen Victoria; army officer and Governor General of Canada (1911-1916)."
+    sources: [wp-prince-arthur-duke-of-connaught-and-strathearn]
+  - key: prince-leopold-duke-of-albany
+    name: Prince Leopold, Duke of Albany
+    type: Royalty
+    sex: male
+    house: Saxe-Coburg and Gotha
+    born: 1853-04-07
+    died: 1884-03-28
+    coverage: not-read
+    note: "Youngest son of Queen Victoria; had haemophilia and died at 30 after a fall."
+    sources: [wp-prince-leopold-duke-of-albany]
+  - key: princess-beatrice-of-the-united-kingdom
+    name: Princess Beatrice
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1857-04-14
+    died: 1944-10-26
+    coverage: not-read
+    note: "Youngest child of Queen Victoria and her constant companion; wife of Prince Henry of Battenberg (married 1885)."
+    sources: [wp-princess-beatrice-of-the-united-kingdom]
+
+  # Edward VII's wife and children (George V is already in)
+  - key: alexandra-of-denmark
+    name: Alexandra of Denmark
+    type: Royalty
+    sex: female
+    born: 1844-12-01
+    died: 1925-11-20
+    coverage: not-read
+    note: "Queen of the United Kingdom as wife of Edward VII (married 10 March 1863 at St George's Chapel, Windsor)."
+    sources: [wp-alexandra-of-denmark]
+  - key: prince-albert-victor-duke-of-clarence-and-avondale
+    name: Prince Albert Victor, Duke of Clarence and Avondale
+    type: Royalty
+    sex: male
+    house: Saxe-Coburg and Gotha
+    born: 1864-01-08
+    died: 1892-01-14
+    coverage: not-read
+    note: "Eldest son of Edward VII and second in line to the throne; engaged to Mary of Teck in late 1891, he died of pneumonia at Sandringham in January 1892, aged 28."
+    sources: [wp-prince-albert-victor-duke-of-clarence-and-avondale]
+  - key: louise-princess-royal
+    name: Louise, Princess Royal
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1867-02-20
+    died: 1931-01-04
+    coverage: not-read
+    note: "Eldest daughter of Edward VII, created Princess Royal in 1905; wife of Alexander Duff, 1st Duke of Fife."
+    sources: [wp-louise-princess-royal]
+  - key: princess-victoria-of-the-united-kingdom
+    name: Princess Victoria
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1868-07-06
+    died: 1935-12-03
+    coverage: not-read
+    note: "Second daughter of Edward VII; never married, and stayed close to her mother and her brother George V."
+    sources: [wp-princess-victoria-of-the-united-kingdom]
+  - key: maud-of-wales
+    name: Maud of Wales
+    type: Royalty
+    sex: female
+    house: Saxe-Coburg and Gotha
+    born: 1869-11-26
+    died: 1938-11-20
+    coverage: not-read
+    note: "Youngest daughter of Edward VII; Queen of Norway from 1905 as wife of Haakon VII."
+    sources: [wp-maud-of-wales]
+
+links:
+  # George IV
+  - {spouse: george-iv, to: caroline-of-brunswick, year: 1795}
+  - {parent: george-iv, child: princess-charlotte-of-wales-1796-1817}
+  - {parent: caroline-of-brunswick, child: princess-charlotte-of-wales-1796-1817}
+  # William IV
+  - {spouse: william-iv, to: adelaide-of-saxe-meiningen, year: 1818}
+  # Victoria (her father's link is in part 5a)
+  - {parent: princess-victoria-of-saxe-coburg-saalfeld, child: victoria-of-the-united-kingdom}
+  - {spouse: victoria-of-the-united-kingdom, to: prince-albert-of-saxe-coburg-and-gotha, year: 1840}
+  - {parent: victoria-of-the-united-kingdom, child: victoria-princess-royal}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: victoria-princess-royal}
+  - {parent: victoria-of-the-united-kingdom, child: edward-vii}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: edward-vii}
+  - {parent: victoria-of-the-united-kingdom, child: princess-alice-of-the-united-kingdom}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: princess-alice-of-the-united-kingdom}
+  - {parent: victoria-of-the-united-kingdom, child: alfred-duke-of-saxe-coburg-and-gotha}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: alfred-duke-of-saxe-coburg-and-gotha}
+  - {parent: victoria-of-the-united-kingdom, child: princess-helena-of-the-united-kingdom}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: princess-helena-of-the-united-kingdom}
+  - {parent: victoria-of-the-united-kingdom, child: princess-louise-duchess-of-argyll}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: princess-louise-duchess-of-argyll}
+  - {parent: victoria-of-the-united-kingdom, child: prince-arthur-duke-of-connaught-and-strathearn}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: prince-arthur-duke-of-connaught-and-strathearn}
+  - {parent: victoria-of-the-united-kingdom, child: prince-leopold-duke-of-albany}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: prince-leopold-duke-of-albany}
+  - {parent: victoria-of-the-united-kingdom, child: princess-beatrice-of-the-united-kingdom}
+  - {parent: prince-albert-of-saxe-coburg-and-gotha, child: princess-beatrice-of-the-united-kingdom}
+  # Edward VII
+  - {spouse: edward-vii, to: alexandra-of-denmark, year: 1863}
+  - {parent: edward-vii, child: prince-albert-victor-duke-of-clarence-and-avondale}
+  - {parent: alexandra-of-denmark, child: prince-albert-victor-duke-of-clarence-and-avondale}
+  - {parent: edward-vii, child: george-v}
+  - {parent: alexandra-of-denmark, child: george-v}
+  - {parent: edward-vii, child: louise-princess-royal}
+  - {parent: alexandra-of-denmark, child: louise-princess-royal}
+  - {parent: edward-vii, child: princess-victoria-of-the-united-kingdom}
+  - {parent: alexandra-of-denmark, child: princess-victoria-of-the-united-kingdom}
+  - {parent: edward-vii, child: maud-of-wales}
+  - {parent: alexandra-of-denmark, child: maud-of-wales}
+
+moments:
+  - {person: caroline-of-brunswick, role: born, place: braunschweig, year: 1768}
+  - {person: caroline-of-brunswick, role: buried, place: brunswick-cathedral}
+  - {person: princess-charlotte-of-wales-1796-1817, role: born, place: carlton-house, year: 1796}
+  - {person: princess-charlotte-of-wales-1796-1817, role: buried, place: st-georges-chapel-windsor, year: 1817}
+  - {person: adelaide-of-saxe-meiningen, role: born, place: meiningen, year: 1792}
+  - {person: adelaide-of-saxe-meiningen, role: buried, place: st-georges-chapel-windsor}
+  - {person: princess-victoria-of-saxe-coburg-saalfeld, role: born, place: coburg, year: 1786}
+  - {person: princess-victoria-of-saxe-coburg-saalfeld, role: buried, place: duchess-of-kents-mausoleum}
+  - {person: victoria-princess-royal, role: born, place: buckingham-palace, year: 1840}
+  - {person: victoria-princess-royal, role: buried, place: church-of-peace-potsdam, year: 1901}
+  - {person: princess-alice-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1843}
+  - {person: princess-alice-of-the-united-kingdom, role: buried, place: rosenhohe-park, year: 1878}
+  - {person: alfred-duke-of-saxe-coburg-and-gotha, role: born, place: windsor-castle, year: 1844}
+  - {person: alfred-duke-of-saxe-coburg-and-gotha, role: buried, place: coburg}
+  - {person: princess-helena-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1846}
+  - {person: princess-helena-of-the-united-kingdom, role: buried, place: royal-burial-ground-frogmore, year: 1928}
+  - {person: princess-louise-duchess-of-argyll, role: born, place: buckingham-palace, year: 1848}
+  - {person: princess-louise-duchess-of-argyll, role: buried, place: royal-burial-ground-frogmore, year: 1940}
+  - {person: prince-arthur-duke-of-connaught-and-strathearn, role: born, place: buckingham-palace, year: 1850}
+  - {person: prince-arthur-duke-of-connaught-and-strathearn, role: buried, place: royal-burial-ground-frogmore, year: 1942}
+  - {person: prince-leopold-duke-of-albany, role: born, place: buckingham-palace, year: 1853}
+  - {person: prince-leopold-duke-of-albany, role: buried, place: st-georges-chapel-windsor}
+  - {person: princess-beatrice-of-the-united-kingdom, role: born, place: buckingham-palace, year: 1857}
+  - {person: princess-beatrice-of-the-united-kingdom, role: buried, place: st-mildreds-church-whippingham, year: 1945}
+  - {person: alexandra-of-denmark, role: born, place: yellow-palace-copenhagen, year: 1844}
+  - {person: alexandra-of-denmark, role: buried, place: st-georges-chapel-windsor, year: 1925}
+  - {person: prince-albert-victor-duke-of-clarence-and-avondale, role: born, place: frogmore-house, year: 1864}
+  - {person: prince-albert-victor-duke-of-clarence-and-avondale, role: buried, place: st-georges-chapel-windsor}
+  - {person: louise-princess-royal, role: born, place: marlborough-house, year: 1867}
+  - {person: louise-princess-royal, role: buried, place: mar-lodge}
+  - {person: princess-victoria-of-the-united-kingdom, role: born, place: marlborough-house, year: 1868}
+  - {person: princess-victoria-of-the-united-kingdom, role: buried, place: royal-burial-ground-frogmore, year: 1936}
+  - {person: maud-of-wales, role: born, place: marlborough-house, year: 1869}
+  - {person: maud-of-wales, role: buried, place: royal-mausoleum-norway}
