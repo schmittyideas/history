@@ -1,0 +1,145 @@
+batch:
+  title: "Events cite their own Wikipedia article (1)"
+  requested: "When an event mentions the Truce of God or a similar act, reference that act's own article too: every event"
+  date: 2026-10-25
+
+# Each event below gets its own Wikipedia article as a source (the article about that battle, treaty, council or act,
+# e.g. the Truce of God at Caen -> 'Peace and Truce of God'). Matched by title search, then checked by hand or by a
+# reviewer reading the article; events with no dedicated article were left out. Existing sources are reused.
+
+sources:
+  - {key: wp-third-council-of-constantinople, title: "Third Council of Constantinople (Wikipedia)", url: "https://en.wikipedia.org/wiki/Third_Council_of_Constantinople"}
+  - {key: wp-second-conflict-in-the-goryeokhitan-war, title: "Second conflict in the Goryeo–Khitan War (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_conflict_in_the_Goryeo%E2%80%93Khitan_War"}
+  - {key: wp-battle-of-kuju, title: "Battle of Kuju (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kuju"}
+  - {key: wp-chola-expedition-of-the-ganges, title: "Chola Expedition of the Ganges (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chola_Expedition_of_the_Ganges"}
+  - {key: wp-chola-invasion-of-srivijaya, title: "Chola invasion of Srivijaya (Wikipedia)", url: "https://en.wikipedia.org/wiki/Chola_invasion_of_Srivijaya"}
+  - {key: wp-battle-of-tamaron, title: "Battle of Tamarón (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Tamar%C3%B3n"}
+  - {key: wp-battle-of-pitgaveny, title: "Battle of Pitgaveny (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Pitgaveny"}
+  - {key: wp-qingli-reforms, title: "Qingli Reforms (Wikipedia)", url: "https://en.wikipedia.org/wiki/Qingli_Reforms"}
+  - {key: wp-council-of-sutri, title: "Council of Sutri (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Sutri"}
+  - {key: wp-peace-and-truce-of-god, title: "Peace and Truce of God (Wikipedia)", url: "https://en.wikipedia.org/wiki/Peace_and_Truce_of_God"}
+  - {key: wp-battle-of-koppam, title: "Battle of Koppam (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Koppam"}
+  - {key: wp-battle-of-civitate, title: "Battle of Civitate (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Civitate"}
+  - {key: wp-eastwest-schism, title: "East–West Schism (Wikipedia)", url: "https://en.wikipedia.org/wiki/East%E2%80%93West_Schism"}
+  - {key: wp-battle-of-lumphanan, title: "Battle of Lumphanan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Lumphanan"}
+  - {key: wp-battle-of-petroe, title: "Battle of Petroe (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Petroe"}
+  - {key: wp-siege-of-thimert, title: "Siege of Thimert (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Thimert"}
+  - {key: wp-in-nomine-domini, title: "In nomine Domini (Wikipedia)", url: "https://en.wikipedia.org/wiki/In_nomine_Domini"}
+  - {key: wp-coronations-of-william-the-conqueror-and-matilda, title: "Coronations of William the Conqueror and Matilda (Wikipedia)", url: "https://en.wikipedia.org/wiki/Coronations_of_William_the_Conqueror_and_Matilda"}
+  - {key: wp-new-policies-song-dynasty, title: "New Policies (Song dynasty) (Wikipedia)", url: "https://en.wikipedia.org/wiki/New_Policies_(Song_dynasty)"}
+  - {key: wp-council-of-winchester-1070, title: "Council of Winchester (1070) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Winchester_(1070)"}
+  - {key: wp-battle-of-manzikert, title: "Battle of Manzikert (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Manzikert"}
+  - {key: wp-songai-viet-war, title: "Song–Đại Việt war (Wikipedia)", url: "https://en.wikipedia.org/wiki/Song%E2%80%93%C4%90%E1%BA%A1i_Vi%E1%BB%87t_war"}
+  - {key: wp-road-to-canossa, title: "Road to Canossa (Wikipedia)", url: "https://en.wikipedia.org/wiki/Road_to_Canossa"}
+  - {key: wp-council-of-lillebonne, title: "Council of Lillebonne (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Lillebonne"}
+  - {key: wp-siege-of-toledo-1085, title: "Siege of Toledo (1085) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Toledo_(1085)"}
+  - {key: wp-battle-of-sagrajas, title: "Battle of Sagrajas (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Sagrajas"}
+  - {key: wp-battle-of-levounion, title: "Battle of Levounion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Levounion"}
+  - {key: wp-battle-of-alnwick-1093, title: "Battle of Alnwick (1093) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Alnwick_(1093)"}
+  - {key: wp-council-of-clermont, title: "Council of Clermont (Wikipedia)", url: "https://en.wikipedia.org/wiki/Council_of_Clermont"}
+  - {key: wp-siege-of-nicaea, title: "Siege of Nicaea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Nicaea"}
+  - {key: wp-battle-of-gvozd-mountain, title: "Battle of Gvozd Mountain (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Gvozd_Mountain"}
+  - {key: wp-siege-of-jerusalem-1099, title: "Siege of Jerusalem (1099) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Jerusalem_(1099)"}
+  - {key: wp-alliance-conducted-at-sea, title: "Alliance Conducted at Sea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alliance_Conducted_at_Sea"}
+  - {key: wp-battle-of-beroia, title: "Battle of Beroia (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Beroia"}
+  - {key: wp-concordat-of-worms, title: "Concordat of Worms (Wikipedia)", url: "https://en.wikipedia.org/wiki/Concordat_of_Worms"}
+  - {key: wp-first-council-of-the-lateran, title: "First Council of the Lateran (Wikipedia)", url: "https://en.wikipedia.org/wiki/First_Council_of_the_Lateran"}
+  - {key: wp-imperator-totius-hispaniae, title: "Imperator totius Hispaniae (Wikipedia)", url: "https://en.wikipedia.org/wiki/Imperator_totius_Hispaniae"}
+  - {key: wp-battle-of-the-standard, title: "Battle of the Standard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_the_Standard"}
+  - {key: wp-second-council-of-the-lateran, title: "Second Council of the Lateran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_Council_of_the_Lateran"}
+  - {key: wp-battle-of-qatwan, title: "Battle of Qatwan (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Qatwan"}
+  - {key: wp-treaty-of-shaoxing, title: "Treaty of Shaoxing (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Shaoxing"}
+  - {key: wp-second-crusade, title: "Second Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Second_Crusade"}
+  - {key: wp-laudabiliter, title: "Laudabiliter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Laudabiliter"}
+  - {key: wp-treaty-of-benevento, title: "Treaty of Benevento (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Benevento"}
+  - {key: wp-hogen-rebellion, title: "Hōgen rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/H%C5%8Dgen_rebellion"}
+  - {key: wp-heiji-rebellion, title: "Heiji rebellion (Wikipedia)", url: "https://en.wikipedia.org/wiki/Heiji_rebellion"}
+  - {key: wp-battle-of-alnwick-1174, title: "Battle of Alnwick (1174) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Alnwick_(1174)"}
+  - {key: wp-treaty-of-falaise, title: "Treaty of Falaise (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Falaise"}
+  - {key: wp-battle-of-legnano, title: "Battle of Legnano (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Legnano"}
+  - {key: wp-treaty-of-venice, title: "Treaty of Venice (Wikipedia)", url: "https://en.wikipedia.org/wiki/Treaty_of_Venice"}
+  - {key: wp-battle-of-tonle-sap, title: "Battle of Tonlé Sap (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Tonl%C3%A9_Sap"}
+  - {key: wp-battle-of-kasahrada, title: "Battle of Kasahrada (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Kasahrada"}
+  - {key: wp-third-council-of-the-lateran, title: "Third Council of the Lateran (Wikipedia)", url: "https://en.wikipedia.org/wiki/Third_Council_of_the_Lateran"}
+  - {key: wp-massacre-of-the-latins, title: "Massacre of the Latins (Wikipedia)", url: "https://en.wikipedia.org/wiki/Massacre_of_the_Latins"}
+  - {key: wp-battle-of-hattin, title: "Battle of Hattin (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Hattin"}
+  - {key: wp-cortes-of-leon-of-1188, title: "Cortes of León of 1188 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cortes_of_Le%C3%B3n_of_1188"}
+  - {key: wp-third-crusade, title: "Third Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Third_Crusade"}
+  - {key: wp-siege-of-acre-11891191, title: "Siege of Acre (1189–1191) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Acre_(1189%E2%80%931191)"}
+  - {key: wp-battle-of-chandawar, title: "Battle of Chandawar (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Chandawar"}
+  - {key: wp-battle-of-alarcos, title: "Battle of Alarcos (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Alarcos"}
+  - {key: wp-chateau-gaillard, title: "Château Gaillard (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ch%C3%A2teau_Gaillard"}
+  - {key: wp-fourth-crusade, title: "Fourth Crusade (Wikipedia)", url: "https://en.wikipedia.org/wiki/Fourth_Crusade"}
+  - {key: wp-siege-of-zara, title: "Siege of Zara (Wikipedia)", url: "https://en.wikipedia.org/wiki/Siege_of_Zara"}
+
+events:
+  - {key: third-council-of-constantinople-680, sources: [wp-third-council-of-constantinople]}
+  - {key: christianisation-of-iceland, sources: [wp-christianization-of-iceland]}
+  - {key: khitan-invasion-of-goryeo-1010, sources: [wp-second-conflict-in-the-goryeokhitan-war]}
+  - {key: battle-of-kwiju-1019, sources: [wp-battle-of-kuju]}
+  - {key: chola-ganges-expedition-1021, sources: [wp-chola-expedition-of-the-ganges]}
+  - {key: chola-srivijaya-expedition-1025, sources: [wp-chola-invasion-of-srivijaya]}
+  - {key: battle-of-tamaron-1037, sources: [wp-battle-of-tamaron]}
+  - {key: western-xia-founded-1038, sources: [wp-western-xia]}
+  - {key: battle-of-bothnagowan-1040, sources: [wp-battle-of-pitgaveny]}
+  - {key: qingli-reforms-1040, sources: [wp-qingli-reforms]}
+  - {key: synod-of-sutri-1046, sources: [wp-council-of-sutri]}
+  - {key: battle-of-val-es-dunes-1047, sources: [wp-battle-of-val-es-dunes]}
+  - {key: truce-of-god-caen-1047, sources: [wp-peace-and-truce-of-god]}
+  - {key: battle-of-koppam-1052, sources: [wp-battle-of-koppam]}
+  - {key: battle-of-civitate-1053, sources: [wp-battle-of-civitate]}
+  - {key: great-schism-1054, sources: [wp-eastwest-schism]}
+  - {key: battle-of-lumphanan-1057, sources: [wp-battle-of-lumphanan]}
+  - {key: battle-of-petroe-1057, sources: [wp-battle-of-petroe]}
+  - {key: siege-of-thimert-1058, sources: [wp-siege-of-thimert]}
+  - {key: lateran-synod-of-1059, sources: [wp-in-nomine-domini]}
+  - {key: coronation-of-william-i, sources: [wp-coronations-of-william-the-conqueror-and-matilda]}
+  - {key: new-policies-1069, sources: [wp-new-policies-song-dynasty]}
+  - {key: papal-legates-crown-william-at-winchester-1070, sources: [wp-council-of-winchester-1070]}
+  - {key: battle-of-manzikert-1071, sources: [wp-battle-of-manzikert]}
+  - {key: ly-song-war-1075, sources: [wp-songai-viet-war]}
+  - {key: walk-to-canossa-1077, sources: [wp-road-to-canossa]}
+  - {key: council-of-lillebonne-1080, sources: [wp-council-of-lillebonne]}
+  - {key: conquest-of-toledo-1085, sources: [wp-siege-of-toledo-1085]}
+  - {key: battle-of-sagrajas-1086, sources: [wp-battle-of-sagrajas]}
+  - {key: battle-of-levounion-1091, sources: [wp-battle-of-levounion]}
+  - {key: battle-of-alnwick-1093, sources: [wp-battle-of-alnwick-1093]}
+  - {key: council-of-clermont-1095, sources: [wp-council-of-clermont]}
+  - {key: first-crusade-at-nicaea-1097, sources: [wp-siege-of-nicaea]}
+  - {key: coloman-conquest-of-croatia-1097, sources: [wp-battle-of-gvozd-mountain]}
+  - {key: capture-of-jerusalem-1099, sources: [wp-siege-of-jerusalem-1099]}
+  - {key: founding-of-jin-1115, sources: [wp-jin-dynasty-1115-1234]}
+  - {key: alliance-conducted-at-sea-1120, sources: [wp-alliance-conducted-at-sea]}
+  - {key: battle-of-beroia-1122, sources: [wp-battle-of-beroia]}
+  - {key: concordat-of-worms-1122, sources: [wp-concordat-of-worms]}
+  - {key: first-lateran-council-1123, sources: [wp-first-council-of-the-lateran]}
+  - {key: western-liao-founded-1124, sources: [wp-qara-khitai]}
+  - {key: dashi-proclaimed-gurkhan-1132, sources: [wp-qara-khitai]}
+  - {key: coronation-of-alfonso-vii-as-emperor-1135, sources: [wp-imperator-totius-hispaniae]}
+  - {key: battle-of-the-standard-1138, sources: [wp-battle-of-the-standard]}
+  - {key: second-lateran-council-1139, sources: [wp-second-council-of-the-lateran]}
+  - {key: battle-of-qatwan-1141, sources: [wp-battle-of-qatwan]}
+  - {key: treaty-of-shaoxing-1142, sources: [wp-treaty-of-shaoxing]}
+  - {key: second-crusade-1147, sources: [wp-second-crusade]}
+  - {key: laudabiliter-1155, sources: [wp-laudabiliter]}
+  - {key: treaty-of-benevento-1156, sources: [wp-treaty-of-benevento]}
+  - {key: hogen-rebellion-1156, sources: [wp-hogen-rebellion]}
+  - {key: heiji-rebellion-1160, sources: [wp-heiji-rebellion]}
+  - {key: battle-of-alnwick-1174, sources: [wp-battle-of-alnwick-1174]}
+  - {key: treaty-of-falaise-1175, sources: [wp-treaty-of-falaise]}
+  - {key: battle-of-legnano-1176, sources: [wp-battle-of-legnano]}
+  - {key: peace-of-venice-1177, sources: [wp-treaty-of-venice]}
+  - {key: cham-sack-of-angkor-1177, sources: [wp-battle-of-tonle-sap]}
+  - {key: battle-of-kasahrada-1178, sources: [wp-battle-of-kasahrada]}
+  - {key: third-lateran-council-1179, sources: [wp-third-council-of-the-lateran]}
+  - {key: massacre-of-the-latins-1182, sources: [wp-massacre-of-the-latins]}
+  - {key: battle-of-hattin-1187, sources: [wp-battle-of-hattin]}
+  - {key: cortes-of-leon-1188, sources: [wp-cortes-of-leon-of-1188]}
+  - {key: third-crusade-1189, sources: [wp-third-crusade]}
+  - {key: capture-of-acre-1191, sources: [wp-siege-of-acre-11891191]}
+  - {key: kamakura-shogunate-founded-1192, sources: [wp-kamakura-shogunate]}
+  - {key: battle-of-chandawar-1194, sources: [wp-battle-of-chandawar]}
+  - {key: battle-of-alarcos-1195, sources: [wp-battle-of-alarcos]}
+  - {key: building-of-chateau-gaillard, sources: [wp-chateau-gaillard]}
+  - {key: fourth-crusade-1202, sources: [wp-fourth-crusade]}
+  - {key: siege-of-zadar-1202, sources: [wp-siege-of-zara]}
