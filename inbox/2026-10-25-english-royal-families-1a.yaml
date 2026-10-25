@@ -1,0 +1,250 @@
+batch:
+  title: "English royal families 1a: Æthelred the Unready to Harthacnut (978-1042)"
+  requested: "Ty: fill in parents, spouses and children (who reached 12) for every English monarch, with sex on each monarch (issue #292). Batch 1 also adds the missing kings Edmund Ironside, Cnut, Harold Harefoot and Harthacnut."
+  date: 2026-10-25
+  notes: "Family links for Æthelred, Sweyn, Edmund Ironside, Cnut, Harold Harefoot and Harthacnut (Edward the Confessor's parents too); adds the four missing kings with their reigns. Part a of two (part b: Edward the Confessor to Stephen). Checked against each person's English Wikipedia article (revisions of 2026-10)."
+
+# Notes for the reviewer
+# Left out: no Wikipedia article of their own
+# - Æthelred's children Ecgberht (d. c. 1005) and Edgar (d. c. 1008), and his daughters Ælfgifu (wife of Uhtred) and
+#   Eadgyth (wife of Eadric Streona); possible daughters Wulfhild and the abbess of Wherwell. All only in his article.
+# - Harold Harefoot's possible wife Ælfgifu and son Ælfwine ("may have had"): no articles.
+# Left out: not legitimate
+# - Sweyn's daughter Gytha (by "an earlier liaison"). Sweyn's mother is unknown, so only his father is linked.
+# Left out: facts not confirmed
+# - Births: Harold Harefoot (his article gives no year; Wikidata says 1016), Æthelstan Ætheling ("early or mid 980s"),
+#   Estrid ("c. 990s"), Harald Bluetooth: no year.
+# - Birth places: Edmund Ironside "possibly" at Æthelingadene. No other new person's article names a birthplace.
+# - Harthacnut's burial in the Old Minster comes from Emma's article (his own names no place).
+# - Marriage years: Ælfgifu of York to Æthelred ("probably mid-980s"), Ælfgifu of Northampton to Cnut (c. 1013, "around
+#   this time" in Sweyn's article), Edgar to Ælfthryth ("964 or 965").
+# - Harthacnut's title as King of Denmark (1035-1042) is not added; the assignment covered his English reign only.
+# Choices
+# - Sweyn's wife: his article says a sister of Bolesław I of Poland, name unknown; Wikipedia's article on her is
+#   "Świętosława", a name historians gave her. Her motherhood of Harald, Cnut and Estrid is marked uncertain (Cnut's article
+#   calls his mother's identity uncertain; Harald II's names Gunhild of Wenden). See discrepancy `cnut-mother`.
+# - Cnut's King of England row starts in 1016 (his article: "King of England from 1016"); Edmund Ironside held Wessex
+#   until 30 November 1016. Harold Harefoot's starts in 1037; he was regent from November 1035.
+# - Old Minster, Winchester: Wikipedia gives no coordinates; it lay beside the present cathedral's nave, so its point is
+#   just north of Winchester Cathedral's (approximate). Harald Bluetooth's "Trinity Church in Roskilde" is put at
+#   Roskilde Cathedral, its site.
+
+sources:
+  - {key: wp-cnut, title: "Cnut (Wikipedia)", url: "https://en.wikipedia.org/wiki/Cnut"}
+  - {key: wp-edmund-ironside, title: "Edmund Ironside (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_Ironside"}
+  - {key: wp-harold-harefoot, title: "Harold Harefoot (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harold_Harefoot"}
+  - {key: wp-harthacnut, title: "Harthacnut (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harthacnut"}
+  - {key: wp-edgar-king-of-england, title: "Edgar, King of England (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edgar,_King_of_England"}
+  - {key: wp-aelfthryth-wife-of-edgar, title: "Ælfthryth (wife of Edgar) (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%86lfthryth_(wife_of_Edgar)"}
+  - {key: wp-aelfgifu-of-york, title: "Ælfgifu of York (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%86lfgifu_of_York"}
+  - {key: wp-emma-of-normandy, title: "Emma of Normandy (Wikipedia)", url: "https://en.wikipedia.org/wiki/Emma_of_Normandy"}
+  - {key: wp-aethelstan-aetheling, title: "Æthelstan Ætheling (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%86thelstan_%C3%86theling"}
+  - {key: wp-eadred-aetheling, title: "Eadred Ætheling (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eadred_%C3%86theling"}
+  - {key: wp-eadwig-aetheling, title: "Eadwig Ætheling (Wikipedia)", url: "https://en.wikipedia.org/wiki/Eadwig_%C3%86theling"}
+  - {key: wp-alfred-aetheling, title: "Alfred Ætheling (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alfred_%C3%86theling"}
+  - {key: wp-godgifu-daughter-of-aethelred-the-unready, title: "Godgifu (daughter of Æthelred the Unready) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Godgifu_(daughter_of_%C3%86thelred_the_Unready)"}
+  - {key: wp-harald-bluetooth, title: "Harald Bluetooth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harald_Bluetooth"}
+  - {key: wp-swietoslawa, title: "Świętosława (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C5%9Awi%C4%99tos%C5%82awa"}
+  - {key: wp-harald-ii-of-denmark, title: "Harald II of Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Harald_II_of_Denmark"}
+  - {key: wp-estrid-svendsdatter, title: "Estrid Svendsdatter (Wikipedia)", url: "https://en.wikipedia.org/wiki/Estrid_Svendsdatter"}
+  - {key: wp-ealdgyth-wife-of-edmund-ironside, title: "Ealdgyth (wife of Edmund Ironside) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Ealdgyth_(wife_of_Edmund_Ironside)"}
+  - {key: wp-edward-the-exile, title: "Edward the Exile (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edward_the_Exile"}
+  - {key: wp-edmund-aetheling, title: "Edmund Ætheling (Wikipedia)", url: "https://en.wikipedia.org/wiki/Edmund_%C3%86theling"}
+  - {key: wp-aelfgifu-of-northampton, title: "Ælfgifu of Northampton (Wikipedia)", url: "https://en.wikipedia.org/wiki/%C3%86lfgifu_of_Northampton"}
+  - {key: wp-svein-knutsson, title: "Svein Knutsson (Wikipedia)", url: "https://en.wikipedia.org/wiki/Svein_Knutsson"}
+  - {key: wp-gunhilda-of-denmark, title: "Gunhilda of Denmark (Wikipedia)", url: "https://en.wikipedia.org/wiki/Gunhilda_of_Denmark"}
+  - {key: wp-glastonbury-abbey, title: "Glastonbury Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Glastonbury_Abbey"}
+  - {key: wp-old-minster-winchester, title: "Old Minster, Winchester (Wikipedia)", url: "https://en.wikipedia.org/wiki/Old_Minster,_Winchester"}
+  - {key: wp-old-st-pauls-cathedral, title: "Old St Paul's Cathedral (Wikipedia)", url: "https://en.wikipedia.org/wiki/Old_St_Paul%27s_Cathedral"}
+  - {key: wp-tavistock-abbey, title: "Tavistock Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Tavistock_Abbey"}
+  - {key: wp-limburg-abbey, title: "Limburg Abbey (Wikipedia)", url: "https://en.wikipedia.org/wiki/Limburg_Abbey"}
+
+places:
+  - {key: glastonbury-abbey, name: Glastonbury Abbey, kind: abbey, city: Glastonbury, region: Somerset, country: England, lat: 51.1461, lng: -2.7153, visitable: true, visit_site: "Glastonbury Abbey (ruins)", sources: [wp-glastonbury-abbey, wp-edmund-ironside]}
+  - {key: old-minster-winchester, name: "Old Minster, Winchester", kind: cathedral, city: Winchester, region: Hampshire, country: England, lat: 51.0612, lng: -1.3134, visitable: true, visit_site: "Its outline is marked out beside Winchester Cathedral", sources: [wp-old-minster-winchester, wp-cnut]}
+  - {key: old-st-pauls-cathedral, name: "Old St Paul's Cathedral", kind: cathedral, city: London, region: Greater London, country: England, lat: 51.5136, lng: -0.0983, ended: 1666, sources: [wp-old-st-pauls-cathedral, wp-edward-the-exile]}
+  - {key: tavistock-abbey, name: Tavistock Abbey, kind: abbey, city: Tavistock, region: Devon, country: England, lat: 50.5494, lng: -4.145, built_by: "Ordwulf, son of Ealdorman Ordgar", sources: [wp-tavistock-abbey, wp-eadwig-aetheling]}
+  - {key: limburg-abbey, name: Limburg Abbey, kind: abbey, city: Bad Dürkheim, region: Rhineland-Palatinate, country: Germany, lat: 49.4564, lng: 8.1464, visitable: true, visit_site: "Limburg Abbey ruins", sources: [wp-limburg-abbey, wp-gunhilda-of-denmark]}
+
+people:
+  # Sex on the monarchs (existing records)
+  - {key: aethelred-the-unready, sex: male}
+  - {key: sweyn-forkbeard, sex: male}
+
+  # The four missing kings
+  - key: edmund-ironside
+    name: Edmund Ironside
+    type: Royalty
+    born: 991
+    born_estimated: true
+    died: 1016-11-30
+    sex: male
+    house: Wessex
+    prominence: 3
+    coverage: partly
+    coverage_note: "Dates, reign, burial and family captured; his battles with Cnut (Penselwood, Sherston, Brentford, Assandun) and the Treaty of Alney not added as events."
+    note: "King of the English from 23 April to 30 November 1016, fighting Cnut's invasion; after defeat at Assandun he kept Wessex and Cnut the rest. Born between 990 and 993 (McDermott suggests 991)."
+    sources: [wp-edmund-ironside]
+  - key: cnut
+    name: Cnut
+    type: Royalty
+    born: 995
+    born_estimated: true
+    died: 1035-11-12
+    sex: male
+    house: Knýtlinga
+    prominence: 4
+    coverage: partly
+    coverage_note: "Dates, reigns, burial and family captured; his conquest of England, journey to Rome and Scandinavian wars not added as events."
+    note: "Cnut the Great (Canute): King of England from 1016, of Denmark from 1018 and of Norway from 1028, the 'North Sea Empire'. Died at Shaftesbury; buried in the Old Minster, Winchester."
+    sources: [wp-cnut]
+  - key: harold-harefoot
+    name: Harold Harefoot
+    type: Royalty
+    died: 1040-03-17
+    sex: male
+    house: Knýtlinga
+    prominence: 2
+    coverage: partly
+    coverage_note: "Death, reign, burial and parents captured; birth year not given by the article."
+    note: "Harold I: regent of England from Cnut's death in 1035 for his absent half-brother Harthacnut, then king from 1037. Died at Oxford; buried at Westminster, then exhumed and thrown into a fen by Harthacnut."
+    sources: [wp-harold-harefoot]
+  - key: harthacnut
+    name: Harthacnut
+    type: Royalty
+    born: 1018
+    born_estimated: true
+    died: 1042-06-08
+    sex: male
+    house: Knýtlinga
+    prominence: 2
+    coverage: partly
+    coverage_note: "Dates, English reign and parents captured; Danish reign (from 1035) not added as a title."
+    note: "King of Denmark from 1035 and of England from 1040 until he died 'as he stood at his drink' at a wedding in Lambeth. The last Dane to rule England; unmarried and childless."
+    sources: [wp-harthacnut]
+
+  # Æthelred's family
+  - {key: edgar-king-of-england, name: "Edgar, King of England", type: Royalty, born: 944, born_estimated: true, died: 0975-07-08, sex: male, house: Wessex, prominence: 3, coverage: not-read, note: "Edgar the Peaceful, King of the English 959-975; father of Edward the Martyr and Æthelred.", sources: [wp-edgar-king-of-england]}
+  - {key: aelfthryth-wife-of-edgar, name: Ælfthryth, type: Royalty, died: 1000, died_estimated: true, sex: female, house: Wessex, prominence: 2, coverage: not-read, note: "Queen of the English, wife of Edgar from 964 or 965; a leader of the regency for her son Æthelred (978-984). Died 17 November 999, 1000 or 1001.", sources: [wp-aelfthryth-wife-of-edgar]}
+  - {key: aelfgifu-of-york, name: Ælfgifu of York, type: Royalty, died: 1001, died_estimated: true, sex: female, house: Wessex, prominence: 1, coverage: not-read, note: "First wife of Æthelred the Unready and mother of Edmund Ironside; probably a daughter of Thored, earl of southern Northumbria.", sources: [wp-aelfgifu-of-york]}
+  - {key: emma-of-normandy, name: Emma of Normandy, type: Royalty, born: 984, born_estimated: true, died: 1052-03-06, sex: female, house: Normandy, prominence: 3, coverage: not-read, note: "Daughter of Richard I of Normandy; queen of England as wife of Æthelred (1002) and then of Cnut (1017); mother of Edward the Confessor and Harthacnut.", sources: [wp-emma-of-normandy]}
+  - {key: aethelstan-aetheling, name: Æthelstan Ætheling, type: Royalty, died: 1014-06-25, sex: male, house: Wessex, prominence: 1, coverage: not-read, note: "Eldest son of Æthelred and heir apparent until his death; born in the early or mid 980s. Left the sword of Offa to Edmund Ironside.", sources: [wp-aethelstan-aetheling]}
+  - {key: eadred-aetheling, name: Eadred Ætheling, type: Royalty, died: 1012, died_estimated: true, sex: male, house: Wessex, prominence: 1, coverage: not-read, note: "Fourth son of Æthelred by Ælfgifu; witnessed charters between 993 and 1012 or 1013.", sources: [wp-eadred-aetheling]}
+  - {key: eadwig-aetheling, name: Eadwig Ætheling, type: Royalty, died: 1017, sex: male, house: Wessex, prominence: 1, coverage: not-read, note: "Fifth son of Æthelred by Ælfgifu; banished and then murdered at Cnut's instigation in 1017.", sources: [wp-eadwig-aetheling]}
+  - {key: alfred-aetheling, name: Alfred Ætheling, type: Royalty, born: 1012, born_estimated: true, died: 1036, sex: male, house: Wessex, prominence: 2, coverage: not-read, note: "Younger son of Æthelred and Emma; captured by Earl Godwin on his return in 1036, blinded, and died soon afterwards.", sources: [wp-alfred-aetheling]}
+  - {key: godgifu-daughter-of-aethelred-the-unready, name: Godgifu, type: Royalty, born: 1004, born_estimated: true, sex: female, house: Wessex, prominence: 1, coverage: not-read, note: "Daughter of Æthelred and Emma; married Drogo of Mantes (probably 1024), then Eustace II of Boulogne (1035). Died c. 1047 or c. 1056: historians disagree.", sources: [wp-godgifu-daughter-of-aethelred-the-unready]}
+
+  # Sweyn's family
+  - {key: harald-bluetooth, name: Harald Bluetooth, type: Royalty, died: 985, died_estimated: true, sex: male, house: Knýtlinga, prominence: 3, coverage: not-read, note: "Harald Gormsson, king of Denmark and Norway; died c. 985/86, buried in the Trinity Church at Roskilde.", sources: [wp-harald-bluetooth]}
+  - {key: swietoslawa, name: Świętosława, type: Royalty, sex: female, house: Piast, prominence: 1, coverage: not-read, note: "Daughter of Mieszko I of Poland and sister of Bolesław I, wife of Sweyn Forkbeard (Thietmar). Her name is not recorded; 'Świętosława' is a name historians gave her.", sources: [wp-swietoslawa]}
+  - {key: harald-ii-of-denmark, name: Harald II of Denmark, type: Royalty, born: 997, born_estimated: true, died: 1018, died_estimated: true, sex: male, house: Knýtlinga, prominence: 2, coverage: not-read, note: "Son of Sweyn Forkbeard, King of Denmark 1014-c. 1018; succeeded by his brother Cnut. Born c. 996-998.", sources: [wp-harald-ii-of-denmark]}
+  - {key: estrid-svendsdatter, name: Estrid Svendsdatter, type: Royalty, sex: female, house: Knýtlinga, prominence: 2, coverage: not-read, note: "Daughter of Sweyn Forkbeard and sister of Cnut; wife of Ulf Jarl and mother of Sweyn II of Denmark. Born in the 990s; died between 1057 and 1073.", sources: [wp-estrid-svendsdatter]}
+
+  # Edmund Ironside's family
+  - {key: ealdgyth-wife-of-edmund-ironside, name: "Ealdgyth (wife of Edmund Ironside)", type: Royalty, born: 992, born_estimated: true, sex: female, prominence: 1, coverage: not-read, note: "Widow of Sigeferth, thegn of the Seven Burghs; Edmund Ironside took her from Malmesbury and married her in 1015. John of Worcester calls her Ealdgyth; the name may be a confusion.", sources: [wp-ealdgyth-wife-of-edmund-ironside]}
+  - {key: edward-the-exile, name: Edward the Exile, type: Royalty, born: 1016, born_estimated: true, died: 1057-04-19, sex: male, house: Wessex, prominence: 2, coverage: not-read, note: "Son of Edmund Ironside, sent abroad as an infant by Cnut; lived in Hungary, was recalled as heir in 1057 and died days after landing. Father of Edgar Ætheling and St Margaret of Scotland.", sources: [wp-edward-the-exile]}
+  - {key: edmund-aetheling, name: Edmund Ætheling, type: Royalty, born: 1016, born_estimated: true, sex: male, house: Wessex, prominence: 1, coverage: not-read, note: "Son of Edmund Ironside, born 1016 or 1017 and sent abroad by Cnut; may have married a daughter of the king of Hungary; died there on 10 January of a year before 1057.", sources: [wp-edmund-aetheling]}
+
+  # Cnut's family
+  - {key: aelfgifu-of-northampton, name: Ælfgifu of Northampton, type: Royalty, born: 990, born_estimated: true, sex: female, prominence: 2, coverage: not-read, note: "First wife of Cnut and mother of Harold Harefoot and Svein; regent of Norway 1030-1035. Died after 1036.", sources: [wp-aelfgifu-of-northampton]}
+  - {key: svein-knutsson, name: Svein Knutsson, type: Royalty, born: 1016, born_estimated: true, died: 1035, sex: male, house: Knýtlinga, prominence: 2, coverage: not-read, note: "Son of Cnut and Ælfgifu of Northampton; ruled Norway with his mother as regent from 1030 until driven out in 1034.", sources: [wp-svein-knutsson]}
+  - {key: gunhilda-of-denmark, name: Gunhilda of Denmark, type: Royalty, born: 1020, born_estimated: true, died: 1038-07-18, sex: female, house: Knýtlinga, prominence: 1, coverage: not-read, note: "Daughter of Cnut and Emma; married Henry III, later Holy Roman Emperor, at Nijmegen in 1036; died of an epidemic in Italy.", sources: [wp-gunhilda-of-denmark]}
+
+links:
+  # Æthelred the Unready
+  - {parent: edgar-king-of-england, child: aethelred-the-unready}
+  - {parent: aelfthryth-wife-of-edgar, child: aethelred-the-unready}
+  - {spouse: edgar-king-of-england, to: aelfthryth-wife-of-edgar}
+  - {spouse: aethelred-the-unready, to: aelfgifu-of-york}
+  - {spouse: aethelred-the-unready, to: emma-of-normandy, year: 1002}
+  - {parent: aethelred-the-unready, child: aethelstan-aetheling}
+  - {parent: aelfgifu-of-york, child: aethelstan-aetheling}
+  - {parent: aethelred-the-unready, child: edmund-ironside}
+  - {parent: aelfgifu-of-york, child: edmund-ironside}
+  - {parent: aethelred-the-unready, child: eadred-aetheling}
+  - {parent: aelfgifu-of-york, child: eadred-aetheling}
+  - {parent: aethelred-the-unready, child: eadwig-aetheling}
+  - {parent: aelfgifu-of-york, child: eadwig-aetheling}
+  - {parent: aethelred-the-unready, child: edward-the-confessor}
+  - {parent: emma-of-normandy, child: edward-the-confessor}
+  - {parent: aethelred-the-unready, child: alfred-aetheling}
+  - {parent: emma-of-normandy, child: alfred-aetheling}
+  - {parent: aethelred-the-unready, child: godgifu-daughter-of-aethelred-the-unready}
+  - {parent: emma-of-normandy, child: godgifu-daughter-of-aethelred-the-unready}
+
+  # Sweyn Forkbeard (mother unknown, so only his father)
+  - {parent: harald-bluetooth, child: sweyn-forkbeard}
+  - {spouse: sweyn-forkbeard, to: swietoslawa}
+  - {parent: sweyn-forkbeard, child: harald-ii-of-denmark}
+  - {parent: sweyn-forkbeard, child: cnut}
+  - {parent: sweyn-forkbeard, child: estrid-svendsdatter}
+  - {parent: swietoslawa, child: harald-ii-of-denmark, uncertain: true, note: "Thietmar says Bolesław I's sister bore Sweyn two sons, Harald and Cnut; Harald's article names his mother Gunhild of Wenden (the sagas' name)", sources: [wp-swietoslawa, wp-sweyn-forkbeard]}
+  - {parent: swietoslawa, child: cnut, uncertain: true, note: "Cnut's mother's identity is uncertain: Thietmar and the Encomium make her a daughter of Mieszko I; the sagas call her Gunhild of Wenden", sources: [wp-swietoslawa, wp-cnut]}
+  - {parent: swietoslawa, child: estrid-svendsdatter, uncertain: true, note: "Sweyn's article makes Estrid a daughter of his Polish wife; Prinke thinks her mother was Sigrid the Haughty", sources: [wp-sweyn-forkbeard, wp-swietoslawa]}
+
+  # Edmund Ironside
+  - {spouse: edmund-ironside, to: ealdgyth-wife-of-edmund-ironside, year: 1015}
+  - {parent: edmund-ironside, child: edward-the-exile}
+  - {parent: ealdgyth-wife-of-edmund-ironside, child: edward-the-exile}
+  - {parent: edmund-ironside, child: edmund-aetheling}
+  - {parent: ealdgyth-wife-of-edmund-ironside, child: edmund-aetheling}
+
+  # Cnut, Harold Harefoot, Harthacnut
+  - {spouse: cnut, to: aelfgifu-of-northampton}
+  - {spouse: cnut, to: emma-of-normandy, year: 1017}
+  - {parent: cnut, child: svein-knutsson}
+  - {parent: aelfgifu-of-northampton, child: svein-knutsson}
+  - {parent: cnut, child: harold-harefoot}
+  - {parent: aelfgifu-of-northampton, child: harold-harefoot}
+  - {parent: cnut, child: harthacnut}
+  - {parent: emma-of-normandy, child: harthacnut}
+  - {parent: cnut, child: gunhilda-of-denmark}
+  - {parent: emma-of-normandy, child: gunhilda-of-denmark}
+
+moments:
+  - {person: edmund-ironside, role: buried, place: glastonbury-abbey, year: 1016}
+  - {person: cnut, role: buried, place: old-minster-winchester, year: 1035}
+  - {person: harold-harefoot, role: buried, place: westminster-abbey, year: 1040}
+  - {person: harthacnut, role: buried, place: old-minster-winchester, year: 1042}
+  - {person: edgar-king-of-england, role: buried, place: glastonbury-abbey, year: 975}
+  - {person: emma-of-normandy, role: buried, place: old-minster-winchester, year: 1052}
+  - {person: aethelstan-aetheling, role: buried, place: old-minster-winchester, year: 1014}
+  - {person: eadwig-aetheling, role: buried, place: tavistock-abbey, year: 1017}
+  - {person: harald-bluetooth, role: buried, place: roskilde-cathedral, year: 985}
+  - {person: estrid-svendsdatter, role: buried, place: roskilde-cathedral}
+  - {person: edward-the-exile, role: buried, place: old-st-pauls-cathedral, year: 1057}
+  - {person: gunhilda-of-denmark, role: buried, place: limburg-abbey, year: 1038}
+
+titles:
+  - {person: edmund-ironside, title: King of England, realm: England, from: 1016-04-23, to: 1016-11-30, sources: [wp-edmund-ironside]}
+  - {person: cnut, title: King of England, realm: England, from: 1016, to: 1035-11-12, note: "King of all England after Edmund Ironside's death on 30 November 1016", sources: [wp-cnut]}
+  - {person: cnut, title: King of Denmark, realm: Denmark, from: 1018, to: 1035-11-12, note: "Succeeded his brother Harald II", sources: [wp-cnut]}
+  - {person: cnut, title: King of Norway, realm: Norway, from: 1028, to: 1035-11-12, note: "Crowned at Trondheim after driving out Olaf Haraldsson", sources: [wp-cnut]}
+  - {person: harold-harefoot, title: King of England, realm: England, from: 1037, to: 1040-03-17, note: "Regent for Harthacnut from Cnut's death in November 1035; accepted as king in 1037", sources: [wp-harold-harefoot]}
+  - {person: harthacnut, title: King of England, realm: England, from: 1040, to: 1042-06-08, note: "Offered the throne after Harold Harefoot's death (17 March 1040); landed at Sandwich on 17 June", sources: [wp-harthacnut]}
+
+discrepancies:
+  - key: cnut-mother
+    question: Who was the mother of Cnut and Harald II of Denmark?
+    about: [{person: cnut}, {person: harald-ii-of-denmark}, {person: swietoslawa}]
+    field: parent
+    claims:
+      - {value: "A daughter of Mieszko I and sister of Bolesław I of Poland (name unrecorded; called Świętosława by historians)", sources: [wp-sweyn-forkbeard, wp-swietoslawa], note: "Thietmar of Merseburg, the Encomium Emmae Reginae; Thietmar is thought best informed"}
+      - {value: "Gunhild of Wenden, daughter of Burislav, king of the Wends", sources: [wp-harald-ii-of-denmark, wp-cnut], note: "Snorri Sturluson's Heimskringla and other sagas"}
+    note: "The database links Cnut, Harald and Estrid to Świętosława as uncertain."
+  - key: harold-harefoot-paternity
+    question: Was Harold Harefoot the son of Cnut and Ælfgifu of Northampton?
+    about: [{person: harold-harefoot}]
+    field: parent
+    claims:
+      - {value: "Yes", sources: [wp-harold-harefoot], note: "Accepted by modern historians; O'Brien sees the doubt as propaganda linked to Emma"}
+      - {value: "No: he only claimed to be (Anglo-Saxon Chronicle); a cobbler's son passed off by Ælfgifu (Florence of Worcester)", sources: [wp-harold-harefoot]}
+    note: "The database links him to Cnut and Ælfgifu."
+  - key: godgifu-death-year
+    question: When did Godgifu, daughter of Æthelred, die?
+    about: [{person: godgifu-daughter-of-aethelred-the-unready}]
+    field: died
+    claims:
+      - {value: "c. 1047", sources: [wp-godgifu-daughter-of-aethelred-the-unready], note: "Heather Tanner, who dates Eustace's remarriage to c. 1049"}
+      - {value: "c. 1056", sources: [wp-godgifu-daughter-of-aethelred-the-unready], note: "Elisabeth van Houts"}
+    note: "The record leaves her death year blank."
