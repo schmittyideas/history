@@ -1,0 +1,63 @@
+# Isabella Clara Eugenia's betrothal to Archduke Rudolf, and her portrait by Alonso Sánchez Coello (Prado).
+# Ty asked for this on 2026-10-28 from an Instagram reel (not readable by Claude; facts are from English Wikipedia
+# and the Commons file page for the painting, read the same day).
+# Stated honestly:
+#  - Wikipedia says only that Isabella was promised to her cousin Rudolf (later Emperor Rudolf II) "at age two" and
+#    waited over twenty years until he said he would marry no one. It gives no exact date, so no betrothal event is
+#    created (events need a clear date); the facts go in her note. Rudolf II's own article says he never married.
+#  - The painting's date, 1585-1588, is the Prado/Commons range; Commons records the Prado object P00861.
+#  - Coello's sitelinks (20) are the language-edition count shown on his Wikipedia page, not read from Wikidata
+#    (Wikidata was rate-limiting); recheck when convenient.
+#  - The dwarf in the painting, Magdalena Ruiz, is named by the Prado but has no person record here.
+batch:
+  title: Isabella Clara Eugenia, betrothed to Rudolf, and her Prado portrait
+  requested: "Isabella Eugenia of Spain to be married to Archduke Rudolph of Austria; painting of her; add to the history db"
+  date: 2026-10-28
+
+sources:
+  - {key: wp-alonso-sanchez-coello, title: "Alonso Sánchez Coello (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alonso_S%C3%A1nchez_Coello"}
+  - {key: commons-coello-isabella-clara-eugenia, title: "File:Alonso Sánchez Coello 011.jpg (Wikimedia Commons)", url: "https://commons.wikimedia.org/wiki/File:Alonso_S%C3%A1nchez_Coello_011.jpg"}
+  - {key: prado-isabel-clara-eugenia-y-magdalena-ruiz, title: "Isabel Clara Eugenia y Magdalena Ruiz (Museo del Prado)", url: "https://www.museodelprado.es/coleccion/galeria-on-line/galeria-on-line/obra/isabel-clara-eugenia-y-magdalena-ruiz/"}
+
+people:
+  - key: isabella-clara-eugenia
+    note: "Daughter of Philip II of Spain. Promised as a child (at about two) to her cousin Archduke Rudolf, later Emperor Rudolf II, who never married and let the match lapse after some twenty years; she married Archduke Albert in 1599 and ruled the Habsburg Netherlands with him 1598-1621, then as governess. Patron of Rubens."
+    portrait: portrait-of-isabella-clara-eugenia-and-magdalena-ruiz-coello
+    sources: [wp-isabella-clara-eugenia]
+  - key: alonso-sanchez-coello
+    name: Alonso Sánchez Coello
+    type: Artist
+    roles: [painter]
+    born: 1531
+    born_estimated: true
+    died: 1588-08-08
+    sex: male
+    realm: Spain
+    note: "Court painter to Philip II from 1560; portraitist of the Spanish and Austrian Habsburgs, including Isabella Clara Eugenia and the young Archduke Rudolf (1567). Born c. 1531/32 in Benifairó de les Valls."
+    sitelinks: 20
+    sitelinks_on: 2026-10-28
+    coverage: partly
+    coverage_note: "Dates and one portrait of Isabella Clara Eugenia captured; the rest of his works not built out."
+    sources: [wp-alonso-sanchez-coello]
+
+artworks:
+  - key: portrait-of-isabella-clara-eugenia-and-magdalena-ruiz-coello
+    name: Infanta Isabella Clara Eugenia and Magdalena Ruiz
+    kind: painting
+    medium: oil on canvas
+    made: 1585
+    made_end: 1588
+    estimated: true
+    museum: museo-del-prado
+    accession: P00861
+    museum_url: https://www.museodelprado.es/coleccion/galeria-on-line/galeria-on-line/obra/isabel-clara-eugenia-y-magdalena-ruiz/
+    image_url: https://upload.wikimedia.org/wikipedia/commons/c/c8/Alonso_S%C3%A1nchez_Coello_011.jpg
+    image_thumb: https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Alonso_S%C3%A1nchez_Coello_011.jpg/500px-Alonso_S%C3%A1nchez_Coello_011.jpg
+    image_page: https://commons.wikimedia.org/wiki/File:Alonso_S%C3%A1nchez_Coello_011.jpg
+    image_license: Public domain
+    image_credit: Alonso Sánchez Coello, Museo del Prado (Wikimedia Commons)
+    note: "Full-length court portrait of Philip II's eldest daughter with her dwarf Magdalena Ruiz. The cameo of her father in her hand stresses dynastic continuity. Some attribution debate (Coello or a follower) per the Prado."
+    people:
+      - {person: alonso-sanchez-coello, role: creator}
+      - {person: isabella-clara-eugenia, role: subject}
+    sources: [commons-coello-isabella-clara-eugenia, prado-isabel-clara-eugenia-y-magdalena-ruiz]
