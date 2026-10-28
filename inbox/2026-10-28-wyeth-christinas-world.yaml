@@ -1,0 +1,319 @@
+# Andrew Wyeth and Christina's World (1948): the painter, the painting, the people and place around it, and four
+# other key works. Ty asked for this on 2026-10-28 (scope: this painting plus key works; people: close circle).
+# Facts read on 2026-10-28 from English Wikipedia (Andrew Wyeth, Christina's World, Olson House, Betsy Wyeth,
+# N. C. Wyeth, The Helga Pictures, Winter 1946, Wind from the Sea) and MoMA's open collection data (CC0, GitHub).
+# Stated honestly:
+#  - No image of Christina's World, Wind from the Sea, Winter 1946, Public Sale or Braids: they are 20th-century
+#    works whose Commons status is not public domain or free, so the image fields are left out.
+#  - Ty's caption says Wyeth enlarged the field and that the body is modelled on Betsy, 26. Wikipedia says Betsy posed
+#    for the torso and Wyeth "altered the land's lay" and separated the house from its barn; it does not say the field
+#    was enlarged. Betsy was born 1921-09-26, so she was 26 for most of 1948. Ty's caption is kept in the private log.
+#  - Where Wikipedia pages disagree, a discrepancy is recorded (Braids date, size of the Helga series, Helga's birth
+#    year, Christina's diagnosis).
+#  - Christina Olson, Alvaro Olson and Helga Testorf have no Wikipedia article of their own (Christina redirects to the
+#    painting's article); they cite the article that covers them. Alvaro's birth year is not given anywhere read.
+#  - Wyeth's burial place is from his article (Hathorn Cemetery, Cushing); the Olson House article's claim that he lies
+#    in the Olson family cemetery is tagged "citation needed", so it is not used.
+batch:
+  title: "Andrew Wyeth and Christina's World"
+  requested: "Add Christina's World, Andrew Wyeth and what we can track on the painting and the artist, then insert it into the History database"
+  date: 2026-10-28
+
+sources:
+  - {key: wp-andrew-wyeth, title: "Andrew Wyeth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Andrew_Wyeth"}
+  - {key: wp-christinas-world, title: "Christina's World (Wikipedia)", url: "https://en.wikipedia.org/wiki/Christina%27s_World"}
+  - {key: wp-olson-house, title: "Olson House (Cushing, Maine) (Wikipedia)", url: "https://en.wikipedia.org/wiki/Olson_House_(Cushing,_Maine)"}
+  - {key: wp-betsy-wyeth, title: "Betsy Wyeth (Wikipedia)", url: "https://en.wikipedia.org/wiki/Betsy_James_Wyeth"}
+  - {key: wp-n-c-wyeth, title: "N. C. Wyeth (Wikipedia)", url: "https://en.wikipedia.org/wiki/N._C._Wyeth"}
+  - {key: wp-the-helga-pictures, title: "The Helga Pictures (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Helga_Pictures"}
+  - {key: wp-winter-1946, title: "Winter 1946 (Wikipedia)", url: "https://en.wikipedia.org/wiki/Winter_1946"}
+  - {key: wp-wind-from-the-sea, title: "Wind from the Sea (Wikipedia)", url: "https://en.wikipedia.org/wiki/Wind_from_the_Sea"}
+  - {key: moma-christinas-world, title: "Christina's World, MoMA collection object 78455", url: "https://www.moma.org/collection/works/78455"}
+  - {key: wikidata-wyeth-works, title: "Wikidata: Winter 1946 (inventory number)", url: "https://www.wikidata.org/wiki/Q28113311"}
+  - {key: wikidata-helga-testorf, title: "Helga Testorf (Wikidata)", url: "https://www.wikidata.org/wiki/Q112404692"}
+
+places:
+  - key: olson-house
+    name: Olson House
+    kind: house
+    city: Cushing
+    region: Maine
+    country: United States
+    lat: 43.9817
+    lng: -69.2686
+    visitable: true
+    visit_site: "Olson House (Farnsworth Art Museum), Hathorn Point Road"
+    built_by: "Captain Samuel Hathorn II (late 1700s); substantially altered in 1871 by Samuel Hathorn IV"
+    note: "Home of Christina and Alvaro Olson (inherited 1929); Wyeth painted it from 1939 to 1968. Bought by Joseph E. Levine in 1968, later owned by John Sculley, who gave it to the Farnsworth Art Museum in 1991. National Register 1995, National Historic Landmark 2011."
+    sources: [wp-olson-house]
+  - key: cushing-maine
+    name: Cushing, Maine
+    kind: town
+    region: Maine
+    country: United States
+    lat: 44.0192
+    lng: -69.2398
+    note: "Wyeth's summer home; he is buried here."
+    sources: [wp-andrew-wyeth]
+  - key: chadds-ford
+    name: Chadds Ford
+    kind: village
+    region: Pennsylvania
+    country: United States
+    lat: 39.8719
+    lng: -75.5914
+    note: "Home of the Wyeth family; birthplace and death place of Andrew Wyeth; Kuerner Farm and the Brandywine Museum of Art are here."
+    sources: [wp-andrew-wyeth]
+
+museums:
+  - key: north-carolina-museum-of-art
+    name: North Carolina Museum of Art
+    kind: art museum
+    city: Raleigh
+    region: North Carolina
+    country: United States
+    lat: 35.8102
+    lng: -78.7029
+    data_access: unknown
+    note: "Holds Wyeth's Winter 1946. Collection data terms not checked."
+    sources: [wp-winter-1946]
+
+people:
+  - key: andrew-wyeth
+    name: Andrew Wyeth
+    type: Artist
+    roles: [painter]
+    born: 1917-07-12
+    died: 2009-01-16
+    sitelinks: 43
+    sitelinks_on: 2026-10-28
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Andrew%20Wyeth.jpg?width=1280
+    image_thumb: https://commons.wikimedia.org/wiki/Special:FilePath/Andrew%20Wyeth.jpg?width=400
+    image_page: https://commons.wikimedia.org/wiki/File:Andrew_Wyeth.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Life dates, family, the Olson House and Christina's World, the Helga pictures and four other key works; the Kuerner Farm series, window paintings, portraits and most museum holdings not built out"
+    note: "American painter of Chadds Ford, Pennsylvania and Cushing, Maine, taught by his father N. C. Wyeth; best known for the egg-tempera Christina's World (1948). First painter to receive the Presidential Medal of Freedom (1963); Congressional Gold Medal 1988; National Medal of Arts 2007."
+    sources: [wp-andrew-wyeth]
+  - key: n-c-wyeth
+    name: N. C. Wyeth
+    type: Artist
+    roles: [painter, illustrator]
+    born: 1882-10-22
+    died: 1945-10-19
+    sitelinks: 23
+    sitelinks_on: 2026-10-28
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/NC%20Wyeth%20ca1920.jpg?width=1280
+    image_thumb: https://commons.wikimedia.org/wiki/Special:FilePath/NC%20Wyeth%20ca1920.jpg?width=400
+    image_page: https://commons.wikimedia.org/wiki/File:NC_Wyeth_ca1920.jpg
+    image_license: Public domain
+    coverage: partly
+    coverage_note: "Dates, death, children and teacher; his illustrations (112 books) not built out"
+    note: "Newell Convers Wyeth, American illustrator and painter (Treasure Island, 1911), pupil of Howard Pyle, Andrew Wyeth's father and only art teacher; killed when a freight train hit his car at a crossing near his Chadds Ford home."
+    sources: [wp-n-c-wyeth]
+  - key: betsy-wyeth
+    name: Betsy Wyeth
+    type: Notable
+    born: 1921-09-26
+    died: 2020-04-21
+    sitelinks: 1
+    sitelinks_on: 2026-10-28
+    coverage: partly
+    coverage_note: "Marriage, her role in Wyeth's career and Christina's World; her books not built out"
+    note: "Betsy Merle James, married Andrew Wyeth on 15 May 1940. His business manager and archivist; she introduced him to the Olsons, posed for the torso in Christina's World and suggested its title."
+    sources: [wp-betsy-wyeth]
+  - key: christina-olson
+    name: Christina Olson
+    type: Notable
+    born: 1893-05-03
+    died: 1968-01-27
+    sitelinks: 0
+    sitelinks_on: 2026-10-28
+    coverage: partly
+    coverage_note: "Dates, condition and the painting; her life at the Olson House not built out"
+    note: "Anna Christina Olson of Cushing, Maine, who could not walk and refused a wheelchair, crawling instead. Wyeth painted her and her brother Alvaro from 1940 to 1968; she is the subject of Christina's World."
+    sources: [wp-christinas-world, wp-olson-house]
+  - key: alvaro-olson
+    name: Alvaro Olson
+    type: Notable
+    died: 1967
+    sitelinks: 0
+    sitelinks_on: 2026-10-28
+    coverage: not-read
+    note: "Christina Olson's younger brother, who shared the Olson House with her and was painted by Wyeth; died in 1967."
+    sources: [wp-olson-house, wp-christinas-world]
+  - key: helga-testorf
+    name: Helga Testorf
+    type: Notable
+    sitelinks: 0
+    sitelinks_on: 2026-10-28
+    coverage: not-read
+    note: "German-born neighbour and caregiver at the Kuerner farm in Chadds Ford, who modelled for Wyeth in secret from 1971 to 1985; the Helga pictures became public in 1986."
+    sources: [wp-the-helga-pictures, wp-andrew-wyeth]
+
+links:
+  - {parent: n-c-wyeth, child: andrew-wyeth}
+  - {teacher: n-c-wyeth, student: andrew-wyeth}
+  - {spouse: andrew-wyeth, to: betsy-wyeth, year: 1940}
+
+moments:
+  - {person: andrew-wyeth, role: born, place: chadds-ford, year: 1917, sources: [wp-andrew-wyeth]}
+  - {person: andrew-wyeth, role: died, place: chadds-ford, year: 2009, sources: [wp-andrew-wyeth]}
+  - {person: andrew-wyeth, role: buried, place: cushing-maine, year: 2009, sources: [wp-andrew-wyeth]}
+  - {person: andrew-wyeth, role: worked, place: olson-house, year: 1939, sources: [wp-olson-house]}
+  - {person: n-c-wyeth, role: died, place: chadds-ford, year: 1945, sources: [wp-n-c-wyeth]}
+  - {person: betsy-wyeth, role: died, place: chadds-ford, year: 2020, sources: [wp-andrew-wyeth]}
+  - {person: christina-olson, role: lived, place: olson-house, year: 1929, sources: [wp-olson-house]}
+  - {person: alvaro-olson, role: lived, place: olson-house, year: 1929, sources: [wp-olson-house]}
+
+events:
+  - key: death-of-nc-wyeth-1945
+    name: Death of N. C. Wyeth
+    type: Death
+    date: 1945-10-19
+    place: chadds-ford
+    prominence: 2
+    note: "His car was struck by a freight train at a railway crossing near his home. Andrew Wyeth's first tempera painting afterwards, Winter 1946, shows the hill above the place."
+    people:
+      - {person: n-c-wyeth, role: died}
+      - {person: andrew-wyeth, role: son}
+    sources: [wp-n-c-wyeth, wp-winter-1946]
+  - key: helga-pictures-made-public-1986
+    name: The Helga pictures made public
+    type: Exhibition
+    year: 1986
+    prominence: 3
+    note: "Wyeth's secret series of studies of Helga Testorf, made over 1971-1985, became public in 1986 (Time cover, 18 August 1986). Leonard E. B. Andrews bought almost the whole set that year; the National Gallery of Art showed it in 1987, to heavy criticism, before it was sold to a Japanese company."
+    people:
+      - {person: andrew-wyeth, role: painter}
+      - {person: helga-testorf, role: model}
+    sources: [wp-the-helga-pictures, wp-andrew-wyeth]
+
+artworks:
+  - key: christinas-world
+    name: Christina's World
+    kind: painting
+    medium: "Tempera on panel"
+    made: 1948
+    museum: museum-of-modern-art
+    accession: "16.1949"
+    museum_url: https://www.moma.org/collection/works/78455
+    # No image: a 1948 work, not public domain or freely licensed on Commons.
+    prominence: 5
+    note: "Wyeth painted Christina Olson (55 per Wikipedia) crawling across a field toward the Olson House, which he saw from a window of the house. Betsy Wyeth posed for the torso and suggested the title. Wyeth separated the house from its barn and altered the lay of the land. First shown at the Macbeth Gallery, New York, in 1948; bought by MoMA's founding director Alfred Barr for $1,800 (MoMA records it acquired 3 February 1949). Wyeth said he wanted to do justice to her 'extraordinary conquest of a life which most people would consider hopeless'."
+    people:
+      - {person: andrew-wyeth, role: creator}
+      - {person: christina-olson, role: subject}
+      - {person: betsy-wyeth, role: model}
+    places:
+      - {place: olson-house, role: depicts}
+      - {place: olson-house, role: made}
+    external:
+      - {system: wikidata, id: Q2465911, url: "https://www.wikidata.org/wiki/Q2465911"}
+    sources: [wp-christinas-world, moma-christinas-world]
+  - key: winter-1946
+    name: Winter 1946
+    kind: painting
+    medium: "Tempera on board"
+    made: 1946
+    museum: north-carolina-museum-of-art
+    accession: "72.11"
+    prominence: 3
+    note: "Wyeth's first tempera painting after his father's death: a boy running down a hill above the crossing where N. C. Wyeth was killed. Wyeth said the hill 'finally became a portrait of him'."
+    people:
+      - {person: andrew-wyeth, role: creator}
+    events:
+      - {event: death-of-nc-wyeth-1945, role: commemorates}
+    external:
+      - {system: wikidata, id: Q28113311, url: "https://www.wikidata.org/wiki/Q28113311"}
+    sources: [wp-winter-1946, wikidata-wyeth-works]
+  - key: wind-from-the-sea
+    name: Wind from the Sea
+    kind: painting
+    medium: "Tempera on hardboard"
+    made: 1947
+    museum: national-gallery-of-art
+    accession: "2009.13.1"
+    prominence: 3
+    note: "A breeze lifts thin curtains at an open attic window on the upper floor of the Olson House. Bought from Wyeth by Clay Bartlett in January 1947; given to the National Gallery of Art in 2009."
+    people:
+      - {person: andrew-wyeth, role: creator}
+    places:
+      - {place: olson-house, role: depicts}
+    external:
+      - {system: wikidata, id: Q12860142, url: "https://www.wikidata.org/wiki/Q12860142"}
+    sources: [wp-wind-from-the-sea, wp-andrew-wyeth]
+  - key: public-sale-1943
+    name: Public Sale
+    kind: painting
+    made: 1943
+    museum: philadelphia-museum-of-art
+    prominence: 2
+    note: "Listed in Wyeth's article as a 1943 work in the Philadelphia Museum of Art; medium and accession not read."
+    people:
+      - {person: andrew-wyeth, role: creator}
+    sources: [wp-andrew-wyeth]
+  - key: braids-1979
+    name: Braids
+    kind: painting
+    made: 1979
+    prominence: 3
+    note: "A portrait of Helga Testorf from the Helga series. Its date is not settled in the sources read."
+    people:
+      - {person: andrew-wyeth, role: creator}
+      - {person: helga-testorf, role: subject}
+    sources: [wp-andrew-wyeth, wp-the-helga-pictures]
+
+discrepancies:
+  - key: braids-date
+    question: When did Wyeth paint Braids?
+    about: [{artwork: braids-1979}]
+    field: made
+    claims:
+      - {value: "1979", sources: [wp-andrew-wyeth], note: "Image caption in the Andrew Wyeth article"}
+      - {value: "1977", sources: [wp-the-helga-pictures], note: "List of works in the Helga Pictures article"}
+    note: "The record uses 1979 for now."
+  - key: helga-pictures-size-and-years
+    question: How many Helga works did Wyeth make, and when did the sessions begin?
+    about: [{event: helga-pictures-made-public-1986}, {person: helga-testorf}]
+    claims:
+      - {value: "247 studies, 1971 to 1985", sources: [wp-andrew-wyeth]}
+      - {value: "More than 268 paintings and drawings, 1971 to 1985", sources: [wp-the-helga-pictures], note: "Lead of the article"}
+      - {value: "45 paintings and 200 drawings, sessions from 1970", sources: [wp-the-helga-pictures], note: "Body of the same article"}
+    note: "The record gives 1971 to 1985 and no count."
+  - key: helga-testorf-birth
+    question: When was Helga Testorf born?
+    about: [{person: helga-testorf}]
+    field: born
+    claims:
+      - {value: "c. 1933", sources: [wp-the-helga-pictures]}
+      - {value: "c. 1939", sources: [wp-the-helga-pictures, wikidata-helga-testorf]}
+    note: "Left out of the record until a source settles it."
+  - key: christina-olson-condition
+    question: What condition left Christina Olson unable to walk?
+    about: [{person: christina-olson}]
+    claims:
+      - {value: "Polio or Charcot-Marie-Tooth disease", sources: [wp-christinas-world]}
+      - {value: "Undiagnosed Charcot-Marie-Tooth disease", sources: [wp-andrew-wyeth]}
+    note: "The record says only that she could not walk."
+
+log:
+  - key: 2026-10-28-christinas-world-caption
+    title: "Christina's World: how much of it is invented?"
+    learned_on: 2026-10-28
+    medium: article
+    source_title: "Museum-style caption supplied by Ty"
+    source_detail: "Christina's World (1948), Andrew Wyeth, MoMA"
+    notes: >-
+      Caption text: the enormous distance is partly invented; Wyeth enlarged the field so the farmhouse feels farther
+      from Christina, who could not walk; she was about 55, and much of the younger body was modelled on his
+      26-year-old wife Betsy. Ty's question: does that honour Christina, or reshape her for us? Checked against
+      Wikipedia: Betsy posed for the torso (agreed), Wyeth altered the land and moved the house from its barn
+      (partly agrees), but no source read says the field was enlarged.
+    details:
+      follow_up: ["Find a source for the enlarged field", "Read the Farnsworth Art Museum's Olson House notes"]
+    about:
+      - {person: andrew-wyeth}
+      - {person: christina-olson}
+      - {person: betsy-wyeth}
+      - {place: olson-house}
