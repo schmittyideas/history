@@ -1,0 +1,242 @@
+# Three paintings Ty asked for on 2026-10-28: Benjamin West's The Fatal Wounding of Sir Philip Sidney (1806),
+# Millais's The Black Brunswicker (1860) and Caravaggio's The Entombment of Christ (1602-1604), each with the
+# people, places and events it links to, plus Rubens's copy of the Caravaggio.
+# Facts read on 2026-10-28 from each painting's English Wikipedia article, the articles for Alexander Davison, Kate
+# Perugini and the Battle of Zutphen, and Wikidata (inventory numbers, coordinates, Wikipedia language editions).
+# All three images are marked public domain on Commons (checked per file).
+# Stated honestly:
+#  - Sidney's death at Arnhem is from the painting's article; his funeral at St Paul's is in the note only, because
+#    no date was read. The Battle of Zutphen is dated 22 September 1586 from its own article.
+#  - The Black Brunswicker is linked to the Duchess of Richmond's ball (15 June 1815) because its article ties the
+#    scene to that ball; the article does not name the Duke of Brunswick, so he is not added.
+#  - Vatican Museums data access is already recorded as no-access, so nothing was read from its site; the inventory
+#    number MV.40386 comes from Wikidata, and no museum_url is given.
+#  - Caravaggio's models (Fillide Melandroni for the women) and the chapel's founder Pietro Vittrice are named in
+#    the note only; neither has a record here yet.
+batch:
+  title: "Paintings: West's Sidney, Millais's Black Brunswicker, Caravaggio's Entombment"
+  requested: "Add The Fatal Wounding of Sir Philip Sidney (Benjamin West), The Black Brunswicker (Millais, 1860) and The Entombment of Christ (Caravaggio, 1602-1604)"
+  date: 2026-10-28
+
+sources:
+  - {key: wp-fatal-wounding-of-sir-philip-sidney, title: "The Fatal Wounding of Sir Philip Sidney (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Fatal_Wounding_of_Sir_Philip_Sidney"}
+  - {key: wp-the-black-brunswicker, title: "The Black Brunswicker (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Black_Brunswicker"}
+  - {key: wp-entombment-of-christ-caravaggio, title: "The Entombment of Christ (Caravaggio) (Wikipedia)", url: "https://en.wikipedia.org/wiki/The_Entombment_of_Christ_(Caravaggio)"}
+  - {key: wp-philip-sidney, title: "Philip Sidney (Wikipedia)", url: "https://en.wikipedia.org/wiki/Philip_Sidney"}
+  - {key: wp-alexander-davison, title: "Alexander Davison (Wikipedia)", url: "https://en.wikipedia.org/wiki/Alexander_Davison"}
+  - {key: wp-kate-perugini, title: "Kate Perugini (Wikipedia)", url: "https://en.wikipedia.org/wiki/Kate_Perugini"}
+  - {key: wp-battle-of-zutphen, title: "Battle of Zutphen (Wikipedia)", url: "https://en.wikipedia.org/wiki/Battle_of_Zutphen"}
+  - {key: wikidata-three-paintings, title: "Wikidata: The Black Brunswicker, The Entombment of Christ, The Fatal Wounding of Sir Philip Sidney", url: "https://www.wikidata.org/wiki/Q326887"}
+
+places:
+  - key: zutphen-battlefield
+    name: Zutphen battlefield (Warnsveld)
+    historical_name: Battle of Zutphen
+    kind: battlefield
+    city: Zutphen
+    region: Gelderland
+    country: Netherlands
+    lat: 52.1475
+    lng: 6.205
+    note: "Near Warnsveld and Zutphen; where the English and Dutch ambushed a Spanish supply convoy on 22 September 1586."
+    sources: [wp-battle-of-zutphen]
+  - key: santa-maria-in-vallicella
+    name: Santa Maria in Vallicella (Chiesa Nuova)
+    kind: church
+    city: Rome
+    region: Lazio
+    country: Italy
+    lat: 41.8982
+    lng: 12.4691
+    visitable: true
+    note: "Caravaggio painted The Entombment of Christ for the Vittrice chapel here; a copy now hangs in its place."
+    sources: [wp-entombment-of-christ-caravaggio]
+
+museums:
+  - key: lady-lever-art-gallery
+    name: Lady Lever Art Gallery
+    kind: art museum
+    city: Port Sunlight
+    region: Merseyside
+    country: England
+    lat: 53.3558
+    lng: -2.9993
+    data_access: unknown
+    note: "Holds The Black Brunswicker (bought by William Hesketh Lever in 1898). Collection data terms not checked."
+    sources: [wp-the-black-brunswicker]
+  - key: woodmere-art-museum
+    name: Woodmere Art Museum
+    kind: art museum
+    city: Philadelphia
+    region: Pennsylvania
+    country: United States
+    lat: 40.0831
+    lng: -75.2197
+    data_access: unknown
+    note: "Holds West's The Fatal Wounding of Sir Philip Sidney. Collection data terms not checked."
+    sources: [wp-fatal-wounding-of-sir-philip-sidney]
+
+people:
+  - key: philip-sidney
+    name: Philip Sidney
+    type: Writer
+    roles: [poet, soldier]
+    born: 1554-11-30
+    died: 1586-10-17
+    sitelinks: 61
+    sitelinks_on: 2026-10-28
+    coverage: not-read
+    note: "English poet, courtier and soldier (Astrophil and Stella, The Defence of Poesy); wounded at the Battle of Zutphen on 22 September 1586, he died at Arnhem and had a lavish funeral procession in London."
+    sources: [wp-philip-sidney]
+  - key: alexander-davison
+    name: Alexander Davison
+    type: Patron
+    born: 1750-04-02
+    died: 1829
+    prominence: 2
+    coverage: partly
+    coverage_note: "Dates, trade and friendship with Nelson; his career not built out"
+    note: "English businessman and government contractor, supplier of coal and other goods to the military and a friend of Lord Nelson; commissioned West's The Fatal Wounding of Sir Philip Sidney."
+    sources: [wp-alexander-davison, wp-fatal-wounding-of-sir-philip-sidney]
+  - key: kate-perugini
+    name: Kate Perugini
+    type: Artist
+    roles: [painter]
+    born: 1839-10-29
+    died: 1929-05-09
+    sitelinks: 18
+    sitelinks_on: 2026-10-28
+    coverage: partly
+    coverage_note: "Dates and her sitting for Millais; her own paintings not built out"
+    note: "Catherine Elizabeth Macready Perugini, nee Dickens, daughter of Charles Dickens and a painter in her own right; the model for the woman in Millais's The Black Brunswicker."
+    sources: [wp-kate-perugini]
+
+moments:
+  - {person: philip-sidney, role: died, place: arnhem, year: 1586, sources: [wp-fatal-wounding-of-sir-philip-sidney]}
+
+events:
+  - key: battle-of-zutphen-1586
+    name: Battle of Zutphen
+    type: Battle
+    date: 1586-09-22
+    place: zutphen-battlefield
+    prominence: 3
+    note: "English and Dutch forces under the Earl of Leicester ambushed a Spanish convoy bound for Zutphen; the Spanish got the supplies through. Philip Sidney was wounded and died weeks later."
+    people:
+      - {person: philip-sidney, role: wounded}
+    sources: [wp-battle-of-zutphen]
+  - key: duchess-of-richmonds-ball-1815
+    name: Duchess of Richmond's ball
+    type: Ball
+    date: 1815-06-15
+    place: brussels
+    prominence: 3
+    note: "The ball in Brussels from which officers left to join their troops for the Battle of Quatre Bras, the eve of Waterloo."
+    sources: [wp-the-black-brunswicker]
+
+artworks:
+  - key: fatal-wounding-of-sir-philip-sidney
+    name: The Fatal Wounding of Sir Philip Sidney
+    kind: painting
+    medium: "Oil on canvas"
+    made: 1806
+    museum: woodmere-art-museum
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/Benjamin%20West%20-%20The%20Fatal%20Wounding%20of%20Sir%20Philip%20Sidney.jpg?width=1280
+    image_thumb: https://commons.wikimedia.org/wiki/Special:FilePath/Benjamin%20West%20-%20The%20Fatal%20Wounding%20of%20Sir%20Philip%20Sidney.jpg?width=400
+    image_page: https://commons.wikimedia.org/wiki/File:Benjamin_West_-_The_Fatal_Wounding_of_Sir_Philip_Sidney.jpg
+    image_license: Public domain
+    image_credit: Wikimedia Commons
+    prominence: 2
+    note: "A reimagined Zutphen: Sidney, wounded, asks that his water go to a dying man whose need is greater. West painted himself on the far right. Commissioned by Alexander Davison; closer to Romanticism than the Neoclassicism West was known for. Sidney's funeral at St Paul's Cathedral followed his death."
+    people:
+      - {person: benjamin-west, role: creator}
+      - {person: philip-sidney, role: subject}
+      - {person: alexander-davison, role: patron}
+    places:
+      - {place: zutphen-battlefield, role: depicts}
+    events:
+      - {event: battle-of-zutphen-1586, role: depicts}
+    external:
+      - {system: wikidata, id: Q125861173, url: "https://www.wikidata.org/wiki/Q125861173"}
+    sources: [wp-fatal-wounding-of-sir-philip-sidney]
+  - key: the-black-brunswicker
+    name: The Black Brunswicker
+    kind: painting
+    medium: "Oil on canvas"
+    made: 1860
+    museum: lady-lever-art-gallery
+    accession: "LL 3643"
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/John%20Everett%20Millais%20The%20Black%20Brunswicker.jpg?width=1280
+    image_thumb: https://commons.wikimedia.org/wiki/Special:FilePath/John%20Everett%20Millais%20The%20Black%20Brunswicker.jpg?width=400
+    image_page: https://commons.wikimedia.org/wiki/File:John_Everett_Millais_The_Black_Brunswicker.jpg
+    image_license: Public domain
+    image_credit: Wikimedia Commons
+    prominence: 3
+    note: "A Brunswick officer about to leave for battle; his sweetheart tries to push the door shut as he opens it. A print of David's Napoleon Crossing the Alps hangs on the wall. Kate Perugini posed for the woman; the officer was an anonymous soldier who died of consumption soon after, and the two never met. Shown at the Royal Academy in 1860; Ernest Gambart paid 1,000 guineas, the highest price Millais had had from him. Lever bought it in 1898."
+    people:
+      - {person: john-everett-millais, role: creator}
+      - {person: kate-perugini, role: model}
+    events:
+      - {event: duchess-of-richmonds-ball-1815, role: depicts}
+    external:
+      - {system: wikidata, id: Q326887, url: "https://www.wikidata.org/wiki/Q326887"}
+    sources: [wp-the-black-brunswicker, wikidata-three-paintings]
+  - key: entombment-of-christ-caravaggio
+    name: The Entombment of Christ
+    kind: painting
+    medium: "Oil on canvas"
+    made: 1602
+    made_end: 1604
+    museum: vatican-museums
+    accession: "MV.40386"
+    image_url: https://commons.wikimedia.org/wiki/Special:FilePath/The%20Entombment%20of%20Christ-Caravaggio%20%28c.1602-3%29.jpg?width=1280
+    image_thumb: https://commons.wikimedia.org/wiki/Special:FilePath/The%20Entombment%20of%20Christ-Caravaggio%20%28c.1602-3%29.jpg?width=400
+    image_page: https://commons.wikimedia.org/wiki/File:The_Entombment_of_Christ-Caravaggio_(c.1602-3).jpg
+    image_license: Public domain
+    image_credit: Wikimedia Commons
+    prominence: 4
+    note: "Made for the chapel of the Pietà founded by Pietro Vittrice in Santa Maria in Vallicella (the Chiesa Nuova), Rome. Shows Nicodemus (with Michelangelo's face), John the Evangelist, the Virgin Mary, Mary of Cleophas and Mary Magdalene; one biographer says Fillide Melandroni modelled the two women. Taken to Paris in 1797, returned in 1816 to the Vatican, where it hangs in the Pinacoteca. Caravaggio's own given name was Michelangelo (Michelangelo Merisi)."
+    people:
+      - {person: caravaggio, role: creator}
+    places:
+      - {place: santa-maria-in-vallicella, role: made-for}
+      - {place: vatican-museums, role: held}
+    external:
+      - {system: wikidata, id: Q1213151, url: "https://www.wikidata.org/wiki/Q1213151"}
+    sources: [wp-entombment-of-christ-caravaggio, wikidata-three-paintings]
+  - key: entombment-of-christ-after-caravaggio-rubens
+    name: The Entombment (after Caravaggio)
+    kind: painting
+    made: 1611
+    estimated: true
+    collection: "National Gallery of Canada"
+    prominence: 2
+    note: "Rubens's copy of Caravaggio's Entombment, dated 1611/12 in the Caravaggio article. Medium and accession not read."
+    after: entombment-of-christ-caravaggio
+    people:
+      - {person: peter-paul-rubens, role: creator}
+      - {person: caravaggio, role: after}
+    sources: [wp-entombment-of-christ-caravaggio]
+
+discrepancies:
+  - key: entombment-of-christ-date
+    question: When did Caravaggio paint The Entombment of Christ?
+    about: [{artwork: entombment-of-christ-caravaggio}]
+    field: made
+    claims:
+      - {value: "1602 to 1604", sources: [wp-entombment-of-christ-caravaggio], note: "Infobox; the chapel was built in 1602, the earliest possible commission"}
+      - {value: "1603 to 1604", sources: [wp-entombment-of-christ-caravaggio], note: "Lead of the same article; the body says planned and begun 1602/03, and a document of 1 September 1604 calls the chapel 'new'"}
+    note: "The record uses the infobox range, 1602 to 1604, which is what Ty supplied."
+
+log:
+  - key: 2026-10-28-caravaggio-michelangelo
+    title: "Caravaggio's name was Michelangelo too"
+    learned_on: 2026-10-28
+    medium: conversation
+    source_title: "Note from Ty with The Entombment of Christ, Caravaggio, 1602-1604"
+    notes: >-
+      Caravaggio was born Michelangelo Merisi, and the Nicodemus in this painting has the face of Michelangelo
+      the sculptor (per Wikipedia), so the two Michelangelos meet in one picture.
+    about:
+      - {person: caravaggio}
+      - {artwork: entombment-of-christ-caravaggio}
