@@ -59,6 +59,16 @@ h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 4.5vw
 .btn { border: 1px solid var(--ink); background: var(--ink); color: var(--panel); padding: 9px 16px; border-radius: 4px; cursor: pointer; }
 .btn.ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
 .btn:focus-visible { outline: 2px solid var(--woad); outline-offset: 2px; }
+/* Recent searches: a small list under a focused, empty search box (wireRecent in app.js). */
+form.has-recent { position: relative; }
+.recent { position: absolute; z-index: 20; max-width: 100%; display: grid; padding: 4px; background: var(--panel); border: 1px solid var(--rule); border-radius: 4px;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--ink) 18%, transparent); }
+.recent-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 2px 8px 4px; }
+.recent-head .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.recent-head .plink { font-size: 13px; }
+.recent-item { border: 0; background: transparent; color: var(--ink); font: inherit; font-size: 14px; text-align: left; padding: 6px 8px; border-radius: 3px; cursor: pointer;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.recent-item:hover, .recent-item[aria-selected="true"] { background: var(--lane); }
 .examples { display: flex; flex-wrap: wrap; gap: 6px 8px; align-items: center; font-size: 13px; color: var(--muted); }
 .examples button { border: 1px dashed var(--rule); background: transparent; border-radius: 999px; padding: 2px 10px; cursor: pointer; color: var(--ink); font-size: 13px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 28px; }
