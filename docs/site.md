@@ -13,6 +13,8 @@ How the site behaves, for changing `app.js` or checking that data shows up as in
 
 Links go both ways between the views.
 
+**Recent searches:** each search box (the Explore search, the Timeline search, the Year form's first box) remembers its last five searches in this browser, newest first, a repeat moving to the top (`localStorage` keys `ht:recent:explore`, `ht:recent:timeline`, `ht:recent:year`). Focusing a box while it is empty opens a small "Recent" list under it; a click, or the arrow keys and Enter, runs that search again, Escape closes it and "Clear" forgets that box's list. Typed searches and the "Try:" examples are remembered; the Year form keeps "1087 to 1154" when both boxes are filled and skips years it couldn't read. Blocked storage just means no list.
+
 ## Filters
 
 - The **Show** buttons filter both views by group (Royalty, Nobility, Clergy, Government, Artists, Architects, Writers, Composers, Scholars, Patrons, Military, Notable people). They sit under the timeline's search box and between the Year form and the year, and double as the colour key: each group has a colour token (woad, weld, stitch, verdigris, ochre, walnut, lichen, rose, slate, indigo, iron, sage) that its people's lifespan bars share. Groups match `type` (Military also takes anyone with a military title); Architects match the `architect` role and Artists need an artistic role (painter, engraver, sculptor…).

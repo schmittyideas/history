@@ -3351,11 +3351,13 @@ function nearMe() {
 
 function wireExplore() {
   wireCardDrag();
-  $("x-form").addEventListener("submit", e => { e.preventDefault(); runExplore($("x-q").value); });
+  const search = text => { runExplore(text); if (S.db) remember("explore", text); };
+  $("x-form").addEventListener("submit", e => { e.preventDefault(); search($("x-q").value); });
   $("x-q").addEventListener("input", () => { $("x-msg").textContent = ""; });
+  wireRecent($("x-q"), "explore", search);
   $("x-near").addEventListener("click", nearMe);
   $("x-country").addEventListener("change", e => setCountry(e.target.value));
-  document.querySelectorAll("#x-examples button").forEach(b => b.addEventListener("click", () => { $("x-q").value = b.dataset.x; runExplore(b.dataset.x); }));
+  document.querySelectorAll("#x-examples button").forEach(b => b.addEventListener("click", () => { $("x-q").value = b.dataset.x; search(b.dataset.x); }));
   addEventListener("keydown", e => { if (e.key === "Escape" && X.open && S.viewMode === "explore") shrinkCard(); });
   addEventListener("popstate", () => { if (X.open) { X.pushed = false; shrinkCard(true); } });
 }
@@ -3364,6 +3366,64 @@ function fillCountryPicker() {
   sel.replaceChildren(h("option", { value: "", text: "All countries" }), ...exploreIndex().countryList.map(c => h("option", { value: c, text: c })));
   if (X.country && !exploreIndex().countryList.includes(X.country)) X.country = "";
   sel.value = X.country;
+}
+
+/* ------------------------------------------------------------------ recent searches */
+
+// Each search box remembers its last five searches per browser (newest first, a repeat moves to the top) and offers
+// them in a small list when the box is focused and empty. Picking one runs it again; "Clear" forgets them.
+const RECENT_MAX = 5;
+const recentList = key => { const v = store.get("recent:" + key, []); return Array.isArray(v) ? v.filter(s => typeof s === "string" && s) : []; };
+function remember(key, text) {
+  text = String(text ?? "").trim();
+  if (!text) return;
+  const rest = recentList(key).filter(s => s.toLowerCase() !== text.toLowerCase());
+  store.set("recent:" + key, [text, ...rest].slice(0, RECENT_MAX));
+}
+function wireRecent(input, key, pick) {
+  const form = input.form, box = h("div", { class: "recent", id: `${input.id}-recent`, role: "listbox", "aria-label": "Recent searches" });
+  box.hidden = true;
+  form.classList.add("has-recent");
+  form.append(box);
+  input.setAttribute("aria-controls", box.id);
+  input.setAttribute("aria-expanded", "false");
+  let items = [], active = -1;
+  const keep = e => e.preventDefault();  // a click on the list must not blur the box first
+  const setActive = i => {
+    active = i;
+    items.forEach((b, j) => b.setAttribute("aria-selected", j === i));
+    if (i >= 0) input.setAttribute("aria-activedescendant", items[i].id); else input.removeAttribute("aria-activedescendant");
+  };
+  const close = () => { box.hidden = true; input.setAttribute("aria-expanded", "false"); setActive(-1); };
+  const choose = s => { close(); input.value = s; pick(s); };
+  const open = () => {
+    const list = recentList(key);
+    if (input.value.trim() || !list.length) { close(); return; }
+    items = list.map((s, i) => h("button", { type: "button", class: "recent-item", role: "option", id: `${box.id}-${i}`, tabindex: "-1",
+      title: s, text: s, onmousedown: keep, onclick: () => choose(s) }));
+    box.replaceChildren(h("div", { class: "recent-head" }, h("span", { class: "lbl", text: "Recent" }),
+      h("button", { type: "button", class: "plink", text: "Clear", onmousedown: keep,
+        onclick: () => { store.set("recent:" + key, []); close(); input.focus(); } })), ...items);
+    // Sit under the box itself, as wide as it (or wider, up to the form's edge, for the narrow Year box).
+    const left = input.offsetLeft;
+    box.style.left = `${left}px`;
+    box.style.top = `${input.offsetTop + input.offsetHeight + 4}px`;
+    box.style.width = `${Math.max(input.offsetWidth, Math.min(260, form.clientWidth - left))}px`;
+    box.hidden = false; input.setAttribute("aria-expanded", "true"); setActive(-1);
+  };
+  input.addEventListener("focus", open);
+  input.addEventListener("click", () => { if (box.hidden) open(); });
+  input.addEventListener("input", open);
+  input.addEventListener("blur", close);
+  input.addEventListener("keydown", e => {
+    if (box.hidden) { if (e.key === "ArrowDown") { open(); if (!box.hidden) e.preventDefault(); } return; }
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      const n = items.length, d = e.key === "ArrowDown" ? 1 : -1;
+      setActive(active < 0 ? (d > 0 ? 0 : n - 1) : (active + d + n) % n);
+    } else if (e.key === "Enter" && active >= 0) { e.preventDefault(); choose(items[active].textContent); }
+    else if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); close(); }
+  });
 }
 
 /* ------------------------------------------------------------------ wiring */
@@ -3415,10 +3475,12 @@ function applyCats() {
 }
 
 function wire() {
-  $("ask-form").addEventListener("submit", e => { e.preventDefault(); run($("q").value.trim(), { pushTrail: true }); });
+  const ask = text => { run(text, { pushTrail: true }); remember("timeline", text); };
+  $("ask-form").addEventListener("submit", e => { e.preventDefault(); ask($("q").value.trim()); });
+  wireRecent($("q"), "timeline", ask);
   $("show-all").addEventListener("click", () => run("", { pushTrail: true }));
   // Only the timeline's examples carry data-q; the Year view's (data-from) are wired below.
-  document.querySelectorAll(".examples button[data-q]").forEach(b => b.addEventListener("click", () => run(b.dataset.q, { pushTrail: true })));
+  document.querySelectorAll(".examples button[data-q]").forEach(b => b.addEventListener("click", () => ask(b.dataset.q)));
   $("group-family").addEventListener("click", () => setGroup("family"));
   $("group-type").addEventListener("click", () => setGroup("type"));
   $("layer-spouses").checked = S.layers.spouses;
@@ -3436,6 +3498,14 @@ function wire() {
     Y.error = r.error || null;
     if (!r.error) { Y.from = r.from; Y.to = r.to; if (r.realm) Y.realm = r.realm; }
     syncYearUrl(); renderYear();
+    // Remembered as typed, "1087 to 1154" when both boxes are filled; picking it splits the two again.
+    const a = $("year-from").value.trim(), b = $("year-to").value.trim();
+    if (!r.error) remember("year", b ? `${a} to ${b}` : a);
+  });
+  wireRecent($("year-from"), "year", s => {
+    const [a, b = ""] = s.split(" to ");
+    $("year-from").value = a; $("year-to").value = b;
+    $("year-form").requestSubmit();
   });
   document.querySelectorAll("#year-form .examples button").forEach(b => b.addEventListener("click", () => {
     $("year-from").value = b.dataset.from; $("year-to").value = b.dataset.to || "";

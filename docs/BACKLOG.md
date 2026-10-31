@@ -150,6 +150,11 @@ Source: Ty, 2026-10-10.
 
 ## Done
 
+#### [P3] Recent searches: remember the last 5 per search box
+`type: enhancement` · `area: site` · `status: done` · `issue: #310`
+
+The Explore search, the Timeline search and the Year form each remember their last five searches in this browser (newest first, a repeat moves to the top) and offer them in a small list under the box when it is focused and empty. Picking one (click, or arrow keys and Enter) runs it again; Clear forgets them. Source: Ty, 2026-10-30. Done 2026-10-30.
+
 #### [P2] Royal families: English monarchs
 `type: task` · `area: data` · `status: done` · `issue: #292`
 
